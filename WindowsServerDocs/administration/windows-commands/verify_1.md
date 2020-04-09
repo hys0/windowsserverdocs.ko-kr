@@ -1,24 +1,20 @@
 ---
 title: 확인
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: 확인에 대 한 Windows 명령 항목. 파일이 디스크에 올바르게 기록 되었는지 확인할 지 여부를 **cmd** 에 알려 줍니다.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: dfe8bc91-d948-4e47-84ad-a79a60506ffa
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 840fd3609ed3aded1c9cfebd4e395ddcc6d5588b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 91a0777999a604a23e2de83eda6b89c926cb241c
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71363105"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80830056"
 ---
 # <a name="verify"></a>확인
 
@@ -34,14 +30,14 @@ ms.locfileid: "71363105"
 verify [on | off]
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------|-----------|
-|[on \| 해제]|스위치는 **확인** 설정 하거나 해제 합니다.|
+|[on \| 꺼짐]|스위치는 **확인** 설정 하거나 해제 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
-## <a name="BKMK_examples"></a>예와
+## <a name="examples"></a><a name=BKMK_examples></a>예와
 
 현재 표시 하려면 **확인** 설정에 입력 합니다.
 ```
@@ -52,6 +48,6 @@ verify
 Verify on
 ```
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
-[명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

@@ -1,24 +1,20 @@
 ---
 title: Sc delete
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2fe94fb3-e4d1-47b5-b999-39995ecbb644
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ad64d0f7c772b8d29a191b5f3e690d74c8765717
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 05b276de04d4250cc03e4b2976bf8c1330ef82ce
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71371283"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80835386"
 ---
 # <a name="sc-delete"></a>Sc delete
 
@@ -34,7 +30,7 @@ ms.locfileid: "71371283"
 sc [<ServerName>] delete [<ServiceName>]
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------|-----------|
@@ -42,7 +38,7 @@ sc [<ServerName>] delete [<ServiceName>]
 |\<ServiceName >|반환 된 서비스 이름을 지정는 **getkeyname** 작업 합니다.|
 |?|명령 프롬프트에 도움말을 표시합니다.|
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 사용 하 여 **프로그램 추가 / 제거** 에 **제어판** DHCP, DNS, 또는 다른 기본 제공 운영 체제 서비스를 삭제 합니다. **프로그램 추가 / 제거** 만 서비스에 대 한 레지스트리 하위 키를 제거 하지 것입니다 하지만 하도 서비스를 제거 하 여 모든 바로 가기를 삭제 합니다.
 
@@ -53,6 +49,6 @@ sc [<ServerName>] delete [<ServiceName>]
 sc delete newserv
 ```
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
-[명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

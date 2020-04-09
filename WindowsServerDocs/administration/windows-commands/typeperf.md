@@ -1,28 +1,22 @@
 ---
 title: typeperf
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: 명령 창 또는 로그 파일에 성능 데이터를 기록 하는 typeperf에 대 한 Windows 명령 항목입니다.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0c7ca89a-03b3-4626-afcf-ef8565e90043
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 087b201c51d5aec8e6f61c7469c59307d3ed8b4d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: ac5f7def37939a472eb8f47cf65edf184a2fe2fc
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71392300"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80832366"
 ---
 # <a name="typeperf"></a>typeperf
-
-
 
 **typeperf** 또는 로그 파일 명령 창에 명령 성능 데이터를 기록 합니다. 중지 하려면 **typeperf**, CTRL + C를 누릅니다.
 
@@ -37,7 +31,7 @@ typeperf -q [object] [options]
 typeperf -qx [object] [options]
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------|-----------|
@@ -62,11 +56,11 @@ typeperf -qx [object] [options]
 |            -s \<computer_name >             |                   카운터 경로에 지정 된 컴퓨터가 있는 경우에 모니터링을 위해 원격 컴퓨터를 지정 합니다.                    |
 |                     -y                     |                                        메시지를 표시 하지 않고 모든 질문에 예로 답변 합니다.                                        |
 
-## <a name="BKMK_EXAMPLES"></a>예와
+## <a name="examples"></a><a name=BKMK_EXAMPLES></a>예와
 
 - 다음 예에서는 로컬 컴퓨터의 성능 카운터 **\\\\processor (_Total)\% 프로세서 시간** 에 대 한 값을 명령 창에 기록 합니다 .이 값은 CTRL + C를 누를 때까지 1 초의 기본 샘플 간격  
   ```
-  typeperf "\Processor(_Total)\% Processor Time"
+  typeperf \Processor(_Total)\% Processor Time
   ```  
 - 다음 예제에서는 파일에서 카운터의 목록에 대 한 값을 쓰는 **counters.txt** 탭으로 구분 된 파일에 **domain2.tsv** 50 샘플이 수집 될 때까지 5 초 간격으로 샘플에 있습니다.  
   ```

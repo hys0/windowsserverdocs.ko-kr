@@ -1,22 +1,18 @@
 ---
 title: 원격 데스크톱 옵션
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
-ms.custom: na
 ms.date: 10/03/2016
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 51076946-ea9b-4ac7-9a6e-d6023816b97d
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: bbf7f258b2904732ab2e605d1eb3ea6bd2d306be
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 5f2c0da644aaf08cc921f778d9d1203c94e3f94e
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59818314"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80852656"
 ---
 # <a name="remote-desktop-options"></a>원격 데스크톱 옵션
  
@@ -27,12 +23,12 @@ ms.locfileid: "59818314"
 ||||||  
 |-|-|-|-|-|  
 ||저속 모뎀(28.8Kbps)|고속 모뎀(56Kbps)(기본값)|광대역(128Kbps - 1.5Mbps)|LAN(Local Area Network)(1.5Mbps 이상)|  
-|바탕 화면 배경|아니오|아니요|아니요|예|  
-|글꼴 다듬기|아니오|아니요|아니요|예|  
-|바탕 화면 구성|아니오|아니요|예|예|  
-|마우스로 끄는 동안 창 내용 표시|아니오|아니요|예|예|  
-|메뉴 및 창 애니메이션|아니오|아니요|예|예|  
-|테마|아니오|예|예|예|  
+|바탕 화면 배경|아니요|아니요|아니요|예|  
+|글꼴 다듬기|아니요|아니요|아니요|예|  
+|바탕 화면 구성|아니요|아니요|예|예|  
+|마우스로 끄는 동안 창 내용 표시|아니요|아니요|예|예|  
+|메뉴 및 창 애니메이션|아니요|아니요|예|예|  
+|테마|아니요|예|예|예|  
 |비트맵 캐싱|예|예|예|예|  
   
 ## <a name="screen-size"></a>화면 크기  
@@ -63,7 +59,7 @@ ms.locfileid: "59818314"
 ## <a name="enable-the-remote-computer-to-access-drives-on-my-local-computer"></a>원격 컴퓨터에서 내 로컬 컴퓨터의 드라이브에 액세스할 수 있도록 설정  
  기본적으로 사용하도록 설정되어 있지 않습니다. 이 옵션을 사용하면 원격 컴퓨터에서 로컬 컴퓨터에 연결된 하드 디스크 드라이브의 파일 및 폴더에 액세스할 수 있습니다.  
   
-## <a name="see-also"></a>참조  
+## <a name="see-also"></a>참고 항목  
   
 -   [원격 웹 액세스 관리](../manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md)  
   

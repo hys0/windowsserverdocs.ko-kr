@@ -1,24 +1,20 @@
 ---
 title: logman 만들기
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 972f0126-7bc4-4b14-9265-062864f3ffd4
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 22e6d19669152f3c9e4761ce2bde5b6d9e524e14
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 2ec0b62bf859e7a3713e2f691e9947a177c301f8
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71374486"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80840846"
 ---
 # <a name="logman-create"></a>logman 만들기
 
@@ -30,7 +26,7 @@ ms.locfileid: "71374486"
 logman create <counter | trace | alert | cfg | api> <[-n] <name>> [options]
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------|-----------|
@@ -40,4 +36,4 @@ logman create <counter | trace | alert | cfg | api> <[-n] <name>> [options]
 |[logman 만들기 cfg](logman-create-cfg.md)|구성 데이터 수집기를 만듭니다.|
 |[logman api 만들기](logman-create-api.md)|한 API 추적 데이터 수집기를 만듭니다.|
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조

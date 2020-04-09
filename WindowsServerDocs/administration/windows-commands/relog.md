@@ -1,24 +1,20 @@
 ---
 title: relog
 description: Performance coutner 로그 파일에서 성능 카운터 정보를 추출 하는 방법에 대해 알아봅니다.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7480f6c0-9953-4d70-9b1c-b27e09d8db13
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: daedd85f1557c191a690e7eb750559cfd268d3a0
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 0ecd06b11c2f055761ed06ef6c9332fb491eaaf3
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71371621"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80836186"
 ---
 # <a name="relog"></a>relog
 
@@ -31,7 +27,7 @@ ms.locfileid: "71371621"
 relog [<FileName> [<FileName> ...]] [/a] [/c <path> [<path> ...]] [/cf <FileName>] [/f  {bin|csv|tsv|SQL}] [/t <Value>] [/o {OutputFile|DSN!CounterLog}] [/b <M/D/YYYY> [[<HH>:] <MM>:] <SS>] [/e <M/D/YYYY> [[<HH>:] <MM>:] <SS>] [/config {<FileName>|i}] [/q]  
 ```  
 
-### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>매개 변수  
 
 |                                         매개 변수                                          |                                                                                                                                                                  설명                                                                                                                                                                   |
 |--------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -49,7 +45,7 @@ relog [<FileName> [<FileName> ...]] [/a] [/c <path> [<path> ...]] [/cf <FileName
 |                                             -y                                             |                                                                                                                                            모든 질문에 "예"를 응답 하 여 메시지를 무시 합니다.                                                                                                                                             |
 |                                             /?                                             |                                                                                                                                                      명령 프롬프트에 도움말을 표시합니다.                                                                                                                                                      |
 
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
 카운터 경로 형식:  
 - 카운터 경로에 대 한 일반적인 형식은 다음과 같습니다. [\\\<computer >] \\\<개체 > [\<Parent >\\< Instance # Index >] \\\<카운터 >] .이 경우 형식의 부모, 인스턴스, 인덱스 및 카운터 구성 요소에 올바른 이름이 나 와일드 카드 문자가 포함 될 수 있습니다. 컴퓨터, 부모, 인스턴스 및 인덱스 구성 요소에 대 한 모든 카운터 필요 하지 않습니다.  
 - 카운터 자체에 따라 사용 하 여 카운터 경로 확인 합니다. 예를 들어 LogicalDisk 개체는 인스턴스 <Index>, 이므로 < #index > 또는 와일드 카드를 제공 해야 합니다. 따라서 다음 형식을 사용할 수 있습니다. **\LogicalDisk (\*/\*#\*)\\** \\*  
@@ -74,7 +70,7 @@ relog [<FileName> [<FileName> ...]] [/a] [/c <path> [<path> ...]] [/cf <FileName
 
 WMI(Windows Management Instrumentation) (WMI) 스크립트에 **relog** 를 통합 하는 방법에 대 한 자세한 내용은 [Microsoft Windows 리소스 키트 웹 사이트](https://go.microsoft.com/fwlink/?LinkId=4665)의 "wmi 스크립팅"을 참조 하십시오.  
 
-## <a name="BKMK_Examples"></a>예와  
+## <a name="examples"></a><a name="BKMK_Examples"></a>예와  
 고정된 간격 30에서 기존 추적 로그를 다시 샘플링 하 고, 카운터 경로 나열 하 고, 출력 파일 및 형식:  
 ```  
 relog c:\perflogs\daily_trace_log.blg /cf counter_file.txt /o c:\perflogs\reduced_log.csv /t 30 /f csv  
@@ -89,4 +85,4 @@ relog "c:\perflogs\daily_trace_log.blg" -f sql -o "SQL:sql2016x64odbc!counter_lo
 ```
 
 ## <a name="additional-references"></a>추가 참조  
--   [명령줄 구문 키](command-line-syntax-key.md)  
+-   - [명령줄 구문 키](command-line-syntax-key.md)  

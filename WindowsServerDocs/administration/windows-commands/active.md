@@ -1,28 +1,22 @@
 ---
-title: active
-description: Windows 명령 항목 **활성** 기본 디스크에 대 한 항목은 활성으로 포커스가 있는 파티션을 표시 합니다.
-ms.custom: na
+title: 활성
+description: '**활성**에 대 한 Windows 명령 항목 (기본 디스크에서)은 포커스가 있는 파티션을 활성으로 표시 합니다.'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1f25da2e-87fc-4392-a7ee-f38d09b7873c
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c926bf9b7a583cf7eaa23166e09e6f0a1599e625
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 42f2e0d367344355e8f9a570f37cfbdc5dfc4590
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71382853"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80851376"
 ---
-# <a name="active"></a>active
-
-
+# <a name="active"></a>활성
 
 기본 디스크에 활성으로 포커스가 있는 파티션을 표시합니다.
 
@@ -33,20 +27,23 @@ ms.locfileid: "71382853"
 
 ```
 active
+```- 
+
+## Remarks
+
+-   This informs the basic input/output system (BIOS) or Extensible Firmware Interface (EFI) that the partition or volume is a valid system partition or system volume.
+
+-   Only partitions can be marked as active.
+
+-   A partition must be selected for this operation to succeed. Use the **select partition** command to select a partition and shift the focus to it.
+
+## <a name=BKMK_examples></a>Examples
+
+To mark the partition with focus as the active partition, type:
+
 ```
-
-## <a name="remarks"></a>설명
-
--   이 통해 알립니다 기본 입/출력 시스템 (BIOS) 또는 인터페이스 EFI (Extensible Firmware) 파티션 또는 볼륨은 유효한 시스템 파티션 또는 시스템 볼륨입니다.
--   파티션만 활성으로 표시할 수 있습니다.
--   이 작업을 수행 하려면 파티션을 선택 해야 합니다. 사용 된 **파티션을 선택** 파티션을 선택 하 고 포커스를 이동 하는 명령입니다.
-
-## <a name="BKMK_examples"></a>예와
-
-파티션을 활성 파티션으로 포커스가 있는 상태를 표시 하려면 다음을 입력 합니다.
+활성
 ```
-active
-```
+## Additional References
 
-#### <a name="additional-references"></a>추가 참조
-
+- [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -2,26 +2,23 @@
 title: 서버 정리 마법사
 description: WSUS (Windows Server Update Service) 항목-서버 정리 마법사를 사용 하 여 디스크 공간을 관리 하는 방법
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-wsus
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7c351797-2716-4442-a668-60d5b4e77751
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e285e59a27b6bf0ef1bf3b1ab0f78a96efa60c87
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 12049e2bba28f2381e6e80db07768b4e180861d6
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71361526"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80828538"
 ---
 # <a name="the-server-cleanup-wizard"></a>서버 정리 마법사
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 서버 정리 마법사는 사용자 인터페이스에 통합 되며 디스크 공간을 관리 하는 데 사용할 수 있습니다. 이 마법사는 다음 작업을 수행할 수 있습니다.
 
@@ -51,7 +48,7 @@ ms.locfileid: "71361526"
   > [!IMPORTANT]
   >  서버 정리 마법사를 사용 하 여 불필요 한 콘텐츠를 제거 하면 Microsoft 업데이트 카탈로그 사이트에서 다운로드 한 모든 개인 업데이트 파일도 제거 됩니다. 서버 정리 마법사를 실행 한 후 이러한 파일을 다시 가져와야 합니다. 
 
-자동 승인 규칙을 사용 하 여 업데이트를 승인 하는 경우 해당 업데이트는 여전히 "승인 됨" 상태가 될 수 있으며 서버 정리 마법사에서 제거 되지 않습니다. "승인 됨" 상태의 자동 승인 된 업데이트를 제거 하려면 WSUS 관리자는 최소 수준으로 대체 된 업데이트의 승인 상태를 "승인 되지 않음"으로 설정 하 여 서버 정리 마법사에서 declination에 적합 하도록 합니다. 서버 정리 마법사를 통해 최신 업데이트가 승인 되 고 업데이트를 "거부 됨"으로 표시 하기 전에 필요에 따라 업데이트를 보고 하는 클라이언트 시스템이 없는지 확인할 수 있습니다.
+자동 승인 규칙을 사용 하 여 업데이트를 승인 하는 경우 해당 업데이트는 여전히 승인 된 상태에 있을 수 있으며 서버 정리 마법사에서 제거 되지 않습니다. 승인 된 상태에 있는 자동 승인 된 업데이트를 제거 하려면 WSUS 관리자가 최소한으로 교체 된 업데이트의 승인 상태를 승인 되지 않음으로 설정 하 여 서버 정리 마법사에서 declination 수 있도록 해야 합니다. 서버 정리 마법사를 통해 최신 업데이트가 승인 되 고 업데이트를 거부 됨으로 표시 하기 전에 필요에 따라 해당 업데이트를 보고 하는 클라이언트 시스템이 없는지 확인할 수 있습니다.
 
 
 

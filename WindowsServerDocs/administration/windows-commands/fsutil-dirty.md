@@ -9,12 +9,12 @@ ms.technology: storage
 audience: IT Pro
 ms.topic: article
 ms.date: 10/16/2017
-ms.openlocfilehash: 01b5490ef7c57e48a43cae15902e03a33794a826
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: cf3685bae9ed76ede4da6df244139437d92250c0
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71377015"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80844336"
 ---
 # <a name="fsutil-dirty"></a>Fsutil 커밋되지 않은 데이터
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
@@ -29,7 +29,7 @@ ms.locfileid: "71377015"
 fsutil dirty {query | set} <VolumePath>
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |   매개 변수   |                                                 설명                                                  |
 |---------------|--------------------------------------------------------------------------------------------------------------|
@@ -37,7 +37,7 @@ fsutil dirty {query | set} <VolumePath>
 |      집합      |                                    지정 된 볼륨의 더티 비트를 설정합니다.                                    |
 | \<VolumePath > | 드라이브 이름 뒤에 콜론 또는 GUID 형식에서 지정: **볼륨 {** <em>GUID</em> **}** 합니다. |
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 -   볼륨의 더티 비트 파일 시스템 일관성이 없는 상태에 있을 수를 나타냅니다. 때문에 더티 비트를 설정할 수 있습니다.
 
@@ -49,7 +49,7 @@ fsutil dirty {query | set} <VolumePath>
 
 -   더티 비트가 설정 된 컴퓨터를 다시 시작 하는 경우 **chkdsk** 실행 파일 시스템 무결성을 확인 하 고 볼륨으로 문제를 해결 하려고 합니다.
 
-## <a name="BKMK_examples"></a>예와
+## <a name="examples"></a><a name="BKMK_examples"></a>예와
 C 드라이브에 더티 비트를 쿼리하려면 다음을 입력 합니다.
 
 ```
@@ -70,8 +70,8 @@ C 드라이브에 더티 비트를 설정 하려면 다음을 입력 합니다.
 fsutil dirty set C:
 ```
 
-#### <a name="additional-references"></a>추가 참조
-[명령줄 구문 키](Command-Line-Syntax-Key.md)
+## <a name="additional-references"></a>추가 참조
+- [명령줄 구문 키](command-line-syntax-key.md)
 
 [Fsutil](Fsutil.md)
 

@@ -1,24 +1,20 @@
 ---
 title: wbadmin 시작 systemstatebackup
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: Wbadmin start systemstatebackup에 대 한 Windows 명령 항목 로컬 컴퓨터의 시스템 상태 백업을 만들고 지정 된 위치에 저장 합니다.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 998366c1-0a64-45e6-9ed3-4c3f5b8406f0
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0244f984d29c8a802475d2dc08f1cdfe4495f0b9
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 9ecbf5a055684026413615a104b4c983ff51ca9e
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71362233"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80829576"
 ---
 # <a name="wbadmin-start-systemstatebackup"></a>wbadmin 시작 systemstatebackup
 
@@ -41,26 +37,26 @@ wbadmin start systemstatebackup
 [-quiet]
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |   매개 변수   |                                                                                                                                                                                                                      설명                                                                                                                                                                                                                      |
 |---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | -backupTarget | 백업을 저장할 위치를 지정 합니다. 저장소 위치에는 \\\\? \Volume{*guid*} 형식의 드라이브 문자 또는 guid 기반 볼륨이 필요 합니다.</br>Windows Server 2008를 실행 하는 컴퓨터에서는 공유 네트워크 폴더에 대 한 시스템 상태 백업이 지원 되지 않습니다. 서버에서 Windows Server 2008 R2 이상을 실행 하는 경우 명령줄 **\\\\servername\sharedFolder\\** 를 사용 하 여 시스템 상태 백업을 저장할 수 있습니다. |
 |    -quiet     |                                                                                                                                                                                                   사용자에 게 하위 명령 프롬프트 없이 실행 됩니다.                                                                                                                                                                                                    |
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 시스템 상태 파일을 포함 하는 볼륨에 시스템 상태 백업을 저장 하는 방법에 대 한 자세한 내용은 Microsoft 기술 자료 문서 944530 ([https://go.microsoft.com/fwlink/?LinkId=110439](https://go.microsoft.com/fwlink/?LinkId=110439))을 참조 하십시오.
 
-## <a name="BKMK_examples"></a>예와
+## <a name="examples"></a><a name=BKMK_examples></a>예와
 
 시스템 상태 백업을 만들고 볼륨 f에 저장 하려면 다음을 입력 합니다.
 ```
 wbadmin start systemstatebackup -backupTarget:f:
 ```
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
--   [명령줄 구문 키](command-line-syntax-key.md)
+-   - [명령줄 구문 키](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
 -   [WBBackup](https://technet.microsoft.com/library/jj902459.aspx) cmdlet

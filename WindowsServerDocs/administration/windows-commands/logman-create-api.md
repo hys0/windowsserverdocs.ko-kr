@@ -1,28 +1,24 @@
 ---
 title: logman api 만들기
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2ecc0a75-2613-464a-8616-c5dc404bb736
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 512602213fcfd95770af0e27b721a589ed489771
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 3beca5ddafcb1d4fbfc6fbe179e219553f7acaf8
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71374602"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80840916"
 ---
 # <a name="logman-create-api"></a>logman api 만들기
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 API 추적 데이터 수집기를 만듭니다.  
 
@@ -30,7 +26,7 @@ API 추적 데이터 수집기를 만듭니다.
 ```  
 logman create api <[-n] <name>> [options]  
 ```  
-## <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
 
 |                    매개 변수                     |                                                                               설명                                                                               |
 |--------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -39,7 +35,7 @@ logman create api <[-n] <name>> [options]
 |                 -config <value>                  |                                                         명령 옵션을 포함 하는 설정 파일을 지정 합니다.                                                         |
 |                   [-n] <name>                    |                                                                       대상 개체의 이름입니다.                                                                        |
 | -f < bin &#124; bincirc &#124; csv 및 &#124; tsv &#124; sql > |                                                            데이터 수집기에 대 한 로그 형식을 지정합니다.                                                             |
-|             -[-u < 사용자 [password] >              | 사용자 계정으로 실행을 지정합니다. 암호에 대해 \*을 입력 하면 암호를 묻는 메시지가 생성 됩니다. 암호 프롬프트에서 입력할 때 암호 표시 되지 않습니다. |
+|             -[-u < 사용자 [password] >              | 사용자 계정으로 실행을 지정합니다. 암호에 대 한 \*를 입력 하면 암호를 묻는 메시지가 생성 됩니다. 암호 프롬프트에서 입력할 때 암호 표시 되지 않습니다. |
 |    -m < [시작] [stop] [[시작] [stop] [...]] >    |                                                예약 된 시작 시간 또는 종료 시간 대신 수동 시작 또는 중지로 변경 합니다.                                                 |
 |                -rf < [[hh:] mm:] ss >                |                                                        지정 된 기간에 대 한 데이터 수집기를 실행 합니다.                                                         |
 |        -b < M/d/yyyy h:mm: ss [AM&#124;PM] >         |                                                              지정된 된 시간에 데이터 수집을 시작 합니다.                                                               |
@@ -61,9 +57,9 @@ logman create api <[-n] <name>> [options]
 |                  -[-] 재귀                   |                                          첫 번째 계층을 벗어나 재귀적으로 (-recursive) 또는 로그 하지 않습니다 (-recursive).                                           |
 |                   -exe <value>                   |                                                        API 추적을 위한 실행 파일의 전체 경로 지정합니다.                                                        |
 
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
 [-] 나열 되는 위치는 추가 된-옵션을 부정 합니다.  
-## <a name="BKMK_examples"></a>예와  
+## <a name="examples"></a><a name=BKMK_examples></a>예와  
 다음 명령은 카운터에 대 한 실행 파일 c:\windows\notepad.exe trace_notepad를 호출 하는 API 추적을 만들고 파일 c:\notepad.etl에 대 한 결과 출력 합니다.  
 ```  
 logman create api trace_notepad -exe c:\windows\notepad.exe -o c:\notepad.etl  
@@ -76,5 +72,5 @@ logman create api trace_notepad -exe c:\windows\notepad.exe -mods c:\windows\sys
 ```  
 logman create api trace_notepad -exe c:\windows\notepad.exe -exapis kernel32.dll!TlsGetValue  
 ```  
-#### <a name="additional-references"></a>추가 참조  
+## <a name="additional-references"></a>추가 참조  
 [logman](logman.md)  

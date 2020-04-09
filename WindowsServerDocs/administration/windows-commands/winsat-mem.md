@@ -1,24 +1,20 @@
 ---
 title: winsat 메모리
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: 멀티미디어 처리에 사용 되는 것 처럼 메모리 버퍼 복사본에 대 한 많은 메모리를 반영 하는 방식으로 시스템 메모리 대역폭을 테스트 하는 winsat 메모리에 대 한 Windows 명령 항목입니다.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+winms.topic: article
 ms.assetid: cda017bf-6193-43c1-b71f-e379c23e1152
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 23bbaf8551031a2e573b117e672a656213efde12
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 20d7a67ebc6ee623ed7cba41e98bc0105465bdcc
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71361979"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80829116"
 ---
 # <a name="winsat-mem"></a>winsat 메모리
 
@@ -34,36 +30,36 @@ ms.locfileid: "71361979"
 winsat mem <parameters>
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------|-----------|
 |-위쪽|하나의 스레드를 사용 하 여 테스트 하는 메모리를 강제 합니다. 기본 물리적 CPU 또는 코어 당 하나의 스레드를 실행 하는 것입니다.|
 |-보냈습니다.|평가 스레드를 보통 우선 순위로 실행 하도록 지정 합니다. 기본값 15 우선 순위에서 실행 하는 것입니다.|
 |nc|평가 메모리를 할당 하 고 캐시 되지 않은 플래그를 지정 합니다. 즉, 복사 작업에 대해 프로세서의 캐시가 무시 됩니다. 기본 캐시 된 공간에서 실행 하는 것입니다.|
-|\<-n >|(바이트) 소스 버퍼의 끝과 대상 버퍼의 시작 부분 사이의 거리를 지정 합니다. 기본값은 64 바이트입니다. 최대 허용 가능한 대상 오프셋은 16MB입니다. 잘못 된 대상 오프셋을 지정 하는 동안 오류가 발생 합니다.</br>참고: 0은  **\<n >** 에 유효한 값 이지만 음수는 그렇지 않습니다.|
-|-mint \<n >|실행 시간 (초)의 평가 대 한 최소값을 지정 합니다. 기본값은 2.0입니다. 최소 값은 1.0입니다. 최대값은 30.0 합니다.</br>참고: 두 매개 변수를 조합 하 여 사용 하는 경우- **maxt** 값 보다 큰 **-mint** 값을 지정 하면 오류가 발생 합니다.|
+|-do \<n >|(바이트) 소스 버퍼의 끝과 대상 버퍼의 시작 부분 사이의 거리를 지정 합니다. 기본값은 64 바이트입니다. 최대 허용 가능한 대상 오프셋은 16MB입니다. 잘못 된 대상 오프셋을 지정 하는 동안 오류가 발생 합니다.</br>참고: 0은 **\<n >** 에 대해 유효한 값 이지만 음수는 그렇지 않습니다.|
+|-mint \<n >|실행 시간 (초)의 평가 대 한 최소값을 지정 합니다. 기본값은 2.0입니다. 최소 값은 1.0입니다. 최대값은 30.0 합니다.</br>참고: 두 매개 변수를 조합 하 여 사용할 경우- **maxt** 값 보다 큰 **-Mint** 값을 지정 하면 오류가 발생 합니다.|
 |-maxt \<n >|최대 실행 시간 (초)를 평가 지정 합니다. 기본값은 5.0. 최소 값은 1.0입니다. 최대값은 30.0 합니다. 와 함께 사용 하는 경우는 **-mint** 매개 변수를에 지정 된 기간 후 그 결과의 통계 정기적으로 검사를 수행 하는 평가 시작 합니다 **-mint**합니다. 통계 검사를 통과 하는 경우 평가 기간에 지정 된 시간 전에 완료 됩니다 **-maxt** 경과 합니다. 에 지정 된 기간에 대 한 평가 실행 하는 경우 **-maxt** 당시에 완료 하 고 결과 반환 됩니다 통계 검사 후 평가 만족 하지 않고 수집 했습니다.|
 |-buffersize \<n >|메모리 복사 테스트 사용 해야 하는 버퍼 크기를 지정 합니다. 두 번이 금액은 하나의 버퍼에서 다른 문서로 복사 하는 데이터의 양을 결정 하는 CPU 당 할당 됩니다. 기본값은 16MB입니다. 이 값은 가장 가까운 4KB 경계에 반올림 됩니다. 최대 값은 32MB입니다. 최소 값은 4KB입니다. 잘못 된 버퍼 크기를 지정 하는 동안 오류가 발생 합니다.|
 |-v|상태 및 진행률 정보를 포함 하 여 STDOUT로 자세한 출력을 보냅니다. 모든 오류는 명령 창에도 기록 됩니다.|
 |-xml \<파일 이름 >|지정 된 XML 파일로 평가의 출력을 저장 합니다. 지정 된 파일이 있으면 덮어씁니다.|
-|-idiskinfo|실제 볼륨과 논리 디스크에 대 한 정보를  **\<systemconfig >** 섹션의 일부로 XML 출력에 저장 합니다.|
+|-idiskinfo|실제 볼륨과 논리 디스크에 대 한 정보를 XML 출력의 **\<SystemConfig >** 섹션의 일부로 저장 합니다.|
 |-iguid|XML 출력 파일의 전역 고유 식별자 (GUID)를 만듭니다.|
-|-"메모 텍스트"를 기록해 둡니다.|XML 출력 파일의  **\<메모 >** 섹션에 메모 텍스트를 추가 합니다.|
+|-참고 참고 텍스트|XML 출력 파일의 **\<note >** 섹션에 메모 텍스트를 추가 합니다.|
 |-icn|XML 출력 파일에 로컬 컴퓨터 이름을 포함 합니다.|
 |-eef|XML 출력 파일에 대 한 추가 시스템 정보를 열거 합니다.|
 
-## <a name="BKMK_examples"></a>예와
+## <a name="examples"></a><a name=BKMK_examples></a>예와
 
 - 다음 예제에서는 최소 4 초 및 32MB 버퍼 크기를 사용 하 여 파일에 XML 형식으로 결과 저장 및 12 초 보다 더 이상에 대 한 평가 실행 **memtest.xml**합니다.  
   ```
   winsat mem -mint 4.0 -maxt 12.0 -buffersize 32MB -xml memtest.xml
   ```
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 -   로컬 Administrators 그룹 또는 이와 동등한 그룹의 구성원은 사용 하는 데 필요한 최소 **winsat**합니다. 이 명령은 관리자 권한 명령 프롬프트 창에서 실행 되어야 합니다.
 -   관리자 권한 명령 프롬프트 창을 열려면 클릭 **시작**, 클릭 **액세서리**, 를 마우스 오른쪽 단추로 클릭 **명령 프롬프트**, 클릭 하 고 **관리자 권한으로 실행**합니다.
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 

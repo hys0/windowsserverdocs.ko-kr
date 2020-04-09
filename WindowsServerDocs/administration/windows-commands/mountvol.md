@@ -1,24 +1,20 @@
 ---
 title: mountvol
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fea8ad4d-f04a-4aaa-a3e5-75931e867b39
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5a3de8e5744c50acff3fdad0c7cf1dabf14fb144
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 34a98a273274f7982bfdd970710c04178fed4f5a
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71373581"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80839386"
 ---
 # <a name="mountvol"></a>mountvol
 
@@ -40,7 +36,7 @@ mountvol [/n | /e]
 mountvol <Drive>: /s
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------|-----------|
@@ -55,19 +51,19 @@ mountvol <Drive>: /s
 |/s|지정 된 드라이브에 EFI 시스템 파티션을 탑재합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 -   **Mountvol** 드라이브 문자를 요구 하지 않고 볼륨을 연결할 수 있습니다.
--   사용 하 여 분리 되어 있는 볼륨 **/p** "하지 탑재 된 UNTIL A 볼륨 탑재 지점이 생성 됩니다."으로 볼륨 목록에 표시 됩니다 사용 하 여 볼륨의 탑재 지점이 여러 개 있으면 **/d** 사용 하기 전에 추가 탑재 지점을 제거 하려면 **/p**합니다. 다시 만들 수 있습니다 기본 볼륨 탑재 가능한 볼륨 탑재 지점을 할당 합니다.
+-   **/P** 를 사용 하 여 분리 된 볼륨은 볼륨 탑재 지점을 만들 때까지 탑재 되지 않은 볼륨 목록에 나열 됩니다. 사용 하 여 볼륨의 탑재 지점이 여러 개 있으면 **/d** 사용 하기 전에 추가 탑재 지점을 제거 하려면 **/p**합니다. 다시 만들 수 있습니다 기본 볼륨 탑재 가능한 볼륨 탑재 지점을 할당 합니다.
 -   를 다시 포맷 하거나 하드 드라이브의 교체 하지 않고 볼륨 공간을 확장 해야 하는 경우 다른 볼륨을 탑재 경로 추가할 수 있습니다. 여러 탑재 경로 볼륨 하나를 사용 하는 이점은 하나의 드라이브 문자를 사용 하 여 모든 로컬 볼륨에 액세스할 수 있는지 (예: `C:`). 드라이브 문자에 해당 하는 볼륨을 기억할 필요가 없습니다-할 수 있지만 로컬 볼륨을 탑재 하 고 드라이브 문자를 할당 합니다.
 
-## <a name="BKMK_examples"></a>예와
+## <a name="examples"></a><a name=BKMK_examples></a>예와
 
 탑재 지점을 만들려면 다음을 입력 합니다.
 ```
 mountvol \sysmount \\?\Volume\{2eca078d-5cbc-43d3-aff8-7e8511f60d0e}\
 ```
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
-[명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

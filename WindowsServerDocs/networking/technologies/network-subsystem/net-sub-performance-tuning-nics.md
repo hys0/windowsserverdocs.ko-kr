@@ -1,24 +1,21 @@
 ---
 title: 네트워크 어댑터 성능 조정
 description: 이 항목은 Windows Server 2016에 대 한 네트워크 하위 시스템 성능 조정 가이드의 일부입니다.
-audience: Admin
-ms.custom:
-- CI ID 111485
-- CSSTroubleshoot
+audience: Admin - CI ID 111485 - CSSTroubleshoot
 ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 0b9b0f80-415c-4f5e-8377-c09b51d9c5dd
 manager: dcscontentpm
-ms.author: lizross
+ms.author: v-tea
 author: Teresa-Motiv
 ms.date: 12/23/2019
-ms.openlocfilehash: f802804d64b3047a2612b7f346de03aff61c30cd
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: dec88eb81227b62cd0a0ca90810b2598b8f9fd52
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80316546"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854746"
 ---
 # <a name="performance-tuning-network-adapters"></a>네트워크 어댑터 성능 조정
 

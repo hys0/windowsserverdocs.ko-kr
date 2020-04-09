@@ -1,24 +1,20 @@
 ---
 title: nslookup set search
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 064ac660-8b04-4af9-8b2c-e4e0549771b8
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d9da08a296d61789dbafeccde5d46c8a220d874c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 9972919eae1be21d5dd30820d64dd1576b935666
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71372784"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80838306"
 ---
 # <a name="nslookup-set-search"></a>nslookup set search
 
@@ -32,7 +28,7 @@ ms.locfileid: "71372784"
 set [no]search
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |  매개 변수   |                                                                          설명                                                                          |
 |--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -40,6 +36,6 @@ set [no]search
 |  **조건을**  | 응답을 받을 때까지 요청에 DNS 도메인 검색 목록에서 도메인 이름 시스템 (DNS) 도메인 이름을 추가 합니다. 기본 구문은 **검색**합니다. |
 |    {도움말     |                                                                              ?}                                                                               |
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
-[명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

@@ -1,23 +1,19 @@
 ---
 title: 기존 클라이언트 컴퓨터 백업에서 전체 시스템 복원
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 47e498a6-1b71-47de-88f6-8c13c221d108
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: b9629f41c4e8eb707b19914a297d9d8b88c6aead
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 37e4d45f6bd34d77fbbf3cbabcd66a776b624c19
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80310652"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80852646"
 ---
 # <a name="restore-a-full-system-from-an-existing-client-computer-backup"></a>기존 클라이언트 컴퓨터 백업에서 전체 시스템 복원
 
@@ -91,7 +87,7 @@ ms.locfileid: "80310652"
  RAID(Redundant Array of Independent Disks) 및 동적 디스크는 백업할 수 없습니다.  
   
 ##  <a name="how-does-the-system-restore-environment-work"></a><a name="BKMK_HowDoes"></a>시스템 복원 환경은 어떻게 작동 하나요?  
- Windows ServerÂ 2012 Essentials에 제공 된 시스템 복원 미디어는 컴퓨터에 Windows 사전 설치 환경 (Windows PE)를 설치 합니다. Windows PE는 MS-DOS 환경을 대체하며 Windows를 위한 핵심 프로그램 파일을 포함하고 있습니다. Windows Server Essentials에는 네트워크를 사용 하 고 미디어에 의존 하지 않는 클라이언트 복원 서비스를 사용 하거나 USB 플래시 드라이브를 사용 하 여 시스템을 복원 하는 데 지원 되는 두 가지 방법이 있습니다.  
+ Windows ServerÂ 2012 Essentials에 제공 된 시스템 복원 미디어는 컴퓨터에 Windows 사전 설치 환경 (Windows PE)를 설치 합니다.&reg; Windows PE는 MS-DOS 환경을 대체하며 Windows를 위한 핵심 프로그램 파일을 포함하고 있습니다. Windows Server Essentials에는 네트워크를 사용 하 고 미디어에 의존 하지 않는 클라이언트 복원 서비스를 사용 하거나 USB 플래시 드라이브를 사용 하 여 시스템을 복원 하는 데 지원 되는 두 가지 방법이 있습니다.  
   
 > [!NOTE]
 >  Windows PE는 무선 연결을 지원하지 않습니다. 따라서 복원되는 컴퓨터가 회사 네트워크에 연결되어 있어야 합니다.  

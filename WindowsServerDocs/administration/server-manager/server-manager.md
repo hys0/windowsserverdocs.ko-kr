@@ -1,34 +1,30 @@
 ---
 title: 서버 관리자
 description: 서버 관리자
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-server-manager
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d996ef40-8bcc-42b0-b6ae-806b828223f6
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 373e2063622317905686b1c5fc74425943abd9ec
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 41d9227dd5472fc55858d75fa25e728dc69c2c7c
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71383062"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80851476"
 ---
 # <a name="server-manager"></a>서버 관리자
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-서버 관리자는 Windows Server의 관리 콘솔로, IT 전문가가 서버에 물리적으로 액세스 하거나 원격 데스크톱을 사용 하도록 설정 하지 않고도 데스크톱에서 로컬 및 원격 Windows 기반 서버를 프로 비전 하 고 관리할 수 있도록 도와줍니다. 각 서버에 대 한 프로토콜 (rdP) 연결입니다. 서버 관리자가 Windows Server 2008 R2 및 Windows Server 2008에서 사용할 수 있지만 서버 관리자는 관리자가 관리할 수는 서버 수가 늘어났으며와 원격 다중 서버 관리를 지원 하려면 Windows Server 2012에서 업데이트 되었습니다.
+서버 관리자는 Windows Server의 관리 콘솔로, IT 전문가가 서버에 물리적으로 액세스 하거나 각 서버에 rdP (원격 데스크톱 프로토콜) 연결을 설정 하지 않고도 데스크톱에서 로컬 및 원격 Windows 기반 서버를 프로 비전 하 고 관리할 수 있도록 도와줍니다. 서버 관리자가 Windows Server 2008 R2 및 Windows Server 2008에서 사용할 수 있지만 서버 관리자는 관리자가 관리할 수는 서버 수가 늘어났으며와 원격 다중 서버 관리를 지원 하려면 Windows Server 2012에서 업데이트 되었습니다.
 
 이 테스트에서 Windows Server 2016, Windows Server 2012 R2 및 Windows Server 2012의 서버 관리자 데 사용할 수 있는 서버를 실행 하는 작업에 따라 최대 100 명의 서버를 관리 합니다. 단일 서버 관리자 콘솔을 사용 하 여 관리할 수 있는 서버 수는 서버 관리자를 실행 하는 컴퓨터에 사용할 수 있는 하드웨어 및 네트워크 리소스 및 관리 되는 서버에서 요청 하는 데이터의 양에 따라 달라질 수 있습니다. 표시 하려는 데이터의 양이 해당 컴퓨터의 리소스 용량에 가까워지면 느린 응답에서 서버 관리자 및 새로 고침 완료 시 지연이 발생할 수 있습니다. 서버 관리자를 사용 하 여 관리할 수 있는 서버 수를 향상 시키기 위해, 서버 관리자의 설정을 사용 하 여 관리 되는 서버에서 가져오는 이벤트 데이터를 제한 권장는 **이벤트 데이터 구성** 대화 상자입니다. 이벤트 데이터 구성은 **이벤트** 타일의 **작업** 메뉴에서 열 수 있습니다. 조직에 있는 서버는 엔터프라이즈 수준의 수를 관리 해야 하는 경우에 제품을 평가 것이 좋습니다는 [Microsoft System Center 제품군](https://go.microsoft.com/fwlink/p/?LinkId=239437)합니다.
 
-이 항목 및 하위 서버 관리자 콘솔의 기능을 사용 하는 방법에 대 한 정보를 제공 합니다. 이 항목에는 다음 섹션이 수록되어 있습니다.
+이 항목 및 하위 서버 관리자 콘솔의 기능을 사용 하는 방법에 대 한 정보를 제공 합니다. 이 항목에는 다음과 같은 섹션이 포함되어 있습니다.
 
 -   [초기 고려 사항 및 시스템 요구 사항 검토](#review-initial-considerations-and-system-requirements)
 
@@ -49,18 +45,18 @@ ms.locfileid: "71383062"
 ### <a name="software-and-configuration-requirements"></a>소프트웨어 및 구성 요구 사항
 서버 관리자는 Windows Server 2016의 모든 버전에는 기본적으로 설치 됩니다. Windows Server 2016 서버 관리자를 사용 하 여 관리 하는 수 [Server Core 설치 옵션](https://go.microsoft.com/fwlink/p/?LinkID=241573) Windows Server 2016, Windows Server 2012 및 원격 컴퓨터에서 실행 되는 Windows Server 2008 r 2입니다. 서버 관리자는 Windows Server 2016의 Server Core 설치 옵션에서 실행 됩니다.
 
-서버 관리자가 최소 서버 그래픽 인터페이스;에서 실행 즉, 서버 그래픽 셸 기능이 설치 될 때 되지 않습니다. Windows Server 2016에서 기본적으로 서버 그래픽 셸 기능이 설치 되지 않았습니다. 실행 하지 않는 서버 그래픽 셸, 서버 관리자 콘솔이 실행 되지만 일부 응용 프로그램 또는 콘솔에서 사용할 수 있는 도구를 사용할 수 없는. 인터넷 브라우저는 서버 그래픽 셸이 없으면 실행 되지 않으므로 HTML 도움말 (예: mmc F1 도움말)과 같은 웹 페이지 및 응용 프로그램을 열 수 없습니다. 서버 그래픽 셸이 설치 되어 있지 않으면; Windows 자동 업데이트 및 피드백을 구성 하기 위한 대화 상자를 열 수 없습니다. 서버 관리자 콘솔에서 이러한 대화 상자를 열고 명령을 실행 하도록 리디렉션됩니다 **sconfig.cmd**합니다.
+서버 관리자가 최소 서버 그래픽 인터페이스;에서 실행 즉, 서버 그래픽 셸 기능이 설치 될 때 되지 않습니다. Windows Server 2016에서 기본적으로 서버 그래픽 셸 기능이 설치 되지 않았습니다. 실행 하지 않는 서버 그래픽 셸, 서버 관리자 콘솔이 실행 되지만 일부 애플리케이션 또는 콘솔에서 사용할 수 있는 도구를 사용할 수 없는. 인터넷 브라우저는 서버 그래픽 셸이 없으면 실행 되지 않으므로 HTML 도움말 (예: mmc F1 도움말)과 같은 웹 페이지 및 응용 프로그램을 열 수 없습니다. 서버 그래픽 셸이 설치 되어 있지 않으면; Windows 자동 업데이트 및 피드백을 구성 하기 위한 대화 상자를 열 수 없습니다. 서버 관리자 콘솔에서 이러한 대화 상자를 열고 명령을 실행 하도록 리디렉션됩니다 **sconfig.cmd**합니다.
 
 Windows Server 2016 보다 오래 된 Windows Server 릴리스를 실행 하는 서버를 관리 하려면 다음 소프트웨어 및 Windows Server 2016에서 서버 관리자를 사용 하 여 이전 버전의 Windows Server를 관리 하기 위해 업데이트를 설치 합니다.
 
-|운영 체제|필요한 소프트웨어|
+|운영 체제|필수 소프트웨어|
 |----------|-----------|
-| Windows Server 2012 R2 또는 Windows Server 2012 |-   [.NET Framework 4.6](https://www.microsoft.com/download/details.aspx?id=45497)<br />-   [Windows Management Framework 5.0](https://go.microsoft.com/fwlink/?LinkID=395058). Windows 관리 프레임 워크 5.0 다운로드 패키지는 Windows Server 2012 R2 및 Windows Server 2012에서 Windows Management Instrumentation (WMI) 공급자를 업데이트합니다. 관리 되는 서버에 설치 되어 있는 역할 및 기능에 대 한 정보를 수집 하는 서버 관리자를 사용 하는 업데이트 된 WMI 공급자 있습니다. Windows Server 2012 r 2를 실행 하는 서버 또는 Windows Server 2012의 관리 효율성 상태는 업데이트가 적용 될 때까지 **액세스할 수 없습니다.** 합니다.<br />-성능 업데이트와 관련 된 [기술 자료 문서 2682011](https://go.microsoft.com/fwlink/p/?LinkID=245487) 은 Windows Server 2012 r 2를 실행 하는 서버 또는 Windows Server 2012에 필요 하지 않습니다.|
-| Windows Server 2008 R2 |-   [.NET Framework 4.5](https://www.microsoft.com/download/details.aspx?id=30653)<br />-   [Windows Management Framework 4.0](https://go.microsoft.com/fwlink/?LinkId=293881). Windows Management Framework 4.0 다운로드 패키지는 Windows Server 2008 r 2에서 Windows Management Instrumentation (WMI) 공급자를 업데이트합니다. 관리 되는 서버에 설치 되어 있는 역할 및 기능에 대 한 정보를 수집 하는 서버 관리자를 사용 하는 업데이트 된 WMI 공급자 있습니다. Windows Server 2008 r 2를 실행 하는 서버는 관리 효율성 상태는 업데이트가 적용 될 때까지 **액세스할 수 없습니다.** 합니다.<br />-성능 업데이트와 관련 된 [기술 자료 문서 2682011](https://go.microsoft.com/fwlink/p/?LinkID=245487) 서버 관리자 Windows Server 2008 r 2에서 성능 데이터를 수집할 수 있습니다.|
-| Windows Server 2008 |-   [.NET Framework 4](https://www.microsoft.com/download/en/details.aspx?id=17718)<br />-    windows[management framework 3.0](https://go.microsoft.com/fwlink/p/?LinkID=229019) windows Server 2008의 Windows management framework 3.0 WMI(WINDOWS MANAGEMENT INSTRUMENTATION) (WMI) 공급자를 다운로드 합니다. 관리 되는 서버에 설치 되어 있는 역할 및 기능에 대 한 정보를 수집 하는 서버 관리자를 사용 하는 업데이트 된 WMI 공급자 있습니다. 업데이트가 적용 될 때까지 Windows Server 2008를 실행 하는 서버의 관리 효율성 상태는 **액세스할 수 없음-이전 버전에서 Windows Management Framework 3.0를 실행 하는지 확인**합니다.<br />-성능 업데이트와 관련 된 [기술 자료 문서 2682011](https://go.microsoft.com/fwlink/p/?LinkID=245487) 서버 관리자에서 Windows Server 2008 성능 데이터를 수집할 수 있습니다.|
+| Windows Server 2012 R2 또는 Windows Server 2012 |-   [.NET Framework 4.6](https://www.microsoft.com/download/details.aspx?id=45497)<br />[Windows Management Framework 5.0](https://go.microsoft.com/fwlink/?LinkID=395058)을 -   합니다. Windows 관리 프레임 워크 5.0 다운로드 패키지는 Windows Server 2012 R2 및 Windows Server 2012에서 Windows Management Instrumentation (WMI) 공급자를 업데이트합니다. 관리 되는 서버에 설치 되어 있는 역할 및 기능에 대 한 정보를 수집 하는 서버 관리자를 사용 하는 업데이트 된 WMI 공급자 있습니다. Windows Server 2012 r 2를 실행 하는 서버 또는 Windows Server 2012의 관리 효율성 상태는 업데이트가 적용 될 때까지 **액세스할 수 없습니다.** 합니다.<br />-성능 업데이트와 관련 된 [기술 자료 문서 2682011](https://go.microsoft.com/fwlink/p/?LinkID=245487) 은 Windows Server 2012 r 2를 실행 하는 서버 또는 Windows Server 2012에 필요 하지 않습니다.|
+| Windows Server 2008 R2 |-   [.NET Framework 4.5](https://www.microsoft.com/download/details.aspx?id=30653)<br />[Windows Management Framework 4.0](https://go.microsoft.com/fwlink/?LinkId=293881)을 -   합니다. Windows Management Framework 4.0 다운로드 패키지는 Windows Server 2008 r 2에서 Windows Management Instrumentation (WMI) 공급자를 업데이트합니다. 관리 되는 서버에 설치 되어 있는 역할 및 기능에 대 한 정보를 수집 하는 서버 관리자를 사용 하는 업데이트 된 WMI 공급자 있습니다. Windows Server 2008 r 2를 실행 하는 서버는 관리 효율성 상태는 업데이트가 적용 될 때까지 **액세스할 수 없습니다.** 합니다.<br />-성능 업데이트와 관련 된 [기술 자료 문서 2682011](https://go.microsoft.com/fwlink/p/?LinkID=245487) 서버 관리자 Windows Server 2008 r 2에서 성능 데이터를 수집할 수 있습니다.|
+| Windows Server 2008 |-   [.NET Framework 4](https://www.microsoft.com/download/en/details.aspx?id=17718)<br />windows management framework [3.0](https://go.microsoft.com/fwlink/p/?LinkID=229019) -   Windows management framework 3.0 windows Server 2008의 WMI (패키지 업데이트 WMI(Windows Management Instrumentation)) 공급자를 다운로드 합니다. 관리 되는 서버에 설치 되어 있는 역할 및 기능에 대 한 정보를 수집 하는 서버 관리자를 사용 하는 업데이트 된 WMI 공급자 있습니다. 업데이트가 적용 될 때까지 Windows Server 2008를 실행 하는 서버의 관리 효율성 상태는 **액세스할 수 없음-이전 버전에서 Windows Management Framework 3.0를 실행 하는지 확인**합니다.<br />-성능 업데이트와 관련 된 [기술 자료 문서 2682011](https://go.microsoft.com/fwlink/p/?LinkID=245487) 서버 관리자에서 Windows Server 2008 성능 데이터를 수집할 수 있습니다.|
 
 #### <a name="manage-remote-computers-from-a-client-computer"></a>클라이언트 컴퓨터에서 원격 컴퓨터 관리
-서버 관리자 콘솔에 포함 된 [원격 서버 관리 도구](https://go.microsoft.com/fwlink/?LinkID=404281) Windows 10 용입니다. 클라이언트 컴퓨터에 원격 서버 관리 도구를 설치 하면 없습니다 관리할 로컬 컴퓨터의 서버 관리자를 사용 하 여 Windows 클라이언트 운영 체제를 실행 하는 컴퓨터 또는 장치를 관리 하려면 서버 관리자를 사용할 수 없습니다. 만 Windows 기반 서버를 관리 하려면 서버 관리자를 사용할 수 있습니다.
+서버 관리자 콘솔에 포함 된 [원격 서버 관리 도구](https://go.microsoft.com/fwlink/?LinkID=404281) Windows 10 용입니다. 클라이언트 컴퓨터에 원격 서버 관리 도구를 설치 하면 없습니다 관리할 로컬 컴퓨터의 서버 관리자를 사용 하 여 Windows 클라이언트 운영 체제를 실행 하는 컴퓨터 또는 디바이스를 관리 하려면 서버 관리자를 사용할 수 없습니다. 만 Windows 기반 서버를 관리 하려면 서버 관리자를 사용할 수 있습니다.
 
 |서버 관리자 원본 운영 체제|대상으로 Windows Server 2016|대상으로 Windows Server 2012 R2 |대상으로 Windows Server 2012 |대상으로 Windows Server 2008 R2 또는 Windows Server 2008 |Windows Server 2003 대상|
 |-------------------------------|--------------------------------------------|---------------------------------------|------------------------------------|-----------------------------------------------------------------------|------------------|
@@ -74,7 +70,7 @@ Windows Server 2016 보다 오래 된 Windows Server 릴리스를 실행 하는 
 
 2.  **시작** 화면에서 **서버 관리자**를 클릭 합니다. **서버 관리자** 타일은 원격 서버 관리 도구를 설치한 후에 사용할 수 있습니다.
 
-3.  원격 서버 관리 도구를 설치한 후 **시작** 화면에 **관리 도구** 및 **서버 관리자** 타일이 모두 표시 되지 않고 **시작** 화면에서 서버 관리자를 검색 하면 표시 되지 않습니다. 결과에서 **관리 도구 표시** 설정이 켜져 있는지 확인 합니다. 이 설정을 보려면 **시작** 화면의 오른쪽 위 모서리를 마우스 커서로 가리킨 다음 **설정**을 클릭 합니다. **관리 도구 표시** 가 꺼져 있으면 원격 서버 관리 도구의 일부로 설치된 도구를 표시하도록 설정을 켭니다.
+3.  원격 서버 관리 도구를 설치한 후 **시작** 화면에 **관리 도구** 및 **서버 관리자** 타일이 모두 표시 되지 않고 **시작** 화면에서 서버 관리자를 검색 해도 결과가 표시 되지 않으면 **관리 도구 표시** 설정이 켜져 있는지 확인 합니다. 이 설정을 보려면 **시작** 화면의 오른쪽 위 모서리를 마우스 커서로 가리킨 다음 **설정**을 클릭 합니다. **관리 도구 표시**가 꺼져 있으면 원격 서버 관리 도구의 일부로 설치된 도구를 표시하도록 설정을 켭니다.
 
 Windows 10에서 원격 서버를 관리 하기 위해 원격 서버 관리 도구를 실행 하는 방법에 대 한 자세한 내용은 TechNet Wiki의 [원격 서버 관리 도구](https://go.microsoft.com/fwlink/?LinkID=221055) 을 참조 하십시오.
 
@@ -119,7 +115,7 @@ Windows 10에서 원격 서버를 관리 하기 위해 원격 서버 관리 도�
     > [!NOTE]
     > 이 명령은 상승된 사용자 권한(관리자 권한으로 실행)으로 연 명령 프롬프트에서도 사용할 수 있습니다.
 
-    원격 관리를 사용 하도록 설정 하지 못한 경우 문제 해결 팁 및 모범 사례는 Microsoft TechNet의 [about_remote_Troubleshooting](https://go.microsoft.com/fwlink/p/?LinkID=135188) 을 참조 하십시오.
+    원격 관리를 사용 하도록 설정 하지 못한 경우 문제 해결 팁 및 모범 사례는 Microsoft TechNet의 [about_remote_Troubleshooting](https://go.microsoft.com/fwlink/p/?LinkID=135188) 을 참조 하세요.
 
 ###### <a name="to-enable-server-manager-and-windows-powershell-remote-management-on-older-operating-systems"></a>이전 운영 체제에서 서버 관리자 및 Windows PowerShell 원격 관리를 사용하도록 설정하려면
 
@@ -132,7 +128,7 @@ Windows 10에서 원격 서버를 관리 하기 위해 원격 서버 관리 도�
 ## <a name="tasks-that-you-can-perform-in-server-manager"></a>서버 관리자에서 수행할 수 있는 작업
 서버 관리자 서버 관리를 더 효율적으로 관리자가 단일 도구를 사용 하 여 다음 표에 작업을 수행할 수 있도록 합니다. Windows Server 2012 R2 및 Windows Server 2012에서 모두 서버 표준 사용자와 Administrators 그룹의 구성원 작업을 수행할 수 관리 서버 관리자에서 하지만 기본적으로 표준 사용자는 못하도록 일부 작업을 수행한 다음 표에 나와 있는 것 처럼.
 
-관리자는 서버 관리자 cmdlet 모듈 ( [인 enable-servermanagerstandarduserremoting](https://technet.microsoft.com/library/jj205470.aspx) 및 [인 enable-servermanagerstandarduserremoting)](https://technet.microsoft.com/library/jj205468.aspx)에서 두 개의 Windows PowerShell cmdlet을 사용 하 여 일부 사용자에 대 한 표준 사용자 액세스를 추가로 제어할 수 있습니다. 추가 데이터입니다. **인 enable-servermanagerstandarduserremoting** cmdlet은 이벤트, 서비스, 성능 카운터, 역할 및 기능 인벤토리 데이터에 대 한 액세스 권한이 있는 표준 관리자가 아닌 사용자를 하나 이상 제공할 수 있습니다.
+관리자는 서버 관리자 cmdlet 모듈 ( [인 enable-servermanagerstandarduserremoting](https://technet.microsoft.com/library/jj205470.aspx) 및 [인 enable-servermanagerstandarduserremoting)](https://technet.microsoft.com/library/jj205468.aspx)에서 두 개의 Windows PowerShell cmdlet을 사용 하 여 추가 데이터에 대 한 표준 사용자 액세스를 추가로 제어할 수 있습니다. **인 enable-servermanagerstandarduserremoting** cmdlet은 이벤트, 서비스, 성능 카운터, 역할 및 기능 인벤토리 데이터에 대 한 액세스 권한이 있는 표준 관리자가 아닌 사용자를 하나 이상 제공할 수 있습니다.
 
 > [!IMPORTANT]
 > Windows Server 운영 체제의 최신 릴리스를 관리 하려면 서버 관리자를 사용할 수 없습니다. Windows Server 2012 r 2를 실행 하는 서버를 관리 하려면 Windows Server 2012 또는 Windows 8에서 실행 되는 서버 관리자를 사용할 수 없습니다.
@@ -143,7 +139,7 @@ Windows 10에서 원격 서버를 관리 하기 위해 원격 서버 관리 도�
 |특정 지리적 위치에 있거나 특정 용도를 제공 하는 서버와 같은 사용자 지정 서버 그룹을 만들고 편집 합니다.|예|예|
 |설치 또는 역할, 역할 서비스 및 로컬 컴퓨터나 Windows Server 2012 r 2를 실행 하는 원격 서버 또는 Windows Server 2012 기능을 제거 합니다. 역할, 역할 서비스 및 기능 정의 참조 하십시오. [역할, 역할 서비스 및 기능](https://go.microsoft.com/fwlink/p/?LinkId=239558)합니다.|예|아니요|
 |로컬 또는 원격 서버에 설치된 서버 역할 및 기능을 보고 변경합니다. **참고:** 서버 관리자에서 역할 및 기능 데이터는 시스템 기본 GUI 언어 또는 운영 체제의 설치 중에 선택한 언어 라고도 하는 시스템의 기본 언어로 표시 됩니다.|예|표준 사용자는 역할 및 기능을 보고 관리하며 역할 이벤트 보기 등과 같은 작업을 수행할 수 있지만 역할 서비스를 추가하거나 제거할 수는 없습니다.|
-|Windows PowerShell 또는 mmc 스냅인과 같은 관리 도구를 시작 합니다. 서버를 마우스 오른쪽 단추로 클릭 하 여 원격 서버에서 대상으로 Windows PowerShell 세션을 시작할 수는 **서버** 타일을 클릭 한 다음 마우스 **Windows PowerShell**합니다. 서버 관리자 콘솔의 **도구** 메뉴에서 mmc 스냅인을 시작한 후 스냅인이 열려 있는 후 원격 컴퓨터를 가리키도록 mmc를 지정할 수 있습니다.|예|예|
+|Windows PowerShell 또는 mmc 스냅인과 같은 관리 도구를 시작 합니다. **서버 타일에서** 서버를 마우스 오른쪽 단추로 클릭 한 다음 **windows powershell**을 클릭 하 여 원격 서버를 대상으로 하는 windows powershell 세션을 시작할 수 있습니다. 서버 관리자 콘솔의 **도구** 메뉴에서 mmc 스냅인을 시작한 후 스냅인이 열려 있는 후 원격 컴퓨터를 가리키도록 mmc를 지정할 수 있습니다.|예|예|
 |**서버** 타일에서 서버를 마우스 오른쪽 단추로 클릭하고 **다음으로 관리**를 클릭하여 서로 다른 자격 증명을 포함한 원격 서버를 관리합니다. 일반 서버와 File and Storage Services 관리 작업에 대해 **다음으로 관리**를 사용할 수 있습니다.|예|아니요|
 |서비스, 시작 또는 중지와 같은 서버의 작동 수명 주기와 연관 된 관리 작업 수행 한 서버 네트워크 설정, 사용자 및 그룹 및 원격 데스크톱 연결을 구성할 수 있도록 하는 다른 도구를 시작 합니다.|예|표준 사용자는 서비스를 시작하거나 중지할 수 없습니다. 로컬 서버 이름, 작업 그룹 또는 도메인 구성원 자격 및 원격 데스크톱 설정을 변경할 수 있지만 사용자 계정 컨트롤에서 이러한 작업을 수행 하기 전에 관리자 자격 증명을 제공 하 라는 메시지가 표시 됩니다. 표준 사용자는 원격 관리 설정은 변경할 수 없습니다.|
 |모범 사례 준수를 위한 역할 검사를 포함하여 서버에 설치된 역할의 작동 수명 주기와 관련된 관리 작업을 수행합니다.|예|표준 사용자가 모범 사례 분석기 검사를 실행할 수 없습니다.|
@@ -170,7 +166,7 @@ Windows 10에서 원격 서버를 관리 하기 위해 원격 서버 관리 도�
 
 1.  서버 관리자 콘솔에서에 **관리** 메뉴 클릭 **서버 관리자 속성**합니다.
 
-2.  **서버 관리자 속성** 대화 상자에서 **로그온 시 서버 관리자를 자동으로 시작 안 함**확인란을 선택합니다. **확인**을 클릭합니다.
+2.  **서버 관리자 속성** 대화 상자에서 **로그온 시 서버 관리자를 자동으로 시작 안 함** 확인란을 선택합니다. **확인**을 클릭합니다.
 
 3.  또는 그룹 정책 설정을 사용 하 여 자동으로 시작 서버 관리자를 방지할 수 **로그온 시 서버 관리자를 자동으로 시작 않는**합니다. 로컬 그룹 정책 editor console에서이 정책 설정의 경로는 computer 시스템 \ 서버 Manager입니다.
 
@@ -180,7 +176,7 @@ Windows 10에서 원격 서버를 관리 하기 위해 원격 서버 관리 도�
 > [!IMPORTANT]
 > 원격 서버를 다시 시작하면 사용자가 원격 서버에 로그온되어 있는 경우에도 그리고 저장되지 않은 데이터가 포함된 프로그램이 열려 있는 경우에도 서버가 강제로 다시 시작됩니다. 이 동작은 로컬 컴퓨터 종료나 다시 시작과 다릅니다. 로컬 컴퓨터를 종료하거나 다시 시작할 경우에는 저장되지 않은 프로그램 데이터를 저장할지 여부를 묻고, 로그온된 사용자를 강제로 로그오프할 것인지 확인합니다. 원격 서버의 다른 사용자를 강제로 로그오프시키고 원격 서버에서 실행 중인 프로그램의 저장되지 않은 데이터가 무시될 수 있습니다.
 > 
-> 관리 되는 서버를 종료 하 고 다시 시작 하는 동안 서버 관리자에서 자동 새로 고침이 발생 하는 경우에는 서버 관리자가 완료 될 때까지 원격 서버에 연결할 수 없으므로 관리 되는 서버에 대해 새로 고침 및 관리 효율 상태 오류가 발생할 수 있습니다. 시키거나.
+> 관리 되는 서버가 종료 되 고 다시 시작 되는 동안 서버 관리자에서 자동 새로 고침이 수행 되 면가 다시 시작을 완료할 때까지 원격 서버에 연결할 수 서버 관리자 없으므로 관리 되는 서버에 대해 새로 고침 및 관리 효율성 상태 오류가 발생할 수 있습니다.
 
 #### <a name="to-restart-remote-servers-in-server-manager"></a>서버 관리자에서 원격 서버를 다시 시작하려면
 
@@ -195,7 +191,7 @@ Windows 10에서 원격 서버를 관리 하기 위해 원격 서버 관리 도�
 
 -   %*appdata*% \ Microsoft\Windows\ServerManager\Serverlist.xml
 
--   %*appdata*% \ Local\Microsoft_Corporation\ServerManager.exe_StrongName_*GUID*\6.2.0.0\user.config
+-   %*appdata*% \ Local \ Microsoft_Corporation \Servermanager. exe_StrongName_*GUID*\6.2.0.0\user.config
 
 > [!NOTE]
 > -   서버 풀의 서버에 대한 다음으로 관리(또는 대체 항목) 자격 증명은 로밍 프로필에 저장되지 않습니다. 서버 관리자 사용자가 이러한 관리 하고자 하는 각 컴퓨터에 추가 해야 합니다.
@@ -215,15 +211,15 @@ Windows 10에서 원격 서버를 관리 하기 위해 원격 서버 관리 도�
 
 3.  다음 중 하나를 수행합니다.
 
-    -   미국 영어 (en-us) 빌드는 **serverlist가** 파일에 대 한 변경 내용이 프로필에 자동으로 저장 됩니다. 다음 단계로 이동합니다.
+    -   미국 영어 (en-us) 빌드에서 **serverlist가** 파일에 대 한 변경 내용은 자동으로 프로필에 저장 됩니다. 다음 단계로 이동합니다.
 
     -   다른 빌드에는 사용자의 로밍 프로필의 일부인 네트워크 공유에 서버 관리자를 실행 하는 컴퓨터에서 다음 두 파일을 복사 합니다.
 
         -   %*appdata*% \ Microsoft\Windows\ServerManager\Serverlist.xml
 
-        -   %*localappdata*% \ Microsoft_Corporation\ServerManager.exe_StrongName_*GUID*\6.2.0.0\user.config
+        -   %*localappdata*% \ Microsoft_Corporation \Servermanager. exe_StrongName_*GUID*\6.2.0.0\user.config
 
-4.  **확인** 을 클릭하여 변경 내용을 저장하고 **속성** 대화 상자를 닫습니다.
+4.  **확인**을 클릭하여 변경 내용을 저장하고 **속성** 대화 상자를 닫습니다.
 
 #### <a name="to-export-server-manager-settings-to-computers-in-workgroups"></a>서버 관리자 설정을 작업 그룹의 컴퓨터로 내보내려면
 
@@ -231,7 +227,7 @@ Windows 10에서 원격 서버를 관리 하기 위해 원격 서버 관리 도�
 
     -   %*appdata*% \ Microsoft\Windows\ServerManager\Serverlist.xml
 
-    -   %*localappdata*% \ Microsoft_Corporation\ServerManager.exe_StrongName_*GUID*\6.2.0.0\user.config
+    -   %*localappdata*% \ Microsoft_Corporation \Servermanager. exe_StrongName_*GUID*\6.2.0.0\user.config
 
 
 

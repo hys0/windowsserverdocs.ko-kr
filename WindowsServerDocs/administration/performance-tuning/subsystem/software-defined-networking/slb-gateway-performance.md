@@ -4,15 +4,15 @@ description: SDN 네트워크에 대 한 SLB 게이트웨이 성능 조정 지�
 ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
-ms.author: grcusanz; AnPaul
+ms.author: grcusanz; anpaul
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 9a0d239da2ca321333ec757db22bbaf9a9b8ba30
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: d1a497f24eba26b3b9b866772ae5171ea0fcbb24
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71383463"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80851586"
 ---
 # <a name="slb-gateway-performance-tuning-in-software-defined-networks"></a>소프트웨어 정의 네트워크에서 SLB 게이트웨이 성능 튜닝
 
@@ -26,7 +26,7 @@ SLB Mux 가상 머신은 활성-활성 구성으로 배포 됩니다.  이는 �
 
 VIP (가상 IP)에 대 한 개별 연결은 항상 동일한 Mux로 전송 되며, muxes 수가 일정 하 게 유지 되 면 처리량은 단일 Mux VM의 처리량으로 제한 됩니다.  Muxes는 VIP로 향하는 인바운드 트래픽만 처리 합니다.  응답 패킷은 클라이언트에 전달 하는 실제 스위치로 응답을 보내는 VM에서 직접 이동 합니다.
 
-경우에 따라 VIP를 관리 하는 것과 동일한 네트워크 컨트롤러에 추가 된 SDN 호스트에서 요청 원본을 만든 경우 요청에 대 한 인바운드 경로를 추가로 최적화할 수 있습니다 .이를 통해 대부분의 패킷이 클라이언트에서 서버에 대 한 Mux를 완전히 무시 합니다.  이 최적화를 수행 하는 데 필요한 추가 구성은 없습니다.
+일부 경우에는 VIP를 관리 하는 것과 동일한 네트워크 컨트롤러에 추가 된 SDN 호스트에서 요청 원본이 생성 되는 경우에도 요청에 대 한 인바운드 경로를 추가로 최적화 하 여 Mux VM을 완전히 우회 하 여 클라이언트에서 서버로 직접 이동 하는 것이 가능 합니다.  이 최적화를 수행 하는 데 필요한 추가 구성은 없습니다.
 
 각 SLB Mux VM은 [소프트웨어 정의 네트워크 인프라 계획](../../../../networking/sdn/plan/Plan-a-Software-Defined-Network-Infrastructure.md) 항목의 SDN 인프라 가상 머신 역할 요구 사항 섹션에 제공 된 지침에 따라 크기를 조정 해야 합니다.
 

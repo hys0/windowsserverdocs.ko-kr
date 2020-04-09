@@ -1,24 +1,20 @@
 ---
 title: 레이블
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bbae8bdd-97d4-4566-9118-7c95aa07645f
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e66a2d9a7d28462b287084e3f8b129ffc03800bd
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 7ccb86e2167682e1048161f2d5f5386a8b5cf6ed
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71374795"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80841176"
 ---
 # <a name="label"></a>레이블
 
@@ -34,16 +30,16 @@ ms.locfileid: "71374795"
 label [/mp] [<Volume>] [<Label>]
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------|-----------|
 |/mp|볼륨 탑재 지점 또는 볼륨 이름으로 처리 해야 함을 지정 합니다.|
-|\<Volume >|(콜론) 드라이브 문자 지정 탑재 지점 또는 볼륨 이름입니다. 볼륨 이름을 지정 하는 경우는 **/mp** 매개 변수가 필요 하지 않습니다.|
-|\<Label >|볼륨에 대 한 레이블을 지정합니다.|
+|볼륨 > \<|(콜론) 드라이브 문자 지정 탑재 지점 또는 볼륨 이름입니다. 볼륨 이름을 지정 하는 경우는 **/mp** 매개 변수가 필요 하지 않습니다.|
+|\<레이블 >|볼륨에 대 한 레이블을 지정합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 - Windows 볼륨 레이블 및 일련 번호 (있으면)의 일부분으로 표시 디렉터리 목록입니다.
 - NTFS 볼륨 레이블의 공백을 포함 하 여 길이가 최대 32 자를 수 있습니다. NTFS 볼륨 레이블 유지 및 레이블을 만들 때 사용 된 사례를 표시 합니다.
@@ -59,7 +55,7 @@ label [/mp] [<Volume>] [<Label>]
   ```  
   레이블을 삭제 하려면 Y 키 또는 레이블을 변경 하지 않으려면 N 키를 누릅니다.
 
-## <a name="BKMK_examples"></a>예와
+## <a name="examples"></a><a name=BKMK_examples></a>예와
 
 7 월에 대 한 판매 정보를 포함 하는 드라이브의 디스크에에서 레이블을 입력 합니다.
 ```
@@ -82,6 +78,6 @@ C 드라이브에 대 한 현재 레이블을 삭제 하려면 다음이 단계�
    ```  
 3. 현재 레이블을 삭제 하려면 Y 누릅니다.
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
-[명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

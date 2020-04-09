@@ -1,24 +1,20 @@
 ---
 title: 파티션 선택
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 25f70083-b8f7-4a8e-9b34-4b3ffbe06670
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9a186e2678fde64396a8b4b57a2d14e4b0b7bf26
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 97145d73cbbe1bdc9b27e545b047b78fe89e4984
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71371074"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80834806"
 ---
 # <a name="select-partition"></a>파티션 선택
 
@@ -34,13 +30,13 @@ ms.locfileid: "71371074"
 select partition=<n>  
 ```  
   
-## <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
   
 |   매개 변수    |                                                                                    설명                                                                                    |
 |----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 파티션\=<n> | 포커스를 받을 파티션의 수입니다. 사용 하 여 현재 선택 된 디스크에 모든 파티션에 대 한 숫자를 볼 수는 **파티션 목록이** DiskPart 명령을 합니다. |
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
   
 -   파티션을 선택 하기 전에 먼저 선택 해야 사용 하 여 디스크는 **디스크 선택** 명령입니다.  
   
@@ -50,7 +46,7 @@ select partition=<n>
   
 -   파티션이 해당 볼륨으로 선택 된 경우 볼륨이 자동으로 선택 됩니다.  
   
-## <a name="BKMK_examples"></a>예와  
+## <a name="examples"></a><a name=BKMK_examples></a>예와  
 포커스 파티션 3 입력 합니다.  
   
 ```  
@@ -63,8 +59,8 @@ select partitition=3
 select partition  
 ```  
   
-#### <a name="additional-references"></a>추가 참조  
-[명령줄 구문 키](command-line-syntax-key.md)  
+## <a name="additional-references"></a>추가 참조  
+- [명령줄 구문 키](command-line-syntax-key.md)  
   
 
   

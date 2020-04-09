@@ -1,58 +1,55 @@
 ---
 title: tscon
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: Tscon에 대 한 Windows 명령 항목은 원격 데스크톱 세션 호스트 (rd 세션 호스트) 서버에서 다른 세션에 연결 합니다.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 315a9793-cd10-4987-bb68-89a9d13f7fce
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6e53ea2888b66b9e4fbf026f752acf9803270fc2
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 1666e3fd47fab89b63efccef43489d15930cd6de
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71392368"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80832536"
 ---
 # <a name="tscon"></a>tscon
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-원격 데스크톱 세션 호스트 (rd 세션 호스트) 서버에서 다른 세션에 연결 합니다.  
-이 명령을 사용 하는 방법에 대 한 예는 [예제](#BKMK_examples)를 참조 하세요.  
+원격 데스크톱 세션 호스트 서버의 다른 세션에 연결 합니다.  
+
+이 명령을 사용하는 방법의 예는 [예](#BKMK_examples)를 참조하세요.  
 
 > [!NOTE]  
-> Windows Server 2008 R2에서는 터미널 서비스의 이름이 원격 데스크톱 서비스로 바뀌었습니다. 최신 버전의 새로운 기능에 대 한 자세한 내용은 Windows Server TechNet 라이브러리의 [Windows server 2012에 있는 원격 데스크톱 서비스의 새로운 기능](https://technet.microsoft.com/library/hh831527) 을 참조 하십시오.  
+> 터미널 서비스는 Windows Server 2008 R2에서 원격 데스크톱 서비스로 이름이 변경되었습니다. 최신 버전의 새로운 기능에 대 한 자세한 내용은 Windows Server TechNet 라이브러리의 [Windows server 2012에 있는 원격 데스크톱 서비스의 새로운 기능](https://technet.microsoft.com/library/hh831527) 을 참조 하십시오.  
 
 ## <a name="syntax"></a>구문  
 ```  
 tscon {<SessionID> | <SessionName>} [/dest:<SessionName>] [/password:<pw> | /password:*] [/v]  
 ```  
-## <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
 
 |매개 변수|설명|  
 |-------|--------|  
-|\<SessionID >|연결 하려는 세션의 ID를 지정 합니다. 선택적 **/대상:** <*세션 이름*> 매개 변수를 사용 하는 경우 연결 하려는 세션의 ID입니다.|  
-|\< 세션 이름 >|연결 하려는 세션의 이름을 지정 합니다.|  
-|/대상: \<SessionName|현재 세션의 이름을 지정 합니다. 이 세션은 새 세션에 연결할 때 연결을 끊습니다.|  
-|/password: \<pw >|연결 하려는 세션을 소유 하는 사용자의 암호를 지정 합니다. 이 암호는 연결 하는 사용자가 세션을 소유 하지 않은 경우에 필요 합니다.|  
+|\<SessionID >|연결 하려는 세션의 ID를 지정 합니다. Optional **/dest:** <*세션 이름*> 매개 변수를 사용 하는 경우 연결 하려는 세션의 ID입니다.|  
+|\<세션 이름 >|연결 하려는 세션의 이름을 지정 합니다.|  
+|/대상:\<세션 이름 >|현재 세션의 이름을 지정 합니다. 이 세션은 새 세션에 연결할 때 연결을 끊습니다.|  
+|/password:\<pw >|연결 하려는 세션을 소유 하는 사용자의 암호를 지정 합니다. 이 암호는 연결 하는 사용자가 세션을 소유 하지 않은 경우에 필요 합니다.|  
 |/password: *|연결 하려는 세션을 소유 하는 사용자의 암호를 묻는 메시지를 표시 합니다.|  
 |/v|수행 중인 작업에 대 한 정보를 표시 합니다.|  
 |/?|명령 프롬프트에 도움말을 표시합니다.|  
 
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
 -   다른 세션에 연결 하려면 모든 권한 또는 연결 액세스 권한이 있어야 합니다.  
--   **/Wdest:** < 세션*이름*> 매개 변수를 사용 하면 다른 사용자의 세션을 다른 세션에 연결할 수 있습니다.  
+-   **/Wdest:** <*세션 이름*> 매개 변수를 사용 하면 다른 사용자의 세션을 다른 세션에 연결할 수 있습니다.  
 -   <*password*> 매개 변수에 암호를 지정 하지 않고 대상 세션이 현재 사용자에 게 속해 있지 않으면 **tscon** 가 실패 합니다.  
 -   콘솔 세션에는 연결할 수 없습니다.  
 
-## <a name="BKMK_examples"></a>예와  
+## <a name="examples"></a><a name=BKMK_examples></a>예와  
 - 현재 rd 세션 호스트 서버에서 세션 12에 연결 하 고 현재 세션의 연결을 끊으려면 다음을 입력 합니다.  
   ```  
   tscon 12  
@@ -65,6 +62,6 @@ tscon {<SessionID> | <SessionName>} [/dest:<SessionName>] [/password:<pw> | /pas
   ```  
   tscon TERM03 /v /dest:TERM05  
   ```  
-  #### <a name="additional-references"></a>추가 참조  
-  [명령줄 구문 키](command-line-syntax-key.md)  
-  [원격 데스크톱 서비스 &#40;터미널 서비스&#41; 명령 참조](remote-desktop-services-terminal-services-command-reference.md)  
+  ## <a name="additional-references"></a>추가 참조  
+  - [명령줄 구문 키](command-line-syntax-key.md)  
+  [원격 데스크톱 서비스(터미널 서비스) 명령 참조](remote-desktop-services-terminal-services-command-reference.md)  

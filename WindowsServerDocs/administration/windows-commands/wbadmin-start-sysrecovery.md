@@ -1,24 +1,20 @@
 ---
 title: wbadmin 시작 sysrecovery
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: 사용자가 지정한 매개 변수를 사용 하 여 시스템 복구 (완전 복구)를 수행 하는 wbadmin start sysrecovery에 대 한 Windows 명령 항목입니다.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 95b8232f-7c42-452b-838e-15b0cf6faebe
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9c653fa52a2a56267d6f0df169f8f9924f2aa94d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 4e0f1f79f35678b5c4a50022adf3413f3de217a7
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71362282"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80829596"
 ---
 # <a name="wbadmin-start-sysrecovery"></a>wbadmin 시작 sysrecovery
 
@@ -47,7 +43,7 @@ wbadmin start sysrecovery
 [-quiet]
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------|-----------|
@@ -60,7 +56,7 @@ wbadmin start sysrecovery
 |-skipBadClusterCheck|복구 디스크에서 잘못 된 클러스터 정보를 확인 하는 것을 건너뜁니다. 대체 서버 또는 하드웨어로 복원 하는 경우에는이 매개 변수를 사용 하지 않는 것이 좋습니다. 언제 든 지 복구 디스크에서 수동으로 **chkdsk/b** 를 실행 하 여 잘못 된 클러스터를 확인 한 다음 파일 시스템 정보를 적절 하 게 업데이트할 수 있습니다.</br>경고: 설명 된 대로 **chkdsk** 를 실행할 때까지 복구 된 시스템에 보고 된 잘못 된 클러스터는 정확 하지 않을 수 있습니다.|
 |-quiet|사용자에 게 프롬프트를 표시 하지 않고 명령을 실행 합니다.|
 
-## <a name="BKMK_examples"></a>예와
+## <a name="examples"></a><a name=BKMK_examples></a>예와
 
 2013 년 3 월 31 일 오전 9:00에 실행 된 백업에서 정보 복구를 시작 하려면 다음을 입력 합니다.
 ```
@@ -71,8 +67,8 @@ wbadmin start sysrecovery -version:03/31/2013-09:00 -backupTarget:d:
 wbadmin start sysrecovery -version:04/30/2013-09:00 -backupTarget:\\servername\share -machine:server01
 ```
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
--   [명령줄 구문 키](command-line-syntax-key.md)
+-   - [명령줄 구문 키](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
 -   [WBBareMetalRecovery](https://technet.microsoft.com/library/jj902461.aspx) cmdlet

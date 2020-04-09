@@ -1,24 +1,20 @@
 ---
 title: findstr
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c2d803fb-4cd2-46a1-a1b7-6f5e0249c418
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 547a0abf658ef826cca8c87d451144181f8dac7d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: dbdc1b741b5934f53340bda773909fb5035e449b
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71377192"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80844636"
 ---
 # <a name="findstr"></a>findstr
 
@@ -32,7 +28,7 @@ ms.locfileid: "71377192"
 findstr [/b] [/e] [/l | /r] [/s] [/i] [/x] [/v] [/n] [/m] [/o] [/p] [/f:<File>] [/c:<String>] [/g:<File>] [/d:<DirList>] [/a:<ColorAttribute>] [/off[line]] <Strings> [<Drive>:][<Path>]<FileName>[ ...]
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------|-----------|
@@ -54,11 +50,11 @@ findstr [/b] [/e] [/l | /r] [/s] [/i] [/x] [/v] [/n] [/m] [/o] [/p] [/f:<File>] 
 |/g:\<파일 >|지정된 된 파일에서 문자열을 검색 하는 가져옵니다.|
 |/d:\<하는 목록 >|지정된 된 디렉터리 목록을 검색합니다. 예를 들어 각 디렉터리는 세미콜론 (;)으로 구분 해야 `dir1;dir2;dir3`합니다.|
 |/a:\<ColorAttribute >|두 개의 16 진수가 color 특성을 지정합니다. 형식 `color /?` 추가 정보에 대 한 합니다.|
-|\<Strings>|검색할 텍스트를 지정 *FileName*합니다. 필수 요소.|
+|\<문자열 >|검색할 텍스트를 지정 *FileName*합니다. 필수입니다.|
 |[\<드라이브 >:] [<Path>]<FileName>[...]|검색할 파일 및 파일 또는 위치를 지정 합니다. 하나 이상의 파일에 이름이 필요 합니다.|
-|/?|명령 프롬프트에 도움말을 표시합니다.|
+|/?|명령 프롬프트에서 도움말을 표시합니다.|
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 - 모든 **findstr** 명령줄 옵션 앞에 야 *문자열* 및 *FileName* 명령 문자열에 있습니다.
 - 정규식 리터럴 문자와 메타 문자를 사용 하 여 텍스트의 패턴 보다 정확한 문자열을 찾을 수 있습니다. 리터럴 문자는 정규식 구문에서 특별 한 의미가 없는 문자를 해당 문자의 회입니다. 예를 들어 문자와 숫자는 리터럴 문자. 메타 문자는 정규식 구문에서 특별 한 의미 (연산자나 구분 기호) 기호입니다.
@@ -84,7 +80,7 @@ findstr [/b] [/e] [/l | /r] [/s] [/i] [/x] [/v] [/n] [/m] [/o] [/p] [/f:<File>] 
   .*
   ``` 
 
-  식을 사용 하 여 다음 더 큰 수식의 일부로 "b"로 시작 하 고 "ing"로 끝나는 문자열 일치 합니다. 
+  B로 시작 하 고 작업으로 끝나는 모든 문자열을 일치 시키려면 다음 식을 큰 식의 일부로 사용 합니다. 
 
   ```
   b.*ing
@@ -94,19 +90,19 @@ findstr [/b] [/e] [/l | /r] [/s] [/i] [/x] [/v] [/n] [/m] [/o] [/p] [/f:<File>] 
 
 인수는 접두사로 붙습니다 하지 않는 한 여러 개의 검색 문자열을 구분 하 공간을 사용 하 여 **/c**합니다.
 
-"Hello"를 검색 하려면 "there" 파일 x.y를 입력 합니다.
+Hello 또는 file x. y에서 검색 하려면 다음을 입력 합니다.
 
 ```
-findstr "hello there" x.y 
+findstr hello there x.y 
 ```
 
-"안녕" x.y 파일에서에서를 검색 하려면 다음을 입력 합니다.
+File x. y에서 hello를 검색 하려면 다음을 입력 합니다.
 
 ```
-findstr /c:"hello there" x.y 
+findstr /c:hello there x.y 
 ```
 
-단어의 모든 항목 "Windows" (초기 자본 문자 W)로 Proposal.txt 파일에서을 찾으려면 다음을 입력 합니다.
+파일 제안에서 단어 창의 모든 항목 (초기 대문자 W)을 찾으려면 다음을 입력 합니다.
 
 ```
 findstr Windows proposal.txt 
@@ -118,10 +114,10 @@ findstr Windows proposal.txt
 findstr /s /i Windows *.* 
 ```
 
-"FOR"로 시작 하며 앞에 0 개 이상의 공백 (예: 컴퓨터 프로그램 루프)을 하는 줄을 모두 찾습니다 고 발생 하는 각가 있는 줄 번호를 표시 하려면 다음을 입력 합니다.
+및에 대해 시작 하 고 0 개 이상의 공백 (컴퓨터 프로그램 루프) 앞에 있는 줄의 모든 항목을 찾으려면 다음을 입력 합니다.
 
 ```
-findstr /b /n /r /c:"^ *FOR" *.bas 
+findstr /b /n /r /c:^ *FOR *.bas 
 ```
 
 파일 집합에 여러 문자열을 검색 하려면 별도 줄에 각 검색 조건을 포함 하는 텍스트 파일을 만듭니다. 또한 텍스트 파일에서 검색 하려는 정확한 파일을 나열할 수 있습니다. 예를 들어, 검색 조건으로 Stringlist.txt 파일을 사용 하려면 Filelist.txt에 나열 된 파일을 검색 하 고 Results.out, 형식 파일에 결과 저장 합니다.
@@ -130,18 +126,18 @@ findstr /b /n /r /c:"^ *FOR" *.bas
 findstr /g:stringlist.txt /f:filelist.txt > results.out 
 ```
 
-현재 디렉터리와 대/소문자, 모든 하위 디렉터리 내에서 "컴퓨터" 라는 단어를 포함 하는 모든 파일을 나열 하려면 다음을 입력 합니다.
+대/소문자에 관계 없이 현재 디렉터리와 모든 하위 디렉터리 내에서 word 컴퓨터를 포함 하는 모든 파일을 나열 하려면 다음을 입력 합니다.
 
 ```
-findstr /s /i /m "\<computer\>" *.*
+findstr /s /i /m \<computer\> *.*
 ```
 
-"컴퓨터" 단어 및 형식 "구성" (예: "칭찬" 및 "경쟁")로 시작 하는 다른 모든 단어를 포함 하는 모든 파일을 나열:
+Word 컴퓨터를 포함 하는 모든 파일 및 comp로 시작 하는 기타 단어를 나열 하려면 다음을 입력 합니다.
 
 ```
-findstr /s /i /m "\<comp.*" *.*
+findstr /s /i /m \<comp.* *.*
 ```
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
-[명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

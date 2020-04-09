@@ -1,24 +1,20 @@
 ---
 title: reg 삭제
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cee05071-1607-4ab1-b8ab-65caebeb85c3
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7156bf58b27da1602931f0dc1903de71d86764e7
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 726a3c700a9278dbc7abb1873aae7ea3c957bbb5
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71384763"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80836506"
 ---
 # <a name="reg-delete"></a>reg 삭제
 
@@ -34,7 +30,7 @@ ms.locfileid: "71384763"
 Reg delete <KeyName> [{/v ValueName | /ve | /va}] [/f]
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------|-----------|
@@ -45,16 +41,16 @@ Reg delete <KeyName> [{/v ValueName | /ve | /va}] [/f]
 |/f|확인을 요청 하지 않고 기존 레지스트리 하위 키 또는 항목을 삭제 합니다.|
 |/?|에 대 한 도움말을 표시 **reg 삭제** 명령 프롬프트입니다.|
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 다음 표에 대 한 반환 값은 **reg 삭제** 작업 합니다.
 
 |값|설명|
 |-----|-----------|
-|0|Success|
+|0|성공|
 |1|실패|
 
-## <a name="BKMK_examples"></a>예와
+## <a name="examples"></a><a name=BKMK_examples></a>예와
 
 레지스트리 키 제한 시간 및 모든 하위 키와 값을 삭제 하려면 다음을 입력 합니다.
 ```
@@ -65,6 +61,6 @@ REG DELETE HKLM\Software\MyCo\MyApp\Timeout
 REG DELETE \\ZODIAC\HKLM\Software\MyCo /v MTU
 ```
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
-[명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

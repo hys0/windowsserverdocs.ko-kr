@@ -1,24 +1,20 @@
 ---
 title: ntfrsutl
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d7721a19-5a87-4ab6-b816-65d2da2c811f
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f1301b6876698e9eb552ae0ef9e70ed278319a7c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 14e718550247b8854073407146456d366d562d2b
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71372617"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80837996"
 ---
 # <a name="ntfrsutl"></a>ntfrsutl
 
@@ -37,7 +33,7 @@ ntfrsutl [version][<computer>]
 ntfrsutl poll[/quickly[=[<N>]]][/slowly[=[<N>]]][/now][<computer>]  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>매개 변수  
   
 |  매개 변수  |                                                                                                                                                                                                                                                                                                                                        설명                                                                                                                                                                                                                                                                                                                                         |
 |-------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -46,16 +42,16 @@ ntfrsutl poll[/quickly[=[<N>]]][/slowly[=[<N>]]][/now][<computer>]
 |    인 로그    |                                                                                                                                                                                                                                                                                                                                        인바운드 로그                                                                                                                                                                                                                                                                                                                                         |
 |   아웃 로그    |                                                                                                                                                                                                                                                                                                                                        아웃 바운드 로그                                                                                                                                                                                                                                                                                                                                        |
 | <computer>  |                                                                                                                                                                                                                                                                                                                                  컴퓨터를 지정합니다.                                                                                                                                                                                                                                                                                                                                   |
-|   메모리    |                                                                                                                                                                                                                                                                                                                                        메모리 사용                                                                                                                                                                                                                                                                                                                                        |
+|   메모리    |                                                                                                                                                                                                                                                                                                                                        메모리 사용량                                                                                                                                                                                                                                                                                                                                        |
 |   스레드   |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-|    단계    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+|    stage(단계)    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 |     ds      |                                                                                                                                                                                                                                                                                                                         DS의 NTFRS 서비스 보기를 나열 합니다.                                                                                                                                                                                                                                                                                                                          |
-|    설정     |                                                                                                                                                                                                                                                                                                                             활성 복제 세트를 지정합니다.                                                                                                                                                                                                                                                                                                                              |
+|    집합     |                                                                                                                                                                                                                                                                                                                             활성 복제 세트를 지정합니다.                                                                                                                                                                                                                                                                                                                              |
 |   version   |                                                                                                                                                                                                                                                                                                                       API 및 NTFRS 서비스 버전을 지정합니다.                                                                                                                                                                                                                                                                                                                        |
-|    설문 조사     | 현재 폴링 간격을 지정합니다.<br /><br />매개 변수:<br /><br /><ul><li>신속 하 게 **\=** \[ <N>\]\]설문 조사를\[ **\/** \(  \)<br /><br /><ul><li>안정적인 구성이 rectrieved 될 때 **까지 신속 하 게 폴링 \-**</li><li>기본 분 마다 빠르게 설문 조사를 빠르게 **\=** \- 합니다.</li><li>*N* 분 마다 빠르게 설문 조사를 신속 하 게 **\=** <N> \-</li></ul></li><li>**\/느린**\[ **\=** \[ <N>\]\]를 천천히 폴링합니다 \(\)<br /><br /><ul><li>안정적인 구성이 검색 될 때까지 **천천히 \- 폴링합니다** .</li><li>**느린\=** \- 기본 분 마다 느리게 폴링합니다.</li><li>**천천히\=** <N> \- *N* 분 마다 빠르게 폴링합니다.</li></ul></li><li>이제 **\/** \(설문 조사를\)</li></ul> |
+|    설문 조사     | 현재 폴링 간격을 지정합니다.<p>매개 변수:<p><ul><li>신속 하 게 **\=** \[ <N>\]\]설문 조사를\[ **\/** \(  \)<p><ul><li>안정적인 구성이 rectrieved 될 때 **까지 신속 하 게 폴링 \-**</li><li>기본 분 마다 빠르게 설문 조사를 빠르게 **\=** \- 합니다.</li><li>*N* 분 마다 빠르게 설문 조사를 신속 하 게 **\=** <N> \-</li></ul></li><li>**\/느린**\[ **\=** \[ <N>\]\]를 천천히 폴링합니다 \(\)<p><ul><li>안정적인 구성이 검색 될 때까지 **천천히 \- 폴링합니다** .</li><li>**느린\=** \- 기본 분 마다 느리게 폴링합니다.</li><li>**천천히\=** <N> \- *N* 분 마다 빠르게 폴링합니다.</li></ul></li><li>이제 **\/** \(설문 조사를\)</li></ul> |
 |     \/?     |                                                                                                                                                                                                                                                                                                                            명령 프롬프트에 도움말을 표시합니다.                                                                                                                                                                                                                                                                                                                            |
   
-## <a name="BKMK_Examples"></a>예와  
+## <a name="examples"></a><a name=BKMK_Examples></a>예와  
 확인 하려면 파일 복제에 대 한 폴링 간격:  
   
 ```  
@@ -70,7 +66,7 @@ C:\Program Files\SupportTools>ntfrsutl version
   
 ## <a name="additional-references"></a>추가 참조  
   
--   [명령줄 구문 키](command-line-syntax-key.md)  
+-   - [명령줄 구문 키](command-line-syntax-key.md)  
   
   
   

@@ -1,24 +1,20 @@
 ---
 title: reg 복사
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3fe74213-39ec-4b2d-ba3d-086243eac997
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a82b17b631d4242fa6affdec0ff67b5b09380550
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b2acfdd3c0ad66d93313a11f8025b690ea0157c2
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71371781"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80836536"
 ---
 # <a name="reg-copy"></a>reg 복사
 
@@ -34,7 +30,7 @@ ms.locfileid: "71371781"
 reg copy <KeyName1> <KeyName2> [/s] [/f]
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------|-----------|
@@ -44,17 +40,17 @@ reg copy <KeyName1> <KeyName2> [/s] [/f]
 |/f|확인 메시지 없이 하위 키를 복사 합니다.|
 |/?|에 대 한 도움말을 표시 **reg** 명령 프롬프트에 복사 합니다.|
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 -   레지스트리 하위 키를 복사 하는 경우 확인을 위해 묻지 않습니다.
 -   다음 표에 대 한 반환 값은 **reg 복사** 작업 합니다.
 
 |값|설명|
 |-----|-----------|
-|0|Success|
+|0|성공|
 |1|실패|
 
-## <a name="BKMK_examples"></a>예와
+## <a name="examples"></a><a name=BKMK_examples></a>예와
 
 모든 하위 키와 MyApp 키 아래의 값 SaveMyApp 키를 복사 하려면 다음을 입력 합니다.
 ```
@@ -65,6 +61,6 @@ REG COPY HKLM\Software\MyCo\MyApp HKLM\Software\MyCo\SaveMyApp /s
 REG COPY \\ZODIAC\HKLM\Software\MyCo HKLM\Software\MyCo1
 ```
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
-[명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

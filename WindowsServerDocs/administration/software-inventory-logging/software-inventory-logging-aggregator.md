@@ -1,26 +1,22 @@
 ---
-title: Software Inventory Logging Aggregator
+title: 소프트웨어 인벤토리 로깅 집계
 description: 소프트웨어 인벤토리 로깅 집계를 설치 하 고 관리 하는 방법을 설명 합니다.
-ms.custom: na
 ms.prod: windows-server
 ms.technology: manage-software-inventory-logging
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e4230a75-6bcd-47d9-ba92-a052a90a6abc
 author: brentfor
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e5834c07e0fdc9f826e3b02fd494c28b9e773ad8
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: e58898359c15a19f139d074bca4ef7bd1aaf9062
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75947007"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80851436"
 ---
-# <a name="software-inventory-logging-aggregator"></a>Software Inventory Logging Aggregator
+# <a name="software-inventory-logging-aggregator"></a>소프트웨어 인벤토리 로깅 집계
 
 >Windows Server 2012 r 2에 적용 됩니다.
 
@@ -61,11 +57,11 @@ SILA는 Windows Server에 설치하지만 Windows Server 설치에 포함되지 
 
 -   시간이 지남에 따라 SQL Server 설치의 수 및 위치 \(라이선스가 필요한 Sku 및 버전만 해당\)
 
--   프로그램 추가\/제거에 설치 된 소프트웨어 목록
+-   프로그램 추가/제거에 설치된 소프트웨어 목록
 
 ### <a name="who-will-use-sil"></a>SIL의 사용자는 누구인가요?
 
--   시간에 따라 중요 소프트웨어 인벤토리 데이터를 자동으로 수집하기 위한 경제적인 방법을 찾고 있는**IT 전문가 또는 데이터 센터 관리자**
+-   시간에 따라 중요 소프트웨어 인벤토리 데이터를 자동으로 수집하기 위한 경제적인 방법을 찾고 있는 **IT 전문가 또는 데이터 센터 관리자**
 
 -   조직의 IT 배포에서 Microsoft 엔터프라이즈 소프트웨어의 사용량을 보고 해야 하는 **cio 및 재무 컨트롤러**
 
@@ -121,7 +117,7 @@ SIL Aggregator에서 폴링을 위해 설정하려는 Windows Server 호스트�
 
 6.  **보안**을 클릭합니다.
 
-7.  **네임스페이스** 트리 뷰에서 **cimv2 네임스페이스** 를 선택합니다.
+7.  **네임스페이스** 트리 뷰에서 **cimv2 네임스페이스**를 선택합니다.
 
 8.  **보안**(단추)을 클릭합니다.
 
@@ -133,7 +129,7 @@ SIL Aggregator에서 폴링을 위해 설정하려는 Windows Server 호스트�
 
 12. 맨 아래에 있는 사용 권한 섹션에서 **원격 사용** 이 선택 되어 있는지 확인 합니다.
 
-13. **적용** , **확인**을 차례로 클릭합니다.
+13. **적용**, **확인**을 차례로 클릭합니다.
 
 14. **속성** 창에서 **확인** 을 클릭합니다.
 
@@ -156,13 +152,13 @@ Windows Server에서 SIL Aggregator를 설치하기 전에 확인해야 할 몇 
 
     -   설치되면 SQL Server 에이전트를 자동으로 실행하도록 구성해야 합니다.
 
--   **IIS 서버 역할** 은 **역할 및 기능 추가 마법사**의 동일한 선택 트리에 .Net Framework 4.5, WCF 서비스 및 HTTP 활성화와 함께 추가됩니다.
+-   **IIS 서버 역할**은 **역할 및 기능 추가 마법사**의 동일한 선택 트리에 .Net Framework 4.5, WCF 서비스 및 HTTP 활성화와 함께 추가됩니다.
 
 -   서버에서 **관리 권한이 있는 계정으로 서버에 로그온됩니다** .
 
 -   Windows 인증을 사용할 경우 **SQL Server에서 sysadmin 권한이 있는 계정으로 서버에 로그온됩니다**.
 
-    또는
+    OR
 
     SQL 인증을 사용할 경우 **SQL 관리 권한이 있는 계정에 대한 암호가 있어야 합니다**.
 
@@ -176,7 +172,7 @@ Windows Server에서 SIL Aggregator를 설치하기 전에 확인해야 할 몇 
 
 4.  **기능 선택**에서 **Software Inventory Logging Aggregator 및 보고 모듈 설치**를 선택하고 **다음**을 클릭합니다.
 
-    보고 모듈만 설치하는 방법에 대한 자세한 내용은 `Publish-SilReport` SIL Aggregator Cmdlet 세부 정보 **섹션에서** 를 참조하세요.
+    보고 모듈만 설치하는 방법에 대한 자세한 내용은 `Publish-SilReport`SIL Aggregator Cmdlet 세부 정보**섹션에서**를 참조하세요.
 
 5.  모든 필수 구성 요소를 확인한 후 **다음**을 클릭합니다.
 
@@ -221,7 +217,7 @@ Windows Server에서 SIL Aggregator를 설치하기 전에 확인해야 할 몇 
 #### <a name="introduction-to-sil-aggregator-powershell-cmdlets"></a>SIL Aggregator PowerShell cmdlet 소개
 다음 명령은 Windows PowerShell 콘솔에서 관리자 권한으로 실행할 수 있습니다.
 
-|Windows PowerShell Cmdlet|기능|
+|Windows PowerShell Cmdlet|함수|
 |-----------------------------|------------|
 |`Start-SilAggregator`|모든 Software Inventory Logging Aggregator 서비스 및 작업을 시작합니다. 집계 중에 SIL 로깅을 시작한 서버에서 HTTPS를 통해 데이터를 받으려면 이 명령을 실행해야 합니다.|
 |`Stop-SilAggregator`|모든 Software Inventory Logging Aggregator 서비스 및 작업을 중지합니다. 작업 또는 서비스를 처리하는 동안 이 명령의 완료가 지연될 수 있습니다.|
@@ -245,11 +241,11 @@ Software Inventory Logging Aggregator를 서버에 설치한 후 관리자 권�
 
         예: `add-silvmhost –vmhostname contoso1 –hostcredential get-credential`
 
-        -   이 예에서 **contoso1** 은 집계에서 시간에 따라 이 데이터를 추적하기 위해 실행 중인 VM을 위한 정기 업데이트에 대해 폴링할 실제 호스트 서버의 네트워크 이름 또는 IP 주소입니다. Get-Credential는 로그온한 사용자에게 해당 위치 다음부터 이 호스트를 폴링하는 데 사용할 계정을 입력하라는 메시지를 표시합니다. 동일한 호스트에서 동일한 명령을 실행하여 언제든지 사용되는 계정을 업데이트할 수 있습니다. 시간에 따른 계정 암호 변경 및 만료에 주의하세요. 자격 증명이 변경되거나 만료된 경우 호스트에 대한 폴링이 실패합니다.
+        -   이 예에서 **contoso1**은 집계에서 시간에 따라 이 데이터를 추적하기 위해 실행 중인 VM을 위한 정기 업데이트에 대해 폴링할 실제 호스트 서버의 네트워크 이름 또는 IP 주소입니다. Get-Credential는 로그온한 사용자에게 해당 위치 다음부터 이 호스트를 폴링하는 데 사용할 계정을 입력하라는 메시지를 표시합니다. 동일한 호스트에서 동일한 명령을 실행하여 언제든지 사용되는 계정을 업데이트할 수 있습니다. 시간에 따른 계정 암호 변경 및 만료에 주의하세요. 자격 증명이 변경되거나 만료된 경우 호스트에 대한 폴링이 실패합니다.
 
-        -   기본적으로 폴링은 `Start-SilAggregator`가 실행되고 1시간 이후부터 또는 호스트가 폴링 목록에 새로 추가되고 1시간 이후부터 매시간 시작됩니다.  `Set-SilAggregator cmdlet`을 사용하여 폴링 간격을 변경할 수 있습니다.
+        -   기본적으로 폴링은 `Start-SilAggregator` 가 실행되고 1시간 이후부터 또는 호스트가 폴링 목록에 새로 추가되고 1시간 이후부터 매시간 시작됩니다.  `Set-SilAggregator cmdlet`을 사용하여 폴링 간격을 변경할 수 있습니다.
 
-        -   이 cmdlet은 미리 설정된 옵션 목록에서 자동으로 검색됩니다( **SIL Aggregator Cmdlet 세부 정보** 섹션 참조). 여기서 HostType 및 HyperVisorType은 추가 중인 호스트에 적합합니다. 이러한 항목을 인식할 수 없거나 제공된 자격 증명이 잘못된 경우 프롬프트가 표시됩니다. **Y** 를 입력하여 수락하면 호스트가 추가되고 **알 수 없음**으로 나열되지만 폴링되지 않습니다.
+        -   이 cmdlet은 미리 설정된 옵션 목록에서 자동으로 검색됩니다(**SIL Aggregator Cmdlet 세부 정보** 섹션 참조). 여기서 HostType 및 HyperVisorType은 추가 중인 호스트에 적합합니다. 이러한 항목을 인식할 수 없거나 제공된 자격 증명이 잘못된 경우 프롬프트가 표시됩니다. **Y**를 입력하여 수락하면 호스트가 추가되고 **알 수 없음**으로 나열되지만 폴링되지 않습니다.
 
     -   "사용자의 클라이언트 인증서의 지문" `Set-SilAggregator –AddCertificateThumbprint`를 실행 합니다.
 
@@ -281,7 +277,7 @@ Software Inventory Logging Aggregator를 서버에 설치한 후 관리자 권�
 
         -   SIL 로깅을 시작한 후 오랜 시간이 경과하고 `Set-SilLogging`을 사용하여 새 SIL Aggregator를 지정한 경우 이 cmdlet을 한 번만 실행하여 전체 데이터 집합을 새 집계로 보내야 합니다.
 
-다음 단계에 따라 가상 Windows Server 컴퓨터를 실행 중인 실제 호스트를 추가하고 해당 Windows Server 내에서 SIL 로깅(소프트웨어 인벤토리 로깅)을 사용하도록 설정한 경우 SIL Aggregator에서 언제든지 `Publish-SilReport –OpenReport`를 실행할 수 있습니다(Excel 2013 필요). 하지만 SQL Server Analysis Services 큐브는 하루에 한 번 처리되므로 동일한 날짜에 보고서에서 데이터를 사용할 수 없습니다.
+다음 단계에 따라 가상 Windows Server 컴퓨터를 실행 중인 실제 호스트를 추가하고 해당 Windows Server 내에서 SIL 로깅(소프트웨어 인벤토리 로깅)을 사용하도록 설정한 경우 SIL Aggregator에서 언제든지 `Publish-SilReport –OpenReport` 를 실행할 수 있습니다(Excel 2013 필요). 하지만 SQL Server Analysis Services 큐브는 하루에 한 번 처리되므로 동일한 날짜에 보고서에서 데이터를 사용할 수 없습니다.
 
 ## <a name="architectural-overview"></a>아키텍처 개요
 SIL은 푸시 모드와 끌어오기 모드 모두에서 작동하며 두 개의 구성 요소, 즉 Windows Server의 SIL(소프트웨어 인벤토리 로깅) 기능과 SILA(Software Inventory Logging Aggregator) 다운로드 가능한 MSI가 병렬로 작동하도록 구성되어 있습니다. 인벤토리를 만들 서버에서는 SIL을 사용하여 HTTPS를 통해 소프트웨어 인벤토리 데이터를 SIL Aggregator에 푸시합니다(1시간마다 각 시간 내의 임의의 시점에). 집계에서는 실제 하이퍼바이저 호스트를 차례로 폴링하거나 쿼리하여 1시간마다 하드웨어 인벤토리 데이터를 끌어옵니다. SIL의 전체 기능을 사용하려면 푸시와 끌어오기 모두를 적절히 구성해야 합니다. 푸시와 끌어오기를 순서에 관계없이 구성할 수 있습니다. 하지만 집계에서 큐브 처리는 하루에 한 번만 발생하므로, 집계에서 푸시 또는 끌어보기를 통해 캡처되는 데이터는 다음 날까지 보고서에 표시되지 않습니다.
@@ -292,9 +288,9 @@ SIL은 푸시 모드와 끌어오기 모드 모두에서 작동하며 두 개의
 > 이 소프트웨어를 사용하는 동안 데이터가 Microsoft로 전송되지 않습니다.
 
 ## <a name="enable-sil-on-multiple-servers"></a>여러 서버에서 SIL 사용
-가상 컴퓨터의 프라이빗 클라우드와 같은 분산된 서버 인프라에서 SIL을 사용하도록 설정하는 몇 가지 방법이 있습니다.  다음은 네트워크에서 처음으로 시작할 때 인벤토리 데이터를 SIL Aggregator로 자동으로 보내도록 Windows Server 이미지를 설정하는 방법을 보여주는 한 가지 예입니다.
+가상 머신의 프라이빗 클라우드와 같은 분산된 서버 인프라에서 SIL을 사용하도록 설정하는 몇 가지 방법이 있습니다.  다음은 네트워크에서 처음으로 시작할 때 인벤토리 데이터를 SIL Aggregator로 자동으로 보내도록 Windows Server 이미지를 설정하는 방법을 보여주는 한 가지 예입니다.
 
-Windows Server가 설치된 각 실행 중인 VM 또는 실제 컴퓨터/디바이스의 PowerShell 콘솔에서 다음 cmdlet을 관리자 권한으로 실행합니다( **필수 구성 요소** 섹션 참조).
+Windows Server가 설치된 각 실행 중인 VM 또는 실제 컴퓨터/장치의 PowerShell 콘솔에서 다음 cmdlet을 관리자 권한으로 실행합니다( **필수 구성 요소** 섹션 참조).
 
 이러한 단계를 사용하려면 .pfx 형식의 유효한 클라이언트 SSL 인증서가 필요합니다.  `Set-SILAggregator –AddCertificateThumbprint` cmdlet을 사용하여 이 인증서의 지문을 SIL Aggregator에 추가해야 합니다. 이 클라이언트 인증서가 SIL Aggregator의 이름과 일치할 필요는 없습니다.
 
@@ -318,7 +314,7 @@ Windows Server가 설치된 각 실행 중인 VM 또는 실제 컴퓨터/디바�
 
 -   `$mypwd = ConvertTo-SecureString -String "`**<password for the certificate pfx file>**`" -Force –AsPlainText`
 
--   `Import-PfxCertificate -FilePath c:\` **<location\\certificatename.pfx>** `cert:\localMachine\my -Password $mypwd`
+-   **certificatename .pfx >\\< 위치를** `Import-PfxCertificate -FilePath c:\``cert:\localMachine\my -Password $mypwd`
 
 -   `Set-sillogging –targeturi "https://` **<machinename of your SIL Aggregator>** `–certificatethumbprint`
 
@@ -385,20 +381,20 @@ Software Inventory Logging Aggregator를 사용할 경우 최고 수위 표시 �
 |열 머리글|설명|
 |-----------------|---------------|
 |월|보고서의 데이터는 월별로 최신 순으로 그룹화됩니다. 같은 달의 데이터는 특정 순서로 나열되지 않습니다.|
-|호스트 이름|SIL Aggregator에서 폴링하고 있는 실제 호스트의 네트워크 이름 또는 FQDN입니다.<br /><br />Get-SilVMHost cmdlet을 사용하여 추가되었지만 폴링되지 않았거나 더 이상 폴링되지 않는 호스트를 찾습니다. 마지막으로 성공한 폴링이 표시됩니다.|
+|호스트 이름|SIL Aggregator에서 폴링하고 있는 실제 호스트의 네트워크 이름 또는 FQDN입니다.<p>Get-SilVMHost cmdlet을 사용하여 추가되었지만 폴링되지 않았거나 더 이상 폴링되지 않는 호스트를 찾습니다. 마지막으로 성공한 폴링이 표시됩니다.|
 |호스트 유형|실제 호스트의 운영 체제 제조업체입니다.|
 |하이퍼바이저 유형|실제 호스트의 하이퍼바이저 제조업체입니다.|
 |프로세서 제조업체|실제 호스트의 프로세서 제조업체입니다.|
 |프로세서 모델|실제 호스트의 프로세서 모델입니다.|
 |하이퍼 스레딩을 사용하나요?|실제 호스트의 프로세서에서 하이퍼 스레딩을 사용하도록 설정했는지 여부에 따라 True 또는 False로 표시합니다.|
-|VM 이름|Windows Server 가상 머신의 네트워크 이름 또는 FQDN입니다. 집계 중에 이 컴퓨터에서 HTTPS를 통해 데이터를 받지 않는 경우 하이퍼바이저의 VM 이름이 나열됩니다.|
-|호스트별로 동시에 실행 중인 Windows Server VM|호스트에서 동시에 실행 중인 Windows Server VM의 수입니다. 해당 호스트에 대해 해당 달의 가장 높은 수는 해당 시점에 나열 및 캡처된 최고 수위 표시입니다.<br /><br />이 설명서의 **최고 수위 표시** 섹션을 참조하세요.<br /><br />Windows Server를 설치한 실제 호스트 또는 Windows Server를 설치했지만 알려진 Windows Server VM이 실행되고 있지 않은 실제 호스트는 항상 하나로 계산됩니다. 호스트에서 하나 이상의 알려진 Windows Server VM이 실행되고 있고 Windows Server가 자체 호스트에서 실행 중인 경우 호스트 OS는 계산에 포함되지 않습니다.|
+|VM 이름|Windows Server 가상 컴퓨터의 네트워크 이름 또는 FQDN입니다. 집계 중에 이 컴퓨터에서 HTTPS를 통해 데이터를 받지 않는 경우 하이퍼바이저의 VM 이름이 나열됩니다.|
+|호스트별로 동시에 실행 중인 Windows Server VM|호스트에서 동시에 실행 중인 Windows Server VM의 수입니다. 해당 호스트에 대해 해당 달의 가장 높은 수는 해당 시점에 나열 및 캡처된 최고 수위 표시입니다.<p>이 설명서의 **최고 수위 표시** 섹션을 참조하세요.<p>Windows Server를 설치한 실제 호스트 또는 Windows Server를 설치했지만 알려진 Windows Server VM이 실행되고 있지 않은 실제 호스트는 항상 하나로 계산됩니다. 호스트에서 하나 이상의 알려진 Windows Server VM이 실행되고 있고 Windows Server가 자체 호스트에서 실행 중인 경우 호스트 OS는 계산에 포함되지 않습니다.|
 |실제 프로세서 수|실제 호스트에 설치된 실제 프로세서 수입니다.|
 |실제 코어 수|실제 호스트에 설치된 실제 프로세서 코어의 수입니다.|
 |가상 프로세서 수|Windows에서 VM 내에서 인식하는 가상 프로세서의 수입니다. 이 값은 Windows Server에서 SIL을 사용하여 HTTPS를 통해 전달되는 데이터에서만 가져옵니다.|
-|폴링 날짜/시간|실제 호스트에서 동시에 실행 중인 Windows Server VM의 최신 최고 수위 표시 지점의 날짜 및 시간입니다.<br /><br />이 설명서의 **폴링 날짜/시간** 섹션을 참조하세요.|
+|폴링 날짜/시간|실제 호스트에서 동시에 실행 중인 Windows Server VM의 최신 최고 수위 표시 지점의 날짜 및 시간입니다.<p>이 설명서의 **폴링 날짜/시간** 섹션을 참조하세요.|
 |VM에 마지막 표시된 날짜/시간|집계 중에 이 Windows Server VM에서 HTTPS를 통해 마지막으로 데이터 인벤토리를 받은 날짜 및 시간입니다.|
-|호스트에 마지막 표시된 날짜/시간|집계 중에 이 Windows Server 실제 호스트에서 HTTPS를 통해 마지막으로 데이터 인벤토리를 받은 날짜 및 시간입니다.<br /><br />Windows Server 및 HyperV를 실행 중인 실제 호스트에서 SIL을 사용하고 HTTPS를 통해 인벤토리 데이터를 SIL Aggregator로 전달할 수 있습니다.|
+|호스트에 마지막 표시된 날짜/시간|집계 중에 이 Windows Server 실제 호스트에서 HTTPS를 통해 마지막으로 데이터 인벤토리를 받은 날짜 및 시간입니다.<p>Windows Server 및 HyperV를 실행 중인 실제 호스트에서 SIL을 사용하고 HTTPS를 통해 인벤토리 데이터를 SIL Aggregator로 전달할 수 있습니다.|
 
 ## <a name="sil-aggregator-cmdlets-detail"></a>SIL Aggregator Cmdlet 세부 정보
 다음은 SIL Aggregator cmdlet에 대한 세부 정보입니다. 전체 cmdlet 문서는 [SIL Aggregator PowerShell cmdlet](https://technet.microsoft.com/library/mt548455.aspx)을 참조하세요.
@@ -422,7 +418,7 @@ Software Inventory Logging Aggregator를 사용할 경우 최고 수위 표시 �
 
 |하이퍼바이저 버전|SIL Aggregator         HostType 값|SIL Aggregator HypervisorType 값|
 |----------------------|-----------------------------------------|---------------------------------------|
-|Windows Server, 2012 R2|Windows|Hyper V|
+|Windows Server, 2012 R2|Windows|HyperV|
 |VMware 5.5|VMware|Esxi|
 |Xen 4.x|Ubuntu, OpenSuse 또는 CentOS|Xen|
 |XenServer 6.2|Citrix|XenServer|
@@ -435,9 +431,9 @@ https://sshnet.codeplex.com/releases/view/120504
 Copyright (c) 2010, RENCI</pre>
 
 ### <a name="get-silaggregator"></a>Get-SilAggregator
-`Get-SilAggregator`에서는 Software Inventory Logging Aggregator 애플리케이션에 대한 구성 정보를 제공합니다. 다음과 같은 예제 출력이 표시됩니다.
+`Get-SilAggregator`에서는 Software Inventory Logging Aggregator 응용 프로그램에 대한 구성 정보를 제공합니다. 다음과 같은 예제 출력이 표시됩니다.
 
--   애플리케이션이 실행 중입니다.
+-   응용 프로그램이 실행 중입니다.
 
 -   폴링 간격은 1시간입니다(시간 단위 증분 변경 가능).
 
@@ -490,7 +486,7 @@ Copyright (c) 2010, RENCI</pre>
 
 -   또한 이 cmdlet은 VM에서 가져온 데이터(VM에서 사용 가능한 경우)를 통해 추가된 호스트 이름을 나열합니다. 이러한 이름은 목록에 나타나지만 HostType 또는 HypervisorType이 없습니다. 이 데이터를 사용하면 폴링하도록 설정되지 않은 VM과 호스트를 일치시킬 수 있습니다.
 
--   `–StartTime` 및 `–EndTime` 매개 변수를 사용하면 언제 호스트가 처음으로 추가되고 마지막으로 폴링되었는지를 쉽게 알 수 있습니다.
+-   `–StartTime` 및`–EndTime` 매개 변수를 사용하면 언제 호스트가 처음으로 추가되고 마지막으로 폴링되었는지를 쉽게 알 수 있습니다.
 
 ### <a name="remove-silvmhost"></a>Remove-SilVMHost
 
@@ -561,7 +557,7 @@ SIL Aggregator를 제거했다가 다시 설치해야 하는 경우 기존 및 �
 
 -   SIL Aggregator에서 `Set-SilAggregator –AddCertificateThumbprint` cmdlet을 사용하여 새 지문을 SIL Aggregator에 추가합니다.
 
--   데이터를 전달하는 모든 서버에서 기본 방법을 사용하여 **\LOCALMACHINE\MY** 에 사용할 새 인증서를 설치합니다.
+-   데이터를 전달하는 모든 서버에서 기본 방법을 사용하여 **\LOCALMACHINE\MY**에 사용할 새 인증서를 설치합니다.
 
 -   데이터를 전달하는 모든 서버에서 `Set-SilLogging –CertificateThumbprint` cmdlet을 사용하여 새 인증서의 지문을 업데이트합니다.
 
@@ -593,7 +589,7 @@ SIL Aggregator를 제거했다가 다시 설치해야 하는 경우 기존 및 �
 
 -   Windows Server 2008 R2 및 Windows Server 2012 호스트를 폴링 호스트 목록에 추가할 수 있지만, 이 버전(1.0)의 SIL Aggregator에서는 Windows/Hyper-V 기반 호스트에서 모든 기능을 사용하도록 Windows Server 2012 R2 폴링만 지원합니다.  특히 Windows Server 2008 R2 호스트를 폴링할 경우 가상 컴퓨터와 호스트를 SIL Aggregator 보고서에서 일치시킬 수 없습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 [Windows Server 용 소프트웨어 인벤토리 로깅 집계 1.0](https://www.microsoft.com/download/details.aspx?id=49046)<br>
 [SIL 집계 PowerShell cmdlet](https://technet.microsoft.com/library/mt548455.aspx)<br>
 [SIL PowerShell cmdlet](https://technet.microsoft.com/library/dn283390.aspx)<br>

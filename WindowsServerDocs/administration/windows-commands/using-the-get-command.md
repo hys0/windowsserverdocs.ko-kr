@@ -1,30 +1,27 @@
 ---
-title: Get 명령을 사용 하 여
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+title: get
+description: 지정 된 개체에 대 한 속성 또는 특성을 검색 하는 get에 대 한 Windows 명령 항목입니다.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fbd44c67-0670-4dfe-a1c0-2ab8abe327b5
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 35fe9ebf036e82fce0f6b2ff67ddb654d8dad586
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: be532dcb57faf4ec2a86a34c3ab59c921c5b8d0c
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71363278"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80831146"
 ---
-# <a name="using-the-get-command"></a>Get 명령을 사용 하 여
+# <a name="get"></a>get
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 속성이 나 지정된 된 개체에 대 한 특성을 검색합니다.
+
 ## <a name="subcommands"></a>하위 명령
 |하위 명령|설명|
 |-------|--------|

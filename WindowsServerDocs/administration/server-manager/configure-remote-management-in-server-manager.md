@@ -1,24 +1,20 @@
 ---
 title: 서버 관리자에서 원격 관리 구성
 description: 서버 관리자
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-server-manager
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 509182ed-c37d-4b81-84bc-aee43d006873
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8e1058a5679f73fcd2ceb8586da687158762d10f
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 01bc2d2d262882c08d1213bae6149896a8b284ab
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71383215"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80851566"
 ---
 # <a name="configure-remote-management-in-server-manager"></a>서버 관리자에서 원격 관리 구성
 
@@ -30,7 +26,7 @@ Windows Server의 원격 서버에서 관리 작업을 수행 하려면 서버 �
 
 Windows Server 2016 보다 오래 된 Windows Server 릴리스를 실행 하는 서버를 관리 하려면 다음 소프트웨어 및 Windows Server 2016에서 서버 관리자를 사용 하 여 이전 버전의 Windows Server를 관리 하기 위해 업데이트를 설치 합니다.
 
-|운영 체제|필요한 소프트웨어|관리 효율성|
+|운영 체제|필수 소프트웨어|관리 효율성|
 |----------|-----------|---------|
 | Windows Server 2012 R2 또는 Windows Server 2012 |-   [.NET Framework 4.6](https://www.microsoft.com/download/details.aspx?id=45497)<br />[Windows Management Framework 5.0](https://go.microsoft.com/fwlink/?LinkID=395058)을 -   합니다. Windows 관리 프레임 워크 5.0 다운로드 패키지는 Windows Server 2012 R2, Windows Server 2012 및 Windows Server 2008 r 2에서 Windows Management Instrumentation (WMI) 공급자를 업데이트합니다. 관리 되는 서버에 설치 되어 있는 역할 및 기능에 대 한 정보를 수집 하는 서버 관리자를 사용 하는 업데이트 된 WMI 공급자 있습니다. Windows Server 2012 R2, Windows Server 2012 또는 Windows Server 2008 r 2를 실행 하는 서버는 관리 효율성 상태는 업데이트가 적용 될 때까지 **액세스할 수 없습니다.** 합니다.<br />-성능 업데이트와 관련 된 [기술 자료 문서 2682011](https://go.microsoft.com/fwlink/p/?LinkID=245487) 은 Windows Server 2012 r 2를 실행 하는 서버 또는 Windows Server 2012에 필요 하지 않습니다.||
 | Windows Server 2008 R2 |-   [.NET Framework 4.5](https://www.microsoft.com/download/details.aspx?id=30653)<br />[Windows Management Framework 4.0](https://go.microsoft.com/fwlink/?LinkId=293881)을 -   합니다. Windows Management Framework 4.0 다운로드 패키지는 Windows Server 2008 r 2에서 Windows Management Instrumentation (WMI) 공급자를 업데이트합니다. 관리 되는 서버에 설치 되어 있는 역할 및 기능에 대 한 정보를 수집 하는 서버 관리자를 사용 하는 업데이트 된 WMI 공급자 있습니다. Windows Server 2008 r 2를 실행 하는 서버는 관리 효율성 상태는 업데이트가 적용 될 때까지 **액세스할 수 없습니다.** 합니다.<br />-성능 업데이트와 관련 된 [기술 자료 문서 2682011](https://go.microsoft.com/fwlink/p/?LinkID=245487) 서버 관리자 Windows Server 2008 r 2에서 성능 데이터를 수집할 수 있습니다.||
@@ -101,7 +97,7 @@ Windows Server 2016에서는 WinRM (Windows remote Management) 및 DCOM (Distrib
 
     **%windir%\system32\Configure-SMremoting.exe**
 
-3.  다음 중 하나를 수행합니다.
+3.  다음 작업 중 하나를 수행합니다.
 
     -   원격 관리를 사용 하지 않도록 설정 하려면 **configure-smremoting.exe-disable**을 입력 한 다음 **enter**키를 누릅니다.
 
@@ -111,7 +107,7 @@ Windows Server 2016에서는 WinRM (Windows remote Management) 및 DCOM (Distrib
 
 ### <a name="to-enable-server-manager-and-windows-powershell-remote-management-on-earlier-releases-of-windows-server"></a>Windows Server의 이전 릴리스에서 서버 관리자 및 Windows PowerShell 원격 관리를 사용하도록 설정하려면
 
--   다음 중 하나를 수행합니다.
+-   다음 작업 중 하나를 수행합니다.
 
     -   Windows Server 2012를 실행 하는 서버에서 원격 관리를 사용 하려면 [Windows 인터페이스를 사용 하 여 서버 관리자 원격 관리를 사용 하도록 설정 하려면](#to-enable-server-manager-remote-management-by-using-the-windows-interface) 이 여기에 있습니다.
 
@@ -187,7 +183,7 @@ WinRM이 원격 컴퓨터와 통신하는 기본 포트 번호는 5985입니다.
 
 WinRM 수신기 설정을 구성 하는 방법에 대 한 자세한 내용을 보려면 명령 프롬프트에서 **winrm help config**를 입력 한 다음 enter 키를 누릅니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 [서버 관리자에 서버 추가](add-servers-to-server-manager.md) windows PowerShell: [사용자 계정 컨트롤](https://support.microsoft.com/kb/951016) 에 대 한 [windows Server TechCenter](https://technet.microsoft.com/library/dd347642.aspx)
 설명 about_remote_Troubleshooting

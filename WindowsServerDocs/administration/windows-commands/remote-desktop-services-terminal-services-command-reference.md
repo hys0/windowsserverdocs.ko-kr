@@ -1,32 +1,28 @@
 ---
 title: 원격 데스크톱 서비스 (터미널 서비스) 명령 참조
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2f371848-5c48-470c-908c-afbc95d3a805
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3d13d6ac2e423c5a07a2a84af5e17fe9081cd70f
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b2e188be84c657688a971a75788942d4acf598d7
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71371607"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80836066"
 ---
 # <a name="remote-desktop-services-terminal-services-command-reference"></a>원격 데스크톱 서비스 (터미널 서비스) 명령 참조
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 다음은 명령줄 도구를 원격 데스크톱 서비스의 목록이 있습니다.
 > [!NOTE]
-> Windows Server 2008 R2에서는 터미널 서비스의 이름이 원격 데스크톱 서비스로 바뀌었습니다. 최신 버전의 새로운 기능에 대 한 자세한 내용은 Windows Server TechNet 라이브러리의 [Windows server 2012에 있는 원격 데스크톱 서비스의 새로운 기능](https://technet.microsoft.com/library/hh831527) 을 참조 하십시오.
+> 터미널 서비스는 Windows Server 2008 R2에서 원격 데스크톱 서비스로 이름이 변경되었습니다. 최신 버전의 새로운 기능에 대 한 자세한 내용은 Windows Server TechNet 라이브러리의 [Windows server 2012에 있는 원격 데스크톱 서비스의 새로운 기능](https://technet.microsoft.com/library/hh831527) 을 참조 하십시오.
 > 
 > |                 명령                 |                                                      설명                                                       |
 > |-----------------------------------------|------------------------------------------------------------------------------------------------------------------------|
@@ -43,7 +39,7 @@ ms.locfileid: "71371607"
 > |            [mstsc](mstsc.md)            |                       rd 세션 호스트 서버 또는 다른 원격 컴퓨터에 대 한 연결을 만듭니다.                        |
 > |          [qappsrv](qappsrv.md)          |                             네트워크에 있는 모든 rd 세션 호스트 서버 목록을 표시 합니다.                             |
 > |         [qprocess](qprocess.md)         |                  Rd 세션 호스트 서버에서 실행 중인 프로세스에 대 한 정보를 표시 합니다.                   |
-> |            [query](query.md)            |                      프로세스, 세션 및 rd 세션 호스트 서버에 대 한 정보를 표시 합니다.                      |
+> |            [쿼리](query.md)            |                      프로세스, 세션 및 rd 세션 호스트 서버에 대 한 정보를 표시 합니다.                      |
 > |    [쿼리 프로세스](query-process.md)    |                  Rd 세션 호스트 서버에서 실행 중인 프로세스에 대 한 정보를 표시 합니다.                   |
 > |    [세션 쿼리](query-session.md)    |                           Rd 세션 호스트 서버에서 세션에 대 한 정보를 표시 합니다.                            |
 > | [termserver 쿼리](query-termserver.md) |                             네트워크에 있는 모든 rd 세션 호스트 서버 목록을 표시 합니다.                             |

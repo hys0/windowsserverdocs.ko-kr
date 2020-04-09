@@ -1,24 +1,20 @@
 ---
 title: xcopy
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: Xcopy를 위한 Windows 명령 항목 w hich는 하위 디렉터리를 포함 하 여 파일 및 디렉터리를 복사 합니다.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 76a310d7-9925-4571-a252-0e28960d5f89
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 01/05/2019
-ms.openlocfilehash: 885729f2bca100d7ac89a3463135d56f48c8b75a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 660ef69a5f1df99c3b959a588984719c9d4dea6b
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71361793"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80828926"
 ---
 # <a name="xcopy"></a>xcopy
 
@@ -32,11 +28,11 @@ ms.locfileid: "71361793"
 Xcopy <Source> [<Destination>] [/w] [/p] [/c] [/v] [/q] [/f] [/l] [/g] [/d [:MM-DD-YYYY]] [/u] [/i] [/s [/e]] [/t] [/k] [/r] [/h] [{/a | /m}] [/n] [/o] [/x] [/exclude:FileName1[+[FileName2]][+[FileName3]] [{/y | /-y}] [/z] [/b] [/j]
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------|-----------|
-|\<원본 >|필수 요소. 복사 하려는 파일의 이름과 위치를 지정 합니다. 이 매개 변수는 드라이브 또는 경로 포함 해야 합니다.|
+|\<원본 >|필수입니다. 복사 하려는 파일의 이름과 위치를 지정 합니다. 이 매개 변수는 드라이브 또는 경로 포함 해야 합니다.|
 |[\<Destination >]|복사 하려는 파일의 대상을 지정 합니다. 이 매개 변수는 드라이브 문자 및 콜론, 디렉터리 이름, 파일 이름, 또는 이들의 조합을 포함할 수 있습니다.|
 |/w|메시지를 표시 하 고 파일을 복사 하기 전에 사용자의 응답을 대기 합니다.</br>**아무 키나 눌러 파일 복사를 시작 합니다.**|
 |/p|각 대상 파일을 만들 것인지 여부를 확인 하 라는 메시지가 표시 됩니다.|
@@ -55,7 +51,7 @@ Xcopy <Source> [<Destination>] [/w] [/p] [/c] [/v] [/q] [/f] [/l] [/g] [/d [:MM-
 |/k|파일을 복사 하 고 읽기 전용 특성을 유지 *대상* 에 존재 하는 경우 파일은 *소스* 파일입니다. 기본적으로 **xcopy** 읽기 전용 특성을 제거 합니다.|
 |/r|읽기 전용 파일을 복사 합니다.|
 |/h|파일을 복사 된 숨겨진 및 시스템 파일 특성입니다. 기본적으로 **xcopy** 가 숨겨진 복사 또는 시스템 파일|
-|/ a|복사만 *소스* 파일의 보관 파일을 파일 특성 집합입니다. **/a** 소스 파일의 보관 파일 특성을 수정 하지는 않습니다. 사용 하 여 보관 파일 특성을 설정 하는 방법에 대 한 내용은 **attrib**, 참조 [추가 참조](#additional-references)합니다.|
+|/a|복사만 *소스* 파일의 보관 파일을 파일 특성 집합입니다. **/a** 소스 파일의 보관 파일 특성을 수정 하지는 않습니다. 사용 하 여 보관 파일 특성을 설정 하는 방법에 대 한 내용은 **attrib**, 참조 [추가 참조](#additional-references)합니다.|
 |/m|복사본 *소스* 파일의 보관 파일을 파일 특성 집합입니다. 와 달리 **/a**, **/m** 원본에 지정 된 파일의 보관 파일 특성을 해제 합니다. 사용 하 여 보관 파일 특성을 설정 하는 방법에 대 한 내용은 **attrib**, 참조 [추가 참조](#additional-references)합니다.|
 |/n|NTFS 짧은 파일 또는 디렉터리 이름을 사용 하 여 복사본을 만듭니다. **/n** 은 파일을 복사 또는 FAT 볼륨을 NTFS 볼륨에서 디렉터리 또는 FAT 파일 시스템 명명 규칙 (즉, 8.3 문자)에 필요한 경우에 필요는 *대상* 파일 시스템입니다. *대상* FAT 또는 NTFS 파일 시스템이 될 수 있습니다.|
 |/o|복사는 소유권 및 임의 액세스 제어 목록 (DACL) 정보 파일입니다.|
@@ -68,7 +64,7 @@ Xcopy <Source> [<Destination>] [/w] [/p] [/c] [/v] [/q] [/f] [/l] [/g] [/d [:MM-
 |/j|버퍼링 하지 않고 파일을 복사 합니다. 매우 큰 파일에 대 한 것이 좋습니다. 이 매개 변수는 Windows Server 2008 r 2에서 추가 되었습니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 - 사용 하 여 **/z**
 
@@ -210,12 +206,12 @@ rem  3 File(s) copied
 
 앞의 예제에서이 특정 소스 매개 변수 값 **입니다.\\toc\*. yml**\\두 경로 문자가 제거 된 경우에도 동일한 3 개의 파일을 복사 합니다 **.** 그러나 원본 매개 변수에서 별표 와일드 카드를 제거 하는 경우 파일을 복사 하지 않습니다 **. toc .yml을\\합니다.**
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
 -   [복사](copy.md)
 -   [이동](move.md)
 -   [Dir](dir.md)
--   [Attrib](attrib.md)
+-   [특성과](attrib.md)
 -   [Diskcopy](diskcopy.md)
 -   [때](if.md)
--   [명령줄 구문 키](command-line-syntax-key.md)
+-   - [명령줄 구문 키](command-line-syntax-key.md)

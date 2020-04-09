@@ -1,24 +1,20 @@
 ---
 title: tasklist
 description: 로컬 또는 원격 컴퓨터에서 실행 중인 프로세스의 목록을 표시 하는 방법에 대해 알아봅니다.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8dbe30ee-1484-46be-917b-5ca3ff4fdc9c
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f7ad61dfe8beb86c8299dd71bec1d862805e50e0
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b43f4c9a89fa60f2244253d48d3dca646fe8e02d
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71383685"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80833436"
 ---
 # <a name="tasklist"></a>tasklist
 
@@ -32,7 +28,7 @@ ms.locfileid: "71383685"
 tasklist [/s <Computer> [/u [<Domain>\]<UserName> [/p <Password>]]] [{/m <Module> | /svc | /v}] [/fo {table | list | csv}] [/nh] [/fi <Filter> [/fi <Filter> [ ... ]]]
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |          매개 변수           |                                                                                                                                            설명                                                                                                                                             |
 |------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -51,23 +47,23 @@ tasklist [/s <Computer> [/u [<Domain>\]<UserName> [/p <Password>]]] [{/m <Module
 
 | 필터 이름 |    유효한 연산자     |                                                                 유효한 값                                                                 |
 |-------------|------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-|   상태    |         eq, ne         |                                                                   RUNNING                                                                    |
+|   STATUS    |         eq, ne         |                                                                   RUNNING                                                                    |
 |  IMAGENAME  |         eq, ne         |                                                                  이미지 이름                                                                  |
 |     PID     | eq, ne, gt, lt, ge, le |                                                                  PID 값                                                                   |
 |   세션   | eq, ne, gt, lt, ge, le |                                                                세션 번호                                                                |
-| 세션 이름 |         eq, ne         |                                                                 Session name(세션 이름)                                                                 |
+| 세션 이름 |         eq, ne         |                                                                 세션 이름                                                                 |
 |   CPU 시간   | eq, ne, gt, lt, ge, le | CPU 시간 형식에서 <em>HH</em> **:** <em>MM</em> **:** <em>SS</em>, 여기서 *MM* 및 *SS* 0에서 59 사이 및 *HH* 부호 없는 숫자는 |
 |  MEMUSAGE   | eq, ne, gt, lt, ge, le |                                                              메모리 사용량 (kb)                                                              |
-|  USERNAME   |         eq, ne         |                                                             모든 유효한 사용자 이름                                                              |
+|  사용자 이름   |         eq, ne         |                                                             모든 유효한 사용자 이름                                                              |
 |  서비스   |         eq, ne         |                                                                 서비스 이름                                                                 |
 | WINDOWTITLE |         eq, ne         |                                                                 창 제목                                                                 |
 |   모듈   |         eq, ne         |                                                                   DLL 이름                                                                   |
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 원격 시스템에서 지정 된 경우에 WINDOWTITLE 및 상태 필터가 지원 되지 않습니다.
 
-## <a name="BKMK_examples"></a>예와
+## <a name="examples"></a><a name="BKMK_examples"></a>예와
 
 프로세스 id, 1000 보다 큰 모든 작업을 나열 하 고 CSV 형식으로 표시 하려면 다음을 입력 합니다.
 ```
@@ -94,6 +90,6 @@ tasklist /s srvmain
 tasklist /s srvmain /u maindom\hiropln /p p@ssW23
 ```
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
-[명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

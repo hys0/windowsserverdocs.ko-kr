@@ -1,24 +1,20 @@
 ---
 title: reg 비교
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 177dc6a3-034e-4846-a394-330d03c14e0b
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: bfccc1f64b0113967a52e3ac0516d800cfea3532
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 21eb459711f8ca72bf2f6d841d958bb25a96f845
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71384721"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80836546"
 ---
 # <a name="reg-compare"></a>reg 비교
 
@@ -34,7 +30,7 @@ ms.locfileid: "71384721"
 reg compare <KeyName1> <KeyName2> [{/v ValueName | /ve}] [{/oa | /od | /os | on}] [/s]
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |    매개 변수    |                                                                                                                                                                                                                                                                                          설명                                                                                                                                                                                                                                                                                           |
 |-----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -50,7 +46,7 @@ reg compare <KeyName1> <KeyName2> [{/v ValueName | /ve}] [{/oa | /od | /os | on}
 |       /s        |                                                                                                                                                                                                                                                                         모든 하위 키와 항목 재귀적으로 비교합니다.                                                                                                                                                                                                                                                                          |
 |       /?        |                                                                                                                                                                                                                                                                    에 대 한 도움말을 표시 **reg 비교** 명령 프롬프트입니다.                                                                                                                                                                                                                                                                    |
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 다음 표에서 반환 값에 대 한 **reg 비교**합니다.
 
@@ -62,13 +58,13 @@ reg compare <KeyName1> <KeyName2> [{/v ValueName | /ve}] [{/oa | /od | /os | on}
 
 다음 표에서 결과에 표시 된 기호를 나열 합니다.
 
-|Symbol|설명|
+|기호|설명|
 |------|-----------|
 |=|*KeyName1* 데이터 같으면 *KeyName2* 데이터입니다.|
 |<|*KeyName1* 데이터는 보다 작은 *KeyName2* 데이터입니다.|
 |>|*KeyName1* 데이터 보다 크면 *KeyName2* 데이터입니다.|
 
-## <a name="BKMK_examples"></a>예와
+## <a name="examples"></a><a name=BKMK_examples></a>예와
 
 **MyApp** 키 아래의 모든 값을 **Savemyapp**키의 모든 값과 비교 하려면 다음을 입력 합니다.
 
@@ -82,6 +78,6 @@ HKLM\Software\MyCo 아래의 모든 하위 키와 값을 로컬 컴퓨터의 HKL
 
 REG COMPARE \\\\ZODIAC\HKLM\Software\MyCo \\\\. /s
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
-[명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

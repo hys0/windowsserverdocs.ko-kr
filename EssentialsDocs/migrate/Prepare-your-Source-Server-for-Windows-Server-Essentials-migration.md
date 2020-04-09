@@ -1,23 +1,19 @@
 ---
 title: Windows Server Essentials migration1에 대 한 원본 서버 준비
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f5861ae9-77cb-4d37-b4c5-8f0757213385
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 503b8edc645b43da1dc5c5fb37547e8e0245d4a2
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: d7a718e9e84866b6a1f626499b7e2bec58de498f
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80318811"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80852406"
 ---
 # <a name="prepare-your-source-server-for-windows-server-essentials-migration1"></a>Windows Server Essentials migration1에 대 한 원본 서버 준비
 
@@ -81,7 +77,7 @@ ms.locfileid: "80318811"
 #### <a name="run-the-windows-server-solutions-best-practices-analyzer"></a>Windows Server Solutions 모범 사례 분석기를 실행합니다.  
  Windows Server Solutions BPA(모범 사례 분석기)를 실행하여 마이그레이션 프로세스를 시작하기 전에 서버, 네트워크 또는 도메인에 문제가 없는지 확인합니다. BPA는 다음 원본에서 구성 정보를 수집합니다.  
   
--   Active Directory® WMI(Windows Management Instrumentation)  
+-   WMI (Active Directory&reg; WMI(Windows Management Instrumentation))  
   
 -   레지스트리  
   

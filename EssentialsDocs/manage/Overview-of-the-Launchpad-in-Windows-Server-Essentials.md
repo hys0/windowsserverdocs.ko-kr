@@ -1,23 +1,19 @@
 ---
 title: Windows Server Essentials의 실행 패드 개요
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 198d16cb-3d07-4706-be89-ad14a5f7dc47
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 63a161057f7068dcb9e02faa353270f0150200b4
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: ffff090e360282933723465bb3bbde6c0285a97b
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80310661"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80852666"
 ---
 # <a name="overview-of-the-launchpad-in-windows-server-essentials"></a>Windows Server Essentials의 실행 패드 개요
 
@@ -77,7 +73,7 @@ Windows Server Essentials 실행 패드는 컴퓨터를 서버에 처음 연결�
  실행 패드에 나타나는 경고는 컴퓨터의 즉각적인 상태에 대한 빠른 상태를 제공합니다. 상태 경고에 대한 정보를 보려면 경고 표시기를 클릭하여 경고 뷰어를 엽니다. 상태 경고가 심각도 수준에 따라 뷰어에 나타납니다. 가장 심각한 경고가 목록에서 첫 번째로 나타나고 덜 심각한 경고가 목록에서 나중에 나타납니다. 컴퓨터 상태 경고에 대 한 자세한 내용은 [시스템 상태 관리](Manage-System-Health-in-Windows-Server-Essentials.md)를 참조 하세요.  
   
 ##  <a name="use-the-launchpad-with-a-mac-computer"></a><a name="BKMK_Mac"></a>Mac 컴퓨터에서 실행 패드 사용  
- Mac OS X® 10.5 이상을 실행 하는 Mac® 컴퓨터를 Windows Server Essentials, Windows Server Essentials 또는 Windows Server 2012 R2 또는 connector 소프트웨어를 다운로드 및 설치 하 여 연결할 수 있습니다. Connector 소프트웨어 설치를 완료하면 시작 시 실행 패드를 자동으로 시작하도록 선택할 수 있습니다.  
+ Mac OS X&reg; 10.5 이상을 실행 하는 Mac&reg; 컴퓨터를 Windows Server Essentials, Windows Server Essentials 또는 Windows Server 2012 R2 또는 connector 소프트웨어를 다운로드 및 설치 하 여 연결할 수 있습니다. Connector 소프트웨어 설치를 완료하면 시작 시 실행 패드를 자동으로 시작하도록 선택할 수 있습니다.  
   
  실행 패드는 인증된 사용자에게 공유 파일 및 미디어, 추가 기능, 원격 웹 액세스를 비롯한 서버의 주요 기능에 대한 액세스 권한을 제공하는 작은 애플리케이션입니다. 실행 패드에서는 컴퓨터 상태에 대한 실시간 정보와 알림도 제공합니다.  
   

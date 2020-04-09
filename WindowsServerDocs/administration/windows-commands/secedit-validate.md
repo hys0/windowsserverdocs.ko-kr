@@ -1,24 +1,20 @@
 ---
 title: 'secedit: 유효성 검사'
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9fb06354-f55a-4ca4-9fbc-9a872eb9b9cf
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ece0a0324b77eb4226b679bc29f7bd599f15a120
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b9425f7a1fb821f4ecbaa7c1689c3baabbff6223
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71371096"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80834876"
 ---
 # <a name="seceditvalidate"></a>secedit: 유효성 검사
 
@@ -33,13 +29,13 @@ Secedit /validate <configuration file name>
 
 ```
 
-### <a name="parameters"></a>매개 변수
+#### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------|-----------|
-|구성 파일 이름|필수.</br>유효성을 검사할 보안 서식 파일에 대 한 경로 파일 이름을 지정 합니다.|
+|구성 파일 이름|필수입니다.</br>유효성을 검사할 보안 서식 파일에 대 한 경로 파일 이름을 지정 합니다.|
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 보안 템플릿 유효성을 검사 하는 경우 도움이 됩니다 하나 손상 되거나 부적절 하 게 설정 합니다.
 
@@ -49,15 +45,15 @@ Secedit /validate <configuration file name>
 
 Windows Server 2008에서 `Secedit /refreshpolicy` 바뀌었습니다 `gpupdate`합니다. 보안 설정을 새로 고치는 방법에 대 한 자세한 내용은 [Gpupdate](gpupdate.md)합니다.
 
-## <a name="BKMK_Examples"></a>예와
+## <a name="examples"></a><a name=BKMK_Examples></a>예와
 
 보안 템플릿 롤백을 수행 된 후 하는지 확인 하려면 rollback inf 파일, secRBKcontoso.inf, 유효 합니다.
 ```
 Secedit /validate secRBKcontoso.inf
 ```
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
 -   [Secedit:generaterollback](secedit-generaterollback.md)
 -   [Secedit](secedit.md)
--   [명령줄 구문 키](command-line-syntax-key.md)
+-   - [명령줄 구문 키](command-line-syntax-key.md)

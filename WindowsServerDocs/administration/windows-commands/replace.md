@@ -1,24 +1,20 @@
 ---
 title: replace
 description: Replace 명령을 사용 하 여 파일을 바꾸는 방법에 대해 알아봅니다.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6143661e-d90f-4812-b265-6669b567dd1f
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: 0e96be58106847a3ff6451cdb7792a197ec40227
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: d44e4f8383a77582177f4d9b161210207ce46e63
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71384514"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80835906"
 ---
 # <a name="replace"></a>replace
 
@@ -35,13 +31,13 @@ replace [<Drive1>:][<Path1>]<FileName> [<Drive2>:][<Path2>] [/a] [/p] [/r] [/w]
 replace [<Drive1>:][<Path1>]<FileName> [<Drive2>:][<Path2>] [/p] [/r] [/s] [/w] [/u] 
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------|-----------|
-|[\<드라이브 1 >:] [\<Path1 >] \<FileName >|위치 및 소스 파일의 이름 또는 파일 집합을 지정합니다. *FileName* 은 필수 이며 와일드 카드 문자를 포함할 수 **&#42;** 있습니다 (및 **?** ).|
+|[\<Drive1 >:] [\<Path1 >]\<파일 이름 >|위치 및 소스 파일의 이름 또는 파일 집합을 지정합니다. *FileName* 은 필수 이며 와일드 카드 문자를 포함할 수 **&#42;** 있습니다 (및 **?** ).|
 |[\<Drive2 >:] [\<Path2 >]|대상 파일의 위치를 지정합니다. 바꾸려는 파일에 대 한 파일 이름을 지정할 수 없습니다. 드라이브 또는 경로 지정 하지 않으면 **대체** 현재 드라이브 및 디렉터리를 대상으로 사용 합니다.|
-|/ a|기존 파일을 대체 하지 않고 대상 디렉터리에 새 파일을 추가 합니다. 이 명령줄 옵션을 사용할 수 없습니다는 **/s** 또는 **/u** 명령줄 옵션입니다.|
+|/a|기존 파일을 대체 하지 않고 대상 디렉터리에 새 파일을 추가 합니다. 이 명령줄 옵션을 사용할 수 없습니다는 **/s** 또는 **/u** 명령줄 옵션입니다.|
 |/p|대상 파일을 교체 하거나 원본 파일을 추가 하기 전에 확인 하면 메시지를 표시 합니다.|
 |/r|읽기 전용 및 보호 되지 않은 파일을 대체합니다. 읽기 전용 파일을 대체 하려고 하지만 지정 하지 않는 경우 **/r**, 오류가 발생 하 고 대체 작업을 중지 합니다.|
 |/w|소스 파일에 대 한 검색을 시작 하기 전에 디스크를 삽입 하도록 기다립니다. 지정 하지 않으면 **/w**, **대체** enter 키를 한 후에 바로 바꾸거나 추가 파일을 시작 합니다.|
@@ -49,7 +45,7 @@ replace [<Drive1>:][<Path1>]<FileName> [<Drive2>:][<Path2>] [/p] [/r] [/s] [/w] 
 |/u|원본 디렉터리에 있는 것 보다 오래 된 대상 디렉터리에 파일에만 대체 합니다. 사용할 수 없습니다 **/u** 와 **/a** 명령줄 옵션입니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 - 으로 **대체** 바꾸거나 추가 파일을 파일 이름이 화면에 표시 됩니다. 후 **대체** 가 완료 된 다음 형식 중 하나에 요약 정보를 표시 합니다.  
   ```
@@ -74,12 +70,12 @@ replace [<Drive1>:][<Path1>]<FileName> [<Drive2>:][<Path2>] [/p] [/r] [/s] [/w] 
 > [!NOTE]
 > ERRORLEVEL 매개 변수를 사용 하 여에 **경우** 일괄 처리에서 반환 되는 프로세스 종료 코드를 프로그램에서 명령줄 **대체**합니다.
 
-## <a name="BKMK_examples"></a>예와
+## <a name="examples"></a><a name="BKMK_examples"></a>예와
 
 A 드라이브에 플로피 디스크에서 Phones.cli 파일의 최신 버전으로 Phones.cli (에 표시 되는 C 드라이브에 여러 디렉터리) 라는 파일의 모든 버전을 업데이트 하려면 다음을 입력 합니다.
 
 `replace a:\phones.cli c:\ /s`
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
-[명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

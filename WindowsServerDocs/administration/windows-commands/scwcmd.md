@@ -1,24 +1,20 @@
 ---
 title: Scwcmd
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 188ae881-c7d4-4a7a-b967-8fdc79f5f345
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: fae9476f94af5faa6e942239e7d91cf589bb1776
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 014bb8b26f6eebaefa3a9997a71fbaaf543a75dc
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71384261"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80835046"
 ---
 # <a name="scwcmd"></a>Scwcmd
 
@@ -40,7 +36,7 @@ SCW (보안 구성 마법사)에 포함 된 Scwcmd 명령줄 도구를 사용 �
 scwcmd <command> [<subcommand>]
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |하위 명령|설명|
 |----------|-----------|
@@ -52,6 +48,6 @@ scwcmd <command> [<subcommand>]
 |/view|지정 된.xsl 변환을 사용 하 여.xml 파일을 렌더링 합니다.</br>참조 [Scwcmd: 보기](scwcmd-view.md) 구문 및 옵션에 대 한 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
--   [명령줄 구문 키](command-line-syntax-key.md)
+-   - [명령줄 구문 키](command-line-syntax-key.md)

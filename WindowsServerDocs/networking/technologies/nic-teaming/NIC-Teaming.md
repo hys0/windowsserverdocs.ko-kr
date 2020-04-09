@@ -2,23 +2,19 @@
 title: NIC 팀
 description: 이 항목에서는 Windows Server 2016의 NIC (네트워크 인터페이스 카드) 팀에 대 한 개요를 제공 합니다. NIC 팀을 사용 하면 32 하나 이상의 실제 이더넷 네트워크 어댑터 간에 하나 이상의 소프트웨어 기반 가상 네트워크 어댑터로 그룹화 할 수 있습니다. 이 가상 네트워크 어댑터에는 빠른 성능과 네트워크 어댑터 오류 발생 시 내결함성을 제공합니다.
 manager: dougkim
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-nict
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: abded6f3-5708-4e35-9a9e-890e81924fec
 ms.author: lizross
 author: eross-msft
 ms.date: 09/10/2018
-ms.openlocfilehash: f4d9dd20d626f998bee0a8414c281cd27b2d3dbb
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 13607bedb436b794e03e3b2ef67ca0e90d865ed7
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80316444"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854736"
 ---
 # <a name="nic-teaming"></a>NIC 팀
 
@@ -41,7 +37,10 @@ Windows Server 2016는 팀 당 최대 32 개의 팀 인터페이스를 지원 �
 또한 팀으로 구성 된 Nic를 동일한 스위치나 다른 스위치에 연결할 수 있습니다. 서로 다른 스위치에 Nic를 연결 하는 경우 두 스위치가 모두 동일한 서브넷에 있어야 합니다.  
   
 ## <a name="availability"></a>가용성  
-NIC 팀은 Windows Server 2016의 모든 버전에서 사용할 수 있습니다. 다음과 같은 다양 한 도구를 사용 하 여 클라이언트 운영 체제를 실행 하는 컴퓨터에서 NIC 팀을 관리할 수 있습니다. • Windows PowerShell cmdlet • 원격 데스크톱 • 원격 서버 관리 도구  
+NIC 팀은 Windows Server 2016의 모든 버전에서 사용할 수 있습니다. 다음과 같은 다양 한 도구를 사용 하 여 클라이언트 운영 체제를 실행 하는 컴퓨터에서 NIC 팀을 관리할 수 있습니다.
+*    Windows PowerShell cmdlet
+*    원격 데스크톱
+*    원격 서버 관리 도구  
   
 ## <a name="supported-and-unsupported-nics"></a>지원 되거나 지원 되지 않는 Nic   
 Windows Server 2016에서 NIC 팀에서 (WHQL 테스트)는 Windows 하드웨어 규정 및 로고 테스트 경과 된 NIC를 사용할 수 있습니다.  
@@ -116,9 +115,9 @@ NIC 팀을 사용 하는 경우 여러 팀 인터페이스를 만들면 호스�
 
 NIC 팀으로 구성 된 VM에서 다음 지침을 사용 하 여 Vlan을 사용 하도록 계획 합니다.
   
--   VM에서 여러 Vlan을 지 원하는 기본 방법은 Hyper-v 가상 스위치의 포트를 여러 개 사용 하 여 VM을 구성 하 고 각 포트를 VLAN과 연결 하는 것입니다. 이러한 포트는 네트워크 통신 문제를 야기 하므로 VM에서 팀으로 설정 하지 마십시오.  
+-    VM에서 여러 Vlan을 지 원하는 기본 방법은 Hyper-v 가상 스위치의 포트를 여러 개 사용 하 여 VM을 구성 하 고 각 포트를 VLAN과 연결 하는 것입니다. 이러한 포트는 네트워크 통신 문제를 야기 하므로 VM에서 팀으로 설정 하지 마십시오.  
 
--   VM에 여러 개의 SR-IOV (가상 함수)가 있는 경우 VM에 팀을 구성 하기 전에 동일한 VLAN에 있는지 확인 합니다. 다른 모든 VFs를 서로 다른 Vlan에 있도록 구성 하는 것이 가능 하며, 이렇게 하면 네트워크 통신 문제가 발생 합니다.  
+-    VM에 여러 개의 SR-IOV (가상 함수)가 있는 경우 VM에 팀을 구성 하기 전에 동일한 VLAN에 있는지 확인 합니다. 다른 모든 VFs를 서로 다른 Vlan에 있도록 구성 하는 것이 가능 하며, 이렇게 하면 네트워크 통신 문제가 발생 합니다.  
  
   
 ### <a name="manage-network-interfaces-and-vlans"></a>네트워크 인터페이스 및 Vlan 관리 
