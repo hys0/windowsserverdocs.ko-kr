@@ -1,28 +1,24 @@
 ---
 title: 서버 관리자에 대한 바로 가기 키
 description: 서버 관리자
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-server-manager
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 96a2a8be-cbeb-4799-9034-284ea057915c
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a78a9eb0923a067fe2a8f1c9faee38b9d7f8b944
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 8135f453f633f8193fa56d80ae05cd9601435c87
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71383166"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80851516"
 ---
 # <a name="keyboard-shortcuts-for-server-manager"></a>서버 관리자에 대한 바로 가기 키
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 서버 관리자가 완전히 새롭게 디자인 Windows Server 2012를 시작 하기 때문에 Windows Server 2008 R2 또는 Windows Server 2008의 서버 관리자 콘솔에 사용 했던 바로 가기 키 필요가 없는 동일한 명령입니다. 이 항목에서는 새 바로 가기 키 및 액세스 키 Windows Server 2012 및 최신 버전의 Windows Server의 서버 관리자에 대 한 설명입니다.
 
@@ -33,7 +29,7 @@ ms.locfileid: "71383166"
 
 **시작 타일**
 
-|컨트롤 그룹|선택키|
+|컨트롤 그룹|액세스 키|
 |---------|-------|
 |시작 타일-빠른 시작 탭|**Alt + Q**|
 |시작 타일 - 새로운 기능 탭|**Alt + W**|
@@ -42,17 +38,17 @@ ms.locfileid: "71383166"
 
 **역할 및 그룹 미리 보기**
 
-|컨트롤 그룹|선택키|
+|컨트롤 그룹|액세스 키|
 |---------|-------|
 |역할 및 서버 그룹 타일|**Alt + R**|
 
 **콘솔 헤더 컨트롤**
 
-|컨트롤 그룹|선택키|
+|컨트롤 그룹|액세스 키|
 |---------|-------|
 |주소 표시줄의 뒤로 단추|**Alt+왼쪽 화살표** 또는 **백스페이스**|
 |주소 표시줄의 앞으로 단추|**Alt + 오른쪽 화살표**|
-|새로 고침|**SHIFT+F5**|
+|새로 고침|**Shift+f5**|
 |알림 영역, 작업 세부 정보 대화 상자 열기|**Alt + N**|
 |관리 메뉴|**Alt + M**|
 |보기 메뉴|**Alt + V**|
@@ -64,7 +60,7 @@ ms.locfileid: "71383166"
 
 **역할, 그룹 또는 로컬 서버 페이지의 타일**
 
-|컨트롤 그룹|선택키|
+|컨트롤 그룹|액세스 키|
 |---------|-------|
 |로컬 서버 페이지 속성 타일|**Alt + P**|
 |역할, 그룹 또는 로컬 서버 페이지 이벤트 타일|**Alt + E**|
@@ -76,12 +72,12 @@ ms.locfileid: "71383166"
 
 **로컬 서버 속성 타일 내 탐색**
 
-|컨트롤 그룹|선택키|
+|컨트롤 그룹|액세스 키|
 |---------|-------|
 |컴퓨터 이름|**Alt + C**|
 |마지막으로 설치한 업데이트|**Alt + L**|
 |도메인 또는 작업 그룹|**Alt + D**|
-|Windows 업데이트|**Alt + W**|
+|Windows Update|**Alt + W**|
 |마지막으로 확인한 업데이트|**Alt + S**|
 |원격 관리|**Alt + R**|
 |Windows 방화벽|**Alt + F**|
@@ -95,7 +91,7 @@ ms.locfileid: "71383166"
 
 **이벤트, 서비스, BPA, 성능, 역할 및 기능 타일 내 탐색**
 
-|컨트롤 그룹|선택키|
+|컨트롤 그룹|액세스 키|
 |---------|-------|
 |작업 메뉴|**Alt + T**|
 |필터 컨트롤|**Alt + F**|

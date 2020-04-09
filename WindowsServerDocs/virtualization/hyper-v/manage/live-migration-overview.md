@@ -2,20 +2,18 @@
 title: 실시간 마이그레이션 개요
 description: Windows Server 2016의 실시간 마이그레이션 기능에 대 한 개요를 제공 합니다.
 ms.prod: windows-server
-ms.service: na
 ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5cc875ab-05c4-439e-b27d-6bfc77054660
 author: johncslack
 ms.author: joslack
 ms.date: 06/27/2017
-ms.openlocfilehash: ba239343728502c4928b86a2a0d4a3db5c36e7f6
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 11fd67f5b4b3c9ce6a8aebe7dac4008f38d0f08e
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71392549"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80815176"
 ---
 # <a name="live-migration-overview"></a>실시간 마이그레이션 개요
 

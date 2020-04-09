@@ -3,16 +3,15 @@ title: 유효성 검사 협상 중 TCP 연결이 중단 됨
 description: 유효성을 검사 하는 동안 TCP 연결이 중단 될 때 SMB 문제를 해결 하는 방법을 소개 합니다.
 author: Deland-Han
 manager: dcscontentpm
-audience: ITPro
 ms.topic: article
 ms.author: delhan
 ms.date: 12/25/2019
-ms.openlocfilehash: 3455b4ac0a2706f80702378dda02c1877af219ca
-ms.sourcegitcommit: 8cf04db0bc44fd98f4321dca334e38c6573fae6c
+ms.openlocfilehash: 36bd49777899870246a19531c6681a5b45bb622d
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75654624"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80815516"
 ---
 # <a name="tcp-connection-is-aborted-during-validate-negotiate"></a>유효성 검사 협상 중 TCP 연결이 중단 됨
 
@@ -51,7 +50,7 @@ Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanWorkstatio
 
 클라이언트 또는 서버에서 Negotiate 유효성 검사 명령을 지원할 수 없는 경우 SMB 서명을 필수로 설정 하 여이 문제를 해결할 수 있습니다. SMB 서명은 협상의 유효성을 검사 하는 것 보다 더 안전 하 게 간주 됩니다. 그러나 서명이 필요한 경우 성능이 저하 될 수도 있습니다.
 
-## <a name="reference"></a>참고자료
+## <a name="reference"></a>참조
 
 자세한 내용은 다음 문서를 참조하세요.
 

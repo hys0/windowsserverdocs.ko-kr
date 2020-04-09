@@ -1,24 +1,20 @@
 ---
 title: (
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e275726c-035f-4a74-8062-013c37f5ded1
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: db0bf54e35e4226cb020b040d5fc36ddd88dc02b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: e7040e4cb8e0f38e58ce5e868535dcfb2d897fbd
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71377116"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80844536"
 ---
 # <a name="for"></a>(
 
@@ -34,17 +30,17 @@ ms.locfileid: "71377116"
 for {%%|%}<Variable> in (<Set>) do <Command> [<CommandLineOptions>]
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------|-----------|
-|{%%\|%}\<변수 >|필수 요소. 대체 가능 매개 변수를 나타냅니다. 단일 백분율 기호 ( **%** )를 사용 하 여 명령 프롬프트에서 **for** 명령을 수행 합니다. 이중 백분율 기호를 사용 하 여 ( **%%** )를 수행 하는 **에 대 한** 배치 파일 내 명령입니다. 변수는 대/소문자를 구분 하 고 나타내야 영문자 값와 같은 **%a**, **%b**, 또는 **%c**합니다.|
-|(\<설정 >)|필수 요소. 하나 이상의 파일, 디렉터리 또는 텍스트 문자열 또는 명령을 실행 하는 데 기반이 값의 범위를 지정 합니다. 괄호가 필요 합니다.|
-|\<명령 >|필수 요소. 에 포함 된 값의 범위 또는 각 파일, 디렉터리 또는 텍스트 문자열에서 체크 아웃 수행 하려는 명령을 지정 *설정*합니다.|
+|{%%\|%}\<변수 >|필수입니다. 대체 가능 매개 변수를 나타냅니다. 단일 백분율 기호 ( **%** )를 사용 하 여 명령 프롬프트에서 **for** 명령을 수행 합니다. 이중 백분율 기호를 사용 하 여 ( **%%** )를 수행 하는 **에 대 한** 배치 파일 내 명령입니다. 변수는 대/소문자를 구분 하 고 나타내야 영문자 값와 같은 **%a**, **%b**, 또는 **%c**합니다.|
+|(\<설정 >)|필수입니다. 하나 이상의 파일, 디렉터리 또는 텍스트 문자열 또는 명령을 실행 하는 데 기반이 값의 범위를 지정 합니다. 괄호가 필요 합니다.|
+|\<명령 >|필수입니다. 에 포함 된 값의 범위 또는 각 파일, 디렉터리 또는 텍스트 문자열에서 체크 아웃 수행 하려는 명령을 지정 *설정*합니다.|
 |\<CommandLineOptions >|지정된 된 명령을 사용 하려면 명령줄 옵션을 지정 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 - 사용 **방법**
 
@@ -68,7 +64,7 @@ for {%%|%}<Variable> in (<Set>) do <Command> [<CommandLineOptions>]
   사용 하는 경우는 **에 대 한** 명령, 첫 번째 값 *설정* 대체 **%** <em>변수</em> 또는 **%%** <em>변수</em>, 지정된 된이이 값을 처리 합니다. 모든 파일 (또는 파일 그룹)에 해당 하는 때까지 계속는 *설정* 값 처리 됩니다.
 - **In** 및 **do** 키워드 사용
 
-  **에** 하 고 **수행** 매개 변수가 있지만 사용 하 여 사용 해야 **에 대 한** 합니다. 이러한 키워드를 생략 하면 오류 메시지가 나타납니다.
+  **및은** 매개 변수가 아니지만 **에 대해** **이 매개** 변수를 사용 해야 합니다. 이러한 키워드를 생략 하면 오류 메시지가 나타납니다.
 - **의 추가** 양식 사용
 
   명령 확장을 사용 하는 경우 (기본값) **에 대해** 다음과 같은 추가 형식이 지원 됩니다.  
@@ -76,7 +72,7 @@ for {%%|%}<Variable> in (<Set>) do <Command> [<CommandLineOptions>]
 
     *Set* 에 와일드 카드 문자 ( **&#42;** 또는 **?** )가 포함 된 경우 지정 된 *명령은* *set*과 일치 하는 지정 된 디렉터리에 있는 파일 집합이 아닌 각 디렉터리에 대해 실행 됩니다.
 
-    구문은 다음과 같습니다.  
+    구문:  
     ```
     for /d {%%|%}<Variable> in (<Set>) do <Command> [<CommandLineOptions>] 
     ```  
@@ -84,7 +80,7 @@ for {%%|%}<Variable> in (<Set>) do <Command> [<CommandLineOptions>]
 
     *드라이브*:*경로* 를 기반으로 하는 디렉터리 트리를 탐색 하 고 트리의 각 디렉터리에서 **for** 문을 실행 합니다. 디렉터리가 없는 지정 되 면 **/r**, 현재 디렉터리를 루트 디렉터리로 사용 됩니다. 경우 *설정* 단일 마침표 (.)만 디렉터리 트리만 열거 합니다.
 
-    구문은 다음과 같습니다.  
+    구문:  
     ```
     for /r [[<Drive>:]<Path>] {%%|%}<Variable> in (<Set>) do <Command> [<CommandLineOptions>]
     ```  
@@ -92,7 +88,7 @@ for {%%|%}<Variable> in (<Set>) do <Command> [<CommandLineOptions>]
 
     반복 변수를 사용 하 여 시작 값을 설정 (*Start*#) 한 다음 값이 설정 된 끝 값 (*End*#)을 초과할 때까지 값의 집합을 단계별로 실행 합니다. **/l** 비교 하 여 반복 되는 실행 *시작*와 # *끝*#입니다. 경우 *시작*#은 보다 작은 *끝*# 명령을 실행 합니다. 반복 변수를 초과할 때 *끝*#, 명령 셸 루프를 종료 합니다. 음수를 사용할 수도 있습니다 *단계*# 감소 하는 값의 범위를 단계별로 실행 되도록 합니다. 예를 들어, (1,1,5) 1 2 3 4 5 시퀀스를 생성 하 고 (5,-1, 1) 5 4 3 2 1 시퀀스를 생성 합니다.
 
-    구문은 다음과 같습니다.  
+    구문:  
     ```
     for /l {%%|%}<Variable> in (<Start#>,<Step#>,<End#>) do <Command> [<CommandLineOptions>]
     ```  
@@ -104,17 +100,17 @@ for {%%|%}<Variable> in (<Set>) do <Command> [<CommandLineOptions>]
 
     구문은 다음과 같습니다.  
     ```
-    for /f ["<ParsingKeywords>"] {%%|%}<Variable> in (<Set>) do <Command> [<CommandLineOptions>]
-    for /f ["<ParsingKeywords>"] {%%|%}<Variable> in ("<LiteralString>") do <Command> [<CommandLineOptions>]
-    for /f ["<ParsingKeywords>"] {%%|%}<Variable> in ('<Command>') do <Command> [<CommandLineOptions>]
+    for /f [<ParsingKeywords>] {%%|%}<Variable> in (<Set>) do <Command> [<CommandLineOptions>]
+    for /f [<ParsingKeywords>] {%%|%}<Variable> in (<LiteralString>) do <Command> [<CommandLineOptions>]
+    for /f [<ParsingKeywords>] {%%|%}<Variable> in ('<Command>') do <Command> [<CommandLineOptions>]
     ```  
     *설정* 인수에는 하나 이상의 파일 이름을 지정 합니다. 각 파일은 열, 읽기 및 처리에 있는 다음 파일을 이동 하기 전에 *설정*합니다. 기본 구문 분석 동작을 재정의 하려면 지정 *ParsingKeywords*합니다. 이것이 다른 구문 분석 옵션을 지정 하려면 하나 이상의 키워드를 포함 하는 따옴표 붙은 문자열입니다.
 
     사용 하는 경우는 **usebackq** 옵션을 다음 구문 중 하나를 사용 합니다.  
     ```
-    for /f ["usebackq <ParsingKeywords>"] {%%|%}<Variable> in ("<Set>") do <Command> [<CommandLineOptions>]
-    for /f ["usebackq <ParsingKeywords>"] {%%|%}<Variable> in ('<LiteralString>') do <Command> [<CommandLineOptions>]
-    for /f ["usebackq <ParsingKeywords>"] {%%|%}<Variable> in (`<Command>`) do <Command> [<CommandLineOptions>]
+    for /f [usebackq <ParsingKeywords>] {%%|%}<Variable> in (<Set>) do <Command> [<CommandLineOptions>]
+    for /f [usebackq <ParsingKeywords>] {%%|%}<Variable> in ('<LiteralString>') do <Command> [<CommandLineOptions>]
+    for /f [usebackq <ParsingKeywords>] {%%|%}<Variable> in (`<Command>`) do <Command> [<CommandLineOptions>]
     ```  
     다음 표에서 구문 분석에 사용할 수 있는 키워드를 보여 줍니다. *ParsingKeywords*합니다.  
 
@@ -133,7 +129,7 @@ for {%%|%}<Variable> in (<Set>) do <Command> [<CommandLineOptions>]
 
     |한정자를 사용 하 여 변수|설명|
     |----------------------|-----------|
-    |% ~ I|확장 **%i** 따옴표를 제거 ("").|
+    |% ~ I|확장 **% I** , 주변 따옴표 ()를 제거 합니다.|
     |% ~ fI|확장 **%i** 정규화 된 경로 이름입니다.|
     |% ~ dI|확장 **%i** 드라이브 문자로 합니다.|
     |% ~ pI|확장 **%i** 만 경로에 있습니다.|
@@ -160,12 +156,12 @@ for {%%|%}<Variable> in (<Set>) do <Command> [<CommandLineOptions>]
     예: 변수 이름은 대문자를 사용 하 여 **%i**, 코드를 더 읽기 쉽게 하 고 대 소문자를 구분 하지 않은 한정자와 혼동 되지 않도록 합니다.
 - 문자열 구문 분석
 
-  "Usebackq"를*사용* *하지 않고* 큰따옴표 ("usebackq") 또는 작은따옴표 (예: ("mystring") 또는 (' mystring ')로 *\<LiteralString\>* 를 래핑하여 즉시 문자열에 **/f** 구문 분석 논리를 사용할 수 있습니다. *\<LiteralString\>* 는 파일에서 한 줄의 입력으로 처리 됩니다. *LiteralString\>\<* 큰따옴표 안에 구문 분석 하는 경우 명령 기호 (예: **\\ \& \|** \> \<)는 일반 문자로 처리 됩니다.\^
+  **/F** 구문 분석 논리는 직접 문자열에 사용할 수 있습니다. 큰따옴표 (usebackq*없음* ) 또는 작은따옴표 (usebackq *) (예* : (mystring) 또는 (' mystring '))로 *LiteralString\>를\<* 래핑합니다. *\<LiteralString\>* 는 파일에서 한 줄의 입력으로 처리 됩니다. *LiteralString\>\<* 큰따옴표 안에 구문 분석 하는 경우 명령 기호 (예: **\\ \& \|** \> \<)는 일반 문자로 처리 됩니다.\^
 - 출력 구문 분석
 
   **/F** 명령을 사용 하 여 따옴표로 묶은 *\<명령\>* 를 괄호 사이에 배치 하 여 명령의 출력을 구문 분석할 수 있습니다. 하위 Cmd.exe에 전달 되는 명령줄으로 처리 됩니다. 출력은 메모리에 캡처되고 파일 처럼 구문 분석 합니다.
 
-## <a name="BKMK_examples"></a>예와
+## <a name="examples"></a><a name=BKMK_examples></a>예와
 
 사용 하 여 **에 대 한** 배치 파일에서 다음 구문을 사용 합니다.
 ```
@@ -179,17 +175,17 @@ for %f in (*.doc *.txt) do type %f
 
 파일을 구문 분석 하려면 무시 하 고 주석 처리 된 줄, 유형:
 ```
-for /f "eol=; tokens=2,3* delims=," %i in (myfile.txt) do @echo %i %j %k
+for /f eol=; tokens=2,3* delims=, %i in (myfile.txt) do @echo %i %j %k
 ```
-이 명령은 Myfile.txt의 각 줄을 구문 분석합니다. 세미콜론으로 시작 하는 줄을 무시 하 고 각 줄을에서 두 번째 및 세 번째 토큰을 전달 된 **에 대 한** 본문 (토큰은 쉼표 또는 공백을로 구분 됨). 본문은 **에 대 한** 문 참조 **%i** 토큰을 가져오기 위해 두 번째, **%j** 세 번째 토큰을 가져오려면 및 **%k** 모든 나머지 토큰을 가져오려면. 사용자가 제공 하는 파일 이름에 공백이 있으면 (예를 들어 "파일 이름") 텍스트 주위에 따옴표를 사용 합니다. 인용 부호를 사용 하려면 사용 해야 **usebackq**합니다. 그렇지 않으면 따옴표는 리터럴 문자열을 구문 분석을 정의로 해석 됩니다.
+이 명령은 Myfile.txt의 각 줄을 구문 분석합니다. 세미콜론으로 시작 하는 줄을 무시 하 고 각 줄을에서 두 번째 및 세 번째 토큰을 전달 된 **에 대 한** 본문 (토큰은 쉼표 또는 공백을로 구분 됨). 본문은 **에 대 한** 문 참조 **%i** 토큰을 가져오기 위해 두 번째, **%j** 세 번째 토큰을 가져오려면 및 **%k** 모든 나머지 토큰을 가져오려면. 사용자가 제공 하는 파일 이름에 공백이 포함 된 경우 텍스트에 따옴표를 사용 합니다 (예: 파일 이름). 인용 부호를 사용 하려면 사용 해야 **usebackq**합니다. 그렇지 않으면 따옴표는 리터럴 문자열을 구문 분석을 정의로 해석 됩니다.
 
-**%i** 에 명시적으로 선언 되는 **에 대 한** 문입니다. **%j** 및 **%k** 를 사용 하 여 암시적으로 선언 된 **토큰 =** 합니다. 사용할 수 있습니다 **토큰 =** 문자 "z" 또는 "Z." 보다 큰 변수를 선언 하려고 하면 발생 하지는 26 개 토큰을 지정 하려면
+**%i** 에 명시적으로 선언 되는 **에 대 한** 문입니다. **%j** 및 **%k** 를 사용 하 여 암시적으로 선언 된 **토큰 =** 합니다. 문자 z 또는 Z 보다 큰 변수를 선언 하려고 시도 하지 않는 경우 token **=** 를 사용 하 여 최대 26 개의 토큰을 지정할 수 있습니다.
 
 다음 예제에서는 현재 환경에서 환경 변수 이름을 열거합니다. 배치 하 여 명령의 출력을 구문 분석을 *설정* 는 괄호를 입력 합니다.
 ```
-for /f "usebackq delims==" %i in ('set') do @echo %i 
+for /f usebackq delims== %i in ('set') do @echo %i 
 ```
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
-[명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

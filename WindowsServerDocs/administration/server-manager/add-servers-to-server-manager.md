@@ -1,12 +1,8 @@
 ---
 title: Add Servers to Server Manager
 description: 서버 관리자
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-server-manager
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aab895f2-fe4d-4408-b66b-cdeadbd8969e
 author: coreyp-at-msft
@@ -14,12 +10,12 @@ ms.author: coreyp
 manager: dongill
 ms.localizationpriority: medium
 ms.date: 02/01/2018
-ms.openlocfilehash: ad30a8f1c4c1e0aa317512eb68fffbd76413175b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f7b5a5b358fa2df54777e0f1f88b1e86a7dafd80
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71383265"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80851576"
 ---
 # <a name="add-servers-to-server-manager"></a>Add Servers to Server Manager
 
@@ -36,14 +32,14 @@ Windows Server의 단일 서버 관리자 콘솔을 사용 하 여 여러 원격
 > 
 > Windows Server 운영 체제의 최신 릴리스를 관리 하려면 서버 관리자를 사용할 수 없습니다. Windows Server 2012 R2, Windows Server 2012, Windows 8.1 또는 Windows 8에서 실행되는 서버 관리자는 Windows Server 2016을 실행하는 서버를 관리하는 데 사용할 수 없습니다.
 
-이 항목에는 다음 섹션이 수록되어 있습니다.
+이 항목에는 다음과 같은 섹션이 포함되어 있습니다.
 
 -   [관리할 서버 추가](#BKMK_add)
 
 -   [다음으로 관리 명령을 사용 하 여 자격 증명 제공](#BKMK_creds)
 
-## <a name="BKMK_creds"></a>다음으로 관리 명령을 사용 하 여 자격 증명 제공
-서버 관리자를 원격 서버를 추가 하면 일부 추가 하는 서버에 액세스 하거나 관리할 다른 사용자 계정 자격 증명을 해야 합니다. 서버 관리자를 실행 하는 컴퓨터에 로그온 하는 데 사용할 다른 관리 되는 서버에 대 한 자격 증명을 지정 하려면 사용는 **으로 관리** 에 서버 관리자에서 관리 되는 서버에 대 한 항목을 마우스 오른쪽 단추로 클릭 하 여 액세스할 수 있는 서버를 추가한 후 명령는 **서버** 역할이 나 그룹 홈 페이지의 분할 합니다. **다음으로 관리** 를 클릭하면 관리되는 서버에 대한 액세스 권한이 있는 사용자 이름을 다음 형식 중 하나로 제공할 수 있는 **Windows 보안** 대화 상자가 열립니다.
+## <a name="provide-credentials-with-the-manage-as-command"></a><a name=BKMK_creds></a>다음으로 관리 명령을 사용 하 여 자격 증명 제공
+서버 관리자를 원격 서버를 추가 하면 일부 추가 하는 서버에 액세스 하거나 관리할 다른 사용자 계정 자격 증명을 해야 합니다. 서버 관리자를 실행 하는 컴퓨터에 로그온 하는 데 사용할 다른 관리 되는 서버에 대 한 자격 증명을 지정 하려면 사용는 **으로 관리** 에 서버 관리자에서 관리 되는 서버에 대 한 항목을 마우스 오른쪽 단추로 클릭 하 여 액세스할 수 있는 서버를 추가한 후 명령는 **서버** 역할이 나 그룹 홈 페이지의 분할 합니다. **다음으로 관리**를 클릭하면 관리되는 서버에 대한 액세스 권한이 있는 사용자 이름을 다음 형식 중 하나로 제공할 수 있는 **Windows 보안** 대화 상자가 열립니다.
 
 -   *사용자 이름*
 
@@ -64,7 +60,7 @@ Windows Server의 단일 서버 관리자 콘솔을 사용 하 여 여러 원격
 > [!NOTE]
 > **다음으로 관리** 명령을 지원하지 않는 역할 및 기능에는 원격 데스크톱 서비스(RDS) 및 IP 관리(IPAM) 서버가 있습니다. 서버 관리자를 실행 하는 컴퓨터에서 사용 하는 동일한 자격 증명을 사용 하 여 원격 RDS 또는 IPAM 서버를 관리할 수 없으면, 일반적으로 서버 관리자를 실행 하는 컴퓨터에서 Administrators 그룹에 이러한 원격 서버 관리를 사용 하는 계정을 추가 하십시오. 그런 다음 사용 중인 계정으로 서버 관리자를 실행하는 컴퓨터에 로그인하여 rdS 또는 IPAM을 실행하는 원격 서버를 관리합니다.
 
-## <a name="BKMK_add"></a>관리할 서버 추가
+## <a name="add-servers-to-manage"></a><a name=BKMK_add></a>관리할 서버 추가
 **서버 추가** 대화 상자에서 다음과 같은 세가지 방법 중 하나를 사용하여 서버 관리자에 관리할 서버를 추가할 수 있습니다.
 
 -   **Active Directory Domain Services** Active Directory가 로컬 컴퓨터와 동일한 도메인에서 찾은 관리할 서버를 추가합니다.
@@ -91,12 +87,12 @@ Windows Server의 단일 서버 관리자 콘솔을 사용 하 여 여러 원격
 
     -   **가져오기** 탭에서 추가할 컴퓨터의 DNS 이름 또는 IP 주소를 포함하는 텍스트 파일을 한 줄당 하나의 이름 또는 IP 주소로 찾습니다.
 
-4.  서버를 모두 추가했으면 **확인**을 클릭합니다.
+4.  서버 추가를 마쳤으면 **확인**을 클릭합니다.
 
 ### <a name="add-and-manage-servers-in-workgroups"></a>작업 그룹의 서버 추가 및 관리
 서버 관리자 작업 그룹에 속한 서버 성공할 수, 추가 된 후 추가 **관리 효율성** 의 열은 **서버** 타일에는 작업 그룹 서버가 포함 된 역할이 나 그룹 페이지를 표시할 수 **자격 증명이 잘못** 에 연결 하거나 원격으로 작업 그룹 서버에서 데이터를 수집 하는 동안 발생 하는 오류.
 
-이 오류 또는 유사한 오류는 다음 조건에서 발생할 수 있습니다.
+다음 조건에서 이러한 오류나 유사한 오류가 발생할 수 있습니다.
 
 -   관리 되는 서버가 서버 관리자를 실행 하는 컴퓨터와 같은 작업 그룹입니다.
 
@@ -129,7 +125,7 @@ Windows Server의 단일 서버 관리자 콘솔을 사용 하 여 여러 원격
 3.  > [!IMPORTANT]
     > 이 단계에서 cmdlet을 실행하면 관리자 권한으로 실행하는 프로세스를 내장된 Administrator 또는 System 계정에서 실행하지 않는 한, 작업 그룹 컴퓨터에서 실행할 수 없도록 하는 UAC(사용자 계정 컨트롤) 조치가 무시됩니다. cmdlet을 사용하면 Administrators 그룹의 구성원이 내장된 Administrator로 로그온하지 않고도 작업 그룹 서버를 관리할 수 있습니다. 추가로 다른 사용자에게 작업 그룹 서버를 관리할 수 있도록 허용하면 보안성이 떨어질 수 있지만, 작업 그룹 서버를 관리하려는 여러 사용자에게 내장된 Administrator 계정 자격 증명을 제공하는 것보다 더 안전합니다.
 
-    작업 그룹 컴퓨터에서 관리자 권한으로 실행 중인 프로세스에 대해 UAC 제한을 무시하려면 다음 cmdlet을 실행하여 작업 그룹 서버에 **LocalAccountTokenFilterPolicy** 라는 레지스트리 항목을 만듭니다.
+    작업 그룹 컴퓨터에서 관리자 권한으로 실행 중인 프로세스에 대해 UAC 제한을 무시하려면 다음 cmdlet을 실행하여 작업 그룹 서버에 **LocalAccountTokenFilterPolicy**라는 레지스트리 항목을 만듭니다.
 
     ```
     New-ItemProperty -Name LocalAccountTokenFilterPolicy -path HKLM:\SOFTWARE\Microsoft\Windows\Currentversion\Policies\System -propertytype DWord -value 1
@@ -165,7 +161,7 @@ Windows Server의 단일 서버 관리자 콘솔을 사용 하 여 여러 원격
 
 이 섹션의 절차를 수행하였지만 작업 그룹 컴퓨터 또는 작업 그룹 컴퓨터가 아닌 컴퓨터를 관리하는 데 문제가 계속 발생하는 경우 Microsoft 웹 사이트에서 [about_remote_Troubleshooting](https://technet.microsoft.com/library/dd347642.aspx)을 참조하십시오.
 
-### <a name="add-and-manage-servers-in-clusters"></a>클러스터에서 서버 추가 및 관리
+### <a name="add-and-manage-servers-in-clusters"></a>클러스터의 서버 추가 및 관리
 장애 조치 클러스터 (서버 클러스터 또는 MSCS 라고도 함)에 있는 서버를 관리 하려면 서버 관리자를 사용할 수 있습니다. 장애 조치 클러스터 (클러스터 노드 인지 실제 또는 가상)에 있는 서버를 서버 관리자에서 일부 고유 동작 및 관리 제한을 합니다.
 
 -   클러스터의 실제 및 가상 서버 클러스터의 한 서버에 서버 관리자에 추가 되 면 자동 서버 관리자에 추가 됩니다. 마찬가지로, 서버 관리자에서 클러스터 된 서버를 제거 하면 메시지가 표시 되는 클러스터의 다른 서버를 제거 하려면.
@@ -176,6 +172,6 @@ Windows Server의 단일 서버 관리자 콘솔을 사용 하 여 여러 원격
 
 -   클러스터된 가상 서버에 역할 및 기능을 설치할 수 없습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 [서버 관리자](server-manager.md)
 [서버 그룹 만들기 및 관리](create-and-manage-server-groups.md)

@@ -1,35 +1,35 @@
 ---
 title: bootcfg
-description: '**Bootcfg** 에 대 한 Windows 명령 항목-boot.ini 파일 설정을 구성, 쿼리 또는 변경 합니다.'
-ms.custom: na
+description: Boot.ini 파일 설정을 구성, 쿼리 또는 변경 하는 bootcfg에 대 한 Windows 명령 항목입니다.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3deb354c-5717-4066-bc79-b9323d559e44
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2d66296327a2221093e5434f69e15e7c55df1f6b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: a977b857242c030515a09a67eb0d284ade7a0beb
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71379848"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80848386"
 ---
 # <a name="bootcfg"></a>bootcfg
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Boot.ini 파일 설정을 구성, 쿼리 또는 변경합니다.  
-## <a name="syntax"></a>구문  
+Boot.ini 파일 설정을 구성, 쿼리 또는 변경합니다.
+
+## <a name="syntax"></a>구문
+
 ```  
 bootcfg <parameter> [arguments...]  
-```  
-## <a name="parameters"></a>매개 변수  
+```
+
+### <a name="parameters"></a>매개 변수
+
 |매개 변수|설명|  
 |-------|--------|  
 |[bootcfg addsw](bootcfg-addsw.md)|지정 된 운영 체제 항목에 대 한 운영 체제 로드 옵션을 추가 합니다.|  

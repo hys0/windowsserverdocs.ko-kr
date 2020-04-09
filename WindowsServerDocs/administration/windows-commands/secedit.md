@@ -1,24 +1,20 @@
 ---
 title: secedit
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 58ed57ed-08e3-403d-a363-0620b358637a
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5598f830ad4cef8d45c99594da12cbcdd84e7eef
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: e80217c201cde4dc1df58c0e8976fbe1422511fe
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71371116"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80834846"
 ---
 # <a name="secedit"></a>secedit
 
@@ -38,7 +34,7 @@ secedit
 [/validate <configuration file name>]
 ```
 
-### <a name="parameters"></a>매개 변수
+#### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------|-----------|
@@ -49,7 +45,7 @@ secedit
 |[Secedit:import](secedit-import.md)|서식 파일에 지정 된 설정을 시스템에 적용 하거나 시스템에 대해 분석 될 수 있도록 보안 템플릿을 데이터베이스로 가져올 수 있습니다.|
 |[Secedit:validate](secedit-validate.md)|보안 템플릿의 구문의 유효성을 검사할 수 있습니다.|
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 모든 파일 이름에 대 한 경로가 지정 되지 않은 경우 현재 디렉터리가 사용 됩니다.
 
@@ -66,7 +62,7 @@ secedit
 > [!NOTE]
 > Microsoft Management Console (MMC) 및 보안 구성 및 분석 스냅인 Server Core에서 사용할 수 없는 경우
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
 이 명령을 사용할 수 있는 방법을 예제를 보려면 하위 명령 파일의 예 섹션을 참조 합니다.
--   [명령줄 구문 키](command-line-syntax-key.md)
+-   - [명령줄 구문 키](command-line-syntax-key.md)

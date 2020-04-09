@@ -1,24 +1,24 @@
 ---
 title: 보호된 VM 배포
-ms.custom: na
 ms.prod: windows-server
 ms.topic: article
 ms.assetid: 5d1a06c9-24e1-4e14-9c9a-efb2adbfeddd
 manager: dongill
 author: rpsqrd
+ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: f7892dabb028b99cb4cb1c9045764a8e36aba7dc
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f4550f8a92330c8f483e332ab9e4b36fda853b0a
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71386770"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856866"
 ---
 # <a name="deploy-shielded-vms"></a>보호된 VM 배포
 
 
->적용 대상: Windows server 2019, Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server 2019, Windows Server (반기 채널), Windows Server 2016
 
 다음 항목에서는 테 넌 트가 보호 된 Vm을 사용할 수 있는 방법에 대해 설명 합니다.
 
@@ -43,6 +43,6 @@ ms.locfileid: "71386770"
 > [!div class="nextstepaction"]
 > [보호 된 VM 템플릿 만들기](guarded-fabric-create-a-shielded-vm-template.md)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [보호된 패브릭 및 보호된 VM](guarded-fabric-and-shielded-vms-top-node.md)

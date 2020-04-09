@@ -9,12 +9,12 @@ author: jasongerend
 ms.author: jgerend
 manager: lizapo
 ms.date: 10/09/2019
-ms.openlocfilehash: 130b51e472ebf3d900186d6d63e318c88a340579
-ms.sourcegitcommit: e2964a803cba1b8037e10d065a076819d61e8dbe
+ms.openlocfilehash: 21f6ac91faefa17f153df43fbd2530a2c8c0f713
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72252355"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80847786"
 ---
 # <a name="chkdsk"></a>chkdsk
 
@@ -37,7 +37,7 @@ ms.locfileid: "72252355"
 chkdsk [<Volume>[[<Path>]<FileName>]] [/f] [/v] [/r] [/x] [/i] [/c] [/l[:<Size>]] [/b]  
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |      매개 변수       |                  설명                                    |
 | -------------------- | ------------------------------------------------------------------------ |
@@ -52,8 +52,8 @@ chkdsk [<Volume>[[<Path>]<FileName>]] [/f] [/v] [/r] [/x] [/i] [/c] [/l[:<Size>]
 |    /l [:\<Size >]     | NTFS로 사용 합니다. 입력 한 크기를 로그 파일 크기를 변경 합니다. Size 매개 변수를 생략 하면 **/l** 은 현재 크기를 표시 합니다. |
 |         /b          | NTFS에만 해당: 볼륨에 잘못 된 클러스터의 목록을 지우고 오류에 대 한 모든 할당 및 사용 가능한 클러스터를 다시 검사 합니다. **/b** 는 **/r**의 기능을 포함 합니다. 새 하드 디스크 드라이브에 볼륨 이미징 후이 매개 변수를 사용 합니다.            |
 | /scan               | NTFS 전용: 볼륨에서 온라인 검색을 실행 합니다. |
-| /forceofflinefix    | NTFS 전용: ("/scan"과 함께 사용 해야 함). 모든 온라인 복구 무시 발견 된 모든 결함은 오프 라인 복구를 위해 큐에 대기 됩니다 (예: "chkdsk/spotfix"). |
-| /perf               | NTFS 전용: ("/scan"과 함께 사용 해야 함). 더 많은 시스템 리소스를 사용 하 여 fast aspossible 검색을 완료 합니다. 이는 시스템에서 실행 되는 다른 작업에 부정적인 영향을 미칠 수 있습니다.|
+| /forceofflinefix    | NTFS 전용: (/scan과 함께 사용 해야 함). 모든 온라인 복구 무시 발견 된 모든 결함은 오프 라인 복구를 위해 큐에 대기 됩니다 (예: chkdsk/spotfix). |
+| /perf               | NTFS 전용: (/scan과 함께 사용 해야 함). 더 많은 시스템 리소스를 사용 하 여 fast aspossible 검색을 완료 합니다. 이는 시스템에서 실행 되는 다른 작업에 부정적인 영향을 미칠 수 있습니다.|
 | /spotfix            | NTFS 전용: 볼륨에 대 한 지점 수정을 실행 합니다. |
 | /sdcleanup          | NTFS만 해당: 불필요 한 보안 설명자 데이터 (/F 함축)를 수집 합니다. |
 | /offlinescanandfix  | 볼륨에 대 한 오프 라인 검사 및 픽스를 실행 합니다. |
@@ -61,7 +61,7 @@ chkdsk [<Volume>[[<Path>]<FileName>]] [/f] [/v] [/r] [/x] [/i] [/c] [/l[:<Size>]
 | /markclean          | FAT/FAT32/exFAT only: 손상이 검색 되지 않은 경우/F가 지정 되지 않은 경우에도 볼륨 정리를 표시 합니다. |
 |         /?          | 명령 프롬프트에 도움말을 표시합니다.                       |
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 - 건너뛸 볼륨 확인
 
@@ -144,4 +144,4 @@ chkdsk *.*
 
 ## <a name="additional-references"></a>추가 참조
 
-[명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

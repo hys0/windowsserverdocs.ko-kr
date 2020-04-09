@@ -1,26 +1,22 @@
 ---
-title: more
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+title: 자세히
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ded14f6a-d82f-4aeb-a2d8-7ec1c94dfb8f
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/26/2019
-ms.openlocfilehash: d505f99511d8702f11ac0c70edba3d62c8cf7996
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 4c627e003e71cb2265c717669e082d48564dd483
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71373911"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80839426"
 ---
-# <a name="more"></a>more
+# <a name="more"></a>자세히
 
 
 
@@ -36,7 +32,7 @@ more [[/c] [/p] [/s] [/t<N>] [+<N>]] < [<Drive>:][<Path>]<FileName>
 more [/c] [/p] [/s] [/t<N>] [+<N>] [<Files>]
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |           매개 변수            |                               설명                               |
 |--------------------------------|-------------------------------------------------------------------------|
@@ -50,7 +46,7 @@ more [/c] [/p] [/s] [/t<N>] [+<N>] [<Files>]
 |            \<파일 >            | 표시할 파일의 목록을 지정 합니다. 파일 이름을 공백으로 구분 합니다. |
 |               /?               |                  명령 프롬프트에 도움말을 표시합니다.                   |
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 -   에 다음 하위 명령 들은 **더** 프롬프트 (`-- More --`). 
 
@@ -68,7 +64,7 @@ more [/c] [/p] [/s] [/t<N>] [+<N>] [<Files>]
 -   리디렉션 문자 ( **<** )를 사용 하는 경우 파일 이름을 원본으로 지정 해야 합니다. 파이프 ( **\|** )를 사용 하는 경우 **dir**, **sort**및 **type**과 같은 명령을 사용할 수 있습니다.
 -   **자세한** 다른 매개 변수와 함께 명령을 복구 콘솔에서 사용할 수 있습니다.
 
-## <a name="BKMK_examples"></a>예와
+## <a name="examples"></a><a name=BKMK_examples></a>예와
 
 첫 번째 화면 Clients.new 라는 파일에 대 한 정보를 보려면 다음 명령 중 하나를 입력 합니다.
 ```
@@ -114,6 +110,6 @@ type clients.new | more /c /s
   ```  
   건너뛸, 줄 번호를 입력 하 고 enter 키를 누릅니다. **더 많은** 지정 된 개수의 줄을 건너뛰고 다음 화면을 표시 합니다.
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
-[명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

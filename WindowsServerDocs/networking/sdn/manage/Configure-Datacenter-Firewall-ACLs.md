@@ -1,24 +1,20 @@
 ---
 title: 데이터 센터 방화벽 ACL(액세스 제어 목록) 구성
 description: 네트워크 인터페이스에 특정 Acl을 적용할 수 있습니다.  네트워크 인터페이스가 연결 된 가상 서브넷에 Acl도 설정 된 경우 두 Acl이 모두 적용 되지만 네트워크 인터페이스 Acl은 가상 서브넷 Acl 위에 우선 순위가 지정 됩니다.
-manager: dougkim
-ms.custom: na
+manager: grcusanz
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-sdn
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 25f18927-a63e-44f3-b02a-81ed51933187
-ms.author: lizross
-author: eross-msft
+ms.author: anpaul
+author: AnirbanPaul
 ms.date: 08/23/2018
-ms.openlocfilehash: fdf9f7dbe8fb9541cc8f77cfbce014c5210296d5
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: f6b1078f88b2d377c3c49934e2b1bd219641d82e
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80317659"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854566"
 ---
 # <a name="configure-datacenter-firewall-access-control-lists-acls"></a>데이터 센터 방화벽 Access Control 목록 (Acl) 구성
 

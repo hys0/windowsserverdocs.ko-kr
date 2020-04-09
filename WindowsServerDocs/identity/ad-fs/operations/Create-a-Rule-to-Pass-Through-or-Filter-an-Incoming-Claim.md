@@ -1,7 +1,6 @@
 ---
 ms.assetid: 6127963f-71b2-4d8f-8b53-7c525bf06521
 title: 통과 또는 들어오는 클레임을 필터링 하는 규칙 만들기
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,20 +8,20 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 145558e620188c4311d79d2a9ba4ed7aaf7b13a8
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: fb885d8b822faf4bd5ee82ad70c59b99678a58e9
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71358143"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80816836"
 ---
 # <a name="create-a-rule-to-pass-through-or-filter-an-incoming-claim"></a>통과 또는 들어오는 클레임을 필터링 하는 규칙 만들기
 
-Active Directory Federation Services \(AD FS\)에서 들어오는 클레임 통과 또는 필터링 규칙 템플릿을 사용 하 여 선택한 클레임 유형으로 들어오는 클레임을 모두 전달할 수 있습니다. 또한 선택한 클레임 형식을 사용 하 여 들어오는 클레임의 값을 필터링 할 수 있습니다. 예를 들어이 규칙 서식 파일을 보낼 모든 들어오는 클레임 규칙을 만들려면 사용할 수 있습니다. 또한이 규칙을 사용 하 여 사용자 계정 이름 \(UPN\) @fabrikam으로 끝나는 클레임만 보낼 수 있습니다.  
+Active Directory Federation Services \(AD FS\)에서 들어오는 클레임 통과 또는 필터링 규칙 템플릿을 사용 하 여 선택한 클레임 유형으로 들어오는 클레임을 모두 전달할 수 있습니다. 선택한 클레임 유형의 들어오는 클레임 값을 필터링할 수도 있습니다. 예를 들어, 이 규칙 템플릿을 사용하여 모든 들어오는 클레임을 전송하는 규칙을 만들 수 있습니다. 또한이 규칙을 사용 하 여 사용자 계정 이름 \(UPN\) @fabrikam으로 끝나는 클레임만 보낼 수 있습니다.  
   
 다음 절차를 사용 하 여 AD FS 관리 스냅인을 사용 하 여 클레임 규칙을 만들려면\-에 있습니다.  
   
-로컬 컴퓨터에서 이 절차를 완료하기 위해서는 최소한 **관리자** 또는 이와 동등한 자격이 있어야 합니다.  적절 한 계정을 사용 하는 방법에 대 한 세부 정보를 검토 하 고 그룹 구성원 자격 [로컬 및 도메인 기본 그룹](https://go.microsoft.com/fwlink/?LinkId=83477)합니다.   
+이 절차를 완료하려면 최소한 로컬 컴퓨터의 **Administrators** 구성원 자격 또는 동급의 권한이 필요합니다.  적절 한 계정을 사용 하는 방법에 대 한 세부 정보를 검토 하 고 그룹 구성원 자격 [로컬 및 도메인 기본 그룹](https://go.microsoft.com/fwlink/?LinkId=83477)합니다.   
 
 ## <a name="to-create-a-rule-to-pass-through-or-filter-an-incoming-claim-on-a-relying-party-trust-in-windows-server-2016"></a>통과 또는 들어오는 클레임을 신뢰 당사자 트러스트 Windows Server 2016에서 필터링 하는 규칙을 만들려면 
 

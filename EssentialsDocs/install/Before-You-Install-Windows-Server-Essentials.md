@@ -1,23 +1,19 @@
 ---
 title: Windows Server Essentials를 설치하기 전에
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8d0893bd-e2b7-4494-9537-02b1cbbcd57a
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 7268ebbfffd034780635e693cd6aa6380f30dd91
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 08f39acccef390cbc5cfa10d0743b05f6914327c
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80310102"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80817356"
 ---
 # <a name="before-you-install-windows-server-essentials"></a>Windows Server Essentials를 설치하기 전에
 

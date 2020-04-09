@@ -1,22 +1,20 @@
 ---
 title: Azure AD를 사용하여 VPN 인증에 대한 루트 인증서 만들기
 description: Azure AD는 vpn 연결을 위해 Azure AD에 인증할 때 VPN 인증서를 사용 하 여 Windows 10 클라이언트에 발급 된 인증서에 서명 합니다. 기본으로 표시 된 인증서는 Azure AD에서 사용 하는 발급자입니다.
-services: active-directory
 ms.prod: windows-server
 ms.technology: networking-ras
-ms.workload: identity
 ms.topic: article
 ms.date: 06/28/2019
-ms.author: lizross
-author: eross-msft
+ms.author: v-tea
+author: Teresa-MOTIV
 ms.localizationpriority: medium
 ms.reviewer: deverette
-ms.openlocfilehash: def4c0d7437dd297460d0a863cd2568325825ca9
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: f4501c244726ee9b23a6d517c4b835f0c9418302
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80319029"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80818806"
 ---
 # <a name="step-72-create-conditional-access-root-certificates-for-vpn-authentication-with-azure-ad"></a>7\.2단계. Azure AD를 사용 하 여 VPN 인증에 대 한 조건부 액세스 루트 인증서 만들기
 

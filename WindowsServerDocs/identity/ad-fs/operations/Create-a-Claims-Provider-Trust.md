@@ -1,7 +1,6 @@
 ---
 ms.assetid: a4f7842c-cfca-4d78-916e-023d12a9cdf0
 title: 클레임 공급자 트러스트 만들기
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 4539e8abd1af1eca7bacb51971e6d355bb0aab28
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: bd5c13dbdf4258b6a87dcf599299dd7969da5acd
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79323085"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80817066"
 ---
 # <a name="create-a-claims-provider-trust"></a>클레임 공급자 트러스트 만들기
 
@@ -54,7 +53,7 @@ ms.locfileid: "79323085"
 ![클레임 공급자 트러스트](media/Create-a-Claims-Provider-Trust/addclaim9.PNG)
 
 ## <a name="to-create-a-claims-provider-trust-using-federation-metadata"></a>페더레이션 메타 데이터를 사용 하 여 클레임 공급자 트러스트를 만들려면
-파트너가 로컬 네트워크 또는 인터넷에 게시 한 페더레이션 메타 데이터에서 파트너에 대 한 구성 데이터를 자동으로 가져와서 AD FS 관리 스냅인을 사용 하 여 새 클레임 공급자 트러스트를 추가 하려면 리소스 파트너 조직의 페더레이션 서버.
+AD FS 관리 스냅인을 사용 하 여 새 클레임 공급자 트러스트를 추가 하려면 파트너가 로컬 네트워크 또는 인터넷에 게시 한 페더레이션 메타 데이터에서 파트너에 대 한 구성 데이터를 자동으로 가져와서 리소스 파트너 조직의 페더레이션 서버에서 다음 절차를 수행 합니다.
 
 >[!NOTE]
 >일반적으로 https:\//myserver와 같이 정규화 되지 않은 호스트 이름으로 인증서를 사용 하는 것이 일반적 이지만 이러한 인증서에는 보안 값이 없으며 공격자가 페더레이션 메타 데이터를 게시 하는 페더레이션 서비스 가장할 수 있습니다. 따라서 페더레이션 메타 데이터를 쿼리 하는 경우 `https://myserver.contoso.com`같은 정규화 된 도메인 이름만 사용 해야 합니다.

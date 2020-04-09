@@ -1,19 +1,19 @@
 ---
 ms.assetid: d8adcb68-18e0-41bf-a817-d57344bf2e7d
 title: Windows Server 2016에서 웹 응용 프로그램 프록시
-description: ''
-author: kgremban
+ms.author: kgremban
+author: eross-msft
 manager: femila
 ms.date: 07/13/2016
 ms.topic: article
 ms.prod: windows-server
 ms.technology: web-app-proxy
-ms.openlocfilehash: 4f2827f02ec13d187cdf360637882c6c9d4b2441
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 660915a9fc704a01b59b4eeb1107ef56599ecac7
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71387974"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80818576"
 ---
 # <a name="web-application-proxy-in-windows-server-2016"></a>Windows Server 2016에서 웹 응용 프로그램 프록시
 
@@ -25,15 +25,15 @@ ms.locfileid: "71387974"
   
 ## <a name="web-application-proxy-new-features-in-windows-server-2016"></a>Windows Server 2016의 웹 응용 프로그램 프록시 새 기능
   
-- HTTP 기본 응용 프로그램 게시에 대 한 사전 인증  
+- HTTP 기본 애플리케이션 게시에 대 한 사전 인증  
   
-  HTTP 기본은 Exchange 사서함이 있는 스마트폰을 포함 한 풍부한 클라이언트에 연결 하려면 ActiveSync를 등의 여러 프로토콜에서 사용 하는 권한 부여 프로토콜입니다. 웹 응용 프로그램 프록시는 전통적으로 ActiveSync 클라이언트에서 지원 되지 않는 AD FS 리디렉션 수를 사용 하 여 상호 작용 합니다. 이 새 버전의 웹 응용 프로그램 프록시에서는 HTTP 응용 프로그램에서 수신 비 클레임을 사용 하 여 기본 HTTP를 사용 하 여 응용 프로그램 게시를 페더레이션 서비스에 응용 프로그램에 대 한 신뢰 당사자 트러스트 합니다.  
+  HTTP 기본은 Exchange 사서함이 있는 스마트폰을 포함 한 풍부한 클라이언트에 연결 하려면 ActiveSync를 등의 여러 프로토콜에서 사용 하는 권한 부여 프로토콜입니다. 웹 응용 프로그램 프록시는 전통적으로 ActiveSync 클라이언트에서 지원 되지 않는 AD FS 리디렉션 수를 사용 하 여 상호 작용 합니다. 이 새 버전의 웹 애플리케이션 프록시에서는 HTTP 애플리케이션에서 수신 비 클레임을 사용 하 여 기본 HTTP를 사용 하 여 애플리케이션 게시를 페더레이션 서비스에 애플리케이션에 대 한 신뢰 당사자 트러스트 합니다.  
   
   HTTP 기본 게시에 대 한 자세한 내용은 참조 하십시오. [AD FS 사전 인증을 사용 하 여 응용 프로그램 게시](Publishing-Applications-using-AD-FS-Preauthentication.md#publish-an-application-that-uses-http-basic)  
   
-- 응용 프로그램의 와일드 카드 도메인 게시  
+- 애플리케이션의 와일드 카드 도메인 게시  
   
-  SharePoint 2013과 같은 시나리오를 지원 하기 위해 응용 프로그램에 대 한 외부 URL 이제 https://*.sp-apps.contoso.com 예를 들어 특정 도메인 내에서 여러 응용 프로그램을 게시할 수 있도록 와일드 카드를 포함할 수 있습니다. SharePoint 응용 프로그램을 게시를 하면 간단해 집니다.  
+  SharePoint 2013과 같은 시나리오를 지원 하기 위해 애플리케이션에 대 한 외부 URL 이제 https://*.sp-apps.contoso.com 예를 들어 특정 도메인 내에서 여러 애플리케이션을 게시할 수 있도록 와일드 카드를 포함할 수 있습니다. SharePoint 응용 프로그램을 게시를 하면 간단해 집니다.  
   
 - HTTP를 HTTPS 리디렉션  
   
@@ -41,7 +41,7 @@ ms.locfileid: "71387974"
   
 - HTTP 게시  
   
-  통과 사전 인증을 사용 하 여 HTTP 응용 프로그램을 게시할 수 있게 되었습니다.  
+  통과 사전 인증을 사용 하 여 HTTP 애플리케이션을 게시할 수 있게 되었습니다.  
   
 - 원격 데스크톱 게이트웨이 응용 프로그램 게시  
   
@@ -53,7 +53,7 @@ ms.locfileid: "71387974"
   
 - 향상 된 관리자 콘솔 UI  
   
-- 백 엔드 응용 프로그램에 대 한 클라이언트 IP 주소의 전파  
+- 백 엔드 애플리케이션에 대 한 클라이언트 IP 주소의 전파  
   
 ## <a name="see-also"></a>관련 항목  
   

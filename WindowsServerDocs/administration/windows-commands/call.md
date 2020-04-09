@@ -1,35 +1,29 @@
 ---
 title: 전화
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: 호출을 위한 Windows 명령 항목으로, 부모 일괄 처리 프로그램을 중지 하지 않고 다른 일괄 처리 프로그램을 호출 합니다.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d34a41dc-e6c7-4467-bf6a-15cec704833e
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 06/05/2018
-ms.openlocfilehash: 89097ec5d3711b3d8831f8c33b3778ed0752246f
-ms.sourcegitcommit: ee8fa8e1293f29229b5ce1b0f3d4a07ba99568f5
+ms.openlocfilehash: 58b2d03c76f53fa7bbf5c483c1a423cd4a011f94
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78280194"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80848236"
 ---
 # <a name="call"></a>전화
 
-
-
-상위 일괄 프로그램을 중지 하지 않고 다른 하나의 일괄 처리 프로그램을 호출 합니다. **호출** 명령 호출 대상으로 레이블을 받아들입니다.
-
-> [!NOTE]
-> **호출** 아무런 효과도 명령 프롬프트에서 스크립트 또는 배치 파일 외부에서 사용 됩니다.
+상위 일괄 프로그램을 중지 하지 않고 다른 하나의 일괄 처리 프로그램을 호출 합니다. **Call** 명령은 레이블을 호출 대상으로 허용 합니다.
 
 이 명령을 사용하는 방법의 예는 [예](#BKMK_examples)를 참조하세요.
+
+> [!NOTE]
+> 스크립트 또는 배치 파일 외부에서 사용 하는 경우 명령 프롬프트에서 호출은 효과가 없습니다.
 
 ## <a name="syntax"></a>구문
 
@@ -37,7 +31,7 @@ ms.locfileid: "78280194"
 call [Drive:][Path]<FileName> [<BatchParameters>] [:<Label> [<Arguments>]]
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |           매개 변수           |                                                                         설명                                                                          |
 |-------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -57,7 +51,7 @@ call [Drive:][Path]<FileName> [<BatchParameters>] [:<Label> [<Arguments>]]
 
 |일괄 매개 변수|설명|
 |---------------|-----------|
-|% ~ 1|확장 **%1** 주변 따옴표를 제거 하 고 ("").|
+|% ~ 1|**%1** 을 (를) 확장 하 고 주변 따옴표 ()를 제거 합니다.|
 |% ~ f1|확장 **%1** 정규화 된 경로에 있습니다.|
 |% ~ d 1|확장 **%1** 드라이브 문자로 합니다.|
 |% ~ p1|확장 **%1** 만 경로에 있습니다.|
@@ -100,7 +94,7 @@ call [Drive:][Path]<FileName> [<BatchParameters>] [:<Label> [<Arguments>]]
 
     `call :<Label> <Arguments>`
 
-## <a name="BKMK_examples"></a>예와
+## <a name="examples"></a><a name=BKMK_examples></a>예와
 
 일괄 처리의 다른 프로그램에서 Checknew.bat 프로그램을 실행 하려면 부모 일괄 프로그램에서 다음 명령을 입력 합니다.
 ```
@@ -111,6 +105,6 @@ call checknew
 call checknew %1 %2
 ```
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
-[명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

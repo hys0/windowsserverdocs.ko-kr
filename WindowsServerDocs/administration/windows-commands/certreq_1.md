@@ -1,36 +1,29 @@
 ---
 title: certreq
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: CA (인증 기관)에서 인증서를 요청 하 고, CA에서 이전 요청에 대 한 응답을 검색 하 고, .inf 파일 로부터 새 요청을 생성 하 고, 요청에 대 한 응답을 수락 및 설치 하 고, 기존 CA 인증서 또는 요청에서 상호 인증 또는 정규화 된 종속 요청을 생성 하 고, 상호 인증 또는 정규화 된 종속 요청에 서명 하는 certreq에 대 한
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7a04e51f-f395-4bff-b57a-0e9efcadf973
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8e3c98fd965fc6923c6af7893261bd1e0eee7d8b
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: babe28932b57fd0a1adc39ba1cb9a8018552c331
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75947596"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80848216"
 ---
 # <a name="certreq"></a>certreq
-
-
 
 상호 인증 또는 정규 하위 요청에 서명 하 고 새 요청을 수락 하 여 상호 인증 또는 정규화 된 종속 요청을 생성 하는 요청에 대 한 응답을 설치 하는.inf 파일 중에서 만들려는 CA에서 이전 요청에 대 한 응답을 검색 하는 인증 기관 (CA)에서 인증서 요청, 또는 기존 CA 인증서를 요청 하려면 Certreq는 사용할 수 있습니다.
 
 > [!WARNING]
-> - 이전 버전의 certreq이이 문서에서 설명 하는 옵션을 모두를 제공할 수 있습니다. 구문 표기법 섹션에 표시 된 명령을 실행 하 여 특정 버전의 certreq 제공 하는 모든 옵션을 볼 수 있습니다.
-> - Certreq는 CEP/CES 환경에서 키 증명 템플릿을 기반으로 하는 새 인증서 요청 만들기를 지원 하지 않습니다.
+> 이전 버전의 certreq이이 문서에서 설명 하는 옵션을 모두를 제공할 수 있습니다. 구문 표기법 섹션에 표시 된 명령을 실행 하 여 특정 버전의 certreq 제공 하는 모든 옵션을 볼 수 있습니다. Certreq는 CEP/CES 환경에서 키 증명 템플릿을 기반으로 하는 새 인증서 요청 만들기를 지원 하지 않습니다.
 
-## <a name="BKMK_Contents"></a>내용
+## <a name="contents"></a><a name=BKMK_Contents></a>컨텐트에
 
 이 문서의 주요 섹션은 다음과 같습니다.
 1.  [동사의](#BKMK_Verbs)
@@ -39,11 +32,11 @@ ms.locfileid: "75947596"
 4.  [형식](#BKMK_Formats)
 5.  [추가 certreq 예제](#BKMK_Examples)
 
-## <a name="BKMK_Verbs"></a>동사의
+## <a name="verbs"></a><a name=BKMK_Verbs></a>동사의
 
 다음 테이블 certreq 명령을 사용 하 여 사용할 수 있는 동사에 설명 있습니다.
 
-|Switch|설명|
+|스위치|설명|
 |------|-----------|
 |-제출|CA에 요청을 제출 합니다. 자세한 내용은 참조 [Certreq-제출](#BKMK_Submit)합니다.|
 |-검색 *요청 Id*|CA에서 이전 요청에 대 한 응답을 검색합니다. 자세한 내용은 참조 [Certreq-검색](#BKMK_Retrieve)합니다.|
@@ -53,12 +46,12 @@ ms.locfileid: "75947596"
 |) 기호 +|상호 인증 또는 정규화 된 종속 요청을 서명합니다. 자세한 내용은 참조 [Certreq-기호](#BKMK_sign)합니다.|
 |-등록|에 대 한 등록 하거나, 인증서를 갱신 합니다. 자세한 내용은 참조 [Certreq-등록](#BKMK_enroll)합니다.|
 |-?|Certreq 구문, 옵션 및 설명의 목록을 표시합니다.|
-|*\<verb>* -?|지정 된 동사에 대 한 도움말을 표시 합니다.|
+|*동사 >\<* -?|지정 된 동사에 대 한 도움말을 표시 합니다.|
 |-v -?|Certreq 구문, 옵션 및 설명의 자세한 목록이 표시 됩니다.|
 
 으로 돌아가서 [내용](#BKMK_Contents)
 
-## <a name="BKMK_notation"></a>구문 표기법
+## <a name="syntax-notations"></a><a name=BKMK_notation></a>구문 표기법
 
 -   기본 명령줄 구문에 대해서는 `certreq -?`를 실행 합니다.
 -   특정 동사와 함께 certutil을 사용 하는 구문에 대해 **certreq** *\<동사 >* **-?** 를 실행 합니다.
@@ -79,7 +72,7 @@ ms.locfileid: "75947596"
 
 으로 돌아가서 [내용](#BKMK_Contents)
 
-## <a name="BKMK_Submit"></a>Certreq -submit
+## <a name="certreq--submit"></a><a name=BKMK_Submit></a>Certreq-제출
 
 Certreq.exe 명령줄 프롬프트에서 옵션이 표시 되지 않는 명시적으로 지정 하는 경우 기본 certreq.exe 매개 변수를 이것이 CA에 인증서 요청 제출 하려고 합니다.
 ```
@@ -93,17 +86,17 @@ CertReq [-Submit] [Options] [RequestFileIn [CertFileOut [CertChainFileOut [FullR
 ```
 certreq –submit certRequest.req certnew.cer certnew.pfx
 ```
-SAN 특성을 지정 하 여 인증서를 요청 하려면 Microsoft 기술 자료 문서 931351의 자세한 단계를 참조 하십시오. [보안 LDAP 인증서에 주체 대체 이름을 추가 하는 방법을](https://support.microsoft.com/kb/931351) "Certreq.exe 유틸리티를 사용 하 여 작성 하 고 SAN을 포함 하는 인증서 요청을 전송 하는 방법" 섹션에 있습니다.
+SAN 특성을 지정 하 여 인증서를 요청 하려면 Microsoft 기술 자료 문서 931351 Certreq 유틸리티를 사용 하 여 SAN 섹션을 포함 하는 인증서 요청을 만들고 제출 하는 방법에서 [보안 LDAP 인증서에 주체 대체 이름을 추가 하는 방법](https://support.microsoft.com/kb/931351) 에서 자세한 단계를 참조 하세요.
 
 으로 돌아가서 [내용](#BKMK_Contents)
 
-## <a name="BKMK_Retrieve"></a>Certreq -retrieve
+## <a name="certreq--retrieve"></a><a name=BKMK_Retrieve></a>Certreq-검색
 
 ```
 certreq -retrieve [Options] RequestId [CertFileOut [CertChainFileOut [FullResponseFileOut]]]
 ```
 -   CAComputerName 또는 CAName in-config CAComputerName\CANamea 대화 상자를 지정 하지 않으면 사용 가능한 모든 Ca 목록이 표시 됩니다.
--   -config CAComputerName\CAName 대신 -config -를 사용하면 기본 CA를 사용하여 작업이 처리됩니다.
+-   -config CAComputerName\CAName 대신 -config -를 사용하는 경우 작업은 기본 CA를 사용하여 처리됩니다.
 -   Certreq를 사용할 수 있습니다-검색 *RequestID* CA가 발급 실제로 후 인증서를 검색 합니다. *RequestID*PKC 10 진수 수 또는 16 진수 접두사 x는 0으로는 0 x 접두사가 없는 인증서 일련 번호 될 수 있습니다. 적이 있는지 여부는 인증서 요청 된 적 있음은 대기 상태에 관계 없이 해지 또는 만료 된 인증서를 포함 하는 CA에서 발급 된 모든 인증서를 검색 하려면 사용할 수 있습니다.
 -   CA의 정책 모듈에서 요청 보류 중 상태 및 반환에 남았을 수는 CA에 요청을 제출 하는 경우는 *RequestID* 표시할 Certreq 호출자에 게 있습니다. 결국은 CA 관리자가 인증서를 발급 되거나 요청을 거부 됩니다.
 
@@ -113,7 +106,7 @@ certreq -retrieve 20 MyCertificate.cer
 ```
 으로 돌아가서 [내용](#BKMK_Contents)
 
-## <a name="BKMK_New"></a>Certreq -new
+## <a name="certreq--new"></a><a name=BKMK_New></a>Certreq-신규
 
 ```
 certreq -new [Options] [PolicyFileIn [RequestFileOut]]
@@ -127,7 +120,7 @@ INF 파일에 대 한 다양 한 매개 변수 및 옵션을 지정할 수 있�
 ```
 [NewRequest] 
 ; At least one value must be set in this section 
-Subject = "CN=W2K8-BO-DC.contoso2.com"
+Subject = CN=W2K8-BO-DC.contoso2.com
 ```
 다음은 일부 가능한 섹션 INF 파일에 추가할 수 있습니다.
 
@@ -135,67 +128,67 @@ Subject = "CN=W2K8-BO-DC.contoso2.com"
 
 이 섹션은 새 인증서 요청에 대 한 템플릿으로 사용 되는 INF 파일에 대 한 필수입니다. 이 섹션에는 적어도 하나의 키 값이 필요합니다.
 
-|키|정의|Value|예|
+|Key|정의|값|예제|
 |---|----------|-----|-------|
-|주체|여러 애플리케이션 인증서의 주체 정보 사용. 따라서이 키에 대 한 값을 지정 하는 것이 좋습니다. 주체 여기 설정 되지 않은 경우 주체 이름이 주체 대체 이름 인증서 확장의 일부로 포함 되도록 하는 것이 좋습니다.|상대 고유 이름 문자열 값|Subject = "CN=computer1.contoso.com" Subject = "CN = John Smith, CN = Users, DC = Contoso, DC = com"|
-|Exportable|이 특성을 TRUE로 설정 하는 경우 인증서와 프라이빗 키를 내보낼 수 있습니다. 높은 수준의 보안을 보장 하려면 프라이빗 키 안 내보낼 수 있습니다. 그러나 경우에 따라 그 필요할 수 프라이빗 키를 여러 컴퓨터 또는 사용자가 동일한 프라이빗 키를 공유 해야 하는 경우에 내보낼 수 있도록 합니다.|true, false|내보낼 수 = TRUE입니다. CNG 키를이 구별할 수 및 일반 텍스트를 내보낼 수 있습니다. CAPI1 키 수는 없습니다.|
-|ExportableEncrypted|프라이빗 키를 내보낼 수로 설정 해야 하는지 여부를 지정 합니다.|true, false|ExportableEncrypted = true</br>팁: 모든 공개 키 크기 및 알고리즘이 모든 해시 알고리즘에서 작동 하는 것은 아닙니다. Tamehe 지정 CSP도 지정된 된 해시 알고리즘을 지원 해야 합니다. 지원 되는 해시 알고리즘의 목록을 보려면 명령을 실행할 수 있습니다 <code>certutil -oid 1 &#124; findstr pwszCNGAlgid &#124; findstr /v CryptOIDInfo</code>|
+|Subject|여러 응용 프로그램 인증서의 주체 정보 사용. 따라서이 키에 대 한 값을 지정 하는 것이 좋습니다. 주체 여기 설정 되지 않은 경우 주체 이름이 주체 대체 이름 인증서 확장의 일부로 포함 되도록 하는 것이 좋습니다.|상대 고유 이름 문자열 값|Subject = CN = computer1 Subject = CN = John Smith, CN = Users, DC = Contoso, DC = com|
+|Exportable|이 특성을 TRUE로 설정하면 프라이빗 키를 인증서와 함께 내보낼 수 있습니다. 높은 수준의 보안을 보장하기 위해 프라이빗 키를 내보낼 수 없습니다. 그러나 경우에 따라 여러 대의 컴퓨터 또는 사용자가 동일한 프라이빗 키를 공유해야 하는 경우 프라이빗 키를 내보낼 수 있도록 해야 할 수도 있습니다.|true, false|내보낼 수 = TRUE입니다. CNG 키를이 구별할 수 및 일반 텍스트를 내보낼 수 있습니다. CAPI1 키 수는 없습니다.|
+|ExportableEncrypted|프라이빗 키를 내보낼 수 있도록 설정해야 하는지 여부를 지정합니다.|true, false|ExportableEncrypted = true</br>팁: 모든 공개 키 크기 및 알고리즘이 모든 해시 알고리즘에서 작동 하는 것은 아닙니다. Tamehe 지정 CSP도 지정된 된 해시 알고리즘을 지원 해야 합니다. 지원 되는 해시 알고리즘의 목록을 보려면 명령을 실행할 수 있습니다 <code>certutil -oid 1 &#124; findstr pwszCNGAlgid &#124; findstr /v CryptOIDInfo</code>|
 |HashAlgorithm|이 요청에 사용할 해시 알고리즘입니다.|Sha256, sha384, sha512, sha1, md5, md4, md2|HashAlgorithm = s h a 1입니다. 지원 되는 해시 알고리즘의 목록을 보려면 certutil-oid 1 &#124; findstr pwszCNGAlgid &#124; Findstr/v cryptoidinfo를 사용 합니다.|
-|KeyAlgorithm|퍼블릭 및 프라이빗 키 쌍을 생성 하려면 서비스 공급자가 사용할 수 있는 알고리즘입니다.|RSA, DH, DSA, ECDH_P256, ECDH_P521, ECDSA_P256, ECDSA_P384, ECDSA_P521|KeyAlgorithm = RSA|
+|KeyAlgorithm|공용 및 프라이빗 키 쌍을 생성하기 위해 서비스 공급자가 사용하는 알고리즘입니다.|RSA, DH, DSA, ECDH_P256, ECDH_P521, ECDSA_P256, ECDSA_P384, ECDSA_P521|KeyAlgorithm = RSA|
 |KeyContainer|하지 않는 새 키 자료를 생성 된 경우 새 요청에 대해이 매개 변수를 설정 하는 것이 좋습니다. 키 컨테이너는 자동으로 생성 하 고 시스템에 의해 유지. 여기서는 기존 키 자료를 사용 해야 하는 요청에 대 한 기존 키의 키 컨테이너 이름으로이 값을 설정할 수 있습니다. certutil을 사용 하 여 – 컴퓨터 컨텍스트에 대 한 사용 가능한 키 컨테이너 목록을 표시 하는 명령 키입니다. 현재 사용자의 컨텍스트에 certutil – key – user 명령을 사용 합니다.|임의의 문자열 값</br>팁: 잠재적 INF 구문 분석 문제를 방지 하려면 공백이 나 특수 문자를 포함 하는 모든 INF 키 값 주위에 큰따옴표를 사용 해야 합니다.|KeyContainer = {C347BD28-7F69-4090-AA16-BC58CF4D749C}|
-|키 길이|퍼블릭 및 프라이빗 키의 길이 정의합니다. 키 길이 인증서의 보안 수준에 영향이 있습니다. 더 긴 키 길이는 일반적으로 더 높은 보안 수준; 제공 그러나 일부 애플리케이션 키 길이 관련 된 제한이 있을 수 있습니다.|암호화 서비스 공급자에서 지 원하는 모든 유효한 키 길이입니다.|키 길이 = 2048|
+|KeyLength|공개 키와 프라이빗 키의 길이를 정의합니다. 키 길이 인증서의 보안 수준에 영향이 있습니다. 더 긴 키 길이는 일반적으로 더 높은 보안 수준; 제공 그러나 일부 응용 프로그램 키 길이 관련 된 제한이 있을 수 있습니다.|암호화 서비스 공급자에서 지 원하는 모든 유효한 키 길이입니다.|키 길이 = 2048|
 |KeySpec|키 서명, Exchange (암호화), 또는 둘 다에 사용 될 수 하는 경우를 결정 합니다.|AT_NONE, AT_SIGNATURE, AT_KEYEXCHANGE|KeySpec AT_KEYEXCHANGE =|
-|KeyUsage|어떤 인증서 키에 사용할지를 정의 합니다.|CERT_DIGITAL_SIGNATURE_KEY_USAGE-80 (128)</br>팁: 표시 된 값은 각 비트 정의에 대 한 16 진수 (10 진수) 값입니다. 오래 된 구문을 사용할 수도 있습니다: 여러 개의 단일 16 진수 값을 비트 기호 표현 하는 대신 집합입니다. 예를 들어 KeyUsage 0xa0 =.</br>CERT_NON_REPUDIATION_KEY_USAGE-40 (64)</br>CERT_KEY_ENCIPHERMENT_KEY_USAGE-20 (32)</br>CERT_DATA_ENCIPHERMENT_KEY_USAGE-10 (16)</br>CERT_KEY_AGREEMENT_KEY_USAGE-8</br>CERT_KEY_CERT_SIGN_KEY_USAGE-4</br>CERT_OFFLINE_CRL_SIGN_KEY_USAGE-2</br>CERT_CRL_SIGN_KEY_USAGE-2</br>CERT_ENCIPHER_ONLY_KEY_USAGE-1</br>CERT_DECIPHER_ONLY_KEY_USAGE-8000 (32768)|KeyUsage = "CERT_DIGITAL_SIGNATURE_KEY_USAGE &#124; CERT_KEY_ENCIPHERMENT_KEY_USAGE"</br>팁: 여러 값은 파이프 (&#124;) 기호 구분 기호를 사용 합니다. INF 구문 분석 문제를 방지 하려면 여러 값을 사용 하는 경우 큰따옴표를 사용 하는 것을 확인 합니다.|
-|KeyUsageProperty|프라이빗 키를 사용할 수 있는 특정 용도 식별 하는 값을 검색 합니다.|NCRYPT_ALLOW_DECRYPT_FLAG-1</br>NCRYPT_ALLOW_SIGNING_FLAG-2</br>NCRYPT_ALLOW_KEY_AGREEMENT_FLAG-4</br>NCRYPT_ALLOW_ALL_USAGES-ffffff (16777215)|KeyUsageProperty = "NCRYPT_ALLOW_DECRYPT_FLAG 및 #124; NCRYPT_ALLOW_SIGNING_FLAG "|
+|KeyUsage|어떤 인증서 키에 사용할지를 정의 합니다.|CERT_DIGITAL_SIGNATURE_KEY_USAGE-80 (128)</br>팁: 표시 된 값은 각 비트 정의에 대 한 16 진수 (10 진수) 값입니다. 오래 된 구문을 사용할 수도 있습니다: 여러 개의 단일 16 진수 값을 비트 기호 표현 하는 대신 집합입니다. 예를 들어 KeyUsage 0xa0 =.</br>CERT_NON_REPUDIATION_KEY_USAGE-40 (64)</br>CERT_KEY_ENCIPHERMENT_KEY_USAGE-20 (32)</br>CERT_DATA_ENCIPHERMENT_KEY_USAGE-10 (16)</br>CERT_KEY_AGREEMENT_KEY_USAGE-8</br>CERT_KEY_CERT_SIGN_KEY_USAGE-4</br>CERT_OFFLINE_CRL_SIGN_KEY_USAGE-2</br>CERT_CRL_SIGN_KEY_USAGE-2</br>CERT_ENCIPHER_ONLY_KEY_USAGE-1</br>CERT_DECIPHER_ONLY_KEY_USAGE-8000 (32768)|KeyUsage = CERT_DIGITAL_SIGNATURE_KEY_USAGE &#124; CERT_KEY_ENCIPHERMENT_KEY_USAGE</br>팁: 여러 값은 파이프 (&#124;) 기호 구분 기호를 사용 합니다. INF 구문 분석 문제를 방지 하려면 여러 값을 사용 하는 경우 큰따옴표를 사용 하는 것을 확인 합니다.|
+|KeyUsageProperty|프라이빗 키를 사용할 수 있는 특정 용도를 식별하는 값을 검색합니다.|NCRYPT_ALLOW_DECRYPT_FLAG-1</br>NCRYPT_ALLOW_SIGNING_FLAG-2</br>NCRYPT_ALLOW_KEY_AGREEMENT_FLAG-4</br>NCRYPT_ALLOW_ALL_USAGES-ffffff (16777215)|KeyUsageProperty = NCRYPT_ALLOW_DECRYPT_FLAG &#124; NCRYPT_ALLOW_SIGNING_FLAG|
 |MachineKeySet|이 키는 컴퓨터와 사용자가 아닌 소유 하는 인증서를 만들어야 할 때 중요 합니다. 생성 되는 키 자료의 보안 컨텍스트 보안 주체 (사용자 또는 컴퓨터 계정)가 만든 요청에에서 유지 됩니다. 관리자가 컴퓨터를 대신 하 여 인증서 요청을 만들 때 키 자료는 관리자의 보안 컨텍스트가 아니라 컴퓨터의 보안 컨텍스트에서 만들어야 합니다. 그렇지 않으면 관리자의 보안 컨텍스트에 있기 때문에 컴퓨터가 개인 키에 액세스할 수 없습니다.|true, false|MachineKeySet = true</br>팁: 기본값은 false입니다.|
-|NotBefore|날짜 또는 날짜 및 되기까지의 요청을 실행할 수 없습니다 시간을 지정 합니다. NotBefore는 ValidityPeriod 유닛의와 사용할 수 있습니다.|날짜 또는 날짜 및 시간|NotBefore = "7/24/2012 10:31 AM"</br>팁: NotBefore 및 NotAfter는 RequestType = cert 전용입니다. 날짜 구문 분석에서 로캘을 구분 하려고 합니다. 월 이름을 사용 하는 경우 모든 로캘에서 명확 하 게 사용할 수 있습니다.|
-|NotAfter|날짜 또는 날짜 및 시간을 요청을 실행할 수 없습니다 지정 합니다. ValidityPeriod 또는 유닛의 NotAfter는 사용할 수 없습니다.|날짜 또는 날짜 및 시간|NotAfter = "9/23/2014 10:31 AM"</br>팁: NotBefore 및 NotAfter는 RequestType = cert 전용입니다. 날짜 구문 분석에서 로캘을 구분 하려고 합니다. 월 이름을 사용 하는 경우 모든 로캘에서 명확 하 게 사용할 수 있습니다.|
-|PrivateKeyArchive|PrivateKeyArchive 설정은 해당 RequestType이 "CMC"로 설정 된 경우에만 작동 합니다. CMS (CMC) 요청 형식을 통한 인증서 관리 메시지만 키 보관을 위해 요청자의 개인 키를 CA로 안전 하 게 전송할 수 있기 때문입니다.|true, false|PrivateKeyArchive = True|
+|NotBefore|날짜 또는 날짜 및 되기까지의 요청을 실행할 수 없습니다 시간을 지정 합니다. NotBefore는 ValidityPeriod 유닛의와 사용할 수 있습니다.|날짜 또는 날짜 및 시간|NotBefore = 오전 7/24/2012 10:31</br>팁: NotBefore 및 NotAfter는 RequestType = cert 전용입니다. 날짜 구문 분석에서 로캘을 구분 하려고 합니다. 월 이름을 사용 하는 경우 모든 로캘에서 명확 하 게 사용할 수 있습니다.|
+|NotAfter|날짜 또는 날짜 및 시간을 요청을 실행할 수 없습니다 지정 합니다. ValidityPeriod 또는 유닛의 NotAfter는 사용할 수 없습니다.|날짜 또는 날짜 및 시간|NotAfter = 오전 9/23/2014 10:31</br>팁: NotBefore 및 NotAfter는 RequestType = cert 전용입니다. 날짜 구문 분석에서 로캘을 구분 하려고 합니다. 월 이름을 사용 하는 경우 모든 로캘에서 명확 하 게 사용할 수 있습니다.|
+|PrivateKeyArchive|PrivateKeyArchive 설정은 해당 RequestType이 CMC로 설정 된 경우에만 작동 합니다. 예를 들어 CMC (인증서 관리 메시지) 요청 형식을 사용 하면 키 보관을 위해 요청자의 개인 키를 CA에 안전 하 게 전송할 수 있습니다.|true, false|PrivateKeyArchive = True|
 |EncryptionAlgorithm|사용할 암호화 알고리즘입니다.|가능한 옵션은 운영 체제 버전 및 설치 된 암호화 공급자 집합에 따라 달라 집니다. 사용 가능한 알고리즘 목록을 보려면 사용 된 지정 된 CSP가 지정 된 대칭 암호화 알고리즘과 길이를 지원 해야 <code>certutil -oid 2 &#124; findstr pwszCNGAlgid</code> 명령을 실행 합니다.|EncryptionAlgorithm 3des =|
 |EncryptionLength|사용할 암호화 알고리즘의 길이입니다.|지정한 EncryptionAlgorithm에서 허용 된 길이입니다.|EncryptionLength = 128|
-|ProviderName|공급자 이름은 CSP의 표시 이름입니다.|사용 하는 CSP의 공급자 이름을 모르는 경우 certutil-csplist 명령줄에서 실행 합니다. 이 명령은 로컬 시스템에서 사용할 수 있는 모든 Csp의 이름이 표시 됩니다.|공급자 이름이 "Microsoft RSA SChannel Cryptographic Provider" =|
-|ProviderType|공급자 유형 "RSA 전체"와 같은 특정 알고리즘 기능에 따라 특정 공급자를 선택 하는 데 사용 됩니다.|사용 하는 CSP의 공급자 형식을 모르는 경우 certutil-csplist 명령줄 프롬프트에서 실행 합니다. 이 명령은 로컬 시스템에서 사용할 수 있는 모든 Csp의 공급자 형식을 표시 됩니다.|ProviderType = 1|
-|RenewalCert|인증서 요청 생성 된 경우 시스템에 존재 하는 인증서를 갱신 해야 하는 경우에이 키에 대 한 값으로 인증서 해시를 지정 해야 합니다.|인증서 요청을 만들 되는 컴퓨터에서 사용할 수 있는 모든 인증서의 인증서 해시입니다. 인증서 해시를 알 수 없는 경우에 인증서 MMC 스냅인을 사용 하 여을 갱신 해야 하는 인증서를 살펴봅니다. 인증서 속성을 열고 인증서의 "지문" 특성을 확인 합니다. 인증서 갱신에는 PKCS #7 또는 CMC 요청 형식이 필요합니다.|RenewalCert 4EDF274BD2919C6E9EC6A522F0F3B153E9B1582D =|
-|RequesterName</br>참고: 이렇게 하면 다른 사용자 요청을 대신 하 여 등록 요청이 수행 됩니다. 또한 등록 에이전트 인증서를 사용 하 여 요청을 서명 해야 합니다. 그렇지 않으면 CA에서 요청을 거부 합니다. 사용 하 여 등록 에이전트 인증서를 지정 하려면-cert 옵션입니다.|요청자 이름에서 RequestType CMC 또는 PKCS # 7로 설정 된 경우 인증서 요청에 대해 지정할 수 있습니다. 이 키에서 RequestType을 PKCS # 10으로 설정 하는 경우 무시 됩니다. Requestername 요청의 일부로 설정할 수 있습니다. 보류 중인 요청에 Requestername 조작할 수 없습니다.|도메인 \ 사용자|Requestername = "Contoso\BSmith"|
+|ProviderName|공급자 이름은 CSP의 표시 이름입니다.|사용 하는 CSP의 공급자 이름을 모르는 경우 certutil-csplist 명령줄에서 실행 합니다. 이 명령은 로컬 시스템에서 사용할 수 있는 모든 Csp의 이름이 표시 됩니다.|ProviderName = Microsoft RSA SChannel 암호화 공급자|
+|ProviderType|공급자 유형은 RSA Full과 같은 특정 알고리즘 기능에 따라 특정 공급자를 선택 하는 데 사용 됩니다.|사용 하는 CSP의 공급자 형식을 모르는 경우 certutil-csplist 명령줄 프롬프트에서 실행 합니다. 이 명령은 로컬 시스템에서 사용할 수 있는 모든 Csp의 공급자 형식을 표시 됩니다.|ProviderType = 1|
+|RenewalCert|인증서 요청 생성 된 경우 시스템에 존재 하는 인증서를 갱신 해야 하는 경우에이 키에 대 한 값으로 인증서 해시를 지정 해야 합니다.|인증서 요청을 만들 되는 컴퓨터에서 사용할 수 있는 모든 인증서의 인증서 해시입니다. 인증서 해시를 알 수 없는 경우에 인증서 MMC 스냅인을 사용 하 여을 갱신 해야 하는 인증서를 살펴봅니다. 인증서 속성을 열고 인증서의 손 도장 (Thumbprint) 특성을 확인 합니다. 인증서 갱신에는 PKCS #7 또는 CMC 요청 형식이 필요합니다.|RenewalCert 4EDF274BD2919C6E9EC6A522F0F3B153E9B1582D =|
+|RequesterName</br>참고: 이렇게 하면 다른 사용자 요청을 대신 하 여 등록 요청이 수행 됩니다. 또한 등록 에이전트 인증서를 사용 하 여 요청을 서명 해야 합니다. 그렇지 않으면 CA에서 요청을 거부 합니다. 사용 하 여 등록 에이전트 인증서를 지정 하려면-cert 옵션입니다.|요청자 이름에서 RequestType CMC 또는 PKCS # 7로 설정 된 경우 인증서 요청에 대해 지정할 수 있습니다. 이 키에서 RequestType을 PKCS # 10으로 설정 하는 경우 무시 됩니다. Requestername 요청의 일부로 설정할 수 있습니다. 보류 중인 요청에 Requestername 조작할 수 없습니다.|도메인 \ 사용자|Requestername = Contoso\BSmith|
 |RequestType|생성 하 고 인증서 요청을 전송 하는 데 사용 되는 표준에 따라 결정 됩니다.|PKCS10-1</br>PKCS7-2</br>CMC-3</br>인증서-4</br>SCEP--fd00 (64768)</br>팁:이 옵션은 자체 서명 된 인증서 또는 자체 발급 된 인증서를 나타냅니다. 요청 하지만 대신 새 인증서를 생성 하지 않습니다 하 고 인증서를 설치 합니다. 자체 서명 된 기본값이입니다. 서명 인증서를 사용 하 여 지정-cert 옵션 없는 자체 서명 된 자체 발급 된 인증서를 만듭니다.|RequestType = CMC|
-|SecurityDescriptor</br>팁:이는 컴퓨터 컨텍스트 비 스마트 카드 키와 관련 된 것입니다.|보안 개체와 관련 된 보안 정보를 포함 합니다. 가장 보안 개체에 대 한 개체를 만드는 함수 호출에는 개체의 보안 설명자를 지정할 수 있습니다.|문자열 기반 [보안 설명자 정의 언어](https://msdn.microsoft.com/library/aa379567(v=vs.85).aspx)합니다.|SecurityDescriptor "D:P(A;; = GA;; SY) (A; GA;; BA) "|
+|SecurityDescriptor</br>팁:이는 컴퓨터 컨텍스트 비 스마트 카드 키와 관련 된 것입니다.|보안 개체와 관련 된 보안 정보를 포함 합니다. 가장 보안 개체에 대 한 개체를 만드는 함수 호출에는 개체의 보안 설명자를 지정할 수 있습니다.|문자열 기반 [보안 설명자 정의 언어](https://msdn.microsoft.com/library/aa379567(v=vs.85).aspx)합니다.|SecurityDescriptor = D:P (A;; GA;;; SY) (A;; GA;;; BA|
 |AlternateSignatureAlgorithm|지정 하 고 불연속 또는 조합 된 PKCS #10 요청 또는 인증서 서명에 대 한 서명 알고리즘 개체 식별자 (OID) 인지 여부를 나타내는 부울 값을 검색 합니다.|true, false|AlternateSignatureAlgorithm = false</br>팁: RSA 시그니처의 경우 false는 Pkcs1 v 1.5를 나타냅니다. True 이면 v2.1 시그니처를 나타냅니다.|
 |자동|기본적으로이 옵션에는 사용자에 게 서 스마트 카드 PIN와 같은 대화형 사용자 데스크톱 및 요청 정보를 CSP 액세스할을 수 있습니다. 이 키가 TRUE로 설정, CSP 데스크톱과 상호 작용 해서는 안 하 고 사용자에 게 모든 사용자 인터페이스를 표시 차단 됩니다.|true, false|자동 = true|
-|SMIME|이 매개 변수는 TRUE로 설정 하는 경우 개체 식별자 값 1.2.840.113549.1.9.15 확장이 요청에 추가 됩니다. 개체 식별자의 수에 따라 다릅니다은 Outlook 같은 Secure Multipurpose Internet Mail Extensions (S/MIME) 애플리케이션에서 사용할 수 있는 대칭 암호화 알고리즘에 대 한 참조는 설치 된 운영 체제 버전 및 CSP 기능에 있습니다.|true, false|SMIME = true|
+|SMIME|이 매개 변수는 TRUE로 설정 하는 경우 개체 식별자 값 1.2.840.113549.1.9.15 확장이 요청에 추가 됩니다. 개체 식별자의 수에 따라 다릅니다은 Outlook 같은 Secure Multipurpose Internet Mail Extensions (S/MIME) 응용 프로그램에서 사용할 수 있는 대칭 암호화 알고리즘에 대 한 참조는 설치 된 운영 체제 버전 및 CSP 기능에 있습니다.|true, false|SMIME = true|
 |UseExistingKeySet|이 매개 변수를 사용 하 여 인증서 요청을 만드는 기존 키 쌍을 사용 해야 함을 지정 합니다. 이 키가 TRUE로 설정 하는 경우 RenewalCert 키 또는 KeyContainer 이름에 대 한 값도 지정 해야 합니다. 기존 키의 속성을 변경할 수 없으므로 하지 내보낼 수 있는 키를 설정 해야 합니다. 이 경우 키 자료가 인증서 요청을 빌드할 때 생성 됩니다.|true, false|UseExistingKeySet = true|
-|KeyProtection|사용 하기 전에 프라이빗 키를 보호 하는 방법을 나타내는 값을 지정 합니다.|XCN_NCRYPT_UI_NO_PROTCTION_FLAG-0</br>XCN_NCRYPT_UI_PROTECT_KEY_FLAG-1</br>XCN_NCRYPT_UI_FORCE_HIGH_PROTECTION_FLAG-2|KeyProtection NCRYPT_UI_FORCE_HIGH_PROTECTION_FLAG =|
+|KeyProtection|사용하기 전에 프라이빗 키를 보호하는 방법을 나타내는 값을 지정합니다.|XCN_NCRYPT_UI_NO_PROTCTION_FLAG-0</br>XCN_NCRYPT_UI_PROTECT_KEY_FLAG-1</br>XCN_NCRYPT_UI_FORCE_HIGH_PROTECTION_FLAG-2|KeyProtection NCRYPT_UI_FORCE_HIGH_PROTECTION_FLAG =|
 |SuppressDefaults|기본 확장 프로그램 및 특성 요청에 포함 되는지 여부를 나타내는 부울 값을 지정 합니다. 기본값은 해당 Oid (개체 식별자)으로 표현 됩니다.|true, false|SuppressDefaults = true|
-|FriendlyName|새 인증서 이름입니다.|텍스트|FriendlyName = "Server1"|
+|FriendlyName|새 인증서 이름입니다.|Text|FriendlyName = Server1|
 |ValidityPeriodUnits</br>참고: 요청 유형 = cert 인 경우에만 사용 됩니다.|ValidityPeriod 함께 사용 되는 단위 수를 지정 합니다.|숫자|유닛의 = 3|
 |ValidityPeriod</br>참고: 요청 유형 = cert 인 경우에만 사용 됩니다.|VValidityPeriod 기간은 영어 (미국) 복수 이어야 합니다.|년, 월, 주, 일, 시간, 분, 초|ValidityPeriod = 년|
 
 으로 돌아가서 [내용](#BKMK_Contents)
 
-**[Extensions]**
+**확장할**
 
 이 섹션은 선택 사항입니다.
 
 
-|  OID 확장   | 정의 | Value |                                                                                                                                                                                                                                                                                                                                                                                                                      예                                                                                                                                                                                                                                                                                                                                                                                                                       |
+|  OID 확장   | 정의 | 값 |                                                                                                                                                                                                                                                                                                                                                                                                                      예제                                                                                                                                                                                                                                                                                                                                                                                                                       |
 |------------------|------------|-------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    2.5.29.17     |            |       |                                                                                                                                                                                                                                                                                                                                                                                                                2.5.29.17 = "{text}"                                                                                                                                                                                                                                                                                                                                                                                                                |
-|    *continue*    |            |       |                                                                                                                                                                                                                                                                                                                                                                                                        *continue* = "UPN=User@Domain.com&"                                                                                                                                                                                                                                                                                                                                                                                                         |
-|    *continue*    |            |       |                                                                                                                                                                                                                                                                                                                                                                                                       *continue* = "EMail =User@Domain.com&"                                                                                                                                                                                                                                                                                                                                                                                                        |
-|    *continue*    |            |       |                                                                                                                                                                                                                                                                                                                                                                                                        *continue* = "DNS=host.domain.com&"                                                                                                                                                                                                                                                                                                                                                                                                         |
-|    *continue*    |            |       |                                                                                                                                                                                                                                                                                                                                                                                               *continue* = "DirectoryName=CN=Name,DC=Domain,DC=com&"                                                                                                                                                                                                                                                                                                                                                                                               |
-|    *continue*    |            |       |                                                                                                                                                                                                                                                                                                                                                                                             *continue* = "URL=<http://host.domain.com/default.html&>"                                                                                                                                                                                                                                                                                                                                                                                              |
-|    *continue*    |            |       |                                                                                                                                                                                                                                                                                                                                                                                                         *continue* = "IPAddress = 10.0.0.1 &"                                                                                                                                                                                                                                                                                                                                                                                                         |
-|    *continue*    |            |       |                                                                                                                                                                                                                                                                                                                                                                                                       *continue* = "RegisteredId = 1.2.3.4.5 &"                                                                                                                                                                                                                                                                                                                                                                                                       |
-|    *continue*    |            |       |                                                                                                                                                                                                                                                                                                                                                                                                      *continue* = "1.2.3.4.6.1={utf8}String&"                                                                                                                                                                                                                                                                                                                                                                                                      |
-|    *continue*    |            |       |                                                                                                                                                                                                                                                                                                                                                                                                  *continue* = "1.2.3.4.6.2={octet}AAECAwQFBgc=&"                                                                                                                                                                                                                                                                                                                                                                                                   |
-|    *continue*    |            |       |                                                                                                                                                                                                                                                                                                                                                                                          *continue* = "1.2.3.4.6.2 = {옥텟} {hex} 00 01 02 03 04 05 06 07 &"                                                                                                                                                                                                                                                                                                                                                                                           |
-|    *continue*    |            |       |                                                                                                                                                                                                                                                                                                                                                                                                 *continue* = "1.2.3.4.6.3={asn}BAgAAQIDBAUGBw==&"                                                                                                                                                                                                                                                                                                                                                                                                  |
-|    *continue*    |            |       |                                                                                                                                                                                                                                                                                                                                                                                           *continue* = "1.2.3.4.6.3={hex}04 08 00 01 02 03 04 05 06 07"                                                                                                                                                                                                                                                                                                                                                                                            |
-|    2.5.29.37     |            |       |                                                                                                                                                                                                                                                                                                                                                                                                                 2.5.29.37="{text}"                                                                                                                                                                                                                                                                                                                                                                                                                 |
-|    *continue*    |            |       |                                                                                                                                                                                                                                                                                                                                                                                                            *continue* = "1.3.6.1.5.5.7.                                                                                                                                                                                                                                                                                                                                                                                                            |
-|    *continue*    |            |       |                                                                                                                                                                                                                                                                                                                                                                                                          *continue* = "1.3.6.1.5.5.7.3.1"                                                                                                                                                                                                                                                                                                                                                                                                          |
-|    2.5.29.19     |            |       |                                                                                                                                                                                                                                                                                                                                                                                                              "{text} ca 0pathlength = 3 ="                                                                                                                                                                                                                                                                                                                                                                                                              |
-|     위험     |            |       |                                                                                                                                                                                                                                                                                                                                                                                                                 중요 한 2.5.29.19 =                                                                                                                                                                                                                                                                                                                                                                                                                 |
+|    2.5.29.17     |            |       |                                                                                                                                                                                                                                                                                                                                                                                                                2.5.29.17 = {text}                                                                                                                                                                                                                                                                                                                                                                                                                |
+|    *하기*    |            |       |                                                                                                                                                                                                                                                                                                                                                                                                        *continue* = UPN =User@Domain.com&                                                                                                                                                                                                                                                                                                                                                                                                         |
+|    *하기*    |            |       |                                                                                                                                                                                                                                                                                                                                                                                                       *continue* = 전자 메일 =User@Domain.com&                                                                                                                                                                                                                                                                                                                                                                                                        |
+|    *하기*    |            |       |                                                                                                                                                                                                                                                                                                                                                                                                        *continue* = DNS = 호스트인 .com &                                                                                                                                                                                                                                                                                                                                                                                                         |
+|    *하기*    |            |       |                                                                                                                                                                                                                                                                                                                                                                                               *continue* = DIRECTORYNAME = CN = NAME, Dc = DOMAIN, dc = com &                                                                                                                                                                                                                                                                                                                                                                                               |
+|    *하기*    |            |       |                                                                                                                                                                                                                                                                                                                                                                                             *continue* = URL =<http://host.domain.com/default.html&>                                                                                                                                                                                                                                                                                                                                                                                              |
+|    *하기*    |            |       |                                                                                                                                                                                                                                                                                                                                                                                                         *continue* = IPAddress = 10.0.0.1 &                                                                                                                                                                                                                                                                                                                                                                                                         |
+|    *하기*    |            |       |                                                                                                                                                                                                                                                                                                                                                                                                       *continue* = RegisteredId = 1.2.3.4.5 &                                                                                                                                                                                                                                                                                                                                                                                                       |
+|    *하기*    |            |       |                                                                                                                                                                                                                                                                                                                                                                                                      *continue* = 1.2.3.4.6.1 = {Utf8} 문자열 &                                                                                                                                                                                                                                                                                                                                                                                                      |
+|    *하기*    |            |       |                                                                                                                                                                                                                                                                                                                                                                                                  *continue* = 1.2.3.4.6.2 = {옥텟} AAECAwQFBgc = &                                                                                                                                                                                                                                                                                                                                                                                                   |
+|    *하기*    |            |       |                                                                                                                                                                                                                                                                                                                                                                                          *continue* = 1.2.3.4.6.2 = {옥텟} {hex} 00 01 02 03 04 05 06 7 &                                                                                                                                                                                                                                                                                                                                                                                           |
+|    *하기*    |            |       |                                                                                                                                                                                                                                                                                                                                                                                                 *continue* = 1.2.3.4.6.3 = {Asn} BAgAAQIDBAUGBw = = &                                                                                                                                                                                                                                                                                                                                                                                                  |
+|    *하기*    |            |       |                                                                                                                                                                                                                                                                                                                                                                                           *continue* = 1.2.3.4.6.3 = {hex} 04 08 00 01 02 03 04 05 06 07                                                                                                                                                                                                                                                                                                                                                                                            |
+|    2.5.29.37     |            |       |                                                                                                                                                                                                                                                                                                                                                                                                                 2.5.29.37 = {text}                                                                                                                                                                                                                                                                                                                                                                                                                 |
+|    *하기*    |            |       |                                                                                                                                                                                                                                                                                                                                                                                                            *continue* = 1.3.6.1.5.5.7.                                                                                                                                                                                                                                                                                                                                                                                                            |
+|    *하기*    |            |       |                                                                                                                                                                                                                                                                                                                                                                                                          *continue* = 1.3.6.1.5.5.7.3.1                                                                                                                                                                                                                                                                                                                                                                                                          |
+|    2.5.29.19     |            |       |                                                                                                                                                                                                                                                                                                                                                                                                              {text} ca = 0pathlength = 3                                                                                                                                                                                                                                                                                                                                                                                                              |
+|     중요     |            |       |                                                                                                                                                                                                                                                                                                                                                                                                                 중요 한 2.5.29.19 =                                                                                                                                                                                                                                                                                                                                                                                                                 |
 |     KeySpec      |            |       |                                                                                                                                                                                                                                                                                                                                                                                             AT_NONE-0</br>AT_SIGNATURE-2</br>AT_KEYEXCHANGE-1                                                                                                                                                                                                                                                                                                                                                                                             |
 |   RequestType    |            |       |                                                                                                                                                                                                                                                                                                                                                                                   PKCS10-1</br>PKCS7-2</br>CMC-3</br>인증서-4</br>SCEP--fd00 (64768)                                                                                                                                                                                                                                                                                                                                                                                   |
 |     KeyUsage     |            |       |                                                                                                                                                                                                       CERT_DIGITAL_SIGNATURE_KEY_USAGE-80 (128)</br>CERT_NON_REPUDIATION_KEY_USAGE-40 (64)</br>CERT_KEY_ENCIPHERMENT_KEY_USAGE-20 (32)</br>CERT_DATA_ENCIPHERMENT_KEY_USAGE-10 (16)</br>CERT_KEY_AGREEMENT_KEY_USAGE-8</br>CERT_KEY_CERT_SIGN_KEY_USAGE-4</br>CERT_OFFLINE_CRL_SIGN_KEY_USAGE-2</br>CERT_CRL_SIGN_KEY_USAGE-2</br>CERT_ENCIPHER_ONLY_KEY_USAGE-1</br>CERT_DECIPHER_ONLY_KEY_USAGE-8000 (32768)                                                                                                                                                                                                       |
@@ -207,26 +200,26 @@ Subject = "CN=W2K8-BO-DC.contoso2.com"
 으로 돌아가서 [내용](#BKMK_Contents)
 
 > [!NOTE]
-> SubjectNameFlags 지정 하는 제목 및 SubjectAltName 확장 필드 certreq 현재 사용자 또는 현재 컴퓨터 속성을 기반으로 자동으로 채워진 INF 파일을 사용 하면: DNS 이름, UPN 등입니다. "Template" 리터럴을 사용 하면 템플릿 이름 플래그가 대신 사용 됩니다. 따라서 단일 INF 파일을 상황에 맞는 주체 정보를 사용 하 여 요청을 생성 하는 여러 컨텍스트에서 사용할 수 있습니다.
+> SubjectNameFlags 지정 하는 제목 및 SubjectAltName 확장 필드 certreq 현재 사용자 또는 현재 컴퓨터 속성을 기반으로 자동으로 채워진 INF 파일을 사용 하면: DNS 이름, UPN 등입니다. 리터럴 템플릿을 사용 하면 템플릿 이름 플래그가 대신 사용 됩니다. 따라서 단일 INF 파일을 상황에 맞는 주체 정보를 사용 하 여 요청을 생성 하는 여러 컨텍스트에서 사용할 수 있습니다.
 >
 > X500NameFlags는 ASN.1 주체 INF 키 값이 변환 될 때 CertStrToName API에 직접 전달 하는 플래그 인코딩된 고유 이름을 지정 합니다.
 
 Certreq를 사용 하 여 기반 인증서를 요청 하려면-새로운 아래 예제에서 단계를 사용 합니다.
 
 > [!WARNING]
-> 이 항목의 콘텐츠는 Windows Server 2008 AD CS에 대한 기본 설정을 따릅니다. 예를 들어 2048로 키 길이 설정, CSP로 Microsoft 소프트웨어 키 스토리지 공급자 선택 및 SHA1(Secure Hash Algorithm 1) 사용 회사의 보안 정책에 대 한 요구 사항에 따라 이러한 선택 항목을 평가 합니다.
+> 이 항목의 콘텐츠는 Windows Server 2008 AD CS;에 대 한 기본 설정에 따라 예를 들어, 2048, CSP,으로 Microsoft 소프트웨어 키 저장소 공급자를 선택 하 고 Secure Hash Algorithm 1 (SHA1)를 사용 하 여 키 길이 설정 합니다. 회사의 보안 정책에 대 한 요구 사항에 따라 이러한 선택 항목을 평가 합니다.
 
 정책 파일 (.inf) 복사 하 고 아래 예제에서는 메모장에서 저장 하 고 RequestConfig.inf로 저장:
 ```
 [NewRequest] 
-Subject = "CN=<FQDN of computer you are creating the certificate>" 
+Subject = CN=<FQDN of computer you are creating the certificate> 
 Exportable = TRUE 
 KeyLength = 2048 
 KeySpec = 1 
 KeyUsage = 0xf0 
 MachineKeySet = TRUE 
 [RequestAttributes]
-CertificateTemplate="WebServer"
+CertificateTemplate=WebServer
 [Extensions] 
 OID = 1.3.6.1.5.5.7.3.1 
 OID = 1.3.6.1.5.5.7.3.2  
@@ -238,29 +231,29 @@ CertReq –New RequestConfig.inf CertRequest.req
 다음 예제에서는 [Strings] 섹션 구문 Oid 및 데이터를 해석 하기 어려운 다른 구현 하는 방법을 보여 줍니다. Oid 쉼표로 구분 된 목록을 사용 하 여 EKU 확장을 위한 새로운 {text} 구문 예제:
 ```
 [Version]
-Signature="$Windows NT$
+Signature=$Windows NT$
 
 [Strings]
-szOID_ENHANCED_KEY_USAGE = "2.5.29.37"
-szOID_PKIX_KP_SERVER_AUTH = "1.3.6.1.5.5.7.3.1"
-szOID_PKIX_KP_CLIENT_AUTH = "1.3.6.1.5.5.7.3.2"
+szOID_ENHANCED_KEY_USAGE = 2.5.29.37
+szOID_PKIX_KP_SERVER_AUTH = 1.3.6.1.5.5.7.3.1
+szOID_PKIX_KP_CLIENT_AUTH = 1.3.6.1.5.5.7.3.2
 
 [NewRequest]
-Subject = "CN=TestSelfSignedCert"
+Subject = CN=TestSelfSignedCert
 Requesttype = Cert
 
 [Extensions]
-%szOID_ENHANCED_KEY_USAGE%="{text}%szOID_PKIX_KP_SERVER_AUTH%,"
-_continue_ = "%szOID_PKIX_KP_CLIENT_AUTH%"
+%szOID_ENHANCED_KEY_USAGE%={text}%szOID_PKIX_KP_SERVER_AUTH%,
+_continue_ = %szOID_PKIX_KP_CLIENT_AUTH%
 ```
 으로 돌아가서 [내용](#BKMK_Contents)
 
-## <a name="BKMK_accept"></a>Certreq -accept
+## <a name="certreq--accept"></a><a name=BKMK_accept></a>Certreq-수락
 
 ```
 CertReq -accept [Options] [CertChainFileIn | FullResponseFileIn | CertFileIn]
 ```
-– 발급 된 인증서를 사용 하 여 이전에 생성 된 프라이빗 키에 연결 하 고 (있는 경우 일치 하는 요청)의 인증서가 요청 하는 위치는 시스템에서 보류 중인 인증서 요청을 제거 하는 매개 변수를 수락 합니다.
+–accept 매개 변수는 이전에 생성된 프라이빗 키를 발급된 인증서와 연결하고 인증서가 요청된 시스템에서 보류 중인 인증서 요청을 제거합니다(일치하는 요청이 있는 경우).
 
 수동으로 인증서를 수락 하는 것에 대 한이 예제를 사용할 수 있습니다.
 ```
@@ -272,7 +265,7 @@ certreq -accept certnew.cer
 
 으로 돌아가서 [내용](#BKMK_Contents)
 
-## <a name="BKMK_policy"></a>Certreq -policy
+## <a name="certreq--policy"></a><a name=BKMK_policy></a>Certreq-정책
 
 ```
 certreq -policy [-attrib AttributeString] [-binary] [-cert CertID] [RequestFileIn [PolicyFileIn [RequestFileOut [PKCS10FileOut]]]]
@@ -287,7 +280,7 @@ certreq -policy Certsrv.req Policy.inf newcertsrv.req
 ```
 으로 돌아가서 [내용](#BKMK_Contents)
 
-## <a name="BKMK_sign"></a>Certreq -sign
+## <a name="certreq--sign"></a><a name=BKMK_sign></a>Certreq-서명
 
 ```
 certreq -sign [Options] [RequestFileIn [RequestFileOut]]
@@ -306,7 +299,7 @@ certreq -submit MyRequest_Sign.req MyRequest_cert.cer
 ```
 으로 돌아가서 [내용](#BKMK_Contents)
 
-## <a name="BKMK_enroll"></a>Certreq -enroll
+## <a name="certreq--enroll"></a><a name=BKMK_enroll></a>Certreq-등록
 
 인증서를 등록 하려면
 ```
@@ -320,28 +313,28 @@ certreq –enroll –cert CertId [Options] Renew [ReuseKeys]
 
 여기의 일련 번호를 사용 하는 인증서를 갱신 합니다. 예:
 ```
-certreq –enroll -machine –cert "61 2d 3c fe 00 00 00 00 00 05" Renew
+certreq –enroll -machine –cert 61 2d 3c fe 00 00 00 00 00 05 Renew
 ```
 인증서 템플릿에 등록할 경우의 예를 통해 U/i: 정책 서버를 선택 하려면 별표 (*)를 사용 하 여 웹 서버 라는
 ```
-certreq -enroll –machine –policyserver * "WebServer"
+certreq -enroll –machine –policyserver * WebServer
 ```
 으로 돌아가서 [내용](#BKMK_Contents)
 
-## <a name="BKMK_Options"></a>옵션
+## <a name="options"></a><a name=BKMK_Options></a>옵션
 
 |옵션|설명|
 |-------|-----------|
 |-모든|Force ICertRequest::Submit 인코딩 유형을 확인할 수 있습니다.|
 |-attrib \<AttributeString >|콜론으로 구분 된 이름 및 값 문자열 쌍을 지정 합니다.</br>\N (예를 들어 Name1:Value1\nName2:Value2) 별도 이름 및 값 문자열 쌍입니다.|
 |-이진|형식 대신 base64 인코딩된 이진 파일을 출력합니다.|
-|-PolicyServer *\<PolicyServer>*|"ldap: *\<경로 >* "</br>URI 또는 인증서 등록 정책 웹 서비스를 실행 하는 컴퓨터에 대 한 고유 ID를 삽입 합니다.</br>검색 하 여 요청 파일을 사용 하도록 지정 하려면 *\<policyserver >* 에 빼기 (-) 기호를 사용 하면 됩니다.|
+|-PolicyServer *\<policyserver >*|ldap: *\<경로 >*</br>URI 또는 인증서 등록 정책 웹 서비스를 실행 하는 컴퓨터에 대 한 고유 ID를 삽입 합니다.</br>검색 하 여 요청 파일을 사용 하도록 지정 하려면 *\<policyserver >* 에 빼기 (-) 기호를 사용 하면 됩니다.|
 |-config \<ConfigString >|CAHostName\CAName 구성 문자열에서 지정 된 CA를 사용 하 여 작업을 처리 합니다. Https 연결에 대 한 등록 서버 URI를 지정 합니다. 로컬 컴퓨터에 대 한 CA를 저장, 빼기를 사용 하 여 기호 (-).|
-|아닌 익명이|인증서 등록 웹 서비스에 대 한 익명 자격 증명을 사용 합니다.|
+|-Anonymous|인증서 등록 웹 서비스에 대 한 익명 자격 증명을 사용 합니다.|
 |-Kerberos|인증서 등록 웹 서비스에 대 한 Kerberos (도메인) 자격 증명을 사용 합니다.|
 |-ClientCertificate *\<ClientCertId >*|*\<ClientCertID >* 을 인증서 지문, CN, EKU, template, EMAIL, UPN 및 new name = value 구문으로 바꿀 수 있습니다.|
 |-UserName *\<username >*|인증서 등록 웹 서비스를 사용합니다. *\<UserName >* 를 SAM 이름 또는 domain\user 대체할 수 있습니다. 이 옵션은-p 옵션으로 사용 합니다.|
-|-p *\<Password>*|인증서 등록 웹 서비스를 사용합니다. *\<password >* 를 실제 사용자의 암호로 바꿉니다. 이 옵션은-UserName 옵션으로 사용 합니다.|
+|-p *\<암호 >*|인증서 등록 웹 서비스를 사용합니다. *\<password >* 를 실제 사용자의 암호로 바꿉니다. 이 옵션은-UserName 옵션으로 사용 합니다.|
 |-사용자|구성-사용자 컨텍스트를 새 인증서 요청에 대 한 컨텍스트를 지정 하거나는 인증서를 허용 합니다. INF 또는 서식 파일에 지정 되지 않은 경우 기본 컨텍스트에입니다.|
 |-컴퓨터|새 인증서 요청을 구성 하거나 컨텍스트를 지정 된 컴퓨터 컨텍스트에 대 한 인증서를 허용 합니다. 새 요청에 대 한 템플릿 컨텍스트와 MachineKeyset INF 키와 일치 이어야 합니다. 이 옵션을 지정 하지 않으면 템플릿에 컨텍스트를 설정 하지 않는 경우 기본값은 사용자 컨텍스트입니다.|
 |-crl|Crl (해지 목록) 출력 CertChainFileOut로 지정 된 base 64 인코딩 PKCS #7 파일 또는 RequestFileOut로 지정 된 base64 인코딩 파일에에서 인증서를 포함 합니다.|
@@ -355,7 +348,7 @@ certreq -enroll –machine –policyserver * "WebServer"
 
 으로 돌아가서 [내용](#BKMK_Contents)
 
-## <a name="BKMK_Formats"></a>형식
+## <a name="formats"></a><a name=BKMK_Formats></a>형식
 
 |형식|설명|
 |-------|-----------|
@@ -367,7 +360,7 @@ certreq -enroll –machine –policyserver * "WebServer"
 |FullResponseFileOut|Base64 인코딩된 전체 응답 파일 이름입니다.|
 |PolicyFileIn|와 함께 사용할는 [Certreq-정책](#BKMK_policy) 동사만 합니다. 요청을 한 정하는 데 사용 되는 확장의 텍스트 표현을 포함 하는 INF 파일입니다.|
 
-## <a name="BKMK_Examples"></a>추가 certreq 예제
+## <a name="additional-certreq-examples"></a><a name=BKMK_Examples></a>추가 certreq 예제
 
 다음 문서 certreq 사용의 예를 들어:
 -   [사용자 지정 주체 대체 이름으로 인증서를 요청 하는 방법](https://technet.microsoft.com/library/ff625722.aspx)

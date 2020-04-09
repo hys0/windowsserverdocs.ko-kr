@@ -1,7 +1,6 @@
 ---
 ms.assetid: bbb84ea6-7e31-4442-85ab-a9447e7c19e8
 title: 토큰 서명 인증서 추가
-description: ''
 author: billmath
 manager: femila
 ms.date: 05/31/2017
@@ -9,12 +8,12 @@ ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: c8b2246842dd70c06442faed995f6b883dbaf70a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 9b737cf8c9efb89ef9b3befaa1875b273bfcadf9
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71360090"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80814936"
 ---
 # <a name="add-a-token-signing-certificate"></a>토큰 서명 인증서 추가
 
@@ -26,7 +25,7 @@ Active Directory Federation Services \(\) AD FS의 페더레이션 서버는 페
   
 토큰\-서명 인증서가 페더레이션 서비스의 신뢰할 수 있는 루트에 연결 되어야 합니다. 다음 절차를 사용 하 여 서명 인증서\-토큰을에서 내보낸 파일의 AD FS 관리 스냅인\-에 추가할 수 있습니다.  
   
-로컬 컴퓨터에서 이 절차를 완료하기 위해서는 최소한 **관리자** 또는 이와 동등한 자격이 있어야 합니다.  [로컬 및 도메인 기본 그룹](https://go.microsoft.com/fwlink/?LinkId=83477) 에서 적절 한 계정 및 그룹 구성원 자격 사용에 대 한 세부 정보를 검토 \(http:\/\/go.microsoft.com\/fwlink\/? LinkId\=83477\).   
+이 절차를 완료하려면 최소한 로컬 컴퓨터의 **Administrators** 구성원 자격 또는 동급의 권한이 필요합니다.  [로컬 및 도메인 기본 그룹](https://go.microsoft.com/fwlink/?LinkId=83477) 에서 적절 한 계정 및 그룹 구성원 자격 사용에 대 한 세부 정보를 검토 \(http:\/\/go.microsoft.com\/fwlink\/? LinkId\=83477\).   
   
 ### <a name="to-add-a-token-signing-certificate"></a>서명 인증서\-토큰을 추가 하려면  
   

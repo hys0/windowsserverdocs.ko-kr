@@ -1,24 +1,20 @@
 ---
 title: Configure Features on Demand in Windows Server
 description: 서버 관리자
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-server-manager
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e663bbea-d025-41fa-b16c-c2bff00a88e8
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f834ca2e4c4acd045ccaeb4f46142dcc0e86f674
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 090b87810dc519728bf915bdb2cd79668c7f01f4
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71383270"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80851556"
 ---
 # <a name="configure-features-on-demand-in-windows-server"></a>Configure Features on Demand in Windows Server
 
@@ -44,7 +40,7 @@ ms.locfileid: "71383270"
 
 -   그룹 정책 설정, **선택적 구성 요소 설치 및 구성 요소 복구를 위한 설정**구성
 
-이 항목에는 다음 섹션이 수록되어 있습니다.
+이 항목에는 다음과 같은 섹션이 포함되어 있습니다.
 
 -   [기능 파일 또는 side-by-side 저장소 만들기](#BKMK_store)
 
@@ -52,14 +48,14 @@ ms.locfileid: "71383270"
 
 -   [제거를 사용 하 여 기능 파일 제거](#BKMK_remove)
 
-## <a name="BKMK_store"></a>기능 파일 또는 side-by-side 저장소 만들기
+## <a name="create-a-feature-file-or-side-by-side-store"></a><a name=BKMK_store></a>기능 파일 또는 side-by-side 저장소 만들기
 이 섹션에는 폴더를 설정 하는 원격 기능 파일 공유 (-병렬 저장소 라고도 함) Windows Server 2012 r 2를 실행 하는 서버 또는 Windows Server 2012에 역할, 역할 서비스 및 기능을 설치 하는 데 필요한 파일을 저장 하는 방법을 설명 합니다. 기능 저장소를 설정한 후에 이러한 운영 체제를 실행 하는 서버에 역할, 역할 서비스 및 기능을 설치할 수 있으며 설치 원본 파일의 위치와 기능 저장소를 지정할 수 있습니다.
 
 #### <a name="to-create-a-feature-file-store"></a>기능 파일 저장소를 만들려면
 
 1.  네트워크의 서버에서 공유 폴더를 만듭니다(예: 예를 들어 *\\\network\share\sxs*합니다.
 
-2.  기능 저장소에 올바른 권한이 할당되었는지 확인합니다. 원본 경로 또는 파일 공유에서 **읽기** 권한을 **Everyone** 그룹 (보안상의 이유로 권장 되지 않음) 또는 설치 하려는 서버의 컴퓨터 계정 (*도메인*\\*SERverNAME*$)에 부여 해야 합니다. 이 기능 저장소를 사용 하는 기능 사용자 계정 액세스 권한을 부여 하는 것 만으로는 충분 하지 않습니다.
+2.  기능 저장소에 올바른 권한이 할당되었는지 확인합니다. 원본 경로 또는 파일 공유에서 **읽기** 권한을 **Everyone** 그룹 (보안상의 이유로 권장 되지 않음) 또는이 기능 저장소를 사용 하 여 기능을 설치 하려는 서버의 컴퓨터 계정 (*도메인*\\*SERverNAME*$)에 부여 해야 합니다. 사용자 계정 액세스 권한을 부여 하는 것 만으로는 충분 하지 않습니다.
 
     Windows 바탕 화면에서 다음 작업 중 하나를 수행하여 파일 공유 및 사용 권한 설정에 액세스할 수 있습니다.
 
@@ -72,14 +68,14 @@ ms.locfileid: "71383270"
 
 3.  Windows Server 설치 미디어에서 **Sources\SxS** 폴더를 1단계에서 만든 공유 폴더에 복사합니다.
 
-## <a name="BKMK_methods"></a>기능 파일을 제거 하는 방법
+## <a name="methods-of-removing-feature-files"></a><a name=BKMK_methods></a>기능 파일을 제거 하는 방법
 두 가지 방법 중 하나를 사용하여 Windows Server의 주문형 기능 구성에서 기능 파일을 제거할 수 있습니다.
 
 -   `remove` 의 매개 변수는 `Uninstall-WindowsFeature` cmdlet를 사용 하면 서버 또는 오프 라인 가상 하드 디스크 (VHD) Windows Server 2012 R2 또는 Windows Server 2012를 실행 하에서 기능 파일을 삭제 합니다. 에 대 한 유효한 값은 `remove` 매개 변수는 이름, 역할, 역할 서비스 및 기능입니다.
 
 -   DISM(배포 이미지 서비스 및 관리) 명령을 통해 필요하지 않거나 다른 원격 원본에서 가져올 수 있는 기능 파일을 생략하여 디스크 공간을 확보하는 사용자 지정 WIM 파일을 만들 수 있습니다. DISM을 사용하여 사용자 지정 이미지를 준비하는 방법에 대한 자세한 내용은 [Windows 기능을 사용하거나 사용하지 않도록 설정하는 방법](https://technet.microsoft.com/library/hh824822.aspx)를 참조하세요.
 
-## <a name="BKMK_remove"></a>제거를 사용 하 여 기능 파일 제거
+## <a name="remove-feature-files-by-using-uninstall-windowsfeature"></a><a name=BKMK_remove></a>제거를 사용 하 여 기능 파일 제거
 서버 및 Windows Server 2012 R2 또는 Windows Server 2012를 실행 하는 오프 라인 Vhd에서 역할, 역할 서비스 및 기능을 제거 하 고 기능 파일을 삭제 하려면 Uninstall-windowsfeature cmdlet을 사용할 수 있습니다. 제거 및 수 원하는 경우 동일한 역할, 역할 서비스 및 동일한 명령에는 기능을 삭제 합니다.
 
 > [!IMPORTANT]
@@ -104,13 +100,13 @@ ms.locfileid: "71383270"
     Uninstall-WindowsFeature -Name <feature_name> -computerName <computer_name> -remove
     ```
 
-    **예 들어** 원격 데스크톱 라이선싱는 설치 된 원격 데스크톱 서비스의 마지막으로 남아 있는 역할 서비스입니다. 이 명령은 원격 데스크톱 라이선싱을 제거한 후 지정된 서버인 *contoso_1*에서 전체 원격 데스크톱 서비스 역할에 대한 기능 파일을 삭제합니다.
+    **예:** 원격 데스크톱 라이선싱은 설치된 원격 데스크톱 서비스에 대해 마지막으로 남아 있는 역할 서비스입니다. 이 명령은 원격 데스크톱 라이선싱을 제거한 후 지정된 서버인 *contoso_1*에서 전체 원격 데스크톱 서비스 역할에 대한 기능 파일을 삭제합니다.
 
     ```
     Uninstall-WindowsFeature -Name rdS-Licensing -computerName contoso_1 -remove
     ```
 
-    **예 들어** 다음 예제에서는 active directory 도메인 서비스를 제거 하 고 오프 라인 VHD에서 그룹 정책 관리를 제거 합니다. 오프라인 VHD, *Contoso.vhd*에서 먼저 역할 및 기능이 제거된 다음 기능 파일이 전부 제거됩니다.
+    **예:** 다음 예제에서는 active directory 도메인 서비스를 제거 하 고 오프 라인 VHD에서 그룹 정책 관리를 제거 합니다. 오프라인 VHD, *Contoso.vhd*에서 먼저 역할 및 기능이 제거된 다음 기능 파일이 전부 제거됩니다.
 
     > [!NOTE]
     > 추가 해야는 `computerName` Windows 8.1 또는 Windows 8 실행 하는 경우 cmdlet은 컴퓨터에서 하는 매개 변수를 실행 합니다.

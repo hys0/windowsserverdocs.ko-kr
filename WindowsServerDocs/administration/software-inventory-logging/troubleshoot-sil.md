@@ -1,23 +1,19 @@
 ---
 title: 소프트웨어 인벤토리 로깅 문제 해결
 description: 일반적인 소프트웨어 인벤토리 로깅 배포 문제를 해결 하는 방법을 설명 합니다.
-ms.custom: na
 ms.prod: windows-server
 ms.technology: manage-software-inventory-logging
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 author: brentfor
 ms.author: coreyp
 manager: lizapo
 ms.date: 10/16/2017
-ms.openlocfilehash: fb6e6fbba835e049748ca8578f24a1ff7fc750bf
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 5a02caf63bbd02705aebb8306a7b50a32f3d6c82
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71382900"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80851416"
 ---
 # <a name="troubleshoot-software-inventory-logging"></a>소프트웨어 인벤토리 로깅 문제 해결 
 
@@ -54,7 +50,7 @@ SIL에 문제가 발생 하는 경우에는 채널을 통한 데이터 흐름과
 >[!IMPORTANT]
 >SQL 데이터 큐브가 현지 시스템 시간 오전 3 시에 처리 될 때까지 보고서에는 데이터가 없습니다. 큐브가 데이터를 처리할 때까지 문제 해결 단계를 진행 하지 마십시오.
 
-큐브를 마지막으로 처리 한 시간 보다 최신 이거나 큐브를 처리 하기 전에 (새 설치의 경우) 보고서의 데이터 또는 보고서에서 누락 된 데이터의 문제를 해결 하는 경우 다음 단계에 따라 SQL 데이터 큐브를 실시간으로 처리 합니다. :
+큐브를 마지막으로 처리 한 시간 보다 최신 이거나 큐브를 처리 하기 전에 (새 설치의 경우) 보고서의 데이터 또는 보고서의 누락 된 데이터 문제를 해결 하는 경우 다음 단계에 따라 SQL 데이터 큐브를 실시간으로 처리 합니다.
 
 1. SQL Server 관리자로 로그인 하 고 명령 프롬프트에서 **SSMS** 를 실행 합니다.
 2. 데이터베이스 엔진에 연결합니다.
@@ -69,11 +65,11 @@ SIL에 문제가 발생 하는 경우에는 채널을 통한 데이터 흐름과
 
 #### <a name="no-data-in-the-report-when-using-the-publish-silreport-cmdlet-or-data-is-generally-missing"></a>SilReport cmdlet을 사용 하는 경우 보고서에 데이터가 없습니다. (또는 데이터가 일반적으로 누락 됨)
 
-데이터가 누락 된 경우 SQL 데이터 큐브가 아직 처리 되지 않았기 때문일 수 있습니다. 최근에 처리 했 고 누락 된 데이터가 큐브 처리 전에 집계에서 도착 한 것으로 판단 되는 경우 데이터의 경로를 역순으로 따릅니다. 문제를 해결 하려면 고유한 호스트와 고유한 VM을 선택 하세요. 역방향의 데이터 경로는 **SIL agent/task를 실행**하는 **SILA Report** &lt; **SILA database** &lt; **SILA local directory** &lt; **원격 실제 호스트** 또는 WS VM입니다.
+데이터가 누락 된 경우 SQL 데이터 큐브가 아직 처리 되지 않았기 때문일 수 있습니다. 최근에 처리 했 고 누락 된 데이터가 큐브 처리 전에 집계에서 도착 한 것으로 판단 되는 경우 데이터의 경로를 역순으로 따릅니다. 문제를 해결 하려면 고유한 호스트와 고유한 VM을 선택 하세요. 역방향의 데이터 경로는 **SIL agent/task를 실행**하는 **SILA 로컬 디렉터리** &lt; **원격 물리적 호스트** 또는 WS VM &lt; **SILA Report** &lt; **SILA database** 입니다.
 
 #### <a name="check-to-see-if-data-is-in-the-database"></a>데이터가 데이터베이스에 있는지 확인 하십시오.
 
-데이터를 확인 하는 방법에는 다음 두 가지가 있습니다. **Powershell** 또는 **SSMS**.
+데이터를 확인 하는 방법에는 **Powershell** 또는 **SSMS**의 두 가지가 있습니다.
 
 >[!Important]
 >SILA가 데이터베이스에 데이터를 삽입 한 후 큐브가 한 번 이상 처리 된 경우이 데이터는 보고서에 반영 되어야 합니다. 데이터베이스에 데이터가 없는 경우 실제 호스트를 폴링하는 작업이 실패 하거나 HTTPS 또는 둘 다를 통해 수신 되지 않습니다.
@@ -92,9 +88,9 @@ SIL에 문제가 발생 하는 경우에는 채널을 통한 데이터 흐름과
 
 **기타 관련 명령**
 
-**Set-silaggregator-데이터 &lt;&gt;를 푸시하는 알려진 서버의 Computername fqdn**: 큐브를 처리 하기 전에는 컴퓨터 (VM)에 대 한 정보를 데이터베이스에서 생성 합니다. 따라서이 cmdlet을 사용 하 여 데이터베이스에서 데이터를 확인 하는 데 사용할 수 있습니다 .이 섹션의 시작 부분에 설명 된 대로 실시간으로 큐브를 새로 고치지 않은 경우에는 HTTPS를 통해 HTTPS, 이전 또는 없이 SIL 데이터를 푸시하는 Windows 서버에 대 한 데이터베이스의 데이터를 확인 하는 데 사용할 수 있습니다.
+**Set-silaggregator-Computername &lt;데이터&gt;를 푸시하는 알려진 서버의 fqdn** : 큐브를 처리 하기 전에도 데이터베이스에서 컴퓨터 (VM)에 대 한 정보를 생성 합니다. 따라서이 cmdlet을 사용 하 여 데이터베이스에서 데이터를 확인 하는 데 사용할 수 있습니다 .이 섹션의 시작 부분에 설명 된 대로 실시간으로 큐브를 새로 고치지 않은 경우에는 HTTPS를 통해 HTTPS, 이전 또는 없이 SIL 데이터를 푸시하는 Windows 서버에 대 한 데이터베이스의 데이터를 확인 하는 데 사용할 수 있습니다.
 
-**Set-silaggregator- &lt;&gt;add-silvmhost cmdlet을 사용할 때 최근에 사용한 폴링 열 아래에 값이 있는 폴링 된 실제 호스트의 fqdn입니다**. 이렇게 하면 큐브가 처리 되기 전에도 데이터베이스에서 실제 호스트에 대 한 정보가 생성 됩니다.
+**Set-silaggregator-VmHostName &lt;add-silvmhost cmdlet&gt;를 사용할 때 최근 폴링 열 아래에 값이 있는 폴링 된 실제 호스트의 fqdn** 입니다. 그러면 큐브가 처리 되기 전에도 데이터베이스에서 실제 호스트에 대 한 정보가 생성 됩니다.
 
 #### <a name="ssms"></a>SSMS
 
@@ -128,7 +124,7 @@ n**폴링 중인 호스트의 데이터를 확인 합니다.**
 
         -   폴링을 수행할 호스트를 추가한 후 1 시간을 기다려야 합니다 (이 간격을 기본값으로 설정 했다고 가정 하 고 **set-silaggregator** cmdlet을 사용 하 여 확인할 수 있음).
 
-        -   호스트가 추가 된 후 1 시간 이었던 경우 폴링 태스크가 실행 중인지 확인 합니다. **작업 스케줄러**의 **Microsoft** &gt; **Windows** 에서 **소프트웨어 인벤토리 로깅 집계** 를 선택 하 고 작업 기록을 확인 합니다.
+        -   호스트가 추가 된 후 1 시간이 었으 면 폴링 작업이 실행 중인지 확인 합니다. **작업 스케줄러**의 **Microsoft** &gt; **Windows** 에서 **소프트웨어 인벤토리 로깅 집계** 를 선택 하 고 작업 기록을 확인 합니다.
 
     -   호스트가 나열 되지만 **RecentPoll**, **HostType**또는 **hypervisortype**에 대 한 값이 없는 경우이는 대부분 무시 될 수 있습니다. 이는 HyperV 환경 에서만 발생 합니다. 이 데이터는 실제로 Windows Server VM에서 제공 되며 HTTPS를 통해 실행 중인 실제 호스트를 식별 합니다. 이는 보고 되는 특정 VM을 식별 하는 데 유용할 수 있지만 **SilAggregatorData** cmdlet을 사용 하 여 데이터베이스를 마이닝 해야 합니다.
 
@@ -145,7 +141,7 @@ n**폴링 중인 호스트의 데이터를 확인 합니다.**
    - 오류가 있는 경우:
      - **Targeturi** 의 항목에 **https://** 이 있는지 확인 합니다.
      - 모든 필수 구성 요소가 충족 되는지 확인 
-     - Windows Server에 필요한 모든 업데이트가 설치 되어 있는지 확인 합니다 (SIL에 대 한 필수 구성 요소 참조). 다음 cmdlet을 사용 하 여이를 확인 하는 것은 WS 2012 r 2에만 해당 하는 빠른 방법입니다. **Get-silwindowsupdate \*3060, \*3000**
+     - Windows Server에 필요한 모든 업데이트가 설치 되어 있는지 확인 합니다 (SIL에 대 한 필수 구성 요소 참조). **Get-silwindowsupdate \*3060, \*3000** cmdlet을 사용 하 여이를 확인 하는 것이 가장 빠른 방법입니다 (WS 2012 R2에만 해당).
      - 집계를 사용 하 여 인증 하는 데 사용 되는 인증서가 **set-sillogging**를 사용 하 여 인벤토리 할 로컬 서버의 올바른 저장소에 설치 되어 있는지 확인 합니다.
      - SIL 집계에서 집계를 사용 하 여 인증 하는 데 사용 되는 인증서의 인증서 지문을 **set-silaggregator** **– addcertificatethumbprint** cmdlet을 사용 하 여 목록에 추가 해야 합니다.
      - 엔터프라이즈 인증서를 사용 중인 경우 SIL을 사용하도록 설정된 서버가 인증서를 만든 도메인에 가입되어 있거나 루트 인증 기관을 통해 인증 가능한지를 확인합니다. 데이터를 집계로 전달/푸시하려는 로컬 컴퓨터의 인증서를 신뢰할 수 없는 경우 이 작업이 실패하고 오류가 발생합니다.
@@ -156,7 +152,7 @@ n**폴링 중인 호스트의 데이터를 확인 합니다.**
 
      -  마지막으로, 전달/푸시를 시도 하는 서버에서 캐시 된 SIL 파일에 대 한 다음 위치를 확인할 수 있습니다. **\Windows\System32\Logfiles\SIL**. **Set-sillogging** 이 시작 되 고 1 시간 이상 실행 중 이거나 **게시-get-sildata** 가 최근에 실행 되었으며이 디렉터리에 파일이 없는 경우 집계에 대 한 로깅이 성공한 것입니다.
 
-오류가 없고 콘솔에 출력이 없는 경우 Windows Server end 노드에서 HTTPS를 통해 SIL 집계로 데이터 푸시/게시를 완료 했습니다. 전달 되는 데이터의 경로를 따르려면 관리자 권한으로 SIL 집계에 로그인 하 고 도착 한 데이터 파일을 검사 합니다. **Program Files (x86)** &gt; **Microsoft SIL 집계** &gt; SILA 디렉터리로 이동 합니다. 실시간으로 도착 하는 데이터 파일을 볼 수 있습니다.
+오류가 없고 콘솔에 출력이 없는 경우 Windows Server end 노드에서 HTTPS를 통해 SIL 집계로 데이터 푸시/게시를 완료 했습니다. 전달 되는 데이터의 경로를 따르려면 관리자 권한으로 SIL 집계에 로그인 하 고 도착 한 데이터 파일을 검사 합니다. **Program Files (x86)** &gt; **Microsoft SIL 수집기** &gt; SILA directory로 이동 합니다. 실시간으로 도착 하는 데이터 파일을 볼 수 있습니다.
 
 >[!NOTE] 
 >**Get-sildata** cmdlet을 사용 하 여 둘 이상의 데이터 파일을 전송할 수 있습니다. 끝 노드의 SIL는 최대 30 일 동안 실패 한 푸시를 캐시 합니다. 다음에 성공한 푸시 모든 데이터 파일은 처리를 위해 집계로 이동 합니다. 이러한 방식으로 새로 설정 된 SIL 집계는 자체 설치 전에 끝 노드의 데이터를 표시할 수 있습니다.

@@ -1,6 +1,6 @@
 ---
 title: cleanmgr
-description: 명령줄 옵션을 사용 하 여 특정 파일을 자동으로 정리 하도록 디스크 정리 도구 (Cleanmgr)를 구성 하는 방법에 대해 알아봅니다.
+description: 명령줄 옵션을 사용하여 특정 파일을 자동으로 정리하도록 디스크 정리 도구(Cleanmgr.exe)를 구성하는 방법에 대해 알아봅니다.
 ms.prod: windows-server
 ms.reviewer: cosmosdarwin
 author: iangpgh
@@ -8,12 +8,12 @@ ms.author: jgerend
 manager: daveba
 ms.technology: storage-spaces
 ms.date: 06/20/2019
-ms.openlocfilehash: 0646922f409d4ea8abb85c927a329013e32016de
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 9abde0cb0db910cd500df94f98c76e6c370cba2a
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75947581"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80847716"
 ---
 # <a name="cleanmgr"></a>cleanmgr
 
@@ -29,7 +29,7 @@ ms.locfileid: "75947581"
 cleanmgr [/d <driveletter>] [/sageset:n]  [/sagerun:n] [/TUNEUP:n] [/LOWDISK] [/VERYLOWDISK]
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |      매개 변수      |    설명     |
 | ------------------- | ------------------ |

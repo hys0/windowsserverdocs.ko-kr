@@ -1,28 +1,22 @@
 ---
 title: comp
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: 두 파일 또는 파일 집합 바이트에 대 한 내용을 비교 하는 comp에 대 한 Windows 명령 항목입니다.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 40319d23-704d-4da1-be93-8259547275d0
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 84604cea36b0b4c9543a7169002551c0da4f0493
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 2f61743b55f38cfdebb17506368609895f48b4f6
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71379261"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80847456"
 ---
 # <a name="comp"></a>comp
-
-
 
 바이트 단위로 두 파일 또는 파일 집합의 내용을 비교 합니다. 매개 변수 없이 사용 하는 경우 **comp** 비교할 파일을 입력 하 라는 메시지를 표시 합니다.
 
@@ -34,21 +28,21 @@ ms.locfileid: "71379261"
 comp [<Data1>] [<Data2>] [/d] [/a] [/l] [/n=<Number>] [/c]
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------|-----------|
 |\<Data1 >|비교할 첫 번째 파일 또는 파일 집합의 위치와 이름을 지정 합니다. 와일드 카드 문자 ( **&#42;** 및 **?** )를 사용 하 여 여러 파일을 지정할 수 있습니다.|
 |\<Data2 >|비교할 두 번째 파일 또는 파일 집합의 위치와 이름을 지정 합니다. 와일드 카드 문자 ( **&#42;** 및 **?** )를 사용 하 여 여러 파일을 지정할 수 있습니다.|
 |/d|소수 형식의 차이를 표시 합니다. 기본 형식은 16 진수입니다.|
-|/ a|차이점을 문자로 표시 합니다.|
+|/a|차이점을 문자로 표시 합니다.|
 |/l|바이트 오프셋을 표시 하는 대신 차이가 발생 하는 줄 번호를 표시 합니다.|
 |/n =\<Number >|파일 크기가 서로 다른 경우에도 각 파일에 지정 된 줄 수를 비교 합니다.|
 |/c|대/소문자를 구분 하지 않는 비교를 수행 합니다.|
 |설정 / 해제 [line]|오프 라인 특성 집합을 사용 하 여 파일을 처리 합니다.|
-|/?|명령 프롬프트에 도움말을 표시합니다.|
+|/?|명령 프롬프트에서 도움말을 표시합니다.|
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 -   **Comp** 명령이 일치 하지 않는 정보를 식별 하는 방법
 
@@ -91,7 +85,7 @@ comp [<Data1>] [<Data2>] [/d] [/a] [/l] [/n=<Number>] [/c]
 
     더 많은 파일을 비교 하려면 Y를 누릅니다. **Comp** 명령은 새 파일의 위치와 이름을 입력 하 라는 메시지를 표시 합니다. 비교를 중지 하려면 N을 누릅니다. Y 키를 누르면 **comp** 는 사용할 명령줄 옵션을 묻는 메시지를 표시 합니다. 명령줄 옵션을 지정 하지 않으면 **comp** 는 이전에 지정한를 사용 합니다.
 
-## <a name="BKMK_examples"></a>예와
+## <a name="examples"></a><a name=BKMK_examples></a>예와
 
 디렉터리 C:\Reports의 내용을 백업 디렉터리와 비교 하려면 다음을 입력 \\\\Sales\Backup\April
 ```
@@ -102,6 +96,6 @@ comp c:\reports \\sales\backup\april
 comp \invoice\*.txt \invoice\backup\*.txt /n=10 /d
 ```
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
-[명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

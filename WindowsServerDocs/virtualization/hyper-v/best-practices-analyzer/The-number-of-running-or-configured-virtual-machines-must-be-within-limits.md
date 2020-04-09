@@ -2,20 +2,19 @@
 title: 실행 수 또는 구성 된 가상 컴퓨터는 지원 되는 제한 내에 있어야 합니다.
 description: 이 모범 사례 분석기 규칙에서 보고 한 문제를 해결 하는 지침을 제공 합니다.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 9d3c4aa3-8416-46ec-a253-26dc98088d7b
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: 56d7fd528d7fda20dbdbb16a6262bb072f053ef0
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 49013d6a4c9dda6e79d6a803bae0f5641d826817
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71364635"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854626"
 ---
 # <a name="the-number-of-running-or-configured-virtual-machines-must-be-within-supported-limits"></a>실행 수 또는 구성 된 가상 컴퓨터는 지원 되는 제한 내에 있어야 합니다.
 
@@ -23,16 +22,16 @@ ms.locfileid: "71364635"
 
 모범 사례 분석기 및 검사에 대한 자세한 내용은 [모범 사례 분석기 검사 실행 및 검사 결과 관리](https://go.microsoft.com/fwlink/p/?LinkID=223177)를 참조하세요.  
   
-|속성|설명|  
+|속성|세부 정보|  
 |-|-|  
 |**운영 체제**|Windows Server 2016|  
 |**제품/기능**|Hyper-V|  
-|**Severity**|Error  
-|**범주**|Configuration|  
+|**등급**|오류  
+|**범주**|구성|  
   
 다음 섹션에서는 기울임꼴이이 문제에 대 한 모범 사례 분석기 도구에 나타나는 텍스트를 나타냅니다.  
   
-## <a name="issue"></a>문제점  
+## <a name="issue"></a>문제  
 *지원 되는 것 보다 더 많은 가상 컴퓨터가 실행 중이거나 구성 되어 있습니다.*  
   
 ## <a name="impact"></a>영향  
@@ -55,13 +54,13 @@ Hyper-v를 실행 중인 가상 컴퓨터의 수와 같은 지원 되는 최대 
    > [!IMPORTANT]  
    > 도메인에 속한 Hyper-v 호스트에서 내보내는 원격 위치에 내보낸된 파일을 저장 하려는 경우 제한 된 위임을 위해 Hyper-v 호스트를 구성 합니다. 원격 위치는 공유 네트워크 폴더 또는으로 가져오는 호스트에 있는 폴더 수 있습니다. 제한 된 위임에는 원격 컴퓨터에 인터넷 파일 시스템 CIFS (Common) 서비스에 대 한 위임 된 자격 증명을 제공 합니다. Hyper-v 호스트의 컴퓨터 계정을 수 있습니다. 제한 된 위임 구성에 관한 내보내기 다음 섹션을 참조 하 고 아래 지침을 가져옵니다.  
   
-1.  Hyper-V 관리자를 엽니다. 클릭 **시작**, 가리킨 **관리 도구**, 를 클릭 하 고 **Hyper-v 관리자**합니다.  
+1.  Hyper-V 관리자를 엽니다. **시작**을 클릭하고 **관리 도구**를 가리킨 다음 **Hyper-V 관리자**를 클릭합니다.  
   
 2.  결과 창에서 아래 **가상 컴퓨터**, 가상 컴퓨터를 마우스 오른쪽 단추로 클릭 한 다음 클릭 **내보내기**합니다.  
   
 3.  에 **가상 컴퓨터를 내보낼** 대화 상자, 형식 또는 모든 가상 컴퓨터 리소스를 저장할 충분 한 여유 공간이 있는 위치로 이동 합니다. 가상 컴퓨터를 내보낼 때 모든 가상 하드 디스크 (.vhd 파일 또는.vhdx 파일), (.avhd 파일), 검사점 및 가상 컴퓨터와 연결 된 저장 된 상태 파일은 지정 된 폴더에 복사 됩니다.  
   
-4.  **내보내기**를 클릭합니다.  
+4.  클릭 **내보내기**합니다.  
   
 가상 컴퓨터를 내보낸 후 다른 서버에 가상 컴퓨터를 가져옵니다.  
   
@@ -82,7 +81,7 @@ Hyper-v를 실행 중인 가상 컴퓨터의 수와 같은 지원 되는 최대 
 1.  Active Directory 도메인 서비스 도구 기능이 설치 된 컴퓨터에서 **관리 도구**, 개방형 **Active Directory 사용자 및 컴퓨터**, Hyper-v를 실행 하는 컴퓨터에 대 한 컴퓨터 계정으로 이동 합니다.  
   
     > [!NOTE]  
-    > **Active Directory 사용자 및 컴퓨터**가 나열되지 않는 경우 Active Directory 도메인 서비스 도구 기능을 설치합니다. 자세한 내용은 [AD DS에 대 한 원격 서버 관리 도구 설치](https://go.microsoft.com/fwlink/?LinkId=140463) (https://go.microsoft.com/fwlink/?LinkId=140463) 을 참조 하십시오.  
+    > **Active Directory 사용자 및 컴퓨터**가 나열되지 않는 경우 Active Directory 도메인 서비스 도구 기능을 설치합니다. 지침은 [AD DS에 대 한 원격 서버 관리 도구 설치](https://go.microsoft.com/fwlink/?LinkId=140463) (https://go.microsoft.com/fwlink/?LinkId=140463)를 참조 하세요.  
   
 2.  Hyper-v를 실행 하는 컴퓨터에 대 한 컴퓨터 계정을 마우스 오른쪽 단추로 클릭 하 고 클릭 한 다음 **속성**합니다.  
   

@@ -1,7 +1,6 @@
 ---
 ms.assetid: 61ed00fd-51c7-4728-91fa-8501de9d8f28
 title: SharePoint, Exchange 및 RDG로 응용 프로그램 게시
-description: ''
 author: billmath
 manager: mtillman
 ms.author: billmath
@@ -9,16 +8,16 @@ ms.date: 04/30/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: web-app-proxy
-ms.openlocfilehash: 3852baf866dae20d1d1d08219841295aa976c626
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: 18851463b82afc1dc34615e6faaa14622c80224a
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79319937"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80818686"
 ---
 # <a name="publishing-applications-with-sharepoint-exchange-and-rdg"></a>SharePoint, Exchange 및 RDG로 응용 프로그램 게시
 
-> 적용 대상: Windows Server 2016
+> 적용 대상: Windows Server 2016
 
 **이 콘텐츠는 웹 응용 프로그램 프록시의 온-프레미스 버전과 관련이 있습니다. 클라우드를 통해 온-프레미스 응용 프로그램에 안전 하 게 액세스할 수 있도록 하려면 [Azure AD 응용 프로그램 프록시 콘텐츠](https://azure.microsoft.com/documentation/articles/active-directory-application-proxy-get-started/)를 참조 하세요.**
 
@@ -27,7 +26,7 @@ ms.locfileid: "79319937"
 > [!NOTE]
 > 이 정보는 있는 그대로 제공 됩니다.  원격 데스크톱 서비스에서는 Azure 앱 프록시를 사용 하 여 [온-프레미스 응용 프로그램에 보안 원격 액세스를 제공](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started)하는 것을 권장 합니다.
 
-## <a name="BKMK_6.1"></a>SharePoint 서버 게시
+## <a name="publish-sharepoint-server"></a><a name="BKMK_6.1"></a>SharePoint 서버 게시
 SharePoint 사이트가 클레임 기반 인증 또는 Windows 통합 인증을 사용 하도록 구성 된 경우에는 웹 응용 프로그램 프록시를 통해 SharePoint 사이트를 게시할 수 있습니다. 사전 인증에 Active Directory Federation Services (AD FS)를 사용 하려는 경우 마법사 중 하나를 사용 하 여 신뢰 당사자를 구성 해야 합니다.
 
 -   SharePoint 사이트에서 클레임 기반 인증을 사용하는 경우에는 신뢰 당사자 트러스트 추가 마법사를 사용하여 애플리케이션에 대한 신뢰 당사자 트러스트를 구성해야 합니다.
@@ -40,7 +39,7 @@ SharePoint 사이트가 클레임 기반 인증 또는 Windows 통합 인증을 
 
 SharePoint 사이트가 AAM(대체 액세스 매핑) 또는 호스트 이름이 지정된 사이트 컬렉션 중 하나를 사용하여 구성된 경우 다른 외부 및 백 엔드 서버 URL을 사용하여 애플리케이션을 게시할 수 있습니다. 그러나 AAM 또는 호스트 이름이 지정된 사이트 컬렉션을 사용하여 SharePoint 사이트를 구성하지 않은 경우 동일한 외부 및 백 엔드 서버 URL을 사용해야 합니다.
 
-## <a name="BKMK_6.2"></a>Exchange Server 게시
+## <a name="publish-exchange-server"></a><a name="BKMK_6.2"></a>Exchange Server 게시
 다음 표에서는 웹 응용 프로그램 프록시를 통해 게시할 수 있는 Exchange 서비스와 이러한 서비스에 대해 지원 되는 사전 인증에 대해 설명 합니다.
 
 
@@ -48,7 +47,7 @@ SharePoint 사이트가 AAM(대체 액세스 매핑) 또는 호스트 이름이 
 |------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    Outlook Web App     | -비 클레임 기반 인증을 사용 하 AD FS<br />-통과<br />-온-프레미스 Exchange 2013 서비스 팩 1 (SP1)에 대 한 클레임 기반 인증을 사용 하는 AD FS |                                                                  자세한 내용은 [Outlook Web App 및 EAC에서 AD FS 클레임 기반 인증 사용](https://go.microsoft.com/fwlink/?LinkId=393723)을 참조하세요.                                                                  |
 | Exchange 제어판 |                                                                               통과                                                                               |                                                                                                                                                                                                                                                                                    |
-|    외부에서 Outlook 사용    |                                                                               통과                                                                               | 올바로 작동하려면 외부에서 Outlook 사용에 대한 다음 3개의 URL을 게시해야 합니다.<br /><br />-자동 검색 URL입니다.<br />-Exchange Server의 외부 호스트 이름 즉, 클라이언트에 연결 하도록 구성 된 URL입니다.<br />-Exchange Server의 내부 FQDN |
+|    외부에서 Outlook 사용    |                                                                               통과                                                                               | 올바로 작동하려면 외부에서 Outlook 사용에 대한 다음 3개의 URL을 게시해야 합니다.<p>-자동 검색 URL입니다.<br />-Exchange Server의 외부 호스트 이름 즉, 클라이언트에 연결 하도록 구성 된 URL입니다.<br />-Exchange Server의 내부 FQDN |
 |  Exchange ActiveSync   |                                                     통과<br/> HTTP 기본 권한 부여 프로토콜을 사용 하 AD FS                                                      |                                                                                                                                                                                                                                                                                    |
 
 Windows 통합 인증을 사용하여 Outlook Web App을 게시하는 경우에는 비 클레임 기반 신뢰 당사자 트러스트 추가 마법사를 사용하여 애플리케이션에 대한 신뢰 당사자 트러스트를 구성해야 합니다.
@@ -162,7 +161,7 @@ Kerberos 인증을 지원 하도록 응용 프로그램을 구성 해야 합니�
 
             RDP에 대 한 자세한 내용은 [TS 게이트웨이 OTP 시나리오 구성](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731249(v=ws.10))을 참조 하세요.
 
-## <a name="BKMK_Links"></a>참고 항목
+## <a name="see-also"></a><a name="BKMK_Links"></a>참고 항목
 
 - [웹 응용 프로그램 프록시를 사용 하 여 응용 프로그램 게시 계획](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn383650(v=ws.11))
 

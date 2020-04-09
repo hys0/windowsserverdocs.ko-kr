@@ -4,19 +4,19 @@ description: 소프트웨어 정의 네트워크에 대 한 HNV 게이트웨이 
 ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
-ms.author: grcusanz; AnPaul
+ms.author: grcusanz; anpaul
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 907b160b143af18a8ede3a9a7975fa8b22753118
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 98b8a50873cf69e96131f98d5d94c386cb30a13d
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71383500"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80851626"
 ---
 # <a name="hnv-gateway-performance-tuning-in-software-defined-networks"></a>소프트웨어 정의 네트워크에서 HNV 게이트웨이 성능 튜닝
 
-이 항목에서는 Windows Server 게이트웨이 가상 컴퓨터 (Vm)에 대 한 구성 매개 변수와 함께 Hyper-v를 실행 하 고 Windows Server 게이트웨이 가상 컴퓨터를 호스트 하는 서버에 대 한 하드웨어 사양 및 구성 권장 사항을 제공 합니다. . Windows Server 게이트웨이 Vm에서 최상의 성능을 추출 하려면 이러한 지침을 따라야 합니다.
+이 항목에서는 Windows Server 게이트웨이 가상 컴퓨터 (Vm)에 대 한 구성 매개 변수와 함께 Hyper-v를 실행 하 고 Windows Server 게이트웨이 가상 컴퓨터를 호스트 하는 서버에 대 한 하드웨어 사양 및 구성 권장 사항을 제공 합니다. Windows Server 게이트웨이 Vm에서 최상의 성능을 추출 하려면 이러한 지침을 따라야 합니다.
 다음 섹션에서는 Windows Server 게이트웨이를 배포할 때의 하드웨어 및 구성 요구 사항을 설명합니다.
 1. Hyper-V 하드웨어 권장 사항
 2. Hyper-V 호스트 구성
@@ -30,7 +30,7 @@ ms.locfileid: "71383500"
 |--------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | CPU(중앙 처리 장치)  | NUMA (Non-uniform Memory Architecture) 노드: 2 <br> 호스트에 Windows Server 게이트웨이 Vm이 여러 개 있는 경우 최상의 성능을 위해 각 게이트웨이 VM에는 하나의 NUMA 노드에 대 한 모든 권한이 있어야 합니다. 그리고 호스트 실제 어댑터에서 사용 하는 NUMA 노드와 달라 야 합니다. |
 | NUMA 노드당 코어 수            | 2                                                                                                                                                                                                                                                                               |
-| 하이퍼 스레딩                | 사용하지 않도록 설정됩니다. 하이퍼 스레딩은 Windows Server 게이트웨이의 성능을 향상시키지 않습니다.                                                                                                                                                                                           |
+| 하이퍼 스레딩                | 사용 안 함. 하이퍼 스레딩은 Windows Server 게이트웨이의 성능을 향상시키지 않습니다.                                                                                                                                                                                           |
 | RAM(Random Access Memory)     | 48GB                                                                                                                                                                                                                                                                           |
 | NIC(네트워크 인터페이스 카드) | 2 10 g b Nic, 게이트웨이 성능은 회선 속도에 따라 달라 집니다. 줄 속도가 10Gbps 보다 작은 경우 게이트웨이 터널 처리량 번호도 동일한 배율로 중단 됩니다.                                                                                          |
 
@@ -63,11 +63,11 @@ Write-Host ("Total Number of Logical Processors: ", $lps)
 |---------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 스위치 포함 팀                     | 여러 네트워크 어댑터를 사용 하 여 vswitch를 만들면 자동으로 해당 어댑터에 대 한 포함 된 팀 전환을 사용 하도록 설정 됩니다. <br> ```New-VMSwitch -Name TeamedvSwitch -NetAdapterName "NIC 1","NIC 2"``` <br> LBFO를 통한 기존 팀은 Windows Server 2016의 SDN에서 지원 되지 않습니다. 스위치 포함 팀을 사용 하면 가상 트래픽과 RDMA 트래픽에 대해 동일한 Nic 집합을 사용할 수 있습니다. LBFO을 기반으로 하는 NIC 팀에서는 지원 되지 않습니다.                                                        |
 | 실제 NIC의 인터럽트 조절       | 기본 설정을 사용합니다. 구성을 확인 하려면 다음 Windows PowerShell 명령을 사용할 수 있습니다. ```Get-NetAdapterAdvancedProperty```                                                                                                                                                                                                                                                                                                                                                                    |
-| 실제 NIC의 수신 버퍼 크기       | @No__t-0을 실행 하 여 실제 Nic가이 매개 변수의 구성을 지원 하는지 확인할 수 있습니다. 이 매개 변수를 지원 하지 않으면 명령의 출력에 "Receive Buffers" 속성이 포함 되지 않습니다. NIC가 이 매개 변수를 지원하는 경우 다음 Windows PowerShell 명령을 사용하여 수신 버퍼 크기를 설정할 수 있습니다. <br>```Set-NetAdapterAdvancedProperty "NIC1" –DisplayName "Receive Buffers" –DisplayValue 3000``` <br>                          |
-| 실제 NIC의 전송 버퍼 크기          | @No__t-0을 실행 하 여 실제 Nic가이 매개 변수의 구성을 지원 하는지 확인할 수 있습니다. Nic가이 매개 변수를 지원 하지 않으면 명령의 출력에 "송신 버퍼" 속성이 포함 되지 않습니다. NIC가 이 매개 변수를 지원하는 경우 다음 Windows PowerShell 명령을 사용하여 전송 버퍼 크기를 설정할 수 있습니다. <br> ```Set-NetAdapterAdvancedProperty "NIC1" –DisplayName "Transmit Buffers" –DisplayValue 3000``` <br>                           |
-| 실제 NIC의 RSS(수신측 배율) | Windows PowerShell 명령 Set-netadapterrss을 실행 하 여 실제 Nic에서 RSS를 사용 하도록 설정 했는지 여부를 확인할 수 있습니다. 다음 Windows PowerShell 명령을 사용 하 여 네트워크 어댑터에서 RSS를 사용 하도록 설정 하 고 구성할 수 있습니다. <br> ```Enable-NetAdapterRss "NIC1","NIC2"```<br> ```Set-NetAdapterRss "NIC1","NIC2" –NumberOfReceiveQueues 16 -MaxProcessors``` <br> 참고: VMMQ 또는 VMQ를 사용 하는 경우 실제 네트워크 어댑터에서 RSS를 사용 하도록 설정할 필요가 없습니다. 호스트 가상 네트워크 어댑터에서 사용 하도록 설정할 수 있습니다. |
+| 실제 NIC의 수신 버퍼 크기       | ```Get-NetAdapterAdvancedProperty```명령을 실행 하 여 실제 Nic가이 매개 변수의 구성을 지원 하는지 확인할 수 있습니다. 이 매개 변수를 지원 하지 않으면 명령의 출력에 "Receive Buffers" 속성이 포함 되지 않습니다. NIC가 이 매개 변수를 지원하는 경우 다음 Windows PowerShell 명령을 사용하여 수신 버퍼 크기를 설정할 수 있습니다. <br>```Set-NetAdapterAdvancedProperty "NIC1" –DisplayName "Receive Buffers" –DisplayValue 3000``` <br>                          |
+| 실제 NIC의 전송 버퍼 크기          | ```Get-NetAdapterAdvancedProperty```명령을 실행 하 여 실제 Nic가이 매개 변수의 구성을 지원 하는지 확인할 수 있습니다. Nic가이 매개 변수를 지원 하지 않으면 명령의 출력에 "송신 버퍼" 속성이 포함 되지 않습니다. NIC가 이 매개 변수를 지원하는 경우 다음 Windows PowerShell 명령을 사용하여 전송 버퍼 크기를 설정할 수 있습니다. <br> ```Set-NetAdapterAdvancedProperty "NIC1" –DisplayName "Transmit Buffers" –DisplayValue 3000``` <br>                           |
+| 실제 NIC의 RSS(수신측 배율) | Windows PowerShell 명령 Get-NetAdapterRss를 실행하여 실제 NIC에 RSS가 설정되어 있는지 확인할 수 있습니다. 다음 Windows PowerShell 명령을 사용 하 여 네트워크 어댑터에서 RSS를 사용 하도록 설정 하 고 구성할 수 있습니다. <br> ```Enable-NetAdapterRss "NIC1","NIC2"```<br> ```Set-NetAdapterRss "NIC1","NIC2" –NumberOfReceiveQueues 16 -MaxProcessors``` <br> 참고: VMMQ 또는 VMQ를 사용 하는 경우 실제 네트워크 어댑터에서 RSS를 사용 하도록 설정할 필요가 없습니다. 호스트 가상 네트워크 어댑터에서 사용 하도록 설정할 수 있습니다. |
 | VMMQ                                        | VM에 대해 VMMQ를 사용 하도록 설정 하려면 다음 명령을 실행 합니다. <br> ```Set-VmNetworkAdapter -VMName <gateway vm name>,-VrssEnabled $true -VmmqEnabled $true``` <br> 참고: 일부 네트워크 어댑터는 VMMQ을 지원 하지 않습니다. 현재는 Chelsio T5 및 T6, Mellanox CX-3 및 CX-4 및 QLogic 45xxx 시리즈에서 지원 됩니다.                                                                                                                                                                                                                                      |
-| NIC 팀의 VMQ(가상 컴퓨터 큐) | 다음 Windows PowerShell 명령을 사용 하 여 집합 팀에서 VMQ를 사용 하도록 설정할 수 있습니다. <br>```Enable-NetAdapterVmq``` <br> 참고: HW가 VMMQ을 지원 하지 않는 경우에만 사용 하도록 설정 해야 합니다. 지원 되는 경우 성능 향상을 위해 VMMQ를 사용 하도록 설정 해야 합니다.                                                                                                                                                                                                                                                               |
+| NIC 팀의 VMQ(가상 컴퓨터 큐) | 다음 Windows PowerShell 명령을 사용 하 여 집합 팀에서 VMQ를 사용 하도록 설정할 수 있습니다. <br>```Enable-NetAdapterVmq``` <br> 참고:이는 HW가 VMMQ을 지원 하지 않는 경우에만 사용 하도록 설정 해야 합니다. 지원 되는 경우 성능 향상을 위해 VMMQ를 사용 하도록 설정 해야 합니다.                                                                                                                                                                                                                                                               |
 >[!Note]
 > VMQ 및 vRSS는 VM의 로드가 높고 CPU가 최대한 활용 되는 경우에만 그림으로 제공 됩니다. 그런 다음에만 하나 이상의 프로세서 코어가 최대 출력 됩니다. 그러면 VMQ와 vRSS가 여러 코어에 걸쳐 처리 부하를 분산 하는 데 도움이 됩니다. IPsec 트래픽은 단일 코어로 제한 되므로 IPsec 트래픽에는 적용 되지 않습니다.
 
@@ -79,7 +79,7 @@ Write-Host ("Total Number of Logical Processors: ", $lps)
 | 구성 항목                 | Windows Powershell 구성                                                                                                                                                                                                                                                                                                                                                               |
 |------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 메모리                             | 8GB                                                                                                                                                                                                                                                                                                                                                                                           |
-| 가상 네트워크 어댑터 수 | 3 Nic는 다음과 같은 특정 용도로 사용 됩니다. 1 외부 네트워크에 대 한 액세스를 제공 하는 외부 1, 내부 네트워크에 대 한 액세스를 제공 하는 외부 네트워크에 대 한 액세스를 제공 하는 관리 운영 체제에서 사용 하는 관리를 위한 1.                                                                                                                                                            |
+| 가상 네트워크 어댑터 수 | 3 Nic: 관리 운영 체제에서 사용 하는 관리의 경우 1, 외부 네트워크에 대 한 액세스를 제공 하는 외부 1, 내부 네트워크에 대 한 액세스만 제공 하는 내부용입니다.                                                                                                                                                            |
 | Receive Side Scaling (RSS)         | 관리 NIC에 대 한 기본 RSS 설정을 유지할 수 있습니다. 다음 구성 예는 가상 프로세서가 8개인 VM에 대한 구성입니다. 외부 및 내부 Nic의 경우 다음 Windows PowerShell 명령을 사용 하 여 BaseProcNumber가 0으로 설정 되 고 MaxRssProcessors가 8로 설정 된 RSS를 사용 하도록 설정할 수 있습니다. <br> ```Set-NetAdapterRss "Internal","External" –BaseProcNumber 0 –MaxProcessorNumber 8``` <br> |
 | 송신 측 버퍼                   | 관리 NIC의 기본 송신 측 버퍼 설정을 유지할 수 있습니다. 내부 및 외부 Nic 모두에 대해 다음 Windows PowerShell 명령을 사용 하 여 32 MB의 RAM이 있는 송신 측 버퍼를 구성할 수 있습니다. <br> ```Set-NetAdapterAdvancedProperty "Internal","External" –DisplayName "Send Buffer Size" –DisplayValue "32MB"``` <br>                                                       |
 | 수신측 버퍼                | 관리 NIC의 기본 수신 측 버퍼 설정을 유지할 수 있습니다. 내부 및 외부 Nic 모두에 대해 다음 Windows PowerShell 명령을 사용 하 여 RAM이 16mb 인 수신측 버퍼를 구성할 수 있습니다. <br> ```Set-NetAdapterAdvancedProperty "Internal","External" –DisplayName "Receive Buffer Size" –DisplayValue "16MB"``` <br>                                            |

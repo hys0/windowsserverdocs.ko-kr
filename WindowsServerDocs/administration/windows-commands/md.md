@@ -1,24 +1,20 @@
 ---
 title: Md
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 82162d00-cc34-4776-9e55-4b4836dbd6a9
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3751b185677bfee9d0519b9a617bea1df063c1e7
-ms.sourcegitcommit: 51e0b575ef43cd16b2dab2db31c1d416e66eebe8
+ms.openlocfilehash: e2fad89fe4b7e8425064301f6020fefaa5705b25
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76259078"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80839586"
 ---
 # <a name="md"></a>Md
 
@@ -38,7 +34,7 @@ md [<Drive>:]<Path>
 mkdir [<Drive>:]<Path>
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------|-----------|
@@ -46,11 +42,11 @@ mkdir [<Drive>:]<Path>
 |\<경로 >|필수입니다. 새 디렉터리의 위치와 이름을 지정합니다. 단일 경로의 최대 길이 파일 시스템에 의해 결정 됩니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 기본적으로 사용 하도록 설정 된 명령 확장을 사용 하면 단일을 사용할 수 있도록 **md** 지정된 된 경로에서 중간 디렉터리를 만드는 명령입니다.
 
-## <a name="BKMK_examples"></a>예제
+## <a name="examples"></a><a name=BKMK_examples></a>예와
 
 현재 디렉터리 내에서 Directory1 라는 디렉터리를 만들려면 다음을 입력 합니다.
 ```
@@ -67,8 +63,8 @@ md \Taxes\Property
 md \Taxes\Property\Current
 ```
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
-[명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)
 
 [Cmd](cmd.md)

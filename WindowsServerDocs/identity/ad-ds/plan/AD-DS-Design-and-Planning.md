@@ -1,7 +1,6 @@
 ---
 ms.assetid: a91339ef-6ad4-445f-8ecc-a95fbcc04296
 title: AD DS 디자인 및 계획
-description: ''
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 08/07/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 5267561e4a3d19514d9105f21122db73f85bffb9
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: fa596fd3897c9fd2cc368e4c5ef164d05bfc4c20
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71409025"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80822906"
 ---
 # <a name="ad-ds-design-and-planning"></a>AD DS 디자인 및 계획
 
@@ -28,11 +27,11 @@ ms.locfileid: "71409025"
   
 이 가이드에서는 Windows Server 2008 AD DS 배포의 몇 가지 가능한 시작 위치에 대 한 작업 집합을 설명 합니다. 이 가이드는 사용자 환경에 가장 적합 한 배포 전략을 결정 하는 데 도움이 됩니다.  
   
-이 가이드에서 설명 하는 전략은 거의 모든 서버 운영 체제 배포에 적합 하지만, 사용자가 10만 개 미만의 사용자를 포함 하 고 1000 사이트 보다 작은 환경에 대해 구체적으로 테스트 하 고 유효성을 검사 했습니다. 최소 28.8 Kbps (초당 킬로 비트)의 네트워크 연결입니다. 사용자 환경이 이러한 조건을 충족 하지 않는 경우 더 복잡 한 환경에서 AD DS 배포 경험이 있는 컨설팅 회사를 사용 하는 것이 좋습니다.  
+이 가이드에서 제시 하는 전략은 거의 모든 서버 운영 체제 배포에 적합 하지만, 최소 28.8 킬로 비트 (Kbps)의 네트워크 연결을 통해 10만 개 미만의 1000 사용자를 포함 하는 환경에 대해 구체적으로 테스트 되 고 유효성이 검사 되었습니다. 사용자 환경이 이러한 조건을 충족 하지 않는 경우 더 복잡 한 환경에서 AD DS 배포 경험이 있는 컨설팅 회사를 사용 하는 것이 좋습니다.  
   
 AD DS 배포 프로세스를 테스트 하는 방법에 대 한 자세한 내용은 [배포 프로세스 테스트 및 확인](https://go.microsoft.com/fwlink/?LinkId=100206)문서를 참조 하세요.  
   
-## <a name="in-this-guide"></a>이 가이드의 내용
+## <a name="in-this-guide"></a>설명서의 내용
 
 [AD DS 디자인 이해](Understanding-AD-DS-Design.md)  
   

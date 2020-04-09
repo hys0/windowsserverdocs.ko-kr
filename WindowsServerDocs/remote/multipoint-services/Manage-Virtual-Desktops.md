@@ -1,27 +1,23 @@
 ---
 title: 가상 데스크톱 관리
 description: MultiPoint 서비스에서 VDI (가상 데스크톱)를 관리 하는 방법 알아보기
-ms.custom: na
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fa9ac0ed-47cb-4811-91ff-4fcb62d7858b
 author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: 45bb3e98779bc27913c7e675a9c9db7e575d9d72
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 114fde42ca36f9451680066056251bafbe944e56
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71389595"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80853466"
 ---
 # <a name="manage-virtual-desktops"></a>가상 데스크톱 관리
-단일 컴퓨터 VDI를 사용 하 여 각 *로컬* multipoint 서비스 스테이션은 스테이션과 동일한 MultiPoint 서비스 컴퓨터의 hyper-v VM (가상 컴퓨터)에서 실행 되는 Windows 10 Enterprise 게스트 운영 체제에 연결 하도록 구성할 수 있습니다. 이러한 가상 데스크톱 스테이션은 Windows 서버 버전에 설치할 수 없는 응용 프로그램을 사용하여 사용자 지정할 수 있습니다.  
+단일 컴퓨터 VDI를 사용 하 여 각 *로컬* multipoint 서비스 스테이션은 스테이션과 동일한 MultiPoint 서비스 컴퓨터의 hyper-v VM (가상 컴퓨터)에서 실행 되는 Windows 10 Enterprise 게스트 운영 체제에 연결 하도록 구성할 수 있습니다. 이러한 가상 데스크톱 스테이션은 Windows 서버 버전에 설치할 수 없는 애플리케이션을 사용하여 사용자 지정할 수 있습니다.  
   
 ## <a name="enable-the-virtual-desktop-feature"></a>가상 데스크톱 기능 사용  
   
@@ -56,14 +52,14 @@ ms.locfileid: "71389595"
 ## <a name="import-a-virtual-desktop-template"></a>가상 데스크톱 템플릿 가져오기  
 다른 MultiPoint Server에서 가상 데스크톱 템플릿을 만든 경우 다음 단계에 따라 해당 템플릿을 가져올 수 있습니다.  
 
-1.  MultiPoint 관리자를 연 다음 **가상 데스크톱** 탭을 클릭합니다.  
+1.    MultiPoint 관리자를 연 다음 **가상 데스크톱** 탭을 클릭합니다.  
   
-2.  VDI 작업에서 **Create virtual desktop template**(가상 데스크톱 템플릿 가져오기)을 클릭합니다.  
+2.    VDI 작업에서 **Create virtual desktop template**(가상 데스크톱 템플릿 가져오기)을 클릭합니다.  
   
-3.  템플릿을 찾고 가져온 템플릿의 경로와 접두사를 정의합니다.  
+3.    템플릿을 찾고 가져온 템플릿의 경로와 접두사를 정의합니다.  
   
 ## <a name="customize-the-virtual-desktop-template"></a>가상 데스크톱 템플릿 사용자 지정  
-가상 데스크톱 템플릿을 만든 후에 응용 프로그램 및 소프트웨어 업데이트를 사용하여 템플릿을 사용자 지정하고 시스템 설정을 구성할 수 있습니다.   
+가상 데스크톱 템플릿을 만든 후에 애플리케이션 및 소프트웨어 업데이트를 사용하여 템플릿을 사용자 지정하고 시스템 설정을 구성할 수 있습니다.   
 
 1. MultiPoint 관리자를 연 다음 **가상 데스크톱** 탭을 클릭합니다.  
 2. 가상 데스크톱 템플릿을 선택한 다음 **Customize virtual desktop template**(가상 데스크톱 템플릿 사용자 지정)을 클릭합니다.  
@@ -76,18 +72,18 @@ ms.locfileid: "71389595"
     > [!NOTE]  
     > MultiPoint 서비스 시스템이 스테이션 모드로 실행되고 있지 않은 경우 이 절차를 완료하기 전에 먼저 시스템을 다시 시작합니다.  
   
-2.  왼쪽\-손 창에서 가상 데스크톱 템플릿을 선택 합니다. 템플릿 이름은 <접두사 -t>입니다.  
+2.  왼쪽 창에서 가상 데스크톱 템플릿을 선택합니다. 템플릿 이름은 <접두사 -t>입니다.  
   
 3.  템플릿 작업에서 **Create virtual desktop stations**(가상 데스크톱 스테이션 만들기)를 클릭한 다음 **확인**을 클릭합니다.  
   
     가상 데스크톱 스테이션을 만드는 프로세스는 몇 분 정도 걸립니다.  
   
     > [!NOTE]  
-    > 로컬 스테이션이 현재 세션\-기반 가상 데스크톱에 연결 되어 있는 경우 새로 만든 가상 데스크톱 스테이션 중 하나에 연결 하려면 해당 스테이션에서 로그 오프 해야 합니다.  
+    > 로컬 스테이션이 현재 세션 기반 가상 데스크톱에 연결되어 있는 경우 해당 스테이션을 새로 만든 가상 데스크톱 스테이션 중 하나에 연결하려면 해당 스테이션에서 로그오프해야 합니다.  
   
 ### <a name="validate-the-newly-created-customized-virtual-station-desktops"></a>새로 만든 사용자 지정 가상 스테이션 데스크톱의 유효성 검사  
   
-로컬 관리자 계정이 나 도메인 계정을 사용 하 여 가상 데스크톱 스테이션 중 하나 이상에 로그온 하 여 사용자 지정 된 가상 스테이션 데스크톱의 유효성을 검사 한 다음 새 VM\-기반 가상 데스크톱이 제대로 작동 하는지 확인할 수 있습니다.  
+로컬 관리자 계정이나 도메인 계정을 사용하여 가상 데스크톱 스테이션 중 하나 이상에 로그온하여 사용자 지정한 가상 스테이션 데스크톱의 유효성을 검사한 다음 새 VM 기반 가상 데스크톱이 제대로 작동하는지 확인할 수 있습니다.  
   
 ## <a name="disable-virtual-desktops"></a>가상 데스크톱 사용 안 함  
   

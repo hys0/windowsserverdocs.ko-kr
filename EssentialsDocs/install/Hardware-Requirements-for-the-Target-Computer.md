@@ -1,23 +1,19 @@
 ---
 title: 대상 컴퓨터에 대한 하드웨어 요구 사항
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c20b06b9-ce0d-4c20-bf49-257c3f5dc01b
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 2ab2608095ffe6c0f2006f9f52cce106ff68cffc
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: a566a8f342ba076ee402d1f19e35f99c58b931e4
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80313250"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80817876"
 ---
 # <a name="hardware-requirements-for-the-target-computer"></a>대상 컴퓨터에 대한 하드웨어 요구 사항
 
@@ -44,7 +40,7 @@ ms.locfileid: "80313250"
 |구성 요소|설명|  
 |---------------|-----------------|  
 |네트워크 어댑터|기가비트 이더넷 어댑터(10/100/1000baseT PHY/MAC)|  
-|인터넷|일부 기능을 이용하려면 인터넷 액세스(사용료가 부과될 수 있음) 또는 Windows Live® ID 계정이 필요할 수도 있습니다.|  
+|인터넷|일부 기능을 사용 하려면 인터넷 액세스 (요금이 부과 될 수 있음) 또는 Windows Live&reg; ID 계정이 필요할 수 있습니다.|  
 |지원되는 클라이언트 운영 체제|-Windows 7<br />-Windows 8<br />-Macintosh OS X 10.5 ~ 10.8<br /><br /> **참고:** 일부 기능에는 professional 이상 버전이 필요 합니다.<br /><br /> 사용 가능한 하드 드라이브 공간 1GB(설치 후에는 이 디스크 부분이 사용 가능하게 됨)|  
 |라우터|IPv4 NAT를 지원하는 라우터 또는 방화벽|  
 |추가 요구 사항|DVD-ROM 드라이브|  

@@ -2,22 +2,18 @@
 title: BGP(경계 게이트웨이 프로토콜)
 description: 이 항목을 사용 하 여 BGP 지원 배포 토폴로지 및 BGP 기능 및 기능을 포함 하 여 Windows Server 2016의 BGP (Border Gateway Protocol)를 이해할 수 있습니다.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-ras
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 78cc2ce3-a48e-45db-b402-e480b493fab1
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 3e04c732cbacb182731717215a4cf99cf3cc1f76
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 5407c2580f9546c59df9e6c1c35520449bdfaa3f
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80309298"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80815866"
 ---
 # <a name="border-gateway-protocol-bgp"></a>BGP(경계 게이트웨이 프로토콜)
 

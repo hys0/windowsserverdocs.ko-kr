@@ -1,24 +1,20 @@
 ---
 title: 소프트웨어 인벤토리 로깅 관리
 description: 소프트웨어 인벤토리 로깅을 관리 하는 방법을 설명 합니다.
-ms.custom: na
 ms.prod: windows-server
 ms.technology: manage-software-inventory-logging
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 812173d1-2904-42f4-a9e2-de19effec201
 author: brentfor
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a14233e01c19df650d1059e1b60cd5398b05709a
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 2176793bd0b7103f69c57476034342a0617329e8
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75946990"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80851426"
 ---
 # <a name="manage-software-inventory-logging"></a>소프트웨어 인벤토리 로깅 관리
 
@@ -90,10 +86,10 @@ SIL 로깅을 시작하려면 몇 가지 계획 및 예측이 필요하지만 �
 -   [KB 3000850 없이 Windows Server 2012 R2 Hyper-v 환경에서 소프트웨어 인벤토리 로깅 사용](manage-software-inventory-logging.md#BKMK_Step12)  
   
 > [!NOTE]  
-> 이 항목에는 설명한 절차의 일부를 자동화하는 데 사용할 수 있는 샘플 Windows PowerShell cmdlet이 포함되어 있습니다. 자세한 내용은 Cmdlet 사용을 참조하십시오.
+> 이 항목에는 설명된 일부 절차를 자동화하는 데 사용할 수 있는 예제 Windows PowerShell cmdlet이 포함되어 있습니다. 자세한 내용은 Cmdlet 사용을 참조하십시오.
 
   
-## <a name="BKMK_Step1"></a>소프트웨어 인벤토리 로깅 시작 및 중지  
+## <a name="starting-and-stopping-software-inventory-logging"></a><a name="BKMK_Step1"></a>소프트웨어 인벤토리 로깅 시작 및 중지  
 소프트웨어 인벤토리를 기록 하려면 Windows Server 2012 r 2를 실행 하는 컴퓨터에서 소프트웨어 인벤토리 로깅 일별 수집 및 네트워크를 통한 전달이 사용 하도록 설정 되어 있어야 합니다.  
   
 > [!NOTE]  
@@ -131,13 +127,13 @@ SIL 로깅을 시작하려면 몇 가지 계획 및 예측이 필요하지만 �
   
 SIL 프레임워크 설정 전반에 대한 포괄적인 가이드는 [Software Inventory Logging Aggregator](software-inventory-logging-aggregator.md)를 참조하세요.  특히 **Publish-SilData** 에서 오류가 발생하거나 다른 이유로 SIL 로깅이 실패하는 경우 문제 해결 섹션을 참조하세요.  
   
-## <a name="BKMK_Step2"></a>시간별 소프트웨어 인벤토리 로깅  
+## <a name="software-inventory-logging-over-time"></a><a name="BKMK_Step2"></a>시간별 소프트웨어 인벤토리 로깅  
 관리자가 소프트웨어 인벤토리 로깅을 시작하면 시간별로 데이터 수집 및 집계 서버(대상 URI)로의 전달이 시작됩니다. 처음에는 특정 시점에 [Get-SilData](https://technet.microsoft.com/library/dn283388.aspx) 가 검색하여 콘솔에 표시한 것과 동일한 전체 데이터 집합이 전달됩니다. 그런 다음 SIL은 각 간격에 따라 데이터를 검사하고 마지막 수집 이후 변경된 데이터가 없으면 작은 식별 응답만 대상 집계 서버로 전달합니다. 값이 변경된 경우 SIL은 전체 데이터 집합을 다시 전송합니다.  
   
 > [!IMPORTANT]  
 > 임의의 간격에 어떤 이유로든 대상 URI에 연결할 수 없거나 네트워크를 통한 데이터 전송에 실패한 경우 수집된 데이터가 최대 30일(기본값) 동안 로컬에 저장됩니다(이후 삭제됨). 다음에 대상 집계 서버로의 데이터 전달이 성공하면 로컬에 저장된 모든 데이터가 전달되고 로컬에 캐시된 데이터는 삭제됩니다.  
   
-## <a name="BKMK_Step3"></a>소프트웨어 인벤토리 로깅 데이터 표시  
+## <a name="displaying-software-inventory-logging-data"></a><a name="BKMK_Step3"></a>소프트웨어 인벤토리 로깅 데이터 표시  
 이전 섹션에서 설명한 PowerShell cmdlet 외에도 6가지 추가 cmdlet을 사용하여 소프트웨어 인벤토리 로깅 데이터를 수집할 수 있습니다.  
   
 -   **[Get-silcomputer](https://technet.microsoft.com/library/dn283392.aspx)** : 사용 가능한 경우 물리적 호스트의 FQDN 또는 호스트 이름 뿐만 아니라 특정 서버 및 운영 체제 관련 데이터에 대 한 특정 시점 값을 표시 합니다.  
@@ -201,7 +197,7 @@ SystemManufacturer        : Microsoft Corporation
 >   
 > **Get-Sil** cmdlet을 사용하기 위해 소프트웨어 인벤토리 로깅을 시작할 필요는 없습니다.  
   
-## <a name="BKMK_Step4"></a>소프트웨어 인벤토리 로깅에 의해 기록 된 데이터 삭제  
+## <a name="deleting-data-logged-by-software-inventory-logging"></a><a name="BKMK_Step4"></a>소프트웨어 인벤토리 로깅에 의해 기록 된 데이터 삭제  
 소프트웨어 인벤토리 로깅은 업무에 필수적인 구성 요소로 고안된 것이 아닙니다. 높은 수준의 안정성을 유지하면서 로컬 시스템 운영에 미치는 영향을 최소화하기 위해 작성되었습니다. 이를 통해 관리자는 소프트웨어 인벤토리 로깅 데이터베이스 및 지원 파일 (\Windows\System32\LogFiles\SIL 디렉터리의 모든 파일)을 수동으로 삭제 하 여 운영 요구 사항을 충족할 수 있습니다.  
   
 #### <a name="to-delete-data-logged-by-software-inventory-logging"></a>소프트웨어 인벤토리 로깅에 의해 기록된 데이터를 삭제하려면  
@@ -214,7 +210,7 @@ SystemManufacturer        : Microsoft Corporation
   
 4. 폴더의 모든 파일을 삭제합니다.  
   
-## <a name="BKMK_Step5"></a>소프트웨어 인벤토리 로깅에 의해 기록 된 데이터 백업 및 복원  
+## <a name="backing-up-and-restoring-data-logged-by-software-inventory-logging"></a><a name="BKMK_Step5"></a>소프트웨어 인벤토리 로깅에 의해 기록 된 데이터 백업 및 복원  
 네트워크를 통한 전달이 실패한 경우 소프트웨어 인벤토리 로깅은 데이터의 시간별 컬렉션을 일시적으로 저장합니다. 로그 파일은 \Windows\System32\LogFiles\SIL\ 디렉터리에 저장됩니다. 이 소프트웨어 인벤토리 로깅 데이터의 백업은 정기적 서버 백업 일정에 따라 수행할 수 있습니다.  
   
 > [!IMPORTANT]  
@@ -223,17 +219,17 @@ SystemManufacturer        : Microsoft Corporation
 > [!NOTE]  
 > SIL에 의해 로컬로 기록 되는 데이터의 보존 기간을 관리 하는 이유가 중요할 경우 여기에서 레지스트리 값을 변경 하 여 구성할 수 있습니다. \ HKEY_LOCAL_MACHINE\\SOFTWARE\Microsoft\Windows\SoftwareInventoryLogging. 기본값은 30 일 동안 ' 30 '입니다.  
   
-## <a name="BKMK_Step6"></a>소프트웨어 인벤토리 로깅에 의해 기록 및 게시 된 데이터 읽기  
+## <a name="reading-data-logged-and-published-by-software-inventory-logging"></a><a name="BKMK_Step6"></a>소프트웨어 인벤토리 로깅에 의해 기록 및 게시 된 데이터 읽기  
 SIL에 의해 기록 되었지만 로컬에 저장 되거나 (대상 URI로의 전달이 실패 한 경우) 대상 집계 서버로 성공적으로 전달 된 데이터는 이진 파일 (각 날짜의 데이터)에 저장 됩니다. PowerShell에서 이 데이터를 표시하려면 [Import-BinaryMiLog](https://technet.microsoft.com/library/dn262592.aspx) cmdlet을 사용합니다.  
   
-## <a name="BKMK_Step7"></a>소프트웨어 인벤토리 로깅 보안  
+## <a name="software-inventory-logging-security"></a><a name="BKMK_Step7"></a>소프트웨어 인벤토리 로깅 보안  
 소프트웨어 인벤토리 로깅 WMI 및 PowerShell API에서 데이터를 성공적으로 검색하려면 로컬 서버에 대한 관리자 권한이 필요합니다.  
   
 시간별로 계속 집계 지점으로 데이터를 전달하는 소프트웨어 인벤토리 로깅 기능의 전체 기능을 활용하려면 관리자가 클라이언트 인증서를 사용하여 HTTPS를 통한 데이터 전송을 위해 보안 SSL 세션이 되도록 해야 합니다. HTTPS 인증의 기본적인 개요는 [HTTPS 인증](https://technet.microsoft.com/library/cc736680(v=WS.10).aspx)에서 확인할 수 있습니다.  
   
 Windows Server에 로컬로 저장된 데이터(기능이 시작되었지만 어떤 이유로든 대상에 연결할 수 없는 경우)는 로컬 서버의 관리자 권한으로만 액세스할 수 있습니다.  
   
-## <a name="BKMK_Step8"></a>Windows Server 2012 R2 소프트웨어 인벤토리 로깅의 날짜 및 시간 설정 작업  
+## <a name="working-with-date-and-time-settings-in-windows-server-2012-r2-software-inventory-logging"></a><a name="BKMK_Step8"></a>Windows Server 2012 R2 소프트웨어 인벤토리 로깅의 날짜 및 시간 설정 작업  
   
 -   [Set-SilLogging](https://technet.microsoft.com/library/dn283387.aspx) -TimeOfDay를 사용하여 SIL 로깅이 실행되는 시간을 설정하려면 날짜 및 시간을 지정해야 합니다. 날짜에 도달할 때까지 달력 날짜가 설정 되 고 로컬 시스템 시간에 로깅이 발생 하지 않습니다.  
   
@@ -241,14 +237,14 @@ Windows Server에 로컬로 저장된 데이터(기능이 시작되었지만 어
   
 -   [Get-silualaccess](https://technet.microsoft.com/library/dn283389.aspx)를 사용 하는 경우 "SampleDate"는 항상 의미 없는 값으로 11:59:00pm을 표시 합니다.  날짜는 이러한 cmdlet 쿼리와 관련 된 데이터입니다.  
   
-## <a name="BKMK_Step10"></a>탑재 된 가상 하드 디스크에서 소프트웨어 인벤토리 로깅 사용 및 구성  
+## <a name="enabling-and-configuring-software-inventory-logging-in-a-mounted-virtual-hard-disk"></a><a name="BKMK_Step10"></a>탑재 된 가상 하드 디스크에서 소프트웨어 인벤토리 로깅 사용 및 구성  
 소프트웨어 인벤토리 로깅은 오프라인 가상 컴퓨터에서의 구성 및 사용도 지원합니다. 이에 대 한 실용적인 용도는 데이터 센터 전체 배포를 위한 ' 골드 이미지 ' 설치 뿐만 아니라 온-프레미스에서 클라우드 배포로의 최종 사용자 이미지 구성에 사용 하기 위한 것입니다.  
   
 이러한 용도를 지원하기 위해 소프트웨어 인벤토리 로깅에는 구성 가능한 각 옵션과 관련된 레지스트리 항목이 있습니다.  이러한 레지스트리 값은 \ HKEY_LOCAL_MACHINE\\SOFTWARE\Microsoft\Windows\SoftwareInventoryLogging.에서 찾을 수 있습니다.  
   
 |||||  
 |-|-|-|-|  
-|**함수**|**값 이름**|**데이터**|**해당 Cmdlet (실행 중인 OS 에서만 사용 가능)**|  
+|**기능**|**값 이름**|**데이터**|**해당 Cmdlet (실행 중인 OS 에서만 사용 가능)**|  
 |시작/중지 기능|CollectionState|1 또는 0|[Start-SilLogging](https://technet.microsoft.com/library/dn283391.aspx), [Stop-SilLogging](https://technet.microsoft.com/library/dn283394.aspx)|  
 |네트워크의 대상 집계 지점을 지정합니다.|TargetUri|string|[Set-SilLogging](https://technet.microsoft.com/library/dn283387.aspx) -TargetURI|  
 |대상 웹 서버에 대한 SSL 인증에 사용되는 인증서 지문 또는 인증서 해시를 지정합니다.|CertificateThumbprint|string|[Set-SilLogging](https://technet.microsoft.com/library/dn283387.aspx) -CertificateThumbprint|  
@@ -266,7 +262,7 @@ Windows Server에 로컬로 저장된 데이터(기능이 시작되었지만 어
   
 OS가 시작되면 소프트웨어 인벤토리 로깅이 이러한 값을 검사하고 적절하게 실행합니다.  
   
-## <a name="BKMK_Step11"></a>KB 3000850 없이 Windows Server 2012 r 2에서 소프트웨어 인벤토리 로깅 사용 개요  
+## <a name="overview-of-using-software-inventory-logging-in-windows-server-2012-r2-without-kb-3000850"></a><a name="BKMK_Step11"></a>KB 3000850 없이 Windows Server 2012 r 2에서 소프트웨어 인벤토리 로깅 사용 개요  
 [KB 3000850](https://support.microsoft.com/kb/3000850)에서는 소프트웨어 인벤토리 로깅 기능 및 기본 설정이 다음과 같이 변경되었습니다.  
   
 -   SIL 로깅이 시작될 때 컬렉션 및 네트워크를 통한 전달의 기본 간격이 매일에서 매시간(각 시간 내의 임의 시점)으로 변경되었습니다.  
@@ -275,12 +271,12 @@ OS가 시작되면 소프트웨어 인벤토리 로깅이 이러한 값을 검�
   
 -   Hyper-V 환경에서 채널 통신을 호스트하는 게스트가 제거되었습니다.  
   
-## <a name="BKMK_Step12"></a>KB 3000850 없이 Windows Server 2012 R2 Hyper-v 환경에서 소프트웨어 인벤토리 로깅 사용  
+## <a name="using-software-inventory-logging-in-a-windows-server-2012-r2-hyper-v-environment-without-kb-3000850"></a><a name="BKMK_Step12"></a>KB 3000850 없이 Windows Server 2012 R2 Hyper-v 환경에서 소프트웨어 인벤토리 로깅 사용  
   
 > [!NOTE]  
 > [KB 3000850](https://support.microsoft.com/kb/3000850) 업데이트 설치 시 이 기능은 제거됩니다.  
   
-Windows Server 2012 R2 Hyper-v 호스트에서 소프트웨어 인벤토리 로깅을 사용 하는 경우 게스트에서 SIL 로깅이 시작 된 경우 로컬에서 실행 되는 Windows Server 2012 R2 게스트에서 SIL 데이터를 검색할 수 있습니다. 그러나 Get-sildata 및 Get-sildata Powershell cmdlet을 사용 하 고 호스트와 게스트 모두에서 WIndows Server 2012 r 2를 사용 하는 경우에만 가능 합니다.  이 기능의 목적은 게스트 Vm을 테 넌 트에 제공 하는 데이터 센터 관리자 또는 대기업의 다른 엔터티를 사용 하 여 하이퍼바이저 호스트에서 소프트웨어 인벤토리 데이터를 캡처한 다음이 모든 데이터를 집계에 전달 하는 것입니다. 대상 URI).  
+Windows Server 2012 R2 Hyper-v 호스트에서 소프트웨어 인벤토리 로깅을 사용 하는 경우 게스트에서 SIL 로깅이 시작 된 경우 로컬에서 실행 되는 Windows Server 2012 R2 게스트에서 SIL 데이터를 검색할 수 있습니다. 그러나 Get-sildata 및 Get-sildata Powershell cmdlet을 사용 하 고 호스트와 게스트 모두에서 WIndows Server 2012 r 2를 사용 하는 경우에만 가능 합니다.  이 기능의 목적은 게스트 Vm을 테 넌 트에 제공 하는 데이터 센터 관리자 또는 대기업의 다른 엔터티를 사용 하 여 하이퍼바이저 호스트에서 소프트웨어 인벤토리 데이터를 캡처한 다음이 모든 데이터를 집계 (또는 대상 URI)로 전달 하는 것입니다.  
   
 다음은 SIL 로깅이 시작 된 Windows Server 2012 R2 게스트 VM 하나를 실행 하는 Windows Server 2012 R2 Hyper-v 호스트에서 PowerShell 콘솔의 출력이 표시 되는 것과 같은 두 가지 예입니다.  Get-sildata만 사용 하는 첫 번째 예제에서는 호스트의 모든 데이터가 예상 대로 출력 됩니다.  또한 게스트의 모든 SIL 데이터가 축소 된 형식으로 포함 됩니다.  게스트에서이 데이터를 확장 하 고 보려면 아래의 두 번째 예제에 사용 된 코드 조각을 잘라내어 붙여 넣습니다.  게스트의 SIL 데이터 개체는 항상 개체 내에 연결 된 VM GUID를 갖습니다.  
   
@@ -295,7 +291,7 @@ Windows Server 2012 R2 Hyper-v 호스트에서 소프트웨어 인벤토리 로�
   
 ![](../media/software-inventory-logging/SILHyper-VExample2.png)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
 [소프트웨어 인벤토리 로깅 시작](get-started-with-software-inventory-logging.md)  
 [소프트웨어 인벤토리 로깅 집계](software-inventory-logging-aggregator.md)  
 [Windows PowerShell의 소프트웨어 인벤토리 로깅 Cmdlet](https://technet.microsoft.com/library/dn283390.aspx)  

@@ -1,29 +1,25 @@
 ---
 title: Windows Small Business Server 2008에서 Windows Server Essentials로 마이그레이션
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 71e3243e-2da9-409a-ae1f-813d4c9062e1
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: f72c696f5d3f4f131a2767b021ddfe3dcd73f8f4
-ms.sourcegitcommit: 3c3dfee8ada0083f97a58997d22d218a5d73b9c4
+ms.openlocfilehash: 6a8c8a142cb40b8211450d16753ec9796987d208
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80639855"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80852516"
 ---
 # <a name="migrate-windows-small-business-server-2008-to-windows-server-essentials"></a>Windows Small Business Server 2008에서 Windows Server Essentials로 마이그레이션
 
 >적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-이 가이드에서는 기존 Windows SBS 2008 도메인을 새 하드웨어의 Windows Server® 2012 Essentials로 마이그레이션한 다음 설정 및 데이터를 마이그레이션하는 방법에 대해 설명 합니다. 또한 마이그레이션을 완료 한 후에 Windows Server Essentials 네트워크에서 기존 서버를 제거 하는 방법을 설명 합니다.  
+이 가이드에서는 기존 Windows SBS 2008 도메인을 새 하드웨어의 Windows Server&reg; 2012 Essentials로 마이그레이션한 다음 설정 및 데이터를 마이그레이션하는 방법에 대해 설명 합니다. 또한 마이그레이션을 완료 한 후에 Windows Server Essentials 네트워크에서 기존 서버를 제거 하는 방법을 설명 합니다.  
   
 > [!NOTE]
 >  마이그레이션 중에 문제를 방지 하기 위해 Windows Server Essentials 제품 개발 팀에서는 마이그레이션을 시작 하기 전에이 문서를 읽을 것을 적극 권장 합니다.  

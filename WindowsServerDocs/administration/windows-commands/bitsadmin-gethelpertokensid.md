@@ -1,42 +1,39 @@
 ---
 title: bitsadmin gethelpertokensid
-description: '**Bitsadmin gethelpertokensid** 에 대 한 Windows 명령 항목-BITS 전송 작업의 도우미 토큰 (설정 된 경우)의 SID를 반환 합니다.'
-ms.custom: na
+description: BITS 전송 작업의 도우미 토큰에 대 한 SID (설정 된 경우)를 반환 하는 **bitsadmin gethelpertokensid**에 대 한 Windows 명령 항목입니다.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 03/01/2019
-ms.openlocfilehash: a8c2a9f319defd8ac9acd36063ee079c24ad8ae0
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: a2e26ff459b068595529fbd24e6165c130660570
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71381586"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80850646"
 ---
 # <a name="bitsadmin-gethelpertokensid"></a>bitsadmin gethelpertokensid
 
-설정 된 경우 BITS 전송 작업의 [도우미 토큰](/windows/desktop/bits/helper-tokens-for-bits-transfer-jobs)에 대 한 SID를 반환 합니다.
+설정 된 경우 BITS 전송 작업의 [도우미 토큰](https://docs.microsoft.com/windows/win32/bits/helper-tokens-for-bits-transfer-jobs)에 대 한 SID를 반환 합니다.
 
-**BITS 3.0 및 이전 버전**: 지원되지 않습니다.
+> [!NOTE]
+> 이 명령은 BITS 3.0 이전 버전에서는 지원 되지 않습니다.
 
 ## <a name="syntax"></a>구문
 
 ```
-bitsadmin /GetHelperTokensID <Job>
+bitsadmin /gethelpertokensid <job>
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------|-----------|
-|작업|작업의 표시 이름 또는 GUID|
+| 매개 변수 | 설명 |
+| -------------- | -------------- |
+| 제출 | 작업의 표시 이름 또는 GUID입니다. |
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
-[명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

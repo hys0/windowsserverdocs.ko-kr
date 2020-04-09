@@ -1,28 +1,22 @@
 ---
-title: copy
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+title: 복사
+description: 하나 이상의 파일을 다른 위치에 복사 하는 복사를 위한 Windows 명령 항목입니다.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9624d4a1-349a-4693-ad00-1d1d4e59e9ac
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 102fd6b59516b04b8986ee47b52f521be73f04de
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 3f1ba088f62dec574a23406683bf5ae3d13c1e86
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71379042"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80847146"
 ---
-# <a name="copy"></a>copy
-
-
+# <a name="copy"></a>복사
 
 다른 한 위치에서 하나 이상의 파일을 복사합니다.
 
@@ -34,7 +28,7 @@ ms.locfileid: "71379042"
 copy [/d] [/v] [/n] [/y | /-y] [/z] [/a | /b] <Source> [/a | /b] [+<Source> [/a | /b] [+ ...]] [<Destination> [/a | /b]]
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------|-----------|
@@ -44,13 +38,13 @@ copy [/d] [/v] [/n] [/y | /-y] [/z] [/a | /b] <Source> [/a | /b] [+<Source> [/a 
 |/y|기존 대상 파일을 덮어쓸 것인지를 확인 하는 메시지를 표시 하지 않습니다.|
 |/ y|기존 대상 파일을 덮어쓸 것인지 확인 하 라는 메시지가 표시 됩니다.|
 |/z|다시 시작 가능 모드에서 네트워크에 연결 된 파일을 복사 합니다.|
-|/ a|ASCII 텍스트 파일을 나타냅니다.|
+|/a|ASCII 텍스트 파일을 나타냅니다.|
 |/b|이진 파일을 나타냅니다.|
-|\<Source >|필수. 파일 또는 파일 집합이 복사 하려는 위치를 지정 합니다. *소스* 드라이브 문자 및 콜론, 디렉터리 이름, 파일 이름, 또는 이들의 조합으로 구성 될 수 있습니다.|
-|\<Destination >|필수. 파일 또는 파일 집합이 복사 하려는 위치를 지정 합니다. *대상* 드라이브 문자 및 콜론, 디렉터리 이름, 파일 이름, 또는 이들의 조합으로 구성 될 수 있습니다.|
+|\<원본 >|필수입니다. 파일 또는 파일 집합이 복사 하려는 위치를 지정 합니다. *소스* 드라이브 문자 및 콜론, 디렉터리 이름, 파일 이름, 또는 이들의 조합으로 구성 될 수 있습니다.|
+|\<대상 >|필수입니다. 파일 또는 파일 집합이 복사 하려는 위치를 지정 합니다. *대상* 드라이브 문자 및 콜론, 디렉터리 이름, 파일 이름, 또는 이들의 조합으로 구성 될 수 있습니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 -   파일의 끝을 나타내는 파일의 끝 문자 (CTRL + Z)를 사용 하는 ASCII 텍스트 파일을 복사할 수 있습니다.
 -   사용 하 여 **/a**
@@ -81,7 +75,7 @@ copy [/d] [/v] [/n] [/y | /-y] [/z] [/a | /b] <Source> [/a | /b] [+<Source> [/a 
 -   사용 하 여 **/z**
 
     연결이 손실 (예를 들어, 오프 라인으로 전환 하는 서버 연결을 끊는 경우), 복사 단계 **/z 복사** 연결이 다시 설정 되 면 다시 시작 됩니다. **/z** 도 각 파일에 대해 완료 하는 복사 작업의 백분율을 표시 합니다.
--   장치에서 복사
+-   디바이스에서 복사
 
     하나 이상의 항목에 대 한 장치 이름을 대체할 수 있습니다 *소스* 또는 *대상*합니다.
 -   사용 하 여 하거나 생략 하더라도 **/b** 장치에 복사 하는 경우
@@ -112,7 +106,7 @@ copy [/d] [/v] [/n] [/y | /-y] [/z] [/a | /b] <Source> [/a | /b] [+<Source> [/a 
     사용 하 여 모든 디렉터리의 파일 및 하위 디렉터리를 복사 하려면는 **xcopy** 명령입니다.
 -   **복사** 다른 매개 변수와 함께 명령을 복구 콘솔에서 사용할 수 있습니다.
 
-## <a name="BKMK_examples"></a>예와
+## <a name="examples"></a><a name=BKMK_examples></a>예와
 
 현재 드라이브에 다음을로 라는 파일을 복사 하 고 복사 된 파일의 끝에는 파일의 끝 문자 (CTRL + Z) 인지 확인 하려면 다음을 입력 합니다.
 ```
@@ -136,7 +130,7 @@ copy report + mar89.rpt + apr89.rpt + may89.rpt
 ```
 copy *.txt Combined.doc 
 ```
-포함, 와일드 카드 문자를 사용 하 여 파일 하나에 여러 개의 이진 파일을 결합 하려는 경우 **/b**합니다. 이렇게 하면 Windows에서를 CTRL + Z를 파일의 끝 문자로 취급지 않습니다. 예를 들어 입력 합니다.
+포함, 와일드 카드 문자를 사용 하 여 파일 하나에 여러 개의 이진 파일을 결합 하려는 경우 **/b**합니다. 이렇게 하면 Windows에서를 CTRL + Z를 파일의 끝 문자로 취급지 않습니다. 예를 들어 다음과 같이 입력합니다.
 ```
 copy /b *.exe Combined.exe
 ```
@@ -144,7 +138,7 @@ copy /b *.exe Combined.exe
 > [!CAUTION]
 > 이진 파일을 결합 하는 경우 결과 파일 내부 형식으로 인해 사용할 수 있습니다.
 
-다음 예에서 **복사** 각 파일을 해당.ref 인 파일 확장명이.txt 인 결합 합니다. 결과 동일한 파일 이름은 같지만 확장명이.doc 파일. **복사** File1.ref와 File1.txt File1.doc, 폼에 결합 한 다음 **복사** File2.txt File2.ref File2.doc, 폼에 함께 결합 합니다. 예를 들어 입력 합니다.
+다음 예에서 **복사** 각 파일을 해당.ref 인 파일 확장명이.txt 인 결합 합니다. 결과 동일한 파일 이름은 같지만 확장명이.doc 파일. **복사** File1.ref와 File1.txt File1.doc, 폼에 결합 한 다음 **복사** File2.txt File2.ref File2.doc, 폼에 함께 결합 합니다. 예를 들어 다음과 같이 입력합니다.
 ```
 copy *.txt + *.ref *.doc
 ```
@@ -153,6 +147,6 @@ copy *.txt + *.ref *.doc
 copy *.txt + *.ref Combined.doc
 ```
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
-[명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

@@ -1,26 +1,22 @@
 ---
-title: Cmd
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+title: cmd를
+description: 명령 인터프리터의 새 인스턴스를 시작 하는 cmd의 Windows 명령 항목. Cmd.exe.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6ec588db-31a9-4a73-a970-65a2c6f4abbe
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 032fbea2039faa09753ac0c2b51e4b62004d36ac
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 83b5e27017a9a0f979acec428b8ddaa73cd9d46b
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71379337"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80847626"
 ---
-# <a name="cmd"></a>Cmd
+# <a name="cmd"></a>cmd를
 
 명령 인터프리터 인 Cmd.exe의 새 인스턴스를 시작 합니다. 매개 변수 없이 사용 하는 경우 **cmd** 운영 체제의 버전 및 저작권 정보를 표시 합니다.
 
@@ -30,7 +26,7 @@ ms.locfileid: "71379337"
 cmd [/c|/k] [/s] [/q] [/d] [/a|/u] [/t:{<B><F>|<F>}] [/e:{on|off}] [/f:{on|off}] [/v:{on|off}] [<String>]
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------|-----------|
@@ -39,7 +35,7 @@ cmd [/c|/k] [/s] [/q] [/d] [/a|/u] [/t:{<B><F>|<F>}] [/e:{on|off}] [/f:{on|off}]
 |/s|**/C** 또는 **/K**뒤의 *문자열* 처리를 수정 합니다.|
 |/q|에코를 끕니다.|
 |/d|자동 실행 명령의 실행을 사용 하지 않도록 설정 합니다.|
-|/ a|ANSI(American National Standards Institute) (ANSI)로 파이프 또는 파일에 대 한 내부 명령 출력의 서식을 지정 합니다.|
+|/a|ANSI(American National Standards Institute) (ANSI)로 파이프 또는 파일에 대 한 내부 명령 출력의 서식을 지정 합니다.|
 |/u|파이프 또는 파일에 대 한 내부 명령 출력의 형식을 유니코드로 지정 합니다.|
 |/t: {\<B\>\<F\>\|\<F\>}|배경 (*B*) 및 전경 (*F*) 색을 설정 합니다.|
 |/e: on|명령 확장을 사용 하도록 설정 합니다.|
@@ -59,9 +55,9 @@ cmd [/c|/k] [/s] [/q] [/d] [/a|/u] [/t:{<B><F>|<F>}] [/e:{on|off}] [/f:{on|off}]
 |1|파랑|
 |2|녹색|
 |3|Aqua|
-|추가를 클릭합니다.|빨강|
-|5|자주색|
-|6|노랑|
+|4|빨강|
+|5|Purple|
+|6|Yellow|
 |7|하얀|
 |8|회색|
 |9|연한 파랑|
@@ -72,14 +68,14 @@ cmd [/c|/k] [/s] [/q] [/d] [/a|/u] [/t:{<B><F>|<F>}] [/e:{on|off}] [/f:{on|off}]
 |e|밝은 노랑|
 |f|밝은 백서|
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 -   여러 명령 사용
 
-    문자열 > \<대 한 여러 명령을 사용 하려면 명령 구분 기호 **&&** 를 사용 하 여 구분 하 고 따옴표로 묶습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+    문자열 > \<대 한 여러 명령을 사용 하려면 명령 구분 기호 **&&** 를 사용 하 여 구분 하 고 따옴표로 묶습니다. 예를 들면 다음과 같습니다.
 
     ```
-    "<Command>&&<Command>&&<Command>"
+    <Command>&&<Command>&&<Command>
     ``` 
  
 -   따옴표 처리
@@ -103,7 +99,7 @@ cmd [/c|/k] [/s] [/q] [/d] [/a|/u] [/t:{<B><F>|<F>}] [/e:{on|off}] [/f:{on|off}]
     하나 또는 두 레지스트리 하위 키가 있는 경우 다른 모든 변수 보다 먼저 실행 됩니다.
 
 > [!CAUTION]
-> 레지스트리를 잘못 편집하면 시스템에 심각한 손상을 줄 수 있습니다. 따라서 레지스트리를 변경하기 전에 컴퓨터의 중요한 데이터를 백업해 두어야 합니다.
+> 레지스트리를 잘못 편집하면 시스템이 크게 손상될 수 있습니다. 따라서 레지스트리를 변경하기 전에 컴퓨터의 중요한 데이터를 백업해 두어야 합니다.
 
 -   명령 확장 사용 및 사용 안 함
 
@@ -116,7 +112,7 @@ cmd [/c|/k] [/s] [/q] [/d] [/a|/u] [/t:{<B><F>|<F>}] [/e:{on|off}] [/f:{on|off}]
     Regedit.exe를 사용 하 여 레지스트리에서 **REG_DWORD** 값을 **0 × 1** (사용) 또는 **0 x 0** (사용 안 함)으로 설정 합니다. 사용자 지정 설정이 컴퓨터 설정 보다 우선 하며 명령줄 옵션 레지스트리 설정 보다 우선 합니다.
 
 > [!CAUTION]
-> 레지스트리를 잘못 편집하면 시스템에 심각한 손상을 줄 수 있습니다. 따라서 레지스트리를 변경하기 전에 컴퓨터의 중요한 데이터를 백업해 두어야 합니다.
+> 레지스트리를 잘못 편집하면 시스템이 크게 손상될 수 있습니다. 따라서 레지스트리를 변경하기 전에 컴퓨터의 중요한 데이터를 백업해 두어야 합니다.
 
     When you enable command extensions, the following commands are affected:  
     -  **assoc**
@@ -156,7 +152,7 @@ cmd [/c|/k] [/s] [/q] [/d] [/a|/u] [/t:{<B><F>|<F>}] [/e:{on|off}] [/f:{on|off}]
     **REG_DWORD** 값을 설정 하려면 regedit.exe를 실행 하 고 특정 함수에 대 한 제어 문자의 16 진수 값을 사용 합니다. 예를 들어 **0 x 9** 는 TAB이 고 **0 x 08** 은 백스페이스입니다. 사용자 지정 설정이 컴퓨터 설정 보다 우선 하며 명령줄 옵션 레지스트리 설정 보다 우선 합니다.
 
 > [!CAUTION]
-> 레지스트리를 잘못 편집하면 시스템에 심각한 손상을 줄 수 있습니다. 따라서 레지스트리를 변경하기 전에 컴퓨터의 중요한 데이터를 백업해 두어야 합니다.
+> 레지스트리를 잘못 편집하면 시스템이 크게 손상될 수 있습니다. 따라서 레지스트리를 변경하기 전에 컴퓨터의 중요한 데이터를 백업해 두어야 합니다.
 
 **/F: on**을 사용 하 여 파일 및 디렉터리 이름 완성을 사용 하도록 설정 하는 경우 디렉터리 이름 완성을 위해 Ctrl + D를 사용 하 고 파일 이름 완성에는 Ctrl + f를 사용 합니다. 레지스트리에서 특정 완료 문자를 사용 하지 않도록 설정 하려면 올바른 제어 문자가 아니기 때문에 공백 [**0 x 20**]에 대 한 값을 사용 합니다.
 
@@ -166,10 +162,10 @@ CTRL + D 또는 CTRL + F를 누르면 **cmd** 에서 파일 및 디렉터리 이
 
 다음 특수 문자에는 따옴표가 필요 합니다. & < > [] {} ^ =;! ' +, ' ~ [공백].
 
-사용자가 제공 하는 정보에 공백이 포함 된 경우 텍스트에 따옴표를 사용 합니다 (예: "컴퓨터 이름").
+사용자가 제공 하는 정보에 공백이 포함 된 경우 텍스트에 따옴표를 사용 합니다 (예: 컴퓨터 이름).
 
 *문자열*내에서 파일 및 디렉터리 이름 완성을 처리 하는 경우 커서 오른쪽의 *경로* 부분은 모두 삭제 됩니다 (완료가 처리 된 *문자열* 의 지점).
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
-[명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

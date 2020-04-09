@@ -1,24 +1,20 @@
 ---
 title: MultiPoint 서비스 시스템 관리
 description: MultiPoint 서비스를 관리 하는 방법 알아보기
-ms.custom: na
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8c7ffe24-f4e5-4fbf-b445-d860f935e4f3
 author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: 6c1e6d7f63251627d6d193820f22af638ba17a0b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: c14c804b3825b976bdba74071ec920ed8e8a65d2
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71389556"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80853476"
 ---
 # <a name="managing-your-multipoint-services-system"></a>MultiPoint 서비스 시스템 관리
 MultiPoint 서비스를 사용하면 하나의 컴퓨터에 여러 스테이션을 연결할 수 있습니다. 기존 스테이션은 [*스테이션 허브*](Switch-Between-Modes.md) 또는 0개의 클라이언트와 모니터, 키보드, 마우스 등으로 구성됩니다. 원격 데스크톱 프로토콜 (RDP) 네트워크에 연결 된 클라이언트도 지원 됩니다.  

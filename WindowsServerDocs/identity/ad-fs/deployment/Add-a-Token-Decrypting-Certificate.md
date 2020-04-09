@@ -1,7 +1,6 @@
 ---
 ms.assetid: 27e1e299-0beb-4e86-8143-1ba031dc3502
 title: 토큰 암호 해독 인증서 추가
-description: ''
 author: billmath
 manager: femila
 ms.date: 05/31/2017
@@ -9,12 +8,12 @@ ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: 388414fff97705901bf52ee844b90508d62f8c83
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 5714a41950b9c2f818ddc154a9af7a55fdb362d8
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71408455"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80814967"
 ---
 # <a name="add-a-token-decrypting-certificate"></a>토큰 암호 해독 인증서 추가
 
@@ -25,7 +24,7 @@ ms.locfileid: "71408455"
   
 다음 절차를 사용 하 여 사용자가 내보낸 파일에서의 AD FS 관리 스냅인\-인증서를 암호 해독\-토큰을 추가할 수 있습니다.  
   
-로컬 컴퓨터에서 이 절차를 완료하기 위해서는 최소한 **관리자** 또는 이와 동등한 자격이 있어야 합니다.  [로컬 및 도메인 기본 그룹](https://go.microsoft.com/fwlink/?LinkId=83477) 에서 적절 한 계정 및 그룹 구성원 자격 사용에 대 한 세부 정보를 검토 \(http:\/\/go.microsoft.com\/fwlink\/? LinkId\=83477\).   
+이 절차를 완료하려면 최소한 로컬 컴퓨터의 **Administrators** 구성원 자격 또는 동급의 권한이 필요합니다.  [로컬 및 도메인 기본 그룹](https://go.microsoft.com/fwlink/?LinkId=83477) 에서 적절 한 계정 및 그룹 구성원 자격 사용에 대 한 세부 정보를 검토 \(http:\/\/go.microsoft.com\/fwlink\/? LinkId\=83477\).   
   
 ### <a name="to-add-a-token-decrypting-certificate"></a>인증서를 암호 해독\-토큰을 추가 하려면  
   

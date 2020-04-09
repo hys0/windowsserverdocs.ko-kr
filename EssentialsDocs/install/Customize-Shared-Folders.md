@@ -1,23 +1,19 @@
 ---
 title: 공유 폴더 사용자 지정
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 47bc4986-14eb-4a29-9930-83a25704a3a0
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 387f9570e87bd2bd65266489b0f3eac6c945e3be
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 861107035408fc39d0dc5e4d94a4d82d8dfba74e
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80311913"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80818076"
 ---
 # <a name="customize-shared-folders"></a>공유 폴더 사용자 지정
 
@@ -57,7 +53,7 @@ ms.locfileid: "80311913"
   
 1.  [초기 구성 후 작업 실행을 위해 PostIC.cmd 파일 만들기](Create-the-PostIC.cmd-File-for-Running-Post-Initial-Configuration-Tasks.md) 섹션의 세부 정보에 따라 초기 구성 후 작업 실행을 위해 PostIC.cmd 파일을 만듭니다.  
   
-2.  메모장을 사용하여 C:\Windows\Setup\Scripts 폴더에 **customizefolders.ps1**이라는 파일을 만든 후 다음 Windows PowerShell® 명령을 파일에 붙여 넣습니다(원하는 동작에 따라 적절한 줄을 표시 해제).  
+2.  메모장을 사용 하 여 C:\Windows\Setup\Scripts 폴더에 **customizefolders.ps1** 이라는 파일을 만든 후 다음 Windows PowerShell&reg; 명령을 파일에 붙여 넣습니다 (원하는 동작에 따라 적절 한 줄을 표시 해제).  
   
     ```  
     # Move the Documents folder to D:\ServerFolders  

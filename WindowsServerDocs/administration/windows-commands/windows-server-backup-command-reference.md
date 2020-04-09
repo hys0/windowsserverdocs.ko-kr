@@ -1,24 +1,20 @@
 ---
 title: Windows Server 백업 명령 참조
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: 백업 명령 참조에 대 한 Windows 명령 항목입니다.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 03de0a65-21f0-4dd7-a3ae-251c98bbf6eb
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c05a44d3390e110fbaf276dfb9b40c1f0adc1dd5
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: ca6a2e17c68e362d8b3d26f67ab3b7e4c7bf86d4
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71362053"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80829207"
 ---
 # <a name="windows-server-backup-command-reference"></a>Windows Server 백업 명령 참조
 
@@ -38,12 +34,12 @@ ms.locfileid: "71362053"
 |[Wbadmin stop job](wbadmin-stop-job.md)|현재 실행 중인 백업이 나 복구 작업을 중지 합니다.|
 |[Wbadmin get versions](wbadmin-get-versions.md)|로컬 컴퓨터에서 복구 가능한 백업의 세부 정보를 나열 하거나 다른 컴퓨터에서 다른 위치를 지정 합니다.|
 |[Wbadmin get items](wbadmin-get-items.md)|특정 백업에 포함 된 항목을 나열 합니다.|
-|[Wbadmin start recovery](wbadmin-start-recovery.md)|볼륨, 응용 프로그램, 파일 또는 지정 된 폴더의 복구를 실행 합니다.|
+|[Wbadmin start recovery](wbadmin-start-recovery.md)|볼륨, 애플리케이션, 파일 또는 지정 된 폴더의 복구를 실행 합니다.|
 |[Wbadmin get status](wbadmin-get-status.md)|현재 실행 중인 백업이 나 복구 작업의 상태를 보여 줍니다.|
 |[Wbadmin get disks](wbadmin-get-disks.md)|현재 온라인 상태의 디스크를 나열 합니다.|
 |[Wbadmin start systemstaterecovery](wbadmin-start-systemstaterecovery.md)|시스템 상태 복구를 실행합니다.|
 |[Wbadmin start systemstatebackup](wbadmin-start-systemstatebackup.md)|시스템 상태 백업을 실행합니다.|
 |[Wbadmin delete systemstatebackup](wbadmin-delete-systemstatebackup.md)|하나 이상의 시스템 상태 백업을 삭제합니다.|
 |[Wbadmin start sysrecovery](wbadmin-start-sysrecovery.md)|전체 시스템 (최소한 모든 볼륨 운영 체제의 상태를 포함 하는)의 복구를 실행 합니다. 이 하위 명령은 Windows 복구 환경을 사용 하는 경우에 사용할 수만 있습니다.|
-|[Wbadmin restore catalog](wbadmin-restore-catalog.md)|백업 카탈로그는 로컬 컴퓨터에 손상 된 경우에서 지정 된 저장소 위치에서 백업 카탈로그를 복구 합니다.|
+|[Wbadmin restore catalog](wbadmin-restore-catalog.md)|백업 카탈로그는 로컬 컴퓨터에 손상 된 경우에서 지정 된 스토리지 위치에서 백업 카탈로그를 복구 합니다.|
 |[Wbadmin delete catalog](wbadmin-delete-catalog.md)|로컬 컴퓨터에서 백업 카탈로그를 삭제합니다. 이 컴퓨터에 백업 카탈로그 손상 되 고 카탈로그를 복원 하는 데 사용할 수 있는 다른 위치에 저장 된 백업이 있는 경우에이 명령을 사용 합니다.|

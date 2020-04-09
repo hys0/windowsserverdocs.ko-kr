@@ -1,24 +1,20 @@
 ---
 title: bitsadmin getproxybypasslist
-description: '**Bitsadmin getproxybypasslist** 에 대 한 Windows 명령 항목-지정 된 작업에 대 한 프록시 무시 목록을 검색 합니다.'
-ms.custom: na
+description: 지정 된 작업에 대 한 프록시 바이패스 목록을 검색 하는 **bitsadmin getproxybypasslist**에 대 한 Windows 명령 항목입니다.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 50959be3-7014-4bc9-9a7b-68f1ff94a94a
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 87cc131402707eac40329750e98218ec52083b94
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 9cd81aaef22c4173f198b765246b78b3d3bae136
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71381420"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80850536"
 ---
 # <a name="bitsadmin-getproxybypasslist"></a>bitsadmin getproxybypasslist
 
@@ -27,26 +23,27 @@ ms.locfileid: "71381420"
 ## <a name="syntax"></a>구문
 
 ```
-bitsadmin /GetProxyBypassList <Job>
+bitsadmin /getproxybypasslist <job>
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------|-----------|
-|작업|작업의 표시 이름 또는 GUID|
+| 매개 변수 | 설명 |
+| -------------- | -------------- |
+| 제출 | 작업의 표시 이름 또는 GUID입니다. |
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-바이패스 목록에는 호스트 이름 또는 IP 주소 또는 둘 다 포함 한 프록시를 통과 하지 않을 하 합니다. 이 목록에는 동일한 LAN에 있는 모든 서버를 참조 하는 "\<local >"이 포함 될 수 있습니다. 목록 세미콜론 이나 공백으로 구분 된.
+바이패스 목록에는 호스트 이름 또는 IP 주소 또는 둘 다 포함 한 프록시를 통과 하지 않을 하 합니다. 이 목록에는 동일한 LAN에 있는 모든 서버를 참조 하 `<local>` 포함 될 수 있습니다. 목록은 세미콜론 (;) 또는 공백으로 구분 됩니다.
 
-## <a name="BKMK_examples"></a>예와
+## <a name="examples"></a><a name=BKMK_examples></a>예와
 
 다음 예제에서는 명명 된 작업에 대 한 프록시 무시 목록 검색 *myDownloadJob*합니다.
+
 ```
-C:\>bitsadmin /GetProxyBypassList myDownloadJob
+C:\>bitsadmin /getproxybypasslist myDownloadJob
 ```
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
-[명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

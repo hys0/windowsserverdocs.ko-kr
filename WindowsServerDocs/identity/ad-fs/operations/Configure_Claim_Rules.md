@@ -1,7 +1,6 @@
 ---
 ms.assetid: 20d48afc-2623-43e9-8ed9-aeb9a0505630
 title: 클레임 규칙 구성
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: b46e228f202eeae7f8cbcf4c1a6851686f905e48
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 37c5688980da50abc4da61dddf77b3dfd83210bc
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71407638"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80816976"
 ---
 # <a name="configure-claim-rules"></a>클레임 규칙 구성
 
@@ -40,5 +39,5 @@ AD FS는 클레임 및 기타 컨텍스트 정보 형식으로 제공 되는 id 
   
 -   [사용자 지정 규칙을 사용하여 클레임을 보내는 규칙 만들기](../../ad-fs/operations/Create-a-Rule-to-Send-Claims-Using-a-Custom-rule.md)  
 
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
 [AD FS 작업](../../ad-fs/AD-FS-2016-Operations.md) 

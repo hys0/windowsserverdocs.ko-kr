@@ -1,36 +1,35 @@
 ---
 title: bootcfg timeout
-description: '**Bootcfg timeout** 에 대 한 Windows 명령 항목-운영 체제의 시간 제한 값을 변경 합니다.'
-ms.custom: na
+description: 운영 체제 시간 제한 값을 변경 하는 bootcfg timeout에 대 한 Windows 명령 항목입니다.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aa858eac-2bb7-4a27-a9bc-3e4a6eb8b2c6
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 94bc2de43dd179117c7a44747961213d12741a09
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b56e609d5e3b7c92a887a98ae5d02bfbfb7a78e6
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71379872"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80848496"
 ---
 # <a name="bootcfg-timeout"></a>bootcfg timeout
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-운영 체제의 시간 제한 값을 변경 합니다.
+운영 체제 제한 시간 값을 변경합니다.
 
 ## <a name="syntax"></a>구문
+
 ```
 bootcfg /timeout <timeOutValue> [/s <computer> [/u <Domain\User>/p <Password>]]
 ```
-## <a name="parameters"></a>매개 변수
+
+### <a name="parameters"></a>매개 변수
+
 
 |        매개 변수        |                                                                                                                                                                                  설명                                                                                                                                                                                   |
 |-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -40,11 +39,11 @@ bootcfg /timeout <timeOutValue> [/s <computer> [/u <Domain\User>/p <Password>]]
 |      /p <Password>      |                                                                                                                                            지정 된 <Password> 에 지정 된 사용자 계정의 **/u** 매개 변수입니다.                                                                                                                                             |
 |           /?            |                                                                                                                                                                      명령 프롬프트에 도움말을 표시합니다.                                                                                                                                                                      |
 
-## <a name="BKMK_examples"></a>예와
+## <a name="examples"></a><a name=BKMK_examples></a>예와
 다음 예제에서는 사용 하는 방법을 보여는 **bootcfg /timeout** 명령:
 ```
 bootcfg /timeout 30
 bootcfg /s srvmain /u maindom\hiropln /p p@ssW23 /timeout 50
 ```
-#### <a name="additional-references"></a>추가 참조
-[명령줄 구문 키](command-line-syntax-key.md)
+## <a name="additional-references"></a>추가 참조
+- [명령줄 구문 키](command-line-syntax-key.md)

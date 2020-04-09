@@ -1,7 +1,6 @@
 ---
 ms.assetid: 8e7015bc-c489-4ec7-8b6e-3ece90f72317
 title: 인증 정책 구성
-description: ''
 author: billmath
 manager: femila
 ms.date: 05/31/2017
@@ -9,16 +8,16 @@ ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: ef38b0280a5753b0995e85d0809de6b632fa3afc
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: 46eb61db92207a73320f87790a4063076a3cac4f
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79323095"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80817286"
 ---
 # <a name="configure-authentication-policies"></a>인증 정책 구성
 
-Windows Server 2012 r 2에서 AD FS에 모두 액세스 제어 및 사용자, 디바이스, 위치 및 인증 데이터를 포함 하는 다중 요소 인증 메커니즘 개선 됩니다. 사용자 인터페이스를 통해 또는 AD FS에 대 한 액세스 권한 부여의 위험을 관리 하려면 Windows PowerShell을 통해 이러한 향상 된 기능,\-다중을 통해 애플리케이션 보안\-액세스 제어 및 다중 팩터링\-사용자 id 또는 그룹 멤버 자격, 네트워크 위치, 작업 공간에 연결 하는 디바이스 데이터를 기반으로 하는 요소 인증\-조인 인증 상태 및 다중\-요소 인증 \(MFA\) 수행 되었습니다.  
+Windows Server 2012 r 2에서 AD FS에 모두 액세스 제어 및 사용자, 디바이스, 위치 및 인증 데이터를 포함 하는 다중 요소 인증 메커니즘 개선 됩니다. 사용자 인터페이스를 통해 또는 AD FS에 대 한 액세스 권한 부여의 위험을 관리 하려면 Windows PowerShell을 통해 이러한 향상 된 기능,\-다중을 통해 응용 프로그램 보안\-액세스 제어 및 다중 팩터링\-사용자 id 또는 그룹 멤버 자격, 네트워크 위치, 작업 공간에 연결 하는 장치 데이터를 기반으로 하는 요소 인증\-조인 인증 상태 및 다중\-요소 인증 \(MFA\) 수행 되었습니다.  
 
 MFA 및 다중 하는 방법에 대 한 자세한 내용은\-Active Directory Federation Services에서 액세스 제어를 팩터링 \(AD FS\) Windows Server 2012 r 2에서는 다음 항목을 참조 합니다.  
 
@@ -47,7 +46,7 @@ Windows Server 2012 r 2에서 AD FS에서 모든 애플리케이션 및 AD FS에
 
     -   기본 인증에 사용할 인증 방법입니다. 아래에서 사용할 수 있는 인증 방법을 선택할 수는 **익스트라넷** 및 **인트라넷**합니다.  
 
-    -   디바이스 인증을 통해는 **디바이스 인증 사용** 확인란입니다. 자세한 내용은 [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications(회사 응용 프로그램 전체에서 SSO 및 원활한 두 번째 요소 인증을 위해 모든 장치에서 작업 공간에 연결)](../../ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)를 참조하세요.  
+    -   장치 인증을 통해는 **장치 인증 사용** 확인란입니다. 자세한 내용은 [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](../../ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)를 참조하세요.  
 ![인증 정책](media/Configure-Authentication-Policies/authpolicy2.png)  
 
 ## <a name="to-configure-primary-authentication-per-relying-party-trust"></a>신뢰 당 기본 인증을 구성 하려면 신뢰 당사자  
@@ -75,9 +74,9 @@ Windows Server 2012 r 2에서 AD FS에서 모든 애플리케이션 및 AD FS에
 
 4.  에 **전역 인증 정책 편집** 창 아래에서 **다중\-비율** 탭 글로벌 다중의 일부로 다음 설정을 구성할 수 있습니다\-팩터링 인증 정책:  
 
-    -   설정 또는 MFA에 대 한 조건에서 사용할 수 있는 옵션을 통해는 **사용자\/그룹**, **디바이스**, 및 **위치** 섹션입니다.  
+    -   설정 또는 MFA에 대 한 조건에서 사용할 수 있는 옵션을 통해는 **사용자\/그룹**, **장치**, 및 **위치** 섹션입니다.  
 
-    -   이러한 설정에 대 한 MFA를 사용 하려면 하나 이상의 추가 인증 방법을 선택 해야 합니다. **인증서 인증** 사용할 수 있는 기본 옵션입니다. 또한 다른 사용자 지정 추가 인증 방법, 예를 들어 Windows Azure 활성 인증을 구성할 수 있습니다. 자세한 내용은 참조 [연습 가이드: 중요 한 애플리케이션에 대 한 Multi-factor Authentication 사용 하 여 위험 관리](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)합니다.  
+    -   이러한 설정에 대 한 MFA를 사용 하려면 하나 이상의 추가 인증 방법을 선택 해야 합니다. **인증서 인증** 사용할 수 있는 기본 옵션입니다. 또한 다른 사용자 지정 추가 인증 방법, 예를 들어 Windows Azure 활성 인증을 구성할 수 있습니다. 자세한 내용은 참조 [연습 가이드: 중요 한 응용 프로그램에 대 한 Multi-factor Authentication 사용 하 여 위험 관리](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)합니다.  
 
 > [!WARNING]  
 > 추가 인증 방법은 전역적 으로만 구성할 수 있습니다.  
@@ -93,7 +92,7 @@ Windows Server 2012 r 2에서 AD FS에서 모든 애플리케이션 및 AD FS에
 
 4.  에 **에 대 한 인증 정책 편집 < 신뢰\_파티\_신뢰\_이름 >** 창 아래에서 **다중\-비율** 탭의 일부로 다음 설정을 구성할 수는 당\-신뢰 당사자 트러스트 인증 정책:  
 
-    -   설정 또는 MFA에 대 한 조건에서 사용할 수 있는 옵션을 통해는 **사용자\/그룹**, **디바이스**, 및 **위치** 섹션입니다.  
+    -   설정 또는 MFA에 대 한 조건에서 사용할 수 있는 옵션을 통해는 **사용자\/그룹**, **장치**, 및 **위치** 섹션입니다.  
 
 ## <a name="configure-authentication-policies-via-windows-powershell"></a>Windows PowerShell을 통해 인증 정책 구성  
 Windows PowerShell을 사용 하는 액세스 제어의 다양 한 요소를 사용 하 여 유연성 및 인증 정책 및 권한 부여를 구성 하려면 Windows Server 2012 r 2에서 AD FS에서 사용할 수 있는 인증 메커니즘 하는 AD FS에 대 한 조건부 액세스를 구현 하는 데 필요한 규칙 \-보안 리소스입니다.  
@@ -130,7 +129,7 @@ Windows PowerShell을 사용 하는 액세스 제어의 다양 한 요소를 사
 
 
 ~~~
-$MfaClaimRule = “c:[Type == ‘“https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid'”, Value =~ ‘“^(?i) <group_SID>$'”] => issue(Type = ‘“https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod'”, Value ‘“https://schemas.microsoft.com/claims/multipleauthn'”);” 
+$MfaClaimRule = "c:[Type == '"https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid'", Value =~ '"^(?i) <group_SID>$'"] => issue(Type = '"https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod'", Value '"https://schemas.microsoft.com/claims/multipleauthn'");" 
 
 Set-AdfsRelyingPartyTrust –TargetRelyingParty $rp –AdditionalAuthenticationRules $MfaClaimRule
 ~~~
@@ -145,8 +144,8 @@ Set-AdfsRelyingPartyTrust –TargetRelyingParty $rp –AdditionalAuthenticationR
 
 
 ~~~
-$MfaClaimRule = “c:[Type == ‘" https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid'", Value == ‘"group_SID'"]  
- => issue(Type = ‘"https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod'", Value = ‘"https://schemas.microsoft.com/claims/multipleauthn'");”  
+$MfaClaimRule = "c:[Type == '" https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid'", Value == '"group_SID'"]  
+ => issue(Type = '"https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod'", Value = '"https://schemas.microsoft.com/claims/multipleauthn'");"  
 
 Set-AdfsAdditionalAuthenticationRule $MfaClaimRule  
 ~~~
@@ -161,8 +160,8 @@ Set-AdfsAdditionalAuthenticationRule $MfaClaimRule
 
 
 ~~~
-$MfaClaimRule = “c:[Type == ‘" https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork'", Value == ‘"true_or_false'"]  
- => issue(Type = ‘"https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod'", Value = ‘"https://schemas.microsoft.com/claims/multipleauthn'");”  
+$MfaClaimRule = "c:[Type == '" https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork'", Value == '"true_or_false'"]  
+ => issue(Type = '"https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod'", Value = '"https://schemas.microsoft.com/claims/multipleauthn'");"  
 
 Set-AdfsAdditionalAuthenticationRule $MfaClaimRule  
 ~~~
@@ -178,17 +177,17 @@ Set-AdfsAdditionalAuthenticationRule $MfaClaimRule
 
 
 ~~~
-$MfaClaimRule = "c:[Type == ‘" https://schemas.microsoft.com/2012/01/devicecontext/claims/isregistereduser'", Value == ‘"true_or_false"']  
- => issue(Type = ‘"https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod'", Value = ‘"https://schemas.microsoft.com/claims/multipleauthn'");"  
+$MfaClaimRule = "c:[Type == '" https://schemas.microsoft.com/2012/01/devicecontext/claims/isregistereduser'", Value == '"true_or_false"']  
+ => issue(Type = '"https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod'", Value = '"https://schemas.microsoft.com/claims/multipleauthn'");"  
 
 Set-AdfsAdditionalAuthenticationRule $MfaClaimRule  
 ~~~
 
 
 > [!NOTE]  
-> 교체 해야 *< true\_또는\_false >* 하나로 `true` 또는 `false`합니다. 값이 디바이스가 작업 공간 연결 인지에 따라 특정 규칙 조건에 종속\-가입 합니다.  
+> 교체 해야 *< true\_또는\_false >* 하나로 `true` 또는 `false`합니다. 값이 장치가 작업 공간 연결 인지에 따라 특정 규칙 조건에 종속\-가입 합니다.  
 
-### <a name="to-configure-mfa-globally-if-the-access-request-comes-from-the-extranet-and-from-a-non-workplace-joined-device"></a>엑스트라넷 및 비에서 액세스를 요청한 경우 MFA를 전역적으로 구성 하려면\-작업 공간\-조인 된 디바이스  
+### <a name="to-configure-mfa-globally-if-the-access-request-comes-from-the-extranet-and-from-a-non-workplace-joined-device"></a>엑스트라넷 및 비에서 액세스를 요청한 경우 MFA를 전역적으로 구성 하려면\-작업 공간\-조인 된 장치  
 
 1.  페더레이션 서버에서 Windows PowerShell 명령 창을 열고 다음 명령을 실행 합니다.  
 
@@ -199,7 +198,7 @@ Set-AdfsAdditionalAuthenticationRule $MfaClaimRule
 
 
 > [!NOTE]  
-> 두 인스턴스를 대체 해야 *< true\_또는\_false >* 하나로 `true` 또는 `false`, 는 특정 규칙 조건에 따라 달라 집니다. 규칙 조건을 기반으로 작업 공간에 디바이스가 인지\-가입 또는 엑스트라넷에서 액세스 요청 하는 없고 여부 또는 인트라넷 합니다.  
+> 두 인스턴스를 대체 해야 *< true\_또는\_false >* 하나로 `true` 또는 `false`, 는 특정 규칙 조건에 따라 달라 집니다. 규칙 조건을 기반으로 작업 공간에 장치가 인지\-가입 또는 엑스트라넷에서 액세스 요청 하는 없고 여부 또는 인트라넷 합니다.  
 
 ### <a name="to-configure-mfa-globally-if-access-comes-from-an-extranet-user-that-belongs-to-a-certain-group"></a>액세스는 엑스트라넷에 속한 사용자가 특정 그룹에서 제공 되는 경우 MFA를 전역적으로 구성 하려면  
 
@@ -229,7 +228,7 @@ Set-AdfsAdditionalAuthenticationRule "c:[Type == `"https://schemas.microsoft.com
 
    ```  
 
-     $GroupAuthzRule = "@RuleTemplate = `“Authorization`” @RuleName = `"Foo`" c:[Type == `"https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid`", Value =~ `"^(?i)<group_SID>$`"] =>issue(Type = `"https://schemas.microsoft.com/authorization/claims/deny`", Value = `"DenyUsersWithClaim`");"  
+     $GroupAuthzRule = "@RuleTemplate = `"Authorization`" @RuleName = `"Foo`" c:[Type == `"https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid`", Value =~ `"^(?i)<group_SID>$`"] =>issue(Type = `"https://schemas.microsoft.com/authorization/claims/deny`", Value = `"DenyUsersWithClaim`");"  
    Set-AdfsRelyingPartyTrust –TargetRelyingParty $rp –IssuanceAuthorizationRules $GroupAuthzRule  
    ```  
 
@@ -254,11 +253,11 @@ Set-AdfsAdditionalAuthenticationRule "c:[Type == `"https://schemas.microsoft.com
    ```  
    $GroupAuthzRule = "@RuleTemplate = `"Authorization`"  
    @RuleName = `"PermitAccessWithMFA`"  
-   c:[Type == `"https://schemas.microsoft.com/claims/authnmethodsreferences`", Value =~ `"^(?i)https://schemas\.microsoft\.com/claims/multipleauthn$`"] => issue(Type = `"https://schemas.microsoft.com/authorization/claims/permit`", Value = ‘“PermitUsersWithClaim'");"  
+   c:[Type == `"https://schemas.microsoft.com/claims/authnmethodsreferences`", Value =~ `"^(?i)https://schemas\.microsoft\.com/claims/multipleauthn$`"] => issue(Type = `"https://schemas.microsoft.com/authorization/claims/permit`", Value = '"PermitUsersWithClaim'");"  
 
    ```  
 
-### <a name="to-grant-access-to-an-application-that-is-secured-by-ad-fs-only-if-the-access-request-comes-from-a-workplace-joined-device-that-is-registered-to-the-user"></a>액세스 경우에만 AD FS에서 보호 되는 애플리케이션에 대 한 액세스 권한을 부여 하는 작업 공간에서 요청이 오는\-사용자에 게 등록 되어 있는 연결된 디바이스  
+### <a name="to-grant-access-to-an-application-that-is-secured-by-ad-fs-only-if-the-access-request-comes-from-a-workplace-joined-device-that-is-registered-to-the-user"></a>액세스 경우에만 AD FS에서 보호 되는 응용 프로그램에 대 한 액세스 권한을 부여 하는 작업 공간에서 요청이 오는\-사용자에 게 등록 되어 있는 연결된 장치  
 
 1.  페더레이션 서버에서 Windows PowerShell 명령 창을 열고 다음 명령을 실행 합니다.  
 
@@ -281,7 +280,7 @@ c:[Type == `"https://schemas.microsoft.com/2012/01/devicecontext/claims/isregist
 
 
 
-### <a name="to-grant-access-to-an-application-that-is-secured-by-ad-fs-only-if-the-access-request-comes-from-a-workplace-joined-device-that-is-registered-to-a-user-whose-identity-has-been-validated-with-mfa"></a>액세스 경우에만 AD FS에서 보호 되는 애플리케이션에 대 한 액세스 권한을 부여 하는 작업 공간에서 요청이 오는\-mfa id 유효성을 확인 된 사용자에 게 등록 되어 있는 연결된 디바이스  
+### <a name="to-grant-access-to-an-application-that-is-secured-by-ad-fs-only-if-the-access-request-comes-from-a-workplace-joined-device-that-is-registered-to-a-user-whose-identity-has-been-validated-with-mfa"></a>액세스 경우에만 AD FS에서 보호 되는 응용 프로그램에 대 한 액세스 권한을 부여 하는 작업 공간에서 요청이 오는\-mfa id 유효성을 확인 된 사용자에 게 등록 되어 있는 연결된 장치  
 
 1.  페더레이션 서버에서 Windows PowerShell 명령 창을 열고 다음 명령을 실행 합니다.  
 
@@ -297,10 +296,10 @@ c:[Type == `"https://schemas.microsoft.com/2012/01/devicecontext/claims/isregist
 2. 동일한 Windows PowerShell 명령 창에서 다음 명령을 실행 합니다.  
 
    ```  
-   $GroupAuthzRule = ‘@RuleTemplate = “Authorization”  
-   @RuleName = “RequireMFAOnRegisteredWorkplaceJoinedDevice”  
+   $GroupAuthzRule = '@RuleTemplate = "Authorization"  
+   @RuleName = "RequireMFAOnRegisteredWorkplaceJoinedDevice"  
    c1:[Type == `"https://schemas.microsoft.com/claims/authnmethodsreferences`", Value =~ `"^(?i)http://schemas\.microsoft\.com/claims/multipleauthn$`"] &&  
-   c2:[Type == `"https://schemas.microsoft.com/2012/01/devicecontext/claims/isregistereduser`", Value =~ `"^(?i)true$”] => issue(Type = "https://schemas.microsoft.com/authorization/claims/permit`", Value = `"PermitUsersWithClaim`");"  
+   c2:[Type == `"https://schemas.microsoft.com/2012/01/devicecontext/claims/isregistereduser`", Value =~ `"^(?i)true$"] => issue(Type = "https://schemas.microsoft.com/authorization/claims/permit`", Value = `"PermitUsersWithClaim`");"  
 
    ```  
 

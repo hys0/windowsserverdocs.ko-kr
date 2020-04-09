@@ -9,12 +9,12 @@ ms.technology: storage
 audience: IT Pro
 ms.topic: article
 ms.date: 10/16/2017
-ms.openlocfilehash: 509e58b85842826b71cb1bfed72ae4c7e5337e25
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: e39b36a6c3126429bc47d5b89d104612cab5db96
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71376827"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80844286"
 ---
 # <a name="fsutil-objectid"></a>Fsutil objectid
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
@@ -35,7 +35,7 @@ fsutil objectid [query] <FileName>
 fsutil objectid [set] <ObjectID> <BirthVolumeID> <BirthObjectID> <DomainID> <FileName>
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |-------------|---------------|
@@ -49,11 +49,11 @@ fsutil objectid [set] <ObjectID> <BirthVolumeID> <BirthObjectID> <DomainID> <Fil
 |\<DomainID >|16 바이트 16 진수 도메인 식별자입니다. 이 값은 현재 사용 되지 않습니다 및 모두 0으로 설정 되어야 합니다.|
 |\<파일 이름 >|파일 이름 및 확장명을 포함 하는 파일의 전체 경로를 지정 합니다 (예: C:\documents\filename.txt.).|
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 -   개체 식별자가 있는 모든 파일에는 역시 출생 볼륨 식별자, 생년월일 개체 id를 및 도메인 식별자입니다. 파일을 이동 하는 경우 개체 식별자 변경할 수 있지만 출생 볼륨 및 생년월일 개체 식별자 동일 하 게 유지 합니다. 이 동작을 통해 Windows 운영 체제는 항상 이동 되었는지에 관계 없이 파일을 검색 합니다.
 
-## <a name="BKMK_examples"></a>예와
+## <a name="examples"></a><a name="BKMK_examples"></a>예와
 개체 식별자를 만들려면 다음을 입력 합니다.
 
 `fsutil objectid create c:\temp\sample.txt`
@@ -70,8 +70,8 @@ fsutil objectid [set] <ObjectID> <BirthVolumeID> <BirthObjectID> <DomainID> <Fil
 
 `fsutil objectid set 40dff02fc9b4d4118f120090273fa9fc f86ad6865fe8d21183910008c709d19e 40dff02fc9b4d4118f120090273fa9fc 00000000000000000000000000000000 c:\temp\sample.txt`
 
-#### <a name="additional-references"></a>추가 참조
-[명령줄 구문 키](Command-Line-Syntax-Key.md)
+## <a name="additional-references"></a>추가 참조
+- [명령줄 구문 키](command-line-syntax-key.md)
 
 [Fsutil](Fsutil.md)
 

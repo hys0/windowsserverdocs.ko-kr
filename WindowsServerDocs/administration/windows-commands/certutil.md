@@ -1,24 +1,20 @@
 ---
 title: certutil
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: Certutil에 대 한 Windows 명령 항목은 CA (인증 기관) 구성 정보를 덤프 및 표시 하 고, 인증서 서비스를 구성 하 고, CA 구성 요소를 백업 및 복원 하 고, 인증서, 키 쌍 및 인증서 체인을 확인 하는 명령줄 프로그램입니다.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c264ccf0-ba1e-412b-9dd3-d77dd9345ad9
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 71525e4051a079eb9a3d0c8c197c8157b53e5e67
-ms.sourcegitcommit: 1f3ffff0af340868dcf3a2cfef5b8f8aea69d96d
+ms.openlocfilehash: 3ae2d68ee6a23422dda3dee8b261027c36707bd1
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78278548"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80848196"
 ---
 # <a name="certutil"></a>certutil
 
@@ -241,8 +237,8 @@ AttributeString--특성 이름 및 값 쌍 요청
 
 - 이름 및 값으로 구분 됩니다.
 - 여러 개의 이름 값 쌍은 줄 바꿈 구분 됩니다.
-- 예: "CertificateTemplate:User\nEMail:User@Domain.com"
-- 각 "\n" 시퀀스를 줄 바꿈 구분 기호로 변환 됩니다.
+- 예: CertificateTemplate:User\nEMail:User@Domain.com
+- 각 \n 시퀀스는 줄 바꿈 기호로 변환 됩니다.
 
 [-config Machine\CAName]
 
@@ -337,7 +333,7 @@ CertUtil [옵션]-CAInfo [InfoName [Index | ErrorCode]]
 
 CA 정보 표시
 
-InfoName-표시할 CA 속성을 나타냅니다 (아래 참조). 모든 속성에 대해 "\*"을 사용 합니다.
+InfoName-표시할 CA 속성을 나타냅니다 (아래 참조). 모든 속성에 대해 \*를 사용 합니다.
 
 인덱스--선택적 0부터 시작 하는 속성 인덱스
 
@@ -530,19 +526,19 @@ csv: 쉼표로 구분 된 값으로 출력
 
 모든 항목에 대해 StatusCode 열을 표시 하려면:-out StatusCode
 
-마지막 항목에 대 한 모든 열을 표시 하려면:-restrict "RequestId = = $"
+마지막 항목에 대 한 모든 열을 표시 하려면:-restrict RequestId = = $
 
-세 개의 요청에 대 한 RequestId 및 처리를 표시 하려면:-restrict "RequestId > = 37, RequestId\<40"-out "RequestId, 처리"
+세 개의 요청에 대 한 RequestId 및 처리를 표시 하려면-제한 RequestId > = 37, RequestId\<40-out RequestId, 처리
 
-모든 기본 Crl의 행 Id 및 CRL 번호를 표시 하려면:-restrict "CRLMinBase = 0"-out "CRLRowId, CRLNumber" CRL
+모든 기본 Crl의 행 Id 및 CRL 번호를 표시 하려면:-restrict CRLMinBase = 0-out CRLRowId, CRLNumber CRL
 
-기본 CRL 번호 3:-v-restrict "CRLMinBase = 0, CRLNumber = 3" CRLRawCRL "CRL을 표시 하려면
+기본 CRL 번호 3:-v-restrict CRLMinBase = 0, CRLNumber = 3-out CRLRawCRL CRL을 표시 하려면
 
 전체 CRL 테이블을 표시 하려면: CRL
 
-날짜 제한의 경우 "Date [+ |-dd: hh]"를 사용 합니다.
+날짜 제한에 날짜 [+ |-dd: hh]를 사용 합니다.
 
-현재 시간을 기준으로 하는 날짜에는 "now + dd: hh"를 사용 합니다.
+현재 시간을 기준으로 날짜에 대해 지금 + dd: hh 사용
 
 [-자동] [-split] [-config Machine\CAName] [-RestrictionList 제한] [-out ColumnList]
 
@@ -731,11 +727,11 @@ CertUtil [Options] -store [CertificateStoreName [CertId [OutputFile]]]
 
 CertificateStoreName: 인증서 저장소 이름입니다. 예를 들면 다음과 같습니다.
 
-- "My", "CA" (기본값), "Root"
-- "ldap: / / / CN 인증 기관, CN = Public Key Services, CN = Services, CN = Configuration, DC = cpandl, DC = com =? cACertificate? 하나? objectClass certificationAuthority =" (루트 인증서 보기)
-- "ldap: / / / CN CAName, CN = 인증 기관, CN = Public Key Services, CN = Services, CN = Configuration, DC = cpandl, DC = com =? cACertificate? 기본? objectClass certificationAuthority =" (수정 루트 인증서)
-- "ldap: / / / CN CAName, CN = MachineName, CN = CDP, CN = Public Key Services, CN = Services, CN = Configuration, DC = cpandl, DC = com =? certificateRevocationList? 기본? objectClass cRLDistributionPoint =" (Crl 보기)
-- "ldap: / / / CN NTAuthCertificates, CN = Public Key Services, CN = Services, CN = Configuration, DC = cpandl, DC = com =? cACertificate? 기본? objectClass certificationAuthority =" (엔터프라이즈 CA 인증서)
+- 내, CA (기본값), 루트,
+- ldap:///CN=Certification 기관, CN = Public Key Services, CN = Services, CN = Configuration, DC = cpandl, DC = com? cACertificate? one? objectClass = certificationAuthority (루트 인증서 보기)
+- ldap:///CN=CAName,CN=Certification 기관, CN = Public Key Services, CN = Services, CN = Configuration, DC = cpandl, DC = com? cACertificate? 기본? objectClass = certificationAuthority (루트 인증서 수정)
+- ldap:///CN=CAName,CN=MachineName,CN=CDP,CN=Public Key Services, CN = Services, CN = Configuration, DC = cpandl, DC = com? certificateRevocationList? 기본? objectClass = cRLDistributionPoint (Crl 보기)
+- ldap:///CN=NTAuthCertificates,CN=Public Key Services, CN = Services, CN = Configuration, DC = cpandl, DC = com? cACertificate? 기본? objectClass = certificationAuthority (엔터프라이즈 CA 인증서)
 - ldap: (AD 컴퓨터 개체 인증서)
 - -사용자 ldap: (AD 사용자 개체 인증서)
 
@@ -821,22 +817,22 @@ CertificateStoreName: 인증서 저장소 이름입니다.  참조 [-저장](#-s
      19 = Empty ; Add archived property, OR:
      19 =       ; Remove archived property
 
-     11 = "{text}Friendly Name" ; Add friendly name property
+     11 = {text}Friendly Name ; Add friendly name property
 
-     127 = "{hex}" ; Add custom hexadecimal property
-         _continue_ = "00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f"
-         _continue_ = "10 11 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f"
+     127 = {hex} ; Add custom hexadecimal property
+         _continue_ = 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f
+         _continue_ = 10 11 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f
 
-     2 = "{text}" ; Add Key Provider Information property
-       _continue_ = "Container=Container Name&"
-       _continue_ = "Provider=Microsoft Strong Cryptographic Provider&"
-       _continue_ = "ProviderType=1&"
-       _continue_ = "Flags=0&"
-       _continue_ = "KeySpec=2"
+     2 = {text} ; Add Key Provider Information property
+       _continue_ = Container=Container Name&
+       _continue_ = Provider=Microsoft Strong Cryptographic Provider&
+       _continue_ = ProviderType=1&
+       _continue_ = Flags=0&
+       _continue_ = KeySpec=2
 
-     9 = "{text}" ; Add Enhanced Key Usage property
-       _continue_ = "1.3.6.1.5.5.7.3.2,"
-       _continue_ = "1.3.6.1.5.5.7.3.1,"
+     9 = {text} ; Add Enhanced Key Usage property
+       _continue_ = 1.3.6.1.5.5.7.3.2,
+       _continue_ = 1.3.6.1.5.5.7.3.1,
 ```
 
 [-f] [-enterprise] [-user] [-GroupPolicy] [-자동] [-split] [-csp 공급자]
@@ -851,11 +847,11 @@ CertUtil [옵션]-viewstore [CertificateStoreName [인증서 [OutputFile]]]
 
 CertificateStoreName: 인증서 저장소 이름입니다. 예를 들면 다음과 같습니다.
 
-- "My", "CA" (기본값), "Root"
-- "ldap: / / / CN 인증 기관, CN = Public Key Services, CN = Services, CN = Configuration, DC = cpandl, DC = com =? cACertificate? 하나? objectClass certificationAuthority =" (루트 인증서 보기)
-- "ldap: / / / CN CAName, CN = 인증 기관, CN = Public Key Services, CN = Services, CN = Configuration, DC = cpandl, DC = com =? cACertificate? 기본? objectClass certificationAuthority =" (수정 루트 인증서)
-- "ldap: / / / CN CAName, CN = MachineName, CN = CDP, CN = Public Key Services, CN = Services, CN = Configuration, DC = cpandl, DC = com =? certificateRevocationList? 기본? objectClass cRLDistributionPoint =" (Crl 보기)
-- "ldap: / / / CN NTAuthCertificates, CN = Public Key Services, CN = Services, CN = Configuration, DC = cpandl, DC = com =? cACertificate? 기본? objectClass certificationAuthority =" (엔터프라이즈 CA 인증서)
+- 내, CA (기본값), 루트,
+- ldap:///CN=Certification 기관, CN = Public Key Services, CN = Services, CN = Configuration, DC = cpandl, DC = com? cACertificate? one? objectClass = certificationAuthority (루트 인증서 보기)
+- ldap:///CN=CAName,CN=Certification 기관, CN = Public Key Services, CN = Services, CN = Configuration, DC = cpandl, DC = com? cACertificate? 기본? objectClass = certificationAuthority (루트 인증서 수정)
+- ldap:///CN=CAName,CN=MachineName,CN=CDP,CN=Public Key Services, CN = Services, CN = Configuration, DC = cpandl, DC = com? certificateRevocationList? 기본? objectClass = cRLDistributionPoint (Crl 보기)
+- ldap:///CN=NTAuthCertificates,CN=Public Key Services, CN = Services, CN = Configuration, DC = cpandl, DC = com? cACertificate? 기본? objectClass = certificationAuthority (엔터프라이즈 CA 인증서)
 - ldap: (AD 컴퓨터 개체 인증서)
 - -사용자 ldap: (AD 사용자 개체 인증서)
 
@@ -890,11 +886,11 @@ CertUtil [옵션]-viewdelstore [CertificateStoreName [인증서 [OutputFile]]]
 
 CertificateStoreName: 인증서 저장소 이름입니다. 예를 들면 다음과 같습니다.
 
-- "My", "CA" (기본값), "Root"
-- "ldap: / / / CN 인증 기관, CN = Public Key Services, CN = Services, CN = Configuration, DC = cpandl, DC = com =? cACertificate? 하나? objectClass certificationAuthority =" (루트 인증서 보기)
-- "ldap: / / / CN CAName, CN = 인증 기관, CN = Public Key Services, CN = Services, CN = Configuration, DC = cpandl, DC = com =? cACertificate? 기본? objectClass certificationAuthority =" (수정 루트 인증서)
-- "ldap: / / / CN CAName, CN = MachineName, CN = CDP, CN = Public Key Services, CN = Services, CN = Configuration, DC = cpandl, DC = com =? certificateRevocationList? 기본? objectClass cRLDistributionPoint =" (Crl 보기)
-- "ldap: / / / CN NTAuthCertificates, CN = Public Key Services, CN = Services, CN = Configuration, DC = cpandl, DC = com =? cACertificate? 기본? objectClass certificationAuthority =" (엔터프라이즈 CA 인증서)
+- 내, CA (기본값), 루트,
+- ldap:///CN=Certification 기관, CN = Public Key Services, CN = Services, CN = Configuration, DC = cpandl, DC = com? cACertificate? one? objectClass = certificationAuthority (루트 인증서 보기)
+- ldap:///CN=CAName,CN=Certification 기관, CN = Public Key Services, CN = Services, CN = Configuration, DC = cpandl, DC = com? cACertificate? 기본? objectClass = certificationAuthority (루트 인증서 수정)
+- ldap:///CN=CAName,CN=MachineName,CN=CDP,CN=Public Key Services, CN = Services, CN = Configuration, DC = cpandl, DC = com? certificateRevocationList? 기본? objectClass = cRLDistributionPoint (Crl 보기)
+- ldap:///CN=NTAuthCertificates,CN=Public Key Services, CN = Services, CN = Configuration, DC = cpandl, DC = com? cACertificate? 기본? objectClass = certificationAuthority (엔터프라이즈 CA 인증서)
 - ldap: (AD 컴퓨터 개체 인증서)
 - -사용자 ldap: (AD 사용자 개체 인증서)
 
@@ -1322,7 +1318,7 @@ CRL: 빈에서 CRL을 만듭니다. 유효 기간 및 기타 옵션 없어야 �
 
 수정 된 인증서 또는 CRL 출력 파일의 OutFileList: 쉼표로 구분 된 목록입니다. 파일 수가 InFileList 일치 해야 합니다.
 
-StartDate + dd:hh: 새 유효 기간: 더하기; 선택적 날짜 선택적 일과 시간 유효 기간. 둘 다 지정 하는 경우에 더하기 기호 (+) 구분 기호를 사용 합니다. "지금 [+ dd:hh]"는 현재 시간에서 시작 하려면 사용 합니다. 사용 하 여 "never" (대 한 Crl에만 해당)에 만료 날짜가 없습니다.
+StartDate + dd:hh: 새 유효 기간: 더하기; 선택적 날짜 선택적 일과 시간 유효 기간. 둘 다 지정 하는 경우에 더하기 기호 (+) 구분 기호를 사용 합니다. 지금 [+ dd: hh]를 사용 하 여 현재 시간에 시작 합니다. 만료 날짜를 사용 하지 않습니다 (Crl에만 해당).
 
 SerialNumberList: 추가 하거나 제거할 쉼표로 구분 된 일련 번호 목록입니다.
 
@@ -1333,8 +1329,8 @@ SerialNumberList: 추가 하거나 제거할 쉼표로 구분 된 일련 번호 
 ```
 [Extensions]
      2.5.29.31 = ; Remove CRL Distribution Points extension
-     2.5.29.15 = "{hex}" ; Update Key Usage extension
-     _continue_="03 02 01 86"
+     2.5.29.15 = {hex} ; Update Key Usage extension
+     _continue_=03 02 01 86
 ```
 
 HashAlgorithm: 앞에 # 기호가 오는 해시 알고리즘의 이름입니다.
@@ -1483,15 +1479,15 @@ PolicyServers: 정책 서버 레지스트리 키 사용
 
 ProgId: 정책 또는 끝내기 모듈의 ProgId (레지스트리 하위 키 이름)를 사용 합니다.
 
-RegistryValueName: 레지스트리 값 이름 (접두사 일치를 위해 "이름\*" 사용)
+RegistryValueName: 레지스트리 값 이름 (접두사 일치에 이름\* 사용)
 
-값: 새 숫자, 문자열 또는 날짜 레지스트리 값 또는 파일 이름입니다. 숫자 값으로 시작 하는 경우 "+" 또는 "-", 새 값에 지정 된 비트 설정 되거나 기존 레지스트리 값에서 선택을 취소 합니다.
+값: 새 숫자, 문자열 또는 날짜 레지스트리 값 또는 파일 이름입니다. 숫자 값이 + 또는-로 시작 하는 경우 새 값에 지정 된 비트는 기존 레지스트리 값에서 설정 되거나 지워집니다.
 
-문자열 값으로 시작 하는 경우 "+" 또는 "-", 및 기존 값은 REG_MULTI_SZ 값, 문자열에 추가 하거나 기존 레지스트리 값에서 제거 합니다. REG_MULTI_SZ 값의 생성을 강제로 문자열 값의 끝에 "\n"을 추가 합니다.
+문자열 값이 + 또는-로 시작 하 고 기존 값이 REG_MULTI_SZ 값 이면 문자열이 기존 레지스트리 값에 추가 되거나 제거 됩니다. REG_MULTI_SZ 값을 강제로 생성 하려면 문자열 값의 끝에 \n을 추가 합니다.
 
-값이 "\@"로 시작 하는 경우 나머지 값은 이진 값의 16 진수 텍스트 표현을 포함 하는 파일의 이름입니다. 올바른 파일을 참조 하지 않는 하는 경우 대신 구문 분석 [Date]와 [+ |-] [dd:hh]-더하기 또는 빼기 선택적 일과 시간에는 선택적 날짜입니다. 둘 다 지정 하는 경우 더하기 기호 (+) 또는 빼기 기호 (-) 구분 기호를 사용 합니다. 현재 시간을 기준으로 날짜에 대 한 "현재 날짜 + dd:hh"를 사용 합니다.
+값이 \@시작 하는 경우 나머지 값은 이진 값의 16 진수 텍스트 표현을 포함 하는 파일의 이름입니다. 올바른 파일을 참조 하지 않는 하는 경우 대신 구문 분석 [Date]와 [+ |-] [dd:hh]-더하기 또는 빼기 선택적 일과 시간에는 선택적 날짜입니다. 둘 다 지정 하는 경우 더하기 기호 (+) 또는 빼기 기호 (-) 구분 기호를 사용 합니다. 현재 시간을 기준으로 날짜에 대해 now + dd: hh를 사용 합니다.
 
-"Chain\ChainCacheResyncFiletime \@now"를 사용 하 여 캐시 된 Crl을 효과적으로 플러시합니다.
+이제 chain\ChainCacheResyncFiletime \@를 사용 하 여 캐시 된 Crl을 효과적으로 플러시합니다.
 
 [-f] [-user] [-GroupPolicy] [-config Machine\CAName]
 
@@ -1521,15 +1517,15 @@ PolicyServers: 정책 서버 레지스트리 키 사용
 
 ProgId: 정책 또는 끝내기 모듈의 ProgId (레지스트리 하위 키 이름)를 사용 합니다.
 
-RegistryValueName: 레지스트리 값 이름 (접두사 일치를 위해 "이름\*" 사용)
+RegistryValueName: 레지스트리 값 이름 (접두사 일치에 이름\* 사용)
 
-값: 새 숫자, 문자열 또는 날짜 레지스트리 값 또는 파일 이름입니다. 숫자 값으로 시작 하는 경우 "+" 또는 "-", 새 값에 지정 된 비트 설정 되거나 기존 레지스트리 값에서 선택을 취소 합니다.
+값: 새 숫자, 문자열 또는 날짜 레지스트리 값 또는 파일 이름입니다. 숫자 값이 + 또는-로 시작 하는 경우 새 값에 지정 된 비트는 기존 레지스트리 값에서 설정 되거나 지워집니다.
 
-문자열 값으로 시작 하는 경우 "+" 또는 "-", 및 기존 값은 REG_MULTI_SZ 값, 문자열에 추가 하거나 기존 레지스트리 값에서 제거 합니다. REG_MULTI_SZ 값의 생성을 강제로 문자열 값의 끝에 "\n"을 추가 합니다.
+문자열 값이 + 또는-로 시작 하 고 기존 값이 REG_MULTI_SZ 값 이면 문자열이 기존 레지스트리 값에 추가 되거나 제거 됩니다. REG_MULTI_SZ 값을 강제로 생성 하려면 문자열 값의 끝에 \n을 추가 합니다.
 
-값이 "\@"로 시작 하는 경우 나머지 값은 이진 값의 16 진수 텍스트 표현을 포함 하는 파일의 이름입니다. 올바른 파일을 참조 하지 않는 하는 경우 대신 구문 분석 [Date]와 [+ |-] [dd:hh]-더하기 또는 빼기 선택적 일과 시간에는 선택적 날짜입니다. 둘 다 지정 하는 경우 더하기 기호 (+) 또는 빼기 기호 (-) 구분 기호를 사용 합니다. 현재 시간을 기준으로 날짜에 대 한 "현재 날짜 + dd:hh"를 사용 합니다.
+값이 \@시작 하는 경우 나머지 값은 이진 값의 16 진수 텍스트 표현을 포함 하는 파일의 이름입니다. 올바른 파일을 참조 하지 않는 하는 경우 대신 구문 분석 [Date]와 [+ |-] [dd:hh]-더하기 또는 빼기 선택적 일과 시간에는 선택적 날짜입니다. 둘 다 지정 하는 경우 더하기 기호 (+) 또는 빼기 기호 (-) 구분 기호를 사용 합니다. 현재 시간을 기준으로 날짜에 대해 now + dd: hh를 사용 합니다.
 
-"Chain\ChainCacheResyncFiletime \@now"를 사용 하 여 캐시 된 Crl을 효과적으로 플러시합니다.
+이제 chain\ChainCacheResyncFiletime \@를 사용 하 여 캐시 된 Crl을 효과적으로 플러시합니다.
 
 [-f] [-user] [-GroupPolicy] [-config Machine\CAName]
 
@@ -1559,15 +1555,15 @@ PolicyServers: 정책 서버 레지스트리 키 사용
 
 ProgId: 정책 또는 끝내기 모듈의 ProgId (레지스트리 하위 키 이름)를 사용 합니다.
 
-RegistryValueName: 레지스트리 값 이름 (접두사 일치를 위해 "이름\*" 사용)
+RegistryValueName: 레지스트리 값 이름 (접두사 일치에 이름\* 사용)
 
-값: 새 숫자, 문자열 또는 날짜 레지스트리 값 또는 파일 이름입니다. 숫자 값으로 시작 하는 경우 "+" 또는 "-", 새 값에 지정 된 비트 설정 되거나 기존 레지스트리 값에서 선택을 취소 합니다.
+값: 새 숫자, 문자열 또는 날짜 레지스트리 값 또는 파일 이름입니다. 숫자 값이 + 또는-로 시작 하는 경우 새 값에 지정 된 비트는 기존 레지스트리 값에서 설정 되거나 지워집니다.
 
-문자열 값으로 시작 하는 경우 "+" 또는 "-", 및 기존 값은 REG_MULTI_SZ 값, 문자열에 추가 하거나 기존 레지스트리 값에서 제거 합니다. REG_MULTI_SZ 값의 생성을 강제로 문자열 값의 끝에 "\n"을 추가 합니다.
+문자열 값이 + 또는-로 시작 하 고 기존 값이 REG_MULTI_SZ 값 이면 문자열이 기존 레지스트리 값에 추가 되거나 제거 됩니다. REG_MULTI_SZ 값을 강제로 생성 하려면 문자열 값의 끝에 \n을 추가 합니다.
 
-값이 "\@"로 시작 하는 경우 나머지 값은 이진 값의 16 진수 텍스트 표현을 포함 하는 파일의 이름입니다. 올바른 파일을 참조 하지 않는 하는 경우 대신 구문 분석 [Date]와 [+ |-] [dd:hh]-더하기 또는 빼기 선택적 일과 시간에는 선택적 날짜입니다. 둘 다 지정 하는 경우 더하기 기호 (+) 또는 빼기 기호 (-) 구분 기호를 사용 합니다. 현재 시간을 기준으로 날짜에 대 한 "현재 날짜 + dd:hh"를 사용 합니다.
+값이 \@시작 하는 경우 나머지 값은 이진 값의 16 진수 텍스트 표현을 포함 하는 파일의 이름입니다. 올바른 파일을 참조 하지 않는 하는 경우 대신 구문 분석 [Date]와 [+ |-] [dd:hh]-더하기 또는 빼기 선택적 일과 시간에는 선택적 날짜입니다. 둘 다 지정 하는 경우 더하기 기호 (+) 또는 빼기 기호 (-) 구분 기호를 사용 합니다. 현재 시간을 기준으로 날짜에 대해 now + dd: hh를 사용 합니다.
 
-"Chain\ChainCacheResyncFiletime \@now"를 사용 하 여 캐시 된 Crl을 효과적으로 플러시합니다.
+이제 chain\ChainCacheResyncFiletime \@를 사용 하 여 캐시 된 Crl을 효과적으로 플러시합니다.
 
 [-f] [-user] [-GroupPolicy] [-config Machine\CAName]
 
@@ -1665,7 +1661,7 @@ PFXOutFile: PFX 출력 파일
 
 ExtendedProperties: 확장 속성 포함
 
-명령줄에 지정 된 암호가 쉼표로 구분 된 암호 목록입니다.  둘 이상의 암호를 지정 하면 출력 파일에 대 한 마지막 암호가 사용 됩니다.  암호를 하나만 제공 하거나 마지막 암호가 "\*" 이면 사용자에 게 출력 파일 암호를 입력 하 라는 메시지가 표시 됩니다.
+명령줄에 지정 된 암호가 쉼표로 구분 된 암호 목록입니다.  둘 이상의 암호를 지정 하면 출력 파일에 대 한 마지막 암호가 사용 됩니다.  암호를 하나만 제공 하거나 마지막 암호를 \*경우 사용자에 게 출력 파일 암호를 입력 하 라는 메시지가 표시 됩니다.
 
 [-f] [-user] [-split] [-p Password] [-ProtectTo SAMNameAndSIDList] [-csp Provider]
 
@@ -1689,7 +1685,7 @@ V3CACertId: V3 CA 인증서 일치 토큰입니다.  참조 [-저장](#-store) �
 
 솔트: EPF 출력 파일 솔트 문자열
 
-명령줄에 지정 된 암호가 쉼표로 구분 된 암호 목록입니다. 둘 이상의 암호를 지정 하면 출력 파일에 대 한 마지막 암호가 사용 됩니다.  암호를 하나만 제공 하거나 마지막 암호가 "\*" 이면 사용자에 게 출력 파일 암호를 입력 하 라는 메시지가 표시 됩니다.
+명령줄에 지정 된 암호가 쉼표로 구분 된 암호 목록입니다. 둘 이상의 암호를 지정 하면 출력 파일에 대 한 마지막 암호가 사용 됩니다.  암호를 하나만 제공 하거나 마지막 암호를 \*경우 사용자에 게 출력 파일 암호를 입력 하 라는 메시지가 표시 됩니다.
 
 [-f] [-자동] [-split] [-dc DCName] [-p 암호] [-csp 공급자]
 
@@ -1726,7 +1722,7 @@ V3CACertId: V3 CA 인증서 일치 토큰입니다.  참조 [-저장](#-store) �
 |-UserName 사용자 이름|SSL 자격 증명에 대 한 명명 된 계정을 사용 합니다. 선택할 U / I,-UserName을 사용 합니다.|
 |-인증서 인증서|인증서에 서명|
 |-dc DCName|특정 도메인 컨트롤러를 대상으로|
-|-RestrictionList 제한|쉼표로 구분 된 제한 목록입니다. 각 제한 열 이름, 관계형 연산자 및 상수 정수, 문자열 또는 날짜 구성 됩니다. 한 열 이름 수 앞에 더하기 또는 빼기 기호 정렬 순서를 나타냅니다. 예를 들면 다음과 같습니다.</br>"RequestId 47 ="</br>"+ RequesterName > = a, RequesterName < b"</br>"-RequesterName > 도메인, 처리 = 21"|
+|-RestrictionList 제한|쉼표로 구분 된 제한 목록입니다. 각 제한 열 이름, 관계형 연산자 및 상수 정수, 문자열 또는 날짜 구성 됩니다. 한 열 이름 수 앞에 더하기 또는 빼기 기호 정렬 순서를 나타냅니다. 예를 들면 다음과 같습니다.</br>RequestId = 47</br>\+ RequesterName > = a, RequesterName < b</br>-RequesterName > 도메인, 처리 = 21|
 |-ColumnList 아웃|쉼표로 구분 된 열 목록|
 |-p 암호|Password|
 |-ProtectTo SAMNameAndSIDList|쉼표로 구분 된 이름/SID 목록 SAM|

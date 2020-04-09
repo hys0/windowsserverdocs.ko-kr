@@ -1,28 +1,22 @@
 ---
 title: chkntfs
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: 컴퓨터를 시작할 때 자동 디스크 검사를 표시 하거나 수정 하는 chkntfs의 Windows 명령 항목입니다.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 93eca810-8699-4716-8e9d-aecd54f704be
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f940fe81f0e7e01495e071931059b2375b78bb22
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: bb04022964b3c315c1003a9746f6551fc281dba3
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71379347"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80847776"
 ---
 # <a name="chkntfs"></a>chkntfs
-
-
 
 표시 하거나 컴퓨터를 시작할 때 검사 자동 디스크를 수정 합니다. 옵션 없이 사용 하는 경우 **chkntfs** 지정된 된 볼륨의 파일 시스템을 표시 합니다. 자동 파일 검사를 실행 하도록 예약 하는 경우 **chkntfs** 표시 합니다. 지정된 된 볼륨 커밋되지 않았는지 여부 될 예정입니다 다음에 컴퓨터를 검사 시작 됩니다.
 
@@ -41,18 +35,18 @@ chkntfs [/x <Volume> [...]]
 chkntfs [/c <Volume> [...]]
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------|-----------|
-|\<Volume > [...]|컴퓨터를 시작할 때를 확인 하려면 하나 이상의 볼륨을 지정 합니다. (콜론) 드라이브 문자를 포함 하는 유효한 볼륨 탑재 지점 또는 볼륨 이름입니다.|
+|\<볼륨 > [...]|컴퓨터를 시작할 때를 확인 하려면 하나 이상의 볼륨을 지정 합니다. (콜론) 드라이브 문자를 포함 하는 유효한 볼륨 탑재 지점 또는 볼륨 이름입니다.|
 |/d|모든 복원 **chkntfs** 기본 카운트다운 검사의 시간을 자동으로 파일을 제외 하 고 설정 합니다. 모든 볼륨은 컴퓨터를 시작할 때 기본적으로 검사 하 고 **chkdsk** 커밋되지 않은에서 실행 됩니다.|
-|/t [: \<Time >]|Autochk.exe 시작 카운트다운 시간 (초)에 지정 된 시간을 변경 합니다. 한 번 입력 하지 않으면 **/t** 현재 카운트 다운 시간을 표시 합니다.|
-|/x \<Volume > [...]|볼륨은 필요한 것으로 표시 하는 경우에 컴퓨터를 시작할 때 검사에서 제외할 볼륨을 하나 이상 지정 **chkdsk**합니다.|
-|/c \<Volume > [...]|컴퓨터가 시작 되 고 실행 하는 경우 검사할 볼륨을 하나 이상 예약 **chkdsk** 에 커밋되지 않은 데이터입니다.|
+|/t [:\<Time >]|Autochk.exe 시작 카운트다운 시간 (초)에 지정 된 시간을 변경 합니다. 한 번 입력 하지 않으면 **/t** 현재 카운트 다운 시간을 표시 합니다.|
+|/x \<볼륨 > [...]|볼륨은 필요한 것으로 표시 하는 경우에 컴퓨터를 시작할 때 검사에서 제외할 볼륨을 하나 이상 지정 **chkdsk**합니다.|
+|/c \<볼륨 > [...]|컴퓨터가 시작 되 고 실행 하는 경우 검사할 볼륨을 하나 이상 예약 **chkdsk** 에 커밋되지 않은 데이터입니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
-## <a name="BKMK_examples"></a>예와
+## <a name="examples"></a><a name=BKMK_examples></a>예와
 
 C 드라이브에 대 한 파일 시스템의 종류를 표시 하려면 다음을 입력 합니다.
 ```
@@ -95,6 +89,6 @@ chkntfs /x c: d: e:
 chkntfs /c d:
 ```
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
-[명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

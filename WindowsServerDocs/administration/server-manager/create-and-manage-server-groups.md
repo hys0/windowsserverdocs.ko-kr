@@ -1,24 +1,20 @@
 ---
 title: 서버 그룹 만들기 및 관리
 description: 서버 관리자
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-server-manager
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9d5b1be8-49fd-4ff7-9580-e4ff21fe4b17
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 74075f091cd707f6faf73567c1dce6f22a2f6753
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 2f4ad512c55bcd1391ad55bdbdeb9a2ba3bfd7f0
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71383223"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80851546"
 ---
 # <a name="create-and-manage-server-groups"></a>서버 그룹 만들기 및 관리
 
@@ -26,7 +22,7 @@ ms.locfileid: "71383223"
 
 이 항목에서는 Windows 서버에서 서버 관리자의 사용자 지정, 사용자 정의 서버 그룹을 만드는 방법에 설명 합니다.
 
-## <a name="BKMK_groups"></a>서버 그룹
+## <a name="server-groups"></a><a name=BKMK_groups></a>서버 그룹
 서버 풀에 추가 하는 서버에 표시 되는 **모든 서버** 서버 관리자의 페이지입니다. 추가한 서버의 사용자 지정 그룹을 만들 수 있습니다. 서버 그룹을 사용 하면 보고를 논리 단위로 서버 풀의 작은 하위 집합을 관리 하려면 예를 들어 라는 그룹을 만들 수 있습니다 **Accounting Servers** 조직에서 모든 서버에 대 한의 회계 부서 또는 그룹 이라는 **시카고** 시카고에 위치한 모든 서버에 대 한 합니다. 서버 그룹을 만든 후 그룹의 서버 관리자의 홈 페이지 이벤트, 서비스, 성능 카운터, 모범 사례 분석기 결과 대 한 정보를 표시 하 고 전체적으로 역할 및 그룹에 대 한 기능을 설치 합니다.
 
 서버는 둘 이상의 그룹에 속할 수 있습니다.
@@ -71,7 +67,7 @@ ms.locfileid: "71383223"
 
 3.  그룹 변경을 마쳤으면 **확인**을 클릭합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 [서버 관리자
 에 서버 추가](add-servers-to-server-manager.md) [서버 관리자](server-manager.md)
 
