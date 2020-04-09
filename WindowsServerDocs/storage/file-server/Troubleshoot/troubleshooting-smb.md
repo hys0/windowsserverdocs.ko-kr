@@ -3,16 +3,15 @@ title: SMB (서버 메시지 블록) 고급 문제 해결
 description: 에서는 고급 SMB (서버 메시지 블록) 문제 해결 방법을 소개 합니다.
 author: Deland-Han
 manager: dcscontentpm
-audience: ITPro
 ms.topic: article
 ms.author: delhan
 ms.date: 12/25/2019
-ms.openlocfilehash: 433221f9846e9e071557b5537974b5739131742b
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 654cb1b0eea65457d521d201739721ed8c3c0203
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75949691"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80815196"
 ---
 # <a name="advanced-troubleshooting-server-message-block-smb"></a>SMB (서버 메시지 블록) 고급 문제 해결
 
@@ -100,7 +99,7 @@ TCP/IP가 이러한 문제를 경험 하는지 확인 합니다.
 
 4. TCP 수신 기간이 감소 합니다. 이는 속도가 낮은 저장소 또는 다른 문제로 인해 AFD (보조 함수 드라이버) Winsock 버퍼에서 데이터가 검색 되지 않는 경우에 발생할 수 있습니다.
 
-뚜렷한 TCP/IP 문제가 없으면 SMB 오류를 확인 하십시오. 이렇게 하려면 다음 단계를 따르세요.
+뚜렷한 TCP/IP 문제가 없으면 SMB 오류를 확인 하십시오. 이렇게 하려면 다음 단계를 수행합니다.
 
 1. SMB2 프로토콜 사양에 대해 항상 SMB 오류를 확인 합니다. 많은 SMB 오류는 심각 하지 않습니다 (유해 하지 않음). 다음 정보를 참조 하면 오류가 다음 문제와 관련 된 것으로 결론을 만들기 전에 SMB에서 오류를 반환한 이유를 확인할 수 있습니다.
 
@@ -129,7 +128,7 @@ TCP/IP가 이러한 문제를 경험 하는지 확인 합니다.
 
 - SMB 명령을 검사 하 여 응용 프로그램에서 수행 하려는 작업에 대해 많은 정보를 확인할 수 있습니다.
 
-명령 및 작업을 프로토콜 사양과 비교 하 여 모든 것이 제대로 작동 하는지 확인 합니다. 그렇지 않은 경우에는 더 가까운 또는 더 낮은 수준에서 데이터를 수집 하 여 근본 원인에 대 한 자세한 정보를 확인 합니다. 이렇게 하려면 다음 단계를 따르세요.
+명령 및 작업을 프로토콜 사양과 비교 하 여 모든 것이 제대로 작동 하는지 확인 합니다. 그렇지 않은 경우에는 더 가까운 또는 더 낮은 수준에서 데이터를 수집 하 여 근본 원인에 대 한 자세한 정보를 확인 합니다. 이렇게 하려면 다음 단계를 수행합니다.
 
 1. 표준 패킷 캡처를 수집 합니다.
 
@@ -137,7 +136,7 @@ TCP/IP가 이러한 문제를 경험 하는지 확인 합니다.
 
 3. 다른 모든 옵션에 오류가 발생 하는 경우 SMB 자체 내에서 문제가 발생 하는 것으로 의심 되는 경우 또는 다른 데이터에서 근본 원인을 식별 하기에 충분 하지 않은 경우에는 t. cmd를 수집 합니다.
 
-예를 들어 다음과 같은 가치를 제공해야 합니다.
+예를 들면 다음과 같습니다.
 
 - 단일 파일 서버로 파일을 전송 하는 속도가 느립니다.
 
@@ -200,6 +199,6 @@ SMB 문제를 해결 하기 전에 다음 구성 요소를 업데이트 하는 �
 
 - 성능 및 안정성 향상을 위해 Windows Core를 업데이트 합니다.
 
-## <a name="reference"></a>참고자료
+## <a name="reference"></a>참조
 
 [Microsoft SMB 프로토콜 패킷 교환 시나리오](https://docs.microsoft.com/windows/win32/fileio/microsoft-smb-protocol-packet-exchange-scenario)

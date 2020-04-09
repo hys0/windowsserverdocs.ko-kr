@@ -3,16 +3,15 @@ title: 이벤트 ID 50 오류 메시지 문제 해결
 description: 이벤트 ID 50 오류 메시지 문제를 해결 하는 방법을 설명 합니다.
 author: Deland-Han
 manager: dcscontentpm
-audience: ITPro
 ms.topic: article
 ms.author: delhan
 ms.date: 12/25/2019
-ms.openlocfilehash: 202e0604fc492ff72cd1794bc8197a12c1ab9163
-ms.sourcegitcommit: 8cf04db0bc44fd98f4321dca334e38c6573fae6c
+ms.openlocfilehash: 7ce3551b60450a3720c9350b5c55f396368490c1
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75654384"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80815236"
 ---
 # <a name="troubleshoot-the-event-id-50-error-message"></a>이벤트 ID 50 오류 메시지 문제 해결
 
@@ -48,7 +47,7 @@ Please try to save this file elsewhere.
 > [!NOTE] 
 > 설명의 장치와 경로 및 특정 16 진수 데이터는 다를 수 있습니다. 
 
-##  <a name="more-information"></a>자세한 정보
+##  <a name="more-information"></a>자세한 내용
 
 Windows에서 디스크에 정보를 쓰려고 할 때 일반 오류가 발생 하는 경우 이벤트 ID 50 메시지가 기록 됩니다. 이 오류는 Windows가 파일 시스템 캐시 관리자 (하드웨어 수준 캐시 아님)에서 실제 디스크로 데이터를 커밋하려고 할 때 발생 합니다. 이 동작은 Windows의 메모리 관리에 포함 됩니다. 예를 들어 프로그램에서 쓰기 요청을 보내는 경우 쓰기 요청이 캐시 관리자에 의해 캐시 되 고 프로그램에 쓰기가 성공적으로 완료 되었음을 지시 하는 것입니다. 나중에 캐시 관리자는 실제 디스크에 데이터를 지연 쓰려고 시도 합니다. Cache Manager에서 데이터를 디스크에 커밋하 려는 경우 데이터를 쓰는 동안 오류가 발생 하 고 데이터가 캐시에서 플러시되고 삭제 됩니다. 쓰기 후 캐싱은 시스템 성능을 향상 시키지만, 데이터 손실 및 볼륨 무결성 손실은 지연 된 쓰기 실패의 결과로 발생할 수 있습니다.
 
@@ -73,17 +72,17 @@ Windows에서 디스크에 정보를 쓰려고 할 때 일반 오류가 발생 �
 |0x04|2|문자열 수 = 0x0002|
 |0x06|2|문자열에 대 한 오프셋|
 |0x08|2|이벤트 범주|
-|0x0c|추가를 클릭합니다.|NTSTATUS 오류 코드 = 0x80040032 = IO_LOST_DELAYED_WRITE|
+|0x0c|4|NTSTATUS 오류 코드 = 0x80040032 = IO_LOST_DELAYED_WRITE|
 |0x10|8|사용되지 않음|
 |0x18|8|사용되지 않음|
 |0x20|8|사용되지 않음|
-|0x28|추가를 클릭합니다.|NT 상태 오류 코드|
+|0x28|4|NT 상태 오류 코드|
 
 #### <a name="key-sections-to-decode"></a>디코딩할 키 섹션
 
 **오류 코드**
 
-"요약" 섹션의 예제에서 오류 코드는 두 번째 줄에 나열 됩니다. 이 줄은 "0008:"로 시작 하 고 마지막 4 바이트 (이 경우 0008:00 00 00 00 32 00 04 80)를 포함 합니다 .이 경우 오류 코드는 0x80040032입니다. 다음 코드는 오류 50에 대 한 코드 이며 모든 이벤트 ID 50 메시지에 대해 동일 합니다. IO_LOST_DELAYED_WRITEWARNINGNote 이벤트 ID 메시지의 16 진수 데이터를 상태 코드로 변환 하는 경우 값이에 표시 됩니다. 작은 endian 형식입니다.
+"요약" 섹션의 예제에서 오류 코드는 두 번째 줄에 나열 됩니다. 이 줄은 "0008:"로 시작 하 고 마지막 4 바이트 (이 경우 0008:00 00 00 00 32 00 04 80)를 포함 합니다 .이 경우 오류 코드는 0x80040032입니다. 다음 코드는 오류 50에 대 한 코드 이며 모든 이벤트 ID 50 메시지에 대해 동일 합니다. IO_LOST_DELAYED_WRITEWARNINGNote 이벤트 ID 메시지의 16 진수 데이터를 상태 코드로 변환 하는 경우 값은 작은 endian 형식으로 표현 됩니다.
 
 **대상 디스크**
 

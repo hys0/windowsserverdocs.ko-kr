@@ -1,7 +1,6 @@
 ---
 ms.assetid: ac6604b0-7459-4ff3-af1c-4936897f5d14
 title: 기본 컨테이너 및 OU의 관리 위임
-description: ''
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 15c6688e32a7ebefbb2dd0fa1e53a4d72baef267
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: a8523ee738b991714a9c8673b6faaff7d9003987
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71408931"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80822656"
 ---
 # <a name="delegating-administration-of-default-containers-and-ous"></a>기본 컨테이너 및 OU의 관리 위임
 
@@ -52,7 +51,7 @@ Windows Server 2003에서 Windows Server 2008로 전체 도메인 업그레이�
   
 |잘 알려진 사용자 및 그룹|기본 제공 계정|  
 |--------------------------------|----------------------|  
-|Cert Publishers<br /><br />도메인 컨트롤러 하나 이상<br /><br />Group Policy Creator Owners<br /><br />KRBTGT<br /><br />도메인 게스트<br /><br />관리자<br /><br />Domain Admins<br /><br />스키마 관리자 (포리스트 루트 도메인에만 해당)<br /><br />Enterprise Admins (포리스트 루트 도메인에만 해당)<br /><br />도메인 사용자|관리자<br /><br />게스트<br /><br />Guests<br /><br />Account Operators<br /><br />Administrators<br /><br />Backup Operators<br /><br />들어오는 포리스트 트러스트 빌더<br /><br />Print Operators<br /><br />Windows 2000 이전 버전과 호환 되는 액세스<br /><br />Server Operators<br /><br />사용자|  
+|Cert Publishers<p>도메인 컨트롤러<p>Group Policy Creator Owners<p>KRBTGT<p>도메인 게스트<p>관리자<p>Domain Admins<p>스키마 관리자 (포리스트 루트 도메인에만 해당)<p>Enterprise Admins (포리스트 루트 도메인에만 해당)<p>도메인 사용자|관리자<p>게스트<p>게스트<p>Account Operators<p>Administrators<p>Backup Operators<p>들어오는 포리스트 트러스트 빌더<p>Print Operators<p>Windows 2000 이전 버전과 호환 되는 액세스<p>Server Operators<p>Users|  
   
 ## <a name="domain-controller-ou"></a>도메인 컨트롤러 OU  
 도메인 컨트롤러를 도메인에 추가 하면 해당 컴퓨터 개체가 도메인 컨트롤러 OU에 자동으로 추가 됩니다. 이 OU에는 기본 정책 집합이 적용 됩니다. 이러한 정책이 모든 도메인 컨트롤러에 균일 하 게 적용 되도록 하려면 도메인 컨트롤러의 컴퓨터 개체를이 OU 외부로 이동 하지 않는 것이 좋습니다. 기본 정책을 적용 하지 않으면 도메인 컨트롤러가 제대로 작동 하지 않을 수 있습니다.  

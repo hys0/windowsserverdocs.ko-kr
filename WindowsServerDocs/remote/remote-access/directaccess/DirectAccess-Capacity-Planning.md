@@ -2,22 +2,18 @@
 title: DirectAccess 용량 계획
 description: Windows server 2012 DirectAccess 서버 성능에 대 한 보고서에이 항목을 사용 하 여 Windows Server 2016의 DirectAccess 용량 계획을 지원할 수 있습니다.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-da
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 456e5971-3aa7-4a24-bc5d-0c21fec7687e
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: e63b4c4f266d286b766c89b61676493328aa8652
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 413dc88ce9ec551a318b63f3df44ed256f289219
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80310979"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80815796"
 ---
 # <a name="directaccess-capacity-planning"></a>DirectAccess 용량 계획
 
@@ -37,7 +33,7 @@ ms.locfileid: "80310979"
 ||||  
 |-|-|-|  
 |구성-하드웨어|저사양 하드웨어(4GB Ram, 4코어)|고사양 하드웨어(8GB, 8코어)|  
-|이중 터널<br /><br />-PKI<br /><br />-DNS64/NAT64 포함|50% CPU에서 750대 동시 연결, Corpnet NIC 처리량 75Mbps에서 50% 메모리 도전적 목표는 50% CPU에서 1000명의 사용자 지원|50% CPU에서 1,500대 동시 연결, Corpnet NIC 처리량 150Mbps에서 50% 메모리|  
+|이중 터널<p>-PKI<p>-DNS64/NAT64 포함|50% CPU에서 750대 동시 연결, Corpnet NIC 처리량 75Mbps에서 50% 메모리 도전적 목표는 50% CPU에서 1000명의 사용자 지원|50% CPU에서 1,500대 동시 연결, Corpnet NIC 처리량 150Mbps에서 50% 메모리|  
 ## <a name="test-environment"></a>테스트 환경
 
 **성능 도구 토폴로지**  

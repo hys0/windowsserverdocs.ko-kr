@@ -1,6 +1,5 @@
 ---
 title: AD 포리스트 복구-SYSVOL의 신뢰할 수 있는 동기화
-description: ''
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
@@ -9,12 +8,12 @@ ms.topic: article
 ms.prod: windows-server
 ms.assetid: 38a1c543-c76d-4b8e-a06b-53742aaa172f
 ms.technology: identity-adds
-ms.openlocfilehash: 051e3fdb1c801ab6f19b276b66599ea555026845
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 4c797c98fc8d41621954077ebf470f1f52604cf7
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71369377"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80824306"
 ---
 # <a name="ad-forest-recovery---performing-an-authoritative-synchronization-of-dfsr-replicated-sysvol"></a>AD 포리스트 복구-DFSR 복제 SYSVOL의 신뢰할 수 있는 동기화 수행  
 
@@ -29,19 +28,19 @@ SYSVOL의 정식 복원을 수행 하는 방법에는 여러 가지가 있습니
 1. Active Directory 사용자 및 컴퓨터를 엽니다.  
 2. **보기**를 클릭 하 고 **사용자, 연락처, 그룹 및 컴퓨터를 컨테이너** 및 **고급 기능**으로 선택 합니다. 
 
-   ![컴퓨터가](media/AD-Forest-Recovery-Authoritative-Recovery-SYSVOL/sysvol1.png) 
+   ![SYSVOL](media/AD-Forest-Recovery-Authoritative-Recovery-SYSVOL/sysvol1.png) 
 
 3. 트리 뷰에서 **도메인 컨트롤러**, 복원한 DC 이름, **DFSR-LocalSettings**, **도메인 시스템 볼륨**을 차례로 클릭 합니다. 
 
-   ![컴퓨터가](media/AD-Forest-Recovery-Authoritative-Recovery-SYSVOL/sysvol2.png)  
+   ![SYSVOL](media/AD-Forest-Recovery-Authoritative-Recovery-SYSVOL/sysvol2.png)  
 
 4. 세부 정보 창에서 **SYSVOL 구독**을 마우스 오른쪽 단추로 클릭 하 고 **속성**을 클릭 한 다음 **특성 편집기**를 클릭 합니다.  
 
-   ![컴퓨터가](media/AD-Forest-Recovery-Authoritative-Recovery-SYSVOL/sysvol3.png) 
+   ![SYSVOL](media/AD-Forest-Recovery-Authoritative-Recovery-SYSVOL/sysvol3.png) 
 
 5. **Msdfsr-옵션**을 클릭 하 고 **편집**을 클릭 한 다음 **1**을 입력 하 고 **확인** 을 클릭 합니다.  
 
-   ![컴퓨터가](media/AD-Forest-Recovery-Authoritative-Recovery-SYSVOL/sysvol4.png) 
+   ![SYSVOL](media/AD-Forest-Recovery-Authoritative-Recovery-SYSVOL/sysvol4.png) 
 
 6. **확인** 을 클릭 하 여 특성 편집기를 닫습니다.  
   

@@ -1,6 +1,5 @@
 ---
 title: AD 포리스트 복구-Windows Server 2003 복구
-description: ''
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,12 +8,12 @@ ms.topic: article
 ms.prod: windows-server
 ms.assetid: 5a291f65-794e-4fc3-996e-094c5845a383
 ms.technology: identity-adds
-ms.openlocfilehash: 43a2034cb707d4333abdce5f5b2b09d6c4b5a33a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 05fece3093d36073358d0d1822559c5b030085d7
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71390064"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80823346"
 ---
 # <a name="ad-forest-recovery---windows-server-2003-recovery"></a>AD 포리스트 복구-Windows Server 2003 복구
 
@@ -63,7 +62,7 @@ ms.locfileid: "71390064"
 5. 명령 프롬프트에서 **ntbackup**을 입력 한 다음 enter 키를 누릅니다.  
 6. **시작** 페이지에서 **고급 모드**를 클릭 한 다음 **미디어 복원 및 관리** 탭을 선택 합니다 ( **복원 마법사**를 선택 하지 않음).  
 7. 복원할 적절 한 백업 파일을 선택 하 고 **시스템 디스크** 및 **시스템 상태** 확인란이 선택 되었는지 확인 합니다.  
-8. **복원 시작**을 클릭합니다.  
+8. **복원 시작**을 클릭 합니다.  
 9. 복원 작업이 완료 되 면 컴퓨터를 다시 시작 합니다.  
   
 다음 절차를 사용 하 여 Windows Server 2003를 실행 하는 DC에서 SYSVOL의 신뢰할 수 있는 (기본이 라고도 함) 복원을 수행할 수 있습니다. 도메인에 복원 된 첫 번째 Windows Server 2003 DC 에서만이 절차를 수행 합니다.  
@@ -100,7 +99,7 @@ ms.locfileid: "71390064"
 
 5. **시작**을 클릭 하 고 **모든 프로그램**, **관리 도구**를 차례로 가리킨 다음 **DNS**를 클릭 합니다.  
 6. 중요 한 오작동 전에 DNS 서버에 호스트 된 동일한 DNS 도메인 이름에 대 한 DNS 영역을 만듭니다. 자세한 내용은 전방 조회 영역 추가 ([https://go.microsoft.com/fwlink/?LinkId=74574](https://go.microsoft.com/fwlink/?LinkId=74574))를 참조 하세요.  
-7. 중요 한 오작동 이전의 DNS 데이터를 구성 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
+7. 중요 한 오작동 이전의 DNS 데이터를 구성 합니다. 예를 들면 다음과 같습니다.  
 
    - AD DS에 저장할 DNS 영역을 구성 합니다. 자세한 내용은 영역 유형 변경 ([https://go.microsoft.com/fwlink/?LinkId=74579](https://go.microsoft.com/fwlink/?LinkId=74579))을 참조 하세요.  
    - 도메인 컨트롤러 로케이터 (DC 로케이터) 리소스 레코드에 대 한 권한이 있는 DNS 영역을 구성 하 여 보안 동적 업데이트를 허용 합니다. 자세한 내용은 보안 동적 업데이트만 허용 ([https://go.microsoft.com/fwlink/?LinkId=74580](https://go.microsoft.com/fwlink/?LinkId=74580))을 참조 하세요.  

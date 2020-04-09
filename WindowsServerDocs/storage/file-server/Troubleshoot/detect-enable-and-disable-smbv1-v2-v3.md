@@ -3,16 +3,15 @@ title: Windows에서 SMBv1, SMBv2 및 SMBv3를 검색, 활성화 및 비활성�
 description: Windows 클라이언트 및 서버 환경에서 서버 메시지 블록 프로토콜 (SMBv1, SMBv2 및 SMBv3)을 사용 하거나 사용 하지 않도록 설정 하는 방법을 설명 합니다.
 author: Deland-Han
 manager: dcscontentpm
-audience: ITPro
 ms.topic: article
 ms.author: delhan
 ms.date: 12/25/2019
-ms.openlocfilehash: 9da4d6f2b5616dc6f8aec3fefb1ae7141ed88b0b
-ms.sourcegitcommit: 8cf04db0bc44fd98f4321dca334e38c6573fae6c
+ms.openlocfilehash: d6c47843dedaf45842f70d1bb408b59d63c03eb4
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75654394"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80815506"
 ---
 # <a name="how-to-detect-enable-and-disable-smbv1-smbv2-and-smbv3-in-windows"></a>Windows에서 SMBv1, SMBv2 및 SMBv3를 검색, 활성화 및 비활성화 하는 방법
 
@@ -46,7 +45,7 @@ Windows 8, Windows 8.1, Windows 10, Windows Server 2012 및 Windows Server 2016�
 - 디렉터리 임대-캐싱을 통해 지점의 응용 프로그램 응답 시간을 향상 시킵니다.    
 - 성능 최적화-작은 임의 읽기/쓰기 i/o에 대 한 최적화
 
-##  <a name="more-information"></a>자세한 정보
+##  <a name="more-information"></a>자세한 내용
 
 SMBv2 프로토콜은 Windows Vista 및 Windows Server 2008에서 도입 되었습니다.
 
@@ -54,7 +53,7 @@ SMBv3 프로토콜은 Windows 8 및 Windows Server 2012에서 도입 되었습�
 
 SMBv2 및 SMBv3 기능에 대 한 자세한 내용은 다음 문서를 참조 하세요.
 
-[서버 메시지 블록 개요](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831795(v=ws.11))
+[Server Message Block 개요](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831795(v=ws.11))
 
 [SMB의 새로운 기능](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff625695(v=ws.10))  
 
@@ -76,7 +75,7 @@ SMBv2 및 SMBv3 기능에 대 한 자세한 내용은 다음 문서를 참조 �
   Disable-WindowsOptionalFeature -Online -FeatureName smb1protocol
   ```
 
-- [도메인에 조인된 컴퓨터를 디바이스로 등록]을 
+- 활성화 
 
   ```PowerShell
   Enable-WindowsOptionalFeature -Online -FeatureName smb1protocol
@@ -96,7 +95,7 @@ SMBv2 및 SMBv3 기능에 대 한 자세한 내용은 다음 문서를 참조 �
   Set-SmbServerConfiguration -EnableSMB2Protocol $false
   ```
 
-- [도메인에 조인된 컴퓨터를 디바이스로 등록]을
+- 활성화
 
   ```PowerShell
   Set-SmbServerConfiguration -EnableSMB2Protocol $true 
@@ -124,7 +123,7 @@ SMBv2 및 SMBv3 기능에 대 한 자세한 내용은 다음 문서를 참조 �
   Disable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol
   ```
 
-- [도메인에 조인된 컴퓨터를 디바이스로 등록]을 
+- 활성화 
 
   ```PowerShell
   Enable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol
@@ -144,7 +143,7 @@ SMBv2 및 SMBv3 기능에 대 한 자세한 내용은 다음 문서를 참조 �
   Set-SmbServerConfiguration –EnableSMB2Protocol $false
   ```
 
-- [도메인에 조인된 컴퓨터를 디바이스로 등록]을
+- 활성화
 
   ```PowerShell
   Set-SmbServerConfiguration –EnableSMB2Protocol $true
@@ -179,7 +178,7 @@ Windows 8 및 Windows Server 2012에는 새로운 **SMBServerConfiguration** win
   Set-SmbServerConfiguration -EnableSMB1Protocol $false
   ```
 
-- [도메인에 조인된 컴퓨터를 디바이스로 등록]을 
+- 활성화 
   ```PowerShell
   Set-SmbServerConfiguration -EnableSMB1Protocol $true
   ```
@@ -199,7 +198,7 @@ Windows 8 및 Windows Server 2012에는 새로운 **SMBServerConfiguration** win
   Set-SmbServerConfiguration -EnableSMB2Protocol $false
   ```
 
-- [도메인에 조인된 컴퓨터를 디바이스로 등록]을
+- 활성화
   
   ```PowerShell
   Set-SmbServerConfiguration -EnableSMB2Protocol $true
@@ -230,7 +229,7 @@ Get-Item HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters | ForEa
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" SMB1 -Type DWORD -Value 0 –Force
 ```
 
-[도메인에 조인된 컴퓨터를 디바이스로 등록]을  
+활성화  
 
 ```PowerShell
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" SMB1 -Type DWORD -Value 1 –Force
@@ -251,7 +250,7 @@ Get-ItemProperty HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" SMB2 -Type DWORD -Value 0 –Force  
 ```
 
-[도메인에 조인된 컴퓨터를 디바이스로 등록]을
+활성화
 
 ```PowerShell
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" SMB2 -Type DWORD -Value 1 –Force 
@@ -263,7 +262,7 @@ Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Par
 #### <a name="registry-editor"></a>레지스트리 편집기
 
 > [!IMPORTANT]
-> 이 섹션의 단계를 신중하게 따릅니다. 레지스트리를 잘못 수정할 경우 심각한 문제가 발생할 수 있습니다. 수정하기 전에, 문제가 발생할 경우를 대비하여 [복원을 위해 레지스트리를 백업](https://support.microsoft.com/help/322756)해 두세요.
+> 이 섹션의 단계를 신중하게 따릅니다. 레지스트리를 잘못 수정하면 심각한 문제가 발생할 수 있습니다. 수정하기 전에, 문제가 발생할 경우를 대비하여 [복원을 위해 레지스트리를 백업](https://support.microsoft.com/help/322756)해 두세요.
  
 SMB 서버에서 SMBv1를 사용 하거나 사용 하지 않도록 설정 하려면 다음 레지스트리 키를 구성 합니다.
 
@@ -312,7 +311,7 @@ Default: 1 = Enabled (No registry key is created)
   sc.exe config mrxsmb10 start= disabled
   ```
 
-- [도메인에 조인된 컴퓨터를 디바이스로 등록]을
+- 활성화
 
   ```cmd
   sc.exe config lanmanworkstation depend= bowser/mrxsmb10/mrxsmb20/nsi
@@ -335,7 +334,7 @@ Default: 1 = Enabled (No registry key is created)
   sc.exe config mrxsmb20 start= disabled 
   ```
 
-- [도메인에 조인된 컴퓨터를 디바이스로 등록]을
+- 활성화
 
   ```cmd
   sc.exe config lanmanworkstation depend= bowser/mrxsmb10/mrxsmb20/nsi

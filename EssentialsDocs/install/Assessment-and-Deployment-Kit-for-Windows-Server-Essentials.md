@@ -1,29 +1,25 @@
 ---
 title: Windows Server Essentials 평가 및 배포 키트
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ef3a7934-e36f-40d8-9e0b-7ed59089f85e
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 88e268f1bdb01488667e4b88878552561fe7c762
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: daa8f75671c4dc663cca12dd0618a593c2010103
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80310122"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80817446"
 ---
 # <a name="assessment-and-deployment-kit-for-windows-server-essentials"></a>Windows Server Essentials 평가 및 배포 키트
 
 >적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-Windows Server® 2012 Essentials ADK (평가 및 배포 키트)는 새 컴퓨터에서 Windows Server Essentials를 사용자 지정, 평가 및 배포 하는 데 사용할 수 있는 도구, 이진 파일 및 운영 체제 언어 팩 모음입니다. 이 문서는 고객을 위해 운영 체제를 미리 설치하려는 파트너를 위한 정보와 다음 주제를 포함합니다.  
+Windows Server&reg; 2012 Essentials ADK (평가 및 배포 키트)는 새 컴퓨터에서 Windows Server Essentials를 사용자 지정, 평가 및 배포 하는 데 사용할 수 있는 도구, 이진 파일 및 운영 체제 언어 팩 모음입니다. 이 문서는 고객을 위해 운영 체제를 미리 설치하려는 파트너를 위한 정보와 다음 주제를 포함합니다.  
   
 
 -   [Windows Server Essentials ADK 시작](Getting-Started-with-the-Windows-Server-Essentials-ADK.md)  
@@ -152,4 +148,4 @@ Windows Server® 2012 Essentials ADK (평가 및 배포 키트)는 새 컴퓨터
   
  Active Directory, Microsoft, Windows Live, Windows PowerShell, Windows 및 Windows Server는 Microsoft 그룹의 상표입니다. 기타 모든 상표는 해당 소유자의 자산입니다.  
   
- © 2012 Microsoft. All rights reserved.
+ &copy; 2012 Microsoft. All rights reserved.

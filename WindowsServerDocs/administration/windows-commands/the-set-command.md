@@ -1,30 +1,27 @@
 ---
-title: Set 명령
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+title: 집합
+description: 집합에 대 한 Windows 명령 항목 Windows 배포 서비스 서버, 사전 준비 된 컴퓨터, 이미지, 이미지 그룹 및 전송 서버에 대 한 속성 및 특성을 설정 합니다.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5def6be0-83b9-4133-bc1b-bbe6d407eca7
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8131685b227444a0114e9c0eb70d6191a78f3da0
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 2e47a90137a94d4ada149135ee0b593e0ade0ae3
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71385080"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80833056"
 ---
-# <a name="the-set-command"></a>Set 명령
+# <a name="set"></a>집합
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Windows 배포 서비스 서버, 사전 준비 된 컴퓨터, 이미지, 이미지 그룹 및 전송 서버에 대 한 속성 및 특성을 설정 합니다.
+
 ## <a name="subcommands"></a>하위 명령
 |하위 명령|설명|
 |-------|--------|

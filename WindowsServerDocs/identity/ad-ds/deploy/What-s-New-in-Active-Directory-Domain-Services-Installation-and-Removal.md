@@ -1,7 +1,6 @@
 ---
 ms.assetid: ba7f2b9f-7351-4680-b7d8-a5f270614f1c
-title: Active Directory Domain Services 설치 및 제거의 새로운 기능
-description: ''
+title: Active Directory 도메인 서비스 설치 및 제거의 새로운 기능
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
@@ -9,14 +8,14 @@ ms.date: 08/09/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 1f24615491391d932609d7f80549985818ced8c1
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: b290b11487ce84b0c7cd962b272f52fea538769a
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79323205"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80824946"
 ---
-# <a name="whats-new-in-active-directory-domain-services-installation-and-removal"></a>Active Directory Domain Services 설치 및 제거의 새로운 기능
+# <a name="whats-new-in-active-directory-domain-services-installation-and-removal"></a>Active Directory 도메인 서비스 설치 및 제거의 새로운 기능
 
 >적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -36,16 +35,16 @@ AD DS 설치에는 다음 기능이 포함됩니다.
 - **그래픽 설치 중 지정된 모든 옵션이 포함되어 있는 Windows PowerShell 스크립트를 내보낼 수 있습니다.** 같은 작업을 자동화하는 데 사용할 수 있도록 설치 또는 제거 프로세스의 마지막에 Windows PowerShell 스크립트로 설정을 내보낼 수 있습니다.  
 - **다시 부팅하기 전에 중요한 복제만 발생합니다.** 다시 부팅하기 전에 중요하지 않은 데이터의 복제를 허용하려면 새 스위치를 사용합니다. 자세한 내용은 [ADDSDeployment cmdlet 인수](../../ad-ds/deploy/Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_Params)를 참조하십시오.  
 
-## <a name="BKMK_ADConfigurationWizard"></a>Active Directory Domain Services 구성 마법사
+## <a name="the-active-directory-domain-services-configuration-wizard"></a><a name="BKMK_ADConfigurationWizard"></a>Active Directory Domain Services 구성 마법사
 
-Windows Server 2012 부터는 Active Directory 도메인 서비스 구성 마법사는 도메인 컨트롤러를 설치할 때 설정을 지정 하는 사용자 인터페이스 (UI) 옵션으로는 레거시 Active Directory 도메인 서비스 설치 마법사를 대체 합니다. Active Directory Domain Services 구성 마법사는 역할 추가 마법사가 완료되면 시작됩니다.  
+Windows Server 2012 부터는 Active Directory 도메인 서비스 구성 마법사는 도메인 컨트롤러를 설치할 때 설정을 지정 하는 사용자 인터페이스 (UI) 옵션으로는 레거시 Active Directory 도메인 서비스 설치 마법사를 대체 합니다. Active Directory 도메인 서비스 구성 마법사는 역할 추가 마법사가 완료되면 시작됩니다.  
 
 > [!WARNING]  
 > 레거시 Active Directory Domain Services 설치 마법사 (dcpromo.exe)는 Windows Server 2012부터 더 이상 사용 되지 않습니다.  
 
 [#40; 및 Active Directory 도메인 서비스 설치 수준 100 & #41;](../../ad-ds/deploy/Install-Active-Directory-Domain-Services--Level-100-.md), UI 프로시저 AD DS 서버를 설치 하려면 역할 추가 마법사를 시작 하는 방법을 보여 줍니다 역할 이진 파일 및 다음 도메인 컨트롤러 설치를 완료 하는 Active Directory 도메인 서비스 구성 마법사를 실행 합니다. Windows PowerShell 예제에는 AD DS 배포 cmdlet을 사용하여 두 단계를 모두 완료하는 방법을 보여 줍니다.  
   
-## <a name="BKMK_NewAdprep"></a>Adprep.exe 통합
+## <a name="adprepexe-integration"></a><a name="BKMK_NewAdprep"></a>Adprep.exe 통합
 
 Windows Server 2012 부터는 Adprep.exe 버전이 하나 뿐입니다 (32 비트 버전인 adprep32.exe는 없음). Adprep 명령은 Windows Server 2012를 실행 하는 도메인 컨트롤러를 기존 Active Directory 도메인 또는 포리스트에 설치할 때 필요에 따라 자동으로 실행 됩니다.  
   
@@ -80,7 +79,7 @@ Adprep was unable to check the specified user's group membership. This could hap
 
 /user 및 /userdomain 매개 변수를 지정하지 않고 Adprep.exe를 실행하고, 작업 마스터에서 Windows Server 2003을 실행하는 경우 Adprep.exe는 현재 로그온 사용자의 도메인에 있는 도메인 컨트롤러를 연결합니다. 현재 로그온 사용자가 도메인 계정이 아닌 경우 Adprep.exe에서 그룹 구성원 확인을 수행할 수 없습니다. 스마트 카드 자격 증명이 사용된 경우에도 /user 및 /userdomain을 모두 지정했더라도 Adprep.exe에서 그룹 구성원 확인을 수행할 수 없습니다.  
   
-Adprep에서 작업을 성공적으로 완료하면 더 이상 작업이 필요하지 않습니다. 액세스 오류로 인해 Adprep을 실행하는 동안 오류가 발생하면 올바른 구성원으로 계정을 제공하십시오. 자세한 내용은 참조 [자격 증명 Adprep.exe를 실행 하 고 Active Directory 도메인 서비스를 설치 요구 사항](../../ad-ds/deploy/Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_Creds)합니다.  
+Adprep에서 작업을 성공적으로 완료하면 더 이상 작업이 필요하지 않습니다. 액세스 오류로 인해 Adprep을 실행하는 동안 오류가 발생하면 올바른 구성원으로 계정을 제공하십시오. 자세한 내용은 [Adprep.exe를 실행하고 Active Directory Domain Services를 설치하는 데 필요한 자격 증명 요구 사항](../../ad-ds/deploy/Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_Creds)을 참조하십시오.  
   
 ### <a name="syntax-for-adprep-in-windows-server-2012"></a>Windows Server 2012의 Adprep에 대한 구문
 
@@ -104,7 +103,7 @@ adprep /domainprep /gpprep 명령은 AD DS 설치 과정에서 실행되지 않�
 
 Adprep/domainprep/gpprep을 실행 하지 않고 Windows Server 2012를 실행 하는 도메인 컨트롤러를 기존 도메인에 안전 하 게 추가할 수 있지만 RSOP 계획 모드가 제대로 작동 하지 않습니다.  
 
-## <a name="BKMK_PrereqCheck"></a>설치 필수 구성 요소 유효성 검사 AD DS
+## <a name="ad-ds-installation-prerequisite-validation"></a><a name="BKMK_PrereqCheck"></a>설치 필수 구성 요소 유효성 검사 AD DS
 
 AD DS 설치 마법사는 설치 전에 다음 필수 구성 요소가 충족되었는지 확인합니다. 이를 통해 잠재적으로 설치를 방해할 수 있는 문제를 수정할 수 있습니다.  
   
@@ -122,13 +121,13 @@ AD DS 설치 마법사는 설치 전에 다음 필수 구성 요소가 충족되
 - 자식 도메인 이름 확인: 부모 도메인 이름 및 새로운 자식 도메인 이름이 유효하고 기존의 도메인과 충돌하지 않는지 확인합니다.  
 - 트리 도메인 이름 확인: 지정된 트리 이름이 유효하고 현재 존재하는 이름이 아닌지 확인합니다.  
 
-## <a name="BKMK_SystemReqs"></a>시스템 요구 사항
+## <a name="system-requirements"></a><a name="BKMK_SystemReqs"></a>시스템 요구 사항
 
 Windows server 2012에 대 한 시스템 요구 사항은 Windows 2008 Server 2008 r 2에서 변경 되지 않았습니다. 자세한 내용은 [Windows Server 2008 R2 SP1 시스템 요구 사항](https://www.microsoft.com/windowsserver2008/en/us/system-requirements.aspx) (https://www.microsoft.com/windowsserver2008/en/us/system-requirements.aspx)을 참조 하세요.  
 
 일부 기능에는 추가 요구 사항이 포함될 수 있습니다. 예를 들어 가상 도메인 컨트롤러 복제 기능을 사용 하려면 PDC 에뮬레이터에서 Windows Server 2012를 실행 하 고 Hyper-v 역할이 설치 된 Windows Server 2012를 실행 하는 컴퓨터를 실행 해야 합니다.  
 
-## <a name="BKMK_KnownIssues"></a>알려진 문제
+## <a name="known-issues"></a><a name="BKMK_KnownIssues"></a>알려진 문제
 
 이 섹션에는 Windows Server 2012의 AD DS 설치에 영향을 주는 알려진된 문제 중 일부를 나열 합니다. 그 밖의 알려진 문제는 [도메인 컨트롤러 배포 문제 해결](../../ad-ds/deploy/Troubleshooting-Domain-Controller-Deployment.md)을 참조하십시오.  
 
@@ -179,7 +178,7 @@ Windows server 2012에 대 한 시스템 요구 사항은 Windows 2008 Server 20
 - 복원 파일 시스템 이라는 Windows Server 2012에는 새로운 파일 시스템이 있습니다. ReFS(복원 파일 시스템)로 포맷된 데이터 볼륨에 Active Directory 데이터베이스, 로그 파일 또는 SYSVOL을 저장하지 마십시오. ReFS에 대한 자세한 내용은 [차세대 Windows 파일 시스템 개발: ReFS](https://blogs.msdn.com/b/b8/archive/2012/01/16/building-the-next-generation-file-system-for-windows-refs.aspx)를 참조하세요.  
 - 서버 관리자에서 Server Core 설치에서 AD DS 또는 기타 서버 역할을 실행 하 고 Windows Server 2012로 업그레이드 하는 서버 이벤트 및 상태가 예상 대로 수집 하는 경우에 서버 역할이 빨간색 상태로 나타날 수 있습니다. 예비 릴리스 Windows Server 2012의 Server Core 설치를 실행 하는 서버에도 영향을 줄 수 있습니다.  
 
-### <a name="active-directory-domain-services-installation-hangs-if-an-error-prevents-critical-replication"></a>오류로 인해 중요한 복제가 수행되지 않는 경우 Active Directory Domain Services 설치가 정지됩니다.
+### <a name="active-directory-domain-services-installation-hangs-if-an-error-prevents-critical-replication"></a>오류로 인해 중요한 복제가 수행되지 않는 경우 Active Directory 도메인 서비스 설치가 정지됩니다.
 
 중요 복제 단계를 수행하는 동안 AD DS 설치에 오류가 발생하면 설치가 무기한 정지될 수 있습니다. 예를 들어 네트워킹 오류로 인해 중요 복제를 완료하지 못한 경우 설치가 중단됩니다.  
   
@@ -228,9 +227,9 @@ Windows server 2012에 대 한 시스템 요구 사항은 Windows 2008 Server 20
    DC2.contoso.com  
    ```  
 
-   운영 체제를 다시 설치를 복구 하기 위해서는 필요한 오류는 로컬 관리자 계정 및 암호를 지정 하 여 발생 하는 경우 [메타 데이터 정리 작업을 수행할](https://technet.microsoft.com/library/cc816907(WS.10).aspx) 설치를 완료 한 다음 다시 도메인 관리자 자격 증명을 사용 하 여 AD DS 설치에 실패 한 도메인 컨트롤러에 대 한 계정입니다. 서버를 다시 시작하는 것으로는 이 오류가 해결되지 않습니다. 서버에서는 설치가 성공적으로 완료되지 않은 경우에도 AD DS가 설치된 것으로 나타내기 때문입니다.  
+   로컬 관리자 계정 및 암호 지정으로 인해 오류가 발생한 경우 복구하려면 운영 체제를 다시 설치하고, 설치를 완료하지 못한 도메인 컨트롤러 계정에 대해 [메타데이터 정리를 수행](https://technet.microsoft.com/library/cc816907(WS.10).aspx) 한 다음, 도메인 관리자 자격 증명을 사용하여 AD DS 설치를 다시 시도해야 합니다. 서버를 다시 시작하는 것으로는 이 오류가 해결되지 않습니다. 서버에서는 설치가 성공적으로 완료되지 않은 경우에도 AD DS가 설치된 것으로 나타내기 때문입니다.  
 
-### <a name="BKMK_nonnormalDNSNameWarning"></a>Active Directory Domain Services 구성 마법사는 정규화 되지 않은 DNS 이름이 지정 된 경우 경고를 표시 합니다.
+### <a name="active-directory-domain-services-configuration-wizard-warns-when-a-non-normalized-dns-name-is-specified"></a><a name="BKMK_nonnormalDNSNameWarning"></a>Active Directory Domain Services 구성 마법사는 정규화 되지 않은 DNS 이름이 지정 된 경우 경고를 표시 합니다.
 
 새 도메인이나 포리스트를 만들 때 정규화되지 않은 다국어 문자를 포함하는 DNS 도메인 이름을 지정하는 경우 Active Directory Domain Services 구성 마법사에는 이름에 대한 DNS 쿼리가 실패할 수 있다는 경고가 표시됩니다. DNS 도메인 이름이 배포 구성 페이지에서 지정된 경우에도 나중에 마법사의 필수 구성 요소 확인 페이지에 경고가 표시됩니다.  
 
@@ -245,6 +244,6 @@ Füßball.com 이나 'ΣΤ'.com와 같은 정규화 되지 않은 이름을 사�
 5. 정규화로 인해 이름이 nps.füssball.com으로 변환 됩니다 및 nps.füßball.com으로 연결을 통해 쿼리  
 6. 클라이언트 애플리케이션에는 등록 된 이름 nps.füßball.com 이므로 이름을 확인할 수 없으면  
 
-Active Directory Domain Services 구성 마법사의 필수 구성 요소 확인 페이지에 경고가 표시되면 배포 구성 페이지로 돌아가 정규화된 DNS 도메인 이름을 지정하십시오. Windows PowerShell을 사용하여 새 도메인을 설치하는 경우에는 -DomainName 옵션에 대해 정규화된 DNS 이름을 지정하십시오.  
+Active Directory 도메인 서비스 구성 마법사의 필수 구성 요소 확인 페이지에 경고가 표시되면 배포 구성 페이지로 돌아가 정규화된 DNS 도메인 이름을 지정하십시오. Windows PowerShell을 사용하여 새 도메인을 설치하는 경우에는 -DomainName 옵션에 대해 정규화된 DNS 이름을 지정하십시오.  
 
 Idn에 대 한 자세한 내용은 참조 [처리 Idn 다국어 도메인 이름 ()](https://msdn.microsoft.com/library/windows/desktop/dd318142(v=vs.85).aspx)합니다.  

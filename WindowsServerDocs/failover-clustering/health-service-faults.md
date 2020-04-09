@@ -5,15 +5,14 @@ manager: eldenc
 ms.author: cosdar
 ms.technology: storage-health-service
 ms.topic: article
-ms.assetid: ''
 author: cosmosdarwin
 ms.date: 10/05/2017
-ms.openlocfilehash: 11af69d1c6f32205b87ad4605edebacb59b0b710
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 913a596a46720718a165295345cb02e3e2baa1de
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71369713"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80827566"
 ---
 # <a name="health-service-faults"></a>상태 관리 서비스 오류
 > 적용 대상: Windows Server 2019, Windows Server 2016
@@ -24,7 +23,7 @@ ms.locfileid: "71369713"
 
 각 오류에는 5 개의 중요 한 필드가 포함 됩니다.  
 
--   severity
+-   Severity
 -   문제에 대한 설명
 -   문제 해결을 위한 권장 다음 단계
 -   오류가 있는 엔터티에 대한 식별 정보
@@ -291,7 +290,7 @@ class FaultsObserver : IObserver
 |---------------------------|-----------------------------------------------------------------|
 | FaultId                   | {12345-12345-12345-12345-12345}                                 |
 | FaultType                 | Microsoft Health.                      |
-| 이유                    | "볼륨에 사용 가능한 공간이 부족 합니다."                 |
+| Reason                    | "볼륨에 사용 가능한 공간이 부족 합니다."                 |
 | PerceivedSeverity         | 5                                                               |
 | FaultingObjectDescription | Contoso XYZ9000 S.N. 123456789                                  |
 | FaultingObjectLocation    | 랙 A06, 매우 25, 슬롯 11                                        |
@@ -318,15 +317,15 @@ class FaultsObserver : IObserver
 | ChangeType                | 0                                                               |
 | FaultId                   | {12345-12345-12345-12345-12345}                                 |
 | FaultType                 | Microsoft Health.                      |
-| 이유                    | "볼륨에 사용 가능한 공간이 부족 합니다."                 |
+| Reason                    | "볼륨에 사용 가능한 공간이 부족 합니다."                 |
 | PerceivedSeverity         | 5                                                               |
 | FaultingObjectDescription | Contoso XYZ9000 S.N. 123456789                                  |
 | FaultingObjectLocation    | 랙 A06, 매우 25, 슬롯 11                                        |
 | RecommendedActions        | {"볼륨을 확장 합니다.", "다른 볼륨으로 워크 로드 마이그레이션"}   |
 
-고가 고가 = {0, 1, 2} = {"Create", "Remove", "Update"}.
+**ChangeType** 고가 고가 = {0, 1, 2} = {"Create", "Remove", "Update"}.
 
-## <a name="coverage"></a>적용 범위
+## <a name="coverage"></a>검사
 
 Windows Server 2016에서 상태 관리 서비스는 다음과 같은 오류 검사를 제공 합니다.  
 
@@ -519,7 +518,7 @@ Windows Server 2016에서 상태 관리 서비스는 다음과 같은 오류 검
 <sup>2</sup> 는 일부의 볼륨이 10% (부), 30% (주) 또는 50% (위험), 24 시간 기간의 최소 IOPS를 충족 하지 못했음을 나타냅니다.  
 
 >[!NOTE]
-> 팬, 전원 공급 장치 및 센서와 같은 저장소 엔클로저 구성 요소의 상태는 SCSI(SCSI Enclosure Services)에서 파생됩니다. 공급업체에서 이 정보를 제공하지 않은 경우 상태 관리 서비스에서 정보를 표시할 수 없습니다.  
+> 팬, 전원 공급 장치 및 센서와 같은 스토리지 엔클로저 구성 요소의 상태는 SCSI(SCSI Enclosure Services)에서 파생됩니다. 공급업체에서 이 정보를 제공하지 않은 경우 상태 관리 서비스에서 정보를 표시할 수 없습니다.  
 
 ## <a name="see-also"></a>참고 항목
 

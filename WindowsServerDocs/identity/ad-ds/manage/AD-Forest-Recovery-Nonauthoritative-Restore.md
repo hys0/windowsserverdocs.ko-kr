@@ -1,6 +1,5 @@
 ---
 title: AD 포리스트 복구-비정식 복원
-description: ''
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
@@ -9,12 +8,12 @@ ms.topic: article
 ms.prod: windows-server
 ms.assetid: e4ce1d18-d346-492a-8bca-f85513aa3ac1
 ms.technology: identity-adds
-ms.openlocfilehash: d7792cd739931d758125c8946606beb043ce19dd
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 4fe4905bba944c86d168eaa46ae699ad25ba0194
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71369094"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80823956"
 ---
 # <a name="performing-a-nonauthoritative-restore-of-active-directory-domain-services"></a>Active Directory Domain Services의 비정식 복원 수행 
 
@@ -24,7 +23,7 @@ ms.locfileid: "71369094"
   
 다음 절차에서는 stsadm.exe를 사용 하 여 Active Directory 또는 Active Directory Domain Services (AD DS)의 비정식 복원을 수행 합니다. 다른 백업 솔루션을 사용 하 고 있거나 나중에 포리스트 복구 프로세스에서 SYSVOL의 정식 복원을 완료 하려는 경우 다음과 같은 대체 방법을 사용 하 여 SYSVOL의 신뢰할 수 있는 복원을 수행할 수 있습니다.  
   
-- FRS (파일 복제 서비스)를 사용 하 여 SYSVOL을 복제 하는 경우 Microsoft 기술 자료 [문서 290762](https://go.microsoft.com/fwlink/?LinkId=148443) 의 단계에 따라 **BurFlags** 레지스트리 키를 사용 하 여 frs 복제 세트를 다시 초기화 하거나 필요한 경우 문서 315457 [ 315457](https://support.microsoft.com/kb/315457)-SYSVOL 트리를 다시 작성 합니다. SYSVOL이 FRS에 의해 복제 되는지 확인 하려면 [도메인 컨트롤러의 SYSVOL 폴더가 DFSR 또는 FRS에 의해 복제 되었는지](https://msdn.microsoft.com/library/windows/desktop/cc507518.aspx#determining_whether_a_domain_controller_s_sysvol_folder_is_replicated_by_dfsr_or_frs)확인을 참조 하세요.  
+- FRS (파일 복제 서비스)를 사용 하 여 SYSVOL을 복제 하는 경우 Microsoft 기술 자료 [문서 290762](https://go.microsoft.com/fwlink/?LinkId=148443) 의 단계에 따라 **BurFlags** 레지스트리 키를 사용 하 여 FRS 복제 세트를 다시 초기화 하거나 필요한 경우 문서 315457 [315457](https://support.microsoft.com/kb/315457)을 사용 하 여 sysvol 트리를 다시 작성 합니다. SYSVOL이 FRS에 의해 복제 되는지 확인 하려면 [도메인 컨트롤러의 SYSVOL 폴더가 DFSR 또는 FRS에 의해 복제 되었는지](https://msdn.microsoft.com/library/windows/desktop/cc507518.aspx#determining_whether_a_domain_controller_s_sysvol_folder_is_replicated_by_dfsr_or_frs)확인을 참조 하세요.  
 - DFS (분산 파일 시스템) 복제를 사용 하 여 SYSVOL을 복제 하는 경우 [DFSR 복제 sysvol의 신뢰할 수 있는 동기화 수행](AD-Forest-Recovery-Authoritative-Recovery-SYSVOL.md)을 참조 하세요.  
 
 ## <a name="performing-a-nonauthoritative-restore"></a>비정식 복원 수행
@@ -39,7 +38,7 @@ ms.locfileid: "71369094"
    wbadmin start systemstaterecovery <otheroptions> -authsysvol  
    ```  
 
-   예를 들어 다음과 같은 가치를 제공해야 합니다.  
+   예를 들면 다음과 같습니다.  
 
    ```  
    wbadmin start systemstaterecovery -version:11/20/2012-13:00 -authsysvol  

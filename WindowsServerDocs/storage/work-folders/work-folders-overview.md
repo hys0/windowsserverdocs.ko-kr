@@ -9,12 +9,12 @@ manager: dougkim
 ms.author: jgerend
 ms.date: 06/07/2019
 description: 클라우드 폴더 개요 - 사용자가 PC와 디바이스에서 일관적인 방법으로 작업 파일에 액세스할 수 있게 해주는 Windows Server의 서버 역할입니다.
-ms.openlocfilehash: ca76412a6e623b42718fc4f7589f7053073e0f64
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 67c62d81c7d9b6d33a198f5282fa39a88e07f2e8
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75950189"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80820786"
 ---
 # <a name="work-folders-overview"></a>클라우드 폴더 개요
 
@@ -32,7 +32,7 @@ Windows 10, Windows 7 또는 Android 또는 iOS 장치에서 클라우드 폴더
 
 ## <a name="role-description"></a>역할 설명
 
- 클라우드 폴더를 통해 사용자는 개인용 컴퓨터 및 디바이스에 작업 파일을 저장하고 여기에 액세스할 수 있습니다. 이를 회사 PC 외의 BYOD(bring-your-own device)라고도 합니다. 사용자는 작업 파일을 저장하고 어디에서나 액세스할 수 있는 편리한 위치를 얻을 수 있습니다. 조직은 중앙에서 관리되는 파일 서버에 파일을 저장하고 선택적으로 사용자 디바이스 정책(예: 암호화 및 잠금 화면 암호)을 지정하여 회사 데이터에 대한 제어를 유지합니다.  
+ 클라우드 폴더를 통해 사용자는 개인용 컴퓨터 및 장치에 작업 파일을 저장하고 여기에 액세스할 수 있습니다. 이를 회사 PC 외의 BYOD(bring-your-own device)라고도 합니다. 사용자는 작업 파일을 저장하고 어디에서나 액세스할 수 있는 편리한 위치를 얻을 수 있습니다. 조직은 중앙에서 관리 되는 파일 서버에 파일을 저장하고 선택적으로 사용자 디바이스 정책(예: 암호화 및 잠금 화면 암호)을 지정하여 회사 데이터에 대한 제어를 유지합니다.  
   
  기존에 배포된 폴더 리디렉션, 오프라인 파일 및 홈 폴더를 사용하여 클라우드 폴더를 배포할 수 있습니다. 클라우드 폴더는 *동기화 공유*라고 하는 서버의 폴더에 사용자 파일을 저장합니다. 이미 사용자 데이터가 포함된 폴더를 지정할 수 있으며, 따라서 서버와 데이터를 마이그레이션하거나 기존 솔루션을 즉시 폐지하지 않고도 클라우드 폴더를 채택할 수 있습니다.  
   
@@ -56,12 +56,12 @@ Windows 10, Windows 7 또는 Android 또는 iOS 장치에서 클라우드 폴더
 
  클라우드 폴더는 다음 기능을 포함하고 있습니다.  
   
-| 기능 | 사용 가능한 시기 | 설명 |  
+| 기능 | 가용성 | 설명 |  
 | ------------------- | ------------------ | ----------------- |  
 | 서버 관리자의 클라우드 폴더 역할 서비스 | Windows Server 2019, Windows Server 2016 또는 Windows Server 2012 R2 | 파일 및 저장소 서비스는 동기화 공유(사용자의 작업 파일을 저장하는 폴더)를 설정하고 클라우드 폴더를 모니터링하고 동기화 공유 및 사용자 액세스를 관리하는 방법을 제공 |
 | 클라우드 폴더 cmdlet | Windows Server 2019, Windows Server 2016 또는 Windows Server 2012 R2 | 클라우드 폴더 서버를 관리하기 위한 포괄적인 cmdlet이 포함된 Windows PowerShell 모듈 |  
-| 클라우드 폴더를 Windows와 통합 | Windows 10<br /><br /> Windows 8.1<br /><br /> Windows RT 8.1<br /><br /> Windows 7(다운로드 필요) | 클라우드 폴더는 Windows 컴퓨터에서 다음 기능을 제공합니다.<br /><br /> -   클라우드 폴더를 설정하고 모니터링하는 제어판 항목<br />-   클라우드 폴더의 파일에 쉽게 액세스할 수 있도록 파일 탐색기 통합<br />-   중앙의 파일 서버와 파일을 주고 받는 한편 배터리 사용 시간과 시스템 성능을 최대화하는 동기화 엔진 |
-| 디바이스용 클라우드 폴더 앱 | Android<br /><br /> Apple iPhone 및 iPad® | 인기 있는 디바이스에서 클라우드 폴더의 파일에 액세스할 수 있게 해주는 앱 |  
+| 클라우드 폴더를 Windows와 통합 | Windows 10<p> Windows 8.1<p> Windows RT 8.1<p> Windows 7(다운로드 필요) | 클라우드 폴더는 Windows 컴퓨터에서 다음 기능을 제공합니다.<p> -   클라우드 폴더를 설정하고 모니터링하는 제어판 항목<br />-   클라우드 폴더의 파일에 쉽게 액세스할 수 있도록 파일 탐색기 통합<br />-   중앙의 파일 서버와 파일을 주고 받는 한편 배터리 사용 시간과 시스템 성능을 최대화하는 동기화 엔진 |
+| 디바이스용 클라우드 폴더 앱 | Android<p> Apple iPhone 및 iPad® | 인기 있는 디바이스에서 클라우드 폴더의 파일에 액세스할 수 있게 해주는 앱 |  
   
 ## <a name="new-and-changed-functionality"></a>새로운 기능 및 변경된 기능
   
@@ -100,13 +100,13 @@ Windows 10, Windows 7 또는 Android 또는 iOS 장치에서 클라우드 폴더
   
 -   PC 및 디바이스가 다음 운영 체제 중 하나에서 실행되어야 합니다.  
   
-    -   Windows 10  
+    -   Windows 10  
   
     -   Windows 8.1  
   
     -   Windows RT 8.1  
   
-    -   Windows 7  
+    -   Windows 7  
   
     -   Android 4.4 KitKat 이상  
   
@@ -114,9 +114,9 @@ Windows 10, Windows 7 또는 Android 또는 iOS 장치에서 클라우드 폴더
   
 -   Windows 7 PC에서 다음 Windows 버전 중 하나를 실행해야 합니다.  
   
-    -   Windows 7 Professional  
+    -   Windows 7 Professional  
   
-    -   Windows 7 Ultimate  
+    -   Windows 7 Ultimate  
   
     -   Windows 7 Enterprise  
   
@@ -124,11 +124,11 @@ Windows 10, Windows 7 또는 Android 또는 iOS 장치에서 클라우드 폴더
   
 -   모든 사용자 파일을 클라우드 폴더에 저장할 수 있는 충분한 여유 공간이 NTFS로 포맷된 로컬 드라이브에 있어야 하며, 클라우드 폴더가 시스템 드라이브에 있는 경우 기본적으로 6GB의 추가 여유 공간이 있어야 합니다. 클라우드 폴더의 위치는 기본적으로 **%USERPROFILE%\Work Folders**입니다.  
   
-     그러나 설정하는 동안 사용자가 위치를 변경할 수 있습니다(NTFS 파일 시스템으로 포맷된 microSD 카드와 USB 드라이브가 지원되는 위치이며, 드라이브가 제거되면 동기화가 중지됨).  
+     그러나 설정하는 동안 사용자가 위치를 변경할 수 있습니다(NTFS 파일 시스템으로 포맷된 microSD 카드와 USB 드라이브가 지원되는 위치이며, 드라이브가 제거된 경우 동기화가 중지됨).  
   
-     개별 파일의 최대 크기는 기본적으로 10GB입니다. 관리자가 파일 서버 리소스 관리자의 할당량 기능을 사용하여 할당량을 구현할 수 있지만 사용자당 저장소 제한은 없습니다.  
+     개별 파일의 최대 크기는 기본적으로 10GB입니다. 관리자가 파일 서버 리소스 관리자의 할당량 기능을 사용하여 할당량을 구현할 수 있지만 사용자당 스토리지 제한은 없습니다.  
   
--   클라우드 폴더는 클라이언트 가상 컴퓨터의 가상 컴퓨터 상태 롤백을 지원하지 않습니다. 대신 시스템 이미지 백업 또는 다른 백업 응용 프로그램을 사용하여 클라이언트 가상 머신 내에서 백업 및 복원 작업을 수행합니다.  
+-   클라우드 폴더는 클라이언트 가상 컴퓨터의 가상 컴퓨터 상태 롤백을 지원하지 않습니다. 대신 시스템 이미지 백업 또는 다른 백업 응용 프로그램을 사용하여 클라이언트 가상 컴퓨터 내에서 백업 및 복원 작업을 수행합니다.  
   
 ## <a name="work-folders-compared-to-other-sync-technologies"></a>다른 동기화 기술과 클라우드 폴더 비교  
 
@@ -140,7 +140,7 @@ Windows 10, Windows 7 또는 Android 또는 iOS 장치에서 클라우드 폴더
 | **작업 파일에 대 한 사용자 액세스를 제공 하기 위한 것입니다.** | 예 | 예 | 예 | 아니요 |
 | **클라우드 서비스** | 없음 | 없음 | Office 365 | Microsoft OneDrive |
 | **내부 네트워크 서버** | Windows Server 2012 R2 또는 Windows Server 2016을 실행하는 파일 서버 | 파일 서버 | SharePoint 서버(선택 사항) | 없음 |
-| **지원되는 클라이언트** | PC, iOS, Android | 회사 네트워크의 PC 또는 DirectAccess, VPN, 기타 원격 액세스 기술을 통해 연결된 PC | PC, iOS, Android, Windows Phone | PC, Mac 컴퓨터, Windows Phone, iOS, Android |
+| **지원 되는 클라이언트** | PC, iOS, Android | 회사 네트워크의 PC 또는 DirectAccess, VPN, 기타 원격 액세스 기술을 통해 연결된 PC | PC, iOS, Android, Windows Phone | PC, Mac 컴퓨터, Windows Phone, iOS, Android |
   
 > [!NOTE]
 >  위의 표에 나열된 동기화 기술 외에도 Microsoft는 서버 간 복제를 위해 설계된 DFS 복제와 지사 WAN 가속 기술로 설계된 BranchCache를 비롯한 다른 복제 기술을 제공합니다. 자세한 내용은 [DFS 네임스페이스 및 DFS 복제](https://technet.microsoft.com/library/jj127250(v=ws.11).aspx) 및 [BranchCache 개요](https://technet.microsoft.com/library/hh831696(v=ws.11).aspx)를 참조하세요. 
@@ -163,9 +163,9 @@ Windows Azure 가상 컴퓨터를 시작하는 방법에 대해 자세히 알아
   
 ## <a name="see-also"></a>참고 항목
 
- 자세한 내용은 다음 리소스를 참조하세요.  
+ 자세한 내용은 다음 리소스를 참조하십시오.  
   
-| 콘텐츠 형식 | 참조 |
+| 콘텐츠 유형 | 참조 |
 | ------------------ | ---------------- |
 | **제품 평가** | [Android 용 -   클라우드 폴더 – 릴리스](https://blogs.technet.microsoft.com/filecab/2016/03/16/work-folders-for-android-released) (블로그 게시물)<br />[iOS에 대 한 -   클라우드 폴더 – IPad 앱 릴리스](https://blogs.technet.com/b/filecab/archive/2015/01/16/work-folders-for-ios-ipad-app-release.aspx) (블로그 게시물)<br />-   [Windows Server 2012 r 2의 클라우드 폴더 소개](https://blogs.technet.com/b/filecab/archive/2013/07/09/introducing-work-folders-on-windows-server-2012-r2.aspx) (블로그 게시물)<br />[클라우드 폴더에 대 한 -   소개](https://channel9.msdn.com/posts/Introduction-to-Work-Folders) (Channel 9 비디오)<br />-   [클라우드 폴더 테스트 랩 배포](https://blogs.technet.com/b/filecab/archive/2013/07/10/work-folders-test-lab-deployment.aspx) (블로그 게시물)<br />[Windows 7 용 클라우드 폴더](https://blogs.technet.com/b/filecab/archive/2014/04/24/work-folders-for-windows-7.aspx) -   (블로그 게시물) |
 | **배포** | [클라우드 폴더 구현 -   디자인](plan-work-folders.md)<br />[클라우드 폴더 -   배포](deploy-work-folders.md)<br />[AD FS 및 WAP (웹 응용 프로그램 프록시)를 사용 하 여 클라우드 폴더 배포](deploy-work-folders-adfs-overview.md) -   <br />[Azure AD 응용 프로그램 프록시를 사용 하 여 클라우드 폴더 배포](https://blogs.technet.microsoft.com/filecab/2017/05/31/enable-remote-access-to-work-folders-using-azure-active-directory-application-proxy/) -   <br />[작업 폴더 마이그레이션 가이드에 대 한 CSC (- 오프라인 파일](https://blogs.technet.microsoft.com/filecab/2016/08/12/offline-files-csc-to-work-folders-migration-guide/) )<br />[클라우드 폴더 배포에 대 한 -   성능 고려 사항](https://blogs.technet.com/b/filecab/archive/2013/11/01/performance-considerations-for-large-scale-work-folders-deployments.aspx)<br />[Windows 7 용 클라우드 폴더 -   (64 비트 다운로드)](https://www.microsoft.com/download/details.aspx?id=42558)<br />[Windows 7 용 클라우드 폴더 -   (32 비트 다운로드)](https://www.microsoft.com/download/details.aspx?id=42559) |

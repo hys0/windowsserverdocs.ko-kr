@@ -1,23 +1,19 @@
 ---
 title: Azure Site Recovery 서비스 통합
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
-ms.custom: na
 ms.date: 10/01/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 262701a6-8a97-4c4e-bfbf-9f8007c308d6
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: c04f27d4bf6ff6e615cf06da73247bf79dea1008
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 29db78fdf38a6fab23d9a5ec5539c0606e2fbbaa
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80310413"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80814486"
 ---
 # <a name="azure-site-recovery-services-integration"></a>Azure Site Recovery 서비스 통합
 
@@ -43,7 +39,7 @@ Azure에 성공적으로 로그인 하면 VM이 저장 되 고 호스팅될 Azur
 
 ### <a name="enabling-guest-virtual-machines-for-protection"></a>보호를 위해 게스트 가상 컴퓨터 사용
 
-Azure 복구 창에 있는 가상 컴퓨터를 선택 하면 대시보드의 오른쪽에 있는 **azure로 복제 사용** 을 클릭 하 여 azure에 가상 컴퓨터™ s 이미지를 준비 하 고 복사할 수 있습니다.
+Azure 복구 창에 있는 가상 컴퓨터를 선택 하면 대시보드의 오른쪽에 있는 **azure로 복제 사용** 을 클릭 하 여 azure에 가상 컴퓨터 &trade;s 이미지를 준비 하 고 복사할 수 있습니다.
 
 ![Azure로 복제 사용 대화 상자를 보여 주는 스크린샷 호스트를 추가 하는 중에 진행률 표시줄이 표시 됩니다.](media/azure-site-recovery-5.PNG)
 

@@ -1,7 +1,6 @@
 ---
 ms.assetid: 1ea2e1be-874f-4df3-bc9a-eb215002da91
 title: 사용자 인증서 인증에 대 한 AD FS 지원 구성
-description: ''
 author: jenfieldmsft
 ms.author: billmath
 manager: samueld
@@ -9,12 +8,12 @@ ms.date: 01/18/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 6c8a3b30a337c164227bf344b5704cc7e782461a
-ms.sourcegitcommit: 1c75e4b3f5895f9fa33efffd06822dca301d4835
+ms.openlocfilehash: 5f2416e45fad8ca47cd756526dc6a554b3a952b1
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77517518"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80817076"
 ---
 # <a name="configuring-ad-fs-for-user-certificate-authentication"></a>사용자 인증서 인증을 위한 AD FS 구성
 
@@ -27,7 +26,7 @@ ms.locfileid: "77517518"
 1) [이 문서](ad-fs-support-for-alternate-hostname-binding-for-certificate-authentication.md) 에서 설명 하는 모드 중 하나를 사용 하 여 사용 하도록 설정할 AD FS 사용자 인증서 인증 모드를 결정 합니다.
 2) 모든 중간 인증 기관을 포함 하 여 모든 AD FS 및 WAP 서버에서 신뢰할 수 & 사용자 인증서 신뢰 체인이 설치 되어 있는지 확인 합니다. 일반적으로이 작업은 AD FS/WAP 서버에서 GPO를 통해 수행 됩니다.
 3)  사용자 인증서의 신뢰 체인에 대 한 루트 인증서가의 NTAuth 저장소에 있는지 확인 하십시오 Active Directory
-4) 대체 인증서 인증 모드에서 AD FS 사용 하는 경우 AD FS 및 WAP 서버에 "certauth" 접두사가 붙은 AD FS 호스트 이름 (예: "certauth.fs.contoso.com")이 포함 된 SSL 인증서가 있고이 호스트 이름에 대 한 트래픽이 허용 되는지 확인 합니다. 방화벽을 통해
+4) 대체 인증서 인증 모드에서 AD FS 사용 하는 경우 AD FS 및 WAP 서버에 "certauth" 접두사가 붙은 AD FS 호스트 이름 (예: "certauth.fs.contoso.com")이 포함 된 SSL 인증서가 있고이 호스트 이름에 대 한 트래픽은 방화벽을 통해 허용 되는지 확인 합니다.
 5) 엑스트라넷에서 인증서 인증을 사용 하는 경우 인증서에 지정 된 목록에 있는 하나 이상의 CDP 또는 OCSP 위치를 인터넷에서 액세스할 수 있어야 합니다.
 6) 또한 Azure AD 인증서 인증의 경우, Exchange ActiveSync 클라이언트의 경우 클라이언트 인증서 주체 이름 또는 주체 대체 이름 필드의 RFC822 이름 값에 Exchange online의 사용자 라우팅할 수 있는 전자 메일 주소가 있어야 합니다. Azure Active Directory RFC822 값을 디렉터리의 프록시 주소 특성에 매핑합니다.
 

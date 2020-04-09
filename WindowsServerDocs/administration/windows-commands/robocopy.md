@@ -1,24 +1,20 @@
 ---
 title: robocopy
 description: Windows 및 Windows Server에서 robocopy 명령을 사용 하 여 파일을 복사 하는 방법에 대해 알아봅니다.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d4c6e8e9-fcb3-4a4a-9d04-2d8c367b6354
 author: coreyp-at-msft
 ms.author: coreyp
 manager: lizapo
 ms.date: 07/25/2018
-ms.openlocfilehash: f675f66eaafbfd79ac6b452a92417159d8ebb28c
-ms.sourcegitcommit: 51e0b575ef43cd16b2dab2db31c1d416e66eebe8
+ms.openlocfilehash: 27a08aabbfd1c2f19f4c70120182f4092cc2a6c9
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76259034"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80835676"
 ---
 # <a name="robocopy"></a>robocopy
 
@@ -30,7 +26,7 @@ ms.locfileid: "76259034"
 robocopy <Source> <Destination> [<File>[ ...]] [<Options>]
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |   매개 변수    |                                                                                            설명                                                                                           |
 |----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -52,7 +48,7 @@ robocopy <Source> <Destination> [<File>[ ...]] [<Options>]
 |/efsraw|EFS RAW 모드에서 모든 암호화 된 파일을 복사합니다.|
 |/copy:\<CopyFlags >|복사할 파일 속성을 지정 합니다. 이 옵션에 대 한 유효한 값은 다음과 같습니다.</br>**D** 데이터</br>**A** 특성</br>**T** 타임 스탬프</br>**S** NTFS 액세스 제어 목록 (ACL)</br>**O** 소유자 정보</br>**U** 감사 정보</br>기본값 **CopyFlags** 는 **DAT** (데이터, 특성 및 타임 스탬프).|
 |/dcopy:\<copyflags\>|디렉터리에 대해 복사할 항목을 정의 합니다. 기본값은 DA입니다. 옵션은 D = data, A = attributes 및 T = 타임 스탬프입니다.|
-|수/초|보안을 사용 하 여 파일을 복사 합니다 ( **/copy: DATS**에 해당).|
+|/초|보안을 사용 하 여 파일을 복사 합니다 ( **/copy: DATS**에 해당).|
 |/copyall|모든 파일 정보 복사 (동일 **/copy:DATSOU**).|
 |/nocopy|복사 하는 파일 정보가 없습니다 (유용 **제거/** ).|
 |/secfix|모든 파일에 대 한 파일 보안 픽스는 스토리를 건너뜁니다.|
@@ -86,7 +82,7 @@ robocopy <Source> <Destination> [<File>[ ...]] [<Options>]
 
 |옵션|설명|
 |------|-----------|
-|/ a|있는 파일만 복사는 **보관** 특성이 설정 되어 있습니다.|
+|/a|있는 파일만 복사는 **보관** 특성이 설정 되어 있습니다.|
 |/m|있는 파일만 복사는 **보관** 특성을 설정 하 고 다시 설정 된 **보관** 특성입니다.|
 |/ia: [RASHCNETO]|지정된 된 특성의 모든 설정 되어 있는 파일만 포함 됩니다.|
 |/xa: [RASHCNETO]|지정된 된 특성의 모든 설정 되는 파일을 제외 합니다.|
@@ -158,7 +154,7 @@ robocopy <Source> <Destination> [<File>[ ...]] [<Options>]
 
 ### <a name="exit-return-codes"></a>종료 (반환) 코드
 
-Value | 설명
+값 | 설명
 -- | --
 0 | 파일이 복사 되지 않았습니다. 오류가 발생 하지 않았습니다.  파일이 일치 하지 않습니다. 파일이 대상 디렉터리에 이미 있습니다. 따라서 복사 작업을 건너뛰었습니다.
 1 | 모든 파일이 복사 되었습니다.
@@ -172,12 +168,12 @@ Value | 설명
 > [!NOTE]
 > 8 보다 큰 값은 복사 작업 중에 하나 이상의 오류가 발생 했음을 나타냅니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 -   **/mir** 옵션은 해당 하는 **/e** plus **제거/** 동작에서 한 가지 작은 차이점이 있는 옵션:  
     -   와 **/e** plus **제거/** 옵션, 대상 디렉터리가 있는 경우, 대상 디렉터리 보안 설정을 덮어쓸 없는 합니다.
     -   와 **/mir** 옵션을 대상 디렉터리가 있는 경우, 대상 디렉터리 보안 설정은 덮어씁니다.
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
-[명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

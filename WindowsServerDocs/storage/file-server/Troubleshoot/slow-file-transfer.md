@@ -3,16 +3,15 @@ title: 저속 SMB 파일 전송 속도
 description: SMB 파일 전송 성능 문제를 해결 하는 방법을 소개 합니다.
 author: Deland-Han
 manager: dcscontentpm
-audience: ITPro
 ms.topic: article
 ms.author: delhan
 ms.date: 12/25/2019
-ms.openlocfilehash: 0e6c049404f464eba872075a8ef5060b303920c8
-ms.sourcegitcommit: 8cf04db0bc44fd98f4321dca334e38c6573fae6c
+ms.openlocfilehash: af05daa164b5b2c5eca73eff51d97d4c25ba1ca3
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75654564"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80815396"
 ---
 # <a name="slow-smb-files-transfer-speed"></a>저속 SMB 파일 전송 속도
 
@@ -46,7 +45,7 @@ ms.locfileid: "75654564"
 
 ## <a name="small-file-transfer-is-slow"></a>작은 파일 전송 속도가 느립니다.
 
-SMB를 통한 작은 파일의 저속 전송은 많은 파일이 있는 경우 가장 일반적으로 발생 합니다. 이는 정상적인 동작입니다.
+SMB를 통한 작은 파일의 저속 전송은 많은 파일이 있는 경우 가장 일반적으로 발생 합니다. 이것은 예상 된 동작입니다.
 
 파일을 전송 하는 동안 파일을 만들면 높은 프로토콜 오버 헤드와 높은 파일 시스템 오버 헤드가 발생 합니다. 대량 파일 전송의 경우 이러한 비용은 한 번만 발생 합니다. 많은 수의 작은 파일을 전송 하는 경우 비용이 반복적으로 발생 하 여 전송 속도가 느려집니다.
 
@@ -66,7 +65,7 @@ SMB를 통한 작은 파일의 저속 전송은 많은 파일이 있는 경우 �
 
 이 문제는 일반적으로 WAN 연결에서 발생 합니다. 일반적으로이는 Office 앱 (특히 Microsoft Excel)에서 데이터를 액세스 하 고 읽는 방식에 의해 발생 합니다.
 
-Office 및 SMB 이진 파일이 최신 상태 인지 확인 하 고 SMB 서버에서 임대를 사용 하지 않도록 설정 하 여 테스트 하는 것이 좋습니다. 이렇게 하려면 다음 단계를 따르세요.
+Office 및 SMB 이진 파일이 최신 상태 인지 확인 하 고 SMB 서버에서 임대를 사용 하지 않도록 설정 하 여 테스트 하는 것이 좋습니다. 이렇게 하려면 다음 단계를 수행합니다.
    
 1. Windows 8 및 windows Server 2012 이상 버전의 windows에서 다음 PowerShell 명령을 실행 합니다.
       

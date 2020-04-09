@@ -2,22 +2,18 @@
 title: DNS 영역 만들기
 description: 이 항목은 Windows Server 2016의 IPAM (IP 주소 관리) 관리 가이드의 일부입니다.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-ipam
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a030ff51-a815-4fc4-b26d-aae41c3e4ce5
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: a9762d15d0b95954623bbefdec38696885676975
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 0ae9869b95cfa1da04e0103b5a824ff1fc21568f
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80312633"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80814756"
 ---
 # <a name="create-a-dns-zone"></a>DNS 영역 만들기
 

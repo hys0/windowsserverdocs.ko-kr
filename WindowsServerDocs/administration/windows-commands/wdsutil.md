@@ -1,31 +1,27 @@
 ---
 title: wdsutil
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: Windows 배포 서비스 서버를 관리 하는 데 사용 되는 명령줄 유틸리티인 wdsutil에 대 한 Windows 명령 항목입니다.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3a1965a0-8677-40cc-9495-30ae806808d1
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0072008c4af32f05c9924cf85c0559cd924cff7c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f57411c1b000355940772003c7ac5343c82838cd
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71362203"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80829445"
 ---
 # <a name="wdsutil"></a>wdsutil
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 wdsutil은 Windows 배포 서비스 서버를 관리 하는 데 사용 되는 명령줄 유틸리티입니다. 이러한 명령을 실행 하려면 **시작**을 클릭 하 고 **명령 프롬프트**를 마우스 오른쪽 단추로 클릭 한 다음 **관리자 권한으로 실행**을 클릭 합니다.  
-## <a name="commands"></a>명령  
+## <a name="commands"></a>Commands  
 |명령|설명|  
 |------|--------|  
 |[추가 명령 사용](using-the-add-command.md)|개체 또는 사전 단계 컴퓨터를 추가 합니다.|  

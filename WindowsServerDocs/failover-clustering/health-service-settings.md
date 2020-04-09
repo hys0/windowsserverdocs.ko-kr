@@ -5,15 +5,14 @@ manager: eldenc
 ms.author: cosdar
 ms.technology: storage-health-service
 ms.topic: article
-ms.assetid: ''
 author: cosmosdarwin
 ms.date: 08/14/2017
-ms.openlocfilehash: 1b10d7c5432b10262e8df85d427f17f402d4f64a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 7ae78137bbd4e39291cc2e307f62697876c98135
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71361044"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80827526"
 ---
 # <a name="health-service-settings"></a>상태 관리 서비스 설정
 > 적용 대상: Windows Server 2019, Windows Server 2016
@@ -99,7 +98,7 @@ Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name "System.Storage.V
 "System.LogLevel" = 4
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Windows Server 2016의 상태 관리 서비스](health-service-overview.md)
 - [Windows Server 2016의 스토리지 공간 다이렉트](../storage/storage-spaces/storage-spaces-direct-overview.md)

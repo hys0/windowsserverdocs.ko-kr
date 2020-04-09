@@ -1,24 +1,20 @@
 ---
 title: repair-bde
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 534dca1a-05f7-4ea8-ac24-4fe5f14f988a
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 817e5fb5cf032376ddfddb3a54f73411ac175def
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 2107e5b7ef0339fc4f682632f3ef5a593578680a
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71384547"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80835966"
 ---
 # <a name="repair-bde"></a>repair-bde
 
@@ -41,7 +37,7 @@ Repair-bde 명령줄 도구에는 다음과 같은 제한이 있습니다.
 repair-bde <InputVolume> <OutputVolumeorImage> [-rk] [–rp] [-pw] [–kp] [–lf] [-f] [{-?|/?}]
 ```
 
-### <a name="parameters"></a>매개 변수
+#### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------|-----------|
@@ -53,13 +49,13 @@ repair-bde <InputVolume> <OutputVolumeorImage> [-rk] [–rp] [-pw] [–kp] [–l
 |-kp|볼륨의 잠금을 해제 하는 데 사용할 수 있는 복구 키 패키지를 식별 합니다. 이 명령으로도 지정할 수 있습니다 **-keypackage**합니다.|
 |-lf|Repair-bde 오류, 경고 및 정보 메시지를 저장할 파일의 경로를 지정 합니다. 이 명령으로도 지정할 수 있습니다 **-로그 파일**합니다.|
 |-f|볼륨을 잠글 수 없습니다 경우에 분리 되도록 합니다. 이 명령으로도 지정할 수 있습니다 **-강제로**합니다.|
-|-? 또는 /?|명령 프롬프트에 도움말을 표시합니다.|
+|-? 또는 /?|명령 프롬프트에서 도움말을 표시합니다.|
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 키 패키지의 경로를 지정 하지 않으면 **복구 bde** 키 패키지에 대 한 드라이브를 검색 합니다. 그러나 하드 드라이브가 손상 된 경우, **복구 bde** 패키지를 찾을 수 없으며 경로 제공 하 라는 메시지가 나타납니다.
 
-## <a name="BKMK_Examples"></a>예와
+## <a name="examples"></a><a name=BKMK_Examples></a>예와
 
 다음 예제에서는 C 드라이브를 복구 하 고 내용을 F 드라이브에 저장 된 복구 키 파일 (RecoveryKey.bek)를 사용 하 여 D 드라이브에 C 드라이브에서 기록 하 고 Z 드라이브에 로그 파일 (log.txt)에이 시도의 결과 기록 합니다.
 ```
@@ -78,6 +74,6 @@ repair-bde C: D: -kp F:\RecoveryKeyPackage -rk F:\RecoveryKey.bek -f
 repair-bde C: D: -pw
 ```
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
--   [명령줄 구문 키](command-line-syntax-key.md)
+-   - [명령줄 구문 키](command-line-syntax-key.md)

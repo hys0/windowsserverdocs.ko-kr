@@ -1,6 +1,5 @@
 ---
 title: AD 포리스트 복구-전체 서버 복구 수행
-description: ''
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
@@ -9,12 +8,12 @@ ms.topic: article
 ms.prod: windows-server
 ms.assetid: 1a1182a6-4462-4a13-806e-0e642a0d5db2
 ms.technology: identity-adds
-ms.openlocfilehash: 1ade1f2e316387fbe84209c1bc7a986fff6f2a71
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: bf321ae769aa6f0da1cebce7700ea429161a0956
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71390542"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80824016"
 ---
 # <a name="ad-forest-recovery---performing-a-full-server-recovery"></a>AD 포리스트 복구-전체 서버 복구 수행 
 
@@ -67,7 +66,7 @@ Windows Server 2016, 2012 R2 또는 2012에 대 한 전체 서버 복구를 수�
    ![Server 복원](media/AD-Forest-Recovery-Perform-a-Full-Recovery/restore7.png)
 7. **고급** 을 클릭 한 후 네트워크에서 복원 하는 경우 **네트워크에서 시스템 이미지 검색**을 선택 합니다. 네트워크 연결을 복원 하 라는 메시지가 표시 될 수 있습니다. 확인을 선택 합니다. </br>
    ![Server 복원](media/AD-Forest-Recovery-Perform-a-Full-Recovery/restore8.png)
-8. 백업 공유 위치의 UNC 경로를 입력 하 고 (예: \\\server1\sta\\server\\\\\server1\\\\\\ \\\192.168.1.3\backups. 같은 대상 서버의 IP 주소를 입력할 수도 있습니다. 
+8. 백업 공유 위치의 UNC 경로를 입력 하 고 (예: \\\server1\sta\\server\\\\\server1\\\\\\ **OK** \\\192.168.1.3\backups. 같은 대상 서버의 IP 주소를 입력할 수도 있습니다. 
    ![Server 복원](media/AD-Forest-Recovery-Perform-a-Full-Recovery/restore9.png)
 9. 공유에 액세스 하는 데 필요한 자격 증명을 입력 하 고 확인을 클릭 합니다. 
 10. 이제 **복원할 시스템 이미지의 날짜와 시간을 선택** 하 고 **다음**을 클릭 합니다.
@@ -120,7 +119,7 @@ Windows Server 2016, 2012 R2 또는 2012에 대 한 전체 서버 복구를 수�
    set address "Name of Network Adapter" static IPv4 Address SubnetMask IPv4 Gateway Address 1  
    ```  
 
-   예를 들어 다음과 같은 가치를 제공해야 합니다.  
+   예를 들면 다음과 같습니다.  
   
    ```  
    set address "Local Area Connection" static 192.168.1.2 255.0.0.0 192.168.1.1 1  

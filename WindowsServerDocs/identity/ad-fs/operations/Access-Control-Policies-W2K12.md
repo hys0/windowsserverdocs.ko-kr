@@ -1,7 +1,6 @@
 ---
 ms.assetid: 5728847d-dcef-4694-9080-d63bfb1fe24b
 title: AD FS의 액세스 제어 정책
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,12 +8,12 @@ ms.date: 06/05/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 7ae66fd47953017652ed1e753279e344e0a6c478
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 7355ff9ed49a5e4ee8bca3a3d266a0ec1ecc0780
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75949417"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80814896"
 ---
 # <a name="access-control-policies-in-windows-server-2012-r2-and-windows-server-2012-ad-fs"></a>Windows Server 2012 R2 및 Windows Server 2012의 Access Control 정책 AD FS
 
@@ -66,7 +65,7 @@ Windows 10 도메인 가입 및 로그온에 필요한 AD FS 끝점
 ## <a name="enabling-client-access-policy"></a>클라이언트 액세스 정책 사용  
  Windows Server 2012 r 2에서 AD FS의 클라이언트 액세스 정책을 사용 하도록 설정 하려면 Microsoft Office 365 Id 플랫폼 신뢰 당사자 트러스트를 업데이트 해야 합니다. 조직의 요구에 가장 부합 하는 **Microsoft Office 365 Id 플랫폼** 신뢰 당사자 트러스트에 대 한 클레임 규칙을 구성 하려면 아래 예제 시나리오 중 하나를 선택 합니다.  
 
-###  <a name="scenario1"></a>시나리오 1: Office 365에 대 한 모든 외부 액세스 차단  
+###  <a name="scenario-1-block-all-external-access-to-office-365"></a><a name="scenario1"></a>시나리오 1: Office 365에 대 한 모든 외부 액세스 차단  
  이 클라이언트 액세스 정책 시나리오에서는 모든 내부 클라이언트의 액세스를 허용 하 고 외부 클라이언트의 IP 주소에 따라 모든 외부 클라이언트를 차단 합니다. 다음 절차를 사용 하 여 선택한 시나리오에 대 한 Office 365 신뢰 당사자 트러스트에 올바른 발급 권한 부여 규칙을 추가할 수 있습니다.  
 
 ##### <a name="to-create-rules-to-block-all-external-access-to-office-365"></a>Office 365에 대 한 모든 외부 액세스를 차단 하는 규칙을 만들려면  
@@ -89,7 +88,7 @@ Windows 10 도메인 가입 및 로그온에 필요한 AD FS 끝점
 
      ![발급 인증 규칙](media/Access-Control-Policies-W2K12/clientaccess1.png "ADFS_Client_Access_1")  
 
-###  <a name="scenario2"></a>시나리오 2: Exchange ActiveSync를 제외 하 고 Office 365에 대 한 모든 외부 액세스 차단  
+###  <a name="scenario-2-block-all-external-access-to-office-365-except-exchange-activesync"></a><a name="scenario2"></a>시나리오 2: Exchange ActiveSync를 제외 하 고 Office 365에 대 한 모든 외부 액세스 차단  
  다음 예에서는 Outlook을 포함 하 여 내부 클라이언트에서 Exchange Online을 비롯 한 모든 Office 365 응용 프로그램에 액세스할 수 있습니다. 클라이언트 IP 주소에 표시 되는 것 처럼 회사 네트워크 외부에 있는 클라이언트의 액세스를 차단 합니다. 단, 스마트 휴대폰과 같은 Exchange ActiveSync 클라이언트의 경우는 예외입니다.  
 
 ##### <a name="to-create-rules-to-block-all-external-access-to-office-365-except-exchange-activesync"></a>Exchange ActiveSync를 제외 하 고 Office 365에 대 한 모든 외부 액세스를 차단 하는 규칙을 만들려면  
@@ -143,9 +142,9 @@ Windows 10 도메인 가입 및 로그온에 필요한 AD FS 끝점
 18. **마침**을 클릭합니다. 새 규칙이 이전 규칙 바로 아래에 표시 되 고, 발급 권한 부여 규칙 목록의 모든 사용자에 게 기본적으로 액세스 허용 규칙 이전에 표시 되는지 확인 합니다 (목록에서 이전에 표시 되는 경우에도 거부 규칙이 우선적으로 적용 됨).  </br>기본 허용 액세스 규칙이 없는 경우 다음과 같이 클레임 규칙 언어를 사용 하 여 목록의 끝에 하나를 추가할 수 있습니다.</br></br>      `c:[] => issue(Type = "https://schemas.microsoft.com/authorization/claims/permit", Value = "true");`</br></br>
 19. 새 규칙을 저장 하려면 **클레임 규칙 편집** 대화 상자에서 확인을 클릭 합니다. 결과 목록은 다음과 같습니다.  
 
-    ![발급 권한 부여 규칙](media/Access-Control-Policies-W2K12/clientaccess2.png )  
+    ![발급 인증 규칙](media/Access-Control-Policies-W2K12/clientaccess2.png )  
 
-###  <a name="scenario3"></a>시나리오 3: 브라우저 기반 응용 프로그램을 제외한 Office 365에 대 한 모든 외부 액세스 차단  
+###  <a name="scenario-3-block-all-external-access-to-office-365-except-browser-based-applications"></a><a name="scenario3"></a>시나리오 3: 브라우저 기반 응용 프로그램을 제외한 Office 365에 대 한 모든 외부 액세스 차단  
 
 ##### <a name="to-create-rules-to-block-all-external-access-to-office-365-except-browser-based-applications"></a>브라우저 기반 응용 프로그램을 제외한 Office 365에 대 한 모든 외부 액세스를 차단 하는 규칙을 만들려면  
 
@@ -180,7 +179,7 @@ Windows 10 도메인 가입 및 로그온에 필요한 AD FS 끝점
 
     ![발급](media/Access-Control-Policies-W2K12/clientaccess3.png)  
 
-###  <a name="scenario4"></a>시나리오 4: 지정 된 Active Directory 그룹을 제외 하 고 Office 365에 대 한 모든 외부 액세스 차단  
+###  <a name="scenario-4-block-all-external-access-to-office-365-except-for-designated-active-directory-groups"></a><a name="scenario4"></a>시나리오 4: 지정 된 Active Directory 그룹을 제외 하 고 Office 365에 대 한 모든 외부 액세스 차단  
  다음 예제에서는 IP 주소를 기반으로 하는 내부 클라이언트에서 액세스할 수 있도록 합니다. 지정 된 Active Directory 그룹의 개인을 제외 하 고 외부 클라이언트 IP 주소가 있는 회사 네트워크 외부에 있는 클라이언트 로부터의 액세스를 차단 합니다. 클레임 규칙 마법사를 사용 하 여 **Microsoft Office 365 Id 플랫폼** 신뢰 당사자 트러스트에 올바른 발급 권한 부여 규칙을 추가 하려면 다음 단계를 수행 합니다.  
 
 ##### <a name="to-create-rules-to-block-all-external-access-to-office-365-except-for-designated-active-directory-groups"></a>지정 된 Active Directory 그룹을 제외 하 고 Office 365에 대 한 모든 외부 액세스를 차단 하는 규칙을 만들려면  
@@ -228,7 +227,7 @@ Windows 10 도메인 가입 및 로그온에 필요한 AD FS 끝점
 
      ![발급](media/Access-Control-Policies-W2K12/clientaccess4.png)  
 
-##  <a name="buildingip"></a>IP 주소 범위 식 작성  
+##  <a name="building-the-ip-address-range-expression"></a><a name="buildingip"></a>IP 주소 범위 식 작성  
  X AD FS--------------------------------------------------- 클레임의 값은 다음 중 하나일 수 있습니다.  
 
 > [!NOTE]
@@ -240,13 +239,13 @@ Windows 10 도메인 가입 및 로그온에 필요한 AD FS 끝점
 > - 회사 네트워크에 있는 클라이언트의 IP 주소는 조직의 아웃 바운드 프록시 또는 게이트웨이의 외부 인터페이스 IP 주소로 표시 됩니다.  
 >   -   Vpn 또는 da의 구성에 따라 VPN 또는 Microsoft DirectAccess (DA)를 통해 회사 네트워크에 연결 된 클라이언트는 내부 회사 클라이언트나 외부 클라이언트로 표시 될 수 있습니다.  
 
--   하나 이상의 IP 주소: Exchange Online에서 연결 하는 클라이언트의 IP 주소를 확인할 수 없는 경우, HTTP 기반 요청에 포함할 수 있는 비표준 헤더 인 x 전달 된 헤더의 값을 기반으로 값을 설정 합니다. 클라이언트, 부하 분산 장치 및 시장의 프록시.  
+-   하나 이상의 IP 주소: Exchange Online에서 연결 하는 클라이언트의 IP 주소를 확인할 수 없는 경우, HTTP 기반 요청에 포함 될 수 있고 시장의 많은 클라이언트, 부하 분산 장치 및 프록시에서 지원 되는 비 표준 헤더 인 x 전달-헤더의 값을 기반으로 값을 설정 합니다.  
 
 > [!NOTE]
 > 1. 클라이언트 IP 주소와 요청을 전달한 각 프록시의 주소를 나타내는 여러 IP 주소가 쉼표로 구분 됩니다.  
 >    2. Exchange Online 인프라와 관련 된 IP 주소는 목록에 없습니다.  
 
-### <a name="regular-expressions"></a>정규식을 참조하세요.  
+### <a name="regular-expressions"></a>정규식  
  IP 주소 범위와 일치 해야 하는 경우 비교를 수행 하는 정규식을 생성 해야 합니다. 다음 일련의 단계에서는 다음 주소 범위와 일치 하도록 이러한 식을 구성 하는 방법에 대 한 예제를 제공 합니다. 공용 IP 범위와 일치 하도록 이러한 예제를 변경 해야 합니다.  
 
 - 192.168.1.1 – 192.168.1.25  
@@ -261,7 +260,7 @@ Windows 10 도메인 가입 및 로그온에 필요한 AD FS 끝점
 
   이렇게 하면 원하는 수의 주소를 입력할 수 있는 방법이 제공 됩니다. 주소 범위 (예: 192.168.1.1 – 192.168.1.25)를 허용 해야 하는 경우 일치 하는 문자: \b192\\. 168\\\\를 입력 해야 합니다. ([1-9]&#124;1 [0-9]&#124;2 [0-5]) \b  
 
-  다음 사항에 유의하세요.  
+  유의 사항은 다음과 같습니다.  
 
 - IP 주소는 숫자가 아니라 문자열로 처리 됩니다.  
 
@@ -307,7 +306,7 @@ Windows 10 도메인 가입 및 로그온에 필요한 AD FS 끝점
 
 -   하나 이상의 IP 주소  
 
-    -   Exchange Online에서 연결 하는 클라이언트의 IP 주소를 확인할 수 없는 경우에는 HTTP 기반 요청에 포함 될 수 있고 많은 클라이언트, 부하 분산 장치에서 지원 되는 비표준 헤더 인 x 전달-헤더의 값을 기반으로 값을 설정 합니다. 시장에서 프록시를 설정 합니다.  
+    -   Exchange Online에서 연결 하는 클라이언트의 IP 주소를 확인할 수 없는 경우에는 HTTP 기반 요청에 포함할 수 있고 시장의 여러 클라이언트, 부하 분산 장치 및 프록시에서 지원 되는 비표준 헤더 인 x 전달-헤더의 값을 기반으로 값을 설정 합니다.  
 
     -   클라이언트 IP 주소와 요청을 전달한 각 프록시의 주소를 나타내는 여러 IP 주소가 쉼표로 구분 됩니다.  
 
@@ -386,5 +385,5 @@ Windows 10 도메인 가입 및 로그온에 필요한 AD FS 끝점
 
  클레임의 값은 요청을 받은 AD FS 서비스의 이름입니다.  
 
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [AD FS 작업](../../ad-fs/AD-FS-2016-Operations.md)

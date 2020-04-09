@@ -1,7 +1,6 @@
 ---
 ms.assetid: 7e804590-6d6c-4cca-ac14-02d4dff06cec
 title: 사용자 지정 암호를 업데이트 합니다.
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: e007d4449cb62e7888c30f5b5929e393d7b571ef
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: cb5fd0ff432e441900e379d3fe798dbe6aef855f
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71407455"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80816106"
 ---
 # <a name="update-password-customization"></a>사용자 지정 암호를 업데이트 합니다. 
 
@@ -23,9 +22,9 @@ ms.locfileid: "71407455"
   
 페이지에 대한 고유한 설명을 제공하여 암호 업데이트 페이지를 사용자 지정할 수 있습니다.  
   
-> 암호 업데이트 페이지를 사용하도록 설정하려면 AD FS 관리에서 끝점으로 이동합니다. 암호 업데이트 끝점은 기타(/adfs/portal/updatepassword/)의 맨 아래에 있습니다. 끝점을 사용하도록 설정한 후에는 AD FS 서비스를 다시 시작해야 합니다. 이 작업은 수동으로 수행해야 합니다. 그런 다음 작업 공간에 연결된 장치에서 https://<fqdn>/adfs/portal/updatepassword/로 이동하면 암호 업데이트 페이지를 볼 수 있습니다.  
+> 암호 업데이트 페이지를 사용하도록 설정하려면 AD FS 관리에서 끝점으로 이동합니다. 암호 업데이트 엔드포인트은 기타(/adfs/portal/updatepassword/)의 맨 아래에 있습니다. 엔드포인트을 사용하도록 설정한 후에는 AD FS 서비스를 다시 시작해야 합니다. 이 작업은 수동으로 수행해야 합니다. 그런 다음 작업 공간에 연결된 장치에서 https://<fqdn>/adfs/portal/updatepassword/로 이동하면 암호 업데이트 페이지를 볼 수 있습니다.  
   
-![업데이트](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom5.png)  
+![update](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom5.png)  
   
 ## <a name="customize-the-update-password-page-description"></a>암호 업데이트 페이지 설명 사용자 지정  
 암호 업데이트 페이지 설명을 사용자 지정 하려면 다음 Windows PowerShell cmdlet 및 구문을 사용 합니다.  

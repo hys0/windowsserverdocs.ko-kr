@@ -1,7 +1,6 @@
 ---
 ms.assetid: 206b8072-1d0c-4a0b-ba8a-35a868d67b4c
 title: 사이트 링크 디자인 만들기
-description: ''
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 08/08/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: fdff477a1fb7cbe42402b2bb608eea55f2f9ec09
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 0d9f167a7721fd98179c30b83cc758aa2079dcb1
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402708"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80822756"
 ---
 # <a name="creating-a-site-link-design"></a>사이트 링크 디자인 만들기
 
@@ -30,9 +29,9 @@ ms.locfileid: "71402708"
   
 새로 만든 사이트 링크에 사이트를 추가할 때마다 추가 되는 사이트가 다른 사이트 링크의 멤버 인지 확인 하 고 필요한 경우 사이트의 사이트 링크 구성원 자격을 변경 합니다. 예를 들어 사이트를 처음 만들 때 사이트를 기본 사이트 링크의 멤버로 지정 하는 경우 새 사이트 링크에 사이트를 추가한 후에 사이트를 기본 사이트 링크에서 제거 해야 합니다. 기본-사이트 링크에서 사이트를 제거 하지 않으면 지식 일관성 검사기 (KCC)가 두 사이트 링크의 멤버 자격을 기준으로 라우팅 결정을 내리는 데이로 인해 잘못 된 라우팅이 발생할 수 있습니다.  
   
-사이트 링크를 사용 하 여 연결 하려는 구성원 사이트를 식별 하려면 "지리적 위치 및 통신 링크" (DSSTOPO_1) 워크시트에서 기록한 위치 및 연결 된 위치 목록을 사용 합니다. 여러 사이트의 연결 및 가용성이 동일한 경우 동일한 사이트 링크를 사용 하 여 연결할 수 있습니다.  
+사이트 링크를 사용 하 여 연결 하려는 구성원 사이트를 식별 하려면 "지리적 위치 및 통신 링크" (DSSTOPO_1 .doc) 워크시트에서 기록한 위치 및 연결 된 위치 목록을 사용 합니다. 여러 사이트의 연결 및 가용성이 동일한 경우 동일한 사이트 링크를 사용 하 여 연결할 수 있습니다.  
   
-사이트 간 전송 컨테이너는 링크에 사용 되는 전송에 사이트 링크를 매핑하는 방법을 제공 합니다. 사이트 링크 개체를 만드는 경우 사이트 링크를 ip 전송에 대 한 RPC (원격 프로시저 호출)와 연결 하는 IP 컨테이너 또는 사이트 링크를 SMTP와 연결 하는 SMTP (Simple Mail Transfer Protocol) 컨테이너에 연결 하는 IP 컨테이너에서 사이트 링크 개체를 만듭니다. 트랜스포트가.  
+사이트 간 전송 컨테이너는 링크에 사용 되는 전송에 사이트 링크를 매핑하는 방법을 제공 합니다. 사이트 링크 개체를 만드는 경우 사이트 링크를 ip 전송에 대 한 RPC (원격 프로시저 호출)와 연결 하는 IP 컨테이너 또는 사이트 링크를 SMTP 전송에 연결 하는 SMTP (Simple Mail Transfer Protocol) 컨테이너에 연결 합니다.  
   
 > [!NOTE]  
 > 이후 버전의 Active Directory Domain Services에서는 SMTP 복제가 지원 되지 않습니다 (AD DS). 따라서 SMTP 컨테이너에 사이트 링크 개체를 만드는 것은 권장 되지 않습니다.  
@@ -41,8 +40,8 @@ ms.locfileid: "71402708"
   
 직접 IP 연결을 사용할 수 없는 경우 사이트 간에 SMTP를 사용 하도록 복제를 구성할 수 있습니다. 그러나 SMTP 복제 기능은 제한적 이며 엔터프라이즈 CA (인증 기관)가 필요 합니다. SMTP는 구성, 스키마 및 응용 프로그램 디렉터리 파티션만 복제할 수 있으며 도메인 디렉터리 파티션의 복제는 지원 하지 않습니다.  
   
-사이트 링크의 이름을 지정 하려면 name_of_site1-name_of_site2와 같은 일관 된 이름 지정 체계를 사용 합니다. 사이트, 연결 된 사이트 및 해당 사이트를 연결 하는 사이트 링크의 이름을 워크시트에 기록 합니다. 사이트 이름 및 연결 된 사이트 링크 이름을 기록 하는 데 도움이 되는 워크시트의 경우 [Windows Server 2003 배포 키트의 작업 지원](https://go.microsoft.com/fwlink/?LinkID=102558)을 참조 하 고, Job_Aids_Designing_and_Deploying_Directory_and_Security_Services를 다운로드 하 고, "사이트 및 연결 된 사이트 링크 "(DSSTOPO_5).  
+사이트 링크의 이름을 지정 하려면 name_of_site1 name_of_site2와 같은 일관 된 이름 지정 체계를 사용 합니다. 사이트, 연결 된 사이트 및 해당 사이트를 연결 하는 사이트 링크의 이름을 워크시트에 기록 합니다. 사이트 이름 및 관련 사이트 링크 이름을 기록 하는 데 도움이 되는 워크시트의 경우 [Windows Server 2003 배포 키트의 작업 지원](https://go.microsoft.com/fwlink/?LinkID=102558)을 참조 하 고, Job_Aids_Designing_and_Deploying_Directory_and_Security_Services .zip을 다운로드 하 고, "사이트 및 관련 사이트 링크" (DSSTOPO_5)를 엽니다.  
   
-## <a name="in-this-guide"></a>이 가이드의 내용
+## <a name="in-this-guide"></a>설명서의 내용
 
 [사이트 링크 속성 설정](Setting-Site-Link-Properties.md)  

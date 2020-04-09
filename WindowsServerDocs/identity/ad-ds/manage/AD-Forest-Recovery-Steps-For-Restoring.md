@@ -1,6 +1,5 @@
 ---
 title: AD 포리스트 복구-포리스트 복원 단계
-description: ''
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
@@ -9,12 +8,12 @@ ms.topic: article
 ms.prod: windows-server
 ms.assetid: 5a291f65-794e-4fc3-996e-094c5845a383
 ms.technology: identity-adds
-ms.openlocfilehash: 07a043c4361f8eaae30b1dea665c604c0df42333
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 537543bedd68bff002054f637d96240a71f75793
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71390295"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80823406"
 ---
 # <a name="ad-forest-recovery---steps-for-restoring-the-forest"></a>AD 포리스트 복구-포리스트 복원 단계
 
@@ -30,7 +29,7 @@ ms.locfileid: "71390295"
   
 2. [포리스트를 복구 하는 방법 결정](AD-Forest-Recovery-Determine-how-to-Recover.md)  
 
-   포리스트 복구가 필요 하다 고 판단 되 면 준비 하는 준비 단계를 완료 합니다. 현재 포리스트 구조를 확인 하 고, 각 DC에서 수행 하는 기능을 식별 하 고, 각 도메인에 대해 복원할 DC를 결정 하 고, 쓰기 가능한 모든 Dc를 확인 합니다. 오프 라인으로 전환 됩니다.  
+   포리스트 복구가 필요 하다 고 판단 되 면 준비 하는 준비 단계를 완료 합니다. 현재 포리스트 구조를 확인 하 고, 각 DC에서 수행 하는 기능을 식별 하 고, 각 도메인에 대해 복원할 DC를 결정 하 고, 쓰기 가능한 모든 Dc를 오프 라인 상태로 만들 수 있는지 확인 합니다.  
 
 3. [초기 복구 수행](AD-Forest-Recovery-Perform-initial-recovery.md)  
 

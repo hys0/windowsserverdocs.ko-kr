@@ -1,7 +1,6 @@
 ---
 ms.assetid: ef4ef4a9-8969-4ad0-bd17-b2bb24f36ef6
 title: 포리스트 루트 도메인 선택
-description: ''
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 08/08/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 80d39a5910d06559b98211eaf55a4cd0c82442a1
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 3fddf5179e2944800d57568f0b8e52262c04cd43
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402509"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80821906"
 ---
 # <a name="selecting-the-forest-root-domain"></a>포리스트 루트 도메인 선택
 
@@ -69,7 +68,7 @@ Active Directory 포리스트에 배포 하는 첫 번째 도메인은 포리스
 Active Directory 네임 스페이스에서 인터넷 인증 기관에 등록 된 DNS 이름을 사용 하는 것이 좋습니다. 등록 된 이름만 전역적으로 고유 하 게 보장 됩니다. 다른 조직에서 나중에 동일한 DNS 도메인 이름을 등록 하는 경우 (또는 조직이 같은 DNS 이름을 사용 하는 다른 회사에서를 사용 하 여 또는 다른 회사에서 획득 한 경우) 두 인프라가 서로 상호 작용할 수 없습니다.  
   
 > [!CAUTION]  
-> 단일 레이블 DNS 이름을 사용 하지 마십시오. 자세한 내용은 단일 레이블 DNS 이름을 사용 하 여 도메인에 대 한 Windows 구성 정보 ([https://go.microsoft.com/fwlink/?LinkId=106631](https://go.microsoft.com/fwlink/?LinkId=106631))를 참조 하세요. 또한 등록 되지 않은 접미사 (예: local)를 사용 하지 않는 것이 좋습니다.  
+> 단일 레이블 DNS 이름을 사용 하지 마십시오. 자세한 내용은 단일 레이블 DNS 이름을 사용 하 여 도메인에 대해 Windows를 구성 하는 방법에 대 한 정보 ([https://go.microsoft.com/fwlink/?LinkId=106631](https://go.microsoft.com/fwlink/?LinkId=106631))를 참조 하세요. 또한 등록 되지 않은 접미사 (예: local)를 사용 하지 않는 것이 좋습니다.  
   
 ### <a name="selecting-a-prefix"></a>접두사 선택
 
@@ -89,4 +88,4 @@ Active Directory DNS 소유자는 Active Directory 네임 스페이스에 사용
   
 ## <a name="documenting-the-forest-root-domain-name"></a>포리스트 루트 도메인 이름 문서화
 
-포리스트 루트 도메인에 대해 선택 하는 DNS 접두사 및 접미사를 문서화 합니다. 이 시점에서 포리스트 루트가 될 도메인을 식별 합니다. 새 도메인 및 업그레이드 된 도메인 및 도메인 이름에 대 한 계획을 문서화 하기 위해 만든 "도메인 계획" 워크시트에 포리스트 루트 도메인 이름 정보를 추가할 수 있습니다. 이 파일을 열려면 [Windows Server 2003 배포 키트의 작업 지원](https://go.microsoft.com/fwlink/?LinkID=102558) 에서 Job_Aids_Designing_and_Deploying_Directory_and_Security_Services를 다운로드 하 고 "도메인 계획" (DSSLOGI_5)을 엽니다.
+포리스트 루트 도메인에 대해 선택 하는 DNS 접두사 및 접미사를 문서화 합니다. 이 시점에서 포리스트 루트가 될 도메인을 식별 합니다. 새 도메인 및 업그레이드 된 도메인 및 도메인 이름에 대 한 계획을 문서화 하기 위해 만든 "도메인 계획" 워크시트에 포리스트 루트 도메인 이름 정보를 추가할 수 있습니다. 이 파일을 열려면 [Windows Server 2003 배포 키트의 작업 지원](https://go.microsoft.com/fwlink/?LinkID=102558) 에서 Job_Aids_Designing_and_Deploying_Directory_and_Security_Services .zip을 다운로드 하 고 "도메인 계획" (DSSLOGI_5)을 엽니다.

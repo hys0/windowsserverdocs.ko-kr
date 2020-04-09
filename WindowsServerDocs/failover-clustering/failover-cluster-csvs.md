@@ -5,15 +5,16 @@ ms.prod: windows-server
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
+manager: lizross
 ms.technology: storage-failover-clustering
 ms.date: 06/07/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: da0f541c34c7f8687822bec365364fdd406fa3c3
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: 1d275e0379b5374899437bcf1f0387b304350840
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79322695"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80827746"
 ---
 # <a name="use-cluster-shared-volumes-in-a-failover-cluster"></a>장애 조치 (failover) 클러스터에서 클러스터 공유 볼륨 사용
 
@@ -29,12 +30,12 @@ CSV는 NTFS (또는 Windows Server 2012 r 2의 경우 ReFS) 위에 계층화 된
 > [!NOTE]
 > Csv SQL Server 2012 및 이전 버전 SQL Server에서 Microsoft SQL Server 클러스터 된 워크 로드를 지원 하지 않습니다.
 
-Windows Server 2012에서는 CSV 기능이 크게 향상 되었습니다. 예를 들어 Active Directory 도메인 서비스에 대한 종속성이 제거되었습니다. **chkdsk**의 기능 향상, 바이러스 백신 및 백업 애플리케이션과의 상호 운용성, BitLocker로 암호화된 볼륨 및 스토리지 공간과 같은 일반적인 스토리지 기능과의 통합 등에 대한 지원이 추가되었습니다. Windows Server 2012에 도입 된 CSV 기능에 대 한 개요는 [Windows server 2012 장애 조치 (Failover) 클러스터링의 새로운 기능 \[리디렉션된\]](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265972(v%3dws.11)>)를 참조 하세요.
+Windows Server 2012에서는 CSV 기능이 크게 향상 되었습니다. 예를 들어 Active Directory 도메인 서비스에 대한 종속성이 제거되었습니다. **chkdsk**의 기능 향상, 바이러스 백신 및 백업 응용 프로그램과의 상호 운용성, BitLocker로 암호화된 볼륨 및 저장소 공간과 같은 일반적인 저장소 기능과의 통합 등에 대한 지원이 추가되었습니다. Windows Server 2012에 도입 된 CSV 기능에 대 한 개요는 [Windows server 2012 장애 조치 (Failover) 클러스터링의 새로운 기능 \[리디렉션된\]](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265972(v%3dws.11)>)를 참조 하세요.
 
-Windows Server 2012 r 2에서는 분산 CSV 소유권과 같은 추가 기능을 제공 하 고, 서버 서비스의 가용성을 통해 복원 력을 높이고, CSV 캐시에 할당할 수 있는 실제 메모리의 양에 대 한 유연성을 향상 시킵니다. 진단 가능성 및 ReFS 및 중복 제거에 대 한 지원을 포함 하는 향상 된 상호 운용성. 자세한 내용은 [장애 조치 (Failover) 클러스터링의 새로운 기능](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265972(v%3dws.11)>)을 참조 하세요.
+Windows Server 2012 r 2에서는 분산 CSV 소유권과 같은 추가 기능을 제공 하 고, 서버 서비스의 가용성을 통해 복원 력을 향상 하 고, CSV 캐시에 할당할 수 있는 실제 메모리의 크기를 더욱 유연 하 게 진단 가능성 하 고, ReFS 및 중복 제거에 대 한 지원을 포함 하는 향상 된 상호 운용성을 제공 합니다. 자세한 내용은 [장애 조치 (Failover) 클러스터링의 새로운 기능](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265972(v%3dws.11)>)을 참조 하세요.
 
 > [!NOTE]
-> VDI(가상 데스크톱 인프라) 시나리오에 CSV의 데이터 중복 제거를 사용하는 방법에 대한 자세한 내용은 블로그 게시물 [Windows Server 2012 R2에서 VDI 스토리지에 대한 데이터 중복 제거 배포](https://blogs.technet.com/b/filecab/archive/2013/07/31/deploying-data-deduplication-for-vdi-storage-in-windows-server-2012-r2.aspx) (영문) 및 [Windows Server 2012 R2에서 새 워크로드로 데이터 중복 제거 확장](https://blogs.technet.com/b/filecab/archive/2013/07/31/extending-data-deduplication-to-new-workloads-in-windows-server-2012-r2.aspx)(영문)을 참조하세요.
+> VDI(가상 데스크톱 인프라) 시나리오에 CSV의 데이터 중복 제거를 사용하는 방법에 대한 자세한 내용은 블로그 게시물 [Windows Server 2012 R2에서 VDI 저장소에 대한 데이터 중복 제거 배포](https://blogs.technet.com/b/filecab/archive/2013/07/31/deploying-data-deduplication-for-vdi-storage-in-windows-server-2012-r2.aspx) (영문) 및 [Windows Server 2012 R2에서 새워크로드로 데이터 중복 제거 확장](https://blogs.technet.com/b/filecab/archive/2013/07/31/extending-data-deduplication-to-new-workloads-in-windows-server-2012-r2.aspx)(영문)을 참조하세요.
 
 ## <a name="review-requirements-and-considerations-for-using-csv-in-a-failover-cluster"></a>장애 조치(failover) 클러스터에서 CSV를 사용하기 위한 요구 사항 및 고려 사항 검토
 
@@ -59,13 +60,13 @@ CSV를 지원하는 네트워크를 구성할 때 고려할 사항은 다음과 
 - **클러스터 네트워크 우선 순위**. 일반적으로 클러스터에서 구성한 네트워크 기본 설정을 변경하지 않는 것이 좋습니다.
 - **IP 서브넷 구성**. CSV를 사용하는 네트워크의 노드에는 특정 서브넷 구성이 필요하지 않습니다. CSV는 다중 서브넷 클러스터를 지원할 수 있습니다.
 - **정책 기반 QoS(서비스 품질)** . CSV를 사용하는 경우 각 노드의 네트워크 트래픽에 대한 QoS 우선 순위 정책 및 최소 대역폭 정책을 구성하는 것이 좋습니다. 자세한 내용은 [QoS (서비스 품질)](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831679(v%3dws.11)>)를 참조 하세요.
-- **스토리지 네트워크**. 저장소 네트워크 권장 사항은 저장소 공급업체에서 제공하는 지침을 검토합니다. CSV 저장소에 대 한 추가 고려 사항은이 항목의 뒷부분에 있는 [저장소 및 디스크 구성 요구 사항](#storage-and-disk-configuration-requirements) 을 참조 하세요.
+- **저장소 네트워크**. 저장소 네트워크 권장 사항은 저장소 공급업체에서 제공하는 지침을 검토합니다. CSV 저장소에 대 한 추가 고려 사항은이 항목의 뒷부분에 있는 [저장소 및 디스크 구성 요구 사항](#storage-and-disk-configuration-requirements) 을 참조 하세요.
 
-장애 조치(failover) 클러스터에 대한 하드웨어, 네트워크 및 스토리지 요구 사항의 개요는 [장애 조치(failover) 클러스터링 하드웨어 요구 사항 및 스토리지 옵션](clustering-requirements.md)을 참조하세요.
+장애 조치(Failover) 클러스터의 하드웨어, 네트워크 및 저장소 요구 사항에 대한 개요는 [Failover Clustering Hardware Requirements and Storage Options](clustering-requirements.md)을 참조하세요.
 
 #### <a name="about-io-synchronization-and-io-redirection-in-csv-communication"></a>CSV 통신의 I/O 동기화 및 리디렉션된 I/O 모드 정보
 
-- **I/o 동기화**: CSV를 사용 하면 여러 노드에서 동일한 공유 저장소에 대 한 동시 읽기/쓰기 액세스를 사용할 수 있습니다. 노드에서 CSV 볼륨에 대해 디스크 I/O(입/출력)를 수행하는 경우 이 노드는 SAN(저장소 영역 네트워크) 등을 통해 저장소와 직접 통신합니다. 그러나 항상 단일 노드(코디네이터 노드라고 함)에서 LUN과 연결된 실제 디스크 리소스를 "소유"합니다. CSV 볼륨의 코디네이터 노드는 장애 조치(failover) 클러스터 관리자에서 **디스크** 아래에 **소유자 노드**로 표시됩니다. 또한이 파일은 [Get ClusterSharedVolume](https://docs.microsoft.com/powershell/module/failoverclusters/get-clustersharedvolume?view=win10-ps) Windows PowerShell cmdlet의 출력에도 표시 됩니다.
+- **I/o 동기화**: CSV를 사용 하면 여러 노드에서 동일한 공유 저장소에 대 한 동시 읽기/쓰기 액세스를 사용할 수 있습니다. 노드에서 CSV 볼륨에 대해 디스크 I/O(입/출력)를 수행하는 경우 이 노드는 SAN(저장소 영역 네트워크) 등을 통해 저장소와 직접 통신합니다. 그러나 언제 든 지 단일 노드 (코디네이터 노드라고 함)는 LUN과 연결 된 실제 디스크 리소스를 "소유" 합니다. CSV 볼륨의 코디네이터 노드는 장애 조치(failover) 클러스터 관리자에서 **디스크** 아래에 **소유자 노드**로 표시됩니다. 또한이 파일은 [Get ClusterSharedVolume](https://docs.microsoft.com/powershell/module/failoverclusters/get-clustersharedvolume?view=win10-ps) Windows PowerShell cmdlet의 출력에도 표시 됩니다.
 
   >[!NOTE]
   >Windows Server 2012 r 2에서는 CSV 소유권이 각 노드에서 소유한 CSV 볼륨 수에 따라 장애 조치 (failover) 클러스터 노드 전체에 고르게 분산 됩니다. 또한 CSV 장애 조치(failover)와 같은 조건이 있거나, 노드가 클러스터에 다시 가입하거나, 클러스터에 새 노드를 추가하거나, 클러스터 노드를 다시 시작하거나, 종료 후 장애 조치(failover) 클러스터를 시작하는 경우 소유권의 균형이 자동으로 조정됩니다.
@@ -76,8 +77,8 @@ CSV를 지원하는 네트워크를 구성할 때 고려할 사항은 다음과 
 
 서버는 상황에 따라 다음 I/O 리디렉션 모드 중 하나를 사용합니다.
 
-- **파일 시스템 리디렉션** 리디렉션이 볼륨 단위로 발생합니다(예: CSV 볼륨이 리디렉션된 I/O 모드에 수동으로 배치되었을 때 백업 애플리케이션에서 CSV 스냅샷을 만드는 경우).
-- **블록 리디렉션** 리디렉션이 파일 블록 수준에서 발생합니다(예: 볼륨의 스토리지 연결이 끊어진 경우). 블록 리디렉션은 파일 시스템 리디렉션보다 훨씬 빠릅니다.
+- **파일 시스템 리디렉션** 리디렉션이 볼륨 단위로 발생합니다(예: CSV 볼륨이 리디렉션된 I/O 모드에 수동으로 배치되었을 때 백업 응용 프로그램에서 CSV 스냅샷을 만드는 경우).
+- **블록 리디렉션** 리디렉션이 파일 블록 수준에서 발생합니다(예: 볼륨의 저장소 연결이 끊어진 경우). 블록 리디렉션은 파일 시스템 리디렉션보다 훨씬 빠릅니다.
 
 Windows Server 2012 r 2에서는 노드 단위로 CSV 볼륨의 상태를 볼 수 있습니다. 예를 들어 I/O가 직접인지, 리디렉션되었는지 또는 CSV 볼륨을 사용할 수 없는지 여부 등을 확인할 수 있습니다. CSV 볼륨이 리디렉션된 I/O 모드에 있으면 이유를 확인할 수도 있습니다. Windows PowerShell cmdlet **Get-ClusterSharedVolumeState**을 사용하여 이 정보를 볼 수 있습니다.
 
@@ -100,7 +101,7 @@ CSV를 사용하려면 저장소 및 디스크가 다음 요구 사항을 충족
   - CSV를 쿼럼 감시 디스크로 사용할 수 없습니다. 클러스터 쿼럼에 대 한 자세한 내용은 [스토리지 공간 다이렉트 쿼럼 이해](../storage/storage-spaces/understand-quorum.md)를 참조 하세요.
   - 디스크를 CSV로 추가하면 CSVFS 형식(CSV 파일 시스템용)으로 지정됩니다. 따라서 클러스터 및 기타 소프트웨어를 다른 NTFS 또는 ReFS 저장소의 CSV 저장소와 구분할 수 있습니다. 일반적으로 CSVFS는 NTFS 또는 ReFS와 동일한 기능을 지원합니다. 그러나 특정 기능은 지원되지 않습니다. 예를 들어 Windows Server 2012 r 2에서는 CSV에서 압축을 사용 하도록 설정할 수 없습니다. Windows Server 2012에서는 CSV에서 데이터 중복 제거 또는 압축을 사용 하도록 설정할 수 없습니다.
 - **클러스터의 리소스 종류**. CSV 볼륨에는 실제 디스크 리소스 종류를 사용해야 합니다. 기본적으로 클러스터 저장소에 추가된 디스크 또는 저장소 공간은 이 방식으로 자동으로 구성됩니다.
-- **클러스터 스토리지에서 CSV 디스크 또는 다른 디스크 선택**. 클러스터된 가상 컴퓨터에 대해 하나 이상의 디스크를 선택할 때는 각 디스크의 사용 방법을 고려해야 합니다. 디스크가 VHD 파일 또는 구성 파일과 같은 Hyper-V에서 생성된 파일을 저장하는 데 사용되는 경우 CSV 디스크 또는 클러스터 저장소의 다른 사용 가능한 디스크에서 선택할 수 있습니다. 디스크가 가상 컴퓨터에 직접 연결되는 실제 디스크(통과 디스크라고도 함)인 경우에는 CSV 디스크를 선택할 수 없으며, 클러스터 저장소의 다른 사용 가능한 디스크에서 선택해야 합니다.
+- **클러스터 저장소에서 CSV 디스크 또는 다른 디스크 선택**. 클러스터된 가상 컴퓨터에 대해 하나 이상의 디스크를 선택할 때는 각 디스크의 사용 방법을 고려해야 합니다. 디스크가 VHD 파일 또는 구성 파일과 같은 Hyper-V에서 생성된 파일을 저장하는 데 사용되는 경우 CSV 디스크 또는 클러스터 저장소의 다른 사용 가능한 디스크에서 선택할 수 있습니다. 디스크가 가상 컴퓨터에 직접 연결되는 실제 디스크(통과 디스크라고도 함)인 경우에는 CSV 디스크를 선택할 수 없으며, 클러스터 저장소의 다른 사용 가능한 디스크에서 선택해야 합니다.
 - **디스크를 식별하는 경로 이름**. CSV의 디스크는 경로 이름으로 식별됩니다. 각 경로는 노드의 시스템 드라이브 **\\ClusterStorage** 폴더 아래에 번호가 매겨진 볼륨으로 표시 됩니다. 이 경로는 클러스터의 모든 노드에서 동일하게 표시됩니다. 필요한 경우 볼륨의 이름을 바꿀 수 있습니다.
 
 CSV에 대한 저장소 요구 사항은 저장소 공급업체에서 제공하는 지침을 검토합니다. CSV에 대한 추가 저장소 계획 고려 사항은 이 항목의 뒷부분에 있는 [장애 조치(failover) 클러스터에서 CSV 사용 계획](#plan-to-use-csv-in-a-failover-cluster)을 참조하세요.
@@ -151,21 +152,21 @@ CSV를 사용하는 장애 조치(failover) 클러스터에 대한 저장소 구
 
 ## <a name="add-a-disk-to-csv-on-a-failover-cluster"></a>장애 조치(failover) 클러스터에 CSV로 디스크 추가
 
-CSV 기능은 장애 조치(failover) 클러스터링에서 기본적으로 사용됩니다. CSV에 디스크를 추가하려면 클러스터의 **사용 가능한 스토리지** 그룹(이미 추가되지 않은 경우)에 디스크를 추가한 다음 클러스터의 CSV에 디스크를 추가합니다. 장애 조치(Failover) 클러스터 관리자 또는 장애 조치 (Failover) 클러스터 Windows PowerShell cmdlet을 사용 하 여 이러한 절차를 수행할 수 있습니다.
+CSV 기능은 장애 조치(failover) 클러스터링에서 기본적으로 사용됩니다. CSV에 디스크를 추가하려면 클러스터의 **사용 가능한 저장소** 그룹(이미 추가되지 않은 경우)에 디스크를 추가한 다음 클러스터의 CSV에 디스크를 추가합니다. 장애 조치(Failover) 클러스터 관리자 또는 장애 조치 (Failover) 클러스터 Windows PowerShell cmdlet을 사용 하 여 이러한 절차를 수행할 수 있습니다.
 
 ### <a name="add-a-disk-to-available-storage"></a>사용 가능한 저장소에 디스크 추가
 
-1. 장애 조치(failover) 클러스터 관리자의 콘솔 트리에서 클러스터 이름을 확장한 다음 **스토리지**를 확장합니다.
+1. 장애 조치(failover) 클러스터 관리자의 콘솔 트리에서 클러스터 이름을 확장한 다음 **저장소**를 확장합니다.
 2. **디스크**를 마우스 오른쪽 단추로 클릭 한 다음 **디스크 추가**를 선택 합니다. 장애 조치(failover) 클러스터에서 사용하기 위해 추가할 수 있는 디스크 목록이 표시됩니다.
 3. 추가 하려는 디스크를 하나 이상 선택한 다음 **확인**을 선택 합니다.
 
-    이제 디스크가 **사용 가능한 스토리지** 그룹에 할당됩니다.
+    이제 디스크가 **사용 가능한 저장소** 그룹에 할당됩니다.
 
 #### <a name="windows-powershell-equivalent-commands-add-a-disk-to-available-storage"></a>Windows PowerShell 해당 명령 (사용 가능한 저장소에 디스크 추가)
 
 다음 Windows PowerShell cmdlet은 이전 절차와 동일한 기능을 수행합니다. 서식 조건 때문에 각 cmdlet이 여러 줄로 자동 줄 바꿈되어 표시되더라도 한 줄에 입력합니다.
 
-다음 예제에서는 클러스터에 추가할 준비가 된 디스크를 식별하여 **사용 가능한 스토리지** 그룹에 추가합니다.
+다음 예제에서는 클러스터에 추가할 준비가 된 디스크를 식별하여 **사용 가능한 저장소** 그룹에 추가합니다.
 
 ```PowerShell
 Get-ClusterAvailableDisk | Add-ClusterDisk
@@ -185,7 +186,7 @@ Get-ClusterAvailableDisk | Add-ClusterDisk
 
 다음 Windows PowerShell cmdlet은 이전 절차와 동일한 기능을 수행합니다. 서식 조건 때문에 각 cmdlet이 여러 줄로 자동 줄 바꿈되어 표시되더라도 한 줄에 입력합니다.
 
-다음 예제에서는 *사용 가능한 스토리지*의 **Cluster Disk 1**을 로컬 클러스터의 CSV에 추가합니다.
+다음 예제에서는 *사용 가능한 저장소*의 **Cluster Disk 1**을 로컬 클러스터의 CSV에 추가합니다.
 
 ```PowerShell
 Add-ClusterSharedVolume –Name "Cluster Disk 1"

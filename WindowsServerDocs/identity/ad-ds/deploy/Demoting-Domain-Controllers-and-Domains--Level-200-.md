@@ -1,7 +1,6 @@
 ---
 ms.assetid: 65ed5956-6140-4e06-8d99-8771553637d1
 title: 도메인 컨트롤러 및 도메인 수준 내리기(수준 200)
-description: ''
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,16 +8,16 @@ ms.date: 11/14/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: e3f320b67196a2400ebedbaeaf0a5b59969400e8
-ms.sourcegitcommit: b7f55949f166554614f581c9ddcef5a82fa00625
+ms.openlocfilehash: b8c5502f50b065e8c75d0167328868ac129dfad1
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72588100"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80825432"
 ---
 # <a name="demoting-domain-controllers-and-domains"></a>도메인 컨트롤러 및 도메인 수준 내리기
 
->적용 대상: Windows Server
+>Windows Server에 적용 됩니다.
 
 이 항목에서는 서버 관리자 또는 Windows PowerShell을 사용하여 AD DS를 제거하는 방법에 대해 설명합니다.
   
@@ -36,8 +35,8 @@ ms.locfileid: "72588100"
 |||  
 |-|-|  
 |**ADDSDeployment 및 ServerManager Cmdlet**|인수(**굵게** 표시된 인수는 필수 항목이며, *기울임꼴* 인수는 Windows PowerShell 또는 AD DS 구성 마법사를 사용하여 지정할 수 있음)|  
-|제거-Install-addsdomaincontroller|-SkipPreChecks<br /><br />*-LocalAdministratorPassword*<br /><br />-Confirm<br /><br />***-Credential***<br /><br />-DemoteOperationMasterRole<br /><br />*-DNSDelegationRemovalCredential*<br /><br />-Force<br /><br />*-ForceRemoval*<br /><br />*-IgnoreLastDCInDomainMismatch*<br /><br />*-IgnoreLastDNSServerForZone*<br /><br />*-LastDomainControllerInDomain*<br /><br />-Norebootoncompletion<br /><br />*-RemoveApplicationPartitions*<br /><br />*-RemoveDNSDelegation*<br /><br />-RetainDCMetadata|  
-|Uninstall-WindowsFeature/Remove-WindowsFeature|***-Name***<br /><br />***-IncludeManagementTools***<br /><br />*-Restart*<br /><br />-Remove<br /><br />-Force<br /><br />-ComputerName<br /><br />-Credential<br /><br />-LogPath<br /><br />-Vhd|  
+|제거-Install-addsdomaincontroller|-SkipPreChecks<p>*-LocalAdministratorPassword*<p>-Confirm<p>***-Credential***<p>-DemoteOperationMasterRole<p>*-DNSDelegationRemovalCredential*<p>-Force<p>*-ForceRemoval*<p>*-IgnoreLastDCInDomainMismatch*<p>*-IgnoreLastDNSServerForZone*<p>*-LastDomainControllerInDomain*<p>-Norebootoncompletion<p>*-RemoveApplicationPartitions*<p>*-RemoveDNSDelegation*<p>-RetainDCMetadata|  
+|Uninstall-WindowsFeature/Remove-WindowsFeature|***-Name***<p>***-IncludeManagementTools***<p>*-Restart*<p>-Remove<p>-Force<p>-ComputerName<p>-Credential<p>-LogPath<p>-Vhd|  
   
 > [!NOTE]  
 > **-credential** 인수는 Enterprise Admins 그룹(도메인의 마지막 DC 수준 내리기) 또는 Domain Admins 그룹(복제본 DC 수준 내리기)의 구성원으로 아직 로그온하지 않은 경우에만 필요하고, **-includemanagementtools** 인수는 모든 AD DS 관리 유틸리티를 제거하려는 경우에만 필요합니다.  
@@ -170,7 +169,7 @@ Uninstall-windowsfeature
 > [!WARNING]
 > 위의 두 옵션은 암호를 확인 하지 않으므로 각별히 주의 해야 합니다. 암호는 표시 되지 않습니다.
 
-변환된 일반 텍스트 변수로 보안 문자열을 제공할 수도 있습니다(권장되지 않음). 예를 들어 다음과 같은 가치를 제공해야 합니다.
+변환된 일반 텍스트 변수로 보안 문자열을 제공할 수도 있습니다(권장되지 않음). 예를 들면 다음과 같습니다.
 
 ```
 -localadministratorpassword (convertto-securestring "Password1" -asplaintext -force)
@@ -193,7 +192,7 @@ Uninstall-ADDSDomainController
 
 선택적 **Whatif** 인수를 **Uninstall-ADDSDomainController** 및 cmdlet과 함께 사용하여 구성 정보를 검토합니다. 이를 통해 cmdlet 인수의 명시적 및 암시적 값을 확인할 수 있습니다.
 
-예를 들어 다음과 같은 가치를 제공해야 합니다.
+예를 들면 다음과 같습니다.
 
 ![PowerShell 제거-Install-addsdomaincontroller 예제](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstall.png)
 

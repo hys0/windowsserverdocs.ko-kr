@@ -1,7 +1,6 @@
 ---
 ms.assetid: 0fd7b6aa-3e50-45a3-a3a6-56982844363e
 title: 이벤트 ID 2088-복제 성공 시 DNS 조회 오류가 발생 함
-description: ''
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: d51cbcc93a8decbcb72a1e91854a09345507511d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f84fd7be45995e9e0b318b42c8b4152af244a9da
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71368914"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80823056"
 ---
 # <a name="event-id-2088-dns-lookup-failure-occurred-with-replication-success"></a>이벤트 ID 2088: 복제 성공과 함께 DNS 조회 실패가 발생함
 
@@ -54,7 +53,7 @@ ms.locfileid: "71368914"
 
 사용자 작업: 
 
-1) 원본 도메인 컨트롤러가 더 이상 작동 하지 않거나 다른 컴퓨터 이름 또는 NTDSDSA 개체 GUID를 사용 하 여 해당 운영 체제를 다시 설치한 경우 MSKB 문서에 설명 된 단계를 사용 하 여 ntdsutil을 사용 하 여 원본 도메인 컨트롤러의 메타 데이터를 제거 합니다. 216498. 
+1) 원본 도메인 컨트롤러가 더 이상 작동 하지 않거나 다른 컴퓨터 이름이 나 NTDSDSA 개체 GUID를 사용 하 여 해당 운영 체제를 다시 설치한 경우 MSKB 문서 216498에 설명 된 단계를 사용 하 여 ntdsutil을 사용 하 여 원본 도메인 컨트롤러의 메타 데이터를 제거 합니다. 
 
 2) 원본 도메인 컨트롤러가 Active Directory 실행 중이 고 "net view \\&lt;원본 DC 이름&gt;" 또는 "ping &lt;원본 DC 이름&gt;"을 입력 하 여 네트워크에서 액세스할 수 있는지 확인 합니다. 
 

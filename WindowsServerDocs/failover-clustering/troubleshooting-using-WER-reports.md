@@ -1,26 +1,23 @@
 ---
 title: Windows 오류 보고를 사용 하 여 장애 조치 (Failover) 클러스터 문제 해결
 description: 보고서를 수집 하 고 일반적인 문제를 진단 하는 방법에 대 한 자세한 정보와 함께 WER 보고서를 사용 하 여 장애 조치 (Failover) 클러스터 문제
-keywords: 장애 조치 (Failover) 클러스터, WER 보고서, 진단, 클러스터, Windows 오류 보고
 ms.prod: windows-server
 ms.technology: storage-failover-clustering
 ms.author: vpetter
-ms.topic: article
-author: vpetter
+author: dcuomo
 ms.date: 03/27/2018
-ms.localizationpriority: ''
-ms.openlocfilehash: 46c633af8cf82ac43d2a787a7193685d88ad0ecc
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: e8db88dc4fe3ad9176299c5b423a7aac6093f254
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79322155"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80827356"
 ---
 # <a name="troubleshooting-a-failover-cluster-using-windows-error-reporting"></a>Windows 오류 보고를 사용 하 여 장애 조치 (Failover) 클러스터 문제 해결 
 
 > 적용 대상: Windows Server 2019, Windows Server 2016, Windows Server
 
-WER (Windows 오류 보고)는 고급 관리자 또는 계층 3 지원을 통해 Windows에서 검색할 수 있는 하드웨어 및 소프트웨어 문제에 대 한 정보를 수집 하 고 Microsoft에 정보를 보고할 수 있도록 설계 된 유연한 이벤트 기반 피드백 인프라입니다. 그리고 사용자에 게 사용 가능한 솔루션을 제공 합니다. 이 [참조](https://docs.microsoft.com/powershell/module/windowserrorreporting/) 는 모든 WindowsErrorReporting cmdlet에 대 한 설명 및 구문을 제공 합니다.
+WER (Windows 오류 보고)는 고급 관리자 또는 계층 3 지원을 통해 Windows에서 검색할 수 있는 하드웨어 및 소프트웨어 문제에 대 한 정보를 수집 하 고, Microsoft에 정보를 보고 하 고, 사용자에 게 사용 가능한 솔루션을 제공 하도록 설계 된 유연한 이벤트 기반 피드백 인프라입니다. 이 [참조](https://docs.microsoft.com/powershell/module/windowserrorreporting/) 는 모든 WindowsErrorReporting cmdlet에 대 한 설명 및 구문을 제공 합니다.
 
 아래에 표시 된 문제 해결에 대 한 정보는 에스컬레이션 된 고급 문제를 해결 하는 데 유용 하며, 심사를 위해 데이터를 Microsoft로 전송 해야 할 수도 있습니다.
 

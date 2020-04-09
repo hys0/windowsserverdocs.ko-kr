@@ -5,16 +5,16 @@ ms.prod: windows-server
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
-ms.manager: daveba
+manager: lizross
 ms.technology: storage-failover-clustering
 ms.date: 05/09/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 56bf122923525de6e0005dd6d866220221dc9ce1
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b14561a05778ed30e71363a2cd3b3b6fdf24f78e
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71392065"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80827476"
 ---
 # <a name="prestage-cluster-computer-objects-in-active-directory-domain-services"></a>Active Directory Domain Services에서 클러스터 컴퓨터 개체 사전 준비
 
@@ -73,7 +73,7 @@ CNO를 자동으로 만들려면 장애 조치(failover) 클러스터를 만드�
 2. CNO을 찾아서 마우스 오른쪽 단추로 클릭 한 다음 **속성**을 선택 합니다.
 3. **보안** 탭에서 **추가**를 선택 합니다.
 4. **사용자, 컴퓨터 또는 그룹 선택** 대화 상자에서 권한을 부여할 사용자 계정 또는 그룹을 지정한 다음 **확인**을 선택 합니다.
-5. 방금 추가한 사용자 계정 또는 그룹을 선택한 다음 **모든 권한**옆에서 **허용** 확인란을 선택합니다.
+5. 방금 추가한 사용자 계정 또는 그룹을 선택한 다음 **모든 권한** 옆에서 **허용** 확인란을 선택합니다.
   
    ![클러스터를 만들 사용자 또는 그룹에 모든 권한 부여](media/prestage-cluster-adds/granting-full-control-to-the-user-create-the-cluster.png)
   
@@ -138,5 +138,5 @@ AD DS에서 CNO를 사전 준비한 경우 다음 중 하나를 수행하여 VCO
 
 ## <a name="more-information"></a>자세한 정보
 
-- [장애 조치(failover) 클러스터링](failover-clustering.md)
+- [장애 조치 클러스터링](failover-clustering.md)
 - [Active Directory에서 클러스터 계정 구성](configure-ad-accounts.md)

@@ -1,7 +1,6 @@
 ---
 ms.assetid: aca4a4fa-b12c-4eed-a499-f9aedb7d2fd6
 title: 페더레이션된 서비스와 DRS에 대해 회사 DNS 구성
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,19 +8,19 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 9f0b04f9dc050117fdefc630759c86d2b1bb1ecc
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 3e3f2b36b7949e4bbde78942006e985f41abf9df
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71408448"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80814267"
 ---
 # <a name="configure-corporate-dns-for-the-federation-service-and-drs"></a>페더레이션된 서비스와 DRS에 대해 회사 DNS 구성
   
 ## <a name="step-6-add-a-host-a-and-alias-cname-resource-record-to-corporate-dns-for-the-federation-service-and-drs"></a>6 단계: 페더레이션 서비스 및 DRS에 대 한\) 및 별칭 \(CNAME\) 리소스 레코드를 회사 DNS에 추가 하 \(호스트를 추가 합니다.  
 이전 단계에서 구성한 페더레이션 서비스 및 장치 등록 서비스에 대 한 DNS\) \(회사 도메인 이름 시스템에 다음 리소스 레코드를 추가 해야 합니다.  
   
-|항목|형식|주소|  
+|항목|형식|Address|  
 |---------|--------|-----------|  
 |페더레이션\_서비스\_이름|\) \(호스트|AD FS 서버 팜 앞에 구성 된 AD FS 서버의 IP 주소 또는 부하 분산 장치의 IP 주소|  
 |enterpriseregistration|CNAME \(별칭\)|페더레이션\_서버\_name.contoso.com|  
@@ -49,7 +48,7 @@ ms.locfileid: "71408448"
     > [!IMPORTANT]  
     > 실제 배포에서는 회사에 여러 UPN (사용자 계정 이름 \(UPN\) 접미사가 있는 경우 DNS의 각 UPN 접미사에 대해 여러 CNAME 레코드를 만들어야 합니다.  
   
-## <a name="see-also"></a>참고 항목 
+## <a name="see-also"></a>관련 항목 
 
 [AD FS 배포](../../ad-fs/AD-FS-Deployment.md)  
 

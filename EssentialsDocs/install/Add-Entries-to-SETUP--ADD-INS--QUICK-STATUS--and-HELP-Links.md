@@ -1,23 +1,19 @@
 ---
 title: 설정, 추가 기능, 빠른 상태 및 도움말 링크에 항목 추가
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c0a8f10d-fd85-4c8d-b9bb-176cb1db1f46
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 074e4e638a1fe96bedf2c8340ec71848a8fa4ac4
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 78eb8a24b32763ae4f7c048889529f87d3b4fecf
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80310275"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80817666"
 ---
 # <a name="add-entries-to-setup-add-ins-quick-status-and-help-links"></a>설정, 추가 기능, 빠른 상태 및 도움말 링크에 항목 추가
 

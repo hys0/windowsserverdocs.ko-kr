@@ -1,7 +1,6 @@
 ---
 ms.assetid: f0cbdd78-f5ae-47ff-b5d3-96faf4940f4a
 title: 대체 로그인 ID 구성
-description: ''
 author: billmath
 ms.author: billmath
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 11/14/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 026873e231628e93738cba096cfae44c8b053217
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 7e7a881a2e6bae499ed7d4713bd70a804c3412e6
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75948556"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80816966"
 ---
 # <a name="configuring-alternate-login-id"></a>대체 로그인 ID 구성
 
@@ -36,7 +35,7 @@ Active Directory Federation Services (AD FS) AD FS를 사용 하 여 페더레�
    위에서 언급 한 시나리오에서 AD FS로 대체 ID를 사용 하면 사용자가 온-프레미스 Upn을 수정 하지 않고 Azure AD에 로그인 할 수 있습니다. 
 
 ## <a name="end-user-experience-with-alternate-login-id"></a>대체 로그인 ID를 사용 하는 최종 사용자 환경
-최종 사용자 환경은 대체 로그인 id에 사용 되는 인증 방법에 따라 달라 집니다.  현재 대체 로그인 id를 사용 하는 세 가지 방법이 있습니다.  채널은 다음과 같습니다.
+최종 사용자 환경은 대체 로그인 id에 사용 되는 인증 방법에 따라 달라 집니다.  현재 대체 로그인 id를 사용 하는 세 가지 방법이 있습니다.  가정합니다.
 
 - **일반 인증 (레거시)** -기본 인증 프로토콜을 사용 합니다.
 - **최신 인증** -응용 프로그램에 ACTIVE DIRECTORY 인증 라이브러리 (ADAL) 기반 로그인을 가져옵니다. 이를 통해 Office 클라이언트 응용 프로그램, 스마트 카드 및 인증서 기반 인증과 함께 Multi-Factor Authentication (MFA), SAML 기반 타사 Id 공급자와 같은 로그인 기능을 사용할 수 있습니다.
@@ -135,7 +134,7 @@ Windows 버전 1709 이상에서는 대체 id 시나리오를 처리 하도록 �
 ##### <a name="step-3-configure-registry-for-impacted-users-using-group-policy"></a>3단계. 그룹 정책을 사용 하 여 영향을 받는 사용자에 대 한 레지스트리 구성
 Office 응용 프로그램은 디렉터리 관리자가 푸시된 정보를 사용 하 여 대체 id 환경을 식별 합니다. Office 응용 프로그램에서 추가 프롬프트를 표시 하지 않고 대체 id를 사용 하 여 사용자를 인증할 수 있도록 다음 레지스트리 키를 구성 해야 합니다.
 
-|추가할 Regkey|Regkey 데이터 이름, 형식 및 값|Windows 7/8|Windows 10|설명|
+|추가할 Regkey|Regkey 데이터 이름, 형식 및 값|Windows 7/8|Windows 10|설명|
 |-----|-----|-----|-----|-----|
 |HKEY_CURRENT_USER \Software\Microsoft\AuthN|DomainHint</br>REG_SZ</br>contoso.com|필수|필수|이 regkey의 값은 조직의 테 넌 트에서 확인 된 사용자 지정 도메인 이름입니다. 예를 들어 Contoso.com이 테 넌 트 Contoso.onmicrosoft.com에서 확인 된 사용자 지정 도메인 이름 중 하나인 경우 Contoso corp는이 regkey에 Contoso.com 값을 제공할 수 있습니다.|
 HKEY_CURRENT_USER \Software\Microsoft\Office\16.0\Common\Identity|EnableAlternateIdSupport</br>REG_DWORD</br>1|Outlook 2016 ProPlus에 필요 합니다.|Outlook 2016 ProPlus에 필요 합니다.|이 regkey의 값은 1/0 일 수 있습니다 .이는 향상 된 대체 id 인증 논리에 대해 Outlook 응용 프로그램에 적용 해야 하는지 여부를 나타냅니다.|
@@ -156,23 +155,23 @@ HKEY_CURRENT_USER \Software\Microsoft\Windows\CurrentVersion\Internet Settings\Z
 
 ### <a name="non-exchange-and-skype-for-business-clients"></a>비 Exchange 및 비즈니스용 Skype 클라이언트
 
-|클라이언트|지원 정책|설명|
+|클라이언트|지원 문|주의|
 | ----- | -----|-----|
-|Microsoft Teams|지원 여부|<li>Microsoft 팀은 AD FS (SAML-P, WS-급지됨, WS-TRUST 및 OAuth)와 최신 인증을 지원 합니다.</li><li> 채널, 채팅 및 파일 기능과 같은 핵심 Microsoft 팀은 대체 로그인 ID로 작동 합니다.</li><li>첫 번째 및 타사 앱은 고객이 별도로 조사 해야 합니다. 각 응용 프로그램에는 고유한 지원 가능성 인증 프로토콜이 있기 때문입니다.</li>|     
+|Microsoft Teams|지원됨|<li>Microsoft 팀은 AD FS (SAML-P, WS-급지됨, WS-TRUST 및 OAuth)와 최신 인증을 지원 합니다.</li><li> 채널, 채팅 및 파일 기능과 같은 핵심 Microsoft 팀은 대체 로그인 ID로 작동 합니다.</li><li>첫 번째 및 타사 앱은 고객이 별도로 조사 해야 합니다. 각 응용 프로그램에는 고유한 지원 가능성 인증 프로토콜이 있기 때문입니다.</li>|     
 |비즈니스용 OneDrive|지원 됨-클라이언트 쪽 레지스트리 키 권장 |대체 ID를 구성 하면 확인 필드에서 온-프레미스 UPN이 미리 채워져 있는 것을 볼 수 있습니다. 이 사용 되는 대체 Id로 변경 해야 합니다. 이 문서에 나와 있는 클라이언트 쪽 레지스트리 키를 사용 하는 것이 좋습니다. Office 2013 및 Lync 2013에서 정기적으로 SharePoint Online, OneDrive 및 Lync Online으로 자격 증명을 묻는 메시지를 표시 합니다.|
-|비즈니스 모바일 클라이언트에 대 한 OneDrive|지원 여부|| 
+|비즈니스 모바일 클라이언트에 대 한 OneDrive|지원됨|| 
 |Office 365 Pro Plus 활성화 페이지|지원 됨-클라이언트 쪽 레지스트리 키 권장|대체 ID를 구성 하면 확인 필드에서 온-프레미스 UPN이 미리 채워져 있는 것을 볼 수 있습니다. 이 사용 되는 대체 Id로 변경 해야 합니다. 이 문서에 나와 있는 클라이언트 쪽 레지스트리 키를 사용 하는 것이 좋습니다. Office 2013 및 Lync 2013에서는 정기적으로 SharePoint Online, OneDrive 및 Lync Online에 대 한 자격 증명을 묻는 메시지를 표시 합니다.|
 
 ### <a name="exchange-and-skype-for-business-clients"></a>Exchange 및 비즈니스용 Skype 클라이언트
 
 |클라이언트|지원 문-HMA 사용|지원 문-HMA 불포함|
 | ----- |----- | ----- |
-|Outlook|지원 됨, 추가 메시지 표시 안 함|지원 여부</br></br>최신 Exchange Online **인증** 사용: 지원 됨</br></br>Exchange Online에 대 한 **일반 인증** 사용: 지원 되는 주의 사항은 다음과 같습니다.</br><li>도메인에 가입 된 컴퓨터에 있어야 하며 회사 네트워크에 연결 되어 있어야 합니다. </li><li>사서함 사용자에 대 한 외부 액세스를 허용 하지 않는 환경에서 대체 ID만 사용할 수 있습니다. 즉, 사용자가 연결 되 고 회사 네트워크, VPN 또는 직접 액세스 컴퓨터를 통해 연결 되는 경우 지원 되는 방식으로 해당 사서함에 대 한 인증을 받을 수 있지만 Outlook 프로필을 구성할 때 몇 가지 추가 프롬프트가 표시 됩니다.| 
+|Outlook|지원 됨, 추가 메시지 표시 안 함|지원됨</br></br>최신 Exchange Online **인증** 사용: 지원 됨</br></br>Exchange Online에 대 한 **일반 인증** 사용: 지원 되는 주의 사항은 다음과 같습니다.</br><li>도메인에 가입 된 컴퓨터에 있어야 하며 회사 네트워크에 연결 되어 있어야 합니다. </li><li>사서함 사용자에 대 한 외부 액세스를 허용 하지 않는 환경에서 대체 ID만 사용할 수 있습니다. 즉, 사용자가 연결 되 고 회사 네트워크, VPN 또는 직접 액세스 컴퓨터를 통해 연결 되는 경우 지원 되는 방식으로 해당 사서함에 대 한 인증을 받을 수 있지만 Outlook 프로필을 구성할 때 몇 가지 추가 프롬프트가 표시 됩니다.| 
 |하이브리드 공용 폴더|지원, 추가 프롬프트가 표시 되지 않습니다.|최신 Exchange Online **인증** 사용: 지원 됨</br></br>Exchange Online에 대 한 **일반 인증** 사용: 지원 되지 않음</br></br><li>대체 ID가 사용 되는 경우 하이브리드 공용 폴더를 확장할 수 없으므로 현재 일반 인증 방법으로 사용해 서는 안 됩니다.|
 |크로스-프레미스 위임|[하이브리드 배포에서 위임 된 사서함 권한을 지원 하도록 Exchange 구성을](https://technet.microsoft.com/library/mt784505.aspx) 참조 하세요.|[하이브리드 배포에서 위임 된 사서함 권한을 지원 하도록 Exchange 구성을](https://technet.microsoft.com/library/mt784505.aspx) 참조 하세요.|
 |사서함 액세스 (사서함 온-프레미스-클라우드에서 보관 파일)를 보관 합니다.|지원 됨, 추가 메시지 표시 안 함|지원 됨-사용자는 보관 파일에 액세스할 때 자격 증명에 대 한 추가 프롬프트를 받을 수 있으며, 메시지가 표시 되 면 해당 대체 ID를 제공 해야 합니다.| 
-|Outlook Web Access|지원 여부|지원 여부|
-|Android, IOS 및 Windows Phone 용 outlook 모바일 앱|지원 여부|지원 여부|
+|Outlook Web Access|지원됨|지원됨|
+|Android, IOS 및 Windows Phone 용 outlook 모바일 앱|지원됨|지원됨|
 |비즈니스용 Skype/Lync|추가 프롬프트 없이 지원 됨|지원 됨 (언급 된 경우 제외), 사용자 혼동 가능성이 있습니다.</br></br>모바일 클라이언트에서 대체 Id는 SIP 주소 = 전자 메일 주소 = 대체 ID 인 경우에만 지원 됩니다.</br></br> 사용자는 먼저 온-프레미스 UPN을 사용 하 고 대체 ID를 사용 하 여 비즈니스용 Skype 데스크톱 클라이언트에 두 번 로그인 해야 할 수 있습니다. "로그인 주소"는 실제로 "사용자 이름"과 같지 않을 수 있는 SIP 주소입니다 (종종). 사용자 이름을 입력 하 라는 메시지가 처음 표시 되 면 사용자는 UPN을 입력 해야 합니다 .이는 대체 ID 또는 SIP 주소로 잘못 미리 채워져 있는 경우에도 마찬가지입니다. 사용자가 UPN을 사용 하 여 로그인을 클릭 하면 사용자 이름 프롬프트가 다시 표시 됩니다 .이 시간은 UPN으로 미리 채워져 있습니다. 이번에는 사용자가이를 대체 ID로 바꾸어야 하 고 로그인을 클릭 하 여 로그인 프로세스를 완료 해야 합니다. 모바일 클라이언트에서 사용자는 UPN 형식이 아닌 SAM 스타일 형식 (domain\username)을 사용 하 여 고급 페이지에서 온-프레미스 사용자 ID를 입력 해야 합니다.</br></br>성공적으로 로그인 한 후 비즈니스용 Skype 또는 Lync가 "Exchange에 자격 증명이 필요 합니다." 라고 표시 되 면 사서함이 있는 위치에 대해 유효한 자격 증명을 제공 해야 합니다. 사서함이 클라우드에 있는 경우 대체 ID를 제공 해야 합니다. 사서함이 온-프레미스 인 경우 온-프레미스 UPN을 제공 해야 합니다.| 
 
 ## <a name="additional-details--considerations"></a>추가 세부 정보 및 고려 사항
@@ -185,7 +184,7 @@ HKEY_CURRENT_USER \Software\Microsoft\Windows\CurrentVersion\Internet Settings\Z
 -   사용 하도록 설정 하는 경우는 대체 로그인 ID만 기능을 사용자 이름/암호 인증에 사용할 수 있는 AD FS에서 지 원하는 하는 모든 사용자 이름/암호 인증 프로토콜에서 (Saml-p, Ws-fed, Ws-trust 및 OAuth).
 
 
--   WIA (Windows 통합 인증)가 수행 되는 경우 (예: 사용자가 인트라넷에서 도메인에 가입 된 컴퓨터의 회사 응용 프로그램에 액세스 하려고 하 고 AD FS 관리자가 인트라넷에 대해 WIA를 사용 하도록 인증 정책을 구성 하는 경우), UPN isused 인증의 경우. 대체 로그인 ID 기능에 대 한 신뢰 당사자에 대 한 모든 클레임 규칙을 구성한 경우 해당 규칙 WIA 경우에서 여전히 유효한 지 확인 해야 합니다.
+-   WIA (Windows 통합 인증)가 수행 되는 경우 (예: 사용자가 인트라넷에서 도메인에 가입 된 컴퓨터의 회사 응용 프로그램에 액세스 하려고 하 고 AD FS 관리자가 인트라넷에 대해 WIA를 사용 하도록 인증 정책을 구성한 경우)에는 인증에 UPN isused가 사용 됩니다. 대체 로그인 ID 기능에 대 한 신뢰 당사자에 대 한 모든 클레임 규칙을 구성한 경우 해당 규칙 WIA 경우에서 여전히 유효한 지 확인 해야 합니다.
 
 -   사용 하도록 설정 하는 경우 대체 로그인 ID 기능은 AD FS에서 지 원하는 각 사용자 계정 포리스트의 AD FS 서버에서 연결할 수 글로벌 카탈로그 서버를 하나 이상 필요 합니다. 사용자 계정 포리스트의 글로벌 카탈로그 서버에 연결 하지 못하면 AD FS UPN을 사용 하는 것으로 대체 됩니다. 기본적으로 모든 도메인 컨트롤러는 글로벌 카탈로그 서버입니다.
 
@@ -219,7 +218,7 @@ HKEY_CURRENT_USER \Software\Microsoft\Windows\CurrentVersion\Internet Settings\Z
 |        여러 사용자 개체가 하나의 포리스트에 있습니다.        |          로그인 실패           | 예외 메시지 MSIS8015를 사용 하는 이벤트 ID 364: id가 인 '{1}' 포리스트에서 id가 '{0}' 인 여러 사용자 계정을 찾았습니다. {2} |
 |   여러 포리스트에 걸친 여러 사용자 개체가 있습니다.    |          로그인 실패           |           예외 메시지 MSIS8014를 사용 하는 이벤트 ID 364: 포리스트에 id가 '{0}' 인 여러 사용자 계정이 있습니다. {1}            |
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 [AD FS 작업](../../ad-fs/AD-FS-2016-Operations.md)
 
 

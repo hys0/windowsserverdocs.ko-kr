@@ -1,30 +1,27 @@
 ---
-title: 추가 ImageDriverPackage 명령을 사용 하 여
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+title: -ImageDriverPackage 추가
+description: 서버에 있는 기존 부팅 이미지에 드라이버 저장소에 있는 드라이버 패키지를 추가 하는 add ImageDriverPackage에 대 한 Windows 명령 항목입니다.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6c2a4833-6427-47f8-9ffb-20b3786cb406
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1069b7c63e8b3bbc28fd900e8c869afc8abc03bc
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 9b61a5beabed655ae629ad5c1e43d681568d07db
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71363730"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80831926"
 ---
-# <a name="using-the-add-imagedriverpackage-command"></a>추가 ImageDriverPackage 명령을 사용 하 여
+# <a name="add-imagedriverpackage"></a>-ImageDriverPackage 추가
 
 >적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-서버에 있는 기존 부팅 이미지에 드라이버 저장소에 있는 드라이버 패키지를 추가 합니다. Windows 7 또는 Windows Server 2008 R2 이미지 버전 이어야 합니다. 이상.
+서버에서 기존 부팅 이미지에 드라이버 저장소에 있는 드라이버 패키지를 추가 합니다. Windows 7 또는 Windows Server 2008 R2 이미지 버전 이어야 합니다. 이상.
+
 ## <a name="syntax"></a>구문
 ```
 wdsutil /add-ImageDriverPackage [/Server:<Server name>media:<Image namemediatype:Boot /Architecture:{x86 | ia64 | x64} 
@@ -32,7 +29,7 @@ wdsutil /add-ImageDriverPackage [/Server:<Server name>media:<Image namemediatype
 ```
 [/Filename:<File name>] {/DriverPackage:<Package Name> | /PackageId:<ID>}
 ```
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |                 매개 변수                  |                                                                                                                                                                                                            설명                                                                                                                                                                                                             |
 |--------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -44,14 +41,14 @@ wdsutil /add-ImageDriverPackage [/Server:<Server name>media:<Image namemediatype
 |           [/Driverpackage:<Name>           |                                                                                                                                                                                   이미지에 추가할 드라이버 패키지의 이름을 지정 합니다.                                                                                                                                                                                    |
 |             [/ 패키지 Id:<ID>]              | 드라이버 패키지의 Windows 배포 서비스 ID를 지정합니다. 드라이버 패키지 이름으로 고유 하 게 식별할 수 없는 경우이 옵션을 지정 해야 합니다. 패키지 ID를 찾으려면 패키지가 드라이버 그룹을 클릭 합니다 (또는 **모든 패키지** 노드)에서 패키지를 마우스 오른쪽 단추로 클릭 한 다음 클릭 **속성**합니다. 패키지 ID는 **일반** 탭에 나열 됩니다. 예: {DD098D20-1850-4fc8-8E35-EA24A1BEFF5E}. |
 
-## <a name="BKMK_examples"></a>예와
+## <a name="examples"></a><a name=BKMK_examples></a>예와
 부팅 이미지에 드라이버 패키지를 추가 하려면 다음 중 하나를 입력 합니다.
 ```
-wdsutil /add-ImageDriverPackagmedia:"WinPE Boot Imagemediatype:Boot /Architecture:x86 /DriverPackage:XYZ
+wdsutil /add-ImageDriverPackagmedia:WinPE Boot Imagemediatype:Boot /Architecture:x86 /DriverPackage:XYZ
 ```
 ```
-wdsutil /verbose /add-ImageDriverPackagmedia:"WinPE Boot Image" /Server:MyWDSServemediatype:Boot /Architecture:x64 /PackageId:{4D36E972-E325-11CE-Bfc1-08002BE10318}
+wdsutil /verbose /add-ImageDriverPackagmedia:WinPE Boot Image /Server:MyWDSServemediatype:Boot /Architecture:x64 /PackageId:{4D36E972-E325-11CE-Bfc1-08002BE10318}
 ```
-#### <a name="additional-references"></a>추가 참조
-[명령줄 구문 키](command-line-syntax-key.md)
+## <a name="additional-references"></a>추가 참조
+- [명령줄 구문 키](command-line-syntax-key.md)
 [추가 ImageDriverPackages 명령을 사용 하 여](using-the-add-imagedriverpackages-command.md)

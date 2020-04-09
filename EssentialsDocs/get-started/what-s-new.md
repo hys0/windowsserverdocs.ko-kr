@@ -1,23 +1,19 @@
 ---
 title: Windows Server 2016 Essentials의 새로운 기능
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: affff774-5fa6-4944-887a-9bfde05f6a3f
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 1d5176a69136e9bad36e22472b8fadbd6d0e9e79
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 420d3b043959b8b1201aad7a5b3210fd9bd6a0da
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80310301"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80817756"
 ---
 # <a name="whats-new-in-windows-server-2016-essentials"></a>Windows Server 2016 Essentials의 새로운 기능
 
@@ -27,7 +23,7 @@ ms.locfileid: "80310301"
 
 ## <a name="integration-with-azure-site-recovery-services"></a>[Azure Site Recovery 서비스와 통합](azure-site-recovery-services-integration.md)
 
-**수행 하는 작업** -보호 되는 가상 컴퓨터가 실패 하거나 보호 된 가상 컴퓨터가 실행 되는 호스트 서버가 실패 하는 경우 온-프레미스 가상 컴퓨터 또는 호스트 서버를 복구 하 고 사용할 수 있을 때까지 Azure Site Recovery Services로 장애 조치 (failover) 하면 비즈니스 연속성을 유지 합니다. 
+보호 되는 가상 컴퓨터에 오류가 발생 하거나 보호 된 가상 컴퓨터가 실행 되는 호스트 서버에서 오류가 발생 하는 경우 Azure Site Recovery Services로 장애 조치 (failover) 하면 온-프레미스 가상 컴퓨터 또는 호스트 서버가 복구 되 고 사용 가능 해질 때까지 비즈니스 연속성을 **유지 하는 --&reg;** . 
 
 **작동 방식** -Microsoft Azure에서 제공 되는 Azure Site Recovery 서비스를 사용 하면 VM (가상 머신)을 Azure의 백업 자격 증명 모음으로 실시간으로 복제할 수 있습니다. 하드웨어 또는 기타 오류로 인해 서버 또는 사이트가 중단 되는 경우 백업 자격 증명 모음에 저장 된 VM 이미지가 Azure에서 실행 중인 VM으로 프로 비전 되도록 Azure Site Recovery 서비스로 장애 조치 (failover) 할 수 있습니다. Azure 가상 네트워크와 결합 된 이전에 온-프레미스 서버에 연결 된 클라이언트 Pc는 Azure에서 실행 되는 서버에 투명 하 게 연결 됩니다.     
                                                                                                                                                                                                                                                                                                                
@@ -52,4 +48,4 @@ ms.locfileid: "80310301"
 <a name="see-also"></a>참고 항목
 --------
 
-[Windows Server Essentials 시작](get-started.md)
+[Windows Server Essentials](get-started.md) &copy;&reg; 시작

@@ -1,6 +1,5 @@
 ---
 title: AD 포리스트 복구-DNS 서버 서비스 구성
-description: ''
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
@@ -8,12 +7,12 @@ ms.date: 08/09/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 2c1f2f68509c9136735fb13e24c86a1da40660eb
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 144a45f2a835d9cca60b5be5aac7569809c45b7c
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71369254"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80824176"
 ---
 # <a name="ad-forest-recovery---configuring-the-dns-server-service"></a>AD 포리스트 복구-DNS 서버 서비스 구성
 
@@ -47,7 +46,7 @@ ms.locfileid: "71369254"
 1. 서버 관리자 열고 **도구** 를 클릭 한 다음 **DNS**를 클릭 합니다.
    DNS 서버 ![](media/AD-Forest-Recovery-Configure-DNS/dns2.png)
 2. 중요 한 오작동 전에 DNS 서버에 호스트 된 동일한 DNS 도메인 이름에 대 한 DNS 영역을 만듭니다. 자세한 내용은 전방 조회 영역 추가 ([https://go.microsoft.com/fwlink/?LinkId=74574](https://go.microsoft.com/fwlink/?LinkId=74574))를 참조 하세요.
-3. 중요 한 오작동 이전의 DNS 데이터를 구성 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
+3. 중요 한 오작동 이전의 DNS 데이터를 구성 합니다. 예를 들면 다음과 같습니다.  
 
    - AD DS에 저장할 DNS 영역을 구성 합니다. 자세한 내용은 영역 유형 변경 ([https://go.microsoft.com/fwlink/?LinkId=74579](https://go.microsoft.com/fwlink/?LinkId=74579))을 참조 하세요.
    - 도메인 컨트롤러 로케이터 (DC 로케이터) 리소스 레코드에 대 한 권한이 있는 DNS 영역을 구성 하 여 보안 동적 업데이트를 허용 합니다. 자세한 내용은 보안 동적 업데이트만 허용 ([https://go.microsoft.com/fwlink/?LinkId=74580](https://go.microsoft.com/fwlink/?LinkId=74580))을 참조 하세요.
@@ -58,7 +57,7 @@ ms.locfileid: "71369254"
    > [!NOTE]
    > 보안 동적 업데이트는 글로벌 카탈로그 서버를 사용할 수 있는 경우에만 작동 합니다. 
 
-   명령 프롬프트에서 다음 명령을 입력하고 Enter 키를 누릅니다.  
+   명령 프롬프트에서 다음 명령을 입력한 다음 Enter 키를 누릅니다.  
 
    **net stop netlogon**  
 

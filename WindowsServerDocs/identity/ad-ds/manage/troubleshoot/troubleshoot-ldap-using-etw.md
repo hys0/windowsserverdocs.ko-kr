@@ -1,26 +1,20 @@
 ---
 title: ETW를 사용 하 여 LDAP 연결 문제 해결
 description: ETW를 설정 하 고 사용 하 여 AD DS 도메인 컨트롤러 간의 LDAP 연결을 추적 하는 방법을 설명 합니다.
-audience: Admin
-ms.custom:
-- CI ID 110964
-- CSSTroubleshoot
 author: Teresa-Motiv
 manager: dcscontentpm
 ms.prod: windows-server-dev
 ms.technology: active-directory-lightweight-directory-services
-ms.tgt_platform: multiple
-keywords:
-- 이벤트 추적 LDAP
+audience: Admin
 ms.author: v-tea
 ms.topic: article
 ms.date: 11/22/2019
-ms.openlocfilehash: 32929a89e959ee28fdf29ec121e74eafcb0209e4
-ms.sourcegitcommit: 30de12eebeb0fc79567d6bb6ab513692ea2415d3
+ms.openlocfilehash: f7b7df714dbd02b15555fa20c70c1e995e121a48
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74854182"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80822936"
 ---
 # <a name="using-etw-to-troubleshoot-ldap-connections"></a>ETW를 사용 하 여 LDAP 연결 문제 해결
 
@@ -112,7 +106,7 @@ ms.locfileid: "74854182"
 |**DEBUG_ERRORS** |0x10000000 |일반 오류를 기록 합니다. 이러한 오류는 대부분 모듈 초기화 오류, SSL 오류 또는 오버플로 또는 언더플로 오류로 분류 될 수 있습니다. |
 |**DEBUG_PERFORMANCE** |0x20000000 |LDAP 요청에 대 한 서버 응답을 받은 후 프로세스-글로벌 LDAP 작업 통계에 대 한 데이터를 기록 합니다. |
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 사용자 계정에 대 한 암호를 설정 하는 App1 응용 프로그램을 고려 합니다. App1에서 예기치 않은 오류가 발생 한다고 가정 합니다. ETW를 사용 하 여이 문제를 진단 하려면 다음 단계를 수행 합니다.
 

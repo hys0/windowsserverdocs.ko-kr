@@ -1,6 +1,5 @@
 ---
 title: AD 포리스트 복구-포리스트를 복구 하는 방법 결정
-description: ''
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
@@ -9,12 +8,12 @@ ms.topic: article
 ms.prod: windows-server
 ms.assetid: 5a291f65-794e-4fc3-996e-094c5845a383
 ms.technology: identity-adds
-ms.openlocfilehash: d604efded5b6a2ff3911a92f52817498f43c9933
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: fea55dc5551198f7bc06afb2ec38077398b9cf77
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71369172"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80824056"
 ---
 # <a name="determine-how-to-recover-the-forest"></a>포리스트를 복구 하는 방법 결정
 
@@ -26,7 +25,7 @@ ms.locfileid: "71369172"
 - 마지막으로 신뢰할 수 있는 백업 이후 기존 개체에 적용 된 모든 업데이트
 - 마지막으로 트러스트 된 백업 이후 AD DS의 구성 파티션이나 스키마 파티션 (예: 스키마 변경)에 대 한 모든 변경 내용
 
-포리스트의 각 도메인에 대해 도메인 관리자 계정의 암호를 알고 있어야 합니다. 기본 제공 관리자 계정의 암호입니다. 또한 DSRM 암호를 알고 있어야 DC의 시스템 상태 복원을 수행할 수 있습니다. 일반적으로 백업이 유효한 경우 (즉, 삭제 표시 수명 기간 내 또는 삭제 된 개체 수명 기간 내에 있는 경우)에는 관리자 계정 및 DSRM 암호 기록을 안전한 장소에 보관 하는 것이 좋습니다 Active Directory 재활용 Bin을 사용 합니다. 더 쉽게 기억할 수 있도록 DSRM 암호를 도메인 사용자 계정과 동기화 할 수도 있습니다. 자세한 내용은 기술 자료 문서 [961320](https://support.microsoft.com/kb/961320)를 참조 하십시오. DSRM 계정의 동기화는 준비의 일부로 포리스트 복구를 수행 하기 전에 수행 해야 합니다.
+포리스트의 각 도메인에 대해 도메인 관리자 계정의 암호를 알고 있어야 합니다. 기본 제공 관리자 계정의 암호입니다. 또한 DSRM 암호를 알고 있어야 DC의 시스템 상태 복원을 수행할 수 있습니다. 일반적으로 백업이 유효한 경우 (즉, Active Directory 휴지통이 사용 하도록 설정 된 경우 삭제 표시 수명 기간 내 또는 삭제 된 개체 수명 기간 내에 있는 경우) 안전한 장소에 관리자 계정 및 DSRM 암호 기록을 보관 하는 것이 좋습니다. 더 쉽게 기억할 수 있도록 DSRM 암호를 도메인 사용자 계정과 동기화 할 수도 있습니다. 자세한 내용은 기술 자료 문서 [961320](https://support.microsoft.com/kb/961320)를 참조 하십시오. DSRM 계정의 동기화는 준비의 일부로 포리스트 복구를 수행 하기 전에 수행 해야 합니다.
 
 > [!NOTE]
 > 관리자 계정은 기본적으로 Domain Admins 및 Enterprise Admins 그룹과 같은 기본 제공 Administrators 그룹의 구성원입니다. 이 그룹에는 도메인의 모든 Dc에 대 한 모든 권한이 있습니다.
@@ -53,7 +52,7 @@ Active Directory을 다른 하드웨어로 복원 해야 하는 경우 전체 �
 
 Active Directory 휴지통을 사용 하는 경우 백업 수명은 **msds-deletedobjectlifetime** 값 또는 **tombstoneLifetime** 값 중 더 작은 값과 같습니다. 자세한 내용은 [Active Directory 휴지통 단계별 가이드](https://go.microsoft.com/fwlink/?LinkId=178657) (https://go.microsoft.com/fwlink/?LinkId=178657)를 참조 하세요.
 
-또는 Active Directory 데이터베이스 탑재 도구 (Dsamain)와 Ldp.exe 또는 Active Directory 사용자 및 컴퓨터와 같은 LDAP (Lightweight Directory Access Protocol) 도구를 사용 하 여의 마지막 안전 상태를 가진 백업을 확인할 수도 있습니다. o. Windows Server 2008 이상 Windows Server 운영 체제에 포함 된 Active Directory 데이터베이스 탑재 도구는 백업 또는 스냅숏에 저장 된 Active Directory 데이터를 LDAP 서버로 노출 합니다. 그런 다음 LDAP 도구를 사용 하 여 데이터를 찾아볼 수 있습니다. 이 방법은 DSRM (디렉터리 서비스 복원 모드)에서 DC를 다시 시작 하 여 AD DS 백업의 내용을 검사 하지 않아도 된다는 장점이 있습니다.
+또는 Active Directory 데이터베이스 탑재 도구 (Dsamain)와 Ldp.exe 또는 Active Directory 사용자 및 컴퓨터와 같은 LDAP (Lightweight Directory Access Protocol) 도구를 사용 하 여 포리스트의 마지막 안전 상태를 확인할 수 있습니다. Windows Server 2008 이상 Windows Server 운영 체제에 포함 된 Active Directory 데이터베이스 탑재 도구는 백업 또는 스냅숏에 저장 된 Active Directory 데이터를 LDAP 서버로 노출 합니다. 그런 다음 LDAP 도구를 사용 하 여 데이터를 찾아볼 수 있습니다. 이 방법은 DSRM (디렉터리 서비스 복원 모드)에서 DC를 다시 시작 하 여 AD DS 백업의 내용을 검사 하지 않아도 된다는 장점이 있습니다.
 
 Active Directory 데이터베이스 탑재 도구를 사용 하는 방법에 대 한 자세한 내용은 [데이터베이스 탑재 도구 Active Directory 단계별 가이드](https://technet.microsoft.com/library/cc753609\(WS.10\).aspx)를 참조 하세요.
 
@@ -90,7 +89,7 @@ Active Directory 포함 된 백업 파일을 처리 하거나 복원할 때 보�
 
 다음 예와 같이 도메인에 있는 각 DC의 기능을 보여 주는 테이블을 준비 합니다. 이를 통해 복구 후 포리스트의 오류 전 구성으로 되돌릴 수 있습니다.
 
-|DC 이름|운영 체제|컴퓨터가|GC|RODC|백업|DNS|Server Core|VM|VM-GenID|  
+|DC 이름|운영 체제|컴퓨터가|GC|RODC|Backup|DNS|Server Core|VM|VM-GenID|  
 |-------------|----------------------|----------|--------|----------|------------|---------|-----------------|--------|---------------|  
 |DC_1|Windows Server 2012|스키마 마스터, 도메인 명명 마스터|예|아니요|예|아니요|아니요|예|예|  
 |DC_2|Windows Server 2012|없음|예|아니요|예|예|아니요|예|예|  
@@ -104,12 +103,12 @@ Active Directory 포함 된 백업 파일을 처리 하거나 복원할 때 보�
   
 이 예에서는 DC_1, DC_2, DC_4 및 DC_5의 네 가지 백업 후보가 있습니다. 이러한 백업 후보 중 하나만 복원 합니다. 권장 되는 DC는 다음과 같은 이유로 DC_5 됩니다.  
 
-- 가상화 된 DC 복제에 대 한 원본으로 사용 하기 위한 요구 사항을 충족 합니다. 즉, Vm-generationid를 지 원하는 하이퍼바이저에서 가상 DC로 Windows Server 2012를 실행 하 고, 복제할 수 있는 소프트웨어를 실행 하거나, 복제할 수 없는 경우 제거할 수 있습니다. d). 복원 후에는 PDC 에뮬레이터 역할이 해당 서버에 점유 되 고 도메인의 복제 가능 도메인 컨트롤러 그룹에 추가 될 수 있습니다.  
+- 가상화 된 DC 복제에 대 한 원본으로 사용 하기 위한 요구 사항을 충족 합니다. 즉, Vm-generationid를 지 원하는 하이퍼바이저에서 가상 DC로 Windows Server 2012를 실행 하 고, 복제할 수 있는 소프트웨어를 실행 하거나, 복제할 수 없는 경우 제거할 수 있습니다. 복원 후에는 PDC 에뮬레이터 역할이 해당 서버에 점유 되 고 도메인의 복제 가능 도메인 컨트롤러 그룹에 추가 될 수 있습니다.  
 - Windows Server 2012의 전체 설치를 실행 합니다. Server Core 설치를 실행 하는 DC는 복구 대상으로 서 편리 하지 않을 수 있습니다.  
 - DNS 서버입니다. 따라서 DNS를 다시 설치할 필요가 없습니다.  
 
 > [!NOTE]
-> DC_5는 글로벌 카탈로그 서버가 아니므로 복원 후에는 글로벌 카탈로그를 제거할 필요가 없다는 장점이 있습니다. 그러나 DC가 글로벌 카탈로그 서버 이기도 하 고, Windows Server 2012부터 모든 Dc는 기본적으로 글로벌 카탈로그 서버 이므로 복원 후에 글로벌 카탈로그를 제거 하 고 추가 하는 것이 포리스트의 일부로 권장 됩니다. 모든 경우에 복구 프로세스  
+> DC_5는 글로벌 카탈로그 서버가 아니므로 복원 후에는 글로벌 카탈로그를 제거할 필요가 없다는 장점이 있습니다. 그러나 DC는 글로벌 카탈로그 서버 이기도 하지만 Windows Server 2012부터 모든 Dc는 기본적으로 글로벌 카탈로그 서버 이므로 복원 후에는 글로벌 카탈로그를 제거 하 고 추가 하는 것이 좋습니다 .이는 모든 경우에 포리스트 복구 프로세스의 일부로 사용 하는 것이 좋습니다.  
 
 ## <a name="recover-the-forest-in-isolation"></a>격리 된 상태에서 포리스트 복구
 
@@ -125,7 +124,7 @@ Active Directory 포함 된 백업 파일을 처리 하거나 복원할 때 보�
 
 실제 하드웨어에서 Dc를 실행 하는 경우에는 포리스트 루트 도메인에서 복원 하려는 첫 번째 DC의 네트워크 케이블 연결을 끊습니다. 가능 하면 다른 모든 Dc의 네트워크 케이블과의 연결을 끊습니다. 이렇게 하면 Dc가 복제 되지 않습니다 (포리스트 복구 프로세스 중에 실수로 시작 된 경우).  
 
-여러 위치에 분산 된 대기업에서 쓰기 가능한 모든 Dc가 종료 되도록 보장 하기 어려울 수 있습니다. 이러한 이유로, 컴퓨터 계정 및 krbtgt 계정을 다시 설정 하는 것과 같은 복구 단계는 메타 데이터 정리 외에도 복구 가능한 쓰기 가능 dc가 위험한 쓰기 가능 Dc로 복제 되지 않도록 설계 되었습니다 (일부 경우 포리스트).  
+여러 위치에 분산 된 대기업에서 쓰기 가능한 모든 Dc가 종료 되도록 보장 하기 어려울 수 있습니다. 이러한 이유로, 컴퓨터 계정 및 krbtgt 계정을 다시 설정 하는 것 외에도 메타 데이터 정리 외에 복구 단계는 복구 된 쓰기 가능 Dc가 위험한 쓰기 가능 Dc로 복제 되지 않도록 설계 되었습니다 (일부 경우 포리스트에서 아직 온라인 상태).  
   
 그러나 쓰기 가능 Dc를 오프 라인으로 설정 하는 경우에만 복제가 발생 하지 않도록 보장할 수 있습니다. 따라서 가능 하면 포리스트 복구 중 쓰기 가능 Dc를 종료 하 고 물리적으로 격리 하는 데 사용할 수 있는 원격 관리 기술을 배포 해야 합니다.  
   

@@ -1,35 +1,32 @@
 ---
 title: 텔넷 송신
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: 텔넷 전송에 대 한 Windows 명령 항목 텔넷 서버에 텔넷 명령을 보냅니다.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7c217abc-1182-466e-914c-1ff16755021b vhorne
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 958e0e507e5a0ae836da98de8d677a116dbb38bd
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 6fef48ca04a3817f58d063bc8b23f5c11c4ea197
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71383626"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80833286"
 ---
 # <a name="telnet-send"></a>텔넷: 송신
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 텔넷 서버에 텔넷 명령을 보냅니다.   
+
 ## <a name="syntax"></a>구문  
 ```  
 sen[d] {ao | ayt | brk | esc | ip | synch | <string>} [?]  
 ```  
-### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>매개 변수  
 
 | 매개 변수 |                     설명                      |
 |-----------|------------------------------------------------------|
@@ -42,10 +39,10 @@ sen[d] {ao | ayt | brk | esc | ip | synch | <string>} [?]
 | <string>  | 텔넷 서버에 입력 하는 모든 문자열을 보냅니다. |
 |     ?     |     이 명령과 관련 된 도움말을 표시 합니다.      |
 
-## <a name="BKMK_Examples"></a>예와  
+## <a name="examples"></a><a name=BKMK_Examples></a>예와  
 그러면 텔넷 서버에 전송 됩니다.  
 ```  
 sen ayt  
 ```  
 ## <a name="additional-references"></a>추가 참조  
--   [명령줄 구문 키](command-line-syntax-key.md)  
+-   - [명령줄 구문 키](command-line-syntax-key.md)  
