@@ -2,20 +2,19 @@
 title: Hyper-v에 대 한 모범 사례 분석기
 description: 이 모범 사례 분석기 규칙에 대 한 텍스트의 온라인 버전입니다.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 3747faa5-6e9f-499e-8a79-3fb9d73b6b92
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: 671e1de78b390e1b595bb218ece375e88a47155b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: d4a2fb889aa13bc945a38a3d879ee013769fabca
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71365152"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80857696"
 ---
 # <a name="best-practices-analyzer-for-hyper-v"></a>Hyper-v에 대 한 모범 사례 분석기
 

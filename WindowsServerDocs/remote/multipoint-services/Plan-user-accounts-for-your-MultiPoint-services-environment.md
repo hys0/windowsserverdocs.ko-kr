@@ -1,24 +1,20 @@
 ---
 title: MultiPoint 서비스 환경에 대한 사용자 계정 계획
 description: MultiPoint 서비스의 사용자 계정에 대 한 계획 정보
-ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d47be540-e891-47bd-85da-6df4bbf93b2f
 author: evaseydl
 manager: scottman
 ms.author: evas
-ms.openlocfilehash: 056c3b9773387cf00b40baf6f14e4e1f3583f6c9
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 28ee7a1475ec55352fe344842b8df7633abb9137
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405010"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80853396"
 ---
 # <a name="plan-user-accounts-for-your-multipoint-services-environment"></a>MultiPoint 서비스 환경에 대한 사용자 계정 계획
 MultiPoint 서비스에서 사용자 계정을 구현 하는 가장 좋은 방법은 배포의 규모와 복잡성에 따라 달라 집니다.  
@@ -62,7 +58,7 @@ MultiPoint 서비스에서 사용자 계정을 구현 하는 가장 좋은 방�
 |UserAccount_04|UserAccount_04|  
 |UserAccount_05|UserAccount_05|  
   
-이 방법의 장점은 사용자가 사용 가능한 모든 MultiPoint 서비스에 대 한 로컬 사용자 계정을 보유 한다는 것입니다. 그러나 단점은이 이점 보다 클 수 있습니다. 예를 들어, 특정 사용자의 사용자 이름과 암호가 두 컴퓨터에서 동일 하더라도 계정은 서로 연결 되지 않습니다. 따라서 사용자가 월요일에 컴퓨터 A의 계정으로 로그온 하 고 파일을 저장 한 다음 화요일에 컴퓨터 B의 계정에 로그온 하면 컴퓨터 A에 이전에 저장 된 파일에 액세스할 수 없게 됩니다. 여러 컴퓨터에서 사용자 계정을 복제 하면 관리 오버 헤드 및 저장소 요구 사항이 증가 합니다.  
+이 방법의 장점은 사용자가 사용 가능한 모든 MultiPoint 서비스에 대 한 로컬 사용자 계정을 보유 한다는 것입니다. 그러나 단점은이 이점 보다 클 수 있습니다. 예를 들어, 특정 사용자의 사용자 이름과 암호가 두 컴퓨터에서 동일 하더라도 계정은 서로 연결 되지 않습니다. 따라서 사용자가 월요일에 컴퓨터 A의 계정으로 로그온 하 고 파일을 저장 한 다음 화요일에 컴퓨터 B의 계정에 로그온 하면 A 컴퓨터에 이전에 저장 한 파일에 액세스할 수 없게 됩니다. 또한 여러 컴퓨터에서 사용자 계정을 복제 하면 관리 오버 헤드 및 저장소 요구 사항이 증가 합니다.  
   
 ### <a name="use-generic-local-user-accounts"></a>일반 로컬 사용자 계정 사용  
 MultiPoint 서비스 시스템이 도메인에 연결 되지 않은 상태에서 각 사용자에 대해 개별 계정을 만들지 않으려는 경우 각 스테이션에 대해 일반 계정을 만들 수 있습니다. 예를 들어 MultiPoint 서비스를 실행 하는 컴퓨터가 두 대 있고 각 컴퓨터에 5 개의 스테이션이 연결 되어 있는 경우 다음 표에 표시 된 것과 유사한 사용자 계정을 만들도록 결정할 수 있습니다.  

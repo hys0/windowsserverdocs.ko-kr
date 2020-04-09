@@ -1,7 +1,6 @@
 ---
 ms.assetid: 10d6723e-c857-43da-9d2d-acb5641d3da8
 title: 도메인에 컴퓨터 가입
-description: ''
 author: billmath
 manager: femila
 ms.date: 05/31/2017
@@ -9,12 +8,12 @@ ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: 9f6d657397cb07d081a229135e3e6c97c7191164
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 174f585f3e156fc8e068b9300fc90a20a67869cf
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71408345"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80855356"
 ---
 # <a name="join-a-computer-to-a-domain"></a>도메인에 컴퓨터 가입
 
@@ -22,7 +21,7 @@ Active Directory Federation Services \(AD FS\) 작동 하려면 페더레이션 
   
 웹 서버가 클레임\-인식 응용 프로그램만 호스트 하는 경우 웹 서버를 도메인에 가입 시킬 필요가 없습니다.  
   
-로컬 컴퓨터에서 이 절차를 완료하기 위해서는 최소한 **관리자** 또는 이와 동등한 자격이 있어야 합니다.  적절 한 계정을 사용 하는 방법에 대 한 세부 정보를 검토 하 고 그룹 구성원 자격 [로컬 및 도메인 기본 그룹](https://go.microsoft.com/fwlink/?LinkId=83477)합니다.   
+이 절차를 완료하려면 최소한 로컬 컴퓨터의 **Administrators** 구성원 자격 또는 동급의 권한이 필요합니다.  적절 한 계정을 사용 하는 방법에 대 한 세부 정보를 검토 하 고 그룹 구성원 자격 [로컬 및 도메인 기본 그룹](https://go.microsoft.com/fwlink/?LinkId=83477)합니다.   
   
 ### <a name="to-join-a-computer-to-a-domain"></a>도메인에 컴퓨터를 가입 시키려면  
   

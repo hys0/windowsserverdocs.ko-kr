@@ -5,15 +5,15 @@ ms.prod: windows-server
 ms.technology: networking-ras
 ms.topic: article
 ms.date: 11/05/2018
-ms.author: lizross
-author: eross-msft
+ms.author: v-tea
+author: Teresa-MOTIV
 ms.localizationpriority: medium
-ms.openlocfilehash: a5d65dd9f8fb6328bd00be8a46af37ee69ccd2bf
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 570b96d07f414442a00d5f7ec48de80f270f0a76
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80313392"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80861316"
 ---
 # <a name="always-on-vpn-technology-overview"></a>Always On VPN 기술 개요
 
@@ -68,7 +68,7 @@ Windows Server 2016에서 원격 액세스 서버 역할은 라우터 및 원격
 
 IKEv2는 인터넷 엔지니어링 작업 Force Request for Comments 7296에 설명 된 VPN 터널링 프로토콜입니다. IKEv2의 주요 이점은 기본 네트워크 연결의 중단을 허용는 것입니다. 예를 들어 연결이 일시적으로 손실 되거나 사용자가 클라이언트 컴퓨터를 한 네트워크에서 다른 네트워크로 이동 하는 경우, IKEv2는 네트워크 연결이 다시 설정 될 때 자동으로 VPN 연결을 복원 합니다. 즉, 사용자 개입이 필요 하지 않습니다.
 
-RAS Gateway를 사용 하 여 VPN 연결을 배포 하 여 최종 사용자에 게 조직의 네트워크 및 리소스에 대 한 원격 액세스를 제공할 수 있습니다. Always On VPN을 배포 하면 원격 컴퓨터가 인터넷에 연결 될 때마다 클라이언트와 조직 네트워크 간에 영구 연결을 유지 관리 합니다. RAS Gateway를 사용 하 여 기본 사무실과 지사 사이에서 서로 다른 위치에 있는 두 서버 간에 사이트 간 VPN 연결을 만들 수도 있으며, 네트워크 내의 사용자가 외부에 액세스할 수 있도록 NAT (Network Address Translation)를 사용할 수도 있습니다. 리소스 (예: 인터넷) 또한 RAS 게이트웨이는 원격 사무실 위치에 BGP를 지 원하는에 지 게이트웨이가 있는 경우 동적 라우팅 서비스를 제공 하는 BGP (Border Gateway Protocol)를 지원 합니다.
+RAS Gateway를 사용 하 여 VPN 연결을 배포 하 여 최종 사용자에 게 조직의 네트워크 및 리소스에 대 한 원격 액세스를 제공할 수 있습니다. Always On VPN을 배포 하면 원격 컴퓨터가 인터넷에 연결 될 때마다 클라이언트와 조직 네트워크 간에 영구 연결을 유지 관리 합니다. RAS Gateway를 사용 하 여 기본 사무실과 지사 사이에서 서로 다른 위치에 있는 두 서버 간에 사이트 간 VPN 연결을 만들 수도 있으며, 네트워크 내의 사용자가 인터넷 등의 외부 리소스에 액세스할 수 있도록 NAT (Network Address Translation)를 사용할 수도 있습니다. 또한 RAS 게이트웨이는 원격 사무실 위치에 BGP를 지 원하는에 지 게이트웨이가 있는 경우 동적 라우팅 서비스를 제공 하는 BGP (Border Gateway Protocol)를 지원 합니다.
 
 Windows PowerShell 명령 및 원격 액세스 MMC (Microsoft Management Console)를 사용 하 여 RAS (원격 액세스 서비스) 게이트웨이를 관리할 수 있습니다.
 
@@ -84,7 +84,7 @@ NPS를 사용 하면 연결 요청 인증 및 권한 부여에 대 한 조직 �
 
 CA (인증 기관) 서버는 Active Directory 인증서 서비스를 실행 하는 인증 기관입니다. VPN 구성에는 Active Directory 기반 PKI (공개 키 인프라)가 필요 합니다.
 
-조직에서는 사람, 장치 또는 서비스의 id는 해당 공개 키에 바인딩하여 보안을 강화 하기 위해 AD CS를 사용할 수 있습니다. AD CS에는 인증서 등록 및 해지 다양 한 확장 가능한 환경에서에서 관리할 수 있는 기능이 포함 되어 있습니다. 자세한 내용은 참조 [Active Directory 인증서 서비스 개요](https://technet.microsoft.com/library/hh831740.aspx) 및 [공개 키 인프라 디자인 지침](https://social.technet.microsoft.com/wiki/contents/articles/2901.public-key-infrastructure-design-guidance.aspx)합니다.
+조직에서는 사람, 디바이스 또는 서비스의 id는 해당 공개 키에 바인딩하여 보안을 강화 하기 위해 AD CS를 사용할 수 있습니다. AD CS에는 인증서 등록 및 해지 다양 한 확장 가능한 환경에서에서 관리할 수 있는 기능이 포함 되어 있습니다. 자세한 내용은 참조 [Active Directory 인증서 서비스 개요](https://technet.microsoft.com/library/hh831740.aspx) 및 [공개 키 인프라 디자인 지침](https://social.technet.microsoft.com/wiki/contents/articles/2901.public-key-infrastructure-design-guidance.aspx)합니다.
 
 배포를 완료 하는 동안 CA에서 다음 인증서 템플릿을 구성 합니다.
 
@@ -126,7 +126,7 @@ CA (인증 기관) 서버는 Active Directory 인증서 서비스를 실행 하�
 
 ## <a name="active-directory-domain-services-ad-ds"></a>AD DS(Active Directory 도메인 서비스)
 
-AD DS에서는 디렉터리 사용 애플리케이션의 네트워크 리소스와 애플리케이션별 데이터에 대한 정보를 저장하고 관리하는 분산 데이터베이스를 제공합니다. 관리자는 AD DS를 이용해 사용자, 컴퓨터 및 다른 장치와 같은 네트워크 요소를 계층적 포함 구조로 구성할 수 있습니다. 계층적 포함 구조에는 Active Directory 포리스트, 포리스트의 도메인 및 각 도메인의 OU(조직 구성 단위)가 포함되어 있습니다. AD DS를 실행하고 있는 서버를 도메인 컨트롤러라고 합니다.
+AD DS에서는 디렉터리 사용 애플리케이션의 네트워크 리소스와 애플리케이션별 데이터에 대한 정보를 저장하고 관리하는 분산 데이터베이스를 제공합니다. 관리자는 AD DS를 이용해 사용자, 컴퓨터 및 다른 디바이스와 같은 네트워크 요소를 계층적 포함 구조로 구성할 수 있습니다. 계층적 포함 구조에는 Active Directory 포리스트, 포리스트의 도메인 및 각 도메인의 OU(조직 구성 단위)가 포함되어 있습니다. AD DS를 실행하고 있는 서버를 도메인 컨트롤러라고 합니다.
 
 AD DS에는 사용자 자격 증명을 인증 하 고 VPN 연결 요청에 대 한 권한 부여를 평가 하기 위해 PEAP (Protected Extensible Authentication Protocol)에 필요한 사용자 계정, 컴퓨터 계정 및 계정 속성이 포함 되어 있습니다. AD DS를 배포 하는 방법에 대 한 자세한 내용은 Windows Server 2016 [Core 네트워크 가이드](../../../../networking/core-network-guide/Core-Network-Guide.md)를 참조 하세요.
 
@@ -202,10 +202,10 @@ Windows 10에서는 많은 Csp를 제공 하지만이 배포에서는 VPNv2 CSP�
 
 - [Dns (Domain Name System)](../../../../networking/dns/dns-top.md):이 항목에서는 Dns (도메인 이름 시스템)의 개요를 제공 합니다. Windows Server 2016에서 DNS는 서버 관리자 또는 Windows PowerShell 명령을 사용 하 여 설치할 수 있는 서버 역할입니다. 새 Active Directory 포리스트 및 도메인을 설치 하는 경우 DNS 자동으로 설치 됩니다 Active directory 포리스트 및 도메인에 대 한 글로벌 카탈로그 서버입니다.
 
-- [Active Directory 인증서 서비스 개요](https://technet.microsoft.com/library/hh831740.aspx):이 문서에서는 Windows Server® 2012에 있는 Active Directory 인증서 서비스 (AD CS)의 개요를 제공 합니다. AD CS는 서버 역할로서 이를 이용하면 조직을 위해 PKI(공개 키 인프라)를 구축할 수 있고 공개 키 암호화, 디지털 인증서, 디지털 서명 기능을 제공할 수 있습니다.
+- [Active Directory 인증서 서비스 개요](https://technet.microsoft.com/library/hh831740.aspx):이 문서에서는 Windows Server&reg; 2012에 있는 Active Directory 인증서 서비스 (AD CS)의 개요를 제공 합니다. AD CS는 서버 역할로서 이를 이용하면 조직을 위해 PKI(공개 키 인프라)를 구축할 수 있고 공개 키 암호화, 디지털 인증서, 디지털 서명 기능을 제공할 수 있습니다.
 
 - [공개 키 인프라 디자인 지침](https://social.technet.microsoft.com/wiki/contents/articles/2901.public-key-infrastructure-design-guidance.aspx):이 Wiki는 Pki (공개 키 인프라) 디자인에 대 한 지침을 제공 합니다. PKI 및 CA (인증 기관) 계층 구조를 구성 하기 전에 조직의 보안 정책 및 CPS (인증서 약관)를 알고 있어야 합니다.
 
-- [AD cs 단계별 가이드: 2 단계 PKI 계층 구조 배포](https://social.technet.microsoft.com/wiki/contents/articles/15037.ad-cs-step-by-step-guide-two-tier-pki-hierarchy-deployment.aspx):이 단계별 가이드에서는 랩 환경에서 ad CS (Active Directory® 인증서 서비스)의 기본 구성을 설정 하는 데 필요한 단계에 대해 설명 합니다. Windows Server® 2008 r 2의 AD CS는 공개 키 기술을 사용 하는 소프트웨어 보안 시스템에서 사용 되는 공개 키 인증서를 만들고 관리 하기 위한 사용자 지정 가능한 서비스를 제공 합니다.
+- [AD cs 단계별 가이드: 2 단계 PKI 계층 구조 배포](https://social.technet.microsoft.com/wiki/contents/articles/15037.ad-cs-step-by-step-guide-two-tier-pki-hierarchy-deployment.aspx):이 단계별 가이드에서는 랩 환경에서 ad CS (Active Directory&reg; 인증서 서비스)의 기본 구성을 설정 하는 데 필요한 단계에 대해 설명 합니다. Windows Server&reg; 2008 r 2의 AD CS는 공개 키 기술을 사용 하는 소프트웨어 보안 시스템에서 사용 되는 공개 키 인증서를 만들고 관리 하기 위한 사용자 지정 가능한 서비스를 제공 합니다.
 
 - [NPS (네트워크 정책 서버)](../../../../networking/technologies/nps/nps-top.md):이 항목에서는 Windows Server 2016의 네트워크 정책 서버에 대 한 개요를 제공 합니다. 네트워크 정책 서버(NPS)를 사용하면 연결 요청 인증 및 권한 부여를 위해 조직 전체의 네트워크 액세스 정책을 생성하여 적용할 수 있습니다.

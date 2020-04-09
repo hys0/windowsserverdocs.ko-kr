@@ -3,18 +3,18 @@ title: 저장소 공간 다이렉트 하드웨어 요구 사항
 ms.prod: windows-server
 description: 저장소 공간 다이렉트 테스트에 대한 최소 하드웨어 요구 사항
 ms.author: eldenc
-ms.manager: eldenc
+manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: eldenchristensen
 ms.date: 08/05/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 63a7152ec6abb318a096ac321ae7ccfaaef4d199
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 42022b6e2e3564d1440e2ba1d45f9f98430242c0
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402936"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80861056"
 ---
 # <a name="storage-spaces-direct-hardware-requirements"></a>저장소 공간 다이렉트 하드웨어 요구 사항
 
@@ -29,7 +29,7 @@ ms.locfileid: "71402936"
 
 ## <a name="base-requirements"></a>기본 요구 사항
 
-시스템, 구성 요소, 장치 및 드라이버는 [Windows Server 카탈로그](https://www.windowsservercatalog.com)를 기준으로 **Windows server 2016 인증** 되어야 합니다. 또한 서버, 드라이브, 호스트 버스 어댑터 및 네트워크 어댑터에는 아래 그림과 같이 **소프트웨어 정의 데이터 센터 (sddc) 표준** 및/또는 **소프트웨어 정의 데이터 센터 (sddc) 프리미엄 추가 AQs (소프트웨어 정의 데이터 센터** )가 있는 것이 좋습니다. 표에서. SDDC AQs이 포함 된 1000 개 이상의 구성 요소가 있습니다.
+시스템, 구성 요소, 장치 및 드라이버는 [Windows Server 카탈로그](https://www.windowsservercatalog.com)를 기준으로 **Windows server 2016 인증** 되어야 합니다. 또한 서버, 드라이브, 호스트 버스 어댑터 및 네트워크 어댑터에는 아래 그림과 같이 **소프트웨어 정의 데이터 센터 (sddc) 표준** 및/또는 **소프트웨어 정의 데이터 센터 (sddc) 프리미엄** 추가 조건 (AQs)이 있습니다. SDDC AQs이 포함 된 1000 개 이상의 구성 요소가 있습니다.
 
 ![SDDC AQs을 보여 주는 Windows Server 카탈로그의 스크린샷](media/hardware-requirements/sddc-aqs.png)
 
@@ -56,7 +56,7 @@ ms.locfileid: "71402936"
 
 - [이제 SATADOM을 포함](https://cloudblogs.microsoft.com/windowsserver/2017/08/30/announcing-support-for-satadom-boot-drives-in-windows-server-2016/) 하는 Windows Server에서 지원 되는 부팅 장치
 - RAID 1 미러가 필요 **하지** 않지만 부팅에 대해 지원 됩니다.
-- 권장: 200 GB의 최소 크기
+- 권장: 200 GB 최소 크기
 
 ## <a name="networking"></a>네트워킹
 
@@ -72,8 +72,8 @@ ms.locfileid: "71402936"
 - 25gbps NIC 이상
 
 스위치 또는 switchless 노드 상호 간의 상호 교환
-- 켜져 네트워크 스위치는 대역폭 및 네트워킹 유형을 처리 하도록 적절히 구성 되어야 합니다.  RoCE 프로토콜을 구현 하는 RDMA를 사용 하는 경우 네트워크 장치 및 스위치 구성이 훨씬 더 중요 합니다. 
-- Switchless: 직접 연결을 사용 하 여 노드를 상호 연결 하 여 스위치를 사용 하지 않을 수 있습니다.  모든 노드에서 클러스터의 다른 모든 노드에 직접 연결 해야 합니다.
+- 전환 됨: 네트워크 스위치가 대역폭 및 네트워킹 유형을 처리 하도록 적절히 구성 되어 있어야 합니다.  RoCE 프로토콜을 구현 하는 RDMA를 사용 하는 경우 네트워크 장치 및 스위치 구성이 훨씬 더 중요 합니다. 
+- Switchless: 직접 연결을 사용 하 여 노드를 상호 연결 하 여 스위치 사용을 방지할 수 있습니다.  모든 노드에서 클러스터의 다른 모든 노드에 직접 연결 해야 합니다.
 
 
 ## <a name="drives"></a>드라이브
@@ -88,7 +88,7 @@ ms.locfileid: "71402936"
 - 영구적 메모리 장치를 캐시 장치로 사용할 경우에는 NVMe 또는 SSD 용량 장치 (Hdd를 사용할 수 없음)를 사용 해야 합니다.
 - NVMe 드라이버는 Microsoft에서 제공 하는 Windows에 포함 되어 있습니다. (stornvme. sys)
 - 권장: 용량 드라이브 수는 캐시 드라이브 수의 전체 배수입니다.
-- 권장: 캐시 드라이브에는 높은 쓰기 endurance 있어야 합니다. 즉, 하루에 3 개 이상의 드라이브 쓰기 (DWPD) 또는 최소 4tb 쓰기 (TBW)를 수행 해야 합니다. [에 대 스토리지 공간 다이렉트 한 드라이브 쓰기 (DWPD), 테라바이트 기록 (TBW) 및 최소 권장 사항 이해를 참조 하세요. ](https://blogs.technet.microsoft.com/filecab/2017/08/11/understanding-dwpd-tbw/)
+- 권장: 캐시 드라이브에는 최대 3 개의 드라이브 쓰기 endurance (DWPD) 또는 하루에 최소 4 테라바이트 쓰기 (TBW)를 포함 해야 합니다. [(DWPD)의 드라이브 쓰기 이해 (), 테라바이트 기록 (TBW) 및 최소 권장 스토리지 공간 다이렉트](https://blogs.technet.microsoft.com/filecab/2017/08/11/understanding-dwpd-tbw/)
 
 스토리지 공간 다이렉트에 대 한 드라이브를 연결 하는 방법은 다음과 같습니다.
 
@@ -129,7 +129,7 @@ ms.locfileid: "71402936"
 
 ### <a name="maximum-capacity"></a>최대 용량
 
-| 최대값                | Windows Server 2019  | Windows Server 2016  |
+| 최대값                | Windows Server 2019  | Windows Server 2016  |
 | ---                     | ---------            | ---------            |
 | 서버당 원시 용량 | 400 TB               | 100 TB               |
 | 풀 용량           | 4 PB (4000 TB)      | 1 PB                 |

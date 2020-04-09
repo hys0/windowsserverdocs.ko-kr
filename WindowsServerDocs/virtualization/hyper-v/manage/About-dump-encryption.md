@@ -8,12 +8,12 @@ author: larsiwer
 ms.asset: b78ab493-e7c3-41f5-ab36-29397f086f32
 ms.author: kathydav
 ms.date: 11/03/2016
-ms.openlocfilehash: 2232f62090e171060f25e4c2513a217e2ab98eaa
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: a7df8de5a828b68a341191eaa1a400f80dd9127b
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75950544"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80852906"
 ---
 # <a name="about-dump-encryption"></a>덤프 암호화 정보
 덤프 암호화를 사용 하 여 시스템에 대해 생성 된 크래시 덤프와 라이브 덤프를 암호화할 수 있습니다. 덤프는 각 덤프에 대해 생성 된 대칭 암호화 키를 사용 하 여 암호화 됩니다. 그런 다음 호스트의 신뢰할 수 있는 관리자가 지정한 공개 키 (크래시 덤프 암호화 키 보호기)를 사용 하 여이 키가 암호화 됩니다. 이렇게 하면 일치 하는 개인 키가 있는 사용자만 암호를 해독 하 여 덤프의 내용에 액세스할 수 있습니다. 이 기능은 보호 된 패브릭에서 활용 됩니다.
@@ -23,11 +23,11 @@ ms.locfileid: "75950544"
 ### <a name="manual-configuration"></a>수동 구성
 레지스트리를 사용 하 여 덤프 암호화를 켜려면 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\CrashControl` 아래에서 다음 레지스트리 값을 구성 합니다.
 
-| 값 이름 | 작업 표시줄의 검색 상자에 | Value |
+| 값 이름 | 형식 | 값 |
 | ---------- | ---- | ----- |
 | 안 함 | DWORD | 1 덤프 암호화를 사용 하도록 설정 하려면 0, 덤프 암호화를 사용 하지 않으려면 0 |
-| UblicKey::P | 이진 | 덤프를 암호화 하는 데 사용 해야 하는 공개 키 (RSA, 2048 비트)입니다. [BCRYPT_RSAKEY_BLOB](https://msdn.microsoft.com/library/windows/desktop/aa375531(v=vs.85).aspx)형식으로 지정 해야 합니다. |
-| \ 인증서:: 지문 | 문자열 | 크래시 덤프의 암호를 해독할 때 로컬 인증서 저장소에서 개인 키를 자동으로 조회할 수 있도록 하는 인증서 지문입니다. |
+| UblicKey::P | Binary | 덤프를 암호화 하는 데 사용 해야 하는 공개 키 (RSA, 2048 비트)입니다. [BCRYPT_RSAKEY_BLOB](https://msdn.microsoft.com/library/windows/desktop/aa375531(v=vs.85).aspx)형식으로 지정 해야 합니다. |
+| \ 인증서:: 지문 | String | 크래시 덤프의 암호를 해독할 때 로컬 인증서 저장소에서 개인 키를 자동으로 조회할 수 있도록 하는 인증서 지문입니다. |
 
 
 ### <a name="configuration-using-script"></a>스크립트를 사용 하 여 구성

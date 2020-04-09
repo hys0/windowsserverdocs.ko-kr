@@ -1,7 +1,6 @@
 ---
 ms.assetid: e863ab80-4e4c-48d3-bdaa-31815ef36bae
 title: LDAP 디렉터리에 저장된 사용자를 인증하도록 AD FS 구성
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 191ec0243c8c34c2084dd07f94f0b3f70b197756
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 9c194128cb5d96bf84e19b11b9d8803c61e34490
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71358072"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859906"
 ---
 # <a name="configure-ad-fs-to-authenticate-users-stored-in-ldap-directories"></a>LDAP 디렉터리에 저장된 사용자를 인증하도록 AD FS 구성
 
@@ -23,13 +22,13 @@ ms.locfileid: "71358072"
 많은 조직에서 id 관리 솔루션은 Active Directory, AD LDS 또는 타사 LDAP 디렉터리의 조합으로 구성 됩니다. LDAP v3 규격 디렉터리에 저장 된 사용자를 인증 하는 AD FS 지원 추가를 통해 사용자 id의 저장 위치에 관계 없이 전체 엔터프라이즈급 AD FS 기능 집합을 활용할 수 있습니다. AD FS LDAP v3 호환 디렉터리를 지원 합니다.
 
 > [!NOTE]
-> AD FS 기능 중 일부에는 SSO (Single Sign-On), 장치 인증, 유연한 조건부 액세스 정책, 웹 응용 프로그램 프록시와의 통합을 통한 작업 지원 및 Azure AD와의 원활한 페더레이션이 포함 됩니다. Office 365 및 기타 SaaS 응용 프로그램을 포함 하 여 사용자와 사용자가 클라우드를 활용할 수 있습니다.  자세한 내용은 [Active Directory Federation Services 개요](../../ad-fs/AD-FS-2016-Overview.md)를 참조 하세요.
+> AD FS 기능 중 일부에는 SSO (Single Sign-On), 장치 인증, 유연한 조건부 액세스 정책, 웹 응용 프로그램 프록시와의 통합을 통해 어디에서 나 작업 지원, Azure AD와의 원활한 페더레이션 등이 있습니다. 그러면 사용자와 사용자가 Office 365 및 기타 SaaS 응용 프로그램을 포함 하 여 클라우드를 활용할 수 있습니다.  자세한 내용은 [Active Directory Federation Services 개요](../../ad-fs/AD-FS-2016-Overview.md)를 참조 하세요.
 
 AD FS가 LDAP 디렉터리에서 사용자를 인증 하도록 하려면 **로컬 클레임 공급자 트러스트**를 만들어이 ldap 디렉터리를 AD FS 팜에 연결 해야 합니다.  로컬 클레임 공급자 트러스트는 AD FS 팜의 LDAP 디렉터리를 나타내는 트러스트 개체입니다. 로컬 클레임 공급자 트러스트 개체는 로컬 페더레이션 서비스에이 LDAP 디렉터리를 식별 하는 다양 한 식별자, 이름 및 규칙으로 구성 됩니다.
 
 여러 **로컬 클레임 공급자 트러스트**를 추가 하 여 동일한 AD FS 팜 내에서 각각 고유한 구성을 사용 하는 여러 LDAP 디렉터리를 지원할 수 있습니다. 또한 AD FS 있는 포리스트에서 신뢰 하지 않는 AD DS 포리스트는 로컬 클레임 공급자 트러스트로도 모델링할 수 있습니다. Windows PowerShell을 사용 하 여 로컬 클레임 공급자 트러스트를 만들 수 있습니다.
 
-LDAP 디렉터리 (로컬 클레임 공급자 트러스트)는 동일한 AD FS 팜 내에서 동일한 AD FS 서버에 AD 디렉터리 (클레임 공급자 트러스트)와 공존할 수 있습니다. 따라서 단일 AD FS 인스턴스는 다음과 같은 사용자에 대 한 액세스를 인증 하 고 권한을 부여할 수 있습니다. AD 및 비-AD 디렉터리 둘 다에 저장 됩니다.
+LDAP 디렉터리 (로컬 클레임 공급자 트러스트)는 동일한 AD FS 팜 내에서 동일한 AD FS 서버에 AD 디렉터리 (클레임 공급자 트러스트)와 공존할 수 있습니다. 따라서 AD FS의 단일 인스턴스는 AD 및 비-AD 디렉터리에 저장 된 사용자에 대 한 액세스를 인증 하 고 권한을 부여할 수 있습니다.
 
 LDAP 디렉터리에서 사용자를 인증 하는 데는 폼 기반 인증만 지원 됩니다. LDAP 디렉터리에서 사용자를 인증 하는 데는 인증서 기반 및 Windows 통합 인증이 지원 되지 않습니다.
 

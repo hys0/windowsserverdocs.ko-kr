@@ -2,22 +2,18 @@
 title: DNS 리소스 레코드 삭제
 description: 이 항목은 Windows Server 2016의 IPAM (IP 주소 관리) 관리 가이드의 일부입니다.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-ipam
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 366e6fd5-d563-4de3-9551-5614cbb8f2cb
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 8c93af6a5d43086320ab27982f7a0c0308ee551d
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: a5658e53aebf9f6fa20a5de9f3f7cb5a0287b408
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80312459"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80860676"
 ---
 # <a name="delete-dns-resource-records"></a>DNS 리소스 레코드 삭제
 
@@ -47,7 +43,7 @@ ms.locfileid: "80312459"
   
     ![올바른 DNS 서버가 선택 되어 있는지 확인 하 고 레코드를 삭제 합니다.](../../media/Delete-DNS-Resource-Records/ipam_DeleteRR_03.jpg)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [DNS 리소스 레코드 관리](DNS-Resource-Record-Management.md)  
 [IPAM 관리](Manage-IPAM.md)  
   

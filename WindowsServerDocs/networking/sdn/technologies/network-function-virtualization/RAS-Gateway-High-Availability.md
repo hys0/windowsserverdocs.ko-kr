@@ -1,23 +1,19 @@
 ---
 title: RAS 게이트웨이 고가용성
 description: 이 항목을 사용 하 여 Windows Server 2016에서 SDN (소프트웨어 정의 네트워킹) 용 RAS 다중 테 넌 트 게이트웨이의 고가용성 구성에 대해 알아볼 수 있습니다.
-manager: brianlic
-ms.custom: na
+manager: grcusanz
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-sdn
-ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 34d826c9-65bc-401f-889d-cf84e12f0144
-ms.author: lizross
-author: eross-msft
-ms.openlocfilehash: 5fca4fc6a636bcde155e60b6da3c827bc9313606
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.author: anpaul
+author: AnirbanPaul
+ms.openlocfilehash: 774f0f4299bb5acbe7314080dd1314f74574d16d
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80313042"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859616"
 ---
 # <a name="ras-gateway-high-availability"></a>RAS 게이트웨이 고가용성
 
@@ -158,7 +154,7 @@ Hyper-v 네트워크 가상화 L3 전달 게이트웨이는 데이터 센터의 
   
 IPsec 또는 GRE 네트워크 연결과 달리 연결 스위치는 테 넌 트의 VLAN 태그가 지정 된 네트워크를 동적으로 알 수 없습니다. 종단 간 연결을 보장 하기 위해 테 넌 트의 VLAN 태그가 지정 된 네트워크에 대 한 라우팅을 연결 스위치 및 물리적 인프라와 게이트웨이 간의 모든 중간 스위치 및 라우터에 구성 해야 합니다.  다음은 아래 그림에 표시 된 것과 같은 예제 CSP Virtual Network 구성입니다.  
   
-|네트워크|Subnet|VLAN ID|기본 게이트웨이|  
+|네트워크|서브넷|VLAN ID|기본 게이트웨이|  
 |-----------|----------|-----------|-------------------|  
 |Contoso L3 논리 네트워크|10.127.134.0/24|1001|10.127.134.1|  
 |Woodgrove L3 논리 네트워크|10.127.134.0/24|1002|10.127.134.1|  

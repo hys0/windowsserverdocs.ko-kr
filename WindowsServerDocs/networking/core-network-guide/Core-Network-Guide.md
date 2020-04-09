@@ -8,12 +8,12 @@ ms.topic: article
 ms.assetid: b3cd60f7-d380-4712-9a78-0a8f551e1121
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: a0da2265f8f66256ed2ba71d4847bf8a548626f8
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: b58fe9eaa66abd91de27713398759529ae6147ae
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80319139"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80861766"
 ---
 # <a name="core-network-components"></a>핵심 네트워크 구성 요소
 
@@ -129,7 +129,7 @@ TCP/IP는 Windows 기반 컴퓨터를 다음과 같은 Microsoft 시스템 및 �
 
 -    Windows Server 2012
 
--   Windows 8
+-   Windows 8
 
 -    Windows Server 2008 R2
 
@@ -283,11 +283,11 @@ AD DS를 설치 하는 동안 사용할 포리스트 기능 수준을 선택 해
 
 |구성 항목:|예제 값:|
 |------------------------|-------------------|
-|전체 DNS 이름|예를 들면 다음과 같습니다.<br /><br />-corp.contoso.com<br />-example.com|
+|전체 DNS 이름|예제:<p>-corp.contoso.com<br />-example.com|
 |포리스트 기능 수준|-Windows Server 2008 <br />-Windows Server 2008 R2 <br />-Windows Server 2012 <br />-Windows Server 2012 R2 <br />-Windows Server 2016|
-|Active Directory Domain Services 데이터베이스 폴더 위치|E:\Configuration\\<br /><br />또는 기본 위치를 적용합니다.|
-|Active Directory Domain Services 로그 파일 폴더 위치|E:\Configuration\\<br /><br />또는 기본 위치를 적용합니다.|
-|Active Directory Domain Services SYSVOL 폴더 위치|E:\Configuration\\<br /><br />또는 기본 위치를 적용합니다.|
+|Active Directory Domain Services 데이터베이스 폴더 위치|E:\Configuration\\<p>또는 기본 위치를 적용합니다.|
+|Active Directory Domain Services 로그 파일 폴더 위치|E:\Configuration\\<p>또는 기본 위치를 적용합니다.|
+|Active Directory Domain Services SYSVOL 폴더 위치|E:\Configuration\\<p>또는 기본 위치를 적용합니다.|
 |디렉터리 복원 모드 관리자 암호|**J\*p2leO4 $ F**|
 |응답 파일 이름(옵션)|**AD DS_AnswerFile**|
 
@@ -412,7 +412,7 @@ DHCP 서버에 대해 범위를 만들면 DHCP 서버가 컴퓨터 및 기타 �
 |네트워크 연결 바인딩|이더넷|
 |DNS 서버 설정|DC1.corp.contoso.com|
 |기본 설정 DNS 서버 IP 주소|10.0.0.2|
-|범위 추가 대화 상자 값<br /><br />1. 범위 이름<br />2. 시작 IP 주소<br />3. 끝 IP 주소<br />4. 서브넷 마스크<br />5. 기본 게이트웨이 (옵션)<br />6. 임대 기간|1. 기본 서브넷<br />2.10.0.0.1<br />3.10.0.0.254<br />4.255.255.255.0<br />5.10.0.0.1<br />6.8 일|
+|범위 추가 대화 상자 값<p>1. 범위 이름<br />2. 시작 IP 주소<br />3. 끝 IP 주소<br />4. 서브넷 마스크<br />5. 기본 게이트웨이 (옵션)<br />6. 임대 기간|1. 기본 서브넷<br />2.10.0.0.1<br />3.10.0.0.254<br />4.255.255.255.0<br />5.10.0.0.1<br />6.8 일|
 |IPv6 DHCP 서버 작동 모드|사용 안 함|
 
 ## <a name="core-network-deployment"></a><a name="BKMK_deployment"></a>핵심 네트워크 배포
@@ -1437,9 +1437,9 @@ Windows Server 핵심 네트워크 배포 절차 [새 포리스트에 대한 AD 
 |-----------------------|------------------|----------|
 |전체 DNS 이름|corp.contoso.com||
 |포리스트 기능 수준|Windows Server 2003||
-|Active Directory Domain Services 데이터베이스 폴더 위치|E:\Configuration\\<br /><br />또는 기본 위치를 적용합니다.||
-|Active Directory Domain Services 로그 파일 폴더 위치|E:\Configuration\\<br /><br />또는 기본 위치를 적용합니다.||
-|Active Directory Domain Services SYSVOL 폴더 위치|E:\Configuration\\<br /><br />또는 기본 위치를 적용합니다.||
+|Active Directory Domain Services 데이터베이스 폴더 위치|E:\Configuration\\<p>또는 기본 위치를 적용합니다.||
+|Active Directory Domain Services 로그 파일 폴더 위치|E:\Configuration\\<p>또는 기본 위치를 적용합니다.||
+|Active Directory Domain Services SYSVOL 폴더 위치|E:\Configuration\\<p>또는 기본 위치를 적용합니다.||
 |디렉터리 복원 모드 관리자 암호|J*p2leO4$F||
 |응답 파일 이름(옵션)|AD DS_AnswerFile||
 
@@ -1448,10 +1448,10 @@ Windows Server 핵심 네트워크 배포 절차 [새 포리스트에 대한 AD 
 |구성 항목|예제 값|값|
 |-----------------------|------------------|----------|
 |영역 종류:|-주 영역<br />-보조 영역<br />-스텁 영역||
-|영역 종류<br /><br />**영역을 Active Directory에 저장 합니다.**|-선택 됨<br />-선택 하지 않음||
+|영역 종류<p>**영역을 Active Directory에 저장 합니다.**|-선택 됨<br />-선택 하지 않음||
 |Active Directory 영역 복제 범위|-이 포리스트의 모든 DNS 서버에<br />-이 도메인의 모든 DNS 서버로<br />-이 도메인의 모든 도메인 컨트롤러에<br />-이 디렉터리 파티션의 범위에 지정 된 모든 도메인 컨트롤러||
-|역방향 조회 영역 이름<br /><br />(IP 유형)|-IPv4 역방향 조회 영역<br />-IPv6 역방향 조회 영역||
-|역방향 조회 영역 이름<br /><br />(네트워크 ID)|10.0.0||
+|역방향 조회 영역 이름<p>(IP 유형)|-IPv4 역방향 조회 영역<br />-IPv6 역방향 조회 영역||
+|역방향 조회 영역 이름<p>(네트워크 ID)|10.0.0||
 
 ### <a name="installing-dhcp"></a><a name="BKMK_FndtnPrep_InstallDHCP"></a>DHCP 설치
 이 섹션의 표에는 DHCP의 사전 설치 및 설치에 대한 구성 항목이 나열되어 있습니다.
@@ -1509,16 +1509,16 @@ Windows Server 핵심 네트워크 배포 절차 [새 DHCP 범위 만들기 및 
 |-----------------------|------------------|----------|
 |새 범위 이름|Corp2||
 |범위 설명|본사 서브넷 2||
-|(IP 주소 범위)<br /><br />시작 IP 주소|10.0.1.1||
-|(IP 주소 범위)<br /><br />끝 IP 주소|10.0.1.254||
+|(IP 주소 범위)<p>시작 IP 주소|10.0.1.1||
+|(IP 주소 범위)<p>끝 IP 주소|10.0.1.254||
 |길이|8||
 |서브넷 마스크|255.255.255.0||
 |(제외 범위) 시작 IP 주소|10.0.1.1||
 |제외 범위 끝 IP 주소|10.0.1.15||
-|임대 기간<br /><br />요일<br /><br />Hours<br /><br />분|-8<br />-   0<br />-   0||
-|라우터(기본 게이트웨이)<br /><br />IP 주소|10.0.1.1||
+|임대 기간<p>요일<p>Hours<p>분|-8<br />-   0<br />-   0||
+|라우터(기본 게이트웨이)<p>IP 주소|10.0.1.1||
 |DNS 부모 도메인|corp.contoso.com||
-|DNS 서버<br /><br />IP 주소|10.0.0.2||
+|DNS 서버<p>IP 주소|10.0.0.2||
 
 ### <a name="installing-network-policy-server-optional"></a><a name="BKMK_FndtnPrep_InstallNPS"></a>네트워크 정책 서버 설치 (선택 사항)
 이 섹션의 표에서는 NPS의 사전 설치 및 설치에 대한 구성 항목을 보여 줍니다.

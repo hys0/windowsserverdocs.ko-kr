@@ -2,21 +2,19 @@
 title: Hyper-v에 대 한 가상 로컬 영역 네트워크를 구성 합니다.
 description: Hyper-v 호스트의 가상 컴퓨터에서 사용할 수 있도록 VLAN (virtual local area network)을 구성 하는 방법에 대 한 지침을 제공 합니다.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8510a709-001c-4eee-b6d6-c451e8a8a836
-author: KBDAzure
+author: kbdazure
 ms.author: kathydav
 ms.date: 10/11/2016
-ms.openlocfilehash: bf40d9ad2612df033db7a7e3b93ca9faf249daf2
-ms.sourcegitcommit: 2a15de216edde8b8e240a4aa679dc6d470e4159e
+ms.openlocfilehash: 08c0e5062715ccc11cdedfe228f8cc58f689f555
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77465587"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80860866"
 ---
 # <a name="configure-virtual-local-area-networks-for-hyper-v"></a>Hyper-v에 대 한 가상 로컬 영역 네트워크를 구성 합니다.
 Virtual local area network \(Vlan\) 네트워크 트래픽을 격리 하는 방법을 제공 합니다. 스위치 및 라우터를 지 원하는 802.1 q Vlan 구성 됩니다. 여러 Vlan을 구성 하 고 해당 사이의 통신을 원하는 경우이 작업을 허용 하도록 네트워크 디바이스를 구성 해야 합니다.
@@ -56,6 +54,6 @@ Vlan을 구성 하려면 다음이 필요 합니다.
 
 - [Set\-set-vmnetworkadaptervlan](https://technet.microsoft.com/library/hh848475.aspx) cmdlet을 사용 하 여 트렁크 모드에서 가상 네트워크 어댑터를 구성 합니다.
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 
 [하이퍼\-V 가상 스위치](https://technet.microsoft.com/windows-server-docs/networking/technologies/hyper-v-virtual-switch/hyper-v-virtual-switch)

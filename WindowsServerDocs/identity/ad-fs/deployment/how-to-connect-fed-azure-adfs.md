@@ -1,27 +1,19 @@
 ---
 title: Azure의 Active Directory Federation Services | Microsoft Docs
 description: 이 문서에서는 Azure에서 high 가용성에 AD FS를 배포 하는 방법에 대해 설명 합니다.
-services: active-directory
-documentationcenter: ''
 author: billmath
 manager: mtillman
-editor: ''
 ms.assetid: 692a188c-badc-44aa-ba86-71c0e8074510
-ms.service: active-directory
-ms.workload: identity
-ms.tgt_pltfrm: na
-ms.devlang: na
 ms.topic: get-started-article
 ms.date: 10/28/2018
 ms.subservice: hybrid
 ms.author: billmath
-ms.custom: H1Hack27Feb2017
-ms.openlocfilehash: 15ebf21973f78ad705aca77e178005dfa9529cf2
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 5701e7955a3baff248c0f7efc0b1de03088a8aa0
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70868222"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854956"
 ---
 # <a name="deploying-active-directory-federation-services-in-azure"></a>Azure에서 Active Directory Federation Services 배포
 AD FS은 간소화 된 보안 id 페더레이션 및 SSO (Web Single Sign-On) 기능을 제공 합니다. Azure AD 또는 O365을 사용한 페더레이션을 통해 사용자는 온-프레미스 자격 증명을 사용 하 여 인증 하 고 클라우드의 모든 리소스에 액세스할 수 있습니다. 따라서 온-프레미스와 클라우드 모두에서 리소스에 대 한 액세스를 보장 하기 위해 항상 사용 가능한 AD FS 인프라를 사용 하는 것이 중요 합니다. Azure에 AD FS를 배포 하면 최소한의 노력으로 고가용성을 유지할 수 있습니다.
@@ -39,11 +31,11 @@ Azure에 AD FS을 배포 하는 경우 몇 가지 이점이 있습니다. 그 �
 
 * **DC/ADFS 서버**: 사용자가 1000 명 미만이 면 도메인 컨트롤러에 AD FS 역할을 설치 하기만 하면 됩니다. 도메인 컨트롤러에 대 한 성능 영향을 원하지 않거나 사용자가 1000 이상인 경우 별도의 서버에 AD FS를 배포 합니다.
 * **WAP 서버** – 사용자가 회사 네트워크에 있지 않은 경우에도 AD FS에 도달할 수 있도록 웹 응용 프로그램 프록시 서버를 배포 해야 합니다.
-* **DMZ**: 웹 응용 프로그램 프록시 서버는 DMZ에 배치 되며 DMZ와 내부 서브넷 사이에는 TCP/443 액세스만 허용 됩니다.
-* **부하 분산 장치**: AD FS 및 웹 응용 프로그램 프록시 서버의 고가용성을 보장 하려면 AD FS 서버 및 웹 응용 프로그램 프록시 서버에 대 한 Azure Load Balancer 내부 부하 분산 장치를 사용 하는 것이 좋습니다.
+* **Dmz**: 웹 응용 프로그램 프록시 서버는 dmz에 배치 되며 dmz와 내부 서브넷 사이에는 TCP/443 액세스만 허용 됩니다.
+* **부하 분산 장치**: AD FS 및 웹 응용 프로그램 프록시 서버의 고가용성을 보장 하려면 AD FS 서버에 내부 부하 분산 장치를 사용 하 고 웹 응용 프로그램 프록시 서버에 Azure Load Balancer를 사용 하는 것이 좋습니다.
 * **가용성 집합**: AD FS 배포에 중복성을 제공 하려면 유사한 워크 로드에 대 한 가용성 집합에서 두 개 이상의 가상 머신을 그룹화 하는 것이 좋습니다. 이 구성은 계획 된 유지 관리 또는 계획 되지 않은 유지 관리 이벤트 중에 하나 이상의 가상 머신을 사용할 수 있게 합니다.
 * **저장소 계정**: 저장소 계정 두 개를 포함 하는 것이 좋습니다. 단일 저장소 계정이 있으면 단일 실패 지점이 생성 될 수 있으며, 저장소 계정이 다운 되는 경우가 거의 없는 시나리오에서 배포를 사용할 수 없게 될 수 있습니다. 저장소 계정 두 개는 각 오류 라인에 대해 하나의 저장소 계정을 연결 하는 데 도움이 됩니다.
-* **네트워크 분리**:  웹 응용 프로그램 프록시 서버를 별도의 DMZ 네트워크에 배포 해야 합니다. 하나의 가상 네트워크를 두 개의 서브넷으로 나눈 다음 격리 된 서브넷에 웹 응용 프로그램 프록시 서버를 배포할 수 있습니다. 각 서브넷에 대 한 네트워크 보안 그룹 설정을 구성 하 고 두 서브넷 간에 필요한 통신만 허용할 수 있습니다. 자세한 내용은 아래 배포 시나리오 별로 제공 됩니다.
+* **Network 분리**: 웹 응용 프로그램 프록시 서버를 별도의 DMZ 네트워크에 배포 해야 합니다. 하나의 가상 네트워크를 두 개의 서브넷으로 나눈 다음 격리 된 서브넷에 웹 응용 프로그램 프록시 서버를 배포할 수 있습니다. 각 서브넷에 대 한 네트워크 보안 그룹 설정을 구성 하 고 두 서브넷 간에 필요한 통신만 허용할 수 있습니다. 자세한 내용은 아래 배포 시나리오 별로 제공 됩니다.
 
 ## <a name="steps-to-deploy-ad-fs-in-azure"></a>Azure에서 AD FS를 배포 하는 단계
 이 섹션에 설명 된 단계는 Azure에서 아래와 같은 AD FS 인프라를 배포 하기 위한 가이드를 간략히 설명 합니다.
@@ -63,7 +55,7 @@ Azure Portal에서 가상 네트워크를 선택 하 고 한 번의 클릭으로
 * 서브넷 패널에서 추가 단추를 클릭 합니다.
 * 서브넷을 만들 서브넷 이름 및 주소 공간 정보를 제공 합니다.
 
-![Subnet](./media/how-to-connect-fed-azure-adfs/deploynetwork2.png)
+![서브넷](./media/how-to-connect-fed-azure-adfs/deploynetwork2.png)
 
 ![서브넷 DMZ](./media/how-to-connect-fed-azure-adfs/deploynetwork3.png)
 
@@ -78,7 +70,7 @@ NSG를 만든 후에는 0 인바운드 및 아웃 바운드 규칙이 0이 됩�
 
 ![NSG 초기화](./media/how-to-connect-fed-azure-adfs/nsgint1.png)
 
-NSGs를 만든 후 NSG_INT를 서브넷 INT와 NSG_DMZ와 서브넷 DMZ와 연결 합니다. 예제 스크린샷에서는 다음과 같습니다.
+NSGs를 만든 후에는 서브넷 INT와 NSG_DMZ를 서브넷 DMZ와 NSG_INT 연결 합니다. 예제 스크린샷에서는 다음과 같습니다.
 
 ![NSG 구성](./media/how-to-connect-fed-azure-adfs/nsgconfigure1.png)
 
@@ -109,13 +101,13 @@ Express 경로를 사용 하는 것이 좋지만 조직에 가장 적합 한 연
 각 역할 (DC/AD FS 및 WAP)에 대해 최소한 두 대의 컴퓨터를 포함 하는 가용성 집합을 만듭니다. 이렇게 하면 각 역할의 가용성을 높일 수 있습니다. 가용성 집합을 만드는 동안 다음을 결정 해야 합니다.
 
 * **장애 도메인**: 동일한 장애 도메인의 가상 머신은 동일한 전원 및 실제 네트워크 스위치를 공유 합니다. 최소 2 개의 장애 도메인을 권장 합니다. 기본값은 3 이며이 배포의 목적으로 그대로 둘 수 있습니다.
-* **도메인 업데이트**: 동일한 업데이트 도메인에 속하는 컴퓨터는 업데이트 중에 함께 다시 시작 됩니다. 최소 2 개의 업데이트 도메인이 필요 합니다. 기본값은 5 이며이 배포의 목적으로 그대로 둘 수 있습니다.
+* 업데이트 **도메인**: 동일한 업데이트 도메인에 속하는 컴퓨터는 업데이트 중에 함께 다시 시작 됩니다. 최소 2 개의 업데이트 도메인이 필요 합니다. 기본값은 5 이며이 배포의 목적으로 그대로 둘 수 있습니다.
 
 ![가용성 집합](./media/how-to-connect-fed-azure-adfs/availabilityset1.png)
 
 다음 가용성 집합 만들기
 
-| 가용성 집합 | 역할 | 오류 도메인 | 업데이트 도메인 |
+| 가용성 집합 | Role | 오류 도메인 | 업데이트 도메인 |
 |:---:|:---:|:---:|:--- |
 | contosodcset |DC/ADFS |3 |5 |
 | contosowapset |WAP |3 |5 |
@@ -123,7 +115,7 @@ Express 경로를 사용 하는 것이 좋지만 조직에 가장 적합 한 연
 ### <a name="4-deploy-virtual-machines"></a>4. 가상 컴퓨터 배포
 다음 단계는 인프라에서 다양 한 역할을 호스트 하는 가상 컴퓨터를 배포 하는 것입니다. 각 가용성 집합에는 최소 두 대의 컴퓨터를 사용 하는 것이 좋습니다. 기본 배포용으로 4 대의 가상 머신을 만듭니다.
 
-| Machine | 역할 | Subnet | 가용성 집합 | Storage 계정 | IP 주소 |
+| 컴퓨터 | Role | 서브넷 | 가용성 집합 | Storage 계정 | IP 주소 |
 |:---:|:---:|:---:|:---:|:---:|:---:|
 | contosodc1 |DC/ADFS |INT |contosodcset |contososac1 |정적 |
 | contosodc2 |DC/ADFS |INT |contosodcset |contososac2 |정적 |
@@ -139,7 +131,7 @@ DNS를 관리 하는 경우 고정 IP 주소를 권장 합니다. 도메인에 �
 ### <a name="5-configuring-the-domain-controller--ad-fs-servers"></a>5. 도메인 컨트롤러/AD FS 서버 구성
  들어오는 요청을 인증 하기 위해 AD FS는 도메인 컨트롤러에 연결 해야 합니다. 인증을 위해 Azure에서 온-프레미스 DC로 비용을 절감할 수 있도록 하려면 Azure에서 도메인 컨트롤러의 복제본을 배포 하는 것이 좋습니다. 고가용성을 얻기 위해서는 도메인 컨트롤러 2 개 이상의 가용성 집합을 만드는 것이 좋습니다.
 
-| 도메인 컨트롤러 | 역할 | Storage 계정 |
+| 도메인 컨트롤러 | Role | Storage 계정 |
 |:---:|:---:|:---:|
 | contosodc1 |복제본 |contososac1 |
 | contosodc2 |복제본 |contososac2 |
@@ -160,9 +152,9 @@ ILB를 배포 하려면 Azure Portal에서 부하 분산 장치를 선택 하 �
 ![부하 분산 장치 찾아보기](./media/how-to-connect-fed-azure-adfs/browseloadbalancer.png)
 
 * **이름**: 부하 분산 장치에 적절 한 이름을 지정 합니다.
-* **구성표**: 이 부하 분산 장치는 AD FS 서버 앞에 배치 되 고 내부 네트워크 연결용 으로만 사용할 수 있으므로 "내부"를 선택 합니다.
+* **구성표**:이 부하 분산 장치는 AD FS 서버 앞에 배치 되 고 내부 네트워크 연결용 으로만 사용할 수 있으므로 "내부"를 선택 합니다.
 * **Virtual Network**: AD FS를 배포할 가상 네트워크를 선택 합니다.
-* **서브넷**: 여기에서 내부 서브넷을 선택 하세요.
+* **서브넷**: 여기에서 내부 서브넷을 선택 합니다.
 * **IP 주소 할당**: 정적
 
 ![내부 부하 분산 장치](./media/how-to-connect-fed-azure-adfs/ilbdeployment1.png)
@@ -189,11 +181,11 @@ ILB를 배포 하려면 Azure Portal에서 부하 분산 장치를 선택 하 �
 ILB 설정 패널에서 상태 프로브를 선택 합니다.
 
 1. 추가를 클릭 합니다.
-2. 프로브 a에 대 한 세부 정보를 제공 합니다. **이름**: 프로브 이름 b. **프로토콜**: HTTP c. **포트**: 80 (HTTP) d. **경로**:/adfs/probe e. **간격**: 5 (기본값)-ILB가 백 엔드 풀의 컴퓨터를 검색 하는 간격입니다. **비정상 임계값 제한**: 2 (기본값)-ILB가 백 엔드 풀의 컴퓨터를 응답 하지 않는 것으로 선언 하 고 해당 컴퓨터에 대 한 트래픽 전송을 중지 하는 연속 프로브 실패의 임계값입니다.
+2. 프로브 a에 대 한 세부 정보를 제공 합니다. **이름**: 프로브 이름 b. **프로토콜**: HTTP c. **포트**: 80 (HTTP) d. **경로**:/adfs/probe e. **간격**: 5 (기본값)-ilb가 백 엔드 풀의 컴퓨터를 검색 하는 간격입니다. **비정상 임계값 제한**: 2 (기본값)-ilb가 백 엔드 풀의 컴퓨터를 응답 하지 않는 것으로 선언 하 고 해당 컴퓨터에 대 한 트래픽 전송을 중지 하는 연속 프로브 실패의 임계값입니다.
 
 ![ILB 프로브 구성](./media/how-to-connect-fed-azure-adfs/ilbdeployment4.png)
 
-전체 HTTPS 경로 검사를 수행할 수 없는 AD FS 환경의 상태 검사에 대해 명시적으로 만든/adfs/probe 끝점을 사용 하 고 있습니다.  이는 최신 AD FS 배포의 상태를 정확 하 게 반영 하지 않는 기본 포트 443 검사 보다 크게 좋습니다.  이에 대 한 자세한 내용은에서 https://blogs.technet.microsoft.com/applicationproxyblog/2014/10/17/hardware-load-balancer-health-checks-and-web-application-proxy-ad-fs-2012-r2/ 찾을 수 있습니다.
+전체 HTTPS 경로 검사를 수행할 수 없는 AD FS 환경의 상태 검사에 대해 명시적으로 만든/adfs/probe 끝점을 사용 하 고 있습니다.  이는 최신 AD FS 배포의 상태를 정확 하 게 반영 하지 않는 기본 포트 443 검사 보다 크게 좋습니다.  이에 대 한 자세한 내용은 https://blogs.technet.microsoft.com/applicationproxyblog/2014/10/17/hardware-load-balancer-health-checks-and-web-application-proxy-ad-fs-2012-r2/에서 찾을 수 있습니다.
 
 **6.4. 부하 분산 규칙 만들기**
 
@@ -220,14 +212,14 @@ DNS 서버로 이동 하 고 ILB에 대 한 CNAME을 만듭니다. CNAME은 ILB�
 웹 응용 프로그램 프록시 서버가 ILB 뒤의 AD FS 서버에 연결할 수 있는지 확인 한 후 웹 응용 프로그램 프록시 서버를 다음에 설치할 수 있습니다. 웹 응용 프로그램 프록시 서버는 도메인에 가입할 필요가 없습니다. 원격 액세스 역할을 선택 하 여 두 웹 응용 프로그램 프록시 서버에 웹 응용 프로그램 프록시 역할을 설치 합니다. 서버 관리자는 WAP 설치를 완료 하는 방법을 안내 합니다.
 WAP를 배포 하는 방법에 대 한 자세한 내용은 [웹 응용 프로그램 프록시 서버 설치 및 구성](https://technet.microsoft.com/library/dn383662.aspx)을 참조 하세요.
 
-### <a name="8--deploying-the-internet-facing-public-load-balancer"></a>8.  인터넷 연결 (공용) Load Balancer
-**8.1.  인터넷 연결 (공용) Load Balancer 만들기**
+### <a name="8--deploying-the-internet-facing-public-load-balancer"></a>8. 인터넷 연결 (공용) Load Balancer
+**8.1. 인터넷 연결 (공용) Load Balancer를 만듭니다.**
 
 Azure Portal에서 부하 분산 장치를 선택 하 고 추가를 클릭 합니다. 부하 분산 장치 만들기 패널에서 다음 정보를 입력 합니다.
 
 1. **이름**: 부하 분산 장치의 이름
-2. **구성표**: 공용 –이 옵션은이 부하 분산 장치에 공용 주소가 필요 함을 Azure에 알려 줍니다.
-3. **IP 주소**: 새 IP 주소 만들기 (동적)
+2. **구성표**: public –이 옵션은이 부하 분산 장치에 공용 주소가 필요 함을 Azure에 알려 줍니다.
+3. **Ip 주소**: 새 ip 주소를 만듭니다 (동적).
 
 ![인터넷 연결 부하 분산 장치](./media/how-to-connect-fed-azure-adfs/elbdeployment1.png)
 
@@ -338,9 +330,9 @@ ILB와 동일한 단계를 수행 하 여 TCP 443에 대 한 부하 분산 규�
 | ADFSVMSize |ADFS 서버의 vm 크기 |
 | WAPVMSize |WAP 서버의 vm 크기 |
 | AdminUserName |가상 컴퓨터의 로컬 관리자 이름 |
-| adminPassword |가상 컴퓨터의 로컬 관리자 계정에 대 한 암호입니다. |
+| AdminPassword |가상 컴퓨터의 로컬 관리자 계정에 대 한 암호입니다. |
 
-## <a name="additional-resources"></a>추가 자료
+## <a name="additional-resources"></a>추가 리소스
 * [가용성 집합](https://aka.ms/Azure/Availability) 
 * [Azure Load Balancer](https://aka.ms/Azure/ILB)
 * [내부 Load Balancer](https://aka.ms/Azure/ILB/Internal)

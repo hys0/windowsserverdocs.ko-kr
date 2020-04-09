@@ -1,27 +1,23 @@
 ---
 title: 로컬 사용자 계정 만들기
 description: MultiPoint 서비스의 세 가지 종류의 사용자 계정 알아보기
-ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 33321932-4266-4961-9924-2cb4620bfcb4
 author: evaseydl
 ms.author: evas
 manager: scottman
-ms.openlocfilehash: 874d9cbdb56c59693cb5843a898b9ebd6893d674
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b07c88e4961544f5854f6e9d829b8d4b97adf7e8
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405104"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859766"
 ---
 # <a name="create-local-user-accounts"></a>로컬 사용자 계정 만들기
-에서 MultiPoint 관리자를 사용 하 여 세 가지 수준의 로컬 사용자 계정을 만들 수 있습니다. 표준 사용자 계정 관리 권한이 제한 된 MultiPoint 대시보드 사용자 및 전체 관리 사용자 계정.  
+다중 포인트 관리자 (표준 사용자 계정)를 사용 하 여에서 세 가지 수준의 로컬 사용자 계정을 만들 수 있습니다. 관리 권한이 제한 된 MultiPoint 대시보드 사용자 및 전체 관리 사용자 계정.  
   
 다음 절차를 사용 하 여 MultiPoint server에서 로컬 사용자 계정을 만들 수 있습니다. 환경에 다중 MultiPoint 서버가 포함 되어 있는 경우 사용자가 임의의 서버에 있는 모든 스테이션에 로그온 할 수 있도록 하려면 각 서버에서 로컬 사용자 계정을 만들어야 합니다. 이 설치에는 몇 가지 제한 사항이 있습니다. 도메인 환경에서는 사용자가 도메인 계정을 사용 하도록 할 수도 있습니다. 옵션에 대 한 개요는 [Windows MultiPoint 서비스 환경에 대 한 사용자 계정 계획](Plan-user-accounts-for-your-MultiPoint-services-environment.md)을 참조 하세요.  
    

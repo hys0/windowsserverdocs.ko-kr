@@ -1,23 +1,19 @@
 ---
 title: Windows Server Essentials에서 시스템 상태 관리
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3043f83b-389c-4f37-a1ff-85afe99314fa
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: bbe05c0564e706ef0227e723a52bd10b2f774756
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 8bca8f89e876da56dc6ede53a017e4d4331e39fc
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80311072"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80852716"
 ---
 # <a name="manage-system-health-in-windows-server-essentials"></a>Windows Server Essentials에서 시스템 상태 관리
 
@@ -28,7 +24,7 @@ ms.locfileid: "80311072"
 > [!NOTE]
 >  Windows server Essentials Experience 역할이 설치 된 windows Server Essentials 및 Windows Server 2012 R2에서 네트워크의 서버 및 클라이언트 컴퓨터에 대 한 상태 경고는 경고 뷰어에 더 이상 표시 되지 않고 대신 **홈** 페이지의 **상태 보고서** 탭에서 볼 수 있습니다.  
   
- Windows Server Essentials는 서버에 연결 된 모든 컴퓨터를 적극적으로 모니터링 하 고, 중요 업데이트, 누락 된 맬웨어 보호, 클라이언트의 오래 된 바이러스 정의를 포함 하 여 시스템 상태와 관련 된 문제를 관리자에 게 알립니다. 컴퓨터 및 조치가 필요한 기타 중요 한 문제 이러한 문제는 경고 뷰어에 경고로 표시 됩니다. 경고 뷰어에는 서버 대시보드 또는 Windows server essentials의 클라이언트 컴퓨터 실행 패드 또는 Windows Server Essentials의 **상태 보고서** 탭에서 실행할 수 있습니다. 기본적으로 경고는 30분마다 새로 고쳐지지만 **상태 보고서** 탭 또는 경고 뷰어에서 **새로 고침**을 클릭하여 언제든지 네트워크에 경고가 있는지 평가할 수 있습니다.  
+ Windows Server Essentials는 서버에 연결 된 모든 컴퓨터를 적극적으로 모니터링 하 고, 중요 업데이트, 누락 된 맬웨어 보호, 클라이언트 컴퓨터의 오래 된 바이러스 정의 및 조치가 필요한 기타 중요 한 문제를 포함 하 여 시스템 상태와 관련 된 문제를 관리자에 게 알립니다. 이러한 문제는 경고 뷰어에 경고로 표시 됩니다. 경고 뷰어에는 서버 대시보드 또는 Windows server essentials의 클라이언트 컴퓨터 실행 패드 또는 Windows Server Essentials의 **상태 보고서** 탭에서 실행할 수 있습니다. 기본적으로 경고는 30분마다 새로 고쳐지지만 **상태 보고서** 탭 또는 경고 뷰어에서 **새로 고침**을 클릭하여 언제든지 네트워크에 경고가 있는지 평가할 수 있습니다.  
   
  다음 항목은 경고 뷰어에서 경고를 이해하고 확인하며 이에 응답하도록 도와주고 전자 메일로 경고 알림을 받도록 서버를 구성하는 지침을 제공합니다.  
   
@@ -85,7 +81,7 @@ ms.locfileid: "80311072"
   기본적으로 보고서에 포함 되는 데이터 요소 중 일부에 관심이 없으면 작업 창에서 **상태 보고서 설정 사용자 지정** 을 클릭 하 고 **콘텐츠** 탭을 클릭 하 여 보고서의 내용을 사용자 지정할 수 있습니다. 보고서에 표시 하지 않을 콘텐츠의 확인란을 선택 취소 합니다. 예를 들어 고유한 서버 백업 계획이 있고 서버 백업에 대 한 경고를 표시 하지 않으려면 서버 **백업** 확인란의 선택을 취소 하 여 보고서에서 서버 백업을 제외할 수 있습니다.  
   
 ###  <a name="email-the-report"></a><a name="BKMK_emailreport"></a>보고서를 전자 메일로 보내기  
- 보고서를 읽으려고 대시보드에 로그온해야 하는 것은 특히 관리할 서버가 두 대 이상 있는 관리자에게 불편한 일입니다. 전자 메일 기능이 켜져 있으면 보고서가 생성되고 나서 보고서 콘텐츠가 포함된 전자 메일이 지정된 전자 메일 주소 목록으로 발송됩니다. 관리자는 모든 장치 또는 클라이언트 응용 프로그램에서 이 보고서를 손쉽게 보고 서버가 최적 상태로 실행 중인지 확인할 수 있습니다.  
+ 보고서를 읽으려고 대시보드에 로그온해야 하는 것은 특히 관리할 서버가 두 대 이상 있는 관리자에게 불편한 일입니다. 전자 메일 기능이 켜져 있으면 보고서가 생성되고 나서 보고서 콘텐츠가 포함된 전자 메일이 지정된 전자 메일 주소 목록으로 발송됩니다. 관리자는 모든 디바이스 또는 클라이언트 응용 프로그램에서 이 보고서를 손쉽게 보고 서버가 최적 상태로 실행 중인지 확인할 수 있습니다.  
   
  **상태 보고서 설정 사용자 지정** 대화 상자에서 메일을 사용하도록 설정하고 SMTP 설정을 변경하고 메일 받는 사람 목록을 지정하고 나면 작업 창에 새 작업 **상태 보고서를 메일로 보내기**가 표시됩니다. SMTP 설정에 대한 자세한 내용은 [경고에 대한 전자 메일 알림 설정](Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_Email)을 참조하세요.  
   
@@ -256,7 +252,7 @@ ms.locfileid: "80311072"
   
 -   저장소 서비스용 VSS 기록기가 실행되고 있지 않습니다.  
   
--   하드 드라이브에 저장소 용량이 부족합니다.  
+-   하드 드라이브에 스토리지 용량이 부족합니다.  
   
 -   드라이브 하나 이상이 작동하지 않고 오프라인 상태입니다.  
   

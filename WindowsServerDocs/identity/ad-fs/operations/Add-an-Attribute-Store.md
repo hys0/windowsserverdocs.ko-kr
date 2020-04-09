@@ -1,7 +1,6 @@
 ---
 ms.assetid: c60227a8-7b44-40f8-b807-a6532851a4a6
 title: 특성 저장소 추가
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 0f5c9d3b0f856ab72a16930ddb5c50686d747ecc
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b197268de3c5335e30c2a24a74c5a7b01224b500
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71358391"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859696"
 ---
 # <a name="add-an-attribute-store"></a>특성 저장소 추가
 
@@ -23,7 +22,7 @@ Active Directory Federation Services \(AD FS\)에 의해 보호 되는 리소스
   
 다음 절차를 사용 하 여 페더레이션 서비스에 특성 저장소를 추가할 수 있습니다.  
   
-로컬 컴퓨터에서 이 절차를 완료하기 위해서는 최소한 **관리자** 또는 이와 동등한 자격이 있어야 합니다.  적절 한 계정을 사용 하는 방법에 대 한 세부 정보를 검토 하 고 그룹 구성원 자격 [로컬 및 도메인 기본 그룹](https://go.microsoft.com/fwlink/?LinkId=83477)합니다.   
+이 절차를 완료하려면 최소한 로컬 컴퓨터의 **Administrators** 구성원 자격 또는 동급의 권한이 필요합니다.  적절 한 계정을 사용 하는 방법에 대 한 세부 정보를 검토 하 고 그룹 구성원 자격 [로컬 및 도메인 기본 그룹](https://go.microsoft.com/fwlink/?LinkId=83477)합니다.   
   
 #### <a name="to-add-an-attribute-store"></a>특성 저장소를 추가 하려면  
   

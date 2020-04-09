@@ -1,7 +1,6 @@
 ---
 ms.assetid: aae907eb-11cf-4a87-a046-8680872ed0b1
 title: 시나리오 액세스 거부 지원
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: d3c1354c54cf421e59d6b37a44ce703f52b6f4b7
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: a6418f7ac317f060adb72f32e231e1577a5f8b92
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71357485"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80861146"
 ---
 # <a name="scenario-access-denied-assistance"></a>시나리오: 액세스 거부 지원
 
@@ -33,25 +32,25 @@ ms.locfileid: "71357485"
   
 Windows Server 2012의 액세스 거부 지원은 파일 서버 관리자에 게 문제를 확인할 수 있는 관련 액세스 정보 및 액세스 요청을 충족 하도록 구성을 변경할 수 있는 적절 한 도구를 제공 합니다. 예를 들어 사용자는 다음 프로세스에 따라 현재 액세스 권한이 없는 파일에 액세스할 수 있습니다.  
   
--   사용자가 \\ \ financeshares 공유 폴더의 파일을 읽으려고 하지만 서버에서 액세스 거부 메시지를 표시 합니다.  
+-   사용자가 \\\financeshares 공유 폴더의 파일을 읽으려고 시도 하지만 서버에서 액세스 거부 메시지를 표시 합니다.  
   
 -    Windows Server 2012는 사용자에 게 지원을 요청 하는 옵션과 함께 액세스 거부 지원 정보를 표시 합니다.  
   
 -   사용자가 리소스에 대한 액세스를 요청하면 서버에서 폴더 소유자에게 액세스 요청 정보가 포함된 메일을 보냅니다.  
   
-액세스 거부 지원 구성을 위한 계획 정보는 [Plan for Access-Denied Assistance](assetId:///b169f0a4-8b97-4da8-ae4a-c8f1986d19e1)에서 확인할 수 있습니다.  
+액세스 거부 지원 구성을 위한 계획 정보는 [액세스 거부 지원 계획](assetId:///b169f0a4-8b97-4da8-ae4a-c8f1986d19e1)에서 확인할 수 있습니다.  
   
 액세스 거부 지원 구성에 대 한 단계는 [액세스 거부 지원 &#40;지원 데모 단계&#41;](Deploy-Access-Denied-Assistance--Demonstration-Steps-.md)에서 확인할 수 있습니다.  
   
 ## <a name="in-this-scenario"></a>이 시나리오의 내용  
 이 시나리오는 동적 Access Control 시나리오의 일부입니다. 동적 액세스 제어에 대한 자세한 내용은 다음을 참조하세요.  
   
--   [동적 액세스 제어: 시나리오 개요](Dynamic-Access-Control--Scenario-Overview.md)  
+-   [동적 Access Control: 시나리오 개요](Dynamic-Access-Control--Scenario-Overview.md)  
   
 ## <a name="practical-applications"></a>유용한 팁  
 Windows Server 2012의 액세스 거부 지원은 사용자에 게 액세스 거부 메시지에서 직접 공유 파일 및 폴더에 대 한 액세스를 요청할 수 있는 기능을 제공 함으로써 동적 Access Control에 기여 합니다.  
   
-## <a name="BKMK_NEW"></a>이 시나리오에 포함 된 기능  
+## <a name="features-included-in-this-scenario"></a><a name="BKMK_NEW"></a>이 시나리오에 포함 된 기능  
 다음 표에는 이 시나리오에 포함된 기능이 나열되어 있으며, 이 기능이 시나리오를 지원하는 방법에 대한 설명이 나와 있습니다.  
   
 |기능|이 시나리오를 지원하는 방법|  

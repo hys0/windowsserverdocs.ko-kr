@@ -5,15 +5,15 @@ ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: a6615411-83d9-495f-8a6a-1ebc8b12f164
-manager: brianlic
-ms.author: lizross
-author: eross-msft
-ms.openlocfilehash: 5e1ed095b3180f3aebd25381ec9086445bb141ec
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+manager: dcscontentpm
+ms.author: v-tea
+author: Teresa-Motiv
+ms.openlocfilehash: 2e902f3aea4025afe4f475c45193710a8b474dcd
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80316620"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80862226"
 ---
 # <a name="choosing-a-network-adapter"></a>네트워크 어댑터 선택
 
@@ -100,27 +100,27 @@ RSS를 구성 하는 데 사용할 수 있는 추가 **set-netadapterrss** 매�
 
 - **\* maxprocessors**: 사용할 RSS 프로세서의 최대 수를 설정 합니다. 이렇게 하면 응용 프로그램 트래픽이 지정 된 인터페이스의 최대 프로세서 수에 바인딩됩니다. 구문 예:
 
-     `Set-NetAdapterRss –Name “Ethernet” –MaxProcessors <value>`
+     `Set-NetAdapterRss –Name "Ethernet" –MaxProcessors <value>`
 
 - **\* BaseProcessorGroup**: NUMA 노드의 기본 프로세서 그룹을 설정 합니다. 이는 RSS에서 사용 되는 프로세서 배열에 영향을 줍니다. 구문 예:
 
-     `Set-NetAdapterRss –Name “Ethernet” –BaseProcessorGroup <value>`
+     `Set-NetAdapterRss –Name "Ethernet" –BaseProcessorGroup <value>`
   
 - **\* MaxProcessorGroup**: NUMA 노드의 최대 프로세서 그룹을 설정 합니다. 이는 RSS에서 사용 되는 프로세서 배열에 영향을 줍니다. 이렇게 설정 하면 부하 분산이 k 그룹 내에 정렬 되도록 최대 프로세서 그룹이 제한 됩니다. 구문 예:
 
-     `Set-NetAdapterRss –Name “Ethernet” –MaxProcessorGroup <value>`
+     `Set-NetAdapterRss –Name "Ethernet" –MaxProcessorGroup <value>`
 
 - **\* BaseProcessorNumber**: NUMA 노드의 기본 프로세서 번호를 설정 합니다. 이는 RSS에서 사용 되는 프로세서 배열에 영향을 줍니다. 이렇게 하면 네트워크 어댑터 간에 프로세서를 분할할 수 있습니다. 각 어댑터에 할당 되는 RSS 프로세서 범위의 첫 번째 논리 프로세서입니다. 구문 예:
 
-     `Set-NetAdapterRss –Name “Ethernet” –BaseProcessorNumber <Byte Value>`
+     `Set-NetAdapterRss –Name "Ethernet" –BaseProcessorNumber <Byte Value>`
 
 - **\* NumaNode**: 각 네트워크 어댑터에서 메모리를 할당할 수 있는 NUMA 노드입니다. 이는 k 그룹 내에 있거나 다른 k 그룹에 있을 수 있습니다. 구문 예:
 
-     `Set-NetAdapterRss –Name “Ethernet” –NumaNodeID <value>`
+     `Set-NetAdapterRss –Name "Ethernet" –NumaNodeID <value>`
 
 - **\* NumberofReceiveQueues**: 논리 프로세서가 수신 \(트래픽에 대해 미달 사용 되는 것 처럼 보이는 경우, 예를 들어 작업 관리자\)에서 볼 수 있듯이 RSS 큐의 수를 기본값인 2에서 네트워크 어댑터에서 지 원하는 최대 수로 늘릴 수 있습니다. 네트워크 어댑터에는 드라이버의 일부로 RSS 큐의 수를 변경 하는 옵션이 있을 수 있습니다. 구문 예:
 
-     `Set-NetAdapterRss –Name “Ethernet” –NumberOfReceiveQueues <value>`
+     `Set-NetAdapterRss –Name "Ethernet" –NumberOfReceiveQueues <value>`
 
 자세한 내용을 보려면 다음 링크를 클릭 하 여 [확장 가능한 네트워킹을 다운로드 하세요. 수신 처리 병목 현상 제거-](https://download.microsoft.com/download/5/D/6/5D6EAF2B-7DDF-476B-93DC-7CF0072878E6/NDIS_RSS.doc) Word 형식으로 RSS를 소개 합니다.
   
@@ -190,7 +190,7 @@ Ethernet                       True         False        True            False  
 다음은 NetAdapterStatistics cmdlet을 실행할 때의 예제 출력입니다.
 
 ```  
-PS C:\Users\Administrator> $x = Get-NetAdapterStatistics “myAdapter”   
+PS C:\Users\Administrator> $x = Get-NetAdapterStatistics "myAdapter"   
 PS C:\Users\Administrator> $x.rscstatistics  
   
 CoalescedBytes       : 0  

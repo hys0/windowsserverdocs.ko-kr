@@ -1,24 +1,19 @@
 ---
 title: 기능 이해
 description: 이 항목에서는 System Insights의 기능 개념을 정의 하 고 Windows Server 2019에서 사용할 수 있는 기본 기능을 소개 합니다.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: system-insights
-ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: ''
 author: gawatu
 ms.author: gawatu
 manager: mallikarjun.chadalapaka
 ms.date: 6/05/2018
-ms.openlocfilehash: 131fbacaab97c1c2c42920a518ce96ba1b8f5d2b
-ms.sourcegitcommit: 2a15de216edde8b8e240a4aa679dc6d470e4159e
+ms.openlocfilehash: 9b0f043aab5773773785afc7fb48ba0295a76865
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77465567"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80858746"
 ---
 # <a name="understanding-capabilities"></a>기능 이해
 
@@ -83,7 +78,7 @@ Windows Server 2019에서 System Insights는 용량 예측에 초점을 맞춘 �
  CPU 용량 예측                | % Processor Time  | 일별 최대 2 시간 평균   
  네트워킹 용량 예측         | 초당 총 바이트 수         | 일별 최대 2 시간 평균  
 
-위의 필터링 논리를 평가 하는 경우에는 각 기능을 통해 관리자에 게 더 이상 사용 가능한 용량을 초과 하는 것이 있는지 확인 하는 것이 중요 합니다. CPU가 일시적으로 100% 사용률을 초과 하더라도 CPU 사용량은 성능 저하 또는 리소스 경합이 발생 했습니다. CPU 및 네트워킹의 경우 일시적 급증이 아닌 지속적으로 높은 사용량이 발생 해야 합니다. 그러나 매일 cpu 및 네트워킹 사용량의 평균을 계산 하는 것은 중요 한 워크 로드의 성능에 영향을 줄 수 있으므로 중요 한 사용 정보는 손실 됩니다. 매일 최대 2 시간 평균으로 이러한 극단를 방지 하 고 분석 하는 각 기능에 대 한 의미 있는 데이터를 생성 합니다.
+위의 필터링 논리를 평가 하는 경우에는 CPU가 100% 사용률을 초과 하는 경우에도 cpu 사용량이 성능 저하 나 리소스 경합이 발생 하지 않을 수 있습니다. CPU 및 네트워킹의 경우 일시적 급증이 아닌 지속적으로 높은 사용량이 발생 해야 합니다. 그러나 매일 cpu 및 네트워킹 사용량의 평균을 계산 하는 것은 중요 한 워크 로드의 성능에 영향을 줄 수 있으므로 중요 한 사용 정보는 손실 됩니다. 매일 최대 2 시간 평균으로 이러한 극단를 방지 하 고 분석 하는 각 기능에 대 한 의미 있는 데이터를 생성 합니다.
 
 그러나 볼륨 및 총 저장소 사용량의 경우 저장소 사용량은 일시적으로 사용 가능한 용량을 초과 하지 않으므로 이러한 기능에 대해 최대 일별 사용량이 사용 됩니다. 
 

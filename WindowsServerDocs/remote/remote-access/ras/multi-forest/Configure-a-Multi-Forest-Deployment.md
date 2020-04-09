@@ -2,22 +2,18 @@
 title: Configure a Multi-Forest Deployment
 description: 이 항목은 Windows Server 2016의 다중 포리스트 환경에 원격 액세스 배포 가이드의 일부입니다.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-ras
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3c8feff2-cae1-4376-9dfa-21ad3e4d5d99
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 68eed3866dc6c6fb02d54bda41c453a9c64c7578
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: f4675e8f465cc44597e16b0312911cae28bd7a1a
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80314073"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80860496"
 ---
 # <a name="configure-a-multi-forest-deployment"></a>Configure a Multi-Forest Deployment
 
@@ -223,7 +219,7 @@ Forest2의 Windows 8 클라이언트 컴퓨터에서 DirectAccess를 통해 리�
   
 3.  **그룹 선택** 대화 상자에서 DirectAccess 클라이언트 컴퓨터를 포함한 보안 그룹을 선택합니다. 그런 다음 **다음**을 클릭합니다.  
   
-4.  **네트워크 연결 길잡이 ** 페이지에서 **마침**을 클릭합니다.  
+4.  **네트워크 연결 길잡이**  페이지에서 **마침**을 클릭합니다.  
   
 5.  원격 액세스 관리 콘솔의 중간 창에서 **마침**을 클릭합니다.  
   

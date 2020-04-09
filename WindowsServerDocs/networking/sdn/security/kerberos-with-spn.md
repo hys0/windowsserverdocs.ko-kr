@@ -1,20 +1,20 @@
 ---
 title: SPN(서비스 사용자 이름) Kerberos
 description: 네트워크 컨트롤러는 관리 클라이언트와의 통신을 위한 여러 인증 방법을 지원 합니다. Kerberos 기반 인증, X509 인증서 기반 인증을 사용할 수 있습니다. 또한 테스트 배포에 대해 인증을 사용 하지 않는 옵션도 있습니다.
-manager: dougkim
+manager: grcusanz
 ms.prod: windows-server
 ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: bc625de9-ee31-40a4-9ad2-7448bfbfb6e6
-ms.author: lizross
-author: eross-msft
+ms.author: anpaul
+author: AnirbanPaul
 ms.date: 08/23/2018
-ms.openlocfilehash: adf282222674130dcb16b0c7bfe0cf3ff05ed720
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 12ad2b27d275c074e0d8baacccd864e8926f405f
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80317391"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854377"
 ---
 # <a name="kerberos-with-service-principal-name-spn"></a>SPN(서비스 사용자 이름) Kerberos
 

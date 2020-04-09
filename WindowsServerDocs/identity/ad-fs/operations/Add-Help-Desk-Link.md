@@ -1,7 +1,6 @@
 ---
 ms.assetid: 2bac7744-9de3-491a-b0a2-4e843cec7344
 title: 지원 센터 링크 추가
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 1673e6ee6357a9d59e8ac5891625d453bb434088
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 0aa57147ed2565db9cf8cde0addeb13432cb8856
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71358459"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859406"
 ---
 # <a name="add-help-desk-link"></a>지원 센터 링크 추가 
 
@@ -29,7 +28,7 @@ ms.locfileid: "71358459"
  
   
 > [!IMPORTANT]  
-> 이 cmdlet의 `linkText` 매개 변수는 기본값( *Help*)이 아닌 다른 값을 사용하는 경우에만 필요합니다. 기본값을 사용하면 모든 클라이언트 로캘로 지역화된다는 점이 장점입니다. 페이지를 사용자 지정한 후에는 사용자 지정 항목이 우선적으로 적용되므로 지원하려는 모든 언어에 대해 사용자 지정해야 합니다.  
+> 이 cmdlet의 `linkText` 매개 변수는 기본값(*Help*)이 아닌 다른 값을 사용하는 경우에만 필요합니다. 기본값을 사용하면 모든 클라이언트 로캘로 지역화된다는 점이 장점입니다. 페이지를 사용자 지정한 후에는 사용자 지정 항목이 우선적으로 적용되므로 지원하려는 모든 언어에 대해 사용자 지정해야 합니다.  
 
 
 ## <a name="additional-references"></a>추가 참조 

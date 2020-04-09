@@ -1,7 +1,6 @@
 ---
 ms.assetid: de7e1e4a-f96d-4b59-ac9b-f65f5d37a96f
 title: 다른 조직의 사용자에게 클레임 인식 응용 프로그램 및 서비스에 대한 액세스 제공
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: a0b2429599036f2893f23df7921a11c8232d9f67
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 2e47197a980c9bcb576d6634a0031a8ae13afbfd
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71359074"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80858606"
 ---
 # <a name="provide-users-in-another-organization-access-to-your-claims-aware-applications-and-services"></a>다른 조직의 사용자에게 클레임 인식 응용 프로그램 및 서비스에 대한 액세스 제공
 
@@ -25,7 +24,7 @@ Active Directory Federation Services \(AD FS\)에 있는 리소스 파트너 조
   
     예를 들어, Fabrikam이 자기 회사 네트워크 직원에게 Contoso에서 호스트되는 웹 서비스에 대해 페더레이션 액세스 권한을 갖게 하고 싶을 수 있습니다.  
   
--   경계 네트워크에서 호스트 되는 특성 저장소에 로그온 한 개별 고객\)와 같이 신뢰할 수 있는 \(조직과 직접 연결 되지 않은 페더레이션 사용자는 인터넷에 있는 클라이언트 컴퓨터에서 한 번 로그온 하 여 경계 네트워크 에서도 호스트 되는 여러 AD FS\-보안 응용 프로그램에 액세스할 수 있습니다. 즉, 고객 계정이 경계 네트워크의 응용 프로그램 또는 서비스에 액세스할 수 있도록 호스트하는 경우 특성 저장소에서 호스트하는 고객은 한 번 로그인하기만 하면 경계 네트워크에서 하나 이상의 응용 프로그램 또는 서비스에 액세스할 수 있습니다. 자세한 내용은 참조 [웹 SSO 디자인](Web-SSO-Design.md)합니다.  
+-   경계 네트워크에서 호스트 되는 특성 저장소에 로그온 한 개별 고객\)와 같이 신뢰할 수 있는 \(조직과 직접 연결 되지 않은 페더레이션 사용자는 인터넷에 있는 클라이언트 컴퓨터에서 한 번 로그온 하 여 경계 네트워크 에서도 호스트 되는 여러 AD FS\-보안 응용 프로그램에 액세스할 수 있습니다. 즉, 고객 계정이 경계 네트워크의 애플리케이션 또는 서비스에 액세스할 수 있도록 호스트하는 경우 특성 저장소에서 호스트하는 고객은 한 번 로그인하기만 하면 경계 네트워크에서 하나 이상의 애플리케이션 또는 서비스에 액세스할 수 있습니다. 자세한 내용은 참조 [웹 SSO 디자인](Web-SSO-Design.md)합니다.  
   
     예를 들어 Fabrikam 수도 있어야 고객 단일\-기호\-에 \(SSO\) 여러 응용 프로그램이 나 해당 경계 네트워크에 호스팅되는 서비스에 액세스할 수 있습니다.  
   
@@ -33,7 +32,7 @@ Active Directory Federation Services \(AD FS\)에 있는 리소스 파트너 조
   
 -   **Active Directory Domain Services \(AD DS\):** 리소스 파트너 페더레이션 서버는 Active Directory 도메인에 가입 되어 있어야 합니다.  
   
--   **경계 DNS:** Domain Name System \(DNS\) 간단한 호스트를 포함 해야 \(A\) 클라이언트 컴퓨터 리소스 파트너 페더레이션 서버와 웹 서버를 찾을 수 있도록 리소스를 기록 합니다. DNS 서버는 경계 네트워크에서도 필요한 다른 DNS 레코드를 호스트할 수 있습니다. 자세한 내용은 참조 [페더레이션 서버에 대 한 이름 확인 요구 사항](Name-Resolution-Requirements-for-Federation-Servers.md)합니다.  
+-   **경계 DNS:** Domain Name System \(DNS\) 간단한 호스트를 포함 해야 \(A\) 클라이언트 컴퓨터 리소스 파트너 페더레이션 서버와 웹 서버를 찾을 수 있도록 리소스를 기록 합니다. DNS 서버는 경계 네트워크에서도 필요한 다른 DNS 레코드를 호스트할 수 있습니다. 자세한 내용은 [페더레이션 서버에 대한 이름 확인 요구 사항](Name-Resolution-Requirements-for-Federation-Servers.md)을 참조하세요.  
   
 -   **리소스 파트너 페더레이션 서버:** 리소스 파트너 페더레이션 서버는 계정 파트너 송신 하는 AD FS 토큰의 유효성을 검사 합니다. 계정 파트너 검색이 페더레이션 서버를 통해 수행 됩니다. 자세한 내용은 [Review the Role of the Federation Server in the Resource Partner](Review-the-Role-of-the-Federation-Server-in-the-Resource-Partner.md)를 참조하세요.  
   

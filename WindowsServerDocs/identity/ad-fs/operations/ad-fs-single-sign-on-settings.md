@@ -1,7 +1,6 @@
 ---
 ms.assetid: 1a443181-7ded-4912-8e40-5aa447faf00c
-title: AD FS 2016 Single Sign-On 설정
-description: ''
+title: AD FS 2016 Single Sign On 설정
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,12 +8,12 @@ ms.date: 08/17/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 76c34dc518f4578b4ae2ead3459f1d79c191b3d7
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: bad6ad9a95618239825366187c8083c1fe77ae94
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75949194"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80860086"
 ---
 # <a name="ad-fs-single-sign-on-settings"></a>Single Sign-on 설정 AD FS
 
@@ -40,7 +39,7 @@ AD FS는 여러 유형의 Single Sign-on 환경을 지원 합니다.
   
      OAuth 시나리오에서 새로 고침 토큰은 특정 응용 프로그램의 범위 내에서 사용자의 SSO 상태를 유지 관리 하는 데 사용 됩니다.  
   
-     장치가 등록 되 면 AD FS는 등록 된 장치에 대 한 영구 SSO 쿠키 수명을 기반으로 하는 새로 고침 토큰의 만료 시간을 설정 합니다 .이는 AD FS 2012R2 2의 경우 기본적으로 7 일이 고 장치를 사용 하는 경우 최대 90 일을 사용 하는 경우 AD FS 2016입니다. 14 일 기간 내에 AD FS 리소스에 액세스 합니다. 
+     장치가 등록 되 면 AD FS는 등록 된 장치에 대 한 영구 SSO 쿠키 수명을 기반으로 하는 새로 고침 토큰의 만료 시간을 설정 합니다 .이는 AD FS 2012R2 2의 경우 기본적으로 7 일이 고, 해당 장치를 사용 하 여 14 일 내에 AD FS 리소스에 액세스 하는 경우 최대 90 2016 AD FS 일입니다. 
 
 장치가 등록 되어 있지 않지만 사용자가 "로그인 유지" 옵션을 선택 하면 새로 고침 토큰의 만료 시간이 "로그인 유지"에 대 한 영구 SSO 쿠키 수명 (기본적으로 최대 7 일)이 됩니다. 그렇지 않은 경우 새로 고침 토큰 수명은 세션 SSO 쿠키 수명과 같으며 기본값은 8 시간입니다.  
   
@@ -96,7 +95,7 @@ Set-AdfsProperties –KmsiLifetimeMins <Int32\>
 ```   
 
 ## <a name="multi-factor-authentication-mfa-behavior"></a>MFA (multi-factor authentication) 동작  
-비교적 긴 single AD FS sign-on을 제공 하는 동안 이전 로그온이 MFA가 아닌 기본 자격 증명을 기반으로 하 고 현재 로그온 한 경우 추가 인증 (multi-factor authentication)을 요청 하는 것을 확인 하는 것이 중요 합니다. MFA 필요  이는 SSO 구성에 관계 없이입니다. AD FS 인증 요청을 받을 때는 먼저 SSO 컨텍스트 (예: 쿠키)가 있는지 여부를 확인 한 다음 MFA가 필요한 경우 (예: 요청이 외부에서 들어오는 경우) SSO 컨텍스트가 MFA를 포함 하는지 여부를 평가 합니다.  그렇지 않으면 MFA에 메시지가 표시 됩니다.  
+비교적 긴 single sign-on을 제공 하는 동안 이전 로그온이 MFA가 아닌 기본 자격 증명을 기반으로 하는 경우 추가 인증 (multi-factor authentication)을 묻는 메시지가 표시 되 고, 현재 로그온에는 MFA가 필요한 경우에도 AD FS 합니다.  이는 SSO 구성에 관계 없이입니다. AD FS 인증 요청을 받을 때는 먼저 SSO 컨텍스트 (예: 쿠키)가 있는지 여부를 확인 한 다음 MFA가 필요한 경우 (예: 요청이 외부에서 들어오는 경우) SSO 컨텍스트가 MFA를 포함 하는지 여부를 평가 합니다.  그렇지 않으면 MFA에 메시지가 표시 됩니다.  
 
 
   
@@ -165,21 +164,21 @@ c:[Type == "https://schemas.microsoft.com/2014/03/psso"]
  <tr align="center">
     <td>SSO =&gt;set Refresh Token =&gt;</td>
     <td>8 시간</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>N/A</td>
+    <td>N/A</td>
     <th></th>
     <td>8 시간</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
 
  <tr align="center">
     <td>PSSO =&gt;set Refresh Token =&gt;</td>
-    <td>해당 없음</td>
+    <td>N/A</td>
     <td>24 시간</td>
-    <td>7일</td>
+    <td>7 일</td>
     <th></th>
-    <td>해당 없음</td>
+    <td>N/A</td>
     <td>24 시간</td>
     <td>최대 90 일 동안 14 일 기간</td>
   </tr>

@@ -1,7 +1,6 @@
 ---
 ms.assetid: cd4d4902-dcdf-49dd-8059-82a56bf4b585
 title: 서버 인증 인증서의 프라이빗 키 부분 내보내기
-description: ''
 author: billmath
 manager: femila
 ms.date: 05/31/2017
@@ -9,12 +8,12 @@ ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: 8e1bbeddc4bae1c420b6cc78b52d6b873320ae8f
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 6baa734e3fc346d94f4387e2ed54d3e707e5af75
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71359583"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80855426"
 ---
 # <a name="export-the-private-key-portion-of-a-server-authentication-certificate"></a>서버 인증 인증서의 프라이빗 키 부분 내보내기
 
@@ -27,7 +26,7 @@ Active Directory Federation Services \(AD FS\) 팜의 모든 페더레이션 서
   
 이 컴퓨터의 역할에 따라 개인 키와 함께 서버 인증 인증서를 설치한 페더레이션 서버 컴퓨터 또는 페더레이션 서버 프록시 컴퓨터에서이 절차를 사용 합니다. 절차를 마치면 팜의 각 서버에 대한 기본 웹 사이트에서 이 인증서를 가져올 수 있습니다. 자세한 내용은 참조 [기본 웹 사이트로 서버 인증 인증서 가져오기](Import-a-Server-Authentication-Certificate-to-the-Default-Web-Site.md)합니다.  
   
-로컬 컴퓨터에서 이 절차를 완료하기 위해서는 최소한 **관리자** 또는 이와 동등한 자격이 있어야 합니다.  적절 한 계정을 사용 하는 방법에 대 한 세부 정보를 검토 하 고 그룹 구성원 자격 [로컬 및 도메인 기본 그룹](https://go.microsoft.com/fwlink/?LinkId=83477)합니다.   
+이 절차를 완료하려면 최소한 로컬 컴퓨터의 **Administrators** 구성원 자격 또는 동급의 권한이 필요합니다.  적절 한 계정을 사용 하는 방법에 대 한 세부 정보를 검토 하 고 그룹 구성원 자격 [로컬 및 도메인 기본 그룹](https://go.microsoft.com/fwlink/?LinkId=83477)합니다.   
   
 ### <a name="to-export-the-private-key-portion-of-a-server-authentication-certificate"></a>서버 인증 인증서의 프라이빗 키 부분을 내보내려면  
   

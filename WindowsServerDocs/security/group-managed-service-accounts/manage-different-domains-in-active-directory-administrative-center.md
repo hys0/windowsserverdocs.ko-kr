@@ -1,22 +1,18 @@
 ---
 title: Active Directory 관리 센터에서 다른 도메인 관리
-ms.prod: windows-server
 description: Windows Server 보안
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.prod: windows-server
 ms.assetid: 166351c3-4076-48be-aa8f-797adf1e9d68
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: 71edf6bb38cc665fe5c780ce986d0c0b8807d6ab
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 6690ffbc558db4026c3fe67168907ca953ad4081
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71386933"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856986"
 ---
 # <a name="manage-different-domains-in-active-directory-administrative-center"></a>Active Directory 관리 센터에서 다른 도메인 관리
 
@@ -24,7 +20,7 @@ ms.locfileid: "71386933"
 
   Active Directory 관리를 열면 해당 컴퓨터에서 현재 로그온 되어 있는 도메인이 로컬 도메인\) \(왼쪽 창 \(Active Directory 관리 센터 탐색 창에 표시 됩니다.\) 현재 로그온 자격 증명 집합의 권한에 따라이 로컬 도메인의 Active Directory 개체를 보거나 관리할 수 있습니다.
 
- 동일한 로그온 자격 증명 집합 및 동일한 Active Directory 관리 센터 인스턴스를 사용 하 여 동일한 포리스트의 다른 도메인에 있는 Active Directory 개체를 확인 하거나 관리 하거나 로컬와의 트러스트 관계가 설정 된 다른 포리스트의 도메인을 볼 수도 있습니다. 도메인. \-단방향 트러스트와 두 개의\-단방향 트러스트가 지원 됩니다.
+ 동일한 로그온 자격 증명 집합 및 동일한 Active Directory 관리 센터 인스턴스를 사용 하 여 동일한 포리스트의 다른 도메인에 있는 Active Directory 개체를 확인 하거나 관리 하거나 로컬 도메인과의 트러스트 관계가 설정 된 다른 포리스트의 도메인을 볼 수도 있습니다. \-단방향 트러스트와 두 개의\-단방향 트러스트가 지원 됩니다.
 
 > [!NOTE]
 >  도메인 a의 사용자가 도메인 B의 리소스에 액세스할 수 있지만 도메인 B의 사용자가 도메인 A의 리소스에 액세스할 수 있는 도메인 a와 도메인 B 간에\-단방향 트러스트 관계가 있는 경우 도메인 B의 사용자는 도메인 A의 리소스에 액세스할 수 없으며, 도메인 A가 로컬 도메인에 있는 컴퓨터에서 Active Directory 관리 센터를 실행 하는 경우 현재 로그온 자격 증명 집합과 동일한 Active Directory 관리 센터 인스턴스를 사용 하 여 도메인 그러나 도메인 B가 로컬 도메인에 있는 컴퓨터에서 Active Directory 관리 센터를 실행 하는 경우 동일한 Active Directory 관리 센터 인스턴스에서 동일한 자격 증명 집합을 사용 하 여 도메인 A에 연결할 수 없습니다.
@@ -74,7 +70,7 @@ ms.locfileid: "71386933"
 
    Active Directory 관리 센터 탐색 창을 사용자 지정 하는 방법에 대 한 자세한 내용은 [Active Directory 관리 센터 탐색 창 사용자 지정](customize-the-active-directory-administrative-center-navigation-pane.md)을 참조 하세요.
 
-   현재 로그온 자격 증명 집합과는 다른 로그온 자격 증명 집합을 사용 하 여 Active Directory 관리 센터를 열 수도 있습니다. 일반 사용자 자격 증명을 사용 하 여 Active Directory 관리 센터를 실행 하는 컴퓨터에 로그온 했지만이 컴퓨터의 Active Directory 관리 센터를 사용 하 여를 관리 하려면 다음 절차의 명령이 유용할 수 있습니다. 관리자 인 로컬 도메인입니다. 이 명령은 Active Directory 관리 센터를 사용 하 여 현재 로그온 자격 증명 집합과 다른 자격 증명 집합을 사용 하 여 로컬 도메인과 다른 외부 도메인을 원격으로 관리 하려는 경우에도 유용할 수 있습니다. \( 그러나 외부 도메인에는 로컬 도메인과의 트러스트가 설정 되어 있어야 합니다.\)
+   현재 로그온 자격 증명 집합과는 다른 로그온 자격 증명 집합을 사용 하 여 Active Directory 관리 센터를 열 수도 있습니다. 일반 사용자 자격 증명을 사용 하 여 Active Directory 관리 센터를 실행 하는 컴퓨터에 로그온 했지만이 컴퓨터의 Active Directory 관리 센터를 사용 하 여 로컬 도메인을 관리자 권한으로 관리 하려는 경우 다음 절차의 명령이 유용할 수 있습니다. 이 명령은 Active Directory 관리 센터를 사용 하 여 현재 로그온 자격 증명 집합과 다른 자격 증명 집합을 사용 하 여 로컬 도메인과 다른 외부 도메인을 원격으로 관리 하려는 경우에도 유용할 수 있습니다. \( 그러나 외부 도메인에는 로컬 도메인과의 트러스트가 설정 되어 있어야 합니다.\)
 
    이 절차를 완료하는 데 필요한 최소 그룹 구성원 자격은 없습니다.
 

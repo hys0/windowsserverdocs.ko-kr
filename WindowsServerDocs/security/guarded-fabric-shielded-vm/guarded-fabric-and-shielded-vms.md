@@ -1,18 +1,18 @@
 ---
 title: 보호된 패브릭 및 보호된 VM 개요
-ms.custom: na
 ms.prod: windows-server
 ms.topic: article
 manager: dongill
 author: rpsqrd
+ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: ace6eb30ae6df2dc29aacc05eb7852e03145df4f
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: edcf2e011b701904fb8c1b27d4f9b7d13415b2a8
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79321995"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856906"
 ---
 # <a name="guarded-fabric-and-shielded-vms-overview"></a>보호된 패브릭 및 보호된 VM 개요
 
@@ -89,9 +89,9 @@ HGS는 보호된 VM을 만드는 방법과 함께 다음 보증을 제공합니�
 
 보호된 패브릭은 다음 세 가지 방법 중 하나로 VM을 실행할 수 있습니다.
 
-1.  이전 버전의 Hyper-V에서 제공하는 수준 이상의 보호를 제공하지 않는 일반 VM
-2.  패브릭 관리자가 보호를 구성할 수 있는 암호화 지원 VM
-3.  모든 보호가 설정되어 있고 패브릭 관리자가 사용하지 않도록 설정할 수 없는 보호된 VM
+1.    이전 버전의 Hyper-V에서 제공하는 수준 이상의 보호를 제공하지 않는 일반 VM
+2.    패브릭 관리자가 보호를 구성할 수 있는 암호화 지원 VM
+3.    모든 보호가 설정되어 있고 패브릭 관리자가 사용하지 않도록 설정할 수 없는 보호된 VM
 
 암호화 지원 VM은 패브릭 관리자를 완전히 신뢰할 수 있는 경우에 사용됩니다.  예를 들어 기업에서는 규정 준수를 위해 VM 디스크가 암호화된 상태로 유지되도록 보호된 패브릭을 배포할 수 있습니다. 패브릭 관리자는 VM 콘솔 연결, PowerShell Direct 및 기타 일상적인 관리 및 문제 해결 도구와 같은 편리한 관리 기능을 계속 사용할 수 있습니다.
 
@@ -105,9 +105,9 @@ HGS는 보호된 VM을 만드는 방법과 함께 다음 보증을 제공합니�
 |Vtpm               | 예, 필수이지만 구성 가능        | 예, 필수 및 적용    |
 |VM 상태 및 실시간 마이그레이션 트래픽 암호화 | 예, 필수이지만 구성 가능 |  예, 필수 및 적용  |
 |통합 구성 요소 | 패브릭 관리자가 구성 가능      | 차단된 특정 통합 구성 요소(예: 데이터 교환, PowerShell Direct) |
-|가상 컴퓨터 연결(콘솔), HID 장치(예: 키보드, 마우스) | 설정, 사용하지 않도록 설정할 수 없음 | Windows Server 버전 1803부터 호스트에서 사용 이전 호스트에서 사용 안 함 |
-|COM/직렬 포트   | 지원됨                             | 사용 안 함(사용하도록 설정할 수 없음) |
-|디버거를 VM 프로세스에 연결 합니다.<sup>1</sup>| 지원됨          | 사용 안 함(사용하도록 설정할 수 없음) |
+|가상 컴퓨터 연결(콘솔), HID 디바이스(예: 키보드, 마우스) | 설정, 사용하지 않도록 설정할 수 없음 | Windows Server 버전 1803부터 호스트에서 사용 이전 호스트에서 사용 안 함 |
+|COM/직렬 포트   | 지원함                             | 사용 안 함(사용하도록 설정할 수 없음) |
+|디버거를 VM 프로세스에 연결 합니다.<sup>1</sup>| 지원함          | 사용 안 함(사용하도록 설정할 수 없음) |
 
 <sup>1</sup> VM의 작업자 프로세스 (vmwp .exe)는 보호 된 프로세스 조명 (PPL) 이기 때문에 WinDbg와 같이 프로세스에 직접 연결 하는 기존 디버거는 보호 된 vm에 대해 차단 됩니다. LiveKd에서 사용 하는 것과 같은 대체 디버깅 기술은 차단 되지 않습니다. 보호 된 Vm과 달리 암호화 지원 Vm에 대 한 작업자 프로세스는 PPL으로 실행 되지 않으므로 WinDbg와 같은 기존 디버거는 정상적으로 계속 작동 합니다. 
 

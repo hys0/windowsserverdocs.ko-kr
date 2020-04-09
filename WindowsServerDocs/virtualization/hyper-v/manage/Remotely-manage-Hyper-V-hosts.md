@@ -2,21 +2,19 @@
 title: Hyper-v 호스트 원격 관리
 description: Hyper-v 호스트와 Hyper-v 관리자 간의 버전 호환성과 도메인 간 및 독립 실행형을 비롯 한 다양 한 환경에서 원격 호스트에 연결 하는 방법을 설명 합니다.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2d34e98c-6134-479b-8000-3eb360b8b8a3
-author: KBDAzure
+author: kbdazure
 ms.author: kathydav
 ms.date: 12/06/2016
-ms.openlocfilehash: 677e054fe42978697ef786b73daac75069f0408f
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 592bb6352c4ca56770e1a3051ecbc88d9d378467
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71392682"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859416"
 ---
 # <a name="remotely-manage-hyper-v-hosts-with-hyper-v-manager"></a>Hyper-v 관리자를 사용 하 여 Hyper-v 호스트 원격 관리
 
@@ -51,7 +49,7 @@ Hyper-v 관리자에서 hyper-v 호스트에 연결 하려면 왼쪽 창에서 *
 
 ## <a name="manage-hyper-v-on-a-local-computer"></a>로컬 컴퓨터의 Hyper-v 관리
 
-Hyper-v 관리자는 로컬 컴퓨터를 포함 하 여 컴퓨터를 추가할 때까지 Hyper-v를 호스트 하는 컴퓨터를 나열 하지 않습니다. 가상 하드 디스크 파일에 대한 중요 정보를 제공하려면
+Hyper-v 관리자는 로컬 컴퓨터를 포함 하 여 컴퓨터를 추가할 때까지 Hyper-v를 호스트 하는 컴퓨터를 나열 하지 않습니다. 이렇게 하려면 다음과 같이 하십시오.
 
 1. 왼쪽 창에서 **Hyper-v 관리자**를 마우스 오른쪽 단추로 클릭 합니다.
 2. **서버에 연결을**클릭 합니다.
@@ -85,7 +83,7 @@ Windows Server 2016 및 Windows 10의 hyper-v 관리자는 다음 섹션에 설�
 
 ### <a name="connect-to-a-windows-2016-or-windows-10-remote-host-as-a-different-user"></a>다른 사용자로 Windows 2016 또는 Windows 10 원격 호스트에 연결
 
-이를 통해 hyper-v 호스트에서 hyper-v 관리자 그룹 또는 Administrators 그룹의 구성원 인 사용자로 로컬 컴퓨터에서 실행 되 고 있지 않은 경우 Hyper-v 호스트에 연결할 수 있습니다. 가상 하드 디스크 파일에 대한 중요 정보를 제공하려면
+이를 통해 hyper-v 호스트에서 hyper-v 관리자 그룹 또는 Administrators 그룹의 구성원 인 사용자로 로컬 컴퓨터에서 실행 되 고 있지 않은 경우 Hyper-v 호스트에 연결할 수 있습니다. 이렇게 하려면 다음과 같이 하십시오.
 
 1. 왼쪽 창에서 **Hyper-v 관리자**를 마우스 오른쪽 단추로 클릭 합니다.
 1. **서버에 연결을**클릭 합니다.
@@ -97,7 +95,7 @@ Windows Server 2016 및 Windows 10의 hyper-v 관리자는 다음 섹션에 설�
 
 ### <a name="connect-to-a-windows-2016-or-windows-10-remote-host-using-ip-address"></a>IP 주소를 사용 하 여 Windows 2016 또는 Windows 10 원격 호스트에 연결
 
-가상 하드 디스크 파일에 대한 중요 정보를 제공하려면
+이렇게 하려면 다음과 같이 하십시오.
 
 1. 왼쪽 창에서 **Hyper-v 관리자**를 마우스 오른쪽 단추로 클릭 합니다.
 1. **서버에 연결을**클릭 합니다.
@@ -108,7 +106,7 @@ Windows Server 2016 및 Windows 10의 hyper-v 관리자는 다음 섹션에 설�
 
 ### <a name="connect-to-a-windows-2016-or-windows-10-remote-host-outside-your-domain-or-with-no-domain"></a>도메인 외부 또는 도메인 외부의 Windows 2016 또는 Windows 10 원격 호스트에 연결
 
-가상 하드 디스크 파일에 대한 중요 정보를 제공하려면
+이렇게 하려면 다음과 같이 하십시오.
 
 1. 관리할 Hyper-v 호스트에서 관리자 권한으로 Windows PowerShell 세션을 엽니다.
 

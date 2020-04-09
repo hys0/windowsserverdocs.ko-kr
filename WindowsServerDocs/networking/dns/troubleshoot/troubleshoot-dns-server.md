@@ -2,18 +2,17 @@
 title: DNS 서버 문제 해결
 description: 이 문서에서는 서버 쪽에서 DNS 문제를 해결 하는 방법을 소개 합니다.
 manager: dcscontentpm
-ms.prod: ''
 ms.technology: networking-dns
 ms.topic: article
 ms.author: delhan
 ms.date: 8/8/2019
 author: Deland-Han
-ms.openlocfilehash: 23e51adafa5ab6da0a9317a1b0fad88bd3901073
-ms.sourcegitcommit: c5709021aa98abd075d7a8f912d4fd2263db8803
+ms.openlocfilehash: 4413c60072c43b623f386d5037e3da7ed5dc128d
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2020
-ms.locfileid: "76265805"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80861326"
 ---
 # <a name="troubleshooting-dns-servers"></a>DNS 서버 문제 해결
 
@@ -30,7 +29,7 @@ ms.locfileid: "76265805"
    ```cmd
    nslookup <name> <IP address of the DNS server>
    ```
-   예를 들어 다음과 같은 가치를 제공해야 합니다. 
+   예를 들면 다음과 같습니다. 
    ```cmd
    nslookup app1 10.0.0.1
    ```
@@ -54,9 +53,9 @@ ms.locfileid: "76265805"
 
 다음 로그를 확인 하 여 기록 된 오류가 있는지 여부를 확인 합니다.
 
-- Application
+- 응용 프로그램
 
-- 시스템
+- System
 
 - DNS 서버
 

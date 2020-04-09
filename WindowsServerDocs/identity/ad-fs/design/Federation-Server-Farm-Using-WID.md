@@ -1,7 +1,6 @@
 ---
 ms.assetid: f775cbda-a75d-439d-9aa7-82f3bc8dc932
 title: WID를 사용하는 페더레이션 서버 팜
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: b0a84940018a0e71aaa1b47c7af3aba5966fe0ae
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 926848f9d39a4e00cb30a6bbde5aecee0ef31043
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71408051"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80853086"
 ---
 # <a name="federation-server-farm-using-wid"></a>WID를 사용하는 페더레이션 서버 팜
 
@@ -73,7 +72,7 @@ NLB 호스트에는 클라이언트 요청을 개별 페더레이션 서버에 �
 ![WID를 사용 하 여 서버 팜](media/FarmWID.gif)  
   
 > [!NOTE]  
-> 이 단일 NLB 호스트에 오류가 있는 경우 사용자가 페더레이션된 응용 프로그램 또는 서비스에 액세스할 수 없습니다. 비즈니스 요구 사항이 단일 지점에서 실패하는 것을 허용하지 않는 경우 추가 NLB 호스트를 추가합니다.  
+> 이 단일 NLB 호스트에 오류가 있는 경우 사용자가 페더레이션된 애플리케이션 또는 서비스에 액세스할 수 없습니다. 비즈니스 요구 사항이 단일 지점에서 실패하는 것을 허용하지 않는 경우 추가 NLB 호스트를 추가합니다.  
   
 페더레이션 서버와 함께 사용 하기 위해 네트워킹 환경을 구성 하는 방법에 대 한 자세한 내용은에서 이름 확인 요구 사항 섹션을 참조 하십시오. [AD FS 요구 사항](AD-FS-Requirements.md)합니다.  
   

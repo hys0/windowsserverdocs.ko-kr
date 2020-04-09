@@ -1,18 +1,17 @@
 ---
-title: 'SMB: 파일 및 프린터 공유 포트를 열어야 합니다.'
-TOCTitle: 'SMB: File and printer sharing ports should be open'
+title: SMB-파일 및 프린터 공유 포트가 열려 있어야 합니다.
 ms.date: 07/02/2012
 ms.prod: windows-server
 ms.technology: storage
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.openlocfilehash: 80cc75f983d4593e4ee98309d1fa39c024b7b379
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: a7e98129c2fb4f2259364c547b426d46f0a24ef3
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75950291"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859466"
 ---
 # <a name="smb-file-and-printer-sharing-ports-should-be-open"></a>SMB: 파일 및 프린터 공유 포트를 열어야 합니다.
 
@@ -21,7 +20,7 @@ ms.locfileid: "75950291"
 
 적용 대상: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 및 Windows Server 2012, Windows Server 2008 R2
 
-*이 항목에서는 모범 사례 분석기 검색에서 식별 한 특정 문제를 해결 하기 위한 것입니다. 이 항목의 정보는 파일 서비스 모범 사례 분석기 실행 되 고이 항목에서 다루는 문제가 발생 한 컴퓨터에만 적용 해야 합니다. 모범 사례 및 검사에 대 한 자세한 내용은 [모범 사례 분석기](https://go.microsoft.com/fwlink/?linkid=122786%0d%0a)를 참조* 하세요.
+*이 항목에서는 모범 사례 분석기 검색에서 식별 한 특정 문제를 해결 하기 위한 것입니다. 이 항목의 정보는 파일 서비스 모범 사례 분석기 실행 되 고이 항목에서 다루는 문제가 발생 한 컴퓨터에만 적용 해야 합니다. 모범 사례 및 검사에 대 한 자세한 내용은 모범 사례 분석기를 참조* [Best Practices Analyzer](https://go.microsoft.com/fwlink/?linkid=122786%0d%0a)하세요.
 
 
 <table>
@@ -39,7 +38,7 @@ ms.locfileid: "75950291"
 <td><p>파일 서비스</p></td>
 </tr>
 <tr class="odd">
-<td><p><strong>Severity</strong></p></td>
+<td><p><strong>등급</strong></p></td>
 <td><p>오류</p></td>
 </tr>
 <tr class="even">
@@ -71,7 +70,7 @@ ms.locfileid: "75950291"
 
 3.  **인바운드 규칙**에서 **파일 및 프린터 공유 (NB 세션)** 및 **파일 및 프린터 공유 (SMB 인)** 규칙을 찾습니다.
 
-4.  각 규칙을 마우스 오른쪽 단추로 클릭한 다음, **규칙 사용**을 클릭합니다.
+4.  각 규칙에 대해 해당 규칙을 마우스 오른쪽 단추로 클릭 한 다음 **규칙 사용**을 클릭 합니다.
 
 ## <a name="additional-references"></a>추가 참조
 

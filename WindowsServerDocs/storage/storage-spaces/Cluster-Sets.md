@@ -1,19 +1,20 @@
 ---
 title: 클러스터 집합
 ms.prod: windows-server
-ms.manager: eldenc
+manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: johnmarlin-msft
+ms.author: johnmar
 ms.date: 01/30/2019
 description: 이 문서에서는 클러스터 집합 시나리오에 대해 설명 합니다.
 ms.localizationpriority: medium
-ms.openlocfilehash: db427e8fa4e5574c6eb7837cf0ab4a9fcc180410
-ms.sourcegitcommit: 3c3dfee8ada0083f97a58997d22d218a5d73b9c4
+ms.openlocfilehash: 3c7ddef1831a82f7fc068ec4241bb1a72bd888bd
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80639958"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80861046"
 ---
 # <a name="cluster-sets"></a>클러스터 집합
 
@@ -100,13 +101,13 @@ Windows Server 2019에는 인프라 스케일 아웃 파일 서버 (SOFS) 이라
 
 인프라 SOFS 역할에 적용 되는 고려 사항은 다음과 같습니다.
 
-1.  장애 조치 (Failover) 클러스터에는 하나의 인프라 SOFS 클러스터 역할만 있을 수 있습니다. 인프라 SOFS 역할은 **ClusterScaleOutFileServerRole** cmdlet에 " **-Infrastructure**" 스위치 매개 변수를 지정 하 여 만듭니다.  예를 들면 다음과 같습니다.
+1.    장애 조치 (Failover) 클러스터에는 하나의 인프라 SOFS 클러스터 역할만 있을 수 있습니다. 인프라 SOFS 역할은 **ClusterScaleOutFileServerRole** cmdlet에 " **-Infrastructure**" 스위치 매개 변수를 지정 하 여 만듭니다.  예를 들면 다음과 같습니다.
 
-        Add-ClusterScaleoutFileServerRole -Name "my_infra_sofs_name" -Infrastructure
+        ClusterScaleoutFileServerRole-Name "my_infra_sofs_name"-Infrastructure
 
-2.  장애 조치 (failover) 시 생성 된 각 CSV 볼륨은 CSV 볼륨 이름을 기반으로 자동 생성 된 이름으로 SMB 공유 생성을 자동으로 트리거합니다. 관리자는 CSV 볼륨 만들기/수정 작업 외에 SOFS 역할을 통해 직접 SMB 공유를 만들거나 수정할 수 없습니다.
+2.    장애 조치 (failover) 시 생성 된 각 CSV 볼륨은 CSV 볼륨 이름을 기반으로 자동 생성 된 이름으로 SMB 공유 생성을 자동으로 트리거합니다. 관리자는 CSV 볼륨 만들기/수정 작업 외에 SOFS 역할을 통해 직접 SMB 공유를 만들거나 수정할 수 없습니다.
 
-3.  하이퍼 수렴 형 구성에서 인프라 SOFS를 사용 하면 SMB 클라이언트 (Hyper-v 호스트)가 보장 된 CA (지속적인 가용성)와 SMB 서버 인프라 SOFS 통신할 수 있습니다. 클라이언트와 서버 간에 소유 하는 가상 컴퓨터 id가 전달 되는 가상 디스크 (VHDx) 파일에 액세스 하는 가상 컴퓨터를 통해이 하이퍼 수렴 형 SMB 루프백 CA를 구현할 수 있습니다. 이 id 전달을 사용 하면 이전 처럼 표준 하이퍼 수렴 형 클러스터 구성에서와 마찬가지로 ACL을 사용 하는 VHDx 파일을 사용할 수 있습니다.
+3.    하이퍼 수렴 형 구성에서 인프라 SOFS를 사용 하면 SMB 클라이언트 (Hyper-v 호스트)가 보장 된 CA (지속적인 가용성)와 SMB 서버 인프라 SOFS 통신할 수 있습니다. 클라이언트와 서버 간에 소유 하는 가상 컴퓨터 id가 전달 되는 가상 디스크 (VHDx) 파일에 액세스 하는 가상 컴퓨터를 통해이 하이퍼 수렴 형 SMB 루프백 CA를 구현할 수 있습니다. 이 id 전달을 사용 하면 이전 처럼 표준 하이퍼 수렴 형 클러스터 구성에서와 마찬가지로 ACL을 사용 하는 VHDx 파일을 사용할 수 있습니다.
 
 클러스터 세트를 만든 후 클러스터 집합 네임 스페이스는 각 구성원 클러스터의 인프라 SOFS를 사용 하 고 관리 클러스터의 인프라 SOFS을 추가로 사용 합니다.
 

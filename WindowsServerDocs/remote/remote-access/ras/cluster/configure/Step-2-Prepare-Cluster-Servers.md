@@ -2,22 +2,18 @@
 title: 클러스터 서버를 준비 하는 2 단계
 description: 이 항목은 Windows Server 2016의 클러스터에 원격 액세스 배포 가이드의 일부입니다.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-ras
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 35d68abb-6914-42e0-91e8-803933cf785e
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 74aac416a5aa69a0cd935d58e3ecb931e4b5fd02
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: e53557f1fb2715f1d0318adc12aebb8f84423519
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80308333"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80861446"
 ---
 # <a name="step-2-prepare-cluster-servers"></a>클러스터 서버를 준비 하는 2 단계
 
@@ -27,7 +23,7 @@ ms.locfileid: "80308333"
   
 |작업|설명|  
 |----|--------|  
-|[2.1 원격 액세스 인프라 구성](#BKMK_config)|클러스터에 추가 하려는 각 서버에서 서버 토폴로지, IP 주소 지정, 라우팅 및 전달을 구성 합니다. 가상 컴퓨터의 부하 분산 된 클러스터를 구성 하는 경우에 MAC 주소 스푸핑을 사용 하도록 가상 컴퓨터를 구성 해야 합니다.<br /><br />또한 각 서버를 동일한 도메인에 가입 하 고 모든 서버를 동일한 서브넷에 연결 합니다.|  
+|[2.1 원격 액세스 인프라 구성](#BKMK_config)|클러스터에 추가 하려는 각 서버에서 서버 토폴로지, IP 주소 지정, 라우팅 및 전달을 구성 합니다. 가상 컴퓨터의 부하 분산 된 클러스터를 구성 하는 경우에 MAC 주소 스푸핑을 사용 하도록 가상 컴퓨터를 구성 해야 합니다.<p>또한 각 서버를 동일한 도메인에 가입 하 고 모든 서버를 동일한 서브넷에 연결 합니다.|  
 |[2.2 원격 액세스 역할 설치](#BKMK_Install)|클러스터에 추가 하려는 각 추가 서버에서 원격 액세스 역할 설치|  
 |[2.3 NLB 설치](#BKMK_NLB)|배포 된 원격 액세스 서버와 클러스터에 추가 하려는 각 추가 서버에서 NLB 기능을 설치 합니다. 이 단계는는 외부 부하 분산 장치를 사용 하는 경우에 필요 합니다.|  
   

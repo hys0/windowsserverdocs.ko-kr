@@ -1,26 +1,22 @@
 ---
-title: 설치에 필요한 하드웨어 및 장치 드라이버 수집
+title: 설치에 필요한 하드웨어 및 디바이스 드라이버 수집
 description: MultiPoint 서비스에 대해 설치 해야 하는 드라이버에 대 한 정보
-ms.custom: na
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4cf5fdbe-b871-4360-b003-d65ac43b491e
 author: evaseydl
 manager: scottman
 ms.author: evas
 ms.date: 08/04/2016
-ms.openlocfilehash: cfbb8c8b68768c72b869df539c93f05e7e01d256
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 57e47b357d5b6311c69cf54a74e3eaff7913da53
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71394695"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80858726"
 ---
-# <a name="collect-hardware-and-device-drivers-needed-for-the-installation"></a>설치에 필요한 하드웨어 및 장치 드라이버 수집
+# <a name="collect-hardware-and-device-drivers-needed-for-the-installation"></a>설치에 필요한 하드웨어 및 디바이스 드라이버 수집
 MultiPoint 서비스 시스템 배포를 시작 하기 전에 다음이 필요 합니다.  
   
 -   **서버에 대 한 하드웨어 구성 요소** -이 시점에서 추가 비디오 카드나 기타 시스템 구성 요소를 설치 합니다.  
@@ -34,4 +30,4 @@ MultiPoint 서비스 시스템 배포를 시작 하기 전에 다음이 필요 �
     > MultiPoint 서비스를 설치 하려면 드라이버의 64 비트 버전을 설치 해야 합니다.  
   
 > [!TIP]  
-> 다른 버전의 Windows가 이미 설치 된 컴퓨터에 MultiPoint 서비스를 설치 하는 경우 Windows Server 설치를 시작 하기 전에 Device Manager에서 비디오 카드 제조업체 및 모델을 확인 하 고 Windows Server 2016에서 사용할 수 있습니다. Device Manager을 열고 **시작** 화면에서 **컴퓨터 관리** 를 엽니다. 그런 다음 콘솔 트리에서 **Device Manager**를 클릭 합니다.
+> 다른 버전의 Windows가 이미 설치 된 컴퓨터에 MultiPoint 서비스를 설치 하는 경우 Windows Server 설치를 시작 하기 전에 Device Manager에서 비디오 카드 제조업체 및 모델을 확인 하 고 Windows Server 2016에 사용할 수 있는 드라이버를 얻을 수 있는지 확인 해야 합니다. Device Manager을 열고 **시작** 화면에서 **컴퓨터 관리** 를 엽니다. 그런 다음 콘솔 트리에서 **Device Manager**를 클릭 합니다.

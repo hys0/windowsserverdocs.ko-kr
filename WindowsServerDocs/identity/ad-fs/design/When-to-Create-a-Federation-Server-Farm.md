@@ -1,7 +1,6 @@
 ---
 ms.assetid: 02580b2f-a339-4470-947c-d700b2d55f3f
 title: 페더레이션 서버 팜을 만들어야 하는 경우
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: fcfc7d640d3688bf0e23557af9bd56082418ef37
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 61e5c2c31ef4f6771c379c93e61b78640f4a180a
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71358938"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80858506"
 ---
 # <a name="when-to-create-a-federation-server-farm"></a>페더레이션 서버 팜을 만들어야 하는 경우
 
@@ -32,7 +31,7 @@ Microsoft NLB 기술을 사용 하 여 클러스터 FQDN을 구성 하는 방법
 ## <a name="best-practices-for-deploying-a-federation-server-farm"></a>페더레이션 서버 팜 배포를 위한 모범 사례  
 프로덕션 환경에 페더레이션 서버를 배포 하기 위한 다음 모범 사례를 따르는 것이 좋습니다.  
   
--   동시에 여러 페더레이션 서버를 배포 하거나 시간에 따라 팜에 서버를 더 추가 하는 경우 팜에 기존 페더레이션 서버의 서버 이미지를 만든 다음, cr을 필요할 때 해당 이미지에서 설치 하는 것이 좋습니다. 추가 페더레이션 서버를 신속 하 게 추가 합니다.  
+-   동시에 여러 페더레이션 서버를 배포 하거나 시간에 따라 팜에 서버를 더 추가 하는 경우 팜에 기존 페더레이션 서버의 서버 이미지를 만든 다음 추가 페더레이션 서버를 신속 하 게 만들어야 할 때 해당 이미지에서 설치 하는 것이 좋습니다.  
   
     > [!NOTE]  
     > 추가 페더레이션 서버를 배포 하는 데 서버 이미지 방법을 사용 하기로 결정 한 경우 새 서버를 팜에 추가할 때마다 [검사 목록: 페더레이션 서버 설정](../../ad-fs/deployment/Checklist--Setting-Up-a-Federation-Server.md) 에서 작업을 완료할 필요가 없습니다.  
@@ -46,10 +45,10 @@ Microsoft NLB 기술을 사용 하 여 클러스터 FQDN을 구성 하는 방법
 ## <a name="configuring-federation-servers-for-a-farm"></a>팜에 대한 페더레이션 서버 구성  
 다음 표에서는 각 페더레이션 서버가 팜 환경에 참여할 수 있도록 하기 위해 완료 해야 하는 작업에 대해 설명 합니다.  
   
-|태스크|설명|  
+|작업|설명|  
 |--------|---------------|  
 |SQL Server를 사용하여 AD FS 구성 데이터베이스를 저장하는 경우|페더레이션 서버 팜은 서명 인증서\-동일한 AD FS 구성 데이터베이스와 토큰을 공유 하는 둘 이상의 페더레이션 서버로 구성 됩니다. Windows 내부 데이터베이스 또는 SQL Server 데이터베이스에 구성 데이터베이스를 저장할 수 있습니다. SQL 데이터베이스에 구성 데이터베이스를 저장 하려는 경우 팜에 참여 하는 모든 새 페더레이션 서버에서 액세스할 수 있도록 구성 데이터베이스에 액세스할 수 있는지 확인 합니다. **참고:** 팜 시나리오의 경우 해당 팜에 페더레이션 서버로도 참여 하지 않는 컴퓨터에 구성 데이터베이스를 배치 하는 것이 중요 합니다. Microsoft NLB는 팜에 참여하는 컴퓨터가 서로 통신하는 것을 허용하지 않습니다. **참고:** 팜에 참여 하는 모든 페더레이션 서버에서 IIS\)\) \(인터넷 정보 서비스 AD FS AppPool의 id에 구성 데이터베이스에 대 한 읽기 권한이 있는지 확인 합니다.|  
-|인증서 가져오기 및 공유|공용 인증 기관 \(CA\)에서 단일 서버 인증 인증서를 가져올 수 있습니다 (예: VeriSign). 그러면 모든 페더레이션 서버가 인증서의 동일한 개인 키 부분을 공유 하도록 인증서를 구성할 수 있습니다. 동일한 인증서를 공유하는 방법에 대한 자세한 내용은 [Checklist: Setting Up a Federation Server](../../ad-fs/deployment/Checklist--Setting-Up-a-Federation-Server.md)을 참조하세요. **참고:** AD FS 관리 스냅인\-서비스 통신 인증서로 페더레이션 서버에 대 한 서버 인증 인증서를 참조 합니다.<br /><br />자세한 내용은 [Certificate Requirements for Federation Servers](Certificate-Requirements-for-Federation-Servers.md)를 참조하세요.|  
+|인증서 가져오기 및 공유|공용 인증 기관 \(CA\)에서 단일 서버 인증 인증서를 가져올 수 있습니다 (예: VeriSign). 그러면 모든 페더레이션 서버가 인증서의 동일한 개인 키 부분을 공유 하도록 인증서를 구성할 수 있습니다. 동일한 인증서를 공유하는 방법에 대한 자세한 내용은 [Checklist: Setting Up a Federation Server](../../ad-fs/deployment/Checklist--Setting-Up-a-Federation-Server.md)을 참조하세요. **참고:** AD FS 관리 스냅인\-서비스 통신 인증서로 페더레이션 서버에 대 한 서버 인증 인증서를 참조 합니다.<p>자세한 내용은 [Certificate Requirements for Federation Servers](Certificate-Requirements-for-Federation-Servers.md)를 참조하세요.|  
 |동일한 SQL Server 인스턴스 가리키기|AD FS 구성 데이터베이스가 SQL 데이터베이스에 저장 되는 경우 새 페더레이션 서버는 팜에 있는 다른 페더레이션 서버에서 사용 하는 것과 동일한 SQL Server 인스턴스를 가리켜야 새 서버가 팜에 참여할 수 있습니다.|  
   
 ## <a name="see-also"></a>참고 항목

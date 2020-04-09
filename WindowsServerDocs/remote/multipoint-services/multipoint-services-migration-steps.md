@@ -1,24 +1,20 @@
 ---
 title: 마이그레이션 MultiPoint 서비스에 대 한 단계
 description: Windows Server 2016에서 MultiPoint 서비스로 마이그레이션하는 단계를 안내 합니다.
-ms.custom: na
 ms.date: 07/29/2016
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3ee77efa-7cc5-4ddf-aaff-b5634a717014
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.openlocfilehash: 862e9b70cfafa9de0928a4789c5d23dfa0fbb530
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f2e293fafb8d6f5d84e9ea5a4ad8ef3b7fe2ba7d
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71389034"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80858696"
 ---
 # <a name="migrate-to--multipoint-services-in-windows-server-2016"></a>Windows Server 2016에서에서 MultiPoint Service로 마이그레이션
 
@@ -33,7 +29,7 @@ ms.locfileid: "71389034"
 > 대상 서버에서 디스크 보호를 사용 하도록 설정 해야 할 경우 MultiPoint 서비스를 구성한 후 될 때까지 기다립니다.
 
 ## <a name="transfer-station-settings"></a>전송 스테이션 설정
-참여 하는 스테이션 하 고 매핑된 스테이션 설정을 적용 하기 전에 모든 대상 서버에 연결 되어 있는지 확인 합니다. 참여 하는 스테이션을 자동으로 검색 됩니다. 각 스테이션 화면 스테이션 사용자와 연결 된 USB 장치는 서버 매핑을 정의 하는 지침을 따릅니다. 마이그레이션 계획 워크시트에 설명 된 대로 기본 스테이션 설정을 적용 합니다.
+참여 하는 스테이션 하 고 매핑된 스테이션 설정을 적용 하기 전에 모든 대상 서버에 연결 되어 있는지 확인 합니다. 참여 하는 스테이션을 자동으로 검색 됩니다. 각 스테이션 화면 스테이션 사용자와 연결 된 USB 디바이스는 서버 매핑을 정의 하는 지침을 따릅니다. 마이그레이션 계획 워크시트에 설명 된 대로 기본 스테이션 설정을 적용 합니다.
 
 ## <a name="migrate-the-vdi-template"></a>VDI 템플릿이 마이그레이션
 

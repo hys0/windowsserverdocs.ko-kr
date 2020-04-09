@@ -2,22 +2,18 @@
 title: 8 단계 INET1 구성
 description: 이 항목은 테스트 랩 가이드-Windows Server 2016에 대 한 DirectAccess 멀티 사이트 배포 시연의 일부입니다.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-da
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 693acb5c-dffc-4484-8286-163bb67724c9
 ms.author: coreyp
 author: coreyp-at-msft
-ms.openlocfilehash: 54674adc33f45a58f2515d07fed4c8a070ded5a1
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: ca8a49e612bef9c4a72c47e8d0e147a900686f84
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404711"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80861546"
 ---
 # <a name="step-8-configure-inet1"></a>8 단계: INET1 구성
 

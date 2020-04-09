@@ -8,12 +8,12 @@ ms.date: 02/22/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 292bec5f73e2746103ffc41cde729ddc59728e0b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: c36de1c3565be7f0f0e6c6203a21345f3d227e96
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71407872"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80857326"
 ---
 # <a name="identity-delegation-scenario-with-ad-fs"></a>AD FS를 사용 하는 id 위임 시나리오
 
@@ -26,20 +26,20 @@ ms.locfileid: "71407872"
 
 다음 다이어그램에서는 Fabrikam 직원이 Contoso.com 응용 프로그램에 노출 된 리소스에 액세스 하는 일반적인 id 위임 시나리오를 보여 줍니다.
 
-![ID](media/ad-fs-identity-delegation/id1.png)
+![Identity](media/ad-fs-identity-delegation/id1.png)
 
 이 시나리오에 참여 하는 가상 사용자는 다음과 같습니다.
 
-- Frank Contoso 리소스에 액세스 하려는 Fabrikam 직원입니다.
-- Daniel 응용 프로그램에서 필요한 변경 내용을 구현 하는 Contoso 응용 프로그램 개발자입니다.
-- 대해서 Contoso IT 관리자.
+- Frank: Contoso 리소스에 액세스 하려는 Fabrikam 직원입니다.
+- Daniel: 응용 프로그램에서 필요한 변경 내용을 구현 하는 Contoso 응용 프로그램 개발자입니다.
+- Adam: Contoso IT 관리자.
 
 이 시나리오와 관련 된 구성 요소는 다음과 같습니다.
 
-- web1 초기 호출자의 위임 된 id를 필요로 하는 백 엔드 리소스에 대 한 링크가 포함 된 웹 응용 프로그램입니다. 이 응용 프로그램은 ASP.NET를 사용 하 여 빌드됩니다.
+- web1: 초기 호출자의 위임 된 id를 필요로 하는 백 엔드 리소스에 대 한 링크가 포함 된 웹 응용 프로그램입니다. 이 응용 프로그램은 ASP.NET를 사용 하 여 빌드됩니다.
 - 직접 실행 호출자의 위임 된 id가 필요한 SQL Server에 액세스 하는 웹 서비스입니다. 이 서비스는 WCF를 사용 하 여 빌드됩니다.
-- sts1: 클레임 공급자의 역할을 하 고 응용 프로그램에서 예상 하는 클레임 (web1)을 내보내는 STS입니다. Fabrikam.com와 응용 프로그램을 사용 하 여 트러스트를 설정 했습니다.
-- sts2: Fabrikam.com에 대 한 id 공급자의 역할에 있는 STS는 Fabrikam 직원이 인증을 위해 사용 하는 끝점을 제공 합니다. Fabrikam 직원이 Contoso.com의 리소스에 액세스할 수 있도록 Contoso.com와 트러스트를 설정 했습니다.
+- sts1: 클레임 공급자의 역할에 있는 STS 이며 응용 프로그램에서 예상 하는 클레임 (web1)을 내보냅니다. Fabrikam.com와 응용 프로그램을 사용 하 여 트러스트를 설정 했습니다.
+- sts2: Fabrikam.com에 대 한 id 공급자의 역할에 있는 STS 이며 Fabrikam 직원이 인증 하는 데 사용 하는 끝점을 제공 합니다. Fabrikam 직원이 Contoso.com의 리소스에 액세스할 수 있도록 Contoso.com와 트러스트를 설정 했습니다.
 
 >[!NOTE] 
 >이 시나리오에서 자주 사용 되는 "ActAs token" 이라는 용어는 STS에서 발급 한 토큰을 나타내며 사용자의 id를 포함 합니다. 행위자 속성은 STS의 id를 포함 합니다.
@@ -57,7 +57,7 @@ ms.locfileid: "71407872"
 Fabrikam.com 관리자는 Frank에 대해 세 가지 옵션을 사용할 수 있습니다.
 
 
-1. AD FS (Active Directory® Federation Services)와 같은 STS 제품을 구매 하 고 설치 합니다.
+1. AD FS (Active Directory&reg; Federation Services)와 같은 STS 제품을 구매 하 고 설치 합니다.
 2. LiveID STS와 같은 클라우드 STS 제품을 구독 합니다.
 3. WIF를 사용 하 여 사용자 지정 STS를 빌드합니다.
 

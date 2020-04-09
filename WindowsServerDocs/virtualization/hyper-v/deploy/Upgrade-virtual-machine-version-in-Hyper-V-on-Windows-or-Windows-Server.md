@@ -2,21 +2,19 @@
 title: Windows 10 또는 Windows Server에서 Hyper-v의 가상 머신 버전 업그레이드
 description: 가상 컴퓨터의 버전을 업그레이드 하는 방법에 대 한 지침 및 고려 사항 제공
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 897f2454-5aee-445c-a63e-f386f514a0f6
 author: jasongerend
 ms.author: jgerend
 ms.date: 05/22/2019
-ms.openlocfilehash: 96678dfab2a3d5b6f503d8ce9d00850a3c437b35
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: e08d13e4d9b493b80cad59561c8088c7d3a12b57
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79322725"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80860876"
 ---
 # <a name="upgrade-virtual-machine-version-in-hyper-v-on-windows-10-or-windows-server"></a>Windows 10 또는 Windows Server에서 Hyper-v의 가상 머신 버전 업그레이드
 
@@ -53,7 +51,7 @@ Windows PowerShell을 사용 하 여 가상 머신 구성 버전을 업그레이
 Update-VMVersion <vmname>
 ```
 
-## <a name="supported-virtual-machine-configuration-versions"></a>지원 되는 가상 머신 구성 버전
+## <a name="supported-virtual-machine-configuration-versions"></a>지원 되는 가상 컴퓨터 구성 버전
 
 PowerShell cmdlet [VMHostSupportedVersion](https://docs.microsoft.com/powershell/module/hyper-v/get-vmhostsupportedversion) 를 실행 하 여 hyper-v 호스트가 지 원하는 가상 컴퓨터 구성 버전을 확인 합니다. 가상 컴퓨터를 만들 때 기본 구성 버전으로 만들어집니다. 기본값을 보려면 다음 명령을 실행 합니다.
 

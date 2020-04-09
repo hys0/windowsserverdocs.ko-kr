@@ -1,24 +1,20 @@
 ---
 title: MultiPoint 서비스 마이그레이션 계획 워크시트
 description: Windows Server 2016에서 MultiPoint 서비스로 마이그레이션하는 데 도움이 되는 계획 워크시트를 제공 합니다.
-ms.custom: na
 ms.date: 07/29/2016
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 864405bb-47ed-4c83-97a2-8df4c6e6f96b
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.openlocfilehash: d3d2ecca4062d28d210196d9191e08710eb731c2
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: c0d5976e70bcf8009cd98e54e973dd6f585d7208
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71394632"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80858906"
 ---
 # <a name="planning-worksheet-for-multipoint-services-migration"></a>MultiPoint 서비스 마이그레이션 계획 워크시트
 
@@ -44,7 +40,7 @@ ms.locfileid: "71394632"
 
 관리 되는 서버 및 컴퓨터의 이름을 기록 합니다. 이 정보를 확인할 수는 **홈** 다중 포인트 관리자 탭 합니다.
 
-| Computer | 컴퓨터 이름 |
+| 컴퓨터 | 컴퓨터 이름 |
 |----------|---------------|
 | 1        |               |
 | 2        |               |

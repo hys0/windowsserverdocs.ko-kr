@@ -1,6 +1,5 @@
 ---
 title: AD FS를 사용한 OpenID Connect 단일 로그아웃
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -8,12 +7,12 @@ ms.date: 11/17/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 5f0127e60243ca81f7e25282adc79e01c54b4b32
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: fe176af74ebabb5cb56d8aa74d755c4e35ec94a3
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71407855"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80857316"
 ---
 #  <a name="single-log-out-for-openid-connect-with-ad-fs"></a>AD FS를 사용한 OpenID Connect 단일 로그아웃
 

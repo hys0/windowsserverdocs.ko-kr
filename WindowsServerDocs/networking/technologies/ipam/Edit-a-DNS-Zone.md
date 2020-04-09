@@ -2,22 +2,18 @@
 title: DNS 영역 편집
 description: 이 항목은 Windows Server 2016의 IPAM (IP 주소 관리) 관리 가이드의 일부입니다.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-ipam
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a35164e1-11ad-47c8-9843-580d30c70d07
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: b2fa8ff6742dc393a5a2cc962c7f849049b5ef31
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 916e745082db64cf548e4b9650ee1f0ec5ba3c24
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80312427"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80860696"
 ---
 # <a name="edit-a-dns-zone"></a>DNS 영역 편집
 
@@ -59,7 +55,7 @@ ms.locfileid: "80312427"
   
 8.  필요한 경우 추가 영역 속성 페이지 이름 (이름 서버, SOA, 영역 전송)을 선택 하 고 편집을 수행한 다음 **적용** 또는 **확인**을 클릭 합니다. 모든 영역 편집 내용을 검토 하려면 **요약**을 클릭 한 다음 **확인**을 클릭 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [DNS 영역 관리](DNS-Zone-Management.md)  
 [IPAM 관리](Manage-IPAM.md)  
   

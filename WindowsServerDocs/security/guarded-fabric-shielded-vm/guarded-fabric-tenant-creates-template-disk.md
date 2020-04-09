@@ -1,23 +1,23 @@
 ---
 title: 테 넌 트 용 보호 된 Vm-템플릿 디스크 만들기-선택 사항
-ms.custom: na
 ms.prod: windows-server
 ms.topic: article
 ms.assetid: c1992f8b-6f88-4dbc-b4a5-08368bba2787
 manager: dongill
 author: rpsqrd
+ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: 8e5080dd74506e86687dddb7be0fd35af92f5b56
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 1f51a0f90f60847929f6fe46732c98f355a6a859
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403434"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856446"
 ---
 # <a name="shielded-vms-for-tenants---creating-a-template-disk-optional"></a>테 넌 트 용 보호 된 Vm-템플릿 디스크 만들기 (선택 사항)
 
->적용 대상: Windows server 2019, Windows Server (반기 채널), Windows Server 2016
+>적용 대상: Windows Server 2019, Windows Server (반기 채널), Windows Server 2016
 
 새 보호 된 VM을 만들려면 특별히 준비 되 고 서명 된 템플릿 디스크를 사용 해야 합니다. 서명 된 템플릿 디스크의 메타 데이터는 디스크가 생성 된 후 수정 되지 않고 보호 된 Vm을 만드는 데 사용할 수 있는 디스크를 제한 하는 테 넌 트로 사용할 수 있도록 하는 데 도움이 됩니다. 이 디스크를 제공 하는 한 가지 방법은이 항목에서 설명 하는 것 처럼 사용자를 위한 테 넌 트를 만드는 것입니다. 
 
@@ -28,10 +28,10 @@ ms.locfileid: "71403434"
 
 보호 된 템플릿 디스크를 만들려면 먼저 템플릿 디스크 마법사를 통해 실행 되는 OS 디스크를 준비 해야 합니다. 이 디스크는 보호 된 Vm에서 OS 디스크로 사용 됩니다. 기존 도구를 사용 하 여이 디스크를 만들 수 있습니다 (예: DISM (Microsoft Desktop Image Service Manager)). 또는 새 VHDX를 사용 하 여 VM을 수동으로 설정 하 고 해당 디스크에 OS를 설치 합니다. 디스크를 설정 하는 경우 2 세대 및/또는 차폐 Vm과 관련 된 다음 요구 사항을 준수 해야 합니다. 
 
-| VHDX에 대 한 요구 사항 | Reason |
+| VHDX에 대 한 요구 사항 | 이유 |
 |-----------|----|
 |GPT (GUID 파티션 테이블) 디스크 여야 합니다. | UEFI를 지원 하기 위해 2 세대 가상 컴퓨터에 필요|
-|디스크 유형은 **동적**이 아닌 **기본** 이어야 합니다. <br>참고: 이는 Hyper-v에서 지 원하는 "동적 확장" VHDX 기능이 아니라 논리 디스크 유형을 나타냅니다. | BitLocker는 동적 디스크를 지원 하지 않습니다.|
+|디스크 유형은 **동적**이 아닌 **기본** 이어야 합니다. <br>참고:이는 Hyper-v에서 지 원하는 "동적 확장" VHDX 기능이 아니라 논리 디스크 유형을 나타냅니다. | BitLocker는 동적 디스크를 지원 하지 않습니다.|
 |디스크에 파티션이 두 개 이상 있습니다. 한 파티션에는 Windows가 설치 된 드라이브가 포함 되어야 합니다. BitLocker가 암호화 하는 드라이브입니다. 다른 파티션은 부팅 로더를 포함 하 고 컴퓨터를 시작할 수 있도록 암호화 되지 않은 상태로 유지 되는 활성 파티션입니다.|BitLocker에 필요|
 |파일 시스템이 NTFS입니다. | BitLocker에 필요|
 |VHDX에 설치 된 운영 체제는 다음 중 하나입니다.<br>-Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 또는 Windows Server 2012 <br>-Windows 10, Windows 8.1, Windows 8| 2 세대 가상 컴퓨터 및 Microsoft 보안 부팅 템플릿을 지 원하는 데 필요 합니다.|
@@ -91,7 +91,7 @@ Windows Server 2016를 실행 하는 컴퓨터에서 다음 단계를 수행 합
 
 보호 된 [VM을 정의 하는 차폐 데이터 만들기](guarded-fabric-tenant-creates-shielding-data.md)에 설명 된 대로 사용자가 만드는 보호 데이터 파일과 함께 보호 된 디스크 템플릿을 호스팅 서비스 공급자에 제공 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [보호된 VM 배포](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 - [보호된 패브릭 및 보호된 VM](guarded-fabric-and-shielded-vms-top-node.md)

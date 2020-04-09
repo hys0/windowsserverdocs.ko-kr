@@ -1,29 +1,25 @@
 ---
 title: 배포 전 검사 목록
 description: MultiPoint 서비스 배포를 계획 하는 데 사용할 수 있는 검사 목록을 제공 합니다.
-ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 87ea20e4-46cf-49e9-86bf-70be9098c8db
 author: evaseydl
 manager: scottman
 ms.author: evas
-ms.openlocfilehash: 38ff3832551024e3d6d89fe6d0f5eb3e136abca6
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 7f2a3b61e87abb285b3112dcad0fdfe2eceef6bb
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405013"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80853376"
 ---
 # <a name="predeployment-checklist"></a>배포 전 검사 목록
 다음 검사 목록을 사용 하 여 MultiPoint 서비스 배포를 계획할 수 있습니다.  
   
-|단계|문제점|도움말 항목|  
+|단계|문제|도움말 항목|  
 |--------|---------|--------------|  
 |1.|응용 프로그램이 MultiPoint 서비스와 호환 되는지 확인 합니다.|[애플리케이션 고려 사항](Application-Considerations.md)|  
 |2.|Multipoint service를 실행 하는 데 필요한 컴퓨터의 수를 예상할 수 있도록 MultiPoint 서비스를 실행 하는 각 컴퓨터에서 동시에 액세스할 수 있는 사용자 수를 결정 합니다.|[사용자, 스테이션 및 컴퓨터](MultiPoint-services-Site-Planning.md#users-stations-and-computers)|  

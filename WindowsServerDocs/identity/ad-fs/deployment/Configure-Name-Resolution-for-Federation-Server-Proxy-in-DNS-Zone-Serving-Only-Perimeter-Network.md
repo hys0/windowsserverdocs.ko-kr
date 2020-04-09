@@ -1,7 +1,6 @@
 ---
 ms.assetid: b7109e46-b66e-4c5c-8b87-a6611d68415a
 title: 경계 네트워크에서만 작동하는 DNS 영역에 페더레이션 서버 프록시에 대한 이름 확인 구성
-description: ''
 author: billmath
 manager: femila
 ms.date: 05/31/2017
@@ -9,12 +8,12 @@ ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: de4627f2e03e6432f4e678cd9ca932819cb483d5
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 451ed2bb2b2da9481d33c6e9e339bb582824a4e1
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71408432"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854926"
 ---
 # <a name="configure-name-resolution-for-a-federation-server-proxy-in-a-dns-zone-that-serves-only-the-perimeter-network"></a>경계 네트워크에서만 작동하는 DNS 영역에 페더레이션 서버 프록시에 대한 이름 확인 구성
 
@@ -31,19 +30,19 @@ Active Directory Federation Services \(AD FS 페더레이션 서버에 대 한 �
 ## <a name="add-the-ip-address-of-a-federation-server-to-the-hosts-file"></a>호스트 파일에 페더레이션 서버의 IP 주소를 추가 합니다.  
 호스트 파일을 가리키는 페더레이션 서버의 DNS 호스트 이름에 해당 페더레이션 서버 프록시에는 항목을 추가 해야 작동 하도록 페더레이션 서버 프록시 계정 파트너의 경계 네트워크에서 예상 대로, \(예를 들어 fs.fabrikam.com\) 및 IP 주소 \(예를 들어 192.168.1.4\) 계정 파트너의 회사 네트워크에 있습니다. 페더레이션 서버 프록시 클라이언트를 해결 하려면 자체에서 방지 hosts 파일에이 항목을 추가\-는 페더레이션 서버는 계정 파트너의 호출을 시작 합니다.  
   
-로컬 컴퓨터에서 이 절차를 완료하기 위해서는 최소한 **관리자** 또는 이와 동등한 자격이 있어야 합니다.  적절 한 계정을 사용 하는 방법에 대 한 세부 정보를 검토 하 고 그룹 구성원 자격 [로컬 및 도메인 기본 그룹](https://go.microsoft.com/fwlink/?LinkId=83477)합니다.   
+이 절차를 완료하려면 최소한 로컬 컴퓨터의 **Administrators** 구성원 자격 또는 동급의 권한이 필요합니다.  적절 한 계정을 사용 하는 방법에 대 한 세부 정보를 검토 하 고 그룹 구성원 자격 [로컬 및 도메인 기본 그룹](https://go.microsoft.com/fwlink/?LinkId=83477)합니다.   
   
 #### <a name="to-add-the-ip-address-of-a-federation-server-to-the-hosts-file"></a>호스트 파일에 페더레이션 서버의 IP 주소를 추가 하려면  
   
 1.  % Systemroot %로 이동\\Winnt\\System32\\드라이버 디렉터리 폴더 찾아서는 **호스트** 파일입니다.  
   
-2.  메모장을 시작 하 고 엽니다는 **호스트** 파일입니다.  
+2.  메모장을 시작하여 **hosts** 파일을 엽니다.  
   
 3.  페더레이션 서버의 호스트 이름과 IP 주소에는 계정 파트너의 추가 **호스트** 다음 예와에서 같이 파일:  
   
     **192.168.1.4fs.fabrikam.com**  
   
-4.  파일을 저장하고 닫습니다.  
+4.  파일을 저장한 후 닫습니다.  
   
 ## <a name="add-a-host-a-resource-record-to-perimeter-dns-for-a-federation-server-proxy"></a>호스트 추가 \(A\) 페더레이션 서버 프록시에 대 한 경계 DNS에 리소스 레코드  
 호스트를 먼저 만들어야 인터넷의 클라이언트를 성공적으로 새로 배포 된 페더레이션 서버 프록시를 통해 페더레이션 서버에 액세스할 수, 있도록 \(A\) 경계 DNS에에서 리소스 레코드입니다. 이 리소스 레코드의 계정 페더레이션 서버 호스트 이름을 확인 \(예를 들어 fs.fabrikam.com\) 계정 페더레이션 서버 프록시의 IP 주소를 \(예를 들어 131.107.27.68\) 경계 네트워크에 있습니다.  

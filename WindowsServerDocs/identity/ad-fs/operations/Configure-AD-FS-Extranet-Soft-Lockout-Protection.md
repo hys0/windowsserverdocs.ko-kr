@@ -1,7 +1,6 @@
 ---
 ms.assetid: 777aab65-c9c7-4dc9-a807-9ab73fac87b8
 title: AD FS 엑스트라넷 잠금 보호 구성
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,12 +8,12 @@ ms.date: 02/01/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: bb5958f8205271fe3ab2258ed9812ae03f2a0be0
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: defe77972dd66f4de27b38bfad3fb172c1f7bee0
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71358213"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859916"
 ---
 # <a name="configure-ad-fs-extranet-lockout-protection"></a>AD FS 엑스트라넷 잠금 보호 구성
 
@@ -67,10 +66,10 @@ AD FS의 엑스트라넷 잠금 기능은 AD 잠금 정책과 독립적으로 �
 
 두 가지 예를 살펴보고 다양 한 설정 및 상태에 따라 시간이 지남에 따라 **badPwdCount** 어떻게 변화 하는지 살펴보겠습니다. 두 예제 **계정 잠금 임계값** = 4 및 **ExtranetLockoutThreshold** = 2를 가정해 보겠습니다. **빨간색** 화살표는 잘못 된 암호 시도를 나타내고 **녹색** 화살표는 좋은 암호 시도를 나타냅니다. 예 #1에서 **ExtranetObservationWindow** 는 **계정 잠금 카운터를 다시 설정**&gt; 합니다. 예 #2에서 **ExtranetObservationWindow** 는 **계정 잠금 카운터를 다시 설정**&lt; 합니다. 
 
-### <a name="example-1"></a>예제 1
+### <a name="example-1"></a>예 1
 ![Example1](media/Configure-AD-FS-Extranet-Lockout-Protection/one.png)
 
-### <a name="example-2"></a>예제 2
+### <a name="example-2"></a>예 2
 ![Example1](media/Configure-AD-FS-Extranet-Lockout-Protection/two.png)
 
 위에서 볼 수 있듯이 **badPwdCount** 가 0으로 다시 설정 되는 경우 두 가지 조건이 있습니다. 하나는 성공적인 로그온이 있는 경우입니다. 다른 것은 설정 **후 계정 잠금 카운터 다시 설정** 에 정의 된 대로이 카운터를 다시 설정 해야 하는 경우입니다. &lt; **ExtranetObservationWindow** **후 계정 잠금 카운터를 다시 설정** 하는 경우 계정에 AD에 의해 잠기는 위험이 없습니다. 그러나 &gt; **ExtranetObservationWindow** **후 계정 잠금 해제 카운터를 다시 설정** 하는 경우 계정이 AD에 의해 잠겨 있지만 "지연 된 방식"으로 잠겨 있을 가능성이 있습니다. 구성에 따라 AD에서 잠긴 계정을 가져오는 데 시간이 걸릴 수 있습니다 AD FS는 **BadPwdCount** **계정 잠금 임계값**에 도달할 때까지 관찰 기간 동안 잘못 된 암호 시도를 허용 합니다.

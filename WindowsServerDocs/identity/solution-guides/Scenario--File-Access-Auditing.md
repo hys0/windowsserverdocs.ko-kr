@@ -1,7 +1,6 @@
 ---
 ms.assetid: 7be1f2cb-02d5-4209-ba79-edf496a88f47
 title: 시나리오 파일 액세스 감사
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,14 +8,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 37a3b17360112d958b59a7e9c3f64aed5e6f6a5b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 37ea1cf28e42f74a18cd57b8fa9def5f9d1646be
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71406999"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80861126"
 ---
-# <a name="scenario-file-access-auditing"></a>시나리오: 파일 액세스 감사
+# <a name="scenario-file-access-auditing"></a>Scenario: File Access Auditing
 
 >적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -71,12 +70,12 @@ Windows Server 2012와 함께 클레임 및 리소스 속성을 사용 하 여 �
   
 -   [중앙 감사 정책을 &#40;사용 하 여 보안 감사 배포 데모 단계&#41;](Deploy-Security-Auditing-with-Central-Audit-Policies--Demonstration-Steps-.md)  
   
-## <a name="BKMK_NEW"></a>이 시나리오에 포함 된 역할 및 기능  
+## <a name="roles-and-features-included-in-this-scenario"></a><a name="BKMK_NEW"></a>이 시나리오에 포함 된 역할 및 기능  
 다음 표에는 이 시나리오에 포함된 역할 및 기능이 나열되어 있으며, 이러한 역할 및 기능이 시나리오를 지원하는 방법에 대한 설명이 나와 있습니다.  
   
 |역할/기능|이 시나리오를 지원하는 방법|  
 |-----------------|---------------------------------|  
-|Active Directory 도메인 서비스 역할|Windows Server 2012의 AD DS 사용자 클레임 및 장치 클레임, 복합 id, (사용자 + 장치 클레임)를 만드는 새로운 중앙 액세스 정책 (CAP) 모델 및 권한 부여 결정에 파일 분류 정보 사용 수 있도록 하는 클레임 기반 권한 부여 플랫폼을 소개 합니다.|  
+|Active Directory 도메인 서비스 역할|Windows Server 2012의 AD DS 사용자 클레임 및 디바이스 클레임, 복합 id, (사용자 + 디바이스 클레임)를 만드는 새로운 중앙 액세스 정책 (CAP) 모델 및 권한 부여 결정에 파일 분류 정보 사용 수 있도록 하는 클레임 기반 권한 부여 플랫폼을 소개 합니다.|  
 |파일 및 저장소 서비스 역할|Windows Server 2012의 파일 서버 관리자 수 확인 파일 또는 폴더에 대 한 사용자에 대 한 유효 사용 권한 및 액세스 문제를 해결 하 고 있는 필요에 따라 액세스 권한을 부여 하는 사용자 인터페이스를 제공 합니다.|  
   
 

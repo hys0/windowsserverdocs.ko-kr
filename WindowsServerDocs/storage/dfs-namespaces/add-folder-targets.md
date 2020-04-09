@@ -3,17 +3,17 @@ title: 폴더 대상 추가
 description: 이 항목에서는 폴더 대상(UNC 경로)을 추가하는 방법을 설명합니다.
 ms.prod: windows-server
 ms.author: jgerend
-ms.manager: brianlic
+manager: brianlic
 ms.technology: storage
 ms.topic: article
 author: jasongerend
 ms-date: 06/05/2017
-ms.openlocfilehash: b0685ea795d53b36fad92d54f817f67de57e3a82
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: d2f3845a612556a51692aaf51d256bbedd518e7a
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403187"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854106"
 ---
 # <a name="add-folder-targets"></a>폴더 대상 추가
 
@@ -25,7 +25,7 @@ ms.locfileid: "71403187"
 
 DFS 관리를 사용하여 폴더 대상을 추가하려면 다음 절차를 따르세요.
 
-1.  **시작**을 클릭하고 **관리 도구**를 가리킨 다음 **DFS 관리**를 클릭합니다.
+1.  **시작**을 클릭하고 **관리 도구**를 가리킨 다음 **DFS 관리**를 클릭합니다.
 
 2.  콘솔 트리의 **네임스페이스** 노드에서 폴더를 마우스 오른쪽 단추를 클릭한 다음 **폴더 대상 추가**를 클릭합니다.
 
@@ -39,7 +39,7 @@ DFS 관리를 사용하여 폴더 대상을 추가하려면 다음 절차를 따
 > [!NOTE]
 > 폴더 계층 구조의 동일한 수준에 폴더 대상과 다른 DFS 폴더 중 하나만 있을 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 -   [DFS 네임스페이스 배포](deploying-dfs-namespaces.md)
 -   [DFS 네임스페이스에 대한 관리 권한 위임](delegate-management-permissions-for-dfs-namespaces.md)

@@ -2,22 +2,18 @@
 title: DNS 리소스 레코드에 대한 액세스 범위 설정
 description: 이 항목은 Windows Server 2016의 IPAM (IP 주소 관리) 관리 가이드의 일부입니다.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-ipam
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a96a8752-5678-49c5-b069-d2cce8042a51
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: fd084c856b4f78810ce732fd64b801d6b0f7b67d
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 613796c933498d104db4895733c9a9b1957cb952
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80316781"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80860616"
 ---
 # <a name="set-access-scope-for-dns-resource-records"></a>DNS 리소스 레코드에 대한 액세스 범위 설정
 
@@ -45,7 +41,7 @@ ms.locfileid: "80316781"
   
     ![액세스 범위 선택](../../media/Set-Access-Scope-for-DNS-Resource-Records/ipam_RestrictUserToRRControl_04.jpg)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [역할 기반 Access Control](Role-based-Access-Control.md)  
 [IPAM 관리](Manage-IPAM.md)  
   

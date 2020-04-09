@@ -1,7 +1,6 @@
 ---
 ms.assetid: 5c8c6cc0-0d22-4f27-a111-0aa90db7d6c8
 title: AD FS 배포 토폴로지 계획
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,18 +8,18 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 9cd036e9dd0b249197fb475504c9cad532ead0ea
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 53364e076a8c3b7d95e8c834a5a7621071ed6061
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71408035"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80858676"
 ---
 # <a name="plan-your-ad-fs-deployment-topology"></a>AD FS 배포 토폴로지 계획
 
 Active Directory Federation Services \(AD FS\) 배포를 계획 하는 첫 번째 단계는 조직의 요구 사항을 충족 하는 올바른 배포 토폴로지를 결정 하는 것입니다.  
   
-이 항목을 읽기 전에 페더레이션 서버 팜의 다른 페더레이션 서버에 AD FS 데이터를 저장 하 고 복제 하는 방법을 검토 하 고의 목적과 AD FS con에 저장 된 기본 데이터에 사용할 수 있는 복제 방법의 용도를 이해 해야 합니다. f) 데이터베이스.  
+이 항목을 읽기 전에 페더레이션 서버 팜의 다른 페더레이션 서버에 AD FS 데이터를 저장 하 고 복제 하는 방법을 검토 하 고의 목적과 AD FS 구성 데이터베이스에 저장 된 기본 데이터에 사용할 수 있는 복제 방법의 용도를 이해 해야 합니다.  
   
 AD FS 구성 데이터를 저장 하는 데 사용할 수 있는 데이터베이스 유형에는 Windows 내부 데이터베이스 \(WID\) 및 Microsoft SQL Server의 두 가지가 있습니다. 자세한 내용은 [AD FS 구성 데이터베이스의 역할](../../ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md)을 참조하세요. 에서 지 원하는 다양 한 응용 프로그램 시나리오와 함께 WID 또는 SQL Server를 AD FS 구성 데이터베이스로 사용 하는 것과 관련 된 다양 한 이점 및 제한 사항을 검토 한 다음 선택 합니다.  
   
@@ -53,7 +52,7 @@ SQL Server 데이터베이스를 사용하는 팜에 배포된 페더레이션 
   
 반면, SQL Server 데이터베이스를 사용하는 팜에 배포된 페더레이션 서버는 AD FS 구성 데이터베이스의 로컬 인스턴스를 포함할 필요가 없습니다. 따라서 하드웨어 리소스에 대한 수요가 조금 더 적습니다.  
   
-## <a name="BKMK_1"></a>페더레이션 서버를 넣을 위치  
+## <a name="where-to-place-a-federation-server"></a><a name="BKMK_1"></a>페더레이션 서버를 넣을 위치  
 보안 모범 사례로, AD FS 페더레이션 서버를 방화벽 앞에 배치한 후 회사 네트워크에 연결 하 여 인터넷 노출을 방지 합니다. 이는 페더레이션 서버에 보안 토큰을 부여 하는 전체 권한이 있기 때문에 중요 합니다. 따라서 도메인 컨트롤러와 동일하게 보호되어야 합니다. 페더레이션 서버가 손상 되 면 악의적인 사용자가 모든 웹 응용 프로그램 및 AD FS로 보호 되는 페더레이션 서버에 대 한 전체 액세스 토큰을 발급할 수 있습니다.  
   
 > [!NOTE]  

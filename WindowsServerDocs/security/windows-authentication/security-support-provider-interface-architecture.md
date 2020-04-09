@@ -1,24 +1,20 @@
 ---
 title: 보안 지원 공급자 인터페이스 아키텍처
 description: Windows Server 보안
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: security-windows-auth
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: de09e099-5711-48f8-adbd-e7b8093a0336
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: 4db407b24b00bc8313d2e17f1fcf55d9fa160c8c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 89e6696c286cae7c3e89346d2044869082cdd8bc
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403305"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80861736"
 ---
 # <a name="security-support-provider-interface-architecture"></a>보안 지원 공급자 인터페이스 아키텍처
 
@@ -58,7 +54,7 @@ Windows에서 특정 인증 프로토콜을 호출 하는 기본 Ssp (보안 지
 
 [보안 지원 공급자 선택](security-support-provider-interface-architecture.md#BKMK_SecuritySupportProviderSelection)
 
-### <a name="BKMK_KerbSSP"></a>Kerberos 보안 지원 공급자
+### <a name="kerberos-security-support-provider"></a><a name="BKMK_KerbSSP"></a>Kerberos 보안 지원 공급자
 이 SSP는 Microsoft에서 구현한 Kerberos 버전 5 프로토콜만 사용 합니다. 이 프로토콜은 네트워크 작업 그룹의 RFC 4120 및 초안 수정 버전을 기반으로 합니다. 암호 또는 스마트 카드를 사용 하는 대화형 로그온에 사용 되는 업계 표준 프로토콜입니다. Windows의 서비스에 대 한 기본 인증 방법 이기도 합니다.
 
 Kerberos 프로토콜은 Windows 2000 이후의 기본 인증 프로토콜 이기 때문에 모든 도메인 서비스가 Kerberos SSP를 지원 합니다. 이러한 서비스는 다음과 같습니다.
@@ -101,7 +97,7 @@ Kerberos 프로토콜은 Windows 2000 이후의 기본 인증 프로토콜 이�
 
 -   [Kerberos 인증 기술 참조](https://technet.microsoft.com/library/cc739058(v=ws.10).aspx)
 
-### <a name="BKMK_NTLMSSP"></a>NTLM 보안 지원 공급자
+### <a name="ntlm-security-support-provider"></a><a name="BKMK_NTLMSSP"></a>NTLM 보안 지원 공급자
 Ntlm SSP (NTLM 보안 지원 공급자)는 SSPI (Security Support Provider Interface)에서 NTLM 챌린지 응답 인증을 허용 하 고 무결성 및 기밀성 옵션을 협상 하는 데 사용 하는 이진 메시징 프로토콜입니다. NTLM은 서버 메시지 블록 또는 CIFS 인증, HTTP Negotiate 인증 (예: 인터넷 웹 인증) 및 원격 프로시저 호출 서비스를 비롯 하 여 SSPI 인증이 사용 되는 모든 위치에 사용 됩니다. NTLM SSP는 NTLM 및 ntlm 버전 2 (NTLMv2) 인증 프로토콜을 포함 합니다.
 
 지원 되는 Windows 운영 체제는 NTLM SSP를 사용 하 여 다음을 수행할 수 있습니다.
@@ -128,7 +124,7 @@ Location:%windir%\Windows\System32\ msv1_0 .dll
 
 -   [NTLM 사용 가이드 감사 및 제한](https://technet.microsoft.com/library/jj865674(v=ws.10).aspx)
 
-### <a name="BKMK_DigestSSP"></a>다이제스트 보안 지원 공급자
+### <a name="digest-security-support-provider"></a><a name="BKMK_DigestSSP"></a>다이제스트 보안 지원 공급자
 다이제스트 인증은 LDAP (Lightweight Directory Access Protocol) 및 웹 인증에 사용 되는 업계 표준입니다. 다이제스트 인증은 네트워크를 통해 MD5 해시 또는 메시지 다이제스트로 자격 증명을 전송 합니다.
 
 다이제스트 SSP (Wdigest .dll)는 다음에 사용 됩니다.
@@ -147,7 +143,7 @@ Location:%windir%\Windows\System32\ msv1_0 .dll
 
 -   [\[MS-6psp\]: 다이제스트 프로토콜 확장](https://msdn.microsoft.com/library/cc227906(PROT.13).aspx)
 
-### <a name="BKMK_SchannelSSP"></a>Schannel 보안 지원 공급자
+### <a name="schannel-security-support-provider"></a><a name="BKMK_SchannelSSP"></a>Schannel 보안 지원 공급자
 보안 채널 (Schannel)은 사용자가 보안 웹 서버에 액세스 하려고 할 때와 같이 웹 기반 서버 인증에 사용 됩니다.
 
 TLS 프로토콜, SSL 프로토콜, PCT (개인 통신 기술) 프로토콜 및 DTLS (데이터 그램 전송 계층) 프로토콜은 공개 키 암호화를 기반으로 합니다. Schannel은 이러한 모든 프로토콜을 제공 합니다. 모든 Schannel 프로토콜에서는 클라이언트/서버 모델이 사용됩니다. Schannel SSP는 공개 키 인증서를 사용하여 당사자를 인증합니다. 파티를 인증할 때 Schannel SSP는 다음과 같은 기본 설정 순서로 프로토콜을 선택 합니다.
@@ -185,7 +181,7 @@ DTLS는 응용 프로그램에 의해 명시적으로 호출 될 때 사용 됩�
 
 -   [\[MS TLSP\]: TLS (Transport Layer Security) 프로필](https://msdn.microsoft.com/library/dd207968(PROT.13).aspx)
 
-### <a name="BKMK_NegoSSP"></a>보안 지원 공급자 협상
+### <a name="negotiate-security-support-provider"></a><a name="BKMK_NegoSSP"></a>보안 지원 공급자 협상
 간단 하 고 보호 된 GSS-API 협상 메커니즘 (SPNEGO)은 특정 인증 프로토콜을 협상 하는 데 사용할 whichcan Negotiate SSP의 기반을 형성 합니다. 응용 프로그램에서 SSPI를 호출 하 여 네트워크에 로그온 하는 경우 요청을 처리할 SSP를 지정할 수 있습니다. 응용 프로그램에서 Negotiate SSP를 지정 하는 경우 요청을 분석 하 고 고객 구성 보안 정책에 따라 적절 한 공급자를 선택 하 여 요청을 처리 합니다.
 
 SPNEGO는 RFC 2478에 지정 되어 있습니다.
@@ -204,7 +200,7 @@ SPNEGO는 RFC 2478에 지정 되어 있습니다.
 
 -   [\[N2HT\]: Negotiate and Nego2 HTTP Authentication Protocol Specification](https://msdn.microsoft.com/library/dd303576(PROT.13).aspx)
 
-### <a name="BKMK_CredSSP"></a>자격 증명 보안 지원 공급자
+### <a name="credential-security-support-provider"></a><a name="BKMK_CredSSP"></a>자격 증명 보안 지원 공급자
 CredSSP (Credential Security Service Provider)는 새 터미널 서비스 및 원격 데스크톱 서비스 세션을 시작할 때 SSO (Single Sign-On) 사용자 환경을 제공 합니다. CredSSP를 통해 응용 프로그램은 클라이언트의 정책을 기반으로 클라이언트 컴퓨터에서 클라이언트 쪽 ssp를 사용 하 여 사용자 자격 증명을 대상 서버 (서버 쪽 SSP를 통해)에 위임할 수 있습니다. CredSSP 정책은 그룹 정책를 사용 하 여 구성 되 고 자격 증명 위임은 기본적으로 해제 되어 있습니다.
 
 위치:%windir%\Windows\System32\credssp.dll
@@ -217,7 +213,7 @@ CredSSP (Credential Security Service Provider)는 새 터미널 서비스 및 �
 
 -   [터미널 서비스 로그온을 위한 자격 증명 보안 서비스 공급자 및 SSO](https://technet.microsoft.com/library/cc749211(v=ws.10).aspx)
 
-### <a name="BKMK_NegoExtsSSP"></a>Negotiate 확장 보안 지원 공급자
+### <a name="negotiate-extensions-security-support-provider"></a><a name="BKMK_NegoExtsSSP"></a>Negotiate 확장 보안 지원 공급자
 Negotiate 확장 (NegoExts)은 Microsoft 및 기타 소프트웨어 회사에서 구현 하는 응용 프로그램 및 시나리오에 대해 NTLM 또는 Kerberos 프로토콜 이외의 Ssp 사용을 협상 하는 인증 패키지입니다.
 
 Negotiate 패키지에 대 한이 확장을 통해 다음과 같은 시나리오를 수행할 수 있습니다.
@@ -238,7 +234,7 @@ NegoExts에서 지 원하는 Ssp는 Kerberos 및 NTLM과 같은 독립 실행형
 
 이 공급자는 Windows Server 2008 및 Windows Vista를 제외 하 고이 항목의 시작 부분에 있는 **적용 대상** 목록에 지정 된 버전에 기본적으로 포함 되어 있습니다.
 
-### <a name="BKMK_PKU2USSP"></a>PKU2U 보안 지원 공급자
+### <a name="pku2u-security-support-provider"></a><a name="BKMK_PKU2USSP"></a>PKU2U 보안 지원 공급자
 PKU2U 프로토콜은 Windows 7 및 Windows Server 2008 r 2에서 SSP로 도입 및 구현 되었습니다. 이 SSP는 Windows 7에 도입 된 홈 그룹 이라는 미디어 및 파일 공유 기능을 사용 하 여 피어 투 피어 인증을 지원 합니다. 이 기능을 사용 하면 도메인의 구성원이 아닌 컴퓨터를 공유할 수 있습니다.
 
 위치:%windir%\Windows\System32\pku2u.dll
@@ -249,8 +245,8 @@ PKU2U 프로토콜은 Windows 7 및 Windows Server 2008 r 2에서 SSP로 도입 
 
 -   [온라인 Id 통합 소개](https://technet.microsoft.com/library/dd560662(v=ws.10).aspx)
 
-## <a name="BKMK_SecuritySupportProviderSelection"></a>보안 지원 공급자 선택
-Windows SSPI는 설치 된 보안 지원 공급자를 통해 지원 되는 모든 프로토콜을 사용할 수 있습니다. 그러나 모든 운영 체제에서 Windows Server를 실행 하는 지정 된 컴퓨터와 동일한 SSP 패키지를 지원 하기 때문에 클라이언트와 서버는 모두에서 지 원하는 프로토콜을 사용 하도록 협상 해야 합니다. Windows Server는 클라이언트 컴퓨터와 응용 프로그램이 가능한 경우 강력한 표준 기반 프로토콜인 Kerberos 프로토콜을 사용 하도록 선호 하지만 운영 체제는 Kerberos를 지원 하지 않는 클라이언트 컴퓨터와 클라이언트 응용 프로그램을 계속 허용 합니다. 인증할 프로토콜입니다.
+## <a name="security-support-provider-selection"></a><a name="BKMK_SecuritySupportProviderSelection"></a>보안 지원 공급자 선택
+Windows SSPI는 설치 된 보안 지원 공급자를 통해 지원 되는 모든 프로토콜을 사용할 수 있습니다. 그러나 모든 운영 체제에서 Windows Server를 실행 하는 지정 된 컴퓨터와 동일한 SSP 패키지를 지원 하기 때문에 클라이언트와 서버는 모두에서 지 원하는 프로토콜을 사용 하도록 협상 해야 합니다. Windows Server에서는 클라이언트 컴퓨터와 응용 프로그램이 가능한 경우 강력한 표준 기반 프로토콜인 Kerberos 프로토콜을 사용 하는 것이 좋습니다. 하지만 운영 체제는 Kerberos 프로토콜을 지원 하지 않는 클라이언트 컴퓨터와 클라이언트 응용 프로그램을 계속 허용 하 여 인증 합니다.
 
 인증을 수행 하려면 두 통신 컴퓨터가 둘 다 지원할 수 있는 프로토콜에 동의 해야 합니다. SSPI를 통해 모든 프로토콜을 사용할 수 있도록 하려면 각 컴퓨터에 적절 한 SSP가 있어야 합니다. 예를 들어 Kerberos 인증 프로토콜을 사용 하는 클라이언트 컴퓨터와 서버는 모두 Kerberos v5를 지원 해야 합니다. Windows Server는 **EnumerateSecurityPackages** 함수를 사용 하 여 컴퓨터에서 지원 되는 ssp와 해당 ssp의 기능을 식별 합니다.
 
@@ -260,7 +256,7 @@ Windows SSPI는 설치 된 보안 지원 공급자를 통해 지원 되는 모�
 
 2.  [Negotiate 옵션](#BKMK_Negotiate)
 
-### <a name="BKMK_SingleAuth"></a>단일 인증 프로토콜
+### <a name="single-authentication-protocol"></a><a name="BKMK_SingleAuth"></a>단일 인증 프로토콜
 서버에 사용할 수 있는 단일 프로토콜이 지정 된 경우 클라이언트 컴퓨터에서 지정 된 프로토콜을 지원 해야 합니다. 그렇지 않으면 통신이 실패 합니다. 허용 되는 단일 프로토콜이 지정 된 경우 인증 교환은 다음과 같이 수행 됩니다.
 
 1.  클라이언트 컴퓨터는 서비스에 대 한 액세스를 요청 합니다.
@@ -269,7 +265,7 @@ Windows SSPI는 설치 된 보안 지원 공급자를 통해 지원 되는 모�
 
 3.  클라이언트 컴퓨터는 회신의 내용을 검사 하 여 지정 된 프로토콜을 지원 하는지 확인 합니다. 클라이언트 컴퓨터에서 지정 된 프로토콜을 지원 하면 인증이 계속 됩니다. 클라이언트 컴퓨터에서 프로토콜을 지원 하지 않는 경우 클라이언트 컴퓨터에 리소스에 액세스할 수 있는 권한이 있는지 여부에 관계 없이 인증이 실패 합니다.
 
-### <a name="BKMK_Negotiate"></a>Negotiate 옵션
+### <a name="negotiate-option"></a><a name="BKMK_Negotiate"></a>Negotiate 옵션
 Negotiate 옵션을 사용 하면 클라이언트와 서버가 허용 가능한 프로토콜을 찾도록 허용할 수 있습니다. 이는 간단 하 고 보호 된 GSS-API 협상 메커니즘 (SPNEGO)을 기반으로 합니다. 인증 프로토콜에 대 한 협상 옵션으로 인증을 시작 하면 SPNEGO 교환이 다음과 같이 수행 됩니다.
 
 1.  클라이언트 컴퓨터는 서비스에 대 한 액세스를 요청 합니다.

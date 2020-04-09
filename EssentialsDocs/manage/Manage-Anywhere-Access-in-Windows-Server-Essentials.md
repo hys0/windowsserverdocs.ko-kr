@@ -1,23 +1,19 @@
 ---
 title: Windows Server Essentials에서 원격 액세스 관리
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c369c317-f94d-4179-a735-e74bf6f62692
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 58cb5072ae037a4c0dca0328a17675d50fa5495f
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 63f8cb17adb7e65a42a93bfeedc2ee7ec2ff3657
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80311464"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80852866"
 ---
 # <a name="manage-anywhere-access-in-windows-server-essentials"></a>Windows Server Essentials에서 원격 액세스 관리
 
@@ -27,7 +23,7 @@ Windows server Essentials에서 원격 액세스 기능, 원격 웹 액세스, �
   
 -   [원격 웹 액세스 관리](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md)  
   
-     원격 웹 액세스에서는 인터넷에 연결된 곳이면 어디에서나 거의 모든 장치를 사용하여 응용 프로그램 및 데이터에 액세스할 수 있는 간편한 터치 기반의 브라우저 경험을 제공합니다.  
+     원격 웹 액세스에서는 인터넷에 연결된 곳이면 어디에서나 거의 모든 디바이스를 사용하여 응용 프로그램 및 데이터에 액세스할 수 있는 간편한 터치 기반의 브라우저 경험을 제공합니다.  
   
 -   [VPN 관리](Manage-VPN-in-Windows-Server-Essentials.md)  
   

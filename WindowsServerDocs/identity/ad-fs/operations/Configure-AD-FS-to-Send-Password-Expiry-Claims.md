@@ -1,7 +1,6 @@
 ---
 ms.assetid: 03c82f43-ae2d-4038-b286-ae3858aed35a
 title: 암호 만료 클레임을 보내도록 AD FS 구성
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 34a0544946da429f4e5b54a27b73c8bf139f5a8d
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: a0c04f42cbe29b1ea36d09f1f148fb28280d7fec
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75948562"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859896"
 ---
 # <a name="configure-ad-fs-to-send-password-expiry-claims"></a>암호 만료 클레임을 보내도록 AD FS 구성
 

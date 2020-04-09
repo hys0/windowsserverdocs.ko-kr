@@ -2,22 +2,18 @@
 title: 원격 액세스 서버 및 해당 구성 요소의 작동 상태 모니터링
 description: 이 항목은 Windows Server 2016의 원격 액세스 모니터링 및 계정에 대 한 가이드의 일부입니다.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-ras
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 077a3a64-2fa3-4994-9711-ec1fbdc081ba
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 64471ba81842fb91a7f6ef765e171949294102fa
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: a93f8100b16da1cabbda8ed3e273a2601adb647a
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80314187"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80860526"
 ---
 # <a name="monitor-the-operations-status-of-the-remote-access-server-and-its-components"></a>원격 액세스 서버 및 해당 구성 요소의 작동 상태 모니터링
 

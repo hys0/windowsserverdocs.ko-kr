@@ -1,24 +1,20 @@
 ---
 title: 일반적인 MultiPoint 서비스 사용 시나리오
 description: MultiPoint 서비스의 일반적인 용도에 대 한 자세한 정보
-ms.custom: na
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9aefaf1b-3ba2-4f41-9068-9629a28157ad
 author: evaseydl
 manager: scottman
 ms.author: evas
 ms.date: 08/04/2016
-ms.openlocfilehash: b6e1ce47be76d8df1d8c9079204106f51c9067b3
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 9429bb297ead933f461b563951a628b1514f28c7
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71395584"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859086"
 ---
 # <a name="common-usage-scenarios"></a>일반 시나리오
 MultiPoint 서비스는 Windows 10 desktop 환경에서 가장 중요 한 요소로 개별 사용자 데스크톱을 제공 합니다. 또한 시스템 관리자가 여러 MultiPoint 서버 및 클라이언트를 검색 하 고 제어 하는 데 사용할 수 있는 다중 포인트 관리자 인 간단한 관리 도구도 제공 합니다. 또한 MultiPoint 서비스에는 실시간 표시 유형에 대 한 다중 포인트 대시보드가 포함 되어 있습니다. MultiPoint 서비스를 사용 하 여 수행할 수 있는 작업의 예는 다음과 같습니다.  

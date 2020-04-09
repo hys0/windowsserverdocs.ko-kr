@@ -2,22 +2,18 @@
 title: 2 단계 원격 액세스 서버를 구성 합니다.
 description: 이 항목은 Windows Server 2016에서 원격으로 DirectAccess 클라이언트 관리 가이드의 일부입니다.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-ras
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c0257b98-5633-4264-9df6-b6ffae80592c
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: fa8cd203304b477761e9cfa0742efc8c9d8a5443
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 7fce9eff4376e2d292622fe3a29fc8b391ad3bab
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80308142"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859186"
 ---
 # <a name="step-2-configure-the-remote-access-server"></a>2 단계 원격 액세스 서버를 구성 합니다.
 
@@ -32,7 +28,7 @@ ms.locfileid: "80308142"
 |DirectAccess 클라이언트 구성|DirectAccess 클라이언트가 포함된 보안 그룹으로 원격 액세스 서버를 구성합니다.|  
 |원격 액세스 서버 구성|원격 액세스 서버 설정을 구성 합니다.|  
 |인프라 서버 구성|조직에서 사용되는 인프라 서버를 구성합니다.|  
-|응용 프로그램 서버 구성|인증 및 암호화를 요구 하도록 애플리케이션 서버를 구성 합니다.|  
+|애플리케이션 서버 구성|인증 및 암호화를 요구 하도록 애플리케이션 서버를 구성 합니다.|  
 |구성 요약 및 대체 GPO|원격 액세스 구성 요약을 확인하고 필요한 경우 GPO를 수정합니다.|  
   
 > [!NOTE]  

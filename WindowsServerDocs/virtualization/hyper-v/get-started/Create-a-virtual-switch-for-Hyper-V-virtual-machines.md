@@ -2,21 +2,19 @@
 title: Hyper-v 가상 컴퓨터에 대 한 가상 스위치 만들기
 description: Hyper-v 관리자 또는 Windows PowerShell을 사용 하 여 가상 스위치를 만드는 방법에 대 한 지침을 제공 합니다.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: fdc8063c-47ce-4448-b445-d7ff9894dc17
-author: KBDAzure
+author: kbdazure
 ms.author: kathydav
 ms.date: 10/04/2016
-ms.openlocfilehash: f1a814060e763545411b5c4345367638a5161ac2
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: e27d1286945671d3f44fe2fa3220a2e223ad7c4f
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71392929"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80860846"
 ---
 # <a name="create-a-virtual-switch-for-hyper-v-virtual-machines"></a>Hyper-v 가상 컴퓨터에 대 한 가상 스위치 만들기
 
@@ -52,8 +50,8 @@ ms.locfileid: "71392929"
   
     |설정 이름|설명|  
     |----------------|---------------|  
-    |이 네트워크 어댑터를 공유하는 관리 운영 체제 허용|Hyper-v 호스트가 가상 스위치의 사용을 공유할 수 있도록 하 고 가상 컴퓨터와 nic 팀이 옵션을 선택 합니다. 이 옵션을 사용 호스트 사용할 수 설정을 구성 하는 가상 스위치와 같은 서비스 품질 (QoS) 설정, 보안 설정 또는 Hyper-v 가상 스위치의 다른 기능.|  
-    |단일 루트 I/O 가상화 (SR-IOV) 사용|가상 컴퓨터 스위치를 무시 하 고 실제 NIC에 직접 이동에 대 한 가상 컴퓨터 트래픽을 허용 하려는 경우에이 옵션을 선택 합니다. 자세한 내용은 포스터 도우미 참조에서 [단일 루트 I/o 가상화](https://technet.microsoft.com/library/dn641211.aspx#Sec4) 를 참조 하세요. Hyper-v 네트워킹.|  
+    |관리 운영 체제가 이 네트워크 어댑터를 공유할 수 있도록 허용|Hyper-v 호스트가 가상 스위치의 사용을 공유할 수 있도록 하 고 가상 컴퓨터와 nic 팀이 옵션을 선택 합니다. 이 옵션을 사용 호스트 사용할 수 설정을 구성 하는 가상 스위치와 같은 서비스 품질 (QoS) 설정, 보안 설정 또는 Hyper-v 가상 스위치의 다른 기능.|  
+    |단일 루트 I/O 가상화(SR-IOV) 사용|가상 컴퓨터 스위치를 무시 하 고 실제 NIC에 직접 이동에 대 한 가상 컴퓨터 트래픽을 허용 하려는 경우에이 옵션을 선택 합니다. 자세한 내용은 참조 [단일 루트 I/O 가상화](https://technet.microsoft.com/library/dn641211.aspx#Sec4) 포스터 도우미 참조에서: Hyper-v 네트워킹.|  
   
 7.  관리 Hyper-v 호스트 운영 체제 또는 동일한 가상 스위치를 공유 하는 다른 가상 컴퓨터에서 네트워크 트래픽을 격리 하려면 **관리 운영 체제에 대 한 가상 LAN Id 사용**을 선택 합니다. 원하는 수의 VLAN ID를 변경 하거나 기본값을 그대로 적용 수 있습니다. 이 관리 운영 체제에서이 가상 스위치를 통해 모든 네트워크 통신에 사용할 가상 LAN id입니다.  
   

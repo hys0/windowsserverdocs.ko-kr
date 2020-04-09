@@ -1,24 +1,19 @@
 ---
 title: Winlogon ARSO(자동 다시 시작 로그온)
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.service: na
-ms.suite: na
 ms.technology: security-auditing
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 15cddcfa-8a8e-45e4-bb76-b8e1a14ceac0
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: f085cf78a01148f97a450577131213ce977a432a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 3dd66cc799ee23f77c9c60e23e49d3088a27b2fc
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402326"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80855106"
 ---
 # <a name="winlogon-automatic-restart-sign-on-arso"></a>Winlogon ARSO(자동 다시 시작 로그온)
 
@@ -30,12 +25,12 @@ ms.locfileid: "71402326"
 > 이 콘텐츠는 Microsoft 고객 지원 엔지니어에 의해 작성되었으며 Windows Server 2012 R2의 기능 및 솔루션에 대해 TechNet에서 일반적으로 제공하는 항목보다 더 자세한 기술적 설명을 찾고 있는 숙련된 관리자 및 시스템 설계자를 대상으로 합니다. 그러나 동일한 편집 과정을 수행하지 않았으므로 일부 언어는 일반적으로 TechNet에서 찾을 수 있는 것보다 완벽하지 않을 수 있습니다.  
   
 ## <a name="overview"></a>개요  
-Windows 8 잠금 화면 앱을 도입 되었습니다.  이 실행 하 고 사용자의 세션 잠겨 있는 동안 알림을 표시 하는 응용 프로그램 (일정 약속, 전자 메일 및 메시지 등).  Windows 업데이트 과정으로 인해 다시 시작 하는 장치 다시 시작 될 때 이러한 잠금 화면 알림을 표시 하지 못합니다.  일부 사용자에 게 이러한 잠금 화면 응용 프로그램에 따라 달라 집니다.  
+Windows 8 잠금 화면 앱을 도입 되었습니다.  이 실행 하 고 사용자의 세션 잠겨 있는 동안 알림을 표시 하는 애플리케이션 (일정 약속, 전자 메일 및 메시지 등).  Windows 업데이트 과정으로 인해 다시 시작 하는 장치 다시 시작 될 때 이러한 잠금 화면 알림을 표시 하지 못합니다.  일부 사용자에 게 이러한 잠금 화면 애플리케이션에 따라 달라 집니다.  
   
 ## <a name="whats-changed"></a>변경 된 내용  
-사용자가 Windows 8.1 장치에 로그인 하는 경우 LSA는 lsass.exe에 의해서만 사용자 자격 증명을 액세스할 수 있는 암호화 된 메모리에 저장 됩니다. Windows Update가 사용자 망이 자동으로 다시 부팅을 시작 사용자에 대 한 자동 로그온을 구성 하려면 이러한 자격 증명 사용 됩니다. TCB 권한으로 시스템으로 실행 되는 Windows Update는이 작업을 수행 하는 RPC 호출을 시작 합니다.  
+사용자가 Windows 8.1 디바이스에 로그인 하는 경우 LSA는 lsass.exe에 의해서만 사용자 자격 증명을 액세스할 수 있는 암호화 된 메모리에 저장 됩니다. Windows Update가 사용자 망이 자동으로 다시 부팅을 시작 사용자에 대 한 자동 로그온을 구성 하려면 이러한 자격 증명 사용 됩니다. TCB 권한으로 시스템으로 실행 되는 Windows Update는이 작업을 수행 하는 RPC 호출을 시작 합니다.  
   
-재부팅 과정에 사용자에 게 자동으로 자동 로그온 메커니즘을 통해 로그인 하 고 사용자의 세션을 보호 하려면 또한 잠겨 있습니다. 잠금가 시작 됩니다 Winlogon 통해 반면 자격 증명 관리 LSA에 의해 수행 됩니다.  자동으로 로그온 하 고 콘솔에 사용자 잠금에 사용자의 잠금 화면 응용 프로그램 다시 시작 된 사용할 수 있게 됩니다.  
+재부팅 과정에 사용자에 게 자동으로 자동 로그온 메커니즘을 통해 로그인 하 고 사용자의 세션을 보호 하려면 또한 잠겨 있습니다. 잠금가 시작 됩니다 Winlogon 통해 반면 자격 증명 관리 LSA에 의해 수행 됩니다.  자동으로 로그온 하 고 콘솔에 사용자 잠금에 사용자의 잠금 화면 애플리케이션 다시 시작 된 사용할 수 있게 됩니다.  
   
 > [!NOTE]  
 > Windows Update 유도 다시 부팅 되는 마지막 대화형 사용자가 자동으로 서명 하 고 세션이 잠깁니다 후 따라서 사용자의 잠금 화면 앱을 실행할 수 있습니다.  
@@ -60,7 +55,7 @@ Windows 8 잠금 화면 앱을 도입 되었습니다.  이 실행 하 고 사�
   
     -   서버 Sku에서에서 기본적으로 사용 안 함  
   
--   이유가 무엇일까요?  
+-   이유  
   
     -   일부 업데이트는 다시 사용자가 로그 될 때까지 완료할 수 없습니다.  
   
@@ -85,17 +80,17 @@ Windows 8.1에서 Windows Server 2012 R2, Windows Update 다시 시작 된 후�
   
 **설명/도움말:**  
   
-이 정책 설정은 장치는 자동으로 로그인 마지막 대화형 사용자 Windows Update 시스템을 다시 시작 후 여부를 제어 합니다.  
+이 정책 설정은 디바이스는 자동으로 로그인 마지막 대화형 사용자 Windows Update 시스템을 다시 시작 후 여부를 제어 합니다.  
   
-사용 하거나이 정책 설정을 구성 하지 않으면, 장치 Windows 업데이트를 다시 시작 후 자동 로그인을 구성 하는 사용자의 자격 증명 (사용자 이름, 도메인 및 암호화 된 암호 포함)를 안전 하 게 저장 합니다. Windows Update 다시 시작한 후 사용자가 자동으로 로그인 하 고 해당 사용자에 대해 구성 된 모든 잠금 화면 앱에 세션이 자동으로 잠깁니다.  
+사용 하거나이 정책 설정을 구성 하지 않으면, 디바이스 Windows 업데이트를 다시 시작 후 자동 로그인을 구성 하는 사용자의 자격 증명 (사용자 이름, 도메인 및 암호화 된 암호 포함)를 안전 하 게 저장 합니다. Windows Update 다시 시작한 후 사용자가 자동으로 로그인 하 고 해당 사용자에 대해 구성 된 모든 잠금 화면 앱에 세션이 자동으로 잠깁니다.  
   
-이 정책 설정을 사용 하지 않으면 Windows Update를 다시 시작한 후 장치에 자동 로그인에 대 한 사용자의 자격 증명을 저장 하지 않습니다. 시스템 다시 시작 된 후 사용자의 잠금 화면 앱을 다시 시작 됩니다.  
+이 정책 설정을 사용 하지 않으면 Windows Update를 다시 시작한 후 디바이스에 자동 로그인에 대 한 사용자의 자격 증명을 저장 하지 않습니다. 시스템 다시 시작 된 후 사용자의 잠금 화면 앱을 다시 시작 됩니다.  
   
 **레지스트리 편집기**  
   
-|값 이름|형식|data|  
+|값 이름|형식|데이터|  
 |-------|----|----|  
-|DisableAutomaticRestartSignOn|DWORD|0<br /><br />**예제:**<br /><br />0 (사용)<br /><br />1 (사용 안 함)|  
+|DisableAutomaticRestartSignOn|DWORD|0<p>**예제:**<p>0 (사용)<p>1 (사용 안 함)|  
   
 **정책 레지스트리 위치:** HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System  
   
@@ -147,6 +142,6 @@ WinLogon를 자동으로 잠그는 경우에 WinLogon의 상태 추적 WinLogon 
   
 |용어|정의|  
 |----|-------|  
-|자동 로그온|자동 로그온은 Windows에 몇 가지 릴리스에 제공 된 기능입니다.  이 기능은 문서화의 자동 로그온에 대 한 Windows v3.01와 같은 도구에도 있는 Windows *[http:/technet.microsoft.com/sysinternals/bb963905.aspx](https://technet.microsoft.com/sysinternals/bb963905.aspx)*<br /><br />단일 사용자를 장치의 자격 증명을 입력 하지 않고 자동으로 로그인 할 수 있습니다. 자격 증명 구성 되 고 레지스트리에 암호화 된 LSA 암호로 저장 됩니다.|  
+|자동 로그온|자동 로그온은 Windows에 몇 가지 릴리스에 제공 된 기능입니다.  이 기능은 문서화의 자동 로그온에 대 한 Windows v3.01와 같은 도구에도 있는 Windows *[http:/technet.microsoft.com/sysinternals/bb963905.aspx](https://technet.microsoft.com/sysinternals/bb963905.aspx)*<p>단일 사용자를 디바이스의 자격 증명을 입력 하지 않고 자동으로 로그인 할 수 있습니다. 자격 증명 구성 되 고 레지스트리에 암호화 된 LSA 암호로 저장 됩니다.|  
   
 

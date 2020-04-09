@@ -1,24 +1,19 @@
 ---
 title: Windows Server 2016의 hyper-v 네트워크 가상화 기술 세부 정보
 description: 이 항목에서는 Windows Server 2016의 Hyper-v 네트워크 가상화에 대 한 기술 정보를 제공 합니다.
-manager: brianlic
-ms.custom: na
+manager: grcusanz
 ms.prod: windows-server
-ms.reviewer: na
-ms.service: virtual-network
-ms.suite: na
 ms.technology: networking-sdn
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9efe0231-94c1-4de7-be8e-becc2af84e69
-ms.author: lizross
-author: eross-msft
-ms.openlocfilehash: a8628404de8a1b9caccc7f7f51b063cabb1caf27
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.author: anpaul
+author: AnirbanPaul
+ms.openlocfilehash: 54fb9eba99a4e6dc565111a3f34c8ccceeca2ff4
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80317201"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859706"
 ---
 # <a name="hyper-v-network-virtualization-technical-details-in-windows-server-2016"></a>Windows Server 2016의 hyper-v 네트워크 가상화 기술 세부 정보
 
@@ -41,7 +36,7 @@ Windows Server 2016: HNVv1 및 HNVv2에서 사용할 수 있는 두 가지 HNV �
 
     HNVv1는 Windows Server 2012 R2 및 System Center 2012 R2 Virtual Machine Manager (VMM)와 호환 됩니다. HNVv1에 대 한 구성은 WMI 관리 및 Windows PowerShell cmdlet (System Center VMM을 통해)을 사용 하 여 격리 설정 및 CA (고객 주소)를 정의 하 고 PA (가상 네트워크-실제 주소) 매핑 및 라우팅을 정의 합니다. Windows Server 2016에서는 HNVv1에 추가 기능이 추가 되지 않으며 새로운 기능이 계획 되지 않았습니다.  
 
-    • 팀 설정 및 HNV V1은 플랫폼과 호환 되지 않습니다.
+    *   SET 팀 및 HNV V1은 플랫폼과 호환 되지 않습니다.
 
     o HA NVGRE 게이트웨이를 사용 하려면 사용자가 LBFO 팀 또는 팀을 사용 해야 합니다. 또는
 

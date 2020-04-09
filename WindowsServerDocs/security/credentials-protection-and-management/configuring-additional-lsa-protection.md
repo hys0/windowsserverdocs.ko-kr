@@ -1,24 +1,20 @@
 ---
 title: 추가 LSA 보호 구성
 description: Windows Server 보안
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: security-credential-protection
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 038e7c2b-c032-491f-8727-6f3f01116ef9
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: 40e489089fc0c15c3e6ebf7b654377f4d6f7e482
-ms.sourcegitcommit: 3d76683718ec6f38613f552f518ebfc6a5db5401
+ms.openlocfilehash: 1c923cfe39892ba105c437cf73843c2f6d07e49b
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74829626"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80857076"
 ---
 # <a name="configuring-additional-lsa-protection"></a>추가 LSA 보호 구성
 
@@ -94,11 +90,11 @@ LSA 보호를 사용 하는 경우 사용자 지정 LSA 플러그 인을 디버�
 
 ##### <a name="to-create-the-auditlevel-value-setting-in-a-gpo"></a>GPO에서 AuditLevel 값 설정을 만들려면
 
-1.  GPMC(그룹 정책 관리 콘솔)를 엽니다.
+1.  그룹 정책 관리 콘솔(GPMC)을 여십시오.
 
 2.  도메인 수준에서 연결되거나 컴퓨터 계정을 포함하는 조직 구성 단위에 연결된 새 GPO(그룹 정책 개체)를 만듭니다. 또는 이미 배포된 GPO를 선택할 수 있습니다.
 
-3.  GPO를 마우스 오른쪽 단추로 클릭한 다음 **편집** 을 클릭하여 그룹 정책 관리 편집기를 엽니다.
+3.  GPO를 마우스 오른쪽 단추로 클릭한 다음 **편집**을 클릭하여 그룹 정책 관리 편집기를 엽니다.
 
 4.  **컴퓨터 구성**, **기본 설정**, **Windows 설정**을 차례로 확장합니다.
 
@@ -134,13 +130,13 @@ LSA 보호를 사용 하는 경우 사용자 지정 LSA 플러그 인을 디버�
 
 공유 섹션은 일반적으로 인스턴스 데이터가 같은 보안 컨텍스트를 사용하는 다른 프로세스와 상호 작용하도록 허용하는 프로그래밍 방법으로 인해 생성됩니다. 이로 인해 보안 취약점이 발생할 수 있습니다.
 
-## <a name="BKMK_HowToConfigure"></a>자격 증명의 추가 LSA 보호를 구성 하는 방법
+## <a name="how-to-configure-additional-lsa-protection-of-credentials"></a><a name="BKMK_HowToConfigure"></a>자격 증명의 추가 LSA 보호를 구성 하는 방법
 Windows 8.1를 실행 하는 장치 (보안 부팅 또는 UEFI 사용 여부에 상관 없음)에서는이 섹션에 설명 된 절차를 수행 하 여 구성할 수 있습니다. Windows RT 8.1를 실행 하는 장치의 경우 lsass.exe 보호가 항상 사용 되며 해제할 수 없습니다.
 
-### <a name="on-x86-based-or-x64-based-devices-using-secure-boot-and-uefi-or-not"></a>보안 부팅 및 UEFI를 사용하거나 사용하지 않는 x86 기반 또는 x64 기반 장치
+### <a name="on-x86-based-or-x64-based-devices-using-secure-boot-and-uefi-or-not"></a>보안 부팅 및 UEFI를 사용하거나 사용하지 않는 x86 기반 또는 x64 기반 디바이스
 보안 부팅 또는 UEFI를 사용 하는 x86 기반 또는 x64 기반 장치에서는 LSA 보호가 레지스트리 키를 사용 하 여 설정 된 경우 uefi 펌웨어에 UEFI 변수가 설정 됩니다. 이 설정이 펌웨어에 저장되면 레지스트리 키에서 UEFI 변수를 삭제하거나 변경할 수 없습니다. UEFI 변수를 다시 설정해야 합니다.
 
-UEFI를 지원하지 않거나 보안 부팅을 사용하지 않는 x86 기반 또는 x64 기반 장치는 LSA 보호 구성을 펌웨어에 저장할 수 없으며 레지스트리 키의 존재 여부만을 기반으로 합니다. 이 시나리오에서는 장치에 대한 원격 액세스를 사용하여 LSA 보호를 사용하지 않도록 설정할 수 있습니다.
+UEFI를 지원하지 않거나 보안 부팅을 사용하지 않는 x86 기반 또는 x64 기반 디바이스는 LSA 보호 구성을 펌웨어에 저장할 수 없으며 레지스트리 키의 존재 여부만을 기반으로 합니다. 이 시나리오에서는 디바이스에 대한 원격 액세스를 사용하여 LSA 보호를 사용하지 않도록 설정할 수 있습니다.
 
 다음 절차를 사용하여 LSA 보호를 사용하거나 사용하지 않도록 설정할 수 있습니다.
 
@@ -154,11 +150,11 @@ UEFI를 지원하지 않거나 보안 부팅을 사용하지 않는 x86 기반 �
 
 ##### <a name="to-enable-lsa-protection-using-group-policy"></a>그룹 정책을 사용하여 LSA 보호를 사용하도록 설정하려면
 
-1.  GPMC(그룹 정책 관리 콘솔)를 엽니다.
+1.  그룹 정책 관리 콘솔(GPMC)을 여십시오.
 
 2.  도메인 수준에서 연결되거나 컴퓨터 계정을 포함하는 조직 구성 단위에 연결된 새 GPO를 만듭니다. 또는 이미 배포된 GPO를 선택할 수 있습니다.
 
-3.  GPO를 마우스 오른쪽 단추로 클릭한 다음 **편집** 을 클릭하여 그룹 정책 관리 편집기를 엽니다.
+3.  GPO를 마우스 오른쪽 단추로 클릭한 다음 **편집**을 클릭하여 그룹 정책 관리 편집기를 엽니다.
 
 4.  **컴퓨터 구성**, **기본 설정**, **Windows 설정**을 차례로 확장합니다.
 
@@ -182,7 +178,7 @@ UEFI를 지원하지 않거나 보안 부팅을 사용하지 않는 x86 기반 �
 
 2.  레지스트리 키에서 "RunAsPPL"=dword:00000001 값을 삭제합니다.
 
-3.  장치에서 보안 부팅을 사용하는 경우 LSA(로컬 보안 기관) 보호된 프로세스 옵트아웃 도구를 사용하여 UEFI 변수를 삭제합니다.
+3.  디바이스에서 보안 부팅을 사용하는 경우 LSA(로컬 보안 기관) 보호된 프로세스 옵트아웃 도구를 사용하여 UEFI 변수를 삭제합니다.
 
     옵트아웃 도구에 대한 자세한 내용은 [공식 Microsoft 다운로드 센터에서 LSA(로컬 보안 기관) 보호된 프로세스 옵트아웃 다운로드](https://www.microsoft.com/download/details.aspx?id=40897)를 참조하세요.
 

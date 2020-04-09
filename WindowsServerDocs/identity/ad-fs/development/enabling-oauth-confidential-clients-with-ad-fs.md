@@ -1,7 +1,6 @@
 ---
 ms.assetid: 5a64e790-6725-4099-aa08-8067d57c3168
 title: AD FS 2016 이상에서 OAuth 기밀 클라이언트를 사용 하 여 서버 쪽 응용 프로그램 빌드
-description: ''
 author: billmath
 ms.author: billmath
 manager: mtillman
@@ -9,18 +8,18 @@ ms.date: 02/22/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 5b2bf036de1de8300e36c3413c551e51d408a4d2
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 8a8567a497e10df66f77fb996c937791b4aa9e08
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71407861"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80857566"
 ---
 # <a name="build-a-server-side-application-using-oauth-confidential-clients-with-ad-fs-2016-or-later"></a>AD FS 2016 이상에서 OAuth 기밀 클라이언트를 사용 하 여 서버 쪽 응용 프로그램 빌드
 
 
 AD FS 2016 이상 릴리스는 웹 서버에서 실행 되는 응용 프로그램 또는 서비스와 같이 자체 암호를 유지 관리할 수 있는 클라이언트에 대 한 지원을 제공 합니다.  이러한 클라이언트는 기밀 클라이언트 라고 합니다.
-다음은 웹 서버에서 실행 되 고 AD FS에 기밀 클라이언트로 웹 응용 프로그램의 개요입니다.  
+다음은 웹 서버에서 실행 되 고 AD FS에 기밀 클라이언트로 웹 애플리케이션의 개요입니다.  
 
 ## <a name="pre-requisites"></a>필수 구성 요소  
 이 문서를 완료 하기 전에 필요한 필수 구성 요소 목록은 다음과 같습니다. 이 문서에서는 AD FS 설치 되어 있다고 가정 합니다.  
@@ -46,13 +45,13 @@ AD FS 2016 이상 릴리스는 웹 서버에서 실행 되는 응용 프로그�
 
     ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_3.PNG)  
 
-4.  **리디렉션 URI** - **에대해다음을입력합니다. https://localhost:44323**  **추가**를 클릭합니다. **다음**을 클릭합니다.  
+4.  **리디렉션 URI:**  -  **https://localhost:44323** 에 대해 다음을 입력 합니다.  **추가**를 클릭합니다. **다음**을 클릭합니다.  
 
 5.  에 **응용 프로그램 자격 증명 구성** 화면에서에 체크 **공유 암호를 생성** secret을 복사 합니다.  이는 나중에 응용 프로그램 web.config 파일에서 **ida: ClientSecret** 의 값으로 사용 됩니다.  **다음**을 클릭합니다.  
 
     ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_4.PNG)   
 
-6. **웹 API 구성** 화면에서 **https://contoso.com/WebApp** **식별자** -  에 대해 다음을 입력 합니다.  **추가**를 클릭합니다. **다음**을 클릭합니다.  이 값은 나중에 사용할 **ida: GraphResourceId** 응용 프로그램 web.config 파일에 있습니다.  
+6. **웹 API 구성** 화면에서 **식별자** -  **https://contoso.com/WebApp** 에 대해 다음을 입력 합니다.  **추가**를 클릭합니다. **다음**을 클릭합니다.  이 값은 나중에 사용할 **ida: GraphResourceId** 응용 프로그램 web.config 파일에 있습니다.  
 
     ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_9.PNG)  
 
@@ -83,7 +82,7 @@ git clone https://github.com/Azure-Samples/active-directory-dotnet-webapp-webapi
 
 #### <a name="to-upgrade-the-database-file"></a>데이터베이스 파일을 업그레이드 하려면  
 
-1.  Visual Studio에서 프로젝트를 열면 앱에 SQL Server 2012 Express가 필요 하거나 데이터베이스를 업그레이드 해야 한다는 팝업이 표시 됩니다.  확인을 클릭 합니다.  
+1.  Visual Studio에서 프로젝트를 열면 앱에 SQL Server 2012 Express가 필요 하거나 데이터베이스를 업그레이드 해야 한다는 팝업이 표시 됩니다.  확인을 클릭합니다.  
 
     ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_12.PNG)  
 
@@ -107,7 +106,7 @@ git clone https://github.com/Azure-Samples/active-directory-dotnet-webapp-webapi
 
     ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_16.PNG)  
 
-7.  확인을 클릭 합니다. 확인을 클릭 합니다.  예를 클릭 하 여 데이터베이스를 업그레이드 합니다.  
+7.  확인을 클릭합니다. 확인을 클릭합니다.  예를 클릭 하 여 데이터베이스를 업그레이드 합니다.  
 
     ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_17.PNG)  
 
@@ -115,7 +114,7 @@ git clone https://github.com/Azure-Samples/active-directory-dotnet-webapp-webapi
 
     ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_18.PNG)  
 
-9.  이제 Web.config 파일을 열고 위에서 복사한 값으로 연결 문자열에 있는 값을 바꿉니다.  Web.config 파일을 저장 합니다.  
+9.  이제 Web.config 파일을 열고 위에서 복사한 값으로 연결 문자열에 있는 값을 바꿉니다.  Web.config 파일을 저장합니다.  
 
     > [!NOTE]  
     > 위의 단계는 새 연결 문자열을 얻을 수 있도록 필요 합니다.  그렇지 않은 경우 데이터베이스 업데이트 아래 실행 하면를 오류가 발생을 합니다.  
@@ -234,7 +233,7 @@ git clone https://github.com/Azure-Samples/active-directory-dotnet-webapp-webapi
 
    ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_31.PNG)  
 
-3. 이제 ASP.NET 사이트에 Hello abby@contoso.com!이 표시 됩니다.  클릭 **프로필**합니다.  
+3. 이제 ASP.NET 사이트가 Hello abby@contoso.com! 라고 표시 됩니다.  **프로필**을 클릭합니다.  
 
    ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_32.PNG)  
 

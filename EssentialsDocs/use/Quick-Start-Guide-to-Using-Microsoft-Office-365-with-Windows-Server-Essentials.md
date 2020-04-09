@@ -1,23 +1,19 @@
 ---
 title: Windows Server Essentials에서 Microsoft Office 365 사용에 대한 빠른 시작 가이드
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 51a7f1f1-088b-4487-b2c6-4f97aad3004d
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 82fa7a206e0f5100f6fb043d9e569b1e114f1537
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 49ffab44c1d385bd149ec048ff0bd4b627529fef
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80313164"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80852136"
 ---
 # <a name="quick-start-guide-to-using-microsoft-office-365-with-windows-server-essentials"></a>Windows Server Essentials에서 Microsoft Office 365 사용에 대한 빠른 시작 가이드
 
@@ -32,7 +28,7 @@ ms.locfileid: "80313164"
 > [!IMPORTANT]
 >  Exchange Online에 연결 하는 데 사용 하는 모바일 장치를 분실 한 경우 다음에 장치를 켤 때 장치에서 중요 한 데이터를 제거할 수 있도록 관리자에 게 문의 하세요.  
 
-### <a name="before-you-begin"></a>시작하기 전 주의 사항  
+### <a name="before-you-begin"></a>시작하기 전에  
 
 1.  사용자 계정에 할당 된 Microsoft Online Services 계정 (Windows Server Essentials에서는 *Office 365 계정*이라고 함)이 있어야 합니다. Office 365에 대 한 온라인 계정이 아직 없는 경우 컴퓨터 네트워크를 유지 관리 하는 사용자에 게 문의 하 여 새로 만듭니다.  
 

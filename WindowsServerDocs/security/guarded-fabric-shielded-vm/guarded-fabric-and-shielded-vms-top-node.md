@@ -1,26 +1,25 @@
 ---
 title: 보호된 패브릭 및 보호된 VM
-ms.custom: na
 ms.prod: windows-server
 ms.topic: article
 ms.assetid: 5c7ada81-2d97-41d4-87cf-1a7ccf06cd20
 manager: dongill
 author: rpsqrd
-ms.author: justinha
+ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: f23d0be0d860695b014f57fd55d8e321e81a70ca
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 9e76b3081438ae38c6b83b7cdd179d47b1e21a70
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75950332"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856916"
 ---
 # <a name="guarded-fabric-and-shielded-vms"></a>보호된 패브릭 및 보호된 VM
 
 >적용 대상: Windows Server 2019, Windows Server (반기 채널), Windows Server 2016
 
-호스트 된 환경을 제공 하는 가장 중요 한 목표 중 하나는 환경에서 실행 되는 가상 컴퓨터의 보안을 보장 하는 것입니다. 클라우드 서비스 공급 기업 또는 엔터프라이즈 프라이빗 클라우드 관리자로서 보호된 패브릭을 사용하여 VM에 대한 더욱 안전한 환경을 제공할 수 있습니다. 보호된 패브릭은 하나의 HGS(호스트 보호 서비스)(일반적으로 3노드의 클러스터)에 하나 이상의 보호된 호스트 및 보호된 가상 컴퓨터(VM) 세트로 구성됩니다.
+호스트 된 환경을 제공 하는 가장 중요 한 목표 중 하나는 환경에서 실행 되는 가상 컴퓨터의 보안을 보장 하는 것입니다. 클라우드 서비스 공급자 또는 엔터프라이즈 사설 클라우드 관리자로서 보호된 패브릭을 사용하여 VM에 대한 더욱 안전한 환경을 제공할 수 있습니다. 보호된 패브릭은 하나의 HGS(호스트 보호 서비스)(일반적으로 3노드의 클러스터)에 하나 이상의 보호된 호스트 및 보호된 가상 컴퓨터(VM) 세트로 구성됩니다.
 
 > [!IMPORTANT]
 > 프로덕션 환경에서 보호 된 가상 컴퓨터를 배포 하기 전에 최신 누적 업데이트를 설치 했는지 확인 합니다.

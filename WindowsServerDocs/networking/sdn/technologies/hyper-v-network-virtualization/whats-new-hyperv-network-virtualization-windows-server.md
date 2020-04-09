@@ -1,24 +1,20 @@
 ---
 title: Windows Server 2016에서 제공 되는 Hyper-v 네트워크 가상화의 새로운 기능
 description: 이 항목에서는 Windows Server 2016의 Hyper-v 네트워크 가상화의 새로운 기능에 대 한 정보를 제공 합니다.
-manager: brianlic
-ms.custom: na
+manager: grcusanz
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-sdn
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0254275a-0a77-40a9-b68a-1029284c03fe
-ms.author: lizross
-author: eross-msft
+ms.author: anpaul
+author: AnirbanPaul
 ms.date: 03/19/2018
-ms.openlocfilehash: a91f54d5d4528ad0ee592f40902c856b94a276b7
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 53f67a4dd4fc135bc260754b7690cb9c10467d92
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80317120"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859686"
 ---
 # <a name="whats-new-in-hyper-v-network-virtualization-in-windows-server-2016"></a>Windows Server 2016에서 제공 되는 Hyper-v 네트워크 가상화의 새로운 기능
 

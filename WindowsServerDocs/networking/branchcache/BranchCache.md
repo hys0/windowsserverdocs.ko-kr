@@ -2,22 +2,18 @@
 title: BranchCache
 description: 이 항목의 BranchCache Windows Server 2016에 대 한 개요를 제공합니다.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-bc
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a4587cff-c086-49f1-a0bf-cd74b8a44440
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 1eea3e11231e1be94db1f88d77faa89a67d46444
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 4e4bff53e5b1e77d81556f59116d8fde33fee72d
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80318519"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80861756"
 ---
 # <a name="branchcache"></a>BranchCache
 
@@ -33,11 +29,11 @@ ms.locfileid: "80318519"
 
 **BranchCache에 관심이 있는 사용자는 누구 인가요?**
 
-시스템 관리자, 네트워크/저장소 솔루션 구축자 또는 기타 IT 전문가라면 다음과 같은 상황에서 BranchCache를 사용할 수 있습니다.
+시스템 관리자, 네트워크/스토리지 솔루션 구축자 또는 기타 IT 전문가라면 다음과 같은 상황에서 BranchCache를 사용할 수 있습니다.
 
 - 실제 위치가 둘 이상이고 지점에서 본사로 연결되는 WAN(광역 네트워크)을 사용하는 조직을 위해 IT 인프라를 디자인하거나 지원하는 경우
 
-- 클라우드 기술을 배포했으며 작업자들이 WAN 연결을 사용하여 원격 위치의 데이터 및 응용 프로그램에 액세스하는 조직을 위해 IT 인프라를 디자인하거나 지원하는 경우
+- 클라우드 기술을 배포했으며 작업자들이 WAN 연결을 사용하여 원격 위치의 데이터 및 애플리케이션에 액세스하는 조직을 위해 IT 인프라를 디자인하거나 지원하는 경우
 
 - 지점과 본사 간의 네트워크 트래픽 양을 줄여 WAN 대역폭 사용을 최적화하려는 경우
 
@@ -118,7 +114,7 @@ BranchCache를 배포할 지점에 추가 인프라(예: 다른 워크로드를 
 BranchCache를 배포할 때 원본 콘텐츠는 본사에서 또는 클라우드 데이터 센터에서 BranchCache 사용 가능 콘텐츠 서버에 저장 됩니다. BranchCache에서 지원되는 콘텐츠 서버 유형은 다음과 같습니다.
 
 > [!NOTE]
-> 소스 내용만-즉, 클라이언트 컴퓨터는 BranchCache 사용 가능 콘텐츠 서버에서 처음 가져온는 콘텐츠는 BranchCache에서 가속 됩니다. 클라이언트 컴퓨터가 인터넷의 웹 서버나 Windows 업데이트 등의 다른 출처로부터 직접 가져온 콘텐츠는 클라이언트 컴퓨터 또는 호스트 캐시 서버에서 캐시된 다음 지점의 다른 컴퓨터와 공유되지 않습니다. 그러나 Windows 업데이트 콘텐츠를 가속 하려는 경우 본사 또는 클라우드 데이터 센터에서 Windows Server Update Services (WSUS) 응용 프로그램 서버를 설치 하 수 BranchCache 콘텐츠 서버로 구성 합니다.
+> 소스 내용만-즉, 클라이언트 컴퓨터는 BranchCache 사용 가능 콘텐츠 서버에서 처음 가져온는 콘텐츠는 BranchCache에서 가속 됩니다. 클라이언트 컴퓨터가 인터넷의 웹 서버나 Windows 업데이트 등의 다른 출처로부터 직접 가져온 콘텐츠는 클라이언트 컴퓨터 또는 호스트 캐시 서버에서 캐시된 다음 지점의 다른 컴퓨터와 공유되지 않습니다. 그러나 Windows 업데이트 콘텐츠를 가속 하려는 경우 본사 또는 클라우드 데이터 센터에서 Windows Server Update Services (WSUS) 애플리케이션 서버를 설치 하 수 BranchCache 콘텐츠 서버로 구성 합니다.
 
 ### <a name="web-servers"></a>웹 서버
 
@@ -134,15 +130,15 @@ BranchCache를 배포할 때 원본 콘텐츠는 본사에서 또는 클라우�
 
 ### <a name="application-servers"></a>응용 프로그램 서버
 
-Windows Server 2016, Windows Server 2012 R2, Windows Server 2012를 실행 하는 컴퓨터를 포함 하는 지원 되는 응용 프로그램 서버 또는 Windows Server 2008 r 2와 BITS Background Intelligent Transfer Service () 설치 하 고 사용 하도록 설정 합니다. 
+Windows Server 2016, Windows Server 2012 R2, Windows Server 2012를 실행 하는 컴퓨터를 포함 하는 지원 되는 애플리케이션 서버 또는 Windows Server 2008 r 2와 BITS Background Intelligent Transfer Service () 설치 하 고 사용 하도록 설정 합니다. 
 
-또한 응용 프로그램 서버에는 BranchCache 기능이 설치되어 있어야 합니다. 응용 프로그램 서버의 예로 WSUS (Microsoft Windows Server Update Services) 및 Microsoft 끝점 Configuration Manager 분기 배포 지점 서버를 BranchCache 콘텐츠 서버로 배포할 수 있습니다.
+또한 애플리케이션 서버에는 BranchCache 기능이 설치되어 있어야 합니다. 응용 프로그램 서버의 예로 WSUS (Microsoft Windows Server Update Services) 및 Microsoft 끝점 Configuration Manager 분기 배포 지점 서버를 BranchCache 콘텐츠 서버로 배포할 수 있습니다.
 
 ## <a name="branchcache-and-the-cloud"></a><a name="BKMK_3a"></a>BranchCache 및 클라우드
 
-클라우드를 사용하면 운영 경비를 줄이고 작동 범위를 새로운 수준으로 확장할 수 있어 매우 유용하지만, 사용자에게 익숙한 위치가 아닌 클라우드로 작업을 이전하는 경우 네트워킹 비용이 증가하고 생산성이 저하될 수 있습니다. 사용자는 고성능을 예상 하 고 응용 프로그램 및 데이터 호스팅되는 신경 쓰지 않습니다. 
+클라우드를 사용하면 운영 경비를 줄이고 작동 범위를 새로운 수준으로 확장할 수 있어 매우 유용하지만, 사용자에게 익숙한 위치가 아닌 클라우드로 작업을 이전하는 경우 네트워킹 비용이 증가하고 생산성이 저하될 수 있습니다. 사용자는 고성능을 예상 하 고 애플리케이션 및 데이터 호스팅되는 신경 쓰지 않습니다. 
 
-BranchCache는 공유 데이터 캐시를 통해 네트워크 응용 프로그램의 성능을 개선하고 대역폭 사용량을 줄일 수 있습니다.  즉, BranchCache는 작업자들이 클라우드에 배포된 서버를 사용하는 본사와 지점의 생산성을 높여 줍니다.
+BranchCache는 공유 데이터 캐시를 통해 네트워크 애플리케이션의 성능을 개선하고 대역폭 사용량을 줄일 수 있습니다.  즉, BranchCache는 작업자들이 클라우드에 배포된 서버를 사용하는 본사와 지점의 생산성을 높여 줍니다.
 
 BranchCache는 하드웨어를 새로 추가하거나 네트워크 토폴로지를 변경하지 않고도 사용할 수 있어 여러 사무실 위치와 공용 및 프라이빗 클라우드 간의 통신을 개선하는 데 최적의 솔루션입니다.
 

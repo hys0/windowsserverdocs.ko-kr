@@ -1,7 +1,6 @@
 ---
 ms.assetid: 39acccd9-0402-49ca-8ce1-b239e1e7e455
 title: 리소스 파트너 조직에 AD FS 배포
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: f4741fcc683a8a22318caa47d5cbd66352862a86
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 780247d72fb35d44a16f1e3da72c3ad59c72ea0c
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71408136"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80853176"
 ---
 # <a name="deploying-ad-fs-in-the-resource-partner-organization"></a>리소스 파트너 조직에 AD FS 배포
 
@@ -24,7 +23,7 @@ Active Directory Federation Services \(AD FS\)의 리소스 파트너 조직은 
   
 리소스 파트너 조직을 설정 및 구성하는 방법에 대한 자세한 내용은 [Checklist: Configuring the Resource Partner Organization](../../ad-fs/deployment/Checklist--Configuring-the-Resource-Partner-Organization.md)을 참조하세요.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>이 섹션의 내용  
   
 -   [리소스 파트너에서 페더레이션 서버의 역할 검토](Review-the-Role-of-the-Federation-Server-in-the-Resource-Partner.md)  
   

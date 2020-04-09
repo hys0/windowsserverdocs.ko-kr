@@ -1,23 +1,19 @@
 ---
 title: SDN에 대한 SLB(소프트웨어 부하 분산)
 description: 이 항목을 사용 하 여 Windows Server 2016의 소프트웨어 정의 네트워킹에 대 한 소프트웨어 부하 분산에 대해 알아볼 수 있습니다.
-manager: brianlic
-ms.custom: na
+manager: grcusanz
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-sdn
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 97abf182-4725-4026-801c-122db96964ed
-ms.author: lizross
-author: eross-msft
-ms.openlocfilehash: 1e7870e045f9af79ed46ec1ad998dbc1f1474afd
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.author: anpaul
+author: AnirbanPaul
+ms.openlocfilehash: 245faa00eed6f8ee49f8d178ab2cde5d01b1e23e
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80312908"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859576"
 ---
 # <a name="software-load-balancing-slb-for-sdn"></a>SDN에 대 한 소프트웨어 부하 분산 \(SLB\)
 

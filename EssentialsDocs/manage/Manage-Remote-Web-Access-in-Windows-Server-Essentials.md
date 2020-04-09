@@ -1,23 +1,19 @@
 ---
 title: Windows Server Essentials에서 원격 웹 액세스 관리
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f3ea40fa-b6ba-4d66-b754-221ca6271387
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 6f4277637ed0f721b0cae12c15086a59ac6190fc
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 3457eb28c05bd79f0de3a982da77ca01ffe9b52d
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80311166"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80852766"
 ---
 # <a name="manage-remote-web-access-in-windows-server-essentials"></a>Windows Server Essentials에서 원격 웹 액세스 관리
 
@@ -106,7 +102,7 @@ ms.locfileid: "80311166"
   
 4. **원격 액세스** 탭에서 **원격 웹 액세스 허용 및 웹 서비스 응용 프로그램에 액세스** 확인란을 선택하여 사용자가 원격 웹 액세스를 사용하여 서버에 연결할 수 있도록 합니다.  
   
-5. **적용**을 클릭한 다음 **확인**을 클릭합니다.  
+5. **적용**, **확인**을 차례로 클릭합니다.  
   
    자세한 내용은 [사용자 계정 관리](Manage-User-Accounts-in-Windows-Server-Essentials.md)를 참조 하세요.  
   
@@ -137,10 +133,10 @@ ms.locfileid: "80311166"
   
     2.  사용자가 원격 웹 액세스를 사용하여 서버에 연결할 수 있게 하려면 **원격 웹 액세스 허용 및 웹 서비스 응용 프로그램에 액세스** 확인란을 선택합니다.  
   
-7.  **적용**을 클릭한 다음 **확인**을 클릭합니다.  
+7.  **적용**, **확인**을 차례로 클릭합니다.  
   
 ##  <a name="set-up-your-router"></a><a name="BKMK_2"></a>라우터 설정  
- 원격 웹 액세스를 지원하도록 서버를 구성한 경우 원격 액세스 설정 마법사가 라우터를 설정하려고 시도합니다. 라우터 또는 라우터 설정을 변경한 경우 라우터 설정 마법사를 다시 실행해야 합니다. 자세한 내용은 다음 항목을 참조하십시오.  
+ 원격 웹 액세스를 지원하도록 서버를 구성한 경우 원격 액세스 설정 마법사가 라우터를 설정하려고 시도합니다. 라우터 또는 라우터 설정을 변경한 경우 라우터 설정 마법사를 다시 실행해야 합니다. 자세한 내용은 아래 항목을 참조하세요.  
   
 -   [라우터 설정](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_SetUpRouter)  
   
@@ -202,7 +198,7 @@ ms.locfileid: "80311166"
 4.  **확인**을 두 번 클릭하여 변경 내용을 적용하고 대화 상자를 닫습니다.  
   
 ##  <a name="set-up-your-domain-name"></a><a name="BKMK_3"></a>도메인 이름 설정  
- 원격 웹 액세스를 설정한 후에는 Windows Server Essentials를 실행하는 서버의 도메인 이름을 설정할 수 있습니다. 이 단계는 원격 컴퓨터에서 원격 웹 액세스를 사용하려는 경우에 필요합니다. 자세한 내용은 다음 항목을 참조하십시오.  
+ 원격 웹 액세스를 설정한 후에는 Windows Server Essentials를 실행하는 서버의 도메인 이름을 설정할 수 있습니다. 이 단계는 원격 컴퓨터에서 원격 웹 액세스를 사용하려는 경우에 필요합니다. 자세한 내용은 아래 항목을 참조하세요.  
   
 -   [도메인 이름 개요](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_DNOverview)  
   
@@ -384,7 +380,7 @@ ms.locfileid: "80311166"
 5. 검색 결과에서 도메인 이름 서비스 공급자의 이름이 **Registrar** 아래에 나열됩니다.  
   
 ##  <a name="customize-remote-web-access"></a><a name="BKMK_4"></a>원격 웹 액세스 사용자 지정  
- 개인 로고 또는 배경 이미지를 추가하여 원격 웹 액세스 사이트를 사용자 지정할 수 있습니다. 또한 모든 사용자가 이 정보를 사용할 수 있도록 홈 페이지에 링크를 추가할 수도 있습니다. 자세한 내용은 다음 항목을 참조하십시오.  
+ 개인 로고 또는 배경 이미지를 추가하여 원격 웹 액세스 사이트를 사용자 지정할 수 있습니다. 또한 모든 사용자가 이 정보를 사용할 수 있도록 홈 페이지에 링크를 추가할 수도 있습니다. 자세한 내용은 아래 항목을 참조하세요.  
   
 -   [원격 웹 액세스 사용자 지정](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_CustomizeRWA)  
   

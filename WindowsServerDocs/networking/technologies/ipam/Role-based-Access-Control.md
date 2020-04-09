@@ -2,22 +2,18 @@
 title: 역할 기반 액세스 제어
 description: 이 항목은 Windows Server 2016의 IPAM (IP 주소 관리) 관리 가이드의 일부입니다.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-ipam
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ecdfc589-fa14-4bb3-ab7e-456ebc719385
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: dc4dc26a5079a34cdaa3d455e59f6bfb4d1f74c1
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: ae5e36e9c0931ca5735df6111f73e87ef012ee5d
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80309526"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80860596"
 ---
 # <a name="role-based-access-control"></a>역할 기반 액세스 제어
 
@@ -42,7 +38,7 @@ ms.locfileid: "80309526"
   
 -   사용자는 특정 영역에 대 한 DNS 리소스 레코드를 편집할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [서버 관리자를 사용 하 여 역할 기반 Access Control 관리](../../technologies/ipam/Manage-Role-Based-Access-Control-with-Server-Manager.md)  
 [Windows PowerShell을 사용 하 여 역할 기반 Access Control 관리](../../technologies/ipam/Manage-Role-Based-Access-Control-with-Windows-PowerShell.md)  
 [IPAM 관리](Manage-IPAM.md)  

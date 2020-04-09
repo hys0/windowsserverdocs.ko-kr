@@ -1,25 +1,20 @@
 ---
 title: Active Directory 도메인 서비스 개요
 description: Windows Server 보안
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.service: na
-ms.suite: na
 ms.technology: security-auditing
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6cfe9479-5d17-41d5-939a-891e5233fdca
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: c0ee85358c5e39f1ebf8cd901298a6083a3ebb97
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 73272086b176fa8fb086063ff3d4249a02b016b2
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403770"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80857026"
 ---
 # <a name="active-directory-domain-services-overview"></a>Active Directory 도메인 서비스 개요
 
@@ -27,7 +22,7 @@ ms.locfileid: "71403770"
   
 디렉터리는 네트워크의 개체에 대 한 정보를 저장 하는 계층 구조입니다. Active Directory Domain Services (AD DS)와 같은 디렉터리 서비스는 디렉터리 데이터를 저장 하 고이 데이터를 네트워크 사용자 및 관리자가 사용할 수 있도록 하는 방법을 제공 합니다. 예를 들어 AD DS은 이름, 암호, 전화 번호 등의 사용자 계정에 대 한 정보를 저장 하 고, 동일한 네트워크에 있는 다른 권한 있는 사용자가이 정보에 액세스할 수 있도록 합니다.  
   
-Active Directory는 네트워크의 개체에 대 한 정보를 저장 하 고 관리자와 사용자가이 정보를 쉽게 찾아서 사용할 수 있도록 합니다. Active Directory는 구조화 된 데이터 저장소를 디렉터리 정보의 논리적 계층 구조에 대 한 기준으로 사용 합니다.  
+Active Directory는 네트워크의 개체에 대한 정보를 저장하고 관리자 및 사용자가 이러한 정보를 쉽게 찾아서 사용할 수 있게 해줍니다. Active Directory는 논리적이고 계층적인 디렉터리 정보 구성을 위한 기초로 구조화된 데이터 저장소를 사용합니다.  
   
 이 데이터 저장소 (디렉터리 라고도 함)에는 Active Directory 개체에 대 한 정보가 포함 되어 있습니다. 일반적으로 이러한 개체에는 서버, 볼륨, 프린터, 네트워크 사용자 및 컴퓨터 계정 등의 공유 리소스가 포함 됩니다. Active Directory 데이터 저장소에 대 한 자세한 내용은 [디렉터리 데이터 저장소](https://technet.microsoft.com/library/cc736627(v=ws.10).aspx)를 참조 하세요.  
   

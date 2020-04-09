@@ -1,7 +1,6 @@
 ---
 ms.assetid: 7f285c9f-c3e8-4aae-9ff4-a9123815114e
 title: 중앙 액세스 정책 시나리오
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,18 +8,18 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 91fd437895e765d4d73f3a200f76a5f8f96b52f2
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: a22592e5c8af9fa23725de90a14a9a8a46c286d7
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71407099"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80861156"
 ---
 # <a name="scenario-central-access-policy"></a>시나리오: 중앙 액세스 정책
 
 >적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-조직은 파일에 대한 중앙 액세스 정책을 통해 사용자 그룹, 사용자 클레임, 장치 클레임 및 리소스 속성을 사용하는 조건식을 비롯한 권한 부여 정책을 중앙에서 배포하고 관리할 수 있습니다. 클레임은 연결된 개체의 특성에 대한 어설션입니다. 예를 들어 HBI(높은 비즈니스 영향) 데이터에 액세스하려면 정규 직원이 관리되는 장치에서 액세스 권한을 얻은 후 스마트 카드를 사용해서 로그온해야 합니다. 이러한 정책은 AD DS(Active Directory 도메인 서비스)에서 정의되어 호스트됩니다.  
+조직은 파일에 대한 중앙 액세스 정책을 통해 사용자 그룹, 사용자 클레임, 디바이스 클레임 및 리소스 속성을 사용하는 조건식을 비롯한 권한 부여 정책을 중앙에서 배포하고 관리할 수 있습니다. 클레임은 연결된 개체의 특성에 대한 어설션입니다. 예를 들어 HBI(높은 비즈니스 영향) 데이터에 액세스하려면 정규 직원이 관리되는 디바이스에서 액세스 권한을 얻은 후 스마트 카드를 사용해서 로그온해야 합니다. 이러한 정책은 AD DS(Active Directory 도메인 서비스)에서 정의되어 호스트됩니다.  
   
 조직 액세스 정책은 규정 준수 및 비즈니스 규정 요구 사항에 따라 달라집니다. 예를 들어 PII(개인 식별 정보) 정보를 볼 수 있도록 허용된 HR(인사부)의 구성원과 파일 소유자만 파일의 PII에 액세스하도록 제한하는 비즈니스 요구 사항이 조직에 있는 경우 이 정책은 조직 전체의 파일 서버에 있는 PII 파일에 적용됩니다. 이 예제에서는 다음을 수행할 수 있어야 합니다.  
   
@@ -83,15 +82,15 @@ ms.locfileid: "71407099"
   
 -   [중앙 액세스 정책 &#40;데모 단계 배포&#41;](Deploy-a-Central-Access-Policy--Demonstration-Steps-.md)  
   
--   [동적 액세스 제어: 시나리오 개요](Dynamic-Access-Control--Scenario-Overview.md)  
+-   [동적 Access Control: 시나리오 개요](Dynamic-Access-Control--Scenario-Overview.md)  
   
-## <a name="BKMK_NEW"></a>이 시나리오에 포함 된 역할 및 기능  
+## <a name="roles-and-features-included-in-this-scenario"></a><a name="BKMK_NEW"></a>이 시나리오에 포함 된 역할 및 기능  
 다음 표에는 이 시나리오에 포함된 역할 및 기능이 나열되어 있으며, 이러한 역할 및 기능이 시나리오를 지원하는 방법에 대한 설명이 나와 있습니다.  
   
 |역할/기능|이 시나리오를 지원하는 방법|  
 |-----------------|---------------------------------|  
-|Active Directory 도메인 서비스 역할|사용자 클레임 및 장치 클레임, 복합 id, (사용자 + 장치 클레임)를 만들 수 있도록 하는 클레임 기반 권한 부여 플랫폼을 소개 하는 Windows Server 2012의 AD DS 새로운 중앙 액세스 정책 (CAP) 모델 및 권한 부여 결정에 파일 분류 정보 사용 합니다.|  
-|파일 및 저장소 서비스 서버 역할|File and Storage Services는 파일을 저장하고 다른 사용자와 공유할 수 있는 네트워크의 중앙 위치를 제공하는 하나 이상의 파일 서버를 설정 및 관리할 수 있는 기술을 제공합니다. 네트워크 사용자에게 동일한 파일 및 응용 프로그램에 대한 액세스 권한이 필요하거나 조직에서 중앙 집중 방식의 백업 및 파일 관리가 필요한 경우, 파일 및 저장소 서비스 역할과 해당 역할 서비스를 컴퓨터에 추가하여 하나 이상의 컴퓨터를 파일 서버로 설정해야 합니다.|  
+|Active Directory 도메인 서비스 역할|사용자 클레임 및 디바이스 클레임, 복합 id, (사용자 + 디바이스 클레임)를 만들 수 있도록 하는 클레임 기반 권한 부여 플랫폼을 소개 하는 Windows Server 2012의 AD DS 새로운 중앙 액세스 정책 (CAP) 모델 및 권한 부여 결정에 파일 분류 정보 사용 합니다.|  
+|파일 및 저장소 서비스 서버 역할|File and Storage Services는 파일을 저장하고 다른 사용자와 공유할 수 있는 네트워크의 중앙 위치를 제공하는 하나 이상의 파일 서버를 설정 및 관리할 수 있는 기술을 제공합니다. 네트워크 사용자에게 동일한 파일 및 애플리케이션에 대한 액세스 권한이 필요하거나 조직에서 중앙 집중 방식의 백업 및 파일 관리가 필요한 경우, 파일 및 저장소 서비스 역할과 해당 역할 서비스를 컴퓨터에 추가하여 하나 이상의 컴퓨터를 파일 서버로 설정해야 합니다.|  
 |Windows 클라이언트 컴퓨터|사용자가 클라이언트 컴퓨터를 통해 네트워크의 파일 및 폴더에 액세스할 수 있습니다.|  
   
 

@@ -1,18 +1,17 @@
 ---
 title: 사용자 지정 포트에서 인증서 키 기반 갱신에 대 한 인증서 등록 웹 서비스 구성
-description: ''
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 ms.date: 11/12/2019
 ms.topic: article
 ms.prod: windows-server
-ms.openlocfilehash: 3d3d08d6abe9daa571dd7365815c1fc61f926501
-ms.sourcegitcommit: e5df3fd267352528eaab5546f817d64d648b297f
+ms.openlocfilehash: a21a34448248658d2ceffcad07d2a4e6e17b9348
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74163106"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856346"
 ---
 # <a name="configuring-certificate-enrollment-web-service-for-certificate-key-based-renewal-on-a-custom-port"></a>사용자 지정 포트에서 인증서 키 기반 갱신에 대 한 인증서 등록 웹 서비스 구성
 
@@ -21,7 +20,7 @@ Windows 그룹을 사용한 ankit Tyagi 지원 엔지니어
 
 ## <a name="summary"></a>요약
 
-이 문서에서는 자동 기능을 활용 하기 위해 인증서 키 기반 갱신에 443이 아닌 사용자 지정 포트에서 인증서 등록 정책 웹 서비스 (CEP) 및 인증서 등록 웹 서비스 (CES)를 구현 하는 단계별 지침을 제공 합니다. CEP 및 CES의 갱신 기능.
+이 문서에서는 CEP 및 CES의 자동 갱신 기능을 활용 하기 위해 인증서 키 기반 갱신에 443이 아닌 사용자 지정 포트에서 인증서 등록 정책 웹 서비스 (CEP) 및 인증서 등록 웹 서비스 (CES)를 구현 하는 단계별 지침을 제공 합니다.
 
 또한이 문서에서는 CEP 및 CES가 작동 하는 방식에 대해 설명 하 고 설치 지침을 제공 합니다.
 
@@ -224,7 +223,7 @@ Set-ADUser -Identity cepcessvc -Add @{'msDS-AllowedToDelegateTo'=@('HOST/CA1.con
    
    CN = ENTCA, CN = 등록 서비스, CN = Public Key Services, CN = Services, CN = Configuration, DC = contoso, DC = com
 
-3. CA 개체를 마우스 오른쪽 단추로 클릭 하 고 편집 합니다. 응용 프로그램 설정에서 찾은 CEP 및 CES 서버 Uri와 함께 사용자 지정 포트를 사용 하 여 **mspki-site-name 특성이** 특성을 변경 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+3. CA 개체를 마우스 오른쪽 단추로 클릭 하 고 편집 합니다. 응용 프로그램 설정에서 찾은 CEP 및 CES 서버 Uri와 함께 사용자 지정 포트를 사용 하 여 **mspki-site-name 특성이** 특성을 변경 합니다. 예를 들면 다음과 같습니다.
 
    ```
    140https://cepces.contoso.com:49999/ENTCA_CES_UsernamePassword/service.svc/CES0   
@@ -235,7 +234,7 @@ Set-ADUser -Identity cepcessvc -Add @{'msDS-AllowedToDelegateTo'=@('HOST/CA1.con
 
 #### <a name="configure-the-client-computer"></a>클라이언트 컴퓨터 구성
 
-클라이언트 컴퓨터에서 등록 정책 및 자동 등록 정책을 설정 합니다. 이렇게 하려면 다음 단계를 따르세요.
+클라이언트 컴퓨터에서 등록 정책 및 자동 등록 정책을 설정 합니다. 이렇게 하려면 다음 단계를 따르십시오.
 
 1. **시작** > **실행**을 선택 하 고 **gpedit.msc**를 입력 합니다.
 
@@ -287,7 +286,7 @@ Set-ADUser -Identity cepcessvc -Add @{'msDS-AllowedToDelegateTo'=@('HOST/CA1.con
 certreq -machine -q -enroll -cert <thumbprint> renew
 ```
 
-![명령을 사용합니다.](media/certificate-enrollment-certificate-key-based-renewal-14.png)
+![명령](media/certificate-enrollment-certificate-key-based-renewal-14.png)
 
 ### <a name="method-2"></a>방법 2
 
@@ -297,7 +296,7 @@ certreq -machine -q -enroll -cert <thumbprint> renew
 
 따라서 시간을 오후 8:10 시로 이동 하는 경우 19 일 갱신 기간이 템플릿에서 8 시간으로 설정 되었기 때문에 Certutil-pulse (AE 엔진 트리거)를 실행 하 여 인증서를 등록 합니다.
 
-![명령을 사용합니다.](media/certificate-enrollment-certificate-key-based-renewal-15.png)
+![명령](media/certificate-enrollment-certificate-key-based-renewal-15.png)
  
 테스트가 완료 되 면 시간 설정을 원래 값으로 되돌리고 클라이언트 컴퓨터를 다시 시작 합니다.
 

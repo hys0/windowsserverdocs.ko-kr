@@ -1,7 +1,6 @@
 ---
 ms.assetid: 434fd617-373a-405e-bae4-da324ea83efc
 title: Windows Server 2012 R2 AD FS 배포 가이드
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 7a3cada555fbf22a853e3aaf002c6413b6555fb8
-ms.sourcegitcommit: 5197a87e659589bcc8d2a32069803ae736b02892
+ms.openlocfilehash: b4cf161d9dfcbeeb467ccb0a83cc260c5299057e
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79376280"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80855526"
 ---
 # <a name="configure-a-federation-server"></a>페더레이션 서버 구성
 
@@ -151,7 +150,7 @@ ms.locfileid: "79376280"
 4.  **팜 지정** 페이지에서 WID를 사용 하는 팜의 기본 페더레이션 서버 이름을 제공 하거나 데이터베이스 호스트 이름과 SQL Server를 사용 하는 기존 페더레이션 서버 팜의 데이터베이스 인스턴스 이름을 지정 합니다.  
   
     > [!WARNING]  
-    > Windows Server® 2012 r 2에서는 SQL Server의 기본 인스턴스를 지정 하는 해결 방법이 있습니다. 이 방법에서는 사용자 인터페이스를 사용하는 대신 대신의 단계를 사용 [하 여 Windows PowerShell을 통해 새 페더레이션 서버 팜에서 첫 번째 페더레이션 서버를 구성](Configure-a-Federation-Server.md#BKMK_3)합니다.  
+    > Windows Server&reg; 2012 r 2에서는 SQL Server의 기본 인스턴스를 지정 하는 해결 방법이 있습니다. 이 방법에서는 사용자 인터페이스를 사용하는 대신 대신의 단계를 사용 [하 여 Windows PowerShell을 통해 새 페더레이션 서버 팜에서 첫 번째 페더레이션 서버를 구성](Configure-a-Federation-Server.md#BKMK_3)합니다.  
   
     > [!IMPORTANT]  
     > AD FS 팜을 만들고 SQL Server를 사용하여 구성 데이터를 저장하려면 SQL Server 2008 이상(SQL Server 2012 포함)을 사용하면 됩니다.  
@@ -225,7 +224,7 @@ ms.locfileid: "79376280"
 
 -   [기존 페더레이션 서버 팜에 페더레이션 서버 추가](Configure-a-Federation-Server.md#BKMK_2)
 
-## <a name="BKMK_1"></a>새 페더레이션 서버 팜에서 첫 번째 페더레이션 서버 구성
+## <a name="configure-the-first-federation-server-in-a-new-federation-server-farm"></a><a name="BKMK_1"></a>새 페더레이션 서버 팜에서 첫 번째 페더레이션 서버 구성
 
 ### <a name="to-configure-the-first-federation-server-in-a-new-federation-server-farm-by-using-the-active-directory-federation-service-configuration-wizard"></a>Active Directory 페더레이션 서비스 구성 마법사를 사용 하 여 새 페더레이션 서버 팜에서 첫 번째 페더레이션 서버를 구성 하려면
 
@@ -271,7 +270,7 @@ ms.locfileid: "79376280"
 
 9. **결과** 페이지에서 결과를 검토 하 고 구성이 성공적으로 완료 되었는지 확인 한 다음 **페더레이션 서비스 배포를 완료 하는 데 필요한 다음 단계**를 클릭 합니다. 자세한 내용은 [AD FS 설치를 완료 하기 위한 다음 단계](https://go.microsoft.com/fwlink/p/?LinkId=286704)를 참조 하세요. **닫기**를 클릭하여 마법사를 종료합니다.
 
-### <a name="BKMK_3"></a>Windows PowerShell을 통해 새 페더레이션 서버 팜에서 첫 번째 페더레이션 서버를 구성 하려면
+### <a name="to-configure-the-first-federation-server-in-a-new-federation-server-farm-via-windows-powershell"></a><a name="BKMK_3"></a>Windows PowerShell을 통해 새 페더레이션 서버 팜에서 첫 번째 페더레이션 서버를 구성 하려면
 새 gMSA 계정이 나 기존 도메인 사용자 계정을 사용 하 여 새 페더레이션 서버 팜을 만들 수 있습니다.
 
 -   **새 gMSA 계정을 사용 하 여 새 페더레이션 서버를 만들려면 다음을 수행 합니다.**
@@ -330,7 +329,7 @@ ms.locfileid: "79376280"
         > [!IMPORTANT]
         > AD FS 팜을 만들고 SQL Server를 사용 하 여 구성 데이터를 저장 하려는 경우 SQL Server 2012 및 SQL Server 2014를 비롯 한 SQL Server 2008 이상 버전을 사용할 수 있습니다.
 
-## <a name="BKMK_2"></a>기존 페더레이션 서버 팜에 페더레이션 서버 추가
+## <a name="add-a-federation-server-to-an-existing-federation-server-farm"></a><a name="BKMK_2"></a>기존 페더레이션 서버 팜에 페더레이션 서버 추가
 
 > [!IMPORTANT]
 > 이 섹션의 절차를 시작 하기 전에 [3 단계: AD FS 역할 서비스 설치](../../ad-fs/deployment/Install-the-AD-FS-Role-Service.md)를 완료 했는지 확인 합니다.
@@ -351,7 +350,7 @@ ms.locfileid: "79376280"
 4.  **팜 지정** 페이지에서 WID를 사용 하는 팜의 기본 페더레이션 서버 이름을 제공 하거나 데이터베이스 호스트 이름과 SQL Server를 사용 하는 기존 페더레이션 서버 팜의 데이터베이스 인스턴스 이름을 지정 합니다.
 
     > [!WARNING]
-    > Windows Server® 2012 r 2에서는 SQL Server의 기본 인스턴스를 지정 하는 해결 방법이 있습니다. 이 방법에서는 사용자 인터페이스를 사용하는 대신 대신의 단계를 사용 [하 여 Windows PowerShell을 통해 새 페더레이션 서버 팜에서 첫 번째 페더레이션 서버를 구성](Configure-a-Federation-Server.md#BKMK_3)합니다.
+    > Windows Server&reg; 2012 r 2에서는 SQL Server의 기본 인스턴스를 지정 하는 해결 방법이 있습니다. 이 방법에서는 사용자 인터페이스를 사용하는 대신 대신의 단계를 사용 [하 여 Windows PowerShell을 통해 새 페더레이션 서버 팜에서 첫 번째 페더레이션 서버를 구성](Configure-a-Federation-Server.md#BKMK_3)합니다.
 
     > [!IMPORTANT]
     > AD FS 팜을 만들고 SQL Server를 사용하여 구성 데이터를 저장하려면 SQL Server 2008 이상(SQL Server 2012 포함)을 사용하면 됩니다.
@@ -418,7 +417,7 @@ ms.locfileid: "79376280"
         > [!IMPORTANT]
         > AD FS 팜을 만들고 SQL Server를 사용 하 여 구성 데이터를 저장 하려는 경우 SQL Server 2012 및 SQL Server 2014를 비롯 한 SQL Server 2008 이상 버전을 사용할 수 있습니다.
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 
 [AD FS 배포](../../ad-fs/AD-FS-Deployment.md)
 

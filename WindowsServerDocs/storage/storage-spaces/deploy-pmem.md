@@ -1,7 +1,6 @@
 ---
 title: 영구적 메모리 이해 및 배포
 description: 영구적 메모리가 무엇 인지, Windows Server 2019에서 저장소 공간 다이렉트를 사용 하 여 설정 하는 방법에 대 한 자세한 정보를 제공 합니다.
-keywords: 스토리지 공간 다이렉트, 영구적 메모리, pmem, storage, S2D
 ms.prod: windows-server
 ms.author: adagashe
 ms.technology: storage-spaces
@@ -9,12 +8,12 @@ ms.topic: article
 author: adagashe
 ms.date: 1/27/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: a9070d2e2ab73c7882f4b2ef585ccb01986695bb
-ms.sourcegitcommit: 07c9d4ea72528401314e2789e3bc2e688fc96001
+ms.openlocfilehash: 43268986f0ef42aabc218062ac19f1d98f27be6d
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76822316"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80861036"
 ---
 # <a name="understand-and-deploy-persistent-memory"></a>영구적 메모리 이해 및 배포
 
@@ -22,7 +21,7 @@ ms.locfileid: "76822316"
 
 영구적 메모리 (또는 PMem)는 경제적인 대용량 및 지 속성의 고유한 조합을 제공 하는 새로운 유형의 메모리 기술입니다. 이 문서에서는 PMem의 배경 및 스토리지 공간 다이렉트을 사용 하 여 Windows Server 2019에 배포 하는 단계를 제공 합니다.
 
-## <a name="background"></a>백그라운드
+## <a name="background"></a>배경
 
 PMem은 전원 주기를 통해 해당 콘텐츠를 유지 하는 비 휘발성 RAM (NVDIMM-N)의 유형입니다. 예기치 않은 정전이 발생 하거나 사용자가 시스템을 시작한 후 시스템 작동이 중단 되는 경우에도 메모리 내용이 유지 됩니다. 이 고유한 특징은 PMem을 저장소로 사용할 수도 있음을 의미 합니다. 이것은 사용자가 PMem을 "저장소 클래스 메모리"로 지칭 하는 이유입니다.
 
@@ -38,11 +37,11 @@ PMem은 전원 주기를 통해 해당 콘텐츠를 유지 하는 비 휘발성 
 
 비디오를 자세히 시청 하는 경우 훨씬 더 jaw 된 것은 대기 시간입니다. 13.7 M s IOPS를 초과 하는 경우에도 Windows의 파일 시스템은 40 μs 보다 일관 된 대기 시간을 보고 합니다. (마이크로초의 경우 1 초에 해당 하는 1 1/1000000) 이 속도는 일반적인 모든 플래시 공급 업체 다니며 오늘 광고 하는 것 보다 더 빠른 크기의 순서입니다.
 
-스토리지 공간 다이렉트 Windows Server 2019 및 Intel® Optane™ DC 영구 메모리의는 혁신적인 성능을 제공 합니다. 예측 가능 하 고 매우 짧은 대기 시간과 함께 13.7 M IOPS에 대 한 업계 최고의 HCI 벤치 마크는 6.7 M IOPS의 이전 업계 최고의 벤치 마크를 2 배 이상 제공 합니다. 그 외에도, 이번에는 12 개의 서버 노드만 2 년 전에 25%&mdash;필요 했습니다.
+스토리지 공간 다이렉트 Windows Server 2019 및 Intel&reg; Optane&trade; DC 영구 메모리의는 혁신적인 성능을 제공 합니다. 예측 가능 하 고 매우 짧은 대기 시간과 함께 13.7 M IOPS에 대 한 업계 최고의 HCI 벤치 마크는 6.7 M IOPS의 이전 업계 최고의 벤치 마크를 2 배 이상 제공 합니다. 그 외에도, 이번에는 12 개의 서버 노드만 2 년 전에 25%&mdash;필요 했습니다.
 
 ![IOPS 향상](media/deploy-pmem/iops-gains.png)
 
-테스트 하드웨어는 3 방향 미러링과 구분 된 ReFS 볼륨, **12** x INTEL® S2600WFT, **384 GiB** memory, 2 x 28 코어 "CASCADELAKE," **1.5 TB** Intel® Optane™ DC 영구적 메모리를 캐시로, **32 TB** NVME (4 x 8 TB Intel® DC P4510)를 용량, **2** x Mellanox connectx-3-4 25 Gbps로 사용 하도록 구성 된 12-서버 클러스터 였습니다.
+테스트 하드웨어는 3 방향 미러링과 구분 된 ReFS 볼륨, **12** x INTEL&reg; S2600WFT, **384 GiB** memory, 2 x 28 코어 "CASCADELAKE," **1.5 TB** Intel&reg; Optane&trade; DC 영구적 메모리를 캐시로, **32 TB** NVME (4 x 8 TB Intel&reg; DC P4510)를 용량, **2** x Mellanox connectx-3-4 25 Gbps로 사용 하도록 구성 된 12-서버 클러스터 였습니다.
 
 다음 표에서는 전체 성능 수치를 보여 줍니다.  
 
@@ -56,17 +55,17 @@ PMem은 전원 주기를 통해 해당 콘텐츠를 유지 하는 비 휘발성 
 
 다음 표에서는 Windows Server 2019 및 Windows Server 2016에 대해 지원 되는 영구 메모리 하드웨어를 보여 줍니다.  
 
-| 영구적 메모리 기술                                      | Windows Server 2016 | 시작 |
+| 영구적 메모리 기술                                      | Windows Server 2016 | Windows Server 2019 |
 |-------------------------------------------------------------------|--------------------------|--------------------------|
-| 영구 모드의 **nvdimm-n**                                  | 지원 여부                | 지원 여부                |
-| 앱 직접 모드의 **Intel Optane™ DC 영구 메모리**             | 지원되지 않음            | 지원 여부                |
-| **Intel Optane™ DC 영구적 메모리** (메모리 모드) | 지원 여부            | 지원 여부                |
+| 영구 모드의 **nvdimm-n**                                  | 지원함                | 지원함                |
+| 앱 직접 모드의 **Intel Optane&trade; DC 영구 메모리**             | 지원되지 않음            | 지원함                |
+| **Intel Optane&trade; DC 영구적 메모리** (메모리 모드) | 지원함            | 지원함                |
 
 > [!NOTE]  
 > Intel Optane는 *메모리* (휘발성) 및 *App Direct* (영구) 모드를 모두 지원 합니다.
    
 > [!NOTE]  
-> 여러 네임 스페이스로 나뉜 앱 직접 모드에서 여러 Intel® Optane™ PMem 모듈이 있는 시스템을 다시 시작 하는 경우 관련 된 논리 저장소 디스크의 일부 또는 전체에 대 한 액세스 권한이 손실 될 수 있습니다. 이 문제는 버전 1903 이전 버전의 Windows Server 2019 버전에서 발생 합니다.
+> 여러 네임 스페이스로 나뉜 앱 직접 모드에서 여러 Intel&reg; Optane&trade; PMem 모듈이 있는 시스템을 다시 시작 하는 경우 관련 된 논리 저장소 디스크의 일부 또는 전체에 대 한 액세스 권한이 손실 될 수 있습니다. 이 문제는 버전 1903 이전 버전의 Windows Server 2019 버전에서 발생 합니다.
 >   
 > 이 액세스 손실는 PMem 모듈이 학습 되지 않거나 시스템이 시작 될 때 실패 하는 경우에 발생 합니다. 이러한 경우에는 실패 한 모듈에 실제로 매핑되지 않는 네임 스페이스를 포함 하 여 시스템의 모든 PMem 모듈에 있는 모든 저장소 네임 스페이스에 오류가 발생 합니다.
 >   
@@ -159,7 +158,7 @@ Windows Server 2019에 대 한 스토리지 공간 다이렉트는 영구적 메
 
 ### <a name="understanding-dax"></a>DAX 이해
 
-영구 메모리에 액세스 하는 방법에는 두 가지가 있습니다. 채널은 다음과 같습니다.
+영구 메모리에 액세스 하는 방법에는 두 가지가 있습니다. 가정합니다.
 
 1. **직접 액세스 (DAX)** : 메모리와 같이 작동 하 여 가장 짧은 대기 시간을 가져옵니다. 앱은 스택을 무시 하 고 영구적 메모리를 직접 수정 합니다. DAX는 NTFS와 함께 사용 하는 경우에만 사용할 수 있습니다.
 1. 응용 프로그램 호환성을 위해 저장소와 같이 작동 하는 **액세스를 차단**합니다. 이 구성 데이터는 스택을 통해 흐릅니다. NTFS 및 ReFS와 함께이 구성을 사용할 수 있습니다.

@@ -1,7 +1,6 @@
 ---
 ms.assetid: d254fca3-85a1-424d-ac22-d6687ec3798e
 title: Active Directory 사용자에게 클레임 인식 응용 프로그램 및 서비스에 대한 액세스 제공
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,18 +8,18 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 48436f8e98af965f2bc2b38d296c4a15924e4db1
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 0cb530eacfa8239f3a2a135397e54becfadb602b
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71407954"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80858576"
 ---
 # <a name="provide-your-active-directory-users-access-to-your-claims-aware-applications-and-services"></a>Active Directory 사용자에게 클레임 인식 응용 프로그램 및 서비스에 대한 액세스 제공
 
 \(Active Directory Federation Services에서 계정 파트너 조직의 관리자가\) 배포를 AD FS 하 고\-SSO\-에 대 한 단일 \(sign-on을 제공 하는 배포 목표가 있는 경우 회사 네트워크의 직원 들에 게 호스트 된 리소스에 대 한\) 액세스를 제공 합니다.  
   
--   회사 네트워크의 Active Directory 포리스트에 로그온한 직원이 SSO를 사용하여 해당 조직의 경계 네트워크에 있는 여러 응용 프로그램이나 서비스에 액세스할 수 있습니다. 이러한 응용 프로그램 및 서비스는 AD FS에서 보안이 유지 됩니다.  
+-   회사 네트워크의 Active Directory 포리스트에 로그온한 직원이 SSO를 사용하여 해당 조직의 경계 네트워크에 있는 여러 애플리케이션이나 서비스에 액세스할 수 있습니다. 이러한 애플리케이션 및 서비스는 AD FS에서 보안이 유지 됩니다.  
   
     예를 들어, Fabrikam 웹에 대 한 액세스를 페더레이션 하는 직원이 회사 네트워크를 할 수\-Fabrikam에 대 한 경계 네트워크에서 호스팅되는 응용 프로그램을 기반으로 합니다.  
   
@@ -35,7 +34,7 @@ ms.locfileid: "71407954"
     > [!NOTE]  
     > 또한\) 토큰 생성을 위한 id를 포함 하는 LDAP\) 또는 구조적 쿼리 언어 \(SQL AD FS에 대 한 LDAP (Lightweight Directory Access Protocol \()를 사용할 수 있습니다.  
   
--   **회사 DNS:** Domain Name System이이 구현 \(DNS\) 간단한 호스트 포함 \(A\) 인트라넷 클라이언트가 계정 페더레이션 서버를 찾을 수 있도록 리소스를 기록 합니다. DNS 구현에서 회사 네트워크에 필요한 다른 DNS 레코드를 호스트할 수도 있습니다. 자세한 내용은 참조 [페더레이션 서버에 대 한 이름 확인 요구 사항](Name-Resolution-Requirements-for-Federation-Servers.md)합니다.  
+-   **회사 DNS:** Domain Name System이이 구현 \(DNS\) 간단한 호스트 포함 \(A\) 인트라넷 클라이언트가 계정 페더레이션 서버를 찾을 수 있도록 리소스를 기록 합니다. DNS 구현에서 회사 네트워크에 필요한 다른 DNS 레코드를 호스트할 수도 있습니다. 자세한 내용은 [페더레이션 서버에 대한 이름 확인 요구 사항](Name-Resolution-Requirements-for-Federation-Servers.md)을 참조하세요.  
   
 -   **계정 파트너 페더레이션 서버:** 이 페더레이션 서버는 계정 파트너 포리스트에 있는 도메인에 가입 합니다. 직원 사용자 계정을 인증하고 AD FS 토큰을 생성합니다. 직원의 클라이언트 컴퓨터는이 페더레이션 서버에 대해 Windows 통합 인증을 수행 하 여 AD FS 토큰을 생성 합니다. 자세한 내용은 참조 [검토 하는 계정 파트너의 페더레이션 서버 역할을](Review-the-Role-of-the-Federation-Server-in-the-Account-Partner.md)합니다.  
   

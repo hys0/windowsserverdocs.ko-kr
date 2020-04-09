@@ -1,24 +1,20 @@
 ---
 title: 파일 공유 사용
 description: MultiPoint 서비스에서 파일 공유에 대 한 자세한 정보
-ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 508ad056-8e0c-4d59-a4fa-05775a54125d
 author: evaseydl
 ms.author: evas
 manager: Scottman
-ms.openlocfilehash: aff6501d129696fd78d58bdac52f5a4a9ef54c63
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 73f89700228d912ac029a97dc3951be21a01e45a
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71395445"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859266"
 ---
 # <a name="enable-file-sharing-in-multipoint-services"></a>MultiPoint 서비스에서 파일 공유 사용
 MultiPoint 스테이션의 사용자는 다음 두 가지 방법으로 파일을 공유할 수 있습니다.  

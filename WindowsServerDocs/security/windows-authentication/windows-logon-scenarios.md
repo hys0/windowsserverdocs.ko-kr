@@ -1,24 +1,20 @@
 ---
 title: Windows 로그온 시나리오
 description: Windows Server 보안
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: security-windows-auth
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 66b7c568-67b7-4ac9-a479-a5a3b8a66142
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: 07bfb538e1b43fc0c734b3c59b906c027ef985c9
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 9a953b22b39a20557103fa84a5d6d5e42e753444
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403295"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80861706"
 ---
 # <a name="windows-logon-scenarios"></a>Windows 로그온 시나리오
 
@@ -34,7 +30,7 @@ Windows 운영 체제를 사용 하려면 모든 사용자가 로컬 및 네트�
 
 인증이 작동 하는 방식을 이해 하려면 [Windows 인증 개념](windows-authentication-concepts.md)을 참조 하세요.
 
-이 항목에서는 다음과 같은 시나리오에 대해 설명 합니다.
+이 항목에서는 다음 시나리오에 대해 설명합니다.
 
 -   [대화형 로그온](#BKMK_InteractiveLogon)
 
@@ -44,7 +40,7 @@ Windows 운영 체제를 사용 하려면 모든 사용자가 로컬 및 네트�
 
 -   [생체 인식 로그온](#BKMK_BioLogon)
 
-## <a name="BKMK_InteractiveLogon"></a>대화형 로그온
+## <a name="interactive-logon"></a><a name="BKMK_InteractiveLogon"></a>대화형 로그온
 사용자가 자격 증명 입력 대화 상자에서 자격 증명을 입력 하거나 사용자가 스마트 카드 판독기에 스마트 카드를 삽입 하거나 사용자가 생체 인식 장치와 상호 작용할 때 로그온 프로세스가 시작 됩니다. 사용자는 로컬 사용자 계정이 나 도메인 계정을 사용 하 여 컴퓨터에 로그온 하 여 대화형 로그온을 수행할 수 있습니다.
 
 다음 다이어그램은 대화형 로그온 요소 및 로그온 프로세스를 보여 줍니다.
@@ -53,7 +49,7 @@ Windows 운영 체제를 사용 하려면 모든 사용자가 로컬 및 네트�
 
 **Windows 클라이언트 인증 아키텍처**
 
-### <a name="BKMK_LocaDomainLogon"></a>로컬 및 도메인 로그온
+### <a name="local-and-domain-logon"></a><a name="BKMK_LocaDomainLogon"></a>로컬 및 도메인 로그온
 사용자가 도메인 로그온을 위해 제공 하는 자격 증명에는 로컬 로그온에 필요한 모든 요소 (예: 계정 이름, 암호 또는 인증서)와 Active Directory 도메인 정보가 포함 됩니다. 이 프로세스는 사용자의 로컬 컴퓨터 또는 Active Directory 도메인에서 보안 데이터베이스에 대 한 사용자의 id를 확인 합니다. 도메인의 사용자에 대해서는이 필수 로그온 프로세스를 끌 수 없습니다.
 
 사용자는 다음 두 가지 방법 중 하나로 컴퓨터에 대화형 로그온을 수행할 수 있습니다.
@@ -74,12 +70,12 @@ Windows 운영 체제를 사용 하려면 모든 사용자가 로컬 및 네트�
 
 도메인 로그온은 로컬 및 도메인 리소스에 액세스할 수 있는 권한을 사용자에 게 부여 합니다. 도메인을 로그온 하려면 사용자에 게 Active Directory의 사용자 계정이 있어야 합니다. 컴퓨터는 Active Directory 도메인에 계정이 있어야 하 고 네트워크에 물리적으로 연결 되어 있어야 합니다. 또한 사용자에 게 로컬 컴퓨터 또는 도메인에 로그온 할 수 있는 사용자 권한이 있어야 합니다. 도메인 사용자 계정 정보 및 그룹 멤버 자격 정보는 도메인 및 로컬 리소스에 대 한 액세스를 관리 하는 데 사용 됩니다.
 
-### <a name="BKMK_RemoteLogon"></a>원격 로그온
+### <a name="remote-logon"></a><a name="BKMK_RemoteLogon"></a>원격 로그온
 Windows에서 원격 로그온을 통해 다른 컴퓨터에 액세스 하는 원격 데스크톱 프로토콜 (RDP)를 사용 합니다. 사용자가 원격 연결을 시도 하기 전에 클라이언트 컴퓨터에 이미 로그온 되어 있어야 하므로 대화형 로그온 프로세스가 성공적으로 완료 되었습니다.
 
 RDP는 사용자가 원격 데스크톱 클라이언트를 사용 하 여 입력 하는 자격 증명을 관리 합니다. 이러한 자격 증명은 대상 컴퓨터용 이며 사용자에 게는 해당 대상 컴퓨터의 계정이 있어야 합니다. 또한 원격 연결을 허용 하도록 대상 컴퓨터를 구성 해야 합니다. 대상 컴퓨터 자격 증명을 전송 하 여 인증 프로세스를 수행 합니다. 인증에 성공 하면 사용자가 제공 된 자격 증명을 사용 하 여 액세스할 수 있는 로컬 및 네트워크 리소스에 연결 됩니다.
 
-## <a name="BKMK_NetworkLogon"></a>네트워크 로그온
+## <a name="network-logon"></a><a name="BKMK_NetworkLogon"></a>네트워크 로그온
 네트워크 로그온은 사용자, 서비스 또는 컴퓨터 인증을 수행한 후에만 사용할 수 있습니다. 네트워크 로그온 중에 프로세스는 자격 증명 항목 대화 상자를 사용 하 여 데이터를 수집 하지 않습니다. 대신 이전에 설정 된 자격 증명 또는 자격 증명을 수집 하는 다른 방법이 사용 됩니다. 이 프로세스는 사용자가 액세스 하려고 하는 모든 네트워크 서비스에 대 한 사용자의 id를 확인 합니다. 대체 자격 증명을 제공 해야 하는 경우가 아니면이 프로세스는 일반적으로 사용자에 게 표시 되지 않습니다.
 
 이러한 종류의 인증을 제공 하기 위해 보안 시스템에는 다음과 같은 인증 메커니즘이 포함 됩니다.
@@ -96,7 +92,7 @@ RDP는 사용자가 원격 데스크톱 클라이언트를 사용 하 여 입력
 
 요소 및 프로세스에 대 한 자세한 내용은 위의 대화형 로그온 다이어그램을 참조 하세요.
 
-## <a name="BKMK_SmartCardLogon"></a>스마트 카드 로그온
+## <a name="smart-card-logon"></a><a name="BKMK_SmartCardLogon"></a>스마트 카드 로그온
 스마트 카드는 로컬 계정이 아닌 도메인 계정에만 로그온 하는 데 사용할 수 있습니다. 스마트 카드 인증을 사용 하려면 Kerberos 인증 프로토콜을 사용 해야 합니다. Windows 2000 서버에서 도입 된 Windows 기반 운영 체제에서 Kerberos 프로토콜의 초기 인증 요청에 대 한 공개 키 확장을 구현 합니다. 공유 비밀 키 암호화와 달리 공개 키 암호화는 비대칭입니다. 즉, 암호화 하는 데 사용할 다른 두 개의 키가 필요 합니다. 두 작업을 모두 수행 하는 데 필요한 키를 함께 사용 하 여 개인/공개 키 쌍을 구성 합니다.
 
 사용자는 일반적인 로그온 세션을 시작 하기 위해 사용자와 기본 Kerberos 프로토콜 인프라로 알려진 정보를 제공 하 여 자신의 id를 증명 해야 합니다. 비밀 정보는 사용자의 암호에서 파생 된 암호화 공유 키입니다. 공유 비밀 키는 대칭 이므로 암호화와 암호 해독 모두에 동일한 키가 사용 됩니다.
@@ -111,10 +107,10 @@ RDP는 사용자가 원격 데스크톱 클라이언트를 사용 하 여 입력
 
 Windows에서 스마트 카드 로그온 프로세스에 대 한 자세한 내용은 [windows에서 스마트 카드 로그인이 작동 하는 방식](https://technet.microsoft.com/library/ff404285.aspx)을 참조 하세요.
 
-## <a name="BKMK_BioLogon"></a>생체 인식 로그온
+## <a name="biometric-logon"></a><a name="BKMK_BioLogon"></a>생체 인식 로그온
 장치는 지문과 같은 아티팩트의 디지털 특성을 캡처하고 빌드하는 데 사용 됩니다. 그런 다음이 디지털 표현은 동일한 아티팩트의 샘플과 비교 되며, 두 개의 비교가 성공적으로 완료 되 면 인증이 발생할 수 있습니다. 이 항목의 시작 부분에 있는 **적용 대상** 목록에 지정 된 운영 체제 중 하나를 실행 하는 컴퓨터는이 로그온 형식을 허용 하도록 구성할 수 있습니다. 그러나 생체 인식 로그온이 로컬 로그온에 대해서만 구성 된 경우 사용자는 Active Directory 도메인에 액세스할 때 도메인 자격 증명을 제공 해야 합니다.
 
-## <a name="additional-resources"></a>추가 자료
+## <a name="additional-resources"></a>추가 리소스
 Windows에서 로그온 프로세스 중에 제출 된 자격 증명을 관리 하는 방법에 대 한 자세한 내용은 [Windows 인증의 자격 증명 관리](https://technet.microsoft.com/library/dn169014.aspx)를 참조 하세요.
 
 [Windows 로그온 및 인증 기술 개요](https://technet.microsoft.com/library/dn169029.aspx)

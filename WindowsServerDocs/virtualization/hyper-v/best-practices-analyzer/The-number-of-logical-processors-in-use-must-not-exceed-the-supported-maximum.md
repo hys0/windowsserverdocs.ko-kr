@@ -2,20 +2,19 @@
 title: 지원 되는 최대 사용의 논리적 프로세서 수가 초과할 수 없습니다.
 description: 이 모범 사례 분석기 규칙에서 보고 한 문제를 해결 하는 지침을 제공 합니다.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 66df8b02-91d1-424b-8934-a39c214d530e
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: 380daf333c041c8702228a60c26ab6e76e4cf3e1
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b6cd948c47e58dec919cd946ad701f70403d6af3
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71393401"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859296"
 ---
 # <a name="the-number-of-logical-processors-in-use-must-not-exceed-the-supported-maximum"></a>지원 되는 최대 사용의 논리적 프로세서 수가 초과할 수 없습니다.
 
@@ -23,16 +22,16 @@ ms.locfileid: "71393401"
 
 모범 사례 및 검사에 대한 자세한 내용은 [모범 사례 분석기](https://go.microsoft.com/fwlink/?LinkId=122786)를 참조하세요.  
   
-|속성|설명|  
+|속성|세부 정보|  
 |-|-|  
 |**운영 체제**|Windows Server 2016|  
 |**제품/기능**|Hyper-V|  
-|**Severity**|Error|  
+|**등급**|오류|  
 |**범주**|정책|  
   
 다음 섹션에서는 기울임꼴이이 문제에 대 한 모범 사례 분석기 도구에 나타나는 텍스트를 나타냅니다.  
   
-## <a name="issue"></a>문제점  
+## <a name="issue"></a>문제  
   
 *서버가 너무 많은 논리적 프로세서로 구성 되었습니다.*  
   
@@ -40,7 +39,7 @@ ms.locfileid: "71393401"
   
 *Microsoft는이 컴퓨터에서 Hyper-v 실행을 지원 하지 않습니다.*  
   
-## <a name="resolution"></a>해결 방법  
+## <a name="resolution"></a>해상도  
   
 *이 컴퓨터에서 일부 프로세서를 제거 하거나 msconfig를 사용 하 여 사용 가능한 프로세서 수를 제한 하십시오.*  
   

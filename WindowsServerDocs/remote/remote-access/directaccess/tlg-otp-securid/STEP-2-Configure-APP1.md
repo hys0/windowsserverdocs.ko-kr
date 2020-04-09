@@ -2,22 +2,18 @@
 title: 2 단계 APP1 구성
 description: 이 항목은 테스트 랩 가이드-OTP 인증을 사용 하는 DirectAccess 시연 및 Windows Server 2016에 대 한 RSA SecurID의 일부입니다.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-da
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 19a7a4a6-9a04-42ea-a5d0-ecb28a34dbaa
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: dbeba9f1646cfb13d709cb4f7987802f69708adb
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 6d8720c71efba6f461aa0789fc2a143d1b1dab3f
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80314420"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80855586"
 ---
 # <a name="step-2-configure-app1"></a>2 단계 APP1 구성
 

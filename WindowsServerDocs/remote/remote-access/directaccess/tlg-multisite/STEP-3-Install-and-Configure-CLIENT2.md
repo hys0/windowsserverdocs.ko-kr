@@ -2,22 +2,18 @@
 title: 3 단계 CLIENT2 설치 및 구성
 description: 이 항목은 테스트 랩 가이드-Windows Server 2016에 대 한 DirectAccess 멀티 사이트 배포 시연의 일부입니다.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-da
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f009fdd1-94e6-4ccb-8c6e-609a5394db53
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: ad09bdef0fba9f8114a09e3ddadb8237be2b7d9f
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: c651a9173fa15856e62bf09767ed90375acefcd5
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80308701"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80861596"
 ---
 # <a name="step-3-install-and-configure-client2"></a>3 단계 CLIENT2 설치 및 구성
 

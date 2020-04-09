@@ -2,19 +2,18 @@
 title: 복제 요청을 허용 하도록 복제 서버를 구성 해야
 description: 이 모범 사례 분석기 규칙에서 보고 한 문제를 해결 하는 지침을 제공 합니다.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: 54868d4db2dccc893bd2897134d9125446873384
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 09bb573bbb091d1b167f3c354be4d6448476e26d
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71366717"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80857956"
 ---
 # <a name="a-replica-server-must-be-configured-to-accept-replication-requests"></a>복제 요청을 허용 하도록 복제 서버를 구성 해야
 
@@ -22,22 +21,22 @@ ms.locfileid: "71366717"
 
 모범 사례 분석기 및 검사에 대한 자세한 내용은 [모범 사례 분석기 검사 실행 및 검사 결과 관리](https://go.microsoft.com/fwlink/p/?LinkID=223177)를 참조하세요.  
   
-|속성|설명|
+|속성|세부 정보|
 |-|-|  
 |**운영 체제**|Windows Server 2016|  
 |**제품/기능**|Hyper-V|  
-|**Severity**|Error|  
-|**범주**|Configuration|  
+|**등급**|오류|  
+|**범주**|구성|  
   
 다음 섹션에서는 기울임꼴이이 문제에 대 한 모범 사례 분석기 도구에 표시 되는 UI 텍스트를 나타냅니다.
   
-## <a name="issue"></a>문제점  
+## <a name="issue"></a>문제  
 *이 컴퓨터는 Hyper-v 복제본 서버로 지정 되지만 주 서버에서 들어오는 복제 데이터를 허용 하도록 구성 되어 있지 않습니다.*  
   
 ## <a name="impact"></a>영향  
 *이 서버는 주 서버에서 복제 트래픽을 허용할 수 없습니다.*  
   
-## <a name="resolution"></a>해결 방법  
+## <a name="resolution"></a>해상도  
 *Hyper-v 관리자를 사용 하 여이 복제본 서버가 복제 데이터를 허용 해야 하는 주 서버를 지정 합니다.*  
   
 #### <a name="create-authorization-entries-using-hyper-v-manager"></a>Hyper-v 관리자를 사용 하 여 권한 부여 항목 만들기  

@@ -6,16 +6,16 @@ ms.prod: windows-server
 ms.technology: networking-ras
 ms.topic: article
 ms.date: 07/24/2019
-ms.author: lizross, v-tea
-author: eross-msft
+ms.author: v-tea
+author: Teresa-MOTIV
 ms.localizationpriority: medium
 ms.reviewer: deverette
-ms.openlocfilehash: 30a8e3053f263ffad3be940a52e845fb7159dde1
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 74cda6a899d69a951c34a9a88e2f51ef1590b621
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80313292"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859496"
 ---
 # <a name="advanced-features-of-always-on-vpn"></a>Always On VPN의 고급 기능
 
@@ -67,7 +67,7 @@ ms.locfileid: "80313292"
 |운영 체제 버전 |릴리스  |
 |---------|---------|
 |Windows Server, 버전 1903  |[KB4501375](https://support.microsoft.com/help/4501375/windows-10-update-kb4501375) |
-|시작<br />Windows Server, 버전 1809  |[KB4505658](https://support.microsoft.com/help/4505658/windows-10-update-kb4505658)  |
+|Windows Server 2019<br />Windows Server, 버전 1809  |[KB4505658](https://support.microsoft.com/help/4505658/windows-10-update-kb4505658)  |
 |Windows Server, 버전 1803  |[KB4507466](https://support.microsoft.com/help/4507466/windows-10-update-kb4507466)  |
 |Windows Server, 버전 1709  |[KB4507465](https://support.microsoft.com/help/4507465/windows-10-update-kb4507465)  |
 |Windows Server 2016, 버전 1607  |[KB4503294](https://support.microsoft.com/help/4503294/windows-10-update-kb4503294) |
@@ -76,7 +76,7 @@ ms.locfileid: "80313292"
 
 1. Windows 업데이트를 사용할 수 있게 되 면 설치 합니다.
 1. 사용 하는 모든 VPN 클라이언트 및 RRAS 서버 인증서에 CDP 항목이 있고 RRAS 서버가 각 Crl에 연결할 수 있는지 확인 합니다.
-1. RRAS 서버에서 **VpnAuthProtocol** PowerShell cmdlet을 사용 하 여 **RootCertificateNameToAccept** 매개 변수를 구성 합니다.<br /><br />
+1. RRAS 서버에서 **VpnAuthProtocol** PowerShell cmdlet을 사용 하 여 **RootCertificateNameToAccept** 매개 변수를 구성 합니다.<p>
    다음 예에서는이 작업을 수행 하는 명령을 나열 합니다. 예제에서 **CN = Contoso Root 인증 기관** 은 루트 인증 기관의 고유 이름을 나타냅니다. 
    ``` powershell
    $cert1 = ( Get-ChildItem -Path cert:LocalMachine\root | Where-Object -FilterScript { $_.Subject -Like "*CN=Contoso Root Certification Authority*" } )

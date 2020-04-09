@@ -1,85 +1,84 @@
 ---
 title: 네트워크 어댑터에 대 한 성능 기록
 ms.author: cosdar
-ms.manager: eldenc
+manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
 ms.date: 02/02/2018
-Keywords: 저장소 공간 다이렉트
 ms.localizationpriority: medium
-ms.openlocfilehash: 340999a8f440975d3736277b1a30dddbb942785d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e2379ce540cb26c02bc79f591d2a597874ab287c
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59849984"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856216"
 ---
 # <a name="performance-history-for-network-adapters"></a>네트워크 어댑터에 대 한 성능 기록
 
-> 적용 대상: Windows Server Insider Preview
+> 적용 대상: Windows Server 2019
 
-이 하위 항목의 [저장소 공간 다이렉트에 대 한 성능 기록을](performance-history.md) 네트워크 어댑터에 대해 수집 된 성능 기록 세부 정보에 설명 합니다. 네트워크 어댑터 성능 기록은 클러스터의 모든 서버에서 모든 실제 네트워크 어댑터에 대해 사용할 수 있습니다. 원격 직접 메모리 액세스 (RDMA) 성능 기록은 사용 하도록 설정 하는 RDMA를 사용 하 여 모든 실제 네트워크 어댑터에 사용할 수입니다.
+[스토리지 공간 다이렉트에 대 한 성능 기록](performance-history.md) 의이 하위 항목에서는 네트워크 어댑터에 대해 수집 된 성능 기록에 대해 자세히 설명 합니다. 네트워크 어댑터 성능 기록은 클러스터의 모든 서버에 있는 모든 실제 네트워크 어댑터에 대해 사용할 수 있습니다. Rdma를 사용 하는 모든 실제 네트워크 어댑터에 대해 RDMA (원격 직접 메모리 액세스) 성능 기록을 사용할 수 있습니다.
 
    > [!NOTE]
-   > 성능 기록 아래에 있는 서버에서 네트워크 어댑터에 대해 수집할 수 없습니다. 컬렉션을 고 서버가 다시 시작 되 면 자동으로 재개 합니다.
+   > 다운 된 서버의 네트워크 어댑터에 대 한 성능 기록을 수집할 수 없습니다. 서버를 다시 시작 하면 수집이 자동으로 다시 시작 됩니다.
 
 ## <a name="series-names-and-units"></a>계열 이름 및 단위
 
-이 시리즈는 모든 적합 한 네트워크 어댑터에 대해 수집 됩니다.
+이러한 시리즈는 적합 한 모든 네트워크 어댑터에 대해 수집 됩니다.
 
-| 시리즈                               | 단위            |
+| 계열                               | 단위            |
 |--------------------------------------|-----------------|
-| `netadapter.bandwidth.inbound`       | 비트 / 초 |
-| `netadapter.bandwidth.outbound`      | 비트 / 초 |
-| `netadapter.bandwidth.total`         | 비트 / 초 |
-| `netadapter.bandwidth.rdma.inbound`  | 비트 / 초 |
-| `netadapter.bandwidth.rdma.outbound` | 비트 / 초 |
-| `netadapter.bandwidth.rdma.total`    | 비트 / 초 |
+| `netadapter.bandwidth.inbound`       | 초당 비트 수 |
+| `netadapter.bandwidth.outbound`      | 초당 비트 수 |
+| `netadapter.bandwidth.total`         | 초당 비트 수 |
+| `netadapter.bandwidth.rdma.inbound`  | 초당 비트 수 |
+| `netadapter.bandwidth.rdma.outbound` | 초당 비트 수 |
+| `netadapter.bandwidth.rdma.total`    | 초당 비트 수 |
 
    > [!NOTE]
-   > 네트워크 어댑터 성능 기록에 기록 됩니다 **비트** 초당 초당 바이트 수 없습니다. 10 GbE 네트워크 어댑터가 도입 되어 1,000,000,000 비트 약를 주고받을 수 하나 125,000,000 바이트 = 1.25 GB 이론적으로 최대 초당 =.
+   > 네트워크 어댑터 성능 기록은 초당 바이트가 아닌 **비트** 수로 기록 됩니다. 1 10 GbE 네트워크 어댑터는 이론적 최대값으로 약 10억 비트 = 1억2500만 바이트 = 초당 1.25 GB를 보내고 받을 수 있습니다.
 
-## <a name="how-to-interpret"></a>해석 하는 방법
+## <a name="how-to-interpret"></a>해석 방법
 
-| 시리즈                               | 해석 하는 방법                                                      |
+| 계열                               | 해석 방법                                                      |
 |--------------------------------------|-----------------------------------------------------------------------|
-| `netadapter.bandwidth.inbound`       | 네트워크 어댑터에서 받은 데이터의 비율입니다.                         |
-| `netadapter.bandwidth.outbound`      | 네트워크 어댑터에서 전송 되는 데이터의 비율입니다.                             |
-| `netadapter.bandwidth.total`         | 총 데이터 변동률 받거나 네트워크 어댑터에서 전송 합니다.           |
-| `netadapter.bandwidth.rdma.inbound`  | 네트워크 어댑터에서 RDMA를 통한 받은 데이터의 비율입니다.               |
-| `netadapter.bandwidth.rdma.outbound` | 네트워크 어댑터에서 RDMA를 통한 전송 되는 데이터의 비율입니다.                   |
-| `netadapter.bandwidth.rdma.total`    | 총 데이터 변동률 받거나 네트워크 어댑터에서 RDMA를 통한 전송 합니다. |
+| `netadapter.bandwidth.inbound`       | 네트워크 어댑터에서 받은 데이터의 요금입니다.                         |
+| `netadapter.bandwidth.outbound`      | 네트워크 어댑터에서 보낸 데이터의 요금입니다.                             |
+| `netadapter.bandwidth.total`         | 네트워크 어댑터에서 받거나 보낸 데이터의 총 비율입니다.           |
+| `netadapter.bandwidth.rdma.inbound`  | 네트워크 어댑터에서 RDMA를 통해 받은 데이터의 요금입니다.               |
+| `netadapter.bandwidth.rdma.outbound` | 네트워크 어댑터에서 RDMA를 통해 보낸 데이터의 요금입니다.                   |
+| `netadapter.bandwidth.rdma.total`    | 네트워크 어댑터에서 RDMA를 통해 받거나 보낸 데이터의 총 비율입니다. |
 
-## <a name="where-they-come-from"></a>어디에서 생겨날
+## <a name="where-they-come-from"></a>원본 위치
 
-`bytes.*` 시리즈에서 수집 되는 `Network Adapter` 네트워크 어댑터를 설치한 서버를 설정 하는 성능 카운터, 네트워크 어댑터 당 하나의 인스턴스.
+`bytes.*` 시리즈는 네트워크 어댑터가 설치 된 서버에 설정 된 `Network Adapter` 성능 카운터에서 수집 되며 네트워크 어댑터 당 하나의 인스턴스입니다.
 
-| 시리즈                           | 원본 카운터           |
+| 계열                           | 원본 카운터           |
 |----------------------------------|--------------------------|
 | `netadapter.bandwidth.inbound`   | 8 × `Bytes Received/sec` |
 | `netadapter.bandwidth.outbound`  | 8 × `Bytes Sent/sec`     |
 | `netadapter.bandwidth.total`     | 8 × `Bytes Total/sec`    |
 
-`rdma.*` 시리즈에서 수집 되는 `RDMA Activity` 네트워크 어댑터를 설치한 서버를 설정 하는 성능 카운터를 사용 하도록 설정 하는 rdma 네트워크 어댑터 당 하나의 인스턴스.
+`rdma.*` 시리즈는 네트워크 어댑터가 설치 된 서버에 설정 된 `RDMA Activity` 성능 카운터에서 수집 되며, RDMA를 사용 하도록 설정 된 네트워크 어댑터 당 하나의 인스턴스입니다.
 
-| 시리즈                               | 원본 카운터           |
+| 계열                               | 원본 카운터           |
 |--------------------------------------|--------------------------|
 | `netadapter.bandwidth.rdma.inbound`  | 8 × `Inbound bytes/sec`  |
 | `netadapter.bandwidth.rdma.outbound` | 8 × `Outbound bytes/sec` |
-| `netadapter.bandwidth.rdma.total`    | 8 × *위의 합계*   |
+| `netadapter.bandwidth.rdma.total`    | 위의 8 × *합계*   |
 
    > [!NOTE]
-   > 카운터는 샘플링 되지 전체 간격을 측정 됩니다. 예를 들어, 네트워크 어댑터 유휴 상태인 경우 9 초 있지만 200 bits 전송에 대 한 10th 1 초 동안에서 해당 `netadapter.bandwidth.total` 으로 기록 됩니다 초당 20 bits 평균 10 초 간격입니다. 이렇게 하면 성능 기록과 모든 활동을 캡처하고 노이즈를 강력 합니다.
+   > 카운터는 샘플링 되지 않고 전체 간격으로 측정 됩니다. 예를 들어 네트워크 어댑터가 9 초 동안 유휴 상태 이지만 10 초 안에 200 비트를 전송 하는 경우 해당 `netadapter.bandwidth.total`는 10 초 간격 동안 평균 초당 20 비트로 기록 됩니다. 이렇게 하면 성능 기록이 모든 활동을 캡처하고 소음에 대해 강력 하 게 됩니다.
 
 ## <a name="usage-in-powershell"></a>PowerShell에서 사용
 
-사용 된 [Get-netadapter](https://docs.microsoft.com/powershell/module/netadapter/get-netadapter) cmdlet:
+[Get-netadapter](https://docs.microsoft.com/powershell/module/netadapter/get-netadapter) cmdlet을 사용 합니다.
 
 ```PowerShell
 Get-NetAdapter <Name> | Get-ClusterPerf
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [저장소 공간 다이렉트에 대 한 성능 기록](performance-history.md)
+- [스토리지 공간 다이렉트에 대 한 성능 기록](performance-history.md)

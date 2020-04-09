@@ -1,38 +1,34 @@
 ---
 title: 스테이션용 Windows 10 Enterprise 가상 데스크톱 만들기
 description: 스테이션에 대해 Windows Server 2016 데스크톱을 만드는 방법 알아보기
-ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 63f08b5b-c735-41f4-b6c8-411eff85a4ab
 author: evaseydl
 ms.author: evas
 manager: scottman
-ms.openlocfilehash: cd08caef8228a4d20c6d5f4a40fe5bd90aacbe40
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 40af6ea98aa91730f78bde8a71f2ad9a741a6490
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71395541"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859806"
 ---
 # <a name="create-windows-10-enterprise-virtual-desktops-for-stations"></a>스테이션용 Windows 10 Enterprise 가상 데스크톱 만들기
-MultiPoint 서비스에서이 옵션 구성은 필수 응용 프로그램가 각 사용자에 대 한 클라이언트 운영 체제의 자체 인스턴스를 필요로 하는 경우에 주로 사용 됩니다. Windows 서버에 설치할 수 없는 응용 프로그램 및 여러 인스턴스를 동일한 호스트 컴퓨터에서 실행 되지 않는 응용 프로그램을 예로 들 수 있습니다.  
+MultiPoint 서비스에서이 옵션 구성은 필수 애플리케이션가 각 사용자에 대 한 클라이언트 운영 체제의 자체 인스턴스를 필요로 하는 경우에 주로 사용 됩니다. Windows 서버에 설치할 수 없는 애플리케이션 및 여러 인스턴스를 동일한 호스트 컴퓨터에서 실행 되지 않는 애플리케이션을 예로 들 수 있습니다.  
   
 > [!NOTE]  
 > 이러한 가상 데스크톱을 VDI 라고도 되므로 기본 MultiPoint 서비스 데스크톱 세션 보다 훨씬 더 많은 리소스 집약적 기본 MultiPoint 서비스 세션을 사용 하는 것이 좋습니다 가능한 경우.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 조건  
 시스템을 스테이션 가상 데스크톱 만들기, MultiPoint 서비스 하는지 확인 하도록 준비 하려면 다음 요구 사항을 충족 합니다.      
   
 |하드웨어|요구 사항|         |
 |------------|----------------|----------------| 
 |CPU (멀티미디어)|1 코어 또는 가상 컴퓨터 별로 스레드|  
-|솔리드 스테이트 드라이브 (SSD)|용량 > = 스테이션 당 20GB + 40GB MultiPoint 서비스 호스트 운영 체제에 대 한<br /><br />임의 읽기\/쓰기 IOPS > 스테이션 당 3 K =|  
+|솔리드 스테이트 드라이브 (SSD)|용량 > = 스테이션 당 20GB + 40GB MultiPoint 서비스 호스트 운영 체제에 대 한<p>임의 읽기\/쓰기 IOPS > 스테이션 당 3 K =|  
 |RAM|Windows MultiPoint Server 호스트 운영 체제에 대 한 2GB + 2GB 스테이션|  
 |그래픽|DX11|  
 |BIOS|가상화 – SLAT 두 번째 수준 주소 변환 ()를 사용 하도록 구성 하는 BIOS CPU 설정|  
@@ -83,7 +79,7 @@ MultiPoint 서비스에서이 옵션 구성은 필수 응용 프로그램가 각
   
 8. 클릭 **확인**, 템플릿 작성이 완료 될 때까지 기다립니다.  
   
-9. 새 서식 파일에 나열 됩니다는 **가상 데스크톱** 탭 합니다. 서식 파일 해제 됩니다.  
+9. 새 템플릿이 **가상 데스크톱** 탭에 나열 됩니다. 템플릿이 해제 됩니다.  
   
 다음 단계에서는 소프트웨어 및 가상 데스크톱에서 원하는 설정을 사용 하 여 서식 파일을 구성 하는 것입니다. 서식 파일에서 모든 가상 데스크톱을 만들기 전에이 수행 해야 합니다.  
   
@@ -102,7 +98,7 @@ MultiPoint 서비스에서이 옵션 구성은 필수 응용 프로그램가 각
   
     Hyper-v에서 템플릿이 열립니다 **VM 연결** 창 및 자동 로그온 내장 된 Administrator 계정을 사용 하 여 수행 됩니다.  
   
-5.  이 시점에서 응용 프로그램 및 소프트웨어 업데이트를 설치 하 고, 설정을 변경 하 고, 관리자 프로필을 업데이트할 수 있습니다. 템플릿의 기본 제공 관리자 프로필에 대 한 모든 변경 내용은 템플릿에서 만든 가상 데스크톱 스테이션의 기본 사용자 프로필로 복사 됩니다.  
+5.  이 시점에서 애플리케이션 및 소프트웨어 업데이트를 설치 하 고, 설정을 변경 하 고, 관리자 프로필을 업데이트할 수 있습니다. 템플릿의 기본 제공 관리자 프로필에 대 한 모든 변경 내용은 템플릿에서 만든 가상 데스크톱 스테이션의 기본 사용자 프로필로 복사 됩니다.  
   
     도메인에 대 여 스테이션을 연결 하는 경우 로컬 사용자 계정을 만들고 사용자 지정 하는 동안 로컬 관리자 그룹에 추가 하는 것이 좋습니다.  
   
