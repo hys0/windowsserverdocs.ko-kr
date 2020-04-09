@@ -1,24 +1,20 @@
 ---
 title: wbadmin get 디스크
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: 로컬 컴퓨터에 대해 현재 온라인 상태인 내부 및 외부 디스크를 나열 하는 wbadmin get disks에 대 한 Windows 명령 항목입니다.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 320edef1-df11-446b-a183-9f81811ef938
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3440e061a97e54c32179ef7d71f469093e9fae00
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 0243edce77febddccc3497df34685113f2a1b48f
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71362421"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80829766"
 ---
 # <a name="wbadmin-get-disks"></a>wbadmin get 디스크
 
@@ -34,12 +30,12 @@ ms.locfileid: "71362421"
 wbadmin get disks
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 이 하위 명령에 매개 변수가 없습니다.
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
--   [명령줄 구문 키](command-line-syntax-key.md)
+-   - [명령줄 구문 키](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
 -   [Get WBDisk](https://technet.microsoft.com/library/jj902446.aspx) cmdlet

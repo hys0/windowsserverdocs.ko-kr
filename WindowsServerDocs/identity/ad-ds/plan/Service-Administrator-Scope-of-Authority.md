@@ -1,7 +1,6 @@
 ---
 ms.assetid: da7b6dcf-53ec-4394-88c0-c087d92f3893
 title: 서비스 관리자 권한 범위
-description: ''
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 2c54279f591545c6207dfec1536f16e29e69aa99
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 3a891ade46fdee1dffc35df31a11c6d138e71e8a
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71408666"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80821896"
 ---
 # <a name="service-administrator-scope-of-authority"></a>서비스 관리자 권한 범위
 
@@ -38,7 +37,7 @@ Active Directory 포리스트에 참여 하도록 선택 하는 경우 포리스
   
 -   포리스트 소유자는 그룹의 관심사에 맞게 신뢰 될 수 있으며 그룹에 대해 악의적으로 작업할 이유가 없습니다.  
   
--   포리스트 소유자는 도메인 컨트롤러에 대 한 실제 액세스를 적절 하 게 제한 합니다. 포리스트 내의 도메인 컨트롤러는 서로 격리 시킬 수 없습니다. 단일 도메인 컨트롤러에 대 한 물리적 액세스 권한이 있는 공격자가 디렉터리 데이터베이스를 오프 라인으로 변경 하 고,이를 통해 포리스트의 모든 도메인에 대 한 작업을 방해 하거나, 포리스트에 저장 된 데이터를 보거나 조작할 수 있습니다. 및은 포리스트에 가입 된 컴퓨터에 저장 된 데이터를 보거나 조작 합니다. 이러한 이유로 도메인 컨트롤러에 대 한 실제 액세스는 신뢰할 수 있는 직원으로 제한 되어야 합니다.  
+-   포리스트 소유자는 도메인 컨트롤러에 대 한 실제 액세스를 적절 하 게 제한 합니다. 포리스트 내의 도메인 컨트롤러는 서로 격리 시킬 수 없습니다. 단일 도메인 컨트롤러에 대 한 물리적 액세스 권한이 있는 공격자는 디렉터리 데이터베이스를 오프 라인으로 변경 하 고,이를 통해 포리스트에 있는 모든 도메인의 작업을 방해 하거나, 포리스트에 있는 모든 위치에 저장 된 데이터를 보거나 조작 하 고, 포리스트에 연결 된 모든 컴퓨터에 저장 된 데이터를 보거나 조작할 수 있습니다. 이러한 이유로 도메인 컨트롤러에 대 한 실제 액세스는 신뢰할 수 있는 직원으로 제한 되어야 합니다.  
   
 -   트러스트 된 서비스 관리자가 시스템의 보안을 손상 시킬 수 있는 잠재적인 위험을 이해 하 고 허용 합니다.  
   

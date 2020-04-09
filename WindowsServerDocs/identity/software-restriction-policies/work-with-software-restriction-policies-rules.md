@@ -1,24 +1,20 @@
 ---
 title: 소프트웨어 제한 정책 규칙 사용
 description: Windows Server 보안
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: security-software-restriction-policies
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4a8047d5-9bb9-4bed-bc8f-583a237731e2
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: bb5e56fe541a06b1100de2f25fc10f4db46b8d24
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: 249426f7b0ef1b427d903e8d0cac9ca2e0747b68
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79322955"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80820986"
 ---
 # <a name="work-with-software-restriction-policies-rules"></a>소프트웨어 제한 정책 규칙 사용
 
@@ -47,7 +43,7 @@ ms.locfileid: "79322955"
 
 소프트웨어 제한 정책을 관리 하는 다른 작업에 대 한 자세한 내용은 [소프트웨어 제한 정책 관리](administer-software-restriction-policies.md)를 참조 하세요.
 
-## <a name="BKMK_Cert_Rules"></a>인증서 규칙 작업
+## <a name="working-with-certificate-rules"></a><a name="BKMK_Cert_Rules"></a>인증서 규칙 작업
 소프트웨어 제한 정책은 서명 인증서로 소프트웨어를 식별할 수도 있습니다. 소프트웨어를 식별하는 인증서 규칙을 생성한 다음 보안 수준에 따라 소프트웨어 실행을 허용 또는 허용하지 않을 수 있습니다. 예를 들어, 인증서 규칙을 통해 사용자에게 메시지를 표시하지 않고 도메인의 신뢰할 수 있는 소스에 있는 소프트웨어를 자동으로 신뢰하게 할 수 있습니다. 또한 인증서 규칙을 사용하여 운영 체제의 허용되지 않는 영역에 있는 파일을 실행할 수도 있습니다. 인증서 규칙은 기본적으로 사용이 설정되어 있지 않습니다.
 
 그룹 정책를 사용 하 여 도메인에 대 한 규칙을 만드는 경우 그룹 정책 개체를 만들거나 수정할 수 있는 권한이 있어야 합니다. 로컬 컴퓨터에 대한 규칙을 만드는 경우 해당 컴퓨터에 관리 자격 증명이 있어야 합니다.
@@ -82,7 +78,7 @@ ms.locfileid: "79322955"
 
 -   [도메인 컨트롤러의 경우에만 원격 서버 관리 도구 Pack이 설치 된 도메인 컨트롤러 또는 워크스테이션에 있습니다.](#BKMK_4)
 
-#### <a name="BKMK_1"></a>로컬 컴퓨터에 대 한 인증서 규칙을 사용 하도록 설정 하려면
+#### <a name="to-enable-certificate-rules-for-your-local-computer"></a><a name="BKMK_1"></a>로컬 컴퓨터에 대 한 인증서 규칙을 사용 하도록 설정 하려면
 
 1.  로컬 보안 설정을 엽니다.
 
@@ -96,7 +92,7 @@ ms.locfileid: "79322955"
 
     -   인증서 규칙을 사용하지 않으려면 **사용 안 함**을 클릭합니다.
 
-#### <a name="BKMK_2"></a>그룹 정책 개체에 대 한 인증서 규칙을 사용 하도록 설정 하 고 도메인에 가입 된 서버에 있는 경우
+#### <a name="to-enable-certificate-rules-for-a-group-policy-object-and-you-are-on-a-server-that-is-joined-to-a-domain"></a><a name="BKMK_2"></a>그룹 정책 개체에 대 한 인증서 규칙을 사용 하도록 설정 하 고 도메인에 가입 된 서버에 있는 경우
 
 1.  MMC(Microsoft Management Console)를 엽니다.
 
@@ -122,7 +118,7 @@ ms.locfileid: "79322955"
 
     -   인증서 규칙을 사용하지 않으려면 **사용 안 함**을 클릭합니다.
 
-#### <a name="BKMK_3"></a>그룹 정책 개체에 대 한 인증서 규칙을 사용 하도록 설정 하 고 원격 서버 관리 도구가 설치 되어 있는 워크스테이션 또는 도메인 컨트롤러에 있는 경우
+#### <a name="to-enable-certificate-rules-for-a-group-policy-object-and-you-are-on-a-domain-controller-or-on-a-workstation-that-has-the-remote-server-administration-tools-installed"></a><a name="BKMK_3"></a>그룹 정책 개체에 대 한 인증서 규칙을 사용 하도록 설정 하 고 원격 서버 관리 도구가 설치 되어 있는 워크스테이션 또는 도메인 컨트롤러에 있는 경우
 
 1.  Active Directory 사용자 및 컴퓨터를 엽니다.
 
@@ -144,7 +140,7 @@ ms.locfileid: "79322955"
 
     -   인증서 규칙을 사용하지 않으려면 **사용 안 함**을 클릭합니다.
 
-#### <a name="BKMK_4"></a>도메인 컨트롤러에 대해서만 인증서 규칙을 사용 하도록 설정 하 고 원격 서버 관리 도구 설치 된 워크스테이션 또는 도메인 컨트롤러에 있는 경우
+#### <a name="to-enable-certificate-rules-for-only-domain-controllers-and-you-are-on-a-domain-controller-or-on-a-workstation-that-has-the-remote-server-administration-tools-installed"></a><a name="BKMK_4"></a>도메인 컨트롤러에 대해서만 인증서 규칙을 사용 하도록 설정 하 고 원격 서버 관리 도구 설치 된 워크스테이션 또는 도메인 컨트롤러에 있는 경우
 
 1.  도메인 컨트롤러 보안 설정을 엽니다.
 
@@ -218,7 +214,7 @@ ms.locfileid: "79322955"
 
 6.  **이 정책 설정 정의** 확인란을 선택하고 원하는 변경을 수행한 다음 **확인**을 클릭하여 새 설정을 적용합니다.
 
-## <a name="BKMK_Hash_Rules"></a>해시 규칙 작업
+## <a name="working-with-hash-rules"></a><a name="BKMK_Hash_Rules"></a>해시 규칙 작업
 해시는 소프트웨어 프로그램 또는 파일을 고유하게 식별하는 일련의 고정 길이 바이트입니다. 해시는 해시 알고리즘으로 계산됩니다. 소프트웨어 프로그램에 대한 해시 규칙을 만들면 소프트웨어 제한 정책에서 프로그램의 해시를 계산합니다. 사용자가 소프트웨어 프로그램을 열려고 하면, 프로그램의 해시가 소프트웨어 제한 정책의 기존 해시 규칙과 비교됩니다. 소프트웨어 프로그램의 해시는 컴퓨터에서의 프로그램 위치에 관계없이 항상 동일합니다. 그러나 소프트웨어 프로그램을 어떤 방식으로 변경하는 경우 해시 또한 변경되고 소프트웨어 제한 정책의 해시 규칙에 있는 해시와 더 이상 일치하지 않습니다.
 
 예를 들어, 해시 규칙을 만들어 보안 수준을 **허용 안 함**으로 설정하여 사용자가 특정 파일을 실행하지 못하도록 방지할 수 있습니다. 파일 이름을 바꾸거나 다른 폴더로 이동할 수 있으며 여전히 해시에 동일한 결과가 있을 수 있습니다. 그러나 파일 자체를 변경할 경우 해시 값도 변경되고 파일에서 제한이 무시될 수 있습니다.
@@ -248,7 +244,7 @@ ms.locfileid: "79322955"
 > -   소프트웨어 제한 정책이 적용 되려면 사용자가 컴퓨터에서 로그 오프 하 고 컴퓨터에 로그온 하 여 정책 설정을 업데이트 해야 합니다.
 > -   정책 설정에 둘 이상의 소프트웨어 제한 정책 규칙이 적용 되는 경우 충돌을 처리 하는 규칙의 우선 순위가 있습니다.
 
-## <a name="BKMK_Internet_Zone_Rules"></a>인터넷 영역 규칙 작업
+## <a name="working-with-internet-zone-rules"></a><a name="BKMK_Internet_Zone_Rules"></a>인터넷 영역 규칙 작업
 인터넷 영역 규칙은 Windows Installer 패키지에만 적용됩니다. 영역 규칙으로 Internet Explorer를 통해 지정된 영역에서 소프트웨어를 식별할 수 있습니다. 인터넷, 로컬 인트라넷, 신뢰할 수 있는 사이트, 제한된 사이트, 내 컴퓨터가 이러한 영역에 해당됩니다. 인터넷 영역 규칙은 사용자가 소프트웨어를 다운로드 하 여 설치할 수 없도록 설계 되었습니다.
 
 #### <a name="to-create-an-internet-zone-rule"></a>인터넷 영역 규칙을 만들려면
@@ -267,7 +263,7 @@ ms.locfileid: "79322955"
 > -   소프트웨어 제한 정책이 적용 되려면 사용자가 컴퓨터에서 로그 오프 하 고 컴퓨터에 로그온 하 여 정책 설정을 업데이트 해야 합니다.
 > -   정책 설정에 둘 이상의 소프트웨어 제한 정책 규칙이 적용 되는 경우 충돌을 처리 하는 규칙의 우선 순위가 있습니다.
 
-## <a name="BKMK_Path_Rules"></a>경로 규칙 작업
+## <a name="working-with-path-rules"></a><a name="BKMK_Path_Rules"></a>경로 규칙 작업
 경로 규칙은 파일 경로에 따라 소프트웨어를 식별하는 규칙입니다. 예를 들어, 컴퓨터의 기본 보안 수준이 **허용 안 함**으로 설정된 경우 각 사용자에 대해 특정 폴더에 대한 무제한 액세스 권한을 부여할 수 있습니다. 파일 경로를 사용하고 경로 규칙의 보안 수준을 **무제한**으로 설정하여 경로 규칙을 만들 수 있습니다. 이 종류의 규칙에 대 한 몇 가지 일반적인 경로는 %userprofile%, %windir%, %appdata%, %programfiles% 및 %temp%입니다. 소프트웨어의 레지스트리 키를 해당 경로로 사용하는 레지스트리 경로 규칙을 만들 수도 있습니다.
 
 이러한 규칙은 경로에 의해 지정되기 때문에 소프트웨어 프로그램이 이동할 경우 해당 경로 규칙은 더 이상 적용되지 않습니다.

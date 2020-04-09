@@ -2,22 +2,18 @@
 title: 1 단계 고급 DirectAccess 인프라 계획
 description: 이 항목은 Windows Server 2016에 대 한 고급 설정을 사용 하 여 단일 DirectAccess 서버 배포 가이드의 일부입니다.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-da
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aa3174f3-42af-4511-ac2d-d8968b66da87
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: a1dbd7bad0a6954d0cf66c372a48507a2a8d61be
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 80f6a06eefeccb727071432d4c519f42128da3c4
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80309070"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80819656"
 ---
 # <a name="step-1-plan-the-advanced-directaccess-infrastructure"></a>1 단계 고급 DirectAccess 인프라 계획
 

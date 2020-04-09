@@ -1,23 +1,19 @@
 ---
 title: 라우터 사전 구성
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9153ac90-bb0c-4b8d-93b2-e2121ed13636
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: bdfa3215b7a2426bcde807119971d99ccc229716
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: c39bf3ac260a23b7fc9cc9feec7f34786b1e8aae
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80311572"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80819946"
 ---
 # <a name="preconfiguring-a-router"></a>라우터 사전 구성
 
@@ -43,7 +39,7 @@ ms.locfileid: "80311572"
   
 -   라우터가 여러 서브넷을 지원하면 서버의 IP 주소는 DHCP를 통해 한 개의 DNS 서버로 보냅니다.  
   
--   라우터에 Active Directory® 도메인 서비스에 대해 통합 된 액세스 제어 기능이 있는 경우 서버의 초기 구성 중에 Active Directory 통합을 자동화할 수 있습니다. 또한 대시보드에서 라우터 관리 추가 기능을 통해 이 기능을 제공해야 합니다.  
+-   라우터에 Active Directory&reg; 도메인 서비스에 대해 통합 된 액세스 제어 기능이 있는 경우 서버의 초기 구성 중에 Active Directory 통합을 자동화할 수 있습니다. 또한 대시보드에서 라우터 관리 추가 기능을 통해 이 기능을 제공해야 합니다.  
   
 > [!NOTE]
 >  무선 연결 구성에 대한 자세한 내용은 [무선 네트워크 지원 구성](Configure-Support-for-a-Wireless-Network.md)을 참조하세요.  

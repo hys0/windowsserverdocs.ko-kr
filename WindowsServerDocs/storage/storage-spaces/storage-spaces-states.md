@@ -1,7 +1,6 @@
 ---
 title: 저장소 공간 및 스토리지 공간 다이렉트 상태 및 작동 상태
 description: 스토리지 공간 다이렉트 및 저장소 공간의 다양 한 상태 및 작동 상태 (실제 디스크, 풀 및 가상 디스크 포함)와 그에 대 한 작업 상태를 찾고 이해 하는 방법입니다.
-keywords: 저장소 공간, 분리 됨, 가상 디스크, 실제 디스크, 성능 저하 됨
 author: jasongerend
 ms.author: jgerend
 ms.date: 12/06/2019
@@ -9,12 +8,12 @@ ms.topic: article
 ms.prod: windows-server
 ms.technology: storage-spaces
 manager: brianlic
-ms.openlocfilehash: 40e820971f9d2ab0ba48fe30b100f07302ed7206
-ms.sourcegitcommit: e817a130c2ed9caaddd1def1b2edac0c798a6aa2
+ms.openlocfilehash: 83489cb7a8a44de13b5ba245d7ce1cb5ceabc08e
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74945276"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80820976"
 ---
 # <a name="troubleshoot-storage-spaces-and-storage-spaces-direct-health-and-operational-states"></a>저장소 공간 및 스토리지 공간 다이렉트 상태 및 작동 상태 문제 해결
 
@@ -195,7 +194,7 @@ Generic Physical Disk SSD        119990648832   False In a Pool
 
 다음 표에서는 각 이유에 대 한 자세한 정보를 제공 합니다.
 
-|이유|설명|
+|Reason|설명|
 |---|---|
 |풀에서|드라이브가 이미 저장소 풀에 속해 있습니다. <br><br>드라이브는 한 번에 하나의 저장소 풀에만 속할 수 있습니다. 다른 저장소 풀에서이 드라이브를 사용 하려면 먼저 기존 풀에서 드라이브를 제거 합니다. 그러면 저장소 공간에서 풀의 다른 드라이브로 드라이브의 데이터를 이동 합니다. 또는 저장소 공간에 알리지 않고 풀에서 드라이브의 연결을 끊은 경우 드라이브를 다시 설정 합니다. <br><br>저장소 풀에서 드라이브를 안전 하 게 제거 하려면 [PhysicalDisk](https://technet.microsoft.com/itpro/powershell/windows/storage/remove-physicaldisk)를 사용 하거나 서버 관리자 > **파일 및 저장소 서비스** > **저장소 풀**, > **실제 디스크**로 이동 하 여 드라이브를 마우스 오른쪽 단추로 클릭 하 고 **디스크 제거**를 선택 합니다.<br><br>드라이브를 다시 설정 하려면 [PhysicalDisk](https://technet.microsoft.com/itpro/powershell/windows/storage/reset-physicaldisk)를 사용 합니다.|
 |비정상|드라이브가 정상 상태가 아니며 교체 해야 할 수 있습니다.|

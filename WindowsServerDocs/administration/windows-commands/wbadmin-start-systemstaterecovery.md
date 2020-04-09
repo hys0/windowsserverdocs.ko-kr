@@ -1,24 +1,20 @@
 ---
 title: wbadmin 시작 systemstaterecovery
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: 사용자가 지정한 백업에서 시스템 상태 복구를 수행 하는 wbadmin start systemstaterecovery에 대 한 Windows 명령 항목입니다.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 208b1be9-3452-4aba-bb49-46bc587fca96
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6ae534eed26629be264b698869edc57232e2b571
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 581ad6fe3591e549c3f89e4c95d2f8ab0cde059c
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71362217"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80829496"
 ---
 # <a name="wbadmin-start-systemstaterecovery"></a>wbadmin 시작 systemstaterecovery
 
@@ -59,7 +55,7 @@ wbadmin start systemstaterecovery
 [-quiet]
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------|-----------|
@@ -72,7 +68,7 @@ wbadmin start systemstaterecovery
 |-autoReboot|시스템 상태 복구 작업이 끝날 때 시스템을 다시 시작 하도록 지정 합니다. 이 매개 변수는 원래 위치로 복구 하는 경우에만 유효 합니다. 복구 작업 후에 단계를 수행 해야 하는 경우에는이 매개 변수를 사용 하지 않는 것이 좋습니다.|
 |-quiet|사용자에 게 하위 명령 프롬프트 없이 실행 됩니다.|
 
-## <a name="BKMK_examples"></a>예와
+## <a name="examples"></a><a name=BKMK_examples></a>예와
 
 - 03/31/2013에서 오전 9:00에 백업 시스템 상태 복구를 수행 하려면 다음을 입력 합니다.  
   ```
@@ -83,8 +79,8 @@ wbadmin start systemstaterecovery
   wbadmin start systemstaterecovery -version:04/30/2013-09:00 -backupTarget:\\servername\share -machine:server01
   ```
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
--   [명령줄 구문 키](command-line-syntax-key.md)
+-   - [명령줄 구문 키](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
 -   [시작 WBSystemStateRecovery](https://technet.microsoft.com/library/jj902449.aspx) cmdlet

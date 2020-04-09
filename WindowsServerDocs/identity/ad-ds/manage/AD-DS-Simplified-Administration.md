@@ -1,7 +1,6 @@
 ---
 ms.assetid: f74eec9a-2485-4ee0-a0d8-cce01250a294
 title: AD DS 간소화된 관리
-description: ''
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 08/09/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 4f12b1e88414a17c8fb82a707bd4399505df4c6c
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: e1989630cadd7d63f8ed041174135722d568484f
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79323165"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80824426"
 ---
 # <a name="ad-ds-simplified-administration"></a>AD DS 간소화된 관리
 
@@ -30,7 +29,7 @@ AD DS 간소화된 관리는 도메인 배포의 새로운 디자인입니다.
 - AD DS 배포 및 구성 엔진이 이제 Windows PowerShell이며, 이는 새로운 AD DS 구성 마법사를 사용하는 경우에도 마찬가지입니다.  
 - 스키마 확장, 포리스트 준비 및 도메인 준비가 도메인 컨트롤러 수준 올리기 프로세스의 일부로 자동으로 수행되므로 더 이상 스키마 마스터와 같은 특정 서버에서 별도의 작업을 수행할 필요가 없습니다.  
 - 이제 수준 올리기에 새 도메인 컨트롤러에 대한 포리스트 및 도메인 준비 상태를 확인하는 필수 구성 요소 확인이 포함되어 있어 수준 올리기에 실패할 가능성이 낮아졌습니다.  
-- 이제 Windows PowerShell용 Active Directory 모듈에 복제 토폴로지 관리, 동적 Access Control 및 기타 작업을 위한 cmdlet이 포함되어 있습니다.  
+- 이제 Windows PowerShell용 Active Directory 모듈에 복제 토폴로지 관리, 동적 액세스 제어 및 기타 작업을 위한 cmdlet이 포함되어 있습니다.  
 - Windows Server 2012 포리스트 기능 수준에서 새로운 기능을 구현하지 않으며 도메인 기능 수준이 새로운 Kerberos 기능의 하위 집합에만 필요하므로 관리자에게 동종 도메인 컨트롤러 환경이 자주 필요하지 않습니다.  
 - 자동화된 배포 및 롤백 보호를 포함하도록 가상화된 도메인 컨트롤러에 대한 완벽한 지원 기능이 추가되었습니다.  
    - 가상화 된 도메인 컨트롤러에 대 한 자세한 내용은 참조 [Active Directory 도메인 서비스 및 #40; 도입 AD DS & #41; 가상화 & #40입니다. 수준 100 & #41;](../../ad-ds/Introduction-to-Active-Directory-Domain-Services-AD-DS-Virtualization-Level-100.md)합니다.
@@ -120,9 +119,9 @@ Windows Server 2012는 1999년에 최초의 Active Directory 도메인을 만든
 - 관리자가 RID 풀을 무효화한 경우 이벤트가 로깅됩니다.  
 - 이제 RID 정책 RID 블록 크기에 대한 최대 한도가 적용됩니다.  
 - 이제 인공 RID 최대값이 적용되며 전역 RID 공간이 적은 경우 로깅되므로 관리자가 전역 공간이 소진되기 전에 조치를 취할 수 있습니다.
-- 이제 전역 RID 공간을 1비트 증가시켜 크기를 두 배(2<sup>31</sup> , 즉 2,147,483,648개의 SID)로 늘릴 수 있습니다.  
+- 이제 전역 RID 공간을 1비트 증가시켜 크기를 두 배(2<sup>31</sup>, 즉 2,147,483,648개의 SID)로 늘릴 수 있습니다.  
 
-Rid 및 RID 마스터에 대 한 자세한 내용은 검토 [보안 식별자 작동](https://technet.microsoft.com/library/cc778824(WS.10).aspx)합니다.  
+RID 및 RID 마스터에 대한 자세한 내용은 [보안 식별자 작동 방식](https://technet.microsoft.com/library/cc778824(WS.10).aspx)을 참조하세요.  
   
 ## <a name="ad-ds-role-deployment-and-management-architecture"></a>AD DS 역할 배포 및 관리 아키텍처
 
@@ -173,7 +172,7 @@ Rid 및 RID 마스터에 대 한 자세한 내용은 검토 [보안 식별자 �
 > [!IMPORTANT]  
 > Windows Server 2012용 32비트 Adprep32.exe 도구는 없습니다. 포리스트와 도메인을 준비하려면 도메인 컨트롤러 또는 구성원 서버로 실행되거나 작업 그룹에서 실행되는 Windows Server 2008 x64, Windows Server 2008 R2 또는 Windows Server 2012 컴퓨터가 하나 이상 있어야 합니다. Adprep.exe는 Windows Server 2003 x64에서 실행되지 않습니다.  
   
-## <a name="BKMK_PrereuisiteChecking"></a>필수 구성 요소 확인
+## <a name="prerequisite-checking"></a><a name="BKMK_PrereuisiteChecking"></a>필수 구성 요소 확인
 
 ADDSDeployment Windows PowerShell 관리 코드에 기본 제공되는 필수 구성 요소 확인은 작업에 따라 여러 모드로 작동합니다. 아래 표에서는 각 테스트와 이러한 테스트가 사용되는 경우, 각 테스트에서 유효성을 검사하는 방법 및 대상에 대해 설명합니다. 이 표는 유효성 검사에 실패하고 오류 정보가 문제를 해결하는 데 부족한 경우에 유용할 수 있습니다.  
   
@@ -191,23 +190,23 @@ ADDSDeployment Windows PowerShell 관리 코드에 기본 제공되는 필수 �
 
 이러한 cmdlet은 대개 별도로 실행할 필요가 없습니다. 기본적으로 배포 cmdlet과 함께 자동으로 실행됩니다.  
 
-#### <a name="BKMK_ADDSInstallPrerequisiteTests"></a>필수 구성 요소 테스트
+#### <a name="prerequisite-tests"></a><a name="BKMK_ADDSInstallPrerequisiteTests"></a>필수 구성 요소 테스트
 
 ||||  
 |-|-|-|  
-|테스트 이름|프로토콜<br /><br />used|설명 및 참고 사항|  
-|VerifyAdminTrusted<br /><br />ForDelegationProvider|LDAP|기존 파트너 도메인 컨트롤러에 대한 "위임 시 컴퓨터 및 사용자 계정을 신뢰할 수 있도록 설정"(SeEnableDelegationPrivilege) 권한이 있는지 확인합니다. 그러려면 생성된 tokenGroups 특성에 액세스할 수 있어야 합니다.<br /><br />Windows Server 2003 도메인 컨트롤러에 연결할 때는 사용되지 않습니다. 수준을 올리기 전에 이 권한을 수동으로 확인해야 합니다.|  
-|VerifyADPrep<br /><br />Prerequisites(포리스트)|LDAP|rootDSE namingContexts 특성 및 스키마 명명 컨텍스트 fsmoRoleOwner 특성을 사용하여 스키마 마스터를 검색하고 연결합니다. AD DS 설치에 필요한 준비 작업(forestprep, domainprep 또는 rodcprep)을 확인합니다. 스키마 objectVersion과 해당 추가 확장이 필요한지 확인합니다.|  
-|VerifyADPrep<br /><br />Prerequisites(도메인 및 RODC)|LDAP|rootDSE namingContexts 특성 및 인프라 컨테이너 fsmoRoleOwner 특성을 사용하여 인프라 마스터를 검색하고 연결합니다. RODC 설치의 경우 이 테스트는 도메인 명명 마스터를 검색하고 온라인 상태인지 확인합니다.|  
-|CheckGroup<br /><br />멤버 자격|LDAP,<br /><br />RPC over SMB(LSARPC)|작업에 따라 사용자가 Domain Admins 또는 Enterprise Admins 그룹의 구성원인지 확인합니다(도메인 컨트롤러 추가 또는 수준 내리기의 경우 DA, 도메인 추가 또는 제거의 경우 EA).|  
-|CheckForestPrep<br /><br />GroupMembership|LDAP,<br /><br />RPC over SMB(LSARPC)|사용자가 Schema Admins 및 Enterprise Admins 그룹의 구성원이고 기존 도메인 컨트롤러에 대한 감사 및 보안 이벤트 로그 관리(SesScurityPrivilege) 권한이 있는지 확인합니다.|  
-|CheckDomainPrep<br /><br />GroupMembership|LDAP,<br /><br />RPC over SMB(LSARPC)|사용자가 Domain Admins 그룹의 구성원이고 기존 도메인 컨트롤러에 대한 감사 및 보안 이벤트 로그 관리(SesScurityPrivilege) 권한이 있는지 확인합니다.|  
-|CheckRODCPrep<br /><br />GroupMembership|LDAP,<br /><br />RPC over SMB(LSARPC)|사용자가 Enterprise Admins 그룹의 구성원이고 기존 도메인 컨트롤러에 대한 감사 및 보안 이벤트 로그 관리(SesScurityPrivilege) 권한이 있는지 확인합니다.|  
-|VerifyInitSync<br /><br />AfterReboot|LDAP|rootDSE 특성 becomeSchemaMaster에서 더미 값을 설정하여 스키마 마스터가 다시 시작된 이후 한 번 이상 복제되었는지 확인합니다.|  
-|VerifySFUHotFix<br /><br />Applied|LDAP|기존 포리스트 스키마에 OID가 1.2.840.113556.1.4.7000.187.102인 UID 특성에 대한 SFU2 확장 관련 알려진 문제가 없는지<br /><br />([https://support.microsoft.com/kb/821732](https://support.microsoft.com/kb/821732))|  
-|VerifyExchange<br /><br />SchemaFixed|LDAP, WMI, DCOM, RPC|기존 포리스트 스키마의 유효성을 검사 하는 데 문제가 Exchange 2000 확장명이 아직 포함 되지 않음-이름, ms-Exch-LabeledURI 및 ms-Exch-집-식별자 ([https://support.microsoft.com/kb/314649](https://support.microsoft.com/kb/314649))|  
-|VerifyWin2KSchema<br /><br />일관성|LDAP|기존 포리스트 스키마에 일관된(타사에서 잘못 수정하지 않은) 핵심 특성 및 클래스가 있는지 확인합니다.|  
-|DCPromo|DRSR over RPC,<br /><br />LDAP,<br /><br />DNS<br /><br />RPC over SMB(SAMR)|수준 올리기 코드로 전달된 명령줄 구문의 유효성을 검사하고 수준 올리기를 테스트합니다. 포리스트 또는 도메인을 새로 만드는 경우 이미 존재하지 않는지 확인합니다.|  
-|VerifyOutbound<br /><br />ReplicationEnabled|LDAP, DRSR over SMB, RPC over SMB(LSARPC)|NTDS 설정 개체의 옵션 특성에서 NTDSDSA_OPT_DISABLE_OUTBOUND_REPL(0x00000004)을 확인하여 복제 파트너로 지정된 기존 도메인 컨트롤러에 아웃바운드 복제가 사용하도록 설정되어 있는지 확인합니다.|  
-|VerifyMachineAdmin<br /><br />Password|DRSR over RPC,<br /><br />LDAP,<br /><br />DNS<br /><br />RPC over SMB(SAMR)|DSRM에 대해 설정된 안전 모드 암호가 도메인 복잡성 요구 사항을 충족하는지 확인합니다.|  
+|테스트 이름|프로토콜<p>used|설명 및 참고 사항|  
+|VerifyAdminTrusted<p>ForDelegationProvider|LDAP|기존 파트너 도메인 컨트롤러에 대한 "위임 시 컴퓨터 및 사용자 계정을 신뢰할 수 있도록 설정"(SeEnableDelegationPrivilege) 권한이 있는지 확인합니다. 그러려면 생성된 tokenGroups 특성에 액세스할 수 있어야 합니다.<p>Windows Server 2003 도메인 컨트롤러에 연결할 때는 사용되지 않습니다. 수준을 올리기 전에 이 권한을 수동으로 확인해야 합니다.|  
+|VerifyADPrep<p>Prerequisites(포리스트)|LDAP|rootDSE namingContexts 특성 및 스키마 명명 컨텍스트 fsmoRoleOwner 특성을 사용하여 스키마 마스터를 검색하고 연결합니다. AD DS 설치에 필요한 준비 작업(forestprep, domainprep 또는 rodcprep)을 확인합니다. 스키마 objectVersion과 해당 추가 확장이 필요한지 확인합니다.|  
+|VerifyADPrep<p>Prerequisites(도메인 및 RODC)|LDAP|rootDSE namingContexts 특성 및 인프라 컨테이너 fsmoRoleOwner 특성을 사용하여 인프라 마스터를 검색하고 연결합니다. RODC 설치의 경우 이 테스트는 도메인 명명 마스터를 검색하고 온라인 상태인지 확인합니다.|  
+|CheckGroup<p>멤버 자격|LDAP,<p>RPC over SMB(LSARPC)|작업에 따라 사용자가 Domain Admins 또는 Enterprise Admins 그룹의 구성원인지 확인합니다(도메인 컨트롤러 추가 또는 수준 내리기의 경우 DA, 도메인 추가 또는 제거의 경우 EA).|  
+|CheckForestPrep<p>GroupMembership|LDAP,<p>RPC over SMB(LSARPC)|사용자가 Schema Admins 및 Enterprise Admins 그룹의 구성원이고 기존 도메인 컨트롤러에 대한 감사 및 보안 이벤트 로그 관리(SesScurityPrivilege) 권한이 있는지 확인합니다.|  
+|CheckDomainPrep<p>GroupMembership|LDAP,<p>RPC over SMB(LSARPC)|사용자가 Domain Admins 그룹의 구성원이고 기존 도메인 컨트롤러에 대한 감사 및 보안 이벤트 로그 관리(SesScurityPrivilege) 권한이 있는지 확인합니다.|  
+|CheckRODCPrep<p>GroupMembership|LDAP,<p>RPC over SMB(LSARPC)|사용자가 Enterprise Admins 그룹의 구성원이고 기존 도메인 컨트롤러에 대한 감사 및 보안 이벤트 로그 관리(SesScurityPrivilege) 권한이 있는지 확인합니다.|  
+|VerifyInitSync<p>AfterReboot|LDAP|rootDSE 특성 becomeSchemaMaster에서 더미 값을 설정하여 스키마 마스터가 다시 시작된 이후 한 번 이상 복제되었는지 확인합니다.|  
+|VerifySFUHotFix<p>Applied|LDAP|기존 포리스트 스키마에 OID가 1.2.840.113556.1.4.7000.187.102인 UID 특성에 대한 SFU2 확장 관련 알려진 문제가 없는지<p>([https://support.microsoft.com/kb/821732](https://support.microsoft.com/kb/821732))|  
+|VerifyExchange<p>SchemaFixed|LDAP, WMI, DCOM, RPC|기존 포리스트 스키마의 유효성을 검사 하는 데 문제가 Exchange 2000 확장명이 아직 포함 되지 않음-이름, ms-Exch-LabeledURI 및 ms-Exch-집-식별자 ([https://support.microsoft.com/kb/314649](https://support.microsoft.com/kb/314649))|  
+|VerifyWin2KSchema<p>일관성|LDAP|기존 포리스트 스키마에 일관된(타사에서 잘못 수정하지 않은) 핵심 특성 및 클래스가 있는지 확인합니다.|  
+|DCPromo|DRSR over RPC,<p>LDAP,<p>DNS<p>RPC over SMB(SAMR)|수준 올리기 코드로 전달된 명령줄 구문의 유효성을 검사하고 수준 올리기를 테스트합니다. 포리스트 또는 도메인을 새로 만드는 경우 이미 존재하지 않는지 확인합니다.|  
+|VerifyOutbound<p>ReplicationEnabled|LDAP, DRSR over SMB, RPC over SMB(LSARPC)|NTDS 설정 개체의 옵션 특성에서 NTDSDSA_OPT_DISABLE_OUTBOUND_REPL(0x00000004)을 확인하여 복제 파트너로 지정된 기존 도메인 컨트롤러에 아웃바운드 복제가 사용하도록 설정되어 있는지 확인합니다.|  
+|VerifyMachineAdmin<p>Password|DRSR over RPC,<p>LDAP,<p>DNS<p>RPC over SMB(SAMR)|DSRM에 대해 설정된 안전 모드 암호가 도메인 복잡성 요구 사항을 충족하는지 확인합니다.|  
 |VerifySafeModePassword|*해당 없음*|설정된 로컬 관리자 암호가 컴퓨터 보안 정책 복잡성 요구 사항을 충족하는지 확인합니다.|  

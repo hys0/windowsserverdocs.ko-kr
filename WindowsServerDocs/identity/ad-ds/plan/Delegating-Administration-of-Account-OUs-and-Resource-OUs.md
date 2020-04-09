@@ -1,7 +1,6 @@
 ---
 ms.assetid: 19feca0e-a6d0-4d27-93b0-cb44f8c26484
 title: OU의 사용자 계정 및 리소스 OU 관리 위임
-description: ''
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 63fda63d5a34404563bab44ee54ba2e22d852782
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 3043aaf79b2c0894fffe2f896a235ad519222e05
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402696"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80822746"
 ---
 # <a name="delegating-administration-of-account-ous-and-resource-ous"></a>OU의 사용자 계정 및 리소스 OU 관리 위임
 
@@ -33,7 +32,7 @@ ms.locfileid: "71402696"
   
 |OU|용도|  
 |------|-----------|  
-|사용자|관리자가 아닌 직원에 대 한 사용자 계정을 포함합니다.|  
+|Users|관리자가 아닌 직원에 대 한 사용자 계정을 포함합니다.|  
 |서비스 계정|네트워크 리소스에 액세스 해야 하는 일부 서비스는 사용자 계정으로 실행 합니다. 이 OU 사용자 OU에에서 포함 된 사용자 계정에서 별도 서비스 사용자 계정에 만들어집니다. 또한 다른 종류의 사용자 계정 별도 Ou에 배치 하는 특정 관리 요구 사항에 따라이 관리할 수 있습니다.|  
 |컴퓨터|도메인 컨트롤러가 아닌 컴퓨터에 대 한 계정을 포함합니다.|  
 |그룹|별도로 관리 하는 관리 그룹을 제외 하 고 모든 종류의 그룹을 포함 합니다.|  

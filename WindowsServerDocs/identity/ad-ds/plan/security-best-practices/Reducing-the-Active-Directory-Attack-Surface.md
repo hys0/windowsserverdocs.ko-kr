@@ -1,7 +1,6 @@
 ---
 ms.assetid: 864ad4bc-8428-4a8b-8671-cb93b68b0c03
 title: Active Directory 공격에 대한 취약성 줄이기
-description: ''
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 94bc65d42fa90dd7c93ba759a41d34edec10de09
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: dcd0b412e7a0005bc6574638e0f6fce4554c6487
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71367650"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80821056"
 ---
 # <a name="reducing-the-active-directory-attack-surface"></a>Active Directory 공격에 대한 취약성 줄이기
 
@@ -32,7 +31,7 @@ ms.locfileid: "71367650"
 이 섹션에서는 Active Directory의 권한 있는 계정 및 그룹 간의 차이점을 설명 하기 위해 Active Directory의 권한 있는 계정 및 그룹에 대 한 배경 정보를 제공 합니다. 이러한 차이점을 이해 하면 [최소 권한 관리 모델을 구현](../../../ad-ds/plan/security-best-practices/../../../ad-ds/plan/security-best-practices/Implementing-Least-Privilege-Administrative-Models.md) 하는 데 권장 사항을 구현 하거나 조직에 맞게 사용자 지정 하도록 선택 하는 경우 각 그룹 및 계정을 적절 하 게 보호 하는 데 필요한 도구를 사용할 수 있습니다.  
   
 ### <a name="built-in-privileged-accounts-and-groups"></a>기본 제공 계정 및 그룹 권한  
-Active Directory는 관리 위임을 용이 하 게 하 고 권한 및 사용 권한을 할당 하는 최소 권한 원칙을 지원 합니다. 도메인에 계정이 있는 "일반" 사용자는 기본적으로 디렉터리에 저장 된 항목의 대부분을 읽을 수 있지만 디렉터리에 있는 데이터의 매우 제한 된 집합만 변경할 수 있습니다. 추가 권한이 필요한 사용자는 해당 역할과 관련 된 특정 작업을 수행할 수 있지만 해당 의무와 관련이 없는 작업을 수행할 수 없도록 디렉터리에 기본 제공 되는 다양 한 "권한 있는" 그룹의 멤버 자격을 부여할 수 있습니다. 또한 조직에서는 특정 업무 담당 업무에 맞게 조정 된 그룹을 만들 수 있으며, IT 직원이이를 초과 하는 권한 및 사용 권한을 부여 하지 않고도 일상적인 관리 기능을 수행할 수 있도록 하는 세분화 된 권한 및 사용 권한이 부여 됩니다. 는 이러한 함수에 필요 합니다.  
+Active Directory는 관리 위임을 용이 하 게 하 고 권한 및 사용 권한을 할당 하는 최소 권한 원칙을 지원 합니다. 도메인에 계정이 있는 "일반" 사용자는 기본적으로 디렉터리에 저장 된 항목의 대부분을 읽을 수 있지만 디렉터리에 있는 데이터의 매우 제한 된 집합만 변경할 수 있습니다. 추가 권한이 필요한 사용자는 해당 역할과 관련 된 특정 작업을 수행할 수 있지만 해당 의무와 관련이 없는 작업을 수행할 수 없도록 디렉터리에 기본 제공 되는 다양 한 "권한 있는" 그룹의 멤버 자격을 부여할 수 있습니다. 또한 조직에서는 특정 업무에 맞게 조정 된 그룹을 만들 수 있으며, IT 직원이 해당 기능에 필요한 것을 초과 하는 권한 및 사용 권한을 부여 하지 않고 일상적인 관리 기능을 수행할 수 있는 권한을 세분화 된 권한 및 사용 권한을 부여 합니다.  
   
 Active Directory 내에서 세 개의 기본 제공 그룹은 Enterprise Admins, Domain Admins 및 Administrators 디렉터리의 가장 높은 권한 그룹입니다. 다음 섹션에서는 이러한 각 그룹의 기본 구성 및 기능에 대해 설명 합니다.  
   
@@ -43,7 +42,7 @@ EA (Enterprise Admins)는 포리스트 루트 도메인에만 존재 하는 그�
   
 ##### <a name="domain-admins"></a>Domain Admins  
 
-포리스트의 각 도메인에는 해당 도메인의 관리자 그룹의 구성원이 고 도메인에 가입 된 모든 컴퓨터에서 로컬 Administrators 그룹의 구성원 인 자체 도메인 관리자 (DA) 그룹이 있습니다. 도메인에 대 한 DA 그룹의 유일한 기본 멤버는 해당 도메인에 대 한 기본 제공 관리자 계정입니다. DAs는 도메인 내에서 "모두 강력한" 반면, EAs에는 포리스트 차원의 권한이 있습니다. 제대로 설계 되 고 구현 된 위임 모델에서는 도메인 관리자 멤버 자격이 "중단" 시나리오 (도메인의 모든 컴퓨터에 대 한 높은 수준의 권한이 있는 계정을 필요로 하는 경우)에만 필요 합니다. 네이티브 Active Directory 위임 메커니즘으로는 응급 시나리오 에서만 DA 계정을 사용할 수 있는 범위를 위임할 수 있지만 효과적인 위임 모델을 구성 하는 데는 많은 시간이 소요 될 수 있으며 많은 조직에서 프로세스를 신속 하 게 진행 하기 위한 타사 도구입니다.  
+포리스트의 각 도메인에는 해당 도메인의 관리자 그룹의 구성원이 고 도메인에 가입 된 모든 컴퓨터에서 로컬 Administrators 그룹의 구성원 인 자체 도메인 관리자 (DA) 그룹이 있습니다. 도메인에 대 한 DA 그룹의 유일한 기본 멤버는 해당 도메인에 대 한 기본 제공 관리자 계정입니다. DAs는 도메인 내에서 "모두 강력한" 반면, EAs에는 포리스트 차원의 권한이 있습니다. 제대로 설계 되 고 구현 된 위임 모델에서는 도메인 관리자 멤버 자격이 "중단" 시나리오 (도메인의 모든 컴퓨터에 대 한 높은 수준의 권한이 있는 계정을 필요로 하는 경우)에만 필요 합니다. 네이티브 Active Directory 위임 메커니즘을 사용 하면 응급 시나리오 에서만 DA 계정을 사용할 수 있는 범위에 위임할 수 있지만 효과적인 위임 모델을 구성 하는 데는 시간이 오래 걸릴 수 있으며 많은 조직에서 타사 도구를 활용 하 여 프로세스를 신속 하 게 수행할 수 있습니다.  
   
 ##### <a name="administrators"></a>Administrators  
 세 번째 그룹은 DAs 및 EAs가 중첩 된 기본 제공 도메인 로컬 관리자 (BA) 그룹입니다. 이 그룹에는 디렉터리 및 도메인 컨트롤러에서 많은 직접 권한 및 사용 권한이 부여 됩니다. 그러나 도메인의 관리자 그룹은 구성원 서버 또는 워크스테이션에 대 한 권한이 없습니다. 로컬 권한이 부여 된 컴퓨터의 로컬 관리자 그룹의 멤버 자격을 통해입니다.  
@@ -55,7 +54,7 @@ EA (Enterprise Admins)는 포리스트 루트 도메인에만 존재 하는 그�
 
 네 번째 권한 있는 그룹인 스키마 관리자 (SA)는 포리스트 루트 도메인에만 존재 하며 Enterprise Admins 그룹과 마찬가지로 기본 구성원으로 해당 도메인의 기본 제공 관리자 계정만 갖습니다. Schema Admins 그룹은 일시적이 고 가끔씩만 채워질 수 있습니다 (AD DS 스키마를 수정 해야 하는 경우).  
   
-SA 그룹은 Active Directory 스키마를 수정할 수 있는 유일한 그룹 이지만 (즉, 디렉터리의 기본 데이터 구조 (예: 개체 및 특성), SA 그룹의 권한 및 사용 권한 범위는 앞에서 설명한 것 보다 제한 됩니다. 그룹과. 또한 그룹의 멤버 자격은 일반적으로 자주 필요 하지 않으며 짧은 기간 동안만 SA 그룹의 멤버 자격 관리에 대 한 적절 한 방법을 개발 하는 것을 발견 하는 것이 일반적입니다. 이는 Active Directory의 EA, DA 및 BA 그룹에 기술적으로 적용 되지만, 조직에서 이러한 그룹에 대 한 유사한 방법을 SA 그룹에 구현 하는 것을 확인 하는 것은 일반적이 지 않습니다.  
+SA 그룹은 Active Directory 스키마를 수정할 수 있는 유일한 그룹 이지만 (즉, 디렉터리의 기본 데이터 구조 (예: 개체 및 특성), SA 그룹의 권한 및 사용 권한 범위는 앞에서 설명한 그룹 보다 제한 됩니다. 또한 그룹의 멤버 자격은 일반적으로 자주 필요 하지 않으며 짧은 기간 동안만 SA 그룹의 멤버 자격 관리에 대 한 적절 한 방법을 개발 하는 것을 발견 하는 것이 일반적입니다. 이는 Active Directory의 EA, DA 및 BA 그룹에 기술적으로 적용 되지만, 조직에서 이러한 그룹에 대 한 유사한 방법을 SA 그룹에 구현 하는 것을 확인 하는 것은 일반적이 지 않습니다.  
   
 #### <a name="protected-accounts-and-groups-in-active-directory"></a>Active Directory의 보호 된 계정 및 그룹  
 Active Directory 내에서 "protected" 계정 및 그룹 이라는 기본 권한 있는 계정 집합과 그룹은 디렉터리의 다른 개체와 다르게 보호 됩니다. 보호 되는 그룹에 직접 또는 전이적 멤버 자격이 있는 모든 계정 (멤버 자격이 보안 또는 배포 그룹에서 파생 되었는지 여부에 관계 없이)은이 제한 된 보안을 상속 합니다.  
@@ -79,7 +78,7 @@ Active Directory 내에서 "protected" 계정 및 그룹 이라는 기본 권한
 |Domain Admins|Backup Operators|Backup Operators|Backup Operators|  
 ||Cert Publishers|||  
 ||Domain Admins|Domain Admins|Domain Admins|  
-|Enterprise Admins|도메인 컨트롤러 하나 이상|도메인 컨트롤러 하나 이상|도메인 컨트롤러 하나 이상|  
+|Enterprise Admins|도메인 컨트롤러|도메인 컨트롤러|도메인 컨트롤러|  
 ||Enterprise Admins|Enterprise Admins|Enterprise Admins|  
 ||Krbtgt|Krbtgt|Krbtgt|  
 ||Print Operators|Print Operators|Print Operators|  
@@ -100,7 +99,7 @@ Active Directory 내에서 "protected" 계정 및 그룹 이라는 기본 권한
 ###### <a name="adminsdholder-ownership"></a>AdminSDHolder 소유권  
 Active Directory의 대부분 개체는 도메인의 BA 그룹이 소유 합니다. 그러나 AdminSDHolder 개체는 기본적으로 도메인의 DA 그룹에서 소유 합니다. (이 경우 DAs는 도메인에 대 한 관리자 그룹의 멤버 자격을 통해 권한 및 사용 권한을 파생 하지 않습니다.)  
   
-Windows Server 2008 이전 버전의 Windows에서는 개체 소유자가 원래 권한이 없는 권한을 부여 하는 것을 포함 하 여 개체의 사용 권한을 변경할 수 있습니다. 따라서 도메인의 AdminSDHolder 개체에 대 한 기본 권한을 사용 하면 BA 또는 EA 그룹의 멤버인 사용자가 도메인의 AdminSDHolder 개체에 대 한 사용 권한을 변경할 수 없습니다. 그러나 도메인에 대 한 관리자 그룹의 멤버는 개체의 소유권을 가지 며 자신에 게 추가 권한을 부여할 수 있습니다. 즉,이 보호는 기초적인 기능이 며, 도메인에 있는 DA 그룹의 구성원이 아닙니다. 또한 BA 및 EA (해당 하는 경우) 그룹에는 로컬 도메인 (EA에 대 한 루트 도메인)에 있는 AdminSDHolder 개체의 특성을 변경할 수 있는 권한이 있습니다.  
+Windows Server 2008 이전 버전의 Windows에서는 개체 소유자가 원래 권한이 없는 권한을 부여 하는 것을 포함 하 여 개체의 사용 권한을 변경할 수 있습니다. 따라서 도메인의 AdminSDHolder 개체에 대 한 기본 권한을 사용 하면 BA 또는 EA 그룹의 멤버인 사용자가 도메인의 AdminSDHolder 개체에 대 한 사용 권한을 변경할 수 없습니다. 그러나 도메인에 대 한 관리자 그룹의 멤버는 개체의 소유권을 가져올 수 있으며,이는 추가 권한을 부여 합니다. 즉,이 보호는 기초적인 것 이며 도메인의 DA 그룹 구성원이 아닌 사용자가 실수로 수정 하지 않도록 개체를 보호 합니다. 또한 BA 및 EA (해당 하는 경우) 그룹에는 로컬 도메인 (EA에 대 한 루트 도메인)에 있는 AdminSDHolder 개체의 특성을 변경할 수 있는 권한이 있습니다.  
   
 > [!NOTE]  
 > AdminSDHolder 개체 dSHeuristics의 특성은 보호 된 그룹으로 간주 되며 AdminSDHolder 및 SDProp의 영향을 받는 그룹의 제한 된 사용자 지정 (제거)을 허용 합니다. 이 사용자 지정은 AdminSDHolder에서 dSHeuristics을 수정 하는 데 유용한 유효한 상황이 있기는 하지만 구현 된 경우 신중 하 게 고려해 야 합니다. AdminSDHolder 개체에서 dSHeuristics 특성을 수정 하는 방법에 대 한 자세한 내용은 Microsoft 지원 문서 [817433](https://support.microsoft.com/?id=817433) 및 [973840](https://support.microsoft.com/kb/973840)및 [부록 C: 보호 된 계정 및 Active Directory의 그룹](Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory.md)에서 찾을 수 있습니다.  

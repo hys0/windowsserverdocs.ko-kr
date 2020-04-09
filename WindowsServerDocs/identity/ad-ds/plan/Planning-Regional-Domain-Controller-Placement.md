@@ -1,7 +1,6 @@
 ---
 ms.assetid: eb600904-24b8-4488-a278-c1c971dc2f2d
 title: 지역 도메인 컨트롤러 배치 계획
-description: ''
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
@@ -9,18 +8,18 @@ ms.date: 08/08/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 2508476f35462516f32877365cb15be919b5b6df
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: cb1d83d5afca92de85c4de8b3e9125e119250f66
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71408730"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80822116"
 ---
 # <a name="planning-regional-domain-controller-placement"></a>지역 도메인 컨트롤러 배치 계획
 
 >적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-비용 효율성을 보장 하기 위해 가능한 한 많은 지역 도메인 컨트롤러를 계획 합니다. 먼저 [네트워크 정보 수집](../../ad-ds/plan/Collecting-Network-Information.md) 에 사용 되는 "지리적 위치 및 통신 링크" (DSSTOPO_1) 워크시트를 검토 하 여 위치가 허브 인지 여부를 확인 합니다.  
+비용 효율성을 보장 하기 위해 가능한 한 많은 지역 도메인 컨트롤러를 계획 합니다. 먼저 [네트워크 정보 수집](../../ad-ds/plan/Collecting-Network-Information.md) 에서 위치가 허브 인지 여부를 확인 하는 데 사용 되는 "지리적 위치 및 통신 링크" (DSSTOPO_1 .doc) 워크시트를 검토 합니다.  
   
 각 허브 위치에 표시 되는 각 도메인에 대해 지역 도메인 컨트롤러를 배치 하도록 계획 합니다. 모든 허브 위치에 지역 도메인 컨트롤러를 배치한 후 위성 위치에 지역 도메인 컨트롤러를 배치 해야 하는 필요성을 평가 합니다. 위성 위치에서 불필요 한 지역 도메인 컨트롤러를 제거 하면 원격 서버 인프라를 유지 관리 하는 데 필요한 지원 비용이 절감 됩니다.  
   
@@ -80,6 +79,6 @@ Active Directory 클라이언트와 동일한 위치에서 도메인 컨트롤�
   
 도메인 컨트롤러를 유지 관리 하는 비용을 줄이는 것이 네트워크 트래픽 보다 중요 한 경우 해당 도메인에 대 한 도메인 컨트롤러를 중앙 집중화 하 고 지역 도메인 컨트롤러를 위치에 배치 하거나 Rodc를 위치에 배치 하는 것이 좋습니다.  
   
-지역별 도메인 컨트롤러의 배치와 각 위치에 표시 되는 각 도메인에 대 한 사용자 수를 문서화 하는 데 도움이 되는 워크시트의 경우 [Windows Server 2003 배포 키트의 작업 지원](https://go.microsoft.com/fwlink/?LinkID=102558), 다운로드 Job_Aids_Designing_and_를 참조 하세요. Deploying_Directory_and_Security_Services를 열고 "도메인 컨트롤러 배치" (DSSTOPO_4)를 엽니다.  
+지역별 도메인 컨트롤러의 배치와 각 위치에 표시 되는 각 도메인에 대 한 사용자 수를 문서화 하는 데 도움이 되는 워크시트의 경우 [Windows Server 2003 배포 키트의 작업 지원](https://go.microsoft.com/fwlink/?LinkID=102558)을 참조 하 고, Job_Aids_Designing_and_Deploying_Directory_and_Security_Services .zip을 다운로드 하 고, "도메인 컨트롤러 배치" (DSSTOPO_4)를 엽니다.  
   
 지역 도메인을 배포할 때 지역 도메인 컨트롤러를 배치 해야 하는 위치에 대 한 정보를 참조 해야 합니다. 지역 도메인 배포 하는 방법에 대 한 자세한 내용은 참조 [배포 Windows Server 2008 지역 도메인](https://technet.microsoft.com/library/cc755118.aspx)합니다.  

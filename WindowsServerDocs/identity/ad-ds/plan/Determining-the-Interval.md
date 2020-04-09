@@ -1,7 +1,6 @@
 ---
 ms.assetid: 96a6749c-6c9f-4f2f-ad0a-51272d282ace
 title: 간격 결정
-description: ''
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 065b4ff707bdd8b82e33e06ad2b52c57a746045f
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f39ad2ce2ce84e36d2faff2a07b8310d3600b6c9
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402622"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80822576"
 ---
 # <a name="determining-the-interval"></a>간격 결정
 
@@ -32,13 +31,13 @@ ms.locfileid: "71402622"
   
 -   다음 예제와 같이 네트워크에 있는 모든 사이트의 테이블을 만듭니다.  
   
-    |사이트|Seattle|보스턴|Los Angeles|New York|워싱턴, D.C|  
+    |사이트|Seattle|보스턴|Los Angeles|New York|Washington, D.C.|  
     |---------|-----------|----------|---------------|------------|--------------------|  
     |Seattle|0.25|||||  
     |보스턴||0.25||||  
     |Los Angeles|||0.25|||  
     |New York||||0.25||  
-    |워싱턴, D.C|||||0.25|  
+    |Washington, D.C.|||||0.25|  
   
     사이트 내의 최악의 대기 시간은 15 분으로 예상 됩니다.  
   
@@ -52,15 +51,15 @@ ms.locfileid: "71402622"
   
 -   이러한 최대 대기 시간을 결합 하 여 전체 네트워크에 대 한 최대 대기 시간을 결정 합니다.  
   
-    예를 들어 시애틀 및 로스앤젤레스의 위성 사이트 간 최대 대기 시간이 하루 이면이 링크 집합의 최대 복제 대기 시간 (워싱턴, D.C-뉴욕-로스앤젤레스)은 31 시간, 즉 4 (워싱턴, D.C-뉴욕) + 3 (신규 시애틀) + 24 (시애틀-로스앤젤레스)와 같이 다음 표에 나와 있습니다.  
+    예를 들어 시애틀에 있는 시애틀와 위성 사이트 간 최대 대기 시간이 1 일 이면이 링크 집합의 최대 복제 대기 시간은 다음 표에 나와 있는 것 처럼 31 시간, 즉 4 (워싱턴, D.C-뉴욕) + 3 (뉴욕-시애틀) + 24 (뉴욕) + 24 (D.C)입니다.  
   
-    |사이트|Seattle|보스턴|Los Angeles|New York|워싱턴, D.C|  
+    |사이트|Seattle|보스턴|Los Angeles|New York|Washington, D.C.|  
     |---------|-----------|----------|---------------|------------|--------------------|  
     |Seattle|0.25|4 + 3|24.00|3.00|4 + 3|  
     |보스턴||0.25|4 + 3 + 24|4.00|4.00|  
     |Los Angeles|||0.25|24 + 3|24 + 3 + 4|  
     |New York||||0.25|4.00|  
-    |워싱턴, D.C|||||0.25|  
+    |Washington, D.C.|||||0.25|  
   
 
 

@@ -1,7 +1,6 @@
 ---
 ms.assetid: 4baefbd3-038f-44c0-85ba-f24e9722b757
 title: 부록 G-Active Directory에서 관리자 그룹 보안
-description: ''
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: cdea04e211b1873ff51c4bc3dc9ff24e746ead69
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f113dc7fc5b131a2c0ef10433125ef12a775707c
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71408649"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80821526"
 ---
 # <a name="appendix-g-securing-administrators-groups-in-active-directory"></a>부록 G: Active Directory에서 Administrators 그룹 보안
 

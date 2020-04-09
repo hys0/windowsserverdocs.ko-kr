@@ -1,7 +1,6 @@
 ---
 ms.assetid: 64142026-07b5-4601-840a-c8dcf6ab9814
 title: 사이트 링크 브리지 디자인 만들기
-description: ''
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 08/08/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 79e91481c357d05617ee0ddc716e2bf6e90b8b27
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f75feb34b64e2ab41859dd708147a2e8d05a768a
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71408968"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80822766"
 ---
 # <a name="creating-a-site-link-bridge-design"></a>사이트 링크 브리지 디자인 만들기
 
@@ -39,4 +38,4 @@ Active Directory 사이트 및 서비스 스냅인을 사용 하 여 **모든 �
   
 ### <a name="controlling-replication-through-a-firewall"></a>방화벽을 통해 복제 제어
 
-서로 다른 두 사이트에서 동일한 도메인을 나타내는 두 도메인 컨트롤러가 방화벽을 통해서만 서로 통신할 수 있도록 하려면 **모든 사이트 링크 브리지** 를 사용 하지 않도록 설정 하 고 같은 쪽 사이트에 대 한 사이트 링크 브리지를 만들 수 있습니다. 방화벽. 따라서 네트워크가 방화벽으로 분리 된 경우 사이트 링크의 전이성을 사용 하지 않도록 설정 하 고 방화벽의 한쪽에서 네트워크에 대 한 사이트 링크 브리지를 만드는 것이 좋습니다. 방화벽을 통해 복제를 관리 하는 방법에 대 한 자세한 내용은 [방화벽으로 분할 된 네트워크의 Active Directory](https://go.microsoft.com/fwlink/?LinkId=107074)문서를 참조 하세요.
+서로 다른 두 사이트에서 동일한 도메인을 나타내는 두 도메인 컨트롤러가 방화벽을 통해서만 서로 통신할 수 있도록 하려면 **모든 사이트 링크 브리지** 를 사용 하지 않도록 설정 하 고 방화벽의 동일한 쪽 사이트에 대 한 사이트 링크 브리지를 만들 수 있습니다. 따라서 네트워크가 방화벽으로 분리 된 경우 사이트 링크의 전이성을 사용 하지 않도록 설정 하 고 방화벽의 한쪽에서 네트워크에 대 한 사이트 링크 브리지를 만드는 것이 좋습니다. 방화벽을 통해 복제를 관리 하는 방법에 대 한 자세한 내용은 [방화벽으로 분할 된 네트워크의 Active Directory](https://go.microsoft.com/fwlink/?LinkId=107074)문서를 참조 하세요.

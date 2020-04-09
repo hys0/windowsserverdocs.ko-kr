@@ -9,12 +9,12 @@ ms.author: jgerend
 manager: dongill
 ms.date: 06/26/2019
 ms.prod: windows-server
-ms.openlocfilehash: 5cb26bcff99d9cf3a1ee8b3a937ad6098a913c3d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 9d68e2becbf9c6522be7e1ff6e6742d44f3a8247
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71362056"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80829236"
 ---
 # <a name="windows-commands"></a>Windows 명령
 
@@ -24,18 +24,36 @@ ms.locfileid: "71362056"
 
 다음 ㄱ-ㅎ 메뉴에서 특정 명령에 대 한 정보를 찾기 위해 명령을 첫 글자를 클릭 하 고 명령 이름을 클릭 합니다.
 
-[@NO__T-](#a)1[B](#b) | 
+[ |
+](#a) [B](#b) | 
 [C](#c) | 
 [D](#d) | 
 [E](#e) | 
-[F](#f) |
-1[G](#g)3[H](#h)5[I](#i)7[J](#j)9[K](#k)1[L ](#l)3[M](#m)5[N](#n)7[O](#o)9[P](#p)1[Q](#q)3[R](#r)5[S](#s)7[T](#t)9[U](#u)1[V](#v)3 [W](#w)5[X](#x) | Y | -
+[F](#f) | 
+[G](#g) | 
+[H](#h) | 
+[I](#i) |
+[J](#j) | 
+[K](#k) | 
+[L](#l) | 
+[M](#m) | 
+[N](#n) | 
+[O](#o) | 
+[P](#p) | 
+[Q](#q) | 
+[R](#r) | 
+[S](#s) | 
+[t](#t) | 
+[U](#u) | 
+[V](#v) | 
+[W](#w) | 
+[X](#x) | Y | -
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 조건
 
 이 항목에 포함 된 정보는 다음에 적용 됩니다.
 
--   Windows Server 2019
+-   시작
 -   Windows Server(반기 채널)
 -   Windows Server 2016
 -   Windows Server 2012 R2
@@ -49,7 +67,7 @@ ms.locfileid: "71362056"
 
 명령 셸은 배치 (.bat) 파일을 사용 하 여 사용자 계정 관리 또는 야간 백업과 같은 일상적인 작업을 자동화 하기 위해 Windows에 기본 제공 되는 셸 이었습니다. Windows 스크립트 호스트를 사용 하면 명령 셸에서 보다 정교한 스크립트를 실행할 수 있습니다. 자세한 내용은 [cscript](cscript.md) 또는 [wscript](wscript.md)를 참조 하세요. 사용자 인터페이스를 사용 하는 것 보다 스크립트를 사용 하 여 작업을 보다 효율적으로 수행할 수 있습니다. 스크립트는 명령줄에서 사용할 수 있는 모든 명령을 허용 합니다.
 
-Windows에는 두 개의 명령 셸이 있습니다. 명령 셸 및 [PowerShell](https://docs.microsoft.com/powershell/scripting/powershell-scripting?view=powershell-6) 각 shell은 사용자와 운영 체제 또는 응용 프로그램 간의 직접 통신을 제공 하 여 IT 운영을 자동화 하는 환경을 제공 하는 소프트웨어 프로그램입니다.
+Windows에는 명령 셸 및 [PowerShell](https://docs.microsoft.com/powershell/scripting/powershell-scripting?view=powershell-6)이라는 두 개의 명령 셸이 있습니다. 각 shell은 사용자와 운영 체제 또는 응용 프로그램 간의 직접 통신을 제공 하 여 IT 운영을 자동화 하는 환경을 제공 하는 소프트웨어 프로그램입니다.
 
 PowerShell은 cmdlet 이라는 PowerShell 명령을 실행 하기 위해 명령 셸의 기능을 확장 하도록 설계 되었습니다. Cmdlet은 Windows 명령과 비슷하지만 보다 확장 가능한 스크립트 언어를 제공 합니다. Powershell에서 Windows 명령 및 PowerShell cmdlet을 실행할 수 있지만 명령 셸은 PowerShell cmdlet이 아닌 Windows 명령만 실행할 수 있습니다.
 
@@ -58,12 +76,12 @@ PowerShell은 cmdlet 이라는 PowerShell 명령을 실행 하기 위해 명령 
 >Powershell의 오픈 소스 버전인 powershell [Core](https://docs.microsoft.com/powershell/scripting/whats-new/what-s-new-in-powershell-core-60?view=powershell-6)를 다운로드 하 여 설치할 수도 있습니다. 
 
 > [!CAUTION]
-> 레지스트리를 잘못 편집하면 시스템에 심각한 손상을 줄 수 있습니다. 레지스트리를 다음과 같이 변경 하기 전에 컴퓨터의 중요 한 데이터를 백업 해야 합니다.
+> 레지스트리를 잘못 편집하면 시스템이 크게 손상될 수 있습니다. 레지스트리를 다음과 같이 변경 하기 전에 컴퓨터의 중요 한 데이터를 백업 해야 합니다.
 
 > [!NOTE]
 > 컴퓨터 또는 사용자 로그온 세션의 명령 셸에서 파일 및 디렉터리 이름 완성을 사용 하거나 사용 하지 않도록 설정 하려면 **regedit.exe** 를 실행 하 고 다음 **reg_DWOrd 값**을 설정 합니다.
 > 
-> HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\completionChar\reg_DWOrd
+> HKEY_LOCAL_MACHINE \Software\Microsoft\Command Processor\completionChar\ reg_DWOrd
 > 
 > **Reg_DWOrd** 값을 설정 하려면 특정 함수에 대 한 제어 문자의 16 진수 값을 사용 합니다 (예: **0 9** 은 Tab, **0 08** 은 백스페이스). 사용자 지정 설정이 컴퓨터 설정 보다 우선 하며 명령줄 옵션 레지스트리 설정 보다 우선 합니다.
 
@@ -71,14 +89,32 @@ PowerShell은 cmdlet 이라는 PowerShell 명령을 실행 하기 위해 명령 
 
 특정 Windows 명령에 대 한 정보를 찾으려면 다음 A-z 메뉴에서 명령이 시작 되는 문자를 클릭 하 고 명령 이름을 클릭 합니다.
 
-[@NO__T-](#a)1[B](#b) | 
+[ |
+](#a) [B](#b) | 
 [C](#c) | 
 [D](#d) | 
 [E](#e) | 
-[F](#f) |
-1[G](#g)3[H](#h)5[I](#i)7[J](#j)9[K](#k)1[L ](#l)3[M](#m)5[N](#n)7[O](#o)9[P](#p)1[Q](#q)3[R](#r)5[S](#s)7[T](#t)9[U](#u)1[V](#v)3 [W](#w)5[X](#x) | Y | -
+[F](#f) | 
+[G](#g) | 
+[H](#h) | 
+[I](#i) |
+[J](#j) | 
+[K](#k) | 
+[L](#l) | 
+[M](#m) | 
+[N](#n) | 
+[O](#o) | 
+[P](#p) | 
+[Q](#q) | 
+[R](#r) | 
+[S](#s) | 
+[t](#t) | 
+[U](#u) | 
+[V](#v) | 
+[W](#w) | 
+[X](#x) | Y | -
 
-### <a name="a"></a>변수를 잠그기 위한
+### <a name="a"></a>A
 -   [append](append.md)
 -   [arp](arp.md)
 -   [assoc](assoc.md)
@@ -348,13 +384,13 @@ PowerShell은 cmdlet 이라는 PowerShell 명령을 실행 하기 위해 명령 
   -   [manage-bde: 보호기](manage-bde-protectors.md)
   -   [manage-bde: tpm](manage-bde-tpm.md)
   -   [manage-bde: setidentifier](manage-bde-setidentifier.md)
-  -   [manage: ForceRecovery](manage-bde-forcerecovery.md)
+  -   [manage-bde: ForceRecovery](manage-bde-forcerecovery.md)
   -   [manage-bde: changepassword](manage-bde-changepassword.md)
   -   [manage-bde: changepin](manage-bde-changepin.md)
   -   [manage-bde: 변환](manage-bde-changekey.md)
-  -   [manage: KeyPackage](manage-bde-keypackage.md)
+  -   [manage-bde: KeyPackage](manage-bde-keypackage.md)
   -   [manage-bde: upgrade](manage-bde-upgrade.md)
-  -   [manage: WipeFreeSpace](manage-bde-wipefreespace.md)
+  -   [manage-bde: WipeFreeSpace](manage-bde-wipefreespace.md)
 - [mapadmin](mapadmin.md)
 - [Md](Md.md)
 - [mkdir](mkdir.md)
@@ -445,7 +481,7 @@ PowerShell은 cmdlet 이라는 PowerShell 명령을 실행 하기 위해 명령 
 ### <a name="q"></a>Q
 -   [qappsrv](qappsrv.md)
 -   [qprocess](qprocess.md)
--   [query](query.md)
+-   [쿼리](query.md)
 -   [quser](quser.md)
 -   [qwinsta](qwinsta.md)
 
@@ -582,7 +618,6 @@ PowerShell은 cmdlet 이라는 PowerShell 명령을 실행 하기 위해 명령 
 - [winnt32](winnt32.md)
 - [winpop](winpop.md)
 - [winrs](winrs.md)
-- [wlbs](wlbs_1.md)
 - [wmic](wmic.md)
 - [wscript](wscript.md)
 

@@ -1,7 +1,6 @@
 ---
 ms.assetid: 341614c6-72c2-444f-8b92-d2663aab7070
 title: 가상화된 도메인 컨트롤러 아키텍처
-description: ''
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: e8673b9e66a0aa3b6bea89b91ae5022efb26c65c
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: fa8645198374d91911f8ec7dc15f04bea4865e38
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79323155"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80824446"
 ---
 # <a name="virtualized-domain-controller-architecture"></a>가상화된 도메인 컨트롤러 아키텍처
 
@@ -26,16 +25,16 @@ ms.locfileid: "79323155"
   
 -   [가상화 된 도메인 컨트롤러 안전 복원 아키텍처](../../../ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Architecture.md#BKMK_SafeRestoreArch)  
   
-## <a name="BKMK_CloneArch"></a>가상화 된 도메인 컨트롤러 복제 아키텍처  
+## <a name="virtualized-domain-controller-cloning-architecture"></a><a name="BKMK_CloneArch"></a>가상화 된 도메인 컨트롤러 복제 아키텍처  
   
 ### <a name="overview"></a>개요  
-가상화된 도메인 컨트롤러 복제에서는 하이퍼바이저 플랫폼을 기반으로 **VM-Generation ID**라는 식별자를 노출하여 가상 머신 생성을 검색합니다. AD DS는 도메인 컨트롤러의 수준을 올리는 동안 초기에 이 식별자 값을 해당 데이터베이스(NTDS.DIT)에 저장합니다. 가상 컴퓨터를 부팅하면 가상 컴퓨터의 현재 VM-Generation ID 값이 데이터베이스에 있는 값과 비교됩니다. 두 값이 서로 다르면 도메인 컨트롤러에서 호출 ID를 다시 설정하고 RID 풀을 삭제하여 USN이 다시 사용되거나 잠재적으로 중복된 보안 주체가 생성되는 것을 방지합니다. 그런 다음 도메인 컨트롤러는 [복제 세부 처리](../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Architecture.md#BKMK_CloneProcessDetails)의 3단계에 설명된 위치에서 DCCloneConfig.xml 파일을 찾습니다. DCCloneConfig.xml 파일을 찾으면 해당 파일이 복제본으로 배포 중인 것으로 결론을 내리므로 원본 미디어에서 복사한 기존 NTDS.DIT 및 SYSVOL 콘텐츠로 다시 수준을 올려 자체를 추가 도메인 컨트롤러로 프로비전하기 위해 복제를 시작합니다.  
+가상화된 도메인 컨트롤러 복제에서는 하이퍼바이저 플랫폼을 기반으로 **VM-Generation ID** 라는 식별자를 노출하여 가상 컴퓨터 생성을 검색합니다. AD DS는 도메인 컨트롤러의 수준을 올리는 동안 초기에 이 식별자 값을 해당 데이터베이스(NTDS.DIT)에 저장합니다. 가상 컴퓨터를 부팅하면 가상 컴퓨터의 현재 VM-Generation ID 값이 데이터베이스에 있는 값과 비교됩니다. 두 값이 서로 다르면 도메인 컨트롤러에서 호출 ID를 다시 설정하고 RID 풀을 삭제하여 USN이 다시 사용되거나 잠재적으로 중복된 보안 주체가 생성되는 것을 방지합니다. 그런 다음 도메인 컨트롤러는 [복제 세부 처리](../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Architecture.md#BKMK_CloneProcessDetails)의 3단계에 설명된 위치에서 DCCloneConfig.xml 파일을 찾습니다. DCCloneConfig.xml 파일을 찾으면 해당 파일이 복제본으로 배포 중인 것으로 결론을 내리므로 원본 미디어에서 복사한 기존 NTDS.DIT 및 SYSVOL 콘텐츠로 다시 수준을 올려 자체를 추가 도메인 컨트롤러로 프로비전하기 위해 복제를 시작합니다.  
   
 VM-GenerationID를 지원하는 하이퍼바이저와 지원하지 않는 하이퍼바이저가 혼합된 환경에서는 VM-GenerationID를 지원하지 않는 하이퍼바이저에 복제 미디어가 실수로 배포될 수 있습니다. DCCloneConfig.xml 파일의 존재는 DC를 복제하기 위한 관리 의도를 나타냅니다. 따라서 부팅 중 DCCloneConfig.xml 파일을 찾았지만 호스트에서 VM-GenerationID가 제공되지 않은 경우 나머지 환경에 미치는 영향을 방지하기 위해 복제 DC가 DSRM(디렉터리 서비스 복원 모드)으로 부팅됩니다. 이후에 복제 미디어를 VM-GenerationID를 지원하는 하이퍼바이저로 이동한 다음 복제를 다시 시도할 수 있습니다.  
   
 복제 미디어가 VM-GenerationID를 지원하는 하이퍼바이저에 배포되었지만 DCCloneConfig.xml 파일이 제공되지 않은 경우에는 DC에서 해당 DIT와 새 VM DIT 간의 VM-GenerationID 변경 내용을 검색하여 USN 재사용 및 SID 중복을 방지하기 위한 보호 기능을 트리거합니다. 그러나 복제가 시작되지 않으므로 보조 DC가 원본 DC와 동일한 ID로 계속 실행됩니다. 환경 내 비일관성을 방지하려면 이 보조 DC를 최대한 빨리 네트워크에서 제거해야 합니다. 업데이트가 아웃바운드 복제되는 것을 확인하는 동안 이 두 번째 DC를 회수하는 방법에 대한 자세한 내용은 Microsoft 기술 자료 문서 [2742970](https://support.microsoft.com/kb/2742970)을 참조하세요.  
   
-### <a name="BKMK_CloneProcessDetails"></a>복제 세부 처리  
+### <a name="cloning-detailed-processing"></a><a name="BKMK_CloneProcessDetails"></a>복제 세부 처리  
 다음 다이어그램에서는 초기 복제 작업 및 복제 다시 시도 작업의 아키텍처를 보여 줍니다. 이러한 프로세스에 대해서는 이 항목의 뒷부분에서 자세히 설명합니다.  
   
 **초기 복제 작업**  
@@ -142,10 +141,10 @@ VM-GenerationID를 지원하는 하이퍼바이저와 지원하지 않는 하이
   
 26. 게스트가 다시 시작됩니다. 이제 정상적인 보급 도메인 컨트롤러가 되었습니다.  
   
-## <a name="BKMK_SafeRestoreArch"></a>가상화 된 도메인 컨트롤러 안전 복원 아키텍처  
+## <a name="virtualized-domain-controller-safe-restore-architecture"></a><a name="BKMK_SafeRestoreArch"></a>가상화 된 도메인 컨트롤러 안전 복원 아키텍처  
   
 ### <a name="overview"></a>개요  
-AD DS에서는 하이퍼바이저 플랫폼을 기반으로 **VM-Generation ID**라는 식별자를 노출하여 가상 머신의 스냅샷 복원을 검색합니다. AD DS는 도메인 컨트롤러의 수준을 올리는 동안 초기에 이 식별자 값을 해당 데이터베이스(NTDS.DIT)에 저장합니다. 관리자가 이전 스냅샷에서 가상 컴퓨터를 복원하면 가상 컴퓨터의 현재 VM-Generation ID 값이 데이터베이스에 있는 값과 비교됩니다. 두 값이 서로 다르면 도메인 컨트롤러에서 호출 ID를 다시 설정하고 RID 풀을 삭제하여 USN이 다시 사용되거나 잠재적으로 중복된 보안 주체가 생성되는 것을 방지합니다. 안전 복원이 발생할 수 있는 다음 두 가지 시나리오가 있습니다.  
+AD DS에서는 하이퍼바이저 플랫폼을 기반으로 **VM-Generation ID** 라는 식별자를 노출하여 가상 컴퓨터의 스냅샷 복원을 검색합니다. AD DS는 도메인 컨트롤러의 수준을 올리는 동안 초기에 이 식별자 값을 해당 데이터베이스(NTDS.DIT)에 저장합니다. 관리자가 이전 스냅샷에서 가상 컴퓨터를 복원하면 가상 컴퓨터의 현재 VM-Generation ID 값이 데이터베이스에 있는 값과 비교됩니다. 두 값이 서로 다르면 도메인 컨트롤러에서 호출 ID를 다시 설정하고 RID 풀을 삭제하여 USN이 다시 사용되거나 잠재적으로 중복된 보안 주체가 생성되는 것을 방지합니다. 안전 복원이 발생할 수 있는 다음 두 가지 시나리오가 있습니다.  
   
 -   종료되어 있는 동안 스냅샷이 복원된 후 가상 도메인 컨트롤러가 시작된 경우  
   
@@ -180,7 +179,7 @@ AD DS에서는 하이퍼바이저 플랫폼을 기반으로 **VM-Generation ID**
 > [!NOTE]  
 > 위 그림은 개념을 설명하기 위해 간소화된 것입니다.  
   
-1.  T1 시점에 하이퍼바이저 관리자는 가상 DC1의 스냅샷을 만듭니다. 이 시점에 DC1의 USN 값(실제로는**highestCommittedUsn** )은 100이고, InvocationId(위 다이어그램에 ID로 표시) 값은 A(실제로는 GUID일 수 있음)입니다. savedVMGID 값은 DC의 DIT 파일에 있는 VM-GenerationID입니다(DC 컴퓨터 개체에 대해 **msDS-GenerationId**특성에 저장됨). VMGID는 가상 컴퓨터 드라이버에서 사용할 수 있는 VM-GenerationId의 현재 값입니다. 이 값은 하이퍼바이저에서 제공됩니다.  
+1.  T1 시점에 하이퍼바이저 관리자는 가상 DC1의 스냅샷을 만듭니다. 이 시점에 DC1의 USN 값(실제로는 **highestCommittedUsn**)은 100이고, InvocationId(위 다이어그램에 ID로 표시) 값은 A(실제로는 GUID일 수 있음)입니다. savedVMGID 값은 DC의 DIT 파일에 있는 VM-GenerationID입니다(DC 컴퓨터 개체에 대해 **msDS-GenerationId**특성에 저장됨). VMGID는 가상 컴퓨터 드라이버에서 사용할 수 있는 VM-GenerationId의 현재 값입니다. 이 값은 하이퍼바이저에서 제공됩니다.  
   
 2.  나중에 T2 시점에 100명의 사용자가 이 DC에 추가됩니다. 사용자를 T1과 T2 사이에 이 DC에서 수행되었을 수 있는 업데이트의 예로 간주하면 됩니다. 이러한 업데이트에는 실제로 사용자 만들기, 그룹 만들기, 암호 업데이트, 특성 업데이트 등이 혼합될 수 있습니다. 이 예에서는 각 업데이트에서 하나의 고유한 USN(실제로는 사용자 만들기에 둘 이상의 USN이 사용될 수 있음)을 사용합니다. 이러한 업데이트를 커밋하기 전에 DC1에서 해당 데이터베이스에 있는 VM-GenerationID 값(savedVMGID)이 드라이버에서 사용할 수 있는 현재 값(VMGID)과 일치하는지 확인합니다. 아직 롤백이 발생하지 않아 두 값이 동일하므로 업데이트가 커밋되고 USN이 200까지 이동합니다. 이는 다음 업데이트에서 USN 201을 사용할 수 있음을 나타냅니다. InvocationId, savedVMGID 또는 VMGID는 변경되지 않습니다. 이러한 업데이트는 다음 복제 주기에서 DC2에 복제됩니다. D c 1은 단순히 DC1 (A) @USN = 200으로 표시 된 상위 워터 마크 (및 **UptoDatenessVector**)를 업데이트 합니다. 즉, DC2는 InvocationId A 컨텍스트에서 USN 200까지 DC1의 모든 업데이트를 인식합니다.  
   
@@ -195,7 +194,7 @@ AD DS에서는 하이퍼바이저 플랫폼을 기반으로 **VM-Generation ID**
 -   DFSR를 사용 하는 게스트 DFSR 서비스를 중지 하 고 DFSR 데이터베이스 파일 삭제 (기본 위치: %systemroot%\system volume information\dfsr\\ *<database GUID>* ). 그런 다음 가능한 경우 변경되지 않은 기존 SYSVOL 데이터를 다시 사용하여 신뢰할 수 없는 방식으로 인바운드 복제를 수행하는 DFSR 서비스를 시작합니다.  
   
 > [!NOTE]  
-> -   하이퍼바이저에서 비교할 수 있는 VM-Generation ID를 제공하지 않는 경우에는 하이퍼바이저에서 가상화 안전 조치를 지원하지 않으므로 게스트가 Windows Server 2008 R2 이하를 실행하는 가상화된 도메인 컨트롤러처럼 작동합니다. 게스트는 파트너 DC에서 마지막으로 확인한 가장 높은 USN을 초과하지 않은 USN으로 복제를 시작하려는 시도가 있는 경우 USN 롤백 격리 보호를 구현합니다. USN 롤백 격리 보호에 대 한 자세한 내용은 참조 [USN 및 USN 롤백](https://technet.microsoft.com/library/virtual_active_directory_domain_controller_virtualization_hyperv(WS.10).aspx)  
+> -   하이퍼바이저에서 비교할 수 있는 VM-Generation ID를 제공하지 않는 경우에는 하이퍼바이저에서 가상화 안전 조치를 지원하지 않으므로 게스트가 Windows Server 2008 R2 이하를 실행하는 가상화된 도메인 컨트롤러처럼 작동합니다. 게스트는 파트너 DC에서 마지막으로 확인한 가장 높은 USN을 초과하지 않은 USN으로 복제를 시작하려는 시도가 있는 경우 USN 롤백 격리 보호를 구현합니다. USN 롤백 격리 보호에 대한 자세한 내용은 [USN 및 USN 롤백](https://technet.microsoft.com/library/virtual_active_directory_domain_controller_virtualization_hyperv(WS.10).aspx)을 참조하세요.  
   
 
 

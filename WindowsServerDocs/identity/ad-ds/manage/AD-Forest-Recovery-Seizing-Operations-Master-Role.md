@@ -1,6 +1,5 @@
 ---
 title: AD 포리스트 복구-작업 마스터 역할 점유
-description: ''
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
@@ -9,12 +8,12 @@ ms.topic: article
 ms.prod: windows-server
 ms.assetid: 7e6bb370-f840-4416-b5e2-86b0ba715f4f
 ms.technology: identity-adds
-ms.openlocfilehash: 672dc119845acbe9cf38f82c793bd377d31db3b2
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b229215eb7dde23bd1c17e6023b1c5eace0a56bf
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71390280"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80823536"
 ---
 # <a name="ad-forest-recovery---seizing-an-operations-master-role"></a>AD 포리스트 복구-작업 마스터 역할 점유  
 
@@ -24,7 +23,7 @@ ms.locfileid: "71390280"
   
 ## <a name="to-seize-an-operations-master-role"></a>작업 마스터 역할을 점유 하려면  
   
-1. 명령 프롬프트에서 다음 명령을 입력하고 Enter 키를 누릅니다.  
+1. 명령 프롬프트에서 다음 명령을 입력한 다음 Enter 키를 누릅니다.  
 
    ```  
    ntdsutil  
@@ -60,11 +59,11 @@ ms.locfileid: "71390280"
 
 6. 점유 하려는 역할에 따라 다음 표에 설명 된 대로 적절 한 명령을 입력 하 고 ENTER 키를 **누릅니다.**  
   
-|역할|자격 증명|명령|  
+|Role|자격 증명|명령|  
 |----------|-----------------|-------------|  
 |도메인 명명 마스터|Enterprise Admins|**이름 지정 마스터 확보**|  
 |스키마 마스터|Schema Admins|**스키마 마스터 확보**|  
-|인프라 마스터 **참고:**  인프라 마스터 역할을 중단 한 후에는 나중에 Adprep/Rodcprep.를 실행 해야 하는 경우 오류 메시지가 표시 될 수 있습니다. 자세한 내용은 기술 자료 문서 [949257](https://support.microsoft.com/kb/949257)를 참조 하십시오.|Domain Admins|**인프라 마스터 확보**|  
+|인프라 마스터 **참고:** 인프라 마스터 역할을 점유 하 고 나면 나중에 Adprep/Rodcprep.를 실행 해야 하는 경우 오류 메시지가 표시 될 수 있습니다. 자세한 내용은 기술 자료 문서 [949257](https://support.microsoft.com/kb/949257)를 참조 하십시오.|Domain Admins|**인프라 마스터 확보**|  
 |PDC 에뮬레이터 마스터|Domain Admins|**Pdc 점유**|  
 |RID 마스터|Domain Admins|**Rid 마스터 점유**|  
 

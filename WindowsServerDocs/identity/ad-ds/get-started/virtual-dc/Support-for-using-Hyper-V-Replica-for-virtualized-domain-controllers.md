@@ -1,7 +1,6 @@
 ---
 ms.assetid: 45a65504-70b5-46ea-b2e0-db45263fabaa
 title: 가상화된 도메인 컨트롤러에 Hyper-V 복제본 사용 지원
-description: ''
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 92324ef7c0fab81e80974a1f05eeec4833f09875
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: d882fc5a8e519c461e17a7a82c8abfc6c16fbe9c
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71390433"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80824506"
 ---
 # <a name="support-for-using-hyper-v-replica-for-virtualized-domain-controllers"></a>가상화된 도메인 컨트롤러에 Hyper-V 복제본 사용 지원
 
@@ -62,9 +61,9 @@ Windows Server 2012 이상을 실행 하는 Vm만 계획 되지 않은 장애 �
   
 |||  
 |-|-|  
-|계획된 장애 조치(failover)|계획되지 않은 장애 조치(failover)|  
+|계획된 장애 조치(failover)|계획되지 않은 장애 조치(Failover)|  
 |지원됨|지원됨|  
-|테스트 사례:<br /><br />-DC1 및 d c 2는 Windows Server 2012를 실행 합니다.<br /><br />-D c 2는 종료 되 고 DC2에서 장애 조치 (failover)가 수행 됩니다. 장애 조치(failover)는 계획되거나 계획되지 않을 수 있습니다.<br /><br />-DC2-Rec가 시작 된 후에는 해당 데이터베이스에 있는 VMGenID의 값이 Hyper-v 복제본 서버에서 저장 한 가상 컴퓨터 드라이버의 값과 동일한 지 여부를 확인 합니다.<br /><br />따라서 DC2-Rec는 가상화 보호를 트리거합니다. 즉, InvocationID를 다시 설정 하 고, RID 풀을 삭제 하 고, 초기 동기화 요구 사항을 설정 하 여 작업 마스터 역할을 가정 합니다. 초기 동기화 요구 사항에 대한 자세한 내용은 다음을 참조하세요.<br /><br />-DC2-Rec는 해당 데이터베이스에 VMGenID의 새 값을 저장 하 고 새 InvocationID의 컨텍스트에서 후속 업데이트를 커밋합니다.<br /><br />-InvocationID reset의 결과로 DC1은 시간이 롤백된 경우에도 DC2-Rec에 의해 도입 된 모든 AD 변경 내용에 대해 수렴 합니다. 즉, 장애 조치 (failover) 후 DC2에서 수행 되는 모든 AD 업데이트가 안전 하 게 수렴 됩니다.|테스트 사례는 다음을 제외하고 계획된 장애 조치(failover)의 테스트 사례와 같습니다.<br /><br />-DC2에서 받았지만 장애 조치 (failover) 이벤트 전에 AD에서 복제 파트너로 아직 복제 하지 않은 AD 업데이트는 모두 손실 됩니다.<br /><br />-AD에서 DC1으로 복제 된 복구 지점의 시간이 d c 2에서 DC1으로 받은 AD 업데이트는 d c 1에서 d c 1로 다시 복제 됩니다.|  
+|테스트 사례:<p>-DC1 및 d c 2는 Windows Server 2012를 실행 합니다.<p>-D c 2는 종료 되 고 DC2에서 장애 조치 (failover)가 수행 됩니다. 장애 조치 (failover)는 계획 되거나 계획 되지 않은 것일 수 있습니다.<p>-DC2-Rec가 시작 된 후에는 해당 데이터베이스에 있는 VMGenID의 값이 Hyper-v 복제본 서버에서 저장 한 가상 컴퓨터 드라이버의 값과 동일한 지 여부를 확인 합니다.<p>따라서 DC2-Rec는 가상화 보호를 트리거합니다. 즉, InvocationID를 다시 설정 하 고, RID 풀을 삭제 하 고, 초기 동기화 요구 사항을 설정 하 여 작업 마스터 역할을 가정 합니다. 초기 동기화 요구 사항에 대한 자세한 내용은 다음을 참조하세요.<p>-DC2-Rec는 해당 데이터베이스에 VMGenID의 새 값을 저장 하 고 새 InvocationID의 컨텍스트에서 후속 업데이트를 커밋합니다.<p>-InvocationID reset의 결과로 DC1은 시간이 롤백된 경우에도 DC2-Rec에 의해 도입 된 모든 AD 변경 내용에 대해 수렴 합니다. 즉, 장애 조치 (failover) 후 DC2에서 수행 되는 모든 AD 업데이트가 안전 하 게 수렴 됩니다.|테스트 사례는 다음을 제외하고 계획된 장애 조치(failover)의 테스트 사례와 같습니다.<p>-DC2에서 받았지만 장애 조치 (failover) 이벤트 전에 AD에서 복제 파트너로 아직 복제 하지 않은 AD 업데이트는 모두 손실 됩니다.<p>-AD에서 DC1으로 복제 된 복구 지점의 시간이 d c 2에서 DC1으로 받은 AD 업데이트는 d c 1에서 d c 1로 다시 복제 됩니다.|  
   
 ### <a name="windows-server-2008-r2-and-earlier-versions"></a>Windows Server 2008 R2 이하 버전
 
@@ -72,6 +71,6 @@ Windows Server 2012 이상을 실행 하는 Vm만 계획 되지 않은 장애 �
   
 |||  
 |-|-|  
-|계획된 장애 조치(failover)|계획되지 않은 장애 조치(failover)|  
-|지원되지만, 이러한 버전의 Windows Server를 실행하는 DC는 VMGenID를 지원하거나 연관된 가상화 세이프가드을 사용하지 않으므로 권장되지 않습니다. USN 롤백에 대한 위험이 따릅니다. 자세한 내용은 [USN 및 USN 롤백](https://technet.microsoft.com/library/d2cae85b-41ac-497f-8cd1-5fbaa6740ffe(v=ws.10))을 참조하세요.|지원 되지 않음 **참고 사항:** 계획되지 않은 장애 조치(failover)는 포리스트의 단일 DC(권장되지 않는 구성)와 같이 USN 롤백이 위험하지 않은 경우에 지원됩니다.|  
-|테스트 사례:<br /><br />-DC1 및 d c 2는 Windows Server 2008 r 2를 실행 합니다.<br /><br />-DC2가 종료 되 고 계획 된 장애 조치 (failover)가 DC2에서 수행 됩니다. DC2의 모든 데이터는 종료가 완료되기 전에 DC2-Rec에 복제됩니다.<br /><br />-DC2-Rec가 시작 된 후 DC2와 동일한 invocationID를 사용 하 여 d c 1을 사용 하 여 복제를 다시 시작 합니다.|해당 사항 없음|  
+|계획된 장애 조치(failover)|계획되지 않은 장애 조치(Failover)|  
+|지원되지만, 이러한 버전의 Windows Server를 실행하는 DC는 VMGenID를 지원하거나 연관된 가상화 세이프가드을 사용하지 않으므로 권장되지 않습니다. USN 롤백에 대한 위험이 따릅니다. 자세한 내용은 [USN 및 USN 롤백](https://technet.microsoft.com/library/d2cae85b-41ac-497f-8cd1-5fbaa6740ffe(v=ws.10))을 참조하세요.|지원 되지 않음 **참고:** 계획 되지 않은 장애 조치 (failover)는 포리스트의 단일 DC (권장 되지 않는 구성)와 같이 USN 롤백이 위험 하지 않은 경우 지원 됩니다.|  
+|테스트 사례:<p>-DC1 및 d c 2는 Windows Server 2008 r 2를 실행 합니다.<p>-DC2가 종료 되 고 계획 된 장애 조치 (failover)가 DC2에서 수행 됩니다. DC2의 모든 데이터는 종료가 완료 되기 전에 DC2에 복제 됩니다.<p>-DC2-Rec가 시작 된 후 DC2와 동일한 invocationID를 사용 하 여 d c 1을 사용 하 여 복제를 다시 시작 합니다.|N/A|  

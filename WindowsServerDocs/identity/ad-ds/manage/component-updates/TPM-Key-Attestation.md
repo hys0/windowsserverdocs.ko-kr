@@ -1,7 +1,6 @@
 ---
 ms.assetid: 16a344a9-f9a6-4ae2-9bea-c79a0075fd04
 title: TPM 키 증명
-description: ''
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: d7104daaa10cf7093370cb309e0366e1ab2b9b51
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: de5a38ff6f811046d06c52a1ca4598f9650b3cfe
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71389864"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80823016"
 ---
 # <a name="tpm-key-attestation"></a>TPM 키 증명
 
@@ -67,7 +66,7 @@ TPM 키 증명을 사용 하 여 새로운 관리 패러다임을 사용할 수 
   
 4.  CA는 OID 나타내는 키를 TPM으로 보호 증명 된 이제는 특별 한 발급 정책을 사용 하 여 인증서를 발급 합니다.  
   
-## <a name="BKMK_DeploymentOverview"></a>배포 개요  
+## <a name="deployment-overview"></a><a name="BKMK_DeploymentOverview"></a>배포 개요  
 이 배포에서는 Windows Server 2012 R2 엔터프라이즈 CA가 설정 되어 있는지 가정 합니다. 또한 클라이언트 (Windows 8.1)는 인증서 템플릿을 사용 하 여 해당 엔터프라이즈 CA에 등록 하도록 구성 됩니다. 
 
 TPM 키 증명을 배포 하는 방법은 세 가지 단계가 있습니다.  
@@ -101,9 +100,9 @@ TPM 키 증명을 배포 하는 방법은 세 가지 단계가 있습니다.
     > -   TPM 키 증명 독립 실행형 CA에 대 한 지원 되지 않습니다.  
     > -   TPM 키 증명을 지원 하지 않습니다 [비영구적 인증서 처리](https://technet.microsoft.com/library/ff934598)합니다.  
   
-## <a name="BKMK_DeploymentDetails"></a>배포 세부 정보  
+## <a name="deployment-details"></a><a name="BKMK_DeploymentDetails"></a>배포 세부 정보  
   
-### <a name="BKMK_ConfigCertTemplate"></a>인증서 템플릿 구성  
+### <a name="configure-a-certificate-template"></a><a name="BKMK_ConfigCertTemplate"></a>인증서 템플릿 구성  
 TPM 키 증명에 대 한 인증서 템플릿을 구성 하려면 다음 구성 단계를 수행 합니다.  
   
 1.  **호환성** 탭  
@@ -155,7 +154,7 @@ TPM 키 증명에 대 한 인증서 템플릿을 구성 하려면 다음 구성 
     |OID|키 증명 유형|설명|보증 수준|  
     |-------|------------------------|---------------|-------------------|  
     |1.3.6.1.4.1.311.21.30|EK|"EK Verified": EK의 목록은 관리자 관리|높음|  
-    |1.3.6.1.4.1.311.21.31|보증 인증서|"EK 인증서 확인 됨": EK 인증서 체인의 유효성을 검사 하는 경우|보통|  
+    |1.3.6.1.4.1.311.21.31|보증 인증서|"EK 인증서 확인 됨": EK 인증서 체인의 유효성을 검사 하는 경우|중간|  
     |1.3.6.1.4.1.311.21.32|사용자 자격 증명|"EK 신뢰할 수 있는 사용 시": EK 사용자 입증에 대 한|낮음|  
   
     Oid 경우 발급된 된 인증서에 삽입 됩니다 **발급 정책 포함** 됩니다 (기본 구성)를 선택 합니다.  
@@ -165,7 +164,7 @@ TPM 키 증명에 대 한 인증서 템플릿을 구성 하려면 다음 구성 
     > [!TIP]  
     > 인증서에 OID를 사용 하는 한 가지 잠재적인 사용은 특정 장치로 VPN 또는 무선 네트워킹에 대 한 액세스를 제한 하는 것입니다. 예를 들어 인증서에 OID 1.3.6.1.4.1.311.21.30가 있는 경우 액세스 정책에서 연결을 허용 하거나 다른 VLAN에 대 한 액세스를 허용할 수 있습니다. 이 옵션을 사용 하면 해당 TPM EK EKPUB 목록에는 장치에 대 한 액세스를 제한할 수 있습니다.  
   
-### <a name="BKMK_CAConfig"></a>CA 구성  
+### <a name="ca-configuration"></a><a name="BKMK_CAConfig"></a>CA 구성  
   
 1.  **발급 CA에 EKCA 및 EKROOT 인증서 저장소 설정**  
   
@@ -192,16 +191,16 @@ TPM 키 증명에 대 한 인증서 템플릿을 구성 하려면 다음 구성 
   
     1.  **EndorsementKeyListDirectories 레지스트리 항목을 만듭니다.** Certutil 명령줄 도구를 사용 하 여 다음 표에 설명 된 대로 신뢰할 수 있는 EKpubs가 정의 된 폴더 위치를 구성 합니다.  
   
-        |작업|명령 구문|  
+        |연산|명령 구문|  
         |-------------|------------------|  
         |폴더 위치를 추가 합니다.|certutil.exe-setreg CA\EndorsementKeyListDirectories + "<folder>"|  
         |폴더 위치를 제거 합니다.|certutil.exe-setreg CA\EndorsementKeyListDirectories-"<folder>"|  
   
         Certutil의 EndorsementKeyListDirectories 명령은 다음 표에 설명 된 대로 레지스트리 설정입니다.  
   
-        |값 이름|형식|data|  
+        |값 이름|형식|데이터|  
         |--------------|--------|--------|  
-        |EndorsementKeyListDirectories|REG_MULTI_SZ|< EKPUB 로컬 또는 UNC 경로 목록을 허용 ><br /><br />예제:<br /><br />*\\\blueCA.contoso.com\ekpub*<br /><br />*\\\bluecluster1.contoso.com\ekpub*<br /><br />D:\ekpub|  
+        |EndorsementKeyListDirectories|REG_MULTI_SZ|< EKPUB 로컬 또는 UNC 경로 목록을 허용 ><p>예:<p>*\\\blueCA.contoso.com\ekpub*<p>*\\\bluecluster1.contoso.com\ekpub*<p>D:\ekpub|  
   
         HKLM\SYSTEM\CurrentControlSet\Services\CertSvc\Configuration\\<CA Sanitized Name>  
   
@@ -275,6 +274,6 @@ Windows PowerShell cmdlet을 사용 하 여 **확인 CAEndorsementKeyInfo**, Ca�
         PS C:>new-object System.Security.Cryptography.X509Certificates.X509Certificate2 "c:\diagnose\myEKcert.cer" | Confirm-CAEndorsementKeyInfo  
         ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
 [신뢰할 수 있는 플랫폼 모듈 기술 개요](https://technet.microsoft.com/library/jj131725.aspx)  
 [외부 리소스: 신뢰할 수 있는 플랫폼 모듈](http://www.cs.unh.edu/~it666/reading_list/Hardware/tpm_fundamentals.pdf)  

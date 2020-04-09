@@ -1,23 +1,19 @@
 ---
 title: Windows Server Essentials에서 DirectAccess 구성
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c959b6fc-c67e-46cd-a9cb-cee71a42fa4c
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 618c88e14fa86a06e763206a981bb42a667705eb
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: d8029b954a5957433fb0fcc71d3bef610a187939
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80311488"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80819707"
 ---
 # <a name="configure-directaccess-in-windows-server-essentials"></a>Windows Server Essentials에서 DirectAccess 구성
 
@@ -77,7 +73,7 @@ ms.locfileid: "80311488"
   
 ##  <a name="step-1-add-remote-access-management-tools-to-your-server"></a><a name="BKMK_AddRAM"></a>1 단계: 서버에 원격 액세스 관리 도구 추가  
   
-#### <a name="to-add-remote-access-management-tools"></a>원격 액세스 관리 도구를 추가하려면  
+#### <a name="to-add-remote-accregss-management-tools--reg"></a>원격 Acc&reg;ss 관리 도구를 추가 하려면 &reg;
   
 1.  서버에서 시작 페이지 왼쪽 아래에 있는 **서버 관리자** 아이콘을 클릭합니다.  
   

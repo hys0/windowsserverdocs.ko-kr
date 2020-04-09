@@ -1,24 +1,20 @@
 ---
 title: 소프트웨어 제한 정책 문제 해결
 description: Windows Server 보안
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: security-software-restriction-policies
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4fd53736-03e7-4bf9-ba90-d1212d93e19a
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: 8dff3e1542afcc3cba3645b6834981bd6ed33f58
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: c6b3a475f21925b506d073bd3618d78e2ee0c1d7
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71407162"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80819726"
 ---
 # <a name="troubleshoot-software-restriction-policies"></a>소프트웨어 제한 정책 문제 해결
 
@@ -27,7 +23,7 @@ ms.locfileid: "71407162"
 이 항목에서는 Windows Server 2008 및 Windows Vista부터 SRP (소프트웨어 제한 정책) 문제를 해결할 때 발생 하는 일반적인 문제 및 해결 방법에 대해 설명 합니다.
 
 ## <a name="introduction"></a>소개
-SRP(소프트웨어 제한 정책)는 도메인의 컴퓨터에서 실행 중인 소프트웨어 프로그램을 식별하고, 실행할 해당 프로그램의 기능을 제어하는 그룹 정책 기반 기능입니다. 소프트웨어 제한 정책을 사용하면 명확하게 식별된 응용 프로그램만 실행할 수 있도록 고도로 제한된 컴퓨터 구성을 만들 수 있습니다. 이러한 기능은 Microsoft Active Directory Domain Services 및 그룹 정책와 통합 되어 있지만 독립 실행형 컴퓨터 에서도 구성할 수 있습니다. SRP에 대 한 자세한 내용은 [소프트웨어 제한 정책](software-restriction-policies.md)을 참조 하십시오.
+SRP(소프트웨어 제한 정책)는 도메인의 컴퓨터에서 실행 중인 소프트웨어 프로그램을 식별하고, 실행할 해당 프로그램의 기능을 제어하는 그룹 정책 기반 기능입니다. 소프트웨어 제한 정책을 사용하면 명확하게 식별된 애플리케이션만 실행할 수 있도록 고도로 제한된 컴퓨터 구성을 만들 수 있습니다. 이러한 기능은 Microsoft Active Directory Domain Services 및 그룹 정책와 통합 되어 있지만 독립 실행형 컴퓨터 에서도 구성할 수 있습니다. SRP에 대 한 자세한 내용은 [소프트웨어 제한 정책](software-restriction-policies.md)을 참조 하십시오.
 
 Windows Server 2008 R2 및 Windows 7 부터는 응용 프로그램 제어 전략의 일부에 대 한 SRP를 사용 하거나 사용 하지 않고 Windows AppLocker를 사용할 수 있습니다.
 
@@ -49,7 +45,7 @@ Windows Server 2008 R2 및 Windows 7 부터는 응용 프로그램 제어 전략
 
 2.  네트워크에서 로그 오프 한 다음 네트워크에 다시 로그온 하 여 정책을 새로 고치십시오. 그룹 정책를 통해 정책이 적용 되는 경우 다시 로그인 하면 해당 정책이 새로 고쳐집니다.
 
-3.  명령줄 유틸리티 gpupdate 또는에서 로그 오프 한 다음 컴퓨터에 다시 로그온 하 여 정책 설정을 새로 고칠 수 있습니다. 최상의 결과를 위해서는 gpupdate를 실행 한 다음에서 로그 오프 하 고 컴퓨터에 다시 로그온 합니다. 일반적으로 보안 설정은 워크스테이션이 나 서버에서 90 분 마다, 도메인 컨트롤러에서는 5 분 마다 새로 고쳐집니다. 또한 보안 설정은 설정이 변경되었는지 여부에 관계없이 16시간마다 새로 고쳐집니다. 이러한 설정은 구성 가능한 설정 이므로 각 도메인에서 새로 고침 간격이 다를 수 있습니다.
+3.  명령줄 유틸리티 gpupdate 또는에서 로그 오프 한 다음 컴퓨터에 다시 로그온 하 여 정책 설정을 새로 고칠 수 있습니다. 최상의 결과를 위해서는 gpupdate를 실행 한 다음에서 로그 오프 하 고 컴퓨터에 다시 로그온 합니다. 일반적으로 보안 설정은 워크스테이션이 나 서버에서 90 분 마다, 도메인 컨트롤러에서는 5 분 마다 새로 고쳐집니다. 그리고 변경 사항이 있는지 여부와 상관없이 16시간마다 설정을 새로 고칩니다. 이러한 설정은 구성 가능한 설정 이므로 각 도메인에서 새로 고침 간격이 다를 수 있습니다.
 
 4.  적용 되는 정책을 확인 합니다. **재정의 설정이 없는** 도메인 수준 정책을 확인 하십시오.
 

@@ -1,7 +1,6 @@
 ---
 ms.assetid: 5b2876ac-fe7d-4054-bfba-b692e57bc0d2
 title: Active Directory의 부록 C 보호 된 계정 및 그룹
-description: ''
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 606b3a42d70ee5c2a3479f9c9df2f95a495d6afd
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 3036176127cbb5401c582d81ddb2704d790a209a
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71408728"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80821686"
 ---
 # <a name="appendix-c-protected-accounts-and-groups-in-active-directory"></a>부록 C: Active Directory의 보호된 계정 및 그룹
 
@@ -22,7 +21,7 @@ ms.locfileid: "71408728"
 
 ## <a name="appendix-c-protected-accounts-and-groups-in-active-directory"></a>부록 C: Active Directory의 보호된 계정 및 그룹
 
-Active Directory 내에서 높은 권한 있는 계정 및 그룹의 기본 집합은 보호 된 계정 및 그룹으로 간주 됩니다. Active Directory에서 대부분의 개체를 사용 하는 경우 위임 된 관리자 (Active Directory 개체를 관리 하는 권한을 위임 받은 사용자)는 해당 개체에 대 한 사용 권한을 변경할 수 있습니다. 예를 들어 그룹입니다.  
+Active Directory 내에서 높은 권한 있는 계정 및 그룹의 기본 집합은 보호 된 계정 및 그룹으로 간주 됩니다. Active Directory에서 대부분의 개체를 사용 하는 경우 위임 된 관리자 (Active Directory 개체를 관리 하는 권한을 위임 받은 사용자)는 그룹의 멤버 자격을 변경할 수 있는 권한 변경을 포함 하 여 개체에 대 한 사용 권한을 변경할 수 있습니다 (예:).  
 
 그러나 보호 된 계정 및 그룹을 사용 하는 경우 개체에 대 한 사용 권한이 디렉터리에서 이동 되더라도 개체에 대 한 사용 권한이 일관 되 게 유지 되도록 하는 자동 프로세스를 통해 개체의 사용 권한이 설정 되 고 적용 됩니다. 사용자가 보호 된 개체의 사용 권한을 수동으로 변경 하는 경우에도이 프로세스를 사용 하면 권한이 기본값으로 빠르게 반환 됩니다.  
 
@@ -40,7 +39,7 @@ Active Directory 내에서 높은 권한 있는 계정 및 그룹의 기본 집�
 |Backup Operators|Backup Operators|Backup Operators|Backup Operators|
 |Cert Publishers|||
 |Domain Admins|Domain Admins|Domain Admins|Domain Admins|
-|도메인 컨트롤러 하나 이상|도메인 컨트롤러 하나 이상|도메인 컨트롤러 하나 이상|도메인 컨트롤러 하나 이상|
+|도메인 컨트롤러|도메인 컨트롤러|도메인 컨트롤러|도메인 컨트롤러|
 |Enterprise Admins|Enterprise Admins|Enterprise Admins|Enterprise Admins|
 ||||엔터프라이즈 키 관리자|
 ||||주요 관리자|

@@ -1,7 +1,6 @@
 ---
 ms.assetid: ac727bd1-a892-47ed-a7ba-439b34187d4e
 title: AD DS 설치 및 제거 마법사 페이지 설명
-description: ''
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 3563c30e86c53435c10cafc840a71c7b8c526943
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: 7370dfed68e22ca88030aec913db4eb52eef9ec3
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79323255"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80825456"
 ---
 # <a name="ad-ds-installation-and-removal-wizard-page-descriptions"></a>AD DS 설치 및 제거 마법사 페이지 설명
 
@@ -50,7 +49,7 @@ ms.locfileid: "79323255"
   
 -   [역할 제거 선택 확인](../../ad-ds/deploy/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md#BKMK_ConfirmRoleRemovalPage)  
   
-## <a name="BKMK_DepConfigPage"></a>배포 구성  
+## <a name="deployment-configuration"></a><a name="BKMK_DepConfigPage"></a>배포 구성  
 서버 관리자는 **배포 구성** 페이지에서 모든 도메인 컨트롤러 설치를 시작합니다. 선택한 배포 작업에 따라 이 페이지 및 다음 페이지에 표시되는 나머지 옵션 및 필수 필드가 바뀝니다. 예를 들어, 새 포리스트를 만드는 경우는 **준비 옵션** 기존 포리스트나 도메인에서 Windows Server 2012를 실행 하는 첫 번째 도메인 컨트롤러를 설치 하는 경우 수행 하지만 페이지가 표시 되지 않습니다.  
   
 일부 유효성 검사 테스트가 이 페이지에서 수행되며 이 테스트는 나중에 필수 구성 요소 확인 과정으로 다시 수행됩니다. 예를 들어, 기능 수준이 Windows 2000 포리스트에서 첫 번째 Windows Server 2012 도메인 컨트롤러를 설치 하려고 하면 오류가이 페이지에 나타납니다.  
@@ -80,7 +79,7 @@ ms.locfileid: "79323255"
   
 -   자식 도메인: 단일 레이블로 구성된 유효한 자식 도메인 이름을 제공합니다. 이름은 DNS 도메인 이름 요구 사항을 사용해야 합니다.  
   
--   현재 자격 증명이 도메인 범위에 속하지 않는 경우 Active Directory Domain Services 구성 마법사에 도메인 자격 증명을 제공하라는 메시지가 표시됩니다. **변경**을 클릭하여 도메인 자격 증명을 제공합니다.  
+-   현재 자격 증명이 도메인 범위에 속하지 않는 경우 Active Directory 도메인 서비스 구성 마법사에 도메인 자격 증명을 제공하라는 메시지가 표시됩니다. **변경**을 클릭하여 도메인 자격 증명을 제공합니다.  
   
 도메인을 만드는 방법에 대 한 자세한 내용은 참조 [는 새 Windows Server 2012 Active Directory 자식 또는 트리 도메인 및 #40; 설치 200 수준 & #41;](../../ad-ds/deploy/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-.md)합니다.  
   
@@ -96,7 +95,7 @@ ms.locfileid: "79323255"
   
 기존 도메인에 도메인 컨트롤러를 추가 하는 방법에 대 한 자세한 내용은 참조 [기존 도메인 & #40;에 복제 Windows Server 2012 도메인 컨트롤러를 설치 합니다. 200 수준 & #41;](../../ad-ds/deploy/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-.md)합니다.  
   
-## <a name="BKMK_DCOptionsPage"></a>도메인 컨트롤러 옵션  
+## <a name="domain-controller-options"></a><a name="BKMK_DCOptionsPage"></a>도메인 컨트롤러 옵션  
 새 포리스트를 만드는 경우 도메인 컨트롤러 옵션 페이지에 다음 옵션이 표시됩니다.  
   
 ![AD DS 설치](media/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions/ADDS_SMI_DCOptions_Forest.gif)  
@@ -141,7 +140,7 @@ ms.locfileid: "79323255"
   
 기존 도메인에 도메인 컨트롤러를 추가 하는 방법에 대 한 자세한 내용은 참조 [기존 도메인 & #40;에 복제 Windows Server 2012 도메인 컨트롤러를 설치 합니다. 200 수준 & #41;](../../ad-ds/deploy/../../ad-ds/deploy/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-.md)합니다.  
   
-## <a name="BKMK_DNSOptionsPage"></a>DNS 옵션  
+## <a name="dns-options"></a><a name="BKMK_DNSOptionsPage"></a>DNS 옵션  
 DNS 서버를 설치하는 경우 다음과 같은 **DNS 옵션** 페이지가 표시됩니다.  
   
 ![AD DS 설치](media/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions/ADDS_SMI_DNSOptions_Replica.gif)  
@@ -168,7 +167,7 @@ Active Directory Domain Services 구성 마법사에서 레코드를 자동으�
   
 -   [전달자 이해](https://go.microsoft.com/fwlink/?LinkId=164778) (https://go.microsoft.com/fwlink/?LinkId=164778)  
   
-## <a name="BKMK_RODCOptionsPage"></a>RODC 옵션  
+## <a name="rodc-options"></a><a name="BKMK_RODCOptionsPage"></a>RODC 옵션  
 RODC(읽기 전용 도메인 컨트롤러)를 설치하는 경우 다음 옵션이 표시됩니다.  
   
 ![AD DS 설치](media/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions/ADDS_SMI_RODCOptions.gif)  
@@ -183,7 +182,7 @@ RODC(읽기 전용 도메인 컨트롤러)를 설치하는 경우 다음 옵션�
   
 Rodc를 설치 하는 방법에 대 한 자세한 내용은 참조 [#40; 및 Windows Server 2012 Active Directory 읽기 전용 도메인 컨트롤러를 설치 합니다. RODC & #41; & #40; 200 수준 & #41;](../../ad-ds/deploy/RODC/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-.md)합니다.  
   
-## <a name="BKMK_AdditionalOptionsPage"></a>추가 옵션  
+## <a name="additional-options"></a><a name="BKMK_AdditionalOptionsPage"></a>추가 옵션  
 새 도메인을 만드는 경우 **추가 옵션** 페이지에 다음 옵션이 표시됩니다.  
   
 ![AD DS 설치](media/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions/ADDS_SMI_AdditionalOptions_Child.gif)  
@@ -198,7 +197,7 @@ Rodc를 설치 하는 방법에 대 한 자세한 내용은 참조 [#40; 및 Win
   
 도메인을 만드는 방법에 대 한 자세한 내용은 참조 [는 새 Windows Server 2012 Active Directory 자식 또는 트리 도메인 및 #40; 설치 200 수준 & #41;](../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-.md)합니다. 기존 도메인에 도메인 컨트롤러를 추가 하는 방법에 대 한 자세한 내용은 참조 [기존 도메인 & #40;에 복제 Windows Server 2012 도메인 컨트롤러를 설치 합니다. 200 수준 & #41;](../../ad-ds/deploy/../../ad-ds/deploy/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-.md)합니다.  
   
-## <a name="BKMK_Paths"></a>경로로  
+## <a name="paths"></a><a name="BKMK_Paths"></a>경로로  
 **경로** 페이지에 다음 옵션이 표시됩니다.  
   
 ![AD DS 설치](media/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions/ADDS_SMI_Paths.gif)  
@@ -207,7 +206,7 @@ Rodc를 설치 하는 방법에 대 한 자세한 내용은 참조 [#40; 및 Win
   
 AD DS 데이터베이스(NTDS.DIT), 로그 파일 및 SYSVOL의 위치를 지정합니다. 로컬 설치의 경우 파일을 저장할 위치를 검색할 수 있습니다.  
   
-## <a name="BKMK_AdprepCreds"></a>준비 옵션  
+## <a name="preparation-options"></a><a name="BKMK_AdprepCreds"></a>준비 옵션  
 ![AD DS 설치](media/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions/ADDS_SMI_PreparationOptions.gif)  
   
 현재 adprep.exe 명령을 실행할 권한이 있는 자격 증명으로 로그온되어 있지 않고 AD DS 설치를 완료하기 위해 adprep을 실행해야 하는 경우 adprep.exe를 실행하는 데 필요한 자격 증명을 제공하라는 메시지가 표시됩니다. Adprep은 기존 도메인 또는 포리스트를 Windows Server 2012를 실행 하는 첫 번째 도메인 컨트롤러를 추가 하기 위해 실행 해야 합니다. 특히 다음에 대한 내용을 더 자세히 설명합니다.  
@@ -220,14 +219,14 @@ AD DS 데이터베이스(NTDS.DIT), 로그 파일 및 SYSVOL의 위치를 지정
   
 Adprep.exe에 대 한 자세한 내용은 참조 [Adprep.exe 통합](../../ad-ds/deploy/What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal.md#BKMK_NewAdprep) 참조 및 [Adprep.exe 실행](https://technet.microsoft.com/library/dd464018(WS.10).aspx)합니다.  
   
-## <a name="BKMK_ViewInstallOptionsPage"></a>검토 옵션  
+## <a name="review-options"></a><a name="BKMK_ViewInstallOptionsPage"></a>검토 옵션  
 ![AD DS 설치](media/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions/ADDS_SMI_ReviewOptions.gif)  
   
 -   **옵션 검토** 페이지에서 설치를 시작하기 전에 설정을 확인하고 이러한 설정이 요구 사항을 충족하는지도 확인할 수 있습니다. 서버 관리자를 사용하여 설치를 중지할 수 있는 마지막 기회는 아닙니다. 이 페이지에서는 단지 구성을 계속하기 전에 설정을 검토하고 확인합니다.  
   
--   서버 관리자의 **옵션 검토** 페이지는 현재 ADDSDeployment 구성을 단일 Windows PowerShell 스크립트로 포함하는 유니코드 텍스트 파일을 만들 수 있도록 **스크립트 보기** 단추(선택 사항)도 제공합니다. 이 단추를 통해 서버 관리자 그래픽 인터페이스를 Windows PowerShell 배포 스튜디오로 사용할 수 있습니다. Active Directory Domain Services 구성 마법사를 사용하여 옵션을 구성하고 구성을 내보낸 다음 마법사를 취소합니다. 이 프로세스를 통해 향후 수정을 위해 사용하거나 직접 사용하기 위한 유효하고 구문상으로 정확한 샘플이 만들어집니다.  
+-   서버 관리자의 **옵션 검토** 페이지는 현재 ADDSDeployment 구성을 단일 Windows PowerShell 스크립트로 포함하는 유니코드 텍스트 파일을 만들 수 있도록 **스크립트 보기** 단추(선택 사항)도 제공합니다. 이 단추를 통해 서버 관리자 그래픽 인터페이스를 Windows PowerShell 배포 스튜디오로 사용할 수 있습니다. Active Directory 도메인 서비스 구성 마법사를 사용하여 옵션을 구성하고 구성을 내보낸 다음 마법사를 취소합니다. 이 프로세스를 통해 향후 수정을 위해 사용하거나 직접 사용하기 위한 유효하고 구문상으로 정확한 샘플이 만들어집니다.  
   
-## <a name="BKMK_PrerqCheckPage"></a>필수 조건 확인  
+## <a name="prerequisites-check"></a><a name="BKMK_PrerqCheckPage"></a>필수 조건 확인  
 ![AD DS 설치](media/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions/ADDS_SMI_PrerequisitesCheck.gif)  
   
 이 페이지에 나타나는 경고 중 일부는 다음과 같습니다.  
@@ -240,7 +239,7 @@ Adprep.exe에 대 한 자세한 내용은 참조 [Adprep.exe 통합](../../ad-ds
   
 AD DS 설치에 대해 수행되는 특정 필수 구성 요소 확인에 대한 자세한 내용은 [필수 구성 요소 테스트](../../ad-ds/manage/AD-DS-Simplified-Administration.md#BKMK_ADDSInstallPrerequisiteTests)를 참조하십시오.  
   
-## <a name="BKMK_Results"></a>검색  
+## <a name="results"></a><a name="BKMK_Results"></a>검색  
 ![AD DS 설치](media/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions/ADDS_SMI_SMResultsBeta.gif)  
   
 이 페이지에서 설치 결과를 확인할 수 있습니다.  
@@ -249,7 +248,7 @@ AD DS 설치에 대해 수행되는 특정 필수 구성 요소 확인에 대한
   
 이 경우 대상 서버가 다시 시작되지 않았으면 수동으로 다시 시작해야 합니다. shutdown.exe나 Windows PowerShell과 같은 도구로는 대상 서버를 다시 시작할 수 없습니다. 원격 데스크톱 서비스를 사용하여 대상 서버에 로그온하고 이 서버를 원격으로 종료할 수 있습니다.  
   
-## <a name="BKMK_RemovalCredsPage"></a>역할 제거 자격 증명  
+## <a name="role-removal-credentials"></a><a name="BKMK_RemovalCredsPage"></a>역할 제거 자격 증명  
 ![AD DS 설치](media/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions/ADDS_RRW_Credentials.gif)  
   
 **자격 증명** 페이지에서 수준 내리기 옵션을 구성합니다. 다음 목록에서 수준 내리기를 수행하는 데 필요한 자격 증명을 제공합니다.  
@@ -263,7 +262,7 @@ AD DS 설치에 대해 수행되는 특정 필수 구성 요소 확인에 대한
   
 AD DS를 제거 하는 방법에 대 한 자세한 내용은 참조 [Active Directory 도메인 서비스 제거 (수준 100)](assetId:///99b97af0-aa7e-41ed-8c81-4eee6c03eb4c) 및 [도메인 컨트롤러 수준 내리기 및 도메인 & #40; 200 수준 & #41;](Demoting-Domain-Controllers-and-Domains--Level-200-.md)합니다.  
   
-## <a name="BKMK_RemovalOptionsPage"></a>AD DS 제거 옵션 및 경고  
+## <a name="ad-ds-removal-options-and-warnings"></a><a name="BKMK_RemovalOptionsPage"></a>AD DS 제거 옵션 및 경고  
 옵션 검토 페이지와 관련하여 도움이 필요한 경우 옵션 검토를 참조하십시오.  
   
 도메인 컨트롤러가 DNS 서버 역할이나 글로벌 카탈로그 서버와 같은 추가 역할을 호스트하는 경우 다음과 같은 경고 페이지가 표시됩니다.  
@@ -290,7 +289,7 @@ AD DS를 제거 하는 방법에 대 한 자세한 내용은 참조 [Active Dire
   
 -   이 Active Directory 도메인 컨트롤러의 모든 애플리케이션 디렉터리 파티션은 제거됩니다. 도메인 컨트롤러에 하나 이상의 애플리케이션 디렉터리 파티션에 대한 마지막 복제본이 있더라도 제거 작업을 완료하면 해당 파티션이 더 이상 존재하지 않게 됩니다.  
   
-도메인의 마지막 도메인 컨트롤러에서 Active Directory Domain Services를 제거하고 나면 도메인이 더 이상 존재하지 않게 됩니다.  
+도메인의 마지막 도메인 컨트롤러에서 Active Directory 도메인 서비스를 제거하고 나면 도메인이 더 이상 존재하지 않게 됩니다.  
   
 도메인 컨트롤러가 DNS 영역을 호스트하도록 위임된 DNS 서버일 경우 다음 페이지에 DNS 영역 위임에서 DNS 서버를 제거하는 옵션이 제공됩니다.  
   
@@ -298,14 +297,14 @@ AD DS를 제거 하는 방법에 대 한 자세한 내용은 참조 [Active Dire
   
 AD DS를 제거 하는 방법에 대 한 자세한 내용은 참조 [Active Directory 도메인 서비스 제거 (수준 100)](assetId:///99b97af0-aa7e-41ed-8c81-4eee6c03eb4c) 및 [도메인 컨트롤러 수준 내리기 및 도메인 & #40; 200 수준 & #41;](Demoting-Domain-Controllers-and-Domains--Level-200-.md)합니다.  
   
-## <a name="BKMK_NewAdminPwdPage"></a>새 관리자 암호  
+## <a name="new-administrator-password"></a><a name="BKMK_NewAdminPwdPage"></a>새 관리자 암호  
 **새 관리자 암호** 페이지 수준 내리기를 완료 되 고 컴퓨터가 도메인 구성원 서버나 작업 그룹 컴퓨터에 기본 제공 로컬 컴퓨터의 관리자 계정에 대 한 암호를 제공 해야 합니다.  
   
 ![AD DS 설치](media/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions/ADDS_RRW_NewAdminPwd.gif)  
   
 AD DS를 제거 하는 방법에 대 한 자세한 내용은 참조 [Active Directory 도메인 서비스 제거 (수준 100)](assetId:///99b97af0-aa7e-41ed-8c81-4eee6c03eb4c) 및 [도메인 컨트롤러 수준 내리기 및 도메인 & #40; 200 수준 & #41;](Demoting-Domain-Controllers-and-Domains--Level-200-.md)합니다.  
   
-## <a name="BKMK_ConfirmRoleRemovalPage"></a>검토 옵션  
+## <a name="review-options"></a><a name="BKMK_ConfirmRoleRemovalPage"></a>검토 옵션  
 **옵션 검토** 페이지에서는 추가 수준 내리기를 자동화할 수 있도록 수준 내리기에 대한 구성 설정을 Windows PowerShell 스크립트로 내보낼 수 있습니다. **수준 내리기**를 클릭하여 AD DS를 제거합니다.  
   
 ![AD DS 설치](media/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions/ADDS_RRW_ReviewOptions.gif)  

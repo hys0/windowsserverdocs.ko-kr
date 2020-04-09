@@ -2,22 +2,18 @@
 title: 4 단계 RSA 및 EDGE1 설치 및 구성
 description: 이 항목은 테스트 랩 가이드-OTP 인증을 사용 하는 DirectAccess 시연 및 Windows Server 2016에 대 한 RSA SecurID의 일부입니다.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-da
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d46ede6f-1a21-414d-b8c3-6b5c87344b9d
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 1a2244422c8b625f5641fb775a2e503b096b07b5
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: dc3bf31652f48442ec96933d4a5afeaccd51f1a9
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80308611"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80814606"
 ---
 # <a name="step-4-install-and-configure-rsa-and-edge1"></a>4 단계 RSA 및 EDGE1 설치 및 구성
 

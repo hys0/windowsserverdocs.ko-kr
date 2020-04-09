@@ -1,26 +1,20 @@
 ---
 title: 조건부 액세스 정책 구성
 description: 루트 인증서를 만든 후 ' VPN 연결 '은 고객의 테 넌 트에서 ' VPN 서버 ' 클라우드 응용 프로그램 만들기를 트리거합니다.
-services: active-directory
 ms.prod: windows-server
 ms.technology: networking-ras
-documentationcenter: ''
-ms.assetid: ''
-ms.workload: identity
-ms.tgt_pltfrm: na
-ms.devlang: na
 ms.topic: article
 ms.date: 05/25/2018
-ms.author: lizross
-author: eross-msft
+ms.author: v-tea
+author: Teresa-MOTIV
 ms.localizationpriority: medium
 ms.reviewer: deverette
-ms.openlocfilehash: 479c9fe4895f4181f8a776f024a7ff3c047fbc0e
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 754182cc3f60e1e30625c11d8778cf24b6d098ac
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80307812"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80819016"
 ---
 # <a name="step-73-configure-the-conditional-access-policy"></a>7\.3단계. 조건부 액세스 정책 구성
 

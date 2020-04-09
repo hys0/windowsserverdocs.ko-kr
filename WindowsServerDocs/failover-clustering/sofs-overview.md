@@ -5,21 +5,22 @@ ms.prod: windows-server
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
+manager: lizross
 ms.technology: storage-failover-clustering
 ms.date: 04/26/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: dc083a15d0cd6a21b5512c1506bc9a461c4b886c
-ms.sourcegitcommit: 3f9bcd188dda12dc5803defb47b2c3a907504255
+ms.openlocfilehash: 78f95f25d365b1b30a9e4e2d311128b8c7cb13b6
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77001768"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80827416"
 ---
 # <a name="scale-out-file-server-for-application-data-overview"></a>애플리케이션 데이터를 위한 스케일 아웃 파일 서버 개요
 
 >적용 대상: Windows Server 2012 R2, Windows Server 2012
 
-스케일 아웃 파일 서버는 파일 기반 서버 애플리케이션 스토리지에 계속 사용할 수 있는 스케일 아웃 파일 공유를 제공하도록 설계된 기능입니다. 스케일 아웃 파일 공유는 같은 클러스터의 여러 노드에서 동일한 폴더를 공유하는 기능을 제공합니다. 이 시나리오는 스케일 아웃 파일 서버를 계획 및 배포하는 방법에 중점을 둡니다.
+스케일 아웃 파일 서버는 파일 기반 서버 응용 프로그램 스토리지에 계속 사용할 수 있는 스케일 아웃 파일 공유를 제공하도록 설계된 기능입니다. 스케일 아웃 파일 공유는 같은 클러스터의 여러 노드에서 동일한 폴더를 공유하는 기능을 제공합니다. 이 시나리오는 스케일 아웃 파일 서버를 계획 및 배포하는 방법에 중점을 둡니다.
 
 다음 방법 중 하나를 사용하여 클러스터된 파일 서버를 배포 및 구성할 수 있습니다.
 
@@ -105,7 +106,7 @@ ms.locfileid: "77001768"
 <td>파일 시스템</td>
 <td>NTFS</td>
 <td>예</td>
-<td>해당 없음</td>
+<td>NA</td>
 </tr>
 <tr class="odd">
 <td>파일 시스템</td>
@@ -116,7 +117,7 @@ ms.locfileid: "77001768"
 <tr class="even">
 <td>파일 시스템</td>
 <td>CSV(클러스터 공유 볼륨) 파일 시스템</td>
-<td>해당 없음</td>
+<td>NA</td>
 <td>예</td>
 </tr>
 <tr class="odd">
@@ -169,7 +170,7 @@ ms.locfileid: "77001768"
 </tr>
 <tr class="odd">
 <td>파일 관리</td>
-<td>동적 액세스 제어(클레임 기반 액세스, CAP)</td>
+<td>동적 Access Control(클레임 기반 액세스, CAP)</td>
 <td>예</td>
 <td>아니요</td>
 </tr>
@@ -210,13 +211,13 @@ ms.locfileid: "77001768"
 <td>아니요</td>
 </tr>
 <tr class="even">
-<td>Applications</td>
+<td>응용 프로그램</td>
 <td>Hyper-V</td>
 <td>권장되지 않음</td>
 <td>예</td>
 </tr>
 <tr class="odd">
-<td>Applications</td>
+<td>응용 프로그램</td>
 <td>Microsoft SQL Server</td>
 <td>권장되지 않음</td>
 <td>예</td>
@@ -228,16 +229,16 @@ ms.locfileid: "77001768"
 
 ## <a name="practical-applications"></a>유용한 팁
 
-스케일 아웃 파일 서버는 서버 애플리케이션 스토리지에 적합합니다. 스케일 아웃 파일 공유에 해당 데이터를 저장할 수 있는 서버 애플리케이션의 몇 가지 예는 다음과 같습니다.
+스케일 아웃 파일 서버는 서버 응용 프로그램 스토리지에 적합합니다. 스케일 아웃 파일 공유에 해당 데이터를 저장할 수 있는 서버 애플리케이션의 몇 가지 예는 다음과 같습니다.
 
 - IIS(인터넷 정보 서비스) 웹 서버는 스케일 아웃 파일 공유에 웹 사이트에 대한 구성 및 데이터를 저장할 수 있습니다. 자세한 내용은 [공유 구성](https://www.iis.net/learn/manage/managing-your-configuration-settings/shared-configuration_264)을 참조하세요.
-- Hyper-V는 스케일 아웃 파일 공유에 구성 및 라이브 가상 디스크를 저장할 수 있습니다. 자세한 내용은 [Deploy Hyper-V over SMB](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134187(v%3dws.11)>)를 참조하세요.
-- SQL Server는 스케일 아웃 파일 공유에 라이브 데이터베이스 파일을 저장할 수 있습니다. 자세한 내용은 [SMB 파일 공유와 함께 스토리지로 SQL Server 설치 옵션](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option)을 참조하세요.
-- VMM(Virtual Machine Manager)은 스케일 아웃 파일 공유에 가상 머신 템플릿 및 관련 파일을 포함하는 라이브러리 공유를 저장할 수 있습니다. 그러나 라이브러리 서버 자체는 스케일 아웃 파일 서버 일 수 없습니다. 즉, 스케일 아웃 파일 서버 클러스터 역할을 사용 하지 않는 독립 실행형 서버 또는 장애 조치 (failover) 클러스터에 있어야 합니다.
+- Hyper-V는 스케일 아웃 파일 공유에 구성 및 라이브 가상 디스크를 저장할 수 있습니다. 자세한 내용은 [SMB를 통한 Hyper-V 배포](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134187(v%3dws.11)>)를 참조하십시오.
+- SQL Server는 스케일 아웃 파일 공유에 라이브 데이터베이스 파일을 저장할 수 있습니다. 자세한 내용은 [SMB 파일 공유와 함께 저장소로 SQL Server 설치 옵션](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option)을 참조하세요.
+- VMM(Virtual Machine Manager)은 스케일 아웃 파일 공유에 가상 컴퓨터 템플릿 및 관련 파일을 포함하는 라이브러리 공유를 저장할 수 있습니다. 그러나 라이브러리 서버 자체는 스케일 아웃 파일 서버 일 수 없습니다. 즉, 스케일 아웃 파일 서버 클러스터 역할을 사용 하지 않는 독립 실행형 서버 또는 장애 조치 (failover) 클러스터에 있어야 합니다.
 
 스케일 아웃 파일 공유를 라이브러리 공유로 사용하는 경우 스케일 아웃 파일 서버와 호환되는 기술만 사용할 수 있습니다. 예를 들어 DFS 복제를 사용 하 여 스케일 아웃 파일 공유에 호스트 된 라이브러리 공유를 복제할 수 없습니다. 또한 스케일 아웃 파일 서버에 최신 소프트웨어 업데이트가 설치되어 있어야 합니다.
 
-스케일 아웃 파일 공유를 라이브러리 공유로 사용하려면 먼저 로컬 공유를 포함하거나 공유가 없는 라이브러리 서버(대체로 가상 머신)를 추가합니다. 그런 다음 라이브러리 공유를 추가할 때 스케일 아웃 파일 서버에서 호스트 되는 파일 공유를 선택 합니다. 이 공유는 VMM에서 관리되고 라이브러리 서버 전용으로 생성되어야 합니다. 또한 스케일 아웃 파일 서버에 최신 업데이트를 설치해야 합니다. VMM 라이브러리 서버 및 라이브러리 공유를 추가 하는 방법에 대 한 자세한 내용은 [vmm 라이브러리에 프로필 추가](https://docs.microsoft.com/system-center/vmm/library-profiles?view=sc-vmm-1801)를 참조 하세요. 파일 및 스토리지 서비스에 대해 현재 사용할 수 있는 핫픽스 목록은 [Microsoft 기술 자료 문서 2899011](https://support.microsoft.com/help/2899011/list-of-currently-available-hotfixes-for-the-file-services-technologie)을 참조하세요.
+스케일 아웃 파일 공유를 라이브러리 공유로 사용하려면 먼저 로컬 공유를 포함하거나 공유가 없는 라이브러리 서버(대체로 가상 컴퓨터)를 추가합니다. 그런 다음 라이브러리 공유를 추가할 때 스케일 아웃 파일 서버에서 호스트 되는 파일 공유를 선택 합니다. 이 공유는 VMM에서 관리되고 라이브러리 서버 전용으로 생성되어야 합니다. 또한 스케일 아웃 파일 서버에 최신 업데이트를 설치해야 합니다. VMM 라이브러리 서버 및 라이브러리 공유를 추가 하는 방법에 대 한 자세한 내용은 [vmm 라이브러리에 프로필 추가](https://docs.microsoft.com/system-center/vmm/library-profiles?view=sc-vmm-1801)를 참조 하세요. 파일 및 저장소 서비스에 대해 현재 사용할 수 있는 핫픽스 목록은 [Microsoft 기술 자료 문서 2899011](https://support.microsoft.com/help/2899011/list-of-currently-available-hotfixes-for-the-file-services-technologie)을 참조하세요.
 
 >[!NOTE]
 >정보 근로자와 같은 일부 사용자의 작업은 성능에 더 큰 영향을 줍니다. 예를 들어 파일 열기 및 닫기, 새 파일 만들기, 기존 파일의 이름 바꾸기와 같은 작업은 여러 사용자가 수행할 경우 성능에 영향을 줍니다. 지속적인 가용성을 사용할 수 있는 파일 공유는 데이터 무결성을 제공하지만 전반적인 성능에 영향을 줍니다. 지속적인 가용성을 위해 디스크에 데이터 동시 쓰기를 수행하여 스케일 아웃 파일 서버에서 클러스터 노드 오류가 발생할 경우 무결성을 보장해야 합니다. 따라서 사용자가 지속적으로 사용 가능한 파일 공유에서 여러 개의 큰 파일을 파일 서버에 복사할 경우 성능이 훨씬 저하될 수 있습니다.
@@ -255,7 +256,7 @@ ms.locfileid: "77001768"
 </thead>
 <tbody>
 <tr class="odd">
-<td><a href="failover-clustering.md">장애 조치(failover) 클러스터링</a></td>
+<td><a href="failover-clustering.md">장애 조치 클러스터링</a></td>
 <td>장애 조치 (Failover) 클러스터는 스케일 아웃 파일 서버를 지원 하기 위해 Windows Server 2012에 분산 네트워크 이름, 스케일 아웃 파일 서버 리소스 종류, CSV (클러스터 공유 볼륨) 2 및 스케일 아웃 파일 서버 고가용성 역할의 기능을 추가 했습니다. 이러한 기능에 대 한 자세한 내용은 <a href="https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265972(v%3dws.11)">Windows Server&#39;2012 장애 조치 (Failover) 클러스터링의 새로운 기능 [리디렉션]</a>을 참조 하세요.</td>
 </tr>
 <tr class="even">
@@ -267,11 +268,11 @@ Windows Server 2012 r 2에서 제공 되는 SMB의 새로운 기능 및 변경 �
 </tbody>
 </table>
 
-## <a name="more-information"></a>추가 정보
+## <a name="more-information"></a>자세한 정보
 
 - [소프트웨어 정의 저장소 디자인 고려 사항 가이드](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/mt243829(v%3dws.11)>)
 - [서버, 저장소 및 네트워크 가용성 향상](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831437(v%3dws.11)>)
-- [SMB를 통한 Hyper-v 배포](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134187(v%3dws.11)>)
-- [서버 응용 프로그램을 위한 빠르고 효율적인 파일 서버 배포](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831723(v%3dws.11)>)
+- [SMB를 통한 Hyper-V 배포](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134187(v%3dws.11)>)
+- [서버 애플리케이션을 위한 신속하고 효율적인 파일 서버 배포](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831723(v%3dws.11)>)
 - [규모를 확장하느냐 마느냐 그것이 문제다](https://blogs.technet.com/b/filecab/archive/2013/12/05/to-scale-out-or-not-to-scale-out-that-is-the-question.aspx) (블로그 게시물)
 - [폴더 리디렉션, 오프라인 파일 및 로밍 사용자 프로필](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh848267(v%3dws.11)>)

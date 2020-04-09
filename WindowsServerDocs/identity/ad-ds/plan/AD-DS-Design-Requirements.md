@@ -1,7 +1,6 @@
 ---
 ms.assetid: f6e76ef0-2217-4cdb-980f-22a780a85ebb
 title: AD DS 디자인 요구 사항
-description: ''
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: cb9d4c04bc3fc7bb534e75b80f0947bd225b7b85
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: e33681088706d60b7d33047d38eb55730725129f
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71368963"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80822916"
 ---
 # <a name="ad-ds-design-requirements"></a>AD DS 디자인 요구 사항
 
@@ -38,7 +37,7 @@ AD DS 인프라에 대 한 논리 구조를 디자인 한 후에 네트워크에
 자세한 내용은 참조 [는 사이트 토폴로지에 대 한 Windows Server 2008 AD DS 디자인](Designing-the-Site-Topology.md)합니다.  
   
 ## <a name="planning-domain-controller-capacity"></a>도메인 컨트롤러 용량 계획  
-효율적인 AD DS 성능을 보장 하기 위해 각 사이트에 대 한 도메인 컨트롤러의 적절 한 수를 확인 하 고 Windows Server 2008에 대 한 하드웨어 요구 사항을 맞는지 확인 해야 합니다. 신중 하 게 용량 도메인 컨트롤러에 대 한 계획 하면 인해 도메인 컨트롤러 성능 및 응용 프로그램 응답 시간을 일으킬 수 있는 하드웨어 요구 사항의 과소 평가 하지 마십시오. 다음 그림에서는 도메인 컨트롤러 용량 계획 프로세스를 보여 줍니다.  
+효율적인 AD DS 성능을 보장 하기 위해 각 사이트에 대 한 도메인 컨트롤러의 적절 한 수를 확인 하 고 Windows Server 2008에 대 한 하드웨어 요구 사항을 맞는지 확인 해야 합니다. 신중 하 게 용량 도메인 컨트롤러에 대 한 계획 하면 인해 도메인 컨트롤러 성능 및 애플리케이션 응답 시간을 일으킬 수 있는 하드웨어 요구 사항의 과소 평가 하지 마십시오. 다음 그림에서는 도메인 컨트롤러 용량 계획 프로세스를 보여 줍니다.  
   
 ![AD DS 디자인 요구 사항](media/AD-DS-Design-Requirements/fff6ef22-5c7b-4478-ad76-42b296dcf769.gif)  
   

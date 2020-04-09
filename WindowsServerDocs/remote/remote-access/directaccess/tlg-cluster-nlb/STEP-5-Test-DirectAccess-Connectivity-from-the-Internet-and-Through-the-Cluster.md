@@ -2,22 +2,18 @@
 title: 5 단계 인터넷 및 클러스터를 통해 DirectAccess 연결 테스트
 description: 이 항목은 테스트 랩 가이드-windows Server 2016 용 Windows NLB를 사용 하는 클러스터의 DirectAccess 시연에 포함 되어 있습니다.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-da
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8399bdfa-809a-45e4-9963-f9b6a631007f
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 92641ccf19f77becd9ed5476cd8c0178f4090f49
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: f8880f60104cc67ca5c25c9c4fbf4ee6c9c1d1f1
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80310833"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80819206"
 ---
 # <a name="step-5-test-directaccess-connectivity-from-the-internet-and-through-the-cluster"></a>5 단계 인터넷 및 클러스터를 통해 DirectAccess 연결 테스트
 

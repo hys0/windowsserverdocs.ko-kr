@@ -2,22 +2,17 @@
 title: 1 단계 기본 DirectAccess 인프라 계획
 description: 이 항목은 Windows Server 2016에 대 한 시작 마법사를 사용 하 여 단일 DirectAccess 서버 배포 가이드의 일부입니다.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-da
-ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: ''
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 9c71ef26f9e4ba5d20705827109d9ad22fe5c7ab
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 6bab4adbcf006556c73c96f403afe7538079e967
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80308890"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80819346"
 ---
 # <a name="step-1-plan-the-basic-directaccess-infrastructure"></a>1 단계 기본 DirectAccess 인프라 계획
 단일 서버에 기본 DirectAccess를 배포 하기 위한 첫 번째 단계는 배포에 필요한 인프라 계획을 수행 하는 것입니다. 이 항목에서는 인프라 계획 단계에 대해 설명합니다.  
@@ -55,8 +50,8 @@ ms.locfileid: "80308890"
   
     ||외부 네트워크 어댑터|내부 네트워크 어댑터<sup>1</sup>|라우팅 요구 사항|  
     |-|--------------|--------------------|------------|  
-    |IPv4 인트라넷 및 IPv4 인터넷|다음을 구성합니다.<br /><br />-적절 한 서브넷 마스크를 사용 하는 고정 공용 IPv4 주소 하나<br />-인터넷 방화벽이 나 로컬 인터넷 서비스 공급자 \(ISP\) 라우터의 기본 게이트웨이 IPv4 주소입니다.|다음을 구성합니다.<br /><br />-적절 한 서브넷 마스크는 IPv4 인트라넷 주소입니다.<br />-연결\-인트라넷 네임 스페이스의 특정 DNS 접미사입니다. DNS 서버도 내부 인터페이스에 구성해야 합니다.<br />-인트라넷 인터페이스에 기본 게이트웨이를 구성 하지 마십시오.|DirectAccess 서버에서 내부 IPv4 네트워크의 모든 서브넷에 연결하도록 구성하려면 다음을 수행합니다.<br /><br />1. 인트라넷의 모든 위치에 대 한 IPv4 주소 공간을 나열 합니다.<br />2. **경로 add \-p** 또는 **netsh interface ipv4 add route** 명령을 사용 하 여 DirectAccess 서버의 ipv4 라우팅 테이블에 고정 경로로 ipv4 주소 공간을 추가 합니다.|  
-    |IPv6 인터넷 및 IPv6 인트라넷|다음을 구성합니다.<br /><br />-ISP에서 제공 하는 자동 구성 된 주소 구성을 사용 합니다.<br />- **Route print** 명령을 사용 하 여 ISP 라우터를 가리키는 기본 IPv6 경로가 IPv6 라우팅 테이블에 존재 하는지 확인 합니다.<br />-ISP 및 인트라넷 라우터가 RFC 4191에 설명 된 기본 라우터 기본 설정을 사용 하 고 로컬 인트라넷 라우터 보다 높은 기본 우선 순위를 사용 하는지 여부를 확인 합니다. 둘 다에 해당되면 기본 경로에 대한 다른 구성이 필요하지 않습니다. ISP 라우터의 우선 순위가 높으면 DirectAccess 서버의 활성 기본 IPv6 경로가 IPv6 인터넷을 가리킵니다.<br /><br />DirectAccess 서버가 IPv6 라우터이므로 기본 IPv6 인프라가 있는 경우 인터넷 인터페이스에서 인트라넷의 도메인 컨트롤러에도 연결할 수 있습니다. 이 경우 경계 네트워크의 도메인 컨트롤러에 패킷 필터를 추가 하 여 DirectAccess 서버의 인터넷\-연결 인터페이스에 대 한 IPv6 주소에 대 한 연결을 방지 합니다.|다음을 구성합니다.<br /><br />-기본 기본 설정 수준을 사용 하지 않는 경우 **netsh interface ipv6 Set InterfaceIndex ignoredefaultroutes\=enabled** 명령을 사용 하 여 인트라넷 인터페이스를 구성 합니다. 이 명령을 사용하면 인트라넷 라우터를 가리키는 추가 기본 경로가 IPv6 라우팅 테이블에 추가되지 않습니다. netsh 인터페이스 표시 인터페이스 명령의 표시에서 인트라넷 인터페이스의 InterfaceIndex를 가져올 수 있습니다.|IPv6 인트라넷을 사용하는 경우 모든 IPv6 위치에 연결하도록 DirectAccess 서버를 구성하려면 다음을 수행합니다.<br /><br />1. 인트라넷의 모든 위치에 대 한 IPv6 주소 공간을 나열 합니다.<br />2. **netsh interface ipv6 add route** 명령을 사용 하 여 DirectAccess 서버의 ipv6 라우팅 테이블에 고정 경로로 ipv6 주소 공간을 추가 합니다.|  
+    |IPv4 인트라넷 및 IPv4 인터넷|다음을 구성합니다.<p>-적절 한 서브넷 마스크를 사용 하는 고정 공용 IPv4 주소 하나<br />-인터넷 방화벽이 나 로컬 인터넷 서비스 공급자 \(ISP\) 라우터의 기본 게이트웨이 IPv4 주소입니다.|다음을 구성합니다.<p>-적절 한 서브넷 마스크는 IPv4 인트라넷 주소입니다.<br />-연결\-인트라넷 네임 스페이스의 특정 DNS 접미사입니다. DNS 서버도 내부 인터페이스에 구성해야 합니다.<br />-인트라넷 인터페이스에 기본 게이트웨이를 구성 하지 마십시오.|DirectAccess 서버에서 내부 IPv4 네트워크의 모든 서브넷에 연결하도록 구성하려면 다음을 수행합니다.<p>1. 인트라넷의 모든 위치에 대 한 IPv4 주소 공간을 나열 합니다.<br />2. **경로 add \-p** 또는 **netsh interface ipv4 add route** 명령을 사용 하 여 DirectAccess 서버의 ipv4 라우팅 테이블에 고정 경로로 ipv4 주소 공간을 추가 합니다.|  
+    |IPv6 인터넷 및 IPv6 인트라넷|다음을 구성합니다.<p>-ISP에서 제공 하는 자동 구성 된 주소 구성을 사용 합니다.<br />- **Route print** 명령을 사용 하 여 ISP 라우터를 가리키는 기본 IPv6 경로가 IPv6 라우팅 테이블에 존재 하는지 확인 합니다.<br />-ISP 및 인트라넷 라우터가 RFC 4191에 설명 된 기본 라우터 기본 설정을 사용 하 고 로컬 인트라넷 라우터 보다 높은 기본 우선 순위를 사용 하는지 여부를 확인 합니다. 둘 다에 해당되면 기본 경로에 대한 다른 구성이 필요하지 않습니다. ISP 라우터의 우선 순위가 높으면 DirectAccess 서버의 활성 기본 IPv6 경로가 IPv6 인터넷을 가리킵니다.<p>DirectAccess 서버가 IPv6 라우터이므로 기본 IPv6 인프라가 있는 경우 인터넷 인터페이스에서 인트라넷의 도메인 컨트롤러에도 연결할 수 있습니다. 이 경우 경계 네트워크의 도메인 컨트롤러에 패킷 필터를 추가 하 여 DirectAccess 서버의 인터넷\-연결 인터페이스에 대 한 IPv6 주소에 대 한 연결을 방지 합니다.|다음을 구성합니다.<p>-기본 기본 설정 수준을 사용 하지 않는 경우 **netsh interface ipv6 Set InterfaceIndex ignoredefaultroutes\=enabled** 명령을 사용 하 여 인트라넷 인터페이스를 구성 합니다. 이 명령을 사용하면 인트라넷 라우터를 가리키는 추가 기본 경로가 IPv6 라우팅 테이블에 추가되지 않습니다. netsh 인터페이스 표시 인터페이스 명령의 표시에서 인트라넷 인터페이스의 InterfaceIndex를 가져올 수 있습니다.|IPv6 인트라넷을 사용하는 경우 모든 IPv6 위치에 연결하도록 DirectAccess 서버를 구성하려면 다음을 수행합니다.<p>1. 인트라넷의 모든 위치에 대 한 IPv6 주소 공간을 나열 합니다.<br />2. **netsh interface ipv6 add route** 명령을 사용 하 여 DirectAccess 서버의 ipv6 라우팅 테이블에 고정 경로로 ipv6 주소 공간을 추가 합니다.|  
     |IPv4 인터넷 및 IPv6 인트라넷|DirectAccess 서버는 Microsoft 6to4 어댑터 인터페이스를 사용하여 기본 IPv6 경로 트래픽을 IPv4 인터넷의 6to4 릴레이에 전달합니다. 다음 명령을 사용 하 여 기본 i p v 6이 회사\) 네트워크에 배포 되지 않은 경우에 사용 되는 IPv4 \(인터넷에서 Microsoft 6to4 relay의 IPv4 주소에 대 한 DirectAccess 서버를 구성할 수 있습니다. netsh interface IPv6 6to4 set relay name\=192.88.99.1 state state\=enabled 명령입니다.|||  
   
     > [!NOTE]  

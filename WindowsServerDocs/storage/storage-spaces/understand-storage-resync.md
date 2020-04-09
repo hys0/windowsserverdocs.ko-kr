@@ -1,7 +1,6 @@
 ---
 title: 저장소 다시 동기화 이해 및 참조
 description: 저장소 다시 동기화가 발생 하는 경우와 Windows Server 2019에서이를 확인 하는 방법에 대 한 자세한 정보입니다.
-keywords: 스토리지 공간 다이렉트, 저장소 다시 동기화, 다시 동기화, 저장소, S2D
 ms.prod: windows-server
 ms.author: adagashe
 ms.technology: storage-spaces
@@ -9,12 +8,12 @@ ms.topic: article
 author: adagashe
 ms.date: 01/14/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: d271d92a14278e52a6020c60f96f48b1c8b35871
-ms.sourcegitcommit: 2a15de216edde8b8e240a4aa679dc6d470e4159e
+ms.openlocfilehash: 1209a3e08922a380ef46d3be6d28ce489b748f22
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77465307"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80820936"
 ---
 # <a name="understand-and-monitor-storage-resync"></a>저장소 재 동기화 이해 및 모니터링
 

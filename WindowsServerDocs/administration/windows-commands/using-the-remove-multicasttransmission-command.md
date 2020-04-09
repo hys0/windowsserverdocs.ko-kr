@@ -1,30 +1,27 @@
 ---
-title: 제거 MulticastTransmission 명령을 사용 하 여
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+title: MulticastTransmission
+description: 이미지에 대 한 멀티 캐스트 전송을 사용 하지 않도록 설정 하는 MulticastTransmission에 대 한 Windows 명령 항목입니다.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9a7f5c31-bfbf-425d-9129-a6f9173fe83d
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 279554124b046f645b3c83e1490657aa8782104a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 36bb666b841c4c0c33f12c5ca766e619afc176ef
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71362825"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80830336"
 ---
 # <a name="using-the-remove-multicasttransmission-command"></a>제거 MulticastTransmission 명령을 사용 하 여
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 이미지에 대 한 멀티 캐스트 전송 하는 사용 하지 않도록 설정 합니다. **/Force**를 지정 하지 않는 한 기존 클라이언트는 이미지 전송을 완료 하지만 새 클라이언트는 참가할 수 없습니다.
+
 ## <a name="syntax"></a>구문
 **Windows Server 2008**
 ```
@@ -46,34 +43,34 @@ wdsutil [Options] /remove-MulticastTransmissiomedia:<Image name>
        mediaGroup:<Image Group
         [/Filename:<File name>]
 ```
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 |매개 변수|설명|
 |-------|--------|
-미디어: <Image name>|이미지의 이름을 지정합니다.|
+미디어:<Image name>|이미지의 이름을 지정합니다.|
 |[/ 서버:<Server name>]|서버 이름을 지정합니다. 이 NetBIOS 이름 또는 정규화 된 도메인 이름 (FQDN) 수 있습니다. 서버 이름을 지정 하지, 로컬 서버가 사용 됩니다.|
 mediatype: {설치&#124;;부팅}|이미지 유형을 지정합니다. 이 옵션을 설정 해야 하는 참고 **설치** Windows Server 2008 용입니다.|
 |/ 아키텍처: {x86 &#124;ia64 &#124; x64}|전송이 시작 되도록 연관 된 부팅 이미지의 아키텍처를 지정 합니다. 다른 아키텍처에서 부팅 이미지에 동일한 이미지 이름을 가질 수 있기 때문에 올바른 전송이 사용 되도록 아키텍처를 지정 해야 합니다.|
 |\mediaGroup:<Image group name>]|이미지가 포함 된 이미지 그룹을 지정 합니다. 이미지 그룹 이름을 지정 하지 않으면 하나의 이미지 그룹 서버에 존재 하는 경우에 해당 이미지 그룹이 사용 됩니다. 이미지 그룹 둘 이상의 서버에 있는 경우 이미지 그룹 이름을 지정 하려면이 옵션을 사용 해야 합니다.|
 |[/ 파일 이름:<File name>]|파일 이름을 지정합니다. 원본 이미지 이름으로 고유 하 게 식별할 수 없으면, 파일 이름을 지정 하려면이 옵션을 사용 해야 합니다.|
 |/force|전송을 제거 하 고 모든 클라이언트를 종료 합니다. **/Force** 옵션에 대 한 값을 지정 하지 않으면 기존 클라이언트는 이미지 전송을 완료할 수 있지만 새 클라이언트는 참가할 수 없습니다.|
-## <a name="BKMK_examples"></a>예와
+## <a name="examples"></a><a name=BKMK_examples></a>예와
 네임 스페이스를 중지 하려면 (현재 클라이언트는 전송을 완료 됩니다 있지만 새 클라이언트에 연결할 수 없습니다) 유형:
 ```
-wdsutil /remove-MulticastTransmissiomedia:"Vista with Office"
+wdsutil /remove-MulticastTransmissiomedia:Vista with Office
 /Imagetype:Install
 ```
 ```
-wdsutil /remove-MulticastTransmissiomedia:"x64 Boot Image"
+wdsutil /remove-MulticastTransmissiomedia:x64 Boot Image
 /Imagetype:Boot /Architecture:x64
 ```
 모든 클라이언트의 종료를 강제 하려면 다음을 입력 합니다.
 ```
 wdsutil /remove-MulticastTransmission /Server:MyWDSServer
-/Image:"Vista with Officemediatype:InstalmediaGroup:ImageGroup1
+/Image:Vista with Officemediatype:InstalmediaGroup:ImageGroup1
 /Filename:install.wim /force
 ```
-#### <a name="additional-references"></a>추가 참조
-[명령줄 구문 키](command-line-syntax-key.md)
+## <a name="additional-references"></a>추가 참조
+- [명령줄 구문 키](command-line-syntax-key.md)
 [get AllMulticastTransmissions 명령을 사용 하 여](using-the-get-allmulticasttransmissions-command.md)
 [get MulticastTransmission 명령을 사용 하 여](using-the-get-multicasttransmission-command.md)
 [MulticastTransmission 새 명령을 사용 하 여](using-the-new-multicasttransmission-command.md)

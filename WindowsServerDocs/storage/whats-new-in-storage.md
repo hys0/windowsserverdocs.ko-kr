@@ -3,17 +3,17 @@ ms.assetid: 0f2a7f7b-aca8-4e5d-ad67-4258e88bc52f
 title: Windows Server에서 제공되는 저장소의 새로운 기능
 ms.prod: windows-server
 ms.author: jgerend
-ms.manager: dongill
+manager: dongill
 ms.technology: storage
 ms.topic: article
 author: jasongerend
 ms.date: 05/29/2019
-ms.openlocfilehash: ffcff036a7e30018e523def055ce3aeb8d30c225
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: 0de83c8642629b3a7ff21c9accadec5f9331178e
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79322335"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80820856"
 ---
 # <a name="whats-new-in-storage-in-windows-server"></a>Windows Server에서 제공 되는 저장소의 새로운 기능
 
@@ -63,9 +63,9 @@ Windows 관리 센터는 windows Server 2019 및 다른 버전의 Windows에서 
 
 ### <a name="storage-migration-service"></a>저장소 마이그레이션 서비스
 
-저장소 마이그레이션 서비스는 서버를 Windows Server의 최신 버전으로 쉽게 마이그레이션할 수 있는 새로운 기술입니다. 서버의 데이터를 인벤토리화하는 그래픽 도구를 제공하며, 데이터 및 구성을 최신 서버로 전송한 다음, 선택적으로 이전 서버의 ID를 새로운 서버로 이동하여 앱 및 사용자가 아무 것도 변경할 필요가 없도록 합니다. 자세한 내용은 [저장소 마이그레이션 서비스](storage-migration-service/overview.md)를 참조하세요.
+저장소 마이그레이션 서비스는 서버를 Windows Server의 최신 버전으로 쉽게 마이그레이션할 수 있는 새로운 기술입니다. 서버의 데이터를 인벤토리화하는 그래픽 도구를 제공하며, 데이터 및 구성을 최신 서버로 전송한 다음, 선택적으로 이전 서버의 ID를 새로운 서버로 이동하여 앱 및 사용자가 아무 것도 변경할 필요가 없도록 합니다. 자세한 내용은 [스토리지 마이그레이션 서비스](storage-migration-service/overview.md)를 참조하세요.
 
-### <a id="storage-spaces-direct"></a>스토리지 공간 다이렉트 (Windows Server 2019에만 해당)
+### <a name="storage-spaces-direct-windows-server-2019-only"></a><a id="storage-spaces-direct"></a>스토리지 공간 다이렉트 (Windows Server 2019에만 해당)
 
 Windows Server 2019에는 다양 한 스토리지 공간 다이렉트 향상 된 기능이 있습니다 (스토리지 공간 다이렉트 Windows Server, 반기 채널에는 포함 되어 있지 않음).
 
@@ -109,7 +109,7 @@ Windows Server 2019에는 다양 한 스토리지 공간 다이렉트 향상 된
 
     이를 통해 관리자는 스토리지 공간 다이렉트 볼륨의 할당을 수동으로 구분할 수 있습니다. 이렇게 하면 특정 조건에 따라 내결함성이 크게 향상 되지만 몇 가지 추가 관리 고려 사항과 복잡성이 적용 됩니다. 자세한 내용은 [볼륨의 할당을 구분 하는](storage-spaces/delimit-volume-allocation.md)방법을 참조 하세요.
 
-### <a name="storage-replica2019"></a>저장소 복제본
+### <a name="storage-replica"></a><a name="storage-replica2019"></a>저장소 복제본
 
 이 릴리스에서는 [저장소 복제본](storage-replica/storage-replica-overview.md) 에 대 한 몇 가지 향상 된 기능이 있습니다.
 
@@ -128,7 +128,7 @@ Windows Server 2019에는 다양 한 스토리지 공간 다이렉트 향상 된
 
 #### <a name="test-failover"></a>테스트 장애 조치(failover)
 
-이제 테스트 또는 백업을 위해 대상 서버에서 복제 된 저장소의 스냅숏을 일시적으로 탑재할 수 있습니다. Microsoft 업데이트에 대한 자세한 내용은 [저장소 복제본 관련 질문과 대답](https://aka.ms/srfaq)을 참조하세요.
+이제 테스트 또는 백업을 위해 대상 서버에서 복제 된 저장소의 스냅숏을 일시적으로 탑재할 수 있습니다. 자세한 내용은 [스토리지 복제본에 대한 질문과 대답](https://aka.ms/srfaq)을 참조하세요.
 
 #### <a name="windows-admin-center-support"></a>Windows Admin Center 지원
 
@@ -154,13 +154,13 @@ Windows Server 2019에는 다양 한 스토리지 공간 다이렉트 향상 된
 
 ### <a name="file-server-resource-manager"></a>파일 서버 리소스 관리자
 
-Windows Server 2019에는 서비스가 시작 될 때 파일 서버 리소스 관리자 서비스에서 모든 볼륨에 변경 저널 (USN 저널이 라고도 함)을 만들 수 없도록 하는 기능이 포함 되어 있습니다. 이를 통해 각 볼륨의 공간을 절약할 수 있지만 실시간 파일 분류를 사용할 수 없게 됩니다. 자세한 내용은 [파일 서버 리소스 관리자 개요](fsrm/fsrm-overview.md)를 참조하십시오.
+Windows Server 2019에는 서비스가 시작 될 때 파일 서버 리소스 관리자 서비스에서 모든 볼륨에 변경 저널 (USN 저널이 라고도 함)을 만들 수 없도록 하는 기능이 포함 되어 있습니다. 이를 통해 각 볼륨의 공간을 절약할 수 있지만 실시간 파일 분류를 사용할 수 없게 됩니다. 자세한 내용은 [파일 서버 리소스 관리자 개요](fsrm/fsrm-overview.md)를 참조하세요.
 
 ## <a name="whats-new-in-storage-in-windows-server-version-1803"></a>Windows Server에서 제공 되는 저장소의 새로운 기능 버전 1803
 
 ### <a name="file-server-resource-manager"></a>파일 서버 리소스 관리자
 
-Windows Server, 버전 1803에는 서비스가 시작 될 때 파일 서버 리소스 관리자 서비스에서 모든 볼륨에 변경 저널 (USN 저널이 라고도 함)을 만들 수 없도록 하는 기능이 포함 되어 있습니다. 이를 통해 각 볼륨의 공간을 절약할 수 있지만 실시간 파일 분류를 사용할 수 없게 됩니다. 자세한 내용은 [파일 서버 리소스 관리자 개요](fsrm/fsrm-overview.md)를 참조하십시오.
+Windows Server, 버전 1803에는 서비스가 시작 될 때 파일 서버 리소스 관리자 서비스에서 모든 볼륨에 변경 저널 (USN 저널이 라고도 함)을 만들 수 없도록 하는 기능이 포함 되어 있습니다. 이를 통해 각 볼륨의 공간을 절약할 수 있지만 실시간 파일 분류를 사용할 수 없게 됩니다. 자세한 내용은 [파일 서버 리소스 관리자 개요](fsrm/fsrm-overview.md)를 참조하세요.
 
 ## <a name="whats-new-in-storage-in-windows-server-version-1709"></a>Windows Server에서 제공 되는 저장소의 새로운 기능 버전 1709
 
@@ -172,7 +172,7 @@ Windows Server, 버전 1709은 반기 채널의 첫 번째 Windows Server 릴리
 
 저장소 복제본을 통해 추가 된 재해 복구 보호는 이제 다음을 포함 하도록 확장 됩니다.
 
-- **테스트 장애 조치**: 대상 저장소를 탑재하는 옵션이 이제 테스트 장애 조치 기능을 통해 이용 가능합니다. 테스트 및 백업을 목적으로 대상 노드에 있는 복제된 저장소의 스냅숏을 일시적으로 탑재할 수 있습니다. Microsoft 업데이트에 대한 자세한 내용은 [저장소 복제본 관련 질문과 대답](https://aka.ms/srfaq)을 참조하세요.
+- **테스트 장애 조치**: 대상 스토리지를 탑재하는 옵션이 이제 테스트 장애 조치 기능을 통해 이용 가능합니다. 테스트 및 백업을 목적으로 대상 노드에 있는 복제된 저장소의 스냅숏을 일시적으로 탑재할 수 있습니다. 자세한 내용은 [스토리지 복제본에 대한 질문과 대답](https://aka.ms/srfaq)을 참조하세요.
 - **Windows 관리 센터 지원**: 이제 서버 관리자 도구를 통해 Windows 관리 센터에서 복제에 대 한 그래픽 관리 지원을 사용할 수 있습니다. 서버 간 복제, 클러스터 간 복제 및 확장 클러스터 복제도 포함 됩니다.
 
 저장소 복제본에는 다음과 같은 향상 된 기능도 포함 되어 있습니다.
@@ -193,7 +193,7 @@ Windows Server, 버전 1709은 반기 채널의 첫 번째 Windows Server 릴리
 
 ## <a name="whats-new-in-storage-in-windows-server-2016"></a>Windows Server 2016에서 제공되는 저장소의 새로운 기능
 
-### <a name="s2d"></a>스토리지 공간 다이렉트  
+### <a name="storage-spaces-direct"></a><a name="s2d"></a>스토리지 공간 다이렉트  
 저장소 공간 다이렉트는 로컬 저장소가 있는 서버를 사용하여 확장 가능한 고가용성 저장소를 구축하도록 지원합니다. 이는 소프트웨어 정의 저장소 시스템의 배포 및 관리를 간소화하고 SATA SSD 및 NVMe 디스크 장치와 같이 이전에 공유 디스크를 사용하는 클러스터형 저장소 공간에서는 불가능했던 새로운 등급의 디스크 장치를 사용합니다.  
 
 **이와 같은 변경을 통해 더해지는 가치**  
@@ -205,7 +205,7 @@ Windows Server, 버전 1709은 반기 채널의 첫 번째 Windows Server 릴리
 **달라진 기능**  
 이 기능은 Windows Server 2016의 새로운 기능입니다.  
 
-### <a name="storage-replica"></a>저장소 복제본
+### <a name="storage-replica"></a><a name="storage-replica"></a>저장소 복제본
 
 저장소 복제본을 통해 사이트 간에 장애 조치(failover) 클러스터를 확장할 뿐만 아니라 재해 복구를 위해 서버 또는 클러스터 간에 저장소에 상관없는 블록 수준의 동기 복제를 사용할 수 있습니다. 동기 복제를 사용하면 파일 시스템 수준에서 데이터가 손실되지 않고 크래시 일관성이 있는 볼륨을 사용하여 실제 사이트의 데이터를 미러링할 수 있습니다. 비동기 복제는 대도시 범위를 넘어 사이트를 확장합니다(데이터가 손실될 수도 있음).  
 
@@ -229,7 +229,7 @@ Windows Server, 버전 1709은 반기 채널의 첫 번째 Windows Server 릴리
 **달라진 기능**  
 이 기능은 Windows Server 2016의 새로운 기능입니다.  
 
-### <a name="storage-qos"></a>저장소 서비스 품질  
+### <a name="storage-quality-of-service"></a><a name="storage-qos"></a>저장소 서비스 품질  
 이제 스토리지 QoS(서비스 품질)를 사용하여 중앙에서 엔드투엔드 스토리지 성능을 모니터링하고 Windows Server 2016의 Hyper-V 및 CSV 클러스터를 통해 관리 정책을 만들 수 있습니다.  
 
 **이와 같은 변경을 통해 더해지는 가치**  
@@ -248,16 +248,16 @@ Windows Server, 버전 1709은 반기 채널의 첫 번째 Windows Server 릴리
 
 자세한 내용은 [저장소 서비스 품질](storage-qos/storage-qos-overview.md)을 참조하세요.
 
-### <a name="dedup"></a>데이터 중복 제거  
+### <a name="data-deduplication"></a><a name="dedup"></a>데이터 중복 제거  
 | 기능 | 새로운 기능 또는 업데이트된 기능 | 설명 |
 |---------------|----------------|-------------|
 | [대용량 볼륨에 대 한 지원](data-deduplication/whats-new.md#large-volume-support) | 업데이트됨 | Windows Server 2016 이전에는 특별히 예상되는 변동에 대비해 볼륨의 크기를 조정해야 했으며, 10TB가 넘는 볼륨은 중복 제거에 적합하지 않았습니다. Windows Server 2016에서는 데이터 중복 제거 기능이 **최대 64TB**의 볼륨 크기를 지원합니다. |
 | [큰 파일 보고서에 대 한 지원](data-deduplication/whats-new.md#large-file-support) | 업데이트됨 | Windows Server 2016 이전에는 크기가 1TB에 가까운 파일은 중복 제거에 적합하지 않았습니다. Windows Server 2016에서 **최대 1TB**의 파일이 완벽하게 지원됩니다. |
 | [Nano Server에 대 한 지원](data-deduplication/whats-new.md#nano-server-support) | 새로 만들기 | 데이터 중복 제거는 Windows Server 2016의 새로운 Nano Server 배포 옵션에서 사용할 수 있으며 완전히 지원됩니다. |
 | [간소화 된 백업 지원](data-deduplication/whats-new.md#simple-backup-support) | 새로 만들기 | Windows Server 2012 R2에서는 Microsoft의 [Data Protection Manager](https://technet.microsoft.com/library/hh758173.aspx)와 같은 가상화된 백업 응용 프로그램이 일련의 수동 구성 단계를 통해 지원되었습니다. Windows Server 2016에서는 가상화된 백업 응용 프로그램에 대한 중복 제거의 원활한 배포를 위해 새로운 기본 사용 유형인 "백업"이 추가되었습니다. |
-| [클러스터 OS 롤링 업그레이드 지원](data-deduplication/whats-new.md#cluster-upgrade-support) | 새로 만들기 | 데이터 중복 제거는 Windows Server 2016의 [클러스터 OS 롤링 업그레이드](..//failover-clustering/cluster-operating-system-rolling-upgrade.md) 기능을 완벽하게 지원합니다. |
+| [클러스터 OS 롤링 업그레이드 지원](data-deduplication/whats-new.md#cluster-upgrade-support) | 새로 만들기 | 데이터 중복 제거는 Windows Server 2016의 [클러스터 OS 롤링 업그레이드](..//failover-clustering/cluster-operating-system-rolling-upgrade.md) 기능을 완전히 지원합니다. |
 
-### <a name="smb-hardening-improvements"></a>SYSVOL 및 NETLOGON 연결에 대 한 SMB 강화 기능 향상  
+### <a name="smb-hardening-improvements-for-sysvol-and-netlogon-connections"></a><a name="smb-hardening-improvements"></a>SYSVOL 및 NETLOGON 연결에 대 한 SMB 강화 기능 향상  
 Active Directory 도메인 서비스에 연결된 Windows 10 및 Windows Server 2016 클라이언트에서는 도메인 컨트롤러의 기본 SYSVOL 및 NETLOGON 공유에 SMB 서명 및 상호 인증(예: Kerberos)이 필요합니다.   
 
 **이와 같은 변경을 통해 더해지는 가치**  

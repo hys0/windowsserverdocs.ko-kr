@@ -1,7 +1,6 @@
 ---
 ms.assetid: 7530cafe-98d7-46c9-95d9-e49d39caa021
 title: Windows 2000 조직에서 AD DS 배포
-description: ''
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: cad5deb32a31f15277c3e0e985d5b7d9b07856aa
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f1543effdb1cd9b83c0a2016855c4c65e3b2b5c0
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71408912"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80822636"
 ---
 # <a name="deploying-ad-ds-in-a-windows-2000-organization"></a>Windows 2000 조직에서 AD DS 배포
 
@@ -22,7 +21,7 @@ ms.locfileid: "71408912"
 
 조직에는 Windows 2000 Active Directory 현재 실행 중인 경우에 Windows Server 2008 도메인 컨트롤러의 운영 체제의 일부 또는 전부의 전체 업그레이드를 수행 하거나 또는 사용자 환경에 Windows Server 2008을 실행 하는 도메인 컨트롤러를 도입 하 여 Windows Server 2008 Active Directory 도메인 서비스 (AD DS)를 배포할 수 있습니다.  
   
-기존 Windows 2000 Active Directory 도메인에 Windows Server 2008을 실행 하는 도메인 컨트롤러를 추가 하기 전에 실행 해야 **adprep**, 명령줄 도구입니다. Adprep AD DS 스키마를 확장 하 고, 선택 된 개체의 기본 보안 설명자를 업데이트, 일부 응용 프로그램에서 필요에 따라 새 디렉터리 개체를 추가 합니다. Adprep는 Windows Server 2008 설치 디스크 (\sources\adprep\adprep.exe)에 있습니다. 자세한 내용은 Adprep ([https://go.microsoft.com/fwlink/?LinkId=99215](https://go.microsoft.com/fwlink/?LinkId=99215))를 참조 하세요.  
+기존 Windows 2000 Active Directory 도메인에 Windows Server 2008을 실행 하는 도메인 컨트롤러를 추가 하기 전에 실행 해야 **adprep**, 명령줄 도구입니다. Adprep AD DS 스키마를 확장 하 고, 선택 된 개체의 기본 보안 설명자를 업데이트, 일부 애플리케이션에서 필요에 따라 새 디렉터리 개체를 추가 합니다. Adprep는 Windows Server 2008 설치 디스크 (\sources\adprep\adprep.exe)에 있습니다. 자세한 내용은 Adprep ([https://go.microsoft.com/fwlink/?LinkId=99215](https://go.microsoft.com/fwlink/?LinkId=99215))를 참조 하세요.  
   
 > [!NOTE]  
 > 기존 Windows 2000 AD DS 도메인 컨트롤러를 Windows Server 2008의 전체 업그레이드를 수행 하려는 경우에 Windows Server 2003에 서버를 먼저 업그레이드 하 고 Windows Server 2008로 업그레이드 해야 합니다.  

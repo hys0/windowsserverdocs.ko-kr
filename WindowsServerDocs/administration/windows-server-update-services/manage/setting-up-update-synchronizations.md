@@ -1,24 +1,20 @@
 ---
 title: 업데이트 동기화 설정
 description: WSUS (Windows Server Update Service) 항목-업데이트 동기화를 설정 및 구성 하는 방법
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-wsus
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ddd5c395-451b-44a0-8e08-a05db26d2282
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9c7bca5be7a8ec0e857cba65680fbc3b967af4f8
-ms.sourcegitcommit: 3c3dfee8ada0083f97a58997d22d218a5d73b9c4
+ms.openlocfilehash: f4da028b2100d824b55c00c185f8b90df7d787bf
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80639749"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80828545"
 ---
 # <a name="setting-up-update-synchronizations"></a>업데이트 동기화 설정
 
@@ -89,7 +85,7 @@ WSUS 서버의 업데이트 소스와 동기화 하는 방법을 사용자 지�
 
 -   동기화에 대 한 사용자 지정 포트를 지정할 수 있습니다. 포트를 구성 하는 방법에 대 한 정보를 참조 하십시오. [3 단계: WSUS 구성](../deploy/2-configure-wsus.md) WSUS 배포 가이드에 있습니다.
 
--   보안 동기화 WSUS 서버 간에 업데이트 정보를 보안 소켓 레이어 (SSL)를 사용할 수 있습니다. SSL을 사용 하는 방법에 대 한 자세한 내용은 "3.5 섹션을 참조 하십시오. WSUS를 보호 Secure Sockets Layer 프로토콜 사용"의 [3 단계: WSUS 구성](../deploy/2-configure-wsus.md) WSUS 배포 가이드에 있습니다.
+-   보안 동기화 WSUS 서버 간에 업데이트 정보를 보안 소켓 레이어 (SSL)를 사용할 수 있습니다. SSL 사용에 대 한 자세한 내용은 섹션 3.5을 참조 하세요. Wsus 배포 가이드의 [3 단계: Wsus 구성](../deploy/2-configure-wsus.md) 의 SSL(Secure Sockets Layer) 프로토콜을 사용 하 여 wsus를 보호 합니다.
 
 ## <a name="synchronizing-manually-or-automatically"></a>수동 또는 자동으로 동기화합니다.
 WSUS 서버를 수동으로 동기화 하거나 자동으로 동기화 하는 시간을 지정할 수 있습니다.

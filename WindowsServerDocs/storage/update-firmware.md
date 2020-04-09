@@ -3,17 +3,17 @@ ms.assetid: e5945bae-4a33-487c-a019-92a69db8cf6c
 title: 드라이브 펌웨어 업데이트
 ms.prod: windows-server
 ms.author: toklima
-ms.manager: dmoss
+manager: dmoss
 ms.technology: storage-spaces
 ms.topic: article
 author: toklima
 ms.date: 10/04/2016
-ms.openlocfilehash: 2f0530101bb7d597d2d95c26648aad65d62b69ca
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 55a4fc94440b763c48735ffe44099da702857489
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71365866"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80820876"
 ---
 # <a name="updating-drive-firmware"></a>드라이브 펌웨어 업데이트
 >적용 대상: Windows Server 2019, Windows Server 2016, Windows 10
@@ -30,11 +30,11 @@ Windows Server를 사용하여 드라이브 펌웨어를 업데이트하려면 �
 하드웨어가 드라이브 펌웨어를 업데이트하는 Windows를 지원하는지에 대한 정보는 솔루션 공급업체에 문의하세요.
 다음은 다양한 요구 사항에 대한 링크입니다.
 
--   타 [Device.Storage.Hd.Sata](https://msdn.microsoft.com/windows/hardware/commercialize/design/compatibility/device-storage#devicestoragehdsata) - **[구현된 경우\] 펌웨어 다운로드 및 활성화** 섹션
+-   SATA: [Device.Storage.Hd.Sata](https://msdn.microsoft.com/windows/hardware/commercialize/design/compatibility/device-storage#devicestoragehdsata) - **[구현된 경우\] 펌웨어 다운로드 및 활성화** 섹션
     
--   SAS [Device.Storage.Hd.Sas](https://msdn.microsoft.com/windows/hardware/commercialize/design/compatibility/device-storage#devicestoragehdsas) - **[구현된 경우\] 펌웨어 다운로드 및 활성화** 섹션
+-   SAS: [Device.Storage.Hd.Sas](https://msdn.microsoft.com/windows/hardware/commercialize/design/compatibility/device-storage#devicestoragehdsas) - **[구현된 경우\] 펌웨어 다운로드 및 활성화** 섹션
 
--   NVMe [Device. ControllerDrive. NVMe](https://msdn.microsoft.com/windows/hardware/commercialize/design/compatibility/device-storage#devicestoragecontrollerdrivenvme) -섹션 **5.7** 및 **5.8**.
+-   NVMe: [Device.Storage.ControllerDrive.NVMe](https://msdn.microsoft.com/windows/hardware/commercialize/design/compatibility/device-storage#devicestoragecontrollerdrivenvme) - **5.7** 및 **5.8** 섹션.
 
 ## <a name="powershell-cmdlets"></a>PowerShell cmdlet
 
@@ -164,7 +164,7 @@ $NewDoc = Get-Content <Path> | Out-String
 $SpacesDirect | Set-StorageHealthSetting -Name "System.Storage.SupportedComponents.Document" -Value $NewDoc
 ```
 
-작동 중인 상태 관리 서비스 확인 하 고 해당 롤아웃 메커니즘에 대해 자세히 알아보려면 다음 비디오를 참조 하세요. https://channel9.msdn.com/Blogs/windowsserver/Update-Drive-Firmware-Without-Downtime-in-Storage-Spaces-Direct
+상태 관리 서비스 작동 중인 것을 확인 하 고 해당 롤아웃 메커니즘에 대해 자세히 알아보려면 다음 비디오를 살펴보세요. https://channel9.msdn.com/Blogs/windowsserver/Update-Drive-Firmware-Without-Downtime-in-Storage-Spaces-Direct
 
 ## <a name="frequently-asked-questions"></a>질문과 대답
 

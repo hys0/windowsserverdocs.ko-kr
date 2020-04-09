@@ -1,26 +1,22 @@
 ---
-title: 필요한 경우 장치 드라이버 업데이트 및 설치
+title: 필요한 경우 디바이스 드라이버 업데이트 및 설치
 description: MultiPoint 서비스에서 장치 드라이버를 확인 하 고 업데이트 하는 방법을 알아봅니다.
-ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 16be3ef9-a05b-4621-a431-5806b567e997
 author: evaseydl
 manager: scottman
 ms.author: evas
-ms.openlocfilehash: 766e2175a16cd20a68730870c8980ed9c9204a3c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 6d20aa80edeafa4311262a380cfd7aad65ae0315
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71394879"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80820606"
 ---
-# <a name="update-and-install-device-drivers-if-needed"></a>필요한 경우 장치 드라이버 업데이트 및 설치
+# <a name="update-and-install-device-drivers-if-needed"></a>필요한 경우 디바이스 드라이버 업데이트 및 설치
 USB 제로 클라이언트 또는 드라이버가 필요한 주변 장치를 사용 하는 경우 지금 드라이버를 설치 해야 합니다. 드라이버 경고에 대 한 **Device Manager** 를 확인 하 고 해당 장치에 대 한 드라이버를 설치 하는 것도 좋습니다.  
   
 일반적으로 최신 드라이버는 다음과 같은 종류의 장치에 필요 합니다.  

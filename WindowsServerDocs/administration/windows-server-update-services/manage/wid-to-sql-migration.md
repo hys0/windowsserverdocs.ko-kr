@@ -2,22 +2,19 @@
 title: (Windows 내부 데이터베이스) WID에서 SQL로 WSUS 데이터베이스 마이그레이션
 description: WSUS (windows Server Update Service) 항목-Windows 내부 데이터베이스 인스턴스에서 SQL Server의 로컬 또는 원격 인스턴스로 WSUS 데이터베이스 (SUSDB)를 마이그레이션하는 방법입니다.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-wsus
-ms.tgt_pltfrm: na
 ms.topic: get-started article
 ms.assetid: 90e3464c-49d8-4861-96db-ee6f8a09g7dr
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dougkim
 ms.date: 07/25/2018
-ms.openlocfilehash: 594c20cbfea521006de6d1ec69763669298376e6
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 8d38833170aae5e13f9d42b726d7cb0b3c12de56
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75948527"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80828456"
 ---
 >적용 대상: Windows Server 2012, Windows Server 2012 R2, Windows Server 2016
 
@@ -25,7 +22,7 @@ ms.locfileid: "75948527"
 
 다음 단계를 사용 하 여 WSUS 데이터베이스 (SUSDB)를 Windows 내부 데이터베이스 인스턴스에서 SQL Server의 로컬 또는 원격 인스턴스로 마이그레이션합니다.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>필수 조건
 
 - SQL 인스턴스. 이는 기본 **MSSQLServer** 또는 사용자 지정 인스턴스일 수 있습니다.
 - SQL Server Management Studio
@@ -70,7 +67,7 @@ PowerShell (승격)에서 다음을 실행 합니다.
 
 ### <a name="copy-the-susdb-files-to-the-sql-server"></a>SUSDB 파일을 SQL Server에 복사 합니다.
 
-1. SUSDB 및 **SUSDB\_** 를 WID 데이터 폴더 (\* **%** ;)에서 SQL 인스턴스 데이터 폴더로 복사 합니다.
+1. SUSDB 및 **SUSDB\_** 를 WID 데이터 폴더 (\* **%** **SUSDB.mdf** ;)에서 SQL 인스턴스 데이터 폴더로 복사 합니다.
 
 > [!TIP]
 > 예를 들어 SQL 인스턴스 폴더가 **C:\Program FILES\MICROSOFT sql Server\MSSQL12. 인 경우 MSSQLSERVER\MSSQL**및 WID 데이터 폴더는 **C:\WINDOWS\WID\DATA** 로 SUSDB 파일을 **C:\WINDOWS\WID\DATA** 에서 **C:\Program Files\Microsoft SQL Server\MSSQL12.로 복사 합니다. MSSQLSERVER\MSSQL\Data**
@@ -124,9 +121,9 @@ SUSDB을 연결한 후 다음을 수행 하 여 **NT AUTHORITY\NETWORK SERVICE**
 4. **사용자 매핑** 페이지에서 다음을 수행 합니다.
     - **이 로그인으로 매핑된 사용자**에서: **SUSDB** 를 선택 합니다.
     - **데이터베이스 역할 멤버 자격: SUSDB**에서 다음을 확인 합니다.
-        - **public**
+        - **공개적**
         - **웹 서비스** ![image9](images/image9.png)
-5. **확인** 클릭
+5. **확인**을 클릭합니다.
 
 이제 로그인 아래에 **NT AUTHORITY\NETWORK SERVICE** 가 표시 되어야 합니다.
 ![image10](images/image10.png)
@@ -149,8 +146,8 @@ SUSDB을 연결한 후 다음을 수행 하 여 **NT AUTHORITY\NETWORK SERVICE**
     >
     > ![image11](images/image11.png)
 
-4. **사용자 매핑** 페이지의 **"이 로그인으로 매핑된 사용자"** 에서 **SUSDB** 데이터베이스를 선택 합니다.
-5. **"데이터베이스 역할 멤버 자격: SUSDB"** : ![image12](images/image12.png)에서 **webservice** 를 확인 합니다.
+4. **사용자 매핑** 페이지의 **이 로그인으로 매핑된 사용자** 에서 **SUSDB** 데이터베이스를 선택 합니다.
+5. **데이터베이스 역할 멤버 자격**아래에서 **webservice** 를 확인 합니다. SUSDB: ![image12](images/image12.png)
 6. **확인** 을 클릭 하 여 설정을 저장 합니다.
     > [!NOTE]
     > 변경 내용을 적용 하려면 SQL 서비스를 다시 시작 해야 할 수 있습니다.
@@ -158,7 +155,7 @@ SUSDB을 연결한 후 다음을 수행 하 여 **NT AUTHORITY\NETWORK SERVICE**
 ### <a name="edit-the-registry-to-point-wsus-to-the-sql-server-instance"></a>WSUS가 SQL Server 인스턴스를 가리키도록 레지스트리를 편집 합니다.
 
 > [!IMPORTANT]
-> 이 섹션의 단계를 신중하게 따릅니다. 레지스트리를 잘못 수정할 경우 심각한 문제가 발생할 수 있습니다. 수정하기 전에, 문제가 발생할 경우를 대비하여 [복원을 위해 레지스트리를 백업](https://support.microsoft.com/help/322756)해 두세요.
+> 이 섹션의 단계를 신중하게 따릅니다. 레지스트리를 잘못 수정하면 심각한 문제가 발생할 수 있습니다. 수정하기 전에, 문제가 발생할 경우를 대비하여 [복원을 위해 레지스트리를 백업](https://support.microsoft.com/help/322756)해 두세요.
 
 1. **시작**을 클릭하고, **실행**을 클릭하고, **regedit**를 입력한 후 **확인**을 클릭합니다.
 2. 다음 키를 찾습니다. **HKEY_LOCAL_MACHINE \software\microsoft\updateservices\server\setup\sqlservername**

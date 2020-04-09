@@ -1,6 +1,5 @@
 ---
 title: AD 포리스트 복구-제거 된 dc의 메타 데이터 정리
-description: ''
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
@@ -9,12 +8,12 @@ ms.topic: article
 ms.prod: windows-server
 ms.assetid: e7543381-4081-407f-adad-a9de792c6616
 ms.technology: identity-adds
-ms.openlocfilehash: cc41170051e55fbaeca048ac587ecd3351cd53ad
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b9ba00939ccb2ee747501733fb9654edb4c8132e
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71369269"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80824256"
 ---
 # <a name="ad-forest-recovery---cleaning-metadata-of-removed-writable-domain-controllers"></a>AD 포리스트 복구-제거 된 쓰기 가능 도메인 컨트롤러의 메타 데이터 정리
 
@@ -41,7 +40,7 @@ RSAT를 설치 하는 방법에 대 한 자세한 내용은 [원격 서버 관�
 1. **시작**, **관리 도구**, **Active Directory 사용자 및 컴퓨터**를 차례로 클릭합니다.  
 2. 콘솔 트리에서 도메인 컨테이너를 두 번 클릭 한 다음 **도메인 컨트롤러** OU (조직 구성 단위)를 두 번 클릭 합니다.  
 3. 세부 정보 창에서 삭제 하려는 DC를 마우스 오른쪽 단추로 클릭 한 다음 **삭제**를 클릭 합니다.
-   ![Delete](media/AD-Forest-Recovery-Cleaning-Metadata/delete1.png) 
+   ![삭제](media/AD-Forest-Recovery-Cleaning-Metadata/delete1.png) 
 4. **예**를 클릭하여 삭제를 확인합니다. **이 도메인 컨트롤러가 영구적으로 오프 라인 상태이 고 Active Directory Domain Services 설치 마법사 (DCPROMO) 확인란을 사용 하 여 더 이상 수준을 내릴 수 없습니다** . 확인란을 선택 하 고 **삭제**를 클릭 합니다.  
 5. DC가 글로벌 카탈로그 서버인 경우 **예** 를 클릭 하 여 삭제를 확인 합니다.  
 

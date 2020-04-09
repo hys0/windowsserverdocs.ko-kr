@@ -1,7 +1,6 @@
 ---
 ms.assetid: d92731f1-e4d8-4223-9b07-ca1f40bb0e1f
 title: 연결되지 않은 네임 스페이스
-description: ''
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 5abe67c89ce4c2f4b5056f6197242b5db8db340e
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b21e849bb69068f66b1b80c6b1a3afbdef91459f
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71408852"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80822536"
 ---
 # <a name="disjoint-namespace"></a>연결되지 않은 네임 스페이스
 
@@ -27,7 +26,7 @@ ms.locfileid: "71408852"
 ## <a name="support-for-disjoint-namespaces"></a>비연속 네임 스페이스 지원  
 도메인 컨트롤러를 포함 하는 도메인 구성원 컴퓨터는 비연속 네임 스페이스에서 작동할 수 있습니다. 도메인 구성원 컴퓨터는 연결 되지 않은 DNS 네임 스페이스에 호스트 (A) 리소스 레코드 및 IP 버전 6 (AAAA) 리소스 레코드를 등록할 수 있습니다. 도메인 구성원 컴퓨터가 이러한 방식으로 리소스 레코드를 등록 하면 도메인 컨트롤러는 DNS 영역에서 Active Directory 도메인 이름과 동일한 글로벌 및 사이트 관련 서비스 (SRV) 리소스 레코드를 계속 등록 합니다.  
   
-예를 들어 corp.fabrikam.com의 주 DNS 접미사를 사용 하는 na.corp.fabrikam.com 라는 Active Directory 도메인의 도메인 컨트롤러가 corp.fabrikam.com DNS 영역에서 호스트 (A) 및 IPv6 호스트 (AAAA) 리소스 레코드를 등록 한다고 가정 합니다. 도메인 컨트롤러는 계속 해 서 전역 및 사이트 관련 서비스 (SRV) 리소스 레코드를 _msdcs. na.corp.fabrikam.com 및 DNS 영역에 등록 합니다. 이렇게 하면 서비스 위치를 사용할 수 있습니다.  
+예를 들어 corp.fabrikam.com의 주 DNS 접미사를 사용 하는 na.corp.fabrikam.com 라는 Active Directory 도메인의 도메인 컨트롤러가 corp.fabrikam.com DNS 영역에서 호스트 (A) 및 IPv6 호스트 (AAAA) 리소스 레코드를 등록 한다고 가정 합니다. 도메인 컨트롤러는 na.corp.fabrikam.com 및 DNS 영역 _msdcs에서 글로벌 및 사이트 관련 서비스 (SRV) 리소스 레코드를 계속 등록 하 여 서비스 위치를 가능 하 게 합니다.  
   
 > [!IMPORTANT]  
 > Windows 운영 체제는 연결 되지 않은 네임 스페이스를 지원할 수 있지만, 주 DNS 접미사가 Active Directory 도메인 접미사가 동일한 환경에서 작동 하지 않는 것으로 가정 하 여 작성 된 응용 프로그램은 이러한 환경에서 작동 하지 않을 수 있습니다. 따라서 연결 되지 않은 네임 스페이스를 배포 하기 전에 모든 응용 프로그램 및 해당 운영 체제를 신중 하 게 테스트 해야 합니다.  
@@ -73,7 +72,7 @@ ms.locfileid: "71408852"
 -   이름 확인을 최적화 하려면 수동 단계를 수행 하 여 다른 주 DNS 접미사로 구성원 컴퓨터를 구성 하는 그룹 정책 수정 및 유지 관리 해야 합니다.  
   
     > [!NOTE]  
-    > WINS (Windows Internet Name Service)는 단일 레이블 이름을 확인 하 여이 단점을 상쇄 하는 데 사용할 수 있습니다. WINS에 대 한 자세한 내용은 WINS 기술 참조 ([https://go.microsoft.com/fwlink/?LinkId=102303](https://go.microsoft.com/fwlink/?LinkId=102303))를 참조 하세요.  
+    > WINS (Windows Internet Name Service)는 단일 레이블 이름을 확인 하 여이 단점을 상쇄 하는 데 사용할 수 있습니다. WINS에 대 한 자세한 내용은 WINS 기술 참조 ([https://go.microsoft.com/fwlink/?LinkId=102303](https://go.microsoft.com/fwlink/?LinkId=102303))를 참조 하십시오.  
   
 -   환경에 여러 기본 DNS 접미사가 필요한 경우 포리스트의 모든 Active Directory 도메인에 대해 DNS 접미사 검색 순서를 적절 하 게 구성 해야 합니다.  
   
@@ -90,16 +89,16 @@ ms.locfileid: "71408852"
   
     자세한 내용은 Spn ([https://go.microsoft.com/fwlink/?LinkId=102304](https://go.microsoft.com/fwlink/?LinkId=102304))이 잘못 설정 되어 서비스 로그온이 실패 함을 참조 하세요.  
   
-    -   제한 된 위임을 사용 하는 Windows Server 2003 기반 컴퓨터를 사용 하는 경우 Spn을 변경 하려면 해당 컴퓨터에 추가 구성이 필요할 수 있습니다. 자세한 내용은 Microsoft 기술 자료 문서 936628 ([https://go.microsoft.com/fwlink/?LinkId=102306](https://go.microsoft.com/fwlink/?LinkId=102306))을 참조 하세요.  
+    -   제한 된 위임을 사용 하는 Windows Server 2003 기반 컴퓨터를 사용 하는 경우 Spn을 변경 하려면 해당 컴퓨터에 추가 구성이 필요할 수 있습니다. 자세한 내용은 Microsoft 기술 자료 문서 936628 ([https://go.microsoft.com/fwlink/?LinkId=102306](https://go.microsoft.com/fwlink/?LinkId=102306))을 참조 하십시오.  
   
-    -   Spn을 하위 관리자에 게 수정 하는 권한을 위임 하려는 경우 Spn을 수정할 권한 위임 ([https://go.microsoft.com/fwlink/?LinkId=106639](https://go.microsoft.com/fwlink/?LinkId=106639))을 참조 하세요.  
+    -   Spn을 종속 관리자로 수정 하는 권한을 위임 하려는 경우 Spn을 수정할 수 있는 권한 위임 ([https://go.microsoft.com/fwlink/?LinkId=106639](https://go.microsoft.com/fwlink/?LinkId=106639))을 참조 하세요.  
   
--   연결 되지 않은 네임 스페이스에 구성 된 도메인 컨트롤러를 포함 하는 배포에서 CA를 사용 하 여 SSL(Secure Sockets Layer) LDAP (Lightweight Directory Access Protocol) (LDAPS)를 사용 하는 경우에는 적절 한 Active Directory 도메인 이름을 사용 해야 합니다. LDAPS 인증서를 구성할 때의 주 DNS 접미사입니다.  
+-   연결 되지 않은 네임 스페이스에 구성 된 도메인 컨트롤러를 포함 하는 배포에서 CA를 사용 하 여 SSL(Secure Sockets Layer) LDAP (Lightweight Directory Access Protocol) (LDAPS)를 사용 하는 경우에는 LDAPS 인증서를 구성할 때 적절 한 Active Directory 도메인 이름과 주 DNS 접미사를 사용 해야 합니다.  
   
     도메인 컨트롤러 인증서 요구 사항에 대 한 자세한 내용은 Microsoft 기술 자료 문서 321051 ([https://go.microsoft.com/fwlink/?LinkId=102307](https://go.microsoft.com/fwlink/?LinkId=102307))을 참조 하십시오.  
   
     > [!NOTE]  
-    > LDAPS에 인증서를 사용 하는 도메인 컨트롤러는 인증서를 다시 배포 해야 할 수 있습니다. 이렇게 하면 도메인 컨트롤러가 다시 시작 될 때까지 적절 한 인증서를 선택 하지 못할 수 있습니다. LDAPS 인증 및 Windows Server 2003 관련 업데이트에 대 한 자세한 내용은 Microsoft 기술 자료 문서 932834 ([https://go.microsoft.com/fwlink/?LinkId=102308](https://go.microsoft.com/fwlink/?LinkId=102308))을 참조 하십시오.  
+    > LDAPS에 인증서를 사용 하는 도메인 컨트롤러는 인증서를 다시 배포 해야 할 수 있습니다. 이렇게 하면 도메인 컨트롤러가 다시 시작 될 때까지 적절 한 인증서를 선택 하지 못할 수 있습니다. Windows Server 2003에 대 한 LDAPS 인증 및 관련 업데이트에 대 한 자세한 내용은 Microsoft 기술 자료 문서 932834 ([https://go.microsoft.com/fwlink/?LinkId=102308](https://go.microsoft.com/fwlink/?LinkId=102308))를 참조 하십시오.  
   
 ### <a name="planning-for-disjoint-namespace-deployments"></a>비연속 네임 스페이스 배포 계획  
 비연속 네임 스페이스가 있는 환경에서 컴퓨터를 배포 하는 경우 다음과 같은 예방 조치를 취해야 합니다.  

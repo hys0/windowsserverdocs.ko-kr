@@ -2,19 +2,18 @@
 title: Windows Server를 위한 상위 지원 솔루션
 description: Windows Server 문제에 대한 해결 방법에 대한 링크 가져오기
 ms.prod: windows-server
-ms.service: na
 manager: alant
 ms.technology: server-general
 ms.date: 03/16/2018
 ms.topic: article
 author: kaushika-msft
 ms.author: elizapo
-ms.openlocfilehash: 61c10f25ac97934f73c4f393e2c91c9b36fc59fd
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 6bd0d22c7df7344e6c4bfbf8360532ab0f36d117
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75950171"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80820756"
 ---
 # <a name="top-support-solutions-for-windows-server-2016"></a>Windows Server 2016을 위한 상위 지원 솔루션
 
@@ -23,7 +22,7 @@ Microsoft는 Windows Server에 대한 업데이트 및 솔루션을 정기적으
 Windows Server 2016을 사용할 때 경험하는 가장 일반적인 문제에 대한 최고의 Microsoft 지원 해결 방법입니다. 아래 링크는 참조 자료 문서, 업데이트 및 라이브러리 문서에 대한 링크를 포함합니다.
 
 >[!TIP]
-> 이전 버전의 Windows Server에 대한 정보를 찾으시나요? docs.microsoft.com에서 다른 [Windows Server 라이브러리](/previous-versions/windows/)를 확인하세요. [이 사이트에서 특정 정보를 검색](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions)할 수도 있습니다.
+> 이전 버전의 Windows Server에 대한 자세한 내용이 궁금하십니까? docs.microsoft.com에서 다른 [Windows Server 라이브러리](/previous-versions/windows/)를 확인하세요. [이 사이트에서 특정 정보를 검색](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions)할 수도 있습니다.
 
 ## <a name="solutions-for-installing-or-upgrading-windows-server"></a>Windows Server 설치 또는 업그레이드 솔루션
 
@@ -31,7 +30,7 @@ Windows Server 2016을 사용할 때 경험하는 가장 일반적인 문제에 
 - [Windows 10 버전 1607 및 Windows Server 2016 용 서비스 스택 업데이트: 8 월 8 일, 2017](https://support.microsoft.com/help/4035631)
 - [Windows 10 버전 1607 및 Windows Server 2016로 업그레이드에 대 한 호환성 업데이트: 2017 년 8 월 3 일](https://support.microsoft.com/help/4033524)
 - [Windows 기반 Azure Vm에서는 내부 시스템 업그레이드가 지원 되지 않습니다.](https://support.microsoft.com/help/4014997)
-- [Windows Server 2016용 업그레이드 및 변환 옵션](../get-started/supported-upgrade-paths.md)
+- [Windows Server 2016에 대 한 업그레이드 및 변환 옵션](../get-started/supported-upgrade-paths.md)
 - [Windows Server 2016에 대 한 서버 역할 업그레이드 및 마이그레이션 매트릭스](../get-started/server-role-upgradeability-table.md)
 - [Windows Server 설치 및 업그레이드](../get-started/installation-and-upgrade.md)
 - [릴리스 정보: Windows Server 2016의 중요 한 문제](../get-started/windows-server-2016-ga-release-notes.md)
@@ -39,7 +38,7 @@ Windows Server 2016을 사용할 때 경험하는 가장 일반적인 문제에 
 
 ## <a name="solutions-for-volume-activation"></a>볼륨 정품 인증 솔루션
 - [Windows Server 2016 정품 인증](../get-started/server-2016-activation.md)
-- [정품 인증 방법 검토 및 선택](https://technet.microsoft.com/library/jj134256(ws.11).aspx)
+- [활성화 방법 검토 및 선택](https://technet.microsoft.com/library/jj134256(ws.11).aspx)
 - [볼륨 정품 인증에 대 한 정품 인증 오류 코드](https://technet.microsoft.com/library/dn502528.aspx)
 - [KMS (키 관리 서비스) 문제를 해결 하는 방법](https://technet.microsoft.com/library/ee939272.aspx)
 - [볼륨 정품 인증 문제 해결](https://technet.microsoft.com/library/ff793439.aspx)
@@ -56,7 +55,7 @@ Windows Server 2016을 사용할 때 경험하는 가장 일반적인 문제에 
 - [AD DS 설치 및 제거에 대 한 알려진 문제](https://technet.microsoft.com/library/cc754463(v=ws.10).aspx)
 
 ## <a name="solutions-for-active-directory-federation-services-ad-fs"></a>AD FS(Active Directory Federation Services)에 대한 해결 방법
-- [Windows 도메인 조인 디바이스의 Azure Active Directory 자동 등록을 구성하는 방법](/azure/active-directory/active-directory-conditional-access-automatic-device-registration-setup)
+- [Azure Active Directory를 사용 하 여 Windows 도메인 가입 장치의 자동 등록을 구성 하는 방법](/azure/active-directory/active-directory-conditional-access-automatic-device-registration-setup)
 - [클레임 발급 설정](/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup#step-2-setup-issuance-of-claims)
 - [LDAP 디렉터리에 저장된 사용자를 인증하도록 AD FS 구성](../identity/ad-fs/operations/configure-ad-fs-to-authenticate-users-stored-in-ldap-directories.md)
 - [인증서 인증의 대체 호스트 이름 바인딩에 대한 AD FS 지원](../identity/ad-fs/operations/ad-fs-support-for-alternate-hostname-binding-for-certificate-authentication.md)

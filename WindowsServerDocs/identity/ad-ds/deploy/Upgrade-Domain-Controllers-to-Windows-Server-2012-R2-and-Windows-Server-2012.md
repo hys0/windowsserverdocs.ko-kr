@@ -1,7 +1,6 @@
 ---
 ms.assetid: e4c31187-f15f-410b-bb79-8d63e2f2b421
 title: Windows Server 2012 R2 및 Windows Server 2012로 도메인 컨트롤러 업그레이드
-description: ''
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 08/09/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: f8e5164ee1b5729d30536ae61df7cf3579e57fe6
-ms.sourcegitcommit: 07c9d4ea72528401314e2789e3bc2e688fc96001
+ms.openlocfilehash: e5c0887c39e07491a5ad6cd6ac89d4d6a41772e3
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76822726"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80824936"
 ---
 # <a name="upgrade-domain-controllers-to-windows-server-2012-r2-and-windows-server-2012"></a>Windows Server 2012 R2 및 Windows Server 2012로 도메인 컨트롤러 업그레이드
 
@@ -22,11 +21,11 @@ ms.locfileid: "76822726"
 
 이 항목에서는 windows server 2012 R2 및 Windows Server 2012의 Active Directory Domain Services에 대 한 배경 정보를 제공 하 고 Windows Server 2008 또는 Windows Server 2008 r 2에서 도메인 컨트롤러를 업그레이드 하는 프로세스에 대해 설명 합니다.  
   
-## <a name="BKMK_UpgradeWorkflow"></a>도메인 컨트롤러 업그레이드 단계  
+## <a name="domain-controller-upgrade-steps"></a><a name="BKMK_UpgradeWorkflow"></a>도메인 컨트롤러 업그레이드 단계  
 도메인을 업그레이드하기 위해 권장되는 방법은 최신 Windows Server 버전을 실행하는 도메인 컨트롤러의 수준을 올리고 필요에 따라 이전 도메인 컨트롤러의 수준을 내리는 것입니다. 기존 도메인 컨트롤러의 운영 체제를 업그레이드할 때 이 방법이 선호됩니다. 이 목록에서는 최신 버전의 Windows Server를 실행 하는 도메인 컨트롤러의 수준을 올리기 전에 수행 해야 하는 일반적인 단계에 대해 설명 합니다.  
   
 1. 대상 서버가 [시스템 요구 사항](https://technet.microsoft.com/library/dn303418.aspx)을 충족하는지 확인합니다.  
-2. [Application compatibility](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_AppCompat)을 확인합니다.  
+2. [응용 프로그램 호환성](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_AppCompat)을 확인합니다.  
 3. 보안 설정을 확인합니다. 자세한 내용은 windows server [2012의 AD DS와 관련 된 사용 되지 않는 기능 및 동작 변경 사항](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_DeprecatedFeatures) 및 [windows Server 2008 및 windows server 2008 r 2의 보안 기본 설정](https://technet.microsoft.com/library/upgrade-domain-controllers-to-windows-server-2008-r2(WS.10).aspx#BKMK_SecureDefault)을 참조 하세요.  
 4. 설치하려고 계획 중인 컴퓨터에서 대상 서버로 연결된 상태를 확인합니다.  
 5. 필요한 작업 마스터 역할의 가용성을 확인합니다.  
@@ -35,7 +34,7 @@ ms.locfileid: "76822726"
    - 포리스트 스키마가 이미 확장된 도메인에 첫 번째 DC를 설치하려면 인프라 마스터에만 연결하면 됩니다.  
    - 기존 포리스트에서 도메인을 설치 또는 제거하려면 도메인 명명 마스터에 연결해야 합니다.  
    - 모든 도메인 컨트롤러를 설치할 경우 RID 마스터에도 연결해야 합니다.  
-   - 기존 포리스트에 첫 번째 읽기 전용 도메인 컨트롤러를 설치할 경우에는 비도메인 명명 컨텍스트 또는 NDNC라고도 하는 각 애플리케이션 디렉터리 파티션용 인프라 마스터에 연결해야 합니다.  
+   - 기존 포리스트에 첫 번째 읽기 전용 도메인 컨트롤러를 설치할 경우에는 비도메인 명명 컨텍스트 또는 NDNC라고도 하는 각 응용 프로그램 디렉터리 파티션용 인프라 마스터에 연결해야 합니다.  
 
 6. AD DS를 설치하는 데 필요한 자격 증명을 입력해야 합니다.  
 
@@ -64,21 +63,21 @@ Windows PowerShell cmdlet와 서버 관리자를 사용하여 신규/복제 Wind
 
 Windows 8이 출시되기 전에는 Windows 업데이트에서 업데이트를 확인하고 이를 다운로드하여 설치하는 자체 내부 일정을 관리했습니다. 이를 위해서는 Windows 업데이트 에이전트가 항상 백그라운드에서 실행되어야 하므로 메모리 및 기타 시스템 리소스가 사용되었습니다.  
   
-Windows 8 및 Windows Server 2012는 [자동 유지 관리](https://msdn.microsoft.com/library/windows/desktop/hh848037(v=vs.85).aspx)라는 새로운 기능을 도입했습니다. 자동 유지 관리는 각각 자체 일정 및 실행 논리를 관리하는 다양한 기능을 통합합니다. 이 통합을 통해 이러한 구성 요소가 모두 훨씬 적은 시스템 리소스를 사용하고, 일관성 있게 작동하며, 새로운 디바이스 유형에 대해 [연결된 대기 상태](https://msdn.microsoft.com/library/windows/hardware/jj248729.aspx) 를 유지하고, 휴대용 디바이스의 배터리를 적게 소모합니다.  
+Windows 8 및 Windows Server 2012는 [자동 유지 관리](https://msdn.microsoft.com/library/windows/desktop/hh848037(v=vs.85).aspx)라는 새로운 기능을 도입했습니다. 자동 유지 관리는 각각 자체 일정 및 실행 논리를 관리하는 다양한 기능을 통합합니다. 이 통합을 통해 이러한 구성 요소가 모두 훨씬 적은 시스템 리소스를 사용하고, 일관성 있게 작동하며, 새로운 장치 유형에 대해 [연결된 대기 상태](https://msdn.microsoft.com/library/windows/hardware/jj248729.aspx) 를 유지하고, 휴대용 장치의 배터리를 적게 소모합니다.  
   
-Windows 업데이트는 Windows 8 및 Windows Server 2012에서 자동 유지 관리의 일부이므로 업데이트 설치 날짜 및 시간을 설정하는 자체 내부 일정이 더 이상 적용되지 않습니다. Windows 8 및 Windows Server 2012를 실행하는 디바이스와 컴퓨터를 포함하여 엔터프라이즈의 모든 디바이스와 컴퓨터에서 일관되고 예측 가능한 다시 시작 동작을 보장하려면 Microsoft 기술 자료 문서 [2885694](https://support.microsoft.com/kb/2885694) (또는 2013년 10월 누적 롤업 [2883201](https://support.microsoft.com/kb/2883201)참조)를 참조한 다음 WSUS 블로그 게시물 [Windows 8 및 Windows Server 2012에 보다 예측 가능한 Windows 업데이트 환경 사용(KB 2885694)](https://blogs.technet.com/b/wsus/archive/2013/10/08/enabling-a-more-predictable-windows-update-experience-for-windows-8-and-windows-server-2012-kb-2885694.aspx)에 설명된 정책 설정을 구성하세요.  
+Windows 업데이트는 Windows 8 및 Windows Server 2012에서 자동 유지 관리의 일부이므로 업데이트 설치 날짜 및 시간을 설정하는 자체 내부 일정이 더 이상 적용되지 않습니다. Windows 8 및 Windows Server 2012를 실행하는 장치와 컴퓨터를 포함하여 엔터프라이즈의 모든 장치와 컴퓨터에서 일관되고 예측 가능한 다시 시작 동작을 보장하려면 Microsoft 기술 자료 문서 [2885694](https://support.microsoft.com/kb/2885694) (또는 2013년 10월 누적 롤업 [2883201](https://support.microsoft.com/kb/2883201)참조)를 참조한 다음 WSUS 블로그 게시물 [Windows 8 및 Windows Server 2012에 보다 예측 가능한 Windows 업데이트 환경 사용(KB 2885694)](https://blogs.technet.com/b/wsus/archive/2013/10/08/enabling-a-more-predictable-windows-update-experience-for-windows-8-and-windows-server-2012-kb-2885694.aspx)에 설명된 정책 설정을 구성하세요.  
 
-## <a name="BKMK_NewWS2012R2"></a>Windows Server 2012 r 2에서 AD DS의 새로운 기능
+## <a name="whats-new-in-ad-ds-in-windows-server-2012-r2"></a><a name="BKMK_NewWS2012R2"></a>Windows Server 2012 r 2에서 AD DS의 새로운 기능
 
 다음 표에는 Windows Server 2012 R2 AD DS의 새로운 기능이 요약되어 있으며, 자세한 정보에 연결해 주는 링크(사용 가능한 경우)가 나와 있습니다. 요구 사항을 비롯한 몇 가지 기능에 대한 자세한 설명은 [Windows Server 2012 R2에서 Active Directory의 새로운 기능](https://technet.microsoft.com/library/dn268294.aspx)을 참조하세요.  
 
 |기능|설명|  
 |-----------|---------------|  
-|[Workplace Join](https://technet.microsoft.com/library/dn280945.aspx)|정보 관리자가 개인 디바이스를 회사에 연결하여 회사 리소스 및 서비스에 액세스할 수 있도록 해줍니다.|  
-|[웹 응용 프로그램 프록시](https://technet.microsoft.com/library/dn280942.aspx)|새로운 원격 액세스 역할 서비스를 사용하여 웹 애플리케이션에 대한 액세스를 제공합니다.|  
-|[Active Directory Federation Services](https://technet.microsoft.com/library/hh831502.aspx)|AD FS는 간소화된 배포 및 향상된 기능을 통해 사용자가 개인 디바이스에서 리소스에 액세스할 수 있도록 하고 IT 부서에서 액세스 제어를 관리할 수 있도록 지원합니다.|  
+|[Workplace Join](https://technet.microsoft.com/library/dn280945.aspx)|정보 관리자가 개인 장치를 회사에 연결하여 회사 리소스 및 서비스에 액세스할 수 있도록 해줍니다.|  
+|[웹 응용 프로그램 프록시](https://technet.microsoft.com/library/dn280942.aspx)|새로운 원격 액세스 역할 서비스를 사용하여 웹 응용 프로그램에 대한 액세스를 제공합니다.|  
+|[Active Directory Federation Services](https://technet.microsoft.com/library/hh831502.aspx)|AD FS는 간소화된 배포 및 향상된 기능을 통해 사용자가 개인 장치에서 리소스에 액세스할 수 있도록 하고 IT 부서에서 액세스 제어를 관리할 수 있도록 지원합니다.|  
 |[SPN 및 UPN 고유성](https://technet.microsoft.com/library/dn535779.aspx)|Windows Server 2012 R2를 실행하는 도메인 컨트롤러에서는 중복된 SPN(서비스 사용자 이름) 및 UPN(사용자 계정 이름)을 만들지 못합니다.|  
-|[Winlogon ARSO(자동 다시 시작 로그온)](https://technet.microsoft.com/library/dn535772.aspx)|잠금 화면 애플리케이션을 다시 시작하고 Windows 8.1 디바이스에서 사용할 수 있도록 합니다.|  
+|[Winlogon ARSO(자동 다시 시작 로그온)](https://technet.microsoft.com/library/dn535772.aspx)|잠금 화면 응용 프로그램을 다시 시작하고 Windows 8.1 장치에서 사용할 수 있도록 합니다.|  
 |[TPM 키 증명](https://technet.microsoft.com/library/dn581921.aspx)|인증서 요청자 프라이빗 키가 실제로 TPM(신뢰할 수 있는 플랫폼 모듈)으로 보호된 발급된 인증서를 CA에서 암호화된 방식으로 증명할 수 있도록 합니다.|  
 |[자격 증명 보호 및 관리](https://technet.microsoft.com/library/dn408190.aspx)|자격 증명 도난을 방지하는 새로운 자격 증명 보호 및 도메인 인증 제어 기능입니다.|  
 |[FRS (파일 복제 서비스)의 사용 중단](https://technet.microsoft.com/library/dn535775.aspx)|Windows Server 2003 도메인 기능 수준에서는 FRS가 SYSVOL을 복제하는 데 사용되므로 이 기능 수준도 더 이상 사용되지 않습니다. 따라서 Windows Server 2012 R2를 실행하는 서버에서 새 도메인을 만들려면 도메인 기능 수준이 Windows Server 2008 이상이어야 합니다. Windows Server 2012 r 2를 실행 하는 도메인 컨트롤러를 Windows Server 2003 도메인 기능 수준이 있는 기존 도메인에 계속 추가할 수 있습니다. 해당 수준에서 새 도메인을 만들 수는 없습니다.|  
@@ -87,7 +86,7 @@ Windows 업데이트는 Windows 8 및 Windows Server 2012에서 자동 유지 �
 |[1644 이벤트 개선 사항](https://technet.microsoft.com/library/dn535775.aspx)|문제 해결을 지원하기 위해 LDAP 검색 결과 통계가 이벤트 ID 1644에 추가되었습니다.|  
 |[Active Directory 복제 처리량 향상](https://technet.microsoft.com/library/dn535775.aspx)|최대 AD 복제 처리량이 40Mbps에서 약 600Mbps로 조정되었습니다.|  
 
-## <a name="BKMK_WhatsNewAD"></a>Windows Server 2012에 AD DS의 새로운 기능
+## <a name="whats-new-in-ad-ds-in-windows-server-2012"></a><a name="BKMK_WhatsNewAD"></a>Windows Server 2012에 AD DS의 새로운 기능
 
 다음 표에는 Windows Server 2012 AD DS의 새로운 기능이 요약되어 있으며, 자세한 정보에 연결해 주는 링크(사용 가능한 경우)가 나와 있습니다. 요구 사항을 비롯 한 일부 기능에 대 한 자세한 설명은 [Active Directory Domain Services의 새로운 기능 (AD DS)](https://technet.microsoft.com/library/hh831477.aspx)을 참조 하세요.  
   
@@ -108,13 +107,13 @@ Windows 업데이트는 Windows 8 및 Windows Server 2012에서 자동 유지 �
 |[가상화 된 Dc에 대 한 USN 롤백 보호](https://technet.microsoft.com/library/hh831734.aspx#safe_virt_dc)|실수로 가상화된 DC의 스냅샷 백업을 복원하면 더 이상 USN이 롤백되지 않습니다.|  
 |[Windows PowerShell 기록 뷰어](https://technet.microsoft.com/library/hh831702.aspx#windows_powershell_history_viewer)|관리자가 ADAC를 사용하면 실행되는 Windows PowerShell 명령을 볼 수 있습니다.|  
   
-### <a name="BKMK_"></a>자동 유지 관리 및 업데이트를 적용 한 후 다시 시작 동작에 대 한 변경 내용 Windows 업데이트
+### <a name="automatic-maintenance-and-changes-to-restart-behavior-after-updates-are-applied-by-windows-update"></a><a name="BKMK_"></a>자동 유지 관리 및 업데이트를 적용 한 후 다시 시작 동작에 대 한 변경 내용 Windows 업데이트
 
 Windows 8이 출시되기 전에는 Windows 업데이트에서 업데이트를 확인하고 이를 다운로드하여 설치하는 자체 내부 일정을 관리했습니다. 이를 위해서는 Windows 업데이트 에이전트가 항상 백그라운드에서 실행되어야 하므로 메모리 및 기타 시스템 리소스가 사용되었습니다.  
   
-Windows 8 및 Windows Server 2012는 [자동 유지 관리](https://msdn.microsoft.com/library/windows/desktop/hh848037(v=vs.85).aspx)라는 새로운 기능을 도입했습니다. 자동 유지 관리는 각각 자체 일정 및 실행 논리를 관리하는 다양한 기능을 통합합니다. 이 통합을 통해 이러한 구성 요소가 모두 훨씬 적은 시스템 리소스를 사용하고, 일관성 있게 작동하며, 새로운 디바이스 유형에 대해 [연결된 대기 상태](https://msdn.microsoft.com/library/windows/hardware/jj248729.aspx) 를 유지하고, 휴대용 디바이스의 배터리를 적게 소모합니다.  
+Windows 8 및 Windows Server 2012는 [자동 유지 관리](https://msdn.microsoft.com/library/windows/desktop/hh848037(v=vs.85).aspx)라는 새로운 기능을 도입했습니다. 자동 유지 관리는 각각 자체 일정 및 실행 논리를 관리하는 다양한 기능을 통합합니다. 이 통합을 통해 이러한 구성 요소가 모두 훨씬 적은 시스템 리소스를 사용하고, 일관성 있게 작동하며, 새로운 장치 유형에 대해 [연결된 대기 상태](https://msdn.microsoft.com/library/windows/hardware/jj248729.aspx) 를 유지하고, 휴대용 장치의 배터리를 적게 소모합니다.  
   
-Windows 업데이트는 Windows 8 및 Windows Server 2012에서 자동 유지 관리의 일부이므로 업데이트 설치 날짜 및 시간을 설정하는 자체 내부 일정이 더 이상 적용되지 않습니다. Windows 8 및 Windows Server 2012를 실행하는 디바이스와 컴퓨터를 포함하여 엔터프라이즈의 모든 디바이스와 컴퓨터에서 일관되고 예측 가능한 다시 시작 동작을 유지하기 위해 다음 그룹 정책 설정을 구성할 수 있습니다.  
+Windows 업데이트는 Windows 8 및 Windows Server 2012에서 자동 유지 관리의 일부이므로 업데이트 설치 날짜 및 시간을 설정하는 자체 내부 일정이 더 이상 적용되지 않습니다. Windows 8 및 Windows Server 2012를 실행하는 장치와 컴퓨터를 포함하여 엔터프라이즈의 모든 장치와 컴퓨터에서 일관되고 예측 가능한 다시 시작 동작을 유지하기 위해 다음 그룹 정책 설정을 구성할 수 있습니다.  
 
 - **컴퓨터 구성 | 정책 | 관리 템플릿 | Windows 구성 요소 | Windows 업데이트 | 자동 업데이트 구성**  
 - **컴퓨터 구성 | 정책 | 관리 템플릿 | Windows 구성 요소 | Windows 업데이트 | 로그온 한 사용자로 자동 다시 시작 안 함**  
@@ -125,13 +124,13 @@ Windows 업데이트는 Windows 8 및 Windows Server 2012에서 자동 유지 �
 |||  
 |-|-|  
 |**시나리오**|**권장 구성**|  
-|**WSUS 관리**<br /><br />-매주 한 번 업데이트 설치<br />-금요일 오후 11 시에 다시 부팅|자동 설치되도록 컴퓨터 설정, 원하는 시간까지 자동 다시 부팅 방지<br /><br />**정책**: 자동 업데이트 구성(사용)<br /><br />자동 업데이트 구성: 4-자동으로 다운로드 하 고 설치를 예약 합니다.<br /><br />**정책**: 로그온 한 사용자로 자동 다시 시작 안 함 (사용 안 함)<br /><br />**WSUS 기한**: 금요일 오후 11시로 설정|  
-|**WSUS 관리**<br /><br />-여러 시간/일에 걸쳐 스 태거 설치|함께 업데이트해야 하는 여러 그룹의 컴퓨터에 대해 대상 그룹 설정<br /><br />이전 시나리오에 위 단계 사용<br /><br />대상 그룹마다 다른 기한 설정|  
-|**WSUS에서 관리 되지 않음-마감일이 지원 되지 않음**<br /><br />-서로 다른 시간에 전체 설치|**정책**: 자동 업데이트 구성(사용)<br /><br />자동 업데이트 구성: 4-자동으로 다운로드 하 고 설치를 예약 합니다.<br /><br />**레지스트리 키:** Microsoft 기술 자료 문서 [2835627](https://support.microsoft.com/kb/2835627)<br /><br />**정책:** 자동 유지 관리 임의 지연(사용)<br /><br />다음 동작을 제공하도록 **정기 유지 관리 임의 지연** 을 PT6H(6시간 임의 지연)로 설정:<br /><br />-업데이트는 구성 된 유지 관리 시간에 임의 지연 시간에 설치 됩니다.<br /><br />-각 컴퓨터의 다시 시작은 정확히 3 일 후에 수행 됩니다.<br /><br />또는 각 그룹의 컴퓨터에 대해 서로 다른 유지 관리 시간 설정|  
+|**WSUS 관리**<p>-매주 한 번 업데이트 설치<br />-금요일 오후 11 시에 다시 부팅|자동 설치되도록 컴퓨터 설정, 원하는 시간까지 자동 다시 부팅 방지<p>**정책**: 자동 업데이트 구성(사용)<p>자동 업데이트 구성: 4-자동으로 다운로드 하 고 설치를 예약 합니다.<p>**정책**: 로그온 한 사용자로 자동 다시 시작 안 함 (사용 안 함)<p>**WSUS 기한**: 금요일 오후 11시로 설정|  
+|**WSUS 관리**<p>-여러 시간/일에 걸쳐 스 태거 설치|함께 업데이트해야 하는 여러 그룹의 컴퓨터에 대해 대상 그룹 설정<p>이전 시나리오에 위 단계 사용<p>대상 그룹마다 다른 기한 설정|  
+|**WSUS에서 관리 되지 않음-마감일이 지원 되지 않음**<p>-서로 다른 시간에 전체 설치|**정책**: 자동 업데이트 구성(사용)<p>자동 업데이트 구성: 4-자동으로 다운로드 하 고 설치를 예약 합니다.<p>**레지스트리 키:** Microsoft 기술 자료 문서 [2835627](https://support.microsoft.com/kb/2835627)<p>**정책:** 자동 유지 관리 임의 지연(사용)<p>다음 동작을 제공하도록 **정기 유지 관리 임의 지연**을 PT6H(6시간 임의 지연)로 설정:<p>-업데이트는 구성 된 유지 관리 시간에 임의 지연 시간에 설치 됩니다.<p>-각 컴퓨터의 다시 시작은 정확히 3 일 후에 수행 됩니다.<p>또는 각 그룹의 컴퓨터에 대해 서로 다른 유지 관리 시간 설정|  
 
 Windows 엔지니어링 팀이 이러한 변경 내용을 구현한 이유에 대한 자세한 내용은 [Windows 업데이트에서 자동으로 업데이트한 후 다시 시작 최소화](https://blogs.msdn.com/b/b8/archive/2011/11/14/minimizing-restarts-after-automatic-updating-in-windows-update.aspx)를 참조하세요.  
 
-## <a name="BKMK_InstallationChanges"></a>AD DS 서버 역할 설치 변경 내용
+## <a name="ad-ds-server-role-installation-changes"></a><a name="BKMK_InstallationChanges"></a>AD DS 서버 역할 설치 변경 내용
 
 Windows Server 2003부터 Windows Server 2008 R2까지는 x86 또는 X64 버전의 Adprep.exe 명령줄 도구를 실행한 후에 Active Directory 설치 마법사, Dcpromo.exe 및 미디어나 무인 설치를 통해 설치할 수 있는 선택적 변형이 포함된 Dcpromo.exe를 실행했습니다.  
   
@@ -142,7 +141,7 @@ AD DS 설치 마법사의 필수 구성 요소를 검사하여 잠재적인 오�
 그러므로 모두 종합해 볼 때 AD DS 설치를 변경하면, 특히 전 세계 지역 및 도메인에 여러 도메인 컨트롤러를 배포하려는 경우 관리상의 오류 발생 가능성을 줄이고 DC 역할 설치 프로세스를 간소화할 수 있습니다.  
 명령줄 구문과 단계별 마법사 지침을 포함하여 GUI 및 Windows PowerShell 기반 설치에 대한 자세한 내용은 [Active Directory 도메인 서비스 설치](https://technet.microsoft.com/library/hh472162.aspx)를 참조하세요. 기존 포리스트의 Windows Server 2012 DC 설치 작업과는 별도로 Active Directory 포리스트 스키마 변경 사항의 도입을 제어하려는 관리자는 계속해서 Adprep.exe 명령을 관리자 권한 명령 프롬프트에서 실행할 수 있습니다.  
 
-## <a name="BKMK_DeprecatedFeatures"></a>Windows Server 2012의 AD DS와 관련 된 사용 되지 않는 기능 및 동작 변경 내용
+## <a name="deprecated-features-and-behavior-changes-related-to-ad-ds-in-windows-server-2012"></a><a name="BKMK_DeprecatedFeatures"></a>Windows Server 2012의 AD DS와 관련 된 사용 되지 않는 기능 및 동작 변경 내용
 
 AD DS와 관련된 몇 가지 변경 사항은 다음과 같습니다.  
 
@@ -158,28 +157,28 @@ Windows Server 2008부터 도메인 컨트롤러에는 Windows Server 2003 또�
 |||||  
 |-|-|-|-|  
 |암호화 유형 또는 정책|Windows Server 2008 기본값|Windows Server 2012 및 Windows Server 2008 R2 기본값|설명|  
-|AllowNT4Crypto|해제됨|해제됨|타사 SMB(서버 메시지 블록) 클라이언트는 도메인 컨트롤러에서 안전한 기본 설정과 호환되지 않을 수 있습니다. 어떠한 경우든 이러한 설정을 완화하여 호환되도록 할 수는 있지만 보안이 취약해질 수 있습니다. 자세한 내용은 Microsoft 기술 자료 [문서 942564](https://go.microsoft.com/fwlink/?LinkId=164558) (https://go.microsoft.com/fwlink/?LinkId=164558) 를 참조 하세요.|  
-|DES|설정됨|해제됨|Microsoft 기술 자료 [문서 977321](https://go.microsoft.com/fwlink/?LinkId=177717) (https://go.microsoft.com/fwlink/?LinkId=177717)|  
-|통합 인증에 대한 CBT/확장된 보호|해당 없음|설정됨|Microsoft [보안 공지 (937811)](https://go.microsoft.com/fwlink/?LinkId=164559) [976918](https://go.microsoft.com/fwlink/?LinkId=178251)https://go.microsoft.com/fwlink/?LinkId=164559) (https://go.microsoft.com/fwlink/?LinkId=178251) 을 참조 하세요.<br /><br />Microsoft 기술 자료 [문서 977073](https://go.microsoft.com/fwlink/?LinkId=186394) (https://go.microsoft.com/fwlink/?LinkId=186394) 필요에 따라 핫픽스를 검토 하 고 설치 합니다.|  
-|LMv2|설정됨|해제됨|Microsoft 기술 자료 [문서 976918](https://go.microsoft.com/fwlink/?LinkId=178251) (https://go.microsoft.com/fwlink/?LinkId=178251)|  
+|AllowNT4Crypto|사용 안 함|사용 안 함|타사 SMB(서버 메시지 블록) 클라이언트는 도메인 컨트롤러에서 안전한 기본 설정과 호환되지 않을 수 있습니다. 어떠한 경우든 이러한 설정을 완화하여 호환되도록 할 수는 있지만 보안이 취약해질 수 있습니다. 자세한 내용은 Microsoft 기술 자료 [문서 942564](https://go.microsoft.com/fwlink/?LinkId=164558) (https://go.microsoft.com/fwlink/?LinkId=164558)를 참조 하세요.|  
+|DES|사용|사용 안 함|Microsoft 기술 자료 [문서 977321](https://go.microsoft.com/fwlink/?LinkId=177717) (https://go.microsoft.com/fwlink/?LinkId=177717)|  
+|통합 인증에 대한 CBT/확장된 보호|N/A|사용|Microsoft [보안 공지 (937811)](https://go.microsoft.com/fwlink/?LinkId=164559) [976918](https://go.microsoft.com/fwlink/?LinkId=178251)https://go.microsoft.com/fwlink/?LinkId=164559) (https://go.microsoft.com/fwlink/?LinkId=178251)을 참조 하세요.<p>Microsoft 기술 자료 [문서 977073](https://go.microsoft.com/fwlink/?LinkId=186394) (https://go.microsoft.com/fwlink/?LinkId=186394) 필요에 따라 핫픽스를 검토 하 고 설치 합니다.|  
+|LMv2|사용|사용 안 함|Microsoft 기술 자료 [문서 976918](https://go.microsoft.com/fwlink/?LinkId=178251) (https://go.microsoft.com/fwlink/?LinkId=178251)|  
 
-## <a name="BKMK_SysReqs"></a>운영 체제 요구 사항
+## <a name="operating-system-requirements"></a><a name="BKMK_SysReqs"></a>운영 체제 요구 사항
 
-다음 표에는 Windows Server 2012에 대 한 최소 시스템 요구 사항이 정리 되어 있습니다. 시스템 요구 사항과 사전 설치 정보에 대한 자세한 내용은 [Windows Server 2012 설치](https://technet.microsoft.com/library/jj134246.aspx)를 참조하세요. 새로운 Active Directory 포리스트를 설치하는 데 필요한 추가 시스템 요구 사항은 없지만 도메인 컨트롤러, LDAP 클라이언트 요청 및 Active Directory 사용 애플리케이션의 성능을 향상시키려면 Active Directory 데이터베이스의 콘텐츠를 캐시할 수 있는 메모리를 충분하게 추가해야 합니다. 새 도메인 컨트롤러를 기존 포리스트에 추가하거나 기존 도메인 컨트롤러를 업그레이드하는 경우, 다음 섹션을 참조하여 서버가 디스크 공간 요구 사항을 충족하는지 확인하세요.  
+다음 표에는 Windows Server 2012에 대 한 최소 시스템 요구 사항이 정리 되어 있습니다. 시스템 요구 사항과 사전 설치 정보에 대한 자세한 내용은 [Windows Server 2012 설치](https://technet.microsoft.com/library/jj134246.aspx)를 참조하세요. 새로운 Active Directory 포리스트를 설치하는 데 필요한 추가 시스템 요구 사항은 없지만 도메인 컨트롤러, LDAP 클라이언트 요청 및 Active Directory 사용 응용 프로그램의 성능을 향상시키려면 Active Directory 데이터베이스의 콘텐츠를 캐시할 수 있는 메모리를 충분하게 추가해야 합니다. 새 도메인 컨트롤러를 기존 포리스트에 추가하거나 기존 도메인 컨트롤러를 업그레이드하는 경우, 다음 섹션을 참조하여 서버가 디스크 공간 요구 사항을 충족하는지 확인하세요.  
 
 |||  
 |-|-|  
-|처리자|1.4Ghz 64비트 프로세서|  
+|프로세서|1.4Ghz 64비트 프로세서|  
 |RAM|512MB|  
 |사용 가능한 디스크 공간 요구 사항|32GB|  
 |화면 해상도|800 x 600 이상|  
 |기타|DVD 드라이브, 키보드, 인터넷 액세스|  
 
-### <a name="BKMK_DiskSpaceDCWin8"></a>도메인 컨트롤러 업그레이드를 위한 디스크 공간 요구 사항
+### <a name="disk-space-requirements-for-upgrading-domain-controllers"></a><a name="BKMK_DiskSpaceDCWin8"></a>도메인 컨트롤러 업그레이드를 위한 디스크 공간 요구 사항
 
 이 섹션에서는 Windows Server 2008 또는 Windows Server 2008 r 2에서 도메인 컨트롤러를 업그레이드 하는 데 필요한 디스크 공간 요구 사항에 대해 설명 합니다. 도메인 컨트롤러를 이전 버전의 Windows Server로 업그레이드하는 데 필요한 디스크 공간에 대한 자세한 내용은 [Windows Server 2008로 업그레이드하는 데 필요한 디스크 공간](https://technet.microsoft.com/library/cc754463(WS.10).aspx#BKMK_2008) 또는 [Windows Server 2008 R2로 업그레이드하는 데 필요한 디스크 공간](https://technet.microsoft.com/library/cc754463(WS.10).aspx#BKMK_2008R2)을 참조하세요.  
   
-Active Directory 데이터베이스와 로그 파일을 호스트하는 디스크 크기를 조정하면 사용자 지정/애플리케이션 구동 스키마 확장, 애플리케이션 및 관리자가 시작한 인덱스 외에도 도메인 컨트롤러의 배포 수명(일반적으로 5~8년) 기간 동안 디렉터리에 추가되는 개체와 특성의 공간 요구 사항을 모두 수용할 수 있습니다. 배포할 때 크기를 알맞게 조정하는 것이 배포 후 디스크 스토리지를 확장하는 데 필요한 작업 비용을 훨씬 더 많이 소비하는 것보다 현명한 투자 방법입니다. 자세한 내용은 [Active Directory 도메인 서비스의 용량 계획](https://social.technet.microsoft.com/wiki/contents/articles/14355.capacity-planning-for-active-directory-domain-services.aspx)을 참조하세요.  
+Active Directory 데이터베이스와 로그 파일을 호스트하는 디스크 크기를 조정하면 사용자 지정/응용 프로그램 구동 스키마 확장, 응용 프로그램 및 관리자가 시작한 인덱스 외에도 도메인 컨트롤러의 배포 수명(일반적으로 5~8년) 기간 동안 디렉터리에 추가되는 개체와 특성의 공간 요구 사항을 모두 수용할 수 있습니다. 배포할 때 크기를 알맞게 조정하는 것이 배포 후 디스크 저장소를 확장하는 데 필요한 작업 비용을 훨씬 더 많이 소비하는 것보다 현명한 투자 방법입니다. 자세한 내용은 [Active Directory 도메인 서비스의 용량 계획](https://social.technet.microsoft.com/wiki/contents/articles/14355.capacity-planning-for-active-directory-domain-services.aspx)을 참조하세요.  
   
 업그레이드하려는 도메인 컨트롤러에서 운영 체제를 업그레이드하기 전에 Active Directory 데이터베이스(NTDS.DIT)를 호스트하는 드라이브에 사용 가능한 디스크 공간이 NTDS.DIT 파일의 20% 이상 있는지 확인합니다. 볼륨에서 사용 가능한 디스크 공간이 충분하지 않으면 업그레이드에 실패할 수 있으며, 업그레이드 호환성 보고서에 사용 가능한 디스크 공간이 부족함을 나타내는 오류가 반환됩니다.  
   
@@ -190,7 +189,7 @@ Active Directory 데이터베이스와 로그 파일을 호스트하는 디스�
 Windows Server는 Foundation, Essentials, Standard 및 Datacenter의 4가지 에디션이 있습니다.
 AD DS 역할을 지원하는 두 가지 버전은 Standard와 Datacenter입니다.  
   
-이전 릴리스에서 Windows Server 버전은 서버 역할의 지원 기능과 프로세서 수, 대량 메모리 지원 기능 등의 측면에서 차이를 보였습니다. Windows Server Standard 및 Datacenter edition은 모든 기능 및 기본 하드웨어를 지원 하지만 가상화 권한에 따라 다릅니다. 표준 버전에는 두 개의 가상 인스턴스가 허용 되며, 데이터 센터에는 가상 인스턴스가 무제한으로 허용 됩니다. 에디션이.  
+이전 릴리스에서 Windows Server 버전은 서버 역할의 지원 기능과 프로세서 수, 대량 메모리 지원 기능 등의 측면에서 차이를 보였습니다. Windows Server Standard 및 Datacenter edition은 모든 기능 및 기본 하드웨어를 지원 하지만 가상화 권한에 따라 다릅니다. 표준 버전에는 두 개의 가상 인스턴스가 허용 되며, Datacenter edition에는 가상 인스턴스가 무제한으로 허용 됩니다.  
   
 ### <a name="windows-client-and-windows-server-operating-systems-that-are-supported-to-join-windows-server-domains"></a>Windows Server 도메인 가입이 지원되는 Windows 클라이언트와 Windows Server 운영 체제
 
@@ -200,24 +199,24 @@ AD DS 역할을 지원하는 두 가지 버전은 Standard와 Datacenter입니�
    - Windows 8.1 또는 Windows 8을 실행하는 컴퓨터는 Windows Server 2003 이상을 비롯한 이전 버전의 Windows Server를 실행하는 도메인 컨트롤러가 있는 도메인에 가입할 수도 있습니다. 그러나 이 경우 일부 Windows 8 기능을 사용할 수 없거나 추가 구성이 필요할 수 있습니다. 이러한 기능 및 하위 도메인에서 Windows 8 클라이언트를 관리하기 위한 기타 권장 사항에 대한 자세한 내용은 [Windows Server 2003 도메인에서 Windows 8 구성원 컴퓨터 실행](https://social.technet.microsoft.com/wiki/contents/articles/17361.running-windows-8-member-computers-in-windows-server-2003-domains.aspx)을 참조하세요.  
 - 서버 운영 체제: Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows Server 2003 R2, Windows Server 2003  
 
-## <a name="BKMK_UpgradePaths"></a>지원 되는 전체 업그레이드 경로
+## <a name="supported-in-place-upgrade-paths"></a><a name="BKMK_UpgradePaths"></a>지원 되는 전체 업그레이드 경로
 
 64 비트 버전의 Windows Server 2008 또는 Windows Server 2008 r 2를 실행 하는 도메인 컨트롤러는 Windows Server 2012로 업그레이드할 수 있습니다. Windows Server 2003 또는 32비트 버전의 Windows Server 2008을 실행하는 도메인 컨트롤러는 업그레이드할 수 없습니다. 이 컨트롤러를 바꾸려면 도메인에 이후 버전의 Windows Server를 실행하는 도메인 컨트롤러를 설치한 후 Windows Server 2003을 실행하는 도메인 컨트롤러를 제거하세요.  
 
 |이러한 버전을 실행 중인 경우|이러한 버전으로 업그레이드 가능|  
 |-------------------------------------|-------------------------------------|  
-|Windows Server 2008 Standard SP2<br /><br />또는<br /><br />Windows Server 2008 Enterprise SP2|Windows Server 2012 Standard<br /><br />또는<br /><br />Windows Server 2012 Datacenter|  
-|Windows Server 2008 Datacenter SP2|Windows Server 2012 Datacenter|  
-|Windows Web Server 2008|Windows Server 2012 Standard|  
-|Windows Server 2008 R2 Standard SP1<br /><br />또는<br /><br />Windows Server 2008 R2 Enterprise SP1|Windows Server 2012 Standard<br /><br />또는<br /><br />Windows Server 2012 Datacenter|  
-|Windows Server 2008 R2 Datacenter SP1|Windows Server 2012 Datacenter|  
-|Windows Web Server 2008 R2|Windows Server 2012 Standard|  
+|Windows Server 2008 Standard SP2<p>OR<p>Windows Server 2008 Enterprise SP2|Windows  Server  2012  Standard<p>OR<p>Windows Server 2012 Datacenter|  
+|Windows Server 2008 Datacenter SP2|Windows Server 2012 Datacenter|  
+|Windows Web Server 2008|Windows  Server  2012  Standard|  
+|Windows Server 2008 R2 Standard SP1<p>OR<p>Windows Server 2008 R2 Enterprise SP1|Windows  Server  2012  Standard<p>OR<p>Windows Server 2012 Datacenter|  
+|Windows Server 2008 R2 Datacenter SP1|Windows Server 2012 Datacenter|  
+|Windows Web Server 2008 R2|Windows  Server  2012  Standard|  
   
 지원되는 업그레이드 경로에 대한 자세한 내용은 [Windows Server 2012의 평가 버전 및 업그레이드 옵션](https://go.microsoft.com/fwlink/?LinkId=260917)을 참조하세요. Windows Server 2012의 평가판을 실행하는 도메인 컨트롤러는 일반 정품으로 바로 전환할 수 없습니다. 대신 서버에 일반 정품을 실행하는 서버에서 도메인 컨트롤러를 추가로 설치하고 평가판을 실행하는 도메인 컨트롤러에서 AD DS를 제거합니다.  
   
-알려진 문제로 인해 Windows server 2008 r 2의 Server Core 설치를 실행 하는 도메인 컨트롤러를 Windows Server 2012의 Server Core 설치로 업그레이드할 수 없습니다. 업그레이드 프로세스 후반부에 검은색 화면이 나타나면서 업그레이드가 중단됩니다. 해당 DC를 재부팅하면 이전 운영 체제 버전으로 롤백하는 boot.ini 파일의 옵션이 표시됩니다. 추가로 재부팅하면 이전 운영 체제 버전으로 자동 롤백 작업이 시작됩니다. 솔루션을 사용할 수 있을 때까지 windows server의 server Core 설치를 실행 하는 기존 도메인 컨트롤러를 현재 위치로 업그레이드 하는 대신 Windows Server 2012의 Server Core 설치를 실행 하는 새 도메인 컨트롤러를 설치 하는 것이 좋습니다. 2008 R2. 자세한 내용은 기술 자료 문서 [2734222](https://support.microsoft.com/kb/2734222)를 참조하세요.  
+알려진 문제로 인해 Windows server 2008 r 2의 Server Core 설치를 실행 하는 도메인 컨트롤러를 Windows Server 2012의 Server Core 설치로 업그레이드할 수 없습니다. 업그레이드 프로세스 후반부에 검은색 화면이 나타나면서 업그레이드가 중단됩니다. 해당 DC를 재부팅하면 이전 운영 체제 버전으로 롤백하는 boot.ini 파일의 옵션이 표시됩니다. 추가로 재부팅하면 이전 운영 체제 버전으로 자동 롤백 작업이 시작됩니다. 솔루션을 사용할 수 있을 때까지 windows server 2008 r 2의 Server Core 설치를 실행 하는 기존 도메인 컨트롤러를 현재 위치로 업그레이드 하는 대신 Windows Server 2012의 Server Core 설치를 실행 하는 새 도메인 컨트롤러를 설치 하는 것이 좋습니다. 자세한 내용은 기술 자료 문서 [2734222](https://support.microsoft.com/kb/2734222)를 참조하세요.  
 
-## <a name="BKMK_FunctionalLevels"></a>기능 수준 기능 및 요구 사항
+## <a name="functional-level-features-and-requirements"></a><a name="BKMK_FunctionalLevels"></a>기능 수준 기능 및 요구 사항
 
 Windows Server 2012에는 Windows Server 2003 포리스트 기능 수준이 필요 합니다. 즉, Windows Server 2012를 실행 하는 도메인 컨트롤러를 기존 Active Directory 포리스트에 추가 하려면 포리스트 기능 수준이 Windows Server 2003 이상 이어야 합니다. 이는 Windows Server 2008 R2, Windows Server 2008 또는 Windows Server 2003을 실행하는 도메인 컨트롤러가 동일한 포리스트에서 작동할 수 있다는 뜻입니다. 그러나 이 경우 Windows 2000 Server를 실행하는 도메인 컨트롤러가 지원되지 않고, Windows Server 2012를 실행하는 도메인 컨트롤러의 설치가 차단됩니다. 포리스트에 Windows Server 2003 이상을 실행하는 도메인 컨트롤러가 포함되지만 포리스트 기능 수준이 여전히 Windows 2000인 경우에는 설치도 차단됩니다.  
   
@@ -231,11 +230,11 @@ Windows 2000 도메인 컨트롤러를 제거한 후에 Windows Server 2012 도�
 
 새로운 Windows Server 2012 도메인 기능 수준에서는 새 기능을 사용할 수 있습니다. **클레임, 복합 인증 및 Kerberos 아머 링 (armoring)에 대 한 kdc 지원** kdc 관리 템플릿 정책에는 Windows Server 2012 도메인 기능 수준을 필요로 하는 두 가지 설정 (**항상 클레임 제공** 및 **아머 링 해제 인증 요청 실패**)이 있습니다.  
   
-Windows Server 2012 포리스트 기능 수준이 새로운 모든 기능을 제공 하지는 않지만 포리스트에서 만들어진 새 도메인이 Windows Server 2012 도메인 기능 수준에서 자동으로 작동 되도록 보장 합니다. Windows Server 2012 도메인 기능 수준에서는 클레임, 복합 인증 및 Kerberos 아머 링 (armoring)에 대 한 KDC 지원 이외에 다른 새로운 기능을 제공 하지 않습니다. 하지만 도메인의 모든 도메인 컨트롤러가 Windows Server 2012를 실행 하도록 합니다. 다양 한 기능 수준에서 사용할 수 있는 다른 기능에 대 한 자세한 내용은 참조 [이해 Active Directory 도메인 서비스 (AD DS) 기능 수준](../active-directory-functional-levels.md)합니다.  
+Windows Server 2012 포리스트 기능 수준이 새로운 모든 기능을 제공 하지는 않지만 포리스트에서 만들어진 새 도메인이 Windows Server 2012 도메인 기능 수준에서 자동으로 작동 되도록 보장 합니다. Windows Server 2012 도메인 기능 수준에서는 클레임, 복합 인증 및 Kerberos 아머 링 (armoring)에 대 한 KDC 지원 이외에 다른 새로운 기능을 제공 하지 않습니다. 하지만 도메인의 모든 도메인 컨트롤러가 Windows Server 2012를 실행 하도록 합니다. 다양한 기능 수준에서 사용할 수 있는 기타 기능에 대한 자세한 내용은 [AD DS(Active Directory 도메인 서비스) 기능 수준 이해](../active-directory-functional-levels.md)를 참조하세요.  
   
 포리스트 기능 수준을 특정 값으로 설정한 후에는 포리스트 기능 수준을 롤백하거나 낮출 수 없습니다. 단, 포리스트 기능 수준을 Windows Server 2012로 올리면 Windows Server 2008 r 2로 낮출 수 있습니다. Active Directory 휴지통이 사용 하도록 설정 되지 않은 경우 포리스트 기능 수준을 windows server 2012에서 Windows server 2008 R2 또는 Windows server 2008로, windows Server 2008 R2에서 Windows server 2008로 낮출 수도 있습니다. 포리스트 기능 수준이 Windows Server 2008 r 2로 설정 된 경우에는 Windows Server 2003 등으로 롤백할 수 없습니다.  
   
-도메인 기능 수준을 특정 값으로 설정한 후에는 도메인 기능 수준을 롤백하거나 낮출 수 없습니다. 단, 도메인 기능 수준을 Windows Server 2008 R2 또는 Windows Server 2012로 올리는 경우 및 포리스트가 지정 nal 수준은 Windows Server 2008이 하입니다. 도메인 기능 수준을 Windows Server 2008 또는 Windows Server 2008 r 2로 다시 롤백할 수 있는 옵션이 있습니다. 도메인 기능 수준은 windows server 2012에서 Windows server 2008 R2 또는 windows server 2008로 또는 Windows Server 2008 r 2에서 Windows Server 2008로만 낮출 수 있습니다. 도메인 기능 수준이 Windows Server 2008 r 2로 설정 된 경우에는 Windows Server 2003 등으로 롤백할 수 없습니다.  
+도메인 기능 수준을 특정 값으로 설정한 후에는 도메인 기능 수준을 롤백하거나 낮출 수 없습니다. 단, 도메인 기능 수준을 Windows Server 2008 R2 또는 Windows Server 2012로 올릴 때 포리스트 기능 수준이 Windows Server 2008 이하인 경우 도메인 기능 수준을 Windows server 2008 또는 Windows Server 2008 r 2로 다시 롤백할 수 있는 옵션이 있습니다. 도메인 기능 수준은 windows server 2012에서 Windows server 2008 R2 또는 windows server 2008로 또는 Windows Server 2008 r 2에서 Windows Server 2008로만 낮출 수 있습니다. 도메인 기능 수준이 Windows Server 2008 r 2로 설정 된 경우에는 Windows Server 2003 등으로 롤백할 수 없습니다.  
   
 낮은 기능 수준에서 사용할 수 있는 기능에 대한 자세한 내용은 [AD DS(Active Directory 도메인 서비스) 기능 수준 이해](../active-directory-functional-levels.md)를 참조하세요.  
   
@@ -244,69 +243,69 @@ Windows Server 2012 포리스트 기능 수준이 새로운 모든 기능을 제
 > [!NOTE]  
 > Microsoft Exchange Server 2013에는 Windows server 2003 이상의 포리스트 기능 수준이 필요합니다.  
 
-## <a name="BKMK_ServerRoles"></a>다른 서버 역할 및 Windows 운영 체제와의 상호 운용성 AD DS
+## <a name="ad-ds-interoperability-with-other-server-roles-and-windows-operating-systems"></a><a name="BKMK_ServerRoles"></a>다른 서버 역할 및 Windows 운영 체제와의 상호 운용성 AD DS
 
 AD DS는 다음과 같은 Windows 운영 체제에서는 지원되지 않습니다.  
   
 - Windows MultiPoint Server  
-- Windows Server 2012 Essentials  
+- Windows  Server  2012  Essentials  
   
 AD DS는 다음과 같은 서버 역할 또는 역할 서비스도 실행하는 서버에는 설치할 수 없습니다.  
   
 - Hyper-V 서버  
 - 원격 데스크톱 연결 브로커  
   
-## <a name="BKMK_OpsMasters"></a>작업 마스터 역할
+## <a name="operations-master-roles"></a><a name="BKMK_OpsMasters"></a>작업 마스터 역할
 
 Windows Server 2012의 일부 새로운 기능은 작업 마스터 역할에 영향을 줍니다.  
 
 - 가상 도메인 컨트롤러 복제를 지원 하려면 PDC 에뮬레이터에서 Windows Server 2012를 실행 해야 합니다. 또한 DC를 복제하는 데 추가 필수 구성 요소가 필요합니다. 자세한 내용은 [AD DS(Active Directory 도메인 서비스) 가상화](https://technet.microsoft.com/library/hh831734.aspx)를 참조하세요.  
 - PDC 에뮬레이터가 Windows Server 2012를 실행할 때 새 보안 주체가 만들어집니다.  
-- RID 마스터에는 새 RID 발급 및 모니터링 기능이 포함됩니다. 개선된 기능으로는 향상된 이벤트 로깅 및 제한 및 비상시 1비트별 전체 RID 풀 할당 증가 기능 등이 있습니다. 자세한 내용은 [Managing RID Issuance](../../ad-ds/manage/Managing-RID-Issuance.md)를 참조하세요.  
+- RID 마스터에는 새 RID 발급 및 모니터링 기능이 포함됩니다. 개선된 기능으로는 향상된 이벤트 로깅 및 제한 및 비상시 1비트별 전체 RID 풀 할당 증가 기능 등이 있습니다. 자세한 내용은 [RID 발급 관리](../../ad-ds/manage/Managing-RID-Issuance.md)를 참조하십시오.  
 
 > [!NOTE]  
 > 작업 마스터 역할은 아니지만 AD DS 설치의 또 다른 변경 사항은 Windows Server 2012를 실행 하는 모든 도메인 컨트롤러에 DNS 서버 역할 및 글로벌 카탈로그가 기본적으로 설치 된다는 것입니다.  
 
-## <a name="BKMK_Virtual"></a>도메인 컨트롤러 가상화
+## <a name="virtualizing-domain-controllers"></a><a name="BKMK_Virtual"></a>도메인 컨트롤러 가상화
 
 Windows Server 2012부터 향상 된 AD DS 향상 된 기능을 통해 도메인 컨트롤러를 보다 안전 하 게 가상화 하 고 도메인 컨트롤러를 복제할 수 있습니다. 도메인 컨트롤러를 복제하면 새로운 도메인에서 추가 도메인 컨트롤러를 신속하게 배포할 수 있으며, 다른 장점도 얻을 수 있습니다. 자세한 내용은 [Active Directory Domain Services &#40;AD DS&#41; 가상화 &#40;수준 100&#41;소개](../../ad-ds/Introduction-to-Active-Directory-Domain-Services-AD-DS-Virtualization-Level-100.md)를 참조 하세요.  
 
-## <a name="BKMK_Admin"></a>Windows Server 2012 서버 관리
+## <a name="administration-of-windows-server-2012-servers"></a><a name="BKMK_Admin"></a>Windows Server 2012 서버 관리
 
 Windows [8 용 원격 서버 관리 도구](https://www.microsoft.com/download/details.aspx?id=28972) 를 사용 하 여 windows Server 2012를 실행 하는 도메인 컨트롤러 및 기타 서버를 관리할 수 있습니다. Windows 8을 실행 하는 컴퓨터에서 Windows Server 2012 원격 서버 관리 도구를 실행할 수 있습니다.  
 
-## <a name="BKMK_AppCompat"></a>응용 프로그램 호환성
+## <a name="application-compatibility"></a><a name="BKMK_AppCompat"></a>응용 프로그램 호환성
 
-다음 표에는 일반적인 Active Directory 통합 Microsoft 애플리케이션이 나와 있습니다. 이 표에서는 Windows Server에 설치 가능한 버전과 Windows Server 2012 DC를 도입하면 애플리케이션 호환성에 영향을 주는지에 대해 설명합니다.  
+다음 표에는 일반적인 Active Directory 통합 Microsoft 응용 프로그램이 나와 있습니다. 이 표에서는 Windows Server에 설치 가능한 버전과 Windows Server 2012 DC를 도입하면 응용 프로그램 호환성에 영향을 주는지에 대해 설명합니다.  
 
-|제품|참고|  
+|Product|참고|  
 |-----------|---------|  
-|[Microsoft SharePoint 2010](https://support.microsoft.com/kb/2724471)|SharePoint 2010 서비스 팩 2를 설치 하 고 작동 해야 합니다. <br />Windows Server 2012 서버의 SharePoint 2010<br /><br />SharePoint 2010 Foundation 서비스 팩 2는 Windows Server 2012 서버에서 SharePoint 2010 Foundation을 설치 및 작동하는 데 필요합니다.<br /><br />SharePoint Server 2010(서비스 팩 제외) 설치 프로세스는 Windows Server 2012에서 설치되지 않습니다.<br /><br />SharePoint Server 2010 필수 구성 요소 설치 관리자 (Prerequisiteinstaller.exe)가 "이 프로그램에 호환성 문제가 있습니다." 라는 오류와 함께 실패 합니다. "도움을 받지 않고 프로그램 실행"을 클릭 하면 "SharePoint를 2012 2010 설치할 &#124; 수 있는지 확인 하는 중입니다.|  
-|[Microsoft SharePoint 2013](https://technet.microsoft.com/library/cc262485(v=office.15).aspx)|팜에 있는 데이터베이스 서버의 최소 요구 사항<br /><br />64비트 버전의 Windows Server 2008 R2 SP1(서비스 팩 1) Standard, Enterprise, Datacenter 또는 64비트 버전의 Windows Server 2012 Standard, Datacenter<br /><br />데이터베이스가 기본 제공되는 단일 서버의 최소 요구 사항:<br /><br />64비트 버전의 Windows Server 2008 R2 SP1(서비스 팩 1) Standard, Enterprise, Datacenter 또는 64비트 버전의 Windows Server 2012 Standard, Datacenter<br /><br />팜에 있는 프런트 엔드 웹 서버 및 애플리케이션 서버의 최소 요구 사항:<br /><br />64비트 버전의 Windows Server 2008 R2 SP1(서비스 팩 1) Standard, Enterprise, Datacenter 또는 64비트 버전의 Windows Server 2012 Standard, Datacenter|  
-|[Configuration Manager 2012](https://blogs.technet.com/b/configmgrteam/archive/2012/09/10/support-questions-about-windows-8-and-windows-server-2012.aspx)|Configuration Manager 2012 서비스 팩 1:<br /><br />Microsoft는 서비스 팩 1 릴리스와 함께 다음 운영 체제를 클라이언트 지원 매트릭스에 추가할 예정입니다.<br /><br />-Windows 8 Pro<br />-   Windows 8 Enterprise<br />-   Windows Server 2012 Standard<br />-   Windows Server 2012 Datacenter<br /><br />사이트 서버, SMS 공급자 및 관리 지점 등의 모든 사이트 서버 역할을 다음 운영 체제 버전과 함께 서버에 배포할 수 있습니다.<br /><br />-   Windows Server 2012 Standard<br />-   Windows Server 2012 Datacenter|  
+|[Microsoft SharePoint 2010](https://support.microsoft.com/kb/2724471)|SharePoint 2010 서비스 팩 2를 설치 하 고 작동 해야 합니다. <br />Windows Server 2012 서버의 SharePoint 2010<p>SharePoint 2010 Foundation 서비스 팩 2는 Windows Server 2012 서버에서 SharePoint 2010 Foundation을 설치 및 작동하는 데 필요합니다.<p>SharePoint Server 2010(서비스 팩 제외) 설치 프로세스는 Windows Server 2012에서 설치되지 않습니다.<p>SharePoint Server 2010 필수 구성 요소 설치 관리자 (Prerequisiteinstaller.exe)가 "이 프로그램에 호환성 문제가 있습니다." 라는 오류와 함께 실패 합니다. "도움을 받지 않고 프로그램 실행"을 클릭 하면 "SharePoint를 2012 2010 설치할 &#124; 수 있는지 확인 하는 중입니다.|  
+|[Microsoft SharePoint 2013](https://technet.microsoft.com/library/cc262485(v=office.15).aspx)|팜에 있는 데이터베이스 서버의 최소 요구 사항<p>64비트 버전의 Windows Server 2008 R2 SP1(서비스 팩 1) Standard, Enterprise, Datacenter 또는 64비트 버전의 Windows Server 2012 Standard, Datacenter<p>데이터베이스가 기본 제공되는 단일 서버의 최소 요구 사항:<p>64비트 버전의 Windows Server 2008 R2 SP1(서비스 팩 1) Standard, Enterprise, Datacenter 또는 64비트 버전의 Windows Server 2012 Standard, Datacenter<p>팜에 있는 프런트 엔드 웹 서버 및 응용 프로그램 서버의 최소 요구 사항:<p>64비트 버전의 Windows Server 2008 R2 SP1(서비스 팩 1) Standard, Enterprise, Datacenter 또는 64비트 버전의 Windows Server 2012 Standard, Datacenter|  
+|[Configuration Manager 2012](https://blogs.technet.com/b/configmgrteam/archive/2012/09/10/support-questions-about-windows-8-and-windows-server-2012.aspx)|Configuration Manager 2012 서비스 팩 1:<p>Microsoft는 서비스 팩 1 릴리스와 함께 다음 운영 체제를 클라이언트 지원 매트릭스에 추가할 예정입니다.<p>-Windows 8 Pro<br />-   Windows 8 Enterprise<br />-   Windows Server 2012 Standard<br />-   Windows Server 2012 Datacenter<p>사이트 서버, SMS 공급자 및 관리 지점 등의 모든 사이트 서버 역할을 다음 운영 체제 버전과 함께 서버에 배포할 수 있습니다.<p>-   Windows Server 2012 Standard<br />-   Windows Server 2012 Datacenter|  
 |[Microsoft 끝점 Configuration Manager (현재 분기)](https://docs.microsoft.com/configmgr/core/plan-design/configs/supported-configurations)|[Configuration Manager 사이트 시스템 서버에 대해 지원 되는 운영 체제](https://docs.microsoft.com/configmgr/core/plan-design/configs/supported-operating-systems-for-site-system-servers)입니다.|  
 |[Microsoft Lync Server 2013](https://technet.microsoft.com/library/gg412883.aspx)|Lync Server 2013에는 Windows Server 2008 R2 또는 Windows Server 2012가 필요합니다. Server Core 설치 시 실행할 수 없으며, [가상 서버](https://technet.microsoft.com/library/gg399035.aspx)에서도 실행할 수 있습니다.|  
 |[Lync Server 2010](https://support.microsoft.com/kb/2777359)|Lync Server 2010은 [2012년 10월 Lync Server의 누적 업데이트](https://support.microsoft.com/?kbid=2493736) 가 설치되어 있으면 새로운(업그레이드되지 않은) 설치 Windows Server 2012에 설치할 수 있습니다. 기존에 설치된 Lync Server 2010에서 Windows Server 2012로 운영 체제를 업그레이드할 수는 없습니다. Microsoft Lync Server 2010 Group Chat Server는 Windows Server 2012에서도 지원되지 않습니다.|  
-|[System Center 2012 Endpoint Protection](https://blogs.technet.com/b/configmgrteam/archive/2012/09/10/support-questions-about-windows-8-and-windows-server-2012.aspx)|System Center 2012 Endpoint Protection 서비스 팩 1은 다음 운영 체제를 포함하도록 클라이언트 지원 매트릭스를 업데이트할 예정입니다.<br /><br />-Windows 8 Pro<br />-   Windows 8 Enterprise<br />-   Windows Server 2012 Standard<br />-   Windows Server 2012 Datacenter|  
-|[System Center 2012 Forefront Endpoint Protection](https://blogs.technet.com/b/configmgrteam/archive/2012/09/10/support-questions-about-windows-8-and-windows-server-2012.aspx)|FEP 2010 업데이트 롤업 1은 다음 운영 체제를 포함하도록 클라이언트 지원 매트릭스를 업데이트할 예정입니다.<br /><br />-Windows 8 Pro<br />-   Windows 8 Enterprise<br />-   Windows Server 2012 Standard<br />-   Windows Server 2012 Datacenter|  
+|[System Center 2012 Endpoint Protection](https://blogs.technet.com/b/configmgrteam/archive/2012/09/10/support-questions-about-windows-8-and-windows-server-2012.aspx)|System Center 2012 Endpoint Protection 서비스 팩 1은 다음 운영 체제를 포함하도록 클라이언트 지원 매트릭스를 업데이트할 예정입니다.<p>-Windows 8 Pro<br />-   Windows 8 Enterprise<br />-   Windows Server 2012 Standard<br />-   Windows Server 2012 Datacenter|  
+|[System Center 2012 Forefront Endpoint Protection](https://blogs.technet.com/b/configmgrteam/archive/2012/09/10/support-questions-about-windows-8-and-windows-server-2012.aspx)|FEP 2010 업데이트 롤업 1은 다음 운영 체제를 포함하도록 클라이언트 지원 매트릭스를 업데이트할 예정입니다.<p>-Windows 8 Pro<br />-   Windows 8 Enterprise<br />-   Windows Server 2012 Standard<br />-   Windows Server 2012 Datacenter|  
 |Forefront TMG(위험 관리 게이트웨이)|TMG는 Windows Server 2008과 Windows Server 2008 R2에서만 실행할 수 있습니다. 자세한 내용은 [Forefront TMG 시스템 요구 사항](https://technet.microsoft.com/library/dd896981.aspx)을 참조하세요.|  
 |Windows Server Update Services|이 WSUS 릴리스는 이미 Windows 8 기반 컴퓨터나 Windows Server 2012 기반 컴퓨터를 클라이언트로 지원하고 있습니다.|  
 |Windows Server Update Services 3.0|업데이트 KB 문서 [2734608](https://support.microsoft.com/kb/2734608) 를 사용 하 여 WINDOWS SERVER UPDATE SERVICES (wsus) 3.0 s p 2를 실행 하는 서버에서 windows 8 또는 windows server 2012를 실행 하는 컴퓨터에 대 한 업데이트를 제공할 수 있습니다. **참고:** 독립 실행형 wsus 3.0 SP2 환경을 사용 하는 고객 또는 wsus 2007 s p 2를 [사용 하는](https://support.microsoft.com/kb/2734608) Configuration Manager 3.0 서비스 팩 2 환경에서는 windows 8 기반 컴퓨터나 windows Server 2734608 기반 컴퓨터|  
-|[Exchange 2013](https://technet.microsoft.com/library/bb691354.aspx)|Windows Server 2012 Standard 및 Datacenter에서는 스키마 마스터, 글로벌 카탈로그 서버, 도메인 컨트롤러, 사서함 및 클라이언트 액세스 서버 역할 등을 지원합니다.<br /><br />포리스트 기능 수준: Windows Server 2003 이상<br /><br />출처: Exchange 2013 시스템 요구 사항|  
-|Exchange 2010|[원본: Exchange 2010 서비스 팩 3](https://blogs.technet.com/b/exchange/archive/2012/09/25/announcing-exchange-2010-service-pack-3.aspx)<br /><br />Exchange 2010 서비스 팩 3은 Windows Server 2012 구성원 서버에 설치할 수 있습니다.<br /><br />[Exchange 2010 시스템 요구 사항](https://technet.microsoft.com/library/aa996719(EXCHG.141).aspx) 에는 Windows Server 2008 R2로 최근에 지원된 스키마 마스터, 글로벌 카탈로그 및 도메인 컨트롤러가 나와 있습니다.<br /><br />포리스트 기능 수준: Windows Server 2003 이상|  
-|SQL Server 2012|출처: KB [2681562](https://support.microsoft.com/kb/2681562)<br /><br />SQL Server 2012 RTM은 Windows Server 2012에서 지원됩니다.|  
-|SQL Server 2008 R2|출처: KB [2681562](https://support.microsoft.com/kb/2681562)<br /><br />Windows Server 2012를 설치하려면 SQL Server 2008 R2 서비스 팩 1 이상이 필요합니다.|  
-|SQL Server 2008|출처: KB [2681562](https://support.microsoft.com/kb/2681562)<br /><br />Windows Server 2012를 설치하려면 SQL Server 2008 서비스 팩 3 이상이 필요합니다.|  
-|SQL Server 2005|출처: KB [2681562](https://support.microsoft.com/kb/2681562)<br /><br />Windows Server 2012에서는 설치할 수 없습니다.|  
+|[Exchange 2013](https://technet.microsoft.com/library/bb691354.aspx)|Windows Server 2012 Standard 및 Datacenter에서는 스키마 마스터, 글로벌 카탈로그 서버, 도메인 컨트롤러, 사서함 및 클라이언트 액세스 서버 역할 등을 지원합니다.<p>포리스트 기능 수준: Windows Server 2003 이상<p>출처: Exchange 2013 시스템 요구 사항|  
+|Exchange 2010|[원본: Exchange 2010 서비스 팩 3](https://blogs.technet.com/b/exchange/archive/2012/09/25/announcing-exchange-2010-service-pack-3.aspx)<p>Exchange 2010 서비스 팩 3은 Windows Server 2012 구성원 서버에 설치할 수 있습니다.<p>[Exchange 2010 시스템 요구 사항](https://technet.microsoft.com/library/aa996719(EXCHG.141).aspx) 에는 Windows Server 2008 R2로 최근에 지원된 스키마 마스터, 글로벌 카탈로그 및 도메인 컨트롤러가 나와 있습니다.<p>포리스트 기능 수준: Windows Server 2003 이상|  
+|SQL Server 2012|출처: KB [2681562](https://support.microsoft.com/kb/2681562)<p>SQL Server 2012 RTM은 Windows Server 2012에서 지원됩니다.|  
+|SQL Server 2008 R2|출처: KB [2681562](https://support.microsoft.com/kb/2681562)<p>Windows Server 2012를 설치하려면 SQL Server 2008 R2 서비스 팩 1 이상이 필요합니다.|  
+|SQL Server 2008|출처: KB [2681562](https://support.microsoft.com/kb/2681562)<p>Windows Server 2012를 설치하려면 SQL Server 2008 서비스 팩 3 이상이 필요합니다.|  
+|SQL Server 2005|출처: KB [2681562](https://support.microsoft.com/kb/2681562)<p>Windows Server 2012에서는 설치할 수 없습니다.|  
 
-## <a name="BKMK_KnownIssues"></a>알려진 문제
+## <a name="known-issues"></a><a name="BKMK_KnownIssues"></a>알려진 문제
 
 다음 표에는 AD DS 설치와 관련해 알려진 문제가 나와 있습니다.  
 
 ||||  
 |-|-|-|  
 |KB 문서 번호 및 제목|영향받는 기술 영역|문제/설명|  
-|[2830145](https://support.microsoft.com/kb/2830145): 도메인 환경의 Windows 7 또는 Windows Server 2008 R2 기반 컴퓨터에서 SID S-1-18-1 및 SID S-1-18-2를 매핑할 수 없음|AD DS 관리/응용 프로그램 호환성|Windows 7 기반 또는 Windows Server 2008 R2 기반 컴퓨터에서 SID를 확인할 수 없으므로 Windows Server 2012의 새로운 기능인 SID S-1-18-1 및 SID S-1-18-2를 매핑하는 애플리케이션이 실패할 수 있습니다. 이 문제를 해결하려면 도메인의 Windows 7 기반 및 Windows Server 2008 R2 기반 컴퓨터에 핫픽스를 설치하세요.|  
+|[2830145](https://support.microsoft.com/kb/2830145): 도메인 환경의 Windows 7 또는 Windows Server 2008 R2 기반 컴퓨터에서 SID S-1-18-1 및 SID S-1-18-2를 매핑할 수 없음|AD DS 관리/응용 프로그램 호환성|Windows 7 기반 또는 Windows Server 2008 R2 기반 컴퓨터에서 SID를 확인할 수 없으므로 Windows Server 2012의 새로운 기능인 SID S-1-18-1 및 SID S-1-18-2를 매핑하는 응용 프로그램이 실패할 수 있습니다. 이 문제를 해결하려면 도메인의 Windows 7 기반 및 Windows Server 2008 R2 기반 컴퓨터에 핫픽스를 설치하세요.|  
 |[2737129](https://support.microsoft.com/kb/2737129): Windows Server 2012용으로 기존 도메인을 자동으로 준비할 때 그룹 정책이 준비되지 않음|AD DS 설치|Adprep /domainprep /gpprep는 한 도메인에서 Windows Server 2012를 실행하는 첫 번째 DC를 설치의 일부로 자동 실행하지 않습니다. 이전에 해당 도메인에서 실행된 적이 없으면 수동으로 실행해야 합니다.|  
 |[2737416](https://support.microsoft.com/kb/2737416): Windows PowerShell 기반 도메인 컨트롤러 배포에서 경고가 반복됨|AD DS 설치|필수 구성 요소의 유효성 검사가 진행되는 동안 경고가 나타났다가 설치할 때 다시 나타날 수 있습니다.|  
 |[2737424](https://support.microsoft.com/kb/2737424): 도메인 컨트롤러에서 Active Directory 도메인 서비스를 제거하려고 할 때 "지정된 도메인 이름의 형식이 올바르지 않습니다." 오류가 발생함|AD DS 설치|사전에 만든 RODC 계정이 여전히 존재하는 도메인에서 마지막 DC를 제거하면 이 오류가 나타납니다. 이 오류는 Windows Server 2012, Windows Server 2008 R2 및 Windows Server 2008에 영향을 줍니다.|  
@@ -321,10 +320,10 @@ Windows [8 용 원격 서버 관리 도구](https://www.microsoft.com/download/d
 |[2738697](https://support.microsoft.com/kb/2738697): 서버 관리자를 사용하여 서버를 구성할 때 "서버를 사용할 수 없습니다." 도메인 컨트롤러 구성 오류가 발생함|AD DS 설치|NTLM 인증을 사용하지 않도록 설정했기 때문에 작업 그룹 컴퓨터에서 AD DS를 설치하려고 하면 이 오류가 표시됩니다.|  
 |[2738746](https://support.microsoft.com/kb/2738746): 로컬 관리자 도메인 계정에 로그온하면 액세스 거부 오류가 발생함|AD DS 설치|기본 제공된 관리자 계정이 아닌 로컬 관리자 계정을 사용하여 로그온한 다음 새 도메인을 만들면 해당 계정이 Domain Admins 그룹에 추가되지 않습니다.|  
 |[2743345](https://support.microsoft.com/kb/2743345): "시스템에서 지정된 파일을 찾을 수 없습니다." Adprep /gpprep 오류가 발생하거나 도구 작동이 중단됨|AD DS 설치|인프라 마스터가 비연속 네임스페이스를 구현하기 때문에 adprep /gpprep를 실행하면 이 오류가 표시됩니다.|  
-|[2743367](https://support.microsoft.com/kb/2743367): Windows Server 2003, 64비트 버전에서 Adprep "올바른 Win32 애플리케이션이 아닙니다." 오류가 발생함|AD DS 설치|Windows Server 2012 Adprep를 Windows Server 2003에서 실행할 수 없기 때문에 이 오류가 표시됩니다.|  
+|[2743367](https://support.microsoft.com/kb/2743367): Windows Server 2003, 64비트 버전에서 Adprep "올바른 Win32 응용 프로그램이 아닙니다." 오류가 발생함|AD DS 설치|Windows Server 2012 Adprep를 Windows Server 2003에서 실행할 수 없기 때문에 이 오류가 표시됩니다.|  
 |[2753560](https://support.microsoft.com/kb/2753560): Windows Server 2012에서 ADMT 3.2 및 PES 3.1 설치 오류가 발생함|ADMT|ADMT 3.2를 의도한 대로 Windows Server 2012에 설치할 수 없습니다.|  
 |[2750857](https://support.microsoft.com/kb/2750857): DFS 복제 진단 보고서가 Internet Explorer 10에 올바르게 표시되지 않음|DFS 복제|Internet Explorer 10에 변경된 사항이 있기 때문에 DFS 복제 진단 보고서가 올바르게 표시되지 않습니다.|  
-|[2741537](https://support.microsoft.com/kb/2741537): 원격 그룹 정책 업데이트가 사용자에게 표시됨|그룹 정책|로그온한 각 사용자 컨텍스트에서 예정된 작업이 실행되기 때문입니다. 이 시나리오에서는 Windows 작업 Scheduler를 설계할 때 대화형 프롬프트가 필요합니다.|  
+|[2741537](https://support.microsoft.com/kb/2741537): 원격 그룹 정책 업데이트가 사용자에게 표시됨|그룹 정책|로그온한 각 사용자 컨텍스트에서 예정된 작업이 실행되기 때문입니다. 이 시나리오에서는 Windows 작업 스케줄러를 설계할 때 대화형 프롬프트가 필요합니다.|  
 |[2741591](https://support.microsoft.com/kb/2741591): ADM 파일이 GPMC 인프라 상태 옵션의 SYSVOL에 표시되지 않음|그룹 정책|GPMC 인프라 상태가 사용자 지정 필터링 규칙을 따르지 않으므로 GP 복제는 "복제 진행 중"을 보고할 수 있습니다.|  
 |[2737880](https://support.microsoft.com/kb/2737880): AD DS 구성 중에 "서비스를 시작할 수 없습니다." 오류가 발생함|가상 DC 복제|DS 역할 서버 서비스를 사용하지 않도록 설정했기 때문에 AD DS 또는 복제를 설치하거나 제거하면 이 오류가 표시됩니다.|  
 |[2742836](https://support.microsoft.com/kb/2742836): VDC 복제 기능을 사용할 때 두 개의 DHCP 임대가 각 도메인 컨트롤러에 생성됨|가상 DC 복제|복제된 도메인 컨트롤러에서 복제하기 전에 임대를 수신하고 복제가 완료되면 다시 수신하기 때문에 이와 같은 현상이 발생합니다.|  
@@ -340,7 +339,7 @@ Windows [8 용 원격 서버 관리 도구](https://www.microsoft.com/download/d
 |[2747974](https://support.microsoft.com/kb/2747974): 도메인 컨트롤러 복제 이벤트 2224에서 잘못된 지침을 제공함|가상 DC 복제|이벤트 ID 2224에서 복제하기 전 관리 서비스 계정을 제거해야 한다고 잘못 표시합니다. 독립 실행형 MSA는 제거해야 하지만 그룹 MSA가 복제를 차단하지는 않습니다.|  
 |[2748266](https://support.microsoft.com/kb/2748266): Windows 8로 업그레이드한 후 BitLocker로 암호화된 드라이브의 잠금을 해제할 수 없음|BitLocker|Windows 7에서 업그레이드 된 컴퓨터의 드라이브 잠금을 해제 하려고 하면 "응용 프로그램을 찾을 수 없음" 오류가 표시 됩니다.|  
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 [Windows Server 2012 평가 리소스](https://technet.microsoft.com/evalcenter/hh708766.aspx)  
 [Windows Server 2012 평가 가이드](https://download.microsoft.com/download/5/B/2/5B254183-FA53-4317-B577-7561058CEF42/WS%202012%20Evaluation%20Guide.pdf)  

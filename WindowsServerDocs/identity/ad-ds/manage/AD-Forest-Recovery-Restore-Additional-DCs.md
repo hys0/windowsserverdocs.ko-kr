@@ -1,6 +1,5 @@
 ---
 title: AD 포리스트 복구-나머지 Dc 다시 배포
-description: ''
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
@@ -9,12 +8,12 @@ ms.topic: article
 ms.prod: windows-server
 ms.assetid: 5a291f65-794e-4fc3-996e-094c5845a383
 ms.technology: identity-adds
-ms.openlocfilehash: fbab907c5624a76540ab6a28c568afbd9192c028
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 17e5ceec74277c888232d17adca5c2bbb305af97
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71390252"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80823626"
 ---
 # <a name="ad-forest-recovery---redeploy-remaining-dcs"></a>AD 포리스트 복구-나머지 Dc 다시 배포
 
@@ -40,8 +39,8 @@ ms.locfileid: "71390252"
 - 복원 하기 위해 첫 번째 가상화 된 DC에서 가상화 된 추가 Dc를 복제 하는 경우 VHDX 파일이 복사 되는 동안 원본 DC를 종료 해야 합니다. 그러면 복제 가상 Dc가 처음으로 시작 될 때 실행 중이 고 온라인으로 사용할 수 있어야 합니다. 첫 번째 복구 된 DC에 대해 종료에 필요한 가동 중지 시간을 사용할 수 없는 경우 복제를 위한 원본으로 작동 하도록 AD DS를 설치 하 여 가상화 된 추가 DC를 배포 합니다.  
 - 복제 된 가상화 된 DC의 호스트 이름 또는 AD DS를 설치 하려는 서버에 대 한 제한은 없습니다. 이전에 사용 중인 새 호스트 이름 또는 호스트 이름을 사용할 수 있습니다. DNS 호스트 이름 구문에 대 한 자세한 내용은 [Dns 컴퓨터 이름 만들기](https://technet.microsoft.com/library/cc785282.aspx) ([https://go.microsoft.com/fwlink/?LinkId=74564](https://go.microsoft.com/fwlink/?LinkId=74564))를 참조 하십시오.  
 - 포리스트의 첫 번째 DNS 서버 (루트 도메인에 복원 된 첫 번째 DC)를 사용 하 여 각 서버를 네트워크 어댑터의 TCP/IP 속성에 있는 기본 설정 DNS 서버로 구성 합니다. 자세한 내용은 [DNS를 사용 하도록 Tcp/ip 구성](https://technet.microsoft.com/library/cc779282.aspx)을 참조 하세요.  
-- 여러 Rodc를 중앙 위치에 배포 하는 경우 가상화 된 DC 복제에 의해 또는 격리 된 위치에 개별적으로 배포 되는 경우 AD DS를 제거 하 고 다시 설치 하 여 일반적인 방법으로 도메인의 모든 Rodc를 다시 배포 합니다. (예: 지점).  
-   - Rodc를 다시 빌드하면 느린 개체가 포함 되지 않으며 나중에 복제 충돌이 발생 하지 않도록 방지할 수 있습니다. RODC에서 AD DS를 제거 하는 경우 *DC 메타 데이터를 유지 하는 옵션을 선택*합니다. 이 옵션을 사용 하면 RODC에 대 한 krbtgt 계정이 유지 되 고 위임 된 RODC 관리자 계정 및 암호 복제 정책 (PRP)에 대 한 사용 권한이 유지 되며, AD DS을 제거 하 고 다시 설치 하는 데 도메인 관리자 자격 증명을 사용 하지 않아도 됩니다. RODC입니다. 또한 원래 RODC에 설치 된 경우 DNS 서버 및 글로벌 카탈로그 역할을 유지 합니다.  
+- 여러 Rodc를 중앙 위치에 배포 하는 경우 가상화 된 DC 복제로 도메인의 모든 Rodc를 다시 배포 하거나, 지점 등의 격리 된 위치에 개별적으로 배포 하는 경우 AD DS를 제거 하 고 다시 설치 하 여 기존에 다시 작성 하는 방법으로 도메인의 모든 Rodc를 다시 배포 합니다.  
+   - Rodc를 다시 빌드하면 느린 개체가 포함 되지 않으며 나중에 복제 충돌이 발생 하지 않도록 방지할 수 있습니다. RODC에서 AD DS를 제거 하는 경우 *DC 메타 데이터를 유지 하는 옵션을 선택*합니다. 이 옵션을 사용 하면 RODC에 대 한 krbtgt 계정이 유지 되 고 위임 된 RODC 관리자 계정 및 암호 복제 정책 (PRP)에 대 한 사용 권한이 유지 되며, RODC에서 AD DS을 제거 하 고 다시 설치 하는 데 도메인 관리자 자격 증명을 사용 하지 않아도 됩니다. 또한 원래 RODC에 설치 된 경우 DNS 서버 및 글로벌 카탈로그 역할을 유지 합니다.  
    - Dc (Rodc 또는 쓰기 가능 Dc)를 다시 작성 하는 경우 다시 설치 하는 동안 복제 트래픽이 증가할 수 있습니다. 이러한 영향을 줄이기 위해 RODC 설치 일정을 엇갈리게 지정할 수 있으며 IFM (미디어에서 설치) 옵션을 사용할 수 있습니다. IFM 옵션을 사용 하는 경우 신뢰 하는 쓰기 가능한 DC에서 **ntdsutil IFM** 명령을 실행 하 여 손상 된 데이터를 사용 하지 않도록 합니다. 이렇게 하면 AD DS 다시 설치가 완료 된 후 RODC에 손상이 나타나지 않도록 방지할 수 있습니다. IFM에 대 한 자세한 내용은 [미디어에서 AD DS 설치](https://technet.microsoft.com/library/cc770654\(WS.10\).aspx)를 참조 하세요.  
    - Rodc를 다시 작성 하는 방법에 대 한 자세한 내용은 [Rodc 제거 및 다시 설치](https://technet.microsoft.com/library/cc835490\(WS.10\).aspx)를 참조 하세요.  
 - 포리스트 오작동 전에 DC가 DNS 서버 서비스를 실행 하 고 있는 경우 AD DS 설치 하는 동안 DNS 서버 서비스를 설치 하 고 구성 합니다. 그렇지 않으면 다른 DNS 서버를 사용 하 여 이전 DNS 클라이언트를 구성 합니다.  

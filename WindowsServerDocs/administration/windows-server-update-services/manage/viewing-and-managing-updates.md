@@ -2,22 +2,19 @@
 title: 업데이트 보기 및 관리
 description: WSUS (Windows Server Update Service) 항목-WSUS 콘솔에서 업데이트를 보고 관리 하는 방법
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-wsus
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ac70192b-0309-4385-b697-2e8eda51911c
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: de2d12ad34ba11f948baa390546747a6bf4b635c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: a2a9f7e1f1f3f648a0cba22d599ccc64e7b424d8
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71361486"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80828446"
 ---
 # <a name="viewing-and-managing-updates"></a>업데이트 보기 및 관리
 
@@ -141,7 +138,7 @@ WSUS 콘솔 보기 및 업데이트 관리를 사용할 수 있습니다.
 
     -   여부 시간 하 고 자동으로 업데이트를 동기화 되어야 합니다.
 
--   업데이트 원본, 제품 및 업데이트 분류, 언어, 연결 설정, 저장소 위치 및 동기화 일정 같은 동기화 옵션을 설정 합니다.
+-   업데이트 원본, 제품 및 업데이트 분류, 언어, 연결 설정, 스토리지 위치 및 동기화 일정 같은 동기화 옵션을 설정 합니다.
 
 -   가져오기의 업데이트 및 관련된 메타 데이터가 WSUS 서버에서 동기화를 통해 Microsoft Update 또는 업스트림 WSUS 서버에서
 
@@ -154,7 +151,7 @@ WSUS 콘솔 보기 및 업데이트 관리를 사용할 수 있습니다.
 ## <a name="update-products-and-classifications"></a>업데이트 제품 및 분류
 제품 (또는 제품군)가 Microsoft Update에서 제공 하는 업데이트를 구별 하 고 분류 합니다.
 
-제품에는 특정 버전의 운영 체제 또는 응용 프로그램, 예를 들어 Windows Server 2012입니다. 제품군에는 개별 제품이 파생 되는 기본 운영 체제 또는 응용 프로그램입니다. 제품군의 예로 Microsoft Windows, Windows Server 2012 멤버인입니다. 제품 또는 제품군 하려는 업데이트를 동기화 하 여 서버를 선택할 수 있습니다. 제품군 또는 제품군에 포함 된 개별 제품을 지정할 수 있습니다. 모든 제품 또는 제품군을 선택 하면 현재 및 향후 버전의 제품에 대 한 업데이트를 받게 됩니다.
+제품에는 특정 버전의 운영 체제 또는 애플리케이션, 예를 들어 Windows Server 2012입니다. 제품군에는 개별 제품이 파생 되는 기본 운영 체제 또는 애플리케이션입니다. 제품군의 예로 Microsoft Windows, Windows Server 2012 멤버인입니다. 제품 또는 제품군 하려는 업데이트를 동기화 하 여 서버를 선택할 수 있습니다. 제품군 또는 제품군에 포함 된 개별 제품을 지정할 수 있습니다. 모든 제품 또는 제품군을 선택 하면 현재 및 향후 버전의 제품에 대 한 업데이트를 받게 됩니다.
 
 업데이트 분류에는 업데이트 유형을 나타냅니다. 모든 제품 또는 제품군에 대 한 업데이트가 여러 업데이트 분류 (예를 들어 Windows 7 제품군 중요 업데이트 및 보안 업데이트) 제공 될 수 있습니다. 다음 표에서 업데이트 분류를 나열합니다.
 

@@ -1,6 +1,5 @@
 ---
 title: AD 포리스트 복구-초기 복구 수행
-description: ''
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
@@ -9,12 +8,12 @@ ms.topic: article
 ms.prod: windows-server
 ms.assetid: 5a291f65-794e-4fc3-996e-094c5845a383
 ms.technology: identity-adds
-ms.openlocfilehash: a369347fe889c7f6675d0091d05a6dee93cb4434
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 7d592198187d44927f643b45e7a8bb4c2eec2a69
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71369070"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80823906"
 ---
 # <a name="perform-initial-recovery"></a>초기 복구 수행  
 
@@ -53,11 +52,11 @@ ms.locfileid: "71369070"
 
       **HKLM\System\CurrentControlSet\Services\NTDS\Parameters\Repl 초기 동기화 수행**  
   
-      **REG_DWORD** 데이터 형식 및 값 **0**을 사용 하 여 항목을 만듭니다. 포리스트가 완전히 복구 된 후에는이 항목의 값을 **1**로 다시 설정할 수 있습니다 .이 경우에는 다시 시작 하 고 작업 마스터 역할을 통해 알려진 복제본으로 인바운드 및 아웃 바운드 복제를 성공적으로 AD DS 수 있도록 하는 도메인 컨트롤러가 필요 합니다. 파트너를 도메인 컨트롤러로 알리고 클라이언트에 서비스를 제공 하기 시작 합니다. 초기 동기화 요구 사항에 대 한 자세한 내용은 기술 자료 문서 [305476](https://support.microsoft.com/kb/305476)를 참조 하십시오. 
+      **REG_DWORD** 데이터 형식 및 값 **0**을 사용 하 여 항목을 만듭니다. 포리스트가 완전히 복구 된 후에는이 항목의 값을 1로 다시 설정할 수 있습니다 .이 경우에는이 항목의 값을 **1**로 다시 설정할 수 있습니다 .이 경우에는 해당 복제본 파트너와의 인바운드 및 아웃 바운드 복제를 성공적으로 AD DS 하 고 도메인 컨트롤러로 알리고 클라이언트에 서비스를 제공 하기 전에 작업 마스터 역할을 유지 합니다. 초기 동기화 요구 사항에 대 한 자세한 내용은 기술 자료 문서 [305476](https://support.microsoft.com/kb/305476)를 참조 하십시오. 
   
       데이터를 복원 하 고 확인 한 후이 컴퓨터를 프로덕션 네트워크에 가입 하기 전에 다음 단계를 계속 진행 합니다. 
   
-4. 포리스트 전체 오류가 네트워크 침입 또는 악의적인 공격과 관련 된 것으로 의심 되는 경우 Enterprise Admins, Domain Admins, Schema Admins, Server Operators, Account의 구성원을 포함 하 여 모든 관리 계정에 대 한 계정 암호를 다시 설정 합니다. 연산자 그룹 등 포리스트 복구의 다음 단계를 수행 하는 동안 추가 도메인 컨트롤러를 설치 하기 전에 관리 계정 암호를 다시 설정 해야 합니다. 
+4. 포리스트 전체 오류가 네트워크 침입 또는 악의적인 공격과 관련 된 것으로 의심 되는 경우 Enterprise Admins, Domain Admins, Schema Admins, Server Operators, Account Operators 그룹의 구성원을 포함 하 여 모든 관리 계정에 대 한 계정 암호를 다시 설정 합니다. 포리스트 복구의 다음 단계를 수행 하는 동안 추가 도메인 컨트롤러를 설치 하기 전에 관리 계정 암호를 다시 설정 해야 합니다. 
 5. 포리스트 루트 도메인의 첫 번째 복원 된 DC에서 모든 도메인 차원 및 포리스트 전체 작업 마스터 역할을 점유 합니다. 엔터프라이즈 관리자 및 스키마 관리자 자격 증명은 포리스트 전체 작업 마스터 역할을 점유 하는 데 필요 합니다. 
   
      각 자식 도메인에서 도메인 차원의 작업 마스터 역할을 점유 합니다. 복원 된 DC에만 작업 마스터 역할을 임시로 보관할 수도 있지만 이러한 역할을 점유 하면 포리스트 복구 프로세스의이 시점에서 해당 역할을 호스트 하는 DC를 확인할 수 있습니다. 사후 복구 프로세스의 일환으로 필요에 따라 작업 마스터 역할을 재배포할 수 있습니다. 작업 마스터 역할을 점유 하는 방법에 대 한 자세한 내용은 [작업 마스터 역할 점유](AD-forest-recovery-seizing-operations-master-role.md)를 참조 하세요. 작업 마스터 역할을 넣을 위치에 대 한 권장 사항은 [작업 마스터 란?](https://technet.microsoft.com/library/cc779716.aspx)을 참조 하세요. 
@@ -111,7 +110,7 @@ ms.locfileid: "71369070"
   
      두 번째 문제는 더 이상 존재 하지 않는 사용자 계정이 여전히 전체 주소 목록에 표시 될 수 있다는 것입니다. 세 번째 문제는 더 이상 존재 하지 않는 유니버설 그룹이 사용자의 액세스 토큰에 계속 표시 될 수 있다는 것입니다. 
   
-     글로벌 카탈로그 였던 DC를 실수로 또는 신뢰할 수 있는 독립 백업 했기 때문에 복원 하는 경우 복원 작업을 수행 하 고 나면 곧 글로벌 카탈로그를 사용 하지 않도록 설정 하 여 느린 개체의 발생을 방지 하는 것이 좋습니다. 완료. 글로벌 카탈로그 플래그를 사용 하지 않도록 설정 하면 컴퓨터의 모든 부분 복제본 (파티션)이 손실 되 고 정기적인 DC 상태가 relegating 됩니다. 
+     글로벌 카탈로그 였던 DC를 실수로 또는 신뢰할 수 있는 독립 백업으로 복원한 경우 복원 작업이 완료 된 후에는 글로벌 카탈로그를 사용 하지 않도록 설정 하 여 느린 개체의 발생을 방지 하는 것이 좋습니다. 글로벌 카탈로그 플래그를 사용 하지 않도록 설정 하면 컴퓨터의 모든 부분 복제본 (파티션)이 손실 되 고 정기적인 DC 상태가 relegating 됩니다. 
   
 13. Windows 시간 서비스를 구성 합니다. 포리스트 루트 도메인에서 외부 시간 원본에서 시간을 동기화 하도록 PDC 에뮬레이터를 구성 합니다. 자세한 내용은 [포리스트 루트 도메인의 PDC 에뮬레이터에서 Windows 시간 서비스 구성](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731191%28v=ws.10%29)을 참조 하세요. 
   
@@ -126,7 +125,7 @@ ms.locfileid: "71369070"
 
 - 이름 확인을 수정 하려면 DNS 위임 레코드를 만들고 필요에 따라 DNS 전달 및 루트 힌트를 구성 합니다. **Repadmin/replsum** 를 실행 하 여 dc 간의 복제를 확인 합니다. 
 - 복원 된 DC가 직접 복제 파트너가 아닌 경우, 복제 복구는 그 사이에 임시 연결 개체를 만들어 훨씬 더 빠릅니다. 
-- 메타 데이터 정리의 유효성을 검사 하려면 포리스트의 모든 dc 목록에 대해 **Repadmin/viewlist \\** *를 실행 합니다. 도메인의 모든 dc 목록을 보려면 **Nltest/DCList:** *\> < 도메인* 을 실행 합니다. 
+- 메타 데이터 정리의 유효성을 검사 하려면 포리스트의 모든 Dc 목록에 대해 **Repadmin/viewlist \\** *를 실행 합니다. 도메인의 모든 Dc 목록을 보려면 **Nltest/DCList:** *< domain\>* 를 실행 합니다. 
 - DC 및 DNS 상태를 확인 하려면 DCDiag/v를 실행 하 여 포리스트의 모든 Dc에서 오류를 보고 합니다. 
 
 ## <a name="add-the-global-catalog-to-a-domain-controller-in-the-forest-root-domain"></a>포리스트 루트 도메인의 도메인 컨트롤러에 글로벌 카탈로그 추가

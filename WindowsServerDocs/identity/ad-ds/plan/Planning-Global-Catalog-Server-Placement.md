@@ -1,7 +1,6 @@
 ---
 ms.assetid: 407d5e81-c04c-4275-9ae9-35f65b4a371a
 title: 글로벌 카탈로그 서버 배치 계획
-description: ''
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: fb61d917300e957534a688b73efd7e193d24ff6f
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: af25688634252ac9f0640ca037d7f2a19b8a8a24
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71408742"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80822166"
 ---
 # <a name="planning-global-catalog-server-placement"></a>글로벌 카탈로그 서버 배치 계획
 
@@ -28,12 +27,12 @@ ms.locfileid: "71408742"
   
 대부분의 경우 새 도메인 컨트롤러를 설치할 때 글로벌 카탈로그를 포함 하는 것이 좋습니다. 적용 되는 예외는 다음과 같습니다.  
   
-- 제한 된 대역폭: 원격 사이트에서 원격 사이트와 허브 사이트 간의 WAN (광역 네트워크) 연결이 제한 된 경우 원격 사이트에서 유니버설 그룹 구성원 자격 캐싱을 사용 하 여 사이트의 사용자에 대 한 로그온 요구를 수용할 수 있습니다.  
-- 인프라 작업 마스터 역할 비호환: 도메인의 모든 도메인 컨트롤러가 글로벌 카탈로그 서버 이거나 포리스트에 도메인이 하나만 있는 경우를 제외 하 고 도메인의 인프라 작업 마스터 역할을 호스트 하는 도메인 컨트롤러에 글로벌 카탈로그를 두지 마십시오.  
+- 제한 된 대역폭: 원격 사이트에서 원격 사이트와 허브 사이트 간의 WAN (광역 네트워크) 연결을 제한 하는 경우 원격 사이트에서 유니버설 그룹 구성원 자격 캐싱을 사용 하 여 사이트의 사용자에 대 한 로그온 요구를 수용할 수 있습니다.  
+- 인프라 작업 마스터 역할 비호환: 도메인의 모든 도메인 컨트롤러가 글로벌 카탈로그 서버 이거나 포리스트에 도메인이 하나만 있는 경우를 제외 하 고 도메인의 인프라 작업 마스터 역할을 호스트 하는 도메인 컨트롤러에 글로벌 카탈로그를 두지 않습니다.  
   
 ## <a name="adding-global-catalog-servers-based-on-application-requirements"></a>응용 프로그램 요구 사항에 따라 글로벌 카탈로그 서버 추가
 
-Microsoft Exchange, 메시지 큐 (MSMQ)와 같은 특정 응용 프로그램 및 DCOM을 사용 하는 응용 프로그램은 잠재적인 WAN 링크에 대 한 적절 한 응답을 제공 하지 않으므로 낮은 쿼리를 제공 하기 위해 항상 사용 가능한 글로벌 카탈로그 인프라가 필요 합니다. 대기가. 저속 WAN 링크를 통해 성능이 저하 되는 응용 프로그램이 위치에서 실행 되 고 있는지 또는 위치에 Microsoft Exchange Server가 필요한 지 여부를 확인 합니다. WAN 링크를 통해 적절 한 응답을 제공 하지 않는 응용 프로그램이 위치에 포함 된 경우, 쿼리 대기 시간을 줄이기 위해 위치에 글로벌 카탈로그 서버를 배치 해야 합니다.  
+Microsoft Exchange, 메시지 큐 (MSMQ)와 같은 특정 응용 프로그램 및 DCOM을 사용 하는 응용 프로그램은 잠재적인 WAN 링크에 대 한 적절 한 응답을 제공 하지 않으므로 낮은 쿼리 대기 시간을 제공 하기 위해 항상 사용 가능한 글로벌 카탈로그 인프라가 필요 합니다. 저속 WAN 링크를 통해 성능이 저하 되는 응용 프로그램이 위치에서 실행 되 고 있는지 또는 위치에 Microsoft Exchange Server가 필요한 지 여부를 확인 합니다. WAN 링크를 통해 적절 한 응답을 제공 하지 않는 응용 프로그램이 위치에 포함 된 경우, 쿼리 대기 시간을 줄이기 위해 위치에 글로벌 카탈로그 서버를 배치 해야 합니다.  
   
 > [!NOTE]  
 > Rodc (읽기 전용 도메인 컨트롤러)를 글로벌 카탈로그 서버 상태에 성공적으로 승격할 수 있습니다. 그러나 특정 디렉터리 사용 응용 프로그램은 글로벌 카탈로그 서버로 RODC를 지원할 수 없습니다. 예를 들어 어떤 버전의 Microsoft Exchange Server는 Rodc를 사용 하지 않습니다. 그러나 사용할 수 있는 쓰기 가능한 도메인 컨트롤러가 있는 경우 Microsoft Exchange Server는 Rodc를 포함 하는 환경에서 작동 합니다. Exchange Server 2007는 Rodc를 효과적으로 무시 합니다. Exchange Server 2003는 Exchange 구성 요소가 사용 가능한 도메인 컨트롤러를 자동으로 검색 하는 기본 조건에서 Rodc도 무시 합니다. 읽기 전용 디렉터리 서버를 인식할 수 있도록 Exchange Server 2003가 변경 되지 않았습니다. 따라서 Exchange Server 2003 서비스 및 관리 도구에서 Rodc를 사용 하도록 강제 하려고 하면 예기치 않은 동작이 발생할 수 있습니다.  
@@ -44,12 +43,12 @@ Microsoft Exchange, 메시지 큐 (MSMQ)와 같은 특정 응용 프로그램 �
   
 ## <a name="using-highly-available-bandwidth"></a>항상 사용 가능한 대역폭 사용
 
-글로벌 카탈로그 서버를 필요로 하는 응용 프로그램이 포함 되지 않은 위치에는 글로벌 카탈로그를 배치 하지 않아도 되며, 사용자가 100 명 미만이 고, 100% 인 WAN 링크로 글로벌 카탈로그 서버를 포함 하는 다른 위치에도 연결 됩니다. Active Directory Domain Services (AD DS)에 대 한 v)입니다. 이 경우 사용자는 WAN 링크를 통해 글로벌 카탈로그 서버에 액세스할 수 있습니다.  
+글로벌 카탈로그 서버를 필요로 하는 응용 프로그램이 포함 되지 않은 위치에는 글로벌 카탈로그를 배치 하지 않아도 되 고, 100 명 미만의 사용자를 포함 하며, Active Directory Domain Services (AD DS)에서 사용할 수 있는 100% 인 WAN 링크로 글로벌 카탈로그 서버를 포함 하는 다른 위치에도 연결할 수 있습니다. 이 경우 사용자는 WAN 링크를 통해 글로벌 카탈로그 서버에 액세스할 수 있습니다.  
   
 로밍 사용자는 모든 위치에서 처음 로그온 할 때마다 글로벌 카탈로그 서버에 연결 해야 합니다. WAN 링크를 통한 로그온 시간이 허용 되지 않는 경우 많은 수의 로밍 사용자가 방문 하는 위치에 글로벌 카탈로그를 배치 합니다.  
   
 ## <a name="enabling-universal-group-membership-caching"></a>유니버설 그룹 구성원 자격 캐싱 사용
 
-100 미만의 사용자를 포함 하 고 글로벌 카탈로그 서버를 필요로 하는 많은 수의 로밍 사용자 또는 응용 프로그램을 포함 하지 않는 위치의 경우 Windows Server 2008를 실행 하는 도메인 컨트롤러를 배포 하 고 유니버설 그룹 구성원 자격을 사용 하도록 설정할 수 있습니다. =. 글로벌 카탈로그 서버가 유니버설 그룹 멤버 자격 캐싱이 설정 된 도메인 컨트롤러에서 둘 이상의 복제 홉이 아닌지 확인 하 여 캐시의 유니버설 그룹 정보를 새로 고칠 수 있도록 합니다. 유니버설 그룹 캐싱이 작동 하는 방법에 대 한 자세한 내용은 [글로벌 카탈로그 작동 방법](https://go.microsoft.com/fwlink/?LinkId=107063)문서를 참조 하세요.  
+100 미만의 사용자를 포함 하 고 글로벌 카탈로그 서버를 필요로 하는 많은 수의 로밍 사용자 또는 응용 프로그램을 포함 하지 않는 위치의 경우 Windows Server 2008를 실행 하는 도메인 컨트롤러를 배포 하 고 유니버설 그룹 멤버 자격 캐싱을 사용 하도록 설정할 수 있습니다. 글로벌 카탈로그 서버가 유니버설 그룹 멤버 자격 캐싱이 설정 된 도메인 컨트롤러에서 둘 이상의 복제 홉이 아닌지 확인 하 여 캐시의 유니버설 그룹 정보를 새로 고칠 수 있도록 합니다. 유니버설 그룹 캐싱이 작동 하는 방법에 대 한 자세한 내용은 [글로벌 카탈로그 작동 방법](https://go.microsoft.com/fwlink/?LinkId=107063)문서를 참조 하세요.  
   
-유니버설 그룹 캐싱을 사용 하도록 설정 된 글로벌 카탈로그 서버 및 도메인 컨트롤러를 배치 하려는 문서를 문서화 하는 데 도움이 되는 워크시트의 경우 [Windows Server 2003 배포 키트에 대 한 작업 지원](https://go.microsoft.com/fwlink/?LinkID=102558), 다운로드 Job_Aids_Designing_and_Deploying_를 참조 하세요. Directory_and_Security_Services을 열고 도메인 컨트롤러 배치 (DSSTOPO_4)를 엽니다. 포리스트 루트 도메인 및 지역 도메인을 배포할 때 글로벌 카탈로그 서버를 배치 해야 하는 위치에 대 한 정보를 참조 하세요.  
+유니버설 그룹 캐싱을 사용 하도록 설정 된 글로벌 카탈로그 서버와 도메인 컨트롤러를 배치할 계획을 문서화 하는 데 도움이 되는 워크시트의 경우 [Windows Server 2003 배포 키트의 작업 지원](https://go.microsoft.com/fwlink/?LinkID=102558)을 참조 하 고, Job_Aids_Designing_and_Deploying_Directory_and_Security_Services을 다운로드 하 고, 도메인 컨트롤러 배치 (DSSTOPO_4)를 엽니다. 포리스트 루트 도메인 및 지역 도메인을 배포할 때 글로벌 카탈로그 서버를 배치 해야 하는 위치에 대 한 정보를 참조 하세요.  

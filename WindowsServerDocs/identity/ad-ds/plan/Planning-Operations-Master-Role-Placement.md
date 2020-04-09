@@ -1,7 +1,6 @@
 ---
 ms.assetid: bd64a766-5362-4f29-b963-5465c2bb79e7
 title: 작업 마스터 역할 배치 계획
-description: ''
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 08/08/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: eb17ed55ba7d7ba23d21162fd41f4022821948fe
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 990f93d44189a6061653d5e190a176b049a280c4
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402523"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80822106"
 ---
 # <a name="planning-operations-master-role-placement"></a>작업 마스터 역할 배치 계획
 
@@ -52,11 +51,11 @@ Active Directory Domain Services (AD DS)는 디렉터리 데이터의 다중 마
 
 PDC 에뮬레이터는 클라이언트 암호 변경을 처리 합니다. 포리스트의 각 도메인에서 하나의 도메인 컨트롤러만 PDC 에뮬레이터 역할을 합니다.  
   
-모든 도메인 컨트롤러가 Windows 2000, Windows Server 2003 및 Windows Server 2008로 업그레이드 되 고 도메인이 Windows 2000 기본 기능 수준에서 작동 하는 경우에도 PDC 에뮬레이터는 수행 된 암호 변경 내용의 기본 복제를 수신 합니다. 도메인에 있는 다른 도메인 컨트롤러 최근 암호를 변경한 경우 해당 변경 내용을 도메인의 모든 도메인 컨트롤러에 복제 하는 데 시간이 걸립니다. 잘못 된 암호로 인해 다른 도메인 컨트롤러에서 로그온 인증이 실패 하는 경우 해당 도메인 컨트롤러는 인증 요청을 PDC 에뮬레이터에 전달한 후 로그온 시도를 수락할지 거부할지 결정 합니다.  
+모든 도메인 컨트롤러가 Windows 2000, Windows Server 2003 및 Windows Server 2008로 업그레이드 되 고 도메인이 Windows 2000 기본 기능 수준에서 작동 하는 경우에도 PDC 에뮬레이터는 도메인의 다른 도메인 컨트롤러에서 수행 하는 암호 변경 내용의 기본 복제를 수신 합니다. 최근 암호를 변경한 경우 해당 변경 내용을 도메인의 모든 도메인 컨트롤러에 복제 하는 데 시간이 걸립니다. 잘못 된 암호로 인해 다른 도메인 컨트롤러에서 로그온 인증이 실패 하는 경우 해당 도메인 컨트롤러는 인증 요청을 PDC 에뮬레이터에 전달한 후 로그온 시도를 수락할지 거부할지 결정 합니다.  
   
 필요한 경우 암호 전달 작업을 위해 해당 도메인의 많은 사용자를 포함 하는 위치에 PDC 에뮬레이터를 배치 합니다. 또한 복제 대기 시간을 최소화 하기 위해 위치가 다른 위치에 제대로 연결 되어 있는지 확인 합니다.  
   
-PDC 에뮬레이터를 배치 하려는 위치 및 각 위치에 표시 되는 각 도메인의 사용자 수에 대 한 정보를 문서화 하는 데 도움이 되는 워크시트의 경우 Windows Server 2003 배포 키트의 작업 지원 ([https://go.microsoft.com/fwlink/?LinkID=102558](https://go.microsoft.com/fwlink/?LinkID=102558)), 다운로드 작업을 참조 하세요. _Aids_Designing_and_Deploying_Directory_and_Security_Services을 열고 도메인 컨트롤러 배치 (DSSTOPO_4)를 엽니다.  
+각 위치에 표시 되는 각 도메인에 대 한 사용자 수와 PDC 에뮬레이터를 배치할 위치에 대 한 정보를 문서화 하는 데 도움이 되는 워크시트의 경우 Windows Server 2003 배포 키트에 대 한 작업 지원 ([https://go.microsoft.com/fwlink/?LinkID=102558](https://go.microsoft.com/fwlink/?LinkID=102558))을 참조 하 고, Job_Aids_Designing_and_Deploying_Directory_and_Security_Services .zip을 다운로드 하 고, 도메인 컨트롤러 배치 (DSSTOPO_4 .doc)를 엽니다.  
   
 지역 도메인을 배포할 때 PDC 에뮬레이터를 배치 해야 하는 위치에 대 한 정보를 참조 해야 합니다. 지역 도메인 배포 하는 방법에 대 한 자세한 내용은 참조 [배포 Windows Server 2008 지역 도메인](https://technet.microsoft.com/library/cc755118.aspx)합니다.  
   
@@ -83,7 +82,7 @@ PDC 에뮬레이터를 배치 하려는 위치 및 각 위치에 표시 되는 �
 - 사이트 C 및 D의 도메인 컨트롤러는 디렉터리, DNS 또는 사용자 지정 응용 프로그램 파티션을 추가 하거나 제거할 수 없습니다.  
 - 사이트 C 및 D의 도메인 컨트롤러는 스키마를 변경할 수 없습니다.  
   
-작업 마스터 역할 배치 계획에 도움이 되는 워크시트의 경우 [Windows Server 2003 배포 키트의 작업 지원](https://go.microsoft.com/fwlink/?LinkID=102558), Job_Aids_Designing_and_Deploying_Directory_and_Security_Services 다운로드 및 도메인 컨트롤러 열기를 참조 하세요. 배치 (DSSTOPO_4).  
+작업 마스터 역할 배치 계획에 도움이 되는 워크시트의 경우 [Windows Server 2003 배포 키트의 작업 지원](https://go.microsoft.com/fwlink/?LinkID=102558)을 참조 하 고, Job_Aids_Designing_and_Deploying_Directory_and_Security_Services을 다운로드 하 고, 도메인 컨트롤러 배치 (DSSTOPO_4)를 엽니다.  
   
 포리스트 루트 도메인 및 지역 도메인을 만들 때이 정보를 참조 해야 합니다. 포리스트 루트 도메인을 배포 하는 방법에 대 한 자세한 내용은 [Windows Server 2008 포리스트 루트 도메인](https://technet.microsoft.com/library/cc731174.aspx)배포 배포를 참조 하세요. 지역 도메인 배포 하는 방법에 대 한 자세한 내용은 참조 [배포 Windows Server 2008 지역 도메인](https://technet.microsoft.com/library/cc755118.aspx)합니다.  
 

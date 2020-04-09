@@ -1,27 +1,23 @@
 ---
 title: 사용자 계정 고려 사항
 description: MultiPoint 서비스에 대 한 사용자 계정, 사용자 이름 및 암호 고려 사항을 제공 합니다.
-ms.custom: na
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e225900b-cee9-48c9-b21c-394dc5e72b78
 author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: c81d14d46e96d39676e1fb6fa31892e0d5e1b683
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 732100a79adbdd7d9fbe4ade742c43084d6b54f6
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71389262"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80820576"
 ---
 # <a name="user-account-considerations"></a>사용자 계정 고려 사항
-이 항목에서는, 관리자는 사용자를 고려해 야 할 사용자 계정 관리를 만들 때 문제를 설명 합니다. 다중 포인트 관리자의 사용자 탭에서 사용자 계정을 관리할 수 있습니다. 자세한 내용은 [사용자 계정 관리](Manage-User-Accounts.md) 항목을 참조하세요.  
+이 항목에서는 관리자가 사용자 계정을 만들고 관리할 때 고려해야 하는 문제를 설명합니다. 다중 포인트 관리자의 사용자 탭에서 사용자 계정을 관리할 수 있습니다. 자세한 내용은 [사용자 계정 관리](Manage-User-Accounts.md) 항목을 참조하세요.  
   
 ## <a name="user-account-types"></a>사용자 계정 유형  
 사용자 계정은 MultiPoint 서비스에 사용자가 액세스할 수 있는 파일 및 폴더, MultiPoint 서비스 시스템에 대해 수행할 수 있는 변경 내용 및 바탕 화면 배경과 같은 각 사용자의 기본 설정에 대 한 정보 모음입니다. 각 사용자는 고유한 사용자 이름 및 암호를 사용하여 자신의 사용자 계정에 액세스합니다. MultiPoint 서비스에는 세 가지 유형의 사용자 계정 지원합니다.  
@@ -40,7 +36,7 @@ ms.locfileid: "71389262"
 > [!TIP]  
 > 더 강력한 시스템 보안을 위해 모든 사용자의 암호는 강력한 암호 여야 합니다. 강력 하 게 추측 하거나 해독할 수 없는 암호는 8 자 이상, 사용자 계정 이름 전체 또는 일부를 포함 하지 않고 대문자, 소문자, 숫자 및 키보드에 있는 기호 (!, @, # 등)의 네 가지 범주 중 세 가지 이상을 포함 하는 암호입니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
 [관리자 계정 만들기](Create-an-Administrative-User-Account.md)  
 [표준 사용자 계정 만들기](Create-a-Standard-User-Account.md)  
 [사용자 파일을 관리](Manage-User-Files.md)

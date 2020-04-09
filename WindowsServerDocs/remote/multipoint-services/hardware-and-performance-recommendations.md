@@ -1,24 +1,20 @@
 ---
 title: 하드웨어 요구 사항 및 성능 권장 사항
 description: MultiPoint 서비스에 대 한 하드웨어 및 성능 요구 사항 및 권장 사항을 제공 합니다.
-ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 99a5c9c2-270f-4753-a28c-434882c03125
 author: evaseydl
 manager: scottman
 ms.author: evas
-ms.openlocfilehash: 284131028b308ee86389f25102d934390ba2f16d
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: dcb139cddf6a7838511365c6a85dc12bd06a81eb
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79322085"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80820346"
 ---
 # <a name="hardware-requirements-and-performance-recommendations"></a>하드웨어 요구 사항 및 성능 권장 사항
 이 항목에서는 MultiPoint 서비스 시스템을 실행 하 고 사용자 응용 프로그램 시나리오를 지 원하는 데 필요한 하드웨어에 대해 설명 합니다. 사용자 시나리오는 CPU, RAM 및 네트워크 대역폭 요구 사항에 직접적인 영향을 줍니다.  
@@ -41,9 +37,9 @@ MultiPoint 서비스는 공유 리소스 컴퓨팅 솔루션 이므로 스테이
   
 |응용 프로그램 시나리오|최대 5 개 스테이션|6-8 스테이션|9-12 스테이션|13-16 스테이션|17-20 스테이션|21-24 스테이션|  
 |------------------------|----------------------|-------------------|------------------|-------------------|-------------------|-----------------|  
-|**업무**<br /><br />Office, 웹 검색, lob (기간 업무) 응용 프로그램|CPU: 2C<br /><br />RAM: 2GB|CPU: 2C<br /><br />RAM: 4GB|CPU: 4C<br /><br />RAM: 6GB|CPU: 4C<br /><br />RAM: 8GB|CPU: 4C + MT 또는 6C<br /><br />RAM: 10GB| CPU: 6C + MT<br /><br />RAM: 12GB|
-|**모음집**<br /><br />Office, 웹 검색, 기간 업무 (lob) 응용 프로그램, 일부 사용자가 가끔씩 비디오 사용|CPU: 2C<br /><br />RAM: 2GB|CPU: 2C<br /><br />RAM: 4GB|CPU: 4C<br /><br />RAM: 6GB|CPU: 4C + MT 또는 6C<br /><br />RAM: 8GB|CPU: 6C + MT<br /><br />RAM: 10GB| CPU: 6C + MT<br /><br />RAM: 12GB| 
-|**비디오 집약적**<br /><br />Office, 웹 검색, lob (기간 업무) 응용 프로그램, 모든 사용자가 자주 사용 하는 비디오 사용에 대 한 **참고:** 비디오 테스트는 네이티브 해상도에서 360P H. 264 비디오를 사용 하 여 수행 되었습니다.|CPU: 4C + MT<br /><br />RAM: 2GB|CPU: 6C + MT<br /><br />RAM: 4GB|CPU: 8C + MT<br /><br />RAM: 6GB|CPU: 12C + MT<br /><br />RAM: 8GB|CPU: 16C + MT<br /><br />RAM: 10GB<br /><br />-씬 클라이언트: RemoteFX<br />-USB 비디오 권장 안 됨| CPU: 20C + MT<br /><br />RAM: 12GB<br /><br />-씬 클라이언트: RemoteFX<br />-USB 비디오 권장 안 됨|   
+|**업무**<p>Office, 웹 검색, lob (기간 업무) 응용 프로그램|CPU: 2C<p>RAM: 2GB|CPU: 2C<p>RAM: 4GB|CPU: 4C<p>RAM: 6GB|CPU: 4C<p>RAM: 8GB|CPU: 4C + MT 또는 6C<p>RAM: 10GB| CPU: 6C + MT<p>RAM: 12GB|
+|**모음집**<p>Office, 웹 검색, 기간 업무 (lob) 응용 프로그램, 일부 사용자가 가끔씩 비디오 사용|CPU: 2C<p>RAM: 2GB|CPU: 2C<p>RAM: 4GB|CPU: 4C<p>RAM: 6GB|CPU: 4C + MT 또는 6C<p>RAM: 8GB|CPU: 6C + MT<p>RAM: 10GB| CPU: 6C + MT<p>RAM: 12GB| 
+|**비디오 집약적**<p>Office, 웹 검색, lob (기간 업무) 응용 프로그램, 모든 사용자가 자주 사용 하는 비디오 사용에 대 한 **참고:** 비디오 테스트는 네이티브 해상도에서 360P H. 264 비디오를 사용 하 여 수행 되었습니다.|CPU: 4C + MT<p>RAM: 2GB|CPU: 6C + MT<p>RAM: 4GB|CPU: 8C + MT<p>RAM: 6GB|CPU: 12C + MT<p>RAM: 8GB|CPU: 16C + MT<p>RAM: 10GB<p>-씬 클라이언트: RemoteFX<br />-USB 비디오 권장 안 됨| CPU: 20C + MT<p>RAM: 12GB<p>-씬 클라이언트: RemoteFX<br />-USB 비디오 권장 안 됨|   
   
 ## <a name="minimum-recommended-hardware-for-running-full-windows-10-virtual-desktops"></a>전체 Windows 10 가상 데스크톱을 실행 하기 위한 최소 권장 하드웨어  
 각 스테이션에 대해 전체 가상 운영 체제 인스턴스를 실행 하는 것은 기본 MultiPoint 데스크톱 세션을 실행 하는 것 보다 더 많은 계산 리소스를 사용 하므로, 스테이션 당 호스트 하드웨어 요구 사항이 더 높습니다.  

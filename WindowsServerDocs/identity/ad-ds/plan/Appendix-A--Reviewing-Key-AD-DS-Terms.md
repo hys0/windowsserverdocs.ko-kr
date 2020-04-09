@@ -1,7 +1,6 @@
 ---
 ms.assetid: 87196b65-a356-409f-9af0-b5950797d668
 title: 부록 A-주요 AD DS 용어 검토
-description: ''
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 81beba874440f7a75c2d7932357fae70f046d996
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: ad8c1cf769c0c2a22e2d55f7bd2d111095410afe
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71409016"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80822866"
 ---
 # <a name="appendix-a-reviewing-key-ad-ds-terms"></a>부록 A: 주요 AD DS 용어 검토
 
@@ -54,7 +53,7 @@ ms.locfileid: "71409016"
 도메인의 디렉터리 서비스를 디렉터리 서비스의 이후 버전으로 업그레이드 하는 프로세스입니다. 여기에는 모든 도메인 컨트롤러에서 운영 체제를 업그레이드 하 고 해당 되는 경우 AD DS 기능 수준을 올리는 작업이 포함 됩니다.  
   
 ## <a name="in-place-domain-upgrade"></a>내부 도메인 업그레이드  
-지정 된 도메인에 있는 모든 도메인 컨트롤러의 운영 체제를 업그레이드 하는 프로세스입니다. 예를 들어 Windows Server 2003을 Windows Server 2008로 업그레이드 하 고 도메인의 기능 수준 (해당 하는 경우)을 발생 시키고, 도메인 개체 (예: 사용자)를 그대로 둡니다. 및 그룹  
+지정 된 도메인에 있는 모든 도메인 컨트롤러의 운영 체제를 업그레이드 하는 프로세스입니다. 예를 들어 Windows Server 2003을 Windows Server 2008로 업그레이드 하 고 도메인의 기능 수준 (해당 하는 경우)을 발생 시키고, 도메인 개체 (예: 사용자 및 그룹)는 그대로 둡니다.  
   
 ## <a name="forest-root-domain"></a>포리스트 루트 도메인  
 Active Directory 포리스트에서 만든 첫 번째 도메인입니다. 이 도메인은 자동으로 포리스트 루트 도메인으로 지정 됩니다. Active Directory 포리스트 인프라의 토대를 제공 합니다.  

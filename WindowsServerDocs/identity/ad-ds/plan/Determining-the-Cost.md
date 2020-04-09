@@ -1,7 +1,6 @@
 ---
 ms.assetid: e3ea1f67-60d4-4566-b24c-37faa95c3b2a
 title: 비용 결정
-description: ''
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 0ce7acddbfa9f7536f3d5a190c6968ea0d8cf6b3
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 1bbc75cab2e78d1001fa13d419072807f202fd61
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71408876"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80822586"
 ---
 # <a name="determining-the-cost"></a>비용 결정
 
@@ -30,16 +29,16 @@ ms.locfileid: "71408876"
   
 |네트워크 유형|속도|  
 |----------------|---------|  
-|매우 느림|초당 Kbps (초당 킬로 비트) 56|  
-|슬로우|64Kbps|  
+|매우 느림|56Kbps|  
+|느림|64Kbps|  
 |ISDN (Integrated Services Digital Network)|64 kbps 또는 128 Kbps|  
 |프레임 릴레이|가변 속도, 일반적으로 56 Kbps와 1.5 메가 비트/초 (Mbps)|  
-|T1|1.5 Mbps|  
+|T1|1.5Mbps|  
 |T3|45 Mbps|  
 |10BaseT|10mbps|  
 |ATM (비동기 전송 모드)|가변 률 (일반적으로 155 Mbps ~ 622 Mbps)|  
 |100BaseT|100Mbps|  
-|기가 비트 이더넷|초당 1 기가 비트 (Gbps)|  
+|기가 비트 이더넷|1Gbps|  
   
 WAN (광역 네트워크 속도) 링크 속도에 따라 각 사이트 링크의 비용을 계산 하려면 다음 표를 사용 합니다. 표에 나열 되지 않은 WAN 링크 속도의 경우 1024를 사용 가능한 대역폭의 로그 (Kbps)로 나누어 상대적 비용 요인을 계산할 수 있습니다.  
   
@@ -54,7 +53,7 @@ WAN (광역 네트워크 속도) 링크 속도에 따라 각 사이트 링크의
 |256|425|  
 |512|378|  
 |1,024|340|  
-|2048|309|  
+|2,048|309|  
 |4,096|283|  
   
 이러한 비용은 네트워크 링크 간의 안정성 차이를 반영 하지 않습니다. 복제에 대 한 링크를 사용 하지 않아도 되도록 오류가 발생 하기 쉬운 네트워크 링크에 대 한 비용을 더 많이 설정 합니다. 사이트 링크 비용을 더 높게 설정 하면 사이트 링크가 실패할 때 복제 장애 조치 (failover)를 제어할 수 있습니다.  

@@ -1,7 +1,6 @@
 ---
 ms.assetid: e6da5984-d99d-4c34-9c11-4a18cd413f06
 title: 기존 도메인에 복제 Windows Server 2012 도메인 컨트롤러 설치(수준 200)
-description: ''
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 5e72c18d3aa49774cf73d5365748e7bf20764b22
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 12068e5a062358463cf208f777144091e1de8257
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71390840"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80825206"
 ---
 # <a name="install-a-replica-windows-server-2012-domain-controller-in-an-existing-domain-level-200"></a>기존 도메인에 복제 Windows Server 2012 도메인 컨트롤러 설치(수준 200)
 
@@ -28,22 +27,22 @@ ms.locfileid: "71390840"
   
 -   [배포](../../ad-ds/deploy/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-.md#BKMK_Dep)  
   
-## <a name="BKMK_Workflow"></a>업그레이드 및 복제본 워크플로  
+## <a name="upgrade-and-replica-workflow"></a><a name="BKMK_Workflow"></a>업그레이드 및 복제본 워크플로  
 다음 다이어그램에서는 이전에 AD DS 역할을 설치하고 서버 관리자를 사용하여 기존 도메인에서 새 도메인 컨트롤러를 만드는 Active Directory 도메인 서비스 구성 마법사를 시작한 경우의 Active Directory 도메인 서비스 구성 프로세스를 보여 줍니다.  
   
 ![복제 데이터베이스를 설치 합니다.](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/adds_forestupgrade.png)  
   
-## <a name="BKMK_PS"></a>업그레이드 및 복제본 Windows PowerShell  
+## <a name="upgrade-and-replica-windows-powershell"></a><a name="BKMK_PS"></a>업그레이드 및 복제본 Windows PowerShell  
   
 |||  
 |-|-|  
 |**ADDSDeployment Cmdlet**|인수(**굵게** 표시된 인수는 필수 항목이며, *기울임꼴* 인수는 Windows PowerShell 또는 AD DS 구성 마법사를 사용하여 지정할 수 있음)|  
-|Install-AddsDomainController|-SkipPreChecks<br /><br />***-DomainName***<br /><br />*-SafeModeAdministratorPassword*<br /><br />*-SiteName*<br /><br />*-ADPrepCredential*<br /><br />-ApplicationPartitionsToReplicate<br /><br />*-AllowDomainControllerReinstall*<br /><br />-Confirm<br /><br />*-CreateDNSDelegation*<br /><br />***-Credential***<br /><br />-CriticalReplicationOnly<br /><br />*-DatabasePath*<br /><br />*-DNSDelegationCredential*<br /><br />-Force<br /><br />*-InstallationMediaPath*<br /><br />*-InstallDNS*<br /><br />*-LogPath*<br /><br />-MoveInfrastructureOperationMasterRoleIfNecessary<br /><br />-NoDnsOnNetwork<br /><br />*-NoGlobalCatalog*<br /><br />-Norebootoncompletion<br /><br />*-ReplicationSourceDC*<br /><br />-SkipAutoConfigureDNS<br /><br />-SiteName<br /><br />*-SystemKey*<br /><br />*-SYSVOLPath*<br /><br />*-UseExistingAccount*<br /><br />*-Whatif*|  
+|Install-AddsDomainController|-SkipPreChecks<p>***-DomainName***<p>*-SafeModeAdministratorPassword*<p>*-SiteName*<p>*-ADPrepCredential*<p>-ApplicationPartitionsToReplicate<p>*-AllowDomainControllerReinstall*<p>-Confirm<p>*-CreateDNSDelegation*<p>***-Credential***<p>-CriticalReplicationOnly<p>*-DatabasePath*<p>*-DNSDelegationCredential*<p>-Force<p>*-InstallationMediaPath*<p>*-InstallDNS*<p>*-LogPath*<p>-MoveInfrastructureOperationMasterRoleIfNecessary<p>-NoDnsOnNetwork<p>*-NoGlobalCatalog*<p>-Norebootoncompletion<p>*-ReplicationSourceDC*<p>-SkipAutoConfigureDNS<p>-SiteName<p>*-SystemKey*<p>*-SYSVOLPath*<p>*-UseExistingAccount*<p>*-Whatif*|  
   
 > [!NOTE]  
 > **-credential** 인수는 현재 Enterprise Admins 및 Schema Admins 그룹의 구성원(포리스트를 업그레이드하는 경우) 또는 Domain Admins 그룹의 구성원(기존 도메인에 새 DC를 추가하는 경우)으로 로그인되어 있지 않은 경우에만 필요합니다.  
   
-## <a name="BKMK_Dep"></a>배포가  
+## <a name="deployment"></a><a name="BKMK_Dep"></a>배포가  
   
 ### <a name="deployment-configuration"></a>배포 구성  
 ![복제 데이터베이스를 설치 합니다.](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_SMI_TR_UpgradeDeployConfig.png)  
@@ -122,7 +121,7 @@ Install-AddsDomainController
   
 ```  
   
-마지막으로 난독 처리된 암호를 파일에 저장한 다음 일반 텍스트 암호를 표시하지 않고 나중에 다시 사용할 수 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
+마지막으로 난독 처리된 암호를 파일에 저장한 다음 일반 텍스트 암호를 표시하지 않고 나중에 다시 사용할 수 있습니다. 예를 들면 다음과 같습니다.  
   
 ```  
 $file = "c:\pw.txt"  
@@ -221,7 +220,7 @@ Active Directory 경로 ADDSDeployment cmdlet 인수는 다음과 같습니다.
   
 서버 관리자의 **옵션 검토** 페이지는 현재 ADDSDeployment 구성을 단일 Windows PowerShell 스크립트로 포함하는 유니코드 텍스트 파일을 만들 수 있도록 **스크립트 보기** 단추(선택 사항)도 제공합니다. 이 단추를 통해 서버 관리자 그래픽 인터페이스를 Windows PowerShell 배포 스튜디오로 사용할 수 있습니다. Active Directory 도메인 서비스 구성 마법사를 사용하여 옵션을 구성하고 구성을 내보낸 다음 마법사를 취소합니다.  이 프로세스를 통해 향후 수정을 위해 사용하거나 직접 사용하기 위한 유효하고 구문상으로 정확한 샘플이 만들어집니다.  
   
-예를 들어 다음과 같은 가치를 제공해야 합니다.  
+예를 들면 다음과 같습니다.  
   
 ```  
 #  
@@ -258,7 +257,7 @@ Install-ADDSDomainController `
   
 **필수 구성 요소 확인**에서는 이전 운영 체제에 영향을 주는 보안 변경 내용과 같은 관련 정보도 제공합니다.  
   
-특정 필수 구성 요소 검사에 대 한 자세한 내용은 참조 [필수 구성 요소 확인](../../ad-ds/manage/AD-DS-Simplified-Administration.md#BKMK_PrereuisiteChecking)합니다.  
+특정 필수 구성 요소 확인에 대한 자세한 내용은 [필수 구성 요소 확인](../../ad-ds/manage/AD-DS-Simplified-Administration.md#BKMK_PrereuisiteChecking)을 참조하세요.  
   
 서버 관리자를 사용할 때는 **필수 구성 요소 확인** 을 무시할 수 없지만 AD DS 배포 cmdlet을 사용할 때는 다음 인수를 사용하여 프로세스를 건너뛸 수 있습니다.  
   
@@ -306,18 +305,18 @@ Install-addsdomaincontroller
   
 ![복제 데이터베이스를 설치 합니다.](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_PSUpgradeProgress.png)  
   
-Windows PowerShell을 사용 하 여 도메인 컨트롤러를 원격으로 구성 하려면 **install-addsdomaincontroller** *cmdlet을* **호출** 하는 cmdlet을 래핑합니다. 이 경우 중괄호를 사용해야 합니다.  
+Windows PowerShell을 사용 하 여 도메인 컨트롤러를 원격으로 구성 하려면 **install-addsdomaincontroller** cmdlet을 **호출** 하는 cmdlet을 래핑합니다. *inside* 이 경우 중괄호를 사용해야 합니다.  
   
 ```  
 invoke-command {install-addsdomaincontroller "domainname <domain> -credential (get-credential)} -computername <dc name>  
 ```  
   
-예를 들어 다음과 같은 가치를 제공해야 합니다.  
+예를 들면 다음과 같습니다.  
   
 ![복제 데이터베이스를 설치 합니다.](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_PSUpgradeExample.gif)  
   
 > [!NOTE]  
-> 설치 및 Adprep 프로세스 작동 방식에 대한 자세한 내용은 [Troubleshooting Domain Controller Deployment](../../ad-ds/deploy/Troubleshooting-Domain-Controller-Deployment.md)을 참조하세요.  
+> 설치 및 Adprep 프로세스 작동 방식에 대한 자세한 내용은 [도메인 컨트롤러 배포 문제 해결](../../ad-ds/deploy/Troubleshooting-Domain-Controller-Deployment.md)을 참조하세요.  
   
 ### <a name="results"></a>결과  
 ![복제 데이터베이스를 설치 합니다.](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_SMI_TR_ForestSignOff.png)  

@@ -1,31 +1,27 @@
 ---
 title: 하드웨어 상태 보기
 description: MultiPoint 서비스에서 하드웨어 정보를 보는 방법에 대해 알아봅니다.
-ms.custom: na
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3a5ec549-e1f9-4714-9e6d-9ea959e1da60
 author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: bfaa9166012dd349124c70a54546c288895d7897
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 961bdf0d1024e8308f78c773bebb470bd03a3f4c
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71389171"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80820496"
 ---
 # <a name="view-hardware-status"></a>하드웨어 상태 보기
 다중 포인트 관리자에서 사용 하 여는 **스테이션** 보려면 탭을 *스테이션* 내용은 같은:  
   
 -   스테이션 이름  
 -   필요한 하드웨어를 사용할 수 있도록 하려면 각 장치 (일반적으로, 하드웨어 비디오 모니터 포함 *스테이션 허브*, 키보드 및 마우스) 
--   스테이션과 연결된 추가 주변 하드웨어 장치  
+-   스테이션과 연결된 추가 주변 하드웨어 디바이스  
 -   스테이션에 없거나 스테이션에서 작동하지 않는 필수 하드웨어에 대한 알림(관련 열에 표시됨)  
 -   MultiPoint 서비스 시스템에 현재 연결되어 있는 사용자의 이름  
   

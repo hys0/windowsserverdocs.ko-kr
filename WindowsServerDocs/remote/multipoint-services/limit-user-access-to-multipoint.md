@@ -1,24 +1,20 @@
 ---
 title: 서버에 대 한 사용자 액세스 제한
 description: 사용자 및 그룹에 대 한 MultiPoint 서비스에 대 한 액세스 권한을 부여 하거나 거부 하는 방법 알아보기
-ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4cabd4f1-a764-4be6-bc6e-0a5f5566390c
 author: evaseydl
 manager: scottman
 ms.author: evas
-ms.openlocfilehash: 62f2a3f9b94ac3f0474636c34e8ec1f81c568cad
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: ddc852eea3ed17cd354cc87c79d82066f989bd5d
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71389061"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80820256"
 ---
 # <a name="limit-users-access-to-the-multipoint-server"></a>Multipoint server에 대 한 사용자 액세스 제한
 MultiPoint server를 Active Directory 도메인에 가입 시키거나 로컬 사용자 계정을 사용 하 든 상관 없이 모든 사용자는 기본적으로 MultiPoint server에 액세스할 수 있습니다. 사용자가 MultiPoint 서비스 환경의 스테이션에 로그온 하도록 허용 하기 전에 서버에 대 한 액세스를 제한 해야 합니다.  

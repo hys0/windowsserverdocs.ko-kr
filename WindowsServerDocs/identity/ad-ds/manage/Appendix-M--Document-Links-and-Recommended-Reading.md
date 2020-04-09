@@ -1,7 +1,6 @@
 ---
 ms.assetid: 6785de86-4f7d-4ed1-9055-8de0871d59b5
 title: 부록 M-문서 링크 및 권장 되는 읽기
-description: ''
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: c48b5330ee1b9a186885645aaa4c1ac79f1782e7
-ms.sourcegitcommit: 07c9d4ea72528401314e2789e3bc2e688fc96001
+ms.openlocfilehash: f1c13f0a7054f236f1ba35201ad9ad62c978d08f
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76822746"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80823296"
 ---
 # <a name="appendix-m-document-links-and-recommended-reading"></a>부록 M: 문서 링크 및 권장 자료
 
@@ -28,7 +27,7 @@ ms.locfileid: "76822746"
   
 |||  
 |-|-|  
-|**Links**|**URLs**|  
+|**링크만**|**Url**|  
 |[보안 관리의 10 가지 불변 법](https://technet.microsoft.com/library/cc722488.aspx)|[https://technet.microsoft.com/library/cc722488.aspx](https://technet.microsoft.com/library/cc722488.aspx)|  
 |[Microsoft 보안 준수 관리자](https://technet.microsoft.com/library/cc677002.aspx)|[https://technet.microsoft.com/library/cc677002.aspx](https://technet.microsoft.com/library/cc677002.aspx)|  
 |[Gartner Symposium ITXPO](http://www.gartner.com/technology/symposium/orlando/)|[http://www.gartner.com/technology/symposium/orlando/](http://www.gartner.com/technology/symposium/orlando/)|  
@@ -198,15 +197,15 @@ ms.locfileid: "76822746"
 #### <a name="copyright-information"></a>저작권 정보  
 이 문서에 포함된 정보는 문서 게시 날짜에 토론된 문제들에 대한 Microsoft Corporation의 당시 견해를 나타냅니다. Microsoft의 견해는 변화하는 시장 환경에 맞게 변화되어야 하기 때문에 이러한 정보는 Microsoft의 약속으로 해석되어서는 안되며, Microsoft는 문서 게시 날짜 이후 제공된 어떠한 정보에 대해서도 정확성을 보장할 수 없습니다.  
   
-이 백서는 참조용 으로만 제공 됩니다. Microsoft는이 문서에서 어떠한 명시적 또는 묵시적 보증도 하지 않습니다.  
+이 백서는 정보를 제공하기 위한 용도로만 사용됩니다. Microsoft는이 문서에서 어떠한 명시적 또는 묵시적 보증도 하지 않습니다.  
   
-모든 관련 저작권법을 준수하는 것은 사용자의 책임입니다. 저작권에서의 권리와는 별도로,이 설명서의 어떠한 부분도 검색 시스템에 저장 또는 도입 되거나 어떠한 형식이 나 수단 (전기적, 기계적, 복사기에의 한 복사, 기록 또는 다른 방법) 또는 목적으로도 전송 될 수 없습니다. Microsoft Corporation의 명시적인 서 면 승인 없이.  
+사용자는 해당 저작권 법을 모두 준수해야 합니다. 저작권에서의 권리와는 별도로, 이 설명서의 어떠한 부분도 Microsoft의 명시적인 서면 승인 없이는 어떠한 형식이나 수단(전기적, 기계적, 복사기에 의한 복사, 디스크 복사 또는 다른 방법) 또는 목적으로도 복제되거나, 검색 시스템에 저장 또는 도입되거나, 전송될 수 없습니다.  
   
-Microsoft는 본 문서에서 다루는 사안과 관련하여 특허권, 특허 애플리케이션, 상표권, 저작권 또는 기타 지적 재산권을 보유할 수 있습니다. Microsoft와 서면으로 체결한 사용권 계약에 명시된 경우를 제외하고 이 문서를 제공했다고 해서 이러한 특허권, 상표권, 저작권 또는 기타 지적 재산권에 대한 라이선스가 부여되는 것은 아닙니다.  
+Microsoft가 이 설명서 본안에 관련된 특허권, 상표권, 저작권 또는 기타 지적 재산권 등을 보유할 수도 있습니다. 서면 사용권 계약에 따라 Microsoft로부터 귀하에게 명시적으로 제공된 권리 이외에, 이 설명서의 제공은 귀하에게 이러한 특허권, 상표권, 저작권, 또는 기타 지적 재산권 등에 대한 어떠한 사용권도 허여하지 않습니다.  
   
 Microsoft, Active Directory, BitLocker, Hyper-v, Internet Explorer, Windows Vista, Windows 및 Windows Server는 미국 및/또는 기타 국가에서의 Microsoft Corporation 등록 상표 또는 상표입니다. 기타 모든 상표는 해당 소유자의 자산입니다.  
   
-예제 회사, 조직, 제품, 도메인 이름, 전자 메일 주소, 로고, 사람, 장소 및 이벤트는 실제 데이터가 아닙니다. 어떠한 실제 회사, 기관, 제품, 도메인 이름, 전자 메일 주소, 로고, 사람, 장소 또는 이벤트와도 연관시킬 의도가 없으며 그렇게 유추해서도 안 됩니다.  
+여기에서 설명하는 회사, 조직, 제품, 도메인 이름, 전자 메일 주소, 로고, 사람, 장소 및 이벤트 등의 예는 실제 데이터가 아닙니다. 어떠한 실제 회사, 기관, 제품, 도메인 이름, 전자 메일 주소, 로고, 사람, 장소 또는 이벤트와도 연관시킬 의도가 없으며 그렇게 유추해서도 안 됩니다.  
   
 ? 2013 Microsoft Corporation. All rights reserved.  
   

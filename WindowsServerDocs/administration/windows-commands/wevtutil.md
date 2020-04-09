@@ -1,24 +1,20 @@
 ---
 title: wevtutil
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: 이벤트 로그 및 게시자에 대 한 정보를 검색할 수 있는 wevtutil의 Windows 명령 항목입니다.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d4c791e0-7e59-45c5-aa55-0223b77a4822 vhorne
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 21f3b721a2a08a7fa101ec09f1f11b5e984f0113
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 62be2b14373457a3b114e8d067e1c7aa32b2182d
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71362172"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80829356"
 ---
 # <a name="wevtutil"></a>wevtutil
 
@@ -40,7 +36,7 @@ wevtutil [{el | enum-logs}] [{gl | get-log} <Logname> [/f:<Format>]]
 [{cl | clear-log} <Logname> [/bu:<Backup>]] [/r:<Remote>] [/u:<Username>] [/p:<Password>] [/a:<Auth>] [/uni:<Unicode>]
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------|-----------|
@@ -63,7 +59,7 @@ wevtutil [{el | enum-logs}] [{gl | get-log} <Logname> [/f:<Format>]]
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    /f:\<형식 >    |                                                                                                                                                               출력 XML 또는 텍스트 형식으로이 되도록 지정 합니다. 형식이 XML > \<경우 출력이 XML 형식으로 표시 됩니다. 서식 >가 텍스트인 \<XML 태그 없이 출력이 표시 됩니다. 기본값은 Text입니다.                                                                                                                                                                |
 |   /e:\<사용 >    |                                                                                                                                                                                                                                         로그를 사용 하지 않도록 설정 하거나 사용 합니다. \<사용 > true 또는 false 일 수 있습니다.                                                                                                                                                                                                                                          |
-|  /i:\<격리 >   | 로그 격리 모드를 설정합니다. \<격리 >는 시스템, 응용 프로그램 또는 사용자 지정 일 수 있습니다. 격리 모드는 로그의 로그는 같은 격리 클래스의 다른 로그 세션을 공유 하는지 여부를 결정 합니다. 대상 로그 공유 시스템 격리를 지정 하는 경우 시스템 로그를 사용 하 여 권한 쓰기입니다. 대상 로그 공유 응용 프로그램 격리를 지정 하면 응용 프로그램 로그를 사용 하 여 권한 쓰기입니다. 사용 하 여 보안 설명자를 제공 해야 사용자 지정 격리를 지정 하는 경우는 **/ca** 옵션입니다. |
+|  /i:\<격리 >   | 로그 격리 모드를 설정합니다. \<격리 >는 시스템, 응용 프로그램 또는 사용자 지정 일 수 있습니다. 격리 모드는 로그의 로그는 같은 격리 클래스의 다른 로그 세션을 공유 하는지 여부를 결정 합니다. 대상 로그 공유 시스템 격리를 지정 하는 경우 시스템 로그를 사용 하 여 권한 쓰기입니다. 대상 로그 공유 애플리케이션 격리를 지정 하면 애플리케이션 로그를 사용 하 여 권한 쓰기입니다. 사용 하 여 보안 설명자를 제공 해야 사용자 지정 격리를 지정 하는 경우는 **/ca** 옵션입니다. |
 |  /lfn:\<Logpath >   |                                                                                                                                                                                                           로그 파일 이름을 정의합니다. \<Logpath >는 이벤트 로그 서비스가이 로그에 대 한 이벤트를 저장 하는 파일의 전체 경로입니다.                                                                                                                                                                                                           |
 |  /rt:\<보존 >  |                                                            로그 보존 모드를 설정합니다. \<보존 > true 또는 false 일 수 있습니다. 로그 보존 모드 로그 최대 크기에 도달할 때 이벤트 로그 서비스의 동작을 결정 합니다. 이벤트 로그에는 최대 크기에 도달 하는 경우 로그 보존 모드가 true 기존 이벤트를 보존할 하 고 들어오는 이벤트는 삭제 됩니다. 로그 보존 모드 false 이면 들어오는 이벤트 로그에서 가장 오래 된 이벤트를 덮어씁니다.                                                             |
 |    /wab:\<자동 >     |                                                                                                                                   로그 자동 백업 정책을 지정합니다. 자동 > \<true 또는 false 일 수 있습니다. 이 값이 true 이면 로그는 백업할 자동으로 최대 크기에 도달 하면 합니다. 이 값이 true 이면 보존 (지정 된 고 **/rt** 옵션) 설정 해야 true로 합니다.                                                                                                                                    |
@@ -87,19 +83,19 @@ wevtutil [{el | enum-logs}] [{gl | get-log} <Logname> [/f:<Format>]]
 |   /sbu:\<백업 >    |                                                                                                                                                                                                      지운된 이벤트를 저장할 파일의 경로를 지정 합니다. 백업 파일의 이름을.evtx 확장명을 포함 합니다.                                                                                                                                                                                                       |
 |    /r: 원격 >\<    |                                                                                                                                                                                            원격 컴퓨터에서 명령을 실행 합니다. 원격 > \<은 원격 컴퓨터의 이름입니다. **im** 및 **um** 매개 변수는 원격 작업을 지원 하지 않습니다.                                                                                                                                                                                            |
 |   /u:\<사용자 이름 >   |                                                                                                                                                                          원격 컴퓨터에 로그온 하는 다른 사용자를 지정 합니다. 사용자 이름 >는 domain\user 또는 user 형식의 사용자 이름 \<합니다. 이 옵션은만 적용 될 때의 **/r** 옵션을 지정 합니다.                                                                                                                                                                          |
-|   /p: 암호를\<>   |                                                                                                                                               사용자에 대 한 암호를 지정합니다. **/U** 옵션을 사용 하는 경우이 옵션을 지정 하지 않거나 암호 > "" \<암호를*입력 하 라는 메시지가 표시 됩니다. 이 옵션은 \*\*/u*\* 옵션이 지정 된 경우에만 적용할 수 있습니다.                                                                                                                                                |
+|   /p: 암호를\<>   |                                                                                                                                               사용자에 대 한 암호를 지정합니다. **/U** 옵션을 사용 하 고이 옵션을 지정 하지 않거나 암호 > \<경우 *암호를 입력 하 라는 메시지가 표시 됩니다. 이 옵션은 \*\*/u*\* 옵션이 지정 된 경우에만 적용할 수 있습니다.                                                                                                                                                |
 |     /a:\<Auth >     |                                                                                                                                                                                             원격 컴퓨터에 연결 하기 위한 인증 유형을 정의 합니다. \<Auth >는 기본값, Negotiate, Kerberos 또는 NTLM이 될 수 있습니다. 기본값은 협상 합니다.                                                                                                                                                                                              |
 |  /uis:\<유니코드 >   |                                                                                                                                                                                                             유니코드로 출력을 표시합니다. 유니코드 > \<true 또는 false 일 수 있습니다. 경우 <Unicode> 유니코드로 출력은 그렇습니다.                                                                                                                                                                                                             |
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 -   Sl 매개 변수와 함께 구성 파일을 사용합니다.
 
     구성 파일은 wevtutil gl \<Logname >/f: xml의 출력과 동일한 형식의 XML 파일입니다. 다음 예제에는 보존을 사용 하 고, autobackup, 응용 프로그램 로그에 최대 로그 크기를 설정 하는 구성 파일의 형식을 보여 줍니다.  
     ```
-    <?xml version="1.0" encoding="UTF-8"?>
-    <channel name="Application" isolation="Application"
-    xmlns="https://schemas.microsoft.com/win/2004/08/events">
+    <?xml version=1.0 encoding=UTF-8?>
+    <channel name=Application isolation=Application
+    xmlns=https://schemas.microsoft.com/win/2004/08/events>
     <logging>
     <retention>true</retention>
     <autoBackup>true</autoBackup>
@@ -110,7 +106,7 @@ wevtutil [{el | enum-logs}] [{gl | get-log} <Logname> [/f:<Format>]]
     </channel>
     ```
 
-## <a name="BKMK_examples"></a>예와
+## <a name="examples"></a><a name=BKMK_examples></a>예와
 
 모든 로그의 이름을 나열 합니다.
 ```
@@ -155,4 +151,4 @@ wevtutil cl Application /bu:C:\admin\backups\a10306.evtx
 
 #### <a name="additional-references"></a>추가 참조
 
-[명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

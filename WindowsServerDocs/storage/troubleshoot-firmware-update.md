@@ -3,21 +3,21 @@ ms.assetid: 13210461-1e92-48a1-91a2-c251957ba256
 title: 드라이브 펌웨어 업데이트 문제 해결
 ms.prod: windows-server
 ms.author: toklima
-ms.manager: masriniv
+manager: masriniv
 ms.technology: storage
 ms.topic: article
 author: toklima
 ms.date: 04/18/2017
-ms.openlocfilehash: 9c9c1083def53e09b063a0ca9879e4d4527e98c0
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b62fdfe64ea579f61239dc582c639fb10ec1371c
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71365890"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80820886"
 ---
 # <a name="troubleshooting-drive-firmware-updates"></a>드라이브 펌웨어 업데이트 문제 해결
 
->적용 대상: Windows 10, Windows Server (반기 채널)
+>적용 대상: Windows 10, Windows Server(반기 채널),
 
 Windows 10, 버전 1703 이후 버전 및 Windows Server(반기 채널)에는 PowerShell을 통해 펌웨어 업그레이드 가능 추가 한정자(Firmware Upgradeable AQ) 인증을 받은 HDD 및 SSD의 펌웨어를 업데이트하는 기능이 포함되어 있습니다.
 
@@ -142,7 +142,7 @@ ClassPnP 작동 채널 외에도 StorAHCI 및 Storahci는 다음 ETW 채널에�
 
 이러한 고급 로그 항목을 수집하려면 로그를 사용 설정하고 해당 펌웨어 업데이트 오류를 재현한 다음, 진단 로그를 저장합니다.
 
-다음은 다운로드할 이미지가 잘못 되었기 때문에 실패 한 SATA 장치의 펌웨어 업데이트 예입니다 (이벤트 ID: 258):
+다음은, 다운로드할 이미지가 잘못되어 SATA 장치의 펌웨어 업데이트가 오류를 일으키는 사례입니다(이벤트 ID: 258).
 
 ``` 
 EventData
@@ -174,11 +174,11 @@ Parameter8Value 0
 ```
 
 위 이벤트는 매개 변수 2~6에 상세한 장치 정보를 담고 있습니다. 여기서는 다양한 ATA 레지스터 값이 보입니다. ATA ACS 명세서는 마이크로코드 다운로드 명령의 실패에 대한 아래의 값을 디코딩하는 데 사용될 수 있습니다.
-- 반환 코드: 0 (0000 0000) (페이로드가 전송 되지 않았기 때문에 의미가 없음)
+- 반환 코드: 0 (0000 0000)(해당 없음 - 전송된 페이로드가 없으므로 의미 없음)
 - 기능: 15 (0000 1111) (비트 1은 ' 1 '로 설정 되 고 "abort"를 나타냄)
-- SectorCount: 0 (0000 0000) (해당 없음)
-- 드라이브 헤드: 160 (1010 0000) (해당 없음-사용 되지 않는 비트만 설정 됨)
-- 명령 146 (1001 0010) (비트 1은 sense 데이터의 가용성을 나타내는 ' 1 '로 설정 됨)
+- SectorCount: 0 (0000 0000)(해당 없음)
+- DriveHead: 160 (1010 0000)(해당 없음 – 사용되지 않는 비트만 설정됨)
+- 명령: 146 (1001 0010) (비트 1은 sense 데이터의 가용성을 나타내는 ' 1 '로 설정 됨)
 
 이를 통해 펌웨어 업데이트 작업이 해당 장치에 의해 중단되었음을 알 수 있습니다.
 

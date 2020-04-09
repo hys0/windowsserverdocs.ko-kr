@@ -1,7 +1,6 @@
 ---
 ms.assetid: e3d55565-ad45-4504-ad73-8103d1a92170
 title: 새 Windows Server 2012 Active Directory 자식 또는 트리 도메인 설치(수준 200)
-description: ''
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: d0944377739f43ea5d9b8d0d9c94c13e9f18985f
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f7244b76364c8e2ce7249af8e76825a08b2a75c8
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71390891"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80825336"
 ---
 # <a name="install-a-new-windows-server-2012-active-directory-child-or-tree-domain-level-200"></a>새 Windows Server 2012 Active Directory 자식 또는 트리 도메인 설치(수준 200)
 
@@ -28,22 +27,22 @@ ms.locfileid: "71390891"
   
 -   [배포](../../ad-ds/deploy/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-.md#BKMK_Deployment)  
   
-## <a name="BKMK_Workflow"></a>자식 및 트리 도메인 워크플로  
+## <a name="child-and-tree-domain-workflow"></a><a name="BKMK_Workflow"></a>자식 및 트리 도메인 워크플로  
 다음 다이어그램에서는 이전에 AD DS 역할을 설치하고 서버 관리자를 사용하여 기존 포리스트에서 새 도메인을 만드는 Active Directory 도메인 서비스 구성 마법사를 시작한 경우의 Active Directory 도메인 서비스 구성 프로세스를 보여 줍니다.  
   
 ![새 AD 자식 설치](media/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-/adds_childtreedeploy_beta1.png)  
   
-## <a name="BKMK_PS"></a>자식 및 트리 도메인 Windows PowerShell  
+## <a name="child-and-tree-domain-windows-powershell"></a><a name="BKMK_PS"></a>자식 및 트리 도메인 Windows PowerShell  
   
 |||  
 |-|-|  
 |**ADDSDeployment Cmdlet**|인수(**굵게** 표시된 인수는 필수 항목이며, *기울임꼴* 인수는 Windows PowerShell 또는 AD DS 구성 마법사를 사용하여 지정할 수 있음)|  
-|**설치-AddsDomain**|-SkipPreChecks<br /><br />***-NewDomainName***<br /><br />***-ParentDomainName***<br /><br />***-SafeModeAdministratorPassword***<br /><br />*-ADPrepCredential*<br /><br />-AllowDomainReinstall<br /><br />-Confirm<br /><br />*-CreateDNSDelegation*<br /><br />***-Credential***<br /><br />*-DatabasePath*<br /><br />*-DNSDelegationCredential*<br /><br />-NoDNSOnNetwork<br /><br />*-DomainMode*<br /><br />***-DomainType***<br /><br />-Force<br /><br />*-InstallDNS*<br /><br />*-LogPath*<br /><br />*-NewDomainNetBIOSName*<br /><br />*-NoGlobalCatalog*<br /><br />-NoNorebootoncompletion<br /><br />*-ReplicationSourceDC*<br /><br />*-SiteName*<br /><br />-SkipAutoConfigureDNS<br /><br />*-SYSVOLPath*<br /><br />*-Whatif*|  
+|**설치-AddsDomain**|-SkipPreChecks<p>***-NewDomainName***<p>***-ParentDomainName***<p>***-SafeModeAdministratorPassword***<p>*-ADPrepCredential*<p>-AllowDomainReinstall<p>-Confirm<p>*-CreateDNSDelegation*<p>***-Credential***<p>*-DatabasePath*<p>*-DNSDelegationCredential*<p>-NoDNSOnNetwork<p>*-DomainMode*<p>***-DomainType***<p>-Force<p>*-InstallDNS*<p>*-LogPath*<p>*-NewDomainNetBIOSName*<p>*-NoGlobalCatalog*<p>-NoNorebootoncompletion<p>*-ReplicationSourceDC*<p>*-SiteName*<p>-SkipAutoConfigureDNS<p>*-SYSVOLPath*<p>*-Whatif*|  
   
 > [!NOTE]  
 > **-credential** 인수는 현재 Enterprise Admins 그룹의 구성원으로 로그인되어 있지 않은 경우에만 필요하고, **-NewDomainNetBIOSName** 인수는 DNS 도메인 이름 접두사에 따라 자동으로 생성된 15자 이름을 변경하려는 경우 또는 이름이 15자를 초과하는 경우에 필요합니다.  
   
-## <a name="BKMK_Deployment"></a>배포가  
+## <a name="deployment"></a><a name="BKMK_Deployment"></a>배포가  
   
 ### <a name="deployment-configuration"></a>배포 구성  
 다음 스크린샷에서는 자식 도메인을 추가하기 위한 옵션을 보여 줍니다.  
@@ -135,7 +134,7 @@ Install-AddsDomain
   
 ```  
   
-마지막으로 난독 처리된 암호를 파일에 저장한 다음 일반 텍스트 암호를 표시하지 않고 나중에 다시 사용할 수 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
+마지막으로 난독 처리된 암호를 파일에 저장한 다음 일반 텍스트 암호를 표시하지 않고 나중에 다시 사용할 수 있습니다. 예를 들면 다음과 같습니다.  
   
 ```  
 $file = "c:\pw.txt"  
@@ -215,7 +214,7 @@ DNS 이름에 대한 자세한 내용은 [컴퓨터, 도메인, 사이트 및 OU
   
 **옵션 검토** 페이지에서 설치를 시작하기 전에 설정을 확인하고 이러한 설정이 요구 사항을 충족하는지도 확인할 수 있습니다. 이것이 서버 관리자를 사용할 때 설치를 중지할 수 있는 마지막 기회는 아닙니다. 구성을 계속하기 전에 설정을 확인하는 옵션일 뿐입니다.  
   
-서버 관리자의 **옵션 검토** 페이지는 현재 ADDSDeployment 구성을 단일 Windows PowerShell 스크립트로 포함하는 유니코드 텍스트 파일을 만들 수 있도록 **스크립트 보기** 단추(선택 사항)도 제공합니다. 이 단추를 통해 서버 관리자 그래픽 인터페이스를 Windows PowerShell 배포 스튜디오로 사용할 수 있습니다. Active Directory 도메인 서비스 구성 마법사를 사용하여 옵션을 구성하고 구성을 내보낸 다음 마법사를 취소합니다.  이 프로세스를 통해 향후 수정을 위해 사용하거나 직접 사용하기 위한 유효하고 구문상으로 정확한 샘플이 만들어집니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
+서버 관리자의 **옵션 검토** 페이지는 현재 ADDSDeployment 구성을 단일 Windows PowerShell 스크립트로 포함하는 유니코드 텍스트 파일을 만들 수 있도록 **스크립트 보기** 단추(선택 사항)도 제공합니다. 이 단추를 통해 서버 관리자 그래픽 인터페이스를 Windows PowerShell 배포 스튜디오로 사용할 수 있습니다. Active Directory 도메인 서비스 구성 마법사를 사용하여 옵션을 구성하고 구성을 내보낸 다음 마법사를 취소합니다.  이 프로세스를 통해 향후 수정을 위해 사용하거나 직접 사용하기 위한 유효하고 구문상으로 정확한 샘플이 만들어집니다. 예를 들면 다음과 같습니다.  
   
 ```  
 #  
@@ -258,7 +257,7 @@ Install-ADDSDomain `
   
 **필수 구성 요소 확인**에서는 이전 운영 체제에 영향을 주는 보안 변경 내용과 같은 관련 정보도 제공합니다.  
   
-특정 필수 구성 요소 검사에 대 한 자세한 내용은 참조 하십시오. [필수 구성 요소 확인](../../ad-ds/manage/AD-DS-Simplified-Administration.md#BKMK_PrereuisiteChecking)합니다.  
+특정 필수 구성 요소 확인에 대한 자세한 내용은 [필수 구성 요소 확인](../../ad-ds/manage/AD-DS-Simplified-Administration.md#BKMK_PrereuisiteChecking)을 참조하세요.  
   
 서버 관리자를 사용할 때는 **필수 구성 요소 확인** 을 무시할 수 없지만 AD DS 배포 cmdlet을 사용할 때는 다음 인수를 사용하여 프로세스를 건너뛸 수 있습니다.  
   

@@ -1,7 +1,6 @@
 ---
 ms.assetid: 155abe09-6360-4913-8dd9-7392d71ea4e6
 title: 문제 해결을 위한 컴퓨터 구성
-description: ''
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 08/07/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 53af8acd7da8f9008c88ad7c6c14b00e63801847
-ms.sourcegitcommit: 1f3ffff0af340868dcf3a2cfef5b8f8aea69d96d
+ms.openlocfilehash: d9d279615dc1f70ffdcff9e49a4aa619f0106a93
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78278558"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80822976"
 ---
 # <a name="configuring-a-computer-for-troubleshooting"></a>문제 해결을 위한 컴퓨터 구성
 
@@ -36,7 +35,7 @@ RSAT를 설치 하는 방법에 대 한 자세한 내용은 [원격 서버 관�
 
 ### <a name="configure-reliability-and-performance-monitor"></a>안정성 및 성능 모니터 구성
 
-Windows Server에는 성능 로그 및 경고, Server Performance Advisor를 비롯 하 여 이전 독립 실행형 도구의 기능을 결합 한 MMC (Microsoft Management Console) 스냅인 인 Windows 안정성 및 성능 모니터가 포함 되어 있습니다. 및 시스템 모니터. 이 스냅인은 데이터 수집기 집합과 이벤트 추적 세션을 사용자 지정 하는 GUI (그래픽 사용자 인터페이스)를 제공 합니다.
+Windows Server에는 Windows 안정성 및 성능 모니터 (MMC (Microsoft Management Console) 스냅인)가 포함 되어 성능 로그 및 경고, Server Performance Advisor, 시스템 모니터 등 이전 독립 실행형 도구의 기능을 결합 한 것입니다. 이 스냅인은 데이터 수집기 집합과 이벤트 추적 세션을 사용자 지정 하는 GUI (그래픽 사용자 인터페이스)를 제공 합니다.
 
 안정성 및 성능 모니터에는 시스템의 변경 내용을 추적 하 고 시스템 안정성의 변경과 비교 하 여 해당 관계에 대 한 그래픽 보기를 제공 하는 MMC 스냅인 인 안정성 모니터도 포함 됩니다.
 

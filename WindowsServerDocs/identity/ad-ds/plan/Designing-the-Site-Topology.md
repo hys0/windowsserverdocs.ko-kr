@@ -1,7 +1,6 @@
 ---
 ms.assetid: eeb919de-e21e-48d8-8186-e42adec6933f
 title: 사이트 토폴로지 디자인
-description: ''
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: d3ebc3bd764a8ed44e201d0fca5f85b06df8be9d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: e7b6267946217d5c5fb57496eb6bf54911b61e8a
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71408899"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80822603"
 ---
 # <a name="designing-the-site-topology"></a>사이트 토폴로지 디자인
 
@@ -36,7 +35,7 @@ ms.locfileid: "71408899"
   
 사이트 토폴로지 디자인을 완료 한 후에는 도메인 컨트롤러가 Windows Server 2008 Standard, Windows Server 2008 Enterprise 및 Windows Server 2008 Datacenter의 하드웨어 요구 사항을 충족 하는지 확인 해야 합니다.  
   
-## <a name="in-this-guide"></a>이 가이드의 내용  
+## <a name="in-this-guide"></a>설명서의 내용  
   
 -   [Active Directory 사이트 토폴로지 이해](../../ad-ds/plan/Understanding-Active-Directory-Site-Topology.md)  
   

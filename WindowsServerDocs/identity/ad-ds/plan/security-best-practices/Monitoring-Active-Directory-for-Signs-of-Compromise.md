@@ -1,7 +1,6 @@
 ---
 ms.assetid: a7ef2fba-b05c-4be2-93b2-b9456244c3ad
 title: 손상 징후에 대한 Active Directory 모니터링
-description: ''
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: e51b7ea151db1ca5d53a8cacef3b042e345175de
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 1d00ab702ab6b4ff4307f96f9e266a1cb3420197
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75949629"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80821146"
 ---
 # <a name="monitoring-active-directory-for-signs-of-compromise"></a>손상 징후에 대한 Active Directory 모니터링
 
@@ -162,7 +161,7 @@ Windows Server 2012, Windows Server 2008 R2 또는 Windows 2008을 실행 하는
 ##### <a name="distribution-group-management"></a>메일 그룹 관리  
 이 하위 멤버를 추가 또는 메일 그룹에서 제거할 때 또는 메일 그룹을 생성, 변경 또는 삭제 등의 메일 그룹 관리의 각 이벤트를 보고 합니다. 이 감사 정책 설정을 사용 하는 경우 관리자는 악의적이 고, 실수로 인 한 권한 있는 그룹 계정 생성을 검색 이벤트 추적 수 있습니다.  
   
-##### <a name="application-group-management"></a>애플리케이션 그룹 관리  
+##### <a name="application-group-management"></a>응용 프로그램 그룹 관리  
 이 하위 멤버를 추가 또는 애플리케이션 그룹에서 제거할 때 또는 애플리케이션 그룹 생성, 변경 또는 삭제와 같은 컴퓨터에서 애플리케이션 그룹 관리의 각 이벤트를 보고 합니다. 이 감사 정책 설정을 사용 하는 경우 관리자는 추적 이벤트를 애플리케이션 그룹 계정의 악의적이 고, 실수로 인 한 권한 있는 생성 수 있습니다.  
   
 ##### <a name="other-account-management-events"></a>다른 계정 관리 이벤트  
@@ -177,7 +176,7 @@ Windows Server 2012, Windows Server 2008 R2 또는 Windows 2008을 실행 하는
 이 하위 프로세스가 종료 될 때 보고 합니다.  
   
 ##### <a name="dpapi-activity"></a>DPAPI 활동  
-이 하위 암호화 하거나 암호 해독 데이터 보호 애플리케이션 프로그래밍 인터페이스 (DPAPI)로 호출을 보고 합니다. DPAPI는 저장 된 암호와 같은 기밀 정보 및 키 정보를 보호 하는 데 사용 됩니다.  
+이 하위 암호화 하거나 암호 해독 데이터 보호 응용 프로그래밍 인터페이스 (DPAPI)로 호출을 보고 합니다. DPAPI는 저장 된 암호와 같은 기밀 정보 및 키 정보를 보호 하는 데 사용 됩니다.  
   
 ##### <a name="rpc-events"></a>RPC 이벤트  
 이 하위 보고서 원격 프로시저 호출 (RPC) 연결 이벤트입니다.  
@@ -275,8 +274,8 @@ Windows Server 2012, Windows Server 2008 R2 또는 Windows 2008을 실행 하는
 ##### <a name="certification-services"></a>인증 서비스  
 이 하위 인증 서비스 작업을 수행할 때 보고 합니다.  
   
-##### <a name="application-generated"></a>생성 된 애플리케이션  
-이 하위 애플리케이션은 Windows 애플리케이션 프로그래밍 인터페이스 (Api)를 감사를 사용 하 여 감사 이벤트를 생성 하려고 할 때 보고 합니다.  
+##### <a name="application-generated"></a>생성 된 응용 프로그램  
+이 하위 애플리케이션은 Windows 응용 프로그래밍 인터페이스 (Api)를 감사를 사용 하 여 감사 이벤트를 생성 하려고 할 때 보고 합니다.  
   
 ##### <a name="handle-manipulation"></a>조작 처리  
 이 하위 개체에 대 한 핸들 열리거나 닫힐 때 보고 합니다. Sacl 사용 하 여 개체에만 생성 되며 작업을 시도한 핸들 SACL 항목을 일치 하는 경우에 이러한 이벤트를 발생 합니다. 핸들 조작 이벤트는 해당 개체 액세스 하위 범주 (예, 파일 시스템 또는 레지스트리)에 설정 되는 개체 유형에 생성 됩니다.  
@@ -293,7 +292,7 @@ Windows Server 2012, Windows Server 2008 R2 또는 Windows 2008을 실행 하는
 ##### <a name="other-object-access-events"></a>다른 개체 액세스 이벤트  
 이 하위 작업 스케줄러 작업 및 COM + 개체와 같은 다른 개체 액세스 관련 이벤트를 보고합니다.  
   
-#### <a name="system"></a>시스템  
+#### <a name="system"></a>System  
   
 ##### <a name="security-state-change"></a>보안 상태 변경  
 이 하위 보안 하위 시스템의 시작 및 중지 시기 등 시스템의 보안 상태에서 변경을 보고 합니다.  

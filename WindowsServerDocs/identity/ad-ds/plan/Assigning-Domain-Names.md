@@ -1,7 +1,6 @@
 ---
 ms.assetid: 73897497-b189-4305-b234-e057ffda163a
 title: 도메인 이름 할당
-description: ''
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 357c136f108c6d8e9e2a15dd9449ab61663079e2
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 0d605a2f0d0b98a65848f94be9803122c4492a8b
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71408992"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80822846"
 ---
 # <a name="assigning-domain-names"></a>도메인 이름 할당
 
@@ -31,7 +30,7 @@ ms.locfileid: "71408992"
 자세한 내용은 컴퓨터, 도메인, 사이트 및 Ou에 대 한 Active Directory의 명명 규칙 ([https://go.microsoft.com/fwlink/?LinkId=106629](https://go.microsoft.com/fwlink/?LinkId=106629))을 참조 하세요.  
   
 > [!NOTE]  
->  Windows Server 2008 및 Windows Server 2003의 Dcpromo.exe를 사용하면 단일 레이블 DNS 도메인 이름을 만들 수 있지만, 여러 가지 이유로 도메인에 단일 레이블 DNS 이름을 사용해서는 안 됩니다. Windows Server 2008 R2에서는 Dcpromo.exe를 사용하여 도메인에 단일 레이블 DNS 이름을 만들 수 없습니다. 자세한 내용은 https://go.microsoft.com/fwlink/?LinkId=92467를 참조 [하세요.](https://go.microsoft.com/fwlink/?LinkId=92467)   
+>  Windows Server 2008 및 Windows Server 2003의 Dcpromo.exe를 통해 단일 레이블 DNS 도메인 이름을 만들 수 있지만 몇 가지 이유 때문에 도메인에 대한 단일 레이블 DNS 도메인 이름을 사용하면 안 됩니다. Windows Server 2008 R2에서 Dcpromo.exe는 도메인에 대한 단일 레이블 DNS 도메인 이름을 만들 수 없습니다. 자세한 내용은 https://go.microsoft.com/fwlink/?LinkId=92467를 참조 [하세요.](https://go.microsoft.com/fwlink/?LinkId=92467)   
   
 도메인의 현재 NetBIOS 이름이 지역을 나타내는 데 적합 하지 않거나 접두사 명명 규칙을 충족 하지 못하는 경우 새 접두사를 선택 합니다. 이 경우 도메인의 NetBIOS 이름은 도메인의 DNS 접두사와 다릅니다.  
   

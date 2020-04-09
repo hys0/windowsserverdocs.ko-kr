@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 82b0035075c981d123ab3b90d56768940f65558e
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: dd3cc1c112560e77d0ab166ffb10a677b62f32e8
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71391115"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80825486"
 ---
 # <a name="install-a-windows-server-2012-active-directory-read-only-domain-controller-rodc-level-200"></a>Windows Server 2012 Active Directory RODC(읽기 전용 도메인 컨트롤러) 설치(수준 200)
 
@@ -33,12 +33,12 @@ ms.locfileid: "71391115"
   
 ![RODC 설치](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/adds_stagedcreation.png)  
   
-## <a name="BKMK_StagePS"></a>RODC 준비 Windows PowerShell  
+## <a name="stage-rodc-windows-powershell"></a><a name=BKMK_StagePS></a>RODC 준비 Windows PowerShell  
   
 |||  
 |-|-|  
 |**ADDSDeployment Cmdlet**|인수(**굵게** 표시된 인수는 필수 항목이며, *기울임꼴* 인수는 Windows PowerShell 또는 AD DS 구성 마법사를 사용하여 지정할 수 있음)|  
-|Add-addsreadonlydomaincontrolleraccount|-SkipPreChecks<br /><br />***-DomainControllerAccountName***<br /><br />***-DomainName***<br /><br />***-SiteName***<br /><br />*-AllowPasswordReplicationAccountName*<br /><br />***-Credential***<br /><br />*-DelegatedAdministratorAccountName*<br /><br />*-DenyPasswordReplicationAccountName*<br /><br />*-NoGlobalCatalog*<br /><br />*-InstallDNS*<br /><br />-ReplicationSourceDC|  
+|Add-addsreadonlydomaincontrolleraccount|-SkipPreChecks<p>***-DomainControllerAccountName***<p>***-DomainName***<p>***-SiteName***<p>*-AllowPasswordReplicationAccountName*<p>***-Credential***<p>*-DelegatedAdministratorAccountName*<p>*-DenyPasswordReplicationAccountName*<p>*-NoGlobalCatalog*<p>*-InstallDNS*<p>-ReplicationSourceDC|  
   
 > [!NOTE]  
 > **-credential** 인수는 현재 Domain Admins 그룹의 구성원으로 로그온되어 있지 않은 경우에만 필요합니다.  
@@ -48,12 +48,12 @@ ms.locfileid: "71391115"
   
 ![RODC 설치](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/adds_stageddeploy_beta1.png)  
   
-## <a name="BKMK_AttachPS"></a>RODC 연결 Windows PowerShell  
+## <a name="attach-rodc-windows-powershell"></a><a name=BKMK_AttachPS></a>RODC 연결 Windows PowerShell  
   
 |||  
 |-|-|  
 |**ADDSDeployment Cmdlet**|인수(**굵게** 표시된 인수는 필수 항목이며, *기울임꼴* 인수는 Windows PowerShell 또는 AD DS 구성 마법사를 사용하여 지정할 수 있음)|  
-|Install-AddsDomaincontroller|-SkipPreChecks<br /><br />***-DomainName***<br /><br />*-SafeModeAdministratorPassword*<br /><br />*-ApplicationPartitionsToReplicate*<br /><br />*-CreateDNSDelegation*<br /><br />***-Credential***<br /><br />-CriticalReplicationOnly<br /><br />*-DatabasePath*<br /><br />*-DNSDelegationCredential*<br /><br />*-InstallationMediaPath*<br /><br />*-LogPath*<br /><br />-Norebootoncompletion<br /><br />*-ReplicationSourceDC*<br /><br />*-SystemKey*<br /><br />*-SYSVOLPath*<br /><br />***-UseExistingAccount***|  
+|Install-AddsDomaincontroller|-SkipPreChecks<p>***-DomainName***<p>*-SafeModeAdministratorPassword*<p>*-ApplicationPartitionsToReplicate*<p>*-CreateDNSDelegation*<p>***-Credential***<p>-CriticalReplicationOnly<p>*-DatabasePath*<p>*-DNSDelegationCredential*<p>*-InstallationMediaPath*<p>*-LogPath*<p>-Norebootoncompletion<p>*-ReplicationSourceDC*<p>*-SystemKey*<p>*-SYSVOLPath*<p>***-UseExistingAccount***|  
   
 > [!NOTE]  
 > **-credential** 인수는 현재 Domain Admins 그룹의 구성원으로 로그온되어 있지 않은 경우에만 필요합니다.  
@@ -76,7 +76,7 @@ Add-addsreadonlydomaincontrolleraccount
   
 ```  
   
-### <a name="welcome"></a>시작  
+### <a name="welcome"></a>환영  
 ![RODC 설치](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/ADDS_SMI_TR_WelcomeStage1.png)  
   
 **Active Directory Domain Services 설치 마법사 시작** 대화 상자에는 **고급 모드 설치 사용**이라는 옵션이 있습니다. 이 옵션을 선택하고 **다음**을 클릭하면 암호 복제 정책 옵션이 표시됩니다. 암호 복제 정책 옵션에 기본값을 사용하려면 이 옵션의 선택을 취소합니다(이 섹션의 뒷부분에 자세히 설명되어 있음).  
@@ -84,7 +84,7 @@ Add-addsreadonlydomaincontrolleraccount
 ### <a name="network-credentials"></a>네트워크 자격 증명  
 ![RODC 설치](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/ADDS_SMI_TR_Stage1Creds.png)  
   
-**네트워크 자격 증명** 대화 상자의 도메인 이름 옵션에는 기본적으로 Active Directory 관리 센터의 대상 도메인이 표시됩니다. 현재 자격 증명이 기본적으로 사용됩니다. 현재 자격 증명에 Domain Admins 그룹의 구성원 자격이 포함되지 않은 경우 **대체 자격 증명**을 클릭한 다음 **설정** 을 클릭하여 Domain Admins의 구성원인 사용자 이름 및 암호를 마법사에 제공합니다.  
+**네트워크 자격 증명** 대화 상자의 도메인 이름 옵션에는 기본적으로 Active Directory 관리 센터의 대상 도메인이 표시됩니다. 현재 자격 증명이 기본적으로 사용됩니다. 현재 자격 증명에 Domain Admins 그룹의 구성원 자격이 포함되지 않은 경우 **대체 자격 증명**을 클릭한 다음 **설정**을 클릭하여 Domain Admins의 구성원인 사용자 이름 및 암호를 마법사에 제공합니다.  
   
 상응하는 ADDSDeployment Windows PowerShell 인수는 다음과 같습니다.  
   
@@ -94,14 +94,14 @@ Add-addsreadonlydomaincontrolleraccount
   
 준비 시스템은 Windows Server 2008 R2의 직접 포트이며, 새로운 Adprep 기능을 제공하지 않습니다. 준비된 RODC 계정을 배포하려면 자동 rodcprep 작업이 실행되도록 해당 도메인에 준비되지 않은 RODC를 먼저 배포하거나, 아니면 adprep.exe /rodcprep를 수동으로 먼저 실행해야 합니다.  
   
-그러지 않으면 "이 "adprep /rodcprep"가 아직 실행되지 않았으므로 이 도메인에 읽기 전용 도메인 컨트롤러를 설치할 수 없습니다." 오류가 발생합니다.  
+그렇지 않으면 adprep/rodcprep가 아직 실행 되지 않았으므로이 도메인에 읽기 전용 도메인 컨트롤러를 설치할 수 없다는 오류가 표시 됩니다.  
   
 ![RODC 설치](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/ADDS_SMI_TR_RODCPrepNotRunError.png)  
   
 ### <a name="specify-the-computer-name"></a>컴퓨터 이름 지정  
 ![RODC 설치](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/ADDS_SMI_TR_Stage1CompName.png)  
   
-**컴퓨터 이름을 지정** 대화 상자에는 존재하지 않는 도메인 컨트롤러의 단일 레이블 **컴퓨터 이름**을 입력해야 합니다. 나중에 구성 하 고이 계정에 연결 하는 도메인 컨트롤러의 이름이 동일 해야 합니다. 그렇지 않으면 수준 올리기 작업에서 준비 된 계정을 검색 하지 않습니다.  
+**컴퓨터 이름을 지정** 대화 상자에는 존재하지 않는 도메인 컨트롤러의 단일 레이블 **컴퓨터 이름**을 입력해야 합니다. 구성한 후 나중에 이 계정에 연결하는 도메인 컨트롤러의 이름이 이 이름과 같아야 합니다. 그렇지 않으면 수준 올리기 작업에서 준비된 계정을 검색하지 못합니다.  
   
 상응하는 ADDSDeployment Windows PowerShell 인수는 다음과 같습니다.  
   
@@ -123,7 +123,7 @@ Add-addsreadonlydomaincontrolleraccount
 ### <a name="additional-domain-controller-options"></a>추가 도메인 컨트롤러 옵션  
 ![RODC 설치](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/ADDS_SMI_TR_Stage1DCOptions.png)  
   
-**추가 도메인 컨트롤러 옵션** 대화 상자에서는 도메인 컨트롤러에 **DNS 서버** 및 **글로벌 카탈로그**역할을 포함하도록 지정할 수 있습니다. 읽기 전용 도메인 컨트롤러에서 DNS 및 GC 서비스를 제공하는 것이 좋으므로 둘 다 기본적으로 설치됩니다. RODC 역할의 한 가지 의도는 광역 네트워크를 사용할 수 없으며 해당 DNS 및 글로벌 카탈로그 서비스 없이는 지점의 컴퓨터에서 AD DS 리소스 및 기능을 사용할 수 없는 지점 시나리오입니다.  
+**추가 도메인 컨트롤러 옵션** 대화 상자에서는 도메인 컨트롤러에 **DNS 서버** 및 **글로벌 카탈로그** 역할을 포함하도록 지정할 수 있습니다. 읽기 전용 도메인 컨트롤러에서 DNS 및 GC 서비스를 제공하는 것이 좋으므로 둘 다 기본적으로 설치됩니다. RODC 역할의 한 가지 의도는 광역 네트워크를 사용할 수 없으며 해당 DNS 및 글로벌 카탈로그 서비스 없이는 지점의 컴퓨터에서 AD DS 리소스 및 기능을 사용할 수 없는 지점 시나리오입니다.  
   
 **RODC(읽기 전용 도메인 컨트롤러)** 옵션은 미리 선택되며 사용하지 않도록 설정할 수 없습니다. 상응하는 ADDSDeployment Windows PowerShell 인수는 다음과 같습니다.  
   
@@ -163,7 +163,7 @@ Add-addsreadonlydomaincontrolleraccount
 ### <a name="delegation-of-rodc-installation-and-administration"></a>RODC 설치 및 관리 위임  
 ![RODC 설치](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/ADDS_SMI_TR_Stage1DelegateAdmin.png)  
   
-**RODC 설치 및 관리 위임** 대화 상자에서는 RODC 컴퓨터 계정에 서버를 연결할 수 있는 사용자 또는 이러한 사용자가 포함된 그룹을 구성할 수 있습니다. **설정**을 클릭하여 사용자 또는 그룹에 대한 도메인을 찾아볼 수 있습니다. 이 대화 상자에 지정된 사용자 또는 그룹에는 RODC에 대한 로컬 관리 권한이 부여됩니다. 지정한 사용자 또는 지정된 된 그룹의 구성원 컴퓨터의 관리자 그룹과 동등한 권한으로 RODC에서 작업을 수행할 수 있습니다. Domain Admins 또는 도메인 기본 제공 Administrators 그룹의 구성원은 *아닙니다* .  
+**RODC 설치 및 관리 위임** 대화 상자에서는 RODC 컴퓨터 계정에 서버를 연결할 수 있는 사용자 또는 이러한 사용자가 포함된 그룹을 구성할 수 있습니다. **설정**을 클릭하여 사용자 또는 그룹에 대한 도메인을 찾아볼 수 있습니다. 이 대화 상자에 지정된 사용자 또는 그룹에는 RODC에 대한 로컬 관리 권한이 부여됩니다. 지정한 사용자 또는 지정된 된 그룹의 구성원 컴퓨터의 관리자 그룹과 동등한 권한으로 RODC에서 작업을 수행할 수 있습니다. Domain Admins 또는 도메인 기본 제공 Administrators 그룹의 구성원은 *아닙니다*.  
   
 Domain Admins 그룹에 분기 관리자 구성원 자격을 부여하지 않고 지점 관리를 위임하려면 이 옵션을 사용합니다. RODC 관리를 위임하지 않아도 됩니다.  
   
@@ -176,7 +176,7 @@ Domain Admins 그룹에 분기 관리자 구성원 자격을 부여하지 않고
 ### <a name="summary"></a>요약  
 ![RODC 설치](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/ADDS_SMI_TR_Stage1Summary.png)  
   
-**요약** 대화 상자에서는 설정을 확인할 수 있습니다. 마법사에서 준비된 계정을 만들기 전에 설치를 중지할 수 있는 마지막 기회입니다. 준비된 RODC 컴퓨터 계정을 만들 준비가 완료되었으면 **다음**을 클릭합니다.  **설정 내보내기** 를 클릭하여 응답 파일을 오래된 dcpromo 무인 파일 형식으로 저장합니다.  
+**요약** 대화 상자에서는 설정을 확인할 수 있습니다. 마법사에서 준비된 계정을 만들기 전에 설치를 중지할 수 있는 마지막 기회입니다. 준비된 RODC 컴퓨터 계정을 만들 준비가 완료되었으면 **다음**을 클릭합니다.  **설정 내보내기**를 클릭하여 응답 파일을 오래된 dcpromo 무인 파일 형식으로 저장합니다.  
   
 ### <a name="creation"></a>만들기  
 ![RODC 설치](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/ADDS_SMI_TR_Stage1InstallProgress.png)  
@@ -194,7 +194,7 @@ Add-addsreadonlydomaincontrolleraccount
   
 필수 및 선택적 인수는 [RODC 준비 Windows PowerShell](../../../ad-ds/deploy/RODC/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-.md#BKMK_StagePS)을 참조하세요.  
   
-**Add-addsreadonlydomaincontrolleraccount** 는 두 단계(필수 구성 요소 확인 및 설치)로 구성된 하나의 작업만 수행하므로 다음 스크린샷에는 최소 필수 인수를 사용하는 설치 단계가 나와 있습니다.  
+**Add-addsreadonlydomaincontrolleraccount**는 두 단계(필수 구성 요소 확인 및 설치)로 구성된 하나의 작업만 수행하므로 다음 스크린샷에는 최소 필수 인수를 사용하는 설치 단계가 나와 있습니다.  
   
 ![RODC 설치](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/ADDS_PSAddRODC.png)  
   
@@ -207,7 +207,7 @@ RODC 준비 작업에서는 Active Directory에 RODC 컴퓨터 계정을 만듭�
 > [!IMPORTANT]  
 > 더 이상 Active Directory 관리 센터에서 읽기 전용 도메인 컨트롤러 컴퓨터 계정에 서버를 연결할 필요가 없습니다. 서버 관리자와 Active Directory Domain Services 구성 마법사 또는 ADDSDeployment Windows PowerShell 모듈 cmdlet **Install-AddsDomainController**를 사용하여 새 RODC를 해당 준비된 계정에 연결할 수 있습니다. 이러한 단계는 RODC 컴퓨터 계정을 준비할 때 결정한 구성 옵션이 준비된 RODC 컴퓨터 계정에 포함되어 있다는 점을 제외하고는 기존 도메인에 새 쓰기 가능한 도메인 컨트롤러를 추가하는 것과 유사합니다.  
   
-## <a name="attaching"></a>연결  
+## <a name="attaching"></a>추가 비교  
   
 ### <a name="deployment-configuration"></a>배포 구성  
 ![RODC 설치](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/ADDS_SMI_TR_RODCDeployConfig.png)  
@@ -229,10 +229,10 @@ Install-AddsDomainController
 ### <a name="domain-controller-options"></a>도메인 컨트롤러 옵션  
 ![RODC 설치](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/ADDS_SMI_TR_Stage2DCOptions.png)  
   
-**도메인 컨트롤러 옵션** 페이지에 도메인 컨트롤러 옵션은 새로운 도메인 컨트롤러에 대 한 표시 합니다. 이 페이지가 로드되면 Active Directory Domain Services 구성 마법사에서 기존 도메인 컨트롤러로 LDAP 쿼리를 보내 비어 있는 계정을 확인합니다. 쿼리에서 현재 컴퓨터와 동일한 이름을 공유 하는 비어 있는 도메인 컨트롤러 컴퓨터 계정을 찾은 경우 페이지 맨 위에 "**대상 서버 이름과 일치 하는 미리 만든 RODC 계정이 디렉터리에 있습니다." 라는 정보 메시지가 표시 됩니다. 기존 RODC 계정을 사용할지 또는이 도메인 컨트롤러를 다시 설치할지를 선택**하십시오. " 마법사에서는 **기존 RODC 계정 사용**을 기본 구성으로 사용합니다.  
+**도메인 컨트롤러 옵션** 페이지에는 새 도메인 컨트롤러에 대한 도메인 컨트롤러 옵션이 표시됩니다. 이 페이지가 로드되면 Active Directory Domain Services 구성 마법사에서 기존 도메인 컨트롤러로 LDAP 쿼리를 보내 비어 있는 계정을 확인합니다. 쿼리에서 현재 컴퓨터와 동일한 이름을 공유 하는 비어 있는 도메인 컨트롤러 컴퓨터 계정을 찾으면 마법사는 **디렉터리에 있는 대상 서버의 이름과 일치 하는 미리 만들어진 RODC 계정을 읽는 페이지 맨 위에 정보 메시지를 표시 합니다. 기존 RODC 계정을 사용할지 또는이 도메인 컨트롤러를 다시 설치할지를 선택**합니다. 마법사에서는 **기존 RODC 계정 사용**을 기본 구성으로 사용합니다.  
   
 > [!IMPORTANT]  
-> 도메인 컨트롤러에 물리적인 문제가 발생하여 정상적인 작동 상태로 되돌릴 수 없는 경우 **이 도메인 컨트롤러 다시 설치** 옵션을 사용할 수 있습니다. 그러면 도메인 컨트롤러 컴퓨터 계정 및 개체 메타 데이터를 Active Directory에 남겨 두어 대체 도메인 컨트롤러를 구성할 때 시간이 절약 됩니다. *같은 이름*으로 새 컴퓨터를 설치하고 도메인의 도메인 컨트롤러로 수준을 올립니다. **이 도메인 컨트롤러를 다시 설치** 옵션은 Active Directory (메타 데이터 정리)에서 도메인 컨트롤러 개체의 메타 데이터를 제거 하는 경우에 사용할 수 없습니다.  
+> 도메인 컨트롤러에 물리적인 문제가 발생하여 정상적인 작동 상태로 되돌릴 수 없는 경우 **이 도메인 컨트롤러 다시 설치** 옵션을 사용할 수 있습니다. 그러면 도메인 컨트롤러 컴퓨터 계정 및 개체 메타데이터가 Active Directory에 그대로 유지되므로 대체 도메인 컨트롤러를 구성할 때 시간이 절약됩니다. *같은 이름*으로 새 컴퓨터를 설치하고 도메인의 도메인 컨트롤러로 수준을 올립니다. **이 도메인 컨트롤러를 다시 설치** 옵션은 Active Directory (메타 데이터 정리)에서 도메인 컨트롤러 개체의 메타 데이터를 제거 하는 경우에 사용할 수 없습니다.  
   
 RODC 컴퓨터 계정에 서버를 연결할 때는 도메인 컨트롤러 옵션을 구성할 수 없습니다. 도메인 컨트롤러 옵션은 준비된 RODC 컴퓨터 계정을 만들 때 구성합니다.  
   
@@ -265,7 +265,7 @@ RODC 컴퓨터 계정에 서버를 연결할 때는 도메인 컨트롤러 옵�
 예를 들어 **Read-Host** cmdlet을 사용하여 수동으로 암호를 물어 사용자에게 보안 문자열을 물을 수 있습니다.  
   
 ```  
--safemodeadministratorpassword (read-host -prompt "Password:" -assecurestring)  
+-safemodeadministratorpassword (read-host -prompt Password: -assecurestring)  
   
 ```  
   
@@ -275,14 +275,14 @@ RODC 컴퓨터 계정에 서버를 연결할 때는 도메인 컨트롤러 옵�
 변환된 일반 텍스트 변수로 보안 문자열을 제공할 수도 있습니다(권장되지 않음).  
   
 ```  
--safemodeadministratorpassword (convertto-securestring "Password1" -asplaintext -force)  
+-safemodeadministratorpassword (convertto-securestring Password1 -asplaintext -force)  
 ```  
   
-마지막으로 난독 처리된 암호를 파일에 저장한 다음 일반 텍스트 암호를 표시하지 않고 나중에 다시 사용할 수 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
+마지막으로 난독 처리된 암호를 파일에 저장한 다음 일반 텍스트 암호를 표시하지 않고 나중에 다시 사용할 수 있습니다. 예를 들면 다음과 같습니다.  
   
 ```  
-$file = "c:\pw.txt"  
-$pw = read-host -prompt "Password:" -assecurestring  
+$file = c:\pw.txt  
+$pw = read-host -prompt Password: -assecurestring  
 $pw | ConvertFrom-SecureString | Set-Content $file  
   
 -safemodeadministratorpassword (Get-Content $File | ConvertTo-SecureString)  
@@ -299,8 +299,9 @@ $pw | ConvertFrom-SecureString | Set-Content $file
   
 또한 IFM(미디어에서 설치) 옵션을 통해 백업된 미디어를 사용하여 도메인 컨트롤러를 설치하도록 선택할 수도 있습니다. **미디어에서 설치** 확인란을 선택하면 찾아보기 옵션이 제공되며 **확인** 을 클릭하여 제공된 경로가 유효한 미디어임을 확인해야 합니다.
 
-IFM 원본에 대 한 지침: • IFM 옵션에 사용 되는 미디어는 운영 체제 버전이 동일한 다른 기존 Windows Server 도메인 컨트롤러에서 Windows Server 백업 또는 Ntdsutil.exe를 사용 하 여 만들어집니다. 예를 들어 windows server 2008 R2 또는 이전 운영 체제를 사용 하 여 Windows Server 2012 도메인 컨트롤러용 미디어를 만들 수 없습니다.
-• IFM 원본 데이터는 쓰기 가능한 도메인 컨트롤러에서 가져온 것 이어야 합니다. RODC의 원본은 기술적으로 새 RODC를 만들기 위해 작동 하지만, IFM 원본 RODC가 복제 하지 않는 거짓 긍정 복제 경고가 발생 합니다.
+IFM 원본에 대 한 지침:
+*    IFM 옵션에서 사용 하는 미디어는 운영 체제 버전이 동일한 다른 기존 Windows Server 도메인 컨트롤러에서 Windows Server 백업 또는 Ntdsutil.exe를 사용 하 여 만듭니다. 예를 들어 windows server 2008 R2 또는 이전 운영 체제를 사용 하 여 Windows Server 2012 도메인 컨트롤러용 미디어를 만들 수 없습니다.
+*    IFM 원본 데이터는 쓰기 가능한 도메인 컨트롤러에서 가져온 것 이어야 합니다. RODC의 원본은 기술적으로 새 RODC를 만들기 위해 작동 하지만, IFM 원본 RODC가 복제 하지 않는 거짓 긍정 복제 경고가 발생 합니다.
 
 IFM의 변경 내용에 대한 자세한 내용은 [Ntdsutil.exe 미디어에서 설치 변경 내용](../../../ad-ds/deploy/Simplified-Administration-Appendix.md#BKMK_IFM)을 참조하세요. SYSKEY로 보호된 미디어를 사용하는 경우 검증하는 동안 서버 관리자에는 이미지 암호를 제공하라는 메시지가 표시됩니다. 
   
@@ -328,7 +329,7 @@ IFM의 변경 내용에 대한 자세한 내용은 [Ntdsutil.exe 미디어에서
 ### <a name="review-options-and-view-script"></a>옵션 검토 및 스크립트 보기  
 ![RODC 설치](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/ADDS_SMI_TR_Stage2ReviewOptions.png)  
   
-**옵션 검토** 페이지에서 설치를 시작하기 전에 설정을 확인하고 이러한 설정이 요구 사항을 충족하는지도 확인할 수 있습니다. 서버 관리자를 사용하여 설치를 중지할 수 있는 마지막 기회는 아닙니다. 이 페이지에서는 단지 구성을 계속하기 전에 설정을 검토하고 확인합니다. 서버 관리자의 **옵션 검토** 페이지는 현재 ADDSDeployment 구성을 단일 Windows PowerShell 스크립트로 포함하는 유니코드 텍스트 파일을 만들 수 있도록 **스크립트 보기** 단추(선택 사항)도 제공합니다. 이 단추를 통해 서버 관리자 그래픽 인터페이스를 Windows PowerShell 배포 스튜디오로 사용할 수 있습니다. Active Directory 도메인 서비스 구성 마법사를 사용하여 옵션을 구성하고 구성을 내보낸 다음 마법사를 취소합니다. 이 프로세스를 통해 향후 수정을 위해 사용하거나 직접 사용하기 위한 유효하고 구문상으로 정확한 샘플이 만들어집니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
+**옵션 검토** 페이지에서 설치를 시작하기 전에 설정을 확인하고 이러한 설정이 요구 사항을 충족하는지도 확인할 수 있습니다. 서버 관리자를 사용하여 설치를 중지할 수 있는 마지막 기회는 아닙니다. 이 페이지에서는 단지 구성을 계속하기 전에 설정을 검토하고 확인합니다. 서버 관리자의 **옵션 검토** 페이지는 현재 ADDSDeployment 구성을 단일 Windows PowerShell 스크립트로 포함하는 유니코드 텍스트 파일을 만들 수 있도록 **스크립트 보기** 단추(선택 사항)도 제공합니다. 이 단추를 통해 서버 관리자 그래픽 인터페이스를 Windows PowerShell 배포 스튜디오로 사용할 수 있습니다. Active Directory 도메인 서비스 구성 마법사를 사용하여 옵션을 구성하고 구성을 내보낸 다음 마법사를 취소합니다. 이 프로세스를 통해 향후 수정을 위해 사용하거나 직접 사용하기 위한 유효하고 구문상으로 정확한 샘플이 만들어집니다. 예를 들면 다음과 같습니다.  
   
 ```  
 #  
@@ -339,10 +340,10 @@ Import-Module ADDSDeployment
 Install-ADDSDomainController `  
 -Credential (Get-Credential) `  
 -CriticalReplicationOnly:$false `  
--DatabasePath "C:\Windows\NTDS" `  
--DomainName "corp.contoso.com" `  
--LogPath "C:\Windows\NTDS" `  
--SYSVOLPath "C:\Windows\SYSVOL" `  
+-DatabasePath C:\Windows\NTDS `  
+-DomainName corp.contoso.com `  
+-LogPath C:\Windows\NTDS `  
+-SYSVOLPath C:\Windows\SYSVOL `  
 -UseExistingAccount:$true `  
 -Norebootoncompletion:$false  
 -Force:$true  
@@ -363,7 +364,7 @@ Install-ADDSDomainController `
   
 새 포리스트 루트 도메인을 설치할 때 서버 관리자 Active Directory 도메인 서비스 구성 마법사는 일련의 직렬화된 모듈식 테스트를 호출합니다. 이러한 테스트에서는 제안된 복구 옵션을 알려 줍니다. 필요한 만큼 여러 번 테스트를 실행할 수 있습니다. 모든 필수 구성 요소 테스트가 통과할 때까지 도메인 컨트롤러 설치 프로세스를 계속할 수 없습니다.  
   
-**필수 구성 요소 확인**에서는 이전 운영 체제에 영향을 주는 보안 변경 내용과 같은 관련 정보도 제공합니다. 필수 구성 요소 검사에 대 한 자세한 내용은 참조 [필수 구성 요소 확인](../../../ad-ds/manage/AD-DS-Simplified-Administration.md#BKMK_PrereuisiteChecking)합니다.  
+**필수 구성 요소 확인**에서는 이전 운영 체제에 영향을 주는 보안 변경 내용과 같은 관련 정보도 제공합니다. 필수 구성 요소 확인에 대한 자세한 내용은 [필수 구성 요소 확인](../../../ad-ds/manage/AD-DS-Simplified-Administration.md#BKMK_PrereuisiteChecking)을 참조하세요.  
   
 서버 관리자를 사용할 때는 **필수 구성 요소 확인** 을 무시할 수 없지만 AD DS 배포 cmdlet을 사용할 때는 다음 인수를 사용하여 프로세스를 건너뛸 수 있습니다.  
   
@@ -395,7 +396,7 @@ Install-addsdomaincontroller
   
 필수 및 선택적 인수는 [RODC 연결 Windows PowerShell](../../../ad-ds/deploy/RODC/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-.md#BKMK_AttachPS)을 참조하세요.  
   
-**Install-addsdomaincontroller** cmdlet은 두 단계(필수 구성 요소 확인 및 설치)만 수행합니다. 아래 두 그림에는 최소 필수 인수인 **-domainname**, **-useexistingaccount**및 **-credential**을 사용한 설치 단계가 나와 있습니다. 서버 관리자와 마찬가지로 **Install-ADDSDomainController** 에서도 수준 올리기 후 서버가 자동으로 다시 부팅됨을 미리 알려 줍니다.  
+**Install-addsdomaincontroller** cmdlet은 두 단계(필수 구성 요소 확인 및 설치)만 수행합니다. 아래 두 그림에는 최소 필수 인수인 **-domainname**, **-useexistingaccount** 및 **-credential**을 사용한 설치 단계가 나와 있습니다. 서버 관리자와 마찬가지로 **Install-ADDSDomainController**에서도 수준 올리기 후 서버가 자동으로 다시 부팅됨을 미리 알려 줍니다.  
   
 ![RODC 설치](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/ADDS_PSStage2.png)  
   
@@ -421,7 +422,7 @@ Install-addsdomaincontroller
 |||  
 |-|-|  
 |**ADDSDeployment Cmdlet**|인수(**굵게** 표시된 인수는 필수 항목이며, *기울임꼴* 인수는 Windows PowerShell 또는 AD DS 구성 마법사를 사용하여 지정할 수 있음)|  
-|Install-AddsDomainController|-SkipPreChecks<br /><br />***-DomainName***<br /><br />*-SafeModeAdministratorPassword*<br /><br />***-SiteName***<br /><br />*-ApplicationPartitionsToReplicate*<br /><br />*-CreateDNSDelegation*<br /><br />***-Credential***<br /><br />*-CriticalReplicationOnly*<br /><br />*-DatabasePath*<br /><br />*-DNSDelegationCredential*<br /><br />-DNSOnNetwork<br /><br />*-InstallationMediaPath*<br /><br />*-InstallDNS*<br /><br />*-LogPath*<br /><br />-MoveInfrastructureOperationMasterRoleIfNecessary<br /><br />*-NoGlobalCatalog*<br /><br />-Norebootoncompletion<br /><br />*-ReplicationSourceDC*<br /><br />-SkipAutoConfigureDNS<br /><br />*-SystemKey*<br /><br />*-SYSVOLPath*<br /><br />*-AllowPasswordReplicationAccountName*<br /><br />*-DelegatedAdministratorAccountName*<br /><br />*-DenyPasswordReplicationAccountName*<br /><br />***-ReadOnlyReplica***|  
+|Install-AddsDomainController|-SkipPreChecks<p>***-DomainName***<p>*-SafeModeAdministratorPassword*<p>***-SiteName***<p>*-ApplicationPartitionsToReplicate*<p>*-CreateDNSDelegation*<p>***-Credential***<p>*-CriticalReplicationOnly*<p>*-DatabasePath*<p>*-DNSDelegationCredential*<p>-DNSOnNetwork<p>*-InstallationMediaPath*<p>*-InstallDNS*<p>*-LogPath*<p>-MoveInfrastructureOperationMasterRoleIfNecessary<p>*-NoGlobalCatalog*<p>-Norebootoncompletion<p>*-ReplicationSourceDC*<p>-SkipAutoConfigureDNS<p>*-SystemKey*<p>*-SYSVOLPath*<p>*-AllowPasswordReplicationAccountName*<p>*-DelegatedAdministratorAccountName*<p>*-DenyPasswordReplicationAccountName*<p>***-ReadOnlyReplica***|  
   
 > [!NOTE]  
 > **-credential** 인수는 현재 Domain Admins 그룹의 구성원으로 로그온되어 있지 않은 경우에만 필요합니다.  
@@ -482,7 +483,7 @@ Install-AddsDomainController
 예를 들어 **Read-Host** cmdlet을 사용하여 수동으로 암호를 물어 사용자에게 보안 문자열을 물을 수 있습니다.  
   
 ```  
--safemodeadministratorpassword (read-host -prompt "Password:" -assecurestring)  
+-safemodeadministratorpassword (read-host -prompt Password: -assecurestring)  
   
 ```  
   
@@ -492,14 +493,14 @@ Install-AddsDomainController
 변환된 일반 텍스트 변수로 보안 문자열을 제공할 수도 있습니다(권장되지 않음).  
   
 ```  
--safemodeadministratorpassword (convertto-securestring "Password1" -asplaintext -force)  
+-safemodeadministratorpassword (convertto-securestring Password1 -asplaintext -force)  
 ```  
   
-마지막으로 난독 처리된 암호를 파일에 저장한 다음 일반 텍스트 암호를 표시하지 않고 나중에 다시 사용할 수 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
+마지막으로 난독 처리된 암호를 파일에 저장한 다음 일반 텍스트 암호를 표시하지 않고 나중에 다시 사용할 수 있습니다. 예를 들면 다음과 같습니다.  
   
 ```  
-$file = "c:\pw.txt"  
-$pw = read-host -prompt "Password:" -assecurestring  
+$file = c:\pw.txt  
+$pw = read-host -prompt Password: -assecurestring  
 $pw | ConvertFrom-SecureString | Set-Content $file  
   
 -safemodeadministratorpassword (Get-Content $File | ConvertTo-SecureString)  
@@ -556,8 +557,9 @@ RODC에서 암호를 캐시할 수 없으며 쓰기 가능한 도메인 컨트�
   
 또한 IFM(미디어에서 설치) 옵션을 통해 백업된 미디어를 사용하여 도메인 컨트롤러를 설치하도록 선택할 수도 있습니다. **미디어에서 설치** 확인란을 선택하면 찾아보기 옵션이 제공되며 **확인** 을 클릭하여 제공된 경로가 유효한 미디어임을 확인해야 합니다.
 
-IFM 원본에 대 한 지침: • IFM 옵션에 사용 되는 미디어는 운영 체제 버전이 동일한 다른 기존 Windows Server 도메인 컨트롤러에서 Windows Server 백업 또는 Ntdsutil.exe를 사용 하 여 만들어집니다. 예를 들어 windows server 2008 R2 또는 이전 운영 체제를 사용 하 여 Windows Server 2012 도메인 컨트롤러용 미디어를 만들 수 없습니다.
-• IFM 원본 데이터는 쓰기 가능한 도메인 컨트롤러에서 가져온 것 이어야 합니다. RODC의 원본은 기술적으로 새 RODC를 만들기 위해 작동 하지만, IFM 원본 RODC가 복제 하지 않는 거짓 긍정 복제 경고가 발생 합니다.
+IFM 원본에 대 한 지침:
+*    IFM 옵션에서 사용 하는 미디어는 운영 체제 버전이 동일한 다른 기존 Windows Server 도메인 컨트롤러에서 Windows Server 백업 또는 Ntdsutil.exe를 사용 하 여 만듭니다. 예를 들어 windows server 2008 R2 또는 이전 운영 체제를 사용 하 여 Windows Server 2012 도메인 컨트롤러용 미디어를 만들 수 없습니다.
+*    IFM 원본 데이터는 쓰기 가능한 도메인 컨트롤러에서 가져온 것 이어야 합니다. RODC의 원본은 기술적으로 새 RODC를 만들기 위해 작동 하지만, IFM 원본 RODC가 복제 하지 않는 거짓 긍정 복제 경고가 발생 합니다.
 
 IFM의 변경 내용에 대한 자세한 내용은 [Ntdsutil.exe 미디어에서 설치 변경 내용](../../../ad-ds/deploy/Simplified-Administration-Appendix.md#BKMK_IFM)을 참조하세요. SYSKEY로 보호된 미디어를 사용하는 경우 검증하는 동안 서버 관리자에는 이미지 암호를 제공하라는 메시지가 표시됩니다.
   
@@ -600,14 +602,14 @@ IFM의 변경 내용에 대한 자세한 내용은 [Ntdsutil.exe 미디어에서
 > [!IMPORTANT]  
 > 이전 버전의 Windows Server와 마찬가지로 Windows Server 2012의 자동화된 도메인 준비에서는 GPPREP를 실행하지 않습니다. 이전에 Windows Server 2003, Windows Server 2008 또는 Windows Server 2008 R2가 준비되지 않은 모든 도메인에 대해 **adprep.exe /gpprep** 를 수동으로 실행하세요. 업그레이드마다 실행하지 말고 도메인 기록에서 GPPrep를 한 번만 실행해야 합니다. Adprep.exe는 /gpprep를 자동으로 실행하지 않습니다. 자동으로 실행할 경우 SYSVOL 폴더의 모든 파일 및 폴더가 모든 도메인 컨트롤러에서 다시 복제될 수 있기 때문입니다.  
 >   
-> 자동 RODCPrep는 도메인에서 준비되지 않은 첫 번째 RODC의 수준을 올릴 때 실행됩니다. 쓰기 가능한 첫 번째 Windows Server 2012 도메인 컨트롤러의 수준을 올릴 때는 실행되지 않습니다. 또한 읽기 전용 도메인 컨트롤러를 배포하려는 경우에도 **adprep.exe /rodcprep** 를 수동으로 실행할 수 있습니다.  
+> 자동 RODCPrep는 도메인에서 준비되지 않은 첫 번째 RODC의 수준을 올릴 때 실행됩니다. 쓰기 가능한 첫 번째 Windows Server 2012 도메인 컨트롤러의 수준을 올릴 때는 실행되지 않습니다. 또한 읽기 전용 도메인 컨트롤러를 배포하려는 경우에도 **adprep.exe /rodcprep**를 수동으로 실행할 수 있습니다.  
   
 ### <a name="review-options-and-view-script"></a>옵션 검토 및 스크립트 보기  
 ![RODC 설치](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/ADDS_SMI_TR_RODCReviewOptions.png)  
   
 **옵션 검토** 페이지에서 설치를 시작하기 전에 설정을 확인하고 이러한 설정이 요구 사항을 충족하는지도 확인할 수 있습니다. 서버 관리자를 사용하여 설치를 중지할 수 있는 마지막 기회는 아닙니다. 이 페이지에서는 단지 구성을 계속하기 전에 설정을 검토하고 확인합니다.  
   
-서버 관리자의 **옵션 검토** 페이지는 현재 ADDSDeployment 구성을 단일 Windows PowerShell 스크립트로 포함하는 유니코드 텍스트 파일을 만들 수 있도록 **스크립트 보기** 단추(선택 사항)도 제공합니다. 이 단추를 통해 서버 관리자 그래픽 인터페이스를 Windows PowerShell 배포 스튜디오로 사용할 수 있습니다. Active Directory 도메인 서비스 구성 마법사를 사용하여 옵션을 구성하고 구성을 내보낸 다음 마법사를 취소합니다. 이 프로세스를 통해 향후 수정을 위해 사용하거나 직접 사용하기 위한 유효하고 구문상으로 정확한 샘플이 만들어집니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
+서버 관리자의 **옵션 검토** 페이지는 현재 ADDSDeployment 구성을 단일 Windows PowerShell 스크립트로 포함하는 유니코드 텍스트 파일을 만들 수 있도록 **스크립트 보기** 단추(선택 사항)도 제공합니다. 이 단추를 통해 서버 관리자 그래픽 인터페이스를 Windows PowerShell 배포 스튜디오로 사용할 수 있습니다. Active Directory 도메인 서비스 구성 마법사를 사용하여 옵션을 구성하고 구성을 내보낸 다음 마법사를 취소합니다. 이 프로세스를 통해 향후 수정을 위해 사용하거나 직접 사용하기 위한 유효하고 구문상으로 정확한 샘플이 만들어집니다. 예를 들면 다음과 같습니다.  
   
 ```  
 #  
@@ -616,18 +618,18 @@ IFM의 변경 내용에 대한 자세한 내용은 [Ntdsutil.exe 미디어에서
   
 Import-Module ADDSDeployment  
 Install-ADDSDomainController `  
--AllowPasswordReplicationAccountName @("CORP\Allowed RODC Password Replication Group", "CORP\Chicago RODC Admins", "CORP\Chicago RODC Users and Computers") `  
+-AllowPasswordReplicationAccountName @(CORP\Allowed RODC Password Replication Group, CORP\Chicago RODC Admins, CORP\Chicago RODC Users and Computers) `  
 -Credential (Get-Credential) `  
 -CriticalReplicationOnly:$false `  
--DatabasePath "C:\Windows\NTDS" `  
--DelegatedAdministratorAccountName "CORP\Chicago RODC Admins" `  
--DenyPasswordReplicationAccountName @("BUILTIN\Administrators", "BUILTIN\Server Operators", "BUILTIN\Backup Operators", "BUILTIN\Account Operators", "CORP\Denied RODC Password Replication Group") `  
--DomainName "corp.contoso.com" `  
+-DatabasePath C:\Windows\NTDS `  
+-DelegatedAdministratorAccountName CORP\Chicago RODC Admins `  
+-DenyPasswordReplicationAccountName @(BUILTIN\Administrators, BUILTIN\Server Operators, BUILTIN\Backup Operators, BUILTIN\Account Operators, CORP\Denied RODC Password Replication Group) `  
+-DomainName corp.contoso.com `  
 -InstallDNS:$true `  
--LogPath "C:\Windows\NTDS" `  
+-LogPath C:\Windows\NTDS `  
 -ReadOnlyReplica:$true `  
--SiteName "Default-First-Site-Name" `  
--SYSVOLPath "C:\Windows\SYSVOL"  
+-SiteName Default-First-Site-Name `  
+-SYSVOLPath C:\Windows\SYSVOL  
 -Force:$true  
   
 ```  
@@ -675,7 +677,7 @@ Install-addsdomaincontroller
   
 필수 및 선택적 인수는 이 섹션의 첫 부분에 있는 **ADDSDeployment Cmdlet** 표를 참조하세요.  
   
-**Install-addsdomaincontroller** cmdlet은 두 단계(필수 구성 요소 확인 및 설치)만 수행합니다. 아래 두 그림에는 최소 필수 인수인 **-domainname**, **-readonlyreplica**, **-sitename** 및 **-credential**을 사용한 설치 단계가 나와 있습니다. 서버 관리자와 마찬가지로 **Install-ADDSDomainController** 에서도 수준 올리기 후 서버가 자동으로 다시 부팅됨을 미리 알려 줍니다.  
+**Install-addsdomaincontroller** cmdlet은 두 단계(필수 구성 요소 확인 및 설치)만 수행합니다. 아래 두 그림에는 최소 필수 인수인 **-domainname**, **-readonlyreplica**, **-sitename** 및 **-credential**을 사용한 설치 단계가 나와 있습니다. 서버 관리자와 마찬가지로 **Install-ADDSDomainController**에서도 수준 올리기 후 서버가 자동으로 다시 부팅됨을 미리 알려 줍니다.  
   
 ![RODC 설치](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/ADDS_PSInstallRODC.png)  
   

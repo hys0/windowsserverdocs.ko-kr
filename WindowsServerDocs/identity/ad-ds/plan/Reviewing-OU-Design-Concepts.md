@@ -1,7 +1,6 @@
 ---
 ms.assetid: 41b56704-c6f9-4d29-af97-62123e300565
 title: OU 디자인 개념 검토
-description: ''
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 6dc2cbb7ddff8725876f8dd4ec2760e828fd4e4c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 67f8ef3ec37146002f3e099caa459fc209fcf5b7
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402519"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80821977"
 ---
 # <a name="reviewing-ou-design-concepts"></a>OU 디자인 개념 검토
 
@@ -42,7 +41,7 @@ OU 계층 구조는 조직 또는 그룹의 부서별 계층 구조를 반영 �
   
 그룹 정책 응용 프로그램과 같은 특정 용도의 Ou 하위 트리를 만들어 특정 사용자만 볼 수 있도록 보호 된 개체의 표시 여부를 제한 하 여 OU 구조를 더 구체화할 수 있습니다. 예를 들어 사용자 또는 리소스의 선택 그룹에 그룹 정책를 적용 해야 하는 경우 해당 사용자 또는 리소스를 OU에 추가 하 고 해당 OU에 그룹 정책을 적용할 수 있습니다. 또한 OU 계층 구조를 사용 하 여 관리 제어를 추가로 위임할 수 있습니다.  
   
-OU 구조의 수준 수에 대 한 기술적인 제한은 없지만 관리 효율성을 위해 OU 구조를 10 개 수준 이하로 제한 하는 것이 좋습니다. 각 수준의 Ou 수에 대 한 기술적인 제한은 없습니다. Active Directory Domain Services (AD DS) 사용 응용 프로그램은 고유 이름에 사용 되는 문자 수 (즉, 디렉터리에 있는 개체에 대 한 전체 LDAP (Lightweight Directory Access Protocol) 경로) 또는 계층 구조 내의 OU 깊이입니다.  
+OU 구조의 수준 수에 대 한 기술적인 제한은 없지만 관리 효율성을 위해 OU 구조를 10 개 수준 이하로 제한 하는 것이 좋습니다. 각 수준의 Ou 수에 대 한 기술적인 제한은 없습니다. Active Directory Domain Services (AD DS) 사용 응용 프로그램은 고유 이름 (즉, 디렉터리에 있는 개체에 대 한 전체 LDAP (Lightweight Directory Access Protocol) 경로) 또는 계층 내 OU 깊이에서 사용 되는 문자 수에 제한이 있을 수 있습니다.  
   
 AD DS의 OU 구조는 최종 사용자에 게 표시 되지 않습니다. OU 구조는 서비스 관리자와 데이터 관리자를 위한 관리 도구로, 쉽게 변경할 수 있습니다. 계속 해 서 OU 구조 디자인을 검토 하 고 업데이트 하 여 관리 구조의 변경 사항을 반영 하 고 정책 기반 관리를 지원 합니다.  
   

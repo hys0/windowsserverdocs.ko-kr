@@ -1,27 +1,23 @@
 ---
 title: 사용자 계정 업데이트 또는 삭제
 description: MultiPoint 서비스에서 사용자를 업데이트 또는 삭제 하는 방법 알아보기
-ms.custom: na
 ms.date: 07/11/2016
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f7f55a35-c932-482c-97d4-ef3c1f390cbf
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.openlocfilehash: ac022cd06b4e014bcccc9e2193c1295efff43017
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 3b5a1344b31dbe261d64f3f130ad34024bb4ffeb
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71389184"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80820596"
 ---
 # <a name="update-or-delete-a-user-account"></a>사용자 계정 업데이트 또는 삭제
-MultiPoint 서비스 시스템에서 관리자 권한으로 로그온 한 경우 계정에 대 한 액세스 수준 변경, 전체 이름 및 암호 변경, 계정 삭제 등의 모든 사용자 계정을 수정할 수 있습니다.  
+MultiPoint 서비스 시스템에서 관리자로 로그온한 경우 계정의 액세스 수준 변경, 전체 이름 및 암호 변경 또는 계정 삭제를 비롯하여 모든 사용자 계정을 수정할 수 있습니다.  
   
 1.  스테이션 모드에서 MultiPoint 관리자를 연 다음 **사용자** 탭을 클릭 합니다.  
   

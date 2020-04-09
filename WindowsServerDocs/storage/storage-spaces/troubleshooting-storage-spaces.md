@@ -1,7 +1,6 @@
 ---
 title: 스토리지 공간 다이렉트 문제 해결
 description: 스토리지 공간 다이렉트 배포 문제를 해결 하는 방법을 알아봅니다.
-keywords: 저장소 공간
 ms.prod: windows-server
 ms.author: ''
 ms.technology: storage-spaces
@@ -9,12 +8,12 @@ ms.topic: article
 author: kaushika-msft
 ms.date: 10/24/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: ace19b711445106956ae223f17afb6b4181d352d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 429eddf30fddf6bfd035d1f928196a3b66d14646
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71365945"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80820946"
 ---
 # <a name="troubleshoot-storage-spaces-direct"></a>문제 해결 스토리지 공간 다이렉트
 
@@ -36,12 +35,12 @@ ms.locfileid: "71365945"
 ## <a name="virtual-disk-resources-are-in-no-redundancy-state"></a>가상 디스크 리소스가 중복 상태가 아닙니다.
 크래시 또는 전원 오류로 인해 스토리지 공간 다이렉트 시스템의 노드가 예기치 않게 다시 시작 됩니다. 그런 다음, 하나 이상의 가상 디스크가 온라인 상태가 아닐 수 있으며 "중복 정보가 충분 하지 않습니다." 라는 설명이 표시 됩니다.
 
-|FriendlyName|ResiliencySettingName| OperationalStatus| HealthStatus| IsManualAttach|Size| PSComputerName|
+|FriendlyName|ResiliencySettingName| OperationalStatus| HealthStatus| IsManualAttach|크기| PSComputerName|
 |------------|---------------------| -----------------| ------------| --------------|-----| --------------|
-|Disk4| Mirror| 확인|  정상| True|  10TB|  노드-01. conto ...|
-|Disk3         |Mirror                 |확인                          |정상       |True            |10TB | 노드-01. conto ...|
-|Disk2         |Mirror                 |중복성 없음               |Unhealthy     |True            |10TB | 노드-01. conto ...|
-|Disk1         |Mirror                 |{중복 없음, InService}  |Unhealthy     |True            |10TB | 노드-01. conto ...| 
+|Disk4| 미러| 확인|  정상| True|  10TB|  노드-01. conto ...|
+|Disk3         |미러                 |확인                          |정상       |True            |10TB | 노드-01. conto ...|
+|Disk2         |미러                 |중복성 없음               |비정상     |True            |10TB | 노드-01. conto ...|
+|Disk1         |미러                 |{중복 없음, InService}  |비정상     |True            |10TB | 노드-01. conto ...| 
 
 또한 가상 디스크를 온라인 상태로 전환 하려고 하면 다음 정보가 클러스터 로그 (DiskRecoveryAction)에 기록 됩니다.  
 
@@ -99,12 +98,12 @@ ms.locfileid: "71365945"
 
 다음은 **VirtualDisk** cmdlet의 출력 예입니다.
 
-|FriendlyName|  ResiliencySettingName|  OperationalStatus|   HealthStatus|  IsManualAttach|  Size|   PSComputerName|
+|FriendlyName|  ResiliencySettingName|  OperationalStatus|   HealthStatus|  IsManualAttach|  크기|   PSComputerName|
 |-|-|-|-|-|-|-|
-|Disk4|         Mirror|                 확인|                  정상|       True|            10TB|  노드-01. conto ...|
-|Disk3|         Mirror|                 확인|                  정상|       True|            10TB|  노드-01. conto ...|
-|Disk2|         Mirror|                 Detached|            알 수 없음|       True|            10TB|  노드-01. conto ...|
-|Disk1|         Mirror|                 Detached|            알 수 없음|       True|            10TB|  노드-01. conto ...| 
+|Disk4|         미러|                 확인|                  정상|       True|            10TB|  노드-01. conto ...|
+|Disk3|         미러|                 확인|                  정상|       True|            10TB|  노드-01. conto ...|
+|Disk2|         미러|                 Detached|            알 수 없음|       True|            10TB|  노드-01. conto ...|
+|Disk1|         미러|                 Detached|            알 수 없음|       True|            10TB|  노드-01. conto ...| 
 
 
 또한 노드에 다음과 같은 이벤트가 기록 될 수 있습니다.
@@ -151,7 +150,7 @@ DeviceName:
 Volume Name:
 ``` 
 
-손상 된 **작업 상태** 는 비정상 상태 추적 (DRT) 로그가 가득 찬 경우에 발생할 수 있습니다. 저장소 공간에서는 미러된 공간에 대해 DRT (더티 영역 추적)를 사용 하 여 전원 오류가 발생할 때 저장소 공간에서 저장소 공간을 다시 실행 하거나 실행 취소 하 여 저장소 공간을 유연 하 게 가져올 수 있도록 메타 데이터에 대 한 진행 중인 모든 업데이트를 기록 합니다. 전원이 복원 되 고 시스템에 백업이 제공 되는 경우 일관 된 상태입니다. DRT 로그가 가득 찬 경우에는 DRT 메타 데이터를 동기화 하 고 플러시할 때까지 가상 디스크를 온라인 상태로 만들 수 없습니다. 이 프로세스를 완료 하려면 전체 검색을 실행 해야 합니다 .이 작업은 완료 하는 데 몇 시간이 걸릴 수 있습니다.
+손상 된 **작업 상태** 는 비정상 상태 추적 (DRT) 로그가 가득 찬 경우에 발생할 수 있습니다. 저장소 공간에서는 미러된 공간에 대 한 DRT (더티 영역 추적)를 사용 하 여 전원 오류가 발생할 때 저장소 공간에서 다시 실행 하거나 실행 취소 작업을 수행 하 여 저장소 공간을 다시 실행 하거나 실행 취소 하 여 저장소 공간을 다시 실행 하거나 시스템이 다시 시작 되는 경우 작업을 실행 취소 하 여 저장소 공간을 유연 하 고 일관 된 상태로 다시 전환할 수 있도록 합니다. DRT 로그가 가득 찬 경우에는 DRT 메타 데이터를 동기화 하 고 플러시할 때까지 가상 디스크를 온라인 상태로 만들 수 없습니다. 이 프로세스를 완료 하려면 전체 검색을 실행 해야 합니다 .이 작업은 완료 하는 데 몇 시간이 걸릴 수 있습니다.
 
 이 문제를 해결 하려면 다음 단계를 수행 합니다.
 1. CSV에서 영향을 받는 가상 디스크를 제거 합니다.
@@ -206,9 +205,9 @@ Volume Name:
 ## <a name="event-5120-with-status_io_timeout-c00000b5"></a>STATUS_IO_TIMEOUT c00000b5를 사용 하는 이벤트 5120 
 
 > [!Important]
-> **Windows Server 2016:** 픽스를 사용 하 여 업데이트를 적용 하는 동안 이러한 증상이 발생할 가능성을 줄이려면 아래 저장소 유지 관리 모드 절차를 사용 하 여 [10 월 18 일 2018, Windows Server 2016 이상 버전에 대 한 누적 업데이트](https://support.microsoft.com/help/4462928) 를 설치 하는 것이 좋습니다. 현재 노드가 2016 년 5 월 [8 일 2018](https://support.microsoft.com/help/4103723) ~ [10 월 9 2018 일](https://support.microsoft.com/help/KB4462917)에 출시 된 Windows Server 누적 업데이트를 설치 했습니다.
+> **Windows Server 2016:** 픽스를 사용 하 여 업데이트를 적용 하는 동안 이러한 증상이 발생할 가능성을 줄이려면 아래 저장소 유지 관리 모드 절차를 사용 하 여 현재 노드가 5 월 [8 일, 2018](https://support.microsoft.com/help/4103723) ~ [10 월 9 2018 일](https://support.microsoft.com/help/KB4462917)에서 릴리스된 windows server 2016 누적 업데이트를 설치 했을 때 [10 월 18 일, 2018, 누적 2016 업데이트](https://support.microsoft.com/help/4462928) 를 설치 하는 것이 좋습니다.
 
-5120 년 5 월 [8 일, 2018 KB 4103723](https://support.microsoft.com/help/4103723) 에서 [10 월 9 2018 일](https://support.microsoft.com/help/4462917) 에 릴리스된 누적 업데이트를 사용 하 여 Windows Server 2016에서 노드를 다시 시작한 후에는 STATUS_IO_TIMEOUT c00000b5를 사용 하 여 이벤트을 받을 수 있습니다.
+5120 년 5 월 [8 일, 2018 KB 4103723](https://support.microsoft.com/help/4103723) 에서 [10 월 9 2018 일](https://support.microsoft.com/help/4462917) 에 릴리스된 누적 업데이트를 사용 하 여 Windows Server 2016에서 노드를 다시 시작한 후에 STATUS_IO_TIMEOUT c00000b5를 사용 하 여 이벤트을 받을 수 있습니다.
 
 노드를 다시 시작 하는 경우 이벤트 5120는 시스템 이벤트 로그에 기록 되 고 다음 오류 코드 중 하나를 포함 합니다.
 
@@ -217,7 +216,7 @@ Event Source: Microsoft-Windows-FailoverClustering
 Event ID: 5120
 Description:    Cluster Shared Volume 'CSVName' ('Cluster Virtual Disk (CSVName)') has entered a paused state because of 'STATUS_IO_TIMEOUT(c00000b5)'. All I/O will temporarily be queued until a path to the volume is reestablished. 
 
-Cluster Shared Volume ‘CSVName' ('Cluster Virtual Disk (CSVName)') has entered a paused state because of 'STATUS_CONNECTION_DISCONNECTED(c000020c)'. All I/O will temporarily be queued until a path to the volume is reestablished.    
+Cluster Shared Volume 'CSVName' ('Cluster Virtual Disk (CSVName)') has entered a paused state because of 'STATUS_CONNECTION_DISCONNECTED(c000020c)'. All I/O will temporarily be queued until a path to the volume is reestablished.    
 ```
 
 이벤트 5120이 기록 되 면 추가 증상이 발생 하거나 성능에 영향을 미칠 수 있는 디버깅 정보를 수집 하기 위해 라이브 덤프가 생성 됩니다. 라이브 덤프를 생성 하면 덤프 파일을 쓰기 위해 메모리의 스냅숏을 만들 수 있는 잠깐 일시 중지 됩니다. 많은 메모리가 있고 스트레스 상태에 있는 시스템은 노드가 클러스터 멤버 자격에서 삭제 될 수 있으며 다음 이벤트 1135이 기록 될 수도 있습니다.
@@ -275,7 +274,7 @@ Description: Cluster node 'NODENAME'was removed from the active failover cluster
 실시간 덤프 시스템 전체를 비롯 한 모든 덤프를 완전히 사용 하지 않도록 설정 하려면 다음 단계를 수행 합니다.
 
 1. 다음 레지스트리 키를 만듭니다. HKLM\System\CurrentControlSet\Control\CrashControl\ForceDumpsDisabled
-2. 새 **ForceDumpsDisabled** 키에서 GUARDEDHOST로 REG_DWORD 속성을 만든 다음 해당 값을 0x10000000로 설정 합니다.
+2. 새 **ForceDumpsDisabled** 키 아래에서 GuardedHost로 REG_DWORD 속성을 만든 다음 해당 값을 0x10000000로 설정 합니다.
 3. 각 클러스터 노드에 새 레지스트리 키를 적용 합니다.
 
 >[!NOTE]
@@ -311,20 +310,20 @@ IO 성능이 느려지는 경우 스토리지 공간 다이렉트 구성에서 �
 
 1. 클러스터 로그를 사용 합니다. 선택한 텍스트 편집기에서 클러스터 로그를 열고 "[= = = SBL Disks = = =]"를 검색 합니다. 이는 로그가 생성 된 노드의 디스크 목록입니다. 
 
-     캐시 사용 디스크 예: 여기서 상태는 CacheDiskStateInitializedAndBound 이며 여기에는 GUID가 있습니다. 
+     캐시 사용 디스크 예: 상태는 Cachediskstateininedandbound 이며 여기에는 GUID가 있습니다. 
 
    ```
    [=== SBL Disks ===]
     {26e2e40f-a243-1196-49e3-8522f987df76},3,false,true,1,48,{1ff348f1-d10d-7a1a-d781-4734f4440481},CacheDiskStateInitializedAndBound,1,8087,54,false,false,HGST    ,HUH721010AL4200 ,        7PG3N2ER,A21D,{d5e27a3b-42fb-410a-81c6-9d8cc12da20c},[R/M 0 R/U 0 R/T 0 W/M 0 W/U 0 W/T 0],
     ```
 
-    캐시 사용 안 함: 여기에서 GUID가 없고 상태는 CacheDiskStateNonHybrid입니다. 
+    캐시 사용 안 함: 여기에서 GUID가 없고 상태가 CacheDiskStateNonHybrid로 표시 될 수 있습니다. 
     ```
    [=== SBL Disks ===]
     {426f7f04-e975-fc9d-28fd-72a32f811b7d},12,false,true,1,24,{00000000-0000-0000-0000-000000000000},CacheDiskStateNonHybrid,0,0,0,false,false,HGST    ,HUH721010AL4200 ,        7PGXXG6C,A21D,{d5e27a3b-42fb-410a-81c6-9d8cc12da20c},[R/M 0 R/U 0 R/T 0 W/M 0 W/U 0 W/T 0],
     ```
 
-    캐시 사용 안 함: 모든 디스크가 동일한 유형 인 경우에는 기본적으로 사용 되지 않습니다. 여기에서 GUID가 없고 상태는 CacheDiskStateIneligibleDataPartition입니다. 
+    캐시 사용 안 함: 모든 디스크가 동일한 유형 사례 이면 기본적으로 사용 되지 않습니다. 여기에서 GUID가 없고 상태는 CacheDiskStateIneligibleDataPartition입니다. 
     ```
     {d543f90c-798b-d2fe-7f0a-cb226c77eeed},10,false,false,1,20,{00000000-0000-0000-0000-000000000000},CacheDiskStateIneligibleDataPartition,0,0,0,false,false,NVMe    ,INTEL SSDPE7KX02,  PHLF7330004V2P0LGN,0170,{79b4d631-976f-4c94-a783-df950389fd38},[R/M 0 R/U 0 R/T 0 W/M 0 W/U 0 W/T 0], 
     ```  
@@ -333,7 +332,7 @@ IO 성능이 느려지는 경우 스토리지 공간 다이렉트 구성에서 �
     2. "Ipmo 저장소" 실행
     3. "$d"를 실행 합니다. 사용법은 자동 선택입니다. 필기장이 아니라 다음과 같은 출력이 표시 됩니다. 
 
-   |FriendlyName|  SerialNumber| MediaType| CanPool| OperationalStatus| HealthStatus| 사용법| Size|
+   |FriendlyName|  SerialNumber| MediaType| CanPool| OperationalStatus| HealthStatus| 사용법| 크기|
    |-----------|------------|---------| -------| -----------------| ------------| -----| ----|
    |NVMe INTEL SSDPE7KX02| PHLF733000372P0LGN| SSD| False|   확인|                정상|      1\.82 TB 자동 선택|
    |NVMe INTEL SSDPE7KX02 |PHLF7504008J2P0LGN| SSD|  False|    확인|                정상| 자동 선택| 1.82 TB|
@@ -394,13 +393,13 @@ IO 성능이 느려지는 경우 스토리지 공간 다이렉트 구성에서 �
     Disk <identifier> connected to node <nodename> returned a SCSI Port Association and the corresponding enclosure device could not be found. The hardware is not compatible with Storage Spaces Direct (S2D), contact the hardware vendor to verify support for SCSI Enclosure Services (SES). 
 
 
-문제는 디스크와 HBA 카드 사이에 있는 HPE SAS 확장기 카드를 사용 하는 것입니다. SAS 확장기는 확장기에 연결 된 첫 번째 드라이브와 확장기 자체 사이에 중복 ID를 만듭니다.  이는 HPE 스마트 배열 [컨트롤러 SAS 확장기 펌웨어에서 해결 되었습니다. 4.02](https://support.hpe.com/hpsc/swd/public/detail?sp4ts.oid=7304566&swItemId=MTX_ef8d0bf4006542e194854eea6a&swEnvOid=4184#tab3).
+문제는 디스크와 HBA 카드 사이에 있는 HPE SAS 확장기 카드를 사용 하는 것입니다. SAS 확장기는 확장기에 연결 된 첫 번째 드라이브와 확장기 자체 사이에 중복 ID를 만듭니다.  이는 [HPE 스마트 배열 컨트롤러 SAS 확장기 펌웨어: 4.02](https://support.hpe.com/hpsc/swd/public/detail?sp4ts.oid=7304566&swItemId=MTX_ef8d0bf4006542e194854eea6a&swEnvOid=4184#tab3)에서 해결 되었습니다.
 
 ## <a name="intel-ssd-dc-p4600-series-has-a-non-unique-nguid"></a>Intel SSD DC P4600 시리즈에 고유 하지 않은 guid가 있습니다.
 아래 예제에서 Intel SSD DC P4600 시리즈 장치가 0100000001000000E4D25C000014E214 또는 0100000001000000E4D25C0000EEE214와 같은 여러 네임 스페이스에 대해 비슷한 16 바이트를 보고 하는 것 처럼 보이는 문제가 나타날 수 있습니다.
 
 
-|               uniqueid               | deviceid | MediaType | BusType |               serialnumber               |      크기      | canpool | #b1 | OperationalStatus |
+|               uniqueid               | deviceid | MediaType | BusType |               serialnumber               |      size      | canpool | #b1 | OperationalStatus |
 |--------------------------------------|----------|-----------|---------|------------------------------------------|----------------|---------|--------------|-------------------|
 |           5000CCA251D12E30           |    0     |    HDD    |   SAS   |                 7PKR197G                 | 10000831348736 |  False  |     HGST     |  HUH721010AL4200  |
 | 0100000001000000E4D25C000014E214 |    4     |    SSD    |  NVMe   | 0100_0000_0100_0000_E4D2_5C00_0014_E214. | 1600321314816  |  True   |    INTEL     |   SSDPE2KE016T7   |
@@ -430,7 +429,7 @@ Windows Server 2016 스토리지 공간 다이렉트 클러스터에는 하나 �
    Clear-PhysicalDiskHealthData -Intent -Policy -SerialNumber 000000000000000 -Verbose -Force
     ```
 
-- **UniqueId** 매개 변수를 사용 하 여 디스크를 지정 합니다 ( **WMI MSFT_PhysicalDisk** 또는 **PhysicalDisk**에서 다시 지정).
+- **UniqueId** 매개 변수를 사용 하 여 디스크를 지정 합니다 ( **WMI MSFT_PhysicalDisk** 또는 **PhysicalDisk**).
 
    ```powershell
    Clear-PhysicalDiskHealthData -Intent -Policy -UniqueId 00000000000000000 -Verbose -Force

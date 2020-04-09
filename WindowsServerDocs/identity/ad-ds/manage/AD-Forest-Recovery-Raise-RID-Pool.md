@@ -1,6 +1,5 @@
 ---
 title: AD 포리스트 복구-RID 풀 발생
-description: ''
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
@@ -9,12 +8,12 @@ ms.topic: article
 ms.prod: windows-server
 ms.assetid: c37bc129-a5e0-4219-9ba7-b4cf3a9fc9a4
 ms.technology: identity-adds
-ms.openlocfilehash: aa1f5e8b40aa43fa2601bc6f11efe2fcd4ccd05e
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 308dce9be53194eb7db91944964ae5de03345ab6
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71369063"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80823856"
 ---
 # <a name="ad-forest-recovery---raising-the-value-of-available-rid-pools"></a>AD 포리스트 복구-사용 가능한 RID 풀의 값을 발생 시킵니다. 
 
@@ -55,7 +54,7 @@ ms.locfileid: "71369063"
   
 ### <a name="to-raise-the-value-of-available-rid-pools-using-ldp"></a>LDP를 사용 하 여 사용 가능한 RID 풀의 값을 높이려면  
   
-1. 명령 프롬프트에서 다음 명령을 입력하고 Enter 키를 누릅니다.  
+1. 명령 프롬프트에서 다음 명령을 입력한 다음 Enter 키를 누릅니다.  
    **ldp**  
 2. **연결**을 클릭 하 고 **연결**을 클릭 한 다음 RID 관리자의 이름을 입력 하 고 **확인**을 클릭 합니다. 
    ![LDP](media/AD-Forest-Recovery-Raise-RID-Pool/ldp1.png)

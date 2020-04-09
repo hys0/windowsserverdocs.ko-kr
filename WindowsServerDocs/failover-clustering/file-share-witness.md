@@ -1,19 +1,20 @@
 ---
 title: Windows Server 2019에서 파일 공유 감시 배포
+description: 파일 공유 미러링 모니터 서버를 사용 하면 파일 공유를 사용 하 여 클러스터 쿼럼에 응답할 수 있습니다. 이 항목에서는 파일 공유 감시로 라우터에 연결 된 USB 드라이브를 사용 하는 것을 포함 하 여 파일 공유 미러링 모니터 서버 및 새 기능에 대해 설명 합니다.
 ms.prod: windows-server
-ms.manager: eldenc
+manager: eldenc
 ms.technology: failover-clustering
 ms.topic: article
 author: johnmarlin-msft
+ms.author: johnmar
 ms.date: 01/24/2019
-description: 파일 공유 미러링 모니터 서버를 사용 하면 파일 공유를 사용 하 여 클러스터 쿼럼에 응답할 수 있습니다. 이 항목에서는 파일 공유 감시로 라우터에 연결 된 USB 드라이브를 사용 하는 것을 포함 하 여 파일 공유 미러링 모니터 서버 및 새 기능에 대해 설명 합니다.
 ms.localizationpriority: medium
-ms.openlocfilehash: 9f0a0c5b48f7c382367e4b1100ff649fe73d3be9
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 63e016b8e00482529e69aaa12727f854afd51e41
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71369756"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80827676"
 ---
 # <a name="deploy-a-file-share-witness"></a>파일 공유 감시 배포
 
@@ -32,7 +33,7 @@ ms.locfileid: "71369756"
 
 |파일 서버 유형                 | 지원 되는 클러스터 |
 |---------------------------------|--------------------|
-|SMB 2 파일 공유에 있는 모든 장치 | Windows Server 2019|
+|SMB 2 파일 공유에 있는 모든 장치 | 시작|
 |도메인에 가입 된 Windows Server     | Windows Server 2008 이상|
 
 클러스터가 Windows Server 2019를 실행 하는 경우 요구 사항은 다음과 같습니다.

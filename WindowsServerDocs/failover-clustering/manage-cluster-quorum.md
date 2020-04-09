@@ -5,15 +5,16 @@ ms.prod: windows-server
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
+manager: lizross
 ms.technology: storage-failover-clustering
 ms.date: 06/07/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 03e155cb9d30bc32da407f0d9ae915308f31494a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 16f141eceb4831f588e33aca5284425f69e9e417
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71361021"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80827516"
 ---
 # <a name="configure-and-manage-quorum"></a>쿼럼 구성 및 관리
 
@@ -27,15 +28,15 @@ ms.locfileid: "71361021"
 
 ## <a name="quorum-configuration-options"></a>쿼럼 구성 옵션
 
-Windows Server의 쿼럼 모델은 유연 합니다. 클러스터에 대 한 쿼럼 구성을 수정 해야 하는 경우 클러스터 쿼럼 구성 마법사 또는 장애 조치 (Failover) 클러스터 Windows PowerShell cmdlet을 사용할 수 있습니다. 쿼럼을 구성하는 단계 및 고려 사항은 이 항목의 뒷부분에 있는 [클러스터 쿼럼 구성](#configure-the-cluster-quorum) 을 참조하세요.
+Windows Server의 쿼럼 모델은 유연 합니다. 클러스터에 대 한 쿼럼 구성을 수정 해야 하는 경우 클러스터 쿼럼 구성 마법사 또는 장애 조치 (Failover) 클러스터 Windows PowerShell cmdlet을 사용할 수 있습니다. 쿼럼 구성 단계 및 고려 사항은 이 항목의 뒷부분에 있는 [클러스터 쿼럼 구성](#configure-the-cluster-quorum)을 참조하세요.
 
 다음 표에는 클러스터 쿼럼 구성 마법사에서 사용할 수 있는 세 가지 쿼럼 구성 옵션이 나와 있습니다.
 
 | 옵션  |설명  |
 | --------- | ---------|
-| 일반 설정 사용     |  클러스터에서 각 노드에 응답을 자동으로 할당하고 노드 응답을 동적으로 관리합니다. 클러스터에 적합하고 사용 가능한 클러스터 공유 저장소가 있는 경우 클러스터에서 디스크 감시를 선택합니다. 클러스터에 대해 가장 높은 가용성을 제공하는 쿼럼 및 감시 구성을 클러스터 소프트웨어에서 자동으로 선택하므로 대부분의 경우 이 옵션을 사용하는 것이 좋습니다.       |
+| 일반 설정 사용     |  클러스터에서 각 노드에 응답을 자동으로 할당하고 노드 응답을 동적으로 관리합니다. 클러스터에 적합하고 사용 가능한 클러스터 공유 스토리지가 있는 경우 클러스터에서 디스크 감시를 선택합니다. 클러스터에 대해 가장 높은 가용성을 제공하는 쿼럼 및 감시 구성을 클러스터 소프트웨어에서 자동으로 선택하므로 대부분의 경우 이 옵션을 사용하는 것이 좋습니다.       |
 | 쿼럼 감시를 추가 또는 변경     |   감시 리소스를 추가, 변경 또는 제거할 수 있습니다. 파일 공유 또는 디스크 감시를 구성할 수 있습니다. 클러스터에서 각 노드에 응답을 자동으로 할당하고 노드 응답을 동적으로 관리합니다.      |
-| 고급 쿼럼 구성 및 감시 선택     | 쿼럼 구성을 위한 응용 프로그램 관련 또는 사이트 관련 요구 사항이 있는 경우에만 이 옵션을 선택해야 합니다. 쿼럼 감시를 수정하고, 노드 응답을 추가 또는 제거하고, 클러스터에서 노드 응답을 동적으로 관리할지 여부를 선택할 수 있습니다. 기본적으로 응답은 모든 노드에 할당되며, 노드 응답은 동적으로 관리됩니다.        |
+| 고급 쿼럼 구성 및 감시 선택     | 쿼럼 구성을 위한 애플리케이션 관련 또는 사이트 관련 요구 사항이 있는 경우에만 이 옵션을 선택해야 합니다. 쿼럼 감시를 수정하고, 노드 응답을 추가 또는 제거하고, 클러스터에서 노드 응답을 동적으로 관리할지 여부를 선택할 수 있습니다. 기본적으로 응답은 모든 노드에 할당되며, 노드 응답은 동적으로 관리됩니다.        |
 
 선택한 쿼럼 구성 옵션 및 특정 설정에 따라 다음 쿼럼 모드 중 하나로 클러스터가 구성됩니다.
 
@@ -51,7 +52,7 @@ Windows Server의 쿼럼 모델은 유연 합니다. 클러스터에 대 한 쿼
 
 일반적으로 쿼럼을 구성할 때 클러스터의 응답 요소는 홀수여야 합니다. 따라서 클러스터에 짝수 개의 응답 노드가 포함된 경우 디스크 감시 또는 파일 공유 감시를 구성해야 합니다. 클러스터는 아래쪽에 추가 노드 하나를 유지할 수 있습니다. 또한 감시 응답을 추가하면 클러스터 노드 절반이 작동 중지되거나 연결이 끊어진 경우 클러스터가 계속 실행될 수 있습니다.
 
-디스크 감시는 일반적으로 모든 노드에서 디스크를 볼 수 있는 경우에 권장됩니다. 파일 공유 감시는 복제된 저장소를 사용하여 다중 사이트 재해 복구를 수행해야 하는 경우에 권장됩니다. 복제된 저장소로 디스크 감시를 구성하는 것은 저장소 공급업체가 모든 사이트에서 복제된 저장소에 읽기/쓰기 액세스할 수 있도록 지원하는 경우에만 가능합니다. <strong>*디스크 감시는 스토리지 공간 다이렉트 지원 되지 않습니다*</strong>.
+디스크 감시는 일반적으로 모든 노드에서 디스크를 볼 수 있는 경우에 권장됩니다. 파일 공유 감시는 복제된 스토리지를 사용하여 다중 사이트 재해 복구를 수행해야 하는 경우에 권장됩니다. 복제된 스토리지로 디스크 감시를 구성하는 것은 스토리지 공급업체가 모든 사이트에서 복제된 스토리지에 읽기/쓰기 액세스할 수 있도록 지원하는 경우에만 가능합니다. <strong>*디스크 감시는 스토리지 공간 다이렉트 지원 되지 않습니다*</strong>.
 
 다음 표에는 쿼럼 감시 유형에 대한 추가 정보 및 고려 사항이 나와 있습니다.
 
@@ -63,7 +64,7 @@ Windows Server의 쿼럼 모델은 유연 합니다. 클러스터에 대 한 쿼
 
 ### <a name="node-vote-assignment"></a>노드 응답 할당
 
-고급 쿼럼 구성 옵션인 노드 단위로 쿼럼 응답을 할당 하거나 제거 하도록 선택할 수 있습니다. 기본적으로 모든 노드에 응답이 할당됩니다. 응답 할당에 상관없이 모든 노드는 클러스터에서 지속적으로 작동하며, 클러스터 데이터베이스 업데이트를 받고, 응용 프로그램을 호스트할 수 있습니다.
+고급 쿼럼 구성 옵션인 노드 단위로 쿼럼 응답을 할당 하거나 제거 하도록 선택할 수 있습니다. 기본적으로 모든 노드에 응답이 할당됩니다. 응답 할당에 상관없이 모든 노드는 클러스터에서 지속적으로 작동하며, 클러스터 데이터베이스 업데이트를 받고, 애플리케이션을 호스트할 수 있습니다.
 
 특정 재해 복구 구성의 경우 노드에서 응답을 제거할 수도 있습니다. 예를 들어 다중 사이트 클러스터의 경우 백업 사이트의 노드가 쿼럼 계산에 영향을 주지 않도록 이러한 노드에서 응답을 제거할 수 있습니다. 이 구성은 사이트 간의 수동 장애 조치(failover)에만 권장됩니다. 자세한 내용은 이 항목의 뒷부분에 있는 [재해 복구 구성에 대한 쿼럼 고려 사항](#quorum-considerations-for-disaster-recovery-configurations)을 참조하세요.
 
@@ -95,25 +96,25 @@ Windows Server 2012에서는 고급 쿼럼 구성 옵션으로 클러스터 별�
 
 ## <a name="general-recommendations-for-quorum-configuration"></a>쿼럼 구성에 대한 일반 권장 사항
 
-클러스터 소프트웨어는 구성된 노드 수 및 공유 저장소의 가용성을 기반으로 새 클러스터에 대한 쿼럼을 자동으로 구성합니다. 일반적으로 이 구성이 해당 클러스터에 가장 적합한 쿼럼 구성입니다. 그러나 클러스터가 만들어진 후 해당 클러스터를 프로덕션 환경에 배치하기 전에 쿼럼 구성을 검토하는 것이 좋습니다. 자세한 클러스터 쿼럼 구성을 보려면 구성 유효성 검사 마법사 또는 [테스트 클러스터](https://docs.microsoft.com/powershell/module/failoverclusters/test-cluster?view=win10-ps) Windows PowerShell cmdlet을 사용 하 여 **쿼럼 구성 유효성 검사** 테스트를 실행할 수 있습니다. 장애 조치(Failover) 클러스터 관리자에서 선택한 클러스터에 대 한 요약 정보에 기본 쿼럼 구성이 표시 됩니다. [또는 Windows PowerShell cmdlet을 실행할](https://docs.microsoft.com/powershell/module/failoverclusters/get-clusterquorum?view=win10-ps) 때 반환 되는 쿼럼 리소스에 대 한 정보를 검토할 수 있습니다.
+클러스터 소프트웨어는 구성된 노드 수 및 공유 스토리지의 가용성을 기반으로 새 클러스터에 대한 쿼럼을 자동으로 구성합니다. 일반적으로 이 구성이 해당 클러스터에 가장 적합한 쿼럼 구성입니다. 그러나 클러스터가 만들어진 후 해당 클러스터를 프로덕션 환경에 배치하기 전에 쿼럼 구성을 검토하는 것이 좋습니다. 자세한 클러스터 쿼럼 구성을 보려면 구성 유효성 검사 마법사 또는 [테스트 클러스터](https://docs.microsoft.com/powershell/module/failoverclusters/test-cluster?view=win10-ps) Windows PowerShell cmdlet을 사용 하 여 **쿼럼 구성 유효성 검사** 테스트를 실행할 수 있습니다. 장애 조치(Failover) 클러스터 관리자에서 선택한 클러스터에 대 한 요약 정보에 기본 쿼럼 구성이 표시 됩니다. [또는 Windows PowerShell cmdlet을 실행할](https://docs.microsoft.com/powershell/module/failoverclusters/get-clusterquorum?view=win10-ps) 때 반환 되는 쿼럼 리소스에 대 한 정보를 검토할 수 있습니다.
 
 언제든지 **쿼럼 구성 유효성 검사** 테스트를 실행하여 쿼럼 구성이 클러스터에 가장 적합한 구성인지 확인할 수 있습니다. 테스트 출력에는 쿼럼 구성 변경이 권장되는지 여부와 최적의 설정이 표시됩니다. 변경이 권장되는 경우 클러스터 쿼럼 구성 마법사를 사용하여 권장 설정을 사용할 수 있습니다.
 
 클러스터를 프로덕션 환경에 배치한 후에는 변경 내용이 클러스터에 적절하다고 확인한 경우가 아니면 쿼럼 구성을 변경하지 마세요. 다음과 같은 경우에 쿼럼 구성 변경을 고려할 수 있습니다.
 
 - 노드 추가 또는 제거
-- 저장소 추가 또는 제거
+- 스토리지 추가 또는 제거
 - 장기적인 노드 또는 감시 실패
 - 다중 사이트 재해 복구 시나리오에서 클러스터 복구
 
-장애 조치(Failover) 클러스터 유효성 검사에 대한 자세한 내용은 [Validate Hardware for a Failover Cluster](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134244(v%3dws.11)>)를 참조하세요.
+하드웨어 유효성 검사 테스트에 대한 자세한 내용은 [장애 조치(failover) 클러스터에 대한 하드웨어 유효성 검사](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134244(v%3dws.11)>)를 참조하세요.
 
 ## <a name="configure-the-cluster-quorum"></a>클러스터 쿼럼 구성
 
 장애 조치(Failover) 클러스터 관리자 또는 장애 조치 (Failover) 클러스터 Windows PowerShell cmdlet을 사용 하 여 클러스터 쿼럼 설정을 구성할 수 있습니다.
 
 > [!IMPORTANT]
-> 일반적으로 클러스터 쿼럼 구성 마법사에서 권장하는 쿼럼 구성을 사용하는 것이 좋습니다. 변경 내용이 클러스터에 적절하다고 확인한 경우에만 쿼럼 구성을 사용자 지정하는 것이 좋습니다. 자세한 내용은 이 항목의 [쿼럼 구성에 대한 일반 권장 사항](#general-recommendations-for-quorum-configuration) 를 참조하세요.
+> 일반적으로 클러스터 쿼럼 구성 마법사에서 권장하는 쿼럼 구성을 사용하는 것이 좋습니다. 변경 내용이 클러스터에 적절하다고 확인한 경우에만 쿼럼 구성을 사용자 지정하는 것이 좋습니다. 자세한 내용은 이 항목에서 [쿼럼 구성에 대한 일반 권장 사항](#general-recommendations-for-quorum-configuration)을 참조하세요.
 
 ### <a name="configure-the-cluster-quorum-settings"></a>클러스터 쿼럼 설정 구성
 
@@ -139,7 +140,7 @@ Windows Server 2012에서는 고급 쿼럼 구성 옵션으로 클러스터 별�
       2. 디스크 감시를 구성하는 옵션을 선택한 경우 **저장소 감시 구성** 페이지에서 디스크 감시로 할당할 저장소 볼륨을 선택하고 마법사를 완료합니다.
       3. 파일 공유 감시를 구성하는 옵션을 선택한 경우 **파일 공유 감시 구성** 페이지에서 감시 리소스로 사용할 파일 공유를 입력하거나 찾은 다음 마법사를 완료합니다.
 
-    - 쿼럼 관리 설정을 구성 하 고 쿼럼 감시를 추가 하거나 변경 하려면 **고급 쿼럼 구성 및 감시 선택**을 선택 하 고 다음 단계를 완료 합니다. 고급 쿼럼 구성 설정에 대한 자세한 내용 및 고려 사항은 이 항목의 앞부분에 있는 [노드 응답 할당](#node-vote-assignment) 및 [동적 쿼럼 관리](#dynamic-quorum-management) 를 참조하세요.
+    - 쿼럼 관리 설정을 구성 하 고 쿼럼 감시를 추가 하거나 변경 하려면 **고급 쿼럼 구성 및 감시 선택**을 선택 하 고 다음 단계를 완료 합니다. 고급 쿼럼 구성 설정에 대한 자세한 내용 및 고려 사항은 이 항목의 앞부분에 있는 [노드 응답 할당](#node-vote-assignment) 및 [동적 쿼럼 관리](#dynamic-quorum-management)를 참조하세요.
 
       1. **응답 구성 선택** 페이지에서 노드에 응답을 할당하는 옵션을 선택합니다. 기본적으로 모든 노드에 응답이 할당됩니다. 그러나 특정 시나리오의 경우 노드 하위 집합에만 응답을 할당할 수 있습니다.
 
@@ -162,7 +163,7 @@ Windows Server 2012에서는 고급 쿼럼 구성 옵션으로 클러스터 별�
 > [!NOTE]
 > 클러스터 쿼럼을 구성한 후에는 **쿼럼 구성 유효성 검사** 테스트를 실행하여 업데이트된 쿼럼 설정을 확인하는 것이 좋습니다.
 
-### <a name="windows-powershell-equivalent-commands"></a>Windows PowerShell 해당 명령
+### <a name="windows-powershell-equivalent-commands"></a>Windows PowerShell 동일 명령
 
 다음 예에서는 클러스터 쿼럼을 구성 [하는 데](https://docs.microsoft.com/powershell/module/failoverclusters/set-clusterquorum?view=win10-ps) 사용 하는 방법을 보여 줍니다.
 
@@ -196,7 +197,7 @@ Set-ClusterQuorum -NodeAndFileShareMajority "\\fileserver\fsw"
 (Get-ClusterNode ContosoFCNode1).NodeWeight=1
 ```
 
-다음 예제에서는 **CONTOSO-FC1** 클러스터의 *DynamicQuorum* 속성을 사용하도록 설정합니다(이전에 사용하지 않도록 설정된 경우).
+다음 예제에서는 **CONTOSO FC1** 클러스터의 *DynamicQuorum* 속성을 사용하도록 설정합니다(이전에 사용하지 않도록 설정된 경우).
 
 ```PowerShell
 (Get-Cluster CONTOSO-FC1).DynamicQuorum=1
@@ -215,7 +216,7 @@ Set-ClusterQuorum -NodeAndFileShareMajority "\\fileserver\fsw"
 
 노드 또는 쿼럼 감시를 정상 상태로 전환하는 것으로 클러스터를 복구할 수 없음을 확인한 후에는 클러스터를 강제로 시작해야 합니다. 클러스터를 강제로 시작하면 클러스터 쿼럼 구성 설정이 재정의되고 클러스터가 **ForceQuorum** 모드로 시작됩니다.
 
-쿼럼이 없는 경우 클러스터를 강제로 시작하는 것은 다중 사이트 클러스터에서 특히 유용할 수 있습니다. 기본 사이트와 백업 사이트가 *SiteA*와 *SiteB*로 별도로 구성된 클러스터에 대한 재해 복구 시나리오를 고려해 보겠습니다. *SiteA*에서 실제 재해가 발생한 경우 해당 사이트를 다시 온라인 상태로 복구하는 데 상당한 시간이 걸릴 수 있습니다. 이 경우 *SiteB* 를 강제로 온라인 상태로 전환할 수 있으며, 이는 이 사이트에 쿼럼이 없는 경우에도 마찬가지입니다.
+쿼럼이 없는 경우 클러스터를 강제로 시작하는 것은 다중 사이트 클러스터에서 특히 유용할 수 있습니다. 기본 사이트와 백업 사이트가 *SiteA*와 *SiteB*로 별도로 구성된 클러스터에 대한 재해 복구 시나리오를 고려해 보겠습니다. *SiteA*에서 실제 재해가 발생한 경우 해당 사이트를 다시 온라인 상태로 복구하는 데 상당한 시간이 걸릴 수 있습니다. 이 경우 *SiteB*를 강제로 온라인 상태로 전환할 수 있으며, 이는 이 사이트에 쿼럼이 없는 경우에도 마찬가지입니다.
 
 클러스터가 **ForceQuorum** 모드로 시작된 경우에는 충분한 쿼럼 응답을 다시 얻은 후 클러스터가 자동으로 강제 상태를 종료하고 정상적으로 작동합니다. 따라서 클러스터를 정상적으로 다시 시작할 필요가 없습니다. 클러스터에서 노드가 손실되고 이로 인해 쿼럼이 손실되면 더 이상 강제 상태에 있지 않으므로 클러스터가 다시 오프라인 상태로 전환됩니다. 쿼럼이 없는 경우 다시 온라인 상태로 전환 하려면 쿼럼 없이 클러스터를 강제로 시작 해야 합니다.
 
@@ -246,7 +247,7 @@ Set-ClusterQuorum -NodeAndFileShareMajority "\\fileserver\fsw"
 
 #### <a name="windows-powershell-equivalent-commands-start-clusternode"></a>Windows PowerShell 해당 명령 (Start-clusternode)
 
-다음 예제에서는 **Start-ClusterNode** cmdlet을 사용하여 *ContosoFCNode1*노드에서 클러스터를 강제로 시작하는 방법을 보여 줍니다.
+다음 예제에서는 **Start-ClusterNode** cmdlet을 사용하여 *ContosoFCNode1* 노드에서 클러스터를 강제로 시작하는 방법을 보여 줍니다.
 
 ```PowerShell
 Start-ClusterNode –Node ContosoFCNode1 –FQ
@@ -258,7 +259,7 @@ Start-ClusterNode –Node ContosoFCNode1 –FQ
 Net Start ClusSvc /FQ
 ```
 
-다음 예제에서는 **Start-ClusterNode** cmdlet을 사용하여 *ContosoFCNode1*노드에서 쿼럼이 방지된 설정으로 클러스터 서비스를 시작하는 방법을 보여 줍니다.
+다음 예제에서는 **Start-ClusterNode** cmdlet을 사용하여 *ContosoFCNode1* 노드에서 쿼럼이 방지된 설정으로 클러스터 서비스를 시작하는 방법을 보여 줍니다.
 
 ```PowerShell
 Start-ClusterNode –Node ContosoFCNode1 –PQ
@@ -294,7 +295,7 @@ Net Start ClusSvc /PQ
 
 ### <a name="manual-failover"></a>수동 장애 조치(failover)
 
-이 구성에서는 클러스터가 기본 사이트( *SiteA*)와 백업(복구) 사이트( *SiteB*)로 구성됩니다. 클러스터된 역할은 *SiteA*에서 호스트됩니다. 클러스터 쿼럼 구성으로 인해, *SiteA*의 모든 노드에서 장애가 발생한 경우 클러스터의 작동이 중지됩니다. 이 시나리오에서는 관리자가 클러스터 서비스를 *SiteB* 로 수동으로 장애 조치(failover)하고 추가 단계를 수행하여 클러스터를 복구해야 합니다.
+이 구성에서는 클러스터가 기본 사이트(*SiteA*)와 백업(복구) 사이트(*SiteB*)로 구성됩니다. 클러스터된 역할은 *SiteA*에서 호스트됩니다. 클러스터 쿼럼 구성으로 인해, *SiteA*의 모든 노드에서 장애가 발생한 경우 클러스터의 작동이 중지됩니다. 이 시나리오에서는 관리자가 클러스터 서비스를 *SiteB*로 수동으로 장애 조치(failover)하고 추가 단계를 수행하여 클러스터를 복구해야 합니다.
 
 다음 표에는 이 구성에 대한 고려 사항 및 권장 사항이 요약되어 있습니다.
 
@@ -307,11 +308,11 @@ Net Start ClusSvc /PQ
 
 #### <a name="additional-considerations-for-manual-failover"></a>수동 장애 조치 (failover)에 대 한 추가 고려 사항
 
-- *SiteA* 의 노드만 초기에 쿼럼 응답으로 구성됩니다. 이는 *SiteB*의 노드 상태가 클러스터 쿼럼에 영향을 주지 않도록 하는 데 필요합니다.
-- *SiteA* 의 장애가 일시적인지 또는 장기적인지에 따라 복구 단계가 다를 수 있습니다.
+- *SiteA*의 노드만 초기에 쿼럼 응답으로 구성됩니다. 이는 *SiteB*의 노드 상태가 클러스터 쿼럼에 영향을 주지 않도록 하는 데 필요합니다.
+- *SiteA*의 장애가 일시적인지 또는 장기적인지에 따라 복구 단계가 다를 수 있습니다.
 
 ## <a name="more-information"></a>자세한 정보
 
-* [장애 조치(failover) 클러스터링](failover-clustering.md)
+* [장애 조치 클러스터링](failover-clustering.md)
 * [장애 조치 (Failover) 클러스터 Windows PowerShell cmdlet](https://docs.microsoft.com/powershell/module/failoverclusters/?view=win10-ps)
 * [클러스터 및 풀 쿼럼 이해](../storage/storage-spaces/understand-quorum.md)

@@ -1,24 +1,20 @@
 ---
 title: waitfor
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: 시스템에서 신호를 보내거나 기다리는 waitfor에 대 한 Windows 명령 항목입니다. **Waitfor** 네트워크를 통해 컴퓨터를 동기화 하는 데 사용 됩니다.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a48ef70d-4d28-4035-b6b0-7d7b46ac2157
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: aecea0ad19ee42e61396eb8b8ccd579b9ce2057b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 4542fc9d231b8150ab89e07e173d9671d6b7a3f3
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71362605"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80829936"
 ---
 # <a name="waitfor"></a>waitfor
 
@@ -35,7 +31,7 @@ waitfor [/s <Computer> [/u [<Domain>\]<User> [/p [<Password>]]]] /si <SignalName
 waitfor [/t <Timeout>] <SignalName>
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |       매개 변수       |                                                                                         설명                                                                                          |
 |-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -47,7 +43,7 @@ waitfor [/t <Timeout>] <SignalName>
 |     \<SignalName >     |                                                신호를 지정 하는 **waitfor** 보내거나 될 때까지 대기 합니다. *SignalName* 는 대 소문자를 구분 하지 않습니다.                                                 |
 |          /?           |                                                                             명령 프롬프트에 도움말을 표시합니다.                                                                             |
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 -   신호 이름은 225 자의 초과할 수 없습니다. 사용할 수 있는 문자에는 a-z, A-Z, 0-9 및 확장 문자 집합 (128-255) ASCII 포함 됩니다.
 -   사용 하지 않는 경우 **/s**, 신호는 도메인의 모든 시스템에 브로드캐스트 됩니다. 사용 하는 경우 **/s**, 신호는 지정된 된 시스템에만 전송 됩니다.
@@ -57,23 +53,23 @@ waitfor [/t <Timeout>] <SignalName>
 -   만 컴퓨터 신호를 보내는 컴퓨터와 동일한 도메인에 있는 경우 신호를 받을 수 있습니다.
 -   사용할 수 있습니다 **waitfor** 소프트웨어 빌드를 테스트할 수 있습니다. 예를 들어 컴파일 컴퓨터 신호를 실행 하는 여러 컴퓨터에 보낼 수 **waitfor** 는 컴파일 성공적으로 완료 된 후입니다. 에 신호를 받으면, 배치 파일은 포함 된 **waitfor** 즉시 소프트웨어를 설치 하거나 컴파일된 빌드에서 테스트 실행을 시작 하는 컴퓨터에 지시할 수 있습니다.
 
-## <a name="BKMK_examples"></a>예와
+## <a name="examples"></a><a name=BKMK_examples></a>예와
 
-"Espresso\build007" 신호가 수신 될 때까지 기다려야 다음을 입력 합니다.
+Es보도 so\build007 신호를 받을 때까지 기다리려면 다음을 입력 합니다.
 ```
 waitfor espresso\build007
 ```
 기본적으로 **waitfor** 신호를 기다립니다.
 
-10 초 동안 시간이 초과 되기 전에 수신 되도록 "espresso\compile007" 신호를 기다려야 다음을 입력 합니다.
+제한 시간이 초과 되기 전에 espresso\compile007 신호가 수신 될 때까지 10 초 동안 대기 하려면 다음을 입력 합니다.
 ```
 waitfor /t 10 espresso\build007
 ```
-"Espresso\build007" 신호를 수동으로 활성화 하려면 다음을 입력 합니다.
+Es보도 so\build007 신호를 수동으로 활성화 하려면 다음을 입력 합니다.
 ```
 waitfor /si espresso\build007
 ```
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
-[명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

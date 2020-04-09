@@ -1,6 +1,5 @@
 ---
 title: TLS (Schannel SSP)
-ms.custom: na
 ms.prod: windows-server
 ms.topic: article
 ms.assetid: ebd3c40c-b4c0-4f6d-a00c-f90eda4691df
@@ -8,16 +7,16 @@ manager: alanth
 author: justinha
 ms.technology: security-authentication
 ms.date: 05/16/2018
-ms.openlocfilehash: e103e985592e6aed150ccd3e1a87e56f19621dbe
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 3547c77e8c58bcbb219a7b017c3186f198007805
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403382"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80820166"
 ---
 # <a name="tls-schannel-ssp-changes-in-windows-10-and-windows-server-2016"></a>Windows 10 및 Windows Server 2016의 TLS (Schannel SSP) 변경 내용
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016 및 Windows 10
+>적용 대상: Windows Server(반기 채널), Windows Server 2016 및 Windows 10
 
 ## <a name="cipher-suite-changes"></a>암호 그룹 변경 내용
 
@@ -27,8 +26,8 @@ Windows 10, 버전 1511 및 Windows Server 2016에서는 MDM (모바일 장치 �
 
 다음 암호 그룹에 대 한 지원이 추가 되었습니다.
 
-- TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (RFC 5289) (Windows 10, 버전 1507 및 Windows Server 2016)
-- TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (RFC 5289) (Windows 10, 버전 1507 및 Windows Server 2016)
+- Windows 10, 버전 1507 및 Windows Server 2016의 TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (RFC 5289)
+- Windows 10, 버전 1507 및 Windows Server 2016의 TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (RFC 5289)
 
 다음 암호 그룹에 대해 DisabledByDefault를 변경 합니다.
 
@@ -37,8 +36,8 @@ Windows 10, 버전 1511 및 Windows Server 2016에서는 MDM (모바일 장치 �
 - TLS_DHE_DSS_WITH_AES_256_CBC_SHA (RFC 5246) (Windows 10 버전 1703)
 - TLS_DHE_DSS_WITH_AES_128_CBC_SHA (RFC 5246) (Windows 10 버전 1703)
 - TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA (RFC 5246) (Windows 10 버전 1703)
-- Windows 10의 TLS_RSA_WITH_RC4_128_SHA 버전 1709
-- Windows 10의 TLS_RSA_WITH_RC4_128_MD5 버전 1709
+- Windows 10, 버전 1709의 TLS_RSA_WITH_RC4_128_SHA
+- Windows 10, 버전 1709의 TLS_RSA_WITH_RC4_128_MD5
 
 Windows 10, 버전 1507 및 Windows Server 2016부터 SHA 512 인증서는 기본적으로 지원 됩니다.
 
@@ -54,9 +53,9 @@ Windows 10, 버전 1507 및 Windows Server 2016에서는 Diffie-hellman 키 크�
 
 자세한 내용은 [KeyExchangeAlgorithm 키 크기](tls-registry-settings.md#keyexchangealgorithm---diffie-hellman-key-sizes)를 참조 하세요.
 
-### <a name="sch_use_strong_crypto-option-changes"></a>SCH_USE_STRONG_CRYPTO 옵션 변경 내용
+### <a name="sch_use_strong_crypto-option-changes"></a>SCH_USE_STRONG_CRYPTO 옵션 변경
 
-Windows 10, 버전 1507 및 Windows Server 2016에서 [SCH_USE_STRONG_CRYPTO](https://msdn.microsoft.com/library/windows/desktop/aa379810.aspx) 옵션은 이제 NULL, MD5, DES 및 내보내기 암호화를 사용 하지 않도록 설정 합니다.
+Windows 10, 버전 1507 및 Windows Server 2016 [SCH_USE_STRONG_CRYPTO](https://msdn.microsoft.com/library/windows/desktop/aa379810.aspx) 옵션은 이제 NULL, MD5, DES 및 내보내기 암호화를 사용 하지 않도록 설정 합니다.
 
 ## <a name="elliptical-curve-changes"></a>타원형 곡선 변경
 
@@ -97,12 +96,12 @@ Windows 10, 버전 1607 및 Windows Server 2016에서는 PSK 키 교환 알고�
 
 다음 PSK 암호 그룹에 대 한 지원이 추가 되었습니다.
 
-- TLS_PSK_WITH_AES_128_CBC_SHA256 (RFC 5487) (Windows 10, 버전 1607 및 Windows Server 2016)
-- TLS_PSK_WITH_AES_256_CBC_SHA384 (RFC 5487) (Windows 10, 버전 1607 및 Windows Server 2016)
-- TLS_PSK_WITH_NULL_SHA256 (RFC 5487) (Windows 10, 버전 1607 및 Windows Server 2016)
-- TLS_PSK_WITH_NULL_SHA384 (RFC 5487) (Windows 10, 버전 1607 및 Windows Server 2016)
-- TLS_PSK_WITH_AES_128_GCM_SHA256 (RFC 5487) (Windows 10, 버전 1607 및 Windows Server 2016)
-- TLS_PSK_WITH_AES_256_GCM_SHA384 (RFC 5487) (Windows 10, 버전 1607 및 Windows Server 2016)
+- Windows 10, 버전 1607 및 Windows Server 2016의 TLS_PSK_WITH_AES_128_CBC_SHA256 (RFC 5487)
+- Windows 10, 버전 1607 및 Windows Server 2016의 TLS_PSK_WITH_AES_256_CBC_SHA384 (RFC 5487)
+- Windows 10, 버전 1607 및 Windows Server 2016의 TLS_PSK_WITH_NULL_SHA256 (RFC 5487)
+- Windows 10, 버전 1607 및 Windows Server 2016의 TLS_PSK_WITH_NULL_SHA384 (RFC 5487)
+- Windows 10, 버전 1607 및 Windows Server 2016의 TLS_PSK_WITH_AES_128_GCM_SHA256 (RFC 5487)
+- Windows 10, 버전 1607 및 Windows Server 2016의 TLS_PSK_WITH_AES_256_GCM_SHA384 (RFC 5487)
 
 ## <a name="session-resumption-without-server-side-state-server-side-performance-improvements"></a>서버 쪽 상태 서버 쪽 성능 향상 없이 세션 다시 시작
 
@@ -110,7 +109,7 @@ Windows 10, 버전 1507 및 Windows Server 2016은 Windows Server 2012와 비교
 
 ## <a name="session-hash-and-extended-master-secret-extension"></a>세션 해시 및 확장 된 마스터 보안 확장
 
-Windows 10, 버전 1507 및 Windows Server 2016 RFC 7627에 대 한 지원을 추가 합니다. TLS (전송 계층 보안) 세션 해시 및 확장 된 마스터 보안 확장 프로그램입니다.
+Windows 10, 버전 1507 및 Windows Server 2016에는 RFC 7627: TLS (Transport Layer Security) 세션 해시 및 확장 된 마스터 보안 확장에 대 한 지원이 추가 되었습니다.
 
 이러한 변경으로 인해 Windows 10 및 Windows Server 2016에는 NCRYPT_SSL_INTERFACE_VERSION_3을 지원 하 고이 새 인터페이스를 설명 하는 타사 [CNG SSL 공급자](https://msdn.microsoft.com/library/windows/desktop/ff468652.aspx) 업데이트가 필요 합니다.
 
@@ -123,11 +122,11 @@ Windows 10 버전 1607 및 Windows Server 2016부터 SSL 2.0은 제거 되었으
 
 ## <a name="changes-to-windows-tls-adherence-to-tls-12-requirements-for-connections-with-non-compliant-tls-clients"></a>비규격 TLS 클라이언트와의 연결에 대 한 TLS 1.2 요구 사항을 준수 하는 Windows TLS의 변경 내용
 
-TLS 1.2에서 클라이언트는 ["signature_algorithms" 확장](https://tools.ietf.org/html/rfc5246#section-7.4.1.4.1) 을 사용 하 여 디지털 서명 (예: 서버 인증서 및 서버 키 교환)에서 사용할 수 있는 서명/해시 알고리즘 쌍을 서버에 표시 합니다. TLS 1.2 RFC는 또한 서버 인증서 메시지에 "signature_algorithms" 확장을 적용 해야 합니다.
+TLS 1.2에서 클라이언트는 ["signature_algorithms" 확장](https://tools.ietf.org/html/rfc5246#section-7.4.1.4.1) 을 사용 하 여 디지털 서명 (예: 서버 인증서 및 서버 키 교환)에서 사용할 수 있는 서명/해시 알고리즘 쌍을 서버에 표시 합니다. TLS 1.2 RFC를 사용 하려면 서버 인증서 메시지가 "signature_algorithms" 확장을 준수 해야 합니다.
 
-"클라이언트에서" signature_algorithms "확장을 제공한 경우 서버에서 제공 하는 모든 인증서가 해당 확장에 표시 되는 해시/서명 알고리즘 쌍으로 서명 되어야 합니다."
+"클라이언트에서" signature_algorithms "확장을 제공한 경우 서버에서 제공 하는 모든 인증서는 해당 확장에 표시 되는 해시/서명 알고리즘 쌍으로 서명 되어야 합니다."
 
-실제로 일부 타사 TLS 클라이언트는 TLS 1.2 RFC를 준수 하지 않고 "signature_algorithms" 확장에서 허용 하려는 모든 서명 및 해시 알고리즘 쌍을 포함 하는 데 실패 하거나 확장을 완전히 생략 합니다 (후자는를 나타냅니다. 클라이언트가 RSA, DSA 또는 ECDSA를 사용 하는 SHA1만 지 원하는 서버입니다.
+실제로 일부 타사 TLS 클라이언트는 TLS 1.2 RFC를 준수 하지 않으며 "signature_algorithms" 확장에서 허용 하려는 모든 서명 및 해시 알고리즘 쌍을 포함 하지 않으며 확장을 모두 생략 합니다 (후자는 클라이언트가 RSA, DSA 또는 ECDSA를 사용 하 여 SHA1을 지원함을 나타냄).
 
 TLS 서버에는 일반적으로 끝점 당 하나의 인증서만 구성 되어 있으므로 서버에서 항상 클라이언트의 요구 사항을 충족 하는 인증서를 제공할 수는 없습니다.
 

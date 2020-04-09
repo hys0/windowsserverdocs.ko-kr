@@ -1,7 +1,6 @@
 ---
 ms.assetid: 7e87ce2b-062e-479f-bcf2-585b6c42026a
 title: ID 구성 요소 업데이트
-description: ''
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,19 +8,19 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: e542997295f8c0db9b660036c995daf0100b74d1
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: c81fa11b8f2fdc534b427f85452ca29c5b37487d
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71368883"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80823026"
 ---
 # <a name="identity-component-updates"></a>ID 구성 요소 업데이트
 
 >적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
   
-## <a name="lesson-1-identity-component-updates"></a>1단원: ID 구성 요소 업데이트  
+## <a name="lesson-1-identity-component-updates"></a>1 단원: Id 구성 요소 업데이트  
 이 단원에서는 Windows Server 2012 r 2의 Id 구성 요소 업데이트에 대해 설명 합니다.  
   
 ### <a name="what-you-will-learn"></a>학습 내용  

@@ -2,22 +2,18 @@
 title: 2 단계 고급 DirectAccess 배포 계획
 description: 이 항목은 Windows Server 2016에 대 한 고급 설정을 사용 하 여 단일 DirectAccess 서버 배포 가이드의 일부입니다.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-da
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3bba28d4-23e2-449f-8319-7d2190f68d56
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 8269fee952e60aa53facec95ab3070b906383ad2
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: cf17c7f1349d5b3ee5b3efe0a872dd433ecbfe8d
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80309057"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80819577"
 ---
 # <a name="step-2-plan-advanced-directaccess-deployments"></a>2 단계 고급 DirectAccess 배포 계획
 

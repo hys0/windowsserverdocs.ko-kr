@@ -1,28 +1,22 @@
 ---
-title: Get DriverPackageFile 명령을 사용 하 여
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+title: DriverPackageFile 가져오기
+description: 드라이버 패키지와 여기에 포함 된 파일을 포함 하 여 드라이버 패키지에 대 한 정보를 표시 하는 가져오기 DriverPackageFile에 대 한 Windows 명령 항목입니다.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f01a2c67-7e9c-4aad-b625-383f5a1fca25
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 21bbe17e56177da5cd2c1bf83c712d256cc794c8
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: d485a24479aa857270968a1bff7bd55a014347a3
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71363152"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80831036"
 ---
-# <a name="using-the-get-driverpackagefile-command"></a>Get DriverPackageFile 명령을 사용 하 여
-
-
+# <a name="get-driverpackagefile"></a>DriverPackageFile 가져오기
 
 드라이버 및 포함 된 파일을 포함 하 여 드라이버 패키지에 대 한 정보를 표시 합니다.
 
@@ -32,21 +26,21 @@ ms.locfileid: "71363152"
 WDSUTIL /Get-DriverPackageFile /InfFile:<Inf File path> [/Architecture:{x86 | ia64 | x64}] [/Show:{Drivers | Files | All}]
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |         매개 변수         |                              설명                               |
 |---------------------------|------------------------------------------------------------------------|
-| /InfFile: \<Inf 파일 경로 > | 드라이버 패키지.inf 파일의 전체 경로 파일 이름을 지정합니다. |
+| /InfFile:\<Inf 파일 경로 > | 드라이버 패키지.inf 파일의 전체 경로 파일 이름을 지정합니다. |
 |    [/아키텍처: {x86    |                                  ia64                                  |
-|     [/Show: {Drivers      |                                 파일                                  |
+|     [/Show: {Drivers      |                                 Files                                  |
 
-## <a name="BKMK_examples"></a>예와
+## <a name="examples"></a><a name=BKMK_examples></a>예와
 
 드라이버 파일에 대 한 정보를 보려면 다음을 입력 합니다.
 ```
-WDSUTIL /Get-DriverPackageFile /InfFile:"C:\temp\1394.inf" /Architecture:x86
+WDSUTIL /Get-DriverPackageFile /InfFile:C:\temp\1394.inf /Architecture:x86
 ```
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
-[명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)
