@@ -1,24 +1,20 @@
 ---
 title: 도움말
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c65b5ac3-711a-4368-95b8-ba82e2d00713
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1d759c85c07d76811053ba0a4a938e07220c2648
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f7b6f3a563c59a55ff92b38f0854437b96478f6c
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71375589"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80842346"
 ---
 # <a name="help"></a>도움말
 
@@ -35,13 +31,13 @@ help [<Command>]
 [<Command>] /?
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------|-----------|
-|\<Command >|정보를 보려는 명령의 이름을 지정 합니다.|
+|\<명령 >|정보를 보려는 명령의 이름을 지정 합니다.|
 
-## <a name="BKMK_examples"></a>예와
+## <a name="examples"></a><a name=BKMK_examples></a>예와
 
 **Robocopy** 명령에 대 한 정보를 보려면 다음 중 하나를 입력 합니다.
 ```
@@ -49,6 +45,6 @@ help robocopy
 robocopy /? 
 ```
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
-[명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

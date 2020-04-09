@@ -9,15 +9,15 @@ ms.technology: storage
 audience: IT Pro
 ms.topic: article
 ms.date: 10/16/2017
-ms.openlocfilehash: 6863940d69e30f4984897a7e03369a834da21d1d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 8227fafc6b29471e2f09db171645012967553429
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71376777"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80844056"
 ---
 # <a name="fsutil-tiering"></a>Fsutil 계층화
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows 10
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows 10
 
 플래그 설정/해제, 계층 목록 등의 저장소 계층 기능을 관리할 수 있습니다.
 
@@ -31,12 +31,12 @@ fsutil tiering [setflags] <volume> <flags>
 fsutil tiering [tierlist] <volume>
 ```
 
-### <a name="parameters"></a>매개 변수
+#### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |-------------|---------------|
 |clearflags|볼륨의 계층화 동작 플래그를 사용 하지 않도록 설정 합니다.|
-|\<volume >|볼륨을 지정 합니다.|
+|볼륨 > \<|볼륨을 지정 합니다.|
 |/TrNH|계층화 된 저장소가 있는 볼륨의 경우에는 열 수집을 사용 하지 않도록 설정 합니다.<br /><br>NTFS 및 ReFS에만 적용 됩니다.|
 |queryflags|볼륨의 계층화 동작 플래그를 쿼리 합니다.|
 |regionlist|볼륨 및 해당 저장소 계층의 계층화 된 영역을 나열 합니다.|
@@ -79,7 +79,7 @@ fsutil tiering tierlist C:
 
 
 ### <a name="additional-references"></a>추가 참조
-[명령줄 구문 키](Command-Line-Syntax-Key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)
 
 [Fsutil](Fsutil.md)
 

@@ -1,24 +1,20 @@
 ---
 title: ksetup
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4e046f8a-811b-48dc-9a69-18d8e097f353
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 265f67bff65794938485472a41064837551c7699
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b3c61fd81691f9db44330eddbf40d4212d1786ff
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71374801"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80841256"
 ---
 # <a name="ksetup"></a>ksetup
 
@@ -55,7 +51,7 @@ ksetup
 
 ```
 
-### <a name="parameters"></a>매개 변수
+#### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------|-----------|
@@ -81,16 +77,16 @@ ksetup
 |[Ksetup:getenctypeattr](ksetup-getenctypeattr.md)|도메인에 대 한 암호화 형식 신뢰 특성을 가져옵니다.|
 |[Ksetup:addenctypeattr](ksetup-addenctypeattr.md)|도메인에 대 한 암호화 형식 신뢰 특성에는 암호화 종류를 추가합니다.|
 |[Ksetup:delenctypeattr](ksetup-delenctypeattr.md)|도메인에 대 한 암호화 형식 신뢰 특성을 삭제합니다.|
-|/?|명령 프롬프트에 도움말을 표시합니다.|
+|/?|명령 프롬프트에서 도움말을 표시합니다.|
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 **Ksetup** Kerberos 영역을 찾기 위한 컴퓨터 설정을 변경 하는 데 사용 됩니다. Microsoft Kerberos 기반 구현에서이 정보는 일반적으로 Krb5.conf 파일에 유지 됩니다. Windows Server 운영 체제의 레지스트리에 저장 됩니다. 이 설정을 수정 하려면이 도구를 사용할 수 있습니다. 이러한 설정은가 도메인 컨트롤러를 찾을 영역 간 트러스트 관계에 대 한 Kerberos 영역 Kerberos 영역을 찾으려고 워크스테이션이 사용 됩니다.
 
-**Ksetup** 는 컴퓨터가 windows server 2003, windows server 2008 또는 windows server 2008 r 2를 실행 하 고 windows의 멤버가 아닌 경우 kerberos SSP (보안 지원 공급자)가 kerberos 영역에 대 한 KDC를 찾기 위해 사용 하는 레지스트리 키를 초기화 합니다. 도메인. 구성 후 운영 체제에 로그온 할 수는 Windows를 실행 하는 클라이언트 컴퓨터의 사용자는 Kerberos 영역에 차지 합니다.
+**Ksetup** 는 컴퓨터가 windows server 2003, windows server 2008 또는 windows server 2008 r 2를 실행 하 고 windows 도메인의 구성원이 아닌 경우 kerberos SSP (보안 지원 공급자)가 kerberos 영역에 대 한 KDC를 찾기 위해 사용 하는 레지스트리 키를 초기화 합니다. 구성 후 운영 체제에 로그온 할 수는 Windows를 실행 하는 클라이언트 컴퓨터의 사용자는 Kerberos 영역에 차지 합니다.
 
 Kerberos 버전 5 프로토콜은 Windows XP Professional, Windows Vista 및 Windows 7을 실행 하는 컴퓨터의 네트워크 인증에 대 한 기본값입니다. Kerberos SSP에는 분야와 사용자의 도메인 이름에 대 한 레지스트리를 검색 하 고 DNS 서버를 쿼리하여 이름을 IP 주소로 확인 합니다. Kerberos 프로토콜 영역 이름만 사용 하 여 Kdc를 찾는 데 DNS를 사용할 수 있지만 그러려면 특별히 구성 해야 합니다.
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
--   [명령줄 구문 키](command-line-syntax-key.md)
+-   - [명령줄 구문 키](command-line-syntax-key.md)

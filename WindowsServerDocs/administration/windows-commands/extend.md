@@ -1,24 +1,20 @@
 ---
 title: extend
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2414e21d-fc0b-40e8-9e33-3e072f8ad76b
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: bb54a661bf60b55fd95bf3a686d758d13831a6ba
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 11991f9fc338dca5201d8f9c9c598b9d7dcf239b
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71377312"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80844786"
 ---
 # <a name="extend"></a>extend
 
@@ -35,7 +31,7 @@ extend [size=<n>] [disk=<n>] [noerr]
 extend filesystem [noerr]  
 ```  
   
-## <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
   
 | 매개 변수  |                                                                                             설명                                                                                              |
 |------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -44,7 +40,7 @@ extend filesystem [noerr]
 | 파일 시스템 |                                   포커스가 있는 볼륨의 파일 시스템을 확장 합니다. 디스크에 파일 시스템 볼륨으로 확장 되지 않은 경우에 사용할 수 있습니다.                                    |
 |   noerr    | 스크립팅 전용입니다. 오류가 발생 하면 오류가 발생 하지 않은 경우에 따라 명령을 처리 하도록 DiskPart 계속 합니다. 이 매개 변수를 크기는 오류 코드를 수행 합니다. |
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
   
 -   기본 디스크의 사용 가능한 공간이 볼륨 또는 포커스가 있는 파티션을 동일한 디스크에 있어야 합니다. 볼륨 또는 포커스가 있는 파티션을 즉시 따라야 \(다음 섹터 오프셋에서 시작 해야, 즉\)합니다.  
   
@@ -58,7 +54,7 @@ extend filesystem [noerr]
   
 -   파티션을 확장할 수는 연결 된 볼륨이 있어야 합니다.  
   
-## <a name="BKMK_examples"></a>예와  
+## <a name="examples"></a><a name=BKMK_examples></a>예와  
 디스크 3, 500mb 하 여 볼륨 또는 포커스가 있는 파티션을 확장 하려면 다음을 입력 합니다.  
   
 ```  
@@ -71,8 +67,8 @@ extend size=500 disk=3
 extend filesystem  
 ```  
   
-#### <a name="additional-references"></a>추가 참조  
-[명령줄 구문 키](command-line-syntax-key.md)  
+## <a name="additional-references"></a>추가 참조  
+- [명령줄 구문 키](command-line-syntax-key.md)  
   
 
   

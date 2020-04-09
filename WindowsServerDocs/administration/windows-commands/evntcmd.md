@@ -1,24 +1,20 @@
 ---
 title: Evntcmd
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c1aabb74-76e7-4304-95a6-50ad87e92fd9
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b4496df6df1a40b383505627d58389c098493f59
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 86e4290543ffcc0da1c768a661fd88a7638b1146
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71377442"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80845016"
 ---
 # <a name="evntcmd"></a>Evntcmd
 
@@ -29,7 +25,7 @@ ms.locfileid: "71377442"
 ```  
 evntcmd [/s <computerName>] [/v <verbosityLevel>] [/n] <FileName>  
 ```  
-### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>매개 변수  
 
 |      매개 변수      |                                                                                                                                                            설명                                                                                                                                                             |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -39,7 +35,7 @@ evntcmd [/s <computerName>] [/v <verbosityLevel>] [/n] <FileName>
 |     <FileName>      |                                                                                     구성 하려는 대상 및 트랩으로의 이벤트 변환에 대 한 정보를 포함 하는 구성 파일의 이름을 지정 합니다.                                                                                     |
 |         /?          |                                                                                                                                                명령 프롬프트에 도움말을 표시합니다.                                                                                                                                                |
 
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
 - 트랩을 구성 하지만 트랩 대상은 구성 하지 않으려는 경우 그래픽 유틸리티인 번역기에 이벤트를 사용 하 여 유효한 구성 파일을 만들 수 있습니다. SNMP 서비스가 설치 되어 있으면 입력 하 여 트랩 변환기에 대 한 이벤트를 시작할 수 있습니다 **evntwin** 명령 프롬프트입니다. 원하는 트랩을 정의한 후에 파일을 만들려면 사용에 적합 한 내보내기를 클릭 **evntcmd**합니다. 트랩 변환기에 대 한 이벤트를 사용 하 여 쉽게 구성 파일을 만든 다음 사용 하 여 구성 파일을 사용 하 여 **evntcmd** 신속 하 게 구성 트랩 여러 컴퓨터에서 명령 프롬프트입니다.  
 - 트랩을 구성 하기 위한 구문은 다음과 같습니다.  
   **#pragma 추가**<em><EventLogFile> <EventSource> <EventID> [<Count> [<Period>]]</em>  
@@ -65,19 +61,19 @@ evntcmd [/s <computerName>] [/v <verbosityLevel>] [/n] <FileName>
   - 매개 변수 *delete_TRAP_DEST* 는 커뮤니티 내에서 지정 된 호스트로 트랩 메시지를 보내지 않도록 지정 합니다.  
   - 매개 변수 *CommunityName* 는 트랩 메시지가 전송 되는 커뮤니티 이름으로 지정 합니다.  
   - 매개 변수 *HostID* 이름 또는 IP 주소를 원하지 않는 트랩 메시지를 보낼 수 있도록 호스트를 지정 합니다.  
-    ## <a name="BKMK_Examples"></a>예와  
+    ## <a name="examples"></a><a name=BKMK_Examples></a>예와  
     다음 예제에 대 한 구성 파일 항목에에서 설명 된 **evntcmd** 명령입니다. 명령 프롬프트에서 입력 하도록 설계 되지 않은 것입니다.  
     트랩 메시지가 이벤트 로그 서비스를 다시 시작할 경우 입력 보내려고 합니다.  
     ```  
-    #pragma add System "Eventlog" 2147489653  
+    #pragma add System Eventlog 2147489653  
     ```  
     트랩 메시지가 이벤트 로그 서비스를 3 분에 두 번 다시 시작한 경우 입력 보내려고 합니다.  
     ```  
-    #pragma add System "Eventlog" 2147489653 2 180  
+    #pragma add System Eventlog 2147489653 2 180  
     ```  
     이벤트 로그 서비스를 다시 시작 하는 경우 트랩 메시지를 보내는 중지 하려면 다음을 입력 합니다.  
     ```  
-    #pragma delete System "Eventlog" 2147489653  
+    #pragma delete System Eventlog 2147489653  
     ```  
     호스트에 IP 주소가 192.168.100.100 Public 이라는 커뮤니티 내에서 트랩 메시지를 보내려면 다음을 입력 합니다.  
     ```  
@@ -92,4 +88,4 @@ evntcmd [/s <computerName>] [/v <verbosityLevel>] [/n] <FileName>
     #pragma delete_TRAP_DEST private localhost  
     ```  
     ## <a name="additional-references"></a>추가 참조  
-- [명령줄 구문 키](command-line-syntax-key.md)  
+- - [명령줄 구문 키](command-line-syntax-key.md)  

@@ -1,24 +1,20 @@
 ---
 title: echo
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fb9fcd0f-5e73-4504-aa95-78204e1a79d3
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 343d6327d262401b4be14e472a135062456890f1
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 5e6e9c3c79cc8006efba0c97a574e3d6d94a6f7e
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71377633"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80845246"
 ---
 # <a name="echo"></a>echo
 
@@ -35,17 +31,17 @@ echo [<Message>]
 echo [on | off]
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------|-----------|
-|[on \| 해제]|또는 명령 에코 기능의 해제를 설정 합니다. 기본적으로 켜져 명령 에코 합니다.|
-|\<Message >|화면에 표시할 텍스트를 지정 합니다.|
+|[on \| 꺼짐]|또는 명령 에코 기능의 해제를 설정 합니다. 기본적으로 켜져 명령 에코 합니다.|
+|\<메시지 >|화면에 표시할 텍스트를 지정 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
--   Echo *Message* 명령은 특히 **echo** 가 꺼진 경우에 유용 합니다. 명령을 표시 하지 않고 몇 줄의 긴 메시지를 표시 하려면 일괄 처리 프로그램에서 **echo off** 명령 뒤에 몇 가지 **echo** *메시지* 명령을 포함할 수 있습니다.
+-   Echo **echo** *Message* 명령은 특히 **echo** 가 꺼진 경우에 유용 합니다. 명령을 표시 하지 않고 몇 줄의 긴 메시지를 표시 하려면 일괄 처리 프로그램에서 **echo off** 명령 뒤에 몇 가지 **echo** *메시지* 명령을 포함할 수 있습니다.
 -   때 **echo** 꺼져, 명령 프롬프트 명령 프롬프트 창에 나타나지 않습니다. 명령 프롬프트를 표시 하려면 입력 **화면 표시 합니다.**
 -   배치 파일에서 사용 하는 경우 **화면 표시** 및 **오프 에코** 명령 프롬프트에서 설정 하는 데 영향을 주지 않습니다.
 -   배치 파일에서 특정 명령 출력을 방지 하려면 삽입는 at 기호 (@) 명령 앞에 있습니다. 배치 파일에서 모든 명령 에코를 방지 하려면 포함는 **오프 에코** 파일의 시작 부분에 명령 합니다.
@@ -117,6 +113,6 @@ File2.txt
 File3.txt
 ```
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
-[명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

@@ -1,24 +1,20 @@
 ---
 title: fc
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 485fc3d8-b7c5-496d-87be-0011112f27d5
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f6c004fcebcf5eb743354d9e0a121ff8598217a4
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 4b358b8c1bf44b5b7942cef05bd09fa8cac850a3
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71377254"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80844746"
 ---
 # <a name="fc"></a>fc
 
@@ -35,11 +31,11 @@ fc /a [/c] [/l] [/lb<N>] [/n] [/off[line]] [/t] [/u] [/w] [/<NNNN>] [<Drive1>:][
 fc /b [<Drive1:>][<Path1>]<FileName1> [<Drive2:>][<Path2>]<FileName2>
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |            매개 변수             |                                                                                                                                     설명                                                                                                                                      |
 |----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|                / a                |                                                 ASCII 비교의 출력을 줄여서 표시 합니다. 다른 줄을 모두 표시 하는 대신 **fc** 차이의 각 집합에 대 한 첫 번째 및 마지막 줄이 표시 됩니다.                                                  |
+|                /a                |                                                 ASCII 비교의 출력을 줄여서 표시 합니다. 다른 줄을 모두 표시 하는 대신 **fc** 차이의 각 집합에 대 한 첫 번째 및 마지막 줄이 표시 됩니다.                                                  |
 |                /b                |             바이트 단위로 이진 모드에서 두 개의 파일을 비교 하 여 불일치를 찾은 후 파일을 다시 동기화를 시도 하지 않습니다. 이 다음과 같은 파일 확장명을 가진 파일을 비교 하기 위한 기본 모드:.exe,.com,.sys,.obj,.lib 또는.bin 합니다.              |
 |                /c                |                                                                                                                               대/소문자를 무시합니다.                                                                                                                               |
 |                /l                |               비교는 ASCII 모드, 및의 파일 줄 단위로 불일치가 발견 되 면 파일을 다시 동기화 하려고 합니다. 이 다음 파일 확장명의 파일을 제외 하 고 파일을 비교 하기 위한 기본 모드:.exe,.com,.sys,.obj,.lib 또는.bin 합니다.                |
@@ -54,7 +50,7 @@ fc /b [<Drive1:>][<Path1>]<FileName1> [<Drive2:>][<Path2>]<FileName2>
 | [\<Drive2 >:] [<Path2>]<FileName2> |                                                                                       두 번째 파일의 이름 또는 집합 비교 하는 파일의 위치를 지정 합니다. *FileName2* 가 필요 합니다.                                                                                        |
 |                /?                |                                                                                                                         명령 프롬프트에 도움말을 표시합니다.                                                                                                                         |
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 -   이 명령은 c:\WINDOWS\fc.exe.에 의해 implemeted 됩니다. PowerShell 내에서이 명령을 사용할 수 있지만 ' fc '가 형식-사용자 지정의 별칭 이므로 전체 실행 파일 (fc-al)을 확인 해야 합니다.
 
@@ -85,7 +81,7 @@ fc /b [<Drive1:>][<Path1>]<FileName1> [<Drive2:>][<Path2>]<FileName2>
 
     사용 가능한 메모리 보다 큰 이진 파일을 비교 하는 경우 **fc** 는 두 파일을 모두 완전히 비교 하 여 메모리의 각 부분을 디스크의 다음 부분으로 겹치게 합니다. 출력은 메모리 용량을 초과 하는 파일에 대 한 동일 하 게 됩니다.
 
-## <a name="BKMK_examples"></a>예와
+## <a name="examples"></a><a name=BKMK_examples></a>예와
 
 Monthly.rpt 및 Sales.rpt, 두 개의 텍스트 파일의 ASCII 비교 확인 약식 형태로 결과 표시를 입력 합니다.
 ```
@@ -124,6 +120,6 @@ D 드라이브의 루트 디렉터리에 같은 이름의 파일을 C 드라이�
 fc c:*.bat d:*.bat
 ```
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
-[명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

@@ -1,28 +1,24 @@
 ---
 title: logman 카운터 만들기
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1e214c32-b704-43c1-b548-e1cf43b583c3
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3245ce1c153ac0d5fe95ea0c85009e33f71a230c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 416a62331bccc9c646ce0a00ec71b9ef7bb4238d
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71374558"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80840876"
 ---
 # <a name="logman-create-counter"></a>logman 카운터 만들기
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 카운터 데이터 수집기를 만듭니다.  
 
@@ -30,7 +26,7 @@ ms.locfileid: "71374558"
 ```  
 logman create counter <[-n] <name>> [options]  
 ```  
-## <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
 
 |                    매개 변수                     |                                                                               설명                                                                               |
 |--------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -39,7 +35,7 @@ logman create counter <[-n] <name>> [options]
 |                 -config <value>                  |                                                         명령 옵션을 포함 하는 설정 파일을 지정 합니다.                                                         |
 |                   [-n] <name>                    |                                                                       대상 개체의 이름입니다.                                                                        |
 | -f < bin &#124; bincirc &#124; csv 및 &#124; tsv &#124; sql > |                                                            데이터 수집기에 대 한 로그 형식을 지정합니다.                                                             |
-|             -[-u < 사용자 [password] >              | 사용자 계정으로 실행을 지정합니다. 암호에 대해 \*을 입력 하면 암호를 묻는 메시지가 생성 됩니다. 암호 프롬프트에서 입력할 때 암호 표시 되지 않습니다. |
+|             -[-u < 사용자 [password] >              | 사용자 계정으로 실행을 지정합니다. 암호에 대 한 \*를 입력 하면 암호를 묻는 메시지가 생성 됩니다. 암호 프롬프트에서 입력할 때 암호 표시 되지 않습니다. |
 |    -m < [시작] [stop] [[시작] [stop] [...]] >    |                                                예약 된 시작 시간 또는 종료 시간 대신 수동 시작 또는 중지로 변경 합니다.                                                 |
 |                -rf < [[hh:] mm:] ss >                |                                                        지정 된 기간에 대 한 데이터 수집기를 실행 합니다.                                                         |
 |        -b < M/d/yyyy h:mm: ss [AM&#124;PM] >         |                                                              지정된 된 시간에 데이터 수집을 시작 합니다.                                                               |
@@ -58,16 +54,16 @@ logman create counter <[-n] <name>> [options]
 |               -c < 경로 [경로 []] >               |                                                              수집할 성능 카운터를 지정 합니다.                                                               |
 |                   -sc <value>                    |                                      성능 카운터 데이터 수집기와 함께 수집 하는 샘플의 최대 수를 지정 합니다.                                      |
 
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
 [-] 나열 되는 위치는 추가 된-옵션을 부정 합니다.  
-## <a name="BKMK_examples"></a>예와  
-다음 명령은 Processor (_Total) 카운터 범주에서% Processor time 카운터를 사용 하 여 perf_log 라는 카운터를 만듭니다.  
+## <a name="examples"></a><a name=BKMK_examples></a>예와  
+다음 명령은 Processor (_Total) 카운터 범주 에서% Processor time 카운터를 사용 하 여 perf_log 이라는 카운터를 만듭니다.  
 ```  
-logman create counter perf_log -c "\Processor(_Total)\% Processor time"  
+logman create counter perf_log -c \Processor(_Total)\% Processor time  
 ```  
-다음 명령은 Processor (_Total) 카운터 범주에서% Processor time 카운터를 사용 하 여 perf_log 라는 카운터를 만들고 최대 크기가 10mb 인 로그 파일을 만들고 1 분 0 초 동안 데이터를 수집 합니다.  
+다음 명령은 Processor (_Total) 카운터 범주 에서% Processor time 카운터를 사용 하 여 perf_log 라는 카운터를 만들고 최대 크기가 10mb 인 로그 파일을 만든 후 1 분에서 0 초 동안 데이터를 수집 합니다.  
 ```  
-logman create counter perf_log -c "\Processor(_Total)\% Processor time" -max 10 -rf 01:00  
+logman create counter perf_log -c \Processor(_Total)\% Processor time -max 10 -rf 01:00  
 ```  
-#### <a name="additional-references"></a>추가 참조  
+## <a name="additional-references"></a>추가 참조  
 [logman](logman.md)  
