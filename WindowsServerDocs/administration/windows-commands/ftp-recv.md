@@ -1,45 +1,41 @@
 ---
 title: ftp 수신
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f249ce61-247d-421b-9b93-48bce5108800 vhorne
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6ec35a2044945e3d39a2a78d39923de3a56eb18d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 7fec409741e00bb3e6f61808630e5141ce4ec78f
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71376121"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80842966"
 ---
 # <a name="ftp-recv"></a>ftp: 수신
 
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 현재 파일 전송 형식을 사용 하 여 원격 파일을 로컬 컴퓨터에 복사 합니다.   
 ## <a name="syntax"></a>구문  
 ```  
 recv <remoteFile> [<LocalFile>]  
 ```  
-### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>매개 변수  
 
 |   매개 변수   |                   설명                    |
 |---------------|--------------------------------------------------|
 | <remoteFile>  |        복사할 원격 파일을 지정 합니다.        |
 | [<LocalFile>] | 로컬 컴퓨터에서 사용 하 여 이름을 지정 합니다. |
 
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
 - **recv** 명령은 동일 합니다는 **가져오기** 명령입니다.  
 - *Localfile* 을 지정 하지 않으면 파일에 *remotefile* 이름이 지정 됩니다.  
-  ## <a name="BKMK_Examples"></a>예와  
+  ## <a name="examples"></a><a name=BKMK_Examples></a>예와  
   현재 파일 전송 형식을 사용 하 여 로컬 컴퓨터에 **test.txt** 를 복사 합니다.  
   ```  
   recv test.txt  
@@ -52,4 +48,4 @@ recv <remoteFile> [<LocalFile>]
 - [ftp: ascii](ftp-ascii.md)  
 - [ftp: 이진](ftp-binary.md)  
 - [ftp: get](ftp-get.md)  
-- [명령줄 구문 키](command-line-syntax-key.md)  
+- - [명령줄 구문 키](command-line-syntax-key.md)  

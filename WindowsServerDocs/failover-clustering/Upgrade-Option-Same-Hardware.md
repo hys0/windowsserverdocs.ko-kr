@@ -1,25 +1,26 @@
 ---
 title: 동일한 하드웨어를 사용 하 여 장애 조치 (Failover) 클러스터 업그레이드
+description: 이 문서에서는 동일한 하드웨어를 사용 하는 2 노드 장애 조치 (Failover) 클러스터 업그레이드에 대해 설명 합니다.
 ms.prod: windows-server
-ms.manager: eldenc
+manager: eldenc
 ms.technology: failover-clustering
 ms.topic: article
 author: johnmarlin-msft
+ms.author: johnmar
 ms.date: 02/28/2019
-description: 이 문서에서는 동일한 하드웨어를 사용 하는 2 노드 장애 조치 (Failover) 클러스터 업그레이드에 대해 설명 합니다.
 ms.localizationpriority: medium
-ms.openlocfilehash: 5fe93f1d43e0c3a1bc4269b585cb9d021d3461aa
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b2d9866417908b3979a4ee17b25dd0d3a404bb1c
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71361403"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80828186"
 ---
 # <a name="upgrading-failover-clusters-on-the-same-hardware"></a>동일한 하드웨어에서 장애 조치 (Failover) 클러스터 업그레이드
 
 > 적용 대상: Windows Server 2019, Windows Server 2016
 
-장애 조치(failover) 클러스터는 응용 프로그램 및 서비스의 가용성을 높이기 위해 함께 작동하는 독립적인 컴퓨터 그룹입니다. 클러스터된 서버(노드라고 함)는 실제 케이블과 소프트웨어로 연결됩니다. 클러스터 노드 중 하나가 실패하면 다른 노드에서 서비스(장애 조치로 알려진 프로세스)를 제공하기 시작합니다. 사용자는 최소한의 서비스 중단을 경험 합니다.
+장애 조치(failover) 클러스터는 애플리케이션 및 서비스의 가용성을 높이기 위해 함께 작동하는 독립적인 컴퓨터 그룹입니다. 클러스터된 서버(노드라고 함)는 실제 케이블 및 소프트웨어로 연결됩니다. 클러스터 노드 중 하나가 실패하면 다른 노드에서 서비스(장애 조치로 알려진 프로세스)를 제공하기 시작합니다. 사용자는 최소한의 서비스 중단을 경험 합니다.
 
 이 가이드에서는 동일한 하드웨어를 사용 하 여 이전 버전에서 windows Server 2019 또는 Windows Server 2016로 클러스터 노드를 업그레이드 하는 단계에 대해 설명 합니다.
 
@@ -37,7 +38,7 @@ ms.locfileid: "71361403"
 
 아래 예에서는 장애 조치 (failover) 클러스터의 이름이 CLUSTER이 고 노드 이름은 NODE1 및 노드 2입니다.
 
-## <a name="step-1-evict-first-node-and-upgrade-to-windows-server-2016"></a>1단계: 첫 번째 노드를 제거 하 고 Windows Server 2016로 업그레이드
+## <a name="step-1-evict-first-node-and-upgrade-to-windows-server-2016"></a>1 단계: 첫 번째 노드를 제거 하 고 Windows Server 2016로 업그레이드
 
 1. 장애 조치(Failover) 클러스터 관리자에서 노드를 마우스 오른쪽 단추로 클릭 하 고 **일시 중지** 및 **드레이닝 역할**을 선택 하 여 NODE1에서 노드 2로 모든 리소스를 드레이닝 합니다.  또는 PowerShell 명령 [start-clusternode](https://docs.microsoft.com/powershell/module/failoverclusters/suspend-clusternode)를 사용할 수 있습니다.
 
@@ -61,7 +62,7 @@ ms.locfileid: "71361403"
 
 7.  모든 리소스를 마이그레이션한 후에는 노드 2 (원래 클러스터)의 전원을 끄고 간섭을 발생 시 키 지 않도록 저장소의 연결을 끊습니다.  저장소를 NODE1에 연결 합니다.  모든 리소스를 연결한 후에는 모든 리소스를 온라인으로 전환 하 고이를 정상적으로 작동 하는지 확인 합니다.
 
-## <a name="step-2-rebuild-second-node-to-windows-server-2019"></a>2단계: Windows Server 2019에 두 번째 노드 다시 빌드
+## <a name="step-2-rebuild-second-node-to-windows-server-2019"></a>2 단계: Windows Server 2019에 두 번째 노드 다시 빌드
 
 모든 것이 제대로 작동 하는지 확인 한 후에는 노드 2를 Windows Server 2019로 다시 작성 하 고 클러스터에 조인할 수 있습니다.
 
@@ -77,7 +78,7 @@ ms.locfileid: "71361403"
 
     ![드레이닝 노드](media/In-Place-Upgrade/In-Place-Upgrade-6.png)
 
-    d. 클러스터 서비스가 중지 되 고 이름 바꾸기를 완료 하기 위해 다시 시작 해야 합니다.
+    . 클러스터 서비스가 중지 되 고 이름 바꾸기를 완료 하기 위해 다시 시작 해야 합니다.
 
 3. 노드 1에서 장애 조치(Failover) 클러스터 관리자를 엽니다.  마우스 오른쪽 단추로 **노드** 를 클릭 하 고 **노드 추가**를 선택 합니다.  클러스터에 노드 2를 추가 하는 마법사를 진행 합니다.
 
@@ -85,7 +86,7 @@ ms.locfileid: "71361403"
 
 5. 노드를 마우스 오른쪽 단추로 클릭 하 고 **일시 중지** 및 **드레이닝 역할**을 선택 하 여 NODE1에서 노드 2까지 모든 리소스를 드레이닝 합니다.  또는 PowerShell 명령 [start-clusternode](https://docs.microsoft.com/powershell/module/failoverclusters/suspend-clusternode)를 사용할 수 있습니다.  모든 리소스가 온라인 상태이 고 제대로 작동 하는지 확인 합니다.
 
-## <a name="step-3-rebuild-first-node-to-windows-server-2019"></a>3단계: Windows Server 2019에 대 한 첫 번째 노드 다시 빌드
+## <a name="step-3-rebuild-first-node-to-windows-server-2019"></a>3 단계: Windows Server 2019에 대 한 첫 번째 노드 다시 빌드
 
 1. 클러스터에서 NODE1을 제거 하 고 이전에 만든 방식으로 노드에서 저장소의 연결을 끊습니다.
 

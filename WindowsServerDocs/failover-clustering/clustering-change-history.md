@@ -1,20 +1,20 @@
 ---
 ms.assetid: 289cbd10-e7ec-4f2e-8dd1-eb5692565578
 title: 장애 조치(failover) 클러스터링 항목에 대한 변경 기록
+description: Windows Server 2016에 대 한 장애 조치 (Failover) 클러스터링 설명서의 새로운 항목 및 업데이트 된 항목
 ms.prod: windows-server
 ms.technology: storage-failover-clustering
 ms.topic: article
 author: JasonGerend
-manager: daveba
+manager: lizross
 ms.author: jgerend
 ms.date: 01/07/2020
-description: Windows Server 2016에 대 한 장애 조치 (Failover) 클러스터링 설명서의 새로운 항목 및 업데이트 된 항목
-ms.openlocfilehash: b29a1dd979dc5ab14684a83e549ce3e6b3c273f1
-ms.sourcegitcommit: 10331ff4f74bac50e208ba8ec8a63d10cfa768cc
+ms.openlocfilehash: 73767eb8411523a93f3a4fe2e04106c81cc39f9b
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75953038"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80827906"
 ---
 # <a name="change-history-for-failover-clustering-topics"></a>장애 조치(failover) 클러스터링 항목에 대한 변경 기록
 
@@ -28,27 +28,27 @@ ms.locfileid: "75953038"
 
 |신규 항목 또는 변경된 항목                                    |설명 |
 |--------------------------------------------------------|------------|
-|[클러스터 이벤트](system-events.md)| 신규 항목     |
+|[클러스터 이벤트](system-events.md)| 새로 만들기     |
 
 ## <a name="march-2019"></a>2019년 3월
 
 |신규 항목 또는 변경된 항목                                    |설명 |
 |--------------------------------------------------------|------------|
-|[클러스터 선호도](cluster-affinity.md)| 신규 항목     |
+|[클러스터 선호도](cluster-affinity.md)| 새로 만들기     |
 
 ## <a name="february-2019"></a>2019년 2월
 
 |신규 항목 또는 변경된 항목                                    |설명 |
 |--------------------------------------------------------|------------|
-| [동일한 하드웨어에서 장애 조치 클러스터 업그레이드](upgrade-option-same-hardware.md)| 신규 항목 |
-|[2노드 파일 서버 배포](deploy-two-node-clustered-file-server.md)| 신규 항목 |
+| [동일한 하드웨어에서 장애 조치 클러스터 업그레이드](upgrade-option-same-hardware.md)| 새로 만들기 |
+|[2노드 파일 서버 배포](deploy-two-node-clustered-file-server.md)| 새로 만들기 |
 
 ## <a name="january-2019"></a>2019년 1월
 
 |신규 항목 또는 변경된 항목                                    |설명 |
 |--------------------------------------------------------|------------|
-|[파일 공유 감시 배포](file-share-witness.md)    | 신규 항목        |
-|[클러스터 도메인 마이그레이션](cluster-domain-migration.md) | 신규 항목        |
+|[파일 공유 감시 배포](file-share-witness.md)    | 새로 만들기        |
+|[클러스터 도메인 마이그레이션](cluster-domain-migration.md) | 새로 만들기        |
 
 ## <a name="november-2018"></a>2018년 11월
 

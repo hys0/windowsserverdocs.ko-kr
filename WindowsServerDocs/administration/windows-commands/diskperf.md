@@ -1,28 +1,22 @@
 ---
 title: diskperf
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: Windows 2000를 실행 하는 컴퓨터에서 실제 또는 논리 디스크 성능 카운터를 원격으로 사용 하거나 사용 하지 않도록 설정 하는 데 사용할 수 있는 diskperf에 대 한 Windows 명령 항목입니다.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f06916e8-069b-4ec8-a6eb-59f1d9f77111
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 829f0284d761e6a5134011fa1dff99646d55fc13
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 1b07471c051d57d0279e4fd8b38afdc4acdc4069
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71377814"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80845466"
 ---
 # <a name="diskperf"></a>diskperf
-
-
 
 Windows 2000에서는 실제 및 논리 디스크 성능 카운터가 기본적으로 사용 되지 않습니다.
 

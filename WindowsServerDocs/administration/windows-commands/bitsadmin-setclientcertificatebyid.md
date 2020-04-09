@@ -1,28 +1,22 @@
 ---
 title: bitsadmin setclientcertificatebyid
-description: '**Bitsadmin setclientcertificatebyid** 에 대 한 Windows 명령 항목 HTTPS (SSL) 요청에서 클라이언트 인증에 사용할 클라이언트 인증서의 식별자를 지정 합니다.'
-ms.custom: na
+description: HTTPS (SSL) 요청에서 클라이언트 인증에 사용할 클라이언트 인증서의 식별자를 지정 하는 bitsadmin setclientcertificatebyid에 대 한 Windows 명령 항목
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8585a7a1-7472-437b-b04a-a11925782a3a
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 53b6fa4c65397cf710d0497fbae889afd31ec136
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 80c97b21194c773d1b21aab2ee31794624da671c
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71380734"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80849666"
 ---
 # <a name="bitsadmin-setclientcertificatebyid"></a>bitsadmin setclientcertificatebyid
-
-
 
 HTTPS (SSL) 요청에서 클라이언트 인증에 사용할 클라이언트 인증서의 식별자를 지정 합니다.
 
@@ -32,7 +26,7 @@ HTTPS (SSL) 요청에서 클라이언트 인증에 사용할 클라이언트 인
 bitsadmin /SetClientCertificateByID <Job> <store_location> <store_name> hexa-decimal_cert_id>
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------|-----------|
@@ -41,13 +35,13 @@ bitsadmin /SetClientCertificateByID <Job> <store_location> <store_name> hexa-dec
 |Store_name|인증서 저장소의 이름입니다. 가능한 값은 다음과 같습니다.</br>CA (인증 기관 인증서)</br>내 (개인 인증서)</br>루트 (루트 인증서)</br>SPC (소프트웨어 게시자 인증서)|
 |Hexadecimal_cert_id|인증서의 해시를 나타내는 16 진수입니다.|
 
-## <a name="BKMK_examples"></a>예와
+## <a name="examples"></a><a name=BKMK_examples></a>예와
 
 다음 예제에서는 *myjob*이라는 작업에 대 한 HTTPS (SSL) 요청에서 클라이언트 인증에 사용할 클라이언트 인증서의 식별자를 지정 합니다.
 ```
 C:\>bitsadmin Bitsadmin /SetClientCertificateByID myJob BG_CERT_STORE_LOCATION_CURRENT_USER MY A106B52356D3FBCD1853A41B619358BD 
 ```
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
-[명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

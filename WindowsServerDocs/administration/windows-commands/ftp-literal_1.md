@@ -1,24 +1,20 @@
 ---
 title: ftp literal_1
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fb81aa2d-07fa-4e79-bf44-1fb5526fdf14 vhorne
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 393dea27e8567a72a5bd25c927282ade93e317c9
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f502bb56c94734870962f56cfb85dcc17ddc3f93
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71376266"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80843396"
 ---
 # <a name="ftp-literal_1"></a>ftp: literal_1
 
@@ -28,19 +24,19 @@ ms.locfileid: "71376266"
 ```  
 literal <Argument> [ ]  
 ```  
-### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>매개 변수  
 
 | 매개 변수  |                    설명                    |
 |------------|---------------------------------------------------|
 | <Argument> | Ftp 서버에 보낼 인수를 지정 합니다. |
 
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
 **리터럴** 명령은 **quote** 명령과 동일 합니다.  
-## <a name="BKMK_Examples"></a>예와  
+## <a name="examples"></a><a name=BKMK_Examples></a>예와  
 **Quit** 명령을 원격 ftp 서버에 보냅니다.  
 ```  
 literal quit  
 ```  
 ## <a name="additional-references"></a>추가 참조  
 -   [ftp: 따옴표](ftp-quote.md)  
--   [명령줄 구문 키](command-line-syntax-key.md)  
+-   - [명령줄 구문 키](command-line-syntax-key.md)  

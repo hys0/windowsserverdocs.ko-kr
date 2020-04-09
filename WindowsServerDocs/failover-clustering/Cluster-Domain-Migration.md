@@ -1,19 +1,20 @@
 ---
 title: Windows Server 2016/2019에서 도메인 간 클러스터 마이그레이션
+description: 이 문서에서는 Windows Server 2019 클러스터를 한 도메인에서 다른 도메인으로 이동 하는 방법을 설명 합니다.
 ms.prod: windows-server
-ms.manager: eldenc
+manager: eldenc
 ms.technology: failover-clustering
 ms.topic: article
 author: johnmarlin-msft
+ms.author: johnmar
 ms.date: 01/18/2019
-description: 이 문서에서는 Windows Server 2019 클러스터를 한 도메인에서 다른 도메인으로 이동 하는 방법을 설명 합니다.
 ms.localizationpriority: medium
-ms.openlocfilehash: 68f49795124dedf0655726853a4d865686f6d697
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: ba556b5a00f3932e2049135b177a7ad8bbceec9c
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71361416"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80828296"
 ---
 # <a name="failover-cluster-domain-migration"></a>장애 조치 (Failover) 클러스터 도메인 마이그레이션
 
@@ -40,7 +41,7 @@ Microsoft는 기본 응용 프로그램 작업이 지원 되지 않는 경우 �
 
 Windows Server 2016 이전 버전에서는 클러스터 서비스 한 도메인에서 다른 도메인으로 이동 하는 기능이 없습니다.  이는 Active Directory Domain Services에 대 한 종속성이 증가 하 여 생성 된 가상 이름 때문 이었습니다.   
 
-## <a name="options"></a>변수
+## <a name="options"></a>옵션
 
 이러한 이동을 수행 하기 위해 두 가지 옵션이 있습니다.
 
@@ -66,7 +67,7 @@ Windows Server 2016 이전 버전에서는 클러스터 서비스 한 도메인�
 
 두 옵션 모두 새 클러스터에는 모든 [클러스터 인식 응용 프로그램](https://technet.microsoft.com/aa369082(v=vs.90)) 을 설치 하 고, 모든 최신 드라이버를 설치 하 고, 모든 것이 제대로 실행 될 수 있도록 테스트 가능 해야 합니다.  데이터도 이동 해야 하는 경우 시간이 오래 걸리는 프로세스입니다.
 
-## <a name="windows-server-2019"></a>Windows Server 2019
+## <a name="windows-server-2019"></a>Windows Server 2019
 
 Windows Server 2019에서는 클러스터 간 도메인 마이그레이션 기능이 도입 되었습니다.  이제 위에 나열 된 시나리오를 쉽게 수행할 수 있으며, 다시 작성 해야 하는 것은 더 이상 필요 하지 않습니다.  
 
@@ -122,7 +123,7 @@ Windows Server 2019에서는 클러스터 간 도메인 마이그레이션 기�
    New-ClusterNameAccount -Name CLUSTERNAME -Domain NEWDOMAINNAME.com -UpgradeVCOs
    ```
 
-    참고: 네트워크 이름 (예: 가상 머신만 있는 Hyper-v 클러스터)이 포함 된 추가 그룹이 없는 경우-UpgradeVCOs 매개 변수 스위치가 필요 하지 않습니다.
+    참고: 네트워크 이름이 있는 추가 그룹 (예: 가상 머신만 있는 Hyper-v 클러스터)이 없는 경우-UpgradeVCOs 매개 변수 스위치가 필요 하지 않습니다.
 
 9. Active Directory 사용자 및 컴퓨터를 사용 하 여 새 도메인을 확인 하 고 연결 된 컴퓨터 개체를 만들었는지 확인 합니다. 해당 하는 경우 그룹의 나머지 리소스를 온라인으로 전환 합니다.
 

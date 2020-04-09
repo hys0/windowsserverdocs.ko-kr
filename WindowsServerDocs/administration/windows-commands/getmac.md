@@ -1,24 +1,20 @@
 ---
 title: getmac
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a749a348-7cd1-4336-9f33-bb42dd0e31e1
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c770f5da5159e0037af479f90fadb4cd83464c77
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 6b593bf61bb08d2c1c7868b1bbb175ed64a8bcf7
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71375814"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80842616"
 ---
 # <a name="getmac"></a>getmac
 
@@ -29,7 +25,7 @@ ms.locfileid: "71375814"
 ```
 getmac[.exe][/s <computer> [/u <Domain\<User> [/p <Password>]]][/fo {TABLE | list | CSV}][/nh][/v]
 ```
-### <a name="parameters"></a>매개 변수
+#### <a name="parameters"></a>매개 변수
 
 |             매개 변수              |                                                                                          설명                                                                                          |
 |------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -41,9 +37,9 @@ getmac[.exe][/s <computer> [/u <Domain\<User> [/p <Password>]]][/fo {TABLE | lis
 |                 /v                 |                                                                    출력이 자세한 정보를 표시 하도록 지정 합니다.                                                                     |
 |                 /?                 |                                                                                                                                                                                               |
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 **getmac** 는 네트워크 분석기에 MAC 주소를 입력 하거나 컴퓨터의 각 네트워크 어댑터에서 현재 사용 중인 프로토콜을 알아야 할 때 유용할 수 있습니다.
-## <a name="BKMK_Examples"></a>예와
+## <a name="examples"></a><a name=BKMK_Examples></a>예와
 다음 예제에서는 사용 하는 방법을 보여는 **getmac** 명령:
 ```
 getmac /fo table /nh /v
@@ -64,4 +60,4 @@ getmac /s srvmain /u maindom\hiropln /p p@ssW23 /fo list /v
 getmac /s srvmain /u maindom\hiropln /p p@ssW23 /fo table /nh
 ```
 ## <a name="additional-references"></a>추가 참조
--   [명령줄 구문 키](command-line-syntax-key.md)
+-   - [명령줄 구문 키](command-line-syntax-key.md)

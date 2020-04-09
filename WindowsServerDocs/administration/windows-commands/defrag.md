@@ -1,30 +1,27 @@
 ---
 title: defrag
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: 조각 모음에 대 한 Windows 명령 항목을 참조 하세요.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aaf1d1ac-996a-4282-9b4d-1e8245ff162c
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2d930e224ac1610b5e49cbf5701778bfb6f14b2e
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f8723afc936fa1ea311e275a58a85b20988f92a2
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71378714"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80846716"
 ---
 # <a name="defrag"></a>defrag
 
 >적용 대상: Windows 10, Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 찾아 시스템 성능 향상을 위해 로컬 볼륨의 조각화 된 파일을 통합 합니다.
+
 로컬의 멤버 자격이 **관리자** 그룹 또는 그에 해당 하는이 명령을 실행 하는 데 필요한 최소입니다.
 
 ## <a name="syntax"></a>구문
@@ -34,12 +31,12 @@ defrag <volumes> | /C | /E <volumes> /A [/H] [/M [n]| [/U] [/V]]
 defrag <volumes> | /C | /E <volumes> /X [/H] [/M [n]| [/U] [/V]]
 defrag <volume> [/<Parameter>]*
 ```
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |-------|--------|
 |`<volume>`|분석 하거나 조각 모음을 볼륨의 드라이브 문자 또는 탑재 지점 경로 지정 합니다.|
-|변수를 잠그기 위한|지정 된 볼륨에 분석을 수행 합니다.|
+|A|지정 된 볼륨에 분석을 수행 합니다.|
 |C|모든 볼륨에 대 한 작업을 수행 합니다.|
 |D|기존 조각 모음 (기본값)을 수행 합니다. 그러나 계층화 된 볼륨에서 기존 조각 모음은 용량 계층 에서만 수행 됩니다.|
 |E|지정 된 항목을 제외한 모든 볼륨에 대 한 작업을 수행 합니다.|
@@ -56,7 +53,7 @@ defrag <volume> [/<Parameter>]*
 |X|지정 된 볼륨에 여유 공간이 통합을 수행 합니다.|
 |?|이 도움말 정보를 표시합니다.|
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 - 특정 유형의 파일 시스템 볼륨 또는 드라이브 조각 모음을 실행할 수 없습니다.
   -   파일 시스템에서 잠 궜 습니다. 볼륨 조각 모음을 실행할 수 없습니다.
   -   손상 될 있다고 표시 된 파일 시스템 볼륨에 조각 모음 수 없습니다. 실행 해야 **chkdsk** 더티 볼륨 전에 조각 모음 할 수 있습니다. 사용 하 여 볼륨 변경 되었는지 확인할 수는 **fsutil** 변경 된 쿼리 명령입니다. **Chkdsk** 및 **fsutil** 더티에 대 한 자세한 내용은 [추가 참조](defrag.md#BKMK_additionalRef)를 참조 하세요.
@@ -64,15 +61,15 @@ defrag <volume> [/<Parameter>]*
   -   CdROMs 조각 모음을 실행할 수 없습니다.
   -   **NTFS**, **ReFS**, **Fat** 또는 **Fat32**가 아닌 파일 시스템 볼륨의 조각 모음을 실행할 수 없습니다.
 - Windows server 2008 R2, Windows Server 2008 및 Windows Vista 볼륨 조각 모음을 예약할 수 있습니다. 그러나 한 견고한 상태 드라이브 (SSD) 또는 볼륨에 가상 하드 디스크 (VHD) SSD에 있는 조각 모음을 예약할 수 없습니다.
-- 이 절차를 수행하려면 로컬 컴퓨터에서 Administrators 그룹의 구성원이거나 적절한 권한을 위임받아야 합니다. 컴퓨터가 도메인에 참가하면 Domain Admins 그룹의 구성원이 이 절차를 수행할 수도 있습니다. 보안을 위해 **실행** 대상을 사용 하 여이 절차를 수행 하는 것이 좋습니다.
+- 이 절차를 수행하려면 로컬 컴퓨터에서 Administrators 그룹의 멤버이거나 적절한 권한을 위임 받아야 합니다. 컴퓨터가 도메인에 가입된 경우 Domain Admins 그룹의 멤버가 이 절차를 수행할 수 있습니다. 보안을 위해 **실행** 대상을 사용 하 여이 절차를 수행 하는 것이 좋습니다.
 - 볼륨에 여유 공간이 15% 이상이 있어야 합니다. **조각 모음** 완전히 또는 적절히 조각 모음을 수행 합니다. **defrag** 는이 공간을 파일 조각의 정렬 영역으로 사용 합니다. 볼륨에 사용 가능한 공간을 15% 보다 작은 경우 **조각 모음** 는 부분적 으로만 조각 모음을 실행 합니다. 볼륨에 여유 공간을 늘리려면 불필요 한 파일을 삭제 하거나 다른 디스크로 이동 합니다.
 - 반면 **조각 모음** 는 깜박이 커서가 분석 하 고 볼륨 조각 모음을 표시 합니다. 때 **조각 모음** 완성 되어 분석 볼륨의 조각 모음, 분석 보고서, 조각 모음 보고서 또는 두 보고서를 표시 하 고 다음 명령 프롬프트를 종료 합니다.
 - 기본적으로 **조각 모음** 지정 하지 않은 경우에 분석 및 조각 모음 보고서의 요약을 표시는 **/a** 또는 **/v** 매개 변수입니다.
-- 입력 하 여 텍스트 파일에는 보고서를 보낼 수 **>** <em>FileName.txt</em>, 여기서 *FileName.txt* 파일 이름을 지정 됩니다. 예: `defrag volume /v > FileName.txt`
+- 입력 하 여 텍스트 파일에는 보고서를 보낼 수 **>** <em>FileName.txt</em>, 여기서 *FileName.txt* 파일 이름을 지정 됩니다. 예를 들면 다음과 같습니다. `defrag volume /v > FileName.txt`
 - 명령줄에서 조각 모음 프로세스를 중단 하려면 **CTRL + C**합니다.
 - **Defrag** 명령 및 디스크 조각 모음을 실행 하는 것은 함께 사용할 수 없습니다. 디스크 조각 모음을 사용 하 여 볼륨을 조각 모음 하 고 명령줄에서 **조각 모음** 명령을 실행 하면 **조각 모음** 명령이 실패 합니다. 반대로, **조각** 모음 명령을 실행 하 고 디스크 조각 모음을 여는 경우 디스크 조각 모음에서 조각 모음 옵션을 사용할 수 없습니다.
 
-## <a name="BKMK_examples"></a>예와
+## <a name="examples"></a><a name=BKMK_examples></a>예와
 진행률 및 자세한 정보 출력을 제공 하는 동안 C 드라이브의 볼륨을 조각 모음을 입력 합니다.
 ```
 defrag C: /U /V
@@ -90,7 +87,7 @@ defrag C: mountpoint /A /U
 defrag /C /H /V
 ```
 
-## <a name="BKMK_scheduledTask"></a>예약 된 작업
+## <a name="scheduled-task"></a><a name=BKMK_scheduledTask></a>예약 된 작업
 조각 모음 예약 된 작업은 유지 관리 작업으로 실행 되며 일반적으로 매주 실행 되도록 예약 됩니다. 관리자는 **드라이브 최적화** 응용 프로그램을 사용 하 여 빈도를 변경할 수 있습니다.
 - 예약 된 작업에서 실행 되는 경우 **조각 모음이** ssd의 정책 보다 아래에 있습니다.
    - **기존 조각 모음** (즉, 파일을 이동 하 여 적절 하 게 연속 되도록 파일 이동) 및 **retrim** 한 달에 한 번만 실행 됩니다.
@@ -102,8 +99,8 @@ defrag /C /H /V
    - 컴퓨터가 AC 전원에 있는 경우에만 시작 되 고 컴퓨터가 배터리 전원으로 전환 되 면 중지 됩니다.
    - 컴퓨터가 유휴 상태가 되 면 중지 됩니다.
 
-## <a name="BKMK_additionalRef"></a>추가 참조
+## <a name="additional-references"></a><a name=BKMK_additionalRef></a>추가 참조
 -   [chkdsk](chkdsk.md)
 -   [fsutil](fsutil.md)
 -   [fsutil 더티](fsutil-dirty.md)
--   [명령줄 구문 키](command-line-syntax-key.md)
+-   - [명령줄 구문 키](command-line-syntax-key.md)

@@ -1,30 +1,26 @@
 ---
 title: diskcomp
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: 두 플로피 디스크의 내용을 비교 하는 diskcomp에 대 한 Windows 명령 항목입니다.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4f56f534-a356-4daa-8b4f-38e089341e42
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ca5ea0f4587b21b2a274c772aab239668b7868b4
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: e36e644616e25659c1a2a5ca684e975fd06fc19f
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71377875"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80845556"
 ---
 # <a name="diskcomp"></a>diskcomp
 
+두 플로피 디스크의 내용을 비교 합니다. 매개 변수 없이 사용 하는 경우 **diskcomp** 는 현재 드라이브를 사용 하 여 두 디스크를 비교 합니다.
 
-
-두 플로피 디스크의 내용을 비교 합니다. 매개 변수 없이 사용 하는 경우 **diskcomp** 는 현재 드라이브를 사용 하 여 두 디스크를 비교 합니다. 이 명령을 사용 하는 방법에 대 한 예는 [예제](#BKMK_examples)를 참조 하세요.
+이 명령을 사용하는 방법의 예는 [예](#BKMK_examples)를 참조하세요.
 
 ## <a name="syntax"></a>구문
 
@@ -32,15 +28,15 @@ ms.locfileid: "71377875"
 diskcomp [<Drive1>: [<Drive2>:]]
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------|-----------|
-|\<드라이브 1 >|플로피 디스크 중 하나를 포함 하는 드라이브를 지정 합니다.|
+|\<Drive1 >|플로피 디스크 중 하나를 포함 하는 드라이브를 지정 합니다.|
 |\<Drive2 >|다른 플로피 디스크를 포함 하는 드라이브를 지정 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 - 디스크 사용
 
@@ -107,7 +103,7 @@ diskcomp [<Drive1>: [<Drive2>:]]
 
   **Diskcomp**에서 반환 하는 종료 코드를 처리 하려면 일괄 처리 프로그램의 **IF** 명령줄에서 ERRORLEVEL 환경 변수를 사용할 수 있습니다.
 
-## <a name="BKMK_examples"></a>예와
+## <a name="examples"></a><a name=BKMK_examples></a>예와
 
 컴퓨터에 플로피 디스크 드라이브가 하나만 있는 경우 (예: 드라이브 A) 두 개의 디스크를 비교 하려면 다음을 입력 합니다.
 ```
@@ -131,7 +127,7 @@ goto exit
 echo ERROR: An irrecoverable error occurred 
 goto exit 
 :break 
-echo "You just pressed CTRL+C" to stop the comparison 
+echo You just pressed CTRL+C to stop the comparison 
 goto exit 
 :no_compare 
 echo Disks are not the same 
@@ -142,6 +138,6 @@ goto exit
 :exit
 ```
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
-[명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

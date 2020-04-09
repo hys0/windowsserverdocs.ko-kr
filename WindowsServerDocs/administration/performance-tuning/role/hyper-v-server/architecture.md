@@ -4,15 +4,15 @@ description: 성능 조정을 위한 hyper-v 아키텍처 condsiderations
 ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
-ms.author: Asmahi; SandySp; JoPoulso
+ms.author: asmahi; sandysp; jopoulso
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 0feb2977791dd181907c381e4898924ff51c2bc5
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 47ff4a25f67e2b03655d17ab5a57aeaa3274a835
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71383495"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80851836"
 ---
 # <a name="hyper-v-architecture"></a>Hyper-V 아키텍처
 
@@ -28,7 +28,7 @@ Windows Server 2008부터 운영 체제는 가상 컴퓨터에서 실행 되는 
 
 다음 섹션에서는 Hyper-v 역할을 실행 하는 서버에서 성능이 향상 되는 모범 사례를 제안 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 -   [Hyper-V 용어](terminology.md)
 

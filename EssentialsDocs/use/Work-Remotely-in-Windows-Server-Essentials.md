@@ -1,23 +1,19 @@
 ---
 title: Windows Server Essentials에서 원격으로 작업
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8b183f8f-1279-4fdf-a495-c7c801563cb0
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 2918a0f198d9c591803fa7bf945e01dd48c9e318
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: ec6b97dd153802ea2ff8b55f6ba58f3208e4abb1
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80313090"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80852086"
 ---
 # <a name="work-remotely-in-windows-server-essentials"></a>Windows Server Essentials에서 원격으로 작업
 
@@ -28,8 +24,8 @@ ms.locfileid: "80313090"
  다음 항목을 통해 서버 리소스에 원격으로 액세스할 수 있습니다.  
   
 
--   [Windows Server Essentials에서 원격 웹 액세스 사용](Work-Remotely-in-Windows-Server-Essentials.md#BKMA_RWA)  
-  
+-      [Windows Server Essentials에서 원격 웹 액세스 사용](Work-Remotely-in-Windows-Server-Essentials.md#BKMA_RWA)  
+     
 -   [VPN을 사용 하 여 Windows Server Essentials에 연결](Work-Remotely-in-Windows-Server-Essentials.md#BKMK_3)  
   
 -   [내 서버 앱을 사용 하 여 Windows Server Essentials에 연결](Work-Remotely-in-Windows-Server-Essentials.md#BKMK_App)  

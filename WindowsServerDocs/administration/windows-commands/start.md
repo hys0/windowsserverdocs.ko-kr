@@ -1,28 +1,22 @@
 ---
-title: start
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+title: 시작
+description: 시작에 대 한 Windows 명령 항목으로, 지정 된 프로그램 또는 명령을 실행 하기 위해 별도의 명령 프롬프트 창을 시작 합니다.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0173f9b3-5cd7-4edb-b01e-d02193b4fadc
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 48197b1bc1d1c9f91a6a35b5fb8aad81b229eb6b
-ms.sourcegitcommit: 51e0b575ef43cd16b2dab2db31c1d416e66eebe8
+ms.openlocfilehash: 6ab8fc07923a2396a173803264d54a036983fb71
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76259088"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80834076"
 ---
-# <a name="start"></a>start
-
-
+# <a name="start"></a>시작
 
 지정 된 프로그램 또는 명령을 실행 하는 별도 명령 프롬프트 창을 시작 합니다.
 
@@ -31,14 +25,14 @@ ms.locfileid: "76259088"
 ## <a name="syntax"></a>구문
 
 ```
-start ["<Title>"] [/d <Path>] [/i] [{/min | /max}] [{/separate | /shared}] [{/low | /normal | /high | /realtime | /abovenormal | belownormal}] [/affinity <HexAffinity>] [/wait] [/elevate] [/b] [<Command> [<Parameter>... ] | <Program> [<Parameter>... ]]
+start [<Title>] [/d <Path>] [/i] [{/min | /max}] [{/separate | /shared}] [{/low | /normal | /high | /realtime | /abovenormal | belownormal}] [/affinity <HexAffinity>] [/wait] [/elevate] [/b] [<Command> [<Parameter>... ] | <Program> [<Parameter>... ]]
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------|-----------|
-|"\<제목 >"|명령 프롬프트 창 제목 표시줄에 표시할 제목을 지정 합니다.|
+|\<제목 >|명령 프롬프트 창 제목 표시줄에 표시할 제목을 지정 합니다.|
 |/d \<경로 >|시작 디렉터리를 지정합니다.|
 |/i|Cmd.exe 시작 환경을 새 명령 프롬프트 창으로 전달합니다. 경우 **/i** 를 지정 하지 않으면 현재 환경이 사용 됩니다.|
 |/min \|/최대|최소화 하기 위해 지정 ( **/min**) 하거나 최대화 ( **/최대 용량**) 새 명령 프롬프트 창입니다.|
@@ -48,15 +42,15 @@ start ["<Title>"] [/d <Path>] [/i] [{/min | /max}] [{/separate | /shared}] [{/lo
 |/wait|애플리케이션을 시작 하 고 끝날 때까지 대기 합니다.|
 |/상승|응용 프로그램을 관리자 권한으로 실행 합니다.|
 |/b|새 명령 프롬프트 창을 열지 않고 애플리케이션을 시작 합니다. CTRL + C 처리는 CTRL + C 처리 애플리케이션을 사용 하지 않으면 무시 됩니다. 애플리케이션을 중단 하려면 CTRL + BREAK를 사용 합니다.|
-|명령 > \| \<프로그램을 \<|명령이 나 프로그램 시작을 지정 합니다.|
+|명령 > \| \<프로그램을 \<>|명령이 나 프로그램 시작을 지정 합니다.|
 |매개 변수 > \<...|명령 또는 프로그램에 전달할 매개 변수를 지정 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 - 명령으로 파일의 이름을 입력 하 여 파일 연결을 통해 실행 불가능 한 파일을 실행할 수 있습니다.
-- 확장 또는 경로 한정자 없이 첫 번째 토큰으로 "CMD" 문자열을 포함 하는 명령을 실행 하면 "CMD" 동작이 발생의 값으로 대체 됩니다. 이로써 사용자를 받지 **cmd** 현재 디렉터리에서.
-- 32 비트 그래픽 사용자 인터페이스 (GUI) 애플리케이션을 실행 하면 **cmd** 명령 프롬프트를 반환 하기 전에 종료 하도록 애플리케이션을 기다리지 않습니다. 명령 스크립트에서 애플리케이션을 실행 하는 경우에이 문제가 발생 하지 않습니다.
+- 확장명이 나 경로 한정자가 없는 첫 번째 토큰으로 CMD 문자열을 포함 하는 명령을 실행 하면 CMD가 COMSPEC 변수의 값으로 바뀝니다. 이로써 사용자를 받지 **cmd** 현재 디렉터리에서.
+- 32 비트 그래픽 사용자 인터페이스 (GUI) 응용 프로그램을 실행 하면 **cmd** 명령 프롬프트를 반환 하기 전에 종료 하도록 응용 프로그램을 기다리지 않습니다. 명령 스크립트에서 애플리케이션을 실행 하는 경우에이 문제가 발생 하지 않습니다.
 - 확장을 포함 하지 않는 첫 번째 토큰을 사용 하는 명령을 실행 하면 Cmd.exe를 사용 하 여 PATHEXT 환경 변수의 값을 찾고 어떤 순서로 확장 프로그램을 결정 합니다. PATHEXT 변수에 대 한 기본값은입니다.  
   ```
   .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC 
@@ -64,7 +58,7 @@ start ["<Title>"] [/d <Path>] [/i] [{/min | /max}] [{/separate | /shared}] [{/lo
   구문을 경로 변수와 각 확장 프로그램을 구분 하는 세미콜론으로 동일 하 게 않음을 유의 하십시오.
 - 모든 확장에 일치 하는 경우 실행 파일을 검색할 때 **시작** 이름이 디렉터리 이름에 일치 하는 경우를 확인 합니다. 그렇지 않으면 **시작** Explorer.exe 해당 경로에 열립니다.
 
-## <a name="BKMK_examples"></a>예제
+## <a name="examples"></a><a name=BKMK_examples></a>예와
 
 명령 프롬프트에서 Myapp 프로그램을 시작 하 고 현재 명령 프롬프트 창을 사용 하 여 유지 하려면 다음을 입력 합니다.
 ```
@@ -75,6 +69,6 @@ start myapp
 start /max start /?
 ```
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
-[명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

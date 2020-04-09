@@ -1,7 +1,6 @@
 ---
 ms.assetid: 3acaa977-ed63-4e38-ac81-229908c47208
 title: LDAP 서버 쿠키를 처리하는 방법
-description: ''
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: ca63fa9504765b0376eb671b4decd67de7768f15
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: f90f53763e7a31ffed1fd820061910742e5cf98a
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75948894"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80823236"
 ---
 # <a name="how-ldap-server-cookies-are-handled"></a>LDAP 서버 쿠키를 처리하는 방법
 
@@ -61,7 +60,7 @@ LDAP 서버는 한 번에 둘 이상의 클라이언트를 처리하고 한 번�
 LDAP 서버는 풀에서 LDAP 연결당 MaxResultSetsPerConn보다 많은 쿠키를 허용하지 않습니다.  
   
 ## <a name="handling-deleted-cookies"></a>삭제된 쿠키 처리  
-LDAP 서버 캐시에서 쿠키 정보를 제거해도 모든 경우에 애플리케이션에서 바로 오류가 발생하는 것은 아닙니다. 애플리케이션이 처음부터 페이지된 검색을 다시 시작하여 다른 시도에서 완료할 수 있습니다. 일부 애플리케이션은 이러한 종류의 다시 시도 메커니즘을 사용하여 견고성을 추가합니다.  
+LDAP 서버 캐시에서 쿠키 정보를 제거해도 모든 경우에 애플리케이션에서 바로 오류가 발생하는 것은 아닙니다. 응용 프로그램이 처음부터 페이지된 검색을 다시 시작하여 다른 시도에서 완료할 수 있습니다. 일부 애플리케이션은 이러한 종류의 다시 시도 메커니즘을 사용하여 견고성을 추가합니다.  
   
 일부 애플리케이션에서는 페이지 검색을 수행하고 완료하지 못할 수 있습니다. 이런 경우 LDAP 서버 쿠키 캐시에 항목이 남아 섹션 4의 메커니즘을 통해 처리될 수 있습니다. 이 작업은 활성 LDAP 검색을 위해 서버에서 메모리를 확보하는 데 반드시 필요합니다.  
   

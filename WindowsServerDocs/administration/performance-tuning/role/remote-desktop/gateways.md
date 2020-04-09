@@ -4,15 +4,15 @@ description: 원격 데스크톱 게이트웨이에 대 한 성능 조정 권장
 ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
-ms.author: HammadBu; VladmiS
+ms.author: hammadbu; vladmis
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: fcd7afd840df12ec19e162f751df9e5c0c9c84d4
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 3794b47e7226a905944495dd7c31f3196a33d0d5
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71385006"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80851736"
 ---
 # <a name="performance-tuning-remote-desktop-gateways"></a>원격 데스크톱 게이트웨이 성능 조정
 
@@ -70,42 +70,42 @@ ms.locfileid: "71385006"
 
 다음 성능 카운터 목록은 RD 게이트웨이에서 리소스 사용량을 모니터링할 때 기본 카운터 집합으로 간주 됩니다.
 
--   \\터미널 서비스 게이트웨이\\\*
+-   터미널 서비스 게이트웨이\\\\\*
 
 -   \\RPC/HTTP 프록시\\\*
 
--   \\서버당 RPC/HTTP 프록시\\\*
+-   서버당 RPC/HTTP 프록시를 \\\\\*
 
--   \\웹 서비스\\\*
+-   웹 서비스\\\\\*
 
--   \\W3SVC\_W3WP.EXE\\\*
+-   W3SVC\_w3wp.exe\\\\\*
 
 -   \\IPv4\\\*
 
--   \\Ram\\\*
+-   메모리\\\\\*
 
--   \\네트워크 인터페이스 (\*)\\\*
+-   \*(\\Network Interface)\\\*
 
--   \\Process (\*)\\\*
+-   \\프로세스 (\*)\\\*
 
--   \\프로세서 정보 (\*)\\\*
+-   \\Processor Information (\*)\\\*
 
 -   \\동기화 (\*)\\\*
 
--   \\컴퓨터\\\*
+-   \\System\\\*
 
 -   \\TCPv4\\\*
 
 다음 성능 카운터는 레거시 RPC 전송에만 적용 됩니다.
 
--   \\Rpc/HTTP 프록시\\rpc \*
+-   rpc \\RPC/HTTP 프록시\\\* RPC
 
--   \\\\ 서버\* rpc 당 rpc/HTTP 프록시
+-   서버당 RPC/HTTP 프록시를 \\\\\* RPC
 
--   \\웹 서비스\\ \* RPC
+-   \\웹 서비스\\\* RPC
 
--   \\\_W3SVCW3WP.EXERPC\* \\
+-   \\W3SVC\_w3wp.exe\\\* RPC
 
 > [!NOTE]
-> 해당 \\하는 경우 IPv6\\ \* 및 \\TCPv6개체를추가\* 합니다.\\ ReplaceThisText
+> 해당 하는 경우 \\IPv6\\\* 및 \\TCPv6\\개체를 추가 합니다. ReplaceThisText\*
 

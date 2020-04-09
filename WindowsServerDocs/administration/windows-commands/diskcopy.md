@@ -1,28 +1,22 @@
 ---
 title: diskcopy
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: Windows 명령 항목-diskcopy는 원본 드라이브의 플로피 디스크 내용을 대상 드라이브의 포맷 되거나 포맷 되지 않은 플로피 디스크로 복사 합니다.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5fd21efa-52cc-4e70-a7fe-35125a435106
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 05/07/2018
-ms.openlocfilehash: 553a85ac4fd9b7708d7adc668be4e000b36a9346
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 675694503cab207f05fd6b48e0d17c23196f85d0
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71377824"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80845546"
 ---
 # <a name="diskcopy"></a>diskcopy
-
-
 
 원본 드라이브의 플로피 디스크 콘텐츠를 대상 드라이브의 포맷 되거나 포맷 되지 않은 플로피 디스크로 복사 합니다. 매개 변수 없이 사용 하는 경우 **diskcopy** 원본 디스크와 대상 디스크에 현재 드라이브를 사용 합니다.
 
@@ -37,16 +31,16 @@ ms.locfileid: "71377824"
 diskcopy [<Drive1>: [<Drive2>:]] [/v]
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------|-----------|
-|\<드라이브 1 >|원본 디스크를 포함 하는 드라이브를 지정 합니다.|
+|\<Drive1 >|원본 디스크를 포함 하는 드라이브를 지정 합니다.|
 |\<Drive2 >|대상 디스크를 포함 하는 드라이브를 지정 합니다.|
 |/v|정보가 올바르게 복사 되었는지 확인 합니다. 이 옵션을 선택 하면 복사 프로세스가 느려집니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 -   디스크 사용
 
@@ -84,9 +78,11 @@ diskcopy [<Drive1>: [<Drive2>:]] [/v]
 
 > [!NOTE]
 > **Xcopy** 를 사용 하 여 시작 디스크를 복사할 수는 없습니다.
-> -   **Diskcopy** 종료 코드 이해
 
-    The following table explains each exit code.  
+### <a name="understanding-diskcopy-exit-codes"></a>**Diskcopy** 종료 코드 이해
+
+    The following table explains each exit code.
+    
     |종료 코드|설명|
     |---------|-----------|
     |0|복사 작업이 성공 했습니다.|
@@ -96,7 +92,7 @@ diskcopy [<Drive1>: [<Drive2>:]] [/v]
 
     To process the exit codes that are returned by **diskcomp**, you can use the *ERRORLEVEL* environment variable on the **if** command line in a batch program.
 
-## <a name="BKMK_examples"></a>예와
+## <a name="examples"></a><a name=BKMK_examples></a>예와
 
 B 드라이브의 디스크를 드라이브 A의 디스크에 복사 하려면 다음을 입력 합니다.
 ```
@@ -106,6 +102,6 @@ diskcopy b: a:
 
 diskcopy a: a:
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
-[명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

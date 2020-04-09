@@ -1,43 +1,37 @@
 ---
 title: 볼륨 raid 만들기
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: 3 개 이상의 지정 된 동적 디스크를 사용 하 여 RAID-5 볼륨을 만드는 볼륨 raid 만들기에 대 한 Windows 명령 항목입니다.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9f257950-9240-4d5f-9537-8ad653d48ebf
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5a3c13cb5b78ae3e771b461a35a7130a48e7ec01
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 656656aa8f1783920097a270bee24aabeb3d005a
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71378857"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80846926"
 ---
 # <a name="create-volume-raid"></a>볼륨 raid 만들기
 
 >적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-3 개 이상의 지정 된 동적 디스크를 사용 하 여 RAID\-5 볼륨을 만듭니다.  
-  
+지정 된 동적 디스크를 세 개 이상 사용 하 여 RAID-5 볼륨을 만듭니다.  
+
 > [!IMPORTANT]  
-> 이 DiskPart 명령을 Windows Vista의 모든 버전에서 사용할 수 없는 경우  
-  
-  
-  
+> 이 DiskPart 명령을 Windows Vista의 모든 버전에서 사용할 수 없는 경우
+
 ## <a name="syntax"></a>구문  
   
 ```  
 create volume raid [size=<n>] disk=<n>,<n>,<n>[,<n>,...] [align=<n>] [noerr]  
 ```  
   
-## <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
   
 |           매개 변수           |                                                                                                                                                                                                                                              설명                                                                                                                                                                                                                                              |
 |-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -46,19 +40,19 @@ create volume raid [size=<n>] disk=<n>,<n>,<n>[,<n>,...] [align=<n>] [noerr]
 |          \=<n> 맞춤           |                                                                                                                   모든 볼륨 범위에 있는 가장 가까운 맞춤 경계선을 맞춥니다. 일반적으로 하드웨어 RAID 논리 단위 번호와 사용 \(LUN\) 성능을 향상 시키기 위해 배열입니다. *n* 는 킬로바이트의 수는 \(KB\) 가장 가까운 맞춤 경계선을 디스크의 시작 부분에서.                                                                                                                   |
 |             noerr             |                                                                                                                                                 스크립팅 전용입니다. 오류가 발생 하면 오류가 발생 하지 않은 경우에 따라 명령을 처리 하도록 DiskPart 계속 합니다. 이 매개 변수를 크기는 오류 코드를 수행 합니다.                                                                                                                                                  |
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
   
 -   볼륨을 만든 후 포커스는 자동으로 새 볼륨으로 이동 합니다.  
   
-## <a name="BKMK_examples"></a>예와  
+## <a name="examples"></a><a name=BKMK_examples></a>예와  
 RAID를 만드는\-1000 메가바이트 1, 2 및 3, 유형 디스크를 사용 하 여 크기의 5 개 볼륨:  
   
 ```  
 create volume raid size=1000 disk=1,2,3  
 ```  
   
-#### <a name="additional-references"></a>추가 참조  
-[명령줄 구문 키](command-line-syntax-key.md)  
+## <a name="additional-references"></a>추가 참조  
+- [명령줄 구문 키](command-line-syntax-key.md)  
   
 
   

@@ -3,17 +3,17 @@ ms.assetid: 6416d125-bcaf-433d-971a-2f0283bca2c2
 title: 클러스터 인식 업데이트-질문과 대답
 ms.topic: article
 ms.prod: windows-server
-manager: dongill
+manager: lizross
 ms.author: jgerend
 author: JasonGerend
 ms.date: 04/28/2017
 description: Windows Server에서 클러스터 인식 업데이트에 대 한 자주 묻는 질문에 대 한 대답입니다.
-ms.openlocfilehash: 736b49222ae4c9e2a27229341f0d886bd3e0343c
-ms.sourcegitcommit: 07c9d4ea72528401314e2789e3bc2e688fc96001
+ms.openlocfilehash: ca81e952c0524af36ab6d241a205bd1cc971c74a
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76822136"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80828106"
 ---
 # <a name="cluster-aware-updating-frequently-asked-questions"></a>클러스터 인식 업데이트: 질문과 대답
 
@@ -22,49 +22,49 @@ ms.locfileid: "76822136"
 CAU\) \([클러스터 인식 업데이트](cluster-aware-updating.md) 는 장애 조치 (failover) 클러스터의 모든 서버에서 소프트웨어 업데이트를 조정 하는 기능으로, 클러스터 노드의 계획 된 장애 조치 (failover)를 통해 서비스 가용성에 영향을 주지 않습니다. 지속적인 가용성 \(기능이 있는 일부 응용 프로그램의 경우 (예: 실시간 마이그레이션을 사용 하는\-Hyper-v 또는 SMB 2.x 파일 서버, SMB 투명 장애 조치 (Failover)\)SMB 2.x 파일 서버) CAU는 서비스 가용성에 영향을 주지 않고 자동화 된 클러스터 업데이트를 조정할 수 있습니다.
 
 ## <a name="does-cau-support-updating-storage-spaces-direct-clusters"></a>CAU는 스토리지 공간 다이렉트 클러스터 업데이트를 지원 하나요?  
-그렇습니다. CAU는 배포 유형 (하이퍼 수렴 형 또는 수렴 됨)에 관계 없이 [스토리지 공간 다이렉트](../storage/storage-spaces/storage-spaces-direct-overview.md) 클러스터 업데이트를 지원 합니다. 특히 CAU 오케스트레이션은 각 클러스터 노드를 일시 중단 하면 기본 클러스터 된 저장소 공간이 정상 상태가 될 때까지 대기 합니다.
+예. CAU는 배포 유형 (하이퍼 수렴 형 또는 수렴 됨)에 관계 없이 [스토리지 공간 다이렉트](../storage/storage-spaces/storage-spaces-direct-overview.md) 클러스터 업데이트를 지원 합니다. 특히 CAU 오케스트레이션은 각 클러스터 노드를 일시 중단 하면 기본 클러스터 된 저장소 공간이 정상 상태가 될 때까지 대기 합니다.
 
 ## <a name="does-cau-work-with-windowsserver-2008r2-or-windows7"></a>CAU는 Windows Server 2008 R2 또는 Windows 7에서 작동합니까?  
-아니요. CAU는 Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10, Windows 8.1 또는 Windows 8을 실행 하는 컴퓨터 에서만 클러스터 업데이트 작업을 조정 합니다. 업데이트 되는 장애 조치 (failover) 클러스터는 Windows Server 2016, Windows Server 2012 R2 또는 Windows Server 2012를 실행 해야 합니다.
+No. CAU는 Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10, Windows 8.1 또는 Windows 8을 실행 하는 컴퓨터 에서만 클러스터 업데이트 작업을 조정 합니다. 업데이트 되는 장애 조치 (failover) 클러스터는 Windows Server 2016, Windows Server 2012 R2 또는 Windows Server 2012를 실행 해야 합니다.
   
 ## <a name="is-cau-limited-to-specific-clustered-applications"></a>CAU는 특정 클러스터형 응용 프로그램으로 제한 됩니까?  
-아니요. CAU는 클러스터된 애플리케이션의 유형에 관계없이 사용할 수 있습니다. CAU는 클러스터링 Api 및 PowerShell cmdlet 위에 계층화 된 솔루션을 업데이트\-는 외부 클러스터입니다. 따라서 CAU는 Windows Server 장애 조치 (failover) 클러스터에 구성 된 모든 클러스터 된 응용 프로그램에 대 한 업데이트를 조정할 수 있습니다.  
+No. CAU는 클러스터된 애플리케이션의 유형에 관계없이 사용할 수 있습니다. CAU는 클러스터링 Api 및 PowerShell cmdlet 위에 계층화 된 솔루션을 업데이트\-는 외부 클러스터입니다. 따라서 CAU는 Windows Server 장애 조치 (failover) 클러스터에 구성 된 모든 클러스터 된 응용 프로그램에 대 한 업데이트를 조정할 수 있습니다.  
   
 > [!NOTE]  
 > 현재 다음과 같은 클러스터 된 워크 로드는 CAU에 대해 테스트 되 고 인증 됩니다. SMB, 하이퍼\-V, DFS 복제, DFS 네임 스페이스, iSCSI 및 NFS.  
   
 ## <a name="does-cau-support-updates-from-microsoft-update-and-windows-update"></a>CAU는 Microsoft 업데이트 및 Windows Update의 업데이트를 지원합니까?  
-그렇습니다. 기본적으로 CAU는 클러스터 노드에서 Windows 업데이트 에이전트 \(WUA\) 유틸리티 Api를 사용 하는 플러그\-를 사용 하 여 구성 됩니다. Microsoft 업데이트 및 Windows 업데이트를 가리키도록 WUA infrastructure를 구성 하 고 WSUS\)를 업데이트 원본으로 \(Windows Server Update Services 수 있습니다.  
+예. 기본적으로 CAU는 클러스터 노드에서 Windows 업데이트 에이전트 \(WUA\) 유틸리티 Api를 사용 하는 플러그\-를 사용 하 여 구성 됩니다. Microsoft 업데이트 및 Windows 업데이트를 가리키도록 WUA infrastructure를 구성 하 고 WSUS\)를 업데이트 원본으로 \(Windows Server Update Services 수 있습니다.  
   
 ## <a name="does-cau-support-wsus-updates"></a>CAU는 WSUS 업데이트를 지원합니까?  
-그렇습니다. 기본적으로 CAU는 클러스터 노드에서 Windows 업데이트 에이전트 \(WUA\) 유틸리티 Api를 사용 하는 플러그\-를 사용 하 여 구성 됩니다. Microsoft 업데이트 및 Windows 업데이트 또는 WSUS\) 서버를 업데이트 원본으로 \(로컬 Windows Server Update Services를 가리키도록 WUA 인프라를 구성할 수 있습니다.  
+예. 기본적으로 CAU는 클러스터 노드에서 Windows 업데이트 에이전트 \(WUA\) 유틸리티 Api를 사용 하는 플러그\-를 사용 하 여 구성 됩니다. Microsoft 업데이트 및 Windows 업데이트 또는 WSUS\) 서버를 업데이트 원본으로 \(로컬 Windows Server Update Services를 가리키도록 WUA 인프라를 구성할 수 있습니다.  
   
 ## <a name="can-cau-apply-limited-distribution-release-updates"></a>CAU는 제한된 배포 릴리스 업데이트를 적용할 수 있습니까?  
-그렇습니다. 핫픽스 라고도 하는 \(LDR\) 업데이트는 Microsoft 업데이트 또는 Windows 업데이트를 통해 게시 되지 않으므로 CAU가 기본적으로 사용 하는 Windows 업데이트 \(\)의\-에이전트에서 다운로드할 수 없습니다.  
+예. 핫픽스 라고도 하는 \(LDR\) 업데이트는 Microsoft 업데이트 또는 Windows 업데이트를 통해 게시 되지 않으므로 CAU가 기본적으로 사용 하는 Windows 업데이트 \(\)의\-에이전트에서 다운로드할 수 없습니다.  
   
 그러나 CAU에는 핫픽스 업데이트를 적용 하도록 선택할 수 있는 두 번째 플러그\-포함 되어 있습니다. 에서이 핫픽스 플러그\-를 사용자 지정 하 여 비\-Microsoft 드라이버, 펌웨어 및 BIOS 업데이트를 적용할 수도 있습니다.  
   
 ## <a name="can-i-use-cau-to-apply-cumulative-updates"></a>CAU를 사용하여 누적 업데이트를 적용할 수 있나요?  
-그렇습니다. 누적 업데이트가 일반 배포 릴리스 업데이트 또는 LDR 업데이트인 경우 CAU가 해당 업데이트를 적용할 수 있습니다.  
+예. 누적 업데이트가 일반 배포 릴리스 업데이트 또는 LDR 업데이트인 경우 CAU가 해당 업데이트를 적용할 수 있습니다.  
   
 ## <a name="can-i-schedule-updates"></a>업데이트를 예약할 수 있나요?  
-그렇습니다. CAU는 다음과 같은 업데이트 모드를 지원하며, 두 모드에서 모두 업데이트를 예약할 수 있습니다.  
+예. CAU는 다음과 같은 업데이트 모드를 지원하며, 두 모드에서 모두 업데이트를 예약할 수 있습니다.  
   
 **자체\-업데이트** 지정 된 프로필 및 정기적인 일정 (예: 월간 유지 관리 기간)에 따라 클러스터 자체를 업데이트할 수 있습니다. 언제 든 지 요청 시 자체\-업데이트 실행을 시작할 수도 있습니다. 자체\-업데이트 모드를 사용 하도록 설정 하려면 클러스터에 CAU 클러스터 된 역할을 추가 해야 합니다. CAU 자체\-업데이트 기능은 다른 클러스터 된 워크 로드와 마찬가지로 수행 되며, 업데이트 코디네이터 컴퓨터의 계획 되거나 계획 되지 않은 장애 조치 (failover)와 함께 원활 하 게 작동할 수 있습니다.  
   
 **원격\-업데이트** Windows 또는 Windows Server를 실행 하는 컴퓨터에서 언제 든 지 업데이트 실행을 시작할 수 있습니다. 클러스터 인식 업데이트 창이 나 **Invoke\-Invoke-caurun** PowerShell cmdlet을 사용 하 여 업데이트 실행을 시작할 수 있습니다. 원격\-업데이트는 CAU의 기본 업데이트 모드입니다. 클러스터 노드가 아닌 원격 컴퓨터에서는 작업 스케줄러를 사용하여 원하는 일정으로 [Invoke-CauRun](https://technet.microsoft.com/itpro/powershell/windows/cluster-aware-updating/invoke-caurun) cmdlet을 실행할 수 있습니다.  
   
 ## <a name="can-i-schedule-updates-to-apply-during-a-backup"></a>백업 중에 적용 되도록 업데이트를 예약할 수 있나요?  
-그렇습니다. CAU는 이러한 측면에서 제약 조건을 적용 하지 않습니다. 그러나 서버 백업이 진행 중인 동안에는 연결 된 잠재적인 다시 시작\) 사용 하 여 서버 \(에서 소프트웨어 업데이트를 수행 하는 것이 모범 사례가 아닙니다. CAU는 클러스터링 API만을 사용하여 리소스 장애 조치(failover) 및 장애 복구(failback)를 결정하므로 서버 백업 상태는 알지 못합니다.  
+예. CAU는 이러한 측면에서 제약 조건을 적용 하지 않습니다. 그러나 서버 백업이 진행 중인 동안에는 연결 된 잠재적인 다시 시작\) 사용 하 여 서버 \(에서 소프트웨어 업데이트를 수행 하는 것이 모범 사례가 아닙니다. CAU는 클러스터링 API만을 사용하여 리소스 장애 조치(failover) 및 장애 복구(failback)를 결정하므로 서버 백업 상태는 알지 못합니다.  
   
 ## <a name="can-cau-work-with-configuration-manager"></a>CAU를 Configuration Manager와 함께 사용할 수 있나요?  
 CAU는 클러스터 노드에서 소프트웨어 업데이트를 조정 하는 도구 이며 서버 소프트웨어 업데이트도 수행 Configuration Manager 합니다. 다른 Windows Server Update Services 서버를 사용 하는 것을 포함 하 여 데이터 센터 배포에서 동일한 서버에 대해 겹치는 검사를 하지 않도록 이러한 도구를 구성 하는 것이 중요 합니다. 이렇게 하면 Configuration Manager\-기반 업데이트에서 클러스터 인식 기능을 포함 하지 않기 때문에 CAU를 사용 하는 목표가 실수로 방지 되지 않습니다.  
   
 ## <a name="do-i-need-administrative-credentials-to-run-cau"></a>CAU를 실행하려면 관리 자격 증명이 필요합니까?  
-그렇습니다. CAU 도구를 실행하려면 CAU에 로컬 서버에 대한 관리 자격 증명이 필요합니다. 또는 CAU가 실행되는 클라이언트 컴퓨터 또는 로컬 서버에 대한 **인증 후 클라이언트 가장** 사용자 권한이 필요합니다. 그러나 클러스터 노드에서 소프트웨어 업데이트를 조정하려면 모든 노드에서 CAU에 클러스터 관리 자격 증명이 필요합니다. CAU UI는 자격 증명 없이 시작 될 수 있지만 업데이트를 미리 보거나 적용 하기 위해 클러스터 인스턴스에 연결할 때 클러스터 관리 자격 증명을 묻는 메시지를 표시 합니다.  
+예. CAU 도구를 실행하려면 CAU에 로컬 서버에 대한 관리 자격 증명이 필요합니다. 또는 CAU가 실행되는 클라이언트 컴퓨터 또는 로컬 서버에 대한 **인증 후 클라이언트 가장** 사용자 권한이 필요합니다. 그러나 클러스터 노드에서 소프트웨어 업데이트를 조정하려면 모든 노드에서 CAU에 클러스터 관리 자격 증명이 필요합니다. CAU UI는 자격 증명 없이 시작 될 수 있지만 업데이트를 미리 보거나 적용 하기 위해 클러스터 인스턴스에 연결할 때 클러스터 관리 자격 증명을 묻는 메시지를 표시 합니다.  
   
 ## <a name="can-i-script-cau"></a>CAU를 스크립팅할 수 있나요?  
-그렇습니다. CAU에는 다양 한 스크립팅 옵션을 제공 하는 PowerShell cmdlet이 제공 됩니다. 이러한 cmdlet은 CAU UI가 CAU 작업을 수행하기 위해 호출하는 cmdlet과 동일합니다.  
+예. CAU에는 다양 한 스크립팅 옵션을 제공 하는 PowerShell cmdlet이 제공 됩니다. 이러한 cmdlet은 CAU UI가 CAU 작업을 수행하기 위해 호출하는 cmdlet과 동일합니다.  
 
 ## <a name="what-happens-to-active-clustered-roles"></a>활성 클러스터 된 역할은 어떻게 되나요?
 
@@ -86,13 +86,13 @@ CAU는 클러스터 된 노드의 부하를 분산 하지 않지만 클러스터
 업데이트 실행을 시작하는 관리자는 오프라인 상태가 될 수 있는 노드 수에 대한 적절한 임계값을 지정할 수 있습니다. 따라서 모든 클러스터 노드가 온라인 상태가 아니어도 클러스터에서 업데이트 실행을 진행할 수 있습니다.  
   
 ## <a name="can-i-use-cau-to-update-only-a-single-node"></a>CAU를 사용 하 여 단일 노드만 업데이트할 수 있나요?  
-아니요. CAU는 클러스터\-범위 업데이트 도구 이므로 업데이트할 클러스터를 선택할 수 있습니다. 단일 노드를 업데이트하려면 CAU와 독립적인 기존 서버 업데이트 도구를 사용하면 됩니다.  
+No. CAU는 클러스터\-범위 업데이트 도구 이므로 업데이트할 클러스터를 선택할 수 있습니다. 단일 노드를 업데이트하려면 CAU와 독립적인 기존 서버 업데이트 도구를 사용하면 됩니다.  
   
 ## <a name="can-cau-report-updates-that-are-initiated-from-outside-cau"></a>CAU는 CAU 외부에서 시작 된 업데이트를 보고할 수 있나요?  
-아니요. CAU는 CAU 내부에서 시작된 업데이트 실행만 보고할 수 있습니다. 그러나 후속 CAU 업데이트 실행을 시작 하면\-이외 CAU 메서드를 통해 설치 된 업데이트를 적절 하 게 고려 하 여 각 클러스터 노드에 적용할 수 있는 추가 업데이트를 확인 합니다.  
+No. CAU는 CAU 내부에서 시작된 업데이트 실행만 보고할 수 있습니다. 그러나 후속 CAU 업데이트 실행을 시작 하면\-이외 CAU 메서드를 통해 설치 된 업데이트를 적절 하 게 고려 하 여 각 클러스터 노드에 적용할 수 있는 추가 업데이트를 확인 합니다.  
   
 ## <a name="can-cau-support-my-unique-it-process-needs"></a>CAU는 고유한 IT 프로세스 요구 사항을 지원할 수 있나요?  
-그렇습니다. CAU는 기업 고객의 고유한 IT 프로세스 요구 사항에 맞는 다음과 같은 유동적 차원 옵션을 제공합니다.  
+예. CAU는 기업 고객의 고유한 IT 프로세스 요구 사항에 맞는 다음과 같은 유동적 차원 옵션을 제공합니다.  
   
 **스크립트** 업데이트 실행에서는 사전\-업데이트 PowerShell 스크립트 및 사후\-업데이트 PowerShell 스크립트를 지정할 수 있습니다. 사전\-업데이트 스크립트는 노드를 일시 중지 하기 전에 각 클러스터 노드에서 실행 됩니다. 사후\-업데이트 스크립트는 노드 업데이트를 설치한 후 각 클러스터 노드에서 실행 됩니다.  
   
@@ -147,10 +147,10 @@ CAU는 클러스터 노드에서 실행 되는 서비스가 필요 하지 않습
 -   CAU는 Windows Server 2016, Windows Server 2012 R2 및 Windows Server 2012를 실행 하는 클러스터 에서만 지원 됩니다. VMM은 Windows Server 2008 R2 및 Windows Server 2008를 실행 하는 컴퓨터의\-Hyper-v 클러스터도 지원 합니다.  
   
 ## <a name="can-i-use-remote-updating-on-a-cluster-that-is-configured-for-self-updating"></a>자체\-업데이트를 위해 구성 된 클러스터에서 원격\-업데이트를 사용할 수 있나요?  
-그렇습니다. 업데이트를 자동으로 설치 하도록 구성 된 Windows 업데이트 경우에도 컴퓨터에서 언제 든 지 Windows 업데이트 검색을 강제할 수 있는 것 처럼, 자체\-업데이트 구성의 장애 조치 (failover) 클러스터에서\-요청 시 원격\-업데이트를 통해 업데이트할 수 있습니다. 그러나 이 경우 업데이트 실행이 이미 진행되지 않았는지 확인해야 합니다.  
+예. 업데이트를 자동으로 설치 하도록 구성 된 Windows 업데이트 경우에도 컴퓨터에서 언제 든 지 Windows 업데이트 검색을 강제할 수 있는 것 처럼, 자체\-업데이트 구성의 장애 조치 (failover) 클러스터에서\-요청 시 원격\-업데이트를 통해 업데이트할 수 있습니다. 그러나 이 경우 업데이트 실행이 이미 진행되지 않았는지 확인해야 합니다.  
   
 ## <a name="can-i-reuse-my-cluster-update-settings-across-clusters"></a>여러 클러스터 간에 클러스터 업데이트 설정을 다시 사용할 수 있습니까?  
-그렇습니다. CAU에서는 클러스터 업데이트 시 업데이트 실행 동작이 서로 다른 여러 업데이트 실행 옵션을 사용할 수 있습니다. 이러한 옵션을 업데이트 실행 프로필로 저장하여 어느 클러스터에서나 다시 사용할 수 있습니다. 설정을 저장하여 업데이트 요구 사항이 비슷한 장애 조치(failover) 클러스터에서 다시 사용하는 것이 좋습니다. 예를 들어 비즈니스\-중요 한 서비스를 지 원하는 모든 Microsoft SQL Server 클러스터에 대해 "비즈니스\-중요 SQL Server 클러스터 업데이트 실행 프로필"을 만들 수 있습니다.  
+예. CAU에서는 클러스터 업데이트 시 업데이트 실행 동작이 서로 다른 여러 업데이트 실행 옵션을 사용할 수 있습니다. 이러한 옵션을 업데이트 실행 프로필로 저장하여 어느 클러스터에서나 다시 사용할 수 있습니다. 설정을 저장하여 업데이트 요구 사항이 비슷한 장애 조치(failover) 클러스터에서 다시 사용하는 것이 좋습니다. 예를 들어 비즈니스\-중요 한 서비스를 지 원하는 모든 Microsoft SQL Server 클러스터에 대해 "비즈니스\-중요 SQL Server 클러스터 업데이트 실행 프로필"을 만들 수 있습니다.  
   
 ## <a name="where-is-the-cau-plug-in-specification"></a>지정 된 경우 CAU 플러그\-은 어디 인가요?  
   
@@ -160,5 +160,5 @@ CAU는 클러스터 노드에서 실행 되는 서비스가 필요 하지 않습
   
 ## <a name="see-also"></a>참고 항목  
   
--   [클러스터 인식 업데이트 개요](cluster-aware-updating.md)  
+-   [클러스터 인식 업데이트 개요\-  
   

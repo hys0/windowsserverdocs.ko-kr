@@ -3,18 +3,18 @@ ms.assetid: 75cc1d24-fa2f-45bd-8f3b-1bbd4a1aead0
 title: 클러스터 인식 업데이트 요구 사항 및 모범 사례
 ms.prod: windows-server
 ms.topic: article
-ms.manager: dongill
+manager: lizross
 author: JasonGerend
 ms.author: jgerend
 ms.technology: storage-failover-clustering
 ms.date: 08/06/2018
 description: 클러스터 인식 업데이트를 사용 하 여 Windows Server를 실행 하는 클러스터에 업데이트를 설치 하기 위한 요구 사항
-ms.openlocfilehash: 14ef72c2d2dd74dbc67bec37d9b09bb6fb077925
-ms.sourcegitcommit: 2a15de216edde8b8e240a4aa679dc6d470e4159e
+ms.openlocfilehash: 6062004f094dfa3b412942f44db568459ce61e17
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77465517"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80828026"
 ---
 # <a name="cluster-aware-updating-requirements-and-best-practices"></a>클러스터 인식 업데이트 요구 사항 및 모범 사례
 
@@ -25,7 +25,7 @@ ms.locfileid: "77465517"
 > [!NOTE]  
 > **Microsoft.windowsupdateplugin**이외의 플러그\-사용 하는 경우 클러스터 환경에서 업데이트를 적용할 준비가 되었는지 독립적으로 확인 해야 할 수 있습니다. \-아닌 Microsoft 플러그\-를 사용 하는 경우 자세한 내용은 게시자에 게 문의 하십시오. 플러그\-기능에 대 한 자세한 내용은 [플러그\-기능 작동 방식](cluster-aware-updating-plug-ins.md)을 참조 하세요.   
 
-## <a name="BKMK_REQ_CLUS"></a>장애 조치 (Failover) 클러스터링 기능 및 장애 조치 (Failover) 클러스터링 도구 설치  
+## <a name="install-the-failover-clustering-feature-and-the-failover-clustering-tools"></a><a name="BKMK_REQ_CLUS"></a>장애 조치 (Failover) 클러스터링 기능 및 장애 조치 (Failover) 클러스터링 도구 설치  
 CAU를 사용하려면 장애 조치(failover) 클러스터링 기능 및 장애 조치(failover) 클러스터링 도구를 설치해야 합니다. 장애 조치 (Failover) 클러스터링 도구에는 cau 도구 \(clusterawareupdating.dll\), 장애 조치 (Failover) 클러스터링 cmdlet 및 CAU 작업에 필요한 기타 구성 요소가 포함 됩니다. 장애 조치(failover) 클러스터링 기능을 설치하는 단계는 [장애 조치(failover) 클러스터링 기능 및 도구 설치](create-failover-cluster.md#install-the-failover-clustering-feature)를 참조하세요.  
 
 장애 조치 (Failover) 클러스터링 도구에 대 한 정확한 설치 요구 사항은 CAU가 장애 조치 (failover) 클러스터의 클러스터 된 역할로 업데이트 하는지 여부에 따라 \(\-업데이트 모드\) 또는 원격 컴퓨터를 사용 합니다. 또한 CAU의 자체\-업데이트 모드를 사용 하려면 CAU 도구를 사용 하 여 장애 조치 (failover) 클러스터에 CAU 클러스터 된 역할을 설치 해야 합니다.    
@@ -62,7 +62,7 @@ CAU를 사용하려면 장애 조치(failover) 클러스터링 기능 및 장애
 
 -   CAU 업데이트 실행 중에 PowerShell 사전\-업데이트 또는 게시\-업데이트 스크립트를 사용 하려면 모든 클러스터 노드에 스크립트가 설치 되어 있는지, 아니면 항상 사용 가능한 네트워크 파일 공유와 같은 모든 노드에 액세스할 수 있는지 확인 합니다. 스크립트가 네트워크 파일 공유에 저장된 경우 Everyone 그룹에 대한 읽기 권한 폴더를 구성합니다.  
 
-## <a name="BKMK_NODE_CONFIG"></a>원격 관리를 위한 노드 구성  
+## <a name="configure-the-nodes-for-remote-management"></a><a name="BKMK_NODE_CONFIG"></a>원격 관리를 위한 노드 구성  
 클러스터 인식 업데이트를 사용 하려면 클러스터의 모든 노드를 원격 관리에 대해 구성 해야 합니다. 기본적으로 원격 관리를 위해 노드를 구성 하기 위해 수행 해야 하는 작업은 [자동 다시 시작을 허용 하는 방화벽 규칙을 사용 하도록 설정](#BKMK_FW)하는 것입니다. 
 
 다음 표에서는 환경이 기본값에서 달라 지므로 하는 경우 전체 원격 관리 요구 사항을 보여 줍니다.
@@ -73,10 +73,10 @@ CAU를 사용하려면 장애 조치(failover) 클러스터링 기능 및 장애
 |---------------|---|-----------------------|-------------------------|  
 |[자동 다시 시작을 허용 하도록 방화벽 규칙 설정](#BKMK_FW)|사용 안 함|방화벽을 사용하는 경우 모든 클러스터 노드에 필요|방화벽을 사용하는 경우 모든 클러스터 노드에 필요|  
 |[WMI(Windows Management Instrumentation) 사용](#BKMK_WMI)|사용|모든 클러스터 노드에 필요|모든 클러스터 노드에 필요|  
-|[Windows PowerShell 3.0 또는 4.0 및 Windows PowerShell 원격 기능 사용](#BKMK_PS)|사용|모든 클러스터 노드에 필요|모든 클러스터 노드에서 다음을 실행하는 데 필요<br /><br />- [Save-caudebugtrace](https://docs.microsoft.com/powershell/module/clusterawareupdating/Save-CauDebugTrace?view=win10-ps) cmdlet<br />-PowerShell 업데이트 실행 중\-업데이트 스크립트를 사전\-업데이트 및 게시<br />-클러스터 인식 업데이트 창이 나 [테스트\-Test-causetup](https://docs.microsoft.com/powershell/module/clusterawareupdating/Test-CauSetup?view=win10-ps) Windows PowerShell cmdlet을 사용 하 여 클러스터 업데이트 준비 테스트|  
-|[4.6 또는 4.5 .NET Framework 설치](#BKMK_NET)|사용|모든 클러스터 노드에 필요|모든 클러스터 노드에서 다음을 실행하는 데 필요<br /><br />- [Save-caudebugtrace](https://docs.microsoft.com/powershell/module/clusterawareupdating/Save-CauDebugTrace?view=win10-ps) cmdlet<br />-PowerShell 업데이트 실행 중\-업데이트 스크립트를 사전\-업데이트 및 게시<br />-클러스터 인식 업데이트 창이 나 [테스트\-Test-causetup](https://docs.microsoft.com/powershell/module/clusterawareupdating/Test-CauSetup?view=win10-ps) Windows PowerShell cmdlet을 사용 하 여 클러스터 업데이트 준비 테스트|  
+|[Windows PowerShell 3.0 또는 4.0 및 Windows PowerShell 원격 기능 사용](#BKMK_PS)|사용|모든 클러스터 노드에 필요|모든 클러스터 노드에서 다음을 실행하는 데 필요<p>- [Save-caudebugtrace](https://docs.microsoft.com/powershell/module/clusterawareupdating/Save-CauDebugTrace?view=win10-ps) cmdlet<br />-PowerShell 업데이트 실행 중\-업데이트 스크립트를 사전\-업데이트 및 게시<br />-클러스터 인식 업데이트 창이 나 [테스트\-Test-causetup](https://docs.microsoft.com/powershell/module/clusterawareupdating/Test-CauSetup?view=win10-ps) Windows PowerShell cmdlet을 사용 하 여 클러스터 업데이트 준비 테스트|  
+|[4.6 또는 4.5 .NET Framework 설치](#BKMK_NET)|사용|모든 클러스터 노드에 필요|모든 클러스터 노드에서 다음을 실행하는 데 필요<p>- [Save-caudebugtrace](https://docs.microsoft.com/powershell/module/clusterawareupdating/Save-CauDebugTrace?view=win10-ps) cmdlet<br />-PowerShell 업데이트 실행 중\-업데이트 스크립트를 사전\-업데이트 및 게시<br />-클러스터 인식 업데이트 창이 나 [테스트\-Test-causetup](https://docs.microsoft.com/powershell/module/clusterawareupdating/Test-CauSetup?view=win10-ps) Windows PowerShell cmdlet을 사용 하 여 클러스터 업데이트 준비 테스트|  
 
-### <a name="BKMK_FW"></a>자동 다시 시작을 허용 하도록 방화벽 규칙 설정  
+### <a name="enable-a-firewall-rule-to-allow-automatic-restarts"></a><a name="BKMK_FW"></a>자동 다시 시작을 허용 하도록 방화벽 규칙 설정  
 업데이트가 적용 된 후 자동 다시 시작을 허용 하려면 \(업데이트를 설치 하는 데 다시\)시작 해야 하는 경우, Windows 방화벽이 나 비\-Microsoft 방화벽이 클러스터 노드에서 사용 되는 경우 다음 트래픽을 허용 하는 각 노드에서 방화벽 규칙을 사용 하도록 설정 해야 합니다.  
 
 -   프로토콜: TCP  
@@ -102,7 +102,7 @@ CAU를 사용하려면 장애 조치(failover) 클러스터링 기능 및 장애
 Set-NetFirewallRule -Group "@firewallapi.dll,-36751" -Profile Domain -Enabled true  
 ```  
 
-### <a name="BKMK_WMI"></a>WMI(Windows Management Instrumentation) 사용 (WMI) 
+### <a name="enable-windows-management-instrumentation-wmi"></a><a name="BKMK_WMI"></a>WMI(Windows Management Instrumentation) 사용 (WMI) 
 WMI(Windows Management Instrumentation) \(WMI\)를 사용 하 여 원격 관리에 대해 모든 클러스터 노드를 구성 해야 합니다. 기본적으로 사용하도록 설정됩니다.  
 
 수동으로 원격 관리를 사용하도록 설정하려면 다음을 수행합니다.  
@@ -117,7 +117,7 @@ WMI(Windows Management Instrumentation) \(WMI\)를 사용 하 여 원격 관리�
 
 WMI 원격을 지원 하려면 클러스터 노드에서 Windows 방화벽을 사용 하는 경우 **\)에서 HTTP\-\(Windows 원격 관리** 에 대 한 인바운드 방화벽 규칙이 각 노드에서 사용 하도록 설정 되어야 합니다.  이 규칙은 기본적으로 사용됩니다.  
 
-### <a name="BKMK_PS"></a>Windows PowerShell 및 Windows PowerShell 원격 기능 사용  
+### <a name="enable-windows-powershell-and-windows-powershell-remoting"></a><a name="BKMK_PS"></a>Windows PowerShell 및 Windows PowerShell 원격 기능 사용  
 원격\-업데이트 모드에서 자체\-업데이트 모드 및 특정 CAU 기능을 사용 하도록 설정 하려면 PowerShell을 설치 하 고 모든 클러스터 노드에서 원격 명령을 실행할 수 있도록 설정 해야 합니다. PowerShell은 기본적으로 설치 되 고 원격 기능을 사용 하도록 설정 됩니다.  
 
 PowerShell 원격을 사용 하도록 설정 하려면 다음 방법 중 하나를 사용 합니다.  
@@ -128,7 +128,7 @@ PowerShell 원격을 사용 하도록 설정 하려면 다음 방법 중 하나�
 
 PowerShell 원격을 사용 하도록 설정 하는 방법에 대 한 자세한 내용은 [원격 요구 사항 정보](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_remote_requirements?view=powershell-6)를 참조 하세요.  
 
-### <a name="BKMK_NET"></a>4.6 또는 4.5 .NET Framework 설치  
+### <a name="install-net-framework-46-or-45"></a><a name="BKMK_NET"></a>4.6 또는 4.5 .NET Framework 설치  
 자체\-업데이트 모드 및 원격\-업데이트 모드의 특정 CAU 기능을 사용 하려면 .NET Framework 4.6 또는 .NET Framework 4.5 (Windows Server 2012 r 2의 경우)를 모든 클러스터 노드에 설치 해야 합니다. 기본적으로 NET Framework가 설치 되어 있습니다.  
 
 PowerShell을 사용 하 여 .NET Framework 4.6 (또는 4.5)을 설치 하려면 다음 명령을 사용 합니다.
@@ -137,9 +137,9 @@ PowerShell을 사용 하 여 .NET Framework 4.6 (또는 4.5)을 설치 하려면
 Install-WindowsFeature -Name NET-Framework-45-Core
 ```
 
-## <a name="BKMK_BEST_PRAC"></a>클러스터 인식 업데이트 사용에 대 한 모범 사례 권장 사항 
+## <a name="best-practices-recommendations-for-using-cluster-aware-updating"></a><a name="BKMK_BEST_PRAC"></a>클러스터 인식 업데이트 사용에 대 한 모범 사례 권장 사항 
 
-### <a name="BKMK_BP_WUA"></a>Microsoft 업데이트 적용에 대 한 권장 사항
+### <a name="recommendations-for-applying-microsoft-updates"></a><a name="BKMK_BP_WUA"></a>Microsoft 업데이트 적용에 대 한 권장 사항
 
 CAU를 사용 하 여 클러스터의 기본 **microsoft.windowsupdateplugin** 플러그\-를 사용 하 여 업데이트를 적용 하기 시작 하는 경우 클러스터 노드에 Microsoft의 소프트웨어 업데이트를 설치 하는 다른 방법의 사용을 중지 하는 것이 좋습니다.  
 
@@ -169,7 +169,7 @@ CAU를 사용 하 여 클러스터의 기본 **microsoft.windowsupdateplugin** �
 
 -   예를 들어 내부 소프트웨어 배포 서버 \(경우 업데이트를 포함 하 고 배포 하는 데 WSUS 서버\) 사용 되며, 해당 서버가 클러스터 노드에 대해 승인 된 업데이트를 올바르게 식별 하는지 확인 합니다.  
 
-#### <a name="BKMK_PROXY"></a>지점 시나리오에서 Microsoft 업데이트 적용  
+#### <a name="apply-microsoft-updates-in-branch-office-scenarios"></a><a name="BKMK_PROXY"></a>지점 시나리오에서 Microsoft 업데이트 적용  
 특정 지점 시나리오에서 Microsoft 업데이트 또는 Windows 업데이트를 통해 클러스터 노드에 Microsoft 업데이트를 다운로드하려면 각 노드에서 로컬 시스템 계정에 대한 프록시 설정을 구성해야 할 수 있습니다. 예를 들어 지점 클러스터에서 로컬 프록시 서버를 통해 Microsoft 업데이트 또는 Windows 업데이트에 액세스하여 업데이트를 다운로드하는 경우 이러한 구성이 필요할 수 있습니다.  
 
 필요한 경우 각 노드에서 WinHTTP 프록시 설정을 구성 하 여 로컬 프록시 서버를 지정 하 고 로컬 주소 예외 \((\)로컬 주소에 대 한 바이패스 목록)를 구성 합니다. 이렇게 하려면 각 클러스터 노드의 관리자 권한 명령 프롬프트에서 다음 명령을 실행하면 됩니다.  
@@ -186,7 +186,7 @@ netsh winhttp set proxy <ProxyServerFQDN >:<port> "<local>"
 netsh winhttp set proxy MyProxy.CONTOSO.com:443 "<local>"  
 ```  
 
-### <a name="BKMK_BP_HF"></a>Microsoft.hotfixplugin 사용에 대 한 권장 사항  
+### <a name="recommendations-for-using-the-microsofthotfixplugin"></a><a name="BKMK_BP_HF"></a>Microsoft.hotfixplugin 사용에 대 한 권장 사항  
 
 -   핫픽스 루트 폴더 및 핫픽스 구성 파일의 사용 권한을 이러한 파일을 저장하는 데 사용되는 컴퓨터의 로컬 관리자로만 쓰기 액세스를 제한하도록 구성하는 것이 좋습니다. 이렇게 하면 권한 없는 사용자가 이러한 파일을 변조하여 핫픽스가 적용될 때 장애 조치(failover) 클러스터의 기능을 손상시킬 수 있는 취약점을 방지할 수 있습니다.  
 
@@ -204,7 +204,7 @@ netsh winhttp set proxy MyProxy.CONTOSO.com:443 "<local>"
 
 -   IT 조직에서 업데이트 실행 설정을 저장하여 업데이트 요구 사항이 유사한 장애 조치(failover) 클러스터 간에 다시 사용하려면 업데이트 실행 프로필을 만들면 됩니다. 또한 업데이트 모드에 따라 모든 원격 업데이트 코디네이터 컴퓨터 또는 장애 조치(failover) 클러스터에서 액세스할 수 있는 파일 공유에서 업데이트 실행 프로필을 저장하고 관리할 수 있습니다. 자세한 내용은 [고급 옵션 및 CAU에 대 한 실행 프로필 업데이트](cluster-aware-updating-options.md)를 참조 하세요.  
 
-## <a name="BKMK_BPA"></a>클러스터 업데이트 준비 테스트  
+## <a name="test-cluster-updating-readiness"></a><a name="BKMK_BPA"></a>클러스터 업데이트 준비 테스트  
 CAU 모범 사례 분석기 \(BPA\) 모델을 실행 하 여 장애 조치 (failover) 클러스터 및 네트워크 환경이 CAU에서 소프트웨어 업데이트를 적용 하는 데 필요한 많은 요구 사항을 충족 하는지 테스트할 수 있습니다. 많은 테스트에서는 **microsoft.windowsupdateplugin**의 기본 플러그\-를 사용 하 여 microsoft 업데이트를 적용 하기 위해 환경에서 준비를 확인 합니다.  
 
 > [!NOTE]  
@@ -235,16 +235,16 @@ CAU 모범 사례 분석기 \(BPA\) 모델을 실행 하 여 장애 조치 (fail
 |----------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |                                     장애 조치(failover) 클러스터를 사용할 수 있어야 함                                     |                                                                                       장애 조치(failover) 클러스터 이름을 확인할 수 없거나, 하나 이상의 클러스터 노드에 액세스할 수 없습니다. BPA에서 클러스터 준비 테스트를 실행할 수 없습니다.                                                                                        |                                                                   -BPA 실행 중에 지정 된 클러스터 이름의 철자를 확인 합니다.<br />-클러스터의 모든 노드가 온라인 상태이 고 실행 중인지 확인 합니다.<br />-구성 유효성 검사 마법사가 장애 조치 (failover) 클러스터에서 성공적으로 실행 될 수 있는지 확인 합니다.                                                                    |
 |                    장애 조치(failover) 클러스터 노드에서 WMI를 통해 원격 관리를 사용할 수 있어야 함                    |                                                하나 이상의 장애 조치 (failover) 클러스터 노드가 WMI(Windows Management Instrumentation) \(WMI\)를 사용 하 여 원격 관리에 대해 사용 하도록 설정 되어 있지 않습니다. 노드에 원격 관리가 구성되지 않은 경우 CAU에서 클러스터 노드를 업데이트할 수 없습니다.                                                 |                                                                                                  모든 장애 조치(failover) 클러스터 노드에서 WMI를 통해 원격 관리를 사용할 수 있는지 확인합니다. 자세한 내용은 이 항목에서 [원격 관리를 위한 노드 구성](#BKMK_NODE_CONFIG)을 참조하세요.                                                                                                   |
-|                      각 장애 조치 (failover) 클러스터 노드에서 PowerShell 원격을 사용 하도록 설정 해야 합니다.                       |                                                           PowerShell이 설치 되어 있지 않거나 하나 이상의 장애 조치 (failover) 클러스터 노드에서 원격 기능을 사용할 수 없습니다. CAU는 자체\-업데이트 모드용으로 구성 하거나 원격\-업데이트 모드의 특정 기능을 사용할 수 없습니다.                                                            |                                                                                             PowerShell이 모든 클러스터 노드에 설치 되어 있고 원격 기능을 사용 하도록 설정 되어 있는지 확인 합니다.<br /><br />자세한 내용은 이 항목에서 [원격 관리를 위한 노드 구성](#BKMK_NODE_CONFIG)을 참조하세요.                                                                                             |
-|                                            장애 조치(failover) 클러스터 버전                                            |                                                                            장애 조치 (failover) 클러스터에 있는 하나 이상의 노드가 Windows Server 2016, Windows Server 2012 R2 또는 Windows Server 2012를 실행 하지 않습니다. CAU에서 장애 조치(failover) 클러스터를 업데이트할 수 없습니다.                                                                             |                                                                   BPA 실행 중에 지정한 장애 조치 (failover) 클러스터가 Windows Server 2016, Windows Server 2012 R2 또는 Windows Server 2012를 실행 하 고 있는지 확인 합니다.<br /><br />자세한 내용은 이 항목에서 [클러스터 구성 확인](#BKMK_REQ_CLUS)을 참조하세요.                                                                   |
-| 필요한 버전의 .NET Framework 및 Windows PowerShell이 모든 장애 조치(failover) 클러스터 노드에 설치되어 있어야 함 |                                                                                              .NET Framework 4.6, 4.5 또는 Windows PowerShell이 하나 이상의 클러스터 노드에 설치 되어 있지 않습니다. 일부 CAU 기능이 작동하지 않을 수 있습니다.                                                                                              |                                                                            .NET Framework 4.6 또는 4.5 및 Windows PowerShell이 필요한 경우 모든 클러스터 노드에 설치 되어 있는지 확인 합니다.<br /><br />자세한 내용은 이 항목에서 [원격 관리를 위한 노드 구성](#BKMK_NODE_CONFIG)을 참조하세요.                                                                             |
-|                           클러스터 서비스가 모든 클러스터 노드에서 실행되어야 함                           |                                                                                                            하나 이상의 노드에서 클러스터 서비스가 실행되지 않습니다. CAU에서 장애 조치(failover) 클러스터를 업데이트할 수 없습니다.                                                                                                             |                        -클러스터의 모든 노드에서 클러스터 서비스 \(clussvc\)가 시작 되었으며 자동으로 시작 되도록 구성 되어 있는지 확인 합니다.<br />-구성 유효성 검사 마법사가 장애 조치 (failover) 클러스터에서 성공적으로 실행 될 수 있는지 확인 합니다.<br /><br />자세한 내용은 이 항목에서 [클러스터 구성 확인](#BKMK_REQ_CLUS)을 참조하세요.                         |
-|     장애 조치(failover) 클러스터 노드에 업데이트를 자동으로 설치하도록 자동 업데이트를 구성해서는 안 됨     |                                           하나 이상의 장애 조치(failover) 클러스터 노드에 Microsoft 업데이트를 자동으로 설치하도록 자동 업데이트가 구성되어 있습니다. CAU를 다른 업데이트 방법과 함께 사용하면 계획되지 않은 가동 중지 시간 또는 예기치 않은 결과가 발생할 수 있습니다.                                            |                                                     Windows 업데이트 기능이 하나 이상의 클러스터 노드에서 자동 업데이트에 대해 구성된 경우 자동 업데이트가 업데이트를 자동으로 설치하도록 구성되어 있지 않은지 확인합니다.<br /><br />자세한 내용은 [Microsoft 업데이트 적용에 대한 권장 사항](#BKMK_BP_WUA)을 참조하세요.                                                     |
-|                          장애 조치(failover) 클러스터 노드에서 동일한 업데이트 원본을 사용해야 함                          |                                                    하나 이상의 장애 조치(failover) 클러스터 노드가 Microsoft 업데이트에 대해 나머지 노드와 다른 업데이트 원본을 사용하도록 구성되어 있습니다. CAU에서 클러스터 노드에 업데이트를 균일하게 적용하지 못할 수 있습니다.                                                    |                                                                        모든 클러스터 노드가 동일한 업데이트 원본(예: WSUS 서버, Windows 업데이트 또는 Microsoft 업데이트)을 사용하도록 균일하게 구성되어 있는지 확인합니다.<br /><br />자세한 내용은 [Microsoft 업데이트 적용에 대한 권장 사항](#BKMK_BP_WUA)을 참조하세요.                                                                         |
-|       장애 조치(failover) 클러스터의 각 노드에 원격 종료를 허용하는 방화벽 규칙이 설정되어 있어야 함       |                 하나 이상의 장애 조치(failover) 클러스터 노드에 원격 종료를 허용하는 방화벽 규칙이 설정되어 있지 않거나, 그룹 정책 설정이 이 규칙의 사용을 차단합니다. 노드를 자동으로 다시 시작해야 하는 업데이트를 적용하는 업데이트 실행이 제대로 완료되지 않을 수 있습니다.                  |                                                                    클러스터 노드에서 Windows 방화벽 또는 비\-Microsoft 방화벽을 사용 하는 경우 원격 종료를 허용 하는 방화벽 규칙을 구성 합니다.<br /><br />자세한 내용은 이 항목에서 [자동 다시 시작을 허용하도록 방화벽 규칙 설정](#BKMK_FW)을 참조하세요.                                                                    |
-|          각 장애 조치(failover) 클러스터 노드의 프록시 서버 설정이 로컬 프록시 서버로 설정되어야 함          |                             하나 이상의 장애 조치(failover) 클러스터 노드에 잘못된 프록시 서버 구성이 있습니다.<br /><br />로컬 프록시 서버를 사용하는 경우 클러스터에서 Windows 업데이트 또는 Microsoft 업데이트에 액세스할 수 있도록 각 노드의 프록시 서버 설정을 올바르게 구성해야 합니다.                              |                                            각 클러스터 노드의 WinHTTP 프록시(필요한 경우) 설정이 로컬 프록시 서버로 설정되어 있는지 확인합니다. 환경에서 프록시 서버를 사용하지 않는 경우에는 이 경고를 무시해도 됩니다.<br /><br />자세한 내용은 이 항목에서 [지점 시나리오에서 업데이트 적용](#BKMK_PROXY)을 참조하세요.                                            |
-|        자체\-업데이트 모드를 사용 하려면 CAU 클러스터 된 역할이 장애 조치 (failover) 클러스터에 설치 되어 있어야 합니다.        |                                                                                                   CAU 클러스터된 역할이 이 장애 조치(failover) 클러스터에 설치되어 있지 않습니다. 이 역할은 클러스터 자체\-업데이트에 필요 합니다.                                                                                                   |      자체\-업데이트 모드에서 CAU를 사용 하려면 다음 방법 중 하나로 장애 조치 (failover) 클러스터에 CAU 클러스터 된 역할을 추가 합니다.<br /><br />- [Add-cauclusterrole](https://docs.microsoft.com/powershell/module/clusterawareupdating/Add-CauClusterRole) PowerShell cmdlet을 실행 합니다.<br />-클러스터 인식 업데이트 창의 클러스터 **자체\-업데이트 옵션 구성** 작업을 선택 합니다.      |
-|         자체\-업데이트 모드를 사용 하도록 설정 하려면 장애 조치 (failover) 클러스터에서 CAU 클러스터 된 역할을 사용 하도록 설정 해야 합니다.         | CAU 클러스터된 역할을 사용할 수 없습니다. 예를 들어 CAU 클러스터 된 역할이 설치 되어 있지 않거나 [Disable\-Add-cauclusterrole](https://docs.microsoft.com/powershell/module/clusterawareupdating/Disable-CauClusterRole) PowerShell cmdlet을 사용 하 여 사용 하지 않도록 설정 되었습니다. 이 역할은 클러스터 자체\-업데이트에 필요 합니다. | 자체\-업데이트 모드에서 CAU를 사용 하려면 다음 방법 중 하나로이 장애 조치 (failover) 클러스터에서 CAU 클러스터 된 역할을 사용 하도록 설정 합니다.<br /><br />- [Add-cauclusterrole](https://docs.microsoft.com/powershell/module/clusterawareupdating/Enable-CauClusterRole) PowerShell cmdlet을 실행 합니다.<br />-클러스터 인식 업데이트 창의 클러스터 **자체\-업데이트 옵션 구성** 작업을 선택 합니다. |
+|                      각 장애 조치 (failover) 클러스터 노드에서 PowerShell 원격을 사용 하도록 설정 해야 합니다.                       |                                                           PowerShell이 설치 되어 있지 않거나 하나 이상의 장애 조치 (failover) 클러스터 노드에서 원격 기능을 사용할 수 없습니다. CAU는 자체\-업데이트 모드용으로 구성 하거나 원격\-업데이트 모드의 특정 기능을 사용할 수 없습니다.                                                            |                                                                                             PowerShell이 모든 클러스터 노드에 설치 되어 있고 원격 기능을 사용 하도록 설정 되어 있는지 확인 합니다.<p>자세한 내용은 이 항목에서 [원격 관리를 위한 노드 구성](#BKMK_NODE_CONFIG)을 참조하세요.                                                                                             |
+|                                            장애 조치(failover) 클러스터 버전                                            |                                                                            장애 조치 (failover) 클러스터에 있는 하나 이상의 노드가 Windows Server 2016, Windows Server 2012 R2 또는 Windows Server 2012를 실행 하지 않습니다. CAU에서 장애 조치(failover) 클러스터를 업데이트할 수 없습니다.                                                                             |                                                                   BPA 실행 중에 지정한 장애 조치 (failover) 클러스터가 Windows Server 2016, Windows Server 2012 R2 또는 Windows Server 2012를 실행 하 고 있는지 확인 합니다.<p>자세한 내용은 이 항목에서 [클러스터 구성 확인](#BKMK_REQ_CLUS)을 참조하세요.                                                                   |
+| 필요한 버전의 .NET Framework 및 Windows PowerShell이 모든 장애 조치(failover) 클러스터 노드에 설치되어 있어야 함 |                                                                                              .NET Framework 4.6, 4.5 또는 Windows PowerShell이 하나 이상의 클러스터 노드에 설치 되어 있지 않습니다. 일부 CAU 기능이 작동하지 않을 수 있습니다.                                                                                              |                                                                            .NET Framework 4.6 또는 4.5 및 Windows PowerShell이 필요한 경우 모든 클러스터 노드에 설치 되어 있는지 확인 합니다.<p>자세한 내용은 이 항목에서 [원격 관리를 위한 노드 구성](#BKMK_NODE_CONFIG)을 참조하세요.                                                                             |
+|                           클러스터 서비스가 모든 클러스터 노드에서 실행되어야 함                           |                                                                                                            하나 이상의 노드에서 클러스터 서비스가 실행되지 않습니다. CAU에서 장애 조치(failover) 클러스터를 업데이트할 수 없습니다.                                                                                                             |                        -클러스터의 모든 노드에서 클러스터 서비스 \(clussvc\)가 시작 되었으며 자동으로 시작 되도록 구성 되어 있는지 확인 합니다.<br />-구성 유효성 검사 마법사가 장애 조치 (failover) 클러스터에서 성공적으로 실행 될 수 있는지 확인 합니다.<p>자세한 내용은 이 항목에서 [클러스터 구성 확인](#BKMK_REQ_CLUS)을 참조하세요.                         |
+|     장애 조치(failover) 클러스터 노드에 업데이트를 자동으로 설치하도록 자동 업데이트를 구성해서는 안 됨     |                                           하나 이상의 장애 조치(failover) 클러스터 노드에 Microsoft 업데이트를 자동으로 설치하도록 자동 업데이트가 구성되어 있습니다. CAU를 다른 업데이트 방법과 함께 사용하면 계획되지 않은 가동 중지 시간 또는 예기치 않은 결과가 발생할 수 있습니다.                                            |                                                     Windows 업데이트 기능이 하나 이상의 클러스터 노드에서 자동 업데이트에 대해 구성된 경우 자동 업데이트가 업데이트를 자동으로 설치하도록 구성되어 있지 않은지 확인합니다.<p>자세한 내용은 [Microsoft 업데이트 적용에 대한 권장 사항](#BKMK_BP_WUA)을 참조하세요.                                                     |
+|                          장애 조치(failover) 클러스터 노드에서 동일한 업데이트 원본을 사용해야 함                          |                                                    하나 이상의 장애 조치(failover) 클러스터 노드가 Microsoft 업데이트에 대해 나머지 노드와 다른 업데이트 원본을 사용하도록 구성되어 있습니다. CAU에서 클러스터 노드에 업데이트를 균일하게 적용하지 못할 수 있습니다.                                                    |                                                                        모든 클러스터 노드가 동일한 업데이트 원본(예: WSUS 서버, Windows 업데이트 또는 Microsoft 업데이트)을 사용하도록 균일하게 구성되어 있는지 확인합니다.<p>자세한 내용은 [Microsoft 업데이트 적용에 대한 권장 사항](#BKMK_BP_WUA)을 참조하세요.                                                                         |
+|       장애 조치(failover) 클러스터의 각 노드에 원격 종료를 허용하는 방화벽 규칙이 설정되어 있어야 함       |                 하나 이상의 장애 조치(failover) 클러스터 노드에 원격 종료를 허용하는 방화벽 규칙이 설정되어 있지 않거나, 그룹 정책 설정이 이 규칙의 사용을 차단합니다. 노드를 자동으로 다시 시작해야 하는 업데이트를 적용하는 업데이트 실행이 제대로 완료되지 않을 수 있습니다.                  |                                                                    클러스터 노드에서 Windows 방화벽 또는 비\-Microsoft 방화벽을 사용 하는 경우 원격 종료를 허용 하는 방화벽 규칙을 구성 합니다.<p>자세한 내용은 이 항목에서 [자동 다시 시작을 허용하도록 방화벽 규칙 설정](#BKMK_FW)을 참조하세요.                                                                    |
+|          각 장애 조치(failover) 클러스터 노드의 프록시 서버 설정이 로컬 프록시 서버로 설정되어야 함          |                             하나 이상의 장애 조치(failover) 클러스터 노드에 잘못된 프록시 서버 구성이 있습니다.<p>로컬 프록시 서버를 사용하는 경우 클러스터에서 Windows 업데이트 또는 Microsoft 업데이트에 액세스할 수 있도록 각 노드의 프록시 서버 설정을 올바르게 구성해야 합니다.                              |                                            각 클러스터 노드의 WinHTTP 프록시(필요한 경우) 설정이 로컬 프록시 서버로 설정되어 있는지 확인합니다. 환경에서 프록시 서버를 사용하지 않는 경우에는 이 경고를 무시해도 됩니다.<p>자세한 내용은 이 항목에서 [지점 시나리오에서 업데이트 적용](#BKMK_PROXY)을 참조하세요.                                            |
+|        자체\-업데이트 모드를 사용 하려면 CAU 클러스터 된 역할이 장애 조치 (failover) 클러스터에 설치 되어 있어야 합니다.        |                                                                                                   CAU 클러스터된 역할이 이 장애 조치(failover) 클러스터에 설치되어 있지 않습니다. 이 역할은 클러스터 자체\-업데이트에 필요 합니다.                                                                                                   |      자체\-업데이트 모드에서 CAU를 사용 하려면 다음 방법 중 하나로 장애 조치 (failover) 클러스터에 CAU 클러스터 된 역할을 추가 합니다.<p>- [Add-cauclusterrole](https://docs.microsoft.com/powershell/module/clusterawareupdating/Add-CauClusterRole) PowerShell cmdlet을 실행 합니다.<br />-클러스터 인식 업데이트 창의 클러스터 **자체\-업데이트 옵션 구성** 작업을 선택 합니다.      |
+|         자체\-업데이트 모드를 사용 하도록 설정 하려면 장애 조치 (failover) 클러스터에서 CAU 클러스터 된 역할을 사용 하도록 설정 해야 합니다.         | CAU 클러스터된 역할을 사용할 수 없습니다. 예를 들어 CAU 클러스터 된 역할이 설치 되어 있지 않거나 [Disable\-Add-cauclusterrole](https://docs.microsoft.com/powershell/module/clusterawareupdating/Disable-CauClusterRole) PowerShell cmdlet을 사용 하 여 사용 하지 않도록 설정 되었습니다. 이 역할은 클러스터 자체\-업데이트에 필요 합니다. | 자체\-업데이트 모드에서 CAU를 사용 하려면 다음 방법 중 하나로이 장애 조치 (failover) 클러스터에서 CAU 클러스터 된 역할을 사용 하도록 설정 합니다.<p>- [Add-cauclusterrole](https://docs.microsoft.com/powershell/module/clusterawareupdating/Enable-CauClusterRole) PowerShell cmdlet을 실행 합니다.<br />-클러스터 인식 업데이트 창의 클러스터 **자체\-업데이트 옵션 구성** 작업을 선택 합니다. |
 |      자체\-업데이트 모드에 대해 구성 된 CAU 플러그\-를 모든 장애 조치 (failover) 클러스터 노드에 등록 해야 합니다.      |                                                              이 장애 조치 (failover) 클러스터의 노드 하나 이상에서 CAU 클러스터 된 역할은 자체\-업데이트 옵션에 구성 된 모듈의 CAU 플러그\-에 액세스할 수 없습니다. 자체\-업데이트 실행이 실패할 수 있습니다.                                                              |           -에서 CAU 플러그\-를 제공 하는 제품에 대 한 설치 절차에 따라의 구성 된 CAU 플러그\-모든 클러스터 노드에 설치 되어 있는지 확인 합니다.<br />- [Register\-Register-cauplugin](https://docs.microsoft.com/powershell/module/clusterawareupdating/Register-CauPlugin) PowerShell cmdlet을 실행 하 여 필요한 클러스터 노드에 플러그\-를 등록 합니다.           |
 |                모든 장애 조치 (failover) 클러스터 노드에서 동일한 등록 된 CAU 플러그\-기능 집합을 가져야 함                 |                                                                             업데이트 실행에서 사용 하도록 구성 된 플러그 인이 일부 클러스터 노드에서 사용할 수 없는 플러그\-인으로 변경 되 면 자체\-업데이트 실행에 실패할 수 있습니다.                                                                              |           -에서 CAU 플러그\-를 제공 하는 제품에 대 한 설치 절차에 따라의 구성 된 CAU 플러그\-모든 클러스터 노드에 설치 되어 있는지 확인 합니다.<br />- [Register\-Register-cauplugin](https://docs.microsoft.com/powershell/module/clusterawareupdating/Register-CauPlugin) PowerShell cmdlet을 실행 하 여 필요한 클러스터 노드에 플러그\-를 등록 합니다.           |
 |                               구성된 업데이트 실행 옵션이 유효해야 함                                |                                                                          이 장애 조치 (failover) 클러스터에 대해 구성 된 자체\-업데이트 일정 및 업데이트 실행 옵션이 완전 하지 않거나 유효 하지 않습니다. 자체\-업데이트 실행이 실패할 수 있습니다.                                                                           |                                                            올바른 자체\-업데이트 일정 및 업데이트 실행 옵션 집합을 구성 합니다. 예를 들어 [Set\-Add-cauclusterrole](https://docs.microsoft.com/powershell/module/clusterawareupdating/Set-CauClusterRole) PowerShell cmdlet을 사용 하 여 CAU 클러스터 된 역할을 구성할 수 있습니다.                                                            |

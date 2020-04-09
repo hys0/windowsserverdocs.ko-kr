@@ -1,18 +1,19 @@
 ---
 title: 클러스터 선호도
 ms.prod: windows-server
-ms.manager: eldenc
+manager: eldenc
 ms.technology: failover-clustering
 ms.topic: article
 author: johnmarlin-msft
+ms.author: johnmar
 ms.date: 03/07/2019
 description: 이 문서에서는 장애 조치 (failover) 클러스터 선호도 및 방지 선호도 수준을 설명 합니다.
-ms.openlocfilehash: 9a269d2b14e953daee849008a473c750dfbfe84b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: c9910cac602802b753391fad1009fb7f1fa3d2f2
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71361461"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80828286"
 ---
 # <a name="cluster-affinity"></a>클러스터 선호도
 

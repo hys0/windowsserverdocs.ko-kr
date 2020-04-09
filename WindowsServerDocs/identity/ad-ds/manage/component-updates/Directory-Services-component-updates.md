@@ -1,7 +1,6 @@
 ---
 ms.assetid: 8a3cf2ae-2511-4eea-afd5-a43179a78613
 title: 디렉터리 서비스 구성 요소 업데이트
-description: ''
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: d79f31572bc30d0f4fa3af45671c58b799e40f02
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: cde839feda47d55415b2b6cc1026a7a3e6515a44
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71390022"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80823096"
 ---
 # <a name="directory-services-component-updates"></a>디렉터리 서비스 구성 요소 업데이트
 
@@ -42,7 +41,7 @@ ms.locfileid: "71390022"
   
     -   [Active Directory 복제 처리량 개선 사항](../../../ad-ds/manage/component-updates/Directory-Services-component-updates.md#BKMK_ADRepl)  
   
-## <a name="BKMK_FL"></a>도메인 및 포리스트 기능 수준  
+## <a name="domain-and-forest-functional-levels"></a><a name="BKMK_FL"></a>도메인 및 포리스트 기능 수준  
   
 ### <a name="overview"></a>개요  
 이 섹션에서는 도메인 및 포리스트 기능 수준 변경에 대해 간략하게 소개 합니다.  
@@ -60,15 +59,15 @@ ms.locfileid: "71390022"
   
     Windows Server 2012 R2 도메인을 인증 하는 *보호 된 사용자* 는 **더 이상**다음을 수행할 수 없습니다.  
   
-    -   NTLM 인증을 사용 하 여 인증  
+    -   NTLM 인증을 통한 인증  
   
-    -   Kerberos 사전 인증에서 DES 또는 RC4 암호 그룹 사용  
+    -   Kerberos 사전 인증에 DES 또는 RC4 암호 그룹 사용  
   
-    -   제한 없는 위임 또는 제한 된 위임을 사용 하 여 위임  
+    -   제한 없는 위임 또는 제한된 위임을 사용한 위임  
   
-    -   초기 4 시간 동안 사용자 티켓 (Tgt) 갱신  
+    -   초기 4시간의 수명이 지난 후 사용자 티켓(TGT) 갱신  
   
-2.  Authentication Policies  
+2.  인증 정책  
   
     Windows Server 2012 R2 도메인의 계정에 적용 하 여 계정이 로그온 할 수 있는 호스트를 제어 하 고 계정으로 실행 되는 서비스에 대 한 인증 액세스 제어 조건을 적용할 수 있는 새로운 포리스트 기반 Active Directory 정책  
   
@@ -145,7 +144,7 @@ Windows Server 2012 r 2를 실행 하는 DC를 2003 DFL을 실행 하는 기존 
   
 2.  Sch69  
   
-## <a name="BKMK_NTFRS"></a>NTFRS 사용 중단  
+## <a name="deprecation-of-ntfrs"></a><a name="BKMK_NTFRS"></a>NTFRS 사용 중단  
   
 ### <a name="overview"></a>개요  
 FRS는 Windows Server 2012 r 2에서 더 이상 사용 되지 않습니다.  FRS의 사용 중단은 Windows Server 2008의 최소 DFL (도메인 기능 수준)을 적용 하 여 수행 됩니다.  이 적용은 서버 관리자 또는 Windows PowerShell을 사용 하 여 새 도메인을 만든 경우에만 표시 됩니다.  
@@ -156,7 +155,7 @@ FRS는 Windows Server 2012 r 2에서 더 이상 사용 되지 않습니다.  FRS
   
 ![디렉터리 서비스 업데이트](media/Directory-Services-component-updates/GTR_ADDS_PS_InstallDFL2.gif)  
   
-## <a name="BKMK_LDAPQuery"></a>LDAP 쿼리 최적화 프로그램 변경 내용  
+## <a name="ldap-query-optimizer-changes"></a><a name="BKMK_LDAPQuery"></a>LDAP 쿼리 최적화 프로그램 변경 내용  
   
 ### <a name="overview"></a>개요  
 LDAP 쿼리 최적화 프로그램 알고리즘이 다시 평가 되 고 추가 최적화 되었습니다.  그 결과 LDAP 검색 효율성 및 복잡 한 쿼리의 LDAP 검색 시간에 대 한 성능이 향상 됩니다.  
@@ -268,7 +267,7 @@ Log Record Bytes Generated: 0
   
         ![디렉터리 서비스 업데이트](media/Directory-Services-component-updates/GTR_ADDS_Event1644.gif)  
   
-### <a name="BKMK_EnableStats"></a>LDP에서 통계 컨트롤을 사용 하도록 설정 하려면  
+### <a name="to-enable-the-stats-control-in-ldp"></a><a name="BKMK_EnableStats"></a>LDP에서 통계 컨트롤을 사용 하도록 설정 하려면  
   
 1.  LDP.EXE를 열고 도메인 컨트롤러에 연결 하 여 바인딩합니다.  
   
@@ -286,7 +285,7 @@ Log Record Bytes Generated: 0
   
     ![디렉터리 서비스 업데이트](media/Directory-Services-component-updates/GTR_ADDS_SearchOptions.gif)  
   
-### <a name="try-this-use-ldp-to-return-query-statistics"></a>다음을 시도 합니다. LDP를 사용 하 여 쿼리 통계 반환  
+### <a name="try-this-use-ldp-to-return-query-statistics"></a>이 작업을 수행해 보세요. LDP를 사용 하 여 쿼리 통계 반환  
 도메인 컨트롤러에서 또는 AD DS 도구가 설치 된 도메인에 가입 된 클라이언트 또는 서버에서 다음을 수행 합니다.  Windows Server 2012 DC 및 Windows Server 2012 R2 DC를 대상으로 다음을 반복 합니다.  
   
 1.  ["보다 효율적인 MICROSOFT AD 지원 응용 프로그램 만들기"](https://msdn.microsoft.com/library/ms808539.aspx) 문서를 검토 하 고 필요에 따라 다시 참조 하세요.  
@@ -308,7 +307,7 @@ Log Record Bytes Generated: 0
   
 [951581](https://support.microsoft.com/kb/951581) LDAP 쿼리가 AD 또는 LDS/ADAM 디렉터리 서비스에서 예상 보다 느리게 실행 되 고 이벤트 ID 1644이 기록 될 수 있습니다.  
   
-## <a name="BKMK_1644"></a>1644 이벤트 개선  
+## <a name="1644-event-improvements"></a><a name="BKMK_1644"></a>1644 이벤트 개선  
   
 ### <a name="overview"></a>개요  
 이 업데이트는 문제 해결을 지원 하기 위해 이벤트 ID 1644에 추가 LDAP 검색 결과 통계를 추가 합니다.  또한 시간 기반 임계값에서 로깅을 사용 하도록 설정 하는 데 사용할 수 있는 새 레지스트리 값이 있습니다.  이러한 향상 된 기능은 KB [2800945](https://support.microsoft.com/kb/2800945) 를 통해 windows server 2012 및 windows Server 2008 R2 s p 1에서 사용할 수 있으며 windows server 2008 s p 2에서 사용할 수 있게 됩니다.  
@@ -326,7 +325,7 @@ Active Directory 성능 문제를 해결 하는 동안 LDAP 검색 작업이 문
   
 -   시작 노드  
   
--   Filter  
+-   필터  
   
 -   검색 범위  
   
@@ -376,7 +375,7 @@ Windows Registry Editor Version 5.00
   
 ![디렉터리 서비스 업데이트](media/Directory-Services-component-updates/GTR_ADDS_Event1644_2012R2.gif)  
   
-#### <a name="try-this-use-the-event-log-to-return-query-statistics"></a>다음을 시도 합니다. 이벤트 로그를 사용 하 여 쿼리 통계 반환  
+#### <a name="try-this-use-the-event-log-to-return-query-statistics"></a>이 작업을 수행 합니다. 이벤트 로그를 사용 하 여 쿼리 통계 반환  
   
 1.  Windows Server 2012 DC 및 Windows Server 2012 R2 DC를 대상으로 다음을 반복 합니다. 각 검색 후 두 Dc에서 이벤트 ID 1644s를 확인 합니다.  
   
@@ -386,7 +385,7 @@ Windows Registry Editor Version 5.00
   
 4.  하나 이상의 특성이 인덱싱되지 않았기 때문에 쿼리 최적화 프로그램에서 최적화할 수 없는 LDAP 검색을 수행 합니다.  
   
-## <a name="BKMK_ADRepl"></a>Active Directory 복제 처리량 향상  
+## <a name="active-directory-replication-throughput-improvement"></a><a name="BKMK_ADRepl"></a>Active Directory 복제 처리량 향상  
   
 ### <a name="overview"></a>개요  
 AD 복제는 해당 복제 전송에 RPC를 사용 합니다. 기본적으로 RPC는 8K 전송 버퍼와 5K 패킷 크기를 사용 합니다. 이는 전송 인스턴스가 3 개의 패킷 (약 15K 분량의 데이터)을 전송 하 고 네트워크 왕복을 기다린 후 더 많은 데이터를 전송 하도록 하는 순 효과가 있습니다. 3ms 왕복 시간을 가정할 때 최고 처리량은 1Gbps 또는 10gbps 네트워크에도 40Mbps를 기준으로 합니다.  

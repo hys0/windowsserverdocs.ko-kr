@@ -1,20 +1,20 @@
 ---
 title: 클러스터 인식 업데이트 개요
+description: CAU (클러스터 인식 업데이트)는 Windows Server를 실행 하는 클러스터에서 소프트웨어 업데이트 설치를 자동화 합니다.
 ms.topic: article
 ms.prod: windows-server
-ms.manager: dongill
+manager: lizross
 author: JasonGerend
 ms.author: jgerend
 ms.technology: storage-failover-clustering
 ms.date: 08/06/2018
-description: CAU (클러스터 인식 업데이트)는 Windows Server를 실행 하는 클러스터에서 소프트웨어 업데이트 설치를 자동화 합니다.
 ms.assetid: 3c2993b4-aa81-452b-a5c3-3724ad95d892
-ms.openlocfilehash: e96223e0b4b44e87ade9dc8eb875f9aa7104f451
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 6a2b6ad06b8a003f9cbf020956994b08cb8cf194
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71361247"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80827996"
 ---
 # <a name="cluster-aware-updating-overview"></a>클러스터 인식 업데이트 개요
 
@@ -25,7 +25,7 @@ ms.locfileid: "71361247"
 > [!NOTE]
 > [스토리지 공간 다이렉트](../storage/storage-spaces/storage-spaces-direct-overview.md) 클러스터를 업데이트할 때 클러스터 인식 업데이트를 사용 하는 것이 좋습니다.
   
-## <a name="BKMK_OVER"></a>기능 설명  
+## <a name="feature-description"></a><a name="BKMK_OVER"></a>기능 설명  
 클러스터 인식 업데이트는 [장애 조치 (failover) 클러스터](failover-clustering-overview.md) 의 서버를 업데이트 하는 동안 가용성을 거의 또는 전혀 손실 하지 않고 업데이트할 수 있는 자동화 된 기능입니다. 업데이트를 실행 하는 동안 클러스터 인식 업데이트는 다음 작업을 투명 하 게 수행 합니다.  
 
 1. 클러스터의 각 노드를 노드 유지 관리 모드로 전환 합니다.
@@ -117,7 +117,7 @@ CAU 사용에 대 한 자세한 요구 사항 및 모범 사례와 CAU 모범 �
   
 1.  서버 관리자를 시작합니다.  
   
-2.  다음 중 하나를 수행합니다.  
+2.  다음 작업 중 하나를 수행합니다.  
   
     -   **도구** 메뉴에서 **클러스터\-인식 업데이트**를 클릭 합니다.  
   
@@ -126,7 +126,7 @@ CAU 사용에 대 한 자세한 요구 사항 및 모범 사례와 CAU 모범 �
 ## <a name="see-also"></a>참고 항목  
 다음 링크는 클러스터 인식 업데이트를 사용 하는 방법에 대 한 자세한 정보를 제공 합니다.  
   
--   [클러스터\-인식 업데이트에 대 한 요구 사항 및 모범 사례](cluster-aware-updating.md)  
+-   [클러스터 인식 업데이트에 대한 요구 사항 및 모범 사례\-  
   
 -   [클러스터\-인식 업데이트: 질문과 대답](cluster-aware-updating-faq.md)  
   

@@ -1,23 +1,19 @@
 ---
 title: Windows Server Essentials에서 VPN 관리
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cc2b264a-b9a8-4114-9f7b-8604f77096e5
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: a00a56acfe5c89c5905bf0fbff31f7fb187b72a4
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 38c0b0e7bfc29f0b7717cd18a103ae068bbb259b
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80311020"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80852696"
 ---
 # <a name="manage-vpn-in-windows-server-essentials"></a>Windows Server Essentials에서 VPN 관리
 
@@ -65,7 +61,7 @@ ms.locfileid: "80311020"
   
 6.  **원격 액세스** 탭에서 사용자가 VPN을 사용하여 서버에 연결할 수 있게 하려면 **VPN(가상 사설망) 허용**  확인란을 선택합니다.  
   
-7.  **적용**을 클릭한 다음 **확인**을 클릭합니다.  
+7.  **적용**, **확인**을 차례로 클릭합니다.  
   
 ##  <a name="connect-client-computers-to-the-server"></a><a name="BKMK_Connect"></a>서버에 클라이언트 컴퓨터 연결  
  Windows Server Essentials를 실행하는 서버에서 원격 액세스에 VPN을 사용하도록 설정하고 나면 VPN 연결을 사용하여 서버에 연결하고 서버에 저장된 모든 리소스에 액세스할 수 있습니다. 그러나 먼저 컴퓨터를 서버에 연결해야 합니다. 서버에 컴퓨터 연결 마법사를 사용하여 서버에 컴퓨터를 연결하면 클라이언트 컴퓨터에서 VPN 네트워크 연결이 자동으로 생성되며 재택 근무 또는 이동 중에 이 연결을 사용하여 서버 리소스에 액세스할 수 있습니다. 서버에 컴퓨터를 연결하는 방법에 대한 단계별 지침은 [Connect computers to the server](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_9)을 참조하세요.  

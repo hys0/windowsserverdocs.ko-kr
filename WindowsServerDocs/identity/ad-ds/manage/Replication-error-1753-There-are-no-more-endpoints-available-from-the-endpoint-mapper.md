@@ -1,7 +1,6 @@
 ---
 ms.assetid: 0f21951c-b1bf-43bb-a329-bbb40c58c876
-title: 복제 오류 1753 끝점 매퍼에서 사용할 수 있는 끝점이 더 이상 없음
-description: ''
+title: 복제 오류 1753 엔드포인트 매퍼에서 사용할 수 있는 엔드포인트이 더 이상 없음
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,20 +8,20 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 64b479663dfc930ec9a6d2055b4c9ad5755b30fc
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 2e63d177abd0a6880c1825b821d265c8fa233a22
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71389974"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80823166"
 ---
-# <a name="replication-error-1753-there-are-no-more-endpoints-available-from-the-endpoint-mapper"></a>복제 오류 1753 끝점 매퍼에서 사용할 수 있는 끝점이 더 이상 없음
+# <a name="replication-error-1753-there-are-no-more-endpoints-available-from-the-endpoint-mapper"></a>복제 오류 1753 엔드포인트 매퍼에서 사용할 수 있는 엔드포인트이 더 이상 없음
 
->적용 대상: Windows Server
+>Windows Server에 적용 됩니다.
 
-이 문서에서는 Win32 오류 1753와 함께 실패 하는 Active Directory 작업에 대 한 증상, 원인 및 해결 단계를 설명 합니다. "끝점 매퍼에서 사용할 수 있는 끝점이 더 이상 없습니다."
+이 문서에서는 Win32 오류 1753로 실패 하는 Active Directory 작업에 대 한 증상, 원인 및 해결 단계를 설명 합니다. "끝점 매퍼에서 사용할 수 있는 끝점이 더 이상 없습니다."
 
-DCDIAG에서 1753 오류와 함께 Active Directory 복제 테스트 또는 KnowsOfRoleHolders 테스트에 대 한 연결 테스트를 수행 하지 못했음을 보고 합니다. "끝점 매퍼에서 사용할 수 있는 끝점이 더 이상 없습니다."
+DCDIAG는 1753 오류: "끝점 매퍼에서 사용할 수 있는 끝점이 더 이상 없습니다."와 함께 연결 테스트, Active Directory 복제 테스트 또는 KnowsOfRoleHolders 테스트가 실패 한 것을 보고 합니다.
 
 ```
 Testing server: <site><DC Name>
@@ -90,18 +89,18 @@ Active Directory 사이트 및 서비스의 **복제 토폴로지 확인** 명�
 
 원본 DC에서 연결 개체를 마우스 오른쪽 단추로 클릭 하 고 **복제 토폴로지 확인** 을 선택 하면 "끝점 매퍼에서 사용할 수 있는 끝점이 더 이상 없습니다."가 발생 합니다. 화면에 표시 되는 오류 메시지는 다음과 같습니다.
 
-대화 상자 제목 텍스트: 복제 토폴로지 대화 상자 메시지 텍스트를 확인 합니다. 도메인 컨트롤러에 연결 하려고 시도 하는 동안 다음 오류가 발생 했습니다. 끝점 매퍼에서 사용할 수 있는 끝점이 더 이상 없습니다.
+대화 상자 제목 텍스트: 복제 토폴로지 확인 대화 상자 메시지 텍스트: 도메인 컨트롤러에 연결 하는 동안 다음 오류가 발생 했습니다. 끝점 매퍼에서 사용할 수 있는 끝점이 더 이상 없습니다.
 
 Active Directory 사이트 및 서비스의 **지금 복제** 명령은 "끝점 매퍼에서 사용할 수 있는 끝점이 더 이상 없습니다."를 반환 합니다.
 원본 DC에서 연결 개체를 마우스 오른쪽 단추로 클릭 하 고 **지금 복제** 를 선택 하면 "끝점 매퍼에서 사용할 수 있는 끝점이 더 이상 없습니다."가 발생 합니다.
 화면에 표시 되는 오류 메시지는 다음과 같습니다.
 
-대화 상자 제목 텍스트: 지금 복제 대화 상자 메시지 텍스트: 명명 컨텍스트 \<% 디렉터리 파티션 이름% >을 (를) 도메인 컨트롤러 \<Source DC >에서 도메인 컨트롤러 \<Destination DC > 동기화 하는 동안 다음 오류가 발생 했습니다.
+대화 상자 제목 텍스트: 지금 복제 대화 상자 메시지 텍스트: 명명 컨텍스트 \<% directory 파티션 이름% >을 (를) 도메인 컨트롤러 \<원본 DC >에서 도메인 컨트롤러 \<대상 DC > 동기화 하는 동안 다음 오류가 발생 했습니다.
 
 끝점 매퍼에서 사용할 수 있는 끝점이 더 이상 없습니다.
 작업을 계속할 수 없습니다.
 
--2146893022 상태를 포함 하는 ntds ActiveDirectory_DomainService 이벤트 또는 ntds KCC는 이벤트 뷰어의 디렉터리 서비스 로그에 기록 됩니다.
+-2146893022 상태를 포함 하는 ntds KCC, NTDS 일반 또는 Microsoft-ActiveDirectory_DomainService 이벤트는 이벤트 뷰어의 디렉터리 서비스 로그에 기록 됩니다.
 
 일반적으로-2146893022 상태를 인용 하는 Active Directory 이벤트는 다음으로 제한 되지 않습니다.
 
@@ -145,18 +144,18 @@ Active Directory 사이트 및 서비스의 **지금 복제** 명령은 "끝점 
 
 끝점 매퍼를 사용 하 여 서비스를 등록 하는 서비스가 시작 되었는지 확인 합니다.
 
-* Windows 2000 및 Windows Server 2003 Dc의 경우: 원본 DC가 표준 모드로 부팅 되었는지 확인 합니다.
+* Windows 2000 및 Windows Server 2003 Dc: 원본 DC가 표준 모드로 부팅 되는지 확인 합니다.
 * Windows Server 2008 또는 Windows Server 2008 r 2의 경우: 원본 DC의 콘솔에서 서비스 관리자 (services.msc)를 시작 하 고 Active Directory Domain Services 서비스가 실행 중인지 확인 합니다.
 
 RPC 클라이언트 (대상 DC)가 의도 한 RPC 서버 (원본 DC)에 연결 되어 있는지 확인 합니다.
 
-공통 Active Directory 포리스트의 모든 Dc는 _msdcs에 도메인 컨트롤러 CNAME 레코드를 등록 합니다. 포리스트 내에 상주 하는 도메인에 관계 없이 DNS 영역을 \<forest 루트 도메인 > 합니다. DC CNAME 레코드는 각 도메인 컨트롤러에 대 한 NTDS 설정 개체의 objectGUID 특성에서 파생 됩니다.
+공통 Active Directory 포리스트의 모든 Dc는 _msdcs 도메인 컨트롤러 CNAME 레코드를 등록 합니다. 포리스트 내에 상주 하는 도메인에 관계 없이 포리스트 루트 도메인 > DNS 영역을 \<합니다. DC CNAME 레코드는 각 도메인 컨트롤러에 대 한 NTDS 설정 개체의 objectGUID 특성에서 파생 됩니다.
 
 복제 기반 작업을 수행할 때 대상 DC는 DNS에서 원본 Dc CNAME 레코드를 쿼리 합니다. CNAME 레코드에는 DNS 클라이언트 캐시 조회, 호스트/LMHost 파일 조회, DNS의 호스트 A/AAAA 레코드 또는 WINS를 통해 원본 dc IP 주소를 파생 시키는 데 사용 되는 원본 DC의 정규화 된 컴퓨터 이름이 포함 됩니다.
 
 DNS, WINS, 호스트 및 LMHOST 파일에 잘못 된 NTDS 설정 개체와 잘못 된 이름-IP 매핑이 있으면 RPC 클라이언트 (대상 DC)가 잘못 된 RPC 서버 (원본 DC)에 연결할 수 있습니다. 또한 잘못 된 이름-IP 매핑으로 인해 rpc 클라이언트 (대상 DC)에서 RPC 서버 응용 프로그램 (이 경우에는 Active Directory 역할)이 설치 되어 있지 않은 컴퓨터에 연결할 수 있습니다. 예: d c 2에 대 한 오래 된 호스트 레코드에는 DC3 또는 구성원 컴퓨터의 IP 주소가 포함 됩니다.
 
-Active Directory의 대상 Dc 복사본에 있는 원본 DC의 objectGUID가 Active Directory의 원본 dc 복사본에 저장 된 원본 DC objectGUID와 일치 하는지 확인 합니다. 불일치가 있는 경우 ntds 설정 개체에 대해 repadmin/showobjmeta와 유사를 사용 하 여 원본 DC의 마지막 승격에 해당 하는 것을 확인 합니다 (힌트: NTDS 설정 개체에 대 한 날짜 스탬프를 비교 합니다. 원본 Dc dcpromo .log 파일. DCPROMO의 마지막 수정/생성 날짜를 사용 해야 할 수도 있습니다. 로그 파일 자체). 개체 Guid가 동일 하지 않은 경우 대상 DC에는 CNAME 레코드가 IP 매핑의 잘못 된 이름을 가진 호스트 레코드를 참조 하는 원본 DC에 대해 오래 된 NTDS 설정 개체가 있을 수 있습니다.
+Active Directory의 대상 Dc 복사본에 있는 원본 DC의 objectGUID가 Active Directory의 원본 dc 복사본에 저장 된 원본 DC objectGUID와 일치 하는지 확인 합니다. 불일치가 있는 경우 ntds 설정 개체에 대해 repadmin/showobjmeta와 유사를 사용 하 여 원본 DC의 마지막 승격에 해당 하는 것을 확인 합니다 (힌트: 원본 dc dcpromo.exe 파일의 마지막 프로 모션 날짜에 대해/showobjmeta와 유사에서 만든 날짜와 NTDS 설정 개체에 대 한 날짜 스탬프 비교). DCPROMO의 마지막 수정/생성 날짜를 사용 해야 할 수도 있습니다. 로그 파일 자체). 개체 Guid가 동일 하지 않은 경우 대상 DC에는 CNAME 레코드가 IP 매핑의 잘못 된 이름을 가진 호스트 레코드를 참조 하는 원본 DC에 대해 오래 된 NTDS 설정 개체가 있을 수 있습니다.
 
 대상 dc에서 IPCONFIG/ALL을 실행 하 여 대상 DC가 이름 확인을 위해 사용 하는 DNS 서버를 확인 합니다.
 
@@ -240,7 +239,7 @@ ncacn_http:CONTOSO-DC01[6004]
 * Rpc 서비스 및 RPC 로케이터에 대 한 시작 값과 서비스 상태가 rpc 클라이언트 (대상 DC) 및 RPC 서버 (원본 DC)의 OS 버전에 대해 올바른지 확인 합니다. 서비스가 현재 중지 되었거나 기본 시작 값으로 구성 되지 않은 경우 기본 시작 값을 다시 설정 하 고 수정 된 DC를 다시 부팅 한 후 작업을 다시 시도 하십시오.
    * 또한 서비스 컨텍스트가 다음 표에 나열 된 기본 설정과 일치 하는지 확인 합니다.
 
-      | 서비스 | Windows Server 2003 이상 버전의 기본 상태 (시작 유형) | Windows Server 2000의 기본 상태 (시작 유형) |
+      | Service | Windows Server 2003 이상 버전의 기본 상태 (시작 유형) | Windows Server 2000의 기본 상태 (시작 유형) |
       | --- | --- | --- |
       | 원격 프로시저 호출 | 시작 됨 (자동) | 시작 됨 (자동) |
       | 원격 프로시저 호출 로케이터 | Null 또는 중지 됨 (수동) | 시작 됨 (자동) |
@@ -266,7 +265,7 @@ ncacn_http:CONTOSO-DC01[6004]
    ncacn_ip_udp REG_SZ rpcrt4.dll
    ```
 
-## <a name="more-information"></a>자세한 정보
+## <a name="more-information"></a>추가 정보
 
 IP 매핑에 대 한 잘못 된 이름의 예: RPC 오류 1753 및-2146893022: 대상 사용자 이름이 잘못 되었습니다.
 
@@ -295,11 +294,11 @@ F# SRC    DEST    Operation
 
 이러한 잘못 된 호스트-IP 매핑은 호스트/lmhost 파일, DNS의 호스트 A/AAAA 등록 또는 WINS의 부실 항목으로 인해 발생할 수 있습니다.
 
-정리 이 예에서는 호스트 파일에 잘못 된 호스트 간 매핑 (이 경우 호스트 파일)이 발생 하 여 대상 DC가 Active Directory Domain Services 서비스를 실행 하지 않는 "원본" DC (또는이 문제에 대해 설치 된 경우에도 설치 됨)를 확인 했기 때문에 실패 했습니다. SPN이 아직 등록 되지 않은 경우 원본 DC에서 오류 1753를 반환 했습니다. 두 번째 경우에는 호스트에서 IP로의 잘못 된 매핑 (호스트 파일에 다시 연결)이 발생 하 여 대상 DC가 E351를 등록 한 DC에 연결 했습니다. 복제 SPN을 사용 하지만 원본 DC와 다른 호스트 이름 및 보안 id가 있으므로 오류-2146893022을 사용 하 여 시도 하지 못했습니다. 대상 사용자 이름이 잘못 되었습니다.
+요약: 잘못 된 호스트-IP 매핑 (이 경우 호스트 파일)에서 Active Directory Domain Services 서비스가 실행 되지 않는 "원본" DC로 확인 되어 (또는 해당 문제에 대해 설치 된 경우에도), 복제 SPN이 아직 등록 되지 않았고 원본 DC에서 오류 1753를 반환 했기 때문에이 예는 실패 했습니다. 두 번째 경우에는 호스트에서 IP로의 잘못 된 매핑 (호스트 파일에 다시 연결)이 발생 하 여 대상 DC가 E351를 등록 한 DC에 연결 했습니다. 복제 SPN을 사용 하지만 원본 DC와 다른 호스트 이름 및 보안 id가 있기 때문에 오류-2146893022: 대상 사용자 이름이 잘못 되었습니다.
 
 ## <a name="related-topics"></a>관련 항목
 
-* [ 1753 오류와 함께 실패 하는 Active Directory 작업 문제 해결: 끝점 매퍼에서 사용할 수 있는 끝점이 더 이상 없습니다. ](https://support.microsoft.com/kb/2089874)
+* [1753 오류로 인해 실패 하는 Active Directory 작업 문제 해결: 끝점 매퍼에서 사용할 수 있는 끝점이 더 이상 없습니다.](https://support.microsoft.com/kb/2089874)
 * [KB 문서 839880 제품 CD의 Windows Server 2003 지원 도구를 사용 하 여 RPC 끝점 매퍼 오류 문제 해결](https://support.microsoft.com/kb/839880)
 * [KB 문서 832017 Windows Server 시스템의 서비스 개요 및 네트워크 포트 요구 사항](https://support.microsoft.com/kb/832017/)
 * [KB 문서 224196 Active Directory 복제 트래픽 및 클라이언트 RPC 트래픽을 특정 포트로 제한](https://support.microsoft.com/kb/224196/)

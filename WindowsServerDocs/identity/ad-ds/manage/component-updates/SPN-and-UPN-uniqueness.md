@@ -1,7 +1,6 @@
 ---
 ms.assetid: 40bc24b1-2e7d-4e77-bd0f-794743250888
 title: SPN 및 UPN 고유성
-description: ''
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: ded707276471fccd28f0ec17afef0a24015ff32f
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f182f79b5bb97e45f1cfd34ad59cf52322f09063
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71390033"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80823066"
 ---
 # <a name="spn-and-upn-uniqueness"></a>SPN 및 UPN 고유성
 
@@ -51,7 +50,7 @@ Upn 및 Spn에 대 한 고유성 요구 사항에 대 한 자세한 내용은 �
   
 **표 SEQ 테이블 \\\* 아랍어 2: UPN 및 SPN 고유성 오류 코드**  
   
-|Decimal|Hex|바로 가기|문자열|  
+|10 진수|16진수|바로 가기|String|  
 |-----------|-------|------------|----------|  
 |8467|21C 7|ERROR_DS_SPN_VALUE_NOT_UNIQUE_IN_FOREST|추가/수정에 제공 되는 SPN 값은 포리스트 전체에서 고유 하지는 작업이 실패 했습니다.|  
 |8648|21C 8|ERROR_DS_UPN_VALUE_NOT_UNIQUE_IN_FOREST|추가/수정에 제공 되는 UPN 값은 포리스트 전체에서 고유 하지는 작업이 실패 했습니다.|  
@@ -240,7 +239,7 @@ servicePrincipalName Value=<SPN>
   
             -   항목을 반환 하는 경우! = 0에 쓰기 실패->  
   
-                -   이벤트 기록  
+                -   이벤트 로깅 여부  
   
                 -   또한 확장 된 오류를 반환합니다.  
   
@@ -256,7 +255,7 @@ servicePrincipalName Value=<SPN>
   
             -   항목을 반환 하는 경우! = 0에 쓰기 실패->  
   
-                -   이벤트 기록  
+                -   이벤트 로깅 여부  
   
                 -   또한 확장 된 오류를 반환합니다.  
   
@@ -280,7 +279,7 @@ servicePrincipalName Value=<SPN>
   
             -   항목을 반환 하는 경우! = 0에 쓰기 실패->  
   
-                -   이벤트 기록  
+                -   이벤트 로깅 여부  
   
                 -   또한 확장 된 오류를 반환합니다.  
   
@@ -296,7 +295,7 @@ servicePrincipalName Value=<SPN>
   
             -   항목을 반환 하는 경우! = 0에 쓰기 실패->  
   
-                -   이벤트 기록  
+                -   이벤트 로깅 여부  
   
                 -   또한 확장 된 오류를 반환합니다.  
   

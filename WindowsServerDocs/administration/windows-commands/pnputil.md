@@ -1,24 +1,20 @@
 ---
 title: pnputil
 description: Pnputil 유틸리티를 사용 하 여 드라이버 저장소를 관리 하는 방법을 알아봅니다.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fab686b8-09d3-4f6c-afa2-630e6036f44c
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: f20c60bfd9ae33497dd356c7797b9fb1d2b51d18
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 134e6ce4b1fc44450047de3287b7daac67da4b6a
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71372294"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80837516"
 ---
 # <a name="pnputil"></a>pnputil
 
@@ -30,11 +26,11 @@ Pnputil은 드라이버 저장소를 관리 하는 데 사용할 수 있는 명�
 pnputil.exe [-f | -i] [ -? | -a | -d | -e ] <INF name>
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------|-----------|
-|-A|식별 된 INF 파일을 추가 하도록 지정 합니다.|
+|-a|식별 된 INF 파일을 추가 하도록 지정 합니다.|
 |-d|식별 된 INF 파일을 삭제 하도록 지정 합니다.|
 |-e|모든 타사 INF 파일을 열거 하도록 지정 합니다.|
 |-f|식별 된 INF 파일을 강제로 삭제 하도록 지정 합니다. **– I** 매개 변수와 함께 사용할 수 없습니다.|
@@ -45,7 +41,7 @@ pnputil.exe [-f | -i] [ -? | -a | -d | -e ] <INF name>
 ## <a name="examples"></a>예
 
 -   pnputil-a a:\usbcam\USBCAM. INF USBCAM에 지정 된 INF 파일을 추가 합니다. DEVICE.INF
--   perfmon.exe-a c:\ drivers\*.inf는 c:\tit\의 모든 INF 파일을 추가 합니다.
+-   perfmon.exe-c:\drivers\*의 모든 INF 파일을 추가 합니다.
 -   pnputil-i-a a:\usbcam\USBCAM. INF 지정 된 드라이버를 추가 하 고 설치 합니다.
 -   pnputil – e는 모든 타사 드라이버를 열거 합니다.
 -   pnputil-d oem0는 지정 된를 삭제 합니다.
@@ -53,6 +49,6 @@ pnputil.exe [-f | -i] [ -? | -a | -d | -e ] <INF name>
 
 ## <a name="additional-references"></a>추가 참조
 
-[명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)
 
 [Popd](popd.md)

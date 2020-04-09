@@ -1,24 +1,20 @@
 ---
 title: ftype
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: '\* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6fb53cee-9bed-44dd-af5d-bc7cec1dd114
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ce3f4c360269eb9cabd2cbef8abb89935923a595
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f982f68f25a4decbc9c572b533fa1ecc5e893a8c
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71375820"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80842706"
 ---
 # <a name="ftype"></a>ftype
 
@@ -34,26 +30,26 @@ ms.locfileid: "71375820"
 ftype [<FileType>[=[<OpenCommandString>]]]
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------|-----------|
 |\<FileType >|표시 하거나 변경 하려면 파일 형식을 지정 합니다.|
-|\<OpenCommandString >|지정 된 파일 형식의 파일을 열 때 사용 하 여 열려 있는 명령 문자열을 지정 합니다.|
+|OpenCommandString을 \<>|지정 된 파일 형식의 파일을 열 때 사용 하 여 열려 있는 명령 문자열을 지정 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 다음 표에서 어떻게 **ftype** 열려 있는 명령 문자열 내에서 변수를 대체 합니다.
 
-|변수|대체 값|
+|Variable|대체 값|
 |--------|-----------------|
 |0 또는 %1|연결을 통해 실행 되 고 파일 이름으로 대체 하 게 합니다.|
 |%*|모든 매개 변수를 가져옵니다.|
-|% 2,% 3, ...|첫 번째 매개 변수 (%2), 두 번째 매개 변수 (%3) 등에 가져옵니다.|
-|%~ @ NO__T-1N >|부터 나머지 매개 변수를 모두 가져옵니다는 *N*번째 매개 변수가 있는 *N* 2에서 9 사이의 숫자가 될 수 있습니다.|
+|%2, %3, ...|첫 번째 매개 변수 (%2), 두 번째 매개 변수 (%3) 등에 가져옵니다.|
+|%~\<N >|부터 나머지 매개 변수를 모두 가져옵니다는 *N*번째 매개 변수가 있는 *N* 2에서 9 사이의 숫자가 될 수 있습니다.|
 
-## <a name="BKMK_examples"></a>예와
+## <a name="examples"></a><a name=BKMK_examples></a>예와
 
 열려 있는 명령 문자열을 정의 하는 현재 파일 종류를 표시 하려면 다음을 입력 합니다.
 ```
@@ -81,6 +77,6 @@ Perl 스크립트를 호출할 때.pl 파일 이름 확장명을 입력할 필�
 set PATHEXT=.pl;%PATHEXT%
 ```
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
-[명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

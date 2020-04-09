@@ -6,13 +6,14 @@ ms.topic: get-started-article
 ms.assetid: 6e102c1f-df26-4eaa-bc7a-d0d55d3b82d5
 author: jasongerend
 ms.author: jgerend
+manager: lizross
 ms.date: 03/27/2018
-ms.openlocfilehash: fc1799db76f528a599ef70eec5093da0a76206a2
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 8b2ea665542d57b12899a5993a62973c446485a7
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75948533"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80828356"
 ---
 # <a name="cluster-operating-system-rolling-upgrade"></a>클러스터 운영 체제 롤링 업그레이드
 
@@ -226,7 +227,7 @@ ClusterFunctionalLevelcmdlet가 실행 된 후 클러스터는 "4 단계"를 입
         VMHostSupportedVersion cmdlet의 출력을 보여 주는 ![Screencap](media/Cluster-Operating-System-Rolling-Upgrade/Clustering_GetVMHostSupportVersion.png)  
         **그림 21: 호스트에서 지원 되는 Hyper-v VM 구성 버전 보기**  
 
-   3. 클러스터의 각 Hyper-v 호스트 노드에서 Hyper-v VM 구성 버전은 사용자를 사용 하 여 간단한 유지 관리 기간을 예약 하 고, 가상 컴퓨터를 백업 및 해제 하 고, [`Update-VMVersion`](https://docs.microsoft.com/powershell/module/hyper-v/Update-VMVersion?view=win10-ps) cmdlet을 실행 하 여 업그레이드할 수 있습니다 (그림 22 참조). 이렇게 하면 가상 컴퓨터 버전이 업데이트 되 고 새 Hyper-v 기능이 사용 되므로 향후 Hyper-v 통합 구성 요소 (IC) 업데이트가 필요 하지 않습니다. 이 cmdlet은 VM을 호스팅하는 Hyper-v 노드에서 실행 하거나, `-ComputerName` 매개 변수를 사용 하 여 VM 버전을 원격으로 업데이트할 수 있습니다. 이 예제에서는 VM1의 구성 버전을 5.0에서 7.0으로 업그레이드 하 여 프로덕션 검사점 (응용 프로그램 일치 백업) 및 이진 VM과 같은 VM 구성 버전과 관련 된 많은 새 Hyper-v 기능을 활용 합니다. 구성 파일.  
+   3. 클러스터의 각 Hyper-v 호스트 노드에서 Hyper-v VM 구성 버전은 사용자를 사용 하 여 간단한 유지 관리 기간을 예약 하 고, 가상 컴퓨터를 백업 및 해제 하 고, [`Update-VMVersion`](https://docs.microsoft.com/powershell/module/hyper-v/Update-VMVersion?view=win10-ps) cmdlet을 실행 하 여 업그레이드할 수 있습니다 (그림 22 참조). 이렇게 하면 가상 컴퓨터 버전이 업데이트 되 고 새 Hyper-v 기능이 사용 되므로 향후 Hyper-v 통합 구성 요소 (IC) 업데이트가 필요 하지 않습니다. 이 cmdlet은 VM을 호스팅하는 Hyper-v 노드에서 실행 하거나, `-ComputerName` 매개 변수를 사용 하 여 VM 버전을 원격으로 업데이트할 수 있습니다. 이 예제에서는 VM1의 구성 버전을 5.0에서 7.0으로 업그레이드 하 여 프로덕션 검사점 (응용 프로그램 일치 백업), 이진 VM 구성 파일 등이 VM 구성 버전과 관련 된 많은 새 Hyper-v 기능을 활용 합니다.  
 
        작업 중인 업데이트-VMVersion cmdlet을 보여 주는 ![Screencap](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_StopVM.png)  
        **그림 22: 업데이트-VMVersion PowerShell cmdlet을 사용 하 여 VM 버전 업그레이드**  
@@ -254,7 +255,7 @@ ClusterFunctionalLevelcmdlet가 실행 된 후 클러스터는 "4 단계"를 입
     예, 클러스터 OS 롤링 업그레이드 프로세스를 시작 하기 전에 모든 클러스터 노드가 최신 소프트웨어 업데이트로 업데이트 되었는지 확인 합니다.  
 
 **노드가 끄거나 일시 중지 된 상태에서 [`Update-ClusterFunctionalLevel`](https://docs.microsoft.com/powershell/module/failoverclusters/Update-ClusterFunctionalLevel?view=win10-ps) cmdlet을 실행할 수 있나요?**  
-    아니요. [`Update-ClusterFunctionalLevel`](https://docs.microsoft.com/powershell/module/failoverclusters/Update-ClusterFunctionalLevel?view=win10-ps) cmdlet이 작동 하려면 모든 클러스터 노드가 및 active directory에 있어야 합니다.  
+    No. [`Update-ClusterFunctionalLevel`](https://docs.microsoft.com/powershell/module/failoverclusters/Update-ClusterFunctionalLevel?view=win10-ps) cmdlet이 작동 하려면 모든 클러스터 노드가 및 active directory에 있어야 합니다.  
 
 **클러스터 운영 체제 롤링 업그레이드는 모든 클러스터 워크 로드에서 작동 하나요? SQL Server에 대해 작동 합니까?**  
     예, 클러스터 OS 롤링 업그레이드는 모든 클러스터 워크 로드에 대해 작동 합니다. 그러나 Hyper-v 및 스케일 아웃 파일 서버 클러스터의 경우에는 가동 중지 시간이 0 일 뿐입니다. 대부분의 다른 워크 로드는 장애 조치 (failover) 시 일부 가동 중지 시간 (일반적으로 몇 분 정도)이 발생 하 고, 클러스터 OS 롤링 업그레이드 프로세스 중에 한 번 이상 장애 조치가 필요 합니다.  
@@ -263,7 +264,7 @@ ClusterFunctionalLevelcmdlet가 실행 된 후 클러스터는 "4 단계"를 입
     예, PowerShell을 사용 하 여 자동화 되도록 클러스터 OS 롤링 업그레이드를 설계 했습니다.  
 
 **추가 워크 로드 및 장애 조치 (failover) 용량이 있는 대형 클러스터의 경우 여러 노드를 동시에 업그레이드할 수 있나요?**  
-    그렇습니다. OS를 업그레이드 하기 위해 클러스터에서 노드 하나를 제거 하면 클러스터는 장애 조치 (failover)를 위해 하나의 노드를 포함 하므로 장애 조치 (failover) 용량이 줄어듭니다. 워크 로드 및 장애 조치 용량이 충분 한 대용량 클러스터의 경우 여러 노드를 동시에 업그레이드할 수 있습니다. 클러스터 노드를 클러스터에 일시적으로 추가 하 여 클러스터 OS 롤링 업그레이드 프로세스 중에 향상 된 워크 로드 및 장애 조치 (failover) 용량을 제공할 수 있습니다.  
+    예. OS를 업그레이드 하기 위해 클러스터에서 노드 하나를 제거 하면 클러스터는 장애 조치 (failover)를 위해 하나의 노드를 포함 하므로 장애 조치 (failover) 용량이 줄어듭니다. 워크 로드 및 장애 조치 용량이 충분 한 대용량 클러스터의 경우 여러 노드를 동시에 업그레이드할 수 있습니다. 클러스터 노드를 클러스터에 일시적으로 추가 하 여 클러스터 OS 롤링 업그레이드 프로세스 중에 향상 된 워크 로드 및 장애 조치 (failover) 용량을 제공할 수 있습니다.  
 
 **[`Update-ClusterFunctionalLevel`](https://docs.microsoft.com/powershell/module/failoverclusters/Update-ClusterFunctionalLevel?view=win10-ps) 성공적으로 실행 된 후 클러스터에서 문제가 발견 되 면 어떻게 되나요?**  
     [`Update-ClusterFunctionalLevel`](https://docs.microsoft.com/powershell/module/failoverclusters/Update-ClusterFunctionalLevel?view=win10-ps)를 실행 하기 전에 시스템 상태 백업을 사용 하 여 클러스터 데이터베이스를 백업한 경우 Windows Server 2012 R2 클러스터 노드에서 정식 복원을 수행 하 고 원래 클러스터 데이터베이스 및 구성을 복원할 수 있습니다.  

@@ -2,27 +2,27 @@
 ms.assetid: 0cd1ac70-532c-416d-9de6-6f920a300a45
 title: 장애 조치 (Failover) 클러스터용 클라우드 감시 배포
 ms.prod: windows-server
-manager: eldenc
+manager: lizross
 ms.author: jgerend
 ms.technology: storage-failover-clustering
 ms.topic: article
 author: JasonGerend
 ms.date: 01/18/2019
 description: Microsoft Azure를 사용 하 여 클라우드에서 Windows Server 장애 조치 (Failover) 클러스터에 대 한 미러링 모니터 서버를 호스트 하는 방법 즉, 클라우드 감시를 배포 하는 방법을 설명 합니다.
-ms.openlocfilehash: ad5ff47a72319fee7650d1d9c0d0616cfaaa22d3
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 0b4ba643dca81d2d19b94b1d27485149f938e1c4
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75948171"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80827916"
 ---
-# <a name="deploy-a-cloud-witness-for-a-failover-cluster"></a>장애 조치 클러스터용 클라우드 감시 배포
+# <a name="deploy-a-cloud-witness-for-a-failover-cluster"></a>장애 조치(failover) 클러스터용 클라우드 감시 배포
 
 > 적용 대상: Windows Server 2019, Windows Server 2016
 
 클라우드 감시는 Microsoft Azure를 사용 하 여 클러스터 쿼럼에 대 한 응답을 제공 하는 장애 조치 (Failover) 클러스터 쿼럼 감시 유형입니다. 이 항목에서는 클라우드 감시 기능, 지원 되는 시나리오 및 장애 조치 (Failover) 클러스터에 대 한 클라우드 감시를 구성 하는 방법에 대 한 지침을 제공 합니다.
 
-## <a name="CloudWitnessOverview"></a>클라우드 감시 개요
+## <a name="cloud-witness-overview"></a><a name="CloudWitnessOverview"></a>클라우드 감시 개요
 
 그림 1에서는 Windows Server 2016를 사용 하는 다중 사이트 스트레치 장애 조치 (Failover) 클러스터 쿼럼 구성을 보여 줍니다. 이 예제 구성 (그림 1)에는 2 개의 데이터 센터 (사이트 라고 함)에 2 개의 노드가 있습니다. 클러스터가 2 개 이상의 데이터 센터에 걸쳐 있을 수 있습니다. 또한 각 데이터 센터에는 노드가 2 개 이상 있을 수 있습니다. 이 설정의 일반적인 클러스터 쿼럼 구성 (자동 장애 조치 (failover) SLA)은 각 노드에 투표를 제공 합니다. 데이터 센터 중 하나에서 정전을 경험 하는 경우에도 클러스터를 계속 실행할 수 있도록 쿼럼 감시에 대 한 추가 응답이 제공 됩니다. 수학은 단순 합니다. 5 개의 총 투표를 수행 하 고 클러스터에서 실행을 유지 하는 데 3 개의 투표를 해야 합니다.  
 
@@ -47,7 +47,7 @@ ms.locfileid: "75948171"
 
 그림 2에 표시 된 것 처럼 별도의 세 번째 사이트가 필요 하지 않습니다. 다른 쿼럼 감시와 마찬가지로 클라우드 감시는 응답을 가져오고 쿼럼 계산에 참여할 수 있습니다.  
 
-## <a name="CloudWitnessSupportedScenarios"></a>클라우드 감시: 단일 미러링 모니터 서버 유형에 대해 지원 되는 시나리오
+## <a name="cloud-witness-supported-scenarios-for-single-witness-type"></a><a name="CloudWitnessSupportedScenarios"></a>클라우드 감시: 단일 미러링 모니터 서버 유형에 대해 지원 되는 시나리오
 장애 조치 (Failover) 클러스터 배포에서 모든 노드가 인터넷에 연결할 수 있는 경우 (Azure 확장을 통해), 쿼럼 감시 리소스로 클라우드 감시를 구성 하는 것이 좋습니다.  
 
 쿼럼 감시로 클라우드 감시를 사용 하도록 지원 되는 몇 가지 시나리오는 다음과 같습니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "75948171"
 
 Windows Server 2012 R2부터 클러스터가 감시 응답을 자동으로 관리 하 고 노드가 동적 쿼럼에 투표 하므로 항상 미러링 모니터 서버를 구성 하는 것이 좋습니다.  
 
-## <a name="CloudWitnessSetUp"></a>클러스터에 대 한 클라우드 감시 설정
+## <a name="set-up-a-cloud-witness-for-a-cluster"></a><a name="CloudWitnessSetUp"></a>클러스터에 대 한 클라우드 감시 설정
 클러스터에 대 한 쿼럼 감시로 클라우드 감시를 설정 하려면 다음 단계를 완료 합니다.
 1. 클라우드 감시로 사용할 Azure Storage 계정 만들기
 2. 클러스터에 대 한 쿼럼 감시로 클라우드 감시를 구성 합니다.
@@ -78,12 +78,12 @@ Windows Server 2012 R2부터 클러스터가 감시 응답을 자동으로 관�
 1. [Azure Portal](https://portal.azure.com)에 로그인합니다.
 2. 허브 메뉴에서 새로 만들기 -> 데이터 + 저장소 -> 저장소 계정을 선택합니다.
 3. 저장소 계정 만들기 페이지에서 다음을 수행 합니다.
-    1. 스토리지 계정의 이름을 입력합니다.
+    1. 저장소 계정의 이름을 입력 합니다.
     <br>Storage 계정 이름은 3자에서 24자 사이여야 하고 숫자 및 소문자만 포함할 수 있습니다. 저장소 계정 이름은 Azure 내에서 고유 해야 합니다.
         
     2. **계정 종류**에 대해 **범용**을 선택 합니다.
     <br>클라우드 감시에는 Blob storage 계정을 사용할 수 없습니다.
-    3. **성능**은 **표준**을 선택합니다.
+    3. **성능**으로 **표준**을 선택 합니다.
     <br>클라우드 감시에는 Azure Premium Storage를 사용할 수 없습니다.
     2. **복제**에 대해 **LRS (로컬 중복 저장소)** 를 선택 합니다.
     <br>장애 조치 (Failover) 클러스터링은 데이터를 읽을 때 일관성을 보장 해야 하는 조정 지점으로 blob 파일을 사용 합니다. 따라서 **복제** 유형의 경우 **로컬 중복 저장소** 를 선택 해야 합니다.

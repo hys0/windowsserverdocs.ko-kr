@@ -1,24 +1,20 @@
 ---
 title: MultiPoint 서비스를 사용하여 파일 저장
 description: MultiPoint 서비스에서 파일 저장소에 대 한 자세한 정보
-ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c9eb0461-3846-4ddc-97ff-de10f03f30cf
 author: evaseydl
 manager: scottman
 ms.author: evas
-ms.openlocfilehash: bf31f5c582cffb5b38cff8cb15fcfdb4b3f76386
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 504389af62af8ec303e5b3baa2797a46f3ef52e6
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71389303"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80853876"
 ---
 # <a name="storing-files-with-multipoint-services"></a>MultiPoint 서비스를 사용하여 파일 저장
 MultiPoint 서비스는 다음과 같은 방법으로 사용자 파일을 저장 하도록 지원 합니다.  

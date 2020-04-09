@@ -1,30 +1,26 @@
 ---
 title: bitsadmin
-description: '**Bitsadmin** -bitsadmin에 대 한 Windows 명령 항목은 작업을 생성, 다운로드 또는 업로드 하 고 진행 상황을 모니터링 하는 데 사용할 수 있는 명령줄 도구입니다.'
-ms.custom: na
+description: Bitsadmin에 대 한 Windows 명령 항목-작업을 생성, 다운로드 또는 업로드 하 고 진행 상황을 모니터링 하는 데 사용 되는 명령줄 도구입니다.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4853036e-1df8-45ad-8be6-cfb097b8dd27
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b53293b28a83ecced34d248741996c958531d517
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: ae6536b5c149f54bbfd37a5e0e814ffaa09a6bae
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71380101"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80848746"
 ---
 # <a name="bitsadmin"></a>bitsadmin
 
 > **적용 대상**: windows Server (반기 채널), windows server 2016, windows Server 2012 R2, windows server 2012, windows 10
 
-bitsadmin은 다운로드 또는 업로드 작업을 만들고 진행 상황을 모니터링 하는 데 사용할 수 있는 명령줄 도구입니다. Bitsadmin 도구는 스위치를 사용 하 여 수행할 작업을 식별 합니다.  `bitsadmin /?` 또는 `bitsadmin /HELP`를 호출 하 여 스위치 목록을 가져올 수 있습니다.
+Bitsadmin은 다운로드 또는 업로드 작업을 만들고 진행 상황을 모니터링 하는 데 사용할 수 있는 명령줄 도구입니다. Bitsadmin 도구는 스위치를 사용 하 여 수행할 작업을 식별 합니다.  `bitsadmin /?` 또는 `bitsadmin /HELP`를 호출 하 여 스위치 목록을 가져올 수 있습니다.
 
 대부분의 스위치에는 작업의 표시 이름 또는 GUID로 설정 하는 \<작업\> 매개 변수가 필요 합니다. 작업의 표시 이름은 고유 하지 않을 수 있습니다. **/Create** 및 **/list** 스위치는 작업의 GUID를 반환 합니다.
 
