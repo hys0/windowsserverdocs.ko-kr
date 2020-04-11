@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setnotifyflags
-description: Bitsadmin setnotifyflags에 대 한 Windows 명령 항목으로, 지정 된 작업에 대 한 이벤트 알림 플래그를 설정 합니다.
+description: '**Bitsadmin setnotifyflags**에 대 한 Windows 명령 항목으로, 지정 된 작업에 대 한 이벤트 알림 플래그를 설정 합니다.'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: fd3001fa4ae7f51cab92556f4f2f498511cca5ae
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 73c088ce2bae8d2ad99b313417c14449ddd822b5
+ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80849286"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81122794"
 ---
 # <a name="bitsadmin-setnotifyflags"></a>bitsadmin setnotifyflags
 
@@ -23,27 +23,22 @@ ms.locfileid: "80849286"
 ## <a name="syntax"></a>구문
 
 ```
-bitsadmin /SetNotifyFlags <Job> <NotifyFlags>
+bitsadmin /setnotifyflags <job> <notifyflags>
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------|-----------|
-|작업|작업의 표시 이름 또는 GUID|
-|NotifyFlags|주의 참조 하십시오.|
+| 매개 변수 | 설명 |
+| --------- | ----------- |
+| 제출 | 작업의 표시 이름 또는 GUID입니다. |
+| notifyflags | 다음과 같은 알림 플래그 중 하나 이상을 포함할 수 있습니다.<ul><li>**1.** 작업의 모든 파일이 전송 되 면 이벤트를 생성 합니다.</li><li>**2.** 오류가 발생 하면 이벤트를 생성 합니다.</li><li>**3.** 모든 파일 전송이 완료 되거나 오류가 발생할 때 이벤트를 생성 합니다.</li><li>**4.** 알림을 사용 하지 않도록 설정 합니다.</li></ul> |
 
-## <a name="remarks"></a>주의
+## <a name="examples"></a>예
 
-**NotifyFlags** 매개 변수는 다음 알림 플래그 중 하나 이상을 포함할 수 있습니다.
+다음 예에서는 *Mydownloadjob*이라는 작업에 대해 오류가 발생할 때 이벤트를 생성 하도록 알림 플래그를 설정 합니다.
 
-|-----|-----| | 1 | 작업의 모든 파일이 전송 되 면 이벤트를 생성 합니다. | | 2 | 오류가 발생 하면 이벤트를 생성 합니다. | | 4 | 알림을 사용 하지 않도록 설정 합니다. |
-
-## <a name="examples"></a><a name=BKMK_examples></a>예와
-
-다음 예제에서는 전송에 대 한 알림 플래그를 설정 및 오류 이벤트 라는 작업에 대 한 작업 *myDownloadJob*합니다.
 ```
-C:\>bitsadmin /SetNotifyFlags myDownloadJob 3
+C:\>bitsadmin /setnotifyflags myDownloadJob 2
 ```
 
 ## <a name="additional-references"></a>추가 참조

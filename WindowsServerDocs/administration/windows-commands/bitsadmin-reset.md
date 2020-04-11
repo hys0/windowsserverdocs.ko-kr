@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ed1dcf9bce06af527ffb5b6a79d76d860d78450c
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: b73bd3b9c66b24330a0f9444836b9c8bd1730722
+ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80849796"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81123089"
 ---
 # <a name="bitsadmin-reset"></a>bitsadmin reset
 
@@ -35,7 +35,7 @@ bitsadmin /reset [/allusers]
 | -------------- | -------------- |
 | /allusers | (선택 사항) 현재 사용자가 소유 하 고 있는 큐의 모든 작업을 취소 합니다. 이 매개 변수를 사용 하려면 관리자 권한이 있어야 합니다. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 
 다음 예제에서는 현재 사용자에 대 한 전송 큐에 모든 작업을 취소합니다.
 

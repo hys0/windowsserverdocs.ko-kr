@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setdescription
-description: Bitsadmin setdescription에 대 한 Windows 명령 항목으로, 지정 된 작업에 대 한 설명을 설정 합니다.
+description: '**Bitsadmin setdescription**에 대 한 Windows 명령 항목으로, 지정 된 작업에 대 한 설명을 설정 합니다.'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,35 +9,36 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4a17f864e3bc3b3cdc8ba0d76d553bcfcef27d29
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 0b62e6b030c23c475418cd6f2c63f04edba1acff
+ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80849566"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81123010"
 ---
 # <a name="bitsadmin-setdescription"></a>bitsadmin setdescription
 
-지정된 된 작업의 설명을 설정합니다.
+지정 된 작업에 대 한 설명을 설정 합니다.
 
 ## <a name="syntax"></a>구문
 
 ```
-bitsadmin /SetDescription <Job> <Description>
+bitsadmin /setdescription <job> <description>
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------|-----------|
-|작업|작업의 표시 이름 또는 GUID|
-|설명|작업에 설명 하는 데 사용 하는 텍스트입니다.|
+| 매개 변수 | 설명 |
+| --------- | ----------- |
+| 제출 | 작업의 표시 이름 또는 GUID입니다. |
+| description | 작업에 설명 하는 데 사용 하는 텍스트입니다. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 
 다음 예제에서는 명명 된 작업에 대 한 설명을 검색 *Mydownloadjob*합니다.
+
 ```
-C:\>bitsadmin /SetDescription myDownloadJob Music Downloads
+C:\>bitsadmin /setdescription myDownloadJob music_downloads
 ```
 
 ## <a name="additional-references"></a>추가 참조

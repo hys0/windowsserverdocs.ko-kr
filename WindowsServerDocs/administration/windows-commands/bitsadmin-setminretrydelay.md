@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setminretrydelay
-description: BITS가 파일을 전송 하기 전에 일시적 오류가 발생 한 후 대기 하는 최소 시간 (초)을 설정 하는 bitsadmin setminretrydelay에 대 한 Windows 명령 항목입니다.
+description: BITS가 파일을 전송 하기 전에 일시적 오류가 발생 한 후 대기 하는 최소 시간 (초)을 설정 하는 **bitsadmin setminretrydelay**에 대 한 Windows 명령 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: fb2fe4c6d0e4f90c6ec49fa1da63404393d4f634
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: ddae9a62a49ca07bb03649f131a0a1ebad8ee3fe
+ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80849366"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81122885"
 ---
 # <a name="bitsadmin-setminretrydelay"></a>bitsadmin setminretrydelay
 
@@ -23,21 +23,22 @@ ms.locfileid: "80849366"
 ## <a name="syntax"></a>구문
 
 ```
-bitsadmin /SetMinRetryDelay <Job> <RetryDelay>
+bitsadmin /setminretrydelay <job> <retrydelay>
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------|-----------|
-|작업|작업의 표시 이름 또는 GUID|
-|Retrydelay는|시간 (초)로 표현 된 숫자입니다.|
+| 매개 변수 | 설명 |
+| --------- | ----------- |
+| 제출 | 작업의 표시 이름 또는 GUID입니다. |
+| retrydelay | 전송 하는 동안 오류가 발생 한 후 BITS가 대기 하는 최소 시간 (초)입니다. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 
 다음 예제에서는 명명 된 작업에 대 한 최소 재시도 지연 *myDownloadJob* 35 초입니다.
+
 ```
-C:\>bitsadmin /SetMinRetryDelay myDownloadJob 35
+C:\>bitsadmin /setminretrydelay myDownloadJob 35
 ```
 
 ## <a name="additional-references"></a>추가 참조

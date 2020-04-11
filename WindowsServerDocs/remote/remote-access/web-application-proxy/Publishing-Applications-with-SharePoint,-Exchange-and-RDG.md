@@ -1,6 +1,6 @@
 ---
 ms.assetid: 61ed00fd-51c7-4728-91fa-8501de9d8f28
-title: SharePoint, Exchange 및 RDG로 응용 프로그램 게시
+title: SharePoint, Exchange 및 RDG로 애플리케이션 게시
 author: billmath
 manager: mtillman
 ms.author: billmath
@@ -8,14 +8,14 @@ ms.date: 04/30/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: web-app-proxy
-ms.openlocfilehash: 18851463b82afc1dc34615e6faaa14622c80224a
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: f859d40ed04cc25285212968e6cd186cffe760ae
+ms.sourcegitcommit: 5c93c685dca3cafeea916cedcc0f915c528484ca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80818686"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "81119243"
 ---
-# <a name="publishing-applications-with-sharepoint-exchange-and-rdg"></a>SharePoint, Exchange 및 RDG로 응용 프로그램 게시
+# <a name="publishing-applications-with-sharepoint-exchange-and-rdg"></a>SharePoint, Exchange 및 RDG로 애플리케이션 게시
 
 > 적용 대상: Windows Server 2016
 
@@ -112,7 +112,7 @@ Kerberos 인증을 지원 하도록 응용 프로그램을 구성 해야 합니�
 5.  외부 및 내부 FQDN이 다르면 RDWeb 게시 규칙에서 요청 헤더 변환을 사용 하지 않도록 설정 하면 안 됩니다. 웹 응용 프로그램 프록시 서버에서 다음 PowerShell 스크립트를 실행 하 여이 작업을 수행할 수 있지만 기본적으로 사용 하도록 설정 해야 합니다.
 
     ```PowerShell
-    Get-WebApplicationProxyApplication applicationname | Set-WebApplicationProxyApplication -DisableTranslateUrlInRequestHeaders:$false
+    Get-WebApplicationProxyApplication applicationname | Set-WebApplicationProxyApplication -DisableTranslateUrlInRequestHeaders:$true
     ```
 
 6.  RDG 게시 된 응용 프로그램의 웹 응용 프로그램 프록시에서 HttpOnly 쿠키 속성을 사용 하지 않도록 설정 합니다. RDG ActiveX 컨트롤에 웹 응용 프로그램 프록시 인증 쿠키에 대 한 액세스를 허용 하려면 웹 응용 프로그램 프록시 쿠키에서 HttpOnly 속성을 사용 하지 않도록 설정 해야 합니다.

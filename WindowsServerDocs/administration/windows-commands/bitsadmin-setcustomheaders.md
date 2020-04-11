@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setcustomheaders
-description: GET 요청에 사용자 지정 HTTP 헤더를 추가 하는 bitsadmin setcustomheaders에 대 한 Windows 명령 항목입니다.
+description: GET 요청에 사용자 지정 HTTP 헤더를 추가 하는 **bitsadmin setcustomheaders**에 대 한 Windows 명령 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,39 +9,36 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e5d97fae5f84637c80c3d1ef00aa36f09049bb17
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: b5b1a28f03815a22a3f8d10b2c3d1d4a3a2ae635
+ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80849616"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81123023"
 ---
 # <a name="bitsadmin-setcustomheaders"></a>bitsadmin setcustomheaders
 
-GET 요청에 사용자 지정 HTTP 헤더를 추가 합니다.
+HTTP 서버에 전송 되는 GET 요청에 사용자 지정 HTTP 헤더를 추가 합니다.
 
 ## <a name="syntax"></a>구문
 
 ```
-bitsadmin /SetCustomHeaders <Job> <Header1> <Header2> <. . .>
+bitsadmin /setcustomheaders <job> <header1> <header2> <...>
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------|-----------|
-|작업|작업의 표시 이름 또는 GUID|
-|Header1 Header2 합니다. . .|작업에 대 한 사용자 지정 헤더|
+| 매개 변수 | 설명 |
+| --------- | ----------- |
+| 제출 | 작업의 표시 이름 또는 GUID입니다. |
+| `<header1> <header2>` 등 | 작업에 대 한 사용자 지정 헤더입니다. |
 
-## <a name="remarks"></a>주의
+## <a name="examples"></a>예
 
--   이 스위치는 HTTP 서버로 전송 된 GET 요청에 사용자 지정 HTTP 헤더를 추가 하는 데 사용 됩니다.
+다음 예제에서는 명명 된 작업에 대 한 사용자 지정 HTTP 헤더 추가 *myDownloadJob*합니다. GET 요청에 대 한 자세한 내용은 [메서드 정의](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3) 및 [헤더 필드 정의](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html)를 참조 하세요.
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
-
-다음 예제에서는 명명 된 작업에 대 한 사용자 지정 HTTP 헤더 추가 *myDownloadJob*합니다.
 ```
-C:\>bitsadmin / SetCustomHeaders myDownloadJob Accept-encoding:deflate/gzip
+C:\>bitsadmin /setcustomheaders myDownloadJob accept-encoding:deflate/gzip
 ```
 
 ## <a name="additional-references"></a>추가 참조

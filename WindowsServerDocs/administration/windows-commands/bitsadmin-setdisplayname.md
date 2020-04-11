@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setdisplayname
-description: 지정 된 작업의 표시 이름을 설정 하는 bitsadmin setdisplayname에 대 한 Windows 명령 항목입니다.
+description: 지정 된 작업의 표시 이름을 설정 하는 **bitsadmin setdisplayname**에 대 한 Windows 명령 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,35 +9,36 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 601c5b406132e70fb7d4facb97329f7456002bb4
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 0b1086903dd130392800f325c451bb4750fbf8fa
+ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80849546"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81123002"
 ---
 # <a name="bitsadmin-setdisplayname"></a>bitsadmin setdisplayname
 
-지정된 된 작업의 표시 이름을 설정합니다.
+지정 된 작업에 대 한 표시 이름을 설정 합니다.
 
 ## <a name="syntax"></a>구문
 
 ```
-bitsadmin /SetDisplayName <Job> <DisplayName>
+bitsadmin /setdisplayname <job> <display_name>
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------|-----------|
-|작업|작업의 표시 이름 또는 GUID|
-|DisplayName|지정된 된 작업의 표시 이름에 사용 되는 텍스트입니다.|
+| 매개 변수 | 설명 |
+| --------- | ----------- |
+| 제출 | 작업의 표시 이름 또는 GUID입니다. |
+| display_name | 특정 작업에 대해 표시 된 이름으로 사용 되는 텍스트입니다. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 
-다음 예제에서는 명명 된 작업에 대 한 표시 이름을 설정 *myDownloadJob* 에 *myDownloadJob2*합니다.
+다음 예에서는 작업의 표시 이름을 *Mydownloadjob*로 설정 합니다.
+
 ```
-C:\>bitsadmin /SetDisplayName myDownloadJob Download Music Job
+C:\>bitsadmin /setdisplayname myDownloadJob
 ```
 
 ## <a name="additional-references"></a>추가 참조

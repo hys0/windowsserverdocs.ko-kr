@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setclientcertificatebyid
-description: HTTPS (SSL) 요청에서 클라이언트 인증에 사용할 클라이언트 인증서의 식별자를 지정 하는 bitsadmin setclientcertificatebyid에 대 한 Windows 명령 항목
+description: HTTPS (SSL) 요청에서 클라이언트 인증에 사용할 클라이언트 인증서의 식별자를 지정 하는 **bitsadmin setclientcertificatebyid**에 대 한 Windows 명령 항목
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 80c97b21194c773d1b21aab2ee31794624da671c
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 376bb850664a5ed569488634029cb7384856f158
+ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80849666"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81123043"
 ---
 # <a name="bitsadmin-setclientcertificatebyid"></a>bitsadmin setclientcertificatebyid
 
@@ -23,23 +23,24 @@ HTTPS (SSL) 요청에서 클라이언트 인증에 사용할 클라이언트 인
 ## <a name="syntax"></a>구문
 
 ```
-bitsadmin /SetClientCertificateByID <Job> <store_location> <store_name> hexa-decimal_cert_id>
+bitsadmin /setclientcertificatebyid <job> <store_location> <store_name> <hexadecimal_cert_id>
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------|-----------|
-|작업|작업의 표시 이름 또는 GUID|
-|Store_location|인증서를 찾는 데 사용할 시스템 저장소의 위치를 식별 합니다. 가능한 값은 다음과 같습니다.</br>1 (CURRENT_USER)</br>2 (LOCAL_MACHINE)</br>3 (CURRENT_SERVICE)</br>4 (서비스)</br>5 (사용자)</br>6 (CURRENT_USER_GROUP_POLICY)</br>7 (LOCAL_MACHINE_GROUP_POLICY)</br>8 (LOCAL_MACHINE_ENTERPRISE)|
-|Store_name|인증서 저장소의 이름입니다. 가능한 값은 다음과 같습니다.</br>CA (인증 기관 인증서)</br>내 (개인 인증서)</br>루트 (루트 인증서)</br>SPC (소프트웨어 게시자 인증서)|
-|Hexadecimal_cert_id|인증서의 해시를 나타내는 16 진수입니다.|
+| 매개 변수 | 설명 |
+| -------------- | -------------- |
+| 제출 | 작업의 표시 이름 또는 GUID입니다. |
+| store_location | 다음을 포함 하 여 인증서를 조회 하는 데 사용할 시스템 저장소의 위치를 식별 합니다.<ul><li>CURRENT_USER</li><li>LOCAL_MACHINE</li><li>CURRENT_SERVICE</li><li>서비스</li><li>사용자</li><li>CURRENT_USER_GROUP_POLICY</li><li>LOCAL_MACHINE_GROUP_POLICY</li><li>LOCAL_MACHINE_ENTERPRISE.</li></ul> |
+| store_name | 인증서 저장소의 이름으로 다음을 포함 합니다.<ul><li>CA (인증 기관 인증서)</li><li>내 (개인 인증서)</li><li>루트 (루트 인증서)</li><li>SPC (소프트웨어 게시자 인증서).</li></ul> |
+| hexadecimal_cert_id | 인증서의 해시를 나타내는 16 진수입니다. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 
-다음 예제에서는 *myjob*이라는 작업에 대 한 HTTPS (SSL) 요청에서 클라이언트 인증에 사용할 클라이언트 인증서의 식별자를 지정 합니다.
+다음 예제에서는 명명 된 작업에 대 한 HTTPS (SSL) 요청에서 클라이언트 인증에 사용할 클라이언트 인증서의 식별자를 지정 *Mydownloadjob*합니다.
+
 ```
-C:\>bitsadmin Bitsadmin /SetClientCertificateByID myJob BG_CERT_STORE_LOCATION_CURRENT_USER MY A106B52356D3FBCD1853A41B619358BD 
+C:\>bitsadmin /setclientcertificatebyid myDownloadJob BG_CERT_STORE_LOCATION_CURRENT_USER MY A106B52356D3FBCD1853A41B619358BD
 ```
 
 ## <a name="additional-references"></a>추가 참조

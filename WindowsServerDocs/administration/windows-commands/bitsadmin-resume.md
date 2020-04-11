@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0a3f464ba00c5cc233c42a40c063372dc0d584e9
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: e81bd80232cd4ec8fbba70c86cd97bb9695680f8
+ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80849756"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81123075"
 ---
 # <a name="bitsadmin-resume"></a>bitsadmin resume
 
@@ -32,7 +32,7 @@ bitsadmin /resume <job>
 | -------------- | -------------- |
 | 제출 | 작업의 표시 이름 또는 GUID입니다. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 
 다음 예제에서는 라는 작업을 다시 시작 *myDownloadJob*합니다.
 

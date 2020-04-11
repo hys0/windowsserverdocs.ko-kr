@@ -1,6 +1,6 @@
 ---
 title: bitsadmin util 및 도움말
-description: Bitsadmin util 및 help에 대 한 Windows 명령 항목은 Util 스위치에 대 한 명령줄 사용법을 표시 합니다.
+description: '**Bitsadmin util 및 help**에 대 한 Windows 명령 항목은 util 스위치에 대 한 명령줄 사용법을 표시 합니다.'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: fac449fea329cf8f03985ab8bc036c4046a5dd24
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 3cbfcb5a630d6670202551a433ca3acc4b9b7fa0
+ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80848906"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81122489"
 ---
 # <a name="bitsadmin-util-and-help"></a>bitsadmin util 및 도움말
 
@@ -23,14 +23,15 @@ ms.locfileid: "80848906"
 ## <a name="syntax"></a>구문
 
 ```
-Bitsadmin /Util /Help 
+bitsadmin /util /help
 ```
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 
 다음 명령은 **Util** 스위치에 대 한 명령줄 도움말을 표시 합니다.
+
 ```
-Bitsadmin /Util /Help
+C:\>bitsadmin /util /help
 ```
 
 ## <a name="additional-references"></a>추가 참조

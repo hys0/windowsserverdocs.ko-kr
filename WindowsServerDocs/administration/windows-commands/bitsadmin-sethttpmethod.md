@@ -1,6 +1,6 @@
 ---
 title: bitsadmin sethttpmethod
-description: Bitsadmin sethttpmethod에 대 한 Windows 명령 항목으로, 사용할 HTTP 동사를 설정 합니다.
+description: '**Bitsadmin sethttpmethod**에 대 한 Windows 명령 항목으로, 사용할 HTTP 동사를 설정 합니다.'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -8,12 +8,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 03/01/2019
-ms.openlocfilehash: 49064395e39b79657249ab3931c6bcc982bd64b4
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: d349dcad7bdf6a6fc566ed961c3160836d7f49da
+ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80849476"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81122963"
 ---
 # <a name="bitsadmin-sethttpmethod"></a>bitsadmin sethttpmethod
 
@@ -22,15 +22,15 @@ ms.locfileid: "80849476"
 ## <a name="syntax"></a>구문
 
 ```
-bitsadmin /GetHttpMethod <Job> <HTTPMethod>
+bitsadmin /sethttpmethod <job> <httpmethod>
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------|-----------|
-|작업|작업의 표시 이름 또는 GUID|
-|HTTPMethod|사용할 HTTP 동사입니다.|
+| 매개 변수 | 설명 |
+| --------- | ----------- |
+| 제출 | 작업의 표시 이름 또는 GUID입니다. |
+| httpmethod | 사용할 HTTP 동사입니다. 사용 가능한 동사에 대 한 자세한 내용은 [메서드 정의](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html)를 참조 하세요. |
 
 ## <a name="additional-references"></a>추가 참조
 

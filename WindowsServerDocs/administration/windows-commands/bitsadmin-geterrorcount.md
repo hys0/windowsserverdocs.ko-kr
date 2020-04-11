@@ -1,6 +1,6 @@
 ---
 title: bitsadmin geterrorcount
-description: 지정 된 작업에서 일시적인 오류가 발생 한 횟수를 검색 하는 bitsadmin geterrorcount에 대 한 Windows 명령 항목입니다.
+description: 지정 된 작업에서 일시적인 오류가 발생 한 횟수를 검색 하는 **bitsadmin geterrorcount**에 대 한 Windows 명령 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1711781dd416311e45874b7c611f3f8f42a06854
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: ef0bf043517d4edfa8d72888746ca5d9c92ecc21
+ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850696"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81123133"
 ---
 # <a name="bitsadmin-geterrorcount"></a>bitsadmin geterrorcount
 

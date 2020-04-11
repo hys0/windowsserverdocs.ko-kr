@@ -9,18 +9,21 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 30415bc85fd8a4a4804946a3d4a168d6a7d1433a
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 47d468ee122dc78cc880f4a9bc0705354e0b5214
+ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80845586"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81122553"
 ---
 # <a name="dfsutil"></a>dfsutil
 
 >적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Dfsutil 명령은 DFS 네임 스페이스, 서버 및 클라이언트를 관리 합니다. 대부분의 경우에는 계속 해 서 dfsutil가 필요한 몇 가지 명령이 있지만 최신 DFS 네임 스페이스 PowerShell cmdlet을 대신 사용할 수 있습니다.
+Dfsutil 명령은 DFS 네임 스페이스, 서버 및 클라이언트를 관리 합니다.
+
+>[!NOTE]
+>**DFS 네임 스페이스 PowerShell 모듈** 은 몇 가지 dfsutil 매개 변수에 대 한 대체를 제공 하지만 다른 일부는 계속 해 서 dfsutil를 사용 해야 합니다. 업데이트 된 PowerShell에 대 한 자세한 내용은 [DFSN](https://docs.microsoft.com/powershell/module/dfsn/?view=win10-ps)를 참조 하세요.
 
 ## <a name="parameters-available-in-powershell"></a>PowerShell에서 사용할 수 있는 매개 변수
 
@@ -33,7 +36,7 @@ PowerShell에서 다음 매개 변수를 사용할 수 있습니다.
 | target | 폴더 대상 또는 네임 스페이스 서버를 표시, 만들기, 제거 합니다. |
 | 속성 | 표시 하거나 폴더 대상 또는 네임 스페이스 서버를 수정 합니다. |
 | 서버 | 네임 스페이스 구성을 표시 하거나 수정 합니다. |
-| 도메인 | 도메인의 도메인 기반 네임 스페이스를 모두 표시 합니다. |
+| domain | 도메인의 도메인 기반 네임 스페이스를 모두 표시 합니다. |
 
 ## <a name="parameters-only-available-in-dfsutil"></a>Dfsutil 에서만 사용할 수 있는 매개 변수
 

@@ -1,6 +1,6 @@
 ---
 title: bitsadmin util 및 setieproxy
-description: Bitsadmin util 및 setieproxy에 대 한 Windows 명령 항목으로, 서비스 계정을 사용 하 여 파일을 전송할 때 사용할 프록시 설정을 설정 합니다.
+description: '**Bitsadmin util 및 setieproxy**에 대 한 Windows 명령 항목으로, 서비스 계정을 사용 하 여 파일을 전송할 때 사용할 프록시 설정을 설정 합니다.'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,39 +9,38 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4e7d8a9ff4e2388b61ee5ae00ae7afe421de68e6
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 2ebb33ff917ddd43bbc62413755ca28478ad5a95
+ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80848886"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81122524"
 ---
 # <a name="bitsadmin-util-and-setieproxy"></a>bitsadmin util 및 setieproxy
 
-서비스 계정을 사용 하 여 파일을 전송할 때 사용할 프록시 설정을 설정 합니다.
+서비스 계정을 사용 하 여 파일을 전송할 때 사용할 프록시 설정을 설정 합니다. 성공적으로 완료 하려면 관리자 권한 명령 프롬프트에서이 명령을 실행 해야 합니다.
 
-**Bitsadmin 1.5 및 이전 버전**: 지원 되지 않습니다.
+> [!NOTE]
+> 이 명령은 BITS 1.5 이전 버전에서는 지원 되지 않습니다.
 
 ## <a name="syntax"></a>구문
 
 ```
-bitsadmin /Util /SetIEProxy <Account> <Usage>[/Conn <ConnectionName>]
+bitsadmin /util /setieproxy <account> <usage> [/conn <connectionname>]
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------|-----------|
-|Account|프록시 설정을 정의 하려는 서비스 계정의 유형을 지정 합니다. 가능한 값은 다음과 같습니다.</br>-LOCALSYSTEM</br>-NETWORKSERVICE</br>-LOCALSERVICE|
-|사용법|프록시 검색을 사용 하 여 폼을 지정 합니다. 가능한 값은 다음과 같습니다.</br>-NO_PROXY-프록시 서버를 사용 하지 않습니다.</br>-자동 검색-프록시 설정을 자동으로 검색 합니다.</br>-MANUAL_PROXY-명시적 프록시 목록을 사용 하 고 바이패스 목록을 사용 합니다. 프록시 목록을 지정 하 고 바이패스 목록 사용 태그 바로 뒤에 키를 누릅니다. 예를 들어, MANUAL_PROXY proxy1 proxy2 NULL입니다.</br>    -프록시 목록은 사용할 프록시 서버를 쉼표로 구분한 목록입니다.</br>    -바이패스 목록은 호스트 이름 또는 IP 주소의 공백으로 구분 된 목록 또는 둘 다를 사용 하 여 전송을 통해 라우팅할 수 없습니다. 로컬 > \<하 여 동일한 LAN에 있는 모든 서버를 참조할 수 있습니다. NULL 또는 값은 빈 프록시 무시 목록에 사용할 수 있습니다.</br>-AUTOSCRIPT-스크립트를 실행 하는 경우를 제외 하 고 자동 검색과 동일 합니다. 사용 현황 태그 바로 뒤에 스크립트 URL을 지정 합니다. 예를 들어 AUTOSCRIPT http://server/proxy.js합니다.</br>-RESET-NO_PROXY와 동일 합니다. 단, 수동 프록시 Url (지정 된 경우) 및 자동 검색을 사용 하 여 검색 된 Url은 제거 합니다.|
-|연결 이름|선택 사항- **/Conn** 매개 변수와 함께 사용 하 여 사용할 모뎀 연결을 지정 합니다. **/Conn** 매개 변수를 지정 하지 않으면 BITS는 LAN 연결을 사용 합니다. 바로 뒤에 모뎀 연결 이름 지정은 **/conn** 매개 변수입니다.|
+
+| 매개 변수 | 설명 |
+| --------- | ---------- |
+| 아닙니다. | 프록시 설정이 정의 하려는 서비스 계정을 지정 합니다. 가능한 값은 다음과 같습니다.<ul><li>LOCALSYSTEM</li><li>   NETWORKSERVICE</li><li>LOCALSERVICE.</li></ul> |
+| usage | 프록시 검색을 사용 하 여 폼을 지정 합니다. 가능한 값은 다음과 같습니다.<ul><li>**NO_PROXY.** 프록시 서버를 사용 하지 마세요.</li><li>**자동 검색.** 프록시 설정을 자동으로 검색 합니다.</li><li>**MANUAL_PROXY.** 지정 된 프록시 목록 및 바이패스 목록을 사용 합니다. 사용 태그 바로 다음에 목록을 지정 해야 합니다. 정의합니다(예: `MANUAL_PROXY proxy1,proxy2 NULL`).<ul><li>**프록시 목록.** 사용할 프록시 서버를 쉼표로 구분한 목록입니다.</li><li>**바이패스 목록입니다.** 전송을 프록시를 통해 라우팅되지 않는 호스트 이름 또는 IP 주소 또는 둘 다의 공백으로 구분 된 목록입니다. 로컬 > \<하 여 동일한 LAN에 있는 모든 서버를 참조할 수 있습니다. NULL 또는 값은 빈 프록시 무시 목록에 사용할 수 있습니다.</li></ul><li>**AUTOSCRIPT.** 자동 **검색**과 동일 합니다. 단, 스크립트도 실행 합니다. 사용 태그 바로 뒤에 스크립트 URL을 지정 해야 합니다. 정의합니다(예: `AUTOSCRIPT http://server/proxy.js`).</li><li>**다시 설정.** **NO_PROXY**와 동일 합니다. 단, 수동 프록시 url (지정 된 경우) 및 자동 검색을 사용 하 여 검색 된 url은 제거 합니다.</li></ul> |
+| connectionname | (선택 사항) **/Conn** 매개 변수와 함께 사용 하 여 사용할 모뎀 연결을 지정 합니다. **/Conn** 매개 변수를 지정 하지 않으면 BITS는 LAN 연결을 사용 합니다. |
 
 ## <a name="remarks"></a>주의
 
-이 스위치를 사용 하는 각 연속 호출은 이전에 지정 된 사용을 대체 하지만 이전에 정의 된 사용의 매개 변수는 대체 하지 않습니다. 예를 들어 별도 호출에서 NO_PROXY, 자동 검색 및 MANUAL_PROXY를 지정 하면 BITS 마지막 제공 된 사용량을 사용 하 여 되지만 이전에 정의 된 사용으로 인해 매개 변수를 유지 합니다.
-
-> [!IMPORTANT]
-> 성공적으로 완료 하려면 관리자 권한 명령 프롬프트에서이 명령을 실행 해야 합니다.
+이 스위치를 사용 하 여 연속 된 각 호출은 이전에 정의 된 사용을 대체 하지만 이전에 정의 된 사용의 매개 변수는 대체 하지 않습니다. 예를 들어 별도의 호출에서 **NO_PROXY**, 자동 **검색**및 **MANUAL_PROXY** 를 지정 하는 경우 BITS는 마지막으로 제공 된 사용을 사용 하지만 이전에 정의 된 사용의 매개 변수를 유지 합니다.
 
 ## <a name="examples"></a>예
 
@@ -55,7 +54,10 @@ C:\>bitsadmin /Util /SetIEProxy localsystem AUTODETECT
 
 ```
 bitsadmin /util /setieproxy localsystem MANUAL_PROXY proxy1,proxy2,proxy3 NULL
-bitsadmin /util /setieproxy localsystem MANUAL_PROXY proxy1:80 
+```
+
+```
+bitsadmin /util /setieproxy localsystem MANUAL_PROXY proxy1:80
 ```
 
 ## <a name="additional-references"></a>추가 참조
