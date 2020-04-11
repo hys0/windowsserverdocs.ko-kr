@@ -7,15 +7,14 @@ ms.sitesec: library
 author: mikeblodge
 ms.author: mikeblodge
 ms.date: 07/12/2018
-ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.localizationpriority: high
-ms.openlocfilehash: cc666c253975396412188896ff223f2c808f098d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 3d2c55430a78eaabfe55b764275c6e61fa80368a
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71391560"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80826216"
 ---
 # <a name="upgrade-windows-server-2008-and-windows-server-2008-r2"></a>Windows Server 2008 및 Windows Server 2008 R2 업그레이드
 
@@ -39,7 +38,7 @@ Windows Server 2003을 실행하는 경우 [Windows Server 2008로 업그레이�
 - 추가 비용 없이 추가 3년 동안 Windows Server 2008 R2 또는 2008의 중요 보안 업데이트를 받을 수 있습니다. 
 - Azure의 무료 업그레이드.
 - 준비가 되었을 때 더 많은 클라우드 서비스를 채택할 수 있습니다.
-- SQL Server를 Azure 관리형 인스턴스 또는 VM으로 마이그레이션하여 추가 비용 없이 추가 3년 동안 Windows Server 2008 R2 또는 2008 중요 보안 업데이트를 받을 수 있습니다. 
+- SQL Server를 Azure Managed Instance또는 VM으로 마이그레이션하여 추가 비용 없이 추가 3년 동안 Windows Server 2008 R2 또는 2008 중요 보안 업데이트를 받을 수 있습니다. 
 - 기존 SQL Server 및 Windows Server 라이선스를 활용하여 Azure에 고유하게 클라우드를 절감할 수 있습니다.
 
 [![특수 이미지를 사용하여 Azure로 마이그레이션 시작](./media/WS08-image-banner-small.png)](uploading-specialized-WS08-image-to-azure.md)

@@ -1,23 +1,19 @@
 ---
 title: 데스크톱 호스팅 서비스
 description: 데스크톱 호스팅 서비스의 구성 요소를 설명합니다.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: helohr
 ms.date: 07/06/2018
-ms.tgt_pltfrm: na
 ms.topic: article
 author: heidilohr
 manager: lizross
-ms.openlocfilehash: cf189b15ca15fb556424b5e4931f19d4be356d4d
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: 64e433ed379ca322996bcfe2d0ddd513e074b85e
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79323375"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854716"
 ---
 # <a name="desktop-hosting-service"></a>데스크톱 호스팅 서비스
 

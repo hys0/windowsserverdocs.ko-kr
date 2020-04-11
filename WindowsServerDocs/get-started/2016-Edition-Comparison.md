@@ -10,12 +10,12 @@ author: jasongerend
 ms.author: jgerend
 manager: dongill
 ms.localizationpriority: medium
-ms.openlocfilehash: f2940e5ad75fab90f717284eabafd555573cab35
-ms.sourcegitcommit: e92a78f8d307200e64617431a701b9112a9b4e48
+ms.openlocfilehash: ce4c35f0b65d0461e9dc2e23404d2637aecff415
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71973856"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80827106"
 ---
 # <a name="comparison-of-standard-and-datacenter-editions-of-windows-server-2016"></a>Windows Server 2016 Standard Edition과 Datacenter Edition의 비교
 
@@ -23,15 +23,15 @@ ms.locfileid: "71973856"
   
 ## <a name="locks-and-limits"></a>잠금 및 제한
 
-| 잠금 및 제한 | Windows Server 2016 Standard | Windows Server 2016 Datacenter |
+| 잠금 및 제한 | Windows Server 2016 Standard | Windows Server 2016 Datacenter |
 | ------------------- |---------- | --------------------------- |  
 | 최대 사용자 수 | CAL 기준   | CAL 기준     |
 | 최대 SMB 연결 수 | 16,777,216      | 16,777,216          |
-| 최대 RRAS 연결 수| 제한 없음       | 제한 없음         |
+| 최대 RRAS 연결 수| 무제한       | 무제한         |
 | 최대 IAS 연결 수 | 2,147,483,647   | 2,147,483,647        |
 | 최대 RDS 연결 수: | 65535           | 65535             |
 | 64비트 소켓 최대 수 | 64     | 64                |
-| 최대 코어 수 | 제한 없음       | 제한 없음      |
+| 최대 코어 수 | 무제한       | 무제한      |
 | 최대 RAM             | 24TB           | 24TB             |
 | 가상화 게스트로 이용 가능 여부 | 예(두 대의 가상 컴퓨터 및 라이선스당 하나의 Hyper-V 호스트) | 예(<strong>무제한 가상 머신</strong>, 라이선스당 하나의 Hyper-V 호스트) |
 | 서버의 도메인 가입 가능 여부 | 예            | 예                |
@@ -41,46 +41,46 @@ ms.locfileid: "71973856"
 
 ## <a name="server-roles"></a>서버 역할
 
-| 사용 가능한 Windows Server 역할     | 역할 서비스 | Windows Server 2016 Standard | Windows Server 2016 Datacenter |  
+| 사용 가능한 Windows Server 역할     | 역할 서비스 | Windows Server 2016 Standard | Windows Server 2016 Datacenter |  
 | -------------------                | ----------    | ----------                   | ---------------------------    |  
 | Active Directory 인증서 서비스|              | 예                          | 예                            |
 | Active Directory 도메인 서비스    |               | 예                          | 예                            |
-| AD FS(Active Directory Federation Services)|               | 예                          | 예                            |
+| ADFS(Active Directory Federation Services)|               | 예                          | 예                            |
 | AD LDS(Lightweight Directory Services)| |예|예|
 | AD Rights Management Services| |예|예|
 | 디바이스 상태 증명| |예|예|
 | DHCP 서버| |예|예|
 | DNS 서버| |예|예|
 | 팩스 서버| |예|예|
-| 파일 및 저장소 서비스|파일 서버|예|예|
-| 파일 및 저장소 서비스|네트워크 파일용 BranchCache|예|예|
-| 파일 및 저장소 서비스|데이터 중복 제거|예|예|
-| 파일 및 저장소 서비스|DFS 네임스페이스|예|예|
-| 파일 및 저장소 서비스|DFS 복제|예|예|
-| 파일 및 저장소 서비스|파일 서버 리소스 관리자|예|예|
-| 파일 및 저장소 서비스|파일 서버 VSS 에이전트 서비스|예|예|
-| 파일 및 저장소 서비스|iSCSI 대상 서버|예|예|
-| 파일 및 저장소 서비스|iSCSI 대상 저장소 공급자|예|예|
-| 파일 및 저장소 서비스|NFS용 서버|예|예|
-| 파일 및 저장소 서비스|클라우드 폴더|예|예|
-| 파일 및 저장소 서비스|저장소 서비스|예|예|
+| 파일 및 스토리지 서비스|파일 서버|예|예|
+| 파일 및 스토리지 서비스|네트워크 파일용 BranchCache|예|예|
+| 파일 및 스토리지 서비스|데이터 중복 제거|예|예|
+| 파일 및 스토리지 서비스|DFS 네임스페이스|예|예|
+| 파일 및 스토리지 서비스|DFS 복제|예|예|
+| 파일 및 스토리지 서비스|File Server Resource Manager|예|예|
+| 파일 및 스토리지 서비스|파일 서버 VSS 에이전트 서비스|예|예|
+| 파일 및 스토리지 서비스|iSCSI Target Server|예|예|
+| 파일 및 스토리지 서비스|iSCSI 대상 스토리지 공급자|예|예|
+| 파일 및 스토리지 서비스|NFS용 서버|예|예|
+| 파일 및 스토리지 서비스|클라우드 폴더|예|예|
+| 파일 및 스토리지 서비스|스토리지 서비스|예|예|
 | 호스트 보호 서비스| |예|예|
 | Hyper-V| |예|예(<strong>보호된 가상 컴퓨터 포함</strong>)|
 | MultiPoint 서비스| |예|예|
-| 네트워크 컨트롤러| |아니오| <strong>예</strong> |
-| 네트워크 정책 및 액세스 서비스| |예(데스크톱 환경 포함 서버로 설치된 경우)|예(데스크톱 환경 포함 서버로 설치된 경우)|
+| 네트워크 컨트롤러| |아니요| <strong>예</strong> |
+| Network Policy and Access Services| |예(데스크톱 환경 포함 서버로 설치된 경우)|예(데스크톱 환경 포함 서버로 설치된 경우)|
 | 인쇄 및 문서 서비스| |예|예|
 | 원격 액세스| |예|예|
 | 원격 데스크톱 서비스| |예|예|
 | 볼륨 정품 인증 서비스| |예|예|
 | Web Services(IIS)| |예|예|
-| Windows 배포 서비스| |예(데스크톱 환경 포함 서버로 설치된 경우)|예(데스크톱 환경 포함 서버로 설치된 경우)|
-| Windows Server 필수 패키지 환경| |예|예|
+| Windows Deployment Services| |예(데스크톱 환경 포함 서버로 설치된 경우)|예(데스크톱 환경 포함 서버로 설치된 경우)|
+| Windows Server Essentials Experience| |예|예|
 | Windows Server Update Services| |예|예|
 
 ## <a name="features"></a>기능
 
-|Windows Server 기능(서버 관리자 또는 PowerShell을 사용하여 설치 가능)|Windows Server 2016 Standard|Windows Server 2016 Datacenter|  
+|Windows Server 기능(서버 관리자 또는 PowerShell을 사용하여 설치 가능)|Windows Server 2016 Standard|Windows Server 2016 Datacenter|  
 |-------------------|----------|---------------------------|  
 |.NET Framework 3.5|예|예|
 |.NET framework 4.6|예|예|
@@ -92,10 +92,10 @@ ms.locfileid: "71973856"
 |컨테이너|예(Windows 컨테이너 제한 없음, Hyper-V 컨테이너 최대 2개)|예(모든 컨테이너 형식 제한 없음)|
 |데이터 센터 브리징|예|예|
 |DirectPlay|예(데스크톱 환경 포함 서버로 설치된 경우)|예(데스크톱 환경 포함 서버로 설치된 경우)|
-|강화된 저장소|예|예|
+|강화된 스토리지|예|예|
 |장애 조치(failover) 클러스터링|예|예|
 |그룹 정책 관리|예|예|
-|호스트 보호 Hyper-V 지원|아니오|<strong>예</strong> |
+|호스트 보호 Hyper-V 지원|아니요|<strong>예</strong> |
 |I/O 서비스 품질|예|예|
 |IIS 호스팅 가능한 웹 코어|예|예|
 |인터넷 인쇄 클라이언트|예(데스크톱 환경 포함 서버로 설치된 경우)|예(데스크톱 환경 포함 서버로 설치된 경우)|
@@ -107,7 +107,7 @@ ms.locfileid: "71973856"
 |메시지 큐|예|예|
 |다중 경로 I/O|예|예|
 |MultiPoint 커넥터|예|예|
-|네트워크 부하 분산|예|예|
+|Network Load Balancing|예|예|
 |피어 이름 확인 프로토콜|예|예|
 |qWave(Quality Windows Audio Video Experience)|예|예|
 |RAS 연결 관리자 관리 키트|예(데스크톱 환경 포함 서버로 설치된 경우)|예(데스크톱 환경 포함 서버로 설치된 경우)|
@@ -121,8 +121,8 @@ ms.locfileid: "71973856"
 |SMB 대역폭 제한|예|예|
 |SMTP 서버|예|예|
 |SNMP 서비스|예|예|
-|소프트웨어 부하 분산 장치|아니오| <strong>예</strong> |
-|저장소 복제본|아니오|예|
+|소프트웨어 부하 분산 장치|아니요| <strong>예</strong> |
+|스토리지 복제본|아니요|예|
 |텔넷 클라이언트|예|예|
 |TFTP 클라이언트|예(데스크톱 환경 포함 서버로 설치된 경우)|예(데스크톱 환경 포함 서버로 설치된 경우)|
 |패브릭 관리를 위한 VM 보호 도구|예|예|
@@ -136,7 +136,7 @@ ms.locfileid: "71973856"
 |Windows Search Service|예(데스크톱 환경 포함 서버로 설치된 경우)|예(데스크톱 환경 포함 서버로 설치된 경우)|
 |Windows Server 백업|예|예|
 |Windows Server 마이그레이션 도구|예|예|
-|Windows 표준 기반 저장소 관리|예|예|
+|Windows 표준 기반 스토리지 관리|예|예|
 |Windows TIFF IFilter|예(데스크톱 환경 포함 서버로 설치된 경우)|예(데스크톱 환경 포함 서버로 설치된 경우)|
 |WinRM IIS 확장|예|예|
 |WINS 서버|예|예|
@@ -144,7 +144,7 @@ ms.locfileid: "71973856"
 |WoW64 지원|설치됨|설치됨|
 |XPS 뷰어|예(데스크톱 환경 포함 서버로 설치된 경우)|예(데스크톱 환경 포함 서버로 설치된 경우)|
 
-|일반적으로 사용 가능한 기능|Windows Server 2016 Standard|Windows Server 2016 Datacenter|  
+|일반적으로 사용 가능한 기능|Windows Server 2016 Standard|Windows Server 2016 Datacenter|  
 |-------------------|----------|---------------------------|  
 |모범 사례 분석기|예|예|
 |직접 액세스|예|예|
@@ -152,16 +152,16 @@ ms.locfileid: "71973856"
 |Hot Add/Replace RAM|예|예|
 |Microsoft Management Console|예|예|
 |최소 서버 인터페이스|예|예|
-|네트워크 부하 분산|예|예|
+|Network Load Balancing|예|예|
 |Windows PowerShell|예|예|
 |Server Core 설치 옵션|예|예|
 |Nano Server 설치 옵션|예|예|
 |서버 관리자|예|예|
 |SMB 다이렉트 및 SMB over RDMA|예|예|
-| 소프트웨어 정의 네트워킹 | 아니오 | <strong>예</strong> |
-|저장소 복제본 | 아니오 | <strong>예</strong> |
-|저장소 공간|예|예|
-|저장소 공간 다이렉트|아니오| <strong>예</strong> |
+| 소프트웨어 정의 네트워킹 | 아니요 | <strong>예</strong> |
+|스토리지 복제본 | 아니요 | <strong>예</strong> |
+|스토리지 공간|예|예|
+|직접 스토리지 공간|아니요| <strong>예</strong> |
 |볼륨 정품 인증 서비스|예|예|
 |VSS (Volume Shadow Copy Service) integration|예|예|
 |Windows Server Update Services|예|예|

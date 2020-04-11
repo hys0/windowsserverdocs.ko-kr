@@ -1,12 +1,8 @@
 ---
 title: 원격 데스크톱 클라이언트
 description: 모든 디바이스에서 사용할 수 있는 다양한 원격 데스크톱 클라이언트 알아보기
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b7d8158c-aee1-4c60-8a46-40ce5595b8e8
 author: HeidiLohr
@@ -14,12 +10,12 @@ manager: lizross
 ms.author: helohr
 ms.date: 01/07/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: ccf6fa376bfb54498851407bfae175736e75ebc9
-ms.sourcegitcommit: 76469d1b7465800315eaca3e0c7f0438fc3939ed
+ms.openlocfilehash: 711fa87fe697ae616d9bd8c696d29fabf1586055
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75919845"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856046"
 ---
 # <a name="remote-desktop-clients"></a>원격 데스크톱 클라이언트
 

@@ -1,12 +1,8 @@
 ---
 title: macOS 클라이언트 시작
 description: Mac용 원격 데스크톱 클라이언트 설정 방법 알아보기
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7afc65f8-3158-49c9-9d48-4dab1c69afba
 author: lizap
@@ -14,12 +10,12 @@ manager: dongill
 ms.author: elizapo
 ms.date: 08/27/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 1b2ea23e95796f6cce90a1dc90de896c2242084a
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: 6c87c95390b4a157b7d12e303520e519a3d157ac
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79319997"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856026"
 ---
 # <a name="get-started-with-the-macos-client"></a>macOS 클라이언트 시작
 

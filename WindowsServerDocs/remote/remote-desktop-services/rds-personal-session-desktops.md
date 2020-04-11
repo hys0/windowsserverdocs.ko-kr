@@ -1,23 +1,19 @@
 ---
 title: 원격 데스크톱 서비스에서 개인 세션 데스크톱 사용
 description: RDS를 통해 할당된 맞춤형 데스크톱을 공유하는 방법을 알아봅니다.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
-ms.tgt_pltfrm: na
 ms.topic: article
 author: lizap
 ms.author: elizapo
 ms.date: 10/22/2019
 manager: dongill
-ms.openlocfilehash: 9386733911ca81ad60d038854bd68e5603aae4cf
-ms.sourcegitcommit: 3262c5c7cece9f2adf2b56f06b7ead38754a451c
+ms.openlocfilehash: c0c36793d08391ad98fa797004ed6dec9883e9f1
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72812280"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80857406"
 ---
 # <a name="use-personal-session-desktops-with-remote-desktop-services"></a>원격 데스크톱 서비스에서 개인 세션 데스크톱 사용
 

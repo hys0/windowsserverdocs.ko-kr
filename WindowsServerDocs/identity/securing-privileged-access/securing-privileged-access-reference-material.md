@@ -9,12 +9,12 @@ ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: daveba
 ms.reviewer: mas
-ms.openlocfilehash: 16d711a288843163b134b0226ed4b8513d7070eb
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 00335fb2ca7a54031430c6c606fb6ffa23a8f7a2
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75950051"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80855136"
 ---
 # <a name="active-directory-administrative-tier-model"></a>Active Directory 관리 계층 모델
 
@@ -592,7 +592,7 @@ Microsoft Azure 및 Office 365와 같은 클라우드 서비스에서 관리 권
 
 |연결 방법|로그온 유형|대상에서 자격 증명 재사용 가능|설명|
 |-----------|-------|--------------------|------|
-|IIS "기본 인증"|네트워크 일반 텍스트<br />(IIS 6.0 이상)<br /><br />Interactive (대화형)<br />(IIS 6.0 이전)|v||
+|IIS "기본 인증"|네트워크 일반 텍스트<br />(IIS 6.0 이상)<p>Interactive (대화형)<br />(IIS 6.0 이전)|v||
 |IIS "Windows 통합 인증"|Network (네트워크)|-|NTLM 및 Kerberos 공급자입니다.|
 
 열 정의:

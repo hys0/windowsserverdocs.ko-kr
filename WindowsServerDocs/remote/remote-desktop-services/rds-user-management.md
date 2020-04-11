@@ -1,24 +1,20 @@
 ---
 title: RDS 컬렉션의 사용자 관리
 description: 원격 데스크톱 서비스에서 사용자를 관리하는 방법을 알아봅니다.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2727e1ab-69b8-46f3-9f6d-2540324fe596
 author: christianmontoya
 ms.author: chrimo
 ms.date: 03/27/2018
 manager: scottman
-ms.openlocfilehash: 870a6360f685c2de31485135202b0f1415c90d85
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 430c38f98dd9aec3034e023d737952e3015622eb
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403860"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80858686"
 ---
 # <a name="manage-users-in-your-rds-collection"></a>RDS 컬렉션의 사용자 관리
 
@@ -26,8 +22,8 @@ ms.locfileid: "71403860"
 
 관리자는 특정 컬렉션에 액세스할 수 있는 사용자를 직접 관리할 수 있습니다. 이렇게 하면 정보 근로자를 위한 표준 애플리케이션으로 하나의 컬렉션을 만들 수 있는 한편, 엔지니어를 위한 그래픽 중심의 모델링 애플리케이션으로 별도의 컬렉션도 만들 수 있습니다. RDS(원격 데스크톱 서비스) 배포에서 사용자 액세스를 관리하기 위한 두 가지 기본 단계가 있습니다.
 
-1.  [Active Directory에서 사용자 및 그룹 만들기](#create-your-users-and-groups-in-active-directory)
-2.  [컬렉션에 사용자 및 그룹 할당](#assign-users-and-groups-to-collections)
+1.    [Active Directory에서 사용자 및 그룹 만들기](#create-your-users-and-groups-in-active-directory)
+2.    [컬렉션에 사용자 및 그룹 할당](#assign-users-and-groups-to-collections)
 
 
 ## <a name="create-your-users-and-groups-in-active-directory"></a>Active Directory에서 사용자 및 그룹 만들기

@@ -1,6 +1,6 @@
 ---
 title: Windows Server의 새로운 기능
-description: 계산, ID, 관리, 자동화, 네트워킹, 보안, 저장소의 새로운 기능입니다.
+description: 컴퓨팅, ID, 관리, 자동화, 네트워킹, 보안, 스토리지의 새로운 기능입니다.
 ms.prod: windows-server
 ms.date: 08/22/2019
 ms.technology: server-general
@@ -8,12 +8,12 @@ ms.topic: article
 author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: medium
-ms.openlocfilehash: 1ce821c2e793792032e2f91aa806b1bd8d8a76f6
-ms.sourcegitcommit: b9ec35416a06854c1bc875a2b731d42a436fe313
+ms.openlocfilehash: 6c424d19c006cfae6343d577dc08ff3553a5616b
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73956068"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80825876"
 ---
 # <a name="whats-new-in-windows-server"></a>Windows Server의 새로운 기능
 

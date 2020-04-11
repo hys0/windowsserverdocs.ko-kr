@@ -2,7 +2,6 @@
 title: Windows Server Update Services 배포
 description: WSUS(Windows Server Update Service) 항목 - 수행할 4단계에 대한 링크가 포함된 배포 프로세스 개요
 ms.prod: windows-server
-ms.reviewer: na
 ms.technology: manage-wsus
 ms.topic: get-started-article
 ms.assetid: 2708f6b2-4252-4b8f-9b7e-84c9b4222075
@@ -10,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e3e6bcd5f90d1a7df2a35dda45b4bf8951940815
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: aa724fc028e245ab404375ba94b074f10078d755
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71361682"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80828766"
 ---
 # <a name="deploy-windows-server-update-services"></a>Windows Server Update Services 배포
 

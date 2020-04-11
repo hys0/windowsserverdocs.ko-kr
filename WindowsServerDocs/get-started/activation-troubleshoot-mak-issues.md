@@ -4,17 +4,16 @@ description: MAK 정품 인증 프로세스 중에 발생할 수 있는 일반�
 ms.topic: article
 ms.date: 10/3/2019
 ms.technology: server-general
-ms.assetid: ''
 author: Teresa-Motiv
 ms.author: v-tea
 manager: dcscontentpm
 ms.localizationpriority: medium
-ms.openlocfilehash: 5ed934e52b11db5b83948ba995eaf31e9ff2cce3
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 0f4153387d740379e66eca9e8069b7a446a1ec71
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75947622"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80826236"
 ---
 # <a name="mak-activation-known-issues"></a>MAK 정품 인증: 알려진 문제
 

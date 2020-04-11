@@ -5,17 +5,16 @@ ms.prod: windows-server
 ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 07/11/2019
-ms.tgt_pltfrm: na
 ms.topic: article
 author: lizap
 manager: dougkim
 ms.localizationpriority: medium
-ms.openlocfilehash: 7b222104abd5b0b964bac748c3be15049075191d
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: c33e5c6309c41e39aeda3a2bdff1a0caf72b2675
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75950422"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80860336"
 ---
 # <a name="use-performance-counters-to-diagnose-app-performance-problems-on-remote-desktop-session-hosts"></a>성능 카운터를 사용하여 원격 데스크톱 세션 호스트에서 앱 성능 문제 진단
 
@@ -84,13 +83,13 @@ reg add "HKLM\System\CurrentControlSet\Control\Terminal Server" /v "EnableLagCou
 
 |카운터의 형식|인스턴스 이름|보고된 지연(밀리초)|
 |---------------|-------------|-------------------|
-|프로세스별 사용자 입력 지연|1:4232 <Calculator.exe>|  200|
-|프로세스별 사용자 입력 지연|2:1000 <Calculator.exe>|  16|
-|프로세스별 사용자 입력 지연|1:2000 <Calculator.exe>|  32|
+|프로세스별 사용자 입력 지연|1:4232 <Calculator.exe>|    200|
+|프로세스별 사용자 입력 지연|2:1000 <Calculator.exe>|    16|
+|프로세스별 사용자 입력 지연|1:2000 <Calculator.exe>|    32|
 |세션별 사용자 입력 지연|1|    200|
 |세션별 사용자 입력 지연|2|    16|
-|세션별 사용자 입력 지연|평균|  108|
-|세션별 사용자 입력 지연|최대|  200|
+|세션별 사용자 입력 지연|평균|     108|
+|세션별 사용자 입력 지연|최대|     200|
 
 ## <a name="counters-used-in-an-overloaded-system"></a>오버로드된 시스템에서 사용되는 카운터
 

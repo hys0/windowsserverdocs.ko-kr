@@ -1,6 +1,6 @@
 ---
 title: Windows Server 버전 1803의 새로운 기능
-description: 계산, ID, 관리, 자동화, 네트워킹, 보안, 저장소의 새로운 기능입니다.
+description: 컴퓨팅, ID, 관리, 자동화, 네트워킹, 보안, 스토리지의 새로운 기능입니다.
 ms.prod: windows-server
 ms.technology: server-general
 ms.topic: article
@@ -8,18 +8,18 @@ author: greg-lindsay
 ms.author: greg-lindsay
 ms.localizationpriority: high
 ms.date: 05/07/2018
-ms.openlocfilehash: 211a0e2b49e9f15682a251f96dc338d124e2f998
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 8b359ac883c24d559e2c3d47db5b68e4f5341338
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71391385"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80826006"
 ---
 # <a name="whats-new-in-windows-server-version-1803"></a>Windows Server 버전 1803의 새로운 기능
 
 >적용 대상: Windows Server(반기 채널)
 
-<img src="../media/landing-icons/new.png" style='float:left; padding:.5em;' alt="Icon showing a newspaper">&nbsp;Windows의 최신 기능을 알아보려면 [Windows Server의 새로운 기능](whats-new-in-windows-server.md)을 참조하세요. 이 콘텐츠는 Windows Server, 버전 1803의 새로운 기능과 변경된 기능을 설명하는 내용입니다. 여기에 나열된 새로운 기능 및 변경 사항은 이 릴리스를 사용할 때 가장 많은 영향을 줄 수 있습니다. 또한 [Windows Server 반기 채널 업데이트](https://cloudblogs.microsoft.com/windowsserver/2018/03/29/windows-server-semi-annual-channel-update/)를 참조하세요.
+<img src=../media/landing-icons/new.png style='float:left; padding:.5em;' alt=Icon showing a newspaper>&nbsp;Windows의 최신 기능을 알아보려면 [Windows Server의 새로운 기능](whats-new-in-windows-server.md)을 참조하세요. 이 콘텐츠는 Windows Server, 버전 1803의 새로운 기능과 변경된 기능을 설명하는 내용입니다. 여기에 나열된 새로운 기능 및 변경 사항은 이 릴리스를 사용할 때 가장 많은 영향을 줄 수 있습니다. 또한 [Windows Server 반기 채널 업데이트](https://cloudblogs.microsoft.com/windowsserver/2018/03/29/windows-server-semi-annual-channel-update/)를 참조하세요.
 
 ## <a name="windows-admin-center"></a>Windows Admin Center
 
@@ -43,7 +43,7 @@ Windows Server 버전 1709는 반기 채널의 최초 버전으로 2017년 9월�
 | ------------- | ------------- | ------------ |
 | 권장 시나리오     | 일반 목적의 파일 서버, 자사 및 타사 워크로드, 기존 앱, 인프라 역할, 소프트웨어 정의 데이터 센터, 하이퍼 컨버지드 인프라  | 더 빠른 혁신을 통해 혜택을 얻는 컨테이너화된 애플리케이션, 컨테이너 호스트 및 애플리케이션 시나리오 |
 | 새 릴리스  | 2~3년마다  | 6개월마다 |
-| 지원  | 일반 지원 5년 + 확장 지원 5년  | 18개월 |
+| Support(지원)  | 일반 지원 5년 + 확장 지원 5년  | 18개월 |
 | 버전  | 모든 Windows Server 버전 사용 가능  | Standard 및 Datacenter 버전 |
 | 사용할 수 있는 사람  | 모든 채널을 통한 모든 고객 | Software Assurance 및 클라우드 고객만 |
 | 설치 옵션  | Server Core 및 데스크톱 환경 포함 서버  | 컨테이너 호스트, 컨테이너 이미지, Nano 서버 컨테이너 이미지용 Server Core |
@@ -92,7 +92,7 @@ Windows Server 버전 1803을 통해 더 많은 기능을 이후 Kubernetes 릴�
     - 특히, 알림은 Server Core와 Nano 서버 컨테이너 기반 이미지에 대해 CTRL_SHUTDOWN_EVENT로 변경됩니다. 또한 컨테이너에서 실행되는 서비스에 서비스 종료 알림 메시지를 보내는 등 Server Core 컨테이너 기반 이미지의 알림이 컨테이너에서 실행되는 모든 프로세스에 영향을 미치도록 확장됩니다.
 - 고정된 데이터 드라이브를 쓸 수 있도록 하는 데(FDVDenyWriteAccess) BitLocker 보호가 필요한지 여부를 결정하는 정책 설정과 docker pull 및 docker load의 비호환성 문제가 해결되었습니다. 
 
-## <a name="storage"></a>저장 공간
+## <a name="storage"></a>스토리지
 
 이 릴리스에서 서비스가 시작되면 모든 볼륨에 File Server Resource Manager 서비스가 변경 저널(USN 저널이라고도 함)을 만드는 것을 방지할 수 있습니다. 이를 통해 각 볼륨의 공간을 절약할 수 있지만 실시간 파일 분류를 사용할 수 없게 됩니다. 자세한 내용은 [파일 서버 리소스 관리자 개요](https://docs.microsoft.com/windows-server/storage/fsrm/fsrm-overview)를 참조하세요.
 

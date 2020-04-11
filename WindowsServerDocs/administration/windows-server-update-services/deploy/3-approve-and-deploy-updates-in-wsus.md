@@ -2,7 +2,6 @@
 title: 3 단계-WSUS에서 업데이트 승인 및 배포
 description: WSUS(Windows Server Update Service) 항목 - WSUS에서 업데이트 승인 및 배포는 WSUS 배포를 위한 4단계 프로세스 중 3단계입니다.
 ms.prod: windows-server
-ms.reviewer: na
 ms.technology: manage-wsus
 ms.topic: article
 ms.assetid: 8d728ff9-170f-47e6-aefe-52be93315a75
@@ -10,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7731cc84f946bfab7f53a3446ed90d1be92cae75
-ms.sourcegitcommit: 3c3dfee8ada0083f97a58997d22d218a5d73b9c4
+ms.openlocfilehash: d8758c4f957d2d9abb156652a568b23634cb1bf0
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80639804"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80828856"
 ---
 # <a name="step-3-approve-and-deploy-updates-in-wsus"></a>3단계: WSUS에서 업데이트 승인 및 배포
 
@@ -29,7 +28,7 @@ ms.locfileid: "80639804"
 |[3.2. 자동 승인 규칙 구성](3-approve-and-deploy-updates-in-wsus.md#BKM_3.2.a.)|선택한 그룹에 대한 업데이트 설치 및 기존 업데이트에 대한 수정 버전을 자동으로 승인하도록 WSUS를 구성합니다.|
 |[3.3. WSUS 보고서를 사용해 설치된 업데이트 검토](3-approve-and-deploy-updates-in-wsus.md#BKM_3.3.)|WSUS 보고 기능을 사용해 설치된 업데이트와 해당 업데이트를 받은 컴퓨터 및 기타 상세 정보를 검토합니다.|
 
-## <a name="31-approve-and-deploy-wsus-updates"></a><a name="BKM_3.1."></a>3.1. WSUS 업데이트 승인 및 배포
+## <a name="31-approve-and-deploy-wsus-updates"></a><a name=BKM_3.1.></a>3.1. WSUS 업데이트 승인 및 배포
 다음 절차에 따라 업데이트를 승인하고 배포합니다.
 
 #### <a name="to-approve-and-deploy-wsus-updates"></a>WSUS 업데이트를 승인 및 배포하려면
@@ -48,7 +47,7 @@ ms.locfileid: "80639804"
 
 7.  업데이트 승인에 영향을 끼치는 작업의 진행 상태를 나타내는 **승인 진행률** 창이 표시됩니다. 승인 절차가 완료되면 **닫기**를 클릭합니다.
 
-## <a name="32-configure-auto-approval-rules"></a><a name="BKM_3.2.a."></a>3.2. 자동 승인 규칙 구성
+## <a name="32-configure-auto-approval-rules"></a><a name=BKM_3.2.a.></a>3.2. 자동 승인 규칙 구성
 자동 승인을 사용하면 선택한 그룹에 대한 업데이트 설치를 자동으로 승인하는 방법 및 기존 업데이트에 대한 수정 버전을 승인하는 방법을 지정할 수 있습니다.
 
 #### <a name="to-configure-automatic-approvals"></a>자동 승인을 구성하려면
@@ -73,7 +72,7 @@ ms.locfileid: "80639804"
 
 7.  **확인** 을 클릭하여 자동 승인 대화 상자를 닫습니다.
 
-## <a name="33-review-installed-updates-with-wsus-reports"></a><a name="BKM_3.3."></a>3.3. WSUS 보고서를 사용해 설치된 업데이트 검토
+## <a name="33-review-installed-updates-with-wsus-reports"></a><a name=BKM_3.3.></a>3.3. WSUS 보고서를 사용해 설치된 업데이트 검토
 업데이트 승인 후 24시간 동안 WSUS 보고서 기능을 사용해 업데이트가 테스트 그룹 컴퓨터에 배포되었는지를 확인할 수 있습니다. 업데이트 상태를 점검하려면 다음과 같이 WSUS 보고 기능을 사용합니다.
 
 #### <a name="to-review-updates"></a>업데이트를 검토하려면

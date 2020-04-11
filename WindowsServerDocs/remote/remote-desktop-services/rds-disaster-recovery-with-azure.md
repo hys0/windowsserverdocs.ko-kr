@@ -1,23 +1,19 @@
 ---
 title: Azure 재해 복구를 사용하여 RDS에 대해 재해 복구 설정
 description: RDS 배포의 재해 복구에 Azure 재해 복구를 사용하는 방법 알아보기
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 06/12/2017
-ms.tgt_pltfrm: na
 ms.topic: article
 author: lizap
 manager: dongill
-ms.openlocfilehash: 514262fde3b433baf89fe8f5a0cf8b04ef267354
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 68fa7026a3198b7800c4855f8472f4a0bec62009
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71387540"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80858996"
 ---
 # <a name="set-up-disaster-recovery-for-rds-using-azure-site-recovery"></a>Azure Site Recovery를 사용하여 RDS에 대해 재해 복구 설정
 
@@ -35,8 +31,8 @@ Hyper-V 또는 VMWare를 실행 중인 가상 머신 또는 물리적 서버에�
 
 | 배포 유형                          | Hyper-V 사이트 간 | Hyper-V 사이트와 Azure 간 | VMWare 사이트와 Azure 간 | 물리적 사이트와 Azure 간 |
 |------------------------------------------|----------------------|-----------------------|---------------------|----------------------|-----------------------|------------------------|
-| 풀링된 가상 데스크톱(비관리형)       |예|아니오|아니오|아니오 |
-| 풀링된 가상 데스크톱(관리형, UPD 없음) | 예|아니오|아니오|아니오|
+| 풀링된 가상 데스크톱(비관리형)       |예|아니요|아니요|아니요 |
+| 풀링된 가상 데스크톱(관리형, UPD 없음) | 예|아니요|아니요|아니요|
 | RemoteApp 및 데스크톱 세션(UPD 없음) | 예|예|예|예  |
 
 ## <a name="prerequisites"></a>필수 구성 요소

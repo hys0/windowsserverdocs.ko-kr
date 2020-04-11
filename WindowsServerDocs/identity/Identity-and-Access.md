@@ -1,6 +1,5 @@
 ---
 title: ID | 액세스
-description: ''
 author: billmath
 manager: femila
 layout: LandingPage
@@ -10,12 +9,12 @@ ms.assetid: c248b41f-0de3-4247-9a25-b4b08e50ebf0
 ms.topic: landing-page
 ms.author: billmath
 ms.localizationpriority: high
-ms.openlocfilehash: c4e3589a8aecd01d06301b702cf5286a6d8d175d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: ecc943878c18525ec10b03d870b8825269628101
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71391152"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80825686"
 ---
 # <a name="identity--access"></a>ID | 액세스
 
@@ -118,7 +117,7 @@ ms.locfileid: "71391152"
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>AD FS(Active Directory Federation Services)</h3><hr />
+                        <h3>ADFS(Active Directory Federation Services)</h3><hr />
                         <p>Windows Server의 AD FS에서 사용할 수 있는 모든 기능에 대한 상세 설명서.</p>
                     </div>
                 </div>

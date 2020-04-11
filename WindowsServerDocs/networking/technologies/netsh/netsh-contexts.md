@@ -8,12 +8,12 @@ ms.assetid: 8cb9b59f-0255-4261-b49a-562c5ea50ee0
 manager: brianlic
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: fe2318ad7feb732b86bcd69317bff20146923b64
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 061d7252d5a7bbe09d3dca245d9b77ed20a4dedf
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80312248"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854766"
 ---
 # <a name="netsh-command-syntax-contexts-and-formatting"></a>Netsh 명령 구문, 컨텍스트 및 서식 지정
 
@@ -133,7 +133,7 @@ Netsh는 현재 실행 중인 컴퓨터의 네트워크 구성을 로컬로 또�
 
 **netsh**\[ **-a**&nbsp;*AliasFile*\] \[ **-c**&nbsp;*Context* \] \[ **-r**&nbsp;*RemoteComputer*\] \[ **-u** \[ *DomainName\\* \] *UserName* \] \[ **-p**&nbsp;*Password* | \*\] \[{*NetshCommand* |  **-f**&nbsp;*ScriptFile*}\]
 
-#### <a name="parameters"></a>매개 변수
+##### <a name="parameters"></a>매개 변수
 
 **`-a`**
 

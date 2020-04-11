@@ -2,7 +2,6 @@
 title: 2단계 - WSUS 구성
 description: WSUS(Windows Server Update Service) 항목 - WSUS 구성은 WSUS 배포를 위한 4단계 프로세스 중 2단계입니다.
 ms.prod: windows-server
-ms.reviewer: na
 ms.technology: manage-wsus
 ms.topic: article
 ms.assetid: d4adc568-1f23-49f3-9a54-12a7bec5f27c
@@ -10,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c1e68685e3a1e5486360d7946d5aeb36abbdcd3a
-ms.sourcegitcommit: 3c3dfee8ada0083f97a58997d22d218a5d73b9c4
+ms.openlocfilehash: aa8a59a25d4a9880c70e593cd31a416ab51552f1
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80639866"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80828866"
 ---
 # <a name="step-2-configure-wsus"></a>2단계: WSUS 구성
 

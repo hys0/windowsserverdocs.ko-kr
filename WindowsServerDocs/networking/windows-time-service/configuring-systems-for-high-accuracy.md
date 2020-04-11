@@ -2,18 +2,18 @@
 ms.assetid: ''
 title: 높은 정확성을 위한 시스템 구성
 description: Windows 10 및 Windows Server 2016의 시간 동기화가 크게 향상되었습니다.  합리적인 운영 조건에서 시스템은 UTC와 관련하여 1ms(밀리초) 이상의 정확도를 유지하도록 구성할 수 있습니다.
-author: eross-msft
+author: dcuomo
 ms.author: dacuo
 ms.date: 05/08/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: networking
-ms.openlocfilehash: 8cdded0eb0dc663d352011fb1a6765a2ed358764
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 25472e4ba4837bd68c9b6914e22c2219c91d3ac0
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80315032"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80861656"
 ---
 # <a name="configuring-systems-for-high-accuracy"></a>높은 정확성을 위한 시스템 구성
 >적용 대상: Windows Server 2016 및 Windows 10 버전 1607 이상:

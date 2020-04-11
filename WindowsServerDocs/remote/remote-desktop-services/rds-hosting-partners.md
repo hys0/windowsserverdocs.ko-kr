@@ -1,24 +1,20 @@
 ---
 title: RDS - 데스크톱 및 앱을 호스트하기 위한 파트너
 description: RDS를 사용하여 데스크톱 및 앱을 호스트할 수 있는 파트너의 목록입니다.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 04/27/2017
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9a3cb426-fb39-40c5-ae07-26dbe9e3aed9
 author: lizap
 manager: dongill
-ms.openlocfilehash: 4d9a6d4885566204bf9fc29cd9513d25d1b39deb
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 503a9917e271c69a78e5f26db6556d788254c823
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75949850"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80861366"
 ---
 # <a name="remote-desktop-services-hosting-partners-and-assessment"></a>원격 데스크톱 서비스 호스팅 파트너 및 평가
 
@@ -36,7 +32,7 @@ Microsoft 파트너이며 평가를 통과한 파트너 목록에 포함되려�
 
 ## <a name="partners-who-have-passed-the-learning-path-assessment"></a>학습 경로 평가를 통과한 파트너 
 
-사용자를 위해 Azure에서 Windows 데스크톱 및 애플리케이션을 호스트하는 데 도움을 줄 수 있는 파트너를 찾고 있는 고객은 평가를 통과한 파트너 목록을 볼 수 있습니다. 다음은 2017년 3월 28일 현재, 다운로드할 수 있는 [해당 파트너 목록](https://github.com/MicrosoftDocs/windowsserverdocs/blob/master/WindowsServerDocs/remote/remote-desktop-services/RDS-Hosting-Partners.pdf)입니다.
+사용자를 위해 Azure에서 Windows 데스크톱 및 애플리케이션을 호스트하는 데 도움을 줄 수 있는 파트너를 찾고 있는 고객은 평가를 통과한 파트너 목록을 볼 수 있습니다. 다음은 2017년 3월 28일 현재, 다운로드할 수 있는 [해당 파트너 목록](rds-hosting-partners.md)입니다.
 
 다음 단계를 사용하여 각 파트너에 대한 자세한 정보를 찾을 수 있습니다.
 

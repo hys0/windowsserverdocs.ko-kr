@@ -1,24 +1,20 @@
 ---
 title: VDI 데스크톱에 추천되는 구성
 description: VDI 이미지로 사용되는 Windows 10 1607(10.0.1393) 데스크톱에 대한 오버헤드를 최소화하는 데 추천되는 설정과 구성입니다.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 12/18/2018
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2a44dc9f-c221-4bf7-89c3-fb4c86a90f8c
 author: jaimeo
 manager: dougkim
-ms.openlocfilehash: ca6d82973ae8201cdb4021c205a580a11c599b2f
-ms.sourcegitcommit: d7045c56046dbfaefd59a8ba132bfd8444690a73
+ms.openlocfilehash: 2ab78ccbc4e49bd95a74fe1e17d5ea14891eb1b8
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78256673"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80857276"
 ---
 # <a name="recommended-settings-for-vdi-desktops"></a>VDI 데스크톱에 추천되는 설정
 

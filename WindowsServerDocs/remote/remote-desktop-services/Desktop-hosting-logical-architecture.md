@@ -1,24 +1,20 @@
 ---
 title: 원격 데스크톱 서비스 아키텍처
 description: RDS에 대한 아키텍처 다이어그램
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 02/10/2017
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7f73bb0a-ce98-48a4-9d9f-cf7438936ca1
 author: lizap
 manager: dongill
-ms.openlocfilehash: 7cd46cadf5ed5424e50556ee0c91a80804108113
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: 441b0b24fd4b4dc18d3afd65283bbf7ff2417048
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79323675"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80818442"
 ---
 # <a name="remote-desktop-services-architecture"></a>원격 데스크톱 서비스 아키텍처
 
@@ -32,8 +28,8 @@ ms.locfileid: "79323675"
 ## <a name="standard-rds-deployment-architectures"></a>표준 RDS 배포 아키텍처
 
 원격 데스크톱 서비스에는 두 가지 표준 아키텍처가 있습니다.
--   기본 배포 – 여기에는 완전히 효과적인 RDS 환경을 만들기 위한 최소 서버 수가 포함됩니다.
--   고가용성 배포 – 여기에는 RDS 환경에 가장 높은 가동 시간을 보장하는 데 필요한 모든 구성 요소가 포함되어 있습니다.
+-    기본 배포 – 여기에는 완전히 효과적인 RDS 환경을 만들기 위한 최소 서버 수가 포함됩니다.
+-    고가용성 배포 – 여기에는 RDS 환경에 가장 높은 가동 시간을 보장하는 데 필요한 모든 구성 요소가 포함되어 있습니다.
 
 ### <a name="basic-deployment"></a>기본 배포
 

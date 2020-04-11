@@ -1,18 +1,18 @@
 ---
 title: Windows Server 2008 R2를 Windows Server 2012 R2로 업그레이드 | Microsoft Docs
 description: 현재 위치 업그레이드를 수행하여 Windows Server 2008 R2에서 Windows Server 2012 R2로 이동하는 방법에 대해 알아봅니다.
-ms.prod: windows server
+ms.prod: windows-server
 ms.technology: server-general
 ms.topic: upgrade
 author: RobHindman
 ms.author: robhind
 ms.date: 09/16/2019
-ms.openlocfilehash: d5051239f7269eb4b6361187121ac960e06f6d9e
-ms.sourcegitcommit: 27f0caf74e88781054250455c3c1adf06deb6234
+ms.openlocfilehash: 5e4436bb6e4db19e015056b67730619a93396f9e
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71125083"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854266"
 ---
 # <a name="upgrade-windows-server-2008-r2-to-windows-server-2012-r2"></a>Windows Server 2008 R2를 Windows Server 2012 R2로 업그레이드
 
@@ -34,7 +34,7 @@ Windows Server 업그레이드를 시작하기 전에 진단 및 문제 해결�
 
 4. 레지스트리 편집기를 열고 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsNT\CurrentVersion 하이브로 이동한 다음, Windows Server **BuildLabEx**(버전) 및 **EditionID**(버전)를 위와 동일한 위치에 복사하여 붙여넣습니다.
 
-Windows Server 관련 정보를 모두 수집한 후에는 운영 체제, 앱 및 가상 머신을 백업하는 것이 좋습니다. 또한 서버에서 현재 실행 중인 모든 가상 머신을 **종료**, **빠른 마이그레이션** 또는 **실시간 마이그레이션**해야 합니다. 현재 위치 업그레이드 중에는 가상 머신을 실행할 수 없습니다.
+Windows Server 관련 정보를 모두 수집한 후에는 운영 체제, 앱 및 가상 머신을 백업하는 것이 좋습니다. 또한 서버에서 현재 실행 중인 모든 가상 머신을 **종료**하고, **빠른 마이그레이션** 또는 **실시간 마이그레이션**을 수행해야 합니다. 현재 위치 업그레이드 중에는 가상 머신을 실행할 수 없습니다.
 
 ## <a name="to-perform-the-upgrade"></a>업그레이드하려면 다음을 수행합니다.
 

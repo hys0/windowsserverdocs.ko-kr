@@ -1,24 +1,20 @@
 ---
 title: CAL(클라이언트 액세스 라이선스)로 RDS 배포 라이선싱
 description: 원격 데스크톱 서비스의 클라이언트 라이선싱 개요입니다.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5be6546b-df16-4475-bcba-aa75aabef3e3
 author: lizap
 ms.author: elizapo
 ms.date: 02/12/2020
 manager: dongill
-ms.openlocfilehash: 391f9e7569abd3c3496bfcc9b52d3ddf8abdebbb
-ms.sourcegitcommit: 5797a2e67211651070404a5893f5c0a91c63e960
+ms.openlocfilehash: 295536afc77d0559fd7d2d4a22f555231a1aab75
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "77173424"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80858076"
 ---
 # <a name="license-your-rds-deployment-with-client-access-licenses-cals"></a>CAL(클라이언트 액세스 라이선스)로 RDS 배포 라이선싱
 

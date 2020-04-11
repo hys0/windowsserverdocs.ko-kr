@@ -1,20 +1,19 @@
 ---
 ms.assetid: d1953097-63ea-4a0e-b860-2f3b7c175c41
 title: Windows 시간 서비스 작동 방식
-description: ''
-author: eross-msft
-ms.author: lizross
+author: dcuomo
+ms.author: dacuo
 manager: dougkim
 ms.date: 05/08/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: networking
-ms.openlocfilehash: d8532dedb6473a34591a1f160a94a785cc4ba367
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: b8b30893abe4cdfe8d7e8c5a95ede651f85643a9
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80315170"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80861666"
 ---
 # <a name="how-the-windows-time-service-works"></a>Windows 시간 서비스 작동 방식
 
@@ -207,10 +206,10 @@ Windows Server 2003 네트워크를 사용 하도록 설정한 후에 동기화�
 |----------------|---------------------|------------|------------------------------|  
 |1|부모 도메인 컨트롤러|사이트 간|신뢰할 수 있는 선호 하는 모든 경우 사용할 수 있는 시간 원본과 하지만 신뢰할 수 있는 비 시간 원본과 동기화 수 있습니다.|  
 |2|로컬 도메인 컨트롤러|사이트 간|신뢰할 수 있는 시간 원본과 동기화 합니다.|  
-|3|로컬 PDC 에뮬레이터|사이트 간|적용 되지 않습니다.<br /><br />도메인 컨트롤러 자체와 동기화를 시도 하지 않습니다.|  
+|3|로컬 PDC 에뮬레이터|사이트 간|적용 되지 않습니다.<p>도메인 컨트롤러 자체와 동기화를 시도 하지 않습니다.|  
 |4|부모 도메인 컨트롤러|사이트 외부|신뢰할 수 있는 선호 하는 모든 경우 사용할 수 있는 시간 원본과 하지만 신뢰할 수 있는 비 시간 원본과 동기화 수 있습니다.|  
 |5|로컬 도메인 컨트롤러|사이트 외부|신뢰할 수 있는 시간 원본과 동기화 합니다.|  
-|6|로컬 PDC 에뮬레이터|사이트 외부|적용 되지 않습니다.<br /><br />도메인 컨트롤러 자체와 동기화를 시도 하지 않습니다.| 
+|6|로컬 PDC 에뮬레이터|사이트 외부|적용 되지 않습니다.<p>도메인 컨트롤러 자체와 동기화를 시도 하지 않습니다.| 
   
 **참고**  
   

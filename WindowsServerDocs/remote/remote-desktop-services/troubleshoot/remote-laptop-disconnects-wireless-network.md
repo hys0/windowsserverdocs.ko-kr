@@ -1,24 +1,19 @@
 ---
 title: 무선 네트워크에서 원격 노트북 연결 끊김
 description: 원격 랩톱과 무선 네트워크의 연결이 끊어지는 문제를 해결합니다.
-audience: itpro
-ms.custom: na
 ms.reviewer: rklemen
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: troubleshooting
-ms.assetid: ''
 author: kaushika-msft
 manager: dcscontentpm
 ms.author: delhan
 ms.date: 07/24/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: df43a69fa4777a9286cbe27cfa2d241111f7edf6
-ms.sourcegitcommit: c5709021aa98abd075d7a8f912d4fd2263db8803
+ms.openlocfilehash: 72bf482512ff3bb0a678ae59cd6ac20b947a54d9
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2020
-ms.locfileid: "76265875"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80857156"
 ---
 # <a name="remote-laptop-disconnects-from-wireless-network"></a>무선 네트워크에서 원격 노트북 연결 끊김
 

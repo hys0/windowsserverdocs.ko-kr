@@ -1,20 +1,19 @@
 ---
-ms.assetid: ''
 title: 정확한 시간을 위한 경계 지원
 description: 이 문서에서는 매우 정확하고 안정적인 시스템 시간을 필요로 하는 환경에서 Windows 시간(W32Time) 서비스의 지원 경계를 설명합니다.
-author: eross-msft
+author: dcuomo
 ms.author: dacuo
 manager: dougkim
 ms.date: 10/17/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: networking
-ms.openlocfilehash: 5748d598272c8f096876bab0d24142d38c2fd64b
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: f6df2a07fa7af2b5912c368393bdab39ccc5ced3
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80314960"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80861636"
 ---
 # <a name="support-boundary-for-high-accuracy-time"></a>정확한 시간을 위한 경계 지원
 
