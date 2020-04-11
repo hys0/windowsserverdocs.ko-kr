@@ -1,24 +1,20 @@
 ---
 title: 웹 클라이언트의 새로운 기능
 description: 원격 데스크톱 웹 클라이언트의 최근 변경 내용 알아보기
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
-ms.tgt_pltfrm: na
 ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
 ms.date: 11/15/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: b5bf231b2aa3542c9cd276b29e7821bdb5dd7cfb
-ms.sourcegitcommit: 76469d1b7465800315eaca3e0c7f0438fc3939ed
+ms.openlocfilehash: 70b3d208ceb76b2746847bd28025fe7369874099
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75919805"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859476"
 ---
 # <a name="whats-new-in-the-web-client"></a>웹 클라이언트의 새로운 기능
 

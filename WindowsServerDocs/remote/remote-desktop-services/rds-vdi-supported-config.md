@@ -1,24 +1,20 @@
 ---
 title: 원격 데스크톱 서비스 VDI에 대한 지원되는 Windows 10 보안 구성
 description: Windows Server 2016에서 RDS를 사용하여 Windows 10 VDI에 대해 지원되는 구성 관련 정보를 제공합니다.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 10/27/2016
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8f164f5d-a498-4f91-a12f-3e01d554f810
 author: lizap
 manager: dongill
-ms.openlocfilehash: 08941c49469dcf9b9e3e42c7ab799186380bab35
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 914e6f4507e0fd997a31866b10e3c48e0cd4cbd7
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71387034"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80857266"
 ---
 # <a name="supported-windows-10-security-configurations-for-remote-desktop-services-vdi"></a>원격 데스크톱 서비스 VDI에 대한 지원되는 Windows 10 보안 구성
 
@@ -35,8 +31,8 @@ Windows 10 및 Windows Server 2016은 운영 체제에 기본 제공되는 새�
 |-------------------------------------|------------------|--------------------|--------------------------------------------------------|--------------------------------------------------------|
 | [Credential Guard](https://technet.microsoft.com/itpro/windows/keep-secure/credential-guard)                    | 예              | 예                | 예                                                    | 예                                                    |
 | [Device Guard](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-deployment-guide)                        | 예              | 예                | 예                                                    | 예                                                    |
-| [원격 Credential Guard](https://technet.microsoft.com/itpro/windows/keep-secure/remote-credential-guard)             | 아니오               | 아니오                 | 아니오                                                     | 아니오                                                     |
-| [보호 및 암호화 지원 VM](../../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms.md) | 아니오               | 아니오                 | 추가 구성을 사용하는 암호화 지원 VM | 추가 구성을 사용하는 암호화 지원 VM |
+| [원격 Credential Guard](https://technet.microsoft.com/itpro/windows/keep-secure/remote-credential-guard)             | 아니요               | 아니요                 | 아니요                                                     | 아니요                                                     |
+| [보호 및 암호화 지원 VM](../../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms.md) | 아니요               | 아니요                 | 추가 구성을 사용하는 암호화 지원 VM | 추가 구성을 사용하는 암호화 지원 VM |
 
 ## <a name="remote-credential-guard"></a>원격 Credential Guard:
 

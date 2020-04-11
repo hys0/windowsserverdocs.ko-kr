@@ -1,24 +1,20 @@
 ---
 title: RDS CAL(원격 데스크톱 서비스 클라이언트 액세스 라이선스) 마이그레이션
 description: 이 문서에서는 원격 데스크톱 서비스 클라이언트 액세스 라이선스를 새로운 Windows Server 2016 라이선스 서버로 마이그레이션하는 방법을 설명합니다.
-ms.custom: na
 ms.prod: windows-server
-msreviewer: ''
-nams.suite: ''
-nams.technology: remote-desktop-services
+ms.technology: remote-desktop-services
 ms.author: chrimo
 ms.date: 11/01/2016
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 91bdedce-6145-469f-b72e-7e113c4391e9
 author: christianmontoya
 manager: scottman
-ms.openlocfilehash: 02d783916625a6f24e3413e8801686d8e5ddb8f3
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 5d95c2bc3a92a8cdcba4b308c88d94cb9af6d2a5
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404051"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80855996"
 ---
 # <a name="migrate-your-remote-desktop-services-client-access-licenses-rds-cals"></a>RDS CAL(원격 데스크톱 서비스 클라이언트 액세스 라이선스) 마이그레이션
 
@@ -80,7 +76,7 @@ RDS CAL을 마이그레이션하는 옵션에는 다음 3가지가 있습니다.
    - 성
    - 이름
    - 회사 이름
-   - 국가/ 지역
+   - 국가/지역
 
      요청된 선택적 정보(예: 회사 주소, 이메일 주소 및 전화 번호)를 제공할 수도 있습니다. 조직 구성 단위 필드에, 이 라이선스 서버가 서비스를 제공하는 조직 내의 단위를 설명할 수 있습니다.
 

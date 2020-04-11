@@ -1,24 +1,19 @@
 ---
 title: 클라이언트에서 연결할 수 없고 "클래스가 등록되지 않았습니다" 오류가 발생함
 description: 원격 데스크톱 연결과 관련된 "클래스가 등록되지 않았습니다" 오류를 해결합니다.
-audience: itpro
-ms.custom: na
 ms.reviewer: rklemen
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: troubleshooting
-ms.assetid: ''
 author: kaushika-msft
 manager: dcscontentpm
 ms.author: delhan
 ms.date: 07/24/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 7a98e894f3eaf47e257ab39c640e93101fd76fc8
-ms.sourcegitcommit: c5709021aa98abd075d7a8f912d4fd2263db8803
+ms.openlocfilehash: 52e696bd4229b947ea63a379211192b8664a9f93
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2020
-ms.locfileid: "76265905"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80857186"
 ---
 # <a name="clients-cant-connect-and-get-the-class-not-registered-error"></a>클라이언트에서 연결할 수 없고 "클래스가 등록되지 않았습니다" 오류가 발생함
 

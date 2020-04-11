@@ -1,22 +1,19 @@
 ---
 title: VDI(가상 데스크톱 인프라)를 위한 Windows 10 버전 1803 최적화
 description: VDI 이미지로 사용되는 Windows 10(1803)에 오버헤드를 최소화하기 위한 권장 설정 및 구성
-ms.custom: na
 ms.prod: windows-server
 ms.reviewer: robsmi
-ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: jaimeo, robsmi
-ms.tgt_pltfrm: na
 ms.topic: article
 author: jaimeo
 manager: dougkim
-ms.openlocfilehash: e7708ffe5639c80067ed0dbc2794c4d6694e6247
-ms.sourcegitcommit: 1c75e4b3f5895f9fa33efffd06822dca301d4835
+ms.openlocfilehash: b96064f1c05e61223b84a2285535f02733160abe
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77517508"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80857296"
 ---
 # <a name="optimizing-windows-10-version-1803-for-a-virtual-desktop-infrastructure-vdi-role"></a>VDI(가상 데스크톱 인프라)를 위한 Windows 10 버전 1803 최적화
 
@@ -91,7 +88,7 @@ VDI VM의 아키텍처에 따라, PreFetch 및 SuperFetch와 같은 기능은 VM
 
 ### <a name="to-sysprep-or-not-sysprep"></a>Sysprep 사용 또는 Sysprep 사용 안 함
 
-Windows 10에는 [시스템 준비 도구](https://docs.microsoft.com/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview)(종종 약어로 "Sysprep" 사용)라는 기본 제공 기능이 있습니다. Sysprep 도구는 이중화를 위해 사용자 지정된 Windows 10 이미지를 준비하는 데 사용합니다. Sysprep 프로세스는 결과 운영 체제가 프로덕션에서 실행될 수 있게 적절히 고유하게 유지합니다.
+Windows 10에는 [시스템 준비 도구](https://docs.microsoft.com/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview)(종종 "Sysprep"으로 약칭)라는 기본 제공 기능이 있습니다. Sysprep 도구는 이중화를 위해 사용자 지정된 Windows 10 이미지를 준비하는 데 사용합니다. Sysprep 프로세스는 결과 운영 체제가 프로덕션에서 실행될 수 있게 적절히 고유하게 유지합니다.
 
 Sysprep을 실행하는 경우와 그렇지 않은 경우는 이유가 있습니다. VDI의 경우 이 이미지를 사용하여 로그온하는 후속 사용자를 위한 프로필 템플릿으로 사용할 수 있게 기본 사용자 프로필을 사용자 지정하는 기능을 원할 수도 있습니다. 앱별 설정을 제어할 수 있는 앱을 설치하려고 할 수 있습니다.
 

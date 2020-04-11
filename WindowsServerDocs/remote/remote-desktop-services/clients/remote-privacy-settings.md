@@ -1,24 +1,20 @@
 ---
 title: 관리형 앱 및 데스크톱에 대한 개인 정보 설정
 description: 관리형 앱 및 데스크톱을 사용하는 경우 원격 시스템의 개인 정보 설정에 대한 정보입니다.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
-ms.tgt_pltfrm: na
 ms.topic: article
 author: davidbel
 manager: daveba
 ms.author: davidbel
 ms.date: 04/12/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 277e099e94d3121f31f5eb98fbca61b84eea1163
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 996f084b86b0a363b0903476598d9edb086b9985
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71387620"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859486"
 ---
 # <a name="privacy-settings-for-managed-apps-and-desktops"></a>관리형 앱 및 데스크톱에 대한 개인 정보 설정
 

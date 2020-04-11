@@ -1,23 +1,19 @@
 ---
 title: RD 세션 호스트 팜을 추가하여 RDS 배포의 규모를 확장합니다
 description: RDS 환경에 두 번째 RD 세션 호스트를 추가합니다.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 04/10/2017
-ms.tgt_pltfrm: na
 ms.topic: article
 author: lizap
 manager: dongill
-ms.openlocfilehash: da0dbd4332cd05d580c2b1f4dc5eb0734b36b13e
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 61d5569c44d7c7ea300b85bf635fccf86275423d
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403891"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859056"
 ---
 # <a name="scale-out-your-remote-desktop-services-deployment-by-adding-an-rd-session-host-farm"></a>RD 세션 호스트 팜을 추가하여 원격 데스크톱 서비스 배포의 규모를 확장합니다.
 
@@ -42,7 +38,7 @@ RDSH(원격 데스크톱 세션 호스트) 팜을 추가하여 RDS 배포의 가
    >[!NOTE] 
    > RDMS 가상 머신에 대한 공용 IP 주소를 만드는 1단계는 RDMS에 VM을 사용하고 있고 할당된 IP 주소가 아직 없는 경우에만 필요합니다.
    
-   1. 원격 데스크톱 관리 서비스 RDMS ()를 실행 하는 가상 컴퓨터에 대 한 공용 IP 주소를 만듭니다. 일반적으로 RDMS 가상 머신은 RD 연결 브로커 역할의 첫 번째 인스턴스를 실행하는 가상 머신입니다.  
+   1. 원격 데스크톱 관리 서비스 RDMS ()를 실행하는 가상 머신에 대한 공용 IP 주소를 만듭니다. 일반적으로 RDMS 가상 머신은 RD 연결 브로커 역할의 첫 번째 인스턴스를 실행하는 가상 머신입니다.  
        1. Azure 포털에서 클릭 **찾아보기 &gt; 리소스 그룹**, RDMS 가상 머신(예를 들어 Contoso Cb1)을 클릭한 다음을 배포에 대한 리소스 그룹을 클릭합니다.  
        2. 클릭 **설정 > 네트워크 인터페이스**, 한 다음 해당 네트워크 인터페이스를 클릭 합니다.   
        3. 클릭 **설정 > IP 주소**합니다.

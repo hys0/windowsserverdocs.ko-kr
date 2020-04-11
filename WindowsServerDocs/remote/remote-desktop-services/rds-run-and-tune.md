@@ -1,24 +1,20 @@
 ---
 title: RDS - 실행 및 조정
 description: 원격 데스크톱 서비스에 대한 관리 정보를 제공합니다.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: spatnaik
 ms.date: 02/08/2017
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 79909767-a4c3-4ecf-8d3f-77d37a663153
 author: spatnaik
 manager: scottman
-ms.openlocfilehash: 5a2aa5c166b41ed8bd04ccfb92911368c07a5459
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 8ce006894376ad120d9d23b6c5f0f891615657fb
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71387161"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859066"
 ---
 # <a name="run-and-tune-your-remote-desktop-services-environment"></a>원격 데스크톱 서비스 환경 실행 및 조정
 
