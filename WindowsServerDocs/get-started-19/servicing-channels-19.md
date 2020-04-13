@@ -1,6 +1,6 @@
 ---
 title: 서비스 채널
-description: 'Windows Server 서비스 채널 설명: LTSC 및 SAC'
+description: Windows Server 서비스 채널에 대한 설명 - LTSC 및 SAC
 ms.prod: windows-server
 ms.technology: server-general
 ms.topic: article
@@ -8,12 +8,12 @@ author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: high
 ms.date: 05/21/2019
-ms.openlocfilehash: 06f92e0a2f74ed229b42e936583a7f75d4584234
-ms.sourcegitcommit: 07c9d4ea72528401314e2789e3bc2e688fc96001
+ms.openlocfilehash: a10cb3b27e3434ab818b41e051edb38ab77626db
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76822116"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80827136"
 ---
 # <a name="windows-server-servicing-channels-ltsc-and-sac"></a>Windows Server 서비스 채널: LTSC 및 SAC
 
@@ -112,7 +112,7 @@ Nano 서버는 반기 채널에서 컨테이너 운영 체제로 이용 가능�
 
 ## <a name="how-to-tell-whether-a-server-is-running-an-ltsc-or-sac-release"></a>서버가 LTSC 또는 SAC 릴리스 중 무엇을 실행 중인지 확인하는 방법
 
-일반적으로 장기 서비스 채널 릴리스(예: Windows Server 2019)는 반기 채널의 새 버전(예: Windows Server, 버전 1809)과 동시에 출시됩니다. 따라서 서버가 반기 채널 릴리스를 실행 중인지 확인하기가 약간 까다로울 수 있습니다. 빌드 번호를 확인하는 대신 제품 이름을 확인해야 합니다. 반기 채널 릴리스는 버전 번호 없이 "Windows Server Standard" 또는 "Windows Server Datacenter" 제품 이름을 사용하지만 장기 서비스 채널 릴리스에는 버전 번호가 포함됩니다(예: "Windows Server 2019 Datacenter").
+일반적으로 장기 서비스 채널 릴리스(예: Windows Server 2019)는 반기 채널의 새 버전(예: Windows Server, 버전 1809)과 동시에 출시됩니다. 따라서 서버가 반기 채널 릴리스를 실행 중인지 확인하기가 약간 까다로울 수 있습니다. 빌드 번호를 확인하는 대신 제품 이름을 확인해야 합니다. 반기 채널 릴리스는 버전 번호 없이 Windows Server Standard 또는 Windows Server Datacenter 제품 이름을 사용하지만 장기 서비스 채널 릴리스에는 버전 번호가 포함됩니다(예: Windows Server 2019 Datacenter).
 
 >[!Note]  
 > 아래 지침은 수명 주기 및 일반 인벤토리만을 목적으로 하는 LTSC 및 SAC의 식별 및 차별화를 돕는 것입니다.  애플리케이션 호환성 용도 또는 특정 API 표면을 나타내는 것을 목적으로 하지 않습니다.  앱 개발자는 지침을 활용하여 구성 요소로서의 호환성, API 및 기능이 시스템 수명 주기에 걸쳐 추가될 수 있거나 아직 추가될 수 없도록 해야 합니다. [운영 체제 버전](https://docs.microsoft.com/windows/desktop/SysInfo/operating-system-version)은 앱 개발자에게 있어 좋은 출발점입니다.
@@ -122,7 +122,7 @@ PowerShell을 열고 Get-ItemProperty Cmdlet 또는 Get-ComputerInfo Cmdlet을 �
 **데스크톱 환경 포함 Windows Server 2019 Datacenter Edition(LTSC) 예시:**
 
 ````PowerShell
-Get-ItemProperty -Path "HKLM:\Software\Microsoft\Windows NT\CurrentVersion" | Select ProductName, ReleaseId, InstallationType, CurrentMajorVersionNumber,CurrentMinorVersionNumber,CurrentBuild
+Get-ItemProperty -Path HKLM:\Software\Microsoft\Windows NT\CurrentVersion | Select ProductName, ReleaseId, InstallationType, CurrentMajorVersionNumber,CurrentMinorVersionNumber,CurrentBuild
 ````
 
 ````
@@ -137,7 +137,7 @@ CurrentBuild              : 17763
 **Windows Server 버전 1809(SAC) Standard Edition Server Core 예시:**
 
 ````PowerShell
-Get-ItemProperty -Path "HKLM:\Software\Microsoft\Windows NT\CurrentVersion" | Select ProductName, ReleaseId, InstallationType, CurrentMajorVersionNumber,CurrentMinorVersionNumber,CurrentBuild
+Get-ItemProperty -Path HKLM:\Software\Microsoft\Windows NT\CurrentVersion | Select ProductName, ReleaseId, InstallationType, CurrentMajorVersionNumber,CurrentMinorVersionNumber,CurrentBuild
 ````
 
 ````

@@ -7,15 +7,14 @@ ms.sitesec: library
 author: mikeblodge
 ms.author: mikeblodge
 ms.date: 07/11/2018
-ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.localizationpriority: high
-ms.openlocfilehash: 19e4abf1573b8d3ee99b8e8828c1674f24d27695
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: de9233e31c5530abd207a1bbba0e1e16a07d1561
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71391497"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80826126"
 ---
 # <a name="upload-a-windows-server-20082008-r2-specialized-image-to-azure"></a>Windows Server 2008/2008 R2 특수 이미지를 Azure에 업로드 
 
@@ -86,26 +85,26 @@ Login-AzureRmAccount
 > [!IMPORTANT]
 > Azure의 미리 정의된 사용자 이미지를 사용하지 마십시오.
 
-1.  새 [리소스 그룹](https://docs.microsoft.com/rest/api/resources/resourcegroups/createorupdate)을 만듭니다. 
-2.  리소스 그룹 내에 새 [스토리지 Blob](https://docs.microsoft.com/rest/api/storageservices/put-blob)을 만듭니다.
-3.  스토리지 Blob 내에 [컨테이너](https://docs.microsoft.com/rest/api/storageservices/create-container)를 만듭니다.
-4.  속성에서 Blob 스토리지의 URL을 복사합니다.
-5.  새 스토리지 Blob에 이미지를 업로드하려면 위에 제공된 스크립트를 사용합니다.
-6.  VHD에 대한 [디스크](https://docs.microsoft.com/azure/virtual-machines/windows/prepare-for-upload-vhd-image)를 만듭니다.   
-     a. 디스크로 이동하여 **추가**를 클릭합니다.  
-     b. 디스크의 이름을 입력합니다. 사용할 구독을 선택하고 영역을 설정하고 계정 유형을 선택합니다.   
+1.    새 [리소스 그룹](https://docs.microsoft.com/rest/api/resources/resourcegroups/createorupdate)을 만듭니다. 
+2.    리소스 그룹 내에 새 [스토리지 Blob](https://docs.microsoft.com/rest/api/storageservices/put-blob)을 만듭니다.
+3.    스토리지 Blob 내에 [컨테이너](https://docs.microsoft.com/rest/api/storageservices/create-container)를 만듭니다.
+4.    속성에서 Blob 스토리지의 URL을 복사합니다.
+5.    새 스토리지 Blob에 이미지를 업로드하려면 위에 제공된 스크립트를 사용합니다.
+6.    VHD에 대한 [디스크](https://docs.microsoft.com/azure/virtual-machines/windows/prepare-for-upload-vhd-image)를 만듭니다.   
+     a.    디스크로 이동하여 **추가**를 클릭합니다.  
+     b.    디스크의 이름을 입력합니다. 사용할 구독을 선택하고 영역을 설정하고 계정 유형을 선택합니다.   
      c. 원본 유형에 대해 스토리지를 선택합니다. 스크립트를 사용하여 만든 Blob VHD 위치를 찾습니다.  
      d. 운영 체제 유형 Windows와 크기(기본값: 1023)를 선택합니다.   
      e. **만들기**를 클릭합니다.   
 
-7.  만든 디스크로 이동하여 **VM 만들기**를 클릭합니다.   
-     a. VM의 이름을 지정합니다.   
-     b. 디스크를 업로드한 5단계에서 만든 기존 그룹을 선택합니다.   
-     c. 크기와 VM에 대한 SKU 요금제를 선택합니다.   
-     d. 설정 페이지에서 네트워크 인터페이스를 선택합니다. 네트워크 인터페이스에 다음과 같은 규칙이 지정되었는지 확인합니다.
+7.    만든 디스크로 이동하여 **VM 만들기**를 클릭합니다.   
+     a.    VM의 이름을 지정합니다.   
+     b.    디스크를 업로드한 5단계에서 만든 기존 그룹을 선택합니다.   
+     c.    크기와 VM에 대한 SKU 요금제를 선택합니다.   
+     d.    설정 페이지에서 네트워크 인터페이스를 선택합니다. 네트워크 인터페이스에 다음과 같은 규칙이 지정되었는지 확인합니다.
  
-        PORT:3389 Protocol: TCP Action: Allow Priority: 1000 Name: ‘RDP-Rule'.   
-     e. **만들기**를 클릭합니다.
+        PORT:3389 프로토콜: TCP 작업: 우선 순위 허용: 1000 이름: 'RDP-Rule'.   
+     e.    **만들기**를 클릭합니다.
 
 
 

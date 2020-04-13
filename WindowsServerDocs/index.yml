@@ -10,12 +10,12 @@ metadata:
   ms.topic: hub-page
   ms.date: 06/06/2019
   ms.author: lizross
-  ms.openlocfilehash: 7ea64a8b3b6d930c8105c57bb7d2a1537eb6780d
-  ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+  ms.openlocfilehash: 91a9a648c5b51f098a94300ffb1dd3f7ce76bdd8
+  ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 04/08/2020
-  ms.locfileid: "80856276"
+  ms.lasthandoff: 04/11/2020
+  ms.locfileid: "81123163"
 highlightedContent:
   items:
   - title: Windows Server 2019의 새로운 기능
@@ -190,12 +190,9 @@ conceptualContent:
 additionalContent:
   sections:
   - items:
-    - title: Windows Server 2012 R2 및 Windows Server 2012
-      summary: Windows Server 2012 R2 및 Windows Server 2012를 관리하는 IT 전문가를 위한 기술 콘텐츠
+    - title: Windows Server 2012 R2 및 Windows Server 2012(보관)
+      summary: Windows Server 2012 R2 및 Windows Server 2012를 관리하는 IT 전문가를 위한 기술 콘텐츠를 보관합니다.
       url: https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh801901(v=ws.11)
-    - title: Windows Server 2008 R2 및 Windows Server 2008
-      summary: Windows Server 2008 R2 및 Windows Server 2008을 관리하는 IT 전문가를 위한 기술 콘텐츠
-      url: https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349801(v=ws.10)
-    - title: Windows Server 2008 개발자 스토리
-      summary: Windows Server 2008의 새로운 기능과 확장된 기능에 관심이 있는 개발자 및 기타 기술 전문가를 위한 콘텐츠입니다.
-      url: https://docs.microsoft.com/previous-versions/windows/server-2008/bb852234(v=msdn.10)
+    - title: Windows Server Essentials
+      summary: Windows Server Essentials를 관리하는 IT 전문가를 위한 기술 콘텐츠로, 최대 25명의 사용자와 50대의 디바이스를 갖춘 소기업을 위해 설계된 최초의 클라우드 연결 서버입니다.
+      url: https://docs.microsoft.com/en-us/windows-server-essentials/get-started/get-started
