@@ -4,14 +4,14 @@ ms.date: 11/12/2012
 ms.prod: windows-server
 ms.technology: storage-failover-clustering
 author: JasonGerend
-manager: elizapo
+manager: lizross
 ms.author: jgerend
-ms.openlocfilehash: 47f3a515379eb79f628a0ee97ef2c7965c4d8d50
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: c087b3f86dcb70c07221a5436d921b09fb5a917f
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75948152"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80827896"
 ---
 # <a name="configuring-cluster-accounts-in-active-directory"></a>Active Directory에서 클러스터 계정 구성하는 중
 
@@ -28,7 +28,7 @@ Windows Server에서 장애 조치 (failover) 클러스터를 만들고 클러�
       
   - **클러스터 이름 계정입니다.** 클러스터 이름 개체 또는 CNO 라고도 하는 클러스터 자체의 컴퓨터 계정입니다. 이 계정은 클러스터 만들기 마법사를 통해 자동으로 생성 되며 클러스터와 동일한 이름을 갖습니다. 클러스터 이름 계정은 매우 중요 합니다 .이 계정을 통해 클러스터에서 새 서비스 및 응용 프로그램을 구성할 때 다른 계정이 자동으로 만들어집니다. 클러스터 이름 계정을 삭제 하거나 사용 권한을 제거 하는 경우 클러스터 이름 계정을 복원 하거나 올바른 사용 권한을 복구할 때까지 클러스터에서 요구 하는 대로 다른 계정을 만들 수 없습니다.  
       
-    예를 들어 Cluster1 이라는 클러스터를 만든 다음 클러스터에서 PrintServer1 이라는 클러스터 된 인쇄 서버를 구성 하는 경우 Active Directory의 Cluster1 계정은 컴퓨터를 만드는 데 사용 될 수 있도록 올바른 권한을 보유 해야 합니다. PrintServer1 라는 계정  
+    예를 들어 Cluster1 이라는 클러스터를 만든 다음 클러스터에서 PrintServer1 이라는 클러스터 된 인쇄 서버를 구성 하는 경우 Active Directory의 Cluster1 계정은 PrintServer1 라는 컴퓨터 계정을 만드는 데 사용할 수 있도록 올바른 권한을 보유 해야 합니다.  
       
     클러스터 이름 계정은 Active Directory의 컴퓨터 계정에 대 한 기본 컨테이너에 생성 됩니다. 기본적으로이 컨테이너는 "컴퓨터" 컨테이너 이지만 도메인 관리자는 다른 컨테이너 또는 OU (조직 구성 단위)로 리디렉션하도록 선택할 수 있습니다.  
       
@@ -47,7 +47,7 @@ Windows Server에서 장애 조치 (failover) 클러스터를 만들고 클러�
 </colgroup>
 <thead>
 <tr class="header">
-<th>계정</th>
+<th>Account</th>
 <th>사용 권한에 대 한 세부 정보</th>
 </tr>
 </thead>
@@ -91,7 +91,7 @@ Windows Server에서 장애 조치 (failover) 클러스터를 만들고 클러�
 
 다이어그램에 표시 되는 문제 유형이 발생 하면 특정 이벤트 (1193, 1194, 1206 또는 1207)가 이벤트 뷰어에 기록 됩니다. 이러한 이벤트에 대 한 자세한 내용은 [https://go.microsoft.com/fwlink/?LinkId=118271](https://go.microsoft.com/fwlink/?linkid=118271)를 참조 하세요.
 
-클러스터 된 서비스 또는 응용 프로그램에 대 한 계정을 만드는 경우와 유사한 문제가 발생 하는 것은 컴퓨터 개체를 만드는 도메인 전체 할당량 (기본적으로 10)에 도달 하는 경우에 발생할 수 있습니다. 이 경우 도메인 전체 설정 이지만 신중한 고려 후에만 변경 해야 하며, 앞의 다이어그램에는이를 확인 한 후에만 변경 해야 합니다. 상황을 설명 합니다. 자세한 내용은이 가이드의 뒷부분에 나오는 [클러스터 관련 Active Directory 계정 변경으로 인해 발생 하는 문제를 해결 하는 단계](#steps-for-troubleshooting-problems-caused-by-changes-in-cluster-related-active-directory-accounts)를 참조 하세요.
+클러스터 된 서비스 또는 응용 프로그램에 대 한 계정을 만드는 경우와 유사한 문제가 발생 하는 것은 컴퓨터 개체를 만드는 도메인 전체 할당량 (기본적으로 10)에 도달 하는 경우에 발생할 수 있습니다. 이 경우 도메인 전체 설정 이지만 신중 하 게 고려 한 후에만 변경 해야 하며, 그 후에는 이전 다이어그램에서 상황을 설명 하지 않는지 확인 한 후에만 도메인 관리자에 게 문의 하는 것이 적절할 수 있습니다. 자세한 내용은이 가이드의 뒷부분에 나오는 [클러스터 관련 Active Directory 계정 변경으로 인해 발생 하는 문제를 해결 하는 단계](#steps-for-troubleshooting-problems-caused-by-changes-in-cluster-related-active-directory-accounts)를 참조 하세요.
 
 ## <a name="requirements-related-to-failover-clusters-active-directory-domains-and-accounts"></a>장애 조치 (failover) 클러스터, Active Directory 도메인 및 계정과 관련 된 요구 사항
 
@@ -262,13 +262,13 @@ Windows Server에서 장애 조치 (failover) 클러스터를 만들고 클러�
 
 클러스터 관리자가 필요에 따라 다음 절차를 수행할 수 있는 올바른 권한을 보유 하 고 있는지 확인 하는 방법에 대 한 자세한 내용은이 가이드의 앞부분에 나오는 암호 재설정 및 기타 계정 유지 관리에 대 한 미리 계획
 
-로컬의 멤버 자격이 **관리자** 그룹 또는 그에 해당 하는이 절차를 완료 하는 데 필요한 최소입니다. 또한 계정이 **Domain Admins** 계정이 아니거나 클러스터 이름 계정의 작성자 소유자 인 경우를 제외 하 고는 클러스터 이름 계정에 대 한 **암호 다시 설정** 권한을 계정에 부여 해야 합니다. 이 절차에는 클러스터를 설치한 사용자가 사용 하는 계정을 사용할 수 있습니다. [https://go.microsoft.com/fwlink/?LinkId=83477](https://go.microsoft.com/fwlink/?linkid=83477)에서 적절 한 계정 및 그룹 멤버 자격 사용에 대 한 세부 정보를 검토 합니다.
+로컬 **관리자** 그룹의 멤버십 또는 이에 상당하는 멤버십은 이 절차를 완료하기 위해 필요한 최소 기준입니다. 또한 계정이 **Domain Admins** 계정이 아니거나 클러스터 이름 계정의 작성자 소유자 인 경우를 제외 하 고는 클러스터 이름 계정에 대 한 **암호 다시 설정** 권한을 계정에 부여 해야 합니다. 이 절차에는 클러스터를 설치한 사용자가 사용 하는 계정을 사용할 수 있습니다. [https://go.microsoft.com/fwlink/?LinkId=83477](https://go.microsoft.com/fwlink/?linkid=83477)에서 적절 한 계정 및 그룹 멤버 자격 사용에 대 한 세부 정보를 검토 합니다.
 
 #### <a name="to-troubleshoot-password-problems-with-the-cluster-name-account"></a>클러스터 이름 계정으로 암호 문제를 해결 하려면
 
-1.  장애 조치 클러스터 스냅인을 열려면 **시작**, **관리 도구**를 차례로 클릭한 다음 **장애 조치 클러스터 관리**를 클릭합니다. **사용자 계정 컨트롤** 대화 상자가 나타나면 표시 되는 작업이 원하는 작업 인지 확인 한 다음 **계속**을 클릭 합니다.
+1.  장애 조치 클러스터 스냅인을 열려면 **시작**, **관리 도구**, **장애 조치(failover) 클러스터 관리**를 차례로 클릭합니다. **사용자 계정 컨트롤** 대화 상자가 나타나면 표시 되는 작업이 원하는 작업 인지 확인 한 다음 **계속**을 클릭 합니다.
 
-2.  장애 조치 클러스터 관리 스냅인에서, 구성하려는 클러스터가 콘솔 트리에 표시되지 않는 경우 **장애 조치 클러스터 관리**를 마우스 오른쪽 단추로 클릭한 다음 **클러스터 관리**를 클릭하고 원하는 클러스터를 선택하거나 지정합니다.
+2.  구성하려는 클러스터가 장애 조치(failover) 클러스터 관리 스냅인에 표시되지 않으면 콘솔 트리에서 **장애 조치(failover) 클러스터 관리**를 마우스 오른쪽 단추로 클릭하고 **클러스터 관리**를 클릭한 다음 원하는 클러스터를 선택하거나 지정합니다.
 
 3.  가운데 창에서 **클러스터 코어 리소스**를 확장 합니다.
 
