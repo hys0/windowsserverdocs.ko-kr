@@ -268,6 +268,7 @@
 #### [AD FS 보안을 위한 모범 사례](ad-fs/deployment/Best-Practices-Securing-AD-FS.md)
 #### [온-프레미스 디바이스 기반 조건부 액세스 계획](ad-fs/deployment/Plan-Device-based-Conditional-Access-on-Premises.md)
 #### [AD FS 및 WAP의 필수 업데이트](ad-fs/deployment/Updates-for-Active-Directory-Federation-Services-AD-FS.md)
+#### [도메인 관리자 권한 없이 AD FS 팜 만들기](ad-fs/deployment/Install-AD-FS-Delegated-Admin.md)
 #### [SQL Server 복제로 지리적 중복성 설정](ad-fs/deployment/Set-up-Geographic-Redundancy-with-SQL-Server-Replication.md)
 #### [Windows Server 2012 R2의 AD FS에 대한 랩 환경 설정](ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)
 #### [WID 데이터베이스를 사용하여 Windows Server 2016에서 AD FS로 업그레이드](ad-fs/deployment/Upgrading-to-AD-FS-in-Windows-Server.md)
