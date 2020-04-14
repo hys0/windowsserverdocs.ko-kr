@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.date: 11/21/2019
 ms.localizationpriority: medium
 ms.prod: windows-server
-ms.openlocfilehash: ddc8eea67cde9d6677836af1201e169c911e77e0
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: cbcb5c2357a60d6d12551a7d08055cacecd515b7
+ms.sourcegitcommit: 20d07170c7f3094c2fb4455f54b13ec4b102f2d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75950487"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81269240"
 ---
 # <a name="manage-servers-with-windows-admin-center"></a>Windows 관리 센터를 사용 하 여 서버 관리
 
@@ -51,11 +51,11 @@ Windows 관리 센터에 서버를 추가 하려면 다음을 수행 합니다.
 | ---- | ----------- |
 | [개요](#overview) | 서버 세부 정보 및 컨트롤 서버 상태 보기 |
 | [Active Directory](#active-directory-preview) | Active Directory 관리 |
-| [Backup](#backup) | Azure Backup 보기 및 구성 |  
+| [백](#backup) | Azure Backup 보기 및 구성 |  
 | [인증서](#certificates) | 인증서 보기 및 수정 |
 | [컨테이너](#containers) | 컨테이너 보기 |
 | [디바이스](#devices) | 장치 보기 및 수정 |
-| [DHCP](#dhcp) | DHCP 서버 구성 보기 및 관리 |
+| [인터페이스](#dhcp) | DHCP 서버 구성 보기 및 관리 |
 | [DNS](#dns) | DNS 서버 구성 보기 및 관리 |
 | [이벤트](#events) | 이벤트 보기 |
 | [파일](#files) | 파일 및 폴더 찾아보기 |
@@ -66,8 +66,8 @@ Windows 관리 센터에 서버를 추가 하려면 다음을 수행 합니다.
 | [패킷 모니터링](https://aka.ms/wac1908) | 네트워크 패킷 모니터링 |
 | [성능 모니터](https://aka.ms/perfmon-blog) | 성능 카운터 및 보고서 보기 |
 | [PowerShell](#powershell) | PowerShell을 통해 서버와 상호 작용 |
-| [프로세스](#processes) | 실행 중인 프로세스 보기 및 수정 |
-| [Registry](#registry) | 레지스트리 항목 보기 및 수정 |
+| [프로세스만](#processes) | 실행 중인 프로세스 보기 및 수정 |
+| [레지스트리](#registry) | 레지스트리 항목 보기 및 수정 |
 | [원격 데스크톱](#remote-desktop) | 원격 데스크톱을 통해 서버와 상호 작용 |
 | [역할 및 기능](#roles-and-features) | 역할 및 기능 보기 및 수정 |
 | [예약 된 작업](#scheduled-tasks) | 예약 된 작업 보기 및 수정 |
@@ -121,7 +121,7 @@ Windows 관리 센터에 서버를 추가 하려면 다음을 수행 합니다.
 
 [**Active Directory에 대 한 사용자 의견 및 제안 된 기능을 봅니다**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BActive%20Directory%5D).
 
-## <a name="backup"></a>백업
+## <a name="backup"></a>Backup
 
 **백업을** 사용 하면 서버를 Microsoft Azure에 직접 백업 하 여 손상, 공격 또는 재해 로부터 Windows 서버를 보호할 수 있습니다.
 [Azure Backup에 대해 자세히 알아보세요.](https://aka.ms/windows-admin-center-backup)
@@ -171,8 +171,8 @@ Windows 관리 센터에 서버를 추가 하려면 다음을 수행 합니다.
 장치에서 지원 되는 기능은 다음과 같습니다.
 
 - 장치 찾아보기 및 검색
-- 디바이스 세부 정보 보기
-- 디바이스 사용 안 함
+- 장치 세부 정보 보기
+- 장치 사용 안 함
 - 장치에서 드라이버 업데이트
 
 [**장치에 대 한 사용자 의견 및 제안 된 기능 보기**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BDevices%5D)
@@ -219,7 +219,7 @@ Windows 관리 센터에 서버를 추가 하려면 다음을 수행 합니다.
 
 [**이벤트에 대 한 사용자 의견 및 제안 된 기능을 봅니다**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BEvents%5D).
 
-## <a name="files"></a>파일
+## <a name="files"></a>Files
 
 **파일** 을 사용 하 여 컴퓨터 또는 서버에서 파일 및 폴더를 관리할 수 있습니다.
 
@@ -235,6 +235,7 @@ Windows 관리 센터에 서버를 추가 하려면 다음을 수행 합니다.
 - 파일 또는 폴더 업로드
 - 파일 또는 폴더 이름 바꾸기
 - Zip 파일 추출
+- 파일 및 폴더 복사 및 이동
 - 파일 또는 폴더 속성 보기
 - 파일 공유 추가, 편집 또는 제거
 - 파일 공유에 대 한 사용자 및 그룹 권한 수정
@@ -284,7 +285,7 @@ Windows 관리 센터에 서버를 추가 하려면 다음을 수행 합니다.
 
 [**로컬 사용자 및 그룹에 대 한 사용자 의견 및 제안 된 기능 보기**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BLocal%20users%20and%20Groups%5D)
 
-## <a name="network"></a>Network (네트워크)
+## <a name="network"></a>네트워크
 
 **네트워크** 를 사용 하면 컴퓨터 또는 서버에서 네트워크 장치 및 설정을 관리할 수 있습니다.
 
@@ -312,7 +313,7 @@ PowerShell에서 지원 되는 기능은 다음과 같습니다.
 
 [**PowerShell에 대 한 사용자 의견 및 제안 된 기능 보기**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BPowerShell%5D)
 
-## <a name="processes"></a>Processes
+## <a name="processes"></a>프로세스
 
 **프로세스** 를 사용 하 여 컴퓨터 또는 서버에서 실행 중인 프로세스를 관리할 수 있습니다.
 
@@ -400,6 +401,7 @@ PowerShell에서 지원 되는 기능은 다음과 같습니다.
 - 서비스의 세부 정보 보기
 - 서비스 시작
 - 서비스 일시 중지
+- 서비스 다시 시작
 - 서비스 속성 편집
 
 [**서비스에 대 한 사용자 의견 및 제안 된 기능을 봅니다**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BServices%5D).
@@ -417,7 +419,7 @@ PowerShell에서 지원 되는 기능은 다음과 같습니다.
 - 역할 기반 액세스 제어 설정 보기 및 수정
 - Hyper-v 호스트 설정 보기 및 수정 (해당 하는 경우)
 
-## <a name="storage"></a>저장소
+## <a name="storage"></a>스토리지
 
 **저장소** 를 사용 하면 컴퓨터 또는 서버에서 저장 장치를 관리할 수 있습니다.
 
@@ -440,7 +442,7 @@ PowerShell에서 지원 되는 기능은 다음과 같습니다.
 
 [**저장소에 대 한 사용자 의견 및 제안 된 기능 보기**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BStorage%5D)
 
-## <a name="storage-migration-service"></a>스토리지 마이그레이션 서비스
+## <a name="storage-migration-service"></a>저장소 마이그레이션 서비스
 
 **Storage Migration Service** 를 사용 하면 앱 또는 사용자가 아무것도 변경 하지 않고도 서버 및 파일 공유를 Azure 또는 Windows Server 2019로 마이그레이션할 수 있습니다.
 [Storage Migration Service 개요 보기](https://go.microsoft.com/fwlink/?linkid=2016155)
@@ -477,7 +479,7 @@ PowerShell에서 지원 되는 기능은 다음과 같습니다.
 
 [**업데이트에 대 한 사용자 의견 및 제안 된 기능 보기**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BUpdates%5D)
 
-## <a name="virtual-machines"></a>가상 머신
+## <a name="virtual-machines"></a>가상 컴퓨터
 
 [Windows 관리 센터를 사용 하 여 Virtual Machines 관리를](manage-virtual-machines.md) 참조 하세요.
 

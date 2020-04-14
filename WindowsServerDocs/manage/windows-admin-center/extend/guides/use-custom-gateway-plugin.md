@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.date: 09/18/2018
 ms.localizationpriority: medium
 ms.prod: windows-server
-ms.openlocfilehash: 829cbf6df8cc2738bf4066b36210b860595774ed
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 5bcaaa452a2b42a54cbc3b1d8f9a296504054e34
+ms.sourcegitcommit: 20d07170c7f3094c2fb4455f54b13ec4b102f2d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71385233"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81269230"
 ---
 # <a name="use-a-custom-gateway-plugin-in-your-tool-extension"></a>도구 확장에 있는 사용자 지정 게이트웨이 플러그 인 사용
 
@@ -63,7 +63,7 @@ export class PluginService {
 
 ```Sample Uno```에 대 한 참조와 기능 이름에 대 한 ```Sample%20Uno```를 적절 하 게 변경 합니다.
 
-[!WARNING]
+> [!WARNING]
 > 기본 제공 ```this.appContextService.node```를 사용 하 여 사용자 지정 게이트웨이 플러그 인에 정의 된 API를 호출 하는 것이 좋습니다. 이렇게 하면 게이트웨이 플러그 인 내에 자격 증명이 필요한 경우 적절 하 게 처리 됩니다.
 
 ### <a name="modify-modulets"></a>모듈을 수정 합니다.

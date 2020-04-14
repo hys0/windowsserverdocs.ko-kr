@@ -8,18 +8,18 @@ ms.author: jol
 ms.date: 06/06/2019
 ms.localizationpriority: medium
 ms.prod: windows-server
-ms.openlocfilehash: d761ba61ae5680373c334889799e82e5d092a0d4
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: f51070abfeed3a790055b12f733fc61be383472c
+ms.sourcegitcommit: 20d07170c7f3094c2fb4455f54b13ec4b102f2d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75950105"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81269260"
 ---
 # <a name="enabling-the-extension-discovery-banner"></a>확장 검색 배너 사용
 
 >적용 대상: Windows Admin Center, Windows Admin Center 미리 보기
 
-Windows 관리 센터 Preview 1903에서 사용할 수 있는 새로운 기능은 확장 검색 배너입니다. 이 기능을 사용 하면 확장에서 지원 되는 서버 하드웨어 제조업체 및 모델을 선언할 수 있으며, 사용자가 확장을 사용할 수 있는 서버 또는 클러스터에 연결 하는 경우 확장을 쉽게 설치할 수 있도록 알림 배너가 표시 됩니다. 확장 개발자는 확장에 대 한 더 많은 가시성을 얻을 수 있으며 사용자는 서버에 대 한 더 많은 관리 기능을 쉽게 검색할 수 있습니다.
+확장 검색 배너 기능은 Windows 관리 센터 Preview 1903 릴리스에서 도입 되었습니다. 이 기능을 사용 하면 확장에서 지원 되는 서버 하드웨어 제조업체 및 모델을 선언할 수 있으며, 사용자가 확장을 사용할 수 있는 서버 또는 클러스터에 연결 하는 경우 확장을 쉽게 설치할 수 있도록 알림 배너가 표시 됩니다. 확장 개발자는 확장에 대 한 더 많은 가시성을 얻을 수 있으며 사용자는 서버에 대 한 더 많은 관리 기능을 쉽게 검색할 수 있습니다.
 
 ![확장 검색 배너](../../media/extend-guides-extension-discovery-banner/extension-discovery-banner.png)
 
@@ -31,7 +31,7 @@ Windows 관리 센터를 시작 하면 등록 된 확장 피드에 연결 되 �
 
 Nuspec 파일의 "tags" 메타 데이터는 확장에서 지 원하는 하드웨어 제조업체 및/또는 모델을 선언 하는 데 사용 됩니다. 태그는 공백으로 구분 되며 제조업체 또는 모델 태그를 추가 하거나 둘 다를 추가 하 여 지원 되는 제조업체 및/또는 모델을 선언할 수 있습니다. 태그 형식은 ``"[value type]_[value condition]"``입니다. 여기서 [값 유형]은 "제조업체" 또는 "모델" (대/소문자 구분)이 고 [값 조건]은 제조업체 또는 모델 문자열을 정의 하는 [Javascript 정규식](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Regular_Expressions) 이며 [value type] 및 [value condition]은 밑줄로 구분 됩니다. 그런 다음 URI 인코딩을 사용 하 여이 문자열을 인코딩하고. nuspec "tags" 메타 데이터 문자열에 추가 합니다.
 
-### <a name="example"></a>예
+### <a name="example"></a>예제
 
 모델 이름이 R3xx 및 R4xx 인 Contoso i n c. 라는 회사의 서버를 지 원하는 확장 프로그램을 개발 했다고 가정해 보겠습니다.
 
