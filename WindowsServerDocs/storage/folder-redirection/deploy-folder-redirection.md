@@ -8,12 +8,12 @@ ms.author: jgerend
 ms.technology: storage
 ms.date: 06/06/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 6d8f6bf0df67b76028945403352bd135e6641a5a
-ms.sourcegitcommit: ab3967d71dcbb962079af194875de58e7c32c4e2
+ms.openlocfilehash: e8e6e5a29c75c117f6faa3c1d1b3f288582d81a2
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76967415"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80855886"
 ---
 # <a name="deploy-folder-redirection-with-offline-files"></a>오프라인 파일을 사용한 폴더 리디렉션 배포
 
@@ -30,7 +30,7 @@ ms.locfileid: "76967415"
 
 ### <a name="hardware-requirements"></a>하드웨어 요구 사항
 
-폴더 리디렉션을 사용하려면 x64 기반 또는 x86 기반 컴퓨터가 필요하며, 이는 Windows® RT에서 지원되지 않습니다.
+폴더 리디렉션을 사용하려면 x64 기반 또는 x86 기반 컴퓨터가 필요하며, 이는 Windows&reg; RT에서 지원되지 않습니다.
 
 ### <a name="software-requirements"></a>소프트웨어 요구 사항
 
@@ -99,7 +99,7 @@ Windows Server 2019, Windows Server 2016 및 Windows Server 2012에서 파일 �
 | System     | 모든 권한        |    이 폴더, 하위 폴더 및 파일     |
 | Administrators     | 모든 권한       | 이 폴더만        |
 | 만든 이/소유자     |   모든 권한      |   하위 폴더 및 파일만      |
-| 공유에 데이터를 저장해야 하는 사용자의 보안 그룹(폴더 리디렉션 사용자)     |   폴더 나열/데이터 읽기 *(고급 권한)* <br /><br />폴더 만들기/데이터 추가 *(고급 권한)* <br /><br />특성 읽기 *(고급 권한)* <br /><br />확장된 특성 읽기 *(고급 권한)* <br /><br />권한 읽기 *(고급 권한)*      |  이 폴더만       |
+| 공유에 데이터를 저장해야 하는 사용자의 보안 그룹(폴더 리디렉션 사용자)     |   폴더 나열/데이터 읽기 *(고급 권한)* <p>폴더 만들기/데이터 추가 *(고급 권한)* <p>특성 읽기 *(고급 권한)* <p>확장된 특성 읽기 *(고급 권한)* <p>권한 읽기 *(고급 권한)*      |  이 폴더만       |
 | 다른 그룹 및 계정     |  없음(제거)       |         |
 
 ## <a name="step-3-create-a-gpo-for-folder-redirection"></a>3단계: 폴더 리디렉션에 대한 GPO 만들기

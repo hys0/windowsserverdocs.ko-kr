@@ -2,21 +2,19 @@
 title: Nano Server의 PowerShell
 description: Nano Server의 제한된 PowerShell 기능 집합의 차이점
 ms.prod: windows-server
-ms.service: na
 manager: DonGill
 ms.technology: server-nano
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9b25b939-1e2c-4bed-a8d3-2a8e8e46b53d
 author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
-ms.openlocfilehash: 1105ba9f4415061b25d0655d3f2d56929dbbdfec
-ms.sourcegitcommit: 5b055fc1d73375f68149c214152f1d63396dd6ca
+ms.openlocfilehash: 4879ae58c24596d64d24b6bece54d4c35837f00f
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76248389"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80826766"
 ---
 # <a name="powershell-on-nano-server"></a>Nano Server의 PowerShell
 
@@ -67,7 +65,7 @@ CompatiblePSEditions Property   System.Collections.Generic.IEnumerable[string] C
 ```
 사용 가능한 모듈 목록을 가져올 때 PowerShell 버전별로 목록을 필터링할 수 있습니다.
 ```powershell
-Get-Module -ListAvailable | ? CompatiblePSEditions -Contains "Desktop"
+Get-Module -ListAvailable | ? CompatiblePSEditions -Contains Desktop
 
     Directory: C:\Program Files\WindowsPowerShell\Modules
 
@@ -76,21 +74,21 @@ ModuleType Version    Name                                ExportedCommands
 ---------- -------    ----                                ----------------
 Manifest   1.0        ModuleWithPSEditions
 
-Get-Module -ListAvailable | ? CompatiblePSEditions -Contains "Core" | % CompatiblePSEditions
+Get-Module -ListAvailable | ? CompatiblePSEditions -Contains Core | % CompatiblePSEditions
 Desktop
 Core
 
 ```
 스크립트 작성자는 #requires 문에서 PSEdition 매개 변수를 사용하여 호환 가능한 PowerShell 버전에서 스크립트가 실행되는 경우에만 스크립트가 실행되도록 할 수 있습니다.
 ```powershell
-Set-Content C:\script.ps1 -Value "#requires -PSEdition Core
-Get-Process -Name PowerShell"
+Set-Content C:\script.ps1 -Value #requires -PSEdition Core
+Get-Process -Name PowerShell
 Get-Content C:\script.ps1
 #requires -PSEdition Core
 Get-Process -Name PowerShell
 
 C:\script.ps1
-C:\script.ps1 : The script 'script.ps1' cannot be run because it contained a "#requires" statement for PowerShell editions 'Core'. The edition of PowerShell that is required by the script does not match the currently running PowerShell Desktop edition.
+C:\script.ps1 : The script 'script.ps1' cannot be run because it contained a #requires statement for PowerShell editions 'Core'. The edition of PowerShell that is required by the script does not match the currently running PowerShell Desktop edition.
 At line:1 char:1
 + C:\script.ps1
 + ~~~~~~~~~~~~~
@@ -104,9 +102,9 @@ Nano 서버의 경우 모든 Nano 서버 설치에 기본적으로 PowerShell Co
 
 **Nano 서버에서 사용할 수 없는 Windows PowerShell 기능**
 * ADSI, ADO 및 WMI 유형 어댑터
-* Enable-PSRemoting, Disable-PSRemoting(PowerShell 원격 기능은 기본적으로 사용하도록 설정되며 [Nano Server 설치](Getting-Started-with-Nano-Server.md)의 "Windows PowerShell 원격 기능 사용" 섹션 참조).
+* Enable-PSRemoting, Disable-PSRemoting(PowerShell 원격 기능은 기본적으로 사용하도록 설정되며 [Nano Server 설치](Getting-Started-with-Nano-Server.md)의 Windows PowerShell 원격 기능 사용 섹션 참조).
 * 예약된 작업 및 PSScheduledJob 모듈
-* 도메인 가입을 위한 컴퓨터 cmdlet { Add | Remove }(Nano Server를 도메인에 가입하는 다양한 방법은 [Nano Server 설치](Getting-Started-with-Nano-Server.md)의 "Nano Server를 도메인에 가입" 섹션 참조).
+* 도메인 가입을 위한 컴퓨터 cmdlet { Add | Remove }(Nano Server를 도메인에 가입하는 다양한 방법은 [Nano Server 설치](Getting-Started-with-Nano-Server.md)의 Nano Server를 도메인에 가입 섹션 참조).
 * Reset-ComputerMachinePassword, Test-ComputerSecureChannel
 * 프로필(`Set-PSSessionConfiguration`으로 들어오는 원격 연결에 대한 시작 스크립트를 추가할 수 있음)
 * 클립보드 cmdlet
