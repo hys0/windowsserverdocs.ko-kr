@@ -1,23 +1,20 @@
 ---
 title: Windows Server 소프트웨어 정의 데이터 센터
-description: Windows Server SDDC 개요
+Description: Windows Server SDDC 개요
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: SDDC
-ms.tgt_pltfrm: na
 ms.topic: get-started article
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 06/04/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 6490bd9a6cb7b305ba9746a357a8c909c7b84555
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 5a90ad13a51a540c6c76adacb7df0225d642573a
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75950461"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80857196"
 ---
 # <a name="windows-server-software-defined-datacenter"></a>Windows Server 소프트웨어 정의 데이터 센터
 
@@ -255,7 +252,7 @@ Windows PowerShell DSC(Desired State Configuration)는 개방형 표준에 따�
 
 ![](media/sddc/spacer1.png)![](media/sddc/dsc.png)
 
-DSC는 “지속적인 배포”를 지원하므로 중단 없이 구성을 계속해서 배포할 수 있습니다.
+DSC는 "지속적인 배포"를 지원하므로 중단 없이 구성을 계속해서 배포할 수 있습니다.
 
 -  DSC 구성은 더 빠른 배포를 위해 원래 설정에서 변경된 설정만 적용합니다.
 -  DSC는 온-프레미스, 퍼블릭 또는 프라이빗 클라우드 환경에서 사용할 수 있습니다.

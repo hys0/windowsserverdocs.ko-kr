@@ -2,22 +2,20 @@
 title: Nano 서버 관리
 description: 업데이트, 서비스 패키지, 네트워킹 추적, 성능 모니터링
 ms.prod: windows-server
-ms.service: na
 manager: DonGill
 ms.technology: server-nano
 ms.date: 09/06/2017
-ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 599d6438-a506-4d57-a0ea-1eb7ec19f46e
 author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
-ms.openlocfilehash: 132f4e1966b332cd6bb6e21402984db7ceed4497
-ms.sourcegitcommit: d599eea5203f95609fb21801196252d5dd9f2669
+ms.openlocfilehash: 0b41113f302dad1c9917001bf137da28ef431d38
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005217"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80826786"
 ---
 # <a name="manage-nano-server"></a>Nano 서버 관리
 
@@ -45,14 +43,14 @@ Windows PowerShell 원격 기능으로 Nano 서버를 관리하려면 관리 컴
   
 신뢰할 수 있는 호스트 목록에 Nano 서버를 추가하려면 관리자 권한 Windows PowerShell 명령 프롬프트에서 이 명령을 실행 합니다.  
   
-`Set-Item WSMan:\localhost\Client\TrustedHosts "<IP address of Nano Server>"`  
+`Set-Item WSMan:\localhost\Client\TrustedHosts <IP address of Nano Server>`  
   
 원격 Windows PowerShell 세션을 시작하려면 관리자 권한 로컬 Windows PowerShell 세션을 시작한 후 다음 명령을 실행합니다.  
   
   
 ```  
-$ip = "<IP address of Nano Server>"  
-$user = "$ip\Administrator"  
+$ip = <IP address of Nano Server>  
+$user = $ip\Administrator  
 Enter-PSSession -ComputerName $ip -Credential $user  
 ```  
   
@@ -71,7 +69,7 @@ Windows PowerShell 프롬프트에서 다음 명령을 실행하여 CIM 세션�
   
   
 ```  
-$ip = "<IP address of the Nano Server\>"  
+$ip = <IP address of the Nano Server\>  
 $user = $ip\Administrator  
 $cim = New-CimSession -Credential $user -ComputerName $ip  
 ```  
@@ -82,7 +80,7 @@ $cim = New-CimSession -Credential $user -ComputerName $ip
   
 ```  
 Get-CimInstance -CimSession $cim -ClassName Win32_ComputerSystem | Format-List *  
-Get-CimInstance -CimSession $Cim -Query "SELECT * from Win32_Process WHERE name LIKE 'p%'"  
+Get-CimInstance -CimSession $Cim -Query SELECT * from Win32_Process WHERE name LIKE 'p%'  
 ```  
   
   
@@ -91,11 +89,11 @@ WinRM(Windows Remote Management)을 사용하여 Nano 서버에서 원격으로 
   
 ```
 winrm quickconfig
-winrm set winrm/config/client @{TrustedHosts="<ip address of Nano Server>"}
+winrm set winrm/config/client @{TrustedHosts=<ip address of Nano Server>}
 chcp 65001
 ```
   
-이제 Nano 서버에서 원격으로 명령을 실행할 수 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
+이제 Nano 서버에서 원격으로 명령을 실행할 수 있습니다. 예:  
 
 ```
 winrs -r:<IP address of Nano Server> -u:Administrator -p:<Nano Server administrator password> ipconfig
@@ -126,7 +124,7 @@ Stop-NetEventSession [-Name]
   
 1.  서비스 패키지를 다운로드합니다(관련 기술 자료 문서에서 또는 [Microsoft 업데이트 카탈로그](https://catalog.update.microsoft.com/v7/site/home.aspx)에서). 로컬 디렉터리 또는 네트워크 공유에 저장합니다(예: C:\ServicingPackages).  
 2.  추출된 서비스 패키지를 저장할 폴더를 만듭니다.  예: c:\KB3157663_expanded  
-3.  Windows PowerShell 콘솔을 열고 `Expand` 명령을 사용하여 `-f:*` 매개 변수 및 서비스 패키지를 추출할 경로가 포함된 서비스 패키지의 .msu 파일 경로를 지정합니다.  예: `Expand "C:\ServicingPackages\Windows10.0-KB3157663-x64.msu" -f:* "C:\KB3157663_expanded"`  
+3.  Windows PowerShell 콘솔을 열고 `Expand` 명령을 사용하여 `-f:*` 매개 변수 및 서비스 패키지를 추출할 경로가 포함된 서비스 패키지의 .msu 파일 경로를 지정합니다.  예: `Expand C:\ServicingPackages\Windows10.0-KB3157663-x64.msu -f:* C:\KB3157663_expanded`  
   
     확장된 파일은 다음과 비슷하게 표시됩니다.  
 C:>dir C:\KB3157663_expanded   
@@ -158,7 +156,7 @@ C 드라이브의 볼륨은 OS
 ```  
 $sess = New-CimInstance -Namespace root/Microsoft/Windows/WindowsUpdate -ClassName MSFT_WUOperationsSession  
 
-$scanResults = Invoke-CimMethod -InputObject $sess -MethodName ScanForUpdates -Arguments @{SearchCriteria="IsInstalled=0";OnlineScan=$true}  
+$scanResults = Invoke-CimMethod -InputObject $sess -MethodName ScanForUpdates -Arguments @{SearchCriteria=IsInstalled=0;OnlineScan=$true}  
 ```  
 **참고:**  
 사용 가능한 업데이트가 없는 경우 이 명령은 다음 오류를 반환합니다.  
@@ -171,7 +169,7 @@ At line:1 char:16
 
 +                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
 
-    + CategoryInfo          : NotSpecified: (MSFT_WUOperatio...-5b842a3dd45d")  
+    + CategoryInfo          : NotSpecified: (MSFT_WUOperatio...-5b842a3dd45d)  
 
    :CimInstance) [Invoke-CimMethod], CimException  
 
@@ -201,11 +199,11 @@ Windows Defender는 업데이트 설치를 차단합니다. 이 문제를 해결
 ```  
 $sess = New-CimInstance -Namespace root/Microsoft/Windows/WindowsUpdate -ClassName MSFT_WUOperationsSession  
 
-$scanResults = Invoke-CimMethod -InputObject $sess -MethodName ScanForUpdates -Arguments @{SearchCriteria="IsInstalled=1";OnlineScan=$true}  
+$scanResults = Invoke-CimMethod -InputObject $sess -MethodName ScanForUpdates -Arguments @{SearchCriteria=IsInstalled=1;OnlineScan=$true}  
 ```  
 
 **참고:**  
-이러한 명령은 설치된 업데이트 목록을 표시하지만 출력에 "설치됨"이라고 구체적으로 표시하지는 않습니다. 보고서처럼 출력에 이러한 내용이 포함되기를 원한다면 다음 명령을 실행합니다.  
+이러한 명령은 설치된 업데이트 목록을 표시하지만 출력에 설치됨이라고 구체적으로 표시하지는 않습니다. 보고서처럼 출력에 이러한 내용이 포함되기를 원한다면 다음 명령을 실행합니다.  
 ```PowerShell
 Get-WindowsPackage -Online
 ```
@@ -214,7 +212,7 @@ Get-WindowsPackage -Online
 ---  
 위에 나열된 명령은 인터넷에서 Windows Update 및 Microsoft 업데이트 서비스를 쿼리하여 업데이트를 찾아서 다운로드합니다. WSUS를 사용하는 경우 Nano 서버에서 레지스트리 키를 설정하면 WSUS 서버를 대신 사용할 수 있습니다.  
   
-[비 Active Directory 환경에서 자동 업데이트 구성](https://technet.microsoft.com/library/cc708449(v=ws.10).aspx)의 "Windows 업데이트 에이전트 환경 옵션 레지스트리 키" 테이블을 참조하세요.  
+[비 Active Directory 환경에서 자동 업데이트 구성](https://technet.microsoft.com/library/cc708449(v=ws.10).aspx)의 Windows 업데이트 에이전트 환경 옵션 레지스트리 키 테이블을 참조하세요.  
   
 적어도 **WUServer** 및 **WUStatusServer** 레지스트리 키를 설정해야 하지만, WSUS을 구현한 방법에 따라 다른 값이 필요할 수 있습니다. 언제든지 동일한 환경에서 다른 Windows Server를 검사하여 이러한 설정을 확인할 수 있습니다.  
 
@@ -242,9 +240,9 @@ Nano 서버는 [ETW(Windows 용 이벤트 추적)](https://aka.ms/u2pa0i) 프레
 wpr.exe -providers
 ```
 
-사용자는 관심 있는 이벤트의 형식에 대한 출력을 필터링 할 수 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+사용자는 관심 있는 이벤트의 형식에 대한 출력을 필터링 할 수 있습니다. 예:
 ```
-PS C:\> wpr.exe -providers | select-string "Storage"
+PS C:\> wpr.exe -providers | select-string Storage
 
        595f33ea-d4af-4f4d-b4dd-9dacdd17fc6e                              : Microsoft-Windows-StorageManagement-WSP-Host
        595f7f52-c90a-4026-a125-8eb5e083f15e                              : Microsoft-Windows-StorageSpaces-Driver
@@ -258,21 +256,21 @@ PS C:\> wpr.exe -providers | select-string "Storage"
 
 추적을 만들고 시작한 다음, 이벤트를 저장할 파일 이름을 지정합니다.
 ```
-PS C:\> New-EtwTraceSession -Name "ExampleTrace" -LocalFilePath c:\etrace.etl
+PS C:\> New-EtwTraceSession -Name ExampleTrace -LocalFilePath c:\etrace.etl
 ```
 
 추적에 공급자 GUID를 추가합니다. ```wpr.exe -providers```를 사용하여 공급자 이름을 GUID로 변환합니다. 
 ```
-PS C:\> wpr.exe -providers | select-string "Kernel-Memory"
+PS C:\> wpr.exe -providers | select-string Kernel-Memory
 
        d1d93ef7-e1f2-4f45-9943-03d245fe6c00                              : Microsoft-Windows-Kernel-Memory
 
-PS C:\> Add-EtwTraceProvider -Guid "{d1d93ef7-e1f2-4f45-9943-03d245fe6c00}" -SessionName "ExampleTrace"
+PS C:\> Add-EtwTraceProvider -Guid {d1d93ef7-e1f2-4f45-9943-03d245fe6c00} -SessionName ExampleTrace
 ```
 
 추적 제거 -- 이 작업은 추적 세션을 중지하고, 이벤트를 관련 로그 파일에 플러시합니다.
 ```
-PS C:\> Remove-EtwTraceSession -Name "ExampleTrace"
+PS C:\> Remove-EtwTraceSession -Name ExampleTrace
 
 PS C:\> dir .\etrace.etl
 
@@ -330,12 +328,12 @@ Copyright (c) 2015 Microsoft Corporation. All rights reserved.
 
 먼저 새 Autologger config 파일을 만듭니다.
 ```
-PS C:\> New-AutologgerConfig -Name "BootPnpLog" -LocalFilePath c:\bootpnp.etl 
+PS C:\> New-AutologgerConfig -Name BootPnpLog -LocalFilePath c:\bootpnp.etl 
 ```
 
 이 파일에 ETW 공급자를 추가합니다. 이 예에서는 커널 PnP 공급자를 사용합니다. ```Add-EtwTraceProvider```를 다시 호출하고, 여러 원본에서 부팅 추적 컬렉션을 사용하도록 Autologger 이름은 같지만 GUID는 다르게 지정합니다.
 ```
-Add-EtwTraceProvider -Guid "{9c205a39-1250-487d-abd7-e831c6290539}" -AutologgerName BootPnpLog
+Add-EtwTraceProvider -Guid {9c205a39-1250-487d-abd7-e831c6290539} -AutologgerName BootPnpLog
 ```
 
 이렇게 하면 ETW 세션이 즉시 시작하는 것이 아니라 다음 부팅에 시작하는 세션이 하나 구성됩니다. 다시 부팅하면 Autologger 구성 이름을 가진 새 ETW 세션이 추가된 추적 공급자가 활성화된 상태로 자동 시작됩니다. Nano 서버가 부팅되면 다음 명령은 기록된 이벤트를 관련 추적 파일에 플러시한 후 추적 세션을 중지합니다.
@@ -351,11 +349,11 @@ PS C:\> Remove-AutologgerConfig -Name BootPnpLog
 다양한 시스템 또는 디스크 없는 시스템에서 부팅 및 설치 추적을 수집하려면 [설치 및 부팅 이벤트 수집](../administration/get-started-with-setup-and-boot-event-collection.md)을 고려해 보세요.
 
 ### <a name="capture-performance-counter-data"></a>성능 카운터 데이터 캡처
-일반적으로 Perfmon.exe GUI를 사용하여 성능 카운터 데이터를 모니터링합니다. Nano 서버에서는 그에 해당하는 ```Typeperf.exe``` 명령줄을 사용합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+일반적으로 Perfmon.exe GUI를 사용하여 성능 카운터 데이터를 모니터링합니다. Nano 서버에서는 그에 해당하는 ```Typeperf.exe``` 명령줄을 사용합니다. 예:
 
 사용 가능한 카운터 쿼리--출력을 필터링하여 원하는 항목을 간편하게 찾을 수 있습니다.
 ```
-PS C:\> typeperf.exe -q | Select-String "UDPv6"
+PS C:\> typeperf.exe -q | Select-String UDPv6
 
 \UDPv6\Datagrams/sec
 \UDPv6\Datagrams Received/sec
@@ -366,14 +364,14 @@ PS C:\> typeperf.exe -q | Select-String "UDPv6"
 
 옵션을 사용하여 카운터 값을 수집하는 횟수 및 간격을 지정할 수 있습니다. 아래 예에서는 프로세서 유휴 시간을 3초마다 5회 수집합니다.
 ```
-PS C:\> typeperf.exe "\Processor Information(0,0)\% Idle Time" -si 3 -sc 5
+PS C:\> typeperf.exe \Processor Information(0,0)\% Idle Time -si 3 -sc 5
 
-"(PDH-CSV 4.0)","\\ns-g2\Processor Information(0,0)\% Idle Time"
-"09/15/2016 09:20:56.002","99.982990"
-"09/15/2016 09:20:59.002","99.469634"
-"09/15/2016 09:21:02.003","99.990081"
-"09/15/2016 09:21:05.003","99.990454"
-"09/15/2016 09:21:08.003","99.998577"
+(PDH-CSV 4.0),\\ns-g2\Processor Information(0,0)\% Idle Time
+09/15/2016 09:20:56.002,99.982990
+09/15/2016 09:20:59.002,99.469634
+09/15/2016 09:21:02.003,99.990081
+09/15/2016 09:21:05.003,99.990454
+09/15/2016 09:21:08.003,99.998577
 Exiting, please wait...
 The command completed successfully.
 ```

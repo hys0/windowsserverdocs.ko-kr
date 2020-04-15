@@ -2,21 +2,19 @@
 title: Nano 서버 빠른 시작
 description: 물리적 또는 가상 컴퓨터에서 기본적인 Nano Server를 신속하게 배포하는 단계
 ms.prod: windows-server
-ms.service: na
 manager: DonGill
 ms.technology: server-nano
 ms.date: 09/05/2017
-ms.tgt_pltfrm: na
 ms.topic: get-started-article
 author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
-ms.openlocfilehash: 5de589d9da1c7d4fc9eb116e6ea1f6a326d1ad7c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 7729b853f2e54c7f99d428fcb821a68d7a22aef0
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71391723"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80826816"
 ---
 # <a name="nano-server-quick-start"></a>Nano 서버 빠른 시작
 
@@ -31,7 +29,7 @@ ms.locfileid: "71391723"
   
 **가상 머신에서 Nano 서버**  
   
-다음 단계에 따라 가상 컴퓨터에서 실행할 Nano 서버 VHD를 만듭니다.  
+다음 단계에 따라 가상 머신에서 실행할 Nano 서버 VHD를 만듭니다.  
   
 ## <a name="to-quickly-deploy-nano-server-in-a-virtual-machine"></a>가상 머신에서 Nano 서버를 신속하게 배포하려면  
   
@@ -51,9 +49,9 @@ ms.locfileid: "71391723"
   
    -   **-TargetPath**는 파일 이름 및 확장명을 포함한 경로를 지정합니다. 이 경로에 결과 VHD 또는 VHDX가 만들어집니다.  
   
-   -   **Computer_name**은 생성 중인 Nano 서버 가상 컴퓨터가 보유할 컴퓨터 이름을 지정합니다.  
+   -   **Computer_name**은 Nano Server 가상 머신이 보유할 컴퓨터 이름을 지정합니다.  
   
-   **예제:** `New-NanoServerImage -Edition Standard -DeploymentType Guest -MediaPath f:\ -BasePath .\Base -TargetPath .\Nano1\Nano.vhd -ComputerName Nano1`  
+   **예:** `New-NanoServerImage -Edition Standard -DeploymentType Guest -MediaPath f:\ -BasePath .\Base -TargetPath .\Nano1\Nano.vhd -ComputerName Nano1`  
   
    이 예에서는 f:\\로 탑재된 ISO에서 VHD를 만듭니다. VHD를 만들면 New-NanoServerImage를 실행했던 것과 동일한 디렉터리에 있는 Base라는 폴더를 사용하고 Nano1이라는 폴더의 VHD(Nano.vhd)를 명령이 실행되는 폴더에 배치합니다. 컴퓨터 이름은 Nano1이 됩니다. 결과 VHD에는 Standard 버전의 Windows Server 2016이 포함되고 VHD는 Hyper-V 가상 머신 배포에 적합하게 됩니다. 1세대 가상 머신을 원하는 경우 -TargetPath에 대해 **.vhd** 확장명을 지정하여 VHD 이미지를 만듭니다. 2세대 가상 머신의 경우 -TargetPath에 대해 **.vhdx** 확장명을 지정하여 VHDX 이미지를 만듭니다. -TargetPath에 대해 **.wim** 확장명을 지정하여 WIM 파일을 직접 생성합니다.  
   
@@ -64,15 +62,15 @@ ms.locfileid: "71391723"
   
 5. 가상 머신을 부팅한 다음 Hyper-V 관리자에서 가상 머신에 연결합니다.  
   
-6. 3단계의 스크립트를 실행하는 동안 제공했던 관리자 및 암호를 사용하여 복구 콘솔에 로그온합니다(이 가이드의 "Nano 서버 복구 콘솔" 섹션 참조).  
+6. 3단계의 스크립트를 실행하는 동안 제공했던 관리자 및 암호를 사용하여 복구 콘솔에 로그온합니다(이 가이드의 Nano 서버 복구 콘솔 섹션 참조).  
    > [!NOTE]  
    > 복구 콘솔은 기본적인 키보드 기능만 지원합니다. 키보드 표시등, 10-키 섹션, 키보드 레이아웃 전환(예: caps lock 및 number lock)은 지원되지 않습니다.
   
-7. Nano 서버 가상 컴퓨터의 IP 주소를 가져오고 Windows PowerShell 원격 기능 또는 기타 원격 관리 도구를 사용하여 가상 컴퓨터에 연결하여 원격으로 관리합니다.  
+7. Nano 서버 가상 머신의 IP 주소를 가져오고 Windows PowerShell 원격 기능 또는 기타 원격 관리 도구를 사용하여 가상 머신에 연결하여 원격으로 관리합니다.  
   
 **물리적 컴퓨터에서 Nano 서버**  
   
-미리 설치된 장치 드라이버를 사용하여 물리적 컴퓨터에서 Nano 서버를 실행할 VHD를 만들 수도 있습니다. 사용자의 하드웨어를 부팅 또는 네트워크에 연결하기 위해서 아직 제공되지 않은 드라이버가 필요한 경우 이 가이드의 "드라이버 추가" 섹션의 단계를 따릅니다.  
+미리 설치된 디바이스 드라이버를 사용하여 물리적 컴퓨터에서 Nano 서버를 실행할 VHD를 만들 수도 있습니다. 사용자의 하드웨어를 부팅 또는 네트워크에 연결하기 위해서 아직 제공되지 않은 드라이버가 필요한 경우 이 가이드의 드라이버 추가 섹션의 단계를 따릅니다.  
   
 ## <a name="to-quickly-deploy-nano-server-on-a-physical-computer"></a>물리적 컴퓨터에서 Nano 서버를 신속하게 배포하려면  
   
@@ -111,7 +109,7 @@ ms.locfileid: "71391723"
   
 6. 물리적 컴퓨터를 Nano 서버 VHD로 부팅합니다.  
   
-7. 3단계의 스크립트를 실행하는 동안 제공했던 관리자 및 암호를 사용하여 복구 콘솔에 로그온합니다(이 가이드의 "Nano 서버 복구 콘솔" 섹션 참조).
+7. 3단계의 스크립트를 실행하는 동안 제공했던 관리자 및 암호를 사용하여 복구 콘솔에 로그온합니다(이 가이드의 Nano 서버 복구 콘솔 섹션 참조).
    > [!NOTE]  
    > 복구 콘솔은 기본적인 키보드 기능만 지원합니다. 키보드 표시등, 10-키 섹션, 키보드 레이아웃 전환(예: caps lock 및 number lock)은 지원되지 않습니다. 
   

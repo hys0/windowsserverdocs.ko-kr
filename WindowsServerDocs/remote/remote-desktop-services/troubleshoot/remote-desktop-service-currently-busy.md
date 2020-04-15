@@ -1,24 +1,19 @@
 ---
 title: 연결 시 "원격 데스크톱 서비스가 현재 사용 중입니다" 메시지가 수신됨
 description: 사용자가 원격 데스크톱 연결을 시작할 때의 "원격 데스크톱 서비스가 현재 사용 중입니다" 오류를 해결합니다.
-audience: itpro
-ms.custom: na
 ms.reviewer: rklemen
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: troubleshooting
-ms.assetid: ''
 author: kaushika-msft
 manager: dcscontentpm
 ms.author: delhan
 ms.date: 07/24/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 989591f1d312446b680d708b2be7bea9b26ab8f9
-ms.sourcegitcommit: c5709021aa98abd075d7a8f912d4fd2263db8803
+ms.openlocfilehash: c345833ee63a1286a5615998649e8aa9d25896a6
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2020
-ms.locfileid: "76265885"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80857166"
 ---
 # <a name="on-connecting-user-receives-remote-desktop-service-is-currently-busy-message"></a>사용자가 연결하면 "원격 데스크톱 서비스가 현재 사용 중입니다" 메시지가 수신됨
 

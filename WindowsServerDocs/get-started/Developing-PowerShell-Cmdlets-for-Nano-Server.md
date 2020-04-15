@@ -1,23 +1,21 @@
 ---
 title: Nano Server용 PowerShell Cmdlet 개발
-description: 'CIM, .NET cmdlet, C++ 이식 '
+description: CIM, .NET cmdlet, C++ 이식
 ms.prod: windows-server
-ms.service: na
 manager: DonGill
 ms.technology: server-nano
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7b4267f0-1c91-4a40-9262-5daf4659f686
 author: jaimeo
 ms.author: jaimeo
 ms.date: 09/06/2017
 ms.localizationpriority: medium
-ms.openlocfilehash: 434b79508dbf88a90348840573255c3084d6e989
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 3965e453483b3515e4957ecfaba39cf9a0b8104f
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75948449"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80827076"
 ---
 # <a name="developing-powershell-cmdlets-for-nano-server"></a>Nano Server용 PowerShell Cmdlet 개발
 
@@ -74,7 +72,7 @@ CompatiblePSEditions Property   System.Collections.Generic.IEnumerable[string] C
 ```  
 사용 가능한 모듈 목록을 가져올 때 PowerShell 버전별로 목록을 필터링할 수 있습니다.  
 ```powershell  
-Get-Module -ListAvailable | ? CompatiblePSEditions -Contains "Desktop"  
+Get-Module -ListAvailable | ? CompatiblePSEditions -Contains Desktop  
   
     Directory: C:\Program Files\WindowsPowerShell\Modules  
   
@@ -83,21 +81,21 @@ ModuleType Version    Name                                ExportedCommands
 ---------- -------    ----                                ----------------  
 Manifest   1.0        ModuleWithPSEditions  
   
-Get-Module -ListAvailable | ? CompatiblePSEditions -Contains "Core" | % CompatiblePSEditions  
+Get-Module -ListAvailable | ? CompatiblePSEditions -Contains Core | % CompatiblePSEditions  
 Desktop  
 Core  
   
 ```  
 스크립트 작성자는 #requires 문에서 PSEdition 매개 변수를 사용하여 호환 가능한 PowerShell 버전에서 스크립트가 실행되는 경우에만 스크립트가 실행되도록 할 수 있습니다.  
 ```powershell  
-Set-Content C:\script.ps1 -Value "#requires -PSEdition Core  
-Get-Process -Name PowerShell"  
+Set-Content C:\script.ps1 -Value #requires -PSEdition Core  
+Get-Process -Name PowerShell  
 Get-Content C:\script.ps1  
 #requires -PSEdition Core  
 Get-Process -Name PowerShell  
   
 C:\script.ps1  
-C:\script.ps1 : The script 'script.ps1' cannot be run because it contained a "#requires" statement for PowerShell editions 'Core'. The edition of PowerShell that is required by the script does not match the currently running PowerShell Desktop edition.  
+C:\script.ps1 : The script 'script.ps1' cannot be run because it contained a #requires statement for PowerShell editions 'Core'. The edition of PowerShell that is required by the script does not match the currently running PowerShell Desktop edition.  
 At line:1 char:1  
 + C:\script.ps1  
 + ~~~~~~~~~~~~~  
@@ -145,7 +143,7 @@ Nano 서버에서 C++를 개발하기 위한 필수 조건 및 연습은 [Nano �
 대부분의 C# 코드는 Nano 서버에서 지원됩니다. [ApiPort](https://github.com/Microsoft/dotnet-apiport)를 사용하여 호환되지 않는 API를 검색할 수 있습니다.  
   
 ### <a name="powershell-core-sdk"></a>Powershell Core SDK  
-"Microsoft.PowerShell.NanoServer.SDK" 모듈은 [PowerShell 갤러리](https://www.powershellgallery.com/packages/Microsoft.PowerShell.NanoServer.SDK/)에 제공되며 Visual Studio 2015 업데이트 2를 사용하여 Nano 서버에서 사용할 수 있는 CoreCLR 및 PowerShell Core 버전을 대상으로 하는 .NET cmdlet 개발을 도와줍니다. 다음 명령으로 PowerShellGet을 사용하여 모듈을 설치할 수 있습니다.  
+Microsoft.PowerShell.NanoServer.SDK 모듈은 [PowerShell 갤러리](https://www.powershellgallery.com/packages/Microsoft.PowerShell.NanoServer.SDK/)에 제공되며 Visual Studio 2015 업데이트 2를 사용하여 Nano 서버에서 사용할 수 있는 CoreCLR 및 PowerShell Core 버전을 대상으로 하는 .NET cmdlet 개발을 도와줍니다. 다음 명령으로 PowerShellGet을 사용하여 모듈을 설치할 수 있습니다.  
   
 `Find-Module Microsoft.PowerShell.NanoServer.SDK -Repository PSGallery | Install-Module -Scope <scope>`  
   
@@ -214,7 +212,7 @@ public class TestNetConnectionResult
 '@  
 # Create object and set properties  
 $result = New-Object TestNetConnectionResult  
-$result.ComputerName = "Foo"  
+$result.ComputerName = Foo  
 $result.RemoteAddress = 1.1.1.1  
   
 ```  
@@ -231,7 +229,7 @@ class TestNetConnectionResult
 }  
 # Create object and set properties  
 $result = [TestNetConnectionResult]::new()  
-$result.ComputerName = "Foo"  
+$result.ComputerName = Foo  
 $result.RemoteAddress = 1.1.1.1  
   
 ```  

@@ -7,15 +7,14 @@ ms.author: billmath
 manager: mtillman
 ms.date: 04/17/2019
 ms.topic: article
-ms.custom: it-pro
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 48d93f515a5f3e5f8ce2c3ff9a1b40f300ca57ed
-ms.sourcegitcommit: c5709021aa98abd075d7a8f912d4fd2263db8803
+ms.openlocfilehash: a1041bdc189238c7da32896e6f867f730e392d24
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2020
-ms.locfileid: "76265745"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80814433"
 ---
 # <a name="ad-fs-frequently-asked-questions-faq"></a>AD FS FAQ(질문과 대답)
 
@@ -105,7 +104,7 @@ AD FS 및 WAP 서버에서 ATP를 지원하는 TLS 암호 그룹만 협상하도
 
 ## <a name="developer"></a>Developer
 
-### <a name="when-generating-an-id_token-with-adfs-for-a-user-authenticated-against-ad-how-is-the-sub-claim-generated-in-the-id_token"></a>ADFS를 사용하여 AD에 대해 인증된 사용자에 대한 ID_Token을 생성하는 경우 "sub" 클레임은 id_Token에서 어떻게 생성되나요?
+### <a name="when-generating-an-id_token-with-adfs-for-a-user-authenticated-against-ad-how-is-the-sub-claim-generated-in-the-id_token"></a>ADFS를 사용하여 AD에 대해 인증된 사용자에 대한 id_token을 생성하는 경우 "sub" 클레임은 id_token에서 어떻게 생성되나요?
 "sub" 클레임의 값은 클라이언트 ID + 앵커 클레임 값의 해시입니다.
 
 ### <a name="what-is-the-lifetime-of-the-refresh-tokenaccess-token-when-the-user-logs-in-via-a-remote-claims-provider-trust-over-ws-fedsaml-p"></a>사용자가 WS-Fed/SAML-P에 대한 원격 클레임 공급자 트러스트를 통해 로그인하는 경우 새로 고침 토큰/액세스 토큰의 수명은 어떻게 되나요?
@@ -232,14 +231,14 @@ AD FS userinfo 엔드포인트는 항상 OpenID 표준에 지정된 대로 주�
 
 ### <a name="why-am-i-seeing-a-warning-for-failure-to-add-the-ad-fs-service-account-to-the-enterprise-key-admins-group"></a>AD FS 서비스 계정을 엔터프라이즈 키 관리 그룹에 추가하지 못했다는 경고가 표시되는 이유는 무엇인가요?
 이 그룹은 FSMO PDC 역할이 있는 Windows 2016 도메인 컨트롤러가 도메인에 있는 경우에만 만들어집니다. 이 오류를 해결하려면 그룹을 수동으로 만들고 아래 절차에 따라 서비스 계정을 그룹의 멤버로 추가한 후 필요한 권한을 부여할 수 있습니다.
-1.  **Active Directory 사용자 및 컴퓨터**를 엽니다.
-2.  탐색 창에서 도메인 이름을 **마우스 오른쪽 단추로 클릭**하고 [속성]을 **클릭**합니다.
-3.  [보안]을 **클릭**합니다([보안] 탭이 없으면 [보기] 메뉴에서 [고급 기능]을 켭니다).
-4.  [고급]을 **클릭**합니다. [추가]를 **클릭**합니다. [보안 주체 선택]을 **클릭**합니다.
-5.  [사용자, 컴퓨터, 서비스 계정 또는 그룹 선택] 대화 상자가 표시됩니다.  [선택할 개체 이름 입력] 텍스트 상자에서 '키 관리 그룹'을 입력합니다.  확인을 클릭합니다.
-6.  [적용 대상] 목록 상자에서 **하위 사용자 개체**를 선택합니다.
-7.  스크롤 막대를 사용하여 페이지 아래쪽으로 스크롤하고, [모두 지우기]를 **클릭**합니다.
-8.  **속성** 섹션에서 **msDS-KeyCredentialLink 읽기** 및 **msDS-KeyCredentialLink 쓰기**를 선택합니다.
+1.    **Active Directory 사용자 및 컴퓨터**를 엽니다.
+2.    탐색 창에서 도메인 이름을 **마우스 오른쪽 단추로 클릭**하고 [속성]을 **클릭**합니다.
+3.    [보안]을 **클릭**합니다([보안] 탭이 없으면 [보기] 메뉴에서 [고급 기능]을 켭니다).
+4.    [고급]을 **클릭**합니다. [추가]를 **클릭**합니다. [보안 주체 선택]을 **클릭**합니다.
+5.    [사용자, 컴퓨터, 서비스 계정 또는 그룹 선택] 대화 상자가 표시됩니다.  [선택할 개체 이름 입력] 텍스트 상자에서 '키 관리 그룹'을 입력합니다.  확인을 클릭합니다.
+6.    [적용 대상] 목록 상자에서 **하위 사용자 개체**를 선택합니다.
+7.    스크롤 막대를 사용하여 페이지 아래쪽으로 스크롤하고, [모두 지우기]를 **클릭**합니다.
+8.    **속성** 섹션에서 **msDS-KeyCredentialLink 읽기** 및 **msDS-KeyCredentialLink 쓰기**를 선택합니다.
 
 ### <a name="why-does-modern-authentication-from-android-devices-fail-if-the-server-does-not-send-all-the-intermediate-certificates-in-the-chain-with-the-ssl-cert"></a>서버에서 SSL 인증서를 사용하여 체인의 모든 중간 인증서를 보내지 않는 경우 Android 디바이스의 최신 인증이 실패하는 이유는 무엇인가요?
 

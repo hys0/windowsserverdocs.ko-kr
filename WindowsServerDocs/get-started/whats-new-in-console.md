@@ -1,30 +1,26 @@
 ---
-title: Windows Server 2016 Windows Console의 새로운 기능
+title: Windows Server 2016 Windows 콘솔의 새로운 기능
 description: Windows Server 2016 콘솔의 중요한 새로운 기능을 나열합니다.
-ms.custom: na
 ms.prod: windows-server
 ms.technology: server-general
-ms.reviewer: na
-ms.suite: na
 ms.date: 10/04/2016
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: da9fc582-033b-4973-84e7-0c6024ecfcbc
 author: jaimeo
 ms.author: jaimeo
 manager: dongill
 ms.localizationpriority: medium
-ms.openlocfilehash: 305363646aa1714504b0cfb4838170b994ce5da9
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b055c379e1d5ee632e420ffd1362389878d3dfd1
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71391437"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80825966"
 ---
-# <a name="whats-new-in-the-windows-console-in-windows-server-2016"></a>Windows Server 2016 Windows Console의 새로운 기능
+# <a name="whats-new-in-the-windows-console-in-windows-server-2016"></a>Windows Server 2016 Windows 콘솔의 새로운 기능
 >적용 대상: Windows Server 2016
 
-콘솔 호스트(Windows 명령 프롬프트, Windows PowerShell 프롬프트 등을 포함하여 모든 문자 모드 응용 프로그램을 지원하는 기본 코드)가 여러 가지 방식으로 업데이트되어 다양한 새로운 기능이 추가되었습니다.  
+콘솔 호스트(Windows 명령 프롬프트, Windows PowerShell 프롬프트 등을 포함하여 모든 문자 모드 애플리케이션을 지원하는 기본 코드)가 여러 가지 방식으로 업데이트되어 다양한 새로운 기능이 추가되었습니다.  
 
 ## <a name="controlling-the-new-features"></a>새로운 기능 제어  
 새로운 기능은 기본적으로 사용하도록 설정되지만 속성 인터페이스(주로 **옵션** 탭에 있음) 또는 다음 레지스트리 키(모든 키는 **HKEY_CURRENT_USER\Console** 아래의 DWORD 값임)를 통해 각 기능을 설정 및 해제하거나 이전 콘솔 호스트로 되돌릴 수 있습니다.  
@@ -64,11 +60,11 @@ ms.locfileid: "71391437"
 |전체 화면 모드 설정/해제|Atl+Enter|  
 
 ## <a name="selection"></a>선택  
-텍스트 및 줄 선택뿐만 아니라 텍스트 표시 및 버퍼 기록 사용에 대한 많은 새로운 옵션이 있습니다. 콘솔에서는 동일한 키를 사용 중일 수 있는 응용 프로그램과의 충돌을 방지하려고 시도합니다.  
+텍스트 및 줄 선택뿐만 아니라 텍스트 표시 및 버퍼 기록 사용에 대한 많은 새로운 옵션이 있습니다. 콘솔에서는 동일한 키를 사용 중일 수 있는 애플리케이션과의 충돌을 방지하려고 시도합니다.  
 
-**개발자**: 충돌이 발생한 경우 일반적으로 SetConsoleMode() API를 사용하여 애플리케이션의 줄 입력, 처리된 입력 및 에코 입력 모드 사용 동작을 제어할 수 있습니다. 처리된 입력 모드로 실행할 경우 아래의 바로 가기가 적용되지만 다른 모드에서는 응용 프로그램이 이를 처리해야 합니다. 여기에 나열되지 않은 모든 키 조합은 이전 버전의 콘솔과 동일하게 작동합니다. **옵션** 탭의 여러 설정을 사용하여 충돌을 해결할 수도 있습니다. 모두 실패한 경우 언제든지 원래 콘솔로 되돌릴 수 있습니다.  
+**개발자**: 충돌이 발생한 경우 일반적으로 SetConsoleMode() API를 사용하여 애플리케이션의 줄 입력, 처리된 입력 및 에코 입력 모드 사용 동작을 제어할 수 있습니다. 처리된 입력 모드로 실행할 경우 아래의 바로 가기가 적용되지만 다른 모드에서는 애플리케이션이 이를 처리해야 합니다. 여기에 나열되지 않은 모든 키 조합은 이전 버전의 콘솔과 동일하게 작동합니다. **옵션** 탭의 여러 설정을 사용하여 충돌을 해결할 수도 있습니다. 모두 실패한 경우 언제든지 원래 콘솔로 되돌릴 수 있습니다.  
 
-이제 빠른 편집 모드 외부에서 "클릭하여 끌기" 선택을 사용할 수 있으며, 이 선택은 사각형 블록 대신 메모장에서와 같이 여러 줄에 걸쳐 텍스트를 선택할 수 있습니다. 복사 작업에서 더 이상 줄 바꿈을 제거할 필요가 없습니다. "클릭하여 끌기" 선택 외에 다음 키 조합을 사용할 수 있습니다.  
+이제 빠른 편집 모드 외부에서 클릭하여 끌기 선택을 사용할 수 있으며, 이 선택은 사각형 블록 대신 메모장에서와 같이 여러 줄에 걸쳐 텍스트를 선택할 수 있습니다. 복사 작업에서 더 이상 줄 바꿈을 제거할 필요가 없습니다. 클릭하여 끌기 선택 외에 다음 키 조합을 사용할 수 있습니다.  
 
 **텍스트 선택**  
 

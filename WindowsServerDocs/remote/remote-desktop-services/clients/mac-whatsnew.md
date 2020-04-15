@@ -1,30 +1,56 @@
 ---
 title: macOS 클라이언트의 새로운 기능
 description: Mac용 원격 데스크톱 클라이언트의 최근 변경 내용에 대해 알아봅니다.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
-ms.tgt_pltfrm: na
 ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 01/06/2020
+ms.date: 04/08/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: ef2a9966da7046a14fb1d9d4562f0ef9b1a09a45
-ms.sourcegitcommit: 76469d1b7465800315eaca3e0c7f0438fc3939ed
+ms.openlocfilehash: c378d8c4a87b6aa0cf4f6b4f30f3bd5524dbb7a9
+ms.sourcegitcommit: f95d0e6904b103fc30dcae13e9199e138c287e2b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75919856"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80980855"
 ---
 # <a name="whats-new-in-the-macos-client"></a>macOS 클라이언트의 새로운 기능
 
 [macOS용 원격 데스크톱 클라이언트](remote-desktop-mac.md)를 정기적으로 업데이트하여 새로운 기능을 추가하고 문제를 해결합니다. 최신 업데이트를 찾을 수 있는 위치는 다음과 같습니다.
 
 문제가 발생하면 언제든지 **도움말** > **문제 보고**로 이동하여 문의할 수 있습니다.
+
+## <a name="updates-for-version-1039"></a>10.3.9 버전에 대한 업데이트
+
+*게시 날짜: 2020년 4월 6일*
+
+이 릴리스에서는 [Windows 가상 데스크톱 서비스](https://azure.microsoft.com/services/virtual-desktop/)와의 상호 운용성을 향상시키기 위해 몇 가지 사항을 변경했습니다. 또한 다음과 같은 업데이트를 포함했습니다.
+
+- 이제 control + Option + Delete는 Ctrl + Alt + Del 시퀀스를 트리거합니다(이전에는 Fn 키를 눌러야 했음).
+- 밝은 모드의 키보드 모드 알림 색 구성표를 수정했습니다.
+- GatewayAccessToken RDP 파일 속성을 사용하여 시작된 연결이 작동하지 않는 시나리오를 해결했습니다.
+
+>[!NOTE]
+>이는 macOS 10.12와 호환되는 마지막 릴리스입니다.
+
+## <a name="updates-for-version-1038"></a>10.3.8 버전에 대한 업데이트
+
+*게시 날짜: 2020년 2월 12일*
+
+2020년의 첫 번째 릴리스를 발표할 때가 되었습니다!
+
+이 업데이트를 사용하면 키보드 입력을 입력할 때 스캔 코드(Ctrl + Command + K)와 유니코드(Ctrl + Command + U) 모드 사이를 전환할 수 있습니다. 유니코드 모드를 사용하면 Mac 키보드의 Option 키를 사용하여 확장 문자를 입력할 수 있습니다. 예를 들어, 미국 Mac 키보드에서 Option+2는 상표(&trade;) 기호를 입력합니다. 또한 유니코드 모드에서는 악센트 부호가 있는 문자를 입력할 수 있습니다. 예를 들어, 미국 Mac 키보드에서 Option+E와 "A" 키를 동시에 입력하면 원격 세션에서 문자 "á"가 입력됩니다.
+
+이 릴리스의 다른 업데이트는 다음과 같습니다.
+
+- 작업 영역 새로 고침 환경 및 UI를 정리했습니다.
+- "상태 확인 중" 메시지가 표시되면 로그인 화면에서 원격 세션 응답이 중지되는 스마트 카드 리디렉션 문제가 해결되었습니다.
+- 클립보드 기반 파일 복사 및 붙여넣기에 사용되는 임시 파일을 만드는 시간이 단축되었습니다.
+- 클립보드 파일 복사 및 붙여넣기에 사용되는 임시 파일은 이제 macOS를 사용하여 삭제하는 대신 앱을 종료하면 자동으로 삭제됩니다.
+- PC 책갈피 동작은 이제 축소판 그림의 오른쪽 위 모퉁이에 렌더링됩니다.
+- 작동 중단 원격 분석을 통해 보고된 문제를 해결하기 위해 수정되었습니다.
 
 ## <a name="updates-for-version-1037"></a>10.3.7 버전에 대한 업데이트
 
@@ -310,7 +336,7 @@ ms.locfileid: "75919856"
 - 이제 바탕 화면 타일에서 Enter 키를 눌러 연결을 시작할 수 있습니다.
 - 전체 화면 보기에서 이제 CMD+M이 WIN+M에 정확하게 매핑됩니다.
 - 연결 센터, 기본 설정 및 정보 창이 이제 CMD+M에 응답합니다.
-- 이제 **원격 리소스 추가** 페이지에서 Enter 키를 눌러 피드 검색을 시작할 수 있습니다.
+- 이제 **원격 리소스 추가*- 페이지에서 Enter 키를 눌러 피드 검색을 시작할 수 있습니다.
 - 새로 고칠 때까지 새 원격 리소스 피드가 연결 센터에서 비어 있는 문제가 해결되었습니다.
 
 ## <a name="updates-for-version-1016"></a>10.1.6 버전에 대한 업데이트

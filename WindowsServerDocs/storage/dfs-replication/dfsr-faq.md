@@ -1,17 +1,17 @@
 ---
-title: 'DFS 복제: FAQ(질문과 대답)'
+title: DFS 복제 - FAQ(질문과 대답)
 ms.date: 06/18/2014
 ms.prod: windows-server
 ms.technology: storage
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.openlocfilehash: e92ada07140b88ef4178a5aecdb263b825380c2d
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 1e11f6c596d7e5eb0bdf379adcf47d21e74e9f6b
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75950280"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80815626"
 ---
 # <a name="dfs-replication-frequently-asked-questions-faq"></a>DFS 복제: FAQ(질문과 대답)
 
@@ -74,7 +74,7 @@ DFS 복제는 Windows Server 운영 체제를 실행하는 서버에서 NFS와 �
 
 아니요, Windows Server 2012, Windows Server 2008 R2 또는 Windows Server 2008을 실행하는 컴퓨터에서 복제된 폴더의 콘텐츠는 Windows Server 2003 이하를 실행하는 컴퓨터에서 Windows 백업(Ntbackup.exe)을 사용하여 백업할 수 없습니다.
 
-저장된 파일을 복제된 폴더에 백업하려면 Windows Server 백업 또는 Microsoft® System Center Data Protection Manager를 사용합니다. Windows Server 2008 R2 및 Windows Server 2008의 백업 및 복구 기능에 대한 자세한 내용은 [백업 및 복구](https://technet.microsoft.com/library/Cc754097)를 참조하세요. 자세한 내용은 [System Center Data Protection Manager](https://go.microsoft.com/fwlink/?linkid=182261)(https://go.microsoft.com/fwlink/?LinkId=182261) 를 참조하세요.
+저장된 파일을 복제된 폴더에 백업하려면 Windows Server 백업 또는 Microsoft&reg; System Center Data Protection Manager를 사용합니다. Windows Server 2008 R2 및 Windows Server 2008의 백업 및 복구 기능에 대한 자세한 내용은 [백업 및 복구](https://technet.microsoft.com/library/Cc754097)를 참조하세요. 자세한 내용은 [System Center Data Protection Manager](https://go.microsoft.com/fwlink/?linkid=182261)(https://go.microsoft.com/fwlink/?LinkId=182261) 를 참조하세요.
 
 ### <a name="do-file-system-policies-impact-dfs-replication"></a>파일 시스템 정책이 DFS 복제에 영향을 주나요?
 
@@ -129,7 +129,7 @@ DFS 복제는 분산 잠금 메커니즘 또는 파일 체크 아웃 기능을 �
 
 ### <a name="what-are-the-benefits-of-using-dfs-replication-instead-of-windows-sharepoint-services"></a>Windows SharePoint Services 대신 DFS 복제를 사용하면 어떤 이점이 있나요?
 
-Windows® SharePoint® Services는 DFS 복제에서 제공하지 않는 파일 체크 아웃 기능의 형태로 긴밀한 일관성을 제공합니다. 여러 사용자가 동일한 파일을 편집하는 데 관심이 있는 경우 Windows SharePoint Services를 사용하는 것이 좋습니다. Windows SharePoint Services 2.0 서비스 팩 2는 Windows Server 2003 R2의 일부로 제공됩니다. Windows SharePoint Services는 Microsoft 웹 사이트에서 다운로드할 수 있으며, 최신 버전의 Windows Server에는 포함되어 있지 않습니다. 그러나 여러 사이트에 걸쳐 데이터를 복제하고 사용자가 동일한 파일을 동시에 편집하지 않는 경우 DFS 복제는 더 높은 대역폭과 더 간단한 관리를 제공합니다.
+Windows&reg; SharePoint&reg; Services는 DFS 복제에서 제공하지 않는 파일 체크 아웃 기능의 형태로 긴밀한 일관성을 제공합니다. 여러 사용자가 동일한 파일을 편집하는 데 관심이 있는 경우 Windows SharePoint Services를 사용하는 것이 좋습니다. Windows SharePoint Services 2.0 서비스 팩 2는 Windows Server 2003 R2의 일부로 제공됩니다. Windows SharePoint Services는 Microsoft 웹 사이트에서 다운로드할 수 있으며, 최신 버전의 Windows Server에는 포함되어 있지 않습니다. 그러나 여러 사이트에 걸쳐 데이터를 복제하고 사용자가 동일한 파일을 동시에 편집하지 않는 경우 DFS 복제는 더 높은 대역폭과 더 간단한 관리를 제공합니다.
 
 ## <a name="limitations-and-requirements"></a>제한 사항 및 요구 사항
 
@@ -152,7 +152,7 @@ Microsoft Outlook 개인 폴더 파일(.pst) 및 Microsoft Access 파일을 보�
 
 ### <a name="can-i-use-dfs-replication-in-a-workgroup"></a>DFS 복제는 작업 그룹에서 사용할 수 있나요?
 
-아니요. DFS 복제는 구성을 위해 Active Directory® Domain Services를 사용합니다. 이는 도메인에서만 작동합니다.
+아니요. DFS 복제는 구성을 위해 Active Directory&reg; Domain Services를 사용합니다. 이는 도메인에서만 작동합니다.
 
 ### <a name="can-more-than-one-folder-be-replicated-on-a-single-server"></a>단일 서버에서 둘 이상의 폴더를 복제할 수 있나요?
 
@@ -343,7 +343,7 @@ Windows Server 2008의 DFS 복제에는 [Windows Server 2003 SP1에서 Windows S
 
 ### <a name="how-does-dfs-replication-performance-compare-with-frs"></a>DFS 복제 성능은 FRS와 어떻게 비교되나요?
 
-DFS 복제는 FRS보다 훨씬 빠릅니다(특히 큰 파일을 약간만 변경하고 RDC를 사용하도록 설정한 경우). 예를 들어 RDC를 사용하는 경우 2MB PowerPoint® 프레젠테이션을 약간만 변경하면 네트워크를 통해 60KB만 전송되므로 전송되는 바이트 수가 97% 절약될 수 있습니다.
+DFS 복제는 FRS보다 훨씬 빠릅니다(특히 큰 파일을 약간만 변경하고 RDC를 사용하도록 설정한 경우). 예를 들어 RDC를 사용하는 경우 2MB PowerPoint&reg; 프레젠테이션을 약간만 변경하면 네트워크를 통해 60KB만 전송되므로 전송되는 바이트 수가 97% 절약될 수 있습니다.
 
 RDC는 64KB 미만의 파일에는 사용되지 않으며, 네트워크 대역폭 경합이 없는 고속 LAN에서 유용하지 않을 수 있습니다. RDC는 DFS 관리를 사용하여 연결별로 사용하지 않도록 설정할 수 있습니다.
 

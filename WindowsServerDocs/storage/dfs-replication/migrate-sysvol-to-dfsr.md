@@ -6,12 +6,12 @@ ms.technology: storage
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.openlocfilehash: d8d9d47ff8f14ce316d2352729247ab2dcf4acbc
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: eb7997b4ed16812ac6b1d6c7d3ccc220f8f63ce7
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75949708"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80815586"
 ---
 # <a name="migrate-sysvol-replication-to-dfs-replication"></a>SYSVOL 복제를 DFS 복제로 마이그레이션
 
@@ -76,9 +76,9 @@ DFS 복제를 사용하여 SYSVOL 폴더를 복제하려면 Windows Server 2008 
 
 [SYSVOL 마이그레이션 시리즈: 3부—'준비' 상태로 마이그레이션](https://go.microsoft.com/fwlink/?linkid=121758)
 
-[SYSVOL 마이그레이션 시리즈: 4부—‘리디렉션' 상태로 마이그레이션](https://go.microsoft.com/fwlink/?linkid=121759)
+[SYSVOL 마이그레이션 시리즈: 4부—'리디렉션' 상태로 마이그레이션](https://go.microsoft.com/fwlink/?linkid=121759)
 
-[SYSVOL 마이그레이션 시리즈: 5부—‘제거된' 상태로 마이그레이션](https://go.microsoft.com/fwlink/?linkid=121760)
+[SYSVOL 마이그레이션 시리즈: 5부—'제거된' 상태로 마이그레이션](https://go.microsoft.com/fwlink/?linkid=121760)
 
 [Windows Server 2008의 분산 파일 시스템에 대한 단계별 가이드](https://go.microsoft.com/fwlink/?linkid=85231)
 

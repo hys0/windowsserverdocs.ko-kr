@@ -2,22 +2,20 @@
 title: Nano 서버 배포
 description: 사용자 지정 이미지, 패키지, 드라이버, 도메인, 역할, 기능의 생성 및 배포에 대해 설명합니다.
 ms.prod: windows-server
-ms.service: na
 manager: DonGill
 ms.technology: server-nano
 ms.date: 09/06/2017
-ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9f109c91-7c2e-4065-856c-ce9e2e9ce558
 author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
-ms.openlocfilehash: 8b0276b70f3899fe1f3e56aebd87ea087ea91fee
-ms.sourcegitcommit: 2a15de216edde8b8e240a4aa679dc6d470e4159e
+ms.openlocfilehash: 9eceb92c239ce222f9f1498dfdeb8a21220af86f
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77465487"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80827116"
 ---
 # <a name="deploy-nano-server"></a>Nano 서버 배포
 
@@ -57,10 +55,10 @@ Nano 서버 이미지 작성기는 사용자 지정 Nano 서버 이미지를 VHD
 
 이 중에서 익숙하지 않은 작업이 있으면 이 토픽의 나머지 내용과 기타 Nano 서버 토픽을 검토하여 이 도구에 필요한 정보를 입력할 수 있도록 준비하시기 바랍니다.
 
-## <a name="BKMK_CreateImage"></a>사용자 지정 Nano 서버 이미지 만들기  
+## <a name="creating-a-custom-nano-server-image"></a><a name=BKMK_CreateImage></a>사용자 지정 Nano 서버 이미지 만들기  
 Windows Server 2016의 경우 Nano 서버가 물리적 미디어에 배포되며, 이 미디어에서 **NanoServer** 폴더를 찾을 수 있습니다. 이 폴더에는 .wim 이미지와 **Packages**라는 이름의 하위 폴더가 들어 있습니다. VHD 이미지에 서버 역할 및 기능을 추가한 다음 부팅할 때 사용하는 파일이 바로 이 패키지 파일입니다.  
 
-PackageManagement(OneGet) PowerShell 모듈의 NanoServerPackage 공급 기업을 사용하여 이러한 패키지를 찾아서 설치할 수도 있습니다. 이 토픽의 "온라인으로 역할 및 기능 설치" 섹션을 참조하세요.  
+PackageManagement(OneGet) PowerShell 모듈의 NanoServerPackage 공급 기업을 사용하여 이러한 패키지를 찾아서 설치할 수도 있습니다. 이 토픽의 온라인으로 역할 및 기능 설치 섹션을 참조하세요.  
 
 다음 테이블은 이 Nano 서버 릴리스에 제공되는 역할 및 기능, 그리고 패키지를 설치하는 Windows PowerShell 옵션을 보여 줍니다. -Compute 같은 일부 패키지는 고유의 Windows PowerShell 스위치를 통해 직접 설치되고, 나머지 패키지는 사용자가 -Package 매개 변수에 패키지 이름을 전달하여 설치하며, 쉼표로 구분된 목록에 결합할 수 있습니다. Get-NanoServerPackage cmdlet을 사용하여 사용 가능한 패키지를 동적으로 나열할 수 있습니다.  
 
@@ -185,7 +183,7 @@ WinPE가 부팅되면 Diskpart.exe를 사용하여 대상 컴퓨터의 하드 �
 > [!WARNING]  
 > 다음 명령은 하드 드라이브의 모든 데이터를 삭제합니다.  
 
-**Diskpart.exe Select disk 0 Clean Convert GPT Create partition efi size=100 Format quick FS=FAT32 label="System" Assign letter="s" Create partition msr size=128 Create partition primary Format quick FS=NTFS label="NanoServer" Assign letter="n" List volume Exit**  
+**Diskpart.exe Select disk 0 Clean Convert GPT Create partition efi size=100 Format quick FS=FAT32 label=System Assign letter=s Create partition msr size=128 Create partition primary Format quick FS=NTFS label=NanoServer Assign letter=n List volume Exit**  
 
 Nano 서버 이미지를 적용합니다(.wim 파일의 경로 조정).  
 
@@ -200,10 +198,10 @@ DVD 미디어 또는 USB 드라이브를 제거하고 **Wpeutil.exe Reboot** 명
  Nano 서버에 연결한 후에는 파일의 상대 또는 절대 경로를 다음과 같이 psEdit 명령에 전달하여 로컬 컴퓨터에 있는 파일을 편집할 수 있습니다.   
 `psEdit C:\Windows\Logs\DISM\dism.log` 또는 `psEdit .\myScript.ps1`  
 
-`Enter-PSSession -ComputerName "192.168.0.100" -Credential ~\Administrator` 명령으로 원격 세션을 시작한 다음 파일의 상대 또는 절대 경로를 다음과 같이 psEdit 명령에 전달하여 원격 Nano 서버에 있는 파일을 편집합니다.   
+`Enter-PSSession -ComputerName 192.168.0.100 -Credential ~\Administrator` 명령으로 원격 세션을 시작한 다음 파일의 상대 또는 절대 경로를 다음과 같이 psEdit 명령에 전달하여 원격 Nano 서버에 있는 파일을 편집합니다.   
 `psEdit C:\Windows\Logs\DISM\dism.log`  
 
-## <a name="BKMK_online"></a>온라인으로 역할 및 기능 설치  
+## <a name="installing-roles-and-features-online"></a><a name=BKMK_online></a>온라인으로 역할 및 기능 설치  
 > [!NOTE]
 > 미디어 또는 온라인 리포지토리에서 선택적 Nano 서버 패키지를 설치하는 경우에는 최근 보안 픽스가 포함되지 않습니다. 옵션 패키지와 기본 운영 체제 간의 버전 불일치를 방지하기 위해 옵션 패키지를 설치하는 즉시 [최신 누적 업데이트](https://technet.microsoft.com/windows-server-docs/get-started/update-nano-server)를 설치한 **후** 서버를 다시 시작해야 합니다.
 
@@ -219,7 +217,7 @@ Import-PackageProvider NanoServerPackage
 >Install-PackageProvider를 실행할 때 오류가 발생하면 다음과 같이 [최신 누적 업데이트](https://technet.microsoft.com/windows-server-docs/get-started/update-nano-server)([KB3206632](https://support.microsoft.com/kb/3206632) 이상)를 설치했는지 확인하거나 Save-Module을 사용합니다. 
 
 ```powershell
-Save-Module -Path "$Env:ProgramFiles\WindowsPowerShell\Modules\" -Name NanoServerPackage -MinimumVersion 1.0.1.0
+Save-Module -Path $Env:ProgramFiles\WindowsPowerShell\Modules\ -Name NanoServerPackage -MinimumVersion 1.0.1.0
 Import-PackageProvider NanoServerPackage
 ```
 
@@ -273,13 +271,13 @@ Find-NanoServerPackage
 
 다음은 패키지 검색 결과를 설치 cmdlet으로 전송하는 몇 가지 예입니다.  
 
-`Find-NanoServerPackage *dcb* | Install-NanoServerPackage`는 이름에 "dcb"가 포함된 패키지를 찾아서 설치합니다.
+`Find-NanoServerPackage *dcb* | Install-NanoServerPackage`는 이름에 dcb가 포함된 패키지를 찾아서 설치합니다.
 
-`Find-Package *nanoserver-compute-* | Install-Package`는 이름에 "nanoserver-compute-"가 포함된 패키지를 찾아서 설치합니다.
+`Find-Package *nanoserver-compute-* | Install-Package`는 이름에 nanoserver-compute-가 포함된 패키지를 찾아서 설치합니다.
 
-`Find-NanoServerPackage -Name *nanoserver-compute* | Install-NanoServerPackage -ToVhd C:\MyNanoVhd.vhd`는 이름에 "compute"가 포함된 패키지를 찾아서 오프라인 이미지에 설치합니다.
+`Find-NanoServerPackage -Name *nanoserver-compute* | Install-NanoServerPackage -ToVhd C:\MyNanoVhd.vhd`는 이름에 compute가 포함된 패키지를 찾아서 오프라인 이미지에 설치합니다.
 
-`Find-Package -ProviderName NanoserverPackage *nanoserver-compute-* | Install-Package -ToVhd C:\MyNanoVhd.vhd`는 이름에 "nanoserver-compute-"가 포함된 패키지와 똑같은 방식으로 작동합니다.
+`Find-Package -ProviderName NanoserverPackage *nanoserver-compute-* | Install-Package -ToVhd C:\MyNanoVhd.vhd`는 이름에 nanoserver-compute-가 포함된 패키지와 똑같은 방식으로 작동합니다.
 
 ### <a name="downloading-nano-server-packages"></a>Nano 서버 패키지 다운로드  
 
@@ -313,19 +311,19 @@ Find-NanoServerPackage
 
 
 ```  
-<?xml version="1.0" encoding="utf-8"?>
-    <unattend xmlns="urn:schemas-microsoft-com:unattend">  
+<?xml version=1.0 encoding=utf-8?>
+    <unattend xmlns=urn:schemas-microsoft-com:unattend>  
     <servicing>  
-        <package action="install">  
-            <assemblyIdentity name="Microsoft-NanoServer-IIS-Feature-Package" version="10.0.14393.0" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" />  
-            <source location="c:\packages\Microsoft-NanoServer-IIS-Package.cab" />  
+        <package action=install>  
+            <assemblyIdentity name=Microsoft-NanoServer-IIS-Feature-Package version=10.0.14393.0 processorArchitecture=amd64 publicKeyToken=31bf3856ad364e35 language=neutral />  
+            <source location=c:\packages\Microsoft-NanoServer-IIS-Package.cab />  
         </package>  
-        <package action="install">  
-            <assemblyIdentity name="Microsoft-NanoServer-IIS-Feature-Package" version="10.0.14393.0" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="en-US" />  
-            <source location="c:\packages\en-us\Microsoft-NanoServer-IIS-Package_en-us.cab" />  
+        <package action=install>  
+            <assemblyIdentity name=Microsoft-NanoServer-IIS-Feature-Package version=10.0.14393.0 processorArchitecture=amd64 publicKeyToken=31bf3856ad364e35 language=en-US />  
+            <source location=c:\packages\en-us\Microsoft-NanoServer-IIS-Package_en-us.cab />  
         </package>  
     </servicing>  
-    <cpi:offlineImage cpi:source="" xmlns:cpi="urn:schemas-microsoft-com:cpi" />  
+    <cpi:offlineImage cpi:source= xmlns:cpi=urn:schemas-microsoft-com:cpi />  
 </unattend>  
 ```  
 
@@ -344,7 +342,7 @@ Find-NanoServerPackage
 
    **dism /online /get-packages**  
 
-   "패키지 ID: Microsoft-NanoServer-IIS-Package~31bf3856ad364e35~amd64~en-US~10.0.10586.0"이 두 번 나열되고, 릴리스 유형: 언어 팩이 한 번 나열되고, 릴리스 유형: 기능 팩이 한 번 나열되어야 합니다.  
+   패키지 ID: Microsoft-NanoServer-IIS-Package~31bf3856ad364e35~amd64~en-US~10.0.10586.0이 두 번 나열되고, 릴리스 유형: 언어 팩이 한 번 나열되고, 릴리스 유형: 기능 팩이 한 번 나열되어야 합니다.  
 
 ## <a name="customizing-an-existing-nano-server-vhd"></a>기존 Nano 서버 VHD 사용자 지정  
 이 예제처럼 Edit-NanoServerImage cmdlet을 사용하여 기존 VHD의 세부 정보를 변경할 수 있습니다.  
@@ -360,7 +358,7 @@ New-NanoServerImage는 도메인에 가입하는 두 가지 방법을 제공합�
 
 `New-NanoServerImage -Edition Standard -DeploymentType Host -MediaPath \\Path\To\Media\en_us -BasePath .\Base -TargetPath .\JoinDomHarvest.vhdx -ComputerName JoinDomHarvest -DomainName Contoso`  
 
-이 cmdlet이 완료되면 Active Directory 컴퓨터 목록에서 "JoinDomHarvest"라는 컴퓨터를 찾아야 합니다.  
+이 cmdlet이 완료되면 Active Directory 컴퓨터 목록에서 JoinDomHarvest라는 컴퓨터를 찾아야 합니다.  
 
 또한 도메인에 가입되지 않은 컴퓨터에서 이 cmdlet을 사용할 수 있습니다. 이렇게 하려면 도메인에 가입된 컴퓨터에서 blob을 수집한 다음 해당 blob를 cmdlet에 직접 입력합니다. 다른 컴퓨터에서 이러한 blob을 수집할 때 blob에는 이미 해당 컴퓨터의 이름이 포함되어 있으므로 *-ComputerName* 매개 변수를 추가하려고 시도하면 오류가 발생합니다.  
 
@@ -436,13 +434,13 @@ Nano 서버는 다양한 네트워크 어댑터 및 스토리지 컨트롤러를
 ### <a name="running-custom-commands-after-the-first-boot"></a>첫 번째 부팅 후 사용자 지정 명령 실행
 setupcomplete.cmd의 일부로 사용자 지정 명령을 실행하려면 -SetupCompleteCommand 매개 변수를 사용하여 명령 배열을 전달합니다.
 
-`New-NanoServerImage -DeploymentType Host -Edition Standard -MediaPath \\Path\To\Media\en_us -BasePath .\Base -TargetPath .\NanoServer.wim -SetupCompleteCommand @("echo foo", "echo bar")`
+`New-NanoServerImage -DeploymentType Host -Edition Standard -MediaPath \\Path\To\Media\en_us -BasePath .\Base -TargetPath .\NanoServer.wim -SetupCompleteCommand @(echo foo, echo bar)`
 
 
 ### <a name="running-custom-powershell-scripts-as-part-of-image-creation"></a>이미지 생성의 일환으로 사용자 지정 PowerShell 스크립트 실행
 이미지 생성 프로세스의 일환으로 사용자 지정 PowerShell 스크립트를 실행하려면 -OfflineScriptPath 매개 변수를 사용하여 .ps1 스크립트로 경로 배열을 전달합니다. 이러한 스크립트에서 인수를 사용할 경우 -OfflineScriptArgument를 사용하여 추가 인수의 해시 테이블을 스크립트에 전달합니다.
 
-`New-NanoServerImage -DeploymentType Host -Edition Standard -MediaPath \\Path\To\Media\en_us -BasePath .\Base -TargetPath .\NanoServer.wim -OfflineScriptPath C:\MyScripts\custom.ps1 -OfflineScriptArgument @{Param1="Value1"; Param2="Value2"}`
+`New-NanoServerImage -DeploymentType Host -Edition Standard -MediaPath \\Path\To\Media\en_us -BasePath .\Base -TargetPath .\NanoServer.wim -OfflineScriptPath C:\MyScripts\custom.ps1 -OfflineScriptArgument @{Param1=Value1; Param2=Value2}`
 
 
 ### <a name="support-for-development-scenarios"></a>개발 시나리오 지원
@@ -488,7 +486,7 @@ WSA 패키지를 만들어서 Nano 서버에 설치하려면 게시자와 패키
 
 다음으로 패키지 소비자는 다음 단계를 수행해야 합니다.
 
-1. [*Import-Certificate*](https://technet.microsoft.com/library/hh848630) PowerShell cmdlet을 실행하여 위의 4단계에서 만든 게시자의 인증서를 Nano 서버의 certStoreLocation인 "Cert:\LocalMachine\TrustedPeople"로 가져옵니다. 예를 들면 다음과 같습니다. `Import-Certificate -FilePath ".\xyz.cer" -CertStoreLocation "Cert:\LocalMachine\TrustedPeople"`
+1. [*Import-Certificate*](https://technet.microsoft.com/library/hh848630) PowerShell cmdlet을 실행하여 위의 4단계에서 만든 게시자의 인증서를 Nano 서버의 certStoreLocation인 Cert:\LocalMachine\TrustedPeople로 가져옵니다. 예를 들면 다음과 같습니다. `Import-Certificate -FilePath .\xyz.cer -CertStoreLocation Cert:\LocalMachine\TrustedPeople`
 2. [**Add-AppxPackage**](https://technet.microsoft.com/library/mt575516(v=wps.620).aspx) PowerShell cmdlet을 실행하여 Nano 서버에 응용 프로그램을 설치하고 Nano 서버에 WSA 패키지를 설치합니다. 예를 들면 다음과 같습니다. `Add-AppxPackage wsaSample.appx`
 
 #### <a name="additional-resources-for-creating-apps"></a>앱 만들기에 대한 추가 리소스
@@ -522,7 +520,7 @@ PnP 드라이버 패키지는 [PnpUtil](https://msdn.microsoft.com/library/windo
 --------------------------------------------------  
 
 
-## <a name="BKMK_JoinDomain"></a>Nano 서버를 도메인에 가입  
+## <a name="joining-nano-server-to-a-domain"></a><a name=BKMK_JoinDomain></a>Nano 서버를 도메인에 가입  
 
 ### <a name="to-add-nano-server-to-a-domain-online"></a>Nano 서버를 온라인으로 도메인에 추가하려면  
 
@@ -530,26 +528,26 @@ PnP 드라이버 패키지는 [PnpUtil](https://msdn.microsoft.com/library/windo
 
     `djoin.exe /provision /domain <domain-name> /machine <machine-name> /savefile .\odjblob`  
 
-    이렇게 하면 "odjblob"이라는 파일에 데이터 blob이 저장됩니다.  
+    이렇게 하면 odjblob이라는 파일에 데이터 blob이 저장됩니다.  
 
-2.  다음 명령을 사용하여 "odjblob" 파일을 Nano 서버 컴퓨터에 복사합니다.  
+2.  다음 명령을 사용하여 odjblob 파일을 Nano 서버 컴퓨터에 복사합니다.  
 
     **net use z: \\\\\<Nano 서버의 ip 주소>\c$**  
 
     > [!NOTE]  
     > net use 명령이 실패하면 Windows 방화벽 규칙을 조정해야 합니다. 이렇게 하려면 먼저 관리자 권한 명령 프롬프트를 열고, Windows PowerShell을 시작한 후 다음 명령을 사용하여 Windows PowerShell 원격 기능으로 Nano 서버 컴퓨터에 연결합니다.  
     >   
-    > `Set-Item WSMan:\localhost\Client\TrustedHosts "<IP address of Nano Server>"`  
+    > `Set-Item WSMan:\localhost\Client\TrustedHosts <IP address of Nano Server>`  
     >   
-    > `$ip = "<ip address of Nano Server>"`  
+    > `$ip = <ip address of Nano Server>`  
     >   
     > `Enter-PSSession -ComputerName $ip -Credential $ip\Administrator`  
     >   
     > 메시지가 나타나면 관리자 암호를 입력한 다음 이 명령을 실행하여 방화벽 규칙을 설정합니다.  
     >   
-    > **netsh advfirewall firewall set rule group="File and Printer Sharing" new enable=yes**  
+    > **netsh advfirewall firewall set rule group=File and Printer Sharing new enable=yes**  
     >   
-    > `Exit-PSSession`을 사용하여 Windows PowerShell을 종료한 다음 net use 명령을 다시 시도합니다. 명령이 성공하면 계속해서 Nano 서버에 "odjblob" 파일 콘텐츠를 복사합니다.  
+    > `Exit-PSSession`을 사용하여 Windows PowerShell을 종료한 다음 net use 명령을 다시 시도합니다. 명령이 성공하면 계속해서 Nano 서버에 odjblob 파일 콘텐츠를 복사합니다.  
 
     **md z:\Temp**  
 
@@ -557,9 +555,9 @@ PnP 드라이버 패키지는 [PnpUtil](https://msdn.microsoft.com/library/windo
 
 3.  Nano 서버를 가입하려는 도메인을 확인하고 해당 DNS가 구성되었는지 확인합니다. 또한 도메인 또는 도메인 컨트롤러의 이름 확인이 예상대로 작동하는지 확인합니다. 이렇게 하려면 먼저 관리자 권한 명령 프롬프트를 열고, Windows PowerShell을 시작한 후 다음 명령을 사용하여 Windows PowerShell 원격 기능으로 Nano 서버 컴퓨터에 연결합니다.  
 
-    `Set-Item WSMan:\localhost\Client\TrustedHosts "<IP address of Nano Server>"`  
+    `Set-Item WSMan:\localhost\Client\TrustedHosts <IP address of Nano Server>`  
 
-    `$ip = "<ip address of Nano Server>"`  
+    `$ip = <ip address of Nano Server>`  
 
     `Enter-PSSession -ComputerName $ip -Credential $ip\Administrator`  
 
@@ -577,7 +575,7 @@ PnP 드라이버 패키지는 [PnpUtil](https://msdn.microsoft.com/library/windo
 
 6.  Nano 서버를 도메인에 가입한 후에는 Nano 서버의 관리자 그룹에 도메인 사용자 계정을 추가합니다.
 
-7. 보안을 위해 이 명령을 사용하여 신뢰할 수 있는 호스트 목록에서 Nano 서버를 제거합니다.`Set-Item WSMan:\localhost\client\TrustedHosts ""` 
+7. 보안을 위해 이 명령을 사용하여 신뢰할 수 있는 호스트 목록에서 Nano 서버를 제거합니다.`Set-Item WSMan:\localhost\client\TrustedHosts ` 
 
 **한 번에 도메인에 가입하는 대체 방법**  
 
@@ -585,7 +583,7 @@ PnP 드라이버 패키지는 [PnpUtil](https://msdn.microsoft.com/library/windo
 
 `djoin.exe /provision /domain <domain-name> /machine <machine-name> /savefile .\odjblob`  
 
-"odjblob" 파일을 열고(메모장에서), 콘텐츠를 복사한 다음 아래 Unattend.xml 파일의 \<AccountData> 섹션에 붙여 넣습니다.  
+odjblob 파일을 열고(메모장에서), 콘텐츠를 복사한 다음, 아래 Unattend.xml 파일의 \<AccountData> 섹션에 붙여 넣습니다.  
 
 이 Unattend.xml 파일을 C:\NanoServer 폴더에 넣은 후, 다음 명령을 사용하여 VHD를 탑재하고 `offlineServicing` 섹션의 설정을 적용합니다.  
 
@@ -593,7 +591,7 @@ PnP 드라이버 패키지는 [PnpUtil](https://msdn.microsoft.com/library/windo
 
 **dism\dismmedia:.\mountdir /Apply-Unattend:.\unattend.xml**  
 
-"Panther" 폴더를 만들고(설치하는 동안 Windows 시스템에서 파일을 저장하는 데 사용하며, 자세한 내용은 [Windows 7, Windows Server 2008 R2 및 Windows Vista 설치 로그 파일 위치](https://support.microsoft.com/kb/927521) 참조), 이 폴더에 Unattend.xml 파일을 복사하고, 다음 명령을 사용하여 VHD를 탑재 해제합니다.  
+Panther 폴더를 만들고(설치하는 동안 Windows 시스템에서 파일을 저장하는 데 사용하며, 자세한 내용은 [Windows 7, Windows Server 2008 R2 및 Windows Vista 설치 로그 파일 위치](https://support.microsoft.com/kb/927521) 참조), 이 폴더에 Unattend.xml 파일을 복사하고, 다음 명령을 사용하여 VHD를 탑재 해제합니다.  
 
 **md .\mountdir\windows\panther**  
 
@@ -639,11 +637,11 @@ Hyper-V는 Windows Server의 Server Core 모드에서 작동하는 것과 똑같
 
 **CredSSP**  
 
-먼저 이 토픽의 "Windows PowerShell 원격 기능 사용" 섹션을 참조하여 CredSSP를 사용하도록 설정하고 테스트하세요. 그런 다음 관리 컴퓨터에서 Hyper-V 관리자를 사용하여 "다른 사용자로 연결" 옵션을 선택합니다. Hyper-V 관리자가 CredSSP를 사용할 것입니다. 현재 계정을 사용하는 경우 이 작업을 수행해야 합니다.  
+먼저 이 토픽의 Windows PowerShell 원격 기능 사용 섹션을 참조하여 CredSSP를 사용하도록 설정하고 테스트하세요. 그런 다음, 관리 컴퓨터에서 Hyper-V 관리자를 사용하여 다른 사용자로 연결 옵션을 선택합니다. Hyper-V 관리자가 CredSSP를 사용할 것입니다. 현재 계정을 사용하는 경우 이 작업을 수행해야 합니다.  
 
 Hyper-V용 Windows PowerShell cmdlet은 CimSession 또는 Credential 매개 변수 중 CredSSP와 호환되는 것을 사용할 수 있습니다.  
 
-### <a name="BKMK_Failover"></a>Nano 서버에서 장애 조치(failover) 클러스터링 사용  
+### <a name="using-failover-clustering-on-nano-server"></a><a name=BKMK_Failover></a>Nano 서버에서 장애 조치(failover) 클러스터링 사용  
 장애 조치(failover) 클러스터링은 Windows Server의 Server Core 모드에서 작동하는 것과 동일한 방식으로 Nano 서버에서 작동하지만 않지만 다음 사항을 염두에 두어야 합니다.  
 
 -   장애 조치(Failover) 클러스터 관리자 또는 Windows PowerShell을 사용하여 클러스터를 원격으로 관리해야 합니다.  
@@ -674,31 +672,31 @@ Hyper-V용 Windows PowerShell cmdlet은 CimSession 또는 Credential 매개 변�
 
 [Microsoft.FailoverClusters.PowerShell](https://technet.microsoft.com/library/ee461009.aspx)에서 장애 조치(failover) 클러스터링에 대한 추가 cmdlet을 찾을 수 있습니다.  
 
-### <a name="BKMK_DNS"></a>Nano 서버에서 DNS 서버 사용  
-Nano 서버에 DNS 서버 역할을 제공하려면 이미지에 Microsoft-NanoServer-DNS-Package를 추가합니다(이 토픽의 "사용자 지정 Nano 서버 이미지 만들기" 참조). Nano 서버가 실행되면 Nano 서버에 연결한 후 관리자 권한 Windows PowerShell 콘솔에서 다음 명령을 실행하여 이 기능을 사용하도록 설정합니다.  
+### <a name="using-dns-server-on-nano-server"></a><a name=BKMK_DNS></a>Nano 서버에서 DNS 서버 사용  
+Nano 서버에 DNS 서버 역할을 제공하려면 이미지에 Microsoft-NanoServer-DNS-Package를 추가합니다(이 토픽의 사용자 지정 Nano 서버 이미지 만들기 참조). Nano 서버가 실행되면 Nano 서버에 연결한 후 관리자 권한 Windows PowerShell 콘솔에서 다음 명령을 실행하여 이 기능을 사용하도록 설정합니다.  
 
 `Enable-WindowsOptionalFeature -Online -FeatureName DNS-Server-Full-Role`  
 
-### <a name="BKMK_IIS"></a>Nano 서버에서 IIS 사용  
+### <a name="using-iis-on-nano-server"></a><a name=BKMK_IIS></a>Nano 서버에서 IIS 사용  
 IIS(인터넷 정보 서비스) 역할을 사용하는 단계는 [Nano 서버의 IIS](IIS-on-Nano-Server.md)를 참조하세요. 
 
 ### <a name="using-mpio-on-nano-server"></a>Nano Server에서 MPIO 사용
 MPIO를 사용하는 단계는 [Nano 서버의 MPIO](MPIO-on-Nano-Server.md)를 참조하세요. 
 
-### <a name="BKMK_SSH"></a>Nano 서버에서 SSH 사용
+### <a name="using-ssh-on-nano-server"></a><a name=BKMK_SSH></a>Nano 서버에서 SSH 사용
 Nano 서버에 SSH를 설치하고 OpenSSH 프로젝트에 사용하는 방법에 대한 자세한 지침은 [Win32-OpenSSH wiki](https://github.com/PowerShell/Win32-OpenSSH/wiki)를 참조하세요.
 
 ## <a name="appendix-sample-unattendxml-file-that-joins-nano-server-to-a-domain"></a>부록: Nano 서버를 도메인에 가입하는 샘플 Unattend.xml 파일  
 
 > [!NOTE]  
-> "odjblob"을 무인 파일에 붙여 넣을 때 odjblob 콘텐츠의 후행 공백을 삭제해야 합니다.  
+> odjblob을 무인 파일에 붙여 넣을 때 odjblob 콘텐츠의 후행 공백을 삭제해야 합니다.  
 
 ```  
 <?xml version='1.0' encoding='utf-8'?>  
-<unattend xmlns="urn:schemas-microsoft-com:unattend" xmlns:wcm="https://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+<unattend xmlns=urn:schemas-microsoft-com:unattend xmlns:wcm=https://schemas.microsoft.com/WMIConfig/2002/State xmlns:xsi=http://www.w3.org/2001/XMLSchema-instance>  
 
-  <settings pass="offlineServicing">  
-    <component name="Microsoft-Windows-UnattendedJoin" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">  
+  <settings pass=offlineServicing>  
+    <component name=Microsoft-Windows-UnattendedJoin processorArchitecture=amd64 publicKeyToken=31bf3856ad364e35 language=neutral versionScope=nonSxS>  
         <OfflineIdentification>                
            <Provisioning>    
              <AccountData> AAAAAAARUABLEABLEABAoAAAAAAAMABSUABLEABLEABAwAAAAAAAAABbMAAdYABc8ABYkABLAABbMAAEAAAAMAAA0ABY4ABZ8ABbIABa0AAcIABY4ABb8ABZUABAsAAAAAAAQAAZoABNUABOYABZYAANQABMoAAOEAAMIAAOkAANoAAMAAAXwAAJAAAAYAAA0ABY4ABZ8ABbIABa0AAcIABY4ABb8ABZUABLEAALMABLQABU0AATMABXAAAAAAAKdf/mhfXoAAUAAAQAAAAb8ABLQABbMABcMABb4ABc8ABAIAAAAAAb8ABLQABbMABcMABb4ABc8ABLQABb0ABZIAAGAAAAsAAR4ABTQABUAAAAAAACAAAQwABZMAAZcAAUgABVcAAegAARcABKkABVIAASwAAY4ABbcABW8ABQoAAT0ABN8AAO8ABekAAJMAAVkAAZUABckABXEABJUAAQ8AAJ4AAIsABZMABdoAAOsABIsABKkABQEABUEABIwABKoAAaAABXgABNwAAegAAAkAAAAABAMABLIABdIABc8ABY4AADAAAA4AAZ4ABbQABcAAAAAAACAAkKBW0ID8nJDWYAHnBAXE77j7BAEWEkl+lKB98XC2G0/9+Wd1DJQW4IYAkKBAADhAnKBWEwhiDAAAM2zzDCEAM6IAAAgAAAAAAAQAAAAAAAAAAAABwzzAAA  
@@ -708,8 +706,8 @@ Nano 서버에 SSH를 설치하고 OpenSSH 프로젝트에 사용하는 방법�
     </component>  
   </settings>  
 
-  <settings pass="oobeSystem">  
-    <component name="Microsoft-Windows-Shell-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">  
+  <settings pass=oobeSystem>  
+    <component name=Microsoft-Windows-Shell-Setup processorArchitecture=amd64 publicKeyToken=31bf3856ad364e35 language=neutral versionScope=nonSxS>  
       <UserAccounts>  
         <AdministratorPassword>  
            <Value>Tuva</Value>  
@@ -720,8 +718,8 @@ Nano 서버에 SSH를 설치하고 OpenSSH 프로젝트에 사용하는 방법�
     </component>  
   </settings>  
 
-  <settings pass="specialize">  
-    <component name="Microsoft-Windows-Shell-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">  
+  <settings pass=specialize>  
+    <component name=Microsoft-Windows-Shell-Setup processorArchitecture=amd64 publicKeyToken=31bf3856ad364e35 language=neutral versionScope=nonSxS>  
       <RegisteredOwner>My Team</RegisteredOwner>  
       <RegisteredOrganization>My Corporation</RegisteredOrganization>  
     </component>  

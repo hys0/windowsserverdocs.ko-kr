@@ -1,25 +1,21 @@
 ---
 title: Windows Server 2016으로 이동하기 위한 권장 사항
 description: Windows Server 2016으로 이동하기 위한 권장 사항입니다.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.date: 10/18/2016
 ms.technology: server-general
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 74aa1da3-7076-4a1f-ad5b-9e17bd46dba2
 author: jaimeo
 ms.author: jaimeo
 manager: dongill
 ms.localizationpriority: medium
-ms.openlocfilehash: be63880e8a07e71aa6811f3a6979eb6e2fcd8eba
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 6b02a3caa0db2a66307754ebd95865d8ba10ef4f
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75947802"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80826756"
 ---
 # <a name="recommendations-for-moving-to-windows-server-2016"></a>Windows Server 2016으로 이동하기 위한 권장 사항
 
@@ -33,7 +29,7 @@ ms.locfileid: "75947802"
 |**ISV 애플리케이션 작업**|- Windows Server 2016으로의 업그레이드에는 애플리케이션 관련 지침을 사용해야 합니다. <br>- 타사 애플리케이션과 Windows Server 호환성에 대한 자세한 내용을 보려면 [Windows Server 로고 인증 포털](https://msdn.microsoft.com/enterprisecloudcertified)을 방문하세요.|Windows Server 2016의 새 기능을 활용하려면 기존 호스트의 가상 머신에서 새 하드웨어를 배포하거나 Windows Server 2016을 설치합니다. 일부 새 기능은 Hyper-V를 실행하는 Windows Server 2016 물리적 호스트에서 가장 잘 작동합니다. 가능한 경우 마이그레이션 가이드를 따르세요. <br>- 또는 현재 OS를 그대로 유지하고 Windows Server 2016 호스트 또는 Microsoft Azure에서 실행되는 가상 머신에서 실행합니다. [Software Assurance](https://www.microsoft.com/Licensing/licensing-programs/software-assurance-default.aspx)를 통한 확장 지원 옵션에 대해 알아보려면 EA 대리점, TAM 또는 Microsoft에 문의하세요.|
 |**사용자 지정 애플리케이션 작업**|- Windows Server 2016의 호환성 및 업그레이드 지침에 대해서는 애플리케이션 개발자에게 문의하세요. <br>- 전환하기 전에 Microsoft Azure를 활용하여 Windows Server 2016에서 애플리케이션을 테스트하세요. <br>- 다음 섹션의 전체 옵션을 참조하세요.|- Windows Server 2016의 호환성 및 업그레이드 지침에 대해서는 애플리케이션 개발자에게 문의하세요. <br>- 전환하기 전에 Microsoft Azure를 활용하여 Windows Server 2016에서 애플리케이션을 테스트하세요. <br>Windows Server 2016의 새 기능을 활용하려면 기존 호스트의 가상 머신에서 새 하드웨어를 배포하거나 Windows Server 2016을 설치합니다. 일부 새 기능은 Hyper-V를 실행하는 Windows Server 2016 물리적 호스트에서 가장 잘 작동합니다. <br>- 다음 섹션의 전체 옵션을 참조하세요.|
 
-## <a name="complete-options-for-moving-servers-running-custom-or-in-house-applications-on-older-versions-of-windows-server-to-windows-server-2016"></a>이전 버전의 Windows Server에서 사용자 지정 또는 “내부” 애플리케이션을 실행하는 서버를 Windows Server 2016으로 전환하기 위한 전체 옵션
+## <a name="complete-options-for-moving-servers-running-custom-or-in-house-applications-on-older-versions-of-windows-server-to-windows-server-2016"></a>이전 버전의 Windows Server에서 사용자 지정 또는 내부 애플리케이션을 실행하는 서버를 Windows Server 2016으로 전환하기 위한 전체 옵션
 
 현재 서비스 및 작업에 미치는 영향을 최소화하면서 사용자 및 고객이 Windows Server 2016의 기능을 활용하는 데 도움이 되는 옵션이 이전보다 다양하게 제공됩니다.
 

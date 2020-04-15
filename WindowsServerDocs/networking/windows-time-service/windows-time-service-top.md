@@ -1,20 +1,19 @@
 ---
 ms.assetid: e34622ff-b2d0-4f81-8d00-dacd5d6c215e
 title: Windows 시간 서비스
-description: ''
-author: eross-msft
-ms.author: lizross
+author: dcuomo
+ms.author: dacuo
 manager: dougkim
 ms.date: 05/08/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: networking
-ms.openlocfilehash: 4b8b1e91f56ec4d6c070037a0f3cc5ec4d50c63e
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 5dbb0db20f7100ed7dbe99587f201f38abf632ad
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80314920"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80815906"
 ---
 # <a name="windows-time-service-w32time"></a>Windows 시간 서비스(W32Time)
 
@@ -33,7 +32,7 @@ Windows 시간 서비스(W32Time) 항목에서 다음 콘텐츠를 사용할 수
 
 
 ## <a name="related-topics"></a>관련 항목
-도메인 계층 구조 및 점수 매기기 시스템에 대한 자세한 내용은 [“Windows 시간 서비스란?”](https://blogs.msdn.microsoft.com/w32time/2007/07/07/what-is-windows-time-service/)을 참조하세요. 블로그 게시물.
+도메인 계층 구조 및 점수 매기기 시스템에 대한 자세한 내용은 ["Windows 시간 서비스란?"](https://blogs.msdn.microsoft.com/w32time/2007/07/07/what-is-windows-time-service/)을 참조하세요. 블로그 게시물.
 
 Windows 시간 공급자 플러그 인 모델은 [technet 문서화](https://msdn.microsoft.com/library/windows/desktop/ms725475%28v=vs.85%29.aspx)합니다.
 

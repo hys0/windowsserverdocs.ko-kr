@@ -1,25 +1,21 @@
 ---
 title: 릴리스 정보 - Windows Server, 버전 1709의 중요한 문제
 description: 충돌, 중단, 설치 실패, 데이터 손실 등을 방지하기 위한 해결책이 필요한 중요한 문제를 요약합니다.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.date: 04/23/2018
 ms.technology: server-general
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 134aab85-664f-4d44-87ef-9e5fd389071f
 author: jaimeo
 ms.author: jaimeo
 manager: dougkim
 ms.localizationpriority: medium
-ms.openlocfilehash: dcd50b287ad0f3dd49a0df3c1fe531379bd4078e
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: fea4b259986d1ca6e2f992168f7b0c2e1a177916
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75948234"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80826106"
 ---
 # <a name="release-notes-important-issues-in-windows-server-version-1709"></a>릴리스 정보: Windows Server 버전 1709의 중요한 이슈
 
@@ -31,7 +27,7 @@ ms.locfileid: "75948234"
   
 ## <a name="storage-spaces-direct"></a>직접 스토리지 공간
 [comment]: # (ID: unknown; Submitter: stevenek; state: signed off)  
-스토리지 공간 다이렉트는 Windows Server, 버전 1709에 포함되지 않습니다. *Enable-ClusterStorageSpacesDirect* 또는 그 별칭인 *Enable-ClusterS2D*를 호출하는 경우 Windows Server, 버전 1709를 실행하는 서버에서 "요청한 작업이 지원되지 않습니다"라는 메시지와 함께 오류가 표시됩니다.
+스토리지 공간 다이렉트는 Windows Server, 버전 1709에 포함되지 않습니다. *Enable-ClusterStorageSpacesDirect* 또는 그 별칭인 *Enable-ClusterS2D*를 호출하는 경우 Windows Server, 버전 1709를 실행하는 서버에서 요청한 작업이 지원되지 않습니다라는 메시지와 함께 오류가 표시됩니다.
 
 또한 Windows Server, 버전 1709를 실행하는 서버를 Windows Server 2016 스토리지 공간 다이렉트 배포에 도입하는 것 역시 지원되지 않습니다.
 

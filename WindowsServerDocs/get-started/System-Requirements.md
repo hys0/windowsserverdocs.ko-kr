@@ -1,25 +1,21 @@
 ---
 title: 시스템 요구 사항
 description: 각 설치 옵션의 새로 설치 시 스토리지, CPU, 네트워크, 메모리 및 RAM에 대한 최소 요구 사항입니다.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.date: 10/17/2017
 ms.technology: server-general
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4a8b42d7-9fe5-4efe-9ea1-ace2131fe068
 author: jaimeo
 ms.author: jaimeo
 manager: dongill
 ms.localizationpriority: medium
-ms.openlocfilehash: 9e8b0c04137ff3b11cdaa7aba3c7899ca6300848
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: cd4666f9ac0677ce8893041ae4e937cca41e8164
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75947747"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80826496"
 ---
 # <a name="system-requirements"></a>시스템 요구 사항
 
@@ -31,16 +27,16 @@ ms.locfileid: "75947747"
 > 이 릴리스에서는 새로 설치만 권장됩니다.  
 
 > [!NOTE]  
-> 설치 시 Server Core 옵션으로 설치하도록 선택한 경우 GUI 구성 요소는 설치되지 않으며 서버 관리자를 사용하여 설치하거나 제거할 수 있다는 점을 알아야 합니다. GUI 기능이 필요한 경우 Windows Server 2016을 설치할 때 "데스크톱 환경 포함 서버" 옵션을 선택해야 합니다. 자세한 내용은 [Nano Server 설치](Getting-Started-with-Nano-Server.md)를 참조하세요.  
+> 설치 시 Server Core 옵션으로 설치하도록 선택한 경우 GUI 구성 요소는 설치되지 않으며 서버 관리자를 사용하여 설치하거나 제거할 수 있다는 점을 알아야 합니다. GUI 기능이 필요한 경우 Windows Server 2016을 설치할 때 데스크톱 환경 포함 서버 옵션을 선택해야 합니다. 자세한 내용은 [Nano Server 설치](Getting-Started-with-Nano-Server.md)를 참조하세요.  
 
 
 ## <a name="review-system-requirements"></a>시스템 요구 사항 검토  
-다음은 Windows Server 2016 설치를 위한 예상되는 시스템 요구 사항입니다. 컴퓨터의 사양이 "최소" 요구 사항보다 낮으면 이 제품을 제대로 설치할 수 없습니다. 실제 요구 사항은 사용자가 설치하는 애플리케이션과 기능 및 시스템 구성에 따라 달라질 수 있습니다.
+다음은 Windows Server 2016 설치를 위한 예상되는 시스템 요구 사항입니다. 컴퓨터의 사양이 최소 요구 사항보다 낮으면 이 제품을 제대로 설치할 수 없습니다. 실제 요구 사항은 사용자가 설치하는 애플리케이션과 기능 및 시스템 구성에 따라 달라질 수 있습니다.
 
 달리 지정되지 않는 경우 이러한 최소 시스템 요구 사항은 모든 설치 옵션(Server Core, 데스크톱 환경 포함 서버, Nano 서버)과 Standard 및 Datacenter 버전에 적용됩니다.  
 
 > [!IMPORTANT]  
-> 매우 다양한 잠재적인 배포 범위로 인해 일반적으로 적용되는 "권장" 시스템 요구 사항이 비현실적일 수 있습니다. 특정 서버 역할에 필요한 리소스에 대한 자세한 내용은 배포하려는 각 서버 역할에 대한 설명서를 참조하세요. 최상의 결과를 얻으려면 테스트 배포를 수행하여 특정 배포 시나리오에 적합한 시스템 요구 사항을 확인하세요.  
+> 매우 다양한 잠재적인 배포 범위로 인해 일반적으로 적용되는 권장 시스템 요구 사항이 비현실적일 수 있습니다. 특정 서버 역할에 필요한 리소스에 대한 자세한 내용은 배포하려는 각 서버 역할에 대한 설명서를 참조하세요. 최상의 결과를 얻으려면 테스트 배포를 수행하여 특정 배포 시나리오에 적합한 시스템 요구 사항을 확인하세요.  
 
 
 ## <a name="processor"></a>프로세서  

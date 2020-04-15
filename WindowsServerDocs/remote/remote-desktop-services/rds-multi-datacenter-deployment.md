@@ -1,24 +1,20 @@
 ---
 title: Azure의 지역 중복 RDS 데이터 센터
 description: 여러 데이터 센터를 사용하여 지리적 위치에 걸쳐 고가용성을 제공하는 RDS 배포를 만드는 방법을 알아봅니다.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 61c36528-cf47-4af0-83c1-a883f79a73a5
 author: haley-rowland
 ms.author: elizapo
 ms.date: 06/14/2017
 manager: dongill
-ms.openlocfilehash: 55b96c112dd7f7294ff674ee4675501af4287da4
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 5c0f5d6937a79f36df264597400fe71af3f3779b
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403954"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80855596"
 ---
 # <a name="create-a-geo-redundant-multi-data-center-rds-deployment-for-disaster-recovery"></a>재해 복구를 위한 지역 중복 다중 데이터 센터 RDS 배포 만들기
 
@@ -86,13 +82,13 @@ Azure에서 다음과 같은 리소스를 만들어 지역 중복 다중 데이�
 두 배포 모두에서 UPD를 사용하도록 설정하려면 다음을 수행합니다.
 
 1. [Set-RDSessionCollectionConfiguration cmdlet](https://docs.microsoft.com/powershell/module/remotedesktop/set-rdsessioncollectionconfiguration)을 실행하여 기본(활성) 배포용 사용자 프로필 디스크를 사용하도록 설정합니다. 배포 단계의 7단계에서 만든 원본 볼륨의 파일 공유에 대한 경로를 제공합니다.
-2. 대상 볼륨이 원본 볼륨이 되도록 스토리지 복제본 방향을 반대로 지정합니다(이 경우 볼륨이 탑재되고 보조 배포에서 액세스할 수 있습니다). 이렇게 하려면 **Set-SRPartnership** cmdlet을 실행할 수 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+2. 대상 볼륨이 원본 볼륨이 되도록 스토리지 복제본 방향을 반대로 지정합니다(이 경우 볼륨이 탑재되고 보조 배포에서 액세스할 수 있습니다). 이렇게 하려면 **Set-SRPartnership** cmdlet을 실행할 수 있습니다. 예:
 
    ```powershell
    Set-SRPartnership -NewSourceComputerName "cluster-b-s2d-c" -SourceRGName "cluster-b-s2d-c" -DestinationComputerName "cluster-a-s2d-c" -DestinationRGName "cluster-a-s2d-c"
    ```
 3. 보조(수동) 배포에서 사용자 프로필 디스크를 사용하도록 설정합니다. 1단계에서 기본 배포에 수행한 것과 동일한 단계를 사용합니다.
-4. 스토리지 복제본 방향을 반대로 다시 지정하면 원래 원본 볼륨이 다시 SR 파트너 관계의 원본 볼륨이 되고 기본 배포에서 파일 공유에 액세스할 수 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+4. 스토리지 복제본 방향을 반대로 다시 지정하면 원래 원본 볼륨이 다시 SR 파트너 관계의 원본 볼륨이 되고 기본 배포에서 파일 공유에 액세스할 수 있습니다. 예:
 
    ```powershell
    Set-SRPartnership -NewSourceComputerName "cluster-a-s2d-c" -SourceRGName "cluster-a-s2d-c" -DestinationComputerName "cluster-b-s2d-c" -DestinationRGName "cluster-b-s2d-c"
@@ -123,7 +119,7 @@ Traffic Manager가 "정상"으로 표시되려면 엔드포인트에서 GET 요�
 
 ## <a name="failover"></a>장애 조치(Failover)
 
-활성-수동 배포의 경우 장애 조치를 수행하려면 보조 배포의 VM을 시작해야 합니다. 이 작업은 수동으로 수행하거나 자동화 스크립트를 사용하여 수행할 수 있습니다. 스토리지 공간 다이렉트 SOFS의 치명적 장애 조치의 경우 대상 볼륨이 원본 볼륨이 되도록 스토리지 복제본 파트너 관계 방향을 변경합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+활성-수동 배포의 경우 장애 조치를 수행하려면 보조 배포의 VM을 시작해야 합니다. 이 작업은 수동으로 수행하거나 자동화 스크립트를 사용하여 수행할 수 있습니다. 스토리지 공간 다이렉트 SOFS의 치명적 장애 조치의 경우 대상 볼륨이 원본 볼륨이 되도록 스토리지 복제본 파트너 관계 방향을 변경합니다. 예:
 
    ```powershell
    Set-SRPartnership -NewSourceComputerName "cluster-b-s2d-c" -SourceRGName "cluster-b-s2d-c" -DestinationComputerName "cluster-a-s2d-c" -DestinationRGName "cluster-a-s2d-c"

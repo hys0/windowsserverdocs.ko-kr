@@ -1,6 +1,6 @@
 ---
 title: Windows Server 버전 1709의 새로운 기능
-description: 계산, ID, 관리, 자동화, 네트워킹, 보안, 저장소의 새로운 기능입니다.
+description: 컴퓨팅, ID, 관리, 자동화, 네트워킹, 보안, 스토리지의 새로운 기능입니다.
 ms.prod: windows-server
 ms.technology: server-general
 ms.topic: article
@@ -8,18 +8,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 ms.localizationpriority: medium
 ms.date: 06/03/2019
-ms.openlocfilehash: 5dbbdc19707f2eadfa3b2c919af95b58645de441
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 07479bc5bd2fdf661db8a30e3a9f20c7cce0513e
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71391371"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80825996"
 ---
 # <a name="whats-new-in-windows-server-version-1709"></a>Windows Server 버전 1709의 새로운 기능
 
 >적용 대상: Windows Server(반기 채널)
 
-<img src="../media/landing-icons/new.png" style='float:left; padding:.5em;' alt="Icon showing a newspaper">&nbsp;Windows의 최신 기능을 알아보려면 [Windows Server의 새로운 기능](whats-new-in-windows-server.md)을 참조하세요. 이 콘텐츠는 Windows Server, 버전 1709의 새로운 기능과 변경된 기능을 설명하는 내용입니다. 여기에 나열된 새로운 기능 및 변경 사항은 이 릴리스를 사용할 때 가장 많은 영향을 줄 수 있습니다. [Windows Server, 버전 1709](https://blogs.technet.microsoft.com/windowsserver/2017/08/24/sneak-peek-1-windows-server-version-1709/)도 참조하세요.
+<img src=../media/landing-icons/new.png style='float:left; padding:.5em;' alt=Icon showing a newspaper>&nbsp;Windows의 최신 기능을 알아보려면 [Windows Server의 새로운 기능](whats-new-in-windows-server.md)을 참조하세요. 이 콘텐츠는 Windows Server, 버전 1709의 새로운 기능과 변경된 기능을 설명하는 내용입니다. 여기에 나열된 새로운 기능 및 변경 사항은 이 릴리스를 사용할 때 가장 많은 영향을 줄 수 있습니다. [Windows Server, 버전 1709](https://blogs.technet.microsoft.com/windowsserver/2017/08/24/sneak-peek-1-windows-server-version-1709/)도 참조하세요.
 
 > [!IMPORTANT]
 > Windows Server, 버전 1709는 2019년 4월 9일부터 지원되지 않습니다.
@@ -37,7 +37,7 @@ ms.locfileid: "71391371"
 | ------------- | ------------- | ------------ |
 | 릴리스 흐름  | 1년에 2회(봄과 가을)  | 2~3년마다 |
 | 지원 일정  | 18개월 일반 프로덕션 지원  | 5년 일반 지원 + 5년 추가 지원 |
-| 사용 가능한 시기  | Software Assurance 또는 Azure(클라우드 호스트)  | 모든 채널 |
+| 가용성  | Software Assurance 또는 Azure(클라우드 호스트)  | 모든 채널 |
 | 명명 규칙  | Windows Server, 버전 YYMM  | Windows Server YYYY |
 
 자세한 내용은 [서비스 채널 비교](https://docs.microsoft.com/windows-server/get-started/semi-annual-channel-overview)를 참조하세요.
@@ -56,7 +56,7 @@ ms.locfileid: "71391371"
 IT 관리자의 핵심 문제 해결, 구성 및 유지 관리 시나리오 관리를 돕는 간소화 및 통합된 안전한 환경을 위한 [Project Honolulu](https://docs.microsoft.com/windows-server/manage/honolulu/honolulu)를 확인하세요.  Project Honolulu에는 간소화 및 통합된 안전하고 확장 가능한 차세대 도구가 포함되어 있습니다.
 Project Honolulu에는 PC, Windows 서버, 장애 조치 클러스터는 물론 스토리지 공간 다이렉트 기반 하이퍼 컨버지드 인프라를 관리하고 운영 비용을 절감하기 위한 직관적인 새로운 관리 환경이 포함되어 있습니다.
 
-## <a name="compute"></a>계산
+## <a name="compute"></a>컴퓨팅
 
 **Nano 컨테이너와 Server Core 컨테이너**: 첫 번째이자 가장 중요한 사실은 이 릴리스가 애플리케이션 혁신 추진을 위한 것이라는 사실입니다. Nano 서버 또는 호스트로서의 Nano는 사용되지 않고 컨테이너 이미지로서 Nano를 실행하는 Nano 컨테이너로 교체되었습니다. 
 
@@ -88,7 +88,7 @@ Project Honolulu에는 PC, Windows 서버, 장애 조치 클러스터는 물론 
 
 **SMBLoris 취약점** 서비스 거부를 일으킬 수 있는, “SMBLoris”라고 알려진 문제가 해결되었습니다.
 
-## <a name="storage"></a>저장 공간
+## <a name="storage"></a>스토리지
 
 **스토리지 복제본**: Windows Server 2016의 스토리지 복제본에 추가된 재해 복구 보호가 확장되었습니다.
 - **테스트 장애 조치**: 대상 스토리지를 탑재하는 옵션이 이제 테스트 장애 조치 기능을 통해 이용 가능합니다. 테스트 및 백업을 목적으로 대상 노드에 있는 복제된 스토리지의 스냅샷을 일시적으로 탑재할 수 있습니다.  자세한 내용은 [스토리지 복제본에 대한 질문과 대답](https://aka.ms/srfaq)을 참조하세요. 

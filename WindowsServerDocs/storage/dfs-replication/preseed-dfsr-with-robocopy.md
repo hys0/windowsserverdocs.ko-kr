@@ -8,14 +8,14 @@ ms.author: jgerend
 ms.technology: storage
 ms.date: 05/18/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: ea5cd954dde6d4fa8fcaa7874f75cb9588115ab1
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 8ff800fc2a0885cec39ca104607d7207f0bd8ce0
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402131"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80815606"
 ---
-# <a name="use-robocopy-to-preseed-files-for-dfs-replication"></a>Robocopy를 사용하여 DFS 복제용 파일 미리 시드
+# <a name="use-robocopy-to-pre-seed-files-for-dfs-replication"></a>Robocopy를 사용하여 DFS 복제용 파일 미리 시드
 
 >적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
@@ -26,7 +26,7 @@ Robocopy(강력한 파일 복사) 명령줄 유틸리티는 Windows Server에 �
 >[!IMPORTANT]
 >Robocopy는 배타적으로 잠긴 파일을 복사하지 않습니다. 사용자가 파일 서버에서 여러 파일을 장기간 잠그는 경향이 있는 경우 다른 사전 시드 방법을 고려해야 합니다. 원본 서버와 대상 서버의 파일 목록이 완벽하게 일치하지 않아도 미리 시드를 사용할 수 있지만, DFS 복제를 위해 초기 동기화를 수행할 때 존재하지 않는 파일이 많을수록 미리 시드의 효율성이 떨어집니다. 잠금 충돌을 최소화하려면 조직의 사용량이 많지 않은 시간에 Robocopy를 사용하세요. 미리 시드 후에는 항상 Robocopy 로그를 검사하여 배타적 잠금으로 인해 건너뛴 파일을 파악해야 합니다.
 
-Rbocopy를 사용하여 DFS 복제용 파일 미리 시드하려면 다음 단계를 수행합니다.
+Robocopy를 사용하여 DFS 복제용 파일을 미리 시드하려면 다음 단계를 수행합니다.
 
 1. [최신 버전의 Robocopy를 다운로드하여 설치](#step-1-download-and-install-the-latest-version-of-robocopy)
 2. [복제할 파일 안정화](#step-2-stabilize-files-that-will-be-replicated)
@@ -49,7 +49,7 @@ Rbocopy를 사용하여 DFS 복제용 파일 미리 시드하려면 다음 단�
 
 ## <a name="step-1-download-and-install-the-latest-version-of-robocopy"></a>1단계: 최신 버전의 Robocopy를 다운로드하여 설치
 
-Robocopy를 사용하여 파일을 미리 시드할 것이므로, 최신 버전의 **Robocopy**를 다운로드하여 설치해야 합니다. 이렇게 하면 Robocopy의 배송 버전에 포함된 이슈 때문에 DFS 복제에서 파일을 건너뛰지 않습니다.
+Robocopy를 사용하여 파일을 미리 시드할 것이므로, 최신 버전의 **Robocopy.exe**를 다운로드하여 설치해야 합니다. 이렇게 하면 Robocopy의 배송 버전에 포함된 이슈 때문에 DFS 복제에서 파일을 건너뛰지 않습니다.
 
 호환되는 최신 Robocopy 버전의 소스는 서버에서 실행 중인 Windows Server 버전에 따라 다릅니다. Windows Server 2008 R2 또는 Windows Server 2008용 Robocopy의 최신 버전을 사용하여 핫픽스를 다운로드하는 방법에 대한 자세한 내용은 [현재 Windows Server 2008 및 Windows Server 2008 R2에서 DFS(분산 파일 시스템) 기술에 사용 가능한 핫픽스 목록](https://support.microsoft.com/help/968429/list-of-currently-available-hotfixes-for-distributed-file-system-dfs-t)을 참조하세요.
 
@@ -85,7 +85,7 @@ Robocopy를 사용하여 파일을 미리 시드할 것이므로, 최신 버전�
 >[!NOTE]
 >원본 컴퓨터 또는 대상 컴퓨터에서 Robocopy를 실행할 수 있습니다. 다음 절차에서는 일반적으로 좀 더 최신 운영 체제를 실행하는 대상 서버에서 Robocopy를 실행하여 최신 운영 체제에서 제공하는 추가 Robocopy 기능을 활용하는 방법을 설명합니다.
 
-### <a name="preseed-the-replicated-files-onto-the-destination-server-with-robocopy"></a>Robocopy를 사용하여 복제된 파일을 대상 서버에 미리 시드
+### <a name="pre-seed-the-replicated-files-onto-the-destination-server-with-robocopy"></a>Robocopy를 사용하여 복제된 파일을 대상 서버에 미리 시드
 
 1. 원본 서버와 대상 서버 모두에서 로컬 관리자 그룹의 구성원인 계정으로 대상 서버에 로그인합니다.
 
@@ -117,7 +117,7 @@ Robocopy를 사용하여 파일을 미리 시드할 것이므로, 최신 버전�
     예를 들어 다음 명령은 복제된 원본 폴더 E:\\RF01의 파일을 대상 서버의 데이터 드라이브 D에 복제합니다.
     
     ```PowerShell
-    robocopy.exe "\\srv01\e$\rf01" "d:\rf01" /e /b /copyall /r:6 /w:5 /MT:64 /xd DfsrPrivate /tee /log:c:\temp\preseedsrv02.log
+    robocopy.exe "\\srv01\e$\rf01" "d:\rf01" /e /b /copyall /r:6 /w:5 /MT:64 /xd DfsrPrivate /tee /log:c:\temp\pre-seedsrv02.log
     ```
     
     >[!NOTE]

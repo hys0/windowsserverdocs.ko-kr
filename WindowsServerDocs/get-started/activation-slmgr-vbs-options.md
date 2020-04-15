@@ -1,7 +1,6 @@
 ---
 title: 볼륨 정품 인증 정보를 가져오는 Slmgr.vbs 옵션
 description: Slmgr.vbs 스크립트에 사용할 수 있는 옵션을 나열하고, 이를 사용하는 방법을 설명합니다.
-TOCTitle: Slmgr.vbs Options
 ms.date: 09/24/2019
 ms.technology: server-general
 ms.topic: article
@@ -13,12 +12,12 @@ appliesto:
 - Windows Server 2012 R2
 - Windows 10
 - Windows 8.1
-ms.openlocfilehash: 3b1ce54fe1e1e855d605aba58a0f0e37f0324469
-ms.sourcegitcommit: 9855d6b59b1f8722f39ae74ad373ce1530da0ccf
+ms.openlocfilehash: e3e4b4d236672ce310c8a0eb038d0e19f936a5d2
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71963069"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80826346"
 ---
 # <a name="slmgrvbs-options-for-obtaining-volume-activation-information"></a>볼륨 정품 인증 정보를 가져오는 Slmgr.vbs 옵션
 
@@ -39,7 +38,7 @@ slmgr.vbs [<ComputerName> [<User> <Password>]] [<Options>]
 원격 클라이언트를 관리하려면 VAMT(볼륨 정품 인증 관리 도구) 버전 1.2 이상을 사용하거나 플랫폼 간의 차이점을 인식하는 사용자 지정 WMI 스크립트를 만들어야 합니다. 볼륨 정품 인증용 WMI 속성 및 메서드에 대한 자세한 내용은 [볼륨 정품 인증용 WMI 속성 및 메서드](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn502536(v=ws.11))를 참조하세요.
 
 > [!IMPORTANT]
-> Windows 7 및 Windows Server 2008 R2의 WMI 변경 내용으로 인해 Slmgr.vbs 스크립트는 플랫폼 간에 작동하지 않습니다. Slmgr.vbs를 사용하여 Windows Vista® 운영 체제에서 Windows 7 또는 Windows Server 2008 R2 시스템을 관리하는 것은 지원되지 않습니다. Windows 7 또는 Windows Server 2008 R2에서 이전 시스템을 관리하려고 하면 특정 버전 불일치 오류가 생성됩니다. 예를 들어 **cscript slmgr.vbs \<vista\_machine\_name\> /dlv**를 실행하면 생성되는 출력은 다음과 같습니다.
+> Windows 7 및 Windows Server 2008 R2의 WMI 변경 내용으로 인해 Slmgr.vbs 스크립트는 플랫폼 간에 작동하지 않습니다. Slmgr.vbs를 사용하여 Windows Vista&reg; 운영 체제에서 Windows 7 또는 Windows Server 2008 R2 시스템을 관리하는 것은 지원되지 않습니다. Windows 7 또는 Windows Server 2008 R2에서 이전 시스템을 관리하려고 하면 특정 버전 불일치 오류가 생성됩니다. 예를 들어 **cscript slmgr.vbs \<vista\_machine\_name\> /dlv**를 실행하면 생성되는 출력은 다음과 같습니다.
 >  
 >> Microsoft (R) Windows Script Host Version 5.8 Copyright (C) Microsoft Corporation. All rights reserved.
 >>  
@@ -68,7 +67,7 @@ slmgr.vbs [<ComputerName> [<User> <Password>]] [<Options>]
 |옵션 |설명 |
 | - | - |
 |\/cpky |일부 서비스 작업의 경우 OOBE(첫 실행 경험) 작업 중에 레지스트리에서 제품 키를 사용할 수 있어야 합니다. **/cpky** 옵션은 악성 코드에 의한 제품 키 도난을 방지하기 위해 레지스트리에서 제품 키를 제거합니다.<br />키를 배포하는 일반 정품 설치의 경우 이 작업을 실행하는 것이 좋습니다. MAK 및 KMS 호스트 키에는 이 옵션이 필요하지 않습니다. 이러한 키에는 기본 동작으로 제공되기 때문입니다. 이 옵션은 기본 동작에서 레지스트리의 키를 지우지 않는 다른 유형의 키에만 필요합니다.<br />이 작업은 관리자 권한으로 실행되는 명령 프롬프트 창에서 실행해야 합니다. |
-|\/ilc&nbsp;&lt;license_file&gt; |이 옵션은 필수 매개 변수에 지정된 라이선스 파일을 설치합니다. 이러한 라이선스는 문제 해결, 토큰 기반 정품 인증 지원 또는 등록된 응용 프로그램의 수동 설치 요소로 설치될 수 있습니다.<br />이 프로세스 중에는 라이선스의 유효성이 검사되지 않습니다. 라이선스 유효성 검사가 Slmgr.vbs의 범위를 벗어나기 때문입니다. 대신 소프트웨어 보호 서비스에서 런타임으로 유효성 검사를 처리합니다.<br />관리자 권한으로 실행되는 명령 프롬프트 창에서 이 작업을 실행하거나, 권한이 없는 사용자가 소프트웨어 보호 서비스에 추가로 액세스할 수 있도록 **표준 사용자 작업** 레지스트리 값을 설정해야 합니다. |
+|\/ilc&nbsp;&lt;license_file&gt; |이 옵션은 필수 매개 변수에 지정된 라이선스 파일을 설치합니다. 이러한 라이선스는 문제 해결, 토큰 기반 정품 인증 지원 또는 등록된 애플리케이션의 수동 설치 요소로 설치될 수 있습니다.<br />이 프로세스 중에는 라이선스의 유효성이 검사되지 않습니다. 라이선스 유효성 검사가 Slmgr.vbs의 범위를 벗어나기 때문입니다. 대신 소프트웨어 보호 서비스에서 런타임으로 유효성 검사를 처리합니다.<br />관리자 권한으로 실행되는 명령 프롬프트 창에서 이 작업을 실행하거나, 권한이 없는 사용자가 소프트웨어 보호 서비스에 추가로 액세스할 수 있도록 **표준 사용자 작업** 레지스트리 값을 설정해야 합니다. |
 |\/rilc |이 옵션은 %SystemRoot%\system32\oem 및 %SystemRoot%\System32\spp\tokens에 저장된 모든 라이선스를 다시 설치합니다. 이러한 라이선스는 설치 중에 저장된 "유효한 것으로 알려진" 복사본입니다.<br />신뢰할 수 있는 저장소에 있는 일치하는 모든 라이선스가 대체됩니다. 추가 라이선스(예: TA(신뢰할 수 있는 기관) IL(발급 라이선스), 애플리케이션 라이선스)는 영향을 받지 않습니다.<br />관리자 권한으로 실행되는 명령 프롬프트 창에서 이 작업을 실행하거나, 권한이 없는 사용자가 소프트웨어 보호 서비스에 추가로 액세스할 수 있도록 **표준 사용자 작업** 레지스트리 값을 설정해야 합니다. |
 |\/rearm |이 옵션은 정품 인증 타이머를 다시 설정합니다. **/rearm** 프로세스는 **sysprep /generalize**에 의해서도 호출됩니다.<br />**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform\SkipRearm** 레지스트리 항목이 **1**로 설정된 경우 이 작업은 수행되지 않습니다. 이 레지스트리 항목에 대한 자세한 내용은 [볼륨 정품 인증에 대한 레지스트리 설정](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn502532(v=ws.11))을 참조하세요.<br />관리자 권한으로 실행되는 명령 프롬프트 창에서 이 작업을 실행하거나, 권한이 없는 사용자가 소프트웨어 보호 서비스에 추가로 액세스할 수 있도록 **표준 사용자 작업** 레지스트리 값을 설정해야 합니다. |
 |\/rearm-app &lt;Application&nbsp;ID&gt; |지정된 응용 프로그램의 라이선스 상태를 다시 설정합니다. |

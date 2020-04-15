@@ -2,21 +2,18 @@
 title: Express 업데이트 배달 ISV 지원
 description: WSUS(Windows Server Update Service) 항목 - ISV(독립 소프트웨어 공급업체)가 WSUS를 사용하여 Express 업데이트 배달을 구성하는 방법
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-wsus
-ms.tgt_pltfrm: na
 ms.topic: get-started article
 author: sakitong
 ms.author: coreyp
 manager: lizapo
 ms.date: 10/16/2017
-ms.openlocfilehash: 13568bb320a3d70bfd6a70d2b9731b460be6f346
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 60d01ef425ed96160cd76afdd7c27c081c778add
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75948497"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80828776"
 ---
 # <a name="express-update-delivery-isv-support"></a>Express 업데이트 배달 ISV 지원
 
@@ -58,11 +55,11 @@ ISV는 WSUS 및 WU 클라이언트를 사용하여 Express 업데이트 배달�
    - ISV 클라이언트 에이전트가 승인할 업데이트 및 업데이트 다운로드/설치 시간을 결정합니다.
    - WU 클라이언트는 다운로드할 바이트 범위를 결정하고 다운로드 요청을 시작합니다.
 
-### <a name="BKMK_1"></a>1단계: WSUS 구성
+### <a name="step-1-configure-wsus"></a><a name=BKMK_1></a>1단계: WSUS 구성
 
 WSUS는 Windows 업데이트 인터페이스로 사용되며, 다운로드해야 하는 Express 패키지를 기술하는 모든 메타 데이터를 관리합니다. 배포가 필요하면 [**Windows Server Update Services 3.0 SP2 개요**](https://technet.microsoft.com/library/dd939931(v=ws.10).aspx)를 참조하세요. WSUS가 배포된 후에는 기본적으로 업데이트 콘텐츠를 WSUS 서버에 로컬로 저장할지 여부를 고려해야 합니다. WSUS를 구성할 때 업데이트가 로컬로 저장되지 않도록 하는 것이 좋습니다. 이 경우 해당 환경에서 이러한 패키지의 배포를 지시하는 소프트웨어가 있다고 가정합니다. WSUS 로컬 스토리지 구성 방법은 [**업데이트 저장 위치 결정**](https://technet.microsoft.com/library/cc720494(v=ws.10).aspx)을 참조하세요.
 
-### <a name="BKMK_2"></a>2단계: ISV 파일 캐시 지정 및 채우기 
+### <a name="step-2-specify-and-populate-the-isv-file-cache"></a><a name=BKMK_2></a>2단계: ISV 파일 캐시 지정 및 채우기 
 
 #### <a name="specify-the-isv-file-cache"></a>ISV 파일 캐시 지정
 
@@ -85,7 +82,7 @@ ISV 파일 캐시의 대체 다운로드 위치를 설정할 때는 두 가지 �
 > [!IMPORTANT]
 > ISV 파일 캐시에는 다음이 필요합니다.                                                          
 > - RFC: <http://www.w3.org/Protocols/rfc2616/rfc2616.html>                                                                                                                                                              에 따라 서버가 HTTP 1.1과 호환되어야 합니다.  
-> 특히 웹 서버가 [**HEAD**](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html) 및 [**GET**](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.htm) 요청을 지원해야 합니다.<br>                                                                                                                                                                                                                                                                                                  - 부분 범위 요청<br>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   - Keep-alive<br>                                                                                                                                                                                                                                                                                                                                                                                                                            - "Transfer-Encoding:chunked" 사용 불가                                                                                                 
+> 특히 웹 서버가 [**HEAD**](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html) 및 [**GET**](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.htm) 요청을 지원해야 합니다.<br>                                                                                                                                                                                                                                                                                                  - 부분 범위 요청<br>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   - Keep-alive<br>                                                                                                                                                                                                                                                                                                                                                                                                                            - Transfer-Encoding:chunked 사용 불가                                                                                                 
 
 #### <a name="populate-the-isv-file-cache"></a>ISV 파일 캐시 채우기
 
@@ -105,7 +102,7 @@ ISV 파일 캐시는 관리되는 클라이언트에 설치할 업데이트와 �
 
      ISV 파일 위치로 MU 폴더 경로 및 파일 이름을 참조하는 HTTP 서버(또는 localhost) 리디렉션 **HTTP GET** 요청을 수행합니다.
 
-### <a name="BKMK_3"></a>3단계: WU 클라이언트 작업 지시를 위한 ISV 클라이언트 에이전트 설정
+### <a name="step-3-set-up-an-isv-client-agent-to-direct-wu-client-operations"></a><a name=BKMK_3></a>3단계: WU 클라이언트 작업 지시를 위한 ISV 클라이언트 에이전트 설정
 
 ISV 클라이언트 에이전트는 다음과 같은 권장 워크플로를 사용하여 승인된 업데이트의 다운로드 및 설치를 오케스트레이션합니다.
 

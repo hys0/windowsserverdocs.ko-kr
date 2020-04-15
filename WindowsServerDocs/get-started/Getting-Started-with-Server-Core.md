@@ -4,19 +4,18 @@ description: Windows Server 2019, Windows Server 2016 또는 Windows Server(반�
 ms.prod: windows-server
 ms.date: 05/21/2019
 ms.technology: server-general
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2d22818c-fbb7-487a-bb82-81ef0a3f7ede
 author: jasongerend
 ms.author: jgerend
 manager: dougkim
 ms.localizationpriority: medium
-ms.openlocfilehash: e6264a59a837003e49e82529750cfb153cc37b92
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 13d36c233094511216483f0fb37dc6a004212a50
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71360342"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80826976"
 ---
 # <a name="install-server-core"></a>Server Core 설치
 
@@ -25,17 +24,17 @@ ms.locfileid: "71360342"
 Windows Server를 처음 설치하는 경우 다음과 같은 설치 옵션이 있습니다.
 
 >[!NOTE]
-> 데스크톱 경험 [uiblue]다음 목록에서 "데스크톱 환경"이 없는 버전은 Server Core 설치 옵션입니다.
+> 다음 목록에서 "데스크톱 환경"이 없는 버전은 Server Core 설치 옵션입니다.
 
--   Windows Server Standard
--   데스크톱 환경 포함 Windows Server Standard
--   Windows Server Datacenter
--   데스크톱 환경 포함 Windows Server Datacenter
+-    Windows Server Standard
+-    데스크톱 환경 포함 Windows Server Standard
+-    Windows Server Datacenter
+-    데스크톱 환경 포함 Windows Server Datacenter
 
 Windows Server(반기 채널)를 설치하는 경우 다음과 같은 설치 옵션이 있습니다.
 
--   Windows Server Standard 
--   Windows Server Datacenter
+-    Windows Server Standard 
+-    Windows Server Datacenter
 
 Server Core 옵션을 사용하면 디스크에 필요한 공간과 공격 취약성이 감소합니다. 따라서 데스크톱 환경 포함 서버 옵션에 포함된 추가 사용자 인터페이스 요소와 그래픽 관리 도구가 특별히 필요한 경우가 아니라면 Server Core 설치 옵션을 선택하는 것이 좋습니다. 추가 사용자 인터페이스 요소가 필요하다고 생각되면 [데스크톱 환경 포함 서버 설치](Getting-Started-with-Server-with-Desktop-Experience.md)를 참조하세요. 
 

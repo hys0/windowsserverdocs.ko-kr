@@ -1,25 +1,21 @@
 ---
 title: Microsoft Server 정품 인증
 description: Windows Server 2016을 정품 인증하는 방법.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.date: 09/19/2018
 ms.technology: server-general
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 99f7daa4-30ce-4d13-be65-0a45d5cc7a54
 author: jaimeo
 ms.author: jaimeo
 manager: dougkim
 ms.localizationpriority: medium
-ms.openlocfilehash: 1354d89ba2c9169b302dca10ae52bad34ef80b43
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: fd9ea63785e8de313d2177113a466fa67c17410b
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75947761"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80826646"
 ---
 # <a name="windows-server-2016-activation"></a>Windows Server 2016 정품 인증
 
@@ -37,9 +33,9 @@ Windows 10 또는 Windows 8.1에서 실행되는 KMS 호스트는 클라이언�
 
 |제품 키 그룹|KMS가 호스트될 수 있는 Windows 버전|이 KMS 호스트에 의해 정품 인증되는 Windows 버전|  
 |-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------|  
-|Windows Server 2016용 볼륨 라이선스|Windows Server 2012<br /><br />Windows Server 2012 R2<br /><br />Windows Server 2016<br /><br />|Windows Server 반기 채널 <br><br>Windows Server 2016(모든 버전)<br /><br />Windows 10 LTSB(2015 및 2016)<br /><br />Windows 10 Professional<br /><br />Windows 10 Enterprise<br /><br />Windows 10 Pro for Workstations<br><br>Windows 10 Education<br><br>Windows Server 2012 R2(모든 버전)<br /><br />Windows 8.1 Professional<br /><br />Windows 8.1 Enterprise<br /><br />Windows Server 2012(모든 버전)<br /><br />Windows Server 2008 R2(모든 버전)<br /><br />Windows Server 2008(모든 버전)<br /><br />Windows 7 Professional<br /><br />Windows 7 Enterprise| 
-|Windows 10용 볼륨 라이선스|Windows 7<br /><br />Windows 8.1<br /><br /> Windows 10|Windows 10 Professional<br /><br /> Windows 10 Professional KN<br /><br /> Windows 10 Enterprise<br /><br /> Windows 10 Enterprise KN<br /><br /> Windows 10 Education<br /><br /> Windows 10 Education KN<br /><br /> Windows 10 Enterprise LTSB(2015)<br /><br /> Windows 10 Enterprise LTSB N(2015)<br /><br /> Windows 10 Pro for Workstations<br><br>Windows 8.1 Professional<br /><br /> Windows 8.1 Enterprise<br /><br /> Windows 7 Professional<br /><br /> Windows 7 Enterprise<br /><br />|  
-|"Windows 10용 Windows Server 2012 R2"에 대한 볼륨 라이선스|Windows Server 2008 R2<br /><br /> Windows Server 2012 Standard<br /><br /> Windows Server 2012 Datacenter<br /><br /> Windows Server 2012 R2 Standard<br /><br />Windows Server 2012 R2 Datacenter|Windows 10 Professional<br /><br /> Windows 10 Enterprise<br /><br />Windows 10 Enterprise LTSB(2015)<br><br>Windows 10 Pro for Workstations<br><br>Windows 10 Education<br><br> Windows Server 2012 R2(모든 버전)<br /><br /> Windows 8.1 Professional<br /><br /> Windows 8.1 Enterprise<br /><br /> Windows Server 2012(모든 버전)<br /><br /> Windows Server 2008 R2(모든 버전)<br /><br />Windows Server 2008(모든 버전)<br /><br /> Windows 7 Professional<br /><br /> Windows 7 Enterprise|
+|Windows Server 2016용 볼륨 라이선스|Windows Server 2012<p>Windows Server 2012 R2<p>Windows Server 2016<p>|Windows Server 반기 채널 <br><br>Windows Server 2016(모든 버전)<p>Windows 10 LTSB(2015 및 2016)<p>Windows 10 Professional<p>Windows 10 Enterprise<p>Windows 10 Pro for Workstations<br><br>Windows 10 Education<br><br>Windows Server 2012 R2(모든 버전)<p>Windows 8.1 Professional<p>Windows 8.1 Enterprise<p>Windows Server 2012(모든 버전)<p>Windows Server 2008 R2(모든 버전)<p>Windows Server 2008(모든 버전)<p>Windows 7 Professional<p>Windows 7 Enterprise| 
+|Windows 10용 볼륨 라이선스|Windows 7<p>Windows 8.1<p> Windows 10|Windows 10 Professional<p> Windows 10 Professional KN<p> Windows 10 Enterprise<p> Windows 10 Enterprise KN<p> Windows 10 Education<p> Windows 10 Education KN<p> Windows 10 Enterprise LTSB(2015)<p> Windows 10 Enterprise LTSB N(2015)<p> Windows 10 Pro for Workstations<br><br>Windows 8.1 Professional<p> Windows 8.1 Enterprise<p> Windows 7 Professional<p> Windows 7 Enterprise<p>|  
+|Windows 10용 Windows Server 2012 R2에 대한 볼륨 라이선스|Windows Server 2008 R2<p> Windows Server 2012 Standard<p> Windows Server 2012 Datacenter<p> Windows Server 2012 R2 Standard<p>Windows Server 2012 R2 Datacenter|Windows 10 Professional<p> Windows 10 Enterprise<p>Windows 10 Enterprise LTSB(2015)<br><br>Windows 10 Pro for Workstations<br><br>Windows 10 Education<br><br> Windows Server 2012 R2(모든 버전)<p> Windows 8.1 Professional<p> Windows 8.1 Enterprise<p> Windows Server 2012(모든 버전)<p> Windows Server 2008 R2(모든 버전)<p>Windows Server 2008(모든 버전)<p> Windows 7 Professional<p> Windows 7 Enterprise|
 
 > [!NOTE]  
 > KMS 서버에서 실행하는 운영 체제 또는 활성화하려는 운영 체제에 따라 다음 업데이트 중 하나 이상을 설치해야 할 수 있습니다.

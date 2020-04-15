@@ -2,7 +2,6 @@
 title: WSUS 배포 계획
 description: WSUS(Windows Server Update Service) 항목 - 관련 항목에 대한 링크가 포함된 배포 계획 프로세스 개요
 ms.prod: windows-server
-ms.reviewer: na
 ms.technology: manage-wsus
 ms.topic: article
 ms.assetid: 35865398-b011-447a-b781-1c52bc0c9e3a
@@ -10,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 05/24/2018
-ms.openlocfilehash: 8d284c51bfa1e04a38c32adf5dce2b6f5d948b0a
-ms.sourcegitcommit: 3c3dfee8ada0083f97a58997d22d218a5d73b9c4
+ms.openlocfilehash: 68825c6bc4d24bca41c04a238fbf4d6291a6625b
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80639929"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80828196"
 ---
 # <a name="plan-your-wsus-deployment"></a>WSUS 배포 계획
 
@@ -218,7 +217,7 @@ WSUS(Windows Server Update Services)에서는 WSUS 구성 및 업데이트 메�
 업데이트는 두 부분, 즉 업데이트를 설명하는 메타데이터와 업데이트를 설치하는 데 필요한 파일로 구성됩니다. 업데이트 메타데이터는 일반적으로 실제 업데이트보다 휠씬 작고 WSUS 데이터베이스에 저장됩니다. 업데이트 파일은 로컬 WSUS 서버나 Microsoft 업데이트 웹 서버에 저장됩니다.
 
 ### <a name="wsus-database"></a>WSUS 데이터베이스
-WSUS에는 각 WSUS 서버에 알맞은 데이터베이스가 필요합니다. WSUS에서는 WSUS 서버가 아닌 다른 컴퓨터에 있는 데이터베이스도 몇 가지 제한을 적용하여 사용할 수 있습니다. 지원되는 데이터베이스의 목록과 원격 데이터베이스의 제한 사항에 대해서는 이 가이드의 "1.1 초기 고려 사항 및 시스템 요구 사항 검토" 섹션을 참조하세요.
+WSUS에는 각 WSUS 서버에 알맞은 데이터베이스가 필요합니다. WSUS에서는 WSUS 서버가 아닌 다른 컴퓨터에 있는 데이터베이스도 몇 가지 제한을 적용하여 사용할 수 있습니다. 지원되는 데이터베이스의 목록과 원격 데이터베이스의 제한 사항에 대해서는 이 가이드의 1.1 초기 고려 사항 및 시스템 요구 사항 검토 섹션을 참조하세요.
 
 WSUS 데이터베이스에 저장되는 정보는 다음과 같습니다.
 
@@ -436,7 +435,7 @@ WSUS에서는 업데이트 동기화를 언어, 제품 및 등급별로 필터�
 ### <a name="installation"></a>설치
 일반적으로 업데이트는 업데이트될 컴퓨터에 이미 존재하는 파일의 새 버전으로 구성됩니다. 이진 수준에서 이러한 기존 파일은 업데이트된 버전과 크게 다르지 않을 수 있습니다. 빠른 설치 파일 기능은 버전 간의 정확한 바이트를 식별해서 이러한 차이 만큼만 업데이트를 만들어 분산한 후 기존 파일과 업데이트된 바이트를 병합합니다.
 
-이 기능은 두 파일 버전 간의 델타(차이)만 다운로드하기 때문에 "델타 배달"이라고도 합니다. 빠른 설치 파일에는 업데이트될 각 파일에 대해 가능한 버전이 모두 포함되어 있어서 그 크기가 클라이언트 컴퓨터에 분산되는 업데이트보다 더 큽니다.
+이 기능은 두 파일 버전 간의 델타(차이)만 다운로드하기 때문에 델타 배달이라고도 합니다. 빠른 설치 파일에는 업데이트될 각 파일에 대해 가능한 버전이 모두 포함되어 있어서 그 크기가 클라이언트 컴퓨터에 분산되는 업데이트보다 더 큽니다.
 
 빠른 설치 파일을 사용하여 로컬 네트워크에서 사용되는 대역폭을 제한할 수 있습니다. 이는 WSUS는 업데이트된 구성 요소의 특정 버전에 적용할 수 있는 델타만 전송하기 때문입니다. 그러나 이 제한으로 인해 WSUS 서버, 업스트림 WSUS 서버 및 Microsoft Update 간의 추가 대역폭이 감소하고 추가적인 로컬 디스크 공간이 필요합니다. 기본적으로 WSUS에서는 빠른 설치 파일을 사용하지 않습니다.
 

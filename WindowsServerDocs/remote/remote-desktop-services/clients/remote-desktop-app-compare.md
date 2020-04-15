@@ -1,25 +1,21 @@
 ---
-title: 원격 데스크톱 - 클라이언트 비교
-description: 지원되는 기능과 관련하여 다양한 RD 클라이언트를 비교하는 방법을 알아봅니다.
-ms.custom: na
+title: 원격 데스크톱 - 클라이언트 앱 비교
+description: 지원되는 기능과 관련하여 다양한 RD 앱을 비교하는 방법을 알아봅니다.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 12efe858-6b76-4e08-9f72-b9603aceb0fc
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 03/28/2020
+ms.date: 04/06/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 11c91ac951db27915d9313f7f98e5e2cfc56b726
-ms.sourcegitcommit: 78c00944b6990702d28bdcc4a9215927ca901bfb
+ms.openlocfilehash: 8c41d2691f22e7feb89518a02736f3607940a2f6
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80440376"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856226"
 ---
 # <a name="compare-the-clients"></a>클라이언트 비교
 
@@ -57,11 +53,11 @@ USB 포트 리디렉션을 활성화하는 경우 USB 포트에 연결된 USB �
 
 | 리디렉션         | Windows Inbox</br>(MSTSC) | Windows 데스크톱</br>(MSRDC) | Windows 스토어 | Android | iOS         | macOS                           | 웹 클라이언트    |
 |---------------------|---------------------------|-----------------------------|---------------|---------|-------------|---------------------------------|---------------|
-| 카메라             | X                         | X                           |               |         |             | X                               |               |
-| 클립보드           | X                         | X                           | X             | text    | 텍스트, 이미지 | X                               | text          |
-| 로컬 드라이브/스토리지 | X                         | X                           |               | X       |             | X                               |               |
+| 카메라             | X                         | X                           |               |         |   X         | X                               |               |
+| 클립보드           | X                         | X                           | X             | 텍스트    | 텍스트, 이미지 | X                               | text          |
+| 로컬 드라이브/스토리지 | X                         | X                           |               | X       |   X        | X                               |               |
 | 위치            | X                         | X                           |               |         |             |                                 |               |
-| 마이크         | X                         | X                           | X             |         |             | X                               |               |
+| 마이크         | X                         | X                           | X             |         |  X          | X                               |               |
 | 프린터            | X                         | X                           |               |         |             | X(CUPS에만 해당)                   | PDF 인쇄     |
 | 스캐너            | X                         | X                           |               |         |             |                                 |               |
 | Smart Cards         | X                         | X                           |               |         |             | X(Windows 로그온은 지원되지 않음) |               |

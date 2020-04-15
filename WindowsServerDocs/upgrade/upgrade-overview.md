@@ -1,18 +1,18 @@
 ---
 title: Windows Server 업그레이드 개요 | Microsoft Docs
 description: 실제 업그레이드를 수행하기 전에 고려해야 할 사항을 비롯한 몇 가지 일반적인 Windows Server 업그레이드 정보를 알아봅니다.
-ms.prod: windows server
+ms.prod: windows-server
 ms.technology: server-general
 ms.topic: upgrade
 author: RobHindman
 ms.author: robhind
 ms.date: 09/10/2019
-ms.openlocfilehash: 6f57e52657ca3c80c92d56c54ea87e43aabd1e99
-ms.sourcegitcommit: 27f0caf74e88781054250455c3c1adf06deb6234
+ms.openlocfilehash: 1ac4cbe8b9bda4ac2de2c7ad7ec27b1534c0de72
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71124793"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854236"
 ---
 # <a name="overview-about-windows-server-upgrades"></a>Windows Server 업그레이드 개요
 
@@ -42,3 +42,4 @@ ms.locfileid: "71124793"
 Windows Server는 일반적으로 하나 이상의 버전 때로는 두 개의 버전을 통해 업그레이드할 수 있습니다. 예를 들어 Windows Server 2012 R2 및 Windows Server 2016은 모두 Windows Server 2019로 바로 업그레이드할 수 있습니다.
 
 평가판 운영 체제를 일반 정품 버전으로 업그레이드하거나, 이전 일반 정품 버전을 새 버전으로 업그레이드하거나, 경우에 따라 운영 체제의 볼륨 라이선스 버전을 일반 정품 버전으로 업그레이드할 수도 있습니다. 현재 위치 업그레이드 이외의 업그레이드 옵션에 대한 자세한 내용은 [Windows Server에 대한 업그레이드 및 변환 옵션](../get-started/supported-upgrade-paths.md)을 참조하세요.
+""'

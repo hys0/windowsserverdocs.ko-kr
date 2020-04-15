@@ -1,20 +1,19 @@
 ---
-ms.assetid: ''
 title: 추적 가능성을 위한 Windows 시간
 description: 많은 섹터의 규정을 준수하려면 시스템을 UTC로 추적할 수 있어야 합니다.  이는 시스템의 오프셋이 UTC와 관련하여 증명될 수 있음을 의미합니다.
-author: eross-msft
+author: dcuomo
 ms.author: dacuo
 manager: dougkim
 ms.date: 10/17/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: networking
-ms.openlocfilehash: e7f7a68d61729813583255d64afbf172475969e3
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 30952c7a15109ccdd8bcbb09d7c8dda44f716d5d
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80314931"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859816"
 ---
 # <a name="windows-time-for-traceability"></a>추적 가능성을 위한 Windows 시간
 >적용 대상: Windows Server 2016 버전 1709 이상 및 Windows 10 버전 1703 이상

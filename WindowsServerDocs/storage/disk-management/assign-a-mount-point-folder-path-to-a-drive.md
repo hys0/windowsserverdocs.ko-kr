@@ -1,7 +1,6 @@
 ---
 title: 탑재 지점 폴더 경로를 드라이브에 할당
 description: 이 문서에서는 (드라이브 문자가 아닌) 탑재 지점 폴더 경로를 드라이브에 할당하는 방법을 설명합니다.
-keywords: 가상화, 보안, 맬웨어
 ms.date: 06/07/2019
 ms.prod: windows-server
 ms.technology: storage
@@ -9,12 +8,12 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 1255eadd50adb0eaaf44774e150d69f6dad8adae
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b2fda216b57fbf036ce20c40b4c8b38d44404f3c
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71386054"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80815536"
 ---
 # <a name="assign-a-mount-point-folder-path-to-a-drive"></a>탑재 지점 폴더 경로를 드라이브에 할당
 
@@ -40,17 +39,17 @@ ms.locfileid: "71386054"
 
 2.  **DISKPART** 프롬프트에서 `list volume`을 입력하고 경로를 할당하고자 하는 볼륨 번호를 메모합니다.
 
-3.  **DISKPART** 프롬프트에서 `select volume <volumenumber>`를 입력합니다. 
+3.  **DISKPART** 프롬프트에서 `select volume <volumenumber>`을(를) 입력합니다. 
 
 4. 경로를 할당하고자 하는 단순 볼륨 *volumenumber*를 선택합니다.
 
-5.  **DISKPART** 프롬프트에서 `assign [mount=<path>]`를 입력합니다.
+5.  **DISKPART** 프롬프트에서 `assign [mount=<path>]`을(를) 입력합니다.
 
 #### <a name="to-remove-a-mount-point-folder-path-to-a-drive"></a>탑재 지점 폴더 경로를 드라이브에서 제거
 
 -   탑재 지점 폴더 경로를 제거하려면 경로를 클릭한 다음, **제거**를 클릭합니다.
 
-| 값 | 설명 |
+| Value | 설명 |
 | --- | --- |
 | **list volume** | 모든 디스크에 기본 및 동적 볼륨 목록을 표시합니다. |
 | **select volume**        | 볼륨 번호가 <em>volumenumber</em>인 지정된 볼륨을 선택하고 포커스를 설정합니다. 지정된 볼륨이 없는 경우 **select** 명령이 포커스가 설정된 현재 볼륨 목록을 표시합니다. 번호, 드라이브 문자 또는 탑재 지점 폴더 경로로 볼륨을 지정할 수 있습니다. 기본 디스크에서 볼륨을 선택하면 해당 파티션에도 포커스를 설정합니다.|

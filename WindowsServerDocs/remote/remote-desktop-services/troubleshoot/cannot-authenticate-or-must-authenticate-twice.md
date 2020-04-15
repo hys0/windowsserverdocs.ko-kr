@@ -1,24 +1,19 @@
 ---
 title: 사용자가 인증할 수 없거나 두 번 인증해야 함
 description: 원격 데스크톱 연결을 시작할 때 사용자가 인증할 수 없거나 두 번 인증해야 하는 문제를 해결합니다.
-audience: itpro
-ms.custom: na
 ms.reviewer: rklemen
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: troubleshooting
-ms.assetid: ''
 author: kaushika-msft
 manager: dcscontentpm
 ms.author: delhan
 ms.date: 07/24/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 7dbb037e335af52dacbc56c920b1776be995e753
-ms.sourcegitcommit: c5709021aa98abd075d7a8f912d4fd2263db8803
+ms.openlocfilehash: 8fd7cfda8814347f8bab9dc7b3f7632e3b992ecb
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2020
-ms.locfileid: "76265935"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80857236"
 ---
 # <a name="user-cant-authenticate-or-must-authenticate-twice"></a>사용자가 인증할 수 없거나 두 번 인증해야 함
 
@@ -94,13 +89,13 @@ RD 세션 호스트 서버가 아닌 다른 서버에서 레거시 RCM 동작을
 
 ### <a name="user-cant-sign-in-to-a-windows-server-2008-sp2-computer-using-a-smart-card"></a>사용자가 스마트 카드를 사용하여 Windows Server 2008 SP2 컴퓨터에 로그인 할 수 없음
 
-사용자가 KB4093227(2018.4B)로 업데이트된 Windows Server 2008 SP2 컴퓨터에 로그인하려고 시도하면 이 이슈가 발생합니다. 사용자가 스마트 카드를 사용하여 로그인하려고 시도하면 “올바른 인증서가 없습니다. 카드를 꽉 맞도록 올바르게 삽입했는지 확인합니다”라는 내용의 메시지와 함께 액세스가 거부됩니다. 그와 동시에, Windows Server 컴퓨터는 "삽입한 스마트 카드에서 디지털 인증서를 검색하는 동안 오류가 발생했습니다. 서명이 잘못되었습니다"라는 애플리케이션 이벤트를 기록합니다.
+사용자가 KB4093227(2018.4B)로 업데이트된 Windows Server 2008 SP2 컴퓨터에 로그인하려고 시도하면 이 이슈가 발생합니다. 사용자가 스마트 카드를 사용하여 로그인하려고 시도하면 "올바른 인증서가 없습니다. 카드를 꽉 맞도록 올바르게 삽입했는지 확인합니다"라는 내용의 메시지와 함께 액세스가 거부됩니다. 그와 동시에, Windows Server 컴퓨터는 "삽입한 스마트 카드에서 디지털 인증서를 검색하는 동안 오류가 발생했습니다. 서명이 잘못되었습니다"라는 애플리케이션 이벤트를 기록합니다.
 
 이 문제를 해결하려면 Windows Server 컴퓨터를 KB 4093227 [Windows Server 2008의 Windows RDP(원격 데스크톱 프로토콜) 서비스 거부 취약성에 대한 보안 업데이트 설명: 2018년 4월 10일](https://support.microsoft.com/help/4093227/security-update-for-vulnerabilities-in-windows-server-2008)의 2018.06 B 재릴리스로 업데이트합니다.
 
 ### <a name="cant-stay-signed-in-with-a-smart-card-and-remote-desktop-services-service-hangs"></a>스마트 카드를 사용하여 로그인 상태를 유지할 수 없고 원격 데스크톱 서비스가 중지됨
 
-사용자가 KB 4056446으로 업데이트된 Windows 또는 Windows Server 컴퓨터에 로그인하려고 시도하면 이 이슈가 발생합니다. 처음에는 사용자가 스마트 카드를 사용하여 시스템에 로그인할 수도 있지만, 그 후 “SCARD\_E\_NO\_SERVICE” 오류 메시지가 수신됩니다. 원격 컴퓨터가 응답하지 않을 수 있습니다.
+사용자가 KB 4056446으로 업데이트된 Windows 또는 Windows Server 컴퓨터에 로그인하려고 시도하면 이 이슈가 발생합니다. 처음에는 사용자가 스마트 카드를 사용하여 시스템에 로그인할 수도 있지만, 그 후 "SCARD\_E\_NO\_SERVICE" 오류 메시지가 수신됩니다. 원격 컴퓨터가 응답하지 않을 수 있습니다.
 
 이 이슈를 해결하려면 원격 컴퓨터를 다시 시작합니다.
 

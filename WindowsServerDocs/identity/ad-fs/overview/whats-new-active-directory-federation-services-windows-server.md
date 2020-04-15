@@ -1,7 +1,6 @@
 ---
 ms.assetid: aa892a85-f95a-4bf1-acbb-e3c36ef02b0d
 title: Active Directory 페더레이션 서비스에 대 한 Windows Server 2016의 새로운 기능
-description: ''
 author: billmath
 ms.author: billmath
 manager: daveba
@@ -9,12 +8,12 @@ ms.date: 01/22/2020
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 8061f41dab0f02bccd59a659e0bcd209bd73a249
-ms.sourcegitcommit: 1c75e4b3f5895f9fa33efffd06822dca301d4835
+ms.openlocfilehash: e88297bdbd55d2f834f1bff72b6d05bdf356bb85
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77517558"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80860256"
 ---
 # <a name="whats-new-in-active-directory-federation-services"></a>Active Directory Federation Services의 새로운 기능
 
@@ -46,13 +45,13 @@ AD FS 2019에서는 다음과 같은 향상된 추가 보안 기능을 사용할
     - 고객이 한 추가 인증 공급자에서 다른 인증 공급자로 전환하려 합니다. 고객은 사용자를 최신 인증 공급자에게 온보딩하는 이 방법을 통해, 그룹을 사용하여 호출되는 추가 인증 공급자를 제어할 수 있습니다.
     - 고객은 특정 애플리케이션에 사용할 특정 추가 인증 공급자(예: 인증서)가 필요합니다. 
 - **TLS 기반 디바이스 인증이 필요한 애플리케이션으로 제한**  - 이제 고객은 클라이언트 TLS 기반 디바이스 인증을 디바이스 기반 조건부 액세스를 수행하는 애플리케이션으로 제한할 수 있습니다. 이렇게 하면 TLS 기반 디바이스 인증이 필요 없는 애플리케이션에서 원치 않는 디바이스 인증(또는 클라이언트 애플리케이션에서 처리할 수 없는 경우에는 오류)을 요구하는 프롬프트를 방지할 수 있습니다.
-- **MFA 새로 고침 지원** - 이제 AD FS는 2번째 요소 자격 증명의 새로 고침을 기반으로 2번째 요소 자격 증명을 다시 수행할 수 있는 기능을 지원합니다. 따라서 고객은 2개 요소를 사용하여 초기 트랜잭션을 수행하고 2번째 요소를 정기적으로 요청할 수 있습니다. 이 방법은 요청에 추가 매개 변수를 제공할 수 있는 애플리케이션에만 사용할 수 있고 ADFS에서는 구성할 수 없는 설정입니다. 이 매개 변수는 Azure AD에서 "Remember my MFA for X days(X일 동안 MFA 저장)"를 구성하고 페더레이션된 도메인 트러스트 설정에서 'supportsMFA' 플래그를 true로 설정한 경우에 Azure AD에서 지원됩니다. 
+- **MFA 새로 고침 지원**    - 이제 AD FS는 2번째 요소 자격 증명의 새로 고침을 기반으로 2번째 요소 자격 증명을 다시 수행할 수 있는 기능을 지원합니다. 따라서 고객은 2개 요소를 사용하여 초기 트랜잭션을 수행하고 2번째 요소를 정기적으로 요청할 수 있습니다. 이 방법은 요청에 추가 매개 변수를 제공할 수 있는 애플리케이션에만 사용할 수 있고 ADFS에서는 구성할 수 없는 설정입니다. 이 매개 변수는 Azure AD에서 "Remember my MFA for X days(X일 동안 MFA 저장)"를 구성하고 페더레이션된 도메인 트러스트 설정에서 'supportsMFA' 플래그를 true로 설정한 경우에 Azure AD에서 지원됩니다. 
 
 ### <a name="sign-in-sso-improvements"></a>로그인 SSO 개선
 AD FS 2019에서는 로그인 SSO가 다음과 같이 개선되었습니다.
 
 - [중앙 테마를 사용하는 페이지가 매겨진 UX](../operations/AD-FS-paginated-sign-in.md) - 이제 ADFS는 유효성을 검사하고 보다 원활한 로그인 환경을 제공할 수 있는 페이지가 매겨진 UX 흐름으로 이동되었습니다. 이제 ADFS는 화면 오른쪽 대신 가운데 맞춤 UI를 사용합니다. 이 환경에 맞는 새 로고와 배경 이미지가 필요할 수도 있습니다. 또한 Azure AD에서 제공되는 기능도 미러링합니다.
-- **버그 수정: PRT 인증을 수행할 때 Win10 디바이스의 영구적 SSO 상태** - Windows 10 디바이스에 PRT 인증을 사용할 때 MFA 상태가 유지되지 않는 문제를 해결합니다. 이 문제가 발생하면 최종 사용자에게 MFA(2번째 단계 자격 증명)를 요청하는 메시지가 자주 표시되었습니다. 또한 이 수정 버전은 클라이언트 TLS 및 PRT 메커니즘을 통해 수행한 디바이스 인증이 성공하면 일관적인 환경을 제공합니다. 
+- **버그 수정: PRT 인증을 수행할 때 Win10 디바이스의 영구적 SSO 상태**    Windows 10 디바이스에 PRT 인증을 사용할 때 MFA 상태가 유지되지 않는 문제를 해결합니다. 이 문제가 발생하면 최종 사용자에게 MFA(2번째 단계 자격 증명)를 요청하는 메시지가 자주 표시되었습니다. 또한 이 수정 버전은 클라이언트 TLS 및 PRT 메커니즘을 통해 수행한 디바이스 인증이 성공하면 일관적인 환경을 제공합니다. 
 
 
 ### <a name="suppport-for-building-modern-line-of-business-apps"></a>최신 기간 업무 앱 빌드 지원
@@ -61,7 +60,7 @@ AD FS 2019에서는 로그인 SSO가 다음과 같이 개선되었습니다.
  - **Oauth 디바이스 흐름/프로필** - 이제 AD FS는 풍부한 로그인 환경을 지원하기 위해 UI 노출 영역이 없는 디바이스에서 로그인을 수행할 수 있도록 OAuth 디바이스 흐름 프로필을 지원합니다. 따라서 사용자가 다른 디바이스에서 로그인 경험을 완료할 수 있습니다. 이 기능은 Azure Stack에서 Azure CLI 환경에 필요하며 다른 사용 사례에도 사용할 수 있습니다. 
  - **'Resource' 매개 변수 제거** - 이제 AD FS를 사용하기 위해 현재 Oauth 사양과 일치하는 리소스 매개 변수를 지정할 필요가 없습니다. 이제 클라이언트는 요청된 권한 외에도 신뢰 당사자 트러스트 식별자를 범위 매개 변수로 제공할 수 있습니다. 
  - **AD FS 응답의 CORS 헤더** - 이제 고객은 AD FS의 OIDC 검색 문서에서 서명 키를 쿼리하여 클라이언트 쪽 JS 라이브러리에서 id_token 서명의 유효성을 검사할 수 있는 단일 페이지 애플리케이션을 빌드할 수 있습니다. 
- - **PKCE 지원** - AD FS는 OAuth 내에서 보안 인증 코드 흐름을 제공하는 PKCE 지원을 추가합니다. 그러면 코드를 하이재킹하여 다른 클라이언트에서 재생하지 못하게 방지하는 추가 보안 레이어가 이 흐름이 추가됩니다. 
+ - **PKCE 지원**    - AD FS는 OAuth 내에서 보안 인증 코드 흐름을 제공하는 PKCE 지원을 추가합니다. 그러면 코드를 하이재킹하여 다른 클라이언트에서 재생하지 못하게 방지하는 추가 보안 레이어가 이 흐름이 추가됩니다. 
  - **버그 수정: x5t 및 어린이 클레임 보내기** - 사소한 버그 수정입니다. 이제 AD FS는 '어린이' 클레임을 추가로 전송하여 서명을 확인하는 키 id 힌트를 표시합니다. 이전에는 AD FS가 이것을 'x5t' 클레임으로만 전송했습니다.
 
 ### <a name="supportability-improvements"></a>향상된 지원 가능성
@@ -72,7 +71,7 @@ AD FS 2019에서는 로그인 SSO가 다음과 같이 개선되었습니다.
 AD FS 2019에는 다음 배포 업데이트가 포함되어 있습니다.
 - **팜 동작 수준 2019** - AD FS 2016과 마찬가지로, 위에 설명된 새 기능을 사용하려면 필요한 새 팜 동작 수준 버전이 있습니다. 이 버전을 통해 다음과 같이 전환할 수 있습니다.
     - 2012 R2 -> 2019
-    - 2016 -> 2019   
+    - 2016 -> 2019     
 
 ### <a name="saml-updates"></a>SAML 업데이트
 다음은 AD FS 2019의 SAML 업데이트입니다.

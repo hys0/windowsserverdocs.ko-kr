@@ -1,23 +1,19 @@
 ---
 title: 릴리스 정보 - Windows Server 2016의 주요 문제점
 description: 충돌, 중단, 설치 실패, 데이터 손실 등을 방지하기 위한 해결책이 필요한 중요한 문제를 요약합니다.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.date: 11/13/2018
 ms.technology: server-general
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 134aab85-664f-4d44-87ef-9e5fd389071f
 author: jaimeo
 ms.author: jaimeo
-ms.openlocfilehash: f4568e1781dbe385d8abe8a96f07841391506738
-ms.sourcegitcommit: 07c9d4ea72528401314e2789e3bc2e688fc96001
+ms.openlocfilehash: 8ceff837c2b85466f5583eed03f39e73f32fd4a4
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76822166"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80826386"
 ---
 # <a name="release-notes-important-issues-in-windows-server-2016"></a>릴리스 정보: Windows Server 2016의 주요 문제점
 
@@ -29,7 +25,7 @@ ms.locfileid: "76822166"
 
 ## <a name="express-updates-available-starting-in-november-2018-new"></a>2018년 11월부터 제공되는 Express 업데이트(신규)
 
-2018년 11월 "화요일 업데이트"부터 Windows는 Windows Server 2016용 [Express 업데이트](express-updates.md)를 다시 게시할 예정입니다. WSUS 및 Configuration Manager를 사용하는 경우 Windows Server 2016 업데이트의 패키지 2개, 즉 전체 업데이트와 Express 업데이트가 다시 표시됩니다. 서버 환경을 위해 Express를 사용하려는 경우 서버에 2017년 11월 이후 전체 업데이트(KB# 4048953)를 받아 Express 업데이트가 올바르게 설치되도록 해야 합니다. 2017 11B 업데이트(KB# 4048953) 이후로 업데이트되지 않은 서버에 Express 업데이트를 시도하는 경우 무한 루프에서 대역폭 및 CPU 리소스를 사용하는 반복되는 오류가 표시됩니다. 이 시나리오가 나타나면 Express 업데이트 푸시를 중지하고 대신 오류 루프를 중지하는 최신 전체 업데이트를 푸시합니다.
+2018년 11월 화요일 업데이트부터 Windows는 Windows Server 2016용 [Express 업데이트](express-updates.md)를 다시 게시할 예정입니다. WSUS 및 Configuration Manager를 사용하는 경우 Windows Server 2016 업데이트의 패키지 2개, 즉 전체 업데이트와 Express 업데이트가 다시 표시됩니다. 서버 환경을 위해 Express를 사용하려는 경우 서버에 2017년 11월 이후 전체 업데이트(KB# 4048953)를 받아 Express 업데이트가 올바르게 설치되도록 해야 합니다. 2017 11B 업데이트(KB# 4048953) 이후로 업데이트되지 않은 서버에 Express 업데이트를 시도하는 경우 무한 루프에서 대역폭 및 CPU 리소스를 사용하는 반복되는 오류가 표시됩니다. 이 시나리오가 나타나면 Express 업데이트 푸시를 중지하고 대신 오류 루프를 중지하는 최신 전체 업데이트를 푸시합니다.
 
 ## <a name="server-core-installation-option"></a>Server Core 설치 옵션
 
@@ -42,7 +38,7 @@ Server Core 설치 옵션을 사용하여 Windows Server 2016을 설치하면 �
 ## <a name="containers"></a>컨테이너
 
 [comment]: # (ID: 371; Submitter: taylorb; state: signed off)
-- 컨테이너를 사용하기 전에 [Windows 10 버전 1607에 대한 서비스 스택 업데이트: 2016년 8월 23일](https://support.microsoft.com/kb/3176936) 또는 그 이후에 나온 업데이트(제공되는 경우)를 설치합니다. 그렇지 않으면 컨테이너 빌드, 시작 또는 실행과 관련된 오류를 비롯하여 여러 문제가 발생할 수 있으며 "Win32에서 CreateProcess 실패: RPC 서버를 사용할 수 없습니다."와 유사한 오류가 발생할 수 있습니다.
+- 컨테이너를 사용하기 전에 [Windows 10 버전 1607에 대한 서비스 스택 업데이트: 2016년 8월 23일](https://support.microsoft.com/kb/3176936) 또는 그 이후에 나온 업데이트(제공되는 경우)를 설치합니다. 그렇지 않으면 컨테이너 빌드, 시작 또는 실행과 관련된 오류를 비롯하여 여러 문제가 발생할 수 있으며 Win32에서 CreateProcess 실패: RPC 서버를 사용할 수 없습니다.
 
 [comment]: # (ID: 373; Submitter: plang; state: signed off)
 - Windows 컨테이너에서 NanoServerPackage OneGet 공급자가 작동하지 않습니다. 이를 해결하려면 서로 다른 컴퓨터(컨테이너 아님)에서 Find-NanoServerPackage 및 Save-NanoServerPackage를 사용하여 필요한 패키지를 다운로드합니다. 그런 다음 패키지를 컨테이너에 복사한 후 설치합니다.
@@ -86,7 +82,7 @@ Windows 10 1주년 업데이트 이전의 버전을 실행하고 가상 신뢰�
 
 ## <a name="copyright"></a>저작권
 
-이 문서는 "있는 그대로" 제공됩니다. URL 및 다른 인터넷 웹 사이트 참조를 포함한 이 문서의 내용과 관점은 예고 없이 변경될 수 있습니다.  
+이 문서는 있는 그대로 제공됩니다. URL 및 다른 인터넷 웹 사이트 참조를 포함한 이 문서의 내용과 관점은 예고 없이 변경될 수 있습니다.  
 
 이 문서는 귀하에게 Microsoft 제품의 지적 재산에 대한 어떠한 법적 권리도 제공하지 않습니다. 내부 참조용으로 이 문서의 사본을 만들 수 있습니다.  
 
