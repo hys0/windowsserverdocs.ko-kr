@@ -2,22 +2,20 @@
 title: Nano Server의 IIS
 description: Nano 서버의 IIS 구성에 대한 세부 정보
 ms.prod: windows-server
-ms.service: na
 manager: DonGill
 ms.technology: server-nano
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.date: 09/06/2017
 ms.assetid: 16984724-2d77-4d7b-9738-3dff375ed68c
 author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
-ms.openlocfilehash: 96a5e5f23ad3cdfc829fd141c3c90f6c200f06c9
-ms.sourcegitcommit: 3f9bcd188dda12dc5803defb47b2c3a907504255
+ms.openlocfilehash: d2522dc94c0d3b68c75e14fec19466529256aad0
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77001808"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80826866"
 ---
 # <a name="iis-on-nano-server"></a>Nano Server의 IIS
 
@@ -100,18 +98,18 @@ IIS의 다른 구성(예: ASP.NET, PHP 및 Java 사용)과 기타 관련 콘텐�
 
 ```  
 
-    <unattend xmlns="urn:schemas-microsoft-com:unattend">  
+    <unattend xmlns=urn:schemas-microsoft-com:unattend>  
     <servicing>  
-        <package action="install">  
-            <assemblyIdentity name="Microsoft-NanoServer-IIS-Package" version="10.0.14393.0" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" />  
-            <source location="c:\packages\Microsoft-NanoServer-IIS-Package.cab" />  
+        <package action=install>  
+            <assemblyIdentity name=Microsoft-NanoServer-IIS-Package version=10.0.14393.0 processorArchitecture=amd64 publicKeyToken=31bf3856ad364e35 language=neutral />  
+            <source location=c:\packages\Microsoft-NanoServer-IIS-Package.cab />  
         </package>  
-        <package action="install">  
-            <assemblyIdentity name="Microsoft-NanoServer-IIS-Package" version="10.0.14393.0" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="en-US" />  
-            <source location="c:\packages\en-us\Microsoft-NanoServer-IIS-Package_en-us.cab" />  
+        <package action=install>  
+            <assemblyIdentity name=Microsoft-NanoServer-IIS-Package version=10.0.14393.0 processorArchitecture=amd64 publicKeyToken=31bf3856ad364e35 language=en-US />  
+            <source location=c:\packages\en-us\Microsoft-NanoServer-IIS-Package_en-us.cab />  
         </package>  
     </servicing>  
-    <cpi:offlineImage cpi:source="" xmlns:cpi="urn:schemas-microsoft-com:cpi" />  
+    <cpi:offlineImage cpi:source= xmlns:cpi=urn:schemas-microsoft-com:cpi />  
 </unattend>  
 ```  
 
@@ -129,7 +127,7 @@ IIS의 다른 구성(예: ASP.NET, PHP 및 Java 사용)과 기타 관련 콘텐�
 
    **dism /online /get-packages**  
 
-   "패키지 ID: Microsoft-NanoServer-IIS-Package~31bf3856ad364e35~amd64~~10.0.14393.1000"이 두 번 나열되고, 릴리스 유형: 언어 팩이 한 번 나열되고, 릴리스 유형: 기능 팩이 한 번 나열되어야 합니다.  
+   패키지 ID: Microsoft-NanoServer-IIS-Package~31bf3856ad364e35~amd64~~10.0.14393.1000이 두 번 나열되고, 릴리스 유형: 언어 팩이 한 번 나열되고, 릴리스 유형: 기능 팩이 한 번 나열되어야 합니다.  
 
 6. **net start w3svc**를 사용하여 또는 Nano 서버를 다시 시작하여 W3SVC 서비스를 시작합니다.  
 
@@ -141,15 +139,15 @@ IIS가 설치되어 실행되면 웹 요청을 처리할 준비가 완료된 것
 기본 IIS 웹 페이지에 액세스할 수 없는 경우 Nano 서버의 **c:\inetpub** 디렉터리를 검색하여 IIS 설치를 두 번 클릭합니다.  
 
 ## <a name="enabling-and-disabling-iis-features"></a>IIS 기능 설정 및 해제  
-IIS 역할을 설치하면 기본적으로 다양한 IIS 기능이 활성화됩니다(이 토픽의 "Nano 서버의 IIS 개요" 섹션에 제공되는 테이블 참조). DISM.exe를 사용하여 추가 기능을 설정하거나 해제할 수 있습니다.
+IIS 역할을 설치하면 기본적으로 다양한 IIS 기능이 활성화됩니다(이 토픽의 Nano 서버의 IIS 개요 섹션에 제공되는 테이블 참조). DISM.exe를 사용하여 추가 기능을 설정하거나 해제할 수 있습니다.
 
 IIS의 각 기능은 구성 요소 집합으로 존재합니다. 예를 들어 Windows 인증 기능은 다음 요소를 구성합니다.  
 
 |섹션|구성 요소|  
 |-----------|--------------------------|  
-|`<globalModules>`|`<add name="WindowsAuthenticationModule" image="%windir%\System32\inetsrv\authsspi.dll`|  
-|`<modules>`|`<add name="WindowsAuthenticationModule" lockItem="true" \/>`|  
-|`<windowsAuthentication>`|`<windowsAuthentication enabled="false" authPersistNonNTLM\="true"><providers><add value="Negotiate" /><add value="NTLM" /><br /></providers><br /></windowsAuthentication>`|  
+|`<globalModules>`|`<add name=WindowsAuthenticationModule image=%windir%\System32\inetsrv\authsspi.dll`|  
+|`<modules>`|`<add name=WindowsAuthenticationModule lockItem=true \/>`|  
+|`<windowsAuthentication>`|`<windowsAuthentication enabled=false authPersistNonNTLM\=true><providers><add value=Negotiate /><add value=NTLM /><br /></providers><br /></windowsAuthentication>`|  
 
 IIS 하위 기능 전체 집합은 이 토픽의 부록 1에 포함되어 있고 해당 구성 요소는 이 토픽의 부록 2에 포함되어 있습니다.  
 
@@ -181,7 +179,7 @@ IIS 하위 기능 전체 집합은 이 토픽의 부록 1에 포함되어 있고
 
 이 cmdlet을 사용합니다.  
 
-`PS D:\> New-IISSite -Name TestSite -BindingInformation "*:80:TestSite" -PhysicalPath c:\test`  
+`PS D:\> New-IISSite -Name TestSite -BindingInformation *:80:TestSite -PhysicalPath c:\test`  
 
 그런 다음 `Get-IISSite`를 실행하여 사이트 상태를 확인할 수 있습니다(웹 사이트 이름, ID, 상태, 실제 경로 및 바인딩을 반환).  
 
@@ -191,12 +189,12 @@ IIS 하위 기능 전체 집합은 이 토픽의 부록 1에 포함되어 있고
 
 **가상 디렉터리 만들기**  
 
-Get-IISServerManager 매개 변수가 반환하는 IISServerManager 개체를 사용하여 가상 디렉터리를 만들 수 있습니다. 이 개체는 .NET Microsoft.Web.Administration.ServerManager API를 노출합니다. 이 예제에서, 다음 명령은 사이트 컬렉션의 "기본 웹 사이트" 요소 및 애플리케이션 섹션의 루트 애플리케이션 요소("/")에 액세스합니다. 그런 다음 해당 애플리케이션 요소에 대한 VirtualDirectories 컬렉션의 Add() 메서드를 호출하여 새 디렉터리를 만듭니다.  
+Get-IISServerManager 매개 변수가 반환하는 IISServerManager 개체를 사용하여 가상 디렉터리를 만들 수 있습니다. 이 개체는 .NET Microsoft.Web.Administration.ServerManager API를 노출합니다. 이 예제에서, 다음 명령은 사이트 컬렉션의 기본 웹 사이트 요소 및 애플리케이션 섹션의 루트 애플리케이션 요소(/)에 액세스합니다. 그런 다음 해당 애플리케이션 요소에 대한 VirtualDirectories 컬렉션의 Add() 메서드를 호출하여 새 디렉터리를 만듭니다.  
 
 ```  
 PS C:\> $sm = Get-IISServerManager  
-PS C:\> $sm.Sites["Default Web Site"].Applications["/"].VirtualDirectories.Add("/DemoVirtualDir1", "c:\test\virtualDirectory1")  
-PS C:\> $sm.Sites["Default Web Site"].Applications["/"].VirtualDirectories.Add("/DemoVirtualDir2", "c:\test\virtualDirectory2")  
+PS C:\> $sm.Sites[Default Web Site].Applications[/].VirtualDirectories.Add(/DemoVirtualDir1, c:\test\virtualDirectory1)  
+PS C:\> $sm.Sites[Default Web Site].Applications[/].VirtualDirectories.Add(/DemoVirtualDir2, c:\test\virtualDirectory2)  
 PS C:\> $sm.CommitChanges()  
 ```  
 
@@ -206,7 +204,7 @@ PS C:\> $sm.CommitChanges()
 
 ```  
 PS C:\> $sm = Get-IISServerManager  
-PS C:\> $sm.ApplicationPools.Add("DemoAppPool")  
+PS C:\> $sm.ApplicationPools.Add(DemoAppPool)  
 ```  
 
 **HTTPS 및 인증서 구성**  
@@ -215,15 +213,15 @@ Nano 서버에서 웹 사이트에 대한 HTTPS를 구성하는 방법을 보여
 
 1.  Nano 서버를 실행하지 않는 다른 컴퓨터에서 인증서를 만들어서(사용자 고유의 인증서 이름 및 암호 사용) c:\temp\test.pfx로 내보냅니다.  
 
-    `$newCert = New-SelfSignedCertificate -DnsName "www.foo.bar.com" -CertStoreLocation cert:\LocalMachine\my`  
+    `$newCert = New-SelfSignedCertificate -DnsName www.foo.bar.com -CertStoreLocation cert:\LocalMachine\my`  
 
-    `$mypwd = ConvertTo-SecureString -String "YOUR_PFX_PASSWD" -Force -AsPlainText`  
+    `$mypwd = ConvertTo-SecureString -String YOUR_PFX_PASSWD -Force -AsPlainText`  
 
     `Export-PfxCertificate -FilePath c:\temp\test.pfx -Cert $newCert -Password $mypwd`  
 
 2.  test.pfx 파일을 Nano 서버 컴퓨터로 복사합니다.  
 
-3.  Nano 서버에서, 다음 명령을 사용하여 "내" 저장소로 인증서를 가져옵니다.  
+3.  Nano 서버에서, 다음 명령을 사용하여 내 저장소로 인증서를 가져옵니다.  
 
     **certoc.exe -ImportPFX -p YOUR_PFX_PASSWD My c:\temp\test.pfx**  
 
@@ -238,11 +236,11 @@ Nano 서버에서 웹 사이트에 대한 HTTPS를 구성하는 방법을 보여
 
     Import-Module IISAdministration  
     $sm = Get-IISServerManager  
-    $sm.Sites["Default Web Site"].Bindings.Add("*:443:", $hash, "My", "0")    # My is the certificate store name  
+    $sm.Sites[Default Web Site].Bindings.Add(*:443:, $hash, My, 0)    # My is the certificate store name  
     $sm.CommitChanges()  
     ```  
 
-    또한 다음 구문을 통해 특정 호스트 이름으로 SNI(서버 이름 표시)를 사용할 수 있습니다. `$sm.Sites["Default Web Site"].Bindings.Add("*:443: www.foo.bar.com", $hash, "My", "Sni".`  
+    또한 다음 구문을 통해 특정 호스트 이름으로 SNI(서버 이름 표시)를 사용할 수 있습니다. `$sm.Sites[Default Web Site].Bindings.Add(*:443: www.foo.bar.com, $hash, My, Sni.`  
 
 ## <a name="appendix-1-list-of-iis-sub-features"></a>부록 1: IIS 하위 기능 목록
 
@@ -288,95 +286,95 @@ IIS의 각 기능은 구성 요소 집합으로 존재합니다. 이 부록에�
 
 |섹션|구성 요소|  
 |----------------|--------------------------|  
-|`<globalModules>`|`<add name="DefaultDocumentModule" image="%windir%\System32\inetsrv\defdoc.dll" />`|  
-|`<modules>`|`<add name="DefaultDocumentModule" lockItem="true" />`|  
-|`<handlers>`|`<add name="StaticFile" path="*" verb="*" modules="DefaultDocumentModule" resourceType="EiSecther" requireAccess="Read" />`|  
-|`<defaultDocument>`|`<defaultDocument enabled="true"><br /><files><br /> <add value="Default.htm" /><br />        <add value="Default.asp" /><br />        <add value="index.htm" /><br />        <add value="index.html" /><br />        <add value="iisstart.htm" /><br />    </files><br /></defaultDocument>`|  
+|`<globalModules>`|`<add name=DefaultDocumentModule image=%windir%\System32\inetsrv\defdoc.dll />`|  
+|`<modules>`|`<add name=DefaultDocumentModule lockItem=true />`|  
+|`<handlers>`|`<add name=StaticFile path=* verb=* modules=DefaultDocumentModule resourceType=EiSecther requireAccess=Read />`|  
+|`<defaultDocument>`|`<defaultDocument enabled=true><br /><files><br /> <add value=Default.htm /><br />        <add value=Default.asp /><br />        <add value=index.htm /><br />        <add value=index.html /><br />        <add value=iisstart.htm /><br />    </files><br /></defaultDocument>`|  
 
-`StaticFile <handlers>` 항목이 이미 존재할 수 있습니다. 만약 그렇다면 \<모듈 > 특성에 "DefaultDocumentModule"을 추가하고 쉼표로 구분합니다.  
+`StaticFile <handlers>` 항목이 이미 존재할 수 있습니다. 만약 그렇다면 \<모듈 > 특성에 DefaultDocumentModule을 추가하고 쉼표로 구분합니다.  
 
 **디렉터리 검색**  
 
 |섹션|구성 요소|  
 |----------------|--------------------------|   
-|`<globalModules>`|`<add name="DirectoryListingModule" image="%windir%\System32\inetsrv\dirlist.dll" />`|  
-|`<modules>`|`<add name="DirectoryListingModule" lockItem="true" />`|  
-|`<handlers>`|`<add name="StaticFile" path="*" verb="*" modules="DirectoryListingModule" resourceType="Either" requireAccess="Read" />`|  
+|`<globalModules>`|`<add name=DirectoryListingModule image=%windir%\System32\inetsrv\dirlist.dll />`|  
+|`<modules>`|`<add name=DirectoryListingModule lockItem=true />`|  
+|`<handlers>`|`<add name=StaticFile path=* verb=* modules=DirectoryListingModule resourceType=Either requireAccess=Read />`|  
 
-`StaticFile <handlers>` 항목이 이미 존재할 수 있습니다. 만약 그렇다면 \<모듈 > 특성에 "DirectoryListingModule"을 추가하고 쉼표로 구분합니다.  
+`StaticFile <handlers>` 항목이 이미 존재할 수 있습니다. 만약 그렇다면 \<모듈 > 특성에 DirectoryListingModule을 추가하고 쉼표로 구분합니다.  
 
 **HTTP 오류**  
 
 |섹션|구성 요소|  
 |----------------|--------------------------|   
-|`<globalModules>`|`<add name="CustomErrorModule" image="%windir%\System32\inetsrv\custerr.dll" />`|  
-|`<modules>`|`<add name="CustomErrorModule" lockItem="true" />`|  
-|`<httpErrors>`|`<httpErrors lockAttributes="allowAbsolutePathsWhenDelegated,defaultPath"><br />    <error statusCode="401"    prefixLanguageFilePath="%SystemDrive%\inetpub\custerr" path="401.htm" ><br />    <error statusCode="403" prefixLanguageFilePath="%SystemDrive%\inetpub\custerr" path="403.htm" /><br />    <error statusCode="404" prefixLanguageFilePath="%SystemDrive%\inetpub\custerr" path="404.htm" /><br />    <error statusCode="405" prefixLanguageFilePath="%SystemDrive%\inetpub\custerr" path="405.htm" /><br />    <error statusCode="406" prefixLanguageFilePath="%SystemDrive%\inetpub\custerr" path="406.htm" /><br />    <error statusCode="412" prefixLanguageFilePath="%SystemDrive%\inetpub\custerr" path="412.htm" /><br />    <error statusCode="500" prefixLanguageFilePath="%SystemDrive%\inetpub\custerr" path="500.htm" /><br />    <error statusCode="501" prefixLanguageFilePath="%SystemDrive%\inetpub\custerr" path="501.htm" /><br />    <error statusCode="502" prefixLanguageFilePath="%SystemDrive%\inetpub\custerr" path="502.htm" /><br /></httpErrors>`|  
+|`<globalModules>`|`<add name=CustomErrorModule image=%windir%\System32\inetsrv\custerr.dll />`|  
+|`<modules>`|`<add name=CustomErrorModule lockItem=true />`|  
+|`<httpErrors>`|`<httpErrors lockAttributes=allowAbsolutePathsWhenDelegated,defaultPath><br />    <error statusCode=401    prefixLanguageFilePath=%SystemDrive%\inetpub\custerr path=401.htm ><br />    <error statusCode=403 prefixLanguageFilePath=%SystemDrive%\inetpub\custerr path=403.htm /><br />    <error statusCode=404 prefixLanguageFilePath=%SystemDrive%\inetpub\custerr path=404.htm /><br />    <error statusCode=405 prefixLanguageFilePath=%SystemDrive%\inetpub\custerr path=405.htm /><br />    <error statusCode=406 prefixLanguageFilePath=%SystemDrive%\inetpub\custerr path=406.htm /><br />    <error statusCode=412 prefixLanguageFilePath=%SystemDrive%\inetpub\custerr path=412.htm /><br />    <error statusCode=500 prefixLanguageFilePath=%SystemDrive%\inetpub\custerr path=500.htm /><br />    <error statusCode=501 prefixLanguageFilePath=%SystemDrive%\inetpub\custerr path=501.htm /><br />    <error statusCode=502 prefixLanguageFilePath=%SystemDrive%\inetpub\custerr path=502.htm /><br /></httpErrors>`|  
 
 **정적 콘텐츠**  
 
 |섹션|구성 요소|  
 |----------------|--------------------------|  
-|`<globalModules>`|`<add name="StaticFileModule" image="%windir%\System32\inetsrv\static.dll" />`|  
-|`<modules>`|`<add name="StaticFileModule" lockItem="true" />`|  
-|`<handlers>`|`<add name="StaticFile" path="*" verb="*" modules="StaticFileModule" resourceType="Either" requireAccess="Read" />`|  
+|`<globalModules>`|`<add name=StaticFileModule image=%windir%\System32\inetsrv\static.dll />`|  
+|`<modules>`|`<add name=StaticFileModule lockItem=true />`|  
+|`<handlers>`|`<add name=StaticFile path=* verb=* modules=StaticFileModule resourceType=Either requireAccess=Read />`|  
 
-`StaticFile \<handlers>` 항목이 이미 존재할 수 있습니다. 만약 그렇다면 \<모듈 > 특성에 "StaticFileModule"을 추가하고 쉼표로 구분합니다.  
+`StaticFile \<handlers>` 항목이 이미 존재할 수 있습니다. 만약 그렇다면 \<모듈 > 특성에 StaticFileModule을 추가하고 쉼표로 구분합니다.  
 
 **HTTP 리디렉션**  
 
 |섹션|구성 요소|  
 |----------------|--------------------------|    
-|`<globalModules>`|`<add name="HttpRedirectionModule" image="%windir%\System32\inetsrv\redirect.dll" />`|  
-|`<modules>`|`<add name="HttpRedirectionModule" lockItem="true" />`|  
-|`<httpRedirect>`|`<httpRedirect enabled="false" />`|  
+|`<globalModules>`|`<add name=HttpRedirectionModule image=%windir%\System32\inetsrv\redirect.dll />`|  
+|`<modules>`|`<add name=HttpRedirectionModule lockItem=true />`|  
+|`<httpRedirect>`|`<httpRedirect enabled=false />`|  
 
 ### <a name="health-and-diagnostics"></a>상태 및 진단  
 **HTTP 로깅**  
 
 |섹션|구성 요소|  
 |----------------|--------------------------|   
-|`<globalModules>`|`<add name="HttpLoggingModule" image="%windir%\System32\inetsrv\loghttp.dll" />`|  
-|`<modules>`|`<add name="HttpLoggingModule" lockItem="true" />`|  
-|`<httpLogging>`|`<httpLogging dontLog="false" />`|  
+|`<globalModules>`|`<add name=HttpLoggingModule image=%windir%\System32\inetsrv\loghttp.dll />`|  
+|`<modules>`|`<add name=HttpLoggingModule lockItem=true />`|  
+|`<httpLogging>`|`<httpLogging dontLog=false />`|  
 
 **사용자 지정 로깅**  
 
 |섹션|구성 요소|  
 |----------------|--------------------------|  
-|`<globalModules>`|`<add name="CustomLoggingModule" image="%windir%\System32\inetsrv\logcust.dll" />`|  
-|`<modules>`|`<add name="CustomLoggingModule" lockItem="true" />`|  
+|`<globalModules>`|`<add name=CustomLoggingModule image=%windir%\System32\inetsrv\logcust.dll />`|  
+|`<modules>`|`<add name=CustomLoggingModule lockItem=true />`|  
 
 **요청 모니터**  
 
 |섹션|구성 요소|  
 |----------------|--------------------------|  
-|`<globalModules>`|`<add name="RequestMonitorModule" image="%windir%\System32\inetsrv\iisreqs.dll" />`|  
+|`<globalModules>`|`<add name=RequestMonitorModule image=%windir%\System32\inetsrv\iisreqs.dll />`|  
 
 **추적**  
 
 |섹션|구성 요소|  
 |----------------|--------------------------|  
-|`<globalModules>`|`<add name="TracingModule" image="%windir%\System32\inetsrv\iisetw.dll" \/><br /><add name="FailedRequestsTracingModule" image="%windir%\System32\inetsrv\iisfreb.dll" />`|  
-|`<modules>`|`<add name="FailedRequestsTracingModule" lockItem="true" />`|  
-|`<traceProviderDefinitions>`|`<traceProviderDefinitions><br />    <add name="WWW Server" guid\="{3a2a4e84-4c21-4981-ae10-3fda0d9b0f83}"><br />        <areas><br />            <clear /><br />            <add name="Authentication" value="2" /><br />            <add name="Security" value="4" /><br />            <add name="Filter" value="8" /><br />            <add name="StaticFile" value="16" /><br />            <add name="CGI" value="32" /><br />            <add name="Compression" value="64" /><br />            <add name="Cache" value="128" /><br />            <add name="RequestNotifications" value="256" /><br />            <add name="Module" value="512" /><br />            <add name="FastCGI" value="4096" /><br />            <add name="WebSocket" value="16384" /><br />        </areas><br />    </add><br />    <add name="ISAPI Extension" guid="{a1c2040e-8840-4c31-ba11-9871031a19ea}"><br />        <areas><br />            <clear /><br />        </areas><br />    </add><br /></traceProviderDefinitions>`|  
+|`<globalModules>`|`<add name=TracingModule image=%windir%\System32\inetsrv\iisetw.dll \/><br /><add name=FailedRequestsTracingModule image=%windir%\System32\inetsrv\iisfreb.dll />`|  
+|`<modules>`|`<add name=FailedRequestsTracingModule lockItem=true />`|  
+|`<traceProviderDefinitions>`|`<traceProviderDefinitions><br />    <add name=WWW Server guid\={3a2a4e84-4c21-4981-ae10-3fda0d9b0f83}><br />        <areas><br />            <clear /><br />            <add name=Authentication value=2 /><br />            <add name=Security value=4 /><br />            <add name=Filter value=8 /><br />            <add name=StaticFile value=16 /><br />            <add name=CGI value=32 /><br />            <add name=Compression value=64 /><br />            <add name=Cache value=128 /><br />            <add name=RequestNotifications value=256 /><br />            <add name=Module value=512 /><br />            <add name=FastCGI value=4096 /><br />            <add name=WebSocket value=16384 /><br />        </areas><br />    </add><br />    <add name=ISAPI Extension guid={a1c2040e-8840-4c31-ba11-9871031a19ea}><br />        <areas><br />            <clear /><br />        </areas><br />    </add><br /></traceProviderDefinitions>`|  
 
 ### <a name="performance"></a>성능  
 **정적 콘텐츠 압축**  
 
 |섹션|구성 요소|  
 |----------------|--------------------------|  
-|`<globalModules>`|`<add name="StaticCompressionModule" image="%windir%\System32\inetsrv\compstat.dll" />`|  
-|`<modules>`|`<add name="StaticCompressionModule" lockItem="true" />`|  
-|`<httpCompression>`|`<httpCompression directory="%SystemDrive%\inetpub\temp\IIS Temporary Compressed Files"><br />    <scheme name="gzip" dll="%Windir%\system32\inetsrv\gzip.dll" /><br />   <staticTypes><br />        <add mimeType="text/*" enabled="true" /><br />        <add mimeType="message/*" enabled="true" /><br />        <add mimeType="application/javascript" enabled="true" \/><br />        <add mimeType="application/atom+xml" enabled="true" /><br />        <add mimeType="application/xaml+xml" enabled="true" /><br />        <add mimeType="\*\*" enabled="false" /><br />    </staticTypes><br /></httpCompression>`|  
+|`<globalModules>`|`<add name=StaticCompressionModule image=%windir%\System32\inetsrv\compstat.dll />`|  
+|`<modules>`|`<add name=StaticCompressionModule lockItem=true />`|  
+|`<httpCompression>`|`<httpCompression directory=%SystemDrive%\inetpub\temp\IIS Temporary Compressed Files><br />    <scheme name=gzip dll=%Windir%\system32\inetsrv\gzip.dll /><br />   <staticTypes><br />        <add mimeType=text/* enabled=true /><br />        <add mimeType=message/* enabled=true /><br />        <add mimeType=application/javascript enabled=true \/><br />        <add mimeType=application/atom+xml enabled=true /><br />        <add mimeType=application/xaml+xml enabled=true /><br />        <add mimeType=\*\* enabled=false /><br />    </staticTypes><br /></httpCompression>`|  
 
 **동적 콘텐츠 압축**  
 
 |섹션|구성 요소|  
 |-----------|--------------------------|  
-|`<globalModules>`|`<add name="DynamicCompressionModule" image="%windir%\System32\inetsrv\compdyn.dll" />`|  
-|`<modules>`|`<add name="DynamicCompressionModule" lockItem="true" />`|  
-|`<httpCompression>`|`<httpCompression directory\="%SystemDrive%\inetpub\temp\IIS Temporary Compressed Files"><br />    <scheme name="gzip" dll="%Windir%\system32\inetsrv\gzip.dll" \/><br />    \<dynamicTypes><br />        <add mimeType="text/*" enabled="true" \/><br />        <add mimeType="message/*" enabled="true" /><br />        <add mimeType="application/x-javascript" enabled="true" /><br />        <add mimeType="application/javascript" enabled="true" /><br />        <add mimeType="*/*" enabled="false" /><br />    <\/dynamicTypes><br /></httpCompression>`|  
+|`<globalModules>`|`<add name=DynamicCompressionModule image=%windir%\System32\inetsrv\compdyn.dll />`|  
+|`<modules>`|`<add name=DynamicCompressionModule lockItem=true />`|  
+|`<httpCompression>`|`<httpCompression directory\=%SystemDrive%\inetpub\temp\IIS Temporary Compressed Files><br />    <scheme name=gzip dll=%Windir%\system32\inetsrv\gzip.dll \/><br />    \<dynamicTypes><br />        <add mimeType=text/* enabled=true \/><br />        <add mimeType=message/* enabled=true /><br />        <add mimeType=application/x-javascript enabled=true /><br />        <add mimeType=application/javascript enabled=true /><br />        <add mimeType=*/* enabled=false /><br />    <\/dynamicTypes><br /></httpCompression>`|  
 
 ### <a name="security"></a>보안  
 **요청 필터링**  
@@ -384,110 +382,110 @@ IIS의 각 기능은 구성 요소 집합으로 존재합니다. 이 부록에�
 
 |       섹션        |                                                                                                                                        구성 요소                                                                                                                                        |
 |----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|  `<globalModules>`   |                                                                                                        `<add name="RequestFilteringModule" image="%windir%\System32\inetsrv\modrqflt.dll" />`                                                                                                        |
-|     `<modules>`      |                                                                                                                       `<add name="RequestFilteringModule" lockItem="true" />`                                                                                                                        |
-| \`<requestFiltering> | `<requestFiltering><br />    <fileExtensions allowUnlisted="true" applyToWebDAV="true" /><br />    <verbs allowUnlisted="true" applyToWebDAV="true" /><br />    <hiddenSegments applyToWebDAV="true"><br />        <add segment="web.config" /><br />    </hiddenSegments><br /></requestFiltering>` |
+|  `<globalModules>`   |                                                                                                        `<add name=RequestFilteringModule image=%windir%\System32\inetsrv\modrqflt.dll />`                                                                                                        |
+|     `<modules>`      |                                                                                                                       `<add name=RequestFilteringModule lockItem=true />`                                                                                                                        |
+| \`<requestFiltering> | `<requestFiltering><br />    <fileExtensions allowUnlisted=true applyToWebDAV=true /><br />    <verbs allowUnlisted=true applyToWebDAV=true /><br />    <hiddenSegments applyToWebDAV=true><br />        <add segment=web.config /><br />    </hiddenSegments><br /></requestFiltering>` |
 
 **기본 인증**  
 
 |섹션|구성 요소|  
 |----------------|--------------------------|   
-|`<globalModules>`|`<add name="BasicAuthenticationModule" image="%windir%\System32\inetsrv\authbas.dll" />`|  
-|`<modules>`|`<add name="WindowsAuthenticationModule" lockItem="true" />`|  
-|`<basicAuthentication>`|`<basicAuthentication enabled="false" />`|  
+|`<globalModules>`|`<add name=BasicAuthenticationModule image=%windir%\System32\inetsrv\authbas.dll />`|  
+|`<modules>`|`<add name=WindowsAuthenticationModule lockItem=true />`|  
+|`<basicAuthentication>`|`<basicAuthentication enabled=false />`|  
 
 **클라이언트 인증서 매핑 인증**  
 
 |섹션|구성 요소|  
 |----------------|--------------------------|  
-|`<globalModules>`|`<add name="CertificateMappingAuthentication" image="%windir%\System32\inetsrv\authcert.dll" />`|  
-|`<modules>`|`<add name="CertificateMappingAuthenticationModule" lockItem="true" />`|  
-|`<clientCertificateMappingAuthentication>`|`<clientCertificateMappingAuthentication enabled="false" />`|  
+|`<globalModules>`|`<add name=CertificateMappingAuthentication image=%windir%\System32\inetsrv\authcert.dll />`|  
+|`<modules>`|`<add name=CertificateMappingAuthenticationModule lockItem=true />`|  
+|`<clientCertificateMappingAuthentication>`|`<clientCertificateMappingAuthentication enabled=false />`|  
 
 **다이제스트 인증**  
 
 |섹션|구성 요소|  
 |----------------|--------------------------|  
-|`<globalModules>`|`<add name="DigestAuthenticationModule" image="%windir%\System32\inetsrv\authmd5.dll" />`|  
-|`<modules>`|`<add name="DigestAuthenticationModule" lockItem="true" />`|  
-|`<other>`|`<digestAuthentication enabled="false" />`|  
+|`<globalModules>`|`<add name=DigestAuthenticationModule image=%windir%\System32\inetsrv\authmd5.dll />`|  
+|`<modules>`|`<add name=DigestAuthenticationModule lockItem=true />`|  
+|`<other>`|`<digestAuthentication enabled=false />`|  
 
 **IIS 클라이언트 인증서 매핑 인증**  
 
 
 |                  섹션                   |                                         구성 요소                                         |
 |--------------------------------------------|--------------------------------------------------------------------------------------------------------|
-|             `<globalModules>`              | `<add name="CertificateMappingAuthenticationModule" image="%windir%\System32\inetsrv\authcert.dll" />` |
-|                `<modules>`                 |               `<add name="CertificateMappingAuthenticationModule" lockItem="true" `/>\`                |
-| `<clientCertificateMappingAuthentication>` |                      `<clientCertificateMappingAuthentication enabled="false" />`                      |
+|             `<globalModules>`              | `<add name=CertificateMappingAuthenticationModule image=%windir%\System32\inetsrv\authcert.dll />` |
+|                `<modules>`                 |               `<add name=CertificateMappingAuthenticationModule lockItem=true `/>\`                |
+| `<clientCertificateMappingAuthentication>` |                      `<clientCertificateMappingAuthentication enabled=false />`                      |
 
 **IP 및 도메인 제한**  
 
 |섹션|구성 요소|  
 |----------------|--------------------------|  
-|`<globalModules>`|```<add name="IpRestrictionModule" image="%windir%\System32\inetsrv\iprestr.dll" /><br /><add name="DynamicIpRestrictionModule" image="%windir%\System32\inetsrv\diprestr.dll" />```|  
-|`<modules>`|`<add name="IpRestrictionModule" lockItem="true" \/><br /><add name="DynamicIpRestrictionModule" lockItem="true" \/>`|  
-|`<ipSecurity>`|`<ipSecurity allowUnlisted="true" />`|  
+|`<globalModules>`|```<add name=IpRestrictionModule image=%windir%\System32\inetsrv\iprestr.dll /><br /><add name=DynamicIpRestrictionModule image=%windir%\System32\inetsrv\diprestr.dll />```|  
+|`<modules>`|`<add name=IpRestrictionModule lockItem=true \/><br /><add name=DynamicIpRestrictionModule lockItem=true \/>`|  
+|`<ipSecurity>`|`<ipSecurity allowUnlisted=true />`|  
 
 **URL 권한 부여**  
 
 |섹션|구성 요소|  
 |----------------|--------------------------|  
-|`<globalModules>`|`<add name="UrlAuthorizationModule" image="%windir%\System32\inetsrv\urlauthz.dll" />`|  
-|`<modules>`|`<add name="UrlAuthorizationModule" lockItem="true" />`|  
-|`<authorization>`|`<authorization><br />    <add accessType="Allow" users="*" /><br /></authorization>`|  
+|`<globalModules>`|`<add name=UrlAuthorizationModule image=%windir%\System32\inetsrv\urlauthz.dll />`|  
+|`<modules>`|`<add name=UrlAuthorizationModule lockItem=true />`|  
+|`<authorization>`|`<authorization><br />    <add accessType=Allow users=* /><br /></authorization>`|  
 
 **Windows 인증**  
 
 |섹션|구성 요소|  
 |----------------|--------------------------|    
-|`<globalModules>`|`<add name="WindowsAuthenticationModule" image="%windir%\System32\inetsrv\authsspi.dll" />`|  
-|`<modules>`|`<add name="WindowsAuthenticationModule" lockItem="true" />`|  
-|`<windowsAuthentication>`|`<windowsAuthentication enabled="false" authPersistNonNTLM\="true"><br />    <providers><br />        <add value="Negotiate" /><br />        <add value="NTLM" /><br />    <\providers><br /><\windowsAuthentication><windowsAuthentication enabled="false" authPersistNonNTLM\="true"><br />    <providers><br />        <add value="Negotiate" /><br />        <add value="NTLM" /><br />    <\/providers><br /><\/windowsAuthentication>`|  
+|`<globalModules>`|`<add name=WindowsAuthenticationModule image=%windir%\System32\inetsrv\authsspi.dll />`|  
+|`<modules>`|`<add name=WindowsAuthenticationModule lockItem=true />`|  
+|`<windowsAuthentication>`|`<windowsAuthentication enabled=false authPersistNonNTLM\=true><br />    <providers><br />        <add value=Negotiate /><br />        <add value=NTLM /><br />    <\providers><br /><\windowsAuthentication><windowsAuthentication enabled=false authPersistNonNTLM\=true><br />    <providers><br />        <add value=Negotiate /><br />        <add value=NTLM /><br />    <\/providers><br /><\/windowsAuthentication>`|  
 
 ### <a name="application-development"></a>애플리케이션 개발  
 **애플리케이션 초기화**  
 
 |섹션|구성 요소|  
 |----------------|--------------------------|  
-|`<globalModules>`|`<add name="ApplicationInitializationModule" image="%windir%\System32\inetsrv\warmup.dll" />`|  
-|`<modules>`|`<add name="ApplicationInitializationModule" lockItem="true" />`|  
+|`<globalModules>`|`<add name=ApplicationInitializationModule image=%windir%\System32\inetsrv\warmup.dll />`|  
+|`<modules>`|`<add name=ApplicationInitializationModule lockItem=true />`|  
 
 **CGI**  
 
 |섹션|구성 요소|  
 |----------------|--------------------------|  
-|`<globalModules>`|`<add name="CgiModule" image="%windir%\System32\inetsrv\cgi.dll" /><br /><add name="FastCgiModule" image="%windir%\System32\inetsrv\iisfcgi.dll" />`|  
-|`<modules>`|`<add name="CgiModule" lockItem="true" /><br /><add name="FastCgiModule" lockItem="true" />`|  
-|`<handlers>`|`<add name="CGI-exe" path="*.exe" verb="\*" modules="CgiModule" resourceType="File" requireAccess="Execute" allowPathInfo="true" />`|  
+|`<globalModules>`|`<add name=CgiModule image=%windir%\System32\inetsrv\cgi.dll /><br /><add name=FastCgiModule image=%windir%\System32\inetsrv\iisfcgi.dll />`|  
+|`<modules>`|`<add name=CgiModule lockItem=true /><br /><add name=FastCgiModule lockItem=true />`|  
+|`<handlers>`|`<add name=CGI-exe path=*.exe verb=\* modules=CgiModule resourceType=File requireAccess=Execute allowPathInfo=true />`|  
 
 **ISAPI 확장**  
 
 |섹션|구성 요소|  
 |----------------|--------------------------|    
-|`<globalModules>`|`<add name="IsapiModule" image="%windir%\System32\inetsrv\isapi.dll" />`|  
-|`<modules>`|`<add name="IsapiModule" lockItem="true" />`|  
-|`<handlers>`|`<add name="ISAPI-dll" path="*.dll" verb="*" modules="IsapiModule" resourceType="File" requireAccess="Execute" allowPathInfo="true" />`|  
+|`<globalModules>`|`<add name=IsapiModule image=%windir%\System32\inetsrv\isapi.dll />`|  
+|`<modules>`|`<add name=IsapiModule lockItem=true />`|  
+|`<handlers>`|`<add name=ISAPI-dll path=*.dll verb=* modules=IsapiModule resourceType=File requireAccess=Execute allowPathInfo=true />`|  
 
 **ISAPI 필터**  
 
 |섹션|구성 요소|  
 |----------------|--------------------------|    
-|`<globalModules>`|`<add name="IsapiFilterModule" image="%windir%\System32\inetsrv\filter.dll" />`|  
-|`<modules>`|`<add name="IsapiFilterModule" lockItem="true" />`|  
+|`<globalModules>`|`<add name=IsapiFilterModule image=%windir%\System32\inetsrv\filter.dll />`|  
+|`<modules>`|`<add name=IsapiFilterModule lockItem=true />`|  
 
 **SSI(Server Side Include)**  
 
 |섹션|구성 요소|  
 |----------------|--------------------------|  
-|`<globalModules>`|<`add name="ServerSideIncludeModule" image="%windir%\System32\inetsrv\iis_ssi.dll" />`|  
-|`<modules>`|`<add name="ServerSideIncludeModule" lockItem="true" />`|  
-|`<handlers>`|`<add name="SSINC-stm" path="*.stm" verb="GET,HEAD,POST" modules="ServerSideIncludeModule" resourceType="File" \/><br /><add name="SSINC-shtm" path="*.shtm" verb="GET,HEAD,POST" modules="ServerSideIncludeModule" resourceType="File" /><br /><add name="SSINC-shtml" path="*.shtml" verb="GET,HEAD,POST" modules="ServerSideIncludeModule" resourceType="File" />`|  
-|`<serverSideInclude>`|`<serverSideInclude ssiExecDisable="false" />`|  
+|`<globalModules>`|<`add name=ServerSideIncludeModule image=%windir%\System32\inetsrv\iis_ssi.dll />`|  
+|`<modules>`|`<add name=ServerSideIncludeModule lockItem=true />`|  
+|`<handlers>`|`<add name=SSINC-stm path=*.stm verb=GET,HEAD,POST modules=ServerSideIncludeModule resourceType=File \/><br /><add name=SSINC-shtm path=*.shtm verb=GET,HEAD,POST modules=ServerSideIncludeModule resourceType=File /><br /><add name=SSINC-shtml path=*.shtml verb=GET,HEAD,POST modules=ServerSideIncludeModule resourceType=File />`|  
+|`<serverSideInclude>`|`<serverSideInclude ssiExecDisable=false />`|  
 
 **WebSocket 프로토콜**  
 
 |섹션|구성 요소|  
 |----------------|--------------------------|    
-|`<globalModules>`|`<add name="WebSocketModule" image="%windir%\System32\inetsrv\iiswsock.dll" />`|  
-|`<modules>`|`<add name="WebSocketModule" lockItem="true" />`|  
+|`<globalModules>`|`<add name=WebSocketModule image=%windir%\System32\inetsrv\iiswsock.dll />`|  
+|`<modules>`|`<add name=WebSocketModule lockItem=true />`|  
