@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: 7609ebb0fdcb6d429cd40d99399eaaedb732df08
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: c0fdb5c1d7c4b03610a173c6cd0575d39646a7d0
+ms.sourcegitcommit: af1cf89632d62a94943d3ad9f6b5234b88499278
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80855096"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81524908"
 ---
 # <a name="determine-allow-deny-list-and-application-inventory-for-software-restriction-policies"></a>소프트웨어 제한 정책에 대한 허용-거부 목록 및 응용 프로그램 인벤토리 확인
 
@@ -48,9 +48,9 @@ SRP를 사용 하 여 특정 작업을 수행 하는 방법에 대 한 자세한
 
 2.  고급 로깅 기능을 사용 하도록 설정 하 고 로그 파일을 쓸 경로를 설정 하려면 다음 레지스트리 값을 만듭니다.
 
-    **"HKEY_LOCAL_MACHINE \SOFTWARE\Policies\Microsoft\Windows\Safer\ CodeIdentifiers"**
+    **"HKEY_LOCAL_MACHINE \SOFTWARE\Policies\Microsoft\Windows\Safer\CodeIdentifiers"**
 
-    문자열 값: *namelogfile의 경로 NameLogFile*
+    문자열 값: *LogFileName path To LogFileName*
 
     SRP는 실행 될 때 모든 응용 프로그램을 평가 하므로 응용 프로그램이 실행 될 때마다 로그 파일 *Namelogfile* 에 항목이 기록 됩니다.
 
@@ -69,5 +69,4 @@ SRP를 사용 하 여 특정 작업을 수행 하는 방법에 대 한 자세한
     로그 파일에 기록 되는 출력의 예는 다음과 같습니다.
 
 **explorer.exe (PID = 4728) identifiedC: \ Windows\system32\onenote.exe As 무제한 usingpath rule, Guid = {320bd852-aa7c-4674-82c5-9a80321670a3}**    SRP를 확인 하 고 차단 하도록 설정 하는 모든 응용 프로그램 및 관련 코드는 로그 파일에 기록 되며,이 파일을 사용 하 여 허용 된 목록에 대해 고려해 야 하는 실행 파일을 확인할 수 있습니다.
-
 
