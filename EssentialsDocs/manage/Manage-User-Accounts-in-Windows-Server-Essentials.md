@@ -1,23 +1,19 @@
 ---
 title: Windows Server Essentials에서 사용자 계정 관리
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0d115697-532b-48c2-a659-9f889e235326
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 86feb7168aa53837c4bef514e8a9b6724c0e5682
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 3aa78edb19891c368408fbf1e4045fea049fc827
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80311041"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80852706"
 ---
 # <a name="manage-user-accounts-in-windows-server-essentials"></a>Windows Server Essentials에서 사용자 계정 관리
 
@@ -207,7 +203,7 @@ Windows Server Essentials 대시보드의 사용자 페이지에서는 소규모
   
 - 다음을 표시하는 사용자 계정 목록:  
   
-  -   사용자의 이름입니다.  
+  -   사용자 이름.  
   
   -   사용자 계정의 로그온 이름.  
   
@@ -456,11 +452,11 @@ Windows Server Essentials 대시보드의 사용자 페이지에서는 소규모
 ###  <a name="give-user-accounts-remote-desktop-permission"></a><a name="BKMK_Access8"></a>사용자 계정에 원격 데스크톱 권한 부여  
  Windows Server Essentials의 기본 설치에서 네트워크 사용자는 네트워크의 컴퓨터 또는 기타 리소스에 대한 원격 연결을 설정할 권한이 없습니다.  
   
- 네트워크 사용자가 네트워크 리소스에 대한 원격 연결을 설정할 수 있으려면 먼저 원격 액세스를 설정해야 합니다. 원격 액세스를 설정하고 나면 사용자가 인터넷 연결을 통해 위치에 관계없이 장치에서 사무실 네트워크의 파일, 응용 프로그램 및 컴퓨터에 액세스할 수 있습니다.  
+ 네트워크 사용자가 네트워크 리소스에 대한 원격 연결을 설정할 수 있으려면 먼저 원격 액세스를 설정해야 합니다. 원격 액세스를 설정하고 나면 사용자가 인터넷 연결을 통해 위치에 관계없이 디바이스에서 사무실 네트워크의 파일, 응용 프로그램 및 컴퓨터에 액세스할 수 있습니다.  
   
  원격 액세스 설정 마법사에서는 두 가지 방법으로 원격 액세스를 수행할 수 있습니다.  
   
-- VPN(가상 프라이빗 네트워크)  
+- VPN(가상 사설망)  
   
 - 원격 웹 액세스  
   
@@ -548,7 +544,7 @@ Windows Server Essentials 대시보드의 사용자 페이지에서는 소규모
   
     -   **원격 웹 액세스 허용 및 웹 서비스 응용 프로그램에 액세스** 확인란을 선택하여 사용자가 원격 웹 액세스를 사용하여 서버에 연결할 수 있도록 합니다.  
   
-6.  **적용**을 클릭한 다음 **확인**을 클릭합니다.  
+6.  **적용**, **확인**을 차례로 클릭합니다.  
   
 ###  <a name="change-virtual-private-network-permissions-for-a-user-account"></a><a name="BKMK_Access11"></a>사용자 계정에 대 한 가상 개인 네트워크 사용 권한 변경  
  VPN(가상 사설망)을 사용하여 Windows Server Essentials에 연결하고 서버에 저장된 모든 리소스에 액세스할 수 있습니다. 이 기능은 특히 VPN 연결을 통해 호스트된 Windows Server Essentials 서버에 연결하는 데 사용할 수 있는 네트워크 계정으로 설정되는 클라이언트 컴퓨터가 있는 경우 유용합니다. 호스트된 Windows Server Essentials 서버에서 새로 만든 모든 사용자 계정은 처음에 VPN을 사용하여 클라이언트 컴퓨터에 로그온해야 합니다.  
@@ -567,7 +563,7 @@ Windows Server Essentials 대시보드의 사용자 페이지에서는 소규모
   
 6.  **원격 액세스** 탭에서 사용자가 VPN을 사용하여 서버에 연결할 수 있게 하려면 **VPN(가상 사설망) 허용** 확인란을 선택합니다.  
   
-7.  **적용**을 클릭한 다음 **확인**을 클릭합니다.  
+7.  **적용**, **확인**을 차례로 클릭합니다.  
   
 ###  <a name="change-access-to-internal-shared-folders-for-a-user-account"></a><a name="BKMK_Access12"></a>사용자 계정에 대 한 내부 공유 폴더에 대 한 액세스 변경  
  대시보드의 **서버 폴더** 탭에 있는 작업을 사용하여 서버에 있는 모든 공유 폴더에 대한 액세스 권한을 관리할 수 있습니다. 기본적으로 Windows Server Essentials를 설치할 때 다음 서버 폴더가 생성됩니다.  
