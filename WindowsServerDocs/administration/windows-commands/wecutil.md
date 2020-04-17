@@ -1,23 +1,19 @@
 ---
 title: wecutil
-description: '\* * * *에 대 한 Windows 명령 항목 '
-ms.custom: na
+description: 원격 컴퓨터에서 전달 되는 이벤트에 대 한 구독을 만들고 관리할 수 있는 wecutil에 대 한 Windows 명령 항목입니다.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0c82a6cb-d652-429c-9c3d-0f568c78d54b
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dansimps
-ms.openlocfilehash: 78005a715a0dbd20124bfb24be27586a8e153310
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 2bb397ace7cc99c8b8d6bbed3598346ff2d0801c
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71362182"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80829442"
 ---
 # <a name="wecutil"></a>wecutil
 
@@ -39,18 +35,18 @@ wecutil  [{es | enum-subscription}]
 [{qc | quick-config} [/q:[<Quiet>]]].
 ```
 
-## <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------|-----------|
 |{es \| 열거-구독}|존재 하는 모든 원격 이벤트 구독의 이름을 표시 합니다.|
 |{gs \| get-subscription} \<Subid > [/f:\<형식 >] [/m:\<유니코드 >]|원격 구독 구성 정보를 표시합니다. \<Subid >는 구독을 고유 하 게 식별 하는 문자열입니다. \<Subid >은 구독을 만드는 데 사용 된 XML 구성 파일의 \<SubscriptionId > 태그에 지정 된 문자열과 같습니다.|
 |{gr \| get-subscriptionruntimestatus} \<Subid > [\<Eventsource > ...]|구독의 런타임 상태를 표시 합니다. \<Subid >는 구독을 고유 하 게 식별 하는 문자열입니다. \<Subid >은 구독을 만드는 데 사용 된 XML 구성 파일의 \<SubscriptionId > 태그에 지정 된 문자열과 같습니다. Eventsource > \<이벤트의 원본으로 사용 되는 컴퓨터를 식별 하는 문자열입니다. \<Eventsource >는 정규화 된 도메인 이름, NetBIOS 이름 또는 IP 주소 여야 합니다.|
-|{ss \| set-subscription} \<Subid > [/e: [\<Subid >]] [/esa:\<Address >] [/ese: [\<Srcenabled >]] [/ese] [/res] [/취소:\<Username >] [/up:\<Password >] [/d:\<Desc >] [/uri:\<Uri >] [/cm:\<Configmode >] [/ex:\<Expires >] [/q:\<Query >] [/dia:\<언어 >] [/tn:\<:\<Deliverymode.persistent >] [/dmi:\<Deliverymax >] [/dmlt:\<경우 deliverytime >] [/hi:\<하트 비트 >] [/scf:\<Content >] [/l:\<Locale >] [/ree: [\<Readexist >]] [/lf:\<Logfile >] [/pn:\<\aa] [/essp: > Enableport\<] [/h n: > 호스트 이름\<] [/sct: > Type\<\<</br>또는</br>{ss \| set-subscription/c:\<k> [/cun:\<Comusername >/cup:\<Compassword >]|등록 구성을 변경합니다. 구독 ID 및 구독 매개 변수를 변경 하려면 적절 한 옵션을 지정할 수 있습니다 또는 구독 매개 변수를 변경 하는 XML 구성 파일을 지정할 수 있습니다.|
+|{ss \| set-subscription} \<Subid > [/e: [\<Subid >]] [/esa:\<Address >] [/ese: [\<Srcenabled >]] [/aes] [/res] [////////////사용자 이름\<] [/up: > Password\<] [/d: > Desc\<] [/ese: > Uri\<] [/ese: > Configmode\<\<쿼리 >] [/dia:\<언어 >] [/tn:\<Hname >] [/tp:\<경우 deliverytime Port >] [/tdm:\<Deliverymode.persistent >] [/dmi:\<Deliverymax >] [/dmlt:\<>] [/안녕하세요:\<하트 비트 >] [/scf:\<Content >] [/l :\<Locale >] [/ree: [\<Readexist >]] [/lf:\<Logfile >] [/pn:\<\era] [/essp: > Enableport\<] [>]</br>또는</br>{ss \| set-subscription/c:\<k> [/cun:\<Comusername >/cup:\<Compassword >]|등록 구성을 변경합니다. 구독 ID 및 구독 매개 변수를 변경 하려면 적절 한 옵션을 지정할 수 있습니다 또는 구독 매개 변수를 변경 하는 XML 구성 파일을 지정할 수 있습니다.|
 |{cs \| create-subscription} \<k> [/cun:\<Username >/컵:\<Password >]|원격 구독을 만듭니다. \<(>)는 구독 구성이 포함 된 XML 파일의 경로를 지정 합니다. 절대 또는 현재 디렉터리에 상대적 경로일 수 있습니다.|
 |{ds \| 삭제-구독} \<Subid >|구독을 삭제 하 고 구독에 대 한 이벤트 로그에 이벤트를 전달 하는 모든 이벤트 원본의 등록을 취소 합니다. 이미 수신 하 고 기록 된 모든 이벤트 삭제 되지 않습니다. \<Subid >는 구독을 고유 하 게 식별 하는 문자열입니다. \<Subid >은 구독을 만드는 데 사용 된 XML 구성 파일의 \<SubscriptionId > 태그에 지정 된 문자열과 같습니다.|
 |{rs \| retry-subscription} \<Subid > [\<Eventsource > ...]|비활성 구독에 원격 구독 요청을 보내고 연결을 설정 하는 다시 시도 합니다. 모든 이벤트 소스를 다시 활성화 하려고 하거나 이벤트 소스를 지정 합니다. 사용할 수 없는 소스를 다시 시도 하지 않습니다. \<Subid >는 구독을 고유 하 게 식별 하는 문자열입니다. \<Subid >은 구독을 만드는 데 사용 된 XML 구성 파일의 \<SubscriptionId > 태그에 지정 된 문자열과 같습니다. Eventsource > \<이벤트의 원본으로 사용 되는 컴퓨터를 식별 하는 문자열입니다. \<Eventsource >는 정규화 된 도메인 이름, NetBIOS 이름 또는 IP 주소 여야 합니다.|
-|{qc \| 빠른 구성} [/q: [\<Quiet >]]|구독을 만들고 번 다시 부팅 되어도 계속 해 서 수를 확인 하려면 Windows 이벤트 수집기 서비스를 구성 합니다. 이 다음 단계가 포함 됩니다.</br>1. 사용 하지 않도록 설정 된 경우 ForwardedEvents channel을 사용 하도록 설정 합니다.</br>2. Windows 이벤트 수집기 서비스를 지연 시작으로 설정 합니다.</br>3. Windows 이벤트 수집기 서비스가 실행 되 고 있지 않으면 시작 합니다.|
+|{qc \| 빠른 구성} [/q: [\<Quiet >]]|구독을 만들고 번 다시 부팅 되어도 계속 해 서 수를 확인 하려면 Windows 이벤트 수집기 서비스를 구성 합니다. 이 다음 단계가 포함 됩니다.</br>1.  비활성화 된 경우 ForwardedEvents 채널을 사용 하도록 설정 합니다.</br>2.  Windows 이벤트 수집기 서비스 시작 지연 시간을 설정 합니다.</br>3.  실행 되지 않는 경우에 Windows 이벤트 수집기 서비스를 시작 합니다.|
 
 ## <a name="options"></a>옵션
 
@@ -67,8 +63,8 @@ wecutil  [{es | enum-subscription}]
 |/up:\<암호 >|사용자 자격 증명에 해당 하는 암호를 지정 합니다. 경우에이 옵션은 허용 된 **/un** 옵션을 지정 합니다.|
 |/d:\<Desc >|구독에 대 한 설명을 제공합니다.|
 |/uri:\<Uri >|구독에서 사용 되는 이벤트의 형식을 지정 합니다. \<Uri >는 이벤트 원본을 고유 하 게 식별 하기 위해 이벤트 원본 컴퓨터의 주소와 결합 된 URI 문자열을 포함 합니다. 구독에서 모든 이벤트 소스 주소 URI 문자열로 사용 됩니다.|
-|/cm:\<Configmode >|구성 모드를 설정합니다. \<Configmode >는 다음 문자열 중 하나일 수 있습니다. 정상, 사용자 지정, MinLatency 또는 Minlatency. 보통, MinLatency, MinBandwidth 모드 배달 모드, 최대 항목 배달, 하트 비트 간격 및 배달 최대 대기 시간을 설정합니다. **/dm**, **/dmi**, **/hi** 또는 **/dmlt** 옵션만 될 구성 모드가 Custom으로 설정 된 경우 지정 합니다.|
-|/ex:\<만료 >|구독이 만료 되는 시간을 설정 합니다. \<만료 > 표준 XML 또는 ISO8601 날짜-시간 형식으로 정의 해야 합니다. yyyy-mm-dd [. Yyyy-mm-ddthh: MM: ss [. sss] [Z]. 여기서 T는 시간 구분 기호이 고 Z는 UTC 시간을 나타냅니다.|
+|/cm:\<Configmode >|구성 모드를 설정합니다. \<Configmode >는 다음 문자열 중 하나일 수 있습니다. 보통, 사용자 지정, MinLatency 또는 Minlatency 있습니다. 보통, MinLatency, MinBandwidth 모드 배달 모드, 최대 항목 배달, 하트 비트 간격 및 배달 최대 대기 시간을 설정합니다. **/dm**, **/dmi**, **/hi** 또는 **/dmlt** 옵션만 될 구성 모드가 Custom으로 설정 된 경우 지정 합니다.|
+|/ex:\<만료 >|구독이 만료 되는 시간을 설정 합니다. \<만료 > 표준 XML 또는 ISO8601 날짜-시간 형식으로 정의 해야 합니다. yyyy-mm-dd . Yyyy-mm-ddthh: MM: ss [. sss] [Z]. 여기서 T는 시간 구분 기호이 고 Z는 UTC 시간을 나타냅니다.|
 |/q:\<쿼리 >|구독에 대 한 쿼리 문자열을 지정합니다. \<쿼리 >의 형식은 URI 값 마다 다를 수 있으며 구독의 모든 원본에 적용 됩니다.|
 |/dia:\<언어 >|쿼리 문자열에 사용 되는 언어를 정의 합니다.|
 |/tn:\<서 이름 >|원격 이벤트 소스에 연결 하는 데 사용 되는 전송의 이름을 지정 합니다.|
@@ -78,7 +74,7 @@ wecutil  [{es | enum-subscription}]
 |/dmlt:\<경우 deliverytime >|이벤트의 일괄 처리를 제공 합니다. 최대 대기 시간을 설정 합니다. \<경우 deliverytime >는 밀리초 수입니다. 이 옵션은 유효만 경우 **/cm** Custom으로 설정 합니다.|
 |/hi:\<하트 비트 >|하트 비트 간격을 정의합니다. \<하트 비트 >는 밀리초 수입니다. 이 옵션은 유효만 경우 **/cm** Custom으로 설정 합니다.|
 |/scf:\<콘텐츠 >|반환 되는 이벤트의 형식을 지정 합니다. \<콘텐츠 > 이벤트 또는 RenderedText 수 있습니다. RenderedText 값을 사용 하는 경우 이벤트 이벤트에 연결 된 지역화 된 문자열 (예: 이벤트 설명)으로 반환 됩니다. 기본값은 RenderedText 합니다.|
-|/l:\<Locale >|지역화 된 문자열의 배달에 대 한 로캘을 RenderedText 형식으로 지정 합니다. \<Locale >는 언어 및 국가/지역 식별자입니다 (예: "EN-US"). 이 옵션은만 유효 하는 경우는 **/cf** 옵션은 RenderedText로 설정 합니다.|
+|/l:\<Locale >|지역화 된 문자열의 배달에 대 한 로캘을 RenderedText 형식으로 지정 합니다. \<로캘 >는 EN-US와 같은 언어 및 국가/지역 식별자입니다. 이 옵션은만 유효 하는 경우는 **/cf** 옵션은 RenderedText로 설정 합니다.|
 |/ree: [\<Readexist >]|구독에 대해 전달 되는 이벤트를 식별 합니다. \<Readexist > true 또는 false 일 수 있습니다. 경우는 <Readexist> 가 true 이면 모든 기존 이벤트를 구독 이벤트 소스에서 읽고 있습니다. 때는 <Readexist> 가 false 이면 (도착) 이후 이벤트에만 전달 됩니다. 기본값은 true는 **/ree** 값이 없는 옵션입니다. 없으면 **/ree** 옵션을 지정한 경우 기본값은 false입니다.|
 |/lf:\<Logfile >|이벤트 원본에서 받은 이벤트를 저장 하는 데 사용 되는 로컬 이벤트 로그를 지정 합니다.|
 |/pn:\<>|게시자 이름을 지정합니다. 이 소유 하거나에서 지정 된 로그를 가져오는 게시자 여야는 **/lf** 옵션입니다.|
@@ -96,7 +92,7 @@ wecutil  [{es | enum-subscription}]
 
 - 다음 예제에서는 구성 파일의 내용을 보여 줍니다.  
   ```
-  <Subscription xmlns="https://schemas.microsoft.com/2006/03/windows/events/subscription">
+  <Subscription xmlns=https://schemas.microsoft.com/2006/03/windows/events/subscription>
   <Uri>https://schemas.microsoft.com/wbem/wsman/1/windows/EventLog</Uri>
   <!-- Use Normal (default), Custom, MinLatency, MinBandwidth -->
   <ConfigurationMode>Normal</ConfigurationMode>
@@ -104,24 +100,24 @@ wecutil  [{es | enum-subscription}]
   <SubscriptionId>SampleSubscription</SubscriptionId>
   <Query><![CDATA[
   <QueryList>
-  <Query Path="Application">
+  <Query Path=Application>
   <Select>*</Select>
   </Query>
   </QueryList>
   ]]></Query>
   <EventSources>
-  <EventSource Enabled="true">
+  <EventSource Enabled=true>
   <Address>mySource.myDomain.com</Address>
   <UserName>myUserName</UserName>
   <Password>*</Password>
   </EventSource>
   </EventSources>
   <CredentialsType>Default</CredentialsType>
-  <Locale Language="EN-US"></Locale>
+  <Locale Language=EN-US></Locale>
   </Subscription>
   ```
 
-## <a name="BKMK_examples"></a>예와
+## <a name="examples"></a><a name=BKMK_examples></a>예와
 
 Sub1 구독에 대 한 구성 정보를 출력 합니다.
 ```
@@ -155,7 +151,7 @@ wecutil ss sub1 /c:%Windir%\system32\WsSelRg2.xml
 ```
 wecutil ss sub2 /esa:myComputer /ese /un:uname /up:* /cm:Normal
 ```
-ForwardedEvents 로그에 mySource.myDomain.com에서 원격 컴퓨터의 Windows Vista 응용 프로그램 이벤트 로그에서 이벤트를 전달 하는 구독 만들기 (구성 파일의 예는 설명 참조).
+ForwardedEvents 로그에 mySource.myDomain.com에서 원격 컴퓨터의 Windows Vista 애플리케이션 이벤트 로그에서 이벤트를 전달 하는 구독 만들기 (구성 파일의 예는 설명 참조).
 ```
 wecutil cs subscription.xml
 ```
@@ -164,6 +160,6 @@ Sub1 라는 구독을 삭제 합니다.
 wecutil ds sub1
 ```
 
-#### <a name="additional-references"></a>추가 참조
+## <a name="additional-references"></a>추가 참조
 
-[명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

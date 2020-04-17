@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.date: 06/07/2019
 ms.localizationpriority: medium
 ms.prod: windows-server
-ms.openlocfilehash: 72e71ce2d1427f392aa02d32597f92d031f9a5c9
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 7a4dacd611741942e874e831fd9598aeda5e97b3
+ms.sourcegitcommit: 20d07170c7f3094c2fb4455f54b13ec4b102f2d7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71407002"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81269280"
 ---
 # <a name="prepare-your-environment-for-windows-admin-center"></a>Windows Admin Center에 대한 환경 준비
 
@@ -22,7 +22,6 @@ ms.locfileid: "71407002"
 Windows Admin Center를 사용하여 관리할 준비가 되기 전에 추가 준비를 해야 하는 일부 Server 버전이 있습니다.
 
 - [Windows Server 2012 및 2012 R2](#prepare-windows-server-2012-and-2012-r2)
-- [Windows Server 2008 R2](#prepare-windows-server-2008-r2)
 - [Microsoft Hyper-V Server 2016](#prepare-microsoft-hyper-v-server-2016)
 - [Microsoft Hyper-V Server 2012 R2](#prepare-microsoft-hyper-v-server-2012-r2)
 
@@ -37,26 +36,6 @@ Windows Admin Center에는 기본적으로 Windows Server 2012 및 2012 R2에 �
 WMF가 설치되어 있는지, 그리고 버전이 5.1 이상인지 확인하려면 PowerShell에 `$PSVersiontable`을 입력합니다.
 
 설치되어있지 않은 경우 [WMF 5.1을 다운로드하여 설치](https://docs.microsoft.com/powershell/wmf/setup/install-configure)할 수 있습니다.
-
-## <a name="prepare-windows-server-2008-r2"></a>Windows Server 2008 R2 준비
-
-### <a name="install-wmf-version-51-or-higher"></a>WMF 버전 5.1 이상 설치
-
-Windows Admin Center에는 기본적으로 Windows Server 2008 R2에 포함되지 않은 PowerShell 기능이 필요합니다. Windows Admin Center로 Windows Server 2008 R2를 관리하려면 해당 서버에서 WMF 5.1 이상 버전을 설치해야 합니다. 
-
-[.NET Framework 4.5.2 이상](https://docs.microsoft.com/dotnet/framework/install/on-windows-7)이 컴퓨터에 이미 설치되어 있는지 확인합니다.
-
-WMF가 설치되어 있는지, 그리고 버전이 5.1 이상인지 확인하려면 PowerShell에 `$PSVersiontable`을 입력합니다.
-
-설치되어있지 않은 경우 [WMF 5.1을 다운로드하여 설치](https://docs.microsoft.com/powershell/wmf/setup/install-configure)할 수 있습니다.
-
-PowerShell 원격 연결을 사용하도록 설정하려면 PowerShell 콘솔에서 `Enable-PSRemoting –force`를 실행합니다. 
-
-### <a name="enable-remote-desktop"></a>원격 데스크톱 사용
-
-Windows Admin Center 내에서 원격 데스크톱을 사용하려면 Windows Server 2008 R2 서버에서 원격 데스크톱을 사용하도록 설정해야 합니다.
-
-**서버 관리자**에서 **원격 데스크톱 구성**으로 이동합니다. "모든 버전의 원격 데스크톱을 실행 중인 컴퓨터에서 연결 허용"을 위해 원격 데스크톱을 사용하도록 설정합니다.
 
 ## <a name="prepare-microsoft-hyper-v-server-2016"></a>Microsoft Hyper-V Server 2016 준비
 
