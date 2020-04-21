@@ -4,16 +4,16 @@ description: Windows Server 관련 릴리스 정보
 ms.prod: windows-server
 ms.technology: server-general
 ms.topic: article
-ms.date: 11/12/2019
+ms.date: 04/14/2020
 author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: high
-ms.openlocfilehash: 19911ceb52587a0897e7fde34bd4b95d375c13a8
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 455b5609c1409d7c01e464c51025042d3b0090c8
+ms.sourcegitcommit: 719b2ee1fe08429cb7929a201dd2816e861ec534
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80825846"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81385304"
 ---
 # <a name="windows-server-release-information"></a>Windows Server 릴리스 정보
 
@@ -28,8 +28,11 @@ Microsoft는 서비스 모델을 업데이트하였습니다. 반기 채널에�
 | Windows Server, 버전 1909(반기 채널)(Datacenter Core, Standard Core) | 1909  | 18363.418.191007-0143 | 2019/11/12 | 2021/05/11 | 검토 메모 |
 | Windows Server, 버전 1903(반기 채널)(Datacenter Core, Standard Core) | 1903  | 18362.30.190401-1528 | 2019/5/21 | 2020/12/08 | 검토 메모 |
 |Windows Server 2019(장기 서비스 채널)(Datacenter, Essentials, Standard)|1809|17763.107.1010129-1455|2018/11/13|2024/01/09|2029/01/09|
-|Windows Server, 버전 1809(반기 채널)(Datacenter Core, Standard Core)|1809|17763.107.1010129-1455|2018/11/13|2020/5/12|검토 메모|
+|Windows Server, 버전 1809(반기 채널)(Datacenter Core, Standard Core)|1809|17763.107.1010129-1455|2018/11/13|2020/11/10|검토 메모|
 | Windows Server 2016(장기 서비스 채널)| 1607 | 14393.0 | 2016/10/15 |2022/01/11| 2027/01/11|
 
-> [!NOTE]
+> [!IMPORTANT]
+> 지속적인 공공 보건 위기로 인해 Windows Server 버전 1809의 서비스 종료가 지연되었습니다. 자세한 내용은 [지원 문서](https://support.microsoft.com/help/4557164)를 참조하세요.
+
+>[!NOTE]
 > Windows Server, 버전 1803 이상은 [최신 수명 주기 정책](https://support.microsoft.com/help/30881)에 따라 결정됩니다. 서비스 요구 사항 및 기타 중요 정보에 대한 자세한 내용은 [Windows 수명 주기 FAQ](https://support.microsoft.com/help/18581/lifecycle-faq-windows-products) 및 [서비스 채널 비교](../get-started-19/servicing-channels-19.md)를 참조하세요.
