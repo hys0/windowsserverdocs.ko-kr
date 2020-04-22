@@ -6,12 +6,12 @@ ms.technology: server-general
 author: Teresa-Motiv
 ms.author: v-tea
 ms.localizationpriority: medium
-ms.openlocfilehash: 6cd94e997deaaf358c72793e6ff35d51a9ab3df6
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 76665d91cc1e2997a837721ffbc51b0513dd7c1a
+ms.sourcegitcommit: af1cf89632d62a94943d3ad9f6b5234b88499278
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80826187"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81524938"
 ---
 # <a name="guidelines-for-troubleshooting-dns-related-activation-issues"></a>DNS 관련 정품 인증 문제 해결을 위한 지침
 
@@ -241,7 +241,7 @@ allow-update { any; };
 - 도메인에 가입된 컴퓨터의 경우 DNS 시스템에서 할당한 컴퓨터의 도메인(예: AD DS(Active Directory Domain Services) DNS).
 - 작업 그룹 컴퓨터의 경우 DHCP(Dynamic Host Configuration Protocol)에서 할당한 컴퓨터의 도메인. 이 도메인 이름은 RFC(Request for Comments) 2132에 정의된 대로 코드 값이 15인 옵션을 통해 정의됩니다.
 
-기본적으로 KMS 호스트는 KMS 호스트 컴퓨터의 도메인과 일치하는 DNS 영역에 SRV 레코드를 등록합니다. 예를 들어 KMS 호스트가 contoso.com 도메인에 가입한다고 가정해 봅시다. 이 시나리오에서 KMS 호스트는 _vmlcs SRV 레코드를 contoso.com DNS 영역 아래에 등록합니다. 따라서 레코드는 서비스를 VLMCS._TCP.CONTOSO.COM으로 식별합니다.
+기본적으로 KMS 호스트는 KMS 호스트 컴퓨터의 도메인과 일치하는 DNS 영역에 SRV 레코드를 등록합니다. 예를 들어 KMS 호스트가 contoso.com 도메인에 가입한다고 가정해 봅시다. 이 시나리오에서 KMS 호스트는 _vmlcs SRV 레코드를 contoso.com DNS 영역 아래에 등록합니다. 따라서 레코드는 서비스를 _VLMCS._TCP.CONTOSO.COM으로 식별합니다.
 
 KMS 호스트와 KMS 클라이언트가 서로 다른 DNS 영역을 사용하는 경우 SRV 레코드를 여러 DNS 도메인에 자동으로 게시하도록 KMS 호스트를 구성해야 합니다. 이렇게 하려면 다음 단계를 따르십시오.
 

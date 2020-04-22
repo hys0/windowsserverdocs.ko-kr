@@ -7,14 +7,14 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 03/24/2020
+ms.date: 04/14/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 34f5fdb5a2826173edf471fd65248008761863dd
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 016a88999b93d686faff73134a660014fd602765
+ms.sourcegitcommit: 20d07170c7f3094c2fb4455f54b13ec4b102f2d7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80861416"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81279699"
 ---
 # <a name="whats-new-in-the-windows-desktop-client"></a>Windows 데스크톱 클라이언트의 새로운 기능
 
@@ -27,7 +27,26 @@ Windows 데스크톱 클라이언트에 대한 자세한 내용은 [Windows 데�
 |사용자 그룹 |Version  |
 |-----------|---------|
 |공용     |1.2.790  |
-|참가자    |1.2.790  |
+|참가자    |1.2.940  |
+
+## <a name="updates-for-version-12940"></a>1\.2.940 버전에 대한 업데이트
+
+*게시 날짜: 2020/04/14*
+
+다운로드: [Windows 64비트](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4txZU), [Windows 32비트](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4txZV), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4tM6I)
+
+- 연결 센터에서 데스크톱 아이콘을 마우스 오른쪽 단추로 클릭하면 제공되는 데스크톱 연결에 대한 새 표시 설정 옵션이 추가되었습니다.
+  - 이제 **모든 디스플레이**, **단일 디스플레이** 및 **디스플레이 선택**이라는 세 가지 표시 구성 옵션이 있습니다.
+  - 이제 디스플레이 구성을 선택할 경우에만 사용 가능한 설정이 표시됩니다.
+  - 디스플레이 선택 모드에서는 **현재 디스플레이에 맞게 최대화**라는 새 옵션을 사용하여 다시 연결하지 않고 세션에 사용되는 디스플레이를 동적으로 변경할 수 있습니다. 사용하도록 설정하면 세션을 최대화할 경우 세션 창이 열리는 모든 디스플레이에서 해당 세션이 전체 화면으로 표시됩니다.
+  - 모든 디스플레이와 디스플레이 선택 모드에 대한 **창 모드인 경우 단일 디스플레이**라는 새 옵션이 추가되었습니다. 이 옵션은 전체 화면 모드를 종료할 때 세션을 자동으로 단일 디스플레이로 전환하고 창을 최대화하면 자동으로 다중 디스플레이로 돌아갑니다.
+- 창 모드 데스크톱 세션의 제목 표시줄을 마우스 오른쪽 단추로 클릭하면 표시되는 시스템 메뉴에 **디스플레이 설정**이라는 새 그룹이 추가되었습니다. 이를 사용하면 세션 중에 일부 설정을 동적으로 변경할 수 있습니다. 예를 들어 새로운 **창 모드인 경우 단일 디스플레이 모드** 및 **현재 디스플레이에 맞게 최대화** 설정을 변경할 수 있습니다.
+- 전체 화면을 종료하면 세션 창이 처음 전체 화면으로 전환되기 전 원래 위치로 돌아갑니다.
+- 이제 정보 페이지에서 사용자 데이터를 다시 설정하면 완료 시 클라이언트를 닫지 않아도 연결 센터로 리디렉션됩니다.
+- 탭 탐색 및 화면 읽기 프로그램과 관련된 몇 가지 내게 필요한 옵션 문제가 해결되었습니다.
+- 여러 배율 디스플레이 사이에서 데스크톱 세션 창을 끌 때의 깜박임 및 축소 문제가 해결되었습니다.
+- 카메라를 리디렉션하는 동안 발생하는 오류가 해결되었습니다.
+- 안정성 개선을 위해 여러 크래시가 해결되었습니다.
 
 ## <a name="updates-for-version-12790"></a>1\.2.790 버전에 대한 업데이트
 

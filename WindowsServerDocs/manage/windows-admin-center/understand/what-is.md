@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.localizationpriority: medium
 ms.prod: windows-server
 ms.date: 06/07/2019
-ms.openlocfilehash: 110e1442b6660c24dc1e3fd9649138390117ffd6
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: cb4e3ab2bf98a0c2d51483642fe5388e468dbbb4
+ms.sourcegitcommit: 20d07170c7f3094c2fb4455f54b13ec4b102f2d7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71406819"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81269270"
 ---
 # <a name="what-is-windows-admin-center"></a>Windows Admin Center란?
 
@@ -27,7 +27,7 @@ Windows Admin Center는 서버 관리자 및 MMC와 같은 "기본 제공" 관�
 
 ## <a name="how-does-windows-admin-center-work"></a>Windows Admin Center는 어떻게 작동합니까?
 
-Windows Admin Center는 웹 브라우저에서 실행되며 Windows Server 또는 Windows 10에 설치된 **Windows Admin Center 게이트웨이**를 통해 Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows 10 등을 관리합니다. 게이트웨이는 WinRM을 통해 원격 PowerShell 및 WMI를 사용하여 서버를 관리합니다. 게이트웨이는 [다운로드](https://aka.ms/windowsadmincenter)할 수 있는 단일 경량 .msi 패키지에서 Windows Admin Center에 포함됩니다.
+Windows Admin Center는 웹 브라우저에서 실행되며 Windows Server 또는 도메인 조인 Windows 10에 설치된 **Windows Admin Center 게이트웨이**를 통해 Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows 10 등을 관리합니다. 게이트웨이는 WinRM을 통해 원격 PowerShell 및 WMI를 사용하여 서버를 관리합니다. 게이트웨이는 [다운로드](https://aka.ms/windowsadmincenter)할 수 있는 단일 경량 .msi 패키지에서 Windows Admin Center에 포함됩니다.
 
 DNS에 게시되고 해당 회사 방화벽을 통해 액세스할 수 있을 때 Windows Admin Center 게이트웨이를 통해 어디서든 Microsoft Edge 또는 Google Chrome으로 안전하게 서버에 연결하고 관리할 수 있습니다.
 

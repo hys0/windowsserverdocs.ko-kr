@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.localizationpriority: medium
 ms.prod: windows-server
 ms.date: 12/02/2019
-ms.openlocfilehash: 503cd64cac0673829fe21bc15e8ad9d6a83bbb15
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: bd7ec8a5a072cbda99b036718d24ec1908fb8b53
+ms.sourcegitcommit: 20d07170c7f3094c2fb4455f54b13ec4b102f2d7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75950512"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81269250"
 ---
 # <a name="what-type-of-installation-is-right-for-you"></a>나에게 적합한 설치 유형은 무엇인가요?
 
@@ -64,10 +64,9 @@ Windows Admin Center를 사용하여 다음 Windows 운영 체제를 **관리**�
 | Windows Server 2012 R2 | 예 | 예 |
 | Microsoft Hyper-V Server 2012 R2 | 예 | 예 |
 | Windows Server 2012 | 예 | 예 |
-| Windows Server 2008 R2 | 예, 기능이 제한적임 | 해당 없음 |
 
 > [!NOTE]
-> Windows Admin Center에는 Windows Server 2008 R2, 2012 및 2012 R2에 포함되지 않은 PowerShell 기능이 필요합니다. Windows Admin Center를 사용하여 이를 관리하려면 이들 서버에 Windows Management Framework(WMF) 버전 5.1 이상을 설치해야 합니다.
+> Windows Admin Center에는 Windows Server 2012 및 2012 R2에 포함되지 않은 PowerShell 기능이 필요합니다. Windows Admin Center를 사용하여 이를 관리하려면 이들 서버에 Windows Management Framework(WMF) 버전 5.1 이상을 설치해야 합니다.
 > 
 > WMF가 설치되어 있는지, 그리고 버전이 5.1 이상인지 확인하려면 PowerShell에 `$PSVersiontable`을 입력합니다. 
 > 
