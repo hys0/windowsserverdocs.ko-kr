@@ -9,10 +9,10 @@ author: JasonGerend
 manager: brianlic
 ms.author: jgerend
 ms.openlocfilehash: 6bd97802fbef342520e92a857a1a53acf3e8d7a3
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 04/23/2020
 ms.locfileid: "71385942"
 ---
 # <a name="convert-an-mbr-disk-into-a-gpt-disk"></a>MBR 디스크를 GPT 디스크로 변환
@@ -58,7 +58,7 @@ MBR(마스터 부트 레코드) 디스크는 표준 BIOS 파티션 테이블을 
 
 7.  **DISKPART** 프롬프트에서 `convert gpt`을(를) 입력합니다.
 
-| 값  | 설명  |
+| Value  | 설명  |
 | ----- | ---- |
 | **list disk** | 디스크의 목록과 크기, 사용 가능한 공간 크기, 기본 또는 동적 디스크 여부, 디스크의 MBR(마스터 부트 레코드) 또는 GPT(GUID 파티션 테이블) 파티션 스타일 사용 여부 등 정보를 표시합니다. 별표(*)가 표시된 디스크는 포커스가 설정됩니다. |
 | **select disk** *disknumber* | 디스크 번호가 *disknumber*인 지정된 디스크를 선택하고 포커스를 설정합니다. |

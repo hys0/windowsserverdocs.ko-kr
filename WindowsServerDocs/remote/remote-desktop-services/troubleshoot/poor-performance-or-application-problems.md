@@ -9,10 +9,10 @@ ms.author: delhan
 ms.date: 07/24/2019
 ms.localizationpriority: medium
 ms.openlocfilehash: 91ced9e729966ee9c46e76d01d7ccbec9a510f5b
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
+ms.lasthandoff: 04/23/2020
 ms.locfileid: "80857226"
 ---
 # <a name="poor-performance-or-application-problems-during-remote-desktop-connection"></a>원격 데스크톱 연결 중 성능 저하 또는 애플리케이션 문제 발생

@@ -1,5 +1,5 @@
 ---
-title: 리모컨
+title: 원격
 description: 원격 액세스 및 서버 관리 활용에 대한 지침
 ms.prod: windows-server
 layout: LandingPage
@@ -10,13 +10,13 @@ ms.author: coreyp
 manager: dougkim
 ms.localizationpriority: high
 ms.openlocfilehash: 659f40f2e6e33378ef9828a746f72c43edaf0859
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 04/23/2020
 ms.locfileid: "71395873"
 ---
-# <a name="remote"></a>리모컨
+# <a name="remote"></a>원격
 
 >[!TIP]
 > 이전 버전의 Windows Server에 대한 정보를 찾으시나요? docs.microsoft.com에서 다른 [Windows Server 라이브러리](/previous-versions/windows/)를 확인하세요. [이 사이트에서 특정 정보를 검색](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions)할 수도 있습니다.
@@ -74,7 +74,7 @@ ms.locfileid: "71395873"
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h3>웹 응용 프로그램 프록시</h3><hr />
+                                            <h3>웹 애플리케이션 프록시</h3><hr />
                                             <p>웹 애플리케이션 프록시는 회사 네트워크 내부의 웹 애플리케이션에 역방향 프록시 기능을 제공하여 모든 디바이스의 사용자가 회사 네트워크 권역을 벗어나도 해당 네트워크에 안전하게 액세스할 수 있도록 지원합니다.</p>
                                         </div>
                                     </div>

@@ -1,5 +1,5 @@
 # [Windows 명령](windows-commands.md)
-## - [명령줄 구문 키](command-line-syntax-key.md)
+## [명령줄 구문 키](command-line-syntax-key.md)
 ## [서버 역할별 명령](commands-by-server-role.md)
 ### [인쇄 명령 참조](print-command-reference.md)
 ### [네트워크 파일 시스템 서비스 명령 참조](services-for-network-file-system-command-reference.md)

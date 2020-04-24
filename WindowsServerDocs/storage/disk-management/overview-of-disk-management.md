@@ -9,10 +9,10 @@ author: JasonGerend
 manager: brianlic
 ms.author: jgerend
 ms.openlocfilehash: 46ed1256ed9039311939f9de12ea46416443be9c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 04/23/2020
 ms.locfileid: "71402149"
 ---
 # <a name="overview-of-disk-management"></a>디스크 관리 개요
@@ -53,7 +53,7 @@ Windows에서 다른 도구를 사용하는 몇 가지 일반적인 작업은 �
 
 - [디스크 관리](manage-disks.md)
 - [기본 볼륨 관리](manage-basic-volumes.md)
-- [디스크 관리 문제 해결](troubleshooting-disk-management.md)
+- [디스크의 관리 문제 해결](troubleshooting-disk-management.md)
 - [Windows 10의 복구 옵션](https://support.microsoft.com/help/12415/windows-10-recovery-options)
 - [Windows 10으로 업데이트한 후 손실된 파일 찾기](https://support.microsoft.com/help/12386/windows-10-find-lost-files-after-update)
 - [파일 백업 및 복원](https://support.microsoft.com/help/17143/windows-10-back-up-your-files)

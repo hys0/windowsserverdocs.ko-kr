@@ -1,5 +1,5 @@
 ---
-title: Management
+title: 관리
 description: Windows Server 관리에 대한 도구, 권장 사항 및 지침 알아보기
 ms.prod: windows-server
 layout: LandingPage
@@ -9,13 +9,13 @@ author: lizap
 ms.author: elizapo
 ms.localizationpriority: high
 ms.openlocfilehash: 4166d4e8d2819946cdc859ef643cf53315e7290a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 04/23/2020
 ms.locfileid: "71370423"
 ---
-# <a name="management"></a>Management
+# <a name="management"></a>관리
 
 
 >[!TIP]
@@ -82,7 +82,7 @@ Windows Server 인스턴스를 관리하는 데 사용하는 도구는 배포한
 <HR />
                         <p><h3><a href="software-inventory-logging/get-started-with-software-inventory-logging.md">소프트웨어 인벤토리 로깅(SIL)</a></h3>Windows Server의 소프트웨어 인벤토리 로깅은 서버 관리자가 서버에 설치된 Microsoft 소프트웨어 목록을 검색하는 데 도움이 되는 간단한 PowerShell cmdlet 집합이 포함된 기능입니다. 또한 이 데이터를 수집하고 집계를 위해 HTTPS 프로토콜을 사용하여 네트워크를 통해 정기적으로 대상 웹 서버에 전달하는 기능을 제공합니다. 주로 시간별 수집 및 전달을 위한 기능 관리도 PowerShell 명령을 통해 수행됩니다.</p>
 <HR />
-                        <p><h3><a href="user-access-logging/get-started-with-user-access-logging.md">사용자 액세스 로깅(UAL)</a></h3>사용자 액세스 로깅은 Windows Server 2016, Windows Server 2012 R2 또는 Windows Server 2012를 실행하는 컴퓨터에서 로깅된 고유한 클라이언트 디바이스 및 사용자 요청 이벤트를 로컬 데이터베이스로 집계합니다. 이렇게 레코드는 서버 관리자가 쿼리를 통해 서버 역할, 사용자, 장치, 로컬 서버 및 날짜를 기준으로 수량과 인스턴스를 검색하는 데 사용할 수 있습니다. 또한 UAL은 타사 소프트웨어 개발자가 집계할 UAL 이벤트를 계측할 수 있도록 해줍니다. </a>
+                        <p><h3><a href="user-access-logging/get-started-with-user-access-logging.md">사용자 액세스 로깅(UAL)</a></h3>사용자 액세스 로깅은 Windows Server 2016, Windows Server 2012 R2 또는 Windows Server 2012를 실행하는 컴퓨터에서 로깅된 고유한 클라이언트 디바이스 및 사용자 요청 이벤트를 로컬 데이터베이스로 집계합니다. 이렇게 레코드는 서버 관리자가 쿼리를 통해 서버 역할, 사용자, 디바이스, 로컬 서버 및 날짜를 기준으로 수량과 인스턴스를 검색하는 데 사용할 수 있습니다. 또한 UAL은 타사 소프트웨어 개발자가 집계할 UAL 이벤트를 계측할 수 있도록 해줍니다. </a>
                     </div>
                 </div>
             </div>

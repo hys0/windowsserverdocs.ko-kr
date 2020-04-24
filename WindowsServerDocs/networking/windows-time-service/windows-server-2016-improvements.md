@@ -9,10 +9,10 @@ ms.topic: article
 ms.prod: windows-server
 ms.technology: networking
 ms.openlocfilehash: 2723868251f90429fb0ad5e966c9222a6a22ab0c
-ms.sourcegitcommit: 1c75e4b3f5895f9fa33efffd06822dca301d4835
+ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 04/23/2020
 ms.locfileid: "77520680"
 ---
 # <a name="windows-server-2016-improvements"></a>Windows Server 2016 향상된 기능
@@ -321,7 +321,7 @@ Windows Server 2012 및 Windows Server 2008의 경우 핫픽스를 먼저 설치
 ### <a name="event-logging"></a>이벤트 로깅
 전체 스토리를 가져오려면도 이벤트 로그 정보가 필요 합니다. 시스템 이벤트 로그를 수집하고 Time-Server, Microsoft-Windows-Kernel-Boot, Microsoft-Windows-Kernel-General을 필터링하면 시간을 변경한 다른 요인(예: 타사)이 있는지 확인할 수 있는 가능성이 있습니다. 외부 간섭을 피하기 위해 이러한 로그가 필요할 수 있습니다. 그룹 정책 이벤트 로그는 로그에 기록 됩니다 영향을 줄 수 있습니다. 사용 하 여 그룹 정책에 대 한 자세한 내용은 위의 섹션을 참조 합니다.
 
-### <a name="W32Logging"></a>W32time 디버그 로깅
+### <a name="w32time-debug-logging"></a><a name="W32Logging"></a>W32time 디버그 로깅
 w32tm을 감사 용도로 사용하기 위해, 다음 명령은 시계의 주기적인 업데이트를 보여주고 원본 시계를 나타내는 로깅을 사용하도록 설정합니다. 새 로깅을 사용 하도록 서비스를 다시 시작 합니다. 
 
 자세한 내용은 참조 [디버그 로깅을 Windows 시간 서비스를 설정 하는 방법을](https://support.microsoft.com/kb/816043)합니다.

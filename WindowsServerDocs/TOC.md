@@ -9,7 +9,7 @@
 ## [네트워킹](networking/Networking.md)
 ## [원격](remote/index.md)
 ## [보안 및 보증](security/security-and-assurance.md)
-## [저장소](storage/storage.md)
+## [스토리지](storage/storage.md)
 ## [가상화](virtualization/virtualization.md)
 ## [문제 해결](troubleshoot/windows-server-troubleshooting.md)
 ## [기타 Windows Server 버전](windows-server-versions.md)

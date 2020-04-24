@@ -11,10 +11,10 @@ ms.author: jgerend
 manager: dougkim
 ms.localizationpriority: medium
 ms.openlocfilehash: 33c1aa654e4c660b4fe2f3305bfaf78b5191220a
-ms.sourcegitcommit: e58e1646ffd75d4a89576d967b2dbbbb84764303
+ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
+ms.lasthandoff: 04/23/2020
 ms.locfileid: "70119197"
 ---
 # <a name="migrating-roles-and-features-in-windows-server"></a>Windows Server에서 역할 및 기능 마이그레이션
@@ -32,7 +32,7 @@ ms.locfileid: "70119197"
 > [!NOTE]
 > 어느 버전의 Windows Server로든 마이그레이션 또는 업그레이드할 때마다 반드시 해당 버전의 [지원 주기 정책](https://support.microsoft.com/lifecycle)과 지원 기간을 검토 및 파악하여 그에 따라 계획을 수립해야 합니다. 관심 있는 특정 Windows Server 릴리스에 대한 [수명 주기 정보](https://support.microsoft.com/lifecycle)를 검색할 수 있습니다.
 
-## <a name="windows-server-2019"></a>Windows Server 2019
+## <a name="windows-server-2019"></a>시작
 
 파일 서버와 스토리지를 Windows Server 2019 또는 Windows Server 2016으로 마이그레이션하려면 [스토리지 마이그레이션 서비스](../storage/storage-migration-service/overview.md)를 사용하는 것이 좋습니다. 다른 역할을 마이그레이션하려면 Windows Server 2016 및 Windows Server 2012 R2에 대한 지침을 참조하세요.
 
@@ -47,7 +47,7 @@ Windows Server 2016에 대한 마이그레이션 가이드는 다음과 같습�
 
 파일 서버를 Windows Server 2019 또는 Windows Server 2016으로 마이그레이션하려면 [스토리지 마이그레이션 서비스](../storage/storage-migration-service/overview.md)를 사용하는 것이 좋습니다.
 
-## <a name="windows-server-2012-r2"></a>Windows Server 2012 R2
+## <a name="windows-server-2012-r2"></a>Windows Server 2012 R2
 
 이 가이드에 제시된 단계적 절차를 따르면 Windows Server 2003, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012 또는 Windows Server 2012 R2를 실행하는 서버로부터 Windows Server 2012 R2로 역할과 기능을 마이그레이션할 수 있습니다. Windows Server 2012 R2의 Windows Server 마이그레이션 도구는 서브넷 간 마이그레이션을 지원합니다.
 

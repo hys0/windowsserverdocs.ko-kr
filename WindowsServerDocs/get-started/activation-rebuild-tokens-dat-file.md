@@ -9,17 +9,17 @@ ms.author: v-tea
 manager: dcscontentpm
 ms.localizationpriority: medium
 ms.openlocfilehash: 8a5835cd601b2eb327c8605d70bf075e6c8e8414
-ms.sourcegitcommit: 9855d6b59b1f8722f39ae74ad373ce1530da0ccf
+ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 04/23/2020
 ms.locfileid: "71962999"
 ---
 # <a name="rebuild-the-tokensdat-file"></a>Tokens.dat 파일 다시 빌드
 
 Windows 정품 인증 문제를 해결할 때 Tokens.dat 파일을 다시 빌드해야 할 수 있습니다. 이 문서에서는 이 작업을 수행하는 방법에 대해 자세히 설명합니다.
 
-## <a name="resolution"></a>해상도
+## <a name="resolution"></a>해결 방법
 
 Tokens.dat 파일을 다시 빌드하려면 다음 단계를 수행합니다.
 
@@ -67,7 +67,7 @@ Tokens.dat 파일을 다시 빌드하려면 다음 단계를 수행합니다.
    ```
 1. 컴퓨터를 다시 시작합니다.
 
-## <a name="more-information"></a>추가 정보
+## <a name="more-information"></a>자세한 정보
 
 Tokens.dat 파일을 다시 빌드한 후에는 다음 방법 중 하나를 사용하여 제품 키를 다시 설치해야 합니다.
 

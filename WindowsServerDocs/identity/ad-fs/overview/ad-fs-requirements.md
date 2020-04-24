@@ -10,10 +10,10 @@ ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
 ms.openlocfilehash: a2f4c9ac05e72083fab3e3a926dbdd2876214a7b
-ms.sourcegitcommit: 1c75e4b3f5895f9fa33efffd06822dca301d4835
+ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 04/23/2020
 ms.locfileid: "77517538"
 ---
 # <a name="ad-fs-requirements"></a>AD FS 요구 사항
@@ -38,7 +38,7 @@ ms.locfileid: "77517538"
   
 -   [권한 요구 사항](ad-fs-requirements.md#BKMK_13)  
   
-## <a name="BKMK_1"></a>인증서 요구 사항  
+## <a name="certificate-requirements"></a><a name="BKMK_1"></a>인증서 요구 사항  
   
 ### <a name="ssl-certificates"></a>SSL 인증서
 
@@ -90,7 +90,7 @@ ms.locfileid: "77517538"
 ### <a name="user-certificates"></a>사용자 인증서
 - 사용할 경우 x509 AD FS 모든 사용자 인증서와 사용자 인증서 인증 AD FS 및 웹 애플리케이션 프록시 서버에서 신뢰할 수 있는 루트 인증 기관에 연결 해야 합니다.
 
-## <a name="BKMK_2"></a>하드웨어 요구 사항  
+## <a name="hardware-requirements"></a><a name="BKMK_2"></a>하드웨어 요구 사항  
 AD FS 및 웹 애플리케이션 프록시 하드웨어 요구 사항 (실제 또는 가상) 팜의 처리 용량에 대 한 크기를 지정 해야 하므로 cpu에서 제어 됩니다.  
 - 사용 하는 [AD FS 2016의 용량 계획 스프레드시트](http://adfsdocs.blob.core.windows.net/adfs/ADFSCapacity2016.xlsx) 해야 하는 AD FS 및 웹 애플리케이션 프록시 서버의 수를 결정 합니다.
 
@@ -106,7 +106,7 @@ AD FS에 대 한 메모리 및 디스크 요구 사항은 상당히 정적인 �
 
 SQL Server AD FS 구성 데이터베이스를 사용 하는 가장 기본적인 SQL Server 권장 사항에 따라 SQL Server의 크기 조정 합니다.  AD FS 데이터베이스 크기는 매우 작은 및 AD FS 데이터베이스 인스턴스에 대 한 중요 한 처리 부하를 넣지 않습니다.  그러나 AD FS, 연결할 데이터베이스 여러 번을 인증 하는 동안 네트워크 연결이 정도로 강력해 야 합니다.  그러나 SQL Azure AD FS 구성 데이터베이스에 대해 지원 되지 않습니다.
   
-## <a name="BKMK_3"></a>프록시 요구 사항  
+## <a name="proxy-requirements"></a><a name="BKMK_3"></a>프록시 요구 사항  
   
 -   엑스트라넷 액세스에 대 한 웹 애플리케이션 프록시 역할 서비스를 배포 해야 \- 원격 액세스 서버 역할의 일부입니다. 
 
@@ -116,7 +116,7 @@ SQL Server AD FS 구성 데이터베이스를 사용 하는 가장 기본적인 
   
 -   페더레이션 서버 및 웹 애플리케이션 프록시 역할 서비스를 동일한 컴퓨터에 설치할 수 없습니다.  
   
-## <a name="BKMK_4"></a>AD DS 요구 사항  
+## <a name="ad-ds-requirements"></a><a name="BKMK_4"></a>AD DS 요구 사항  
 **도메인 컨트롤러 요구 사항**  
   
 - AD FS는 Windows Server 2008 이상을 실행 하는 도메인 컨트롤러가 필요 합니다.
@@ -165,7 +165,7 @@ SQL Server AD FS 구성 데이터베이스를 사용 하는 가장 기본적인 
   
 -   AD FS 서비스 계정이 AD FS 서비스를 인증 하는 사용자를 포함 하는 모든 도메인 사용자 특성을 읽을 권한이 있어야 합니다.  
   
-## <a name="BKMK_5"></a>구성 데이터베이스 요구 사항  
+## <a name="configuration-database-requirements"></a><a name="BKMK_5"></a>구성 데이터베이스 요구 사항  
 이 섹션에서는 요구 사항 및 사용 하는 각각 내부 데이터베이스 WID (Windows) 또는 SQL Server 데이터베이스와 AD FS 팜에 대 한 제한 사항을 설명 합니다.  
   
 **WID**  
@@ -188,7 +188,7 @@ SQL Server AD FS 구성 데이터베이스를 사용 하는 가장 기본적인 
 
 - SAML 아티팩트 확인와 토큰 재생 검색은 SQL Server 팜의에서 지원 됩니다.  
   
-## <a name="BKMK_6"></a>브라우저 요구 사항  
+## <a name="browser-requirements"></a><a name="BKMK_6"></a>브라우저 요구 사항  
 브라우저 또는 브라우저 컨트롤을 통해 AD FS 인증을 수행할 때는 브라우저 다음 요구 사항을 준수 해야 합니다.  
   
 - JavaScript은 사용 하도록 설정  
@@ -200,7 +200,7 @@ SQL Server AD FS 구성 데이터베이스를 사용 하는 가장 기본적인 
 - 브라우저는 사용자 인증서 및 디바이스 인증서 인증을 위해 SSL 클라이언트 인증서 인증을 지원 해야 합니다.  
 
 - Windows 통합 인증을 사용하여 원활하게 로그인하려면 로컬 인트라넷 영역 또는 신뢰할 수 있는 사이트 영역에서 페더레이션 서비스 이름(예제: https:\/\/fs.contoso.com)을 구성해야 합니다.
-  ## <a name="BKMK_7"></a>네트워크 요구 사항  
+  ## <a name="network-requirements"></a><a name="BKMK_7"></a>네트워크 요구 사항  
  
 **방화벽 요구 사항**  
   
@@ -237,7 +237,7 @@ SQL Server AD FS 구성 데이터베이스를 사용 하는 가장 기본적인 
 - 부하를 분산하는 방법으로 DNS 라운드 로빈을 사용하지 않는 것이 좋습니다. 이 유형의 부하 분산을 사용하는 경우 상태 프로브를 사용하여 부하 분산 장치에서 노드를 제거하는 자동화된 방법을 제공하지 않습니다. 
 - 부하 분산 장치 내에서 AD FS에 대한 인증 트래픽을 위해 IP 기반 세션 선호도 또는 고정 세션을 사용하지 않는 것이 좋습니다. 이로 인해 메일 클라이언트에서 Office 365 메일 서비스(Exchange Online)에 연결하는 데 레거시 인증 프로토콜을 사용하는 경우 특정 노드의 오버로드가 발생할 수 있습니다. 
 
-## <a name="BKMK_13"></a>권한 요구 사항  
+## <a name="permissions-requirements"></a><a name="BKMK_13"></a>권한 요구 사항  
 설치 및 AD FS의 초기 구성을 수행 하는 관리자에는 AD FS 서버에서 로컬 관리자 권한이 있어야 합니다.  먼저 도메인 관리자는 로컬 관리자는 Active Directory에 개체를 만들 권한이 없는 경우 있어야 필요한 AD 개체를 만든 다음 AdminConfiguration 매개 변수를 사용 하 여 AD FS 팜을 구성 합니다.  
   
   

@@ -66,13 +66,11 @@
 #### [도구 확장에 사용자 지정 게이트웨이 플러그 인 사용](extend/guides/use-custom-gateway-plugin.md)
 #### [연결 공급자 만들기](extend/guides/create-connection-provider.md)
 #### [루트 탐색 동작 수정](extend/guides/modify-root-navigation.md)
-#### [Windows Admin Center v1909 내 클러스터 연결 유형 변경 사항](extend/guides/cluster-connection-change-wac-1909.md)
 #### [도구의 가시성 제어](extend/guides/dynamic-tool-display.md)
 #### [문자열 및 지역화](extend/guides/strings-localization.md)
 #### [UI 텍스트 및 디자인 스타일 가이드](extend/guides/ui-text-style-guide.md)
 #### [확장에 PowerShell 사용](extend/guides/powershell.md)
 #### [CSS 아이콘 가이드](extend/guides/cssicons.md)
-#### [최신 SDK로 마이그레이션](extend/guides/migration-guide-0_1-1_0.md)
 #### [확장 검색 배너 사용](extend/guides/extension-discovery-banner.md)
 ### [확장 게시](extend/publish-extensions.md)
 ### 사례 연구

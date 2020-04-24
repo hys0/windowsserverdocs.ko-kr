@@ -10,10 +10,10 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ms.openlocfilehash: d678c139ae2327eeecdff2731f1edb57d358a28a
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
+ms.lasthandoff: 04/23/2020
 ms.locfileid: "80828846"
 ---
 # <a name="step-4-configure-group-policy-settings-for-automatic-updates"></a>4단계: 자동 업데이트를 위한 그룹 정책 설정 구성
@@ -370,7 +370,7 @@ Windows Update에서 자동으로 설치를 위한 예약 된 업데이트가 �
 
 **옵션:** 사용 설정되었으면 이 설정 옵션을 사용하여 예약된 다시 시작에 대한 알림을 사용자에게 다시 표시하기 전의 경과 시간(분)을 지정할 수 있습니다.
 
-#### <a name="reschedule-automatic-updates-scheduled-installations"></a>예약된 자동 업데이트 설치 일정 변경
+#### <a name="reschedule-automatic-updates-scheduled-installations"></a>예약 된 자동 업데이트 설치 일정 변경
 다음 컴퓨터 시작을 이전에 수행 되지 않은 예약된 된 설치를 계속 하기 전에 대기 하는 자동 업데이트에 대 한 시간을 지정 합니다.
 
 상태가 **구성되지 않음**으로 설정되었으면 다음에 컴퓨터를 시작하고 1분 후 누락된 예약 설치가 수행됩니다.
@@ -396,7 +396,7 @@ Microsoft Update에서 업데이트를 호스트 하도록 인트라넷 서버�
 
 |지원 됩니다.|제외:|
 |---------|-------|
-|안에서 중인 Windows 운영 체제의 [Microsoft 제품 지원 기간](https://support.microsoft.com/gp/lifeselect)합니다.|Windows RT.|
+|안에서 중인 Windows 운영 체제의 [Microsoft 제품 지원 기간](https://support.microsoft.com/gp/lifeselect)합니다.|Windows 직각|
 
 이 설정은 사용 하는 역할을 하는 내부 업데이트 서비스는 네트워크에서 WSUS 서버를 지정할 수 있습니다. Microsoft 업데이트를 인터넷에서 사용 하는 대신 WSUS 클라이언트가 적용 되는 업데이트에 대 한이 서비스를 검색 합니다.
 

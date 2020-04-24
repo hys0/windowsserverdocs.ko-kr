@@ -11,13 +11,13 @@ ms.author: jgerend
 manager: dougkim
 ms.localizationpriority: medium
 ms.openlocfilehash: 5e13886395040619a7509c3cf896112288c48115
-ms.sourcegitcommit: e817a130c2ed9caaddd1def1b2edac0c798a6aa2
+ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/09/2019
+ms.lasthandoff: 04/23/2020
 ms.locfileid: "74945204"
 ---
-# <a name="features-removed-or-deprecated-in--windows-server-2016"></a>Windows Server 2016에서 제거되었거나 사용되지 않는 기능
+# <a name="features-removed-or-deprecated-in--windows-server-2016"></a>Windows Server 2016에서 제거되었거나 사용되지 않는 기능
 
 >적용 대상: Windows Server 2016
 
@@ -33,9 +33,9 @@ ms.locfileid: "74945204"
 > [!NOTE]  
 > Windows Server 2012 R2 또는 Windows Server 2012 이전의 서버 릴리스에서 Windows Server 2016으로 전환하는 경우 [Windows Server 2012 R2에서 제거되었거나 더 이상 사용되지 않는 기능](https://technet.microsoft.com/library/dn303411.aspx) 및 [Windows Server 2012에서 제거되었거나 더 이상 사용되지 않는 기능](https://technet.microsoft.com/library/hh831568.aspx)도 검토해야 합니다.  
 
-### <a name="share-and-storage-management"></a>공유 및 저장소 관리
+### <a name="share-and-storage-management"></a>공유 및 스토리지 관리
 
-Microsoft Management Console용 공유 및 저장소 관리 스냅인이 제거되었습니다. 대신 다음 중 하나를 수행합니다.  
+Microsoft Management Console용 공유 및 스토리지 관리 스냅인이 제거되었습니다. 대신 다음 중 하나를 수행합니다.  
 
 -   관리하려는 컴퓨터에서 Windows Server 2016 이전 운영 체제를 실행 중인 경우 원격 데스크톱에 연결하여 로컬 버전의 공유 및 스토리지 관리 스냅인을 사용합니다.  
 
@@ -73,7 +73,7 @@ Journal.dll은 Windows Server 2016에서 제거되었습니다. 대체 항목은
 
 ## <a name="features-deprecated-starting-with-windows-server-2016"></a>Windows Server 2016부터 사용되지 않는 기능
 
-다음 기능은 이번 릴리스부터 사용되지 않습니다. 결국 제품에서 완전히 제거될 예정이지만 일단 이 버전에서는 계속 제공됩니다. 그러나 경우에 따라 일부 기능이 제거될 수 있습니다. 이러한 기능에 종속된 응용 프로그램, 코드, 사용법을 계속 사용하기 위한 다른 방법을 생각해야 합니다.  
+다음 기능은 이번 릴리스부터 사용되지 않습니다. 결국 제품에서 완전히 제거될 예정이지만 일단 이 버전에서는 계속 제공됩니다. 그러나 경우에 따라 일부 기능이 제거될 수 있습니다. 이러한 기능에 종속된 애플리케이션, 코드, 사용법을 계속 사용하기 위한 다른 방법을 생각해야 합니다.  
 
 ### <a name="configuration-tools"></a>구성 도구  
 
