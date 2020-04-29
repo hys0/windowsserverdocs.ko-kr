@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 05/24/2018
-ms.openlocfilehash: 68825c6bc4d24bca41c04a238fbf4d6291a6625b
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 0208e23b94b5e7c5012bc99eabf71aa0c7ad944c
+ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80828196"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82037142"
 ---
 # <a name="plan-your-wsus-deployment"></a>WSUS 배포 계획
 
@@ -115,15 +115,7 @@ WSUS를 사용하려면 다음 데이터베이스 중 하나가 필요합니다.
 
 -   WID(Windows 내부 데이터베이스)
 
--   Microsoft SQL Server 2017
-
--   Microsoft SQL Server 2016
-
--   Microsoft SQL Server 2014
-
--   Microsoft SQL Server 2012
-
--   Microsoft SQL Server 2008 R2
+-   지원되는 Microsoft SQL Server 버전. 자세한 내용은 [Microsoft 주기 정책](https://aka.ms/sqllifecycle)을 참조하세요.
 
 WSUS에서 지원되는 SQL Server 버전은 다음과 같습니다.
 
@@ -450,8 +442,8 @@ WSUS에서는 업데이트 동기화를 언어, 제품 및 등급별로 필터�
 
 3.  컴퓨터 그룹을 사용하여 출시를 제어합니다. 클라이언트 컴퓨터는 WSUS 서버로 정보를 보낼 때 특정 컴퓨터 그룹의 구성원으로 식별됩니다. WSUS 서버는 이 정보를 사용하여 해당 컴퓨터에 배포해야 할 업데이트를 확인합니다. 컴퓨터 그룹을 여러 개 그룹을 설정한 다음 이러한 그룹의 하위 집합에 대규모 서비스 팩 다운로드를 승인할 수 있습니다.
 
-### <a name="background-intelligent-transfer-service"></a>BITS(Background Intelligent Transfer Service)
-모든 파일 전송 작업 시 WSUS에서는 BITS(Background Intelligent Transfer Service) 프로토콜을 사용합니다. 이 작업에는 클라이언트 컴퓨터에 대한 다운로드와 서버 동기화가 포함됩니다. BITS에서 프로그램은 스패어 대역폭을 사용해 파일을 다운로드할 수 있습니다. BITS는 네트워크 연결이 끊어졌거나 컴퓨터가 다시 시작하는 동안에도 파일 전송 상태를 그대로 유지합니다. 자세한 내용은 다음을 참조하세요. [BITS(Background Intelligent Transfer Service)](https://msdn.microsoft.com/library/bb968799.aspx).
+### <a name="background-intelligent-transfer-service"></a>Background Intelligent Transfer Service
+모든 파일 전송 작업 시 WSUS에서는 BITS(Background Intelligent Transfer Service) 프로토콜을 사용합니다. 이 작업에는 클라이언트 컴퓨터에 대한 다운로드와 서버 동기화가 포함됩니다. BITS에서 프로그램은 스패어 대역폭을 사용해 파일을 다운로드할 수 있습니다. BITS는 네트워크 연결이 끊어졌거나 컴퓨터가 다시 시작하는 동안에도 파일 전송 상태를 그대로 유지합니다. 자세한 내용은 다음을 참조하세요. [Background Intelligent Transfer Service](https://msdn.microsoft.com/library/bb968799.aspx).
 
 ## <a name="17-plan-automatic-updates-settings"></a>1.7. 자동 업데이트 설정 계획
 WSUS 서버의 업데이트를 승인할 최종 기한을 지정할 수 있습니다. 최종 기한을 지정하면 클라이언트 컴퓨터가 특정 기간에 업데이트를 설치합니다. 그러나 최종 기한이 만료되었는지, 컴퓨터 큐에 설치할 다른 업데이트가 있는지, 업데이트(또는 큐의 다른 업데이트)를 다시 시작해야 하는지 등에 따른 여러 가지 상황이 있을 수 있습니다.

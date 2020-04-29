@@ -9,12 +9,12 @@ ms.assetid: 18eface5-7518-4c6b-9282-93e2e3e87492
 author: kbdazure
 ms.author: kathydav
 ms.date: 12/06/2016
-ms.openlocfilehash: dccc4ccf66d457da9dcc2a71ff8d259565fe2714
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 40dd4076a4d1a57c8a1e999669e589dadeb88cbe
+ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80860476"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "81650121"
 ---
 # <a name="use-local-resources-on-hyper-v-virtual-machine-with-vmconnect"></a>VMConnect를 사용하여 Hyper-V 가상 머신에서 로컬 리소스 사용
 
@@ -95,6 +95,9 @@ Windows PowerShell 또는 명령 프롬프트에서 다음 명령을 실행하�
   
 `VMConnect.exe <ServerName> <VMName> /edit`  
   
+> [!Note]
+> 관리자 권한 명령 프롬프트가 필요할 수 있습니다.
+  
 ## <a name="requirements-for-using-local-resources"></a>로컬 리소스 사용을 위한 요구 사항
 
 컴퓨터의 로컬 리소스를 사용하여 가상 머신을 사용할 수 있습니다:  
@@ -139,6 +142,5 @@ VMConnect를 실행하는 컴퓨터와 가상 머신이 모두 요구 사항을 
 ## <a name="see-also"></a>참고 항목  
 [Virtual Machine에 연결](https://technet.microsoft.com/library/cc742407.aspx)  
 [1세대 또는 2세대 가상 머신을 Hyper-V에서 만들어야 하나요?](../plan/Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md)
-
 
 

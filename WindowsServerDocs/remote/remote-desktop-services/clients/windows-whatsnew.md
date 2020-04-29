@@ -7,18 +7,33 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 01/02/2020
+ms.date: 04/20/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 540630ce4baa8246d654b0d50f203623705286c5
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 5fd9e353c18293d22b18c6ffb6a57ad97a819a4a
+ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80859736"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "81650046"
 ---
 # <a name="whats-new-in-the-windows-store-client"></a>Windows 스토어 클라이언트의 새로운 기능
 
 [Windows Store 클라이언트](windows.md)를 정기적으로 업데이트하여 새로운 기능을 추가하고 문제를 수정합니다. 최신 업데이트를 찾을 수 있는 위치는 다음과 같습니다.
+
+## <a name="updates-for-version-1011215"></a>10.1.1215 버전에 대한 업데이트
+
+*게시 날짜: 2020년 4월 20일*
+
+- Windows Virtual Desktop의 사용자 에이전트 문자열을 업데이트했습니다.
+
+## <a name="updates-for-version-1011195"></a>10.1.1195 버전에 대한 업데이트
+
+*게시 날짜: 2020년 3월 6일*
+
+- 이제 앱이 최소화된 상태 또는 백그라운드에서 실행되는 경우에도 세션의 오디오가 계속 재생됩니다.
+- 토글 키(caps lock, num lock 등)가 로컬 PC와 원격 PC 간에 동기화되지 않던 문제를 해결했습니다.
+- 64비트 디바이스의 성능 향상
+- 앱이 일시 중단될 때마다 발생하는 충돌을 수정했습니다.
 
 ## <a name="updates-for-version-1011107"></a>10.1.1107 버전에 대한 업데이트
 
@@ -37,7 +52,7 @@ ms.locfileid: "80859736"
 - 이제 원격 리소스를 추가할 때 기존 사용자 계정을 선택할 수 있습니다.
 - 클라이언트가 제대로 종료되지 않던 문제를 해결했습니다.
 - 클라이언트는 이제 보조 창이 열려 있을 때 일시 중단 상태를 적절히 처리합니다.
-- 추가 버그 픽스.
+- 추가 버그 수정 사항
 
 ## <a name="updates-for-version-1011088"></a>10.1.1088 버전에 대한 업데이트
 
