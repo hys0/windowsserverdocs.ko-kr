@@ -8,12 +8,12 @@ ms.date: 08/08/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: abc02bec101b39a66a78da871f838d2585d89377
-ms.sourcegitcommit: af1cf89632d62a94943d3ad9f6b5234b88499278
+ms.openlocfilehash: 1abf845ce69b395bf46a0f155db2c683c359207c
+ms.sourcegitcommit: 11421f4005f9f3a3f6c0db95b1836d0f765a9fa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81524928"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81623881"
 ---
 # <a name="selecting-the-forest-root-domain"></a>포리스트 루트 도메인 선택
 
@@ -68,7 +68,7 @@ Active Directory 포리스트에 배포 하는 첫 번째 도메인은 포리스
 Active Directory 네임 스페이스에서 인터넷 인증 기관에 등록 된 DNS 이름을 사용 하는 것이 좋습니다. 등록 된 이름만 전역적으로 고유 하 게 보장 됩니다. 다른 조직에서 나중에 동일한 DNS 도메인 이름을 등록 하는 경우 (또는 조직이 같은 DNS 이름을 사용 하는 다른 회사에서를 사용 하 여 또는 다른 회사에서 획득 한 경우) 두 인프라가 서로 상호 작용할 수 없습니다.
 
 > [!CAUTION]
-> 단일 레이블 DNS 이름을 사용 하지 마십시오. 자세한 내용은 ([단일 레이블 DNS 이름을 사용 하 여 구성 된 Active Directory 도메인의 배포 및 작업](https://go.microsoft.com/fwlink/?LinkId=106631))을 참조 하세요. 또한 등록 되지 않은 접미사 (예: local)를 사용 하지 않는 것이 좋습니다.
+> 단일 레이블 DNS 이름을 사용 하지 마십시오. 자세한 내용은 [단일 레이블 DNS 이름을 사용 하 여 구성 된 Active Directory 도메인의 배포 및 운영](https://support.microsoft.com/help/300684/)을 참조 하세요. 또한 등록 되지 않은 접미사 (예: local)를 사용 하지 않는 것이 좋습니다.
 
 ### <a name="selecting-a-prefix"></a>접두사 선택
 
@@ -78,14 +78,14 @@ Active Directory 네임 스페이스에서 인터넷 인증 기관에 등록 된
 
 다음 표에서는 등록 된 DNS 이름에 대 한 접두사를 선택 하는 규칙을 나열 합니다.
 
-|규칙|설명|
-|--------|---------------|
-|오래 될 가능성이 없는 접두사를 선택 합니다.|나중에 변경 될 수 있는 제품 라인 또는 운영 체제와 같은 이름을 사용 하지 마십시오. Corp 또는 ds와 같은 일반 이름을 사용 하는 것이 좋습니다.|
-|인터넷 표준 문자만 포함 하는 접두사를 선택 합니다.|A-z, a-z, 0-9 및 (-) 이지만 완전히 숫자로는 그렇지 않습니다.|
-|접두사에 15 자 이하의 값을 포함 합니다.|15 자 이하의 접두사 길이를 선택 하는 경우 NetBIOS 이름은 접두사와 동일 합니다.|
+| 규칙     | 설명 |
+| -------- | --------------- |
+| 오래 될 가능성이 없는 접두사를 선택 합니다. | 나중에 변경 될 수 있는 제품 라인 또는 운영 체제와 같은 이름을 사용 하지 마십시오. Corp 또는 ds와 같은 일반 이름을 사용 하는 것이 좋습니다.|
+| 인터넷 표준 문자만 포함 하는 접두사를 선택 합니다. | A-z, a-z, 0-9 및 (-) 이지만 완전히 숫자로는 그렇지 않습니다. |
+| 접두사에 15 자 이하의 값을 포함 합니다. | 15 자 이하의 접두사 길이를 선택 하는 경우 NetBIOS 이름은 접두사와 동일 합니다. |
 
 Active Directory DNS 소유자는 Active Directory 네임 스페이스에 사용 되는 이름의 소유권을 얻기 위해 조직의 DNS 소유자와 작업 해야 합니다. AD DS를 지원 하기 위해 DNS 인프라를 디자인 하는 방법에 대 한 자세한 내용은 [Dns 인프라 디자인 만들기](../../ad-ds/plan/Creating-a-DNS-Infrastructure-Design.md)를 참조 하세요.
 
 ## <a name="documenting-the-forest-root-domain-name"></a>포리스트 루트 도메인 이름 문서화
 
-포리스트 루트 도메인에 대해 선택 하는 DNS 접두사 및 접미사를 문서화 합니다. 이 시점에서 포리스트 루트가 될 도메인을 식별 합니다. 새 도메인 및 업그레이드 된 도메인 및 도메인 이름에 대 한 계획을 문서화 하기 위해 만든 "도메인 계획" 워크시트에 포리스트 루트 도메인 이름 정보를 추가할 수 있습니다. 이 파일을 열려면 [Windows Server 2003 배포 키트의 작업 지원](https://www.microsoft.com/download/details.aspx?id=9608) 에서 Job_Aids_Designing_and_Deploying_Directory_and_Security_Services .zip을 다운로드 하 고 "도메인 계획" (DSSLOGI_5)을 엽니다.
+포리스트 루트 도메인에 대해 선택 하는 DNS 접두사 및 접미사를 문서화 합니다. 이 시점에서 포리스트 루트가 될 도메인을 식별 합니다. 새 도메인 및 업그레이드 된 도메인 및 도메인 이름에 대 한 계획을 문서화 하기 위해 만든 "도메인 계획" 워크시트에 포리스트 루트 도메인 이름 정보를 추가할 수 있습니다. 이 파일을 열려면 [Windows Server 2003 배포 키트의 작업 지원](https://microsoft.com/download/details.aspx?id=9608) 에서 Job_Aids_Designing_and_Deploying_Directory_and_Security_Services .zip을 다운로드 하 고 "도메인 계획" (DSSLOGI_5)을 엽니다.

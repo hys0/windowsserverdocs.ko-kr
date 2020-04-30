@@ -8,12 +8,12 @@ ms.date: 05/23/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: bc881efcd932e36e40f4483ae5a8378884db64a6
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 53bbc2bd30f7ede3fc9e4f3580a96514068a7d5f
+ms.sourcegitcommit: d669d4af166b9018bcf18dc79cb621a5fee80042
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75948862"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82037162"
 ---
 # <a name="build-a-custom-authentication-method-for-ad-fs-in-windows-server"></a>Windows Server에서 AD FS에 대 한 사용자 지정 인증 방법 빌드
 
@@ -21,7 +21,7 @@ ms.locfileid: "75948862"
 
 
 > [!WARNING]
-> 여기에서 빌드할 수 있는 예제는 교육용 으로만&nbsp;있습니다. 이러한 지침은 모델의 필수 요소를 표시할 수 있는 가장 간단한 구현에 대 한 &nbsp;입니다.&nbsp; 인증 백 엔드, 오류 처리 또는 구성 데이터가 없습니다. 
+> 여기에서 빌드할 수 있는 예제는 교육용&nbsp;으로만 사용 됩니다. &nbsp;이러한 지침은 모델의 필수 요소를 노출할 수 있는 가장 간단한 구현에 대 한 것입니다. &nbsp; 인증 백 엔드, 오류 처리 또는 구성 데이터가 없습니다. 
 > <P></P>
 
 
@@ -40,8 +40,8 @@ ms.locfileid: "75948862"
 <tbody>
 <tr class="odd">
 <td><p><strong>참조 dll</strong></p></td>
-<td><p><strong>찾을 수 있는 위치</strong></p></td>
-<td><p><strong>필수 항목</strong></p></td>
+<td><p><strong>찾는 위치</strong></p></td>
+<td><p><strong>소프트웨어가 사용되는 구성 요소</strong></p></td>
 </tr>
 <tr class="even">
 <td><p>IdentityServer.</p></td>
@@ -62,7 +62,7 @@ ms.locfileid: "75948862"
 
     ![공급자 만들기](media/ad-fs-build-custom-auth-method/Dn783423.71a57ae1-d53d-462b-a846-5b3c02c7d3f2(MSDN.10).jpg "공급자 만들기")
 
-3.  AD FS 설치 된 Windows Server 2012 R2 서버 에서% windir%\\ADFS의 **IdentityServer** 복사본을 만들어 개발 컴퓨터의 프로젝트 폴더에 붙여 넣습니다.
+3.  AD FS 설치 된 Windows **Microsoft.IdentityServer.Web.dll** Server 2012 R2 서버 에서% windir%\\ADFS의 IdentityServer 복사본을 만들어 개발 컴퓨터의 프로젝트 폴더에 붙여 넣습니다.
 
 4.  **솔루션 탐색기**에서 **참조** 를 마우스 오른쪽 단추로 클릭 하 고 **참조 추가** ...를 클릭 합니다.
 
@@ -74,7 +74,7 @@ ms.locfileid: "75948862"
 
     이제 공급자에 필요한 모든 형식을 확인 하도록를 설정 해야 합니다. 
 
-7.  프로젝트에 새 클래스를 추가 합니다. 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 추가 ...를 클릭 합니다.  **클래스 ...** ) 아래에 표시 된 **Myadapter**와 같은 이름을 지정 합니다.
+7.  프로젝트에 새 클래스를 추가 합니다. 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 추가 ...를 클릭 합니다. ** 클래스 ...**) 아래에 표시 된 **Myadapter**와 같은 이름을 지정 합니다.
 
     ![공급자 만들기](media/ad-fs-build-custom-auth-method/Dn783423.6b6a7a8b-9d66-40c7-8a86-a2e3b9e14d09(MSDN.10).jpg "공급자 만들기")
 
@@ -345,7 +345,7 @@ ms.locfileid: "75948862"
 
    ![공급자 만들기](media/ad-fs-build-custom-auth-method/Dn783423.3369ad8f-f65f-4f36-a6d5-6a3edbc1911a(MSDN.10).jpg "공급자 만들기")
 
-15. 그런 다음 **리소스 .resx** 파일 내에서 리소스 추가 ...를 선택 합니다.  **기존 파일을 추가**합니다.  위에서 저장 한 텍스트 파일 (html 조각 포함)로 이동 합니다.
+15. 그런 다음 **리소스 .resx** 파일 내에서 리소스 추가 ...를 선택 합니다. ** 기존 파일을 추가**합니다.  위에서 저장 한 텍스트 파일 (html 조각 포함)로 이동 합니다.
 
    GetFormHtml 코드가 리소스 파일 (.resx 파일) 이름 접두사와 리소스 자체의 이름을 통해 새 리소스의 이름을 올바르게 확인 하는지 확인 합니다.
 
@@ -359,7 +359,7 @@ ms.locfileid: "75948862"
 
 1.  솔루션 탐색기에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 **속성**을 클릭 합니다.
 
-2.  **서명** 탭에서 **어셈블리 서명** 을 선택 하 고 **강력한 이름 키 파일 선택** 에서 **\<새로 만들기 ...\>** 를 선택 합니다. 키 파일 이름 및 암호를 입력 하 고 **확인**을 클릭 합니다.  그런 다음 **어셈블리 서명** 이 선택 되어 있고 **연기 서명만** 선택 취소 되어 있는지 확인 합니다.  속성 **서명** 페이지는 다음과 같습니다.
+2.  **서명** 탭에서 **어셈블리 서명** 을 선택 하 고 ** \<새로 만들기 ...를 선택 합니다. \> ** **강력한 이름 키 파일 선택** 에서 키 파일 이름 및 암호를 입력 하 고 **확인**을 클릭 합니다.  그런 다음 **어셈블리 서명** 이 선택 되어 있고 **연기 서명만** 선택 취소 되어 있는지 확인 합니다.  속성 **서명** 페이지는 다음과 같습니다.
 
     ![공급자 빌드](media/ad-fs-build-custom-auth-method/Dn783423.0b1a1db2-d64e-4bb8-8c01-ef34296a2668(MSDN.10).jpg "공급자 빌드")
 
@@ -381,44 +381,44 @@ AD FS에서 외부 공급자를 호출 하려면 먼저 시스템에 등록 되�
 
 3.  Gacutil.exe 도구를 서버에 복사 합니다.
 
-    Gacutil.exe는 Windows 8 컴퓨터의 **% homedrive%\\Program Files (x86)\\Microsoft sdk\\windows\\v 8.0 a 4.0\\** \\\\에 있습니다.  **NETFX 4.0 Tools** 위치 아래의 **1033**, **en-us**및 기타 지역화 된 리소스 폴더 뿐만 아니라 **gacutil.exe** 파일 자체가 필요 합니다.
+    Gacutil.exe는 windows 8 컴퓨터의 **%\\homedrive% Program Files (x86)\\Microsoft sdk\\Windows\\v 8.0 a\\bin\\NETFX 4.0 도구\\ ** 에서 찾을 수 있습니다.  **NETFX 4.0 Tools** 위치 아래의 **1033**, **en-us**및 기타 지역화 된 리소스 폴더 뿐만 아니라 **gacutil.exe** 파일 자체가 필요 합니다.
 
 4.  공급자 파일 (하나 이상의 강력한 이름의 서명 된 .dll 파일)을 gacutil.exe와 동일한 폴더 위치에 복사 **합니다.** 위치는 편의를 위한 것입니다.
 
 5.  팜의 각 AD FS 페더레이션 서버에서 GAC에 .dll 파일을 추가 합니다.
 
-    예: 명령줄 도구 Gacutil.exe를 사용 하 여 dll을 GAC에 추가: `C:\>.\gacutil.exe /if .\<yourdllname>.dll`
+    예: 명령줄 도구 Gacutil.exe를 사용 하 여 dll을 GAC에 추가 합니다.`C:\>.\gacutil.exe /if .\<yourdllname>.dll`
 
-    GAC에서 결과 항목을 보려면:`C:\>.\gacutil.exe /l <yourassemblyname>`
+    GAC에서 결과 항목을 보려면 다음을 수행 합니다.`C:\>.\gacutil.exe /l <yourassemblyname>`
 
 6.  
 
 ### <a name="register-your-provider-in-ad-fs"></a>AD FS에 공급자 등록
 
-위의 필수 구성 요소가 충족 되 면 페더레이션 서버에서 Windows PowerShell 명령 창을 열고 다음 명령을 입력 합니다. Windows 내부 데이터베이스를 사용 하는 페더레이션 서버 팜을 사용 하는 경우에는 다음 명령을 실행 해야 합니다. 팜의 기본 페더레이션 서버):
+위의 필수 구성 요소가 충족 되 면 페더레이션 서버에서 Windows PowerShell 명령 창을 열고 다음 명령을 입력 합니다. Windows 내부 데이터베이스를 사용 하는 페더레이션 서버 팜을 사용 하는 경우 팜의 기본 페더레이션 서버에서 다음 명령을 실행 해야 합니다.
 
 1.  `Register-AdfsAuthenticationProvider –TypeName YourTypeName –Name “AnyNameYouWish” [–ConfigurationFilePath (optional)]`
 
-    여기서 해당 Typename은 .NET 강력한 형식 이름입니다. "해당 형식 이름:" 해당 Defaultnamespace. .NET은 어셈블리 = 해당 하는 Assemblyversion, Culture = 중립, PublicKeyToken = YourPublicKeyTokenValue, processorArchitecture = MSIL "
+    여기서 해당 Typename은 .NET 강력한 형식 이름입니다. "해당 하는 Defaultnamespace. YourPublicKeyTokenValue, processorArchitecture = MSIL"은 해당 형식 이름입니다.
 
     그러면 AD FS에 외부 공급자가 등록 되 고,이 이름은 위의 AnyNameYouWish로 제공한 이름으로 등록 됩니다.
 
 2.  예를 들어 Windows 서비스 스냅인을 사용 하 여 AD FS 서비스를 다시 시작 합니다.
 
-3.  `Get-AdfsAuthenticationProvider` 명령을 실행합니다.
+3.  명령 `Get-AdfsAuthenticationProvider`를 실행합니다.
 
     이렇게 하면 공급자가 시스템의 공급자 중 하나로 표시 됩니다.
 
-    예:
+    예제:
 
         PS C:\>$typeName = "MFAadapter.MyAdapter, MFAadapter, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e675eb33c62805a0, processorArchitecture=MSIL”
         PS C:\>Register-AdfsAuthenticationProvider -TypeName $typeName -Name “MyMFAAdapter”
         PS C:\>net stop adfssrv
         PS C:\>net start adfssrv
 
-    AD FS 환경에서 장치 등록 서비스를 사용 하도록 설정한 경우 다음도 실행 합니다. `PS C:\>net start drs`
+    AD FS 환경에서 장치 등록 서비스를 사용 하도록 설정한 경우 다음도 실행 합니다.`PS C:\>net start drs`
 
-    등록 된 공급자를 확인 하려면 다음 명령을 사용 합니다:`PS C:\>Get-AdfsAuthenticationProvider`.
+    등록 된 공급자를 확인 하려면 다음 명령을 사용`PS C:\>Get-AdfsAuthenticationProvider`합니다.
 
     이렇게 하면 공급자가 시스템의 공급자 중 하나로 표시 됩니다.
 
@@ -438,7 +438,7 @@ AD FS에서 외부 공급자를 호출 하려면 먼저 시스템에 등록 되�
 
 6.  다음 명령을 사용 하 여 결과를 확인 합니다.
 
-    먼저 `Get-AdfsGlobalAuthenticationPolicy`를 사용 합니다. 공급자 이름이 AdditionalAuthenticationProvider 값 중 하나로 표시 됩니다.
+    먼저를 `Get-AdfsGlobalAuthenticationPolicy`사용 합니다. 공급자 이름이 AdditionalAuthenticationProvider 값 중 하나로 표시 됩니다.
 
     그런 다음 `Get-AdfsAdditionalAuthenticationRule`를 사용 합니다. 관리자 UI에서 정책 선택의 결과로 구성 된 엑스트라넷 및 인트라넷에 대 한 규칙이 표시 됩니다.
 
@@ -487,15 +487,15 @@ Example:`PS C:\>Set-AdfsGlobalAuthenticationPolicy –AdditionalAuthenticationPr
 
     구성 된 어댑터가 둘 이상 있는 경우 위의 이름과 함께 MFA 선택 페이지가 표시 됩니다.
 
-    ![어댑터를 사용 하 여 인증](media/ad-fs-build-custom-auth-method/Dn783423.c98d2712-cbd3-4cb9-ac03-2838b81c4f63(MSDN.10).jpg "어댑터로 인증")
+    ![어댑터로 인증](media/ad-fs-build-custom-auth-method/Dn783423.c98d2712-cbd3-4cb9-ac03-2838b81c4f63(MSDN.10).jpg "어댑터로 인증")
 
-    ![어댑터를 사용 하 여 인증](media/ad-fs-build-custom-auth-method/Dn783423.fd3aefc0-ef6c-4a8c-a737-4914c78ff2d2(MSDN.10).jpg "어댑터로 인증")
+    ![어댑터로 인증](media/ad-fs-build-custom-auth-method/Dn783423.fd3aefc0-ef6c-4a8c-a737-4914c78ff2d2(MSDN.10).jpg "어댑터로 인증")
 
 이제 인터페이스를 제대로 구현 했으며 모델의 작동 방식에 대 한 지식이 있습니다. BeginAuthentication에서 중단 지점과 나머지를 설정 하는 추가 예제로 m m을 사용할 수 있습니다.  사용자가 처음으로 MFA 폼에 들어가면 BeginAuthentication이 실행 되는 방식을 확인할 수 있습니다. 반면에는 각 폼 전송 시에는는 BeginAuthentication이 트리거됩니다.
 
 ## <a name="update-the-adapter-for-successful-authentication"></a>성공적인 인증을 위해 어댑터 업데이트
 
-대기-예제 어댑터가 성공적으로 인증 되지 않습니다\!  이는 코드에서 TryEndAuthentication에 대해 null을 반환 하지 않기 때문입니다.
+대기-예제 어댑터는 성공적으로 인증 되지 않습니다.\!  이는 코드에서 TryEndAuthentication에 대해 null을 반환 하지 않기 때문입니다.
 
 위의 절차를 완료 하 여 기본 어댑터 구현을 만들고이를 AD FS 서버에 추가 했습니다.  MFA 양식 페이지를 가져올 수 있지만, 아직 인증 되지 않은 경우에는 아직 인증 되지 않았습니다.  이를 추가 해 보겠습니다.
 
@@ -539,7 +539,7 @@ Example:`PS C:\>Set-AdfsGlobalAuthenticationPolicy –AdditionalAuthenticationPr
      outgoingClaims = new[] 
      {
      // Return the required authentication method claim, indicating the particulate authentication method used.
-     new Claim( "https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", 
+     new Claim( "http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", 
      "http://example.com/myauthenticationmethod1" )
      };
      return null;
@@ -565,7 +565,7 @@ Example:`PS C:\>Set-AdfsGlobalAuthenticationPolicy –AdditionalAuthenticationPr
 
 `PS C:\> Unregister-AdfsAuthenticationProvider –Name “YourAuthProviderName”`
 
-예: `PS C:\> Unregister-AdfsAuthenticationProvider –Name “MyMFAAdapter”`
+예:`PS C:\> Unregister-AdfsAuthenticationProvider –Name “MyMFAAdapter”`
 
 "Name"에 대해 전달 하는 값은 Register-adfsauthenticationprovider cmdlet에 제공한 "Name"과 동일한 값입니다.  Register-adfsauthenticationprovider에서 출력 되는 "Name" 속성 이기도 합니다.
 
@@ -577,11 +577,11 @@ Example:`PS C:\>Set-AdfsGlobalAuthenticationPolicy –AdditionalAuthenticationPr
 
 1.  먼저 다음 명령을 사용 하 여 항목의 정규화 된 강력한 이름을 찾습니다.`C:\>.\gacutil.exe /l <yourAdapterAssemblyName>`
 
-    예: `C:\>.\gacutil.exe /l mfaadapter`
+    예:`C:\>.\gacutil.exe /l mfaadapter`
 
 2.  그런 다음, 다음 명령을 사용 하 여 GAC에서 제거 합니다.`.\gacutil /u “<output from the above command>”`
 
-    예: `C:\>.\gacutil /u “mfaadapter, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e675eb33c62805a0, processorArchitecture=MSIL”`
+    예:`C:\>.\gacutil /u “mfaadapter, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e675eb33c62805a0, processorArchitecture=MSIL”`
 
 ### <a name="add-the-updated-assembly-to-gac"></a>GAC에 업데이트 된 어셈블리 추가
 
@@ -633,9 +633,9 @@ Example:`PS C:\>Set-AdfsGlobalAuthenticationPolicy –AdditionalAuthenticationPr
 
 MFA 인증 페이지에서 "adfabric"을 입력 하면 성공적인 로그인이 표시 됩니다.
 
-![어댑터를 사용 하 여 로그인](media/ad-fs-build-custom-auth-method/Dn783423.630d8a91-3bfe-4cba-8acf-03eae21530ee(MSDN.10).jpg "어댑터로 로그인")
+![어댑터로 로그인](media/ad-fs-build-custom-auth-method/Dn783423.630d8a91-3bfe-4cba-8acf-03eae21530ee(MSDN.10).jpg "어댑터로 로그인")
 
-![어댑터를 사용 하 여 로그인](media/ad-fs-build-custom-auth-method/Dn783423.c340fa73-f70f-4870-b8dd-07900fea4469(MSDN.10).jpg "어댑터로 로그인")
+![어댑터로 로그인](media/ad-fs-build-custom-auth-method/Dn783423.c340fa73-f70f-4870-b8dd-07900fea4469(MSDN.10).jpg "어댑터로 로그인")
 
 ## <a name="see-also"></a>참고 항목
 

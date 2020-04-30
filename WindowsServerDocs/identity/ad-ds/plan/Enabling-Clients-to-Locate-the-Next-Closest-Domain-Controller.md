@@ -1,6 +1,6 @@
 ---
 ms.assetid: 7dd905ea-4235-4519-8400-31b4fa0ed1bf
-title: 클라이언트에서 다음으로 가장 가까운 도메인 컨트롤러를 찾도록 설정
+title: 다음 가장 가까운 도메인 컨트롤러를 찾아야 하는 클라이언트를 사용 하도록 설정
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
@@ -8,16 +8,16 @@ ms.date: 08/08/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 55e19728e247240ca35bf7cc7b47b36171f1f195
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 75e31a435e8d8411fbe4db242e6d31fd7676fe4e
+ms.sourcegitcommit: 11421f4005f9f3a3f6c0db95b1836d0f765a9fa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80822506"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81624251"
 ---
-# <a name="enabling-clients-to-locate-the-next-closest-domain-controller"></a>클라이언트에서 다음으로 가장 가까운 도메인 컨트롤러를 찾도록 설정
+# <a name="enabling-clients-to-locate-the-next-closest-domain-controller"></a>다음 가장 가까운 도메인 컨트롤러를 찾아야 하는 클라이언트를 사용 하도록 설정
 
->적용 대상: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> 적용 대상: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Windows Server 2008 이상을 실행 하는 도메인 컨트롤러가 있는 경우 **다음으로 가장 가까운 사이트** 사용 그룹 정책 설정을 사용 하 여 windows Vista 이상 또는 windows Server 2008 이상을 실행 하는 클라이언트 컴퓨터에서 도메인 컨트롤러를 더 효율적으로 찾을 수 있도록 할 수 있습니다. 이 설정은 특히 지점 및 사이트를 많이 포함 되어 있는 대기업에서에서 네트워크 트래픽을 간소화 하 여 도메인 컨트롤러 로케이터 (DC 로케이터)를 향상 시킵니다.
 
@@ -31,7 +31,7 @@ Windows Server 2008 이상을 실행 하는 도메인 컨트롤러가 있는 경
 - 같은 사이트에서 사용할 수 있는 도메인 컨트롤러가 없으면 도메인에 있는 모든 도메인 컨트롤러를 찾아 봅니다.
 
 > [!NOTE]
-> 이 이전 버전의 Active Directory DC 로케이터 사용 되는 것과 동일한 알고리즘입니다. 자세한 내용은 [Active Directory에 대 한 DNS 지원이 작동 하는 방법](https://go.microsoft.com/fwlink/?LinkId=108587)문서를 참조 하세요.
+> 이 이전 버전의 Active Directory DC 로케이터 사용 되는 것과 동일한 알고리즘입니다. 자세한 내용은 [Active Directory에 대 한 DNS 지원이 작동 하는 방법](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc759550(v=ws.10))문서를 참조 하세요.
 
 사용 하도록 설정 하면는 **가장 가까운 다음 사이트 시도** 설정, DC 로케이터를 사용 하 여 다음과 같은 알고리즘 도메인 컨트롤러를 찾습니다.
 
@@ -54,4 +54,4 @@ Windows Server 2008 이상을 실행 하는 도메인 컨트롤러가 있는 경
 > [!NOTE]
 > **가장 가까운 다음 사이트 시도** 설정은 자동 사이트 적용 범위를 조정 하 여 작동 합니다. 예를 들어 다음 가장 가까운 사이트에 도메인 컨트롤러가 없는 경우 DC 로케이터는 해당 사이트에 대 한 자동 사이트 검사를 수행 하는 도메인 컨트롤러를 찾을 시도 합니다.
 
-**가장 가까운 다음 사이트 시도** 설정을 적용 하려면 GPO (그룹 정책 개체)를 만들어 조직의 적절 한 개체에 연결 하거나, 도메인에서 windows Vista 이상 및 windows Server 2008 이상을 실행 하는 모든 클라이언트에 영향을 주는 기본 도메인 정책을 수정할 수 있습니다. 설정 하는 방법에 대 한 자세한 내용은 **가장 가까운 다음 사이트 시도** 참조 설정, [다음 가장 가까운 사이트에서 도메인 컨트롤러를 찾는 데 클라이언트가 사용](https://technet.microsoft.com/library/cc772592.aspx)합니다.
+**가장 가까운 다음 사이트 시도** 설정을 적용 하려면 GPO (그룹 정책 개체)를 만들어 조직의 적절 한 개체에 연결 하거나, 도메인에서 windows Vista 이상 및 windows Server 2008 이상을 실행 하는 모든 클라이언트에 영향을 주는 기본 도메인 정책을 수정할 수 있습니다. 설정 하는 방법에 대 한 자세한 내용은 **가장 가까운 다음 사이트 시도** 참조 설정, [다음 가장 가까운 사이트에서 도메인 컨트롤러를 찾는 데 클라이언트가 사용](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772592(v=ws.10))합니다.

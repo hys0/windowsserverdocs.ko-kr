@@ -7,18 +7,19 @@ author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 01/06/2020
 ms.prod: windows-server
-ms.openlocfilehash: 5f6777939b907a0d50d134c5507efec5f03e3286
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 3976761836e4bbec2a3d06d56220066a595046b4
+ms.sourcegitcommit: 074b59341640a8ae0586d6b37df7ba256e03a0c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75952745"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81650096"
 ---
 # <a name="windows-admin-center-release-history"></a>Windows 관리 센터 릴리스 기록
 
 다음은 최신 릴리스 기능 목록입니다.
 
-- 버전 [1910](https://aka.ms/wac1910)은 몇 가지 새로운 Azure 하이브리드 서비스를 도입하고 이전에 미리 보기에 있던 기능을 GA 채널에 가져온 최신 GA 릴리스입니다.
+- 버전 [1910.2](https://aka.ms/wac1910.2) 은 최신 GA 릴리스입니다. 플랫폼의 접근성 및 많은 버그 수정에 대 한 업데이트가 포함 되어 있습니다.
+- 버전 [1910](https://aka.ms/wac1910) 에는 몇 가지 새로운 Azure 하이브리드 서비스가 도입 되었으며 이전에는 GA 채널에 미리 보기로 제공 되었던 기능이 제공 됩니다.
 - 버전 [1909](https://aka.ms/wac1909)에서는 Azure VM 관련 연결 유형을 소개하고 기존 장애 조치(failover) 클러스터 및 HCI 클러스터에 대한 연결 유형을 통합합니다.
 - 버전 [1908](https://aka.ms/wac1908)에는 시각적 업데이트, Packetmon, FlowLog Audit, 클러스터용 Azure Monitor 온보딩 및 HTTPS를 통한 WinRM 지원(포트 5986)이 추가되었습니다.
 - 버전 [1907](https://aka.ms/wac1907)은 Azure 비용 추정 링크를 추가하고 가상 머신의 가져오기/내보내기 및 태그 지정을 개선했습니다.

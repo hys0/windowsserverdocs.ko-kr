@@ -1,6 +1,6 @@
 ---
 title: schtasks
-description: '\* * * *에 대 한 Windows 명령 항목'
+description: '* * * *에 대 한 Windows 명령 항목'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0d4c28072a8e4d01ea3a045314796bcda32c8a59
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 2b50ca62aea7a46f9246fb8d5089c0ef41aa1316
+ms.sourcegitcommit: d669d4af166b9018bcf18dc79cb621a5fee80042
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80835246"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82037172"
 ---
 # <a name="schtasks"></a>schtasks
 
@@ -23,14 +23,14 @@ ms.locfileid: "80835246"
 명령 및 프로그램이 정기적으로 또는 특정 시간에 실행 되도록 예약 합니다. 추가 및 일정에서 작업을 제거, 시작 요청 시 작업을 중지 하 고 표시 되며 및 예약 된 작업을 변경 합니다.
 
 다음 명령 구문을 보려면 다음 명령 중 하나를 클릭 합니다.
--   [schtasks 만들기](#BKMK_create)
--   [schtasks 변경](#BKMK_change)
--   [schtasks 실행](#BKMK_run)
--   [schtasks 종료](#BKMK_end)
--   [schtasks 삭제](#BKMK_delete)
--   [schtasks 쿼리](#BKMK_query)
+-   [매개 변수 만들기](#BKMK_create)
+-   [매개 변수 변경](#BKMK_change)
+-   [실행 매개 변수](#BKMK_run)
+-   [schtasks 끝](#BKMK_end)
+-   [매개 변수 삭제](#BKMK_delete)
+-   [매개 변수 쿼리](#BKMK_query)
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 - **SchTasks.exe** 와 같은 작업을 수행 **예약 된 작업** 에서 **제어판**합니다. 이러한 도구를 서로 교환해 서 사용할 수 있습니다.
 - **Schtasks** 대체 **At.exe**, 이전 버전의 Windows에 포함 하는 도구입니다. 하지만 **At.exe** Windows Server 2003 제품군에 여전히 포함 되어 **schtasks** 권장된 명령줄 작업 일정 관리 도구입니다.
@@ -47,24 +47,24 @@ ms.locfileid: "80835246"
   ```  
   손상 된 작업을 복구할 수 없습니다. 작업 일정은 시스템의 기능을 복원 하려면 **SchTasks.exe** 또는 **예약 된 작업** 하는 시스템에서 작업을 삭제 하 고 일정을 조정 합니다.
 
-## <a name="schtasks-create"></a><a name=BKMK_create></a>schtasks 만들기
+## <a name="schtasks-create"></a><a name=BKMK_create></a>매개 변수 만들기
 
 작업을 예약 합니다.
 
 **Schtasks** 각 일정 유형에 대해 다른 매개 변수 조합을 사용 합니다. 작업을 만들기 위한 결합 된 구문을 또는 특정 일정 유형으로 작업을 만들기 위한 구문을 보려면 다음 옵션 중 하나를 클릭 합니다.
--   [조합 된 구문 및 매개 변수 설명](#BKMK_syntax)
+-   [결합 된 구문 및 매개 변수 설명](#BKMK_syntax)
 -   [N 분 마다 실행 되는 작업을 예약 하려면](#BKMK_minutes)
 -   [N 시간 마다 실행 되는 작업을 예약 하려면](#BKMK_hours)
 -   [N 일 마다 실행 되는 작업을 예약 하려면](#BKMK_days)
--   [N 주마다 실행 되는 작업을 예약 하려면](#BKMK_weeks)
--   [N 개월 마다 실행 되는 작업을 예약 하려면](#BKMK_months)
+-   [N 주마다를 실행 하는 작업을 예약 하려면](#BKMK_weeks)
+-   [3 개월 마다 실행 하는 작업을 예약 하려면](#BKMK_months)
 -   [특정 요일에 실행 되는 작업을 예약 하려면](#BKMK_spec_day)
--   [월의 특정 주에 실행 되는 작업을 예약 하려면](#BKMK_spec_week)
--   [매월 특정 날짜에 실행 되는 작업을 예약 하려면](#BKMK_spec_date)
+-   [해당 월의 특정 주에 실행 되는 작업을 예약 하려면](#BKMK_spec_week)
+-   [특정 날짜 각 월에 실행 되는 작업을 예약 하려면](#BKMK_spec_date)
 -   [한 달의 마지막 날에 실행 되는 작업을 예약 하려면](#BKMK_last_day)
 -   [한 번 실행 되는 작업을 예약 하려면](#BKMK_once)
--   [시스템이 시작 될 때마다 실행 되는 작업을 예약 하려면](#BKMK_startup)
--   [사용자가 로그온 할 때 실행 되는 작업을 예약 하려면](#BKMK_logon)
+-   [시스템 시작 될 때마다 실행 되는 작업을 예약 하려면](#BKMK_startup)
+-   [로그온 사용자가 실행 되는 작업을 예약 하려면](#BKMK_logon)
 -   [시스템이 유휴 상태일 때 실행 되는 작업을 예약 하려면](#BKMK_idle)
 -   [지금 실행 되는 작업을 예약 하려면](#BKMK_now)
 -   [다른 사용 권한으로 실행 되는 작업을 예약 하려면](#BKMK_diff_perms)
@@ -72,7 +72,7 @@ ms.locfileid: "80835246"
 -   [둘 이상의 프로그램을 실행 하는 작업을 예약 하려면](#BKMK_multi_progs)
 -   [원격 컴퓨터에서 실행 되는 작업을 예약 하려면](#BKMK_remote)
 
-### <a name="combined-syntax-and-parameter-descriptions"></a><a name=BKMK_syntax></a>조합 된 구문 및 매개 변수 설명
+### <a name="combined-syntax-and-parameter-descriptions"></a><a name=BKMK_syntax></a>결합 된 구문 및 매개 변수 설명
 
 #### <a name="syntax"></a>구문
 
@@ -82,7 +82,7 @@ schtasks /create /sc <ScheduleType> /tn <TaskName> /tr <TaskRun> [/s <Computer> 
 
 ##### <a name="parameters"></a>매개 변수
 
-##### <a name="sc-scheduletype"></a>/sc \<ScheduleType >
+##### <a name="sc-scheduletype"></a>/sc \<ScheduleType>
 
 일정 유형을 지정합니다. 유효한 값은 분, 매시간, 매일, 매주, 매월 한 번, ONSTART, 유형에, ONIDLE 합니다.
 
@@ -94,115 +94,115 @@ schtasks /create /sc <ScheduleType> /tn <TaskName> /tr <TaskRun> [/s <Computer> 
 |트리거|사용자 (사용자)가 로그온 할 때마다 작업을 실행 합니다. 날짜를 지정 하거나 다음에 사용자가 로그온 작업을 실행할 수 있습니다.|
 |ONIDLE|작업에는 지정 된 시간 동안 시스템이 유휴 상태일 때마다 실행 됩니다. 다음에 시스템이 유휴 상태일 때 작업을 실행 하거나 날짜를 지정 수 있습니다.|
 
-##### <a name="tn-taskname"></a>/tn \<TaskName >
+##### <a name="tn-taskname"></a>/tn \<TaskName>
 
 작업에 대 한 이름을 지정합니다. 시스템에서 각 작업에는 고유한 이름이 있어야 합니다. 이름을 파일 이름에 대 한 규칙을 준수 해야 하며 238 자를 초과할 수 없습니다. 인용 부호를 사용 하 여 공백을 포함 하는 이름을 묶습니다.
 
-##### <a name="tr-taskrun"></a>/tr \<TaskRun >
+##### <a name="tr-taskrun"></a>/tr \<taskrun>
 
 프로그램이 나 작업을 실행 하는 명령을 지정 합니다. 실행 파일, 스크립트 파일 또는 배치 파일의 정규화 된 경로 파일 이름을 입력 합니다. 경로 이름은 262 자를 초과할 수 없습니다. 경로 생략 하면 **schtasks** 파일에 있다고 가정은 *SystemRoot*\System32 디렉터리입니다.
 
-##### <a name="s-computer"></a>/s \<컴퓨터 >
+##### <a name="s-computer"></a>/s \<컴퓨터>
 
 지정된 된 원격 컴퓨터에서 작업을 예약 합니다. 이름 또는 원격 컴퓨터 (백슬래시 없이 또는)의 IP 주소를 입력 합니다. 기본값은 로컬 컴퓨터입니다. **/u** 및 **/p** 매개 변수는 사용 하는 경우에 유효 **/s**합니다.
 
-##### <a name="u-domainuser"></a>/u [\<도메인 >\]<User>
+##### <a name="u-domainuser"></a>/u [\<도메인>\]<User>
 
-이 명령은 지정된 된 사용자 계정 권한으로 실행 됩니다. 기본값은 로컬 컴퓨터의 현재 사용자의 권한. **/u** 및 **/p** 매개 변수는 원격 컴퓨터에서 작업을 예약할 경우에 유효한 ( **/s**).
+이 명령은 지정된 된 사용자 계정 권한으로 실행 됩니다. 기본값은 로컬 컴퓨터의 현재 사용자의 권한. **/u** 및 **/p** 매개 변수는 원격 컴퓨터에서 작업을 예약할 경우에 유효한 (**/s**).
 
 지정 된 계정의 사용 권한 작업을 예약 하 고 작업을 실행에 사용 됩니다. 다른 사용자의 권한으로 작업을 실행 하려면 **/ru** 매개 변수를 사용 합니다.
 
 사용자 계정에는 원격 컴퓨터에서 Administrators 그룹의 구성원 이어야 합니다. 또한 로컬 컴퓨터의 원격 컴퓨터와 동일한 도메인에 있어야 하거나 원격 컴퓨터 도메인에서 신뢰 하는 도메인에 있어야 합니다.
 
-##### <a name="p-password"></a>/p \<암호 >
+##### <a name="p-password"></a>/p \<암호>
 
 에 지정 된 사용자 계정에 대 한 암호를 제공 된 **/u** 매개 변수입니다. 사용 하는 경우는 **/u** 매개 변수를 생략 하는 **/p** 매개 변수 또는 password 인수 **schtasks** 암호를 묻는 메시지를 표시 하 고 입력 한 텍스트를가 려 합니다.
 
-**/u** 및 **/p** 매개 변수는 원격 컴퓨터에서 작업을 예약할 경우에 유효한 ( **/s**).
+**/u** 및 **/p** 매개 변수는 원격 컴퓨터에서 작업을 예약할 경우에 유효한 (**/s**).
 
-##### <a name="ru-domainuser--system"></a>/ru {[\<도메인 >\]<User> | 컴퓨터
+##### <a name="ru-domainuser--system"></a>/ru {[\<도메인>\] <User> | 컴퓨터
 
 지정 된 사용자 계정 권한으로 작업을 실행 합니다. 기본적으로 작업이 실행 하 여 지정 된 사용자의 사용 권한 또는 로컬 컴퓨터의 현재 사용자의 권한으로는 **/u** 매개 변수를 포함 된 경우. **/ru** 매개 변수는 로컬 또는 원격 컴퓨터에서 작업을 예약 하는 경우에 유효 합니다.
 
 
 |       값        |                                                    설명                                                    |
 |--------------------|-------------------------------------------------------------------------------------------------------------------|
-| [\<도메인 >\]<User> |                                       다른 사용자 계정을 지정합니다.                                        |
+| [\<도메인>\]<User> |                                       다른 사용자 계정을 지정합니다.                                        |
 |    시스템 또는     | 운영 체제와 시스템 서비스에서 사용 하는 강력한 권한의 계정이 로컬 시스템 계정을 지정 합니다. |
 
-##### <a name="rp-password"></a>/rp \<암호 >
+##### <a name="rp-password"></a>/rp \<암호>
 
 에 지정 된 사용자 계정에 대 한 암호를 제공 된 **/ru** 매개 변수입니다. 사용자 계정을 지정할 때이 매개 변수를 생략 하면 **SchTasks.exe** 암호를 묻는 메시지를 표시 하 고 입력 한 텍스트를가 려 합니다.
 
-사용 하지 않는 **/rp** 시스템 계정 자격 증명으로 실행 하는 작업에 대 한 매개 변수 ( **/ru 시스템**). 시스템 계정에 암호가 없는 및 **SchTasks.exe** 하나 마다 표시 되지는 않습니다.
+사용 하지 않는 **/rp** 시스템 계정 자격 증명으로 실행 하는 작업에 대 한 매개 변수 (**/ru 시스템**). 시스템 계정에 암호가 없는 및 **SchTasks.exe** 하나 마다 표시 되지는 않습니다.
 
-##### <a name="mo-modifier"></a>/mo \<한정자 >
+##### <a name="mo-modifier"></a>/mo \<Modifier>
 
 일정 유형 내에서 작업을 실행 하는 빈도 지정 합니다. 이 매개 변수 유효 하지만 선택 사항 1 분을 시간별, 일별, 주별 및 월별 예약 합니다. 기본값은 1입니다.
 
 |일정 유형|한정자 값|설명|
 |-------------|---------------|-----------|
-|MINUTE|1 - 1439|작업은 \<N > 분 마다 실행 됩니다.|
-|시간 단위|1 - 23|작업은 \<N > 시간 마다 실행 됩니다.|
-|DAILY|1 - 365|작업은 \<N > 일 마다 실행 됩니다.|
-|매주|1 - 52|이 작업은 \<N > 주 마다 실행 됩니다.|
+|MINUTE|1 - 1439|작업은 N> \<분 마다 실행 됩니다.|
+|시간 단위|1 - 23|작업은 N> \<시간 마다 실행 됩니다.|
+|매일|1 - 365|작업은 N> \<일 마다 실행 됩니다.|
+|매주|1 - 52|작업은 \<N> 주마다 실행 됩니다.|
 |한 번|한정자가 없습니다.|작업을 한 번 실행 합니다.|
 |ONSTART|한정자가 없습니다.|작업 시작 시 실행합니다.|
 |트리거|한정자가 없습니다.|작업을 실행 하 여 사용자 지정 하는 경우는 **/u** 매개 변수를 로그온 합니다.|
 |ONIDLE|한정자가 없습니다.|시스템이 유휴 상태일 때 (분)로 지정 된 후 작업을 실행는 **/i** 매개 변수인 ONIDLE와 함께 사용 해야 합니다.|
-|월별|1 - 12|작업은 \<N > 개월 마다 실행 됩니다.|
+|월별|1 - 12|작업은 N> \<개월 마다 실행 됩니다.|
 |월별|말일|월의 마지막 날에 작업을 실행 합니다.|
-|월별|첫째, 둘째, 셋째, 넷째, 마지막|**/D**\<day > 매개 변수와 함께 사용 하 여 특정 주 및 일에 대 한 작업을 실행할 수 있습니다. 예를 들어 해당 월의 세 번째 수요일에.|
+|월별|첫째, 둘째, 셋째, 넷째, 마지막|**/D**\<day> 매개 변수와 함께 사용 하 여 특정 주 및 일에 대 한 작업을 실행할 수 있습니다. 예를 들어 해당 월의 세 번째 수요일에.|
 
 ##### <a name="d-dayday--"></a>/d Day [, Day ...] | *
 
 주 또는 하루에 (또는 일) 한 달의 일 (또는 일)을 지정합니다. 매주 또는 매월 일정에만 유효 합니다.
 
 
-| 일정 유형 |              Modifier              |     날짜 값 (/d)      |                                                                                                 설명                                                                                                 |
+| 일정 유형 |              한정자              |     날짜 값 (/d)      |                                                                                                 설명                                                                                                 |
 |---------------|------------------------------------|--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    매주     |               1 - 52               | MON-SUN [, MON-SUN ...] |                                                                                                     \*                                                                                                      |
 |    월별    | 첫째, 둘째, 셋째, 넷째, 마지막 |        월요일-일요일         |                                                                                   특정 주 일정에 필요합니다.                                                                                    |
-|    월별    |          없음 또는 {1-12}          |          1 - 31          | 선택 사항 이며 한정자가 아닌 ( **/mo**) 매개 변수 (특정 날짜 일정) 또는 **/mo** 가 1-12 경우 (\<N > 개월 일정 마다)에만 유효 합니다. 기본값은 일 (월의 첫 번째 날) 1입니다. |
+|    월별    |          없음 또는 {1-12}          |          1 - 31          | 선택적 이며 한정자가 없는 경우 (**/mo**) 매개 변수 (특정 날짜 일정) 또는 **/mo** 가 1-12 (매 \<N> 개월 일정) 인 경우에만 유효 합니다. 기본값은 일 (월의 첫 번째 날) 1입니다. |
 
 ##### <a name="m-monthmonth"></a>/m 월 [,... 월]
 
 한 달 또는 예약된 된 작업을 실행 해야 하는 연도의 월을 지정 합니다. 유효한 값은 1 월-12 월 및 * (매월)입니다. **/m** 매개 변수는 월별 일정에만 유효 합니다. 그는 말일 한정자를 사용 하는 경우에 필요 합니다. 그렇지 않으면 선택적 이며 기본값은 * (매월).
 
-##### <a name="i-idletime"></a>/i \<IdleTime >
+##### <a name="i-idletime"></a>/i \<IdleTime>
 
 얼마나 많은 분 작업이 시작 되기 전에 컴퓨터가 유휴 상태일 지정 합니다. 유효한 값은 1에서 999 사이의 정수입니다. 이 매개 변수는 ONIDLE 일정에만 유효 하 고 필요한 됩니다.
 
-##### <a name="st-starttime"></a>/st \<StartTime >
+##### <a name="st-starttime"></a>/st \<StartTime>
 
-작업이 시작 될 때마다 HH: MM > 24 시간 형식 \<으로 작업을 시작 하는 시간을 지정 합니다. 기본값은 로컬 컴퓨터에 현재 시간입니다. **/st** 매개 변수는 사용할 수 분, 매시간, 매일, 매주, 매월 및 한 번을 예약 합니다. 한 번 일정 되어야합니다.
+작업 시작 시간을 HH: MM> 24 시간 형식으로 \<지정 합니다. 기본값은 로컬 컴퓨터에 현재 시간입니다. **/st** 매개 변수는 사용할 수 분, 매시간, 매일, 매주, 매월 및 한 번을 예약 합니다. 한 번 일정 되어야합니다.
 
-##### <a name="ri-interval"></a>/ri \<간격 >
+##### <a name="ri-interval"></a>/ri \<interval>
 
 되풀이 간격을 분 단위로 지정 합니다. 일정 유형에 해당 되지 않습니다: 1 분, 시간, ONSTART, 유형 및 ONIDLE 합니다. 유효 범위는 599, 940을 1 분 (599940 분 = 9, 999 시간). /ET 또는 /DU를 지정 하는 되풀이 간격 기본 10 분입니다.
 
-##### <a name="et-endtime"></a>/et \<EndTime >
+##### <a name="et-endtime"></a>/et \<EndTime>
 
-분 또는 매시간 작업 일정이 끝나는 시간을 HH: MM > 24 시간 형식 \<지정 합니다. 지정 된 종료 시간 이후 **schtasks** 오지 않습니다 작업 다시 시작 시간이 될 때까지 합니다. 기본적으로 작업 일정에는 종료 시간이 없습니다. 이 매개 변수가 선택적 이며 분 또는 매시간 일정에만 유효 합니다.
-
-예를 들어, 다음을 참조 하십시오.
--   에서 업무 외 시간에 100 분 마다 실행 되는 작업을 예약 하려면 \<N > **분** 섹션 **마다 실행 되는 작업을 예약** 합니다.
-
-##### <a name="du-duration"></a>/du \<Duration >
-
-\<HHHH: MM > 24 시간 형식으로 분 또는 매시간 일정에 대 한 최대 시간 길이를 지정 합니다. 지정 된 시간이 경과 된 후 **schtasks** 오지 않습니다 작업 다시 시작 시간이 될 때까지 합니다. 기본적으로 작업 일정에는 최대 기간이 없습니다. 이 매개 변수가 선택적 이며 분 또는 매시간 일정에만 유효 합니다.
+분 또는 매시간 작업 일정이 끝나는 시간을 HH: MM> 24 시간 \<형식으로 지정 합니다. 지정 된 종료 시간 이후 **schtasks** 오지 않습니다 작업 다시 시작 시간이 될 때까지 합니다. 기본적으로 작업 일정에는 종료 시간이 없습니다. 이 매개 변수가 선택적 이며 분 또는 매시간 일정에만 유효 합니다.
 
 예를 들어, 다음을 참조 하십시오.
--   에서 10 시간 동안 3 시간 마다 실행 되는 작업을 예약 하 여 \<N > **시간** 섹션 **마다 실행 되는 작업을 예약** 합니다.
+-   에서 업무 외 시간에 100 분 마다 실행 되는 작업을 예약 하려면> **분** 섹션 \< **마다 실행 되는 작업을 예약** 합니다.
+
+##### <a name="du-duration"></a>/du \<duration>
+
+HHHH: MM> 24 시간 형식으로 \<분 또는 매시간 일정에 대 한 최대 시간 길이를 지정 합니다. 지정 된 시간이 경과 된 후 **schtasks** 오지 않습니다 작업 다시 시작 시간이 될 때까지 합니다. 기본적으로 작업 일정에는 최대 기간이 없습니다. 이 매개 변수가 선택적 이며 분 또는 매시간 일정에만 유효 합니다.
+
+예를 들어, 다음을 참조 하십시오.
+-   에서 10 시간 동안 3 시간 마다 실행 되는 작업을 예약 하 여 N> **시간** 섹션 \< **마다 실행 되는 작업을 예약** 합니다.
 
 ##### <a name="k"></a>/k
 
 지정 된 시간에 작업을 실행 하는 프로그램을 중지 **/et** 또는 **/du**합니다. 없이 **/k**, **schtasks** 않습니다 하지 프로그램을 다시 시작 하 여 지정 된 시간에 도달한 후 **/et** 또는 **/du**, 하지만 여전히 실행 중이면 프로그램을 중지 하지 않습니다. 이 매개 변수가 선택적 이며 분 또는 매시간 일정에만 유효 합니다.
 
 예를 들어, 다음을 참조 하십시오.
--   에서 업무 외 시간에 100 분 마다 실행 되는 작업을 예약 하려면 \<N > **분** 섹션 **마다 실행 되는 작업을 예약** 합니다.
+-   에서 업무 외 시간에 100 분 마다 실행 되는 작업을 예약 하려면> **분** 섹션 \< **마다 실행 되는 작업을 예약** 합니다.
 
-##### <a name="sd-startdate"></a>/sd \<>
+##### <a name="sd-startdate"></a>/sd \<날짜/>
 
 작업 일정 시작 날짜를 지정 합니다. 기본값은 로컬 컴퓨터에 현재 날짜입니다. **/sd** 모든 일정을 형식에 대 한 유효 하 고 선택적 매개 변수는 합니다.
 
@@ -213,11 +213,11 @@ schtasks /create /sc <ScheduleType> /tn <TaskName> /tr <TaskRun> [/s <Computer> 
 
 |       값       |                                        설명                                         |
 |-------------------|--------------------------------------------------------------------------------------------|
-| \<MM >/<DD>/<YYYY> | 와 같은, 월-첫 번째 형식에 사용할 **영어 (미국)** 및 **스페인어 (파나마)** 합니다. |
-| \<DD >/<MM>/<YYYY> |       와 같은, 하루 첫 번째 형식에 사용할 **불가리아어** 및 **네덜란드어 (네덜란드)** 합니다.        |
-| \<YYYY >/<MM>/<DD> |          와 같은, 연도가 먼저 나오는 형식에 사용할 **스웨덴어** 및 **프랑스어 (캐나다)** 합니다.          |
+| \<MM>/<DD>/<YYYY> | 와 같은, 월-첫 번째 형식에 사용할 **영어 (미국)** 및 **스페인어 (파나마)** 합니다. |
+| \<DD>/<MM>/<YYYY> |       와 같은, 하루 첫 번째 형식에 사용할 **불가리아어** 및 **네덜란드어 (네덜란드)** 합니다.        |
+| \<YYYY>/<MM>/<DD> |          와 같은, 연도가 먼저 나오는 형식에 사용할 **스웨덴어** 및 **프랑스어 (캐나다)** 합니다.          |
 
-/ed \<EndDate >
+/ed \<EndDate>
 
 일정 종료 날짜를 지정 합니다. 이 매개 변수는 선택 사항입니다. 한 번, ONSTART, 유형에 또는 ONIDLE 일정에 올바르지 않습니다. 기본적으로 일정에는 종료 날짜가 없습니다.
 
@@ -228,9 +228,9 @@ schtasks /create /sc <ScheduleType> /tn <TaskName> /tr <TaskRun> [/s <Computer> 
 
 |       값       |                                        설명                                         |
 |-------------------|--------------------------------------------------------------------------------------------|
-| \<MM >/<DD>/<YYYY> | 와 같은, 월-첫 번째 형식에 사용할 **영어 (미국)** 및 **스페인어 (파나마)** 합니다. |
-| \<DD >/<MM>/<YYYY> |       와 같은, 하루 첫 번째 형식에 사용할 **불가리아어** 및 **네덜란드어 (네덜란드)** 합니다.        |
-| \<YYYY >/<MM>/<DD> |          와 같은, 연도가 먼저 나오는 형식에 사용할 **스웨덴어** 및 **프랑스어 (캐나다)** 합니다.          |
+| \<MM>/<DD>/<YYYY> | 와 같은, 월-첫 번째 형식에 사용할 **영어 (미국)** 및 **스페인어 (파나마)** 합니다. |
+| \<DD>/<MM>/<YYYY> |       와 같은, 하루 첫 번째 형식에 사용할 **불가리아어** 및 **네덜란드어 (네덜란드)** 합니다.        |
+| \<YYYY>/<MM>/<DD> |          와 같은, 연도가 먼저 나오는 형식에 사용할 **스웨덴어** 및 **프랑스어 (캐나다)** 합니다.          |
 
 ##### <a name="it"></a>/it
 
@@ -262,7 +262,7 @@ schtasks /create /sc <ScheduleType> /tn <TaskName> /tr <TaskRun> [/s <Computer> 
 schtasks /create /tn <TaskName> /tr <TaskRun> /sc minute [/mo {1 - 1439}] [/st <HH:MM>] [/sd <StartDate>] [/ed <EndDate>] [{/et <HH:MM> | /du <HHHH:MM>} [/k]] [/it] [/ru {[<Domain>\]<User> [/rp <Password>] | System}] [/s <Computer> [/u [<Domain>\]<User> [/p <Password>]]]
 ```
 
-#### <a name="remarks"></a>주의
+#### <a name="remarks"></a>설명
 
 분 일정에는 **/sc 분** 매개 변수는 필수입니다. **/mo** (한정자) 매개 변수는 선택 사항이 며 작업의 실행 간격 (분)을 지정 합니다. 기본값 **/mo** 1 (분)입니다. **/et** (종료 시간) 및 **/du** (기간) 매개 변수는 선택 사항이 며 여부에 관계 없이 사용할 수는 **/k** (최종 작업) 매개 변수입니다.
 
@@ -292,7 +292,7 @@ schtasks /create /tn Security Script /tr sec.vbs /sc minute /mo 100 /st 17:00 /e
 schtasks /create /tn <TaskName> /tr <TaskRun> /sc hourly [/mo {1 - 23}] [/st <HH:MM>] [/sd <StartDate>] [/ed <EndDate>] [{/et <HH:MM> | /du <HHHH:MM>} [/k]] [/it] [/ru {[<Domain>\]<User> [/rp <Password>] | System}] [/s <Computer> [/u [<Domain>\]<User> [/p <Password>]]]
 ```
 
-#### <a name="remarks"></a>주의
+#### <a name="remarks"></a>설명
 
 매시간 일정에는 **/sc 매시간** 매개 변수는 필수입니다. **/mo** (한정자) 매개 변수는 선택 사항이 며 작업의 각 실행 사이의 시간 수를 지정 합니다. 기본값 **/mo** 1 (1 시간)입니다. **/k** (최종 작업) 매개 변수는 선택 사항이 며 함께 사용할 수 **/et** (지정된 된 시간에 끝) 또는 **/du** (지정된 된 간격 후 끝).
 
@@ -332,7 +332,7 @@ schtasks /create /tn My App /tr myapp.exe /sc hourly /mo 3 /st 00:00 /du 0010:00
 schtasks /create /tn <TaskName> /tr <TaskRun> /sc daily [/mo {1 - 365}] [/st <HH:MM>] [/sd <StartDate>] [/ed <EndDate>] [/it] [/ru {[<Domain>\]<User> [/rp <Password>] | System}] [/s <Computer> [/u [<Domain>\]<User> [/p <Password>]]]
 ```
 
-#### <a name="remarks"></a>주의
+#### <a name="remarks"></a>설명
 
 매일 일정의 경우에 **/sc daily** 매개 변수는 필수입니다. **/mo** (한정자) 매개 변수는 선택 사항이 며 작업의 각 실행 사이의 일 수를 지정 합니다. 기본값 **/mo** 1 (매일)입니다.
 
@@ -364,9 +364,9 @@ schtasks /create /tn Security Script /tr sec.vbs /sc daily /mo 70 /it
 ```
 
 > [!NOTE]
-> 대화형 전용 있는 작업을 확인 하려면 ( **/it**) 속성을 자세한 정보는 쿼리를 사용 하 여 **(/ /v 쿼리**). 지정한 작업의 자세한 정보 쿼리 표시에서 **/it**,  **로그온 모드** 필드의 값이 **대화형만**합니다.
+> 대화형 전용 있는 작업을 확인 하려면 (**/it**) 속성을 자세한 정보는 쿼리를 사용 하 여 **(/ /v 쿼리**). 지정한 작업의 자세한 정보 쿼리 표시에서 **/it**,  **로그온 모드** 필드의 값이 **대화형만**합니다.
 
-### <a name="to-schedule-a-task-that-runs-every-n-weeks"></a><a name=BKMK_weeks></a>N 주마다 실행 되는 작업을 예약 하려면
+### <a name="to-schedule-a-task-that-runs-every-n-weeks"></a><a name=BKMK_weeks></a>N 주마다를 실행 하는 작업을 예약 하려면
 
 #### <a name="weekly-schedule-syntax"></a>주간 일정 구문
 
@@ -374,11 +374,11 @@ schtasks /create /tn Security Script /tr sec.vbs /sc daily /mo 70 /it
 schtasks /create /tn <TaskName> /tr <TaskRun> /sc weekly [/mo {1 - 52}] [/d {<MON - SUN>[,MON - SUN...] | *}] [/st <HH:MM>] [/sd <StartDate>] [/ed <EndDate>] [/it] [/ru {[<Domain>\]<User> [/rp <Password>] | System}] [/s <Computer> [/u [<Domain>\]<User> [/p <Password>]]]
 ```
 
-#### <a name="remarks"></a>주의
+#### <a name="remarks"></a>설명
 
 주간 일정에서는 **/sc 매주** 매개 변수는 필수입니다. **/mo** (한정자) 매개 변수는 선택 사항이 며 작업의 각 실행 사이의 주 수를 지정 합니다. 기본값 **/mo** 1 (매주)입니다.
 
-또한 주별 일정에는 지정 된 요일 또는 모든 날짜 ()에 실행 되도록 작업을 예약 하는 선택적 **/d** 매개 변수가 있습니다 *. 기본값은 MON (월요일)입니다. 매일 (* ) 옵션은 일별 작업을 예약 하는 것과 같습니다.
+또한 주별 일정에는 지정 된 요일 또는 모든 날짜 ()에 실행 되도록 작업을 예약 하는 선택적 **/d** 매개 변수가 있습니다 *. 기본값은 MON (월요일)입니다. 매일 (*) 옵션은 일별 작업을 예약 하는 것과 같습니다.
 
 #### <a name="examples"></a>예
 
@@ -400,7 +400,7 @@ schtasks /create /tn My App /tr c:\apps\myapp.exe /sc weekly /mo 6 /s Server16 /
 schtasks /create /tn My App /tr c:\apps\myapp.exe /sc weekly /mo 2 /d FRI
 ```
 
-### <a name="to-schedule-a-task-that-runs-every-n-months"></a><a name=BKMK_months></a>N 개월 마다 실행 되는 작업을 예약 하려면
+### <a name="to-schedule-a-task-that-runs-every-n-months"></a><a name=BKMK_months></a>3 개월 마다 실행 하는 작업을 예약 하려면
 
 #### <a name="syntax"></a>구문
 
@@ -408,7 +408,7 @@ schtasks /create /tn My App /tr c:\apps\myapp.exe /sc weekly /mo 2 /d FRI
 schtasks /create /tn <TaskName> /tr <TaskRun> /sc monthly [/mo {1 - 12}] [/d {1 - 31}] [/st <HH:MM>] [/sd <StartDate>] [/ed <EndDate>] [/it] [/ru {[<Domain>\]<User> [/rp <Password>] | System}] [/s <Computer> [/u [<Domain>\]<User> [/p <Password>]]]
 ```
 
-#### <a name="remarks"></a>주의
+#### <a name="remarks"></a>설명
 
 이 일정 유형에 **/sc monthly** 매개 변수는 필수입니다. **/mo** 작업의 각 실행 간의 개월 수를 지정 하는 (한정자) 매개 변수는 선택 사항이 며 기본값은 1 (매월). 이 일정 유형 역시 선택적 **/d** 매개 변수는 월의 지정한 날짜에 실행 되도록 작업을 예약할 수 있습니다. 기본값은 1 (해당 월의 첫 번째 날)입니다.
 
@@ -445,9 +445,9 @@ schtasks /create /tn My App /tr c:\apps\myapp.exe /sc monthly /mo 2 /d 21 /st 00
 schtasks /create /tn <TaskName> /tr <TaskRun> /sc weekly [/d {<MON - SUN>[,MON - SUN...] | *}] [/mo {1 - 52}] [/st <HH:MM>] [/sd <StartDate>] [/ed <EndDate>] [/it] [/ru {[<Domain>\]<User> [/rp <Password>] | System}] [/s <Computer> [/u [<Domain>\]<User> [/p <Password>]]]
 ```
 
-#### <a name="remarks"></a>주의
+#### <a name="remarks"></a>설명
 
-요일 일정은 주별 일정의 변동입니다. 주간 일정에서는 **/sc 매주** 매개 변수는 필수입니다. **/mo** (한정자) 매개 변수는 선택 사항이 며 작업의 각 실행 사이의 주 수를 지정 합니다. 기본값 **/mo** 1 (매주)입니다. **/d** 작업이 지정 된 요일 또는 매일 실행 되도록 예약 하는 매개 변수는 선택 항목인 (\*). 기본값은 월요일 (월요일). 매일 옵션 ( **/d \*** )은 매일 작업을 예약 하는 것과 같습니다.
+요일 일정은 주별 일정의 변동입니다. 주간 일정에서는 **/sc 매주** 매개 변수는 필수입니다. **/mo** (한정자) 매개 변수는 선택 사항이 며 작업의 각 실행 사이의 주 수를 지정 합니다. 기본값 **/mo** 1 (매주)입니다. **/d** 작업이 지정 된 요일 또는 매일 실행 되도록 예약 하는 매개 변수는 선택 항목인 (\*). 기본값은 월요일 (월요일). 매일 옵션 (**/d \***)은 매일 작업을 예약 하는 것과 같습니다.
 
 #### <a name="examples"></a>예
 
@@ -465,7 +465,7 @@ schtasks /create /tn My App /tr c:\apps\myapp.exe /sc weekly /d WED
 schtasks /create /tn My App /tr c:\apps\myapp.exe /sc weekly /mo 8 /d MON,FRI
 ```
 
-### <a name="to-schedule-a-task-that-runs-on-a-specific-week-of-the-month"></a><a name=BKMK_spec_week></a>월의 특정 주에 실행 되는 작업을 예약 하려면
+### <a name="to-schedule-a-task-that-runs-on-a-specific-week-of-the-month"></a><a name=BKMK_spec_week></a>해당 월의 특정 주에 실행 되는 작업을 예약 하려면
 
 #### <a name="specific-week-syntax"></a>특정 주 구문
 
@@ -473,9 +473,9 @@ schtasks /create /tn My App /tr c:\apps\myapp.exe /sc weekly /mo 8 /d MON,FRI
 schtasks /create /tn <TaskName> /tr <TaskRun> /sc monthly /mo {FIRST | SECOND | THIRD | FOURTH | LAST} /d MON - SUN [/m {JAN - DEC[,JAN - DEC...] | *}] [/st <HH:MM>] [/sd <StartDate>] [/ed <EndDate>] [/it] [/ru {[<Domain>\]<User> [/rp <Password>] | System}] [/s <Computer> [/u [<Domain>\]<User> [/p <Password>]]]
 ```
 
-#### <a name="remarks"></a>주의
+#### <a name="remarks"></a>설명
 
-이 일정 유형에 **/sc monthly** 매개 변수는 **/mo** (한정자) 매개 변수 및 **/d** (일) 매개 변수는 필요 합니다. **/mo** (한정자) 매개 변수는 작업이 실행 되는 주를 지정 합니다. **/d** 매개 변수는 요일을 지정 합니다. 이 일정 유형에는 요일을 하나만 지정할 수 있습니다. 이 일정에는 특정 월 또는 매월 (\*)에 대해 작업을 예약할 수 있는 선택적 **/m** (월) 매개 변수도 있습니다. **/M** 매개 변수의 기본값은 매월 (\*)입니다.
+이 일정 유형에 **/sc monthly** 매개 변수는 **/mo** (한정자) 매개 변수 및 **/d** (일) 매개 변수는 필요 합니다. **/mo** (한정자) 매개 변수는 작업이 실행 되는 주를 지정 합니다. **/d** 매개 변수는 요일을 지정 합니다. 이 일정 유형에는 요일을 하나만 지정할 수 있습니다. 이 일정에는 특정 월 **/m** 또는 매월 (\*)에 대해 작업을 예약할 수 있도록 하는 선택적/m (월) 매개 변수도 있습니다. **/M** 매개 변수의 기본값은 매월 (\*)입니다.
 
 #### <a name="examples"></a>예
 
@@ -493,7 +493,7 @@ schtasks /create /tn My App /tr c:\apps\myapp.exe /sc monthly /mo SECOND /d SUN
 schtasks /create /tn My App /tr c:\apps\myapp.exe /sc monthly /mo FIRST /d MON /m MAR,SEP
 ```
 
-### <a name="to-schedule-a-task-that-runs-on-a-specific-date-each-month"></a><a name=BKMK_spec_date></a>매월 특정 날짜에 실행 되는 작업을 예약 하려면
+### <a name="to-schedule-a-task-that-runs-on-a-specific-date-each-month"></a><a name=BKMK_spec_date></a>특정 날짜 각 월에 실행 되는 작업을 예약 하려면
 
 #### <a name="specific-date-syntax"></a>특정 날짜 구문
 
@@ -501,11 +501,11 @@ schtasks /create /tn My App /tr c:\apps\myapp.exe /sc monthly /mo FIRST /d MON /
 schtasks /create /tn <TaskName> /tr <TaskRun> /sc monthly /d {1 - 31} [/m {JAN - DEC[,JAN - DEC...] | *}] [/st <HH:MM>] [/sd <StartDate>] [/ed <EndDate>] [/it] [/ru {[<Domain>\]<User> [/rp <Password>] | System}] [/s <Computer> [/u [<Domain>\]<User> [/p <Password>]]]
 ```
 
-#### <a name="remarks"></a>주의
+#### <a name="remarks"></a>설명
 
 특정 날짜 일정 유형에 **/sc monthly** 매개 변수 및 **/d** (일) 매개 변수는 필요 합니다. **/d** 매개 변수 (1-31) 요일을 차례로 하지 달의 날짜를 지정 합니다. 일정에만 1 일을 지정할 수 있습니다. **/mo** (한정자) 매개 변수는이 일정 형식으로 유효 하지 않습니다.
 
-**/M** (month) 매개 변수는이 일정 유형에 대해 선택 사항이 며 기본값은 매월 (<em>)입니다. **Schtasks</em>*  를 사용 하면 **/m** 매개 변수로 지정 된 월에 발생 하지 않는 날짜에 대 한 작업을 예약할 수 없습니다. 그러나 경우 생략 된 **/m** 매개 변수 및 일정 달에는 31 번째 날, 다음 작업 등 특정 달에 표시 되지 않는 날짜에 대 한 작업 실행 되지 않습니다. 월의 마지막 날에 대 한 작업을 예약 하려면 마지막 날 일정 유형을 사용 합니다.
+**/M** (month) 매개 변수는이 일정 유형에 대해 선택 사항이 며 기본값은 매월 (<em>)입니다. **Schtasks</em> * 를 사용 하면 **/m** 매개 변수로 지정 된 월에 발생 하지 않는 날짜에 대 한 작업을 예약할 수 없습니다. 그러나 경우 생략 된 **/m** 매개 변수 및 일정 달에는 31 번째 날, 다음 작업 등 특정 달에 표시 되지 않는 날짜에 대 한 작업 실행 되지 않습니다. 월의 마지막 날에 대 한 작업을 예약 하려면 마지막 날 일정 유형을 사용 합니다.
 
 #### <a name="examples"></a>예
 
@@ -531,7 +531,7 @@ schtasks /create /tn My App /tr c:\apps\myapp.exe /sc monthly /d 15 /m MAY,JUN /
 schtasks /create /tn <TaskName> /tr <TaskRun> /sc monthly /mo LASTDAY /m {JAN - DEC[,JAN - DEC...] | *} [/st <HH:MM>] [/sd <StartDate>] [/ed <EndDate>] [/it] [/ru {[<Domain>\]<User> [/rp <Password>] | System}] [/s <Computer> [/u [<Domain>\]<User> [/p <Password>]]]
 ```
 
-#### <a name="remarks"></a>주의
+#### <a name="remarks"></a>설명
 
 마지막 날 일정 유형에 **/sc monthly** 매개 변수는 **/mo 말일** (한정자) 매개 변수 및 **/m** (월) 매개 변수는 필요 합니다. **/d** (일) 매개 변수가 올바르지 않습니다.
 
@@ -559,7 +559,7 @@ schtasks /create /tn My App /tr c:\apps\myapp.exe /sc monthly /mo lastday /m FEB
 schtasks /create /tn <TaskName> /tr <TaskRun> /sc once /st <HH:MM> [/sd <StartDate>] [/it] [/ru {[<Domain>\]<User> [/rp <Password>] | System}] [/s <Computer> [/u [<Domain>\]<User> [/p <Password>]]]
 ```
 
-#### <a name="remarks"></a>주의
+#### <a name="remarks"></a>설명
 
 한 번 실행 일정 유형에 **/sc 한 번** 매개 변수는 필수입니다. **/st** 작업이 실행 하는 시간을 지정 하는 매개 변수는 필수입니다. **/sd** 작업이 실행 되는 날짜를 지정 하는 매개 변수는 선택 사항입니다. **/mo** (한정자) 및 **/ed** (종료 날짜) 매개 변수는이 일정 유형에 적합 하지 않습니다.
 
@@ -576,7 +576,7 @@ schtasks /create /tn <TaskName> /tr <TaskRun> /sc once /st <HH:MM> [/sd <StartDa
 schtasks /create /tn My App /tr c:\apps\myapp.exe /sc once /sd 01/01/2003 /st 00:00
 ```
 
-### <a name="to-schedule-a-task-that-runs-every-time-the-system-starts"></a><a name=BKMK_startup></a>시스템이 시작 될 때마다 실행 되는 작업을 예약 하려면
+### <a name="to-schedule-a-task-that-runs-every-time-the-system-starts"></a><a name=BKMK_startup></a>시스템 시작 될 때마다 실행 되는 작업을 예약 하려면
 
 #### <a name="syntax"></a>구문
 
@@ -584,7 +584,7 @@ schtasks /create /tn My App /tr c:\apps\myapp.exe /sc once /sd 01/01/2003 /st 00
 schtasks /create /tn <TaskName> /tr <TaskRun> /sc onstart [/sd <StartDate>] [/it] [/ru {[<Domain>\]<User> [/rp <Password>] | System}] [/s <Computer> [/u [<Domain>\]<User> [/p <Password>]]]
 ```
 
-#### <a name="remarks"></a>주의
+#### <a name="remarks"></a>설명
 
 시작에 일정 유형에 **/sc onstart** 매개 변수는 필수입니다. **/sd** (시작 날짜) 매개 변수는 선택 사항이 며 기본값은 현재 날짜입니다.
 
@@ -599,7 +599,7 @@ schtasks /create /tn <TaskName> /tr <TaskRun> /sc onstart [/sd <StartDate>] [/it
 schtasks /create /tn My App /tr c:\apps\myapp.exe /sc onstart /sd 03/15/2001
 ```
 
-### <a name="to-schedule-a-task-that-runs-when-a-user-logs-on"></a><a name=BKMK_logon></a>사용자가 로그온 할 때 실행 되는 작업을 예약 하려면
+### <a name="to-schedule-a-task-that-runs-when-a-user-logs-on"></a><a name=BKMK_logon></a>로그온 사용자가 실행 되는 작업을 예약 하려면
 
 #### <a name="syntax"></a>구문
 
@@ -607,7 +607,7 @@ schtasks /create /tn My App /tr c:\apps\myapp.exe /sc onstart /sd 03/15/2001
 schtasks /create /tn <TaskName> /tr <TaskRun> /sc onlogon [/sd <StartDate>] [/it] [/ru {[<Domain>\]<User> [/rp <Password>] | System}] [/s <Computer> [/u [<Domain>\]<User> [/p <Password>]]]
 ```
 
-#### <a name="remarks"></a>주의
+#### <a name="remarks"></a>설명
 
 로그온 시 일정 유형은 사용자가 컴퓨터에 로그온 할 때마다 실행 되는 작업을 예약 합니다. 로그온 일정 유형에 **/sc 유형에** 매개 변수가 필요 합니다. **/sd** (시작 날짜) 매개 변수는 선택 사항이 며 기본값은 현재 날짜입니다.
 
@@ -628,7 +628,7 @@ schtasks /create /tn Start Web Site /tr c:\myiis\webstart.bat /sc onlogon /s Ser
 schtasks /create /tn <TaskName> /tr <TaskRun> /sc onidle /i {1 - 999} [/sd <StartDate>] [/it] [/ru {[<Domain>\]<User> [/rp <Password>] | System}] [/s <Computer> [/u [<Domain>\]<User> [/p <Password>]]]
 ```
 
-#### <a name="remarks"></a>주의
+#### <a name="remarks"></a>설명
 
 유휴 상태 일정 유형은 **/i** 매개 변수로 지정 된 시간 동안 사용자 활동이 없을 때마다 실행 되는 작업을 예약 합니다. 유휴 상태 일정 유형에 서 **/sc onidle** 매개 변수 및 **/i** 매개 변수가 필요 합니다. **/sd** (시작 날짜)은 선택 사항이 며 기본값은 현재 날짜입니다.
 
@@ -710,7 +710,7 @@ SUCCESS: The scheduled task My App has successfully been created.
 schtasks /create /tn Check Admin /tr AdminCheck.exe /sc weekly /d FRI /st 04:00 /s Public /u Domain3\Admin06 /ru Public\Admin01 /it
 ```
 **참고**
--   대화형 전용 있는 작업을 확인 하려면 ( **/it**) 속성을 자세한 정보는 쿼리를 사용 하 여 **(/ /v 쿼리**). 지정한 작업의 자세한 정보 쿼리 표시에서 **/it**,  **로그온 모드** 필드의 값이 **대화형만**합니다.
+-   대화형 전용 있는 작업을 확인 하려면 (**/it**) 속성을 자세한 정보는 쿼리를 사용 하 여 **(/ /v 쿼리**). 지정한 작업의 자세한 정보 쿼리 표시에서 **/it**,  **로그온 모드** 필드의 값이 **대화형만**합니다.
 
 ### <a name="to-schedule-a-task-that-runs-with-system-permissions"></a><a name=BKMK_sys_perms></a>시스템 권한으로 실행 되는 작업을 예약 하려면
 
@@ -722,7 +722,7 @@ schtasks /create /tn Check Admin /tr AdminCheck.exe /sc weekly /d FRI /st 04:00 
 
 **참고**
 
-시스템 권한으로 실행 되는 작업을 확인 하려면 자세한 정보 표시 쿼리 ( **/query** **/v**)를 사용 합니다. 시스템 실행 하는 작업의 자세한 정보 쿼리 표시에는 **사용자로 실행** 필드의 값이 **NT AUTHORITY\SYSTEM** 및 **로그온 모드** 필드의 값이 **만 배경**합니다.
+시스템 권한으로 실행 되는 작업을 확인 하려면 자세한 정보 표시 쿼리 (**/query** **/v**)를 사용 합니다. 시스템 실행 하는 작업의 자세한 정보 쿼리 표시에는 **사용자로 실행** 필드의 값이 **NT AUTHORITY\SYSTEM** 및 **로그온 모드** 필드의 값이 **만 배경**합니다.
 
 #### <a name="examples"></a>예
 
@@ -861,7 +861,7 @@ Idle Time: Disabled
 Power Management: Disabled
 ```
 
-#### <a name="remarks"></a>주의
+#### <a name="remarks"></a>설명
 
 -   실행 하는 **/create** 명령을 사용 하 여 다른 사용자의 권한으로는 **/u** 매개 변수입니다. **/u** 매개 변수는 원격 컴퓨터에서 작업을 예약할 경우에 유효 합니다.
 -   더 **schtasks /create** 예제에서 형식 **schtasks 만들기 / /?** .
@@ -873,13 +873,13 @@ Power Management: Disabled
 -   각 작업이 하나의 프로그램을 실행합니다. 그러나 여러 작업을 시작 하는 일괄 처리 파일을 만들고 배치 파일을 실행 하는 작업을 예약할 수 있습니다.
 -   만든 즉시 작업을 테스트할 수 있습니다. 사용 하 여는 **실행** 작업을 테스트 하 고 다음 SchedLgU.txt 파일을 확인 하는 작업 (*SystemRoot*\SchedLgU.txt) 오류입니다.
 
-## <a name="schtasks-change"></a><a name=BKMK_change></a>schtasks 변경
+## <a name="schtasks-change"></a><a name=BKMK_change></a>매개 변수 변경
 
 작업의 다음 속성 중 하나 이상을 변경합니다.
--   작업을 실행 하는 프로그램 ( **/tr**).
--   작업이 실행 되는 사용자 계정 ( **/ru**).
--   사용자 계정의 암호 ( **/rp**).
--   작업에 전용 속성을 추가 ( **/it**).
+-   작업을 실행 하는 프로그램 (**/tr**).
+-   작업이 실행 되는 사용자 계정 (**/ru**).
+-   사용자 계정의 암호 (**/rp**).
+-   작업에 전용 속성을 추가 (**/it**).
 
 ### <a name="syntax"></a>구문
 
@@ -891,34 +891,34 @@ schtasks /change /tn <TaskName> [/s <Computer> [/u [<Domain>\]<User> [/p <Passwo
 
 |          용어           |                                                                                                                                                                                                                                                                                                                                     정의                                                                                                                                                                                                                                                                                                                                      |
 |-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|     /tn \<TaskName >     |                                                                                                                                                                                                                                                                                                               변경 작업을 식별 합니다. 작업 이름을 입력 합니다.                                                                                                                                                                                                                                                                                                               |
-|     /s \<컴퓨터 >      |                                                                                                                                                                                                                                                                               (백슬래시 없이 또는) 이름 또는 원격 컴퓨터의 IP 주소를 지정합니다. 기본값은 로컬 컴퓨터입니다.                                                                                                                                                                                                                                                                               |
-|  /u [\<도메인 >\]<User>  |                                                                                                                                                                 이 명령은 지정된 된 사용자 계정 권한으로 실행 됩니다. 기본값은 로컬 컴퓨터의 현재 사용자의 권한. 지정된 된 사용자 계정에는 원격 컴퓨터에서 Administrators 그룹의 구성원 이어야 합니다. **/u** 및 **/p** 매개 변수는 원격 컴퓨터에서 작업 변경에 대해서만 유효 ( **/s**).                                                                                                                                                                  |
-|     /p \<암호 >      |                                                                                                                                                                                              에 지정 된 사용자 계정의 암호를 지정 된 **/u** 매개 변수입니다. 사용 하는 경우는 **/u** 매개 변수를 생략 하는 **/p** 매개 변수 또는 password 인수 **schtasks** 암호를 묻는 메시지가 표시 됩니다.</br>**/u** 및 **/p** 매개 변수는 사용 하는 경우에 유효 **/s**합니다.                                                                                                                                                                                               |
-| /ru {[\<도메인 >\]<User> |                                                                                                                                                                                                                                                                                                                                       컴퓨터                                                                                                                                                                                                                                                                                                                                       |
-|     /rp \<암호 >     |                                                                                                                                                                                                                                                 기존 사용자 계정 또는 지정 된 사용자 계정에 대 한 새 암호를 지정 된 **/ru** 매개 변수입니다. 이 매개 변수는 로컬 시스템 계정으로 사용 된 무시 됩니다.                                                                                                                                                                                                                                                  |
-|     /tr \<TaskRun >      |                                                                                                                                                                                  작업을 실행 하는 프로그램을 변경 합니다. 실행 파일, 스크립트 파일 또는 배치 파일의 정규화 된 경로 파일 이름을 입력 합니다. 경로를 생략 하면 **schtasks** 는 파일이 \<systemroot > \system32 디렉터리에 있다고 가정 합니다. 지정된 된 프로그램 작업이 실행 되는 원래 프로그램을 대체 합니다.                                                                                                                                                                                  |
-|    /st \<Starttime >     |                                                                                                                                                                                                                                                              24 시간 형식 hh: mm를 사용 하 여 작업에 대 한 시작 시간을 지정 합니다. 예를 들어 오후 14시 30분 2 시 30 분의 12 시간제과 같습니다.                                                                                                                                                                                                                                                               |
-|     /ri \<간격 >     |                                                                                                                                                                                                                                                                           예약된 된 작업에 대 한 되풀이 간격을 분 단위로 지정 합니다. 유효 범위는 1-599940 (599940 분 = 9, 999 시간).                                                                                                                                                                                                                                                                            |
-|     /et \<EndTime >      |                                                                                                                                                                                                                                                               24 시간 형식 hh: mm를 사용 하 여 작업에 대 한 종료 시간을 지정 합니다. 예를 들어 오후 14시 30분 2 시 30 분의 12 시간제과 같습니다.                                                                                                                                                                                                                                                                |
-|     /du \<Duration >     |                                                                                                                                                                                                                                                                                                     \<EndTime > 또는 <Duration>(지정 된 경우)에서 작업을 닫도록 지정 합니다.                                                                                                                                                                                                                                                                                                      |
+|     /tn \<TaskName>     |                                                                                                                                                                                                                                                                                                               변경 작업을 식별 합니다. 작업 이름을 입력 합니다.                                                                                                                                                                                                                                                                                                               |
+|     /s \<컴퓨터>      |                                                                                                                                                                                                                                                                               (백슬래시 없이 또는) 이름 또는 원격 컴퓨터의 IP 주소를 지정합니다. 기본값은 로컬 컴퓨터입니다.                                                                                                                                                                                                                                                                               |
+|  /u [\<도메인>\]<User>  |                                                                                                                                                                 이 명령은 지정된 된 사용자 계정 권한으로 실행 됩니다. 기본값은 로컬 컴퓨터의 현재 사용자의 권한. 지정된 된 사용자 계정에는 원격 컴퓨터에서 Administrators 그룹의 구성원 이어야 합니다. **/u** 및 **/p** 매개 변수는 원격 컴퓨터에서 작업 변경에 대해서만 유효 (**/s**).                                                                                                                                                                  |
+|     /p \<암호>      |                                                                                                                                                                                              에 지정 된 사용자 계정의 암호를 지정 된 **/u** 매개 변수입니다. 사용 하는 경우는 **/u** 매개 변수를 생략 하는 **/p** 매개 변수 또는 password 인수 **schtasks** 암호를 묻는 메시지가 표시 됩니다.</br>**/u** 및 **/p** 매개 변수는 사용 하는 경우에 유효 **/s**합니다.                                                                                                                                                                                               |
+| /ru {[\<도메인>\]<User> |                                                                                                                                                                                                                                                                                                                                       컴퓨터                                                                                                                                                                                                                                                                                                                                       |
+|     /rp \<암호>     |                                                                                                                                                                                                                                                 기존 사용자 계정 또는 지정 된 사용자 계정에 대 한 새 암호를 지정 된 **/ru** 매개 변수입니다. 이 매개 변수는 로컬 시스템 계정으로 사용 된 무시 됩니다.                                                                                                                                                                                                                                                  |
+|     /tr \<taskrun>      |                                                                                                                                                                                  작업을 실행 하는 프로그램을 변경 합니다. 실행 파일, 스크립트 파일 또는 배치 파일의 정규화 된 경로 파일 이름을 입력 합니다. 경로를 생략 하면 **schtasks** 는 파일이 \<systemroot> \system32 디렉터리에 있다고 가정 합니다. 지정된 된 프로그램 작업이 실행 되는 원래 프로그램을 대체 합니다.                                                                                                                                                                                  |
+|    /st \<Starttime>     |                                                                                                                                                                                                                                                              24 시간 형식 hh: mm를 사용 하 여 작업에 대 한 시작 시간을 지정 합니다. 예를 들어 오후 14시 30분 2 시 30 분의 12 시간제과 같습니다.                                                                                                                                                                                                                                                               |
+|     /ri \<interval>     |                                                                                                                                                                                                                                                                           예약된 된 작업에 대 한 되풀이 간격을 분 단위로 지정 합니다. 유효 범위는 1-599940 (599940 분 = 9, 999 시간).                                                                                                                                                                                                                                                                            |
+|     /et \<EndTime>      |                                                                                                                                                                                                                                                               24 시간 형식 hh: mm를 사용 하 여 작업에 대 한 종료 시간을 지정 합니다. 예를 들어 오후 14시 30분 2 시 30 분의 12 시간제과 같습니다.                                                                                                                                                                                                                                                                |
+|     /du \<duration>     |                                                                                                                                                                                                                                                                                                     \<EndTime>에서 작업을 닫으려면를 지정 하 고 <Duration>, 지정 된 경우를 지정 합니다.                                                                                                                                                                                                                                                                                                      |
 |           /k            |                                                                                                                                                                   지정 된 시간에 작업을 실행 하는 프로그램을 중지 **/et** 또는 **/du**합니다. 없이 **/k**, **schtasks** 않습니다 하지 프로그램을 다시 시작 하 여 지정 된 시간에 도달한 후 **/et** 또는 **/du**, 하지만 여전히 실행 중이면 프로그램을 중지 하지 않습니다. 이 매개 변수가 선택적 이며 분 또는 매시간 일정에만 유효 합니다.                                                                                                                                                                   |
-|    /sd \<>     |                                                                                                                                                                                                                                                                                              태스크를 실행 해야 하는 첫 번째 날짜를 지정 합니다. 날짜 형식은 MM/DD/YYYY입니다.                                                                                                                                                                                                                                                                                               |
-|     /ed \<EndDate >      |                                                                                                                                                                                                                                                                                                 태스크를 실행 해야 하는 마지막 날짜를 지정 합니다. 형식은 MM/DD/YYYY입니다.                                                                                                                                                                                                                                                                                                  |
+|    /sd \<날짜/>     |                                                                                                                                                                                                                                                                                              태스크를 실행 해야 하는 첫 번째 날짜를 지정 합니다. 날짜 형식은 MM/DD/YYYY입니다.                                                                                                                                                                                                                                                                                               |
+|     /ed \<EndDate>      |                                                                                                                                                                                                                                                                                                 태스크를 실행 해야 하는 마지막 날짜를 지정 합니다. 형식은 MM/DD/YYYY입니다.                                                                                                                                                                                                                                                                                                  |
 |         / 사용 사용         |                                                                                                                                                                                                                                                                                                                       예약 된 작업을 사용 하도록 지정 합니다.                                                                                                                                                                                                                                                                                                                       |
 |        / 사용 안 함         |                                                                                                                                                                                                                                                                                                                      예약된 된 작업을 사용 하지 않도록 설정 하려면이 옵션을 지정 합니다.                                                                                                                                                                                                                                                                                                                       |
 |           /it           | 실행 사용자 (작업이 실행 되는 사용자 계정)가 컴퓨터에 로그온 한 경우에만 예약 된 작업을 실행 하도록 지정 합니다.</br>이 매개 변수는 시스템 권한으로 실행 되는 작업 또는 대화형 전용 속성 집합에 이미 있는 작업에 영향을 주지 않습니다. 속성을 제거 하는 전용 작업에서 변경 명령을 사용할 수 없습니다.</br>기본적으로 실행 사용자는 작업이 예약 된 경우 로컬 컴퓨터의 현재 사용자이 고, 사용 되는 경우에는 **/u** 매개 변수로 지정 된 계정입니다. 그러나 명령에 **/ru** 매개 변수가 포함 된 경우 실행 사용자는 **/ru** 매개 변수로 지정 된 계정입니다. |
 |           /z            |                                                                                                                                                                                                                                                                                                          일정 완료 시 작업을 삭제 하도록 지정 합니다.                                                                                                                                                                                                                                                                                                          |
 |           /?            |                                                                                                                                                                                                                                                                                                                        명령 프롬프트에 도움말을 표시합니다.                                                                                                                                                                                                                                                                                                                         |
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 -   **/tn** 및 **/s** 매개 변수는 작업을 식별 합니다. **/tr**, **/ru**, 및 **/rp** 매개 변수는 변경할 수 있는 작업의 속성을 지정 합니다.
 -   **/ru**, 및 **/rp** 매개 변수는 작업이 실행 되는 사용 권한을 지정 합니다. **/u** 및 **/p** 매개 변수는 작업을 변경 하는 데 사용 권한을 지정 합니다.
 -   원격 컴퓨터에서 작업을 변경 하려면 사용자는 원격 컴퓨터에서 Administrators 그룹의 구성원 인 계정으로 로컬 컴퓨터에 로그온 해야 합니다.
--   실행 하는 **/변경** 다른 사용자의 권한으로 명령 ( **/u**, **/p**), 로컬 컴퓨터에서 원격 컴퓨터와 동일한 도메인에 있어야 또는 원격 컴퓨터 도메인에서 트러스트 된 도메인에 있어야 합니다.
+-   실행 하는 **/변경** 다른 사용자의 권한으로 명령 (**/u**, **/p**), 로컬 컴퓨터에서 원격 컴퓨터와 동일한 도메인에 있어야 또는 원격 컴퓨터 도메인에서 트러스트 된 도메인에 있어야 합니다.
 -   시스템 계정에 대화식 로그온 권한이 없습니다. 사용자는 표시 되지 않으면 및 시스템 권한으로 실행 하는 프로그램과 상호 작용할 수 없습니다.
--   사용 하 여 작업을 식별 하는 **/it** 속성을 자세한 정보는 쿼리를 사용 하 여 ( **//v 쿼리**). 지정한 작업의 자세한 정보 쿼리 표시에서 **/it**,  **로그온 모드** 필드의 값이 **대화형만**합니다.
+-   사용 하 여 작업을 식별 하는 **/it** 속성을 자세한 정보는 쿼리를 사용 하 여 (**//v 쿼리**). 지정한 작업의 자세한 정보 쿼리 표시에서 **/it**,  **로그온 모드** 필드의 값이 **대화형만**합니다.
 
 ### <a name="examples"></a>예
 
@@ -928,7 +928,7 @@ schtasks /change /tn <TaskName> [/s <Computer> [/u [<Domain>\]<User> [/p <Passwo
 ```
 schtasks /change /tn Virus Check /tr C:\VirusCheck2.exe
 ```
-응답으로 **SchTasks.exe** 성공 메시지를 표시 합니다.
+이에 대 한 응답으로 **schtasks.exe** 는 다음과 같은 성공 메시지를 표시 합니다.
 ```
 SUCCESS: The parameters of the scheduled task Virus Check have been changed.
 ```
@@ -936,13 +936,13 @@ SUCCESS: The parameters of the scheduled task Virus Check have been changed.
 
 ### <a name="to-change-the-password-for-a-remote-task"></a>원격 작업에 대 한 암호를 변경 하려면
 
-다음 명령은 원격 컴퓨터 s v r 01에서 RemindMe 작업에 대 한 사용자 계정의 암호를 변경 합니다. 명령을 사용 하 여는 **/tn** 매개 변수 작업을 식별 하 고 **/s** 매개 변수를 원격 컴퓨터를 지정 합니다. 이 파일은 **/rp** 매개 변수를 사용 하 여 새 암호 p@ssWord3를 지정 합니다.
+다음 명령은 원격 컴퓨터 s v r 01에서 RemindMe 작업에 대 한 사용자 계정의 암호를 변경 합니다. 명령을 사용 하 여는 **/tn** 매개 변수 작업을 식별 하 고 **/s** 매개 변수를 원격 컴퓨터를 지정 합니다. 이 파일은 **/rp** 매개 변수를 사용 하 여 새 p@ssWord3암호를 지정 합니다.
 
 이 절차는 사용자 계정의 암호가 만료 되거나 변경 될 때마다 필요 합니다. 작업에 저장 된 암호를 더 이상 사용할 수, 작업이 실행 되지 않습니다.
 ```
 schtasks /change /tn RemindMe /s Svr01 /rp p@ssWord3
 ```
-응답으로 **SchTasks.exe** 성공 메시지를 표시 합니다.
+이에 대 한 응답으로 **schtasks.exe** 는 다음과 같은 성공 메시지를 표시 합니다.
 ```
 SUCCESS: The parameters of the scheduled task RemindMe have been changed.
 ```
@@ -964,7 +964,7 @@ Please enter the password for DomainX\Admin01:
 ```
 **/tn** 매개 변수를 식별 하 고 작업의 **/tr** 및 **/ru** 매개 변수가 작업의 속성을 변경 합니다. 다른 매개 변수를 사용 하 여 작업을 식별 하 없습니다 및 작업 이름을 변경할 수 없습니다.
 
-응답으로 **SchTasks.exe** 성공 메시지를 표시 합니다.
+이에 대 한 응답으로 **schtasks.exe** 는 다음과 같은 성공 메시지를 표시 합니다.
 ```
 SUCCESS: The parameters of the scheduled task ChkNews have been changed.
 ```
@@ -972,11 +972,11 @@ SUCCESS: The parameters of the scheduled task ChkNews have been changed.
 
 ### <a name="to-change-a-program-to-the-system-account"></a>시스템 계정에 프로그램을 변경 하려면
 
-다음 명령은 시스템 계정의 사용 권한으로 실행 되도록 SecurityScript 작업을 변경 합니다. \* */Ru * * 매개 변수를 사용 하 여 시스템 계정을 표시 합니다.
+다음 명령은 시스템 계정의 사용 권한으로 실행 되도록 SecurityScript 작업을 변경 합니다. * */Ru * * 매개 변수를 사용 하 여 시스템 계정을 표시 합니다.
 ```
 schtasks /change /tn SecurityScript /ru 
 ```
-응답으로 **SchTasks.exe** 성공 메시지를 표시 합니다.
+이에 대 한 응답으로 **schtasks.exe** 는 다음과 같은 성공 메시지를 표시 합니다.
 ```
 INFO: The run as user name for the scheduled task SecurityScript will be changed to NT AUTHORITY\SYSTEM.
 SUCCESS: The parameters of the scheduled task SecurityScript have been changed.
@@ -996,7 +996,7 @@ schtasks /change /tn MyApp /it
 SUCCESS: The parameters of the scheduled task MyApp have been changed.
 ```
 
-## <a name="schtasks-run"></a><a name=BKMK_run></a>schtasks 실행
+## <a name="schtasks-run"></a><a name=BKMK_run></a>실행 매개 변수
 
 예약된 된 작업을 즉시 시작합니다. **실행** 작업 일정을 무시 하지만 프로그램 파일 위치, 사용자 계정 및 작업에 저장 된 암호를 사용 하 여 작업을 즉시 실행 합니다.
 
@@ -1010,17 +1010,17 @@ schtasks /run /tn <TaskName> [/s <Computer> [/u [<Domain>\]<User> [/p <Password>
 
 |         용어          |                                                                                                                                                                 정의                                                                                                                                                                  |
 |-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    /tn \<TaskName >    |                                                                                                                                                       필수입니다. 작업을 식별합니다.                                                                                                                                                        |
-|    /s \<컴퓨터 >     |                                                                                                           (백슬래시 없이 또는) 이름 또는 원격 컴퓨터의 IP 주소를 지정합니다. 기본값은 로컬 컴퓨터입니다.                                                                                                           |
-| /u [\<도메인 >\]<User> | 이 명령은 지정된 된 사용자 계정 권한으로 실행 됩니다. 기본적으로 명령은 로컬 컴퓨터의 현재 사용자의 권한으로 실행 합니다.</br>지정된 된 사용자 계정에는 원격 컴퓨터에서 Administrators 그룹의 구성원 이어야 합니다. **/u** 및 **/p** 매개 변수는 사용 하는 경우에 유효 **/s**합니다. |
-|    /p \<암호 >     |                          에 지정 된 사용자 계정의 암호를 지정 된 **/u** 매개 변수입니다. 사용 하는 경우는 **/u** 매개 변수를 생략 하는 **/p** 매개 변수 또는 password 인수 **schtasks** 암호를 묻는 메시지가 표시 됩니다.</br>**/u** 및 **/p** 매개 변수는 사용 하는 경우에 유효 **/s**합니다.                           |
+|    /tn \<TaskName>    |                                                                                                                                                       필수 사항입니다. 작업을 식별합니다.                                                                                                                                                        |
+|    /s \<컴퓨터>     |                                                                                                           (백슬래시 없이 또는) 이름 또는 원격 컴퓨터의 IP 주소를 지정합니다. 기본값은 로컬 컴퓨터입니다.                                                                                                           |
+| /u [\<도메인>\]<User> | 이 명령은 지정된 된 사용자 계정 권한으로 실행 됩니다. 기본적으로 명령은 로컬 컴퓨터의 현재 사용자의 권한으로 실행 합니다.</br>지정된 된 사용자 계정에는 원격 컴퓨터에서 Administrators 그룹의 구성원 이어야 합니다. **/u** 및 **/p** 매개 변수는 사용 하는 경우에 유효 **/s**합니다. |
+|    /p \<암호>     |                          에 지정 된 사용자 계정의 암호를 지정 된 **/u** 매개 변수입니다. 사용 하는 경우는 **/u** 매개 변수를 생략 하는 **/p** 매개 변수 또는 password 인수 **schtasks** 암호를 묻는 메시지가 표시 됩니다.</br>**/u** 및 **/p** 매개 변수는 사용 하는 경우에 유효 **/s**합니다.                           |
 |          /?           |                                                                                                                                                    명령 프롬프트에 도움말을 표시합니다.                                                                                                                                                     |
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
--   이 작업을 사용 하 여 작업을 테스트 합니다. 작업이 실행 되지 않는 경우 작업 스케줄러 서비스 트랜잭션 로그 \<Systemroot > \SchedLgU.txt에서 오류를 확인 합니다.
+-   이 작업을 사용 하 여 작업을 테스트 합니다. 작업이 실행 되지 않는 경우 작업 스케줄러 서비스 트랜잭션 로그 \<Systemroot> \schedlgu.txt에서 오류를 확인 합니다.
 -   작업을 실행 작업 일정에 영향을 주지 않는 및 작업에 대 한 예약 된 다음 실행된 시간을 변경 되지 않습니다.
--   작업을 원격으로 실행 하려면 원격 컴퓨터에서 작업을 예약 해야 합니다. 를 실행 하면 작업이 원격 컴퓨터 에서만 실행 됩니다. 작업이 원격 컴퓨터에서 실행 되 고 있는지 확인 하려면 작업 관리자 또는 작업 스케줄러 트랜잭션 로그 \<Systemroot > \Schedlgu.txt 합니다 .를 사용 합니다.
+-   작업을 원격으로 실행 하려면 원격 컴퓨터에서 작업을 예약 해야 합니다. 를 실행 하면 작업이 원격 컴퓨터 에서만 실행 됩니다. 작업이 원격 컴퓨터에서 실행 되 고 있는지 확인 하려면 작업 관리자 또는 작업 스케줄러 트랜잭션 로그, \<Systemroot> \schedlgu.txt 합니다 .를 사용 합니다.
 
 ### <a name="examples"></a>예
 
@@ -1064,7 +1064,7 @@ SUCCESS: Attempted to run the scheduled task Update.
 ```
 메시지에서 알 수 있듯이 **schtasks** 을 만들었지만 해당 프로그램을 시작 하 여 프로그램이 실제로 시작 하는 매우 없습니다.
 
-## <a name="schtasks-end"></a><a name=BKMK_end></a>schtasks 종료
+## <a name="schtasks-end"></a><a name=BKMK_end></a>schtasks 끝
 
 작업에 의해 시작 된 프로그램을 중지 합니다.
 
@@ -1078,13 +1078,13 @@ schtasks /end /tn <TaskName> [/s <Computer> [/u [<Domain>\]<User> [/p <Password>
 
 |         용어          |                                                                                                                                                               정의                                                                                                                                                                |
 |-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    /tn \<TaskName >    |                                                                                                                                         필수입니다. 프로그램을 시작 하는 작업을 식별 합니다.                                                                                                                                         |
-|    /s \<컴퓨터 >     |                                                                                                                        이름 또는 원격 컴퓨터의 IP 주소를 지정합니다. 기본값은 로컬 컴퓨터입니다.                                                                                                                        |
-| /u [\<도메인 >\]<User> | 이 명령은 지정된 된 사용자 계정 권한으로 실행 됩니다. 기본적으로 명령은 로컬 컴퓨터의 현재 사용자의 권한으로 실행 합니다. 지정된 된 사용자 계정에는 원격 컴퓨터에서 Administrators 그룹의 구성원 이어야 합니다. **/u** 및 **/p** 매개 변수는 사용 하는 경우에 유효 **/s**합니다. |
-|    /p \<암호 >     |                        에 지정 된 사용자 계정의 암호를 지정 된 **/u** 매개 변수입니다. 사용 하는 경우는 **/u** 매개 변수를 생략 하는 **/p** 매개 변수 또는 password 인수 **schtasks** 암호를 묻는 메시지가 표시 됩니다.</br>**/u** 및 **/p** 매개 변수는 사용 하는 경우에 유효 **/s**합니다.                         |
-|          /?           |                                                                                                                                                             도움말을 표시 합니다.                                                                                                                                                              |
+|    /tn \<TaskName>    |                                                                                                                                         필수 사항입니다. 프로그램을 시작 하는 작업을 식별 합니다.                                                                                                                                         |
+|    /s \<컴퓨터>     |                                                                                                                        이름 또는 원격 컴퓨터의 IP 주소를 지정합니다. 기본값은 로컬 컴퓨터입니다.                                                                                                                        |
+| /u [\<도메인>\]<User> | 이 명령은 지정된 된 사용자 계정 권한으로 실행 됩니다. 기본적으로 명령은 로컬 컴퓨터의 현재 사용자의 권한으로 실행 합니다. 지정된 된 사용자 계정에는 원격 컴퓨터에서 Administrators 그룹의 구성원 이어야 합니다. **/u** 및 **/p** 매개 변수는 사용 하는 경우에 유효 **/s**합니다. |
+|    /p \<암호>     |                        에 지정 된 사용자 계정의 암호를 지정 된 **/u** 매개 변수입니다. 사용 하는 경우는 **/u** 매개 변수를 생략 하는 **/p** 매개 변수 또는 password 인수 **schtasks** 암호를 묻는 메시지가 표시 됩니다.</br>**/u** 및 **/p** 매개 변수는 사용 하는 경우에 유효 **/s**합니다.                         |
+|          /?           |                                                                                                                                                             도움말을 표시합니다.                                                                                                                                                              |
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 **SchTasks.exe** 예약된 작업에 의해 시작 된 프로그램 인스턴스를 종료 합니다. 다른 프로세스를 중지 하려면 TaskKill를 사용 합니다. 자세한 내용은 참조 [Taskkill](taskkill.md)합니다.
 
@@ -1112,7 +1112,7 @@ schtasks /end /tn InternetOn /s Svr01
 SUCCESS: The scheduled task InternetOn has been terminated successfully.
 ```
 
-## <a name="schtasks-delete"></a><a name=BKMK_delete></a>schtasks 삭제
+## <a name="schtasks-delete"></a><a name=BKMK_delete></a>매개 변수 삭제
 
 예약된 된 작업을 삭제합니다.
 
@@ -1126,17 +1126,17 @@ schtasks /delete /tn {<TaskName> | *} [/f] [/s <Computer> [/u [<Domain>\]<User> 
 
 |         용어          |                                                                                                                                                                 정의                                                                                                                                                                  |
 |-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|   /tn {\<TaskName >    |                                                                                                                                                                     \*}                                                                                                                                                                     |
+|   /tn {\<TaskName>    |                                                                                                                                                                     \*}                                                                                                                                                                     |
 |          /f           |                                                                                                                                  확인 메시지를 표시 하지 않습니다. 경고 없이 작업이 삭제 됩니다.                                                                                                                                  |
-|    /s \<컴퓨터 >     |                                                                                                           (백슬래시 없이 또는) 이름 또는 원격 컴퓨터의 IP 주소를 지정합니다. 기본값은 로컬 컴퓨터입니다.                                                                                                           |
-| /u [\<도메인 >\]<User> | 이 명령은 지정된 된 사용자 계정 권한으로 실행 됩니다. 기본적으로 명령은 로컬 컴퓨터의 현재 사용자의 권한으로 실행 합니다.</br>지정된 된 사용자 계정에는 원격 컴퓨터에서 Administrators 그룹의 구성원 이어야 합니다. **/u** 및 **/p** 매개 변수는 사용 하는 경우에 유효 **/s**합니다. |
-|    /p \<암호 >     |                          에 지정 된 사용자 계정의 암호를 지정 된 **/u** 매개 변수입니다. 사용 하는 경우는 **/u** 매개 변수를 생략 하는 **/p** 매개 변수 또는 password 인수 **schtasks** 암호를 묻는 메시지가 표시 됩니다.</br>**/u** 및 **/p** 매개 변수는 사용 하는 경우에 유효 **/s**합니다.                           |
+|    /s \<컴퓨터>     |                                                                                                           (백슬래시 없이 또는) 이름 또는 원격 컴퓨터의 IP 주소를 지정합니다. 기본값은 로컬 컴퓨터입니다.                                                                                                           |
+| /u [\<도메인>\]<User> | 이 명령은 지정된 된 사용자 계정 권한으로 실행 됩니다. 기본적으로 명령은 로컬 컴퓨터의 현재 사용자의 권한으로 실행 합니다.</br>지정된 된 사용자 계정에는 원격 컴퓨터에서 Administrators 그룹의 구성원 이어야 합니다. **/u** 및 **/p** 매개 변수는 사용 하는 경우에 유효 **/s**합니다. |
+|    /p \<암호>     |                          에 지정 된 사용자 계정의 암호를 지정 된 **/u** 매개 변수입니다. 사용 하는 경우는 **/u** 매개 변수를 생략 하는 **/p** 매개 변수 또는 password 인수 **schtasks** 암호를 묻는 메시지가 표시 됩니다.</br>**/u** 및 **/p** 매개 변수는 사용 하는 경우에 유효 **/s**합니다.                           |
 |          /?           |                                                                                                                                                    명령 프롬프트에 도움말을 표시합니다.                                                                                                                                                     |
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 - **삭제** 작업 일정에서 작업을 삭제 합니다. 작업이 실행 되는 프로그램을 삭제 하거나 실행 중인 프로그램을 중단 하지 않습니다.
-- **Delete \\** * 명령은 현재 사용자가 예약한 작업 뿐만 아니라 컴퓨터에 대해 예약 된 모든 작업을 삭제 합니다.
+- **Delete \\ *** 명령은 현재 사용자가 예약한 작업 뿐만 아니라 컴퓨터에 대해 예약 된 모든 작업을 삭제 합니다.
 
 ### <a name="examples"></a>예
 
@@ -1154,7 +1154,7 @@ SUCCESS: The scheduled task Start Mail was successfully deleted.
 
 ### <a name="to-delete-all-tasks-scheduled-for-the-local-computer"></a>로컬 컴퓨터에 대 한 예약 된 모든 작업을 삭제 하려면
 
-다음 명령을 다른 사용자가 예약 된 작업을 비롯 하 여 로컬 컴퓨터의 일정에서 모든 작업을 삭제 합니다. **/Tn \\** * 매개 변수를 사용 하 여 컴퓨터의 모든 작업을 나타내고 **/f** 매개 변수를 사용 하 여 확인 메시지를 표시 하지 않습니다.
+다음 명령을 다른 사용자가 예약 된 작업을 비롯 하 여 로컬 컴퓨터의 일정에서 모든 작업을 삭제 합니다. **/Tn \\ *** 매개 변수를 사용 하 여 컴퓨터의 모든 작업을 나타내고 **/f** 매개 변수를 사용 하 여 확인 메시지를 표시 하지 않습니다.
 ```
 schtasks /delete /tn * /f
 ```
@@ -1162,7 +1162,7 @@ schtasks /delete /tn * /f
 
 `SUCCESS: The scheduled task SecureScript was successfully deleted.`
 
-## <a name="schtasks-query"></a><a name=BKMK_query></a>schtasks 쿼리
+## <a name="schtasks-query"></a><a name=BKMK_query></a>매개 변수 쿼리
 
 컴퓨터에서 실행 하도록 예약 된 작업을 표시 합니다.
 
@@ -1177,15 +1177,15 @@ schtasks [/query] [/fo {TABLE | LIST | CSV}] [/nh] [/v] [/s <Computer> [/u [<Dom
 |         용어          |                                                                                                                                                                 정의                                                                                                                                                                  |
 |-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |       / [쿼리]        |                                                                                                                        작업 이름은 선택 사항입니다. 입력 **schtasks** 매개 변수는 쿼리를 수행 하지 않고 있습니다.                                                                                                                         |
-|      /fo {테이블       |                                                                                                                                                                    LIST                                                                                                                                                                     |
+|      /fo \<형식>    |  출력 형식을 지정합니다. 유효한 값은 TABLE, LIST 및 CSV입니다.                                                                                                                                 |
 |          /nh          |                                                                                                            테이블 표시에서 열 머리글을 생략합니다. 이 매개 변수는 유효한는 **테이블** 및 **CSV** 출력 형식입니다.                                                                                                             |
 |          /v           |                                                                                                         디스플레이에 작업의 고급 속성을 추가합니다.</br>사용 하 여 쿼리 **/v** 여야 **목록** 또는 **CSV**합니다.                                                                                                          |
-|    /s \<컴퓨터 >     |                                                                                                           (백슬래시 없이 또는) 이름 또는 원격 컴퓨터의 IP 주소를 지정합니다. 기본값은 로컬 컴퓨터입니다.                                                                                                           |
-| /u [\<도메인 >\]<User> | 이 명령은 지정된 된 사용자 계정 권한으로 실행 됩니다. 기본적으로 명령은 로컬 컴퓨터의 현재 사용자의 권한으로 실행 합니다.</br>지정된 된 사용자 계정에는 원격 컴퓨터에서 Administrators 그룹의 구성원 이어야 합니다. **/u** 및 **/p** 매개 변수는 사용 하는 경우에 유효 **/s**합니다. |
-|    /p \<암호 >     |                                        에 지정 된 사용자 계정의 암호를 지정 된 **/u** 매개 변수입니다. 사용 하는 경우 **/u**, 생략 **/p** 또는 암호 인수 **schtasks** 암호를 묻는 메시지가 표시 됩니다.</br>**/u** 및 **/p** 매개 변수는 사용 하는 경우에 유효 **/s**합니다.                                         |
+|    /s \<컴퓨터>     |                                                                                                           (백슬래시 없이 또는) 이름 또는 원격 컴퓨터의 IP 주소를 지정합니다. 기본값은 로컬 컴퓨터입니다.                                                                                                           |
+| /u [\<도메인>\]<User> | 이 명령은 지정된 된 사용자 계정 권한으로 실행 됩니다. 기본적으로 명령은 로컬 컴퓨터의 현재 사용자의 권한으로 실행 합니다.</br>지정된 된 사용자 계정에는 원격 컴퓨터에서 Administrators 그룹의 구성원 이어야 합니다. **/u** 및 **/p** 매개 변수는 사용 하는 경우에 유효 **/s**합니다. |
+|    /p \<암호>     |                                        에 지정 된 사용자 계정의 암호를 지정 된 **/u** 매개 변수입니다. 사용 하는 경우 **/u**, 생략 **/p** 또는 암호 인수 **schtasks** 암호를 묻는 메시지가 표시 됩니다.</br>**/u** 및 **/p** 매개 변수는 사용 하는 경우에 유효 **/s**합니다.                                         |
 |          /?           |                                                                                                                                                    명령 프롬프트에 도움말을 표시합니다.                                                                                                                                                     |
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 **SchTasks.exe** 예약된 작업에 의해 시작 된 프로그램 인스턴스를 종료 합니다. 다른 프로세스를 중지 하려면 TaskKill를 사용 합니다. 자세한 내용은 참조 [Taskkill](taskkill.md)합니다.
 
@@ -1252,7 +1252,7 @@ Power Mgmt: Stop On Battery Mode: Disabled
 
 다음 명령은 원격 컴퓨터에 예약 된 작업의 목록을 요청 하 고 로컬 컴퓨터에 쉼표로 구분 된 로그 파일의 작업을 추가 합니다. 이 명령 형식을 사용 하 여 수집 하 고 여러 컴퓨터에 대해 예약 된 작업을 추적할 수 있습니다.
 
-명령을 사용 하 여는 **/s** Reskit16, 원격 컴퓨터를 식별 하는 매개 변수는 **/fo** 매개 변수를 형식 지정 및 **/nh** 를 열 머리글을 표시 하지 않는 매개 변수입니다. **>>**  p0102.csv 로컬 컴퓨터에 s v r 01에 작업 로그에 출력을 리디렉션하는 기호에 추가 합니다. 명령이 원격 컴퓨터에서 실행 하기 때문에 로컬 컴퓨터 경로 정규화 해야 합니다.
+명령을 사용 하 여는 **/s** Reskit16, 원격 컴퓨터를 식별 하는 매개 변수는 **/fo** 매개 변수를 형식 지정 및 **/nh** 를 열 머리글을 표시 하지 않는 매개 변수입니다. 추가 **>>** 기호는 출력을 로컬 컴퓨터 Svr01의 작업 로그 인 p0102.csv으로 리디렉션합니다. 명령이 원격 컴퓨터에서 실행 하기 때문에 로컬 컴퓨터 경로 정규화 해야 합니다.
 ```
 schtasks /query /s Reskit16 /fo csv /nh >> \\svr01\data\tasklogs\p0102.csv
 ```
