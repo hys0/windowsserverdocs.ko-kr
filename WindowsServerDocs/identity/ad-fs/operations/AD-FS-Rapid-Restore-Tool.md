@@ -4,16 +4,16 @@ title: AD FS 신속 복원 도구
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 07/02/2019
+ms.date: 04/24/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 506734812689a42ec17768652ac715f5c7e24401
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: dde9d60278a32ae4e6ba0baf35bc11ce631d4e02
+ms.sourcegitcommit: 371e59315db0cca5bdb713264a62b215ab43fd0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80858106"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82192606"
 ---
 # <a name="ad-fs-rapid-restore-tool"></a>AD FS 신속 복원 도구
 
@@ -41,7 +41,7 @@ ms.locfileid: "80858106"
 - AD FS 구성 데이터베이스 (SQL 또는 WID)
 - 구성 파일 (AD FS 폴더에 있음)
 - 토큰 서명 및 인증서와 프라이빗 키 (에서 Active Directory DKM 컨테이너)를 암호 해독을 자동으로 생성
-- SSL 인증서와 외부에서 등록한 인증서 (토큰 서명, 토큰 암호 해독 및 서비스 통신)와 해당 프라이빗 키(참고: 프라이빗 키를 내보낼 수 있어야 하고 스크립트를 실행하는 사용자에 대한 액세스 권한이 있어야 합니다.)
+- SSL 인증서와 외부에서 등록 한 인증서 (토큰 서명, 토큰 암호 해독 및 서비스 통신)와 해당 프라이빗 키 (참고: 프라이빗 키를 내보낼 수 있어야 하 고 스크립트를 실행 하는 사용자에 대 한 액세스 권한이 있어야 합니다.)
 - 사용자 지정 인증 공급자, 특성 저장소 및 로컬 클레임 공급자의 목록이 설치 되어 있는 것을 신뢰 합니다.
 
 ## <a name="how-to-use-the-tool"></a>이 도구를 사용 하는 방법
@@ -78,17 +78,17 @@ Cmdlet은 다음 매개 변수를 사용 합니다.
 
 - **BackupDKM** -기본 구성 (자동으로 생성 된 토큰 서명 및 인증서를 암호 해독)에서 AD FS 키를 포함 하는 Active Directory DKM 컨테이너를 백업 합니다. 이는 ad 도구 ' ldifde '를 사용 하 여 AD 컨테이너와 해당 하위 트리를 모두 내보냅니다.
 
-- -**Storagetype &lt;문자열&gt;** -사용자가 사용 하려는 저장소의 유형입니다. "FileSystem"은 사용자가 로컬 또는 네트워크에 있는 폴더에 저장 하려고 함을 나타냅니다. "Azure"는 사용자가 백업을 수행할 때 사용자가 백업을 수행할 때 Azure Storage 컨테이너에 저장 하려고 함을 나타내고, 파일 시스템 또는 클라우드에서 백업 위치를 선택 합니다. 사용할 Azure에 대 한 Azure 저장소 자격 증명을 cmdlet으로 전달 되어야 합니다. 스토리지 자격 증명의 계정 이름 및 키를 포함 합니다. 또한이 컨테이너 이름에 전달 합니다. 컨테이너가 존재 하지 않는 경우 백업 중에 생성 됩니다. 사용할 파일 시스템에 대 한 스토리지 경로 제공 합니다. 해당 디렉터리에 각 백업에 대해 새 디렉터리가 생성 됩니다. 만든 각 디렉터리에는 백업된 파일이 포함 됩니다. 
+- -**Storagetype &lt;문자열&gt; ** -사용자가 사용 하려는 저장소의 유형입니다. "FileSystem"은 사용자가 로컬 또는 네트워크에 있는 폴더에 저장 하려고 함을 나타냅니다. "Azure"는 사용자가 백업을 수행할 때 사용자가 백업을 수행할 때 Azure Storage 컨테이너에 저장 하려고 함을 나타내고, 파일 시스템 또는 클라우드에서 백업 위치를 선택 합니다. 사용할 Azure의 경우 Azure 스토리지 자격 증명을 cmdlet으로 전달해야 합니다. 스토리지 자격 증명의 계정 이름 및 키를 포함합니다. 또한이 컨테이너 이름에 전달 합니다. 컨테이너가 존재 하지 않는 경우 백업 중에 생성 됩니다. 사용할 파일 시스템에 대한 스토리지 경로를 제공합니다. 해당 디렉터리에 각 백업에 대해 새 디렉터리가 생성 됩니다. 만든 각 디렉터리에는 백업된 파일이 포함 됩니다. 
 
 - **EncryptionPassword &lt;문자열&gt;** -백업된 된 모든 파일을 저장 하기 전에 암호화 하는 데 사용 될 것 이라고 암호
 
-- **AzureConnectionCredentials &lt;pscredential&gt;** -계정 이름 및 Azure 저장소 계정에 대 한 키
+- **AzureConnectionCredentials &lt;pscredential&gt;** - 계정 이름 및 Azure 스토리지 계정에 대한 키
 
-- **AzureStorageContainer &lt;문자열&gt;** -백업이 Azure에 저장 될 저장소 컨테이너
+- **AzureStorageContainer &lt;문자열&gt;** - 백업이 Azure에 저장될 스토리지 컨테이너
 
-- **StoragePath &lt;문자열&gt;** -위치에 백업을 저장 됩니다
+- **StoragePath &lt;문자열&gt;** - 백업이 저장될 위치
 
-- **Serviceaccountcredential &lt;pscredential&gt;** -현재 실행 중인 AD FS 서비스에 사용 되는 서비스 계정을 지정 합니다. 이 매개 변수는 사용자가 DKM을 백업 하 고 도메인 관리자가 아니거나 컨테이너의 콘텐츠에 대 한 액세스 권한이 없는 경우에만 필요 합니다. 
+- **Serviceaccountcredential &lt;pscredential&gt; ** -현재 실행 중인 AD FS 서비스에 사용 되는 서비스 계정을 지정 합니다. 이 매개 변수는 사용자가 DKM을 백업 하 고 도메인 관리자가 아니거나 컨테이너의 콘텐츠에 대 한 액세스 권한이 없는 경우에만 필요 합니다. 
 
 - **BackupComment &lt;string&gt;** -Hyper-v가 검사점 이름을 지정 하는 개념과 비슷합니다 복원 되는 동안 표시 되는 백업에 대 한 정보는 문자열입니다. 기본값은 빈 문자열
 
@@ -123,7 +123,7 @@ Backup-ADFS -StorageType "FileSystem" -StoragePath "C:\Users\administrator\testE
 ## <a name="restore-from-backup"></a>백업에서 복원
 새 AD FS 설치 백업 ADFS를 사용 하 여 만든 구성 적용 복원 ADFS cmdlet을 사용 합니다.
 
-이 cmdlet은 cmdlet `Install-AdfsFarm`를 사용 하 여 새 AD FS 팜을 만들고 AD FS 구성, 데이터베이스, 인증서 등을 복원 합니다.  서버에 AD FS 역할을 설치 하지 않은 경우 cmdlet에서 해당 역할을 설치 합니다.  Cmdlet는 기존 백업 복원 위치를 확인 하 고는 적절 한 백업을 수행 된 날짜/시간 및 백업 주석을 백업에 사용자 연결 수에 따라 선택 하 라는 메시지. 다른 페더레이션 서비스 이름으로 여러 AD FS 구성의 경우 다음 사용자가 선택 하 라는 메시지가 먼저 적절 한 AD FS 구성 합니다.
+이 cmdlet은 cmdlet `Install-AdfsFarm` 을 사용 하 여 새 AD FS 팜을 만들고 AD FS 구성, 데이터베이스, 인증서 등을 복원 합니다.  서버에 AD FS 역할을 설치 하지 않은 경우 cmdlet에서 해당 역할을 설치 합니다.  Cmdlet는 기존 백업 복원 위치를 확인 하 고는 적절 한 백업을 수행 된 날짜/시간 및 백업 주석을 백업에 사용자 연결 수에 따라 선택 하 라는 메시지. 다른 페더레이션 서비스 이름으로 여러 AD FS 구성의 경우 다음 사용자가 선택 하 라는 메시지가 먼저 적절 한 AD FS 구성 합니다.
 사용자가이 cmdlet을 실행 하려면 로컬 및 도메인 관리자 여야 합니다.
 
 
@@ -136,22 +136,22 @@ Cmdlet은 다음 매개 변수를 사용 합니다.
 
 ### <a name="detailed-description"></a>자세한 설명
 
-- **StorageType &lt;문자열&gt;** -사용자가 사용 하려는 저장소 유형입니다.
+- **StorageType &lt;문자열&gt;** - 사용자가 사용하려는 스토리지 유형입니다.
  "FileSystem"은 사용자가 로컬 또는 "Azure" 네트워크에 저장 하려는 사용자가 Azure Storage 컨테이너에 저장 하려고 함을 나타냅니다.
 
 - **DecryptionPassword &lt;문자열&gt;** -백업된 된 모든 파일 암호화에 사용 된 암호 
 
-- **AzureConnectionCredentials &lt;pscredential&gt;** -계정 이름 및 Azure 저장소 계정에 대 한 키
+- **AzureConnectionCredentials &lt;pscredential&gt;** - 계정 이름 및 Azure 스토리지 계정에 대한 키
 
-- **AzureStorageContainer &lt;문자열&gt;** -백업이 Azure에 저장 될 저장소 컨테이너
+- **AzureStorageContainer &lt;문자열&gt;** - 백업이 Azure에 저장될 스토리지 컨테이너
 
-- **StoragePath &lt;문자열&gt;** -위치에 백업을 저장 됩니다
+- **StoragePath &lt;문자열&gt;** - 백업이 저장될 위치
 
 - **ADFSName &lt; 문자열 &gt;** -백업 및 복원 하려고 하는 페더레이션의 이름입니다. 이 제공 되지 않았고는 하나의 페더레이션 서비스 이름 다음에 사용 됩니다. 있는 경우에 둘 이상의 페더레이션 서비스 위치에 백업 후 사용자는 페더레이션 서비스 백업 중 하나를 선택 하 라는 메시지가 표시 됩니다.
 
-- **Serviceaccountcredential &lt; pscredential &gt;** -복원 되는 새 AD FS 서비스에 사용할 서비스 계정을 지정 합니다. 
+- **Serviceaccountcredential &lt; pscredential &gt; ** -복원 중인 새 AD FS 서비스에 사용 되는 서비스 계정을 지정 합니다. 
 
-- **GroupServiceAccountIdentifier &lt;string&gt;** -사용자가 복원 되는 새 AD FS 서비스에 사용 하려는 GMSA입니다. 기본적으로, 둘 중 아무것도 제공 다음 백업를 계정 이름이 사용 됩니다 GMSA를 다른 서비스 계정에 넣을 묻는 것
+- **GroupServiceAccountIdentifier &lt;string&gt; ** -사용자가 복원 중인 새 AD FS 서비스에 사용 하려는 GMSA입니다. 기본적으로, 둘 중 아무것도 제공 다음 백업를 계정 이름이 사용 됩니다 GMSA를 다른 서비스 계정에 넣을 묻는 것
 
 - **DBConnectionString &lt;문자열&gt;** -은 전달 해야 SQL 연결 문자열 또는 형식 WID WID.에 대 한 다음 다른 데이터베이스에 복원에 사용 하 여 사용자가 원하는 경우
 
@@ -217,19 +217,30 @@ RngCryptoServiceProvider는 AES 및 Rfc2898DeriveBytes 클래스에서 사용 �
 >[!NOTE]
 > 복원을 수행할 때 AD FS 서비스를 시작 하기 전에 수동으로 설치할 추가 인증 공급자, 특성 저장소 및 로컬 클레임 공급자 트러스트에 대 한 개요를 포함 하는 PostRestore_Instructions 파일이 만들어질 수 있습니다.
 
-## <a name="version-release-history"></a>버전 릴리스 기록
+## <a name="version-release-history"></a>버전 릴리스 내역
+
+### <a name="version-10823"></a>버전 1.0.82.3
+릴리스: 4 월 2020
+
+**수정된 문제:**
+
+
+- CNG 기반 인증서에 대 한 지원 추가
+
 
 ### <a name="version-10820"></a>버전 1.0.82.0
 릴리스: 7 월 2019
 
-**해결 된 문제:**
+**수정된 문제:**
+
+
 - LDAP 이스케이프 문자를 포함 하는 AD FS 서비스 계정 이름에 대 한 버그 수정
 
 
 ### <a name="version-10810"></a>버전: 1.0.81.0
 릴리스: 4 월 2019
 
-**해결 된 문제:**
+**수정된 문제:**
 
 
 - 인증서 백업 및 복원에 대 한 버그 수정
@@ -239,13 +250,13 @@ RngCryptoServiceProvider는 AES 및 Rfc2898DeriveBytes 클래스에서 사용 �
 ### <a name="version-10750"></a>버전: 1.0.75.0
 릴리스: 8 월 2018
 
-**해결 된 문제:**
+**수정된 문제:**
 * 백업 업데이트--BackupDKM 스위치를 사용 하는 경우 ADFS  이 도구는 현재 컨텍스트가 DKM 컨테이너에 액세스할 수 있는지 여부를 확인 합니다.  그렇다면 도메인 관리자 권한 또는 서비스 계정 자격 증명이 필요 하지 않습니다.  이렇게 하면 명시적으로 자격 증명을 제공 하거나 도메인 관리자 계정으로 실행 하지 않고도 자동화 된 백업이 수행 될 수 있습니다.
 
 ### <a name="version-10730"></a>버전: 1.0.73.0
 릴리스: 8 월 2018
 
-**해결 된 문제:**
+**수정된 문제:**
 * 응용 프로그램이 FIPS를 준수 하도록 암호화 알고리즘을 업데이트 합니다.
     
     >[!NOTE]
@@ -256,14 +267,14 @@ RngCryptoServiceProvider는 AES 및 Rfc2898DeriveBytes 클래스에서 사용 �
 ### <a name="version-10720"></a>버전: 1.0.72.0
 릴리스: 7 월 2018
 
-**해결 된 문제:**
+**수정된 문제:**
 
    - 버그 수정:이 수정 되었습니다. 전체 업그레이드를 지 원하는 MSI 설치 관리자 
 
 ### <a name="10180"></a>1.0.18.0
 릴리스: 7 월 2018
 
-**해결 된 문제:**
+**수정된 문제:**
 
    - 버그 수정: 특수 문자를 포함 하는 서비스 계정 암호를 처리 합니다 (ie, ' & ').
    - 버그 수정: 다른 프로세스에서 IdentityServer을 사용 하 고 있으므로 복원에 실패 합니다.

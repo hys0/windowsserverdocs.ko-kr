@@ -9,16 +9,16 @@ ms.author: johnmar
 ms.date: 01/30/2019
 description: 이 문서에서는 클러스터 집합 시나리오에 대해 설명 합니다.
 ms.localizationpriority: medium
-ms.openlocfilehash: 3c7ddef1831a82f7fc068ec4241bb1a72bd888bd
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 484b6a1e658cd5c0583747194fa42494e54c3301
+ms.sourcegitcommit: 4824f3b307e5b8b9bf5be7bc948f7aba9cf7063f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80861046"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82579936"
 ---
-# <a name="cluster-sets"></a>클러스터 집합
+# <a name="cluster-sets"></a>클러스터 세트
 
-> 적용 대상: Windows Server 2019
+> 적용 대상: 시작
 
 클러스터 집합은 단일 소프트웨어 정의 데이터 센터 (SDDC) 클라우드에서 크기의 순서로 클러스터 노드 수를 늘리는 Windows Server 2019 릴리스의 새로운 클라우드 스케일 아웃 기술입니다. 클러스터 집합은 여러 장애 조치 (Failover) 클러스터 (계산, 저장소 또는 하이퍼 수렴)의 느슨하게 결합 된 그룹입니다. 클러스터 집합 기술은 클러스터 집합 내의 구성원 클러스터와 가상 컴퓨터 fluidity의 지원에 대 한 통합 저장소 네임 스페이스 간에 가상 컴퓨터를 fluidity 수 있도록 합니다.
 
@@ -101,13 +101,15 @@ Windows Server 2019에는 인프라 스케일 아웃 파일 서버 (SOFS) 이라
 
 인프라 SOFS 역할에 적용 되는 고려 사항은 다음과 같습니다.
 
-1.    장애 조치 (Failover) 클러스터에는 하나의 인프라 SOFS 클러스터 역할만 있을 수 있습니다. 인프라 SOFS 역할은 **ClusterScaleOutFileServerRole** cmdlet에 " **-Infrastructure**" 스위치 매개 변수를 지정 하 여 만듭니다.  예를 들면 다음과 같습니다.
+1. 장애 조치 (Failover) 클러스터에는 하나의 인프라 SOFS 클러스터 역할만 있을 수 있습니다. 인프라 SOFS 역할은 **ClusterScaleOutFileServerRole** cmdlet에 "**-Infrastructure**" 스위치 매개 변수를 지정 하 여 만듭니다.  다음은 그 예입니다. 
 
-        ClusterScaleoutFileServerRole-Name "my_infra_sofs_name"-Infrastructure
+    ```PowerShell
+    Add-ClusterScaleoutFileServerRole -Name "my_infra_sofs_name" -Infrastructure
+    ```
 
-2.    장애 조치 (failover) 시 생성 된 각 CSV 볼륨은 CSV 볼륨 이름을 기반으로 자동 생성 된 이름으로 SMB 공유 생성을 자동으로 트리거합니다. 관리자는 CSV 볼륨 만들기/수정 작업 외에 SOFS 역할을 통해 직접 SMB 공유를 만들거나 수정할 수 없습니다.
+2. 장애 조치 (failover) 시 생성 된 각 CSV 볼륨은 CSV 볼륨 이름을 기반으로 자동 생성 된 이름으로 SMB 공유 생성을 자동으로 트리거합니다. 관리자는 CSV 볼륨 만들기/수정 작업 외에 SOFS 역할을 통해 직접 SMB 공유를 만들거나 수정할 수 없습니다.
 
-3.    하이퍼 수렴 형 구성에서 인프라 SOFS를 사용 하면 SMB 클라이언트 (Hyper-v 호스트)가 보장 된 CA (지속적인 가용성)와 SMB 서버 인프라 SOFS 통신할 수 있습니다. 클라이언트와 서버 간에 소유 하는 가상 컴퓨터 id가 전달 되는 가상 디스크 (VHDx) 파일에 액세스 하는 가상 컴퓨터를 통해이 하이퍼 수렴 형 SMB 루프백 CA를 구현할 수 있습니다. 이 id 전달을 사용 하면 이전 처럼 표준 하이퍼 수렴 형 클러스터 구성에서와 마찬가지로 ACL을 사용 하는 VHDx 파일을 사용할 수 있습니다.
+3. 하이퍼 수렴 형 구성에서 인프라 SOFS를 사용 하면 SMB 클라이언트 (Hyper-v 호스트)가 보장 된 CA (지속적인 가용성)와 SMB 서버 인프라 SOFS 통신할 수 있습니다. 클라이언트와 서버 간에 소유 하는 가상 컴퓨터 id가 전달 되는 가상 디스크 (VHDx) 파일에 액세스 하는 가상 컴퓨터를 통해이 하이퍼 수렴 형 SMB 루프백 CA를 구현할 수 있습니다. 이 id 전달을 사용 하면 이전 처럼 표준 하이퍼 수렴 형 클러스터 구성에서와 마찬가지로 ACL을 사용 하는 VHDx 파일을 사용할 수 있습니다.
 
 클러스터 세트를 만든 후 클러스터 집합 네임 스페이스는 각 구성원 클러스터의 인프라 SOFS를 사용 하 고 관리 클러스터의 인프라 SOFS을 추가로 사용 합니다.
 
@@ -117,7 +119,7 @@ Windows Server 2019에는 인프라 스케일 아웃 파일 서버 (SOFS) 이라
 
 ## <a name="creating-a-cluster-set"></a>클러스터 집합 만들기
 
-### <a name="prerequisites"></a>필수 조건
+### <a name="prerequisites"></a>전제 조건
 
 클러스터 집합을 만들 때 다음 필수 구성 요소를 권장 합니다.
 
@@ -138,49 +140,69 @@ Windows Server 2019에는 인프라 스케일 아웃 파일 서버 (SOFS) 이라
 
 2. 모든 클러스터를 만들었으면 다음 명령을 사용 하 여 클러스터 집합 마스터를 만듭니다.
 
-        New-ClusterSet -Name CSMASTER -NamespaceRoot SOFS-CLUSTERSET -CimSession SET-CLUSTER
+    ```PowerShell
+    New-ClusterSet -Name CSMASTER -NamespaceRoot SOFS-CLUSTERSET -CimSession SET-CLUSTER
+    ```
 
 3. 클러스터 집합에 클러스터 서버를 추가 하려면 아래를 사용 합니다.
 
-        Add-ClusterSetMember -ClusterName CLUSTER1 -CimSession CSMASTER -InfraSOFSName SOFS-CLUSTER1
-        Add-ClusterSetMember -ClusterName CLUSTER2 -CimSession CSMASTER -InfraSOFSName SOFS-CLUSTER2
+    ```PowerShell
+    Add-ClusterSetMember -ClusterName CLUSTER1 -CimSession CSMASTER -InfraSOFSName SOFS-CLUSTER1
+    Add-ClusterSetMember -ClusterName CLUSTER2 -CimSession CSMASTER -InfraSOFSName SOFS-CLUSTER2
+    ```
 
    > [!NOTE]
    > 고정 IP 주소 체계를 사용 하는 경우에는 **새-ClusterSet** 명령에 *-staticaddress x* . x. x를 포함 해야 합니다.
 
 4. 클러스터 구성원으로 설정 된 클러스터를 만들었으면 노드 집합 및 해당 속성을 나열할 수 있습니다.  클러스터 집합의 모든 구성원 클러스터를 열거 하려면:
 
-        Get-ClusterSetMember -CimSession CSMASTER
+    ```PowerShell
+    Get-ClusterSetMember -CimSession CSMASTER
+    ```
 
 5. 관리 클러스터 노드를 포함 하 여 클러스터 집합의 모든 구성원 클러스터를 열거 하려면:
 
-        Get-ClusterSet -CimSession CSMASTER | Get-Cluster | Get-ClusterNode
+    ```PowerShell
+    Get-ClusterSet -CimSession CSMASTER | Get-Cluster | Get-ClusterNode
+    ```
 
 6. 멤버 클러스터의 모든 노드를 나열 하려면 다음을 수행 합니다.
 
-        Get-ClusterSetNode -CimSession CSMASTER
+    ```PowerShell
+    Get-ClusterSetNode -CimSession CSMASTER
+    ```
 
 7. 클러스터 집합 전체에서 모든 리소스 그룹을 나열 하려면 다음을 수행 합니다.
 
-        Get-ClusterSet -CimSession CSMASTER | Get-Cluster | Get-ClusterGroup 
+    ```PowerShell
+    Get-ClusterSet -CimSession CSMASTER | Get-Cluster | Get-ClusterGroup 
+    ```
 
 8. 클러스터 집합 생성 프로세스에서 각 클러스터 구성원의 CSV 볼륨에 대 한 인프라 SOFS에 하나의 SMB 공유 (Volume1로 식별 되거나 ScopeName로 레이블이 지정 된 CSV 폴더의 이름 및 두 파일의 경로)가 생성 되었는지 확인 하려면 다음을 수행 합니다.
 
-        Get-SmbShare -CimSession CSMASTER
+    ```PowerShell
+    Get-SmbShare -CimSession CSMASTER
+    ```
 
 8. 클러스터 집합에는 검토를 위해 수집할 수 있는 디버그 로그가 있습니다.  모든 구성원 및 관리 클러스터에 대해 클러스터 집합과 클러스터 디버그 로그를 모두 수집할 수 있습니다.
 
-        Get-ClusterSetLog -ClusterSetCimSession CSMASTER -IncludeClusterLog -IncludeManagementClusterLog -DestinationFolderPath <path>
+    ```PowerShell
+    Get-ClusterSetLog -ClusterSetCimSession CSMASTER -IncludeClusterLog -IncludeManagementClusterLog -DestinationFolderPath <path>
+    ```
 
 9. 모든 클러스터 집합 구성원 사이에서 Kerberos [제한 위임을](https://techcommunity.microsoft.com/t5/virtualization/live-migration-via-constrained-delegation-with-kerberos-in/ba-p/382334) 구성 합니다.
 
 10. 클러스터 집합의 각 노드에서 클러스터 간 가상 머신 실시간 마이그레이션 인증 유형을 Kerberos로 구성 합니다.
 
-        foreach($h in $hosts){ Set-VMHost -VirtualMachineMigrationAuthenticationType Kerberos -ComputerName $h }
+    ```PowerShell
+    foreach($h in $hosts){ Set-VMHost -VirtualMachineMigrationAuthenticationType Kerberos -ComputerName $h }
+    ```
 
 11. 클러스터 집합의 각 노드에 있는 로컬 관리자 그룹에 관리 클러스터를 추가 합니다.
 
-        foreach($h in $hosts){ Invoke-Command -ComputerName $h -ScriptBlock {Net localgroup administrators /add <management_cluster_name>$} }
+    ```PowerShell
+    foreach($h in $hosts){ Invoke-Command -ComputerName $h -ScriptBlock {Net localgroup administrators /add <management_cluster_name>$} }
+    ```
 
 ## <a name="creating-new-virtual-machines-and-adding-to-cluster-sets"></a>새 가상 컴퓨터 만들기 및 클러스터 집합에 추가
 
@@ -198,43 +220,53 @@ Windows Server 2019에는 인프라 스케일 아웃 파일 서버 (SOFS) 이라
 - 1에서 사용 되는 가상 프로세서를 설정 합니다.
 - 가상 컴퓨터에 사용할 수 있는 CPU가 10% 이상 인지 확인 합니다.
 
-   ```PowerShell
-   # Identify the optimal node to create a new virtual machine
-   $memoryinMB=4096
-   $vpcount = 1
-   $targetnode = Get-ClusterSetOptimalNodeForVM -CimSession CSMASTER -VMMemory $memoryinMB -VMVirtualCoreCount $vpcount -VMCpuReservation 10
-   $secure_string_pwd = convertto-securestring "<password>" -asplaintext -force
-   $cred = new-object -typename System.Management.Automation.PSCredential ("<domain\account>",$secure_string_pwd)
+```PowerShell
+# Identify the optimal node to create a new virtual machine
+$memoryinMB=4096
+$vpcount = 1
+$targetnode = Get-ClusterSetOptimalNodeForVM -CimSession CSMASTER -VMMemory $memoryinMB -VMVirtualCoreCount $vpcount -VMCpuReservation 10
+$secure_string_pwd = convertto-securestring "<password>" -asplaintext -force
+$cred = new-object -typename System.Management.Automation.PSCredential ("<domain\account>",$secure_string_pwd)
 
-   # Deploy the virtual machine on the optimal node
-   Invoke-Command -ComputerName $targetnode.name -scriptblock { param([String]$storagepath); New-VM CSVM1 -MemoryStartupBytes 3072MB -path $storagepath -NewVHDPath CSVM.vhdx -NewVHDSizeBytes 4194304 } -ArgumentList @("\\SOFS-CLUSTER1\VOLUME1") -Credential $cred | Out-Null
-   
-   Start-VM CSVM1 -ComputerName $targetnode.name | Out-Null
-   Get-VM CSVM1 -ComputerName $targetnode.name | fl State, ComputerName
-   ```
+# Deploy the virtual machine on the optimal node
+Invoke-Command -ComputerName $targetnode.name -scriptblock { param([String]$storagepath); New-VM CSVM1 -MemoryStartupBytes 3072MB -path $storagepath -NewVHDPath CSVM.vhdx -NewVHDSizeBytes 4194304 } -ArgumentList @("\\SOFS-CLUSTER1\VOLUME1") -Credential $cred | Out-Null
+
+Start-VM CSVM1 -ComputerName $targetnode.name | Out-Null
+Get-VM CSVM1 -ComputerName $targetnode.name | fl State, ComputerName
+```
 
 완료 되 면 가상 머신에 대 한 정보와 해당 위치가 배치 된 위치에 대 한 정보가 제공 됩니다.  위의 예제에서는 다음과 같이 표시 됩니다.
 
-        State         : Running
-        ComputerName  : 1-S2D2
+```
+State         : Running
+ComputerName  : 1-S2D2
+```
 
 가상 컴퓨터를 추가 하는 데 충분 한 메모리, cpu 또는 디스크 공간이 없는 경우 다음과 같은 오류가 표시 됩니다.
 
-      Get-ClusterSetOptimalNodeForVM : A cluster node is not available for this operation.  
+```
+Get-ClusterSetOptimalNodeForVM : A cluster node is not available for this operation.  
+```
 
 가상 머신이 만들어지면 지정 된 특정 노드에 Hyper-v 관리자에 표시 됩니다.  클러스터 집합 가상 머신으로 클러스터에 추가 하려면 다음 명령을 추가 합니다.  
 
-        Register-ClusterSetVM -CimSession CSMASTER -MemberName $targetnode.Member -VMName CSVM1
+```PowerShell
+Register-ClusterSetVM -CimSession CSMASTER -MemberName $targetnode.Member -VMName CSVM1
+```
 
 완료 되 면 출력은 다음과 같습니다.
 
-         Id  VMName  State  MemberName  PSComputerName
-         --  ------  -----  ----------  --------------
-          1  CSVM1      On  CLUSTER1    CSMASTER
+```
+Id  VMName  State  MemberName  PSComputerName
+--  ------  -----  ----------  --------------
+1  CSVM1      On  CLUSTER1    CSMASTER
+```
 
 기존 가상 컴퓨터를 사용 하 여 클러스터를 추가한 경우에는 가상 컴퓨터를 클러스터 집합에 등록 해야 합니다. 그러면 모든 가상 컴퓨터를 한 번에 등록 해야 사용할 수 있습니다.
 
-        Get-ClusterSetMember -name CLUSTER3 -CimSession CSMASTER | Register-ClusterSetVM -RegisterAll -CimSession CSMASTER
+```PowerShell
+Get-ClusterSetMember -Name CLUSTER3 -CimSession CSMASTER | Register-ClusterSetVM -RegisterAll -CimSession CSMASTER
+```
 
 그러나 가상 머신의 경로를 클러스터 집합 네임 스페이스에 추가 해야 하므로 프로세스가 완료 되지 않습니다.
 
@@ -242,12 +274,16 @@ Windows Server 2019에는 인프라 스케일 아웃 파일 서버 (SOFS) 이라
 
 이 예제에서 CLUSTER3는 SOFS로 스케일 아웃 파일 서버 인프라를 사용 하 여 CLUSTER3로 추가 ClusterSetMember를 사용 하 여 클러스터 집합에 추가 되었습니다.  가상 컴퓨터 구성 및 저장소를 이동 하는 명령은 다음과 같습니다.
 
-        Move-VMStorage -DestinationStoragePath \\SOFS-CLUSTER3\Volume1 -Name MYVM
+```PowerShell
+Move-VMStorage -DestinationStoragePath \\SOFS-CLUSTER3\Volume1 -Name MYVM
+```
 
 완료 되 면 경고를 받게 됩니다.
 
-        WARNING: There were issues updating the virtual machine configuration that may prevent the virtual machine from running.  For more information view the report file below.
-        WARNING: Report file location: C:\Windows\Cluster\Reports\Update-ClusterVirtualMachineConfiguration '' on date at time.htm.
+```
+WARNING: There were issues updating the virtual machine configuration that may prevent the virtual machine from running.  For more information view the report file below.
+WARNING: Report file location: C:\Windows\Cluster\Reports\Update-ClusterVirtualMachineConfiguration '' on date at time.htm.
+```
 
 이 경고는 "가상 컴퓨터 역할 저장소 구성에서 변경 내용이 검색 되지 않았습니다." 라는 경고가 발생 한 경우 무시 해도 됩니다.  실제 실제 위치에 대 한 경고의 원인은 변경 되지 않습니다. 구성 경로만. 
 
@@ -261,13 +297,17 @@ VMStorage 이동에 대 한 자세한 내용은이 [링크](https://docs.microso
 
 클러스터 집합을 사용 하면 이러한 단계가 필요 하지 않으며 명령만 있으면 됩니다.  먼저 명령을 사용 하 여 마이그레이션에 사용할 수 있는 모든 네트워크를 설정 해야 합니다.
 
-    Set-VMHost -UseAnyNetworkForMigration $true
+```PowerShell
+Set-VMHost -UseAnyNetworkForMigration $true
+```
 
 예를 들어 클러스터 집합 가상 머신을 CLUSTER1에서 CL3의 CLUSTER3로 이동 하려고 합니다.  단일 명령은 다음과 같습니다.
 
-        Move-ClusterSetVM -CimSession CSMASTER -VMName CSVM1 -Node NODE2-CL3
+```PowerShell
+Move-ClusterSetVM -CimSession CSMASTER -VMName CSVM1 -Node NODE2-CL3
+```
 
-가상 컴퓨터 저장소 또는 구성 파일은 이동 하지 않습니다.  가상 컴퓨터의 경로가 \\SOFS-CLUSTER1\VOLUME1.으로 유지 되므로이 작업이 필요 하지 않습니다.  가상 컴퓨터에 등록 된 가상 컴퓨터의 인프라 파일 서버 공유 경로가 있는 경우 드라이브와 가상 컴퓨터는 가상 컴퓨터와 동일한 컴퓨터에 있지 않아도 됩니다.
+가상 컴퓨터 저장소 또는 구성 파일은 이동 하지 않습니다.  가상 컴퓨터에 대 한 경로가 SOFS-CLUSTER1\VOLUME1.으로 \\ \\유지 되므로이 작업이 필요 하지 않습니다.  가상 컴퓨터에 등록 된 가상 컴퓨터의 인프라 파일 서버 공유 경로가 있는 경우 드라이브와 가상 컴퓨터는 가상 컴퓨터와 동일한 컴퓨터에 있지 않아도 됩니다.
 
 ## <a name="creating-availability-sets-fault-domains"></a>가용성 집합 장애 도메인 만들기
 
@@ -279,39 +319,49 @@ VMStorage 이동에 대 한 자세한 내용은이 [링크](https://docs.microso
 
 장애 도메인을 만드는 명령은 다음과 같습니다.
 
-        New-ClusterSetFaultDomain -Name FD1 -FdType Logical -CimSession CSMASTER -MemberCluster CLUSTER1,CLUSTER2 -Description "This is my first fault domain"
+```PowerShell
+New-ClusterSetFaultDomain -Name FD1 -FdType Logical -CimSession CSMASTER -MemberCluster CLUSTER1,CLUSTER2 -Description "This is my first fault domain"
 
-        New-ClusterSetFaultDomain -Name FD2 -FdType Logical -CimSession CSMASTER -MemberCluster CLUSTER3,CLUSTER4 -Description "This is my second fault domain"
+New-ClusterSetFaultDomain -Name FD2 -FdType Logical -CimSession CSMASTER -MemberCluster CLUSTER3,CLUSTER4 -Description "This is my second fault domain"
+```
 
 성공적으로 만들어졌는지 확인 하려면 출력을 표시 한 상태로 Get ClusterSetFaultDomain을 실행할 수 있습니다.
 
-        PS C:\> Get-ClusterSetFaultDomain -CimSession CSMASTER -FdName FD1 | fl *
+```PowerShell
+PS C:\> Get-ClusterSetFaultDomain -CimSession CSMASTER -FdName FD1 | fl *
 
-        PSShowComputerName    : True
-        FaultDomainType       : Logical
-        ClusterName           : {CLUSTER1, CLUSTER2}
-        Description           : This is my first fault domain
-        FDName                : FD1
-        Id                    : 1
-        PSComputerName        : CSMASTER
+PSShowComputerName    : True
+FaultDomainType       : Logical
+ClusterName           : {CLUSTER1, CLUSTER2}
+Description           : This is my first fault domain
+FDName                : FD1
+Id                    : 1
+PSComputerName        : CSMASTER
+```
 
 이제 장애 도메인을 만들었으므로 가용성 집합을 만들어야 합니다.
 
-        New-ClusterSetAvailabilitySet -Name CSMASTER-AS -FdType Logical -CimSession CSMASTER -ParticipantName FD1,FD2
+```PowerShell
+New-ClusterSetAvailabilitySet -Name CSMASTER-AS -FdType Logical -CimSession CSMASTER -ParticipantName FD1,FD2
+```
 
 유효성을 검사 하려면 다음을 사용 합니다.
 
-        Get-ClusterSetAvailabilitySet -AvailabilitySetName CSMASTER-AS -CimSession CSMASTER
+```PowerShell
+Get-ClusterSetAvailabilitySet -AvailabilitySetName CSMASTER-AS -CimSession CSMASTER
+```
 
 새 가상 컴퓨터를 만들 때 최적 노드를 결정 하는 과정에서-가용성 집합 매개 변수를 사용 해야 합니다.  그러면 다음과 같이 표시 됩니다.
 
-        # Identify the optimal node to create a new virtual machine
-        $memoryinMB=4096
-        $vpcount = 1
-        $av = Get-ClusterSetAvailabilitySet -Name CSMASTER-AS -CimSession CSMASTER
-        $targetnode = Get-ClusterSetOptimalNodeForVM -CimSession CSMASTER -VMMemory $memoryinMB -VMVirtualCoreCount $vpcount -VMCpuReservation 10 -AvailabilitySet $av
-        $secure_string_pwd = convertto-securestring "<password>" -asplaintext -force
-        $cred = new-object -typename System.Management.Automation.PSCredential ("<domain\account>",$secure_string_pwd)
+```PowerShell
+# Identify the optimal node to create a new virtual machine
+$memoryinMB=4096
+$vpcount = 1
+$av = Get-ClusterSetAvailabilitySet -Name CSMASTER-AS -CimSession CSMASTER
+$targetnode = Get-ClusterSetOptimalNodeForVM -CimSession CSMASTER -VMMemory $memoryinMB -VMVirtualCoreCount $vpcount -VMCpuReservation 10 -AvailabilitySet $av
+$secure_string_pwd = convertto-securestring "<password>" -asplaintext -force
+$cred = new-object -typename System.Management.Automation.PSCredential ("<domain\account>",$secure_string_pwd)
+```
 
 다양 한 수명 주기 때문에 클러스터 집합에서 클러스터를 제거 합니다. 클러스터 집합에서 클러스터를 제거 해야 하는 경우가 있습니다. 모든 클러스터 집합 가상 머신은 클러스터에서 이동 해야 하는 것이 가장 좋습니다. 이는 **이동 ClusterSetVM** 및 **vmstorage** 명령을 사용 하 여 수행할 수 있습니다.
 
@@ -322,9 +372,11 @@ VMStorage 이동에 대 한 자세한 내용은이 [링크](https://docs.microso
 
 예를 들어 클러스터 집합에서 CLUSTER1 클러스터를 제거 하는 명령은 다음과 같습니다.
 
-        Remove-ClusterSetMember -ClusterName CLUSTER1 -CimSession CSMASTER
+```PowerShell
+Remove-ClusterSetMember -ClusterName CLUSTER1 -CimSession CSMASTER
+```
 
-## <a name="frequently-asked-questions-faq"></a>FAQ(질문과 대답)
+## <a name="frequently-asked-questions-faq"></a>질문과 대답(FAQ)
 
 **질문:** 내 클러스터 집합에서 하이퍼 수렴 형 클러스터만 사용 하도록 제한 됩니까? <br>
 **답변:** 아니요.  기존 클러스터와 스토리지 공간 다이렉트 혼합할 수 있습니다.
@@ -356,7 +408,7 @@ VMStorage 이동에 대 한 자세한 내용은이 [링크](https://docs.microso
 **답변:** 아니요, 논리적 장애 도메인 내에서 클러스터 간 장애 조치 (failover)는 아직 지원 되지 않습니다. 
 
 **질문:** 내 클러스터 집합에서 여러 사이트 (또는 DNS 도메인)에 클러스터를 확장할 수 있나요? <br> 
-**대답:** 이는 테스트 되지 않은 시나리오 이며 프로덕션 지원에 대해 즉시 계획 되지 않습니다. 이 시나리오가 중요 한 것과 사용 방법에 대해 Microsoft에 알려 주십시오.
+**답변:** 이는 테스트 되지 않은 시나리오 이며 프로덕션 지원에 대해 즉시 계획 되지 않습니다. 이 시나리오가 중요 한 것과 사용 방법에 대해 Microsoft에 알려 주십시오.
 
 **질문:** 클러스터가 i p v 6에서 작동 하나요? <br>
 **답변:** IPv4 및 IPv6 모두 장애 조치 (Failover) 클러스터와 함께 클러스터 집합에서 지원 됩니다.

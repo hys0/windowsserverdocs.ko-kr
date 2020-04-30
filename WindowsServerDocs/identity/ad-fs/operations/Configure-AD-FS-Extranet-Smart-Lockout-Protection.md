@@ -8,12 +8,12 @@ ms.date: 05/20/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 28f7fc4a8c7129d9f88cc030b1b150db44321bf9
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 843ed0b3ebf25d662d0b90c17f8fe23548829a7e
+ms.sourcegitcommit: 371e59315db0cca5bdb713264a62b215ab43fd0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80859946"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82192607"
 ---
 # <a name="ad-fs-extranet-lockout-and-extranet-smart-lockout"></a>AD FS 엑스트라넷 잠금 및 엑스트라넷 스마트 잠금
 
@@ -34,7 +34,7 @@ AD FS 2019의 엑스트라넷 스마트 잠금은 AD FS 2016에 비해 다음과
 ### <a name="configuration-information"></a>구성 정보
 ESL를 사용 하는 경우 아티팩트 데이터베이스 AdfsArtifactStore의 새 테이블이 만들어지고 AD FS 팜에서 "사용자 활동" 마스터로 노드가 선택 됩니다. WID 구성에서이 노드는 항상 주 노드입니다. SQL 구성에서는 하나의 노드가 사용자 활동 마스터로 선택 됩니다.  
 
-사용자 활동 마스터로 선택 된 노드를 봅니다. AdfsFarmInformation. FarmRoles
+사용자 활동 마스터로 선택 된 노드를 봅니다. (AdfsFarmInformation). FarmRoles
 
 모든 보조 노드는 포트 80을 통해 새로 로그인 할 때마다 마스터 노드에 연결 하 여 잘못 된 암호 수와 친숙 한 새 위치 값의 최신 값을 알아보고 로그인이 처리 된 후 해당 노드를 업데이트 합니다.
 
@@ -57,7 +57,7 @@ ESL를 사용 하는 경우 아티팩트 데이터베이스 AdfsArtifactStore의
 IPv4 및 IPv6 주소가 지원 됩니다.
 
 ### <a name="anatomy-of-a-transaction"></a>트랜잭션 분석
-- **사전 인증 확인**: 인증 요청 중에 ESL은 표시 된 모든 ip를 확인 합니다. 이러한 ip는 네트워크 IP, 전달 된 IP 및 선택적인 x 전달-IP의 조합입니다. 감사 로그에서 이러한 Ip는 x-m 전달-클라이언트 ip, x로 전달 된----------ip의 순서로 <IpAddress> 필드에 나열 됩니다.
+- **사전 인증 확인**: 인증 요청 중에 ESL은 표시 된 모든 ip를 확인 합니다. 이러한 ip는 네트워크 IP, 전달 된 IP 및 선택적인 x 전달-IP의 조합입니다. 감사 로그에서 이러한 Ip는 x-m-전달 <IpAddress> -클라이언트-ip, x--------------ip의 순서로 필드에 나열 됩니다.
 
   ADFS는 이러한 Ip를 기반으로 요청이 친숙 한 위치 또는 익숙하지 않은 위치에서 온 것인지를 확인 한 다음 각 badPwdCount가 설정 된 임계값 제한 보다 작음을 확인 하거나 마지막으로 **실패** 한 시도가 관찰 창 시간 프레임 보다 오래 발생 했는지 확인 합니다. 이러한 조건 중 하나가 true 이면 ADFS는 추가 처리 및 자격 증명 유효성 검사를 위해이 트랜잭션을 허용 합니다. 두 조건이 모두 false 이면 관찰 창이 통과할 때까지 계정이 이미 잠긴 상태입니다. 관찰 창이 전달 된 후에는 사용자가 인증을 시도할 수 있습니다. 2019에서 ADFS는 IP 주소가 친숙 한 위치와 일치 하는지 여부에 따라 적절 한 임계값 제한을 확인 합니다.
 - **성공한 로그인**: 로그인이 성공 하면 요청의 ip가 사용자의 친숙 한 위치 IP 목록에 추가 됩니다.  
@@ -144,7 +144,7 @@ AccountActivity 테이블은 ' 로그 전용 ' 모드 및 ' 적용 ' 모드로 �
 이 기능을 사용 하면 보안 감사 로그가 사용 되므로 AD FS에서 감사를 사용 하도록 설정 하 고 모든 AD FS 서버의 로컬 정책에 대해 감사를 사용 하도록 설정 해야 합니다.
 
 ### <a name="configuration-instructions"></a>구성 지침
-엑스트라넷 스마트 잠금은 ADFS 속성 **ExtranetLockoutEnabled**를 사용 합니다. 이 속성은 이전에 Server 2012R2 2의 "엑스트라넷 소프트 잠금"을 제어 하는 데 사용 되었습니다. 엑스트라넷 소프트 잠금이 사용 하도록 설정 된 경우 현재 속성 구성을 보려면 ` Get-AdfsProperties`를 실행 합니다.
+엑스트라넷 스마트 잠금은 ADFS 속성 **ExtranetLockoutEnabled**를 사용 합니다. 이 속성은 이전에 Server 2012R2 2의 "엑스트라넷 소프트 잠금"을 제어 하는 데 사용 되었습니다. 엑스트라넷 소프트 잠금이 사용 하도록 설정 된 경우 현재 속성 구성을 보려면를 실행 ` Get-AdfsProperties` 합니다.
 
 ### <a name="configuration-recommendations"></a>구성 권장 사항
 엑스트라넷 스마트 잠금을 구성할 때 임계값 설정에 대 한 모범 사례를 따릅니다.  
@@ -236,9 +236,13 @@ AD FS는 계정 활동 데이터를 관리 하는 세 가지 cmdlet을 제공 �
 ## <a name="event-logging--user-activity-information-for-ad-fs-extranet-lockout"></a>AD FS 엑스트라넷 잠금에 대 한 사용자 활동 정보를 & 이벤트 로깅
 
 ### <a name="connect-health"></a>Connect Health
-사용자 계정 작업을 모니터링 하는 데 권장 되는 방법은 Connect Health를 사용 하는 것입니다. Connect Health는 위험한 Ip에 대 한 다운로드 가능한 보고와 잘못 된 암호 시도를 생성 합니다. 위험한 IP 보고서의 각 항목에는 지정 된 임계값을 초과 하는 실패 한 AD FS 로그인 활동에 대 한 집계 정보가 표시 됩니다. 사용자 지정 가능한 메일 설정에서이 문제가 발생 하는 즉시 경고 관리자에 게 전자 메일 알림을 설정할 수 있습니다. 추가 정보 및 설정 지침은 [Connect Health 설명서](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-health-adfs)를 참조 하세요.
+사용자 계정 작업을 모니터링 하는 데 권장 되는 방법은 Connect Health를 사용 하는 것입니다. Connect Health는 위험한 Ip에 대 한 다운로드 가능한 보고와 잘못 된 암호 시도를 생성 합니다. 위험한 IP 보고서의 각 항목에는 지정된 임계값을 초과하는 실패한 AD FS 로그인 활동에 대한 집계 정보가 표시됩니다. 사용자 지정 가능한 메일 설정에서이 문제가 발생 하는 즉시 경고 관리자에 게 전자 메일 알림을 설정할 수 있습니다. 추가 정보 및 설정 지침은 [Connect Health 설명서](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-health-adfs)를 참조 하세요.
 
 ### <a name="ad-fs-extranet-smart-lockout-events"></a>엑스트라넷 스마트 잠금 이벤트를 AD FS 합니다.
+
+>[!NOTE]
+> [AD FS 지원 엑스트라넷 잠금 문제 해결 가이드](https://adfshelp.microsoft.com/TroubleshootingGuides/Workflow/a73d5843-9939-4c03-80a1-adcbbf3ccec8) 를 사용 하 여 엑스트라넷 스마트 잠금 문제 해결
+
 엑스트라넷 스마트 잠금 이벤트를 작성 하려면 ' 로그 전용 ' 또는 ' 강제 적용 ' 모드에서 ESL를 사용 하도록 설정 하 고 ADFS 보안 감사를 사용 하도록 설정 해야 합니다.
 AD FS는 보안 감사 로그에 엑스트라넷 잠금 이벤트를 기록 합니다.
 - 사용자가 잠겨 있는 경우 (실패 한 로그인 시도에 대 한 잠금 임계값에 도달)
@@ -266,11 +270,11 @@ A: ADFS 스마트 잠금이 ' 강제 적용 ' 모드로 설정 되어 있으면 
 
 **ESL가 사용 하도록 설정 되 고 잘못 된 행위자에 사용자 암호가 있나요?** 
 
-A: 무차별 암호 대입 공격 시나리오의 일반적인 목표는 암호를 추측 하 고 성공적으로 로그인 하는 것입니다.  사용자가 피싱 하거나 암호를 추측 하는 경우 로그인이 올바른 암호와 새 IP의 "성공" 조건을 충족 하기 때문에 ESL 기능은 액세스를 차단 하지 않습니다. 그러면 잘못 된 행위자 IP가 "친숙 한" 것으로 나타납니다. 이 시나리오에서 가장 좋은 완화 방법은 ADFS의 사용자 활동을 지우고 사용자에 대해 Multi-factor Authentication을 요구 하는 것입니다. 추측할 암호가 시스템에 표시 되지 않도록 하는 AAD 암호 보호를 설치 하는 것이 좋습니다.
+A: 무차별 암호 대입 공격 시나리오의 일반적인 목표는 암호를 추측 하 고 성공적으로 로그인 하는 것입니다.사용자가 피싱 하거나 암호를 추측 하는 경우 로그인이 올바른 암호와 새 IP의 "성공" 조건을 충족 하기 때문에 ESL 기능은 액세스를 차단 하지 않습니다. 그러면 잘못 된 행위자 IP가 "친숙 한" 것으로 나타납니다.이 시나리오에서 가장 좋은 완화 방법은 ADFS의 사용자 활동을 지우고 사용자에 대해 Multi-factor Authentication을 요구 하는 것입니다. 추측할 암호가 시스템에 표시 되지 않도록 하는 AAD 암호 보호를 설치 하는 것이 좋습니다.
 
 **사용자가 IP에서 성공적으로 로그인 한 적이 없는 경우 잘못 된 암호를 사용 하 여 마지막으로 암호를 올바르게 입력 하면 로그인 할 수 있나요?** 
 
-A: 사용자가 잘못 된 암호를 여러 개 제출 하는 경우 (즉, 합법적인 mis를 입력 하는 경우) 다음 시도에서 암호를 올바르게 입력 하면 사용자는 즉시 로그인이 성공 합니다.  그러면 잘못 된 암호 수가 삭제 되 고 해당 IP가 FamiliarIPs 목록에 추가 됩니다.  그러나 알 수 없는 위치에서 실패 한 로그인의 임계값을 초과 하는 경우 잠금 상태로 전환 되며 관찰 창에서 대기 하 고 유효한 암호로 로그인 하거나 관리자의 개입이 있어야만 계정을 다시 설정할 수 있습니다.  
+A: 사용자가 잘못 된 암호를 여러 개 제출 하는 경우 (즉, 합법적인 mis를 입력 하는 경우) 다음 시도에서 암호를 올바르게 입력 하면 사용자는 즉시 로그인이 성공 합니다. 그러면 잘못 된 암호 수가 삭제 되 고 해당 IP가 FamiliarIPs 목록에 추가 됩니다.그러나 알 수 없는 위치에서 실패 한 로그인의 임계값을 초과 하는 경우 잠금 상태로 전환 되며 관찰 창에서 대기 하 고 유효한 암호로 로그인 하거나 관리자의 개입이 있어야만 계정을 다시 설정할 수 있습니다.  
  
 **ESL도 인트라넷에서 작동 하나요?**
 
@@ -278,10 +282,10 @@ A: 클라이언트가 ADFS 서버에 직접 연결 하 고 웹 응용 프로그�
 
 **클라이언트 IP 필드에 Microsoft IP 주소가 표시 됩니다. ESL에서 프록시 무차별 암호 대입 공격을 차단 하나요?**  
 
-A: ESL는 Exchange Online 또는 기타 레거시 인증 무작위 공격 시나리오를 방지 하는 데 효과적입니다. 레거시 인증에는 00000000-0000-0000-0000-000000000000의 "작업 ID"가 있습니다. 이러한 공격에서 잘못 된 행위자는 Exchange Online 기본 인증 (레거시 인증이 라고도 함)을 활용 하 여 클라이언트 IP 주소가 Microsoft 하나로 표시 되도록 합니다. 클라우드의 Exchange online 서버는 Outlook 클라이언트를 대신 하 여 인증 확인을 합니다. 이러한 시나리오에서 악의적인 제출자의 IP 주소는 x-ms로 전달 된-클라이언트 ip에 있고 Microsoft Exchange Online server IP는 x-m-클라이언트 ip 값에 있습니다.
+A: ESL는 Exchange Online 또는 기타 레거시 인증 무작위 공격 시나리오를 방지 하는 데 효과적입니다. 레거시 인증에는 00000000-0000-0000-0000-000000000000의 "작업 ID"가 있습니다.이러한 공격에서 잘못 된 행위자는 Exchange Online 기본 인증 (레거시 인증이 라고도 함)을 활용 하 여 클라이언트 IP 주소가 Microsoft 하나로 표시 되도록 합니다. 클라우드의 Exchange online 서버는 Outlook 클라이언트를 대신 하 여 인증 확인을 합니다. 이러한 시나리오에서 악의적인 제출자의 IP 주소는 x-ms로 전달 된-클라이언트 ip에 있고 Microsoft Exchange Online server IP는 x-m-클라이언트 ip 값에 있습니다.
 엑스트라넷 스마트 잠금은 네트워크 ip, 전달 된 ip, x로 전달 된 클라이언트 IP 및 x-m-클라이언트 ip 값을 확인 합니다. 요청에 성공 하면 모든 Ip가 친숙 한 목록에 추가 됩니다. 요청이 표시 되 고 제공 된 Ip가 친숙 한 목록에 없는 경우 요청은 익숙하지 않은 것으로 표시 됩니다. 친숙 한 사용자는 잘 로그인 할 수 있지만, 익숙하지 않은 위치의 요청은 차단 됩니다.  
 
-\* * Q: ESL를 사용 하기 전에 ADFSArtifactStore 크기를 예측할 수 있나요?
+* * Q: ESL를 사용 하기 전에 ADFSArtifactStore 크기를 예측할 수 있나요?
 
 A: ESL를 사용 하도록 설정 하면 ADFSArtifactStore 데이터베이스의 사용자에 대 한 계정 작업 및 알려진 위치를 추적 AD FS 합니다. 이 데이터베이스는 추적된 사용자 및 알려진 위치의 수를 기준으로 크기를 조정합니다. ESL을 사용하도록 계획하는 경우 ADFSArtifactStore 데이터베이스의 크기가 사용자 100,000명당 최대 1GB의 속도로 확장한다고 예측할 수 있습니다. AD FS 팜이 WID (Windows 내부 데이터베이스)를 사용 하는 경우 데이터베이스 파일의 기본 위치는 C:\Windows\WID\Data\.입니다. 이 드라이브를 채우지 않도록 방지하려면 ESL을 사용하도록 설정하기 전에 최소 5GB의 사용 가능한 스토리지가 있어야 합니다. 디스크 스토리지 외에도 500,000명 이하의 사용자 인구에 대해 최대 1GB의 RAM을 추가하여 ESL을 사용하도록 설정한 후 총 프로세스 메모리를 늘리도록 계획합니다.
 
