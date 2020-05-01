@@ -8,12 +8,12 @@ ms.author: jeffrew
 ms.localizationpriority: medium
 ms.prod: windows-server
 ms.date: 06/07/2019
-ms.openlocfilehash: 5c9e8b7e1e11deaa82fbec6f451b4f194609c299
-ms.sourcegitcommit: 1d83ca198c50eef83d105151551c6be6f308ab94
+ms.openlocfilehash: d7dc3455c5d7c6b00940008ceea646436b40bed0
+ms.sourcegitcommit: e51dd9dabec82c59e805e7a04c27e56c83773857
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/30/2020
-ms.locfileid: "82605553"
+ms.locfileid: "82613735"
 ---
 # <a name="windows-admin-center-known-issues"></a>Windows 관리 센터의 알려진 문제
 
@@ -28,6 +28,8 @@ ms.locfileid: "82605553"
 - 1024 미만의 포트 사용은 지원 되지 않습니다. 서비스 모드에서는 지정 된 포트로 리디렉션하도록 포트 80을 선택적으로 구성할 수 있습니다.
 
 ## <a name="general"></a>일반
+
+- Windows 관리 센터 1910.2 릴리스에서는 특정 하드웨어에서 Hyper-v 서버에 연결할 수 없습니다. 이 문제가 발생 하는 경우 [이전 빌드를 다운로드 하세요](https://aka.ms/wacprevious). 
 
 - Windows 관리 센터를 사용 중인 **Windows Server 2016** 에 게이트웨이로 설치한 경우 서비스는 및 ```Faulting application name: sme.exe``` ```Faulting module name: WsmSvc.dll```를 포함 하는 이벤트 로그에서 오류로 인해 중단 될 수 있습니다. 이 문제는 Windows Server 2019에서 수정 된 버그로 인해 발생 합니다. Windows Server 2016에 대 한 패치는 2 월 2019 누적 업데이트 [KB4480977](https://www.catalog.update.microsoft.com/Search.aspx?q=4480977)에 포함 되었습니다.
 
