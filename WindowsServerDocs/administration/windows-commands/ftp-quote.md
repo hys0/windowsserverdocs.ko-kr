@@ -1,6 +1,6 @@
 ---
 title: ftp 견적
-description: '\* * * *에 대 한 Windows 명령 항목'
+description: '* * * *에 대 한 참조 항목'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1bf13704150d602fbfa4e3b1a3fb1774d3bf7363
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 1101dd6a5fa163df8d43d182e9d0dfe66e340b60
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80843036"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82725148"
 ---
 # <a name="ftp-quote"></a>ftp: 따옴표
 
->적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 축 자 인수를 원격 ftp 서버에 보냅니다. 단일 ftp 회신 코드가 반환 됩니다.   
 ## <a name="syntax"></a>구문  
@@ -31,9 +31,9 @@ quote <Argument>[ ]
 |------------|---------------------------------------------------|
 | <Argument> | Ftp 서버에 보낼 인수를 지정 합니다. |
 
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
 **견적** 명령은 동일 합니다는 **리터럴** 명령입니다.  
-## <a name="examples"></a><a name=BKMK_Examples></a>예와  
+## <a name="examples"></a>예  
 **Quit** 명령을 원격 ftp 서버에 보냅니다.  
 ```  
 quote quit  

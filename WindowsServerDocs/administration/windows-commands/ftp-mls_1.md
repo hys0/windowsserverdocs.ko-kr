@@ -1,6 +1,6 @@
 ---
 title: ftp mls_1
-description: '\* * * *에 대 한 Windows 명령 항목'
+description: '* * * *에 대 한 참조 항목'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ca3b8e04dd4a152b2d1bf8ce1ca8006d70186116
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 27f74d4c1d03cb4d9f665566f69485e80f8eccdc
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80843296"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82725202"
 ---
 # <a name="ftp-mls_1"></a>ftp: mls_1
 
->적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 원격 디렉터리에서 파일 및 하위 디렉터리의 축약 된 목록을 표시 합니다.   
 ## <a name="syntax"></a>구문  
@@ -32,12 +32,12 @@ mls <remoteFile>[ ] <LocalFile>
 | <remoteFile> | 목록을 보려는 파일을 지정 합니다. |
 | <LocalFile>  |  목록을 저장할 로컬 파일을 지정 합니다.  |
 
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
 - *Remotefiles* 지정  
-  원격 컴퓨터에서 현재 작업 디렉터리를 사용 하려면 하이픈 ( **-** )을 입력 합니다.  
+  원격 컴퓨터에서 현재**-** 작업 디렉터리를 사용 하려면 하이픈 ()을 입력 합니다.  
 - *Localfile* 지정  
-  화면에 목록을 표시 하려면 하이픈 ( **-** )을 입력 합니다.  
-  ## <a name="examples"></a><a name=BKMK_Examples></a>예와  
+  하이픈 (**-**)을 입력 하 여 화면에 목록을 표시 합니다.  
+  ## <a name="examples"></a>예  
   **Dir1** 및 **dir2**에 대 한 파일 및 하위 디렉터리의 축약 된 목록을 표시 합니다.  
   ```  
   mls dir1 dir2 -  

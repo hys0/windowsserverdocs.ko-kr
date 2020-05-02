@@ -1,6 +1,6 @@
 ---
 title: getmac
-description: '\* * * *에 대 한 Windows 명령 항목'
+description: '* * * *에 대 한 참조 항목'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6b593bf61bb08d2c1c7868b1bbb175ed64a8bcf7
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 1fa37f558b454388b8451629ef96584ab8da0c3d
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80842616"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82724980"
 ---
 # <a name="getmac"></a>getmac
 
->적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 반환 미디어 제어 (MAC) 주소 및 네트워크 프로토콜에 연결 된 각 컴퓨터에 모든 네트워크 카드에 대 한 각 주소 하거나 로컬 또는 네트워크를 통해 목록에 액세스 합니다. 
 ## <a name="syntax"></a>구문
@@ -29,17 +29,17 @@ getmac[.exe][/s <computer> [/u <Domain\<User> [/p <Password>]]][/fo {TABLE | lis
 
 |             매개 변수              |                                                                                          설명                                                                                          |
 |------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|           /s <computer>            |                                      이름 또는 원격 컴퓨터의 IP 주소를 지정 합니다 (백슬래시를 사용 하지 않습니다). 기본값은 로컬 컴퓨터입니다.                                       |
-|        /u <Domain>\\<User>         | 사용자 또는 도메인 \ 사용자가 지정 된 사용자의 계정 권한으로 명령을 실행 합니다. 기본값은 현재 로그온 된 명령을 실행 하는 컴퓨터에서 사용자의 사용 권한. |
-|           /p <Password>            |                                                     에 지정 된 사용자 계정의 암호를 지정 된 **/u** 매개 변수입니다.                                                     |
-| /fo {테이블 &#124; 목록&#124; CSV} |                       쿼리 출력에 사용할 형식을 지정 합니다. 유효한 값은 **TABLE**, **list**및 **CSV**입니다. 출력에 대 한 기본 형식은 **테이블**합니다.                        |
-|                /nh                 |                                             출력에서 열 머리글을 표시 하지 않습니다. 유효한 경우에는 **/fo** 매개 변수는 설정 **테이블** 또는 **CSV**합니다.                                              |
+|           /s<computer>            |                                      이름 또는 원격 컴퓨터의 IP 주소를 지정 합니다 (백슬래시를 사용 하지 않습니다). 기본값은 로컬 컴퓨터입니다.                                       |
+|        /u<Domain>\\<User>         | 사용자 또는 도메인 \ 사용자가 지정 된 사용자의 계정 권한으로 명령을 실행 합니다. 기본값은 현재 로그온 된 명령을 실행 하는 컴퓨터에서 사용자의 사용 권한. |
+|           /p<Password>            |                                                     에 지정 된 사용자 계정의 암호를 지정 된 **/u** 매개 변수입니다.                                                     |
+| /fo {테이블 &#124; 목록&#124; CSV} |                       쿼리 출력에 사용할 형식을 지정 합니다. 유효한 값은 **TABLE**, **list**및 **CSV**입니다. 출력의 기본 형식은 **TABLE**입니다.                        |
+|                /nh                 |                                             출력에서 열 머리글을 표시 하지 않습니다. **/Fo** 매개 변수가 **TABLE** 또는 **CSV**로 설정 된 경우에 유효 합니다.                                              |
 |                 /v                 |                                                                    출력이 자세한 정보를 표시 하도록 지정 합니다.                                                                     |
 |                 /?                 |                                                                                                                                                                                               |
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 **getmac** 는 네트워크 분석기에 MAC 주소를 입력 하거나 컴퓨터의 각 네트워크 어댑터에서 현재 사용 중인 프로토콜을 알아야 할 때 유용할 수 있습니다.
-## <a name="examples"></a><a name=BKMK_Examples></a>예와
+## <a name="examples"></a>예
 다음 예제에서는 사용 하는 방법을 보여는 **getmac** 명령:
 ```
 getmac /fo table /nh /v

@@ -1,6 +1,6 @@
 ---
 title: 작성기 나열
-description: '\* * * *에 대 한 Windows 명령 항목'
+description: '* * * *에 대 한 참조 항목'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1e12c4f36c3fd840b7b37b12d9f4171429e5a52d
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: ef7fa0bd6e9857e22994178849e49afeb3305a2a
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80841116"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82724482"
 ---
 # <a name="list-writers"></a>작성기 나열
 
@@ -22,7 +22,7 @@ ms.locfileid: "80841116"
 
 시스템에는 작성기를 나열 합니다. 매개 변수 없이 사용 하는 경우 **목록** 출력을 표시 **메타 데이터를 목록** 기본적으로 합니다.
 
-이 명령을 사용하는 방법의 예는 [예](#BKMK_examples)를 참조하세요.
+
 
 ## <a name="syntax"></a>구문
 
@@ -35,10 +35,10 @@ list writers [metadata | detailed | status]
 |매개 변수|설명|
 |---------|-----------|
 |metadata|Id 및 기록기의 상태를 나열 하 고 구성 요소 세부 정보 및 제외 된 파일 등의 메타 데이터를 표시 합니다. 이것이 기본 매개 변수입니다.|
-|상세|와 동일한 정보를 나열 **메타 데이터**, 하지만 **자세한** 모든 구성 요소에 대 한 전체 파일 목록이 포함 됩니다.|
+|자세한|와 동일한 정보를 나열 **메타 데이터**, 하지만 **자세한** 모든 구성 요소에 대 한 전체 파일 목록이 포함 됩니다.|
 |상태|Id 및 등록 된 기록기의 상태를 나열합니다.|
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 
 Id 및 기록기의 상태를 나열 하려면 다음을 입력 합니다.
 ```

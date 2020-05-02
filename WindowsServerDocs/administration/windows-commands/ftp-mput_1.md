@@ -1,6 +1,6 @@
 ---
 title: ftp mput_1
-description: '\* * * *에 대 한 Windows 명령 항목'
+description: '* * * *에 대 한 참조 항목'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 489e18da937e12a1fc69e0ee84d9dda00309ccd6
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: b3fb654d5a2f44b9b63238abdbaee8d6a0294861
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80843236"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82725223"
 ---
 # <a name="ftp-mput_1"></a>ftp: mput_1
 
->적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 현재 파일 전송 형식을 사용 하 여 원격 컴퓨터에 로컬 파일을 복사 합니다.   
 ## <a name="syntax"></a>구문  
@@ -31,7 +31,7 @@ mput <LocalFile>[ ]
 |-------------|----------------------------------------------------------|
 | <LocalFile> | 원격 컴퓨터에 복사할 로컬 파일을 지정 합니다. |
 
-## <a name="examples"></a><a name=BKMK_Examples></a>예와  
+## <a name="examples"></a>예  
 현재 파일 전송 형식을 사용 하 여 **Program1** 및 **program2.c** 을 원격 컴퓨터에 복사 합니다.  
 ```  
 mput Program1.exe Program2.exe  

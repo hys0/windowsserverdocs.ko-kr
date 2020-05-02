@@ -1,6 +1,6 @@
 ---
 title: 'ksetup: delrealmflags'
-description: '\* * * *에 대 한 Windows 명령 항목'
+description: '* * * *에 대 한 참조 항목'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,18 +9,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a082b2798ffafaca96c19590f02c94b380c3e779
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 9ba11f6c06f9479be584d847d77adf0a3142b94a
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80841606"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82724662"
 ---
 # <a name="ksetupdelrealmflags"></a>ksetup: delrealmflags
 
 
 
-지정 된 영역에서 영역 플래그를 제거 합니다.  이 명령을 사용할 수 있는 방법을의 예 참조 [예제](#BKMK_Examples)합니다.
+지정 된 영역에서 영역 플래그를 제거 합니다. 
 
 ## <a name="syntax"></a>구문
 
@@ -32,27 +32,27 @@ ksetup /delrealmflags <RealmName> [sendaddress] [tcpsupported] [delegate] [ncsup
 
 |매개 변수|설명|
 |---------|-----------|
-|\<RealmName >|영역 이름은 CORP와 같은 대문자 DNS 이름으로 명시 됩니다. CONTOSO.COM는 **Ksetup** 가 실행 될 때 기본 영역으로 나열 됩니다.|
+|\<RealmName>|영역 이름은 CORP와 같은 대문자 DNS 이름으로 명시 됩니다. CONTOSO.COM는 **Ksetup** 가 실행 될 때 기본 영역으로 나열 됩니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 영역 플래그는 Windows Server 운영 체제를 기반으로 하지 않는 Kerberos 영역의 추가 기능을 지정 합니다. Windows server 2003, Windows Server 2008 또는 Windows Server 2008 r 2를 실행 하는 컴퓨터는 Kerberos 서버를 사용 하 여 Windows Server 운영 체제를 실행 하는 도메인을 사용 하는 대신 Kerberos 서버를 사용 하 여 인증을 관리할 수 있으며, 이러한 시스템은 Kerberos 영역에 참여 합니다. 이 항목은 영역의 기능을 설정 합니다. 다음 표에서는 각에 대해 설명 합니다.
 
 |값|영역 플래그|설명|
 |-----|----------|-----------|
 |0xF를 지정합니다.|모두|모든 영역 플래그를 설정 합니다.|
-|0x00|없음|영역 플래그는 설정 되지 않으며 추가 기능을 사용할 수 없습니다.|
+|0x00|None|영역 플래그는 설정 되지 않으며 추가 기능을 사용할 수 없습니다.|
 |0x01|SendAddress|IP 주소는 티켓 부여 티켓에 포함 됩니다.|
 |0x02|TcpSupported|이 영역에서는 TCP (전송 제어 프로토콜)와 UDP (사용자 데이터 그램 프로토콜)가 모두 지원 됩니다.|
-|0x04|대리자|이 영역에 있는 모든 사용자는 위임용으로 트러스트 됩니다.|
+|0x04|대리자(delegate)|이 영역에 있는 모든 사용자는 위임용으로 트러스트 됩니다.|
 |0x08|NcSupported|이 영역은 DNS 및 영역 명명 표준을 허용 하는 이름 정규화를 지원 합니다.|
 |0x80|RC4|이 영역 TLS 사용에 대 한 수 있는 상호 영역 트러스트를 사용 하도록 설정 하려면 RC4 암호화를 지원 합니다.|
 
-영역 플래그는 **HKEY_LOCAL_MACHINE \system\currentcontrolset\control\lsa\kerberos\domains\\** <em>RealmName</em>의 레지스트리에 저장 됩니다. 이 항목은 기본적으로 레지스트리에 없습니다. [Ksetup: addrealmflags](ksetup-addrealmflags.md) 명령을 사용 하 여 레지스트리를 채울 수 있습니다.
+영역 플래그는 **HKEY_LOCAL_MACHINE \system\currentcontrolset\control\lsa\kerberos\domains\\**<em>RealmName</em>의 레지스트리에 저장 됩니다. 이 항목은 기본적으로 레지스트리에 없습니다. [Ksetup: addrealmflags](ksetup-addrealmflags.md) 명령을 사용 하 여 레지스트리를 채울 수 있습니다.
 
 **Ksetup** 또는 **ksetup/dvstate**의 출력을 확인 하 여 사용할 수 있는 영역 플래그와 설정 된 영역 플래그를 확인할 수 있습니다.
 
-## <a name="examples"></a><a name=BKMK_Examples></a>예와
+## <a name="examples"></a>예
 
 CONTOSO 영역에 사용할 수 있는 영역 플래그를 나열 합니다.
 ```

@@ -1,6 +1,6 @@
 ---
 title: ftp remotehelp_1
-description: '\* * * *에 대 한 Windows 명령 항목'
+description: '* * * *에 대 한 참조 항목'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3c4a4ffec01fce5cde8b2aa9dd1fa0704f3a85ff
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: dc4affb3f04eadaa4e0005e5edce0f564156f64a
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80843056"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82725129"
 ---
 # <a name="ftp-remotehelp_1"></a>ftp: remotehelp_1
 
->적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 원격 명령에 대 한 도움말을 표시 합니다.   
 ## <a name="syntax"></a>구문  
@@ -29,9 +29,9 @@ remotehelp [<Command>]
 |매개 변수|설명|  
 |-------|--------|  
 |[<Command>]|도움말을 원하는 명령의 이름을 지정 합니다. 경우 *명령* 를 지정 하지 않으면 **ftp** 모든 원격 명령 목록이 표시 됩니다.|  
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
 사용 하 여 원격 명령을 실행 하면 **견적** 또는 **리터럴**합니다.  
-## <a name="examples"></a><a name=BKMK_Examples></a>예와  
+## <a name="examples"></a>예  
 원격 명령 목록을 표시 합니다.  
 ```  
 remotehelp  

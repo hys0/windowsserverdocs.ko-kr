@@ -1,6 +1,6 @@
 ---
 title: ftp 상태
-description: '\* * * *에 대 한 Windows 명령 항목'
+description: '* * * *에 대 한 참조 항목'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 03d294271059103c1291b66debd1071ee1b45cee
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 0dda330eb15a76b00266f89b9e478c1ed16e5a82
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80842906"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82725097"
 ---
 # <a name="ftp-status"></a>ftp: 상태
 
->적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Ftp 연결의 현재 상태를 표시 합니다.   
 ## <a name="syntax"></a>구문  
@@ -26,8 +26,8 @@ Ftp 연결의 현재 상태를 표시 합니다.
 status  
 ```  
 #### <a name="parameters"></a>매개 변수  
-없음  
-## <a name="examples"></a><a name=BKMK_Examples></a>예와  
+none  
+## <a name="examples"></a>예  
 Ftp 연결의 현재 상태를 표시 합니다.  
 ```  
 status  

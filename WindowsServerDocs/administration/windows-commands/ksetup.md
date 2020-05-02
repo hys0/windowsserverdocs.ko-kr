@@ -1,6 +1,6 @@
 ---
 title: ksetup
-description: '\* * * *에 대 한 Windows 명령 항목'
+description: '* * * *에 대 한 참조 항목'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b3c61fd81691f9db44330eddbf40d4212d1786ff
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 2f3fde0ada4ab8bcbe52eccf22b959f99f91319f
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80841256"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82724545"
 ---
 # <a name="ksetup"></a>ksetup
 
@@ -64,7 +64,7 @@ ksetup
 |[Ksetup:server](ksetup-server.md)|변경 내용을 적용 하는 Windows 컴퓨터의 이름을 지정할 수 있습니다.|
 |[Ksetup:setcomputerpassword](ksetup-setcomputerpassword.md)|컴퓨터의 도메인 계정 (또는 호스트 보안 주체)에 대 한 암호를 설정합니다.|
 |[Ksetup:removerealm](ksetup-removerealm.md)|레지스트리에서 지정한 영역에 대 한 모든 정보를 삭제합니다.|
-|[Ksetup:domain](ksetup-domain.md)|도메인을 지정할 수 있습니다 (\<DomainName > **를 사용 하 여 설정**하지 않은 경우).|
+|[Ksetup:domain](ksetup-domain.md)|도메인을 지정할 수 있습니다 (도메인 이름 \<> **/domain**을 사용 하 여 설정 되지 않은 경우).|
 |[Ksetup:changepassword](ksetup-changepassword.md)|로그온된 한 사용자의 암호를 변경 하는 Kpasswd를 사용할 수 있습니다.|
 |[Ksetup:listrealmflags](ksetup-listrealmflags.md)|사용할 수 있는 목록 영역에 플래그를 지정 하는 **ksetup** 감지할 수 있습니다.|
 |[Ksetup:setrealmflags](ksetup-setrealmflags.md)|특정 영역에 대 한 영역 플래그를 설정합니다.|
@@ -77,9 +77,9 @@ ksetup
 |[Ksetup:getenctypeattr](ksetup-getenctypeattr.md)|도메인에 대 한 암호화 형식 신뢰 특성을 가져옵니다.|
 |[Ksetup:addenctypeattr](ksetup-addenctypeattr.md)|도메인에 대 한 암호화 형식 신뢰 특성에는 암호화 종류를 추가합니다.|
 |[Ksetup:delenctypeattr](ksetup-delenctypeattr.md)|도메인에 대 한 암호화 형식 신뢰 특성을 삭제합니다.|
-|/?|명령 프롬프트에서 도움말을 표시합니다.|
+|/?|명령 프롬프트에 도움말을 표시합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 **Ksetup** Kerberos 영역을 찾기 위한 컴퓨터 설정을 변경 하는 데 사용 됩니다. Microsoft Kerberos 기반 구현에서이 정보는 일반적으로 Krb5.conf 파일에 유지 됩니다. Windows Server 운영 체제의 레지스트리에 저장 됩니다. 이 설정을 수정 하려면이 도구를 사용할 수 있습니다. 이러한 설정은가 도메인 컨트롤러를 찾을 영역 간 트러스트 관계에 대 한 Kerberos 영역 Kerberos 영역을 찾으려고 워크스테이션이 사용 됩니다.
 

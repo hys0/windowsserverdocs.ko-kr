@@ -1,6 +1,6 @@
 ---
 title: 도움말
-description: '\* * * *에 대 한 Windows 명령 항목'
+description: '* * * *에 대 한 참조 항목'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 404cefe879e8f63678f2cba90516fad9c216eb23
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 6887edfd41895bb151c5aaebb88d8b72198f4dbf
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80842316"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82724902"
 ---
 # <a name="help"></a>도움말
 
->적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 지정한 명령에 사용할 수 있는 명령 또는 자세한 도움말 정보 목록을 표시합니다.  
   
@@ -36,11 +36,11 @@ help [<command>]
 |-----------|-----------------------------------------------------------------------|
 | <command> | 자세한 도움말 정보를 표시 하는 명령을 지정 합니다. |
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
   
 -   명령을 지정 하지 않으면 가능한 모든 명령이 **도움말** 에 표시 됩니다.  
   
-## <a name="examples"></a><a name=BKMK_examples></a>예와  
+## <a name="examples"></a>예  
 DiskPart에서 사용할 수 있는 모든 명령 목록을 표시 하려면 다음을 입력 합니다.  
   
 ```  

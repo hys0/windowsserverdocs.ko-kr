@@ -1,6 +1,6 @@
 ---
 title: 섀도 목록 표시
-description: '\* * * *에 대 한 Windows 명령 항목'
+description: '* * * *에 대 한 참조 항목'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e22b0006709e1cf6636ad6c2bcc18432f59b4d1a
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: d22fc3bbe644983eaf072a430e565a0d34d1c4dd
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80841166"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82724470"
 ---
 # <a name="list-shadows"></a>섀도 목록 표시
 
@@ -32,9 +32,9 @@ list shadows {all | set <SetID> | id <ShadowID>}
 
 |매개 변수|설명|
 |---------|-----------|
-|모두|모든 섀도 복사본을 나열합니다.|
-|\<SetID > 설정|섀도 복사본에 지정 된 섀도 복사본 세트 ID에 속하는 나열|
-|id \<ShadowID >|지정 된 섀도 복사본 ID 가진 모든 섀도 복사본을 나열합니다.|
+|all|모든 섀도 복사본을 나열합니다.|
+|SetID \<> 설정|섀도 복사본에 지정 된 섀도 복사본 세트 ID에 속하는 나열|
+|id \<ShadowID>|지정 된 섀도 복사본 ID 가진 모든 섀도 복사본을 나열합니다.|
 
 ## <a name="additional-references"></a>추가 참조
 

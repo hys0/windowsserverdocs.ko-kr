@@ -1,52 +1,56 @@
 ---
 title: list
-description: '\* * * *에 대 한 Windows 명령 항목'
+description: 디스크 목록, 디스크의 파티션, 디스크의 볼륨 또는 Vhd (가상 하드 디스크)를 표시 하는 목록 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
-ms.assetid: 57b6c8d0-872e-4dba-9715-1db8ab892e98
+ms.assetid: 69b105a1-9710-4a06-8102-38cc9e475ca5
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d60c42b868a1e9a26e3168e4b489573f9f87e179
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 53914468ddee4a8930fc05c677c94be700a89021
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80841106"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82724494"
 ---
 # <a name="list"></a>list
 
-
-
-작성자, 섀도 복사본 또는 시스템에 있는 현재 등록 된 섀도 복사본 공급자를 나열 합니다. 매개 변수 없이 사용 하는 경우 **목록** 명령 프롬프트에서 도움말을 표시 합니다.
-
-이 명령을 사용하는 방법의 예는 [예](#BKMK_examples)를 참조하세요.
+디스크의 디스크, 디스크의 파티션, 디스크의 볼륨 또는 Vhd (가상 하드 디스크)의 목록을 표시 합니다.
 
 ## <a name="syntax"></a>구문
 
 ```
-list writers [metadata | detailed | status]
-list shadows {all | set <SetID> | id <ShadowID>}
-list providers
+list { disk | partition | volume | vdisk }
 ```
 
 ### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------|-----------|
-|작성자|기록기를 나열합니다. 참조 [작성기 목록](list-writers.md) 구문 및 매개 변수입니다.|
-|그림자|영구 및 기존 비영구 섀도 복사본을 나열 합니다. 참조 [그림자 목록](list-shadows.md) 구문 및 매개 변수입니다.|
-|공급자|현재 목록 섀도 복사본 공급자를 등록 합니다. 참조 [공급자 나열](list-providers.md) 구문 및 매개 변수입니다.|
+|disk|디스크 및 해당 디스크에 대 한 정보 (예: 크기, 사용 가능한 공간 크기, 디스크가 기본 또는 동적 디스크 인지 여부, 디스크에서 MBR (마스터 부트 레코드) 또는 GPT (GUID 파티션 테이블) 파티션 스타일)를 사용 하는지 여부에 대 한 정보를 표시 합니다.|
+|partition|현재 디스크의 파티션 테이블에 나열 된 파티션을 표시 합니다.|
+|볼륨|모든 디스크에 기본 및 동적 볼륨 목록을 표시합니다.|
+|vdisk|연결 및/또는 선택 된 Vhd의 목록을 표시 합니다. 이 명령은 현재 선택 되어; 경우 분리 된 Vhd를 나열 그러나, VHD가 연결 될 때까지 알 수 없는 디스크 유형 설정 됩니다. 별표 (*)로 표시 된 VHD에 포커스가 있습니다.</br>참고:이 명령은 Windows 7 및 Windows Server 2008 r 2 에서만 사용할 수 있습니다.|
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="remarks"></a>설명
 
-모든 섀도 복사본을 나열 하려면 다음을 입력 합니다.
+-   동적 디스크에 파티션을 나열할 때 동적 볼륨은 디스크에 파티션이 없습니다 해당할 수 있습니다. 이러한 불일치는 동적 디스크에 시스템 볼륨이 나 부팅 볼륨 (디스크에 있는 경우)에 대 한 파티션 테이블의 항목이 포함 되어 있기 때문에 발생 합니다. 또한 동적 볼륨에 사용할 공간을 예약 하기 위해 디스크의 나머지 부분을 차지 하는 파티션을 포함 합니다.
+-   별표 (*)로 표시 된 개체에 포커스가 있습니다.
+-   디스크가 없을 경우 디스크를 나열 하는 경우 해당 디스크 번호 M가 붙습니다. 예를 들어, 첫 번째 누락 된 디스크는 번호가 지정 m 0입니다.
+
+## <a name="examples"></a>예
+
 ```
-list shadows all
+list disk
+list partition
+list volume
+list vdisk
 ```
 
 ## <a name="additional-references"></a>추가 참조
 
 - [명령줄 구문 키](command-line-syntax-key.md)
+

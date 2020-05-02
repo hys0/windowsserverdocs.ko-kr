@@ -1,6 +1,6 @@
 ---
 title: klist
-description: '\* * * *에 대 한 Windows 명령 항목'
+description: '* * * *에 대 한 참조 항목'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,18 +9,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b693e4496f4fc1275e1f2b364900564ce86e97cb
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: f83a46f158cd83aa8393630aa0138271e8868575
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80841966"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82724740"
 ---
 # <a name="klist"></a>klist
 
 
 
-현재 캐시 된 Kerberos 티켓의 목록을 표시 합니다. 이 정보는 Windows Server 2012에 적용 됩니다. 이 명령을 사용할 수 있는 방법을의 예 참조 [예제](#BKMK_Examples)합니다.
+현재 캐시 된 Kerberos 티켓의 목록을 표시 합니다. 이 정보는 Windows Server 2012에 적용 됩니다.
 
 ## <a name="syntax"></a>구문
 
@@ -34,19 +34,19 @@ klist [-lh <LogonId.HighPart>] [-li <LogonId.LowPart>] tickets | tgt | purge | s
 |---------|-----------|
 |-lh|사용자의 LUID (로컬 고유 식별자)가 16 진수로 표현 된 상위 부분을 나타냅니다. – Lh 또는 – li가 모두 없는 경우 명령은 현재 로그인 한 사용자의 LUID로 기본 설정 됩니다.|
 |-li|사용자의 LUID (로컬 고유 식별자)가 16 진수로 표현 된 하위 부분을 나타냅니다. – Lh 또는 – li가 모두 없는 경우 명령은 현재 로그인 한 사용자의 LUID로 기본 설정 됩니다.|
-|티켓|지정 된 로그온 세션의 현재 캐시 된 티켓 (Tgt) 및 서비스 티켓을 나열 합니다. 이 옵션이 기본 옵션입니다.|
+|티켓|지정 된 로그온 세션의 현재 캐시 된 티켓 (Tgt) 및 서비스 티켓을 나열 합니다. 기본 옵션입니다.|
 |tgt|초기 Kerberos TGT를 표시 합니다.|
-|비우기|지정 된 로그온 세션의 모든 티켓을 삭제할 수 있습니다.|
+|제거가|지정 된 로그온 세션의 모든 티켓을 삭제할 수 있습니다.|
 |세션|이 컴퓨터의 로그온 세션 목록을 표시 합니다.|
 |kcd_cache|Kerberos 제한 위임 캐시 정보를 표시 합니다.|
-|get|SPN (서비스 사용자 이름)으로 지정 된 대상 컴퓨터에 대 한 티켓을 요청할 수 있습니다.|
+|Get|SPN (서비스 사용자 이름)으로 지정 된 대상 컴퓨터에 대 한 티켓을 요청할 수 있습니다.|
 |add_bind|Kerberos 인증에 대 한 기본 설정 도메인 컨트롤러를 지정할 수 있습니다.|
 |query_bind|Kerberos에 연결 된 각 도메인에 대해 캐시 된 기본 설정 도메인 컨트롤러 목록을 표시 합니다.|
 |purge_bind|지정 된 도메인에 대해 캐시 된 기본 설정 도메인 컨트롤러를 제거 합니다.|
 |kdcoptions|RFC 4120에 지정 된 KDC (키 배포 센터) 옵션을 표시 합니다.|
 |/?|이 명령에 대 한 도움말을 표시합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 이 명령의 모든 매개 변수를 실행 하려면 최소한 **Domain Admins**의 구성원 이거나 이와 동등한 자격이 필요 합니다.
 
@@ -70,7 +70,7 @@ klist [-lh <LogonId.HighPart>] [-li <LogonId.LowPart>] tickets | tgt | purge | s
     초기 Kerberos TGT 및 현재 캐시 된 티켓의 다음 특성을 나열 합니다.  
     -   로그온 id: 16 진수로 식별
     -   ServiceName: krbtgt
-    -   TargetName \<SPN >: krbtgt
+    -   TargetName \<SPN>: krbtgt
     -   DomainName: TGT를 발급 하는 도메인의 이름
     -   TargetDomainName: TGT가 발급 된 도메인
     -   AltTargetDomainName: TGT가 발급 된 도메인
@@ -93,7 +93,7 @@ klist [-lh <LogonId.HighPart>] [-li <LogonId.LowPart>] tickets | tgt | purge | s
 
     Kerberos 제한 위임 캐시 정보를 표시할 수 있습니다.  
     -   로그온 id: 지정 된 경우 지정 된 값으로 로그온 세션에 대 한 캐시 정보를 표시 합니다. 지정 하지 않으면 현재 사용자의 로그온 세션에 대 한 캐시 정보를 표시 합니다.
--   **가져오기**
+-   **get**
 
     SPN으로 지정 된 대상에 대 한 티켓을 요청할 수 있습니다.  
     -   로그온 id: 지정 된 경우 지정 된 값으로 로그온 세션을 사용 하 여 티켓을 요청 합니다. 지정 하지 않으면는 현재 사용자의 로그온 세션을 사용 하 여 티켓을 요청 합니다.
@@ -114,7 +114,7 @@ klist [-lh <LogonId.HighPart>] [-li <LogonId.LowPart>] tickets | tgt | purge | s
 **기타 고려 사항**
 -   Klist는 Windows Server 2012 및 Windows 8에서 사용할 수 있으며 특별 한 설치는 필요 하지 않습니다.
 
-## <a name="examples"></a><a name=BKMK_Examples></a>예와
+## <a name="examples"></a>예
 
 1. 대상 서버에 대 한 TGS (티켓 부여 서비스) 요청을 처리 하는 동안 이벤트 ID 27을 진단할 때이 계정에는 Kerberos 티켓을 생성 하는 데 적합 한 키가 없습니다. Klist를 사용 하 여 Kerberos 티켓 캐시를 쿼리하면 대상 서버 또는 계정에 오류가 있거나 암호화 형식이 지원 되지 않는 경우에는 티켓이 없는지 확인할 수 있습니다.  
    ```

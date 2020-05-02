@@ -1,6 +1,6 @@
 ---
-title: 레이블
-description: '\* * * *에 대 한 Windows 명령 항목'
+title: label
+description: '* * * *에 대 한 참조 항목'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,20 +9,20 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7ccb86e2167682e1048161f2d5f5386a8b5cf6ed
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 63603eda8d23b6f7b89b8d1ba858575a60e3c65c
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80841176"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82724513"
 ---
-# <a name="label"></a>레이블
+# <a name="label"></a>label
 
 
 
 만들고, 변경 또는 디스크의 볼륨 레이블 (이름)을 삭제 합니다. 매개 변수 없이 사용 되는 **레이블** 명령을 현재 볼륨 레이블을 변경 하거나 기존 레이블을 삭제 합니다.
 
-이 명령을 사용하는 방법의 예는 [예](#BKMK_examples)를 참조하세요.
+
 
 ## <a name="syntax"></a>구문
 
@@ -35,11 +35,11 @@ label [/mp] [<Volume>] [<Label>]
 |매개 변수|설명|
 |---------|-----------|
 |/mp|볼륨 탑재 지점 또는 볼륨 이름으로 처리 해야 함을 지정 합니다.|
-|볼륨 > \<|(콜론) 드라이브 문자 지정 탑재 지점 또는 볼륨 이름입니다. 볼륨 이름을 지정 하는 경우는 **/mp** 매개 변수가 필요 하지 않습니다.|
-|\<레이블 >|볼륨에 대 한 레이블을 지정합니다.|
+|\<볼륨>|(콜론) 드라이브 문자 지정 탑재 지점 또는 볼륨 이름입니다. 볼륨 이름을 지정 하는 경우는 **/mp** 매개 변수가 필요 하지 않습니다.|
+|\<레이블>|볼륨에 대 한 레이블을 지정합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 - Windows 볼륨 레이블 및 일련 번호 (있으면)의 일부분으로 표시 디렉터리 목록입니다.
 - NTFS 볼륨 레이블의 공백을 포함 하 여 길이가 최대 32 자를 수 있습니다. NTFS 볼륨 레이블 유지 및 레이블을 만들 때 사용 된 사례를 표시 합니다.
@@ -55,14 +55,14 @@ label [/mp] [<Volume>] [<Label>]
   ```  
   레이블을 삭제 하려면 Y 키 또는 레이블을 변경 하지 않으려면 N 키를 누릅니다.
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 
 7 월에 대 한 판매 정보를 포함 하는 드라이브의 디스크에에서 레이블을 입력 합니다.
 ```
 label a:sales-july
 ```
 C 드라이브에 대 한 현재 레이블을 삭제 하려면 다음이 단계를 따르십시오.
-1. 명령 프롬프트에서 다음을 입력합니다.  
+1. 명령 프롬프트에 다음을 입력합니다.  
    ```
    Label
    ```  

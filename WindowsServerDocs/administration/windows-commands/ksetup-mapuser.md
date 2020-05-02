@@ -1,6 +1,6 @@
 ---
 title: 'ksetup: mapuser'
-description: '\* * * *에 대 한 Windows 명령 항목'
+description: '* * * *에 대 한 참조 항목'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,18 +9,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f61c67fa21eccb77601b78aed51791259d609c5e
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: daa1b8d2c6d0ce2801191b953a533a63bcd8f4ab
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80841486"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82724610"
 ---
 # <a name="ksetupmapuser"></a>ksetup: mapuser
 
 
 
-Kerberos 보안 주체의 이름을 계정에 매핑합니다. 이 명령을 사용할 수 있는 방법을의 예 참조 [예제](#BKMK_Examples)합니다.
+Kerberos 보안 주체의 이름을 계정에 매핑합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -32,10 +32,10 @@ ksetup /mapuser <Principal> <Account>
 
 |  매개 변수   |                                                   설명                                                   |
 |--------------|-----------------------------------------------------------------------------------------------------------------|
-| \<Principal > |              모든 보안 주체의 정규화 된 도메인 이름입니다. 예를 들어 mike@corp.CONTOSO.COM합니다.              |
-|  \<계정 >  | 게스트, 도메인 사용자 또는 관리자와 같이이 컴퓨터에 존재 하는 계정 또는 보안 그룹 이름입니다. |
+| \<보안 주체> |              모든 보안 주체의 정규화 된 도메인 이름입니다. 예를 mike@corp.CONTOSO.COM들면입니다.              |
+|  \<계정>  | 게스트, 도메인 사용자 또는 관리자와 같이이 컴퓨터에 존재 하는 계정 또는 보안 그룹 이름입니다. |
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 도메인 게스트 등의 계정을 구체적으로 식별할 수 있습니다. 또는 와일드 카드 문자 (*)를 사용 하 여 모든 계정을 포함할 수 있습니다.
 
@@ -47,7 +47,7 @@ ksetup /mapuser <Principal> <Account>
 
 외부 키 배포 센터 (KDC) 및 영역 구성이 변경 될 때마다 설정이 변경 된 컴퓨터를 다시 시작 해야 합니다.
 
-## <a name="examples"></a><a name=BKMK_Examples></a>예와
+## <a name="examples"></a>예
 
 Kerberos 영역 CONTOSO 내에서이 컴퓨터의 게스트 계정에 Mike Danseglio의 계정을 매핑하고,이 컴퓨터에 인증 하지 않고도 기본 제공 게스트 계정의 구성원에 대 한 모든 권한을 부여 합니다.
 ```

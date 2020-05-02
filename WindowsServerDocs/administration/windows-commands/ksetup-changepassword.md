@@ -1,6 +1,6 @@
 ---
 title: 'ksetup: changepassword'
-description: '\* * * *에 대 한 Windows 명령 항목'
+description: '* * * *에 대 한 참조 항목'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,18 +9,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 68b14388ff3c33458873b494c8d5a770b44f7545
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 32c48e896b77043820eea42159e20c089bd69fb8
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80841786"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82724721"
 ---
 # <a name="ksetupchangepassword"></a>ksetup: changepassword
 
 
 
-키 배포 센터 (KDC) 암호 (kpasswd) 값을 사용 하 여 로그온 한 사용자의 암호를 변경 합니다. 이 명령을 사용할 수 있는 방법을의 예 참조 [예제](#BKMK_Examples)합니다.
+키 배포 센터 (KDC) 암호 (kpasswd) 값을 사용 하 여 로그온 한 사용자의 암호를 변경 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -32,10 +32,10 @@ ksetup /changepassword <OldPasswd> <NewPasswd>
 
 |매개 변수|설명|
 |---------|-----------|
-|\<OldPasswd >|로그온 한 사용자의 기존 암호를 명시 합니다.|
-|\<NewPasswd >|로그온 한 사용자의 새 암호를 명시 합니다.|
+|\<OldPasswd>|로그온 한 사용자의 기존 암호를 명시 합니다.|
+|\<NewPasswd>|로그온 한 사용자의 새 암호를 명시 합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 이 명령은 KDC password (kpasswd) 값을 사용 하 여 로그온 한 사용자의 암호를 변경 합니다. **Ksetup/** kpasswd 명령을 실행 하 여 출력에 설정 된 경우이를 표시 합니다.
 
@@ -47,7 +47,7 @@ ksetup /changepassword <OldPasswd> <NewPasswd>
 
 명령의 출력은 성공 또는 실패 상태를 알려 줍니다.
 
-## <a name="examples"></a><a name=BKMK_Examples></a>예와
+## <a name="examples"></a>예
 
 이 도메인에서 현재이 컴퓨터에 로그온 한 사용자의 암호를 변경 합니다.
 ```

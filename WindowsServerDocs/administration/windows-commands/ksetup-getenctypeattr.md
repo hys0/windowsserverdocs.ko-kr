@@ -1,6 +1,6 @@
 ---
 title: 'ksetup: getenctypeattr'
-description: '\* * * *에 대 한 Windows 명령 항목'
+description: '* * * *에 대 한 참조 항목'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,18 +9,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 60de138ac73140c69e9a863083e01a51c0e13ca3
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: f8363113d4fbb310d98b40d852b36a00f20320e6
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80841536"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82724629"
 ---
 # <a name="ksetupgetenctypeattr"></a>ksetup: getenctypeattr
 
 
 
-도메인에 대 한 암호화 유형 특성을 검색 합니다. 이 명령을 사용할 수 있는 방법을의 예 참조 [예제](#BKMK_Examples)합니다.
+도메인에 대 한 암호화 유형 특성을 검색 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -32,17 +32,17 @@ ksetup /getenctypeattr <DomainName>
 
 |매개 변수|설명|
 |---------|-----------|
-|\<DomainName >|연결을 설정 하려는 도메인 이름입니다. 정규화 된 도메인 이름 또는 corp.contoso.com 또는 contoso와 같은 간단한 형식의 이름을 사용 합니다.|
+|\<DomainName>|연결을 설정 하려는 도메인 이름입니다. 정규화 된 도메인 이름 또는 corp.contoso.com 또는 contoso와 같은 간단한 형식의 이름을 사용 합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 Kerberos TGT (티켓 허용 티켓) 및 세션 키의 암호화 유형을 보려면 **klist** 명령을 실행 하 고 출력을 확인 합니다.
 
 명령이 성공 하거나 실패 하면 성공적으로 완료 되거나 성공적으로 완료 되 면 상태 메시지가 표시 됩니다.
 
-연결 하 고 사용 하려는 도메인을 설정 하려면 **ksetup/domain \<DomainName >** 명령을 실행 합니다.
+연결 하 고 사용 하려는 도메인을 설정 하려면 **ksetup/Domain \<DomainName>** 명령을 실행 합니다.
 
-## <a name="examples"></a><a name=BKMK_Examples></a>예와
+## <a name="examples"></a>예
 
 도메인에 대 한 암호화 유형 특성을 확인 합니다.
 ```

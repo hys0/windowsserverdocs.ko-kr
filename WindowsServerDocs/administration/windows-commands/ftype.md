@@ -1,6 +1,6 @@
 ---
 title: ftype
-description: '\* * * *에 대 한 Windows 명령 항목'
+description: '* * * *에 대 한 참조 항목'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,20 +9,20 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f982f68f25a4decbc9c572b533fa1ecc5e893a8c
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 43108fad0e1981bffd110264809acf30c1c12ba1
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80842706"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82725012"
 ---
 # <a name="ftype"></a>ftype
 
 
 
-표시 하거나 파일 이름 확장명 연결에 사용 되는 파일 형식을 수정 합니다. 대입 연산자 없이 사용 되는 경우 ( **=** ), **ftype** 지정된 된 파일 형식에 대 한 현재 열려 있는 명령 문자열을 표시 합니다. 매개 변수 없이 사용 하는 경우 **ftype** 열려 있는 명령 문자열을 정의 하는 파일 형식이 표시 됩니다.
+표시 하거나 파일 이름 확장명 연결에 사용 되는 파일 형식을 수정 합니다. 할당 연산자 (**=**) 없이 사용 하는 경우 **ftype** 지정 된 파일 형식에 대 한 현재 열려 있는 명령 문자열을 표시 합니다. 매개 변수 없이 사용 하는 경우 **ftype** 열려 있는 명령 문자열을 정의 하는 파일 형식이 표시 됩니다.
 
-이 명령을 사용하는 방법의 예는 [예](#BKMK_examples)를 참조하세요.
+
 
 ## <a name="syntax"></a>구문
 
@@ -34,22 +34,22 @@ ftype [<FileType>[=[<OpenCommandString>]]]
 
 |매개 변수|설명|
 |---------|-----------|
-|\<FileType >|표시 하거나 변경 하려면 파일 형식을 지정 합니다.|
-|OpenCommandString을 \<>|지정 된 파일 형식의 파일을 열 때 사용 하 여 열려 있는 명령 문자열을 지정 합니다.|
+|\<FileType>|표시 하거나 변경 하려면 파일 형식을 지정 합니다.|
+|\<OpenCommandString>|지정 된 파일 형식의 파일을 열 때 사용 하 여 열려 있는 명령 문자열을 지정 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 다음 표에서 어떻게 **ftype** 열려 있는 명령 문자열 내에서 변수를 대체 합니다.
 
-|Variable|대체 값|
+|변수|대체 값|
 |--------|-----------------|
 |0 또는 %1|연결을 통해 실행 되 고 파일 이름으로 대체 하 게 합니다.|
 |%*|모든 매개 변수를 가져옵니다.|
 |%2, %3, ...|첫 번째 매개 변수 (%2), 두 번째 매개 변수 (%3) 등에 가져옵니다.|
-|%~\<N >|부터 나머지 매개 변수를 모두 가져옵니다는 *N*번째 매개 변수가 있는 *N* 2에서 9 사이의 숫자가 될 수 있습니다.|
+|%~\<N>|부터 나머지 매개 변수를 모두 가져옵니다는 *N*번째 매개 변수가 있는 *N* 2에서 9 사이의 숫자가 될 수 있습니다.|
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 
 열려 있는 명령 문자열을 정의 하는 현재 파일 종류를 표시 하려면 다음을 입력 합니다.
 ```
@@ -59,7 +59,7 @@ ftype
 ```
 ftype txtfile
 ```
-이 명령은 다음과 유사한 출력을 생성합니다.
+이 명령은 다음과 유사한 출력 결과를 표시합니다.
 ```
 txtfile=%SystemRoot%\system32\NOTEPAD.EXE %1
 ```

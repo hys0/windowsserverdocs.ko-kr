@@ -1,6 +1,6 @@
 ---
-title: 가져오기
-description: '\* * * *에 대 한 Windows 명령 항목'
+title: 수입
+description: '* * * *에 대 한 참조 항목'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,20 +9,20 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 07fdd03c73c454e92218a4c6983eac7f29b50883
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 72cbd6195de64a6a0a7f2c258e19b2d5eb1378b1
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80842176"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82724852"
 ---
-# <a name="import"></a>가져오기
+# <a name="import"></a>수입
 
 
 
 시스템에 로드 된 메타 데이터 파일에서 전송 가능한 섀도 복사본을 가져옵니다.
 
-이 명령을 사용하는 방법의 예는 [예](#BKMK_examples)를 참조하세요.
+
 
 ## <a name="syntax"></a>구문
 
@@ -30,12 +30,12 @@ ms.locfileid: "80842176"
 import
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 -   전송 가능한 섀도 복사본 즉시 시스템에 저장 되지 않습니다. 세부 정보는 DiskShadow에서 자동으로 요청 하 고 작업 디렉터리에.cab 메타 데이터 파일에 저장 된 백업 구성 요소 문서 XML 파일을에 저장 됩니다. 사용 하 여이 파일의 이름과 경로 변경할 수는 **메타 데이터 설정** 명령입니다.
 -   사용 하려면 먼저 **가져오기**, 를 사용 하 여 DiskShadow 메타 데이터 파일을 로드 해야는 **메타 데이터를 로드** 명령입니다.
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 
 다음은의 사용을 보여 주는 샘플 DiskShadow 스크립트는 **가져올** 명령:
 ```

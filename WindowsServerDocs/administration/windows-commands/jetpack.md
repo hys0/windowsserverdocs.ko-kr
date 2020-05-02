@@ -1,6 +1,6 @@
 ---
 title: jetpack
-description: '\* * * *에 대 한 Windows 명령 항목'
+description: '* * * *에 대 한 참조 항목'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 008e9dd4d41fe270d775b1c44d799dd16429046f
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: ec29a1fd48fdba72f07fe5d00de7730d93434105
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80841976"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82724793"
 ---
 # <a name="jetpack"></a>jetpack
 
->적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 WINS (Windows Internet Name Service) 또는 DHCP (Dynamic Host Configuration Protocol) 데이터베이스를 압축 합니다. 30 MB에 도달할 때까지 WINS 데이터베이스를 압축 하는 것이 좋습니다. 
 
@@ -34,7 +34,7 @@ jetpack.EXE <database name> <temp database name>
 |<temp database name>|임시 데이터베이스 파일을 지정 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
-## <a name="examples"></a><a name=BKMK_Examples></a>예와
+## <a name="examples"></a>예
 WINS 데이터베이스를 압축 하려면:
 ```
 cd %SYSTEMROOT%\SYSTEM32\WINS
