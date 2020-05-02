@@ -1,6 +1,6 @@
 ---
-title: bitsadmin 피어
-description: /Peers 스위치를 나열 하는 **bitsadmin 피어**에 대 한 Windows 명령 항목입니다.
+title: bitsadmin peers
+description: Bitsadmin 피어 명령에 대 한 참조 항목입니다 .이 명령에는/peers 스위치가 나열 됩니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7b7dc04997ae914c259f93b0418c77aef2828e7e
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: fa2929b842b64841b7b2d50578133dd040475c80
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80849956"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717102"
 ---
-# <a name="bitsadmin-peers"></a>bitsadmin 피어
+# <a name="bitsadmin-peers"></a>bitsadmin peers
 
->적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
+사용 가능한/피어 스위치를 나열 합니다.
 
 사용 가능한/피어 스위치를 나열 합니다.
 
@@ -40,3 +42,5 @@ bitsadmin /peers /list
 ## <a name="additional-references"></a>추가 참조
 
 - [명령줄 구문 키](command-line-syntax-key.md)
+
+- [bitsadmin 명령](bitsadmin.md)

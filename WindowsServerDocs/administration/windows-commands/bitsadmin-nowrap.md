@@ -1,6 +1,6 @@
 ---
 title: bitsadmin nowrap
-description: '**Bitsadmin nowrap**에 대 한 Windows 명령 항목으로, 명령 창의 가장 오른쪽 가장자리를 벗어나 확장 되는 출력 텍스트 줄을 자릅니다.'
+description: 명령 창의 가장 오른쪽 가장자리를 벗어나 확장 되는 출력 텍스트 줄을 잘라내는 bitsadmin nowrap 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f9f1db370d8a8917aa03a414a27623a1024df192
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 2aac604ec3e13026e322d7cb7a9364df46266a0c
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850186"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717339"
 ---
 # <a name="bitsadmin-nowrap"></a>bitsadmin nowrap
 
@@ -26,14 +26,16 @@ ms.locfileid: "80850186"
 bitsadmin /nowrap
 ```
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 
-다음 예제에서는 이름이 *Mydownloadjob* 인 작업의 상태를 검색 하 고 출력을 줄 바꿈하지 않습니다.
+출력을 래핑하는 동안 *Mydownloadjob* 이라는 작업 상태를 검색 하려면 다음을 수행 합니다.
 
 ```
-C:\>bitsadmin /nowrap /getstate myDownloadJob
+bitsadmin /nowrap /getstate myDownloadJob
 ```
 
 ## <a name="additional-references"></a>추가 참조
 
 - [명령줄 구문 키](command-line-syntax-key.md)
+
+- [bitsadmin 명령](bitsadmin.md)

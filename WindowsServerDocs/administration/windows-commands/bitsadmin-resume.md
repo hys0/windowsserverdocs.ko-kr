@@ -1,6 +1,6 @@
 ---
 title: bitsadmin resume
-description: '**Bitsadmin 다시 시작**에 대 한 Windows 명령 항목으로, 전송 큐에서 새 작업 또는 일시 중단 된 작업을 활성화 합니다.'
+description: 전송 큐에서 새 작업이 나 일시 중단 된 작업을 활성화 하는 bitsadmin resume 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e81bd80232cd4ec8fbba70c86cd97bb9695680f8
-ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
+ms.openlocfilehash: ba4cd57ddeeb3c35ca0871c2953fd409ddb57e73
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81123075"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717001"
 ---
 # <a name="bitsadmin-resume"></a>bitsadmin resume
 
-전송 큐에 새로운 또는 일시 중단 된 작업을 활성화합니다.
+전송 큐에 새로운 또는 일시 중단 된 작업을 활성화합니다. 실수로 작업을 다시 시작 하거나 작업을 일시 중단 해야 하는 경우 [bitsadmin suspend](bitsadmin-suspend.md) 스위치를 사용 하 여 작업을 일시 중단할 수 있습니다.
 
 ## <a name="syntax"></a>구문
 
@@ -30,16 +30,20 @@ bitsadmin /resume <job>
 
 | 매개 변수 | 설명 |
 | -------------- | -------------- |
-| 제출 | 작업의 표시 이름 또는 GUID입니다. |
+| 작업(job) | 작업의 표시 이름 또는 GUID입니다. |
 
 ## <a name="examples"></a>예
 
-다음 예제에서는 라는 작업을 다시 시작 *myDownloadJob*합니다.
+*Mydownloadjob*이라는 작업을 다시 시작 하려면 다음을 수행 합니다.
 
 ```
-C:\>bitsadmin /resume myDownloadJob
+bitsadmin /resume myDownloadJob
 ```
 
 ## <a name="additional-references"></a>추가 참조
 
 - [명령줄 구문 키](command-line-syntax-key.md)
+
+- [bitsadmin suspend 명령](bitsadmin-suspend.md)
+
+- [bitsadmin 명령](bitsadmin.md)

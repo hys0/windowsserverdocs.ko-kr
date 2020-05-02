@@ -1,6 +1,6 @@
 ---
-title: bitsadmin util 및 enableanalyticchannel
-description: BITS 클라이언트 분석 채널을 사용 하거나 사용 하지 않도록 설정 하는 **bitsadmin util 및 enableanalyticchannel**에 대 한 Windows 명령 항목입니다.
+title: bitsadmin util and enableanalyticchannel
+description: BITS 클라이언트 분석 채널을 사용 하거나 사용 하지 않도록 설정 하는 bitsadmin util 및 enableanalyticchannel 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f8ff1f835415979036fdc0f8aa637fe693e57d46
-ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
+ms.openlocfilehash: c1f5c8c924d1011928aca6ec1bcebd4d71abb015
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81122680"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707767"
 ---
-# <a name="bitsadmin-util-and-enableanalyticchannel"></a>bitsadmin util 및 enableanalyticchannel
+# <a name="bitsadmin-util-and-enableanalyticchannel"></a>bitsadmin util and enableanalyticchannel
 
 BITS 클라이언트 분석 채널을 사용 하지 않도록 설정 하거나 사용 합니다.
 
@@ -32,12 +32,16 @@ bitsadmin /util /enableanalyticchannel TRUE|FALSE
 
 ## <a name="examples"></a>예
 
-다음 예에서는 BITS 클라이언트 분석 채널입니다.
+BITS 클라이언트 분석 채널을 설정 하거나 해제 합니다.
 
 ```
-C:\>bitsadmin /util / enableanalyticchannel TRUE
+bitsadmin /util / enableanalyticchannel TRUE
 ```
 
 ## <a name="additional-references"></a>추가 참조
 
 - [명령줄 구문 키](command-line-syntax-key.md)
+
+- [bitsadmin util 명령](bitsadmin-util.md)
+
+- [bitsadmin 명령](bitsadmin.md)

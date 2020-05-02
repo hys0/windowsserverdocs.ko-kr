@@ -1,6 +1,6 @@
 ---
 title: bootcfg ems
-description: 사용자가 응급 관리 서비스 콘솔의 리디렉션 설정을 원격 컴퓨터에 추가 하거나 변경할 수 있는 bootcfg ems에 대 한 Windows 명령 항목입니다.
+description: 사용자가 응급 관리 서비스 콘솔의 리디렉션 설정을 원격 컴퓨터로 추가 하거나 변경할 수 있도록 하는 bootcfg ems 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,44 +9,52 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 825426b3ce865f96892f8a8d9b11f11650e1b6c1
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: c85231e094852feb673eb4f99b183f06014234b2
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80848536"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82709519"
 ---
 # <a name="bootcfg-ems"></a>bootcfg ems
 
->적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-사용자를 추가 하 여 원격 컴퓨터에 응급 관리 서비스 콘솔의 리디렉션에 대 한 설정을 변경할 수 있습니다. 응급 관리 서비스를 사용 하도록 설정 하면 boot.ini 파일의 [부팅 로더] 섹션에 리디렉션 = 포트 # 줄을 추가 하 고 지정 된 운영 체제 항목 줄에입니다 옵션을 추가 합니다. 응급 관리 서비스 기능은 서버에만 사용 됩니다.
+사용자를 추가 하 여 원격 컴퓨터에 응급 관리 서비스 콘솔의 리디렉션에 대 한 설정을 변경할 수 있습니다. 응급 관리 서비스를 사용 하도록 설정 `redirect=Port#` 하면입니다 옵션과 함께 boot.ini 파일의 [부팅 로더] 섹션에 지정 된 운영 체제 항목 줄에 대 한 줄이 추가 됩니다. 응급 관리 서비스 기능은 서버에만 사용 됩니다.
 
 ## <a name="syntax"></a>구문
+
 ```
-bootcfg /ems {ON | OFF | edit} [/s <computer> [/u <Domain>\<User> /p <Password>]] [/port {COM1 | COM2 | COM3 | COM4 | BIOSSET}] [/baud {9600 | 19200 | 38400 | 57600 | 115200}] [/id <OSEntryLineNum>]
+bootcfg /ems {on | off | edit}[/s <computer> [/u <domain>\<user> /p <password>]] [/port {COM1 | COM2 | COM3 | COM4 | BIOSSET}] [/baud {9600 | 19200 | 38400 | 57600 | 115200}] [/id <osentrylinenum>]
 ```
+
 ### <a name="parameters"></a>매개 변수
 
-|                            매개 변수                             |                                                                                                                                                                                                                                                                                                                                                              설명                                                                                                                                                                                                                                                                                                                                                              |
-|------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|                    {ON &#124; OFF&#124; 편집}                    | 응급 관리 서비스 리디렉션에 대 한 값을 지정합니다.<p>**ON** -지정 된 원격 출력 활성화 <OSEntryLineNum>합니다. 지정 된 <OSEntryLineNum>에입니다 옵션을 추가 하 고 [부팅 로더] 섹션에 리디렉션 = com<X> 설정을 추가 합니다. Com 값<X> 에 의해 설정 됩니다는 **/포트** 매개 변수입니다.<p>**OFF** -원격 컴퓨터에 대 한 출력을 사용 하지 않도록 설정 합니다. 지정 된 <OSEntryLineNum>에서입니다 옵션을 제거 하 고 [부팅 로더] 섹션에서 리디렉션 = com<X> 설정을 제거 합니다.<p>**편집** -[부팅 로더] 섹션에서 리디렉션 = com<X> 설정을 변경 하 여 포트 설정을 변경할 수 있습니다. Com 값<X> 에 지정 된 값으로 다시 설정 되는 **/포트** 매개 변수입니다. |
-|                          /s <computer>                           |                                                                                                                                                                                                                                                                                                          이름 또는 원격 컴퓨터의 IP 주소를 지정 합니다 (백슬래시를 사용 하지 않습니다). 기본값은 로컬 컴퓨터입니다.                                                                                                                                                                                                                                                                                                           |
-|                       /u <Domain>\\<User>                        |                                                                                                                                                                                                                                                                 <User> 또는 <Domain>\\<User>에 지정 된 사용자의 계정 권한으로 명령을 실행 합니다. 기본값은 현재 로그온 된 명령을 실행 하는 컴퓨터에서 사용자의 사용 권한.                                                                                                                                                                                                                                                                  |
-|                          /p <Password>                           |                                                                                                                                                                                                                                                                                                                         에 지정 된 사용자 계정의 암호를 지정 된 **/u** 매개 변수입니다.                                                                                                                                                                                                                                                                                                                         |
-| / {COM1 & #124; 포트 COM2 & #124; COM3 & #124; COM4 & #124; BIOSSET}  |                                                                                                                                                                                                                              리디렉션에 사용할 COM 포트를 지정 합니다. **BIOSSET** 리디렉션에 사용할 포트를 확인 하 고 BIOS 설정을 가져오려는 응급 관리 서비스에 지시 합니다. 사용 하지 않는 **/포트** 출력을 원격으로 관리 하는 경우 매개 변수는 사용할 수 없습니다.                                                                                                                                                                                                                              |
-| /baud {9600 (& a) #124; 19200 & #124; 38400 & #124; 57600 & #124; 115200} |                                                                                                                                                                                                                                                                                               리디렉션에 사용할 전송 속도 지정 합니다. 사용 하지 않는 **/baud** 출력을 원격으로 관리 하는 경우 매개 변수는 사용할 수 없습니다.                                                                                                                                                                                                                                                                                               |
-|                       /id <OSEntryLineNum>                       |                                                                                                                                                                                              응급 관리 서비스 옵션 Boot.ini 파일의 [운영 체제] 섹션에 추가 된 운영 체제 항목 줄 번호를 지정 합니다. [운영 체제] 섹션 헤더 후 첫 번째 줄은 1입니다. 응급 관리 서비스 값으로 설정 된 경우이 매개 변수는 필수 **ON** 또는 **OFF**합니다.                                                                                                                                                                                              |
-|                                /?                                |                                                                                                                                                                                                                                                                                                                                                 명령 프롬프트에 도움말을 표시합니다.                                                                                                                                                                                                                                                                                                                                                  |
+| 매개 변수 | 설명 |
+| --------- | ----------- |
+| `{on | off | edit}` | 다음을 포함 하 여 응급 관리 서비스 리디렉션에 대 한 값을 지정 합니다.<ul><li>**sign-on.** 지정 `<osentrylinenum>`된에 대 한 원격 출력을 사용 하도록 설정 합니다. 는 지정 <osentrylinenum> 된에입니다 옵션을 추가 하 고 `redirect=com<X>` [부팅 로더] 섹션에도 추가 합니다. 의 `com<X>` 값은 **/port** 매개 변수로 설정 됩니다.</li><li>**해제.** 원격 컴퓨터에 대 한 출력을 사용 하지 않도록 설정 합니다. 또한 지정 <osentrylinenum> 된 및 [부팅 로더] 섹션의 `redirect=com<X>` 설정에 대 한입니다 옵션을 제거 합니다.</li><li>**편집할.** [부팅 로더] 섹션에서 `redirect=com<X>` 설정을 변경 하 여 포트 설정을 변경할 수 있습니다. 의 `com<X>` 값은 **/port** 매개 변수로 설정 됩니다.</li></ul> |
+| `/s <computer>` | 원격 컴퓨터의 이름 또는 IP 주소를 지정 합니다 (백슬래시를 사용 하지 않음). 기본값은 로컬 컴퓨터입니다. |
+| `/u <domain>\<user>`  | 또는 `<user>` `<domain>\<user>`로 지정 된 사용자의 계정 권한으로 명령을 실행 합니다. 기본값은 현재 로그온 된 명령을 실행 하는 컴퓨터에서 사용자의 사용 권한. |
+| `/p <password>` | 에 지정 된 사용자 계정의 암호를 지정 된 **/u** 매개 변수입니다. |
+| `/port {COM1 | COM2 | COM3 | COM4 | BIOSSET}` |  리디렉션에 사용할 COM 포트를 지정 합니다. BIOSSET 매개 변수는 BIOS 설정을 가져오도록 응급 관리 서비스에 지시 하 여 리디렉션에 사용할 포트를 결정 합니다. 원격으로 관리 되는 출력을 사용 하지 않는 경우이 매개 변수를 사용 하지 마세요. |
+| `/baud {9600 | 19200 | 38400 | 57600 | 115200}` | 리디렉션에 사용할 전송 속도 지정 합니다. 원격으로 관리 되는 출력을 사용 하지 않는 경우이 매개 변수를 사용 하지 마세요. |
+| `/id <osentrylinenum>` | 응급 관리 서비스 옵션 Boot.ini 파일의 [운영 체제] 섹션에 추가 된 운영 체제 항목 줄 번호를 지정 합니다. [운영 체제] 섹션 헤더 후 첫 번째 줄은 1입니다. 이 매개 변수는 응급 관리 서비스 값을 **on** 또는 **off**로 설정한 경우에 필요 합니다. |
+| /? | 명령 프롬프트에 도움말을 표시합니다. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
-다음 예제에서는 사용 하는 방법을 보여는 **bootcfg /ems** 명령:
+## <a name="examples"></a>예
+
+**Bootcfg/ems** 명령을 사용 하려면 다음을 수행 합니다.
+
 ```
-bootcfg /ems on /port com1 /baud 19200 /id 2 
-bootcfg /ems on /port biosset /id 3 
-bootcfg /s srvmain /ems off /id 2 
-bootcfg /ems edit /port com2 /baud 115200 
+bootcfg /ems on /port com1 /baud 19200 /id 2
+bootcfg /ems on /port biosset /id 3
+bootcfg /s srvmain /ems off /id 2
+bootcfg /ems edit /port com2 /baud 115200
 bootcfg /s srvmain /u maindom\hiropln /p p@ssW23 /ems off /id 2
 ```
+
 ## <a name="additional-references"></a>추가 참조
+
 - [명령줄 구문 키](command-line-syntax-key.md)
+
+- [bootcfg 명령](bootcfg.md)

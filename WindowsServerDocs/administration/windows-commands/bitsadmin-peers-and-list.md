@@ -1,6 +1,6 @@
 ---
-title: bitsadmin 피어 및 목록
-description: 모든 피어를 나열 하는 **bitsadmin 피어** 및 **목록**에 대 한 Windows 명령 항목입니다.
+title: bitsadmin peers and list
+description: 모든 피어를 나열 하는 bitsadmin 피어 및 list 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a38f3ed825f6629c196d5ebac1e967f4fa06a940
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: a6c1f8fbcb6ca40c86a1d589ba7217392b9875cf
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80849936"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717151"
 ---
-# <a name="bitsadmin-peers-and-list"></a>bitsadmin 피어 및 목록
+# <a name="bitsadmin-peers-and-list"></a>bitsadmin peers and list
 
 모든 피어를 나열 합니다.
 
@@ -26,14 +26,18 @@ ms.locfileid: "80849936"
 bitsadmin /peers /list
 ```
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 
-다음 예에서는 모든 피어를 나열 합니다.
+모든 피어를 나열 하려면:
 
 ```
-C:\>bitsadmin /peers /list
+bitsadmin /peers /list
 ```
 
 ## <a name="additional-references"></a>추가 참조
 
 - [명령줄 구문 키](command-line-syntax-key.md)
+
+- [bitsadmin 명령](bitsadmin.md)
+
+- [bitsadmin 피어 명령](bitsadmin-peers.md)

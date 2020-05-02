@@ -1,6 +1,6 @@
 ---
 title: bitsadmin reset
-description: '**Bitsadmin reset**에 대 한 Windows 명령 항목으로, 현재 사용자가 소유한 전송 큐의 모든 작업을 취소 합니다.'
+description: 현재 사용자가 소유 하는 전송 큐의 모든 작업을 취소 하는 bitsadmin reset 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,19 +9,19 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b73bd3b9c66b24330a0f9444836b9c8bd1730722
-ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
+ms.openlocfilehash: a6aea1d3cb0a89def1e23f42272bf0503022ac54
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81123089"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717005"
 ---
 # <a name="bitsadmin-reset"></a>bitsadmin reset
 
-현재 사용자가 소유 하 고 있는 전송 큐의 모든 작업을 취소 합니다. > 로컬 시스템에서 만든 작업은 다시 설정할 수 없습니다. 대신 관리자 이며 작업 스케줄러를 사용 하 여 로컬 시스템 자격 증명을 사용 하 여이 명령을 작업으로 예약 해야 합니다.
+현재 사용자가 소유 하 고 있는 전송 큐의 모든 작업을 취소 합니다. 로컬 시스템에서 만든 작업은 다시 설정할 수 없습니다. 대신 관리자 이며 작업 스케줄러를 사용 하 여 로컬 시스템 자격 증명을 사용 하 여이 명령을 작업으로 예약 해야 합니다.
 
 > [!NOTE]
-> BITSAdmin 1.5이 하에서 관리자 권한이 있는 경우/reset 스위치는 큐에 있는 모든 작업을 취소 합니다. 또한/allusers 옵션은 지원 되지 않습니다.
+> BITSAdmin 1.5 이전 버전에서 관리자 권한이 있는 경우/reset 스위치는 큐에 있는 모든 작업을 취소 합니다. 또한/allusers 옵션은 지원 되지 않습니다.
 
 ## <a name="syntax"></a>구문
 
@@ -37,12 +37,14 @@ bitsadmin /reset [/allusers]
 
 ## <a name="examples"></a>예
 
-다음 예제에서는 현재 사용자에 대 한 전송 큐에 모든 작업을 취소합니다.
+현재 사용자에 대 한 전송 큐의 모든 작업을 취소 합니다.
 
 ```
-C:\>bitsadmin /reset
+bitsadmin /reset
 ```
 
 ## <a name="additional-references"></a>추가 참조
 
 - [명령줄 구문 키](command-line-syntax-key.md)
+
+- [bitsadmin 명령](bitsadmin.md)

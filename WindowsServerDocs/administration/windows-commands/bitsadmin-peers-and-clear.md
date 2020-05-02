@@ -1,6 +1,6 @@
 ---
-title: bitsadmin 피어 및 지우기
-description: '**Bitsadmin 피어** 에 대 한 Windows 명령 항목 및 **clear**-피어 목록을 지웁니다.'
+title: bitsadmin peers and clear
+description: Bitsadmin 피어 및 clear 명령에 대 한 참조 항목으로, 피어 목록을 지웁니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 87c33d011f38e0ebda2383fc468cad9b30ab22c5
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 445ce0db00abb3d46f2dc7379c066624cef7afae
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850026"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717202"
 ---
-# <a name="bitsadmin-peers-and-clear"></a>bitsadmin 피어 및 지우기
+# <a name="bitsadmin-peers-and-clear"></a>bitsadmin peers and clear
 
 피어 목록을 지웁니다.
 
@@ -26,14 +26,18 @@ ms.locfileid: "80850026"
 bitsadmin /peers /clear
 ```
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 
-다음 예제에서는 피어 목록을 지웁니다.
+-피어 목록을 지웁니다.
 
 ```
-C:\>bitsadmin /peers /clear
+bitsadmin /peers /clear
 ```
 
 ## <a name="additional-references"></a>추가 참조
 
 - [명령줄 구문 키](command-line-syntax-key.md)
+
+- [bitsadmin 명령](bitsadmin.md)
+
+- [bitsadmin 피어 명령](bitsadmin-peers.md)

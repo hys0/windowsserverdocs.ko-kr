@@ -1,6 +1,6 @@
 ---
-title: bitsadmin 피어 및 도움말
-description: '**Bitsadmin 피어** 및 **도움말**에 대 한 Windows 명령 항목./t e r v 스위치에 대 한 명령줄 사용법을 표시 합니다.'
+title: bitsadmin peers and help
+description: Bitsadmin 피어 및 도움말 명령에 대 한 참조 항목입니다. 여기에는/svv 스위치에 대 한 명령줄 사용이 표시 됩니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9f1eee039830fce2fc311afaf782b97ddd641c70
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 405bf6d0641d46a9e7d365bbd9742633df403020
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850086"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717154"
 ---
-# <a name="bitsadmin-peers-and-help"></a>bitsadmin 피어 및 도움말
+# <a name="bitsadmin-peers-and-help"></a>bitsadmin peers and help
 
 **/T피어** 스위치에 대 한 명령줄 사용법을 표시 합니다.
 
@@ -26,14 +26,18 @@ ms.locfileid: "80850086"
 bitsadmin /peers /help
 ```
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 
-다음 명령은 **/피어** 스위치에 대 한 명령줄 도움말을 표시 합니다.
+**/T피어** 스위치에 대 한 명령줄 사용법을 표시 하려면 다음을 수행 합니다.
 
 ```
-C:\>bitsadmin /peers /help
+bitsadmin /peers /help
 ```
 
 ## <a name="additional-references"></a>추가 참조
 
 - [명령줄 구문 키](command-line-syntax-key.md)
+
+- [bitsadmin 명령](bitsadmin.md)
+
+- [bitsadmin 피어 명령](bitsadmin-peers.md)

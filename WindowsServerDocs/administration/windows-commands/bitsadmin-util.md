@@ -1,6 +1,6 @@
 ---
 title: bitsadmin util
-description: Util 스위치를 나열 하는 **bitsadmin util**에 대 한 Windows 명령 항목입니다.
+description: Util 스위치를 나열 하는 bitsadmin util 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0982bd02001bc6168f13255a7e785905f617db3f
-ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
+ms.openlocfilehash: 0fa7e8f67dd1c7c77ac489b38aa967e55f0e3506
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81122575"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707583"
 ---
 # <a name="bitsadmin-util"></a>bitsadmin util
 
-> 적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
+**/Util** 스위치를 나열 합니다.
 
 **Util** 스위치를 나열 합니다.
 
@@ -45,3 +47,5 @@ bitsadmin /util /version
 ## <a name="additional-references"></a>추가 참조
 
 - [명령줄 구문 키](command-line-syntax-key.md)
+
+- [bitsadmin 명령](bitsadmin.md)

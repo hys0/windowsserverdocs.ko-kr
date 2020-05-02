@@ -1,6 +1,6 @@
 ---
-title: bitsadmin util 및 repairservice
-description: '**Bitsadmin util 및 repairservice**에 대 한 Windows 명령 항목으로, 다양 한 버전의 BITS 서비스에서 알려진 문제를 해결 합니다.'
+title: bitsadmin util and repairservice
+description: BITS 서비스의 여러 버전에서 알려진 문제를 해결 하는 bitsadmin util 및 repairservice 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 164a402e7cbfc0a9223a97f4246eac84f0797aed
-ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
+ms.openlocfilehash: 0104a3f2ace972821151bf5083f9b0795e427ff1
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81122512"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707651"
 ---
-# <a name="bitsadmin-util-and-repairservice"></a>bitsadmin util 및 repairservice
+# <a name="bitsadmin-util-and-repairservice"></a>bitsadmin util and repairservice
 
 BITS가 시작 되지 않으면이 스위치는 잘못 된 서비스 구성과 Windows 서비스 (예: LANManworkstation) 및 네트워크 디렉터리에 대 한 종속성과 관련 된 오류를 해결 하려고 합니다. 이 스위치는 해결 된 문제가 있는지 여부를 나타내는 출력도 생성 합니다.
 
@@ -40,12 +40,16 @@ bitsadmin /util /repairservice [/force]
 
 ## <a name="examples"></a>예
 
-다음 예에서는 BITS 서비스 구성을 복구 합니다.
+BITS 서비스 구성을 복구 하려면:
 
 ```
-C:\>bitsadmin /util /repairservice
+bitsadmin /util /repairservice
 ```
 
 ## <a name="additional-references"></a>추가 참조
 
 - [명령줄 구문 키](command-line-syntax-key.md)
+
+- [bitsadmin util 명령](bitsadmin-util.md)
+
+- [bitsadmin 명령](bitsadmin.md)

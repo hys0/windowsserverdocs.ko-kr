@@ -1,6 +1,6 @@
 ---
-title: 만들기
-description: 디스크에 파티션, 하나 이상의 디스크에 볼륨 또는 VHD (가상 하드 디스크)를 만드는 만들기에 대 한 Windows 명령 항목입니다.
+title: create
+description: 디스크에 파티션, 하나 이상의 디스크에 볼륨 또는 VHD (가상 하드 디스크)를 만드는 만들기에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 76ff641757de78a10980b10a1ba4921dd2a57f0c
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 8d1e0f11a2e7011792da9c9d81d592fcfd7aa307
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80846846"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82716843"
 ---
-# <a name="create"></a>만들기
+# <a name="create"></a>create
 
 하나 이상의 디스크 또는 가상 하드 디스크 (VHD)에 있는 볼륨으로 디스크에 파티션을 만듭니다.
 
