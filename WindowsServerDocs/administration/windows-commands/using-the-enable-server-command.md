@@ -1,6 +1,6 @@
 ---
 title: 사용-서버
-description: Windows 배포 서비스에 대 한 모든 서비스를 사용할 수 있도록 하는 서버 사용에 대 한 Windows 명령 항목입니다.
+description: Windows 배포 서비스에 대 한 모든 서비스를 사용 하도록 설정 하는 enable Server에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6b10ff920667cfdbaae5baaf096bf56e11ce880e
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: bf7bf57c0784fa16719b9f77da50212bca0ef850
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80831546"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82720929"
 ---
 # <a name="enable-server"></a>사용-서버
 
->적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Windows 배포 서비스에 대 한 모든 서비스를 활성화 합니다.
 
@@ -30,7 +30,7 @@ wdsutil [Options] /Enable-Server [/Server:<Server name>]
 |매개 변수|설명|
 |-------|--------|
 |[/ 서버:<Server name>]|서버 이름을 지정합니다. 이 NetBIOS 이름 또는 정규화 된 도메인 이름 (FQDN) 수 있습니다. 서버 이름이 없는 지정 하는 경우 로컬 서버 사용 됩니다.|
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 서버에서 서비스를 사용 하려면 다음 중 하나를 실행 합니다.
 ```
 wdsutil /Enable-Server
@@ -38,10 +38,10 @@ wdsutil /verbose /Enable-Server /Server:MyWDSServer
 ```
 ## <a name="additional-references"></a>추가 참조
 - [명령줄 구문 키](command-line-syntax-key.md)
-[는 서버 사용 안 함-명령을 사용 하 여](using-the-disable-server-command.md)
-[get 서버 명령을 사용 하 여](using-the-get-server-command.md)
-[Initialize 서버 명령을 사용 하 여](using-the-initialize-server-command.md)
-[하위 명령: 서버 설정](subcommand-set-server.md)
-[하위 명령: 서버 시작](subcommand-start-server.md)
-[하위 명령: 서버 중지](subcommand-stop-server.md)
+[안 함](using-the-disable-server-command.md)
+-서버 명령을 사용 하 여[get](using-the-get-server-command.md)
+서버 명령을 사용 하 여[Initialize](using-the-initialize-server-command.md)
+
+서버 명령을 사용 하 여 다음 명령을 사용[합니다. 서버](subcommand-set-server.md)하위 명령:[시작-](subcommand-start-server.md)
+서버 하위 명령: 서버[중지](subcommand-stop-server.md)
 [초기화 서버 옵션](the-uninitialize-server-option.md)

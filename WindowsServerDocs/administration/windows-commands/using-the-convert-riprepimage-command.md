@@ -1,6 +1,6 @@
 ---
 title: 변환-RiprepImage
-description: RiprepImage에 대 한 windows 명령 항목. 기존 RIPrep (원격 설치 준비) 이미지를 Windows 이미지 (.wim) 형식으로 변환 합니다.
+description: RiprepImage에 대 한 참조 항목으로, 기존 RIPrep (원격 설치 준비) 이미지를 Windows 이미지 (.wim) 형식으로 변환 합니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 01e33580a6d2da55df15fabde70697c22f894f7c
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 12bdd6c49b5fdec0c0e4980a1abf7e21cefc538e
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80831816"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82721032"
 ---
 # <a name="convert-riprepimage"></a>변환-RiprepImage
 
@@ -36,10 +36,10 @@ WDSUTIL [Options] /Convert-RIPrepImage /FilePath:<File path and name>
 
 |            매개 변수            |                                                                                                                                                                                                                                                                                                               설명                                                                                                                                                                                                                                                                                                                |
 |---------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| /Sfilefiles:\<파일 경로 및 이름 > |                                                                                                                                                                                                       RIPrep 이미지에 해당 하는.sif 파일의 전체 경로 파일 이름을 지정 합니다. 이 일반적으로 Riprep.sif 호출 파일과 RIPrep 이미지를 포함 하는 폴더의 \Templates 하위 폴더에서 찾을 수 있습니다.                                                                                                                                                                                                       |
-|        / DestinationImage        | 다음 옵션을 사용 하 여 대상 이미지에 대 한 설정을 지정 합니다.</br>-/Sfilefiles:\<파일 경로 및 이름 >-새 파일의 전체 파일 경로를 설정 합니다. 예를 들어: **C:\Temp\convert.wim**</br>-[/Name:\<Name >]-이미지의 표시 이름을 설정 합니다. 표시 이름을 지정 하지 않으면 원본 이미지의 표시 이름이 사용 됩니다.</br>-[/설명: \<설명 >]-이미지에 대 한 설명을 설정 합니다.</br>-[/InPlace]-변환이 발생할 기본 동작인 원본 이미지의 사본을 아닌 원래 RIPrep 이미지에는 지정 해야 합니다.</br>-[/Overwrite: {예 |
+| /Sfilefiles:\<파일 경로 및 이름> |                                                                                                                                                                                                       RIPrep 이미지에 해당 하는.sif 파일의 전체 경로 파일 이름을 지정 합니다. 이 일반적으로 Riprep.sif 호출 파일과 RIPrep 이미지를 포함 하는 폴더의 \Templates 하위 폴더에서 찾을 수 있습니다.                                                                                                                                                                                                       |
+|        / DestinationImage        | 다음 옵션을 사용 하 여 대상 이미지에 대 한 설정을 지정 합니다.</br>-/Sfilefiles:\<파일 경로 및 이름>-새 파일의 전체 파일 경로를 설정 합니다. 예를 들어: **C:\Temp\convert.wim**</br>-[/Name:\<name>]-이미지의 표시 이름을 설정 합니다. 표시 이름을 지정 하지 않으면 원본 이미지의 표시 이름이 사용 됩니다.</br>-[/설명: \<설명>]-이미지에 대 한 설명을 설정 합니다.</br>-[/InPlace]-변환이 발생할 기본 동작인 원본 이미지의 사본을 아닌 원래 RIPrep 이미지에는 지정 해야 합니다.</br>-[/Overwrite: {예 |
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 
 지정된 된 RIPrep.sif 이미지 RIPREP.wim을 변환 하려면 다음을 입력 합니다.
 ```

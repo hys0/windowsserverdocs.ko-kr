@@ -1,6 +1,6 @@
 ---
 title: 삭제-AutoaddDevices
-description: 자동 추가 데이터베이스에서 보류 중이거나 거부 되었거나 승인 된 컴퓨터를 삭제 하는 delete AutoaddDevices에 대 한 Windows 명령 항목입니다.
+description: 자동 추가 데이터베이스에서 보류 중이거나 거부 되었거나 승인 된 컴퓨터를 삭제 하는 delete AutoaddDevices에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 29df0bd92859e9ee0b5b5bedfbd2e66173059cb5
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 90b5b24b68b2cfe3d387cb02b3715b70edba4300
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80831666"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82720988"
 ---
 # <a name="delete-autoadddevices"></a>삭제-AutoaddDevices
 
->적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 자동 추가 데이터베이스에서 보류 중이거나 거부 되거나 승인 된 컴퓨터를 삭제 합니다. 이 데이터베이스는 서버에서 이러한 컴퓨터에 대 한 정보를 저장합니다.
 
@@ -31,7 +31,7 @@ wdsutil /delete-AutoaddDevices [/Server:<Server name>] /Devicetype:{PendingDevic
 |-------|--------|
 |[/ 서버:<Server name>]|서버 이름을 지정합니다. 이 NetBIOS 이름 또는 정규화 된 도메인 이름 (FQDN) 수 있습니다. 서버 이름이 없는 지정 하는 경우 로컬 서버 사용 됩니다.|
 |/Devicetype: {PendingDevices &#124; RejectedDevices &#124;ApprovedDevices}|데이터베이스에서 삭제할 컴퓨터의 유형을 지정 합니다. 이 다음 세 가지 유형 중 하나일 수 있습니다.<p>-   **PendingDevices** 는 데이터베이스에서 보류 중 상태의 모든 컴퓨터를 반환 합니다.<br />-   **RejectedDevices** 는 데이터베이스에서 상태가 거부 됨 인 모든 컴퓨터를 반환 합니다.<br />-   **ApprovedDevices** 는 승인 됨 상태의 모든 컴퓨터를 반환 합니다.|
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 모든 거부 된 컴퓨터를 삭제 하려면 다음을 입력 합니다.
 ```
 wdsutil /delete-AutoaddDevices /Devicetype:RejectedDevices
@@ -41,7 +41,7 @@ wdsutil /delete-AutoaddDevices /Devicetype:RejectedDevices
 wdsutil /verbose /delete-AutoaddDevices /Server:MyWDSServer /Devicetype:ApprovedDevices
 ```
 ## <a name="additional-references"></a>추가 참조
-- [명령줄 구문 키](command-line-syntax-key.md) [승인 autoadddevices](using-the-approve-autoadddevices-command.md) 명령을 사용 하
-[get](using-the-get-autoadddevices-command.md) autoadddevices 명령을 사용 하 여
-
-[거부 autoadddevices](using-the-reject-autoadddevices-command.md) 명령을 사용 하 여
+- [명령줄 구문 키](command-line-syntax-key.md)
+[승인 autoadddevices](using-the-approve-autoadddevices-command.md)
+명령을 사용 하 여[get](using-the-get-autoadddevices-command.md)
+autoadddevices 명령을 사용 하 여[거부 autoadddevices](using-the-reject-autoadddevices-command.md) 명령을 사용 하 여

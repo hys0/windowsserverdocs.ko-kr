@@ -1,6 +1,6 @@
 ---
 title: -DriverPackage 추가
-description: 서버에 드라이버 패키지를 추가 하는 드라이버 패키지를 추가 하는 Windows 명령 항목입니다.
+description: 서버에 드라이버 패키지를 추가 하는 추가 DriverPackage에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e2ccdfcddd2f605eccd9cd32fed7b8c6921297fc
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 12d7f7078cf3dde10f834a4d4c7784ecc1d9bdf2
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80832016"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82721086"
 ---
 # <a name="add-driverpackage"></a>-DriverPackage 추가
 
@@ -30,13 +30,13 @@ WDSUTIL /Add-DriverPackage /InfFile:<Inf File path> [/Server:<Server name>] [/Ar
 
 |          매개 변수           |                                                              설명                                                              |
 |------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-|   InfFile:\<Inf 파일 경로 >   |                                           추가할.inf 파일의 전체 경로 지정 합니다.                                            |
-|    /Server:\<서버 이름 >    | 서버 이름을 지정합니다. 이 NetBIOS 이름이 나 FQDN 수 있습니다. 서버 이름을 지정 하지, 로컬 서버가 사용 됩니다. |
+|   InfFile:\<Inf 파일 경로>   |                                           추가할.inf 파일의 전체 경로 지정 합니다.                                            |
+|    /Server:\<서버 이름>    | 서버 이름을 지정합니다. 이 NetBIOS 이름이 나 FQDN 수 있습니다. 서버 이름을 지정 하지, 로컬 서버가 사용 됩니다. |
 |      /아키텍처: {x86      |                                                                 ia64                                                                  |
-| [/Drivergroup:\<그룹 이름 >] |                             패키지를 추가할 드라이버 그룹의 이름을 지정 합니다.                              |
-|   [/Name:\<친근 한 이름 >]   |                                           드라이버 패키지에 대 한 이름을 알려 줍니다.                                            |
+| [/Drivergroup:\<그룹 이름>] |                             패키지를 추가할 드라이버 그룹의 이름을 지정 합니다.                              |
+|   [/Name:\<친근 한 이름>]   |                                           드라이버 패키지에 대 한 이름을 알려 줍니다.                                            |
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 
 드라이버 패키지를 추가 하려면 다음 중 하나를 입력 합니다.
 ```

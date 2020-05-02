@@ -1,6 +1,6 @@
 ---
 title: echo
-description: '\* * * *에 대 한 Windows 명령 항목'
+description: '* * * *에 대 한 참조 항목'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5e6e9c3c79cc8006efba0c97a574e3d6d94a6f7e
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 05b42e4df38c3eafd3dcf3a92ced7b7b2c088e2b
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80845246"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82720874"
 ---
 # <a name="echo"></a>echo
 
@@ -35,17 +35,17 @@ echo [on | off]
 
 |매개 변수|설명|
 |---------|-----------|
-|[on \| 꺼짐]|또는 명령 에코 기능의 해제를 설정 합니다. 기본적으로 켜져 명령 에코 합니다.|
-|\<메시지 >|화면에 표시할 텍스트를 지정 합니다.|
+|[ \| 꺼짐]|또는 명령 에코 기능의 해제를 설정 합니다. 기본적으로 켜져 명령 에코 합니다.|
+|\<메시지>|화면에 표시할 텍스트를 지정 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
--   Echo **echo** *Message* 명령은 특히 **echo** 가 꺼진 경우에 유용 합니다. 명령을 표시 하지 않고 몇 줄의 긴 메시지를 표시 하려면 일괄 처리 프로그램에서 **echo off** 명령 뒤에 몇 가지 **echo** *메시지* 명령을 포함할 수 있습니다.
+-   **echo** *메시지* 명령은 특히 유용 **echo** 해제 됩니다. 여러 줄 메시지를 표시 하려면 모든 명령을 표시 하지 않고 포함할 수 있습니다 여러 **echo** *메시지* 후 명령는 **오프 에코** 명령 일괄 프로그램에 있습니다.
 -   때 **echo** 꺼져, 명령 프롬프트 명령 프롬프트 창에 나타나지 않습니다. 명령 프롬프트를 표시 하려면 입력 **화면 표시 합니다.**
 -   배치 파일에서 사용 하는 경우 **화면 표시** 및 **오프 에코** 명령 프롬프트에서 설정 하는 데 영향을 주지 않습니다.
 -   배치 파일에서 특정 명령 출력을 방지 하려면 삽입는 at 기호 (@) 명령 앞에 있습니다. 배치 파일에서 모든 명령 에코를 방지 하려면 포함는 **오프 에코** 파일의 시작 부분에 명령 합니다.
--   파이프를 표시 하려면 ( **|** ) 또는 리디렉션 문자 ( **<** 또는 **>** ) 사용 하는 **echo**, 리디렉션 또는 파이프 문자 바로 앞에 캐럿 (^)를 사용 하 여 (예를 들어 **^|** , **^>** , 또는 **^<** ). 캐럿을 표시 하려면 두 캐럿 연속으로 입력 합니다 ( **^^** ).
+-   Echo를 사용할 때 파이프**|**() 또는 리디렉션 문자**<** ( **>** 또는)를 표시 하려면 **echo**파이프 또는 리디렉션 문자 바로 앞에 캐럿 (^)을 사용 합니다 **^|**(예: **^>**, 또는 **^<**). 캐럿을 표시 하려면 연속 해 서 두 개의 캐럿 (**^^**)을 입력 합니다.
 
 ## <a name="examples"></a>예
 

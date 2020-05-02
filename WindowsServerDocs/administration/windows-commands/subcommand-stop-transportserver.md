@@ -1,6 +1,6 @@
 ---
 title: 하위 명령 중지-서버
-description: Stop-서버에 대 한 Windows 명령 항목
+description: 중지-서버에 대 한 참조 항목
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 44d62332307ffda4dcfa6af286c7b95cb12423dc
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 4321ec991b2c20911f992e4c3c38e5c9cfa5f165
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80833706"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82721618"
 ---
 # <a name="subcommand-stop-transportserver"></a>중지-TransportServer 하위 명령:
 
->적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 전송 서버에서 모든 서비스를 중지합니다.
 ## <a name="syntax"></a>구문
@@ -37,8 +37,8 @@ wdsutil /verbose /Stop-TransportServer /Server:MyWDSServer
 ```
 ## <a name="additional-references"></a>추가 참조
 - [명령줄 구문 키](command-line-syntax-key.md)
-[TransportServer 사용 안 함 명령을 사용 하 여](using-the-disable-transportserver-command.md)
-[사용 TransportServer 명령을 사용 하 여](using-the-enable-transportserver-command.md)
-[get TransportServer 명령을 사용 하 여](using-the-get-transportserver-command.md)
-[하위 명령: 집합 TransportServer](subcommand-set-transportserver.md)
-[하위 명령: TransportServer 시작](subcommand-start-transportserver.md)
+[안 함](using-the-disable-transportserver-command.md)
+-지 수 서버 명령을 사용 하 여-지[수](using-the-enable-transportserver-command.md)
+서버 명령을 사용 하 여 명령[하위 명령: 설정-](subcommand-set-transportserver.md)
+서버 하위 명령[: 시작-](subcommand-start-transportserver.md) [수신](using-the-get-transportserver-command.md)
+서버

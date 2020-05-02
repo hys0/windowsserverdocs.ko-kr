@@ -1,6 +1,6 @@
 ---
 title: 축소
-description: 사용자가 지정한 양만큼 선택한 볼륨의 크기를 줄이는 DiskPart 축소를 위한 Windows 명령 항목입니다.
+description: 지정한 양만큼 선택한 볼륨의 크기를 줄이는 DiskPart 축소에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2afdaf4ac27ef0c4378d6ae34d959dc81e63bc18
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 357a2320bf8b26130c9aa148d513edff6f1e85db
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80834206"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82721799"
 ---
 # <a name="shrink"></a>축소
 
->적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Diskpart 축소 명령은 지정한 양만큼 선택한 볼륨의 크기를 줄입니다. 이 명령은 볼륨의 끝에 사용 되지 않은 공간에서 사용할 수 있는 사용 가능한 디스크 공간을 만듭니다.
 
@@ -37,7 +37,7 @@ shrink querymax [noerr]
 |   nowait    |                                                       축소 프로세스가 계속 진행 되는 동안 명령이 즉시 반환 되도록 합니다.                                                        |
 |    noerr    | 스크립팅 전용입니다. 오류가 발생 하면 오류가 발생 하지 않은 경우에 따라 명령을 처리 하도록 DiskPart 계속 합니다. 이 매개 변수를 크기는 오류 코드를 수행 합니다. |
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 - 파일 시스템에 없는 경우 또는 NTFS 파일 시스템을 사용 하 여 서식이 지정 하는 경우에 볼륨의 크기를 줄일 수 있습니다.
 - 이 명령은 기본 볼륨 단순 또는 스팬 동적 볼륨에 사용 됩니다.
 - 원하는 금액을 지정 하지 않으면 최소 용량 (지정 된 경우) 만큼 볼륨이 줄어듭니다.
@@ -46,7 +46,7 @@ shrink querymax [noerr]
 - 최소 크기를 지정 했지만 사용 가능한 공간이 충분 하지 않은 경우 명령은 실패 합니다.
 - 이 작업을 수행 하려면 볼륨을 선택 해야 합니다. 사용 하 여는 **볼륨 선택** 볼륨을 선택 하 고 포커스를 이동 하는 명령입니다.
 - 이 명령은 원래 장비 제조업체 (OEM) 파티션, 확장 가능 펌웨어 인터페이스 (EFI) 시스템 파티션 또는 복구 파티션을에서 작동 하지 않습니다.
-  ## <a name="examples"></a><a name=BKMK_examples></a>예와
+  ## <a name="examples"></a>예
   250와 500 메가바이트 간의 가장 큰 가능한 양만큼 선택한 볼륨의 크기를 줄이려면 다음을 입력 합니다.
   ```
   shrink desired=500 minimum=250

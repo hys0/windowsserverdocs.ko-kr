@@ -1,6 +1,6 @@
 ---
 title: tpmvscmgr
-description: Tpmvscmgr에 대 한 Windows 명령 항목-관리자 자격 증명을 가진 사용자가 컴퓨터에서 TPM 가상 스마트 카드를 만들고 삭제 하는 데 사용할 수 있는 명령줄 도구입니다.
+description: 관리자 자격 증명을 가진 사용자가 컴퓨터에서 TPM 가상 스마트 카드를 만들고 삭제 하는 데 사용할 수 있는 명령줄 도구인 tpmvscmgr에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4411e0ec3c75cd768b2fe32ad26b17331328e3ca
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: ab0419060121033571eeba643cc0e2d42b45c743
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80832736"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82721302"
 ---
 # <a name="tpmvscmgr"></a>tpmvscmgr
 
-Tpmvscmgr을 명령줄 도구를 만들고 삭제 하는 컴퓨터에 TPM 가상 스마트 카드 관리 자격 증명이 있는 사용자를 수 있습니다. 이 명령을 사용할 수 있는 방법을의 예 참조 [예제](#BKMK_Examples)합니다.
+Tpmvscmgr을 명령줄 도구를 만들고 삭제 하는 컴퓨터에 TPM 가상 스마트 카드 관리 자격 증명이 있는 사용자를 수 있습니다.
 
 ## <a name="syntax"></a>구문
 
@@ -35,11 +35,11 @@ Tpmvscmgr destroy [/instance <instance ID>] [/?]
 
 |매개 변수|설명|
 |---------|-----------|
-|이름 /|필수입니다. 새로운 가상 스마트 카드의 이름을 나타냅니다.|
+|이름 /|필수 사항입니다. 새로운 가상 스마트 카드의 이름을 나타냅니다.|
 |/ AdminKey|사용자가 PIN을 잊어버린 경우 카드의 PIN을 다시 설정에 사용할 수 있는 원하는 관리자 키를 나타냅니다.</br>**기본** 010203040506070801020304050607080102030405060708의 기본값을 지정 합니다.</br>**프롬프트** 관리자 키에 대 한 값을 입력 하 라는 메시지를 표시 합니다.</br>**임의** 사용자에 게 반환 되지 않는 카드에 대 한 관리자 키에 대 한 임의 설정의 결과입니다. 이 스마트 카드 관리 도구를 사용 하 여 관리할 수 없을 수도 있는 카드를 만듭니다. 난수를 생성 하는 경우 48 자리 16 진수도 관리자가 키를 입력 해야 합니다.|
 |/ 핀|원하는 사용자 PIN 값을 나타냅니다.</br>**기본** 기본 12345678의 PIN을 지정 합니다.</br>**프롬프트** 명령줄에서 PIN을 입력 하 라는 메시지입니다. PIN에는 8 자 이상 이어야 합니다 하 고 숫자, 문자 및 특수 문자를 포함할 수 있습니다.|
 |/ PUK|원하는 PIN 잠금 해제 키 PUK () 값을 나타냅니다. PUK 값에는 8 자 이상 이어야 합니다 하 고 숫자, 문자 및 특수 문자를 포함할 수 있습니다. 매개 변수를 생략 하면 카드는 PUK 없이 만들어집니다.</br>**기본** PUK 12345678의 기본을 지정 합니다.</br>**프롬프트** 사용자에 게 명령줄에서 PUK를 입력 하 라는 메시지를 표시 합니다.|
-|생성 /|가상 스마트 카드에 대 한 함수에 필요한 스토리지에 파일을 생성 합니다. 하는 경우는 생성 / 매개 변수가 생략 되는 것을이 파일 시스템 없이 카드를 만드는 것과 같습니다. 예: Microsoft Configuration Manager는 스마트 카드 관리 시스템에 의해서만 파일 시스템이 없는 카드를 관리할 수 있습니다.|
+|생성 /|가상 스마트 카드에 대한 함수에 필요한 스토리지에 파일을 생성합니다. 하는 경우는 생성 / 매개 변수가 생략 되는 것을이 파일 시스템 없이 카드를 만드는 것과 같습니다. 예: Microsoft Configuration Manager는 스마트 카드 관리 시스템에 의해서만 파일 시스템이 없는 카드를 관리할 수 있습니다.|
 |/machine|에 가상 스마트 카드를 만들 수는 원격 컴퓨터의 이름을 지정할 수 있습니다. 이 도메인 환경 에서만 사용할 수 고 DCOM에 의존 합니다. 이 명령을 실행 하는 사용자는 다른 컴퓨터에서 가상 스마트 카드 만들기에 성공 하려면 명령에 대 한 원격 컴퓨터에서 로컬 관리자 그룹의 구성원 이어야 합니다.|
 |/?|이 명령에 대 한 도움말을 표시합니다.|
 
@@ -55,13 +55,13 @@ Tpmvscmgr destroy [/instance <instance ID>] [/?]
 |/instance|제거할 가상 스마트 카드의 인스턴스 ID를 지정 합니다. InstanceID는 카드를 만들 때 Tpmvscmgr.exe에서 출력으로 생성 되었습니다. /Instance Destroy 명령에 대 한 필수 필드입니다.|
 |/?|이 명령에 대 한 도움말을 표시합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 멤버는 **관리자** 그룹 (또는 해당 하는) 대상 컴퓨터에는이 명령의 모든 매개 변수를 실행 하는 데 필요한 최소입니다.
 
 영숫자 입력에 대 한 전체 127 문자 ASCII 집합 허용 됩니다.
 
-## <a name="examples"></a><a name=BKMK_Examples></a>예와
+## <a name="examples"></a>예
 
 다음 명령은 나중에 다른 컴퓨터에서 시작 된 스마트 카드 관리 도구에 의해 관리 될 수 있는 가상 스마트 카드를 만드는 방법을 보여 줍니다.
 ```
@@ -79,7 +79,7 @@ tpmvscmgr.exe create /name VirtualSmartCardForCorpAccess /AdminKey RANDOM /PIN P
 ```
 tpmvscmgr.exe destroy /instance <instance ID> 
 ```
-여기서 \<instance ID >은 사용자가 카드를 만들 때 화면에 인쇄 되는 값입니다. 특히, 만든 첫 번째 카드, 인스턴스 ID가 ROOT\SMARTCARDREADER\0000입니다.
+여기서 \<instance ID>은 사용자가 카드를 만들 때 화면에 인쇄 되는 값입니다. 특히, 만든 첫 번째 카드, 인스턴스 ID가 ROOT\SMARTCARDREADER\0000입니다.
 
 ## <a name="additional-references"></a>추가 참조
 

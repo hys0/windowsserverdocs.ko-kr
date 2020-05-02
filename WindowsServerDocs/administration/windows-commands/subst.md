@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 43cbc57aba29ea0b9150dccdfc566a93017a09a5
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 62ba0de33e69998e7d3e343b1e53c1de7e630e10
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80833646"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82721606"
 ---
 # <a name="subst"></a>subst
 
@@ -22,7 +22,7 @@ ms.locfileid: "80833646"
 
 드라이브 문자를 경로 연결합니다. 매개 변수 없이 사용 하는 경우 **subst** 적용 가상 드라이브의 이름을 표시 합니다.
 
-이 명령을 사용하는 방법의 예는 [예](#BKMK_examples)를 참조하세요.
+
 
 ## <a name="syntax"></a>구문
 
@@ -35,12 +35,12 @@ subst <Drive1>: /d
 
 |매개 변수|설명|
 |---------|-----------|
-|\<Drive1 >:|경로 할당할 가상 드라이브를 지정 합니다.|
-|[\<Drive2 >:]\<경로 >|실제 드라이브와 가상 드라이브에 할당 하 고 원하는 경로 지정 합니다.|
+|\<Drive1>:|경로 할당할 가상 드라이브를 지정 합니다.|
+|[\<Drive2>:] \<경로>|실제 드라이브와 가상 드라이브에 할당 하 고 원하는 경로 지정 합니다.|
 |/d|대체 된 가상 드라이브를 삭제합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 -   다음 명령은 작동 하지 않으며 **subst** 명령에 지정 된 드라이브에서 사용 하면 안 됩니다.
 

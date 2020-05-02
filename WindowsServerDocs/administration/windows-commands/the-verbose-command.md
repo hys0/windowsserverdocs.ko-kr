@@ -1,6 +1,6 @@
 ---
-title: 자세한 정보 표시
-description: 지정 된 명령에 대 한 자세한 정보 출력을 표시 하는 자세한 내용은 Windows 명령 항목을 참조 하세요.
+title: verbose
+description: 지정 된 명령에 대 한 자세한 정보 출력을 표시 하는 자세한 정보에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f67a4fe99a5051e8844e6386d87911946a808c1e
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 3563673d1f80167e469d98a664a6f96ca49815a1
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80832846"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82721369"
 ---
-# <a name="verbose"></a>자세한 정보 표시
+# <a name="verbose"></a>verbose
 
 지정 된 명령에 대 한 자세한 정보 출력을 표시합니다. 사용할 수 있습니다 **/verbose** 실행 하는 다른 WDSUTIL 명령을 사용 합니다. 지정 해야 하는 참고 **/verbose** 및 **진행률/** 바로 뒤 **WDSUTIL**합니다.
 

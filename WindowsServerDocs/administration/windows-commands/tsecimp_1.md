@@ -1,6 +1,6 @@
 ---
 title: tsecimp
-description: Tsecimp에 대 한 Windows 명령 항목은 XML(Extensible Markup Language) (XML) 파일의 할당 정보를 TAPI 서버 보안 파일 (Tsec .ini)로 가져옵니다.
+description: XML(Extensible Markup Language) (XML) 파일의 할당 정보를 TAPI 서버 보안 파일 (Tsec .ini)로 가져오는 tsecimp에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 30a097bcd25e981f72a421b81b80b595343404ba
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: afd38f7081a9b4674eb6cac26f52849794b8d5e6
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80832506"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82721250"
 ---
 # <a name="tsecimp"></a>tsecimp
 
@@ -31,19 +31,19 @@ tsecimp /d
 
 |매개 변수|설명|
 |---------|-----------|
-|/f \<파일 이름 >|필수입니다. 가져올 할당 정보를 포함 하는 XML 파일의 이름을 지정 합니다.|
+|/f \<파일 이름>|필수 사항입니다. 가져올 할당 정보를 포함 하는 XML 파일의 이름을 지정 합니다.|
 |/v|Tsec.ini 파일에 정보를 가져오지 않고 XML 파일의 구조를 확인 합니다.|
-|/u|각 사용자는 XML 파일에 지정 된 도메인의 구성원 인지 확인 합니다. 이 매개 변수를 사용 하는 컴퓨터는 네트워크에 연결 되어야 합니다. 이 매개 변수는 많은 양의 사용자 할당 정보를 처리 하는 경우 성능이 크게 저하 될 수 있습니다.|
+|/U|각 사용자는 XML 파일에 지정 된 도메인의 구성원 인지 확인 합니다. 이 매개 변수를 사용 하는 컴퓨터는 네트워크에 연결 되어야 합니다. 이 매개 변수는 많은 양의 사용자 할당 정보를 처리 하는 경우 성능이 크게 저하 될 수 있습니다.|
 |/d|설치 된 전화 통신 공급자의 목록이 표시 됩니다. 각 전화 통신 공급자에 대 한 관련된 된 회선 디바이스가 주소와 각 줄 디바이스와 연결 된 사용자가 나열 됩니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 -   할당 정보를 가져오려면 원하는 XML 파일 아래에 설명 된 구조를 따라야 합니다.  
     -   **UserList** 요소
 
         **UserList** XML 파일의 최상위 요소입니다.
-    -   **사용자** 요소
+    -   **User** 요소
 
         각 **사용자** 요소는 도메인의 구성원 인 사용자에 대 한 정보를 포함 합니다. 각 사용자는 하나 이상의 줄 디바이스 할당 될 수 있습니다.
 
@@ -51,13 +51,13 @@ tsecimp /d
 
         **사용자** 는 단일 요소를 포함 해야 **DomainUserName** 사용자의 도메인과 사용자 이름을 지정 하는 요소입니다. **사용자** 요소가 포함 될 수도 하나 **FriendlyName** 사용자에 대 한 이름을 지정 하는 요소입니다.
 
-        **사용자** 요소가 하나 포함 될 수 있습니다 **LineList** 요소입니다. 경우에 **LineList** 요소가 없으면,이 사용자에 대 한 모든 줄 장치가 제거 됩니다.
+        **사용자** 요소가 하나 포함 될 수 있습니다 **LineList** 요소입니다. 경우에 **LineList** 요소가 없으면,이 사용자에 대 한 모든 줄 디바이스가 제거 됩니다.
     -   **LineList** 요소
 
-        **LineList** 요소는 각 줄 또는 사용자에 게 할당 될 수 있는 장치에 대 한 정보를 포함 합니다. 각 **LineList** 요소를 하나 이상 포함할 수 **줄** 요소입니다.
+        **LineList** 요소는 각 줄 또는 사용자에 게 할당 될 수 있는 디바이스에 대 한 정보를 포함 합니다. 각 **LineList** 요소를 하나 이상 포함할 수 **줄** 요소입니다.
     -   **줄** 요소
 
-        각 **줄** 요소 줄 장치를 지정 합니다. 중 하나를 추가 하 여 각 줄 장치를 식별 해야는 **주소** 요소 또는 **PermanentID** 요소 아래에서 **줄** 요소입니다.
+        각 **줄** 요소 줄 디바이스를 지정 합니다. 중 하나를 추가 하 여 각 줄 디바이스를 식별 해야는 **주소** 요소 또는 **PermanentID** 요소 아래에서 **줄** 요소입니다.
 
         각각에 대해 **줄** 설정할 수 있습니다 요소는 **제거** 특성. 이 특성을 설정 하는 경우 사용자가 더 이상 해당 회선 디바이스를 할당 합니다. 이 특성을 설정 하지 않으면 사용자는 해당 줄 디바이스에 대 한 액세스를 얻게 됩니다. 회선 디바이스 사용자에 게 사용할 수 없는 경우 오류가 지정 됩니다.
 

@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5b6efff57a512a2e0519b3294c51c073f1f44d8d
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: e27b260bdaa8896ad3cf0ad58294467bbb63e1c2
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80832836"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82721359"
 ---
 # <a name="time"></a>time
 
@@ -22,7 +22,7 @@ ms.locfileid: "80832836"
 
 표시 하거나 시스템 시간을 설정 합니다. 매개 변수 없이 사용 하는 경우 **시간** 현재 시스템 시간을 표시 하 고 새 시간을 입력 하 라는 메시지가 표시 됩니다.
 
-이 명령을 사용하는 방법의 예는 [예](#BKMK_examples)를 참조하세요.
+
 
 ## <a name="syntax"></a>구문
 
@@ -34,11 +34,11 @@ time [/t | [<HH>[:<MM>[:<SS>]] [am|pm]]]
 
 |매개 변수|설명|
 |---------|-----------|
-|\<HH > [:\<MM > [:\<SS > [.\<NN >]]] [am\|pm]|여기서 지정 된 시간에 시스템 시간을 설정 *HH* (필수) 시간에 *MM* 는 분으로 및 *SS* (초)입니다. *NN* 1/100 초를 지정 하는 것입니다. 경우 **고** 또는 **오후** 를 지정 하지 않으면 **시간** 기본적으로 24 시간 형식을 사용 합니다.|
+|\<HH> [:\<MM> [:\<SS> [.\< NN>]]] [am\|pm]|여기서 지정 된 시간에 시스템 시간을 설정 *HH* (필수) 시간에 *MM* 는 분으로 및 *SS* (초)입니다. *NN* 1/100 초를 지정 하는 것입니다. 경우 **고** 또는 **오후** 를 지정 하지 않으면 **시간** 기본적으로 24 시간 형식을 사용 합니다.|
 |/t|새 시간에 대 한 메시지를 표시 하지 않고 현재 시간을 표시 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 -   현재 시간을 변경 하려면 관리자 자격 증명이 있어야 합니다.
 -   에 대 한 값을 구분 해야 *HH*, *MM*, 및 *SS* 콜론 (:)으로 합니다. *SS* 및 *NN* 마침표 (.)로 구분 해야 합니다.

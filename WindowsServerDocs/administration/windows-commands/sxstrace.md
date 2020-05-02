@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ece727b68eb620e839cbfb8efe02dbe775666498
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 212e2d45b77f09b9460555733de15488a4420842
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80833616"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82721605"
 ---
 # <a name="sxstrace"></a>sxstrace
 
->적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 함께 하 여 문제를 진단합니다.    
 
@@ -32,17 +32,17 @@ sxstrace [{[trace -logfile:<FileName> [-nostop]|[parse -logfile:<FileName> -outf
 |-------|--------|  
 |추적|Sxs (side-by-side-)에 대 한 추적 활성화|  
 |-로그 파일|원시 로그 파일을 지정합니다.|  
-|\<파일 이름 >|추적 로그가 저장 *FileName*합니다.|  
+|\<파일 이름>|추적 로그가 저장 *FileName*합니다.|  
 |-nostop|추적을 중지 하려면 안 함을 지정 합니다.|  
-|구문 분석|원시 추적 파일을 변환합니다.|  
+|parse|원시 추적 파일을 변환합니다.|  
 |-출력|출력 파일 이름을 지정합니다.|  
-|\<ParsedFile >|구문 분석 된 파일의 파일 이름을 지정합니다.|  
-|-필터|출력을을 필터링 할 수 있습니다.|  
-|\<AppName >|애플리케이션의 이름을 지정합니다.|  
+|\<ParsedFile>|구문 분석 된 파일의 파일 이름을 지정합니다.|  
+|-filter|출력을을 필터링 할 수 있습니다.|  
+|\<AppName>|애플리케이션의 이름을 지정합니다.|  
 |stoptrace|전에 중지 하지 않으면 추적을 중지 합니다.|  
 |-?|명령 프롬프트에 도움말을 표시합니다.|  
 
-## <a name="examples"></a><a name="BKMK_Examples"></a>예와  
+## <a name="examples"></a>예  
 추적을 설정 하 고 추적 파일을 저장 **sxstrace.etl**:  
 ```  
 sxstrace trace -logfile:sxstrace.etl  

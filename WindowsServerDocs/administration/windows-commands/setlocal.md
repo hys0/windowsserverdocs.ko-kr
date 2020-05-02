@@ -1,6 +1,6 @@
 ---
 title: setlocal
-description: 배치 파일에서 환경 변수를 지역화 하기 시작 하는 setlocal의 Windows 명령 항목입니다.
+description: 배치 파일에서 환경 변수를 지역화 하기 시작 하는 setlocal에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,18 +9,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 24ed41289bb517d41db11fd3ebc41e5751b7afd9
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: def4e8c58399af498e3c097f53e526fbedf9de0d
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80834366"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82721859"
 ---
 # <a name="setlocal"></a>setlocal
 
 배치 파일에서 환경 변수의 지역화를 시작합니다. 지역화 일치 될 때까지 계속 **endlocal** 명령이 나 배치 파일의 끝에 도달 했습니다.
 
-이 명령을 사용하는 방법의 예는 [예](#BKMK_examples)를 참조하세요.
+
 
 ## <a name="syntax"></a>구문
 
@@ -38,7 +38,7 @@ setlocal [enableextensions | disableextensions] [enabledelayedexpansion | disabl
 |disabledelayedexpansion|일치 하는 때까지 지연된 환경 변수 확장을 사용 하지 않도록 설정 **endlocal** 하기 전에 설정에 관계 없이 명령이 발견 되는 **setlocal** 명령이 실행 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 -   사용 하 여 **setlocal**
 
@@ -51,7 +51,7 @@ setlocal [enableextensions | disableextensions] [enabledelayedexpansion | disabl
     둘 이상의 **setlocal** 또는 **endlocal** 명령을 일괄 프로그램 (즉, 중첩 된 명령).
 -   배치 파일에서 명령 확장에 대 한 테스트
 
-    **setlocal** ERRORLEVEL 변수를 설정 하는 명령입니다. 전달 하는 경우 {**enableextensions** | **disableextensions**} 또는 {**enabledelayedexpansion** | **disabledelayedexpansion**}, ERRORLEVEL 변수 설정 되어 **0** (영)입니다. 그렇지 않으면로 설정 됩니다 **1**합니다. 다음 예제와 같이 확장을 사용할 수 있는 지 확인 하기 위해 배치 스크립트에서이 정보를 사용할 수 있습니다.  
+    **setlocal** ERRORLEVEL 변수를 설정 하는 명령입니다. {**Enableextensions** | **disableextensions**} 또는 {**enabledelayedexpansion** | **disabledelayedexpansion**}를 전달 하는 경우 ERRORLEVEL 변수는 **0** (영)으로 설정 됩니다. 그렇지 않으면로 설정 됩니다 **1**합니다. 다음 예제와 같이 확장을 사용할 수 있는 지 확인 하기 위해 배치 스크립트에서이 정보를 사용할 수 있습니다.  
     ```
     setlocal enableextensions
     verify other 2>nul
@@ -59,7 +59,7 @@ setlocal [enableextensions | disableextensions] [enabledelayedexpansion | disabl
     ```  
     때문에 **cmd** 명령 확장 비활성화 되 면 ERRORLEVEL 변수를 설정 하지 않는 **확인** 명령에 잘못 된 인수를 사용 하는 경우 0이 아닌 값으로 ERRORLEVEL 변수를 초기화 합니다. 또한 사용 하는 경우는 **setlocal** 명령 인수에 {**enableextensions** | **disableextensions**} 또는 {**enabledelayedexpansion** | **disabledelayedexpansion**} ERRORLEVEL 변수 설정 하지 않으므로 및 **1**, 명령 확장을 사용할 수 없습니다.
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 
 다음 예제 스크립트에 표시 된 대로 배치 파일에서 환경 변수를 지역화할 수 있습니다.
 ```
