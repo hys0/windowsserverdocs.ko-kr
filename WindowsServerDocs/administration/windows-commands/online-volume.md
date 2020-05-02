@@ -1,6 +1,6 @@
 ---
 title: 온라인 볼륨
-description: '\* * * *에 대 한 Windows 명령 항목'
+description: '* * * *에 대 한 참조 항목'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 476dd893e7899a2bd58336546a7881934f415f92
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: bb2ee396e4fa8a2e61001df0d979d85dabe1aa32
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80837846"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82723428"
 ---
 # <a name="online-volume"></a>온라인 볼륨
 
@@ -40,12 +40,12 @@ online volume [noerr]
 |---------|-----------|
 |noerr|스크립팅 전용입니다. 오류가 발생 하면 오류가 발생 하지 않은 경우에 따라 명령을 처리 하도록 DiskPart 계속 합니다. 이 매개 변수를 크기는 오류 코드를 수행 합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 -   이 명령은 실패 한, 실패 또는 중복 실패 상태에 있는 볼륨에서 작동 합니다.
 -   이 명령을 성공적으로 볼륨을 선택 해야 합니다. 사용 하 여는 **볼륨 선택** 볼륨을 선택 하 고 포커스를 이동 하는 명령입니다.
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 
 온라인에 포커스가 있는 볼륨을 상태로 전환 하려면 다음을 입력 합니다.
 ```

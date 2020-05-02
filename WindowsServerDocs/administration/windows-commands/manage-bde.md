@@ -1,6 +1,6 @@
 ---
 title: manage-bde
-description: '\* * * *에 대 한 Windows 명령 항목'
+description: '* * * *에 대 한 참조 항목'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,18 +9,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 816e20152ec40ce54c1192f3075c6f4556aed3db
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 567e0ed45f6bef42e82c3a68b3c0cbbb352b12d9
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80839696"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82724038"
 ---
 # <a name="manage-bde"></a>manage-bde
 
 
 
-설정 하거나 BitLocker 해제를 사용 하는, 지정한 메커니즘을 잠금 해제, 복구 메서드를 업데이트 하 고, BitLocker로 보호 된 데이터 드라이브를 잠금 해제 합니다. 이 명령줄 도구를 대신 사용할 수는 **BitLocker 드라이브 암호화** 제어판 항목입니다. 이 명령을 사용할 수 있는 방법을의 예 참조 [예제](#BKMK_Examples)합니다.
+설정 하거나 BitLocker 해제를 사용 하는, 지정한 메커니즘을 잠금 해제, 복구 메서드를 업데이트 하 고, BitLocker로 보호 된 데이터 드라이브를 잠금 해제 합니다. 이 명령줄 도구를 대신 사용할 수는 **BitLocker 드라이브 암호화** 제어판 항목입니다.
 
 ## <a name="syntax"></a>구문
 
@@ -54,17 +54,17 @@ manage-bde [-status] [–on] [–off] [–pause] [–resume] [–lock] [–unloc
 |-? 또는 /?|도움말에 대 한 간단한 명령 프롬프트에 표시 됩니다.|
 |-help 또는-h|명령 프롬프트에서 전체 도움말을 표시 합니다.|
 
-## <a name="examples"></a><a name=BKMK_Examples></a>예와
+## <a name="examples"></a>예
 
-다음 예제에서는 컴퓨터의 드라이브를 표시 하 고 식별 BitLocker로 보호 되는 여부 및 현재 암호화 상태입니다.
+을 (를) 통해 컴퓨터의 드라이브를 표시 하 고 BitLocker로 보호 되는 드라이브 및 현재 암호화 상태를 확인 합니다.
 ```
 manage-bde -status
 ```
-다음 예제는 사용 하도록 설정 하면 BitLocker 복구 암호의 옵션으로 C 드라이브입니다. 복구 암호 BitLocker에 의해 생성 된 되어 녹음할 수 있도록 화면에 표시 됩니다.
+C 드라이브에서 BitLocker를 사용 하도록 설정 하는 방법을 보여 줍니다. 복구 암호 BitLocker에 의해 생성 된 되어 녹음할 수 있도록 화면에 표시 됩니다.
 ```
 manage-bde –on C: -recoverypassword
 ```
-다음 예제에서는 복구 암호를 사용 하 여 BitLocker로 보호 된 드라이브를 잠금 해제 하는 방법을 보여 줍니다.
+는 복구 암호를 사용 하 여 BitLocker로 보호 된 드라이브의 잠금을 해제 하는 방법을 보여 줍니다.
 ```
 manage-bde –unlock E: -recoverypassword 111111-222222-333333-444444-555555-666666-777777-888888
 ```
@@ -72,4 +72,4 @@ manage-bde –unlock E: -recoverypassword 111111-222222-333333-444444-555555-666
 ## <a name="additional-references"></a>추가 참조
 
 -   - [명령줄 구문 키](command-line-syntax-key.md)
--   [명령줄을 사용 하 여 BitLocker 사용](https://technet.microsoft.com/library/dd894351(v=ws.10).aspx)
+-   [명령줄을 사용 하 여 BitLocker를 사용 하도록 설정](https://technet.microsoft.com/library/dd894351(v=ws.10).aspx)

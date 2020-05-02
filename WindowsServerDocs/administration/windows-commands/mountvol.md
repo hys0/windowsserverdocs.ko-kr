@@ -1,6 +1,6 @@
 ---
 title: mountvol
-description: '\* * * *에 대 한 Windows 명령 항목'
+description: '* * * *에 대 한 참조 항목'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,20 +9,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 34a98a273274f7982bfdd970710c04178fed4f5a
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: ca3e4320499161194f87ceaca4f693ff997f3ba2
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80839386"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82723919"
 ---
 # <a name="mountvol"></a>mountvol
 
 
 
 만들고, 삭제 또는 볼륨 탑재 지점을 나열 합니다.
-
-이 명령을 사용 하는 방법의 예 참조 [예제](#BKMK_examples)합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -40,8 +38,8 @@ mountvol <Drive>: /s
 
 |매개 변수|설명|
 |---------|-----------|
-|[\<Drive >:]<Path>|탑재 지점이 있는 기존 NTFS 디렉터리를 지정 합니다.|
-|\<VolumeName >|탑재 지점의 대상인 볼륨 이름을 지정 합니다. 볼륨 이름에 다음 구문을 사용 하 여 여기서 *GUID* 전역 고유 식별자입니다.</br>`\\\\?\Volume\{GUID}\`</br>대괄호 {}는 필요 합니다.|
+|[\<드라이브>:]<Path>|탑재 지점이 있는 기존 NTFS 디렉터리를 지정 합니다.|
+|\<VolumeName>|탑재 지점의 대상인 볼륨 이름을 지정 합니다. 볼륨 이름에 다음 구문을 사용 하 여 여기서 *GUID* 전역 고유 식별자입니다.</br>`\\\\?\Volume\{GUID}\`</br>대괄호 {}는 필요 합니다.|
 |/d|지정된 된 폴더의 볼륨 탑재 지점을 제거합니다.|
 |/l|지정된 된 폴더에 탑재 된 볼륨 이름을 나열합니다.|
 |/p|지정된 된 디렉터리에서 볼륨 탑재 지점을 제거 하 고 기본 볼륨을 분리는 기본 볼륨을 오프 라인을 탑재할 수 없게 만드는 합니다. 다른 프로세스에서 볼륨을 사용 하는 경우 **mountvol** 에서 볼륨을 분리 하기 전에 열린 핸들을 닫습니다.|
@@ -51,13 +49,13 @@ mountvol <Drive>: /s
 |/s|지정 된 드라이브에 EFI 시스템 파티션을 탑재합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 -   **Mountvol** 드라이브 문자를 요구 하지 않고 볼륨을 연결할 수 있습니다.
 -   **/P** 를 사용 하 여 분리 된 볼륨은 볼륨 탑재 지점을 만들 때까지 탑재 되지 않은 볼륨 목록에 나열 됩니다. 사용 하 여 볼륨의 탑재 지점이 여러 개 있으면 **/d** 사용 하기 전에 추가 탑재 지점을 제거 하려면 **/p**합니다. 다시 만들 수 있습니다 기본 볼륨 탑재 가능한 볼륨 탑재 지점을 할당 합니다.
 -   를 다시 포맷 하거나 하드 드라이브의 교체 하지 않고 볼륨 공간을 확장 해야 하는 경우 다른 볼륨을 탑재 경로 추가할 수 있습니다. 여러 탑재 경로 볼륨 하나를 사용 하는 이점은 하나의 드라이브 문자를 사용 하 여 모든 로컬 볼륨에 액세스할 수 있는지 (예: `C:`). 드라이브 문자에 해당 하는 볼륨을 기억할 필요가 없습니다-할 수 있지만 로컬 볼륨을 탑재 하 고 드라이브 문자를 할당 합니다.
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 
 탑재 지점을 만들려면 다음을 입력 합니다.
 ```

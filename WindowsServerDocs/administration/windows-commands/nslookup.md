@@ -1,6 +1,6 @@
 ---
 title: nslookup
-description: '\* * * *에 대 한 Windows 명령 항목'
+description: '* * * *에 대 한 참조 항목'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 15062d81992ee1b6e55d47cb9e49822350e4f2bc
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 35f790a3a537959501afe7c3173317f22b934ec6
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80838096"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82723498"
 ---
 # <a name="nslookup"></a>nslookup
 
->적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 도메인 이름 시스템 (DNS) 인프라를 진단 하는 데 사용할 수 있는 정보를 표시 합니다. 이 도구를 사용 하기 전에 DNS의 작동 원리에 대해 잘 알고 있어야 합니다. Nslookup 명령줄 도구는 TCP/IP 프로토콜을 설치한 경우에만 사용할 수 있습니다.
 ## <a name="syntax"></a>구문
@@ -84,7 +84,7 @@ nslookup /view <FileName>
 |         [nslookup set vc](nslookup-set-vc.md)         |                                                                     가상 회로 보낼 때 서버에 요청을 사용 하지 않는 또는 사용 하도록 지정 합니다.                                                                      |
 |           [nslookup view](nslookup-view.md)           |                                                                          정렬 하 고는 이전 출력 나열 **ls** 하위 명령 또는 명령입니다.                                                                          |
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 - *Computertofind* 가 IP 주소이 고 쿼리가 A 또는 PTR 리소스 레코드 종류에 대 한 것 이면 컴퓨터 이름이 반환 됩니다. *Computertofind* 가 이름이 고 마침표가 없으면 기본 DNS 도메인 이름이 이름에 추가 됩니다. 이 동작은 다음의 상태에 따라 **설정** 하위 명령: **도메인**, **srchlist**, **defname**, 및 **검색**합니다.
 - *Computertofind*대신 하이픈 (-)을 입력 하면 명령 프롬프트가 **nslookup** 대화형 모드로 변경 됩니다.
 - 명령줄 길이 256 자 미만 이어야 합니다.
@@ -102,7 +102,7 @@ nslookup /view <FileName>
   |`No response from server`|DNS 이름 서버는 서버 컴퓨터에서 실행 됩니다.|
   |`No records`|DNS 이름 서버에 리소스 레코드는 컴퓨터에 대 한 현재 쿼리 형식의 없는 컴퓨터 이름이 올바른지 있지만. 쿼리 형식이 지정 된 고 **querytype 설정** 명령입니다.|
   |`Nonexistent domain`|컴퓨터 또는 DNS 도메인 이름이 존재 하지 않습니다.|
-  |`Connection refused`<p>-또는-<p>`Network is unreachable`|DNS 이름 서버 또는 손가락 서버에 연결할 수 없습니다. 이 오류가 자주 발생 하면 **ls** 및 **손가락** 요청 합니다.|
+  |`Connection refused`<p>또는<p>`Network is unreachable`|DNS 이름 서버 또는 손가락 서버에 연결할 수 없습니다. 이 오류가 자주 발생 하면 **ls** 및 **손가락** 요청 합니다.|
   |`Server failure`|DNS 이름 서버 데이터베이스의 내부 불일치를 발견 하 고 유효한 응답을 반환할 수 없습니다.|
   |`Refused`|DNS 이름 서버 요청을 거부 했습니다.|
   |`format error`|DNS 이름 서버 요청 패킷의 형식이 없음을 발견 합니다. 에 오류가 있다는 의미일 수 있습니다 **nslookup**합니다.|
@@ -112,5 +112,5 @@ nslookup /view <FileName>
   - Larson, M. 및 C. Liu입니다. 2001. *Windows 2000에서 DNS*합니다. Sebastopol, 캘리포니아: O'Reilly 및 연결, i n c.
     #### <a name="examples"></a>예
     각 명령줄 옵션은 명령 이름으로, 일부 경우, 등호 (=) 및 값에 바로 뒤에 오는 하이픈 (-)으로 구성 됩니다. 예를 들어, 기본 쿼리 형식을 호스트 (컴퓨터) 정보 및 초기 제한 시간을 10 초를 변경 하려면 입력: **nslookup-querytype = hinfo-timeout = 10**
-    ## <a name="see-also"></a>관련 항목
+    ## <a name="see-also"></a>참고 항목
     - [명령줄 구문 키](command-line-syntax-key.md)

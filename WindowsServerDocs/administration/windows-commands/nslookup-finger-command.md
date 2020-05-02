@@ -1,6 +1,6 @@
 ---
-title: nslookup finger 명령
-description: '\* * * *에 대 한 Windows 명령 항목'
+title: nslookup finger Command
+description: '* * * *에 대 한 참조 항목'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9cfdf60478ca917fb373d07a72f018cf09056b49
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 428c9e7e775c85992f861e30ae9628ea27f7ee70
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80838786"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82723727"
 ---
-# <a name="nslookup-finger-command"></a>nslookup finger 명령
+# <a name="nslookup-finger-command"></a>nslookup finger Command
 
 
 
@@ -32,8 +32,8 @@ finger [<UserName>] [{[>] <FileName>|[>>] <FileName>}]
 
 |  매개 변수  |                                                                               설명                                                                               |
 |-------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| \<사용자 이름 > |                                                               조회 하는 사용자의 이름을 지정 합니다.                                                                |
-| \<파일 이름 > | 출력을 저장 하는 파일 이름을 지정 합니다. 보다 큼 (>) 및 이중 사용할 수 있습니다 보다 큰 (>>) 문자를 일반적인 방법으로 출력을 리디렉션합니다. |
+| \<사용자 이름> |                                                               조회 하는 사용자의 이름을 지정 합니다.                                                                |
+| \<파일 이름> | 출력을 저장 하는 파일 이름을 지정 합니다. 보다 큼 (>) 및 이중 사용할 수 있습니다 보다 큰 (>>) 문자를 일반적인 방법으로 출력을 리디렉션합니다. |
 |    {도움말    |                                                                                   ?}                                                                                    |
 
 ## <a name="additional-references"></a>추가 참조

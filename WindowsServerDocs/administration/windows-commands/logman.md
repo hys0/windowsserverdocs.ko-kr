@@ -1,6 +1,6 @@
 ---
 title: logman
-description: '\* * * *에 대 한 Windows 명령 항목'
+description: '* * * *에 대 한 참조 항목'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,23 +9,23 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: bb6654cce0e23ac08a2fa6334d6144b08c8b65f3
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 9aed5a83c503c03f52757abf525aa5d122f41466
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80840406"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82724269"
 ---
 # <a name="logman"></a>logman
 
->적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 **logman** 는 이벤트 추적 세션 및 성능 로그를 만들고 관리 하며 명령줄에서 성능 모니터의 많은 기능을 지원 합니다.
 ## <a name="syntax"></a>구문
 ```
 logman [create | query | start | stop | delete| update | import | export | /?] [options]
 ```
-## <a name="actions"></a>작업
+## <a name="actions"></a>동작
 |작업|설명|
 |-----|--------|
 |[logman create](logman-create.md)|카운터, 추적, 구성 데이터 수집기 또는 API를 만듭니다.|

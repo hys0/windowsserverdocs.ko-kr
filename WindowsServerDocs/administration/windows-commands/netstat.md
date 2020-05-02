@@ -1,6 +1,6 @@
 ---
 title: netstat
-description: '\* * * *에 대 한 Windows 명령 항목'
+description: '* * * *에 대 한 참조 항목'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: afd34cca2ecd3caa7ac480b380b85ba6d2a19fcb
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 7b1dbe232ce297e987118616681b82332e81e930
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80839016"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82723786"
 ---
 # <a name="netstat"></a>netstat
 
->적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 활성 TCP 연결을 대기할 컴퓨터는 수신 대기, 이더넷 통계, IP 라우팅 테이블, (IP, ICMP, TCP 및 UDP 프로토콜)에 대 한 IPv4 통계 및 IPv6 (에 대 한 통계는 IPv6, ICMPv6, i p v 6 통해 TCP 및 UDP IPv6 프로토콜을 통해) 포트를 표시 합니다. 매개 변수 없이 사용 **netstat** 활성 TCP 연결을 표시 합니다. 
 
@@ -31,18 +31,18 @@ netstat [-a] [-e] [-n] [-o] [-p <Protocol>] [-r] [-s] [<Interval>]
 
 |   매개 변수   |                                                                                                                                              설명                                                                                                                                              |
 |---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|      -A       |                                                                                                   모든 활성 TCP 연결 및 컴퓨터가 수신 대기 하는 TCP 및 UDP 포트를 표시 합니다.                                                                                                   |
-|      -e       |                                                                                 송 / 수신 패킷 및 바이트의 수와 같은 이더넷 통계를 표시 합니다. 이 매개 변수를 결합할 수 **-s**합니다.                                                                                  |
+|      지정하지 않을 경우       |                                                                                                   모든 활성 TCP 연결 및 컴퓨터가 수신 대기 하는 TCP 및 UDP 포트를 표시 합니다.                                                                                                   |
+|      -E       |                                                                                 송 / 수신 패킷 및 바이트의 수와 같은 이더넷 통계를 표시 합니다. 이 매개 변수를 결합할 수 **-s**합니다.                                                                                  |
 |      -n       |                                                                               그러나 활성 TCP 연결을 표시 합니다. 주소 및 포트 번호는 수치화 하는 이름을 확인 하려고 시도 하지.                                                                               |
-|      -o       |                          활성 TCP 연결을 표시 하 고 각 연결에 대 한 프로세스 ID (PID)를 포함 합니다. Windows 작업 관리자의 프로세스 탭에서 PID를 기준으로 애플리케이션을 찾을 수 있습니다. 이 매개 변수를 결합할 수 **-** , **-n**, 및 **-p**합니다.                           |
+|      -o       |                          활성 TCP 연결을 표시 하 고 각 연결에 대 한 프로세스 ID (PID)를 포함 합니다. Windows 작업 관리자의 프로세스 탭에서 PID를 기준으로 애플리케이션을 찾을 수 있습니다. 이 매개 변수를 결합할 수 **-**, **-n**, 및 **-p**합니다.                           |
 | -p <Protocol> |               에 지정 된 프로토콜에 대 한 연결을 보여 줍니다 *프로토콜*합니다. 이 경우에 *프로토콜* tcp, udp, tcpv6, udpv6를 사용할 수 있습니다. 이 매개 변수를 사용 하는 경우 **-s** 프로토콜에서 통계를 표시 하려면 *프로토콜* tcp, udp, icmp, ip, tcpv6, udpv6, icmpv6, 또는 i p v 6 일 수 있습니다.                |
-|      -s       | 프로토콜에서 통계를 표시합니다. 기본적으로 TCP, UDP, ICMP 및 IP 프로토콜에 대 한 통계가 표시 됩니다. IPv6 프로토콜이 설치 되어 있는 경우 통계가 표시 됩니다 TCP에 대 한 IPv6, UDP를 통해 IPv6, ICMPv6, 및 i p v 6을 통해 프로토콜. **-p** 프로토콜의 집합을 지정 하려면 매개 변수를 사용할 수 있습니다. |
+|      -S       | 프로토콜에서 통계를 표시합니다. 기본적으로 TCP, UDP, ICMP 및 IP 프로토콜에 대 한 통계가 표시 됩니다. IPv6 프로토콜이 설치 되어 있는 경우 통계가 표시 됩니다 TCP에 대 한 IPv6, UDP를 통해 IPv6, ICMPv6, 및 i p v 6을 통해 프로토콜. **-p** 프로토콜의 집합을 지정 하려면 매개 변수를 사용할 수 있습니다. |
 |      -r       |                                                                                                     IP 라우팅 테이블의 내용을 표시합니다. Route print 명령을 하는 것과 같습니다.                                                                                                     |
 |  <Interval>   |                                                        선택한 정보를 다시 표시 모든 *간격* 초입니다. CTRL + C를 다시 표시 하지 않으려면 키를 누릅니다. 이 매개 변수를 생략 하면 **netstat** 선택한 정보를 한 번만 출력 합니다.                                                         |
 |      /?       |                                                                                                                                 명령 프롬프트에 도움말을 표시합니다.                                                                                                                                  |
 
-## <a name="remarks"></a>주의
--   이 명령과 함께 사용 되는 매개 변수가 하이픈 접두사로 추가 해야 합니다 ( **-** ) 대신 슬래시 ( **/** ).
+## <a name="remarks"></a>설명
+-   이 명령에 사용 되는 매개 변수는 슬래시 (**-****/**) 대신 하이픈 ()을 접두사로 사용 해야 합니다.
 -   **netstat** 는 다음에 대 한 통계를 제공 합니다.
     -   프로토콜 (TCP 또는 UDP) 프로토콜의 이름입니다.
     -   로컬 주소 로컬 컴퓨터의 IP 주소와 사용 중인 포트 번호입니다. IP 주소에 해당 하는 로컬 컴퓨터의 이름 및 포트의 이름을 확인할 수는 **-n** 매개 변수를 지정 합니다. 포트 연결이 아직 설정 되지 포트 번호는 별표 (*)로 표시 됩니다.
@@ -50,7 +50,7 @@ netstat [-a] [-e] [-n] [-o] [-p <Protocol>] [-r] [-s] [<Interval>]
     -   (상태) TCP 연결의 상태를 나타냅니다. 가능한 상태는 다음과 같습니다. CLOSE_WAIT 닫힌 설정 FIN_WAIT_1 FIN_WAIT_2 LAST_ACK 수신 대기 SYN_RECEIVED SYN_SEND timeD_WAIT TCP 연결 상태에 대 한 자세한 내용은 Rfc 793을 참조 하세요.
 -   이 명령은 네트워크 연결에서 네트워크 어댑터의 속성에 구성 요소로 인터넷 프로토콜 (TCP/IP) 프로토콜을 설치 하는 경우에 사용할 수입니다.
 
-## <a name="examples"></a><a name=BKMK_Examples></a>예와
+## <a name="examples"></a>예
 이더넷 통계와 모든 프로토콜에 대 한 통계를 표시 하려면 다음을 입력 합니다.
 ```
 netstat -e -s

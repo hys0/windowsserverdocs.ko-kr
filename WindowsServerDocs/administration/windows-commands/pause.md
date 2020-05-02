@@ -1,6 +1,6 @@
 ---
 title: 일시 중지
-description: '\* * * *에 대 한 Windows 명령 항목'
+description: '* * * *에 대 한 참조 항목'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 135d074a71c7153cc1665ad7b543bdba56ed66e8
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 89e76c4f45f59c32ef879fb518a1a92c973f5cdf
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80837686"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82723349"
 ---
 # <a name="pause"></a>일시 중지
 
@@ -24,7 +24,7 @@ ms.locfileid: "80837686"
 ```
 Press any key to continue . . .
 ```
-이 명령을 사용하는 방법의 예는 [예](#BKMK_examples)를 참조하세요.
+
 
 ## <a name="syntax"></a>구문
 
@@ -38,7 +38,7 @@ pause
 |---------|-----------|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 - **일시 중지** 명령을 실행 하면 다음과 같은 메시지가 나타납니다.  
   ```
@@ -51,7 +51,7 @@ pause
   이 메시지에 대 한 응답으로 Y (예의 경우)를 누르면 일괄 처리 프로그램이 종료 되 고 운영 체제에 대 한 제어가 반환 됩니다.
 - 처리 하지 않을 수 있는 배치 파일의 섹션 앞에 **일시 중지** 명령을 삽입할 수 있습니다. **일시 중지가** 일괄 처리 프로그램의 처리를 일시 중단 하면 Ctrl + C를 누른 다음 Y를 눌러 batch 프로그램을 중지할 수 있습니다.
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 
 사용자에 게 드라이브 중 하나에서 디스크를 변경 하 라는 메시지를 표시 하는 일괄 처리 프로그램을 만들려면 다음을 입력 합니다.
 ```

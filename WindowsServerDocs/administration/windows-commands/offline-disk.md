@@ -1,6 +1,6 @@
 ---
 title: 오프 라인 디스크
-description: '\* * * *에 대 한 Windows 명령 항목'
+description: '* * * *에 대 한 참조 항목'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: bd7991f1f5967970690c7051612395fb47a764ec
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 3a00b7f51bc950c3737ba6350fe15a7a4c6cc45e
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80837986"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82723442"
 ---
 # <a name="offline-disk"></a>오프 라인 디스크
 
@@ -37,13 +37,13 @@ offline disk [noerr]
 |---------|-----------|
 |noerr|스크립팅 전용입니다. 오류가 발생 하면 오류가 발생 하지 않은 경우에 따라 명령을 처리 하도록 DiskPart 계속 합니다. 이 매개 변수를 크기는 오류 코드를 수행 합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 -   이 명령은 SAN 온라인 모드에 있는 디스크에서 작동 합니다. 자신의 SAN 모드를 오프 라인으로 변경 됩니다.
 -   디스크의 상태가으로 변경 된 동적 디스크의 디스크 그룹을 오프 라인 상태인 경우 **누락** 그룹은 오프 라인 상태인 디스크를 보여 줍니다. 손실 된 디스크는 잘못 된 그룹으로 이동 됩니다. 동적 디스크 그룹의 마지막 디스크 이면 디스크의 상태가으로 변경 됩니다 **오프 라인**, 빈 그룹을 제거 됩니다.
 -   디스크를 선택 해야는 **오프 라인 디스크** 명령을 성공적으로 합니다. 사용 된 **디스크 선택** 디스크를 선택 하 고 포커스를 이동 하는 명령입니다.
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 
 포커스가 있는 디스크를 오프 라인으로 다음을 입력 합니다.
 ```

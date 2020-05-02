@@ -1,6 +1,6 @@
 ---
 title: msdt
-description: '\* * * *에 대 한 Windows 명령 항목'
+description: '* * * *에 대 한 참조 항목'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 87c1e4e8cd6d9de036b47de590867a6531d0335a
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: e5d31b1b5a73d975aec08d675aaff04ee29c7d3c
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80839256"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82723869"
 ---
 # <a name="msdt"></a>msdt
 
@@ -35,9 +35,9 @@ msdt </id <name> | /path <name> | /cab < name>> <</parameter> [options] … <par
 
 |      매개 변수      |                                                                                            설명                                                                                             |
 |---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| /id \<패키지 이름 > |        실행할 진단 패키지를 지정 합니다. 사용 가능한 패키지 목록을 보려면이 항목의 뒷부분에 나오는 사용 가능한 문제 해결 팩 섹션에서 문제 해결 팩 ID를 참조 하십시오.         |
+| /id \<패키지 이름> |        실행할 진단 패키지를 지정 합니다. 사용 가능한 패키지 목록을 보려면이 항목의 뒷부분에 나오는 사용 가능한 문제 해결 팩 섹션에서 문제 해결 팩 ID를 참조 하십시오.         |
 |  /path \<디렉터리  |                                                                                           . diagpkg 파일                                                                                            |
-|   /dci \<암호 >   |                                        인시던트의은 msdt의 암호 필드입니다. 이 매개 변수는 지원 공급자가 암호를 제공한 경우에만 사용 됩니다.                                         |
-|  /sdt \<directory >   | 지정 된 디렉터리에 문제 해결 기록을 표시 합니다. 진단 결과는 사용자의 **%LOCALAPPDATA%\Diagnostics** 또는 **%LOCALAPPDATA%\ElevatedDiagnostics** 디렉터리에 저장 됩니다. |
-| /af \<응답 파일 >  |                                               하나 이상의 진단 상호 작용에 대 한 응답을 포함 하는 XML 형식의 응답 파일을 지정 합니다.                                               |
+|   /dci \<암호>   |                                        인시던트의은 msdt의 암호 필드입니다. 이 매개 변수는 지원 공급자가 암호를 제공한 경우에만 사용 됩니다.                                         |
+|  /dt \<디렉터리>   | 지정 된 디렉터리에 문제 해결 기록을 표시 합니다. 진단 결과는 사용자의 **%LOCALAPPDATA%\Diagnostics** 또는 **%LOCALAPPDATA%\ElevatedDiagnostics** 디렉터리에 저장 됩니다. |
+| /af \<응답 파일>  |                                               하나 이상의 진단 상호 작용에 대 한 응답을 포함 하는 XML 형식의 응답 파일을 지정 합니다.                                               |
 

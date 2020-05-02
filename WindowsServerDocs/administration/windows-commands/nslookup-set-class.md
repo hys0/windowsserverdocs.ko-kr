@@ -1,6 +1,6 @@
 ---
 title: nslookup set class
-description: '\* * * *에 대 한 Windows 명령 항목'
+description: '* * * *에 대 한 참조 항목'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: bc3bb4e36582f01584c0b89a12d43874322c3190
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: b1ae3a5336815a5273aafa976b1dcad8b60fac9b
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80838586"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82723652"
 ---
 # <a name="nslookup-set-class"></a>nslookup set class
 
@@ -32,7 +32,7 @@ set class=<Class>
 
 | 매개 변수 |                                                                                                                                    설명                                                                                                                                    |
 |-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| \<클래스 >  | 기본 클래스는 IN입니다. 다음은이 명령에 대 한 유효한 값을 나열 합니다.</br>-IN: 인터넷 클래스를 지정 합니다.</br>-비정상: 비정상 클래스를 지정 합니다.</br>-HESIOD: MIT 아테나 Hesiod 클래스를 지정 합니다.</br>-ANY: 이전에 나열 된 와일드 카드를 지정 합니다. |
+| \<Class>  | 기본 클래스는 IN입니다. 다음은이 명령에 대 한 유효한 값을 나열 합니다.</br>-IN: 인터넷 클래스를 지정 합니다.</br>-비정상: 비정상 클래스를 지정 합니다.</br>-HESIOD: MIT 아테나 Hesiod 클래스를 지정 합니다.</br>-ANY: 이전에 나열 된 와일드 카드를 지정 합니다. |
 |   {도움말   |                                                                                                                                        ?}                                                                                                                                         |
 
 ## <a name="additional-references"></a>추가 참조

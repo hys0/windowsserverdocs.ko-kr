@@ -1,6 +1,6 @@
 ---
-title: nslookup exit 명령
-description: '\* * * *에 대 한 Windows 명령 항목'
+title: nslookup exit Command
+description: '* * * *에 대 한 참조 항목'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 84133cdd238d06287f42e28f006a3578bac4c122
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 25696b5889d4b430586285de1f4d6471f9e28b27
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80838796"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82723732"
 ---
-# <a name="nslookup-exit-command"></a>nslookup exit 명령
+# <a name="nslookup-exit-command"></a>nslookup exit Command
 
 
 

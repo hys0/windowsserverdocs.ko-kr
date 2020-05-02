@@ -1,6 +1,6 @@
 ---
 title: msinfo32
-description: '\* * * *에 대 한 Windows 명령 항목'
+description: '* * * *에 대 한 참조 항목'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5a77cf9ae4c5f054e66839ff5b5b057e031b36ff
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 0db8a4549ac26ef61d4aa8f435a01d3224501a77
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80839116"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82723842"
 ---
 # <a name="msinfo32"></a>msinfo32
 
->적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 로컬 컴퓨터의 하드웨어, 시스템 구성 요소 및 소프트웨어 환경에 대 한 종합적인 보기를 표시 하려면 시스템 정보 도구를 엽니다. 
 ## <a name="syntax"></a>구문
@@ -41,9 +41,9 @@ msinfo32 [/pch] [/nfo <path>] [/report <path>] [/computer <computerName>] [/show
 |   /categories   |                          지정 된 범주나 범주만 표시 된 시스템 정보를 시작 합니다. 또한 선택한 범주 또는 범주에 대 한 출력을 제한합니다. 사용 하 여 **/showcategories** 사용 가능한 범주 Id의 목록을 표시 합니다.                          |
 |       /?        |                                                                                                                     명령 프롬프트에 도움말을 표시합니다.                                                                                                                     |
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 일부 시스템 정보 범주는 많은 양의 데이터를 포함합니다. 사용할 수는 **start /wait** 명령을 이러한 범주에 대 한 보고 성능을 최적화할 수 있습니다. 자세한 내용은 참조 [시스템 정보](https://technet.microsoft.com/library/cc783305(v=ws.10).aspx)합니다.
-## <a name="examples"></a><a name=BKMK_Examples></a>예와
+## <a name="examples"></a>예
 사용 가능한 범주 Id를 나열 하려면 다음을 입력 합니다.
 ```
 msinfo32 /showcategories

@@ -1,5 +1,5 @@
 ---
-title: 경로
+title: path
 description: PATH 환경 변수를 설정 하는 방법에 대해 알아봅니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
@@ -9,20 +9,20 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: cb77cac3871dcf4a411638409de68d038a317d24
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 52d4a99d21574f9cae3120201dcd4db0cd9a2202
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80837716"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82723372"
 ---
-# <a name="path"></a>경로
+# <a name="path"></a>path
 
 
 
 PATH 환경 변수 (실행 파일을 검색 하는 데 사용 되는 디렉터리 집합)에서 명령 경로 설정 합니다. 매개 변수 없이 사용 하는 경우 **경로** 현재 명령 경로 표시 합니다.
 
-이 명령을 사용하는 방법의 예는 [예](#BKMK_examples)를 참조하세요.
+
 
 ## <a name="syntax"></a>구문
 
@@ -35,12 +35,12 @@ path ;
 
 |     매개 변수     |                                                                                                     설명                                                                                                      |
 |-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [\<Drive >:]<Path> |                                                                            드라이브와 명령 경로에 설정 하는 디렉터리를 지정 합니다.                                                                             |
+| [\<드라이브>:]<Path> |                                                                            드라이브와 명령 경로에 설정 하는 디렉터리를 지정 합니다.                                                                             |
 |         ;         | 명령 경로에서 디렉터리를 구분 합니다. 다른 매개 변수 없이 사용 하는 경우 **;** 기존 명령 경로 PATH 환경 변수를 지우고 Cmd.exe 현재 디렉터리 에서만에서 검색 하도록 지시 합니다. |
 |      % PATH %       |                                                         PATH 환경 변수에 나열 된 디렉터리의 기존 집합에 명령 경로 추가 합니다.                                                         |
 |        /?         |                                                                                         명령 프롬프트에 도움말을 표시합니다.                                                                                         |
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 -   포함 하는 경우 **% PATH %** 구문에서 Cmd.exe 바꿉니다 PATH 환경 변수에 명령 경로 값 명령 프롬프트에서 이러한 값을 수동으로 입력할 필요가 없습니다.
 -   현재 디렉터리를 명령 경로에 지정 된 디렉터리 하기 전에 항상 검색 됩니다.

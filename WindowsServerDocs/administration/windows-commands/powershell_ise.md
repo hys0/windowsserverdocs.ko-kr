@@ -1,6 +1,6 @@
 ---
 title: PowerShell_ise
-description: '\* * * *에 대 한 Windows 명령 항목'
+description: '* * * *에 대 한 참조 항목'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b6ae96dcd40c894e0a528c06b461173f626fb2d2
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 5fb143c3d365b47f66aee5c64bfdc7dc26e5794f
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80837396"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82723288"
 ---
 # <a name="powershell_ise"></a>PowerShell_ise
 
@@ -55,13 +55,12 @@ Windows PowerShell ISE (통합 스크립팅 환경)는 그래픽 지원 환경�
 
 Windows PowerShell ISE를 시작 하는 다른 방법에 대 한 자세한 내용은 [Windows PowerShell 시작](https://go.microsoft.com/fwlink/?LinkID=135259)을 참조 하세요.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 Windows PowerShell은 Windows Server 운영 체제의 Server Core 설치 옵션에서 실행 됩니다. 그러나 Windows PowerShell ISE에는 그래픽 사용자 인터페이스가 필요 하기 때문에 Server Core 설치에서 실행 되지 않습니다.
 
 ## <a name="additional-references"></a>추가 참조
 
-windows powershell을 사용 하는 [about_PowerShell_Ise](https://go.microsoft.com/fwlink/?LinkId=256512)
-[about_PowerShell .exe](https://go.microsoft.com/fwlink/?LinkID=113439) 를 [
-
-windows](https://go.microsoft.com/fwlink/?LinkID=107116) [powershell을 사용 하 여 스크립팅을](https://technet.microsoft.com/scriptcenter/dd742419) 참조 하세요.
+[about_PowerShell_Ise.exe](https://go.microsoft.com/fwlink/?LinkId=256512)[about_PowerShell.exe](https://go.microsoft.com/fwlink/?LinkID=113439)
+[Windows PowerShell](https://go.microsoft.com/fwlink/?LinkID=107116)
+[windows powershell을 사용 하 여](https://technet.microsoft.com/scriptcenter/dd742419) about_PowerShell_Ise about_PowerShell windows powershell 스크립팅 참고 항목
