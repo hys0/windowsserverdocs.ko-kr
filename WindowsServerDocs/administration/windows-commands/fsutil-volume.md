@@ -9,19 +9,19 @@ ms.technology: storage
 audience: IT Pro
 ms.topic: article
 ms.date: 10/16/2017
-ms.openlocfilehash: 587ff48bd0af80667f9a336323641b87be808b1d
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 7e332db921eeb64f890149d143fc13b6e27fe4aa
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80843936"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82720070"
 ---
 # <a name="fsutil-volume"></a>Fsutil 볼륨
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
+> 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
 
 볼륨을 분리 하거나 쿼리를 하드 디스크 드라이브 여유 공간을 하드 디스크 드라이브에서 현재 사용할 수 또는 파일에는 특정 클러스터를 사용 하는 경우를 확인 합니다.
 
-이 명령을 사용하는 방법의 예는 [예](#BKMK_examples)를 참조하세요.
+
 
 ## <a name="syntax"></a>구문
 
@@ -39,14 +39,14 @@ fsutil volume [querycluster] <VolumePath> <Cluster> [<Cluster>] … …
 |매개 변수|설명|
 |-------------|---------------|
 |allocationreport|지정 된 볼륨에서 저장소를 사용 하는 방법에 대 한 정보를 표시 합니다.|
-|\<VolumePath >|드라이브 문자를 지정 하 고 그 뒤에 콜론을 지정 합니다.|
+|\<VolumePath>|드라이브 문자를 지정 하 고 그 뒤에 콜론을 지정 합니다.|
 |diskfree|하드 디스크 드라이브에 사용 가능한 공간의 크기를 확인 하려면을 쿼리 합니다.|
 |분리|볼륨을 분리합니다.|
 |filelayout|지정 된 파일에 대 한 NTFS 메타 데이터를 표시 합니다.|
-|fileid > \<|파일 id를 지정 합니다.|
+|\<fileid>|파일 id를 지정 합니다.|
 |list|시스템의 모든 볼륨을 나열 합니다.|
 |querycluster|파일은 지정된 된 클러스터를 사용 하 여 찾습니다. 여러 클러스터를 지정할 수는 **querycluster** 매개 변수입니다.<p>이 매개 변수가 적용 됩니다: Windows Server 2008 R2 및 Windows 7입니다.|
-|\<클러스터 >|LCN (logical cluster number)을 지정 합니다.|
+|\<클러스터>|LCN (logical cluster number)을 지정 합니다.|
 
 ## <a name="examples"></a><a name="BKMK_examples"></a>예와
 할당 된 클러스터 보고서를 표시 하려면 다음을 입력 합니다.
@@ -92,6 +92,6 @@ fsutil volume querycluster C: 50 0x2000
 
 [Fsutil](Fsutil.md)
 
-[NTFS 작동 방법](https://go.microsoft.com/fwlink/?LinkId=183396)
+[NTFS의 작동 원리](https://go.microsoft.com/fwlink/?LinkId=183396)
 
 

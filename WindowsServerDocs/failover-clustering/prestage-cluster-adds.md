@@ -1,5 +1,5 @@
 ---
-title: Active Directory Domain Services에서 클러스터 컴퓨터 개체 사전 준비
+title: Active Directory Domain Services에서 클러스터 컴퓨터 계정 사전 준비
 description: Active Directory Domain Services에서 클러스터 컴퓨터 개체를 사전 준비 하는 방법
 ms.prod: windows-server
 ms.topic: article
@@ -9,16 +9,16 @@ manager: lizross
 ms.technology: storage-failover-clustering
 ms.date: 05/09/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: b14561a05778ed30e71363a2cd3b3b6fdf24f78e
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: eb9077f40c33d615c0bbe18f1c02b29ce27165a2
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80827476"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82720520"
 ---
-# <a name="prestage-cluster-computer-objects-in-active-directory-domain-services"></a>Active Directory Domain Services에서 클러스터 컴퓨터 개체 사전 준비
+# <a name="prestage-cluster-computer-objects-in-active-directory-domain-services"></a>Active Directory Domain Services에서 클러스터 컴퓨터 계정 사전 준비
 
->적용 대상: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> 적용 대상: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 이 항목에서는 AD DS(Active Directory 도메인 서비스)에서 클러스터 컴퓨터 개체를 사전 준비하는 방법을 보여 줍니다. 이 절차를 사용하여 사용자 또는 그룹이 AD DS에서 컴퓨터 개체를 만들 권한이 없는 경우 장애 조치(failover) 클러스터를 만들 수 있도록 할 수 있습니다.
 
@@ -71,7 +71,7 @@ CNO를 자동으로 만들려면 장애 조치(failover) 클러스터를 만드�
 
 1. Active Directory 사용자 및 컴퓨터의 **보기** 메뉴에서 **고급 기능**이 선택되어 있는지 확인합니다.
 2. CNO을 찾아서 마우스 오른쪽 단추로 클릭 한 다음 **속성**을 선택 합니다.
-3. **보안** 탭에서 **추가**를 선택 합니다.
+3. **보안** 탭에서 **추가**를 선택합니다.
 4. **사용자, 컴퓨터 또는 그룹 선택** 대화 상자에서 권한을 부여할 사용자 계정 또는 그룹을 지정한 다음 **확인**을 선택 합니다.
 5. 방금 추가한 사용자 계정 또는 그룹을 선택한 다음 **모든 권한** 옆에서 **허용** 확인란을 선택합니다.
   
@@ -128,7 +128,7 @@ AD DS에서 CNO를 사전 준비한 경우 다음 중 하나를 수행하여 VCO
 4. **컴퓨터 이름** 상자에 클러스터 된 역할에 사용할 이름을 입력 하 고 **확인**을 선택 합니다.
 5. 모범 사례로, 방금 만든 컴퓨터 계정을 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택한 다음 **개체** 탭을 선택 합니다. **개체** 탭에서 **실수로 삭제 되지 않도록 개체 보호** 확인란을 선택 하 고 **확인**을 선택 합니다.
 6. 방금 만든 컴퓨터 계정을 마우스 오른쪽 단추로 클릭 한 다음 **속성**을 선택 합니다.
-7. **보안** 탭에서 **추가**를 선택 합니다.
+7. **보안** 탭에서 **추가**를 선택합니다.
 8. **사용자, 컴퓨터, 서비스 계정 또는 그룹 선택** 대화 상자에서 **개체 유형**을 선택 하 고 **컴퓨터** 확인란을 선택한 다음 **확인**을 선택 합니다.
 9. **선택할 개체 이름을 입력**하십시오 .에 CNO 이름을 입력 하 고 **이름 확인**을 선택한 다음 **확인**을 선택 합니다. 사용할 수 없는 개체를 추가 한다고 알리는 경고 메시지가 표시 되 면 **확인**을 선택 합니다.
 10. CNO이 선택되어 있는지 확인한 다음 **모든 권한** 옆에서 **허용** 확인란을 선택합니다.
@@ -138,5 +138,5 @@ AD DS에서 CNO를 사전 준비한 경우 다음 중 하나를 수행하여 VCO
 
 ## <a name="more-information"></a>자세한 정보
 
-- [장애 조치 클러스터링](failover-clustering.md)
+- [장애 조치(failover) 클러스터링](failover-clustering.md)
 - [Active Directory에서 클러스터 계정 구성](configure-ad-accounts.md)

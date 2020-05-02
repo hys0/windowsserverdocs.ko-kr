@@ -7,14 +7,15 @@ ms.technology: storage-health-service
 ms.topic: article
 author: cosmosdarwin
 ms.date: 10/05/2017
-ms.openlocfilehash: 3b47e1abf3805b7e6e3dc180d5d937ddb2723fa4
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 0a03dc5d646d24c9f24f979df36fb3fe1eafe631
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80827546"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82720550"
 ---
 # <a name="health-service-reports"></a>상태 관리 서비스 보고서
+
 > 적용 대상: Windows Server 2019, Windows Server 2016
 
 ## <a name="what-are-reports"></a>보고서 란?  
@@ -43,14 +44,13 @@ Get-Volume -FileSystemLabel <Label> | Get-StorageHealthReport -Count <Count>
 Get-StorageNode -Name <Name> | Get-StorageHealthReport -Count <Count>
 ```
 
-## <a name="usage-in-net-and-c"></a>.NET 및에서 사용C#
+## <a name="usage-in-net-and-c"></a>.NET 및 C에서 사용 #
 
 ### <a name="connect"></a>연결
 
-상태 관리 서비스를 쿼리하려면 클러스터로 **CimSession** 를 설정 해야 합니다. 이렇게 하려면 전체 .NET 에서만 사용할 수 있는 몇 가지 항목이 필요 합니다. 즉, 웹 또는 모바일 앱에서 바로이 작업을 수행할 수 없습니다. 이러한 코드 샘플은이 데이터 액세스 계층에 가장 간단한 선택 인 C\#를 사용 합니다.
+상태 관리 서비스를 쿼리하려면 클러스터로 **CimSession** 를 설정 해야 합니다. 이렇게 하려면 전체 .NET 에서만 사용할 수 있는 몇 가지 항목이 필요 합니다. 즉, 웹 또는 모바일 앱에서 바로이 작업을 수행할 수 없습니다. 이러한 코드 샘플은이 데이터\#액세스 계층에 가장 간단한 선택 인 C를 사용 합니다.
 
-``` 
-...
+```
 using System.Security;
 using Microsoft.Management.Infrastructure;
 
@@ -79,7 +79,7 @@ public CimSession Connect(string Domain = "...", string Computer = "...", string
 
 **CimSession** 가 설정 되 면 클러스터에서 WMI(WINDOWS MANAGEMENT INSTRUMENTATION) (WMI)를 쿼리할 수 있습니다.
 
-오류나 메트릭을 얻기 전에 여러 관련 개체의 인스턴스를 가져와야 합니다. 먼저, **MSFT\_StorageSubSystem** 은 클러스터의 스토리지 공간 다이렉트를 나타냅니다. 이를 사용 하 여 클러스터의 모든 **msft\_StorageNode** 및 모든 **msft\_볼륨**, 데이터 볼륨을 가져올 수 있습니다. 마지막으로, 상태 관리 서비스 자체인 **MSFT\_StorageHealth**가 필요 합니다.
+오류나 메트릭을 얻기 전에 여러 관련 개체의 인스턴스를 가져와야 합니다. 먼저 클러스터에서 스토리지 공간 다이렉트를 나타내는 **MSFT\_storagesubsystem** 입니다. 이를 사용 하 여 클러스터의 **모든\_msft StorageNode** 및 모든 **msft\_볼륨**, 데이터 볼륨을 가져올 수 있습니다. 마지막으로, 상태 관리 서비스 **\_MSFT storagehealth**가 필요 합니다.
 
 ```
 CimInstance Cluster;
@@ -112,7 +112,6 @@ public void DiscoverObjects(CimSession Session)
 [저장소 관리 API 클래스](https://msdn.microsoft.com/library/windows/desktop/hh830612(v=vs.85).aspx)에서 설명 하는 모든 동일한 속성에 액세스할 수 있습니다.
 
 ```
-...
 using System.Diagnostics;
 
 foreach (CimInstance Node in Nodes)
@@ -208,19 +207,19 @@ public void BeginStreamingMetrics(CimSession Session, CimInstance HealthService,
 
 메트릭의 모든 샘플은 개별 메트릭에 해당 하는 많은 "레코드"를 포함 하는 하나의 "보고서"입니다.
 
-전체 스키마의 경우 *Storagewmi*에서 **msft\_** 및 **msft\_HealthRecord** 클래스를 검사 합니다.
+전체 스키마에 대해 *storagewmi .mof*에서 **\_msft StorageHealthReport** 및 **msft\_HealthRecord** 클래스를 검사 합니다.
 
 각 메트릭에는이 테이블 당 세 가지 속성만 있습니다.
 
 | **속성** | **예제**       |
 | -------------|-------------------|
-| 이름         | IOLatencyAverage  |
+| 속성         | IOLatencyAverage  |
 | 값        | 0.00021           |
 | 단위        | 3                 |
 
 단위 = {0, 1, 2, 3, 4}, 여기서 0 = "Bytes", 1 = "BytesPerSecond", 2 = "CountPerSecond", 3 = "Seconds" 또는 4 = "백분율".
 
-## <a name="coverage"></a>검사
+## <a name="coverage"></a>적용 범위
 
 Windows Server 2016의 각 범위에 사용할 수 있는 메트릭은 다음과 같습니다.
 

@@ -1,6 +1,6 @@
 ---
 title: Windows 명령
-description: Windows 명령
+description: 참고
 ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: c703d07c-8227-4e86-94a6-8ef390f94cdc
@@ -9,12 +9,12 @@ ms.author: jgerend
 manager: dongill
 ms.date: 06/26/2019
 ms.prod: windows-server
-ms.openlocfilehash: 9d68e2becbf9c6522be7e1ff6e6742d44f3a8247
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 7baec3bbe532bbcedb8c17628fd88d2c8eac34c6
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80829236"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82720728"
 ---
 # <a name="windows-commands"></a>Windows 명령
 
@@ -24,32 +24,32 @@ ms.locfileid: "80829236"
 
 다음 ㄱ-ㅎ 메뉴에서 특정 명령에 대 한 정보를 찾기 위해 명령을 첫 글자를 클릭 하 고 명령 이름을 클릭 합니다.
 
-[ |
-](#a) [B](#b) | 
-[C](#c) | 
-[D](#d) | 
-[E](#e) | 
-[F](#f) | 
-[G](#g) | 
-[H](#h) | 
-[I](#i) |
+[A](#a) |
+[B](#b) | 
+[M](#m)[D](#d) | 
+[V](#v)[C](#c) |
 [J](#j) | 
-[K](#k) | 
-[L](#l) | 
-[M](#m) | 
-[N](#n) | 
-[O](#o) | 
-[P](#p) | 
-[Q](#q) | 
-[R](#r) | 
-[S](#s) | 
-[t](#t) | 
-[U](#u) | 
-[V](#v) | 
-[W](#w) | 
-[X](#x) | Y | -
+[W](#w)[F](#f) | 
+[S](#s)[E](#e) | 
+[R](#r)[G](#g) | 
+[U](#u)[H](#h) | 
+[X](#x) [I](#i) | 
+[T](#t)[L](#l)[N](#n)[Q](#q)[O](#o)[P](#p)[K](#k)C D E F G H I J | 
+K L M | 
+N | 
+O | 
+P | 
+Q R S T U V W X | | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ Y | -
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>전제 조건
 
 이 항목에 포함 된 정보는 다음에 적용 됩니다.
 
@@ -76,7 +76,7 @@ PowerShell은 cmdlet 이라는 PowerShell 명령을 실행 하기 위해 명령 
 >Powershell의 오픈 소스 버전인 powershell [Core](https://docs.microsoft.com/powershell/scripting/whats-new/what-s-new-in-powershell-core-60?view=powershell-6)를 다운로드 하 여 설치할 수도 있습니다. 
 
 > [!CAUTION]
-> 레지스트리를 잘못 편집하면 시스템이 크게 손상될 수 있습니다. 레지스트리를 다음과 같이 변경 하기 전에 컴퓨터의 중요 한 데이터를 백업 해야 합니다.
+> 레지스트리를 잘못 편집하면 시스템에 심각한 손상을 줄 수 있습니다. 레지스트리를 다음과 같이 변경 하기 전에 컴퓨터의 중요 한 데이터를 백업 해야 합니다.
 
 > [!NOTE]
 > 컴퓨터 또는 사용자 로그온 세션의 명령 셸에서 파일 및 디렉터리 이름 완성을 사용 하거나 사용 하지 않도록 설정 하려면 **regedit.exe** 를 실행 하 고 다음 **reg_DWOrd 값**을 설정 합니다.
@@ -89,30 +89,30 @@ PowerShell은 cmdlet 이라는 PowerShell 명령을 실행 하기 위해 명령 
 
 특정 Windows 명령에 대 한 정보를 찾으려면 다음 A-z 메뉴에서 명령이 시작 되는 문자를 클릭 하 고 명령 이름을 클릭 합니다.
 
-[ |
-](#a) [B](#b) | 
-[C](#c) | 
-[D](#d) | 
-[E](#e) | 
-[F](#f) | 
-[G](#g) | 
-[H](#h) | 
-[I](#i) |
+[A](#a) |
+[B](#b) | 
+[M](#m)[D](#d) | 
+[V](#v)[C](#c) |
 [J](#j) | 
-[K](#k) | 
-[L](#l) | 
-[M](#m) | 
-[N](#n) | 
-[O](#o) | 
-[P](#p) | 
-[Q](#q) | 
-[R](#r) | 
-[S](#s) | 
-[t](#t) | 
-[U](#u) | 
-[V](#v) | 
-[W](#w) | 
-[X](#x) | Y | -
+[W](#w)[F](#f) | 
+[S](#s)[E](#e) | 
+[R](#r)[G](#g) | 
+[U](#u)[H](#h) | 
+[X](#x) [I](#i) | 
+[T](#t)[L](#l)[N](#n)[Q](#q)[O](#o)[P](#p)[K](#k)C D E F G H I J | 
+K L M | 
+N | 
+O | 
+P | 
+Q R S T U V W X | | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ Y | -
 
 ### <a name="a"></a>A
 -   [append](append.md)
@@ -126,7 +126,7 @@ PowerShell은 cmdlet 이라는 PowerShell 명령을 실행 하기 위해 명령 
 -   [autoconv](autoconv.md)
 -   [autofmt](autofmt.md)
 
-### <a name="b"></a>B
+### <a name="b"></a>b
 - [bcdboot](bcdboot.md)
 - [bcdedit](bcdedit.md)
 - [bdehdcfg](bdehdcfg.md)
@@ -361,10 +361,10 @@ PowerShell은 cmdlet 이라는 PowerShell 명령을 실행 하기 위해 명령 
 - [logman](logman.md)
   -   [logman create](logman-create.md)
   -   [logman query](logman-query.md)
-  -   [logman start & 124; 막을](logman-start-stop.md)
+  -   [logman start &124; 막을](logman-start-stop.md)
   -   [logman delete](logman-delete.md)
   -   [logman update](logman-update.md)
-  -   [logman 가져오기 & 124; 내보내기가](logman-import-export.md)
+  -   [logman 가져오기 &124; 내보내기가](logman-import-export.md)
 - [logoff](logoff.md)
 - [lpq](lpq.md)
 - [lpr](lpr.md)
@@ -589,7 +589,7 @@ PowerShell은 cmdlet 이라는 PowerShell 명령을 실행 하기 위해 명령 
 -   [verifier](verifier.md)
 -   [verify](verify_1.md)
 -   [vol](vol.md)
--   [vssadmin](vssadmin.md)- 
+-   [list](vssadmin.md)- 
 
 ### <a name="w"></a>W
 - [waitfor](waitfor.md)

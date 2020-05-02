@@ -1,6 +1,6 @@
 ---
 title: get AllServers
-description: 모든 Windows 배포 서비스 서버에 대 한 정보를 검색 하는 get AllServers에 대 한 Windows 명령 항목입니다.
+description: 모든 Windows 배포 서비스 서버에 대 한 정보를 검색 하는 get AllServers에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b400d5a2be69e8e89a05b233cc2e8f29bec848f6
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: b623b5e95e2a57147b7d9d191d42556191dd8e4d
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80831216"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719979"
 ---
 # <a name="get-allservers"></a>get AllServers
 
@@ -37,7 +37,7 @@ WDSUTIL [Options] /Get-AllServers /Show:{Config | Images | All} [/Detailed] [/Fo
 |  [/ 자세한]  | 와 함께에서 사용 하는 경우는 **/Show:Images** 또는 **/Show:All**, 모든 이미지 각 이미지의 메타 데이터를 반환 합니다. 하는 경우는 **자세한/** 옵션이 지정 되지 않은, 이미지 이름, 설명 및 파일 이름을 반환 하는 기본 동작입니다. |
 | [포리스트/: {예 |                                                                                                                     아니요}]                                                                                                                     |
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 
 모든 서버에 대 한 정보를 보려면 다음을 입력 합니다.
 ```

@@ -1,6 +1,6 @@
 ---
 title: wmic
-description: Wmic의 Windows 명령 항목-대화형 명령 셸 내에 WMI 정보를 표시 합니다.
+description: Wmic에 대 한 참조 항목으로, 대화형 명령 셸 내에 WMI 정보를 표시 합니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 03ba4ecb4b12b03e010318bf6ca260dec00f28f3
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 252ba6b59c29378dd1f5e437de21a2ec4f5ec5c8
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80829056"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82720649"
 ---
 # <a name="wmic"></a>wmic
 
@@ -22,7 +22,7 @@ ms.locfileid: "80829056"
 
 대화형 명령 셸에서 WMI 정보를 표시합니다.
 
-이 명령을 사용하는 방법의 예는 [예](#BKMK_examples)를 참조하세요.
+
 
 ## <a name="syntax"></a>구문
 
@@ -37,11 +37,11 @@ wmic </parameter>
 |하위 명령|설명|
 |-----------|-----------|
 |class|클래스는 WMI 스키마에 직접 액세스 하는 WMIC의 기본 별칭 모드에서 나와 있습니다.|
-|경로|WMI 스키마에 있는 인스턴스를 직접 액세스 하는 WMIC의 기본 별칭 모드에서 나와 있습니다.|
-|context|모든 전역 스위치의 현재 값을 표시합니다.|
-|[종료 \| 종료]|종료는 WMIC 명령 셸.|
+|path|WMI 스키마에 있는 인스턴스를 직접 액세스 하는 WMIC의 기본 별칭 모드에서 나와 있습니다.|
+|컨텍스트|모든 전역 스위치의 현재 값을 표시합니다.|
+|[ \| 끝내기 종료]|종료는 WMIC 명령 셸.|
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 
 모든 전역 스위치의 현재 값을 표시 하려면 다음을 입력 합니다.
 ```

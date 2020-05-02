@@ -8,16 +8,16 @@ ms.author: jgerend
 ms.technology: storage
 ms.date: 03/05/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 8cd3b5e5629e41702126fb42b815931ff0aea6fa
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 05e58498a59a9e87fc773428d7e5956ce3285b67
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80830026"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82720241"
 ---
 # <a name="vssadmin-resize-shadowstorage"></a>Vssadmin resize shadowstorage
 
->적용 대상: Windows 10, Windows 8.1, Windows Server 2016, Windows Server 2012 R2, Windows server 2012, windows Server 2008 R2, Windows Server 2008
+> 적용 대상: Windows 10, Windows 8.1, Windows Server 2016, Windows Server 2012 R2, Windows server 2012, windows Server 2008 R2, Windows Server 2008
 
 섀도 복사본 저장소에 사용할 수 있는 저장소 공간의 최대 크기를 조정 합니다.
 

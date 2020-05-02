@@ -9,15 +9,15 @@ ms.technology: storage
 audience: IT Pro
 ms.topic: article
 ms.date: 10/16/2017
-ms.openlocfilehash: d4a8f2c008c1a28e498edb7726a8c209e91f41af
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 12a9965515ef26e0cbccb2d20d25f66b54b23b8a
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80843926"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82720058"
 ---
 # <a name="fsutil-wim"></a>Fsutil wim
->적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows 10
+> 적용 대상: Windows Server(반기 채널), Windows Server 2019, Windows Server 2016, Windows 10
 
 WIM (Windows 이미지) 지원 파일을 검색 하 고 관리 하는 함수를 제공 합니다.
 
@@ -35,11 +35,11 @@ fsutil wim [removewim] <drive name> <data source>
 |매개 변수|설명|
 |-------------|---------------|
 |enumfiles|WIM 지원 파일을 열거 합니다.|
-|\<드라이브 이름 >|드라이브 이름을 지정 합니다.|
-|\<데이터 소스 >|데이터 원본을 지정 합니다.|
+|\<드라이브 이름>|드라이브 이름을 지정 합니다.|
+|\<데이터 원본>|데이터 원본을 지정 합니다.|
 |enumwims|지원 WIM 파일을 열거 합니다.|
 |queryfile|파일이 WIM에 의해 지원 되는 경우 쿼리 하 고, 그럴 경우 WIM 파일에 대 한 세부 정보를 표시 합니다.|
-|\<파일 이름 >|파일 이름을 지정 합니다.|
+|\<파일 이름>|파일 이름을 지정 합니다.|
 |removewim|지원 파일에서 WIM을 제거 합니다.|
 
 

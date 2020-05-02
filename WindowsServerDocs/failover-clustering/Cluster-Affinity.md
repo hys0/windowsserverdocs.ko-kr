@@ -8,22 +8,22 @@ author: johnmarlin-msft
 ms.author: johnmar
 ms.date: 03/07/2019
 description: 이 문서에서는 장애 조치 (failover) 클러스터 선호도 및 방지 선호도 수준을 설명 합니다.
-ms.openlocfilehash: c9910cac602802b753391fad1009fb7f1fa3d2f2
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: b0c2209680f3c34ac8376d5662620595aff92c0b
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80828286"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82720611"
 ---
 # <a name="cluster-affinity"></a>클러스터 선호도
 
 > 적용 대상: Windows Server 2019, Windows Server 2016
 
-장애 조치 (failover) 클러스터는 노드 간에 이동 하 여 실행할 수 있는 다양 한 역할을 보유할 수 있습니다.  특정 역할 (즉, 가상 컴퓨터, 리소스 그룹 등)이 동일한 노드에서 실행 되지 않는 경우가 있습니다.  리소스 사용, 메모리 사용 등으로 인해 발생할 수 있습니다.  예를 들어 메모리와 CPU를 많이 사용 하는 두 개의 가상 컴퓨터가 있으며, 두 가상 컴퓨터가 동일한 노드에서 실행 중인 경우 가상 컴퓨터 중 하나 또는 둘 다에 성능 영향 문제가 있을 수 있습니다.  이 문서에서는 클러스터 방지 선호도 수준 및 사용 방법에 대해 설명 합니다.
+장애 조치 (failover) 클러스터는 노드 간에 이동 하 여 실행할 수 있는 다양 한 역할을 보유할 수 있습니다. 특정 역할 (즉, 가상 컴퓨터, 리소스 그룹 등)이 동일한 노드에서 실행 되지 않는 경우가 있습니다.  리소스 사용, 메모리 사용 등으로 인해 발생할 수 있습니다.  예를 들어 메모리와 CPU를 많이 사용 하는 두 개의 가상 컴퓨터가 있으며, 두 가상 컴퓨터가 동일한 노드에서 실행 중인 경우 가상 컴퓨터 중 하나 또는 둘 다에 성능 영향 문제가 있을 수 있습니다.  이 문서에서는 클러스터 방지 선호도 수준 및 사용 방법에 대해 설명 합니다.
 
 ## <a name="what-is-affinity-and-antiaffinity"></a>선호도 및 방지 선호도 란 무엇 인가요?
 
-선호도는 둘 이상의 역할 (i, e, virtual machines, 리소스 그룹 등) 간의 관계를 설정 하 여 함께 유지 하는 규칙입니다.  방지 선호도는 동일 하지만 지정 된 역할을 서로 분리 하 여 유지 하는 데 사용 됩니다.  장애 조치 (Failover) 클러스터는 해당 역할에 대해 방지 선호도를 사용 합니다.  더 구체적으로 말하자면 역할에 정의 된 [AntiAffinityClassNames](https://docs.microsoft.com/previous-versions/windows/desktop/mscs/groups-antiaffinityclassnames) 매개 변수는 동일한 노드에서 실행 되지 않습니다.  
+선호도는 둘 이상의 역할 (i, e, virtual machines, 리소스 그룹 등) 간의 관계를 설정 하 여 함께 유지 하는 규칙입니다.  방지 선호도는 동일 하지만 지정 된 역할을 서로 분리 하 여 유지 하는 데 사용 됩니다. 장애 조치 (Failover) 클러스터는 해당 역할에 대해 방지 선호도를 사용 합니다.  더 구체적으로 말하자면 역할에 정의 된 [AntiAffinityClassNames](https://docs.microsoft.com/previous-versions/windows/desktop/mscs/groups-antiaffinityclassnames) 매개 변수는 동일한 노드에서 실행 되지 않습니다.  
 
 ## <a name="antiaffinityclassnames"></a>AntiAffinityClassnames
 
@@ -87,7 +87,4 @@ AntiAffinityClassName 매개 변수는 "soft" 블록입니다.  즉, 서로 다�
 - 2 노드 시나리오와 ClusterEnforcedAntiAffinity에서 한 노드가 다운 된 경우 두 그룹은 실행 되지 않습니다.  
 
 - 그룹에 기본 설정 소유자를 사용 하는 것은 3 개 이상의 노드 클러스터에서 선호도 방지와 결합 될 수 있습니다.
-- AntiAffinityClassNames 및 ClusterEnforcedAntiAffinity 설정은 리소스 재활용 후에만 수행 됩니다. I.E. 설정할 수 있지만 두 그룹이 설정 시 동일한 노드에서 온라인 상태 이면 둘 다 온라인 상태로 유지 됩니다.
-
-
-
+- AntiAffinityClassNames 및 ClusterEnforcedAntiAffinity 설정은 리소스 재활용 후에만 수행 됩니다. 핵. 설정할 수 있지만 두 그룹이 설정 시 동일한 노드에서 온라인 상태 이면 둘 다 온라인 상태로 유지 됩니다.

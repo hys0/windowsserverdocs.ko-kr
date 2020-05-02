@@ -1,6 +1,6 @@
 ---
 title: 바꾸기-이미지
-description: 기존 이미지를 해당 이미지의 새 버전으로 대체 하는 대체 이미지에 대 한 Windows 명령 항목입니다.
+description: 기존 이미지를 해당 이미지의 새 버전으로 대체 하는 대체 이미지에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8d16ec07171e4560af8074cb9b0be7b6dc252119
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 9dad35e54f064e02b863059ae6da9378403ee4f9
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80830226"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82720317"
 ---
 # <a name="using-the-replace-image-command"></a>바꾸기 이미지 명령을 사용 하 여
 
->적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 해당 이미지의 새 버전으로 기존 이미지를 대체합니다.
 ## <a name="syntax"></a>구문
@@ -48,13 +48,13 @@ wdsutil [Options] /replace-Imagmedia:<Image name> [/Server:<Server name>]
 ### <a name="parameters"></a>매개 변수
 |매개 변수|설명|
 |-------|--------|
-미디어:<Image name>|교체 이미지의 이름을 지정 합니다.|
+미디어만<Image name>|교체 이미지의 이름을 지정 합니다.|
 |[/ 서버:<Server name>]|서버 이름을 지정합니다. 이 NetBIOS 이름 또는 정규화 된 도메인 이름 (FQDN) 수 있습니다. 서버 이름이 없는 지정 하는 경우 로컬 서버 사용 됩니다.|
-mediatype: {부팅 &#124; 설치}|교체는 이미지의 유형을 지정 합니다.|
+미디어 미디어: {Boot &#124; 설치}|교체는 이미지의 유형을 지정 합니다.|
 |/ 아키텍처: {x86 &#124;ia64 &#124; x64}|교체 이미지의 아키텍처를 지정 합니다. 다른 아키텍처에서 다른 부팅 이미지에 대 한 동일한 이미지 이름을 가질 수 있기 때문에 아키텍처를 지정 하 하면 올바른 이미지 대체 됩니다.|
 |[/ 파일 이름:<File name>]|이미지를 이름으로 고유 하 게 식별할 수 없는 경우에는이 옵션을 사용 하 여 파일 이름을 지정 해야 합니다.|
 |/replacementImage|대체 이미지에 대 한 설정을 지정합니다. 다음 옵션을 사용 하 여 이러한 설정을 설정할 수 있습니다.<p>-mediaFile: <file path> -이름 및 새.wim 파일의 위치 (전체 경로)을 지정 합니다.<br />-[/ SourceImage: <image name>]-.wim 파일에 여러 이미지가 포함 된 경우 사용할 이미지를 지정 합니다. 이 옵션은 설치 이미지에만 적용 됩니다.<br />-[/Name:<Image name>] 이미지의 표시 이름을 설정 합니다.<br />-[/ 설명:<Image description>]-이미지의 설명을 설정 합니다.|
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 부팅 이미지를 대체 하려면 다음 중 하나를 입력 합니다.
 ```
 wdsutil /replace-Imagmedia:WinPE Boot Imagemediatype:Boot /Architecture:x86 /replacementImagmediaFile:C:\MyFolder\Boot.wim
@@ -69,9 +69,9 @@ wdsutil /verbose /Progress /replace-Imagmedia:Windows Vista Pro /Server:MyWDSSer
 ```
 ## <a name="additional-references"></a>추가 참조
 - [명령줄 구문 키](command-line-syntax-key.md)
-[추가 이미지 명령을 사용 하 여](using-the-add-image-command.md)
-[복사 이미지 명령을 사용 하 여](using-the-copy-image-command.md)
-[이미지 내보내기 명령을 사용 하 여](using-the-export-image-command.md)
-[get 이미지 명령을 사용 하 여](using-the-get-image-command.md)
-[바꾸기 이미지 명령을 사용 하 여](using-the-replace-image-command.md)
-[하위 명령: 설정 이미지](subcommand-set-image.md)
+[추가 이미지](using-the-add-image-command.md)
+명령을 사용 하 여[복사](using-the-copy-image-command.md)
+이미지 명령을 사용 하 여 이미지[내보내기](using-the-export-image-command.md)
+명령을 사용 하 여[get](using-the-get-image-command.md)
+이미지 명령을 사용 하 여[바꾸기 이미지](using-the-replace-image-command.md)
+명령을 사용 하 여[하위 명령: 설정 이미지](subcommand-set-image.md)

@@ -1,6 +1,6 @@
 ---
 title: get AutoaddDevices
-description: Windows 배포 서비스 서버의 자동 추가 데이터베이스에 있는 모든 컴퓨터를 표시 하는 get AutoaddDevices에 대 한 Windows 명령 항목입니다.
+description: Windows 배포 서비스 서버의 자동 추가 데이터베이스에 있는 모든 컴퓨터를 표시 하는 get AutoaddDevices에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b373fca81769ff1296d0e9a0788fe536c4fc3132
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: c15836fa81c694aa9295d0a98376f4bef3125243
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80831186"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719994"
 ---
 # <a name="get-autoadddevices"></a>get AutoaddDevices
 
->적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Windows 배포 서비스 서버의 자동 추가 데이터베이스에 있는 모든 컴퓨터를 표시 합니다.
 
@@ -31,7 +31,7 @@ wdsutil [Options] /Get-AutoaddDevices [/Server:<Server name>] /Devicetype:{Pendi
 |-------|--------|
 |[/ 서버:<Server name>]|서버 이름을 지정합니다. 이 NetBIOS 이름 또는 정규화 된 도메인 이름 (FQDN) 수 있습니다. 서버 이름이 없는 지정 하는 경우 로컬 서버 사용 됩니다.|
 |/Devicetype: {PendingDevices &#124; RejectedDevices &#124; ApprovedDevices}|컴퓨터를 복구의 유형을 지정 합니다.<p>-   **PendingDevices** 는 데이터베이스에서 보류 중 상태의 모든 컴퓨터를 반환 합니다.<br />-   **RejectedDevices** 는 데이터베이스에서 상태가 거부 됨 인 모든 컴퓨터를 반환 합니다.<br />-   **ApprovedDevices** 는 데이터베이스에서 승인 됨 상태의 모든 컴퓨터를 반환 합니다.|
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 모든 승인 된 컴퓨터를 보려면 다음을 입력 합니다.
 ```
 wdsutil /Get-AutoaddDevices /Devicetype:ApprovedDevices
@@ -41,7 +41,7 @@ wdsutil /Get-AutoaddDevices /Devicetype:ApprovedDevices
 wdsutil /verbose /Get-AutoaddDevices /Devicetype:RejectedDevices /Server:MyWDSServer
 ```
 ## <a name="additional-references"></a>추가 참조
-- [명령줄 구문 키](command-line-syntax-key.md) [삭제](using-the-delete-autoadddevices-command.md) -autoadddevices 명령을 사용 하
-
-[거부](using-the-reject-autoadddevices-command.md) -autoadddevices 명령을 사용 하 여
-[승인](using-the-approve-autoadddevices-command.md) autoadddevices 명령을 사용 하 여 합니다.
+- [명령줄 구문 키](command-line-syntax-key.md)
+[삭제](using-the-delete-autoadddevices-command.md)
+-autoadddevices 명령을 사용 하 여[승인](using-the-approve-autoadddevices-command.md)
+autoadddevices 명령을 사용 하 여[거부 autoadddevices](using-the-reject-autoadddevices-command.md) 명령을 사용 하 여

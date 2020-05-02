@@ -9,16 +9,16 @@ manager: lizross
 ms.technology: storage-failover-clustering
 ms.date: 06/07/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 16f141eceb4831f588e33aca5284425f69e9e417
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 67ef309bc2a09c5e241d52c747ab800cfde86168
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80827516"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82720527"
 ---
 # <a name="configure-and-manage-quorum"></a>쿼럼 구성 및 관리
 
->적용 대상: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> 적용 대상: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 이 항목에서는 Windows Server 장애 조치 (failover) 클러스터에서 쿼럼을 구성 하 고 관리 하는 배경 및 단계를 제공 합니다.
 
@@ -40,7 +40,7 @@ Windows Server의 쿼럼 모델은 유연 합니다. 클러스터에 대 한 쿼
 
 선택한 쿼럼 구성 옵션 및 특정 설정에 따라 다음 쿼럼 모드 중 하나로 클러스터가 구성됩니다.
 
-| 모드  | 설명  |
+| Mode  | 설명  |
 | --------- | ---------|
 | 노드 과반수(감시 없음)     |   노드에만 응답이 있으며, 쿼럼 감시는 구성되지 않습니다. 클러스터 쿼럼은 활성 클러스터 구성원의 과반수 응답 노드입니다.      |
 | 감시 있는 노드 과반수(디스크 또는 파일 공유)     |   노드에 응답이 있으며, 쿼럼 감시에도 응답이 있습니다. 클러스터 쿼럼은 활성 클러스터 구성원의 과반수 응답 노드와 감시 응답으로 구성됩니다. 쿼럼 감시는 지정된 디스크 감시 또는 지정된 파일 공유 감시일 수 있습니다. 
@@ -58,8 +58,8 @@ Windows Server의 쿼럼 모델은 유연 합니다. 클러스터에 대 한 쿼
 
 | 감시 유형  | 설명  | 요구 사항 및 권장 사항  |
 | ---------    |---------        |---------                        |
-| 디스크 감시     |  <ul><li> 클러스터 데이터베이스의 복사본을 저장하는 전용 LUN</li><li> 복제되지 않은 공유 저장소를 사용하는 클러스터에 가장 유용함</li>       |  <ul><li>LUN 크기는 최소 512MB여야 함</li><li> 클러스터에만 사용되고 클러스터된 역할에 할당되지 않아야 함</li><li> 클러스터된 저장소에 포함되고 저장소 유효성 검사 테스트를 통과해야 함</li><li> CSV(클러스터 공유 볼륨)인 디스크일 수 없음</li><li> 단일 볼륨이 있는 기본 디스크</li><li> 드라이브 문자가 필요 없음</li><li> NTFS 또는 ReFS로 포맷할 수 있음</li><li> 필요한 경우 내결함성을 위해 하드웨어 RAID로 구성할 수 있음</li><li> 백업 및 바이러스 백신 검사에서 제외해야 함</li><li> 디스크 감시는 스토리지 공간 다이렉트 지원 되지 않습니다.</li>|
-| 파일 공유 감시     | <ul><li>Windows Server를 실행하는 파일 서버에 구성되는 SMB 파일 공유</li><li> 클러스터 데이터베이스의 복사본을 저장하지 않음</li><li> witness.log 파일에만 클러스터 정보를 유지 관리함</li><li> 복제된 저장소를 사용하는 다중 사이트 클러스터에 가장 유용함 </li>       |  <ul><li>최소 5MB의 사용 가능한 공간이 있어야 함</li><li> 단일 클러스터에만 사용해야 하며, 사용자 또는 응용 프로그램 데이터를 저장할 수 없음</li><li> 컴퓨터 개체에 클러스터 이름에 대한 쓰기 권한이 있어야 함</li></ul><br>파일 공유 감시를 호스트하는 파일 서버에 대한 추가 고려 사항:<ul><li>여러 클러스터에 대한 파일 공유 감시로 단일 파일 서버를 구성할 수 있습니다.</li><li> 파일 서버는 클러스터 작업과 별도의 사이트에 있어야 합니다. 이렇게 하면 사이트 간 네트워크 통신이 끊어진 경우 모든 클러스터 사이트에 동등한 존속 기회가 제공됩니다. 파일 서버가 동일한 사이트에 있는 경우 해당 사이트가 기본 사이트가 되며 이 사이트에서만 파일 공유에 연결할 수 있습니다.</li><li> 가상 컴퓨터가 파일 공유 감시를 사용하는 동일한 클러스터에서 호스트되지 않는 경우 가상 컴퓨터에서 파일 서버를 실행할 수 있습니다.</li><li> 고가용성을 위해 별도의 장애 조치(failover) 클러스터에서 파일 서버를 구성할 수 있습니다. </li>      |
+| 디스크 감시     |  <ul><li> 클러스터 데이터베이스의 복사본을 저장하는 전용 LUN</li><li> 복제되지 않은 공유 스토리지를 사용하는 클러스터에 가장 유용함</li>       |  <ul><li>LUN 크기는 최소 512MB여야 함</li><li> 클러스터에만 사용되고 클러스터된 역할에 할당되지 않아야 함</li><li> 클러스터된 스토리지에 포함되고 스토리지 유효성 검사 테스트를 통과해야 함</li><li> CSV(클러스터 공유 볼륨)인 디스크일 수 없음</li><li> 단일 볼륨이 있는 기본 디스크</li><li> 드라이브 문자가 필요 없음</li><li> NTFS 또는 ReFS로 포맷할 수 있음</li><li> 필요한 경우 내결함성을 위해 하드웨어 RAID로 구성할 수 있음</li><li> 백업 및 바이러스 백신 검사에서 제외해야 함</li><li> 디스크 감시는 스토리지 공간 다이렉트 지원 되지 않습니다.</li>|
+| 파일 공유 감시     | <ul><li>Windows Server를 실행하는 파일 서버에 구성되는 SMB 파일 공유</li><li> 클러스터 데이터베이스의 복사본을 저장하지 않음</li><li> witness.log 파일에만 클러스터 정보를 유지 관리함</li><li> 복제된 스토리지를 사용하는 다중 사이트 클러스터에 가장 유용함 </li>       |  <ul><li>최소 5MB의 사용 가능한 공간이 있어야 함</li><li> 단일 클러스터에만 사용해야 하며, 사용자 또는 애플리케이션 데이터를 저장할 수 없음</li><li> 컴퓨터 개체에 클러스터 이름에 대한 쓰기 권한이 있어야 함</li></ul><br>파일 공유 감시를 호스트하는 파일 서버에 대한 추가 고려 사항:<ul><li>여러 클러스터에 대한 파일 공유 감시로 단일 파일 서버를 구성할 수 있습니다.</li><li> 파일 서버는 클러스터 작업과 별도의 사이트에 있어야 합니다. 이렇게 하면 사이트 간 네트워크 통신이 끊어진 경우 모든 클러스터 사이트에 동등한 존속 기회가 제공됩니다. 파일 서버가 동일한 사이트에 있는 경우 해당 사이트가 기본 사이트가 되며 이 사이트에서만 파일 공유에 연결할 수 있습니다.</li><li> 가상 컴퓨터가 파일 공유 감시를 사용하는 동일한 클러스터에서 호스트되지 않는 경우 가상 컴퓨터에서 파일 서버를 실행할 수 있습니다.</li><li> 고가용성을 위해 별도의 장애 조치(failover) 클러스터에서 파일 서버를 구성할 수 있습니다. </li>      |
 | 클라우드 감시     |  <ul><li>Azure blob storage에 저장 된 미러링 모니터 파일</li><li> 클러스터의 모든 서버에 안정적인 인터넷 연결이 있는 경우에 권장 됩니다.</li>      |  [클라우드 감시 배포를](https://docs.microsoft.com/windows-server/failover-clustering/deploy-cloud-witness)참조 하세요.       |
 
 ### <a name="node-vote-assignment"></a>노드 응답 할당
@@ -137,7 +137,7 @@ Windows Server 2012에서는 고급 쿼럼 구성 옵션으로 클러스터 별�
           > [!NOTE]
           > **쿼럼 감시 구성 안 함**을 선택하고 마법사를 완료할 수도 있습니다. 클러스터에 짝수 개의 응답 노드가 있는 경우 이 구성은 권장되는 구성이 아닐 수 있습니다.
 
-      2. 디스크 감시를 구성하는 옵션을 선택한 경우 **저장소 감시 구성** 페이지에서 디스크 감시로 할당할 저장소 볼륨을 선택하고 마법사를 완료합니다.
+      2. 디스크 감시를 구성하는 옵션을 선택한 경우 **스토리지 감시 구성** 페이지에서 디스크 감시로 할당할 스토리지 볼륨을 선택하고 마법사를 완료합니다.
       3. 파일 공유 감시를 구성하는 옵션을 선택한 경우 **파일 공유 감시 구성** 페이지에서 감시 리소스로 사용할 파일 공유를 입력하거나 찾은 다음 마법사를 완료합니다.
 
     - 쿼럼 관리 설정을 구성 하 고 쿼럼 감시를 추가 하거나 변경 하려면 **고급 쿼럼 구성 및 감시 선택**을 선택 하 고 다음 단계를 완료 합니다. 고급 쿼럼 구성 설정에 대한 자세한 내용 및 고려 사항은 이 항목의 앞부분에 있는 [노드 응답 할당](#node-vote-assignment) 및 [동적 쿼럼 관리](#dynamic-quorum-management)를 참조하세요.
@@ -153,17 +153,17 @@ Windows Server 2012에서는 고급 쿼럼 구성 옵션으로 클러스터 별�
           > [!NOTE]
           > **쿼럼 감시 구성 안 함**을 선택하고 마법사를 완료할 수도 있습니다. 클러스터에 짝수 개의 응답 노드가 있는 경우 이 구성은 권장되는 구성이 아닐 수 있습니다.
 
-      4. 디스크 감시를 구성하는 옵션을 선택한 경우 **저장소 감시 구성** 페이지에서 디스크 감시로 할당할 저장소 볼륨을 선택하고 마법사를 완료합니다.
+      4. 디스크 감시를 구성하는 옵션을 선택한 경우 **스토리지 감시 구성** 페이지에서 디스크 감시로 할당할 스토리지 볼륨을 선택하고 마법사를 완료합니다.
       5. 파일 공유 감시를 구성하는 옵션을 선택한 경우 **파일 공유 감시 구성** 페이지에서 감시 리소스로 사용할 파일 공유를 입력하거나 찾은 다음 마법사를 완료합니다.
 
 4. **다음**을 선택합니다. 표시 되는 확인 페이지에서 선택 항목을 확인 하 고 **다음**을 선택 합니다.
 
-마법사를 실행 하 고 **요약** 페이지가 표시 된 후 마법사에서 수행한 작업에 대 한 보고서를 보려면 **보고서 보기**를 선택 합니다. 가장 최근 보고서는 **quorumconfiguration.mht 라는**이름이 있는 <em>systemroot</em> **\\Cluster\\Reports** 폴더에 그대로 유지 됩니다.
+마법사를 실행 하 고 **요약** 페이지가 표시 된 후 마법사에서 수행한 작업에 대 한 보고서를 보려면 **보고서 보기**를 선택 합니다. 가장 최근 보고서는 이름이 **quorumconfiguration.mht 라는**인 <em>systemroot</em>**\\Cluster\\Reports** 폴더에 유지 됩니다.
 
 > [!NOTE]
 > 클러스터 쿼럼을 구성한 후에는 **쿼럼 구성 유효성 검사** 테스트를 실행하여 업데이트된 쿼럼 설정을 확인하는 것이 좋습니다.
 
-### <a name="windows-powershell-equivalent-commands"></a>Windows PowerShell 동일 명령
+### <a name="windows-powershell-equivalent-commands"></a>Windows PowerShell 해당 명령
 
 다음 예에서는 클러스터 쿼럼을 구성 [하는 데](https://docs.microsoft.com/powershell/module/failoverclusters/set-clusterquorum?view=win10-ps) 사용 하는 방법을 보여 줍니다.
 
@@ -179,7 +179,7 @@ Set-ClusterQuorum –Cluster CONTOSO-FC1 -NodeMajority
 Set-ClusterQuorum -NodeAndDiskMajority "Cluster Disk 2"
 ```
 
-다음 예제에서는 로컬 클러스터의 쿼럼 구성을 감시 구성이 있는 노드 과반수로 변경합니다. *\\\\CONTOSO-FS\\fsw* 이라는 파일 공유 리소스가 파일 공유 감시로 구성 됩니다.
+다음 예제에서는 로컬 클러스터의 쿼럼 구성을 감시 구성이 있는 노드 과반수로 변경합니다. * \\ \\CONTOSO-FS\\fsw* 라는 파일 공유 리소스가 파일 공유 감시로 구성 됩니다.
 
 ```PowerShell
 Set-ClusterQuorum -NodeAndFileShareMajority "\\fileserver\fsw"
@@ -287,7 +287,7 @@ Net Start ClusSvc /PQ
 | 노드 응답 할당     |  모든 노드가 동일하게 중요하므로 노드 응답을 제거할 수 없음       |
 | 동적 쿼럼 관리     |   사용해야 함      |
 | 감시 구성     |  파일 공유 감시가 권장되며, 클러스터 사이트와 별도의 사이트에 구성됨       |
-| 작업     |  모든 사이트에서 작업을 구성할 수 있음       |
+| 워크로드     |  모든 사이트에서 작업을 구성할 수 있음       |
 
 #### <a name="additional-considerations-for-automatic-failover"></a>자동 장애 조치에 대 한 추가 고려 사항
 
@@ -304,7 +304,7 @@ Net Start ClusSvc /PQ
 | 사이트당 노드 응답 수     |  <ul><li> 노드 응답을 기본 사이트(**SiteA**)의 노드에서 제거할 수 없음</li><li>노드 응답을 백업 사이트(**SiteB**)의 노드에서 제거해야 함</li><li>**SiteA**에서 장기 중단이 발생한 경우 해당 사이트의 쿼럼 과반수를 복구의 일부로 사용하려면 **SiteB**의 노드에 응답을 할당해야 함</li>       |
 | 동적 쿼럼 관리     |  사용해야 함       |
 | 감시 구성     |  <ul><li>**SiteA**에 짝수 개의 노드가 있는 경우 감시 구성</li><li>감시가 필요한 경우 **SiteA**의 노드에서만 액세스할 수 있는 파일 공유 감시 또는 디스크 감시 구성(비대칭 디스크 감시라고도 함)</li>       |
-| 작업     |  기본 설정된 소유자를 사용하여 **SiteA**의 노드에서 작업의 실행 상태 유지       |
+| 워크로드     |  기본 설정된 소유자를 사용하여 **SiteA**의 노드에서 작업의 실행 상태 유지       |
 
 #### <a name="additional-considerations-for-manual-failover"></a>수동 장애 조치 (failover)에 대 한 추가 고려 사항
 
@@ -313,6 +313,6 @@ Net Start ClusSvc /PQ
 
 ## <a name="more-information"></a>자세한 정보
 
-* [장애 조치 클러스터링](failover-clustering.md)
-* [장애 조치 (Failover) 클러스터 Windows PowerShell cmdlet](https://docs.microsoft.com/powershell/module/failoverclusters/?view=win10-ps)
+* [장애 조치(failover) 클러스터링](failover-clustering.md)
+* [장애 조치(Failover) 클러스터 Windows PowerShell cmdlet](https://docs.microsoft.com/powershell/module/failoverclusters/?view=win10-ps)
 * [클러스터 및 풀 쿼럼 이해](../storage/storage-spaces/understand-quorum.md)

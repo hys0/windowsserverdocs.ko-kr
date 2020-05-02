@@ -1,6 +1,6 @@
 ---
 title: 가져오기-이미지
-description: 이미지에 대 한 정보를 검색 하는 가져오기 이미지에 대 한 Windows 명령 항목입니다.
+description: 이미지에 대 한 정보를 검색 하는 get 이미지에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: cfebb8948d21d4f09855683bbf6c42d725d877e8
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 04cc7b8d90415e32be4103ef6c7f7b709c3550c3
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80831006"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719919"
 ---
 # <a name="get-image"></a>가져오기-이미지
 
->적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 이미지에 대 한 정보를 검색합니다.
 
@@ -34,13 +34,13 @@ wdsutil [Options] /Get-Imagmedia:<Image name> [/Server:<Server name>mediatype:In
 ### <a name="parameters"></a>매개 변수
 |매개 변수|설명|
 |-------|--------|
-미디어:<Image name>|이미지의 이름을 지정합니다.|
+미디어만<Image name>|이미지의 이름을 지정합니다.|
 |[/ 서버:<Server name>]|서버 이름을 지정합니다. 이 NetBIOS 이름 또는 정규화 된 도메인 이름 (FQDN) 수 있습니다. 서버 이름이 없는 지정 하는 경우 로컬 서버 사용 됩니다.|
-mediatype: {부팅 &#124; 설치}|이미지의 유형을 지정합니다.|
+미디어 미디어: {Boot &#124; 설치}|이미지의 유형을 지정합니다.|
 |/ 아키텍처: {x86 &#124;ia64 &#124; x64}|이미지의 아키텍처를 지정합니다. 다른 아키텍처에서 부팅 이미지에 동일한 이미지 이름을 가질 수 있기 때문에 아키텍처 값을 지정 하 하면 올바른 이미지가 반환 됩니다.|
 |[/ 파일 이름:<File name>]|이미지를 이름으로 고유 하 게 식별할 수 없는 경우에는이 옵션을 사용 하 여 파일 이름을 지정 해야 합니다.|
 |\mediaGroup:<Image group name>]|이미지가 포함 된 이미지 그룹을 지정 합니다. 지정 된 이미지 그룹이 없고 하나의 이미지 그룹 서버에 존재 하는 경우 해당 그룹 사용 됩니다. 이미지 그룹 둘 이상의 서버에 있는 경우에 이미지 그룹을 지정 하려면이 매개 변수를 사용 해야 합니다.|
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 부팅 이미지에 대 한 정보를 검색 하려면 다음 중 하나를 입력 합니다.
 ```
 wdsutil /Get-Imagmedia:WinPE boot imagemediatype:Boot /Architecture:x86
@@ -53,9 +53,9 @@ wdsutil /verbose /Get-Imagmedia:Windows Vista with Office /Server:MyWDSServemedi
 ```
 ## <a name="additional-references"></a>추가 참조
 - [명령줄 구문 키](command-line-syntax-key.md)
-[추가 이미지 명령을 사용 하 여](using-the-add-image-command.md)
-[복사 이미지 명령을 사용 하 여](using-the-copy-image-command.md)
-[이미지 내보내기 명령을 사용 하 여](using-the-export-image-command.md)
-[제거 이미지 명령을 사용 하 여](using-the-remove-image-command.md)
-[바꾸기 이미지 명령을 사용 하 여](using-the-replace-image-command.md)
-[하위 명령: 설정 이미지](subcommand-set-image.md)
+[추가 이미지](using-the-add-image-command.md)
+명령을 사용 하 여[복사](using-the-copy-image-command.md)
+이미지 명령을 사용 하 여 이미지[내보내기](using-the-export-image-command.md)
+명령을 사용 하 여[제거](using-the-remove-image-command.md)
+이미지 명령을 사용 하 여[바꾸기](using-the-replace-image-command.md)
+이미지 명령을 사용 하 여[하위 명령: 설정 이미지](subcommand-set-image.md)

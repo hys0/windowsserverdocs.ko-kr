@@ -7,14 +7,15 @@ ms.technology: storage-health-service
 ms.topic: article
 author: cosmosdarwin
 ms.date: 10/05/2017
-ms.openlocfilehash: 913a596a46720718a165295345cb02e3e2baa1de
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 5fe2f98c89d97325c1f59dc6ba292831e0ffa5ff
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80827566"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82720559"
 ---
 # <a name="health-service-faults"></a>상태 관리 서비스 오류
+
 > 적용 대상: Windows Server 2019, Windows Server 2016
 
 ## <a name="what-are-faults"></a>오류 란?
@@ -23,7 +24,7 @@ ms.locfileid: "80827566"
 
 각 오류에는 5 개의 중요 한 필드가 포함 됩니다.  
 
--   Severity
+-   심각도
 -   문제에 대한 설명
 -   문제 해결을 위한 권장 다음 단계
 -   오류가 있는 엔터티에 대한 식별 정보
@@ -69,14 +70,13 @@ Get-FileShare -Name <Name> | Debug-FileShare
 
 이렇게 하면 특정 볼륨 또는 파일 공유에만 영향을 주는 오류가 반환 됩니다. 대부분의 경우 이러한 오류는 용량 계획, 데이터 복원 력 또는 Storage 서비스 품질 또는 저장소 복제본과 같은 기능과 관련이 있습니다. 
 
-## <a name="usage-in-net-and-c"></a>.NET 및에서 사용C#
+## <a name="usage-in-net-and-c"></a>.NET 및 C에서 사용 #
 
 ### <a name="connect"></a>연결
 
-상태 관리 서비스를 쿼리하려면 클러스터로 **CimSession** 를 설정 해야 합니다. 이렇게 하려면 전체 .NET 에서만 사용할 수 있는 몇 가지 항목이 필요 합니다. 즉, 웹 또는 모바일 앱에서 바로이 작업을 수행할 수 없습니다. 이러한 코드 샘플은이 데이터 액세스 계층에 가장 간단한 선택 인 C\#를 사용 합니다.
+상태 관리 서비스를 쿼리하려면 클러스터로 **CimSession** 를 설정 해야 합니다. 이렇게 하려면 전체 .NET 에서만 사용할 수 있는 몇 가지 항목이 필요 합니다. 즉, 웹 또는 모바일 앱에서 바로이 작업을 수행할 수 없습니다. 이러한 코드 샘플은이 데이터\#액세스 계층에 가장 간단한 선택 인 C를 사용 합니다.
 
-``` 
-...
+```
 using System.Security;
 using Microsoft.Management.Infrastructure;
 
@@ -105,7 +105,7 @@ public CimSession Connect(string Domain = "...", string Computer = "...", string
 
 **CimSession** 가 설정 되 면 클러스터에서 WMI(WINDOWS MANAGEMENT INSTRUMENTATION) (WMI)를 쿼리할 수 있습니다.
 
-오류나 메트릭을 얻기 전에 여러 관련 개체의 인스턴스를 가져와야 합니다. 먼저, **MSFT\_StorageSubSystem** 은 클러스터의 스토리지 공간 다이렉트를 나타냅니다. 이를 사용 하 여 클러스터의 모든 **msft\_StorageNode** 및 모든 **msft\_볼륨**, 데이터 볼륨을 가져올 수 있습니다. 마지막으로, 상태 관리 서비스 자체인 **MSFT\_StorageHealth**가 필요 합니다.
+오류나 메트릭을 얻기 전에 여러 관련 개체의 인스턴스를 가져와야 합니다. 먼저 클러스터에서 스토리지 공간 다이렉트를 나타내는 **MSFT\_storagesubsystem** 입니다. 이를 사용 하 여 클러스터의 **모든\_msft StorageNode** 및 모든 **msft\_볼륨**, 데이터 볼륨을 가져올 수 있습니다. 마지막으로, 상태 관리 서비스 **\_MSFT storagehealth**가 필요 합니다.
 
 ```
 CimInstance Cluster;
@@ -138,7 +138,6 @@ public void DiscoverObjects(CimSession Session)
 [저장소 관리 API 클래스](https://msdn.microsoft.com/library/windows/desktop/hh830612(v=vs.85).aspx)에서 설명 하는 모든 동일한 속성에 액세스할 수 있습니다.
 
 ```
-...
 using System.Diagnostics;
 
 foreach (CimInstance Node in Nodes)
@@ -213,7 +212,7 @@ foreach (CimInstance DiagnoseResult in DiagnoseResults)
 
 오류가 생성, 제거 또는 업데이트 되 면 상태 관리 서비스에서 WMI 이벤트를 생성 합니다. 이는 자주 폴링하는 대신 응용 프로그램 상태를 동기화 상태로 유지 하는 데 필수적 이며, 예를 들어 전자 메일 경고를 보낼 시기를 결정 하는 등의 작업에 도움이 될 수 있습니다. 이러한 이벤트를 구독 하기 위해이 샘플 코드는 관찰자 디자인 패턴을 다시 사용 합니다.
 
-먼저 **MSFT\_StorageFaultEvent** 이벤트를 구독 합니다.
+먼저 **MSFT\_storagefaultevent** 이벤트를 구독 합니다.
 
 ```      
 public void ListenForFaultEvents()
@@ -284,13 +283,13 @@ class FaultsObserver : IObserver
 
 ### <a name="properties-of-faults"></a>오류의 속성
 
-이 표에서는 오류 개체의 몇 가지 주요 속성을 보여 줍니다. 전체 스키마의 경우 *storagewmi .mof*에서 **MSFT\_StorageDiagnoseResult** 클래스를 검사 합니다.
+이 표에서는 오류 개체의 몇 가지 주요 속성을 보여 줍니다. 전체 스키마의 경우 *storagewmi .mof*에서 **\_MSFT StorageDiagnoseResult** 클래스를 검사 합니다.
 
 | **속성**              | **예제**                                                     |
 |---------------------------|-----------------------------------------------------------------|
 | FaultId                   | {12345-12345-12345-12345-12345}                                 |
-| FaultType                 | Microsoft Health.                      |
-| Reason                    | "볼륨에 사용 가능한 공간이 부족 합니다."                 |
+| FaultType                 | Microsoft Health..                      |
+| 이유                    | "볼륨에 사용 가능한 공간이 부족 합니다."                 |
 | PerceivedSeverity         | 5                                                               |
 | FaultingObjectDescription | Contoso XYZ9000 S.N. 123456789                                  |
 | FaultingObjectLocation    | 랙 A06, 매우 25, 슬롯 11                                        |
@@ -308,7 +307,7 @@ class FaultsObserver : IObserver
 
 ## <a name="properties-of-fault-events"></a>오류 이벤트의 속성
 
-이 표에서는 오류 이벤트의 몇 가지 주요 속성을 보여 줍니다. 전체 스키마의 경우 *storagewmi .mof*에서 **MSFT\_storagefaultevent** 클래스를 검사 합니다.
+이 표에서는 오류 이벤트의 몇 가지 주요 속성을 보여 줍니다. 전체 스키마의 경우 *storagewmi .mof*에서 **\_MSFT storagefaultevent** 클래스를 검사 합니다.
 
 오류를 생성, 제거 또는 업데이트 하 고 있는지 여부를 나타내는 **FaultId** **를 확인**합니다. 이벤트에는 영향을 받는 오류의 모든 속성도 포함 됩니다.
 
@@ -316,8 +315,8 @@ class FaultsObserver : IObserver
 |---------------------------|-----------------------------------------------------------------|
 | ChangeType                | 0                                                               |
 | FaultId                   | {12345-12345-12345-12345-12345}                                 |
-| FaultType                 | Microsoft Health.                      |
-| Reason                    | "볼륨에 사용 가능한 공간이 부족 합니다."                 |
+| FaultType                 | Microsoft Health..                      |
+| 이유                    | "볼륨에 사용 가능한 공간이 부족 합니다."                 |
 | PerceivedSeverity         | 5                                                               |
 | FaultingObjectDescription | Contoso XYZ9000 S.N. 123456789                                  |
 | FaultingObjectLocation    | 랙 A06, 매우 25, 슬롯 11                                        |
@@ -325,7 +324,7 @@ class FaultsObserver : IObserver
 
 **ChangeType** 고가 고가 = {0, 1, 2} = {"Create", "Remove", "Update"}.
 
-## <a name="coverage"></a>검사
+## <a name="coverage"></a>적용 범위
 
 Windows Server 2016에서 상태 관리 서비스는 다음과 같은 오류 검사를 제공 합니다.  
 
@@ -374,7 +373,7 @@ Windows Server 2016에서 상태 관리 서비스는 다음과 같은 오류 검
 ### <a name="virtual-disk-2"></a>**가상 디스크 (2)**
 
 #### <a name="faulttype-microsofthealthfaulttypevirtualdisksneedsrepair"></a>FaultType: NeedsRepair을 입력 합니다.
-* 심각도: 정보
+* 심각도: 알림
 * 이유: *"이 볼륨의 일부 데이터가 완전히 복원 되지 않습니다. 계속 해 서 액세스할 수 있습니다. "*
 * RecommendedAction: *"데이터 복원 력을 복원 합니다."*
 
@@ -390,7 +389,7 @@ Windows Server 2016에서 상태 관리 서비스는 다음과 같은 오류 검
 * 이유: *"저장소 풀에 권장 되는 최소 예약 용량이 없습니다. 이로 인해 드라이브 오류가 발생할 경우 데이터 복원 력을 복원 하는 기능이 제한 될 수 있습니다. "*
 * RecommendedAction: *"저장소 풀에 용량을 더 추가 하거나 용량을 확보 합니다. 권장 되는 최소 예약은 배포에 따라 다르지만 약 2 개 드라이브의 용량입니다. "*
 
-### <a name="volume-capacity-2sup1sup"></a>**볼륨 용량 (2)** <sup>1</sup>
+### <a name="volume-capacity-2sup1sup"></a>**볼륨 용량 (2)**<sup>1</sup>
 
 #### <a name="faulttype-microsofthealthfaulttypevolumecapacity"></a>FaultType: Microsoft Health.
 * 심각도: 경고
@@ -497,7 +496,7 @@ Windows Server 2016에서 상태 관리 서비스는 다음과 같은 오류 검
 * 원인: *"펌웨어 업데이트 시도에 실패 한 실제 디스크 수가 너무 많아 펌웨어 롤아웃이 취소 되었습니다."*
 * RecommendedAction: *"펌웨어 문제가 해결 되 면 펌웨어 출시를 다시 시작 합니다."*
 
-### <a name="storage-qos-3sup2sup"></a>**저장소 QoS (3)** <sup>2</sup>
+### <a name="storage-qos-3sup2sup"></a>**저장소 QoS (3)**<sup>2</sup>
 
 #### <a name="faulttype-microsofthealthfaulttypestorqosinsufficientthroughput"></a>FaultType: InsufficientThroughput을 입력 합니다.
 * 심각도: 경고

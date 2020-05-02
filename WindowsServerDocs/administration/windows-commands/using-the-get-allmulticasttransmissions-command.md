@@ -1,6 +1,6 @@
 ---
 title: AllMulticastTransmissions
-description: 서버에 있는 모든 멀티 캐스트 전송에 대 한 정보를 표시 하는 AllMulticastTransmissions에 대 한 Windows 명령 항목입니다.
+description: AllMulticastTransmissions에 대 한 참조 항목으로, 서버의 모든 멀티 캐스트 전송에 대 한 정보를 표시 합니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c81db5a5d5ebb9bcc5e2d00165d5c944c687fd97
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 5303618d1021a0c585a2bd6f958f73e145028a09
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80831335"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82720010"
 ---
 # <a name="get-allmulticasttransmissions"></a>AllMulticastTransmissions
 
->적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 서버에서 모든 멀티 캐스트 전송에 대 한 정보를 표시합니다.
 
@@ -41,15 +41,15 @@ wdsutil /Get-AllMulticastTransmissions [/Server:<Server name>] [/Show:{Boot | In
 |    /세부 정보: 클라이언트     |                                                                                                                                                                                              Windows Server 2008 r 2 에서만 지원 됩니다. 있는 경우에 전송에 연결 된 클라이언트가 표시 됩니다.                                                                                                                                                                                               |
 | [/ExcludedeletePending] |                                                                                                                                                                                                                                              비활성화 된 모든 전송 목록에서 제외 됩니다.                                                                                                                                                                                                                                               |
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 모든 전송에 대 한 정보를 보려면 다음을 입력 합니다.
-- Windows Server 2008: `wdsutil /Get-AllMulticastTransmissions`
+- Windows Server 2008:`wdsutil /Get-AllMulticastTransmissions`
 - Windows Server 2008 R2: `wdsutil /Get-AllMulticastTransmissions /Show:All` 비활성화 된 전송 제외한 모든 전송에 대 한 정보를 보려면 다음을 입력 합니다.
-- Windows Server 2008: `wdsutil /Get-AllMulticastTransmissions /Server:MyWDSServer /Show:Clients /ExcludedeletePending`
-- Windows Server 2008 R2: `wdsutil /Get-AllMulticastTransmissions /Server:MyWDSServer /Show:All /details:Clients /ExcludedeletePending`
+- Windows Server 2008:`wdsutil /Get-AllMulticastTransmissions /Server:MyWDSServer /Show:Clients /ExcludedeletePending`
+- Windows Server 2008 R2:`wdsutil /Get-AllMulticastTransmissions /Server:MyWDSServer /Show:All /details:Clients /ExcludedeletePending`
   ## <a name="additional-references"></a>추가 참조
   - [명령줄 구문 키](command-line-syntax-key.md)
-  [get MulticastTransmission 명령을 사용 하 여](using-the-get-multicasttransmission-command.md)
-  [MulticastTransmission 새 명령을 사용 하 여](using-the-new-multicasttransmission-command.md)
-  [제거 MulticastTransmission 명령을 사용 하 여](using-the-remove-multicasttransmission-command.md)
-  [하위 명령: MulticastTransmission 시작](subcommand-start-multicasttransmission.md)
+  [MulticastTransmission 명령을](using-the-get-multicasttransmission-command.md)
+  사용 하 여[MulticastTransmission](using-the-new-multicasttransmission-command.md)
+  명령을 사용 하 여[MulticastTransmission 명령](using-the-remove-multicasttransmission-command.md)
+  [하위 명령: MulticastTransmission](subcommand-start-multicasttransmission.md)

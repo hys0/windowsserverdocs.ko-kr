@@ -8,16 +8,16 @@ ms.author: jgerend
 manager: lizross
 ms.technology: storage-failover-clustering
 ms.date: 01/14/2020
-ms.openlocfilehash: 5d382807adcfd771215d1f87332a47842d25eda3
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: eea98579a66f1db7f7ec873bda6a2c934841736f
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80827386"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82720515"
 ---
 # <a name="failover-clustering-system-log-events"></a>장애 조치 (Failover) 클러스터링 시스템 로그 이벤트
 
->적용 대상: Windows Server 2019, Windows Server 2016
+> 적용 대상: Windows Server 2019, Windows Server 2016
 
 이 항목에서는 Windows Server 시스템 로그 (이벤트 뷰어에서 볼 수 있음)의 장애 조치 (Failover) 클러스터링 이벤트를 나열 합니다. 이러한 이벤트는 모두 **FailoverClustering** 의 이벤트 원본을 공유 하며 클러스터 문제를 해결할 때 유용할 수 있습니다.
 
@@ -600,7 +600,7 @@ IPv6 터널 주소 리소스 ' %1 '을 (를) 온라인 상태로 만들지 못�
 
 ### <a name="event-1567-service_failed_to_change_log_size"></a>이벤트 1567: SERVICE_FAILED_TO_CHANGE_LOG_SIZE
 
-클러스터 서비스에서 추적 로그 크기를 변경 하지 못했습니다. ' Get Cluster \| Format-List \*' PowerShell cmdlet을 사용 하 여 ClusterLogSize 설정을 확인 하세요. 또한 성능 모니터 스냅인을 사용 하 여 FailoverClustering에 대 한 이벤트 추적 세션 설정을 확인 합니다.
+클러스터 서비스에서 추적 로그 크기를 변경 하지 못했습니다. ' Get-Cluster \| Format-List \*' PowerShell cmdlet을 사용 하 여 clusterlogsize 설정을 확인 하세요. 또한 성능 모니터 스냅인을 사용 하 여 FailoverClustering에 대 한 이벤트 추적 세션 설정을 확인 합니다.
 
 ### <a name="event-1567-res_vipaddr_address_interface_failed"></a>이벤트 1567: RES_VIPADDR_ADDRESS_INTERFACE_FAILED
 
@@ -664,11 +664,11 @@ IP 인터페이스 ' %1 ' (주소 ' %2 ')에 대 한 상태 검사에 실패 했
 
 ### <a name="event-1606-res_disk_cno_check_failed"></a>이벤트 1606: RES_DISK_CNO_CHECK_FAILED
 
-클러스터 디스크 리소스 ' %1 '에 BitLocker로 보호 된 볼륨 ' %2 '이 (가) 포함 되어 있지만이 볼륨의 Active Directory 클러스터 이름 계정 (클러스터 이름 개체 또는 CNO 라고도 함)이 볼륨에 대 한 BitLocker 보호기가 아닙니다. BitLocker로 보호 되는 볼륨에 필요 합니다. 이를 해결 하려면 먼저 클러스터에서 디스크를 제거 합니다. 그런 다음 Manage-bde.exe 명령줄 도구를 사용 하 여 클러스터 이름에 대해 도메인\\ClusterName\$ 형식을 사용 하 여 클러스터 이름을 ADAccountOrGroup 보호기로 추가 합니다. 그런 다음 클러스터에 디스크를 다시 추가 합니다. 자세한 내용은 Manage-bde.exe에 대 한 설명서를 참조 하세요.
+클러스터 디스크 리소스 ' %1 '에 BitLocker로 보호 된 볼륨 ' %2 '이 (가) 포함 되어 있지만이 볼륨의 Active Directory 클러스터 이름 계정 (클러스터 이름 개체 또는 CNO 라고도 함)이 볼륨에 대 한 BitLocker 보호기가 아닙니다. BitLocker로 보호 되는 볼륨에 필요 합니다. 이를 해결 하려면 먼저 클러스터에서 디스크를 제거 합니다. 그런 다음 Manage-bde.exe 명령줄 도구를 사용 하 여 클러스터 이름에 대 한 도메인\\ClusterName\$ 형식을 사용 하 여 클러스터 이름을 ADAccountOrGroup 보호기로 추가 합니다. 그런 다음 클러스터에 디스크를 다시 추가 합니다. 자세한 내용은 Manage-bde.exe에 대 한 설명서를 참조 하세요.
 
 ### <a name="event-1607-res_disk_cno_unlock_failed"></a>이벤트 1607: RES_DISK_CNO_UNLOCK_FAILED
 
-클러스터 디스크 리소스 ' %1 '이 (가) BitLocker로 보호 되는 볼륨 ' %2 '의 잠금을 해제할 수 없습니다. 클러스터 이름 개체 (CNO)가이 볼륨의 유효한 BitLocker 보호기로 설정 되어 있지 않습니다. 이를 해결 하려면 클러스터에서 디스크를 제거 합니다. 그런 다음 Manage-bde.exe 명령줄 도구를 사용 하 여 도메인\\ClusterName\$형식으로 클러스터 이름을 ADAccountOrGroup 보호기로 추가 하 고 디스크를 클러스터에 다시 추가 합니다. 자세한 내용은 Manage-bde.exe에 대 한 설명서를 참조 하세요.
+클러스터 디스크 리소스 ' %1 '이 (가) BitLocker로 보호 되는 볼륨 ' %2 '의 잠금을 해제할 수 없습니다. 클러스터 이름 개체 (CNO)가이 볼륨의 유효한 BitLocker 보호기로 설정 되어 있지 않습니다. 이를 해결 하려면 클러스터에서 디스크를 제거 합니다. 그런 다음 Manage-bde.exe 명령줄 도구를 사용 하 여 도메인\\ClusterName\$형식을 사용 하 여 클러스터 이름을 ADAccountOrGroup 보호기로 추가 하 고 디스크를 클러스터에 다시 추가 합니다. 자세한 내용은 Manage-bde.exe에 대 한 설명서를 참조 하세요.
 
 ### <a name="event-1608-res_fileserver_leader_failed"></a>이벤트 1608: RES_FILESERVER_LEADER_FAILED
 
@@ -780,7 +780,7 @@ Active Directory에서 네트워크 이름에 대 한 컴퓨터 개체를 사용
 
 ### <a name="event-4613-nodecleanup_clear_clusdisk_database_failed"></a>이벤트 4613: NODECLEANUP_CLEAR_CLUSDISK_DATABASE_FAILED
 
-클러스터를 삭제 하는 동안 클러스터 서비스에서 ID가 ' %2 ' 인 클러스터 된 디스크를 제대로 정리 하지 못했습니다. 오류 코드는 ' %1 '입니다. 정리가 성공적으로 완료 될 때까지이 디스크에 액세스할 수 없습니다. 수동 정리의 경우 Windows 레지스트리에서 ' HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\ClusDisk\\Parameters ' 키의 ' AttachedDisks ' 값을 삭제 합니다.
+클러스터를 삭제 하는 동안 클러스터 서비스에서 ID가 ' %2 ' 인 클러스터 된 디스크를 제대로 정리 하지 못했습니다. 오류 코드는 ' %1 '입니다. 정리가 성공적으로 완료 될 때까지이 디스크에 액세스할 수 없습니다. 수동 정리의 경우 Windows 레지스트리에서\\' HKEY_LOCAL_MACHINE SYSTEM\\CurrentControlSet\\Services\\ClusDisk\\Parameters ' 키의 ' AttachedDisks ' 값을 삭제 합니다.
 
 ### <a name="event-4615-nodecleanup_disable_cluster_service_failed"></a>이벤트 4615: NODECLEANUP_DISABLE_CLUSTER_SERVICE_FAILED
 

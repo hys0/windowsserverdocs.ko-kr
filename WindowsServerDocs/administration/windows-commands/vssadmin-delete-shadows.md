@@ -8,16 +8,16 @@ ms.author: jgerend
 ms.technology: storage
 ms.date: 05/18/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 9807efa2c570b8ed63c2d776327b8e3311846488
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: e18823c5c030aa1a7b8f032f820e415f36fd7827
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80830116"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82720275"
 ---
 # <a name="vssadmin-delete-shadows"></a>Vssadmin delete 그림자
 
->적용 대상: Windows 10, Windows 8.1, Windows Server 2016, Windows Server 2012 R2, Windows server 2012, windows Server 2008 R2, Windows Server 2008
+> 적용 대상: Windows 10, Windows 8.1, Windows Server 2016, Windows Server 2012 R2, Windows server 2012, windows Server 2008 R2, Windows Server 2008
 
 지정 된 볼륨의 섀도 복사본을 삭제 합니다.
 
@@ -31,13 +31,13 @@ vssadmin delete shadows /for=<ForVolumeSpec> [/oldest | /all | /shadow=<ShadowID
 
 |매개 변수|설명|
 |---|---|
-|/for =\<ForVolumeSpec >|삭제할 볼륨의 섀도 복사본을 지정 합니다.|
+|/for =\<ForVolumeSpec>|삭제할 볼륨의 섀도 복사본을 지정 합니다.|
 |/oldest|가장 오래 된 섀도 복사본만 삭제 합니다.|
 |/all|지정 된 볼륨의 섀도 복사본을 모두 삭제 합니다.|
-|/shadow =\<ShadowID >|ShadowID에 지정 된 섀도 복사본을 삭제 합니다. 섀도 복사본 ID를 가져오려면 **vssadmin list shadows** 명령을 사용 합니다. 섀도 복사본 ID를 입력할 때 다음 형식을 사용 합니다. 여기서 각 *X* 는 16 진수 문자를 나타냅니다.<br><br>XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX-XXXX-XXXX|
+|/shadow =\<ShadowID>|ShadowID에 지정 된 섀도 복사본을 삭제 합니다. 섀도 복사본 ID를 가져오려면 **vssadmin list shadows** 명령을 사용 합니다. 섀도 복사본 ID를 입력할 때 다음 형식을 사용 합니다. 여기서 각 *X* 는 16 진수 문자를 나타냅니다.<br><br>XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX-XXXX-XXXX|
 |/quiet|명령이 실행 되는 동안 메시지를 표시 하지 않도록 지정 합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 클라이언트 액세스 가능 유형을 사용 하 여 섀도 복사본을 삭제할 수 있습니다.
 

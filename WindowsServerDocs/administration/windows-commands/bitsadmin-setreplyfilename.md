@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setreplyfilename
-description: '**Bitsadmin setreplyfilename**에 대 한 Windows 명령 항목으로, 서버 업로드-회신이 포함 된 파일의 경로를 지정 합니다.'
+description: 서버 업로드-회신이 포함 된 파일의 경로를 지정 하는 bitsadmin setreplyfilename 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6c476073cb22ff66bcefc75a45fcd0526cdf3d25
-ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
+ms.openlocfilehash: 2f0bd184db274dc915817ff3e26ae2c686190c27
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81122733"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82720485"
 ---
 # <a name="bitsadmin-setreplyfilename"></a>bitsadmin setreplyfilename
 
@@ -33,17 +33,19 @@ bitsadmin /setreplyfilename <job> <file_path>
 
 | 매개 변수 | 설명 |
 | -------------- | -------------- |
-| 제출 | 작업의 표시 이름 또는 GUID입니다. |
+| 작업(job) | 작업의 표시 이름 또는 GUID입니다. |
 | file_path | 서버 업로드-회신이 배치 될 위치입니다. |
 
 ## <a name="examples"></a>예
 
-다음 예에서는 이름이 *Mydownloadjob*인 작업에 대 한 upload-reply 파일 이름 파일 경로를 설정 합니다.
+*Mydownloadjob*이라는 작업의 업로드-회신 파일 이름 파일 경로를 설정 하려면 다음을 수행 합니다.
 
 ```
-C:\>bitsadmin /setreplyfilename myDownloadJob c:\upload-reply
+bitsadmin /setreplyfilename myDownloadJob c:\upload-reply
 ```
 
 ## <a name="additional-references"></a>추가 참조
 
 - [명령줄 구문 키](command-line-syntax-key.md)
+
+- [bitsadmin 명령](bitsadmin.md)

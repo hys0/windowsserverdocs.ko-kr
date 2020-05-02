@@ -1,6 +1,6 @@
 ---
 title: Windows Server 백업 명령 참조
-description: 백업 명령 참조에 대 한 Windows 명령 항목입니다.
+description: 백업 명령 참조에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ca6a2e17c68e362d8b3d26f67ab3b7e4c7bf86d4
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 69121e445e5c7a967c30b0a911c639431c7dd74a
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80829207"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82720724"
 ---
 # <a name="windows-server-backup-command-reference"></a>Windows Server 백업 명령 참조
 
@@ -24,7 +24,7 @@ ms.locfileid: "80829207"
 
 백업 일정을 구성 하려면의 구성원 이어야는 **관리자** 그룹입니다. 이 명령 사용 하 여 다른 모든 작업을 수행 하려면의 구성원 이어야는 **Backup Operators** 또는 **관리자** 그룹 또는 사용자 받아야 적절 한 권한을 위임 합니다.
 
-실행 해야 **wbadmin** 상승된 된 명령 프롬프트에서. (관리자 권한 명령 프롬프트를 열려면 **시작**, 를 마우스 오른쪽 단추로 클릭 **명령 프롬프트**, 를 클릭 하 고 **관리자 권한으로 실행**.)
+실행 해야 **wbadmin** 상승된 된 명령 프롬프트에서. 관리자 권한 명령 프롬프트를 열려면 **시작**을 클릭 하 고 **명령 프롬프트**를 마우스 오른쪽 단추로 클릭 한 다음 **관리자 권한으로 실행**을 클릭 합니다.
 
 |하위 명령|설명|
 |----------|-----------|
@@ -41,5 +41,5 @@ ms.locfileid: "80829207"
 |[Wbadmin start systemstatebackup](wbadmin-start-systemstatebackup.md)|시스템 상태 백업을 실행합니다.|
 |[Wbadmin delete systemstatebackup](wbadmin-delete-systemstatebackup.md)|하나 이상의 시스템 상태 백업을 삭제합니다.|
 |[Wbadmin start sysrecovery](wbadmin-start-sysrecovery.md)|전체 시스템 (최소한 모든 볼륨 운영 체제의 상태를 포함 하는)의 복구를 실행 합니다. 이 하위 명령은 Windows 복구 환경을 사용 하는 경우에 사용할 수만 있습니다.|
-|[Wbadmin restore catalog](wbadmin-restore-catalog.md)|백업 카탈로그는 로컬 컴퓨터에 손상 된 경우에서 지정 된 스토리지 위치에서 백업 카탈로그를 복구 합니다.|
+|[Wbadmin restore catalog](wbadmin-restore-catalog.md)|로컬 컴퓨터의 백업 카탈로그가 손상된 경우에 지정된 스토리지 위치에서 백업 카탈로그를 복구합니다.|
 |[Wbadmin delete catalog](wbadmin-delete-catalog.md)|로컬 컴퓨터에서 백업 카탈로그를 삭제합니다. 이 컴퓨터에 백업 카탈로그 손상 되 고 카탈로그를 복원 하는 데 사용할 수 있는 다른 위치에 저장 된 백업이 있는 경우에이 명령을 사용 합니다.|

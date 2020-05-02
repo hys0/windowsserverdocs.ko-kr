@@ -7,14 +7,15 @@ ms.technology: storage-health-service
 ms.topic: article
 author: cosmosdarwin
 ms.date: 08/14/2017
-ms.openlocfilehash: 7ae78137bbd4e39291cc2e307f62697876c98135
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: a8262567abdd18847e99026c43d722351a00d3f2
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80827526"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82720545"
 ---
 # <a name="health-service-settings"></a>상태 관리 서비스 설정
+
 > 적용 대상: Windows Server 2019, Windows Server 2016
 
 상태 관리 서비스는 스토리지 공간 다이렉트를 실행 하는 클러스터에 대 한 일상적인 모니터링 및 운영 환경을 개선 하는 Windows Server 2016의 새로운 기능입니다.
@@ -23,7 +24,7 @@ ms.locfileid: "80827526"
 
 다음 PowerShell cmdlet을 사용 하 여 설정을 설정 하거나 수정할 수 있습니다.
 
-### <a name="usage"></a>사용법
+### <a name="usage"></a>사용
 
 ```PowerShell
 Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name <SettingName> -Value <Value>  
@@ -86,7 +87,7 @@ Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name "System.Storage.V
 "Platform.Quiescence.MaxDelaySeconds" = 420 (i.e. 7 minutes)
 ```
 
-#### <a name="metrics"></a>metrics
+#### <a name="metrics"></a>메트릭
 
 ```
 "System.Reports.ReportingPeriodSeconds" = 1
