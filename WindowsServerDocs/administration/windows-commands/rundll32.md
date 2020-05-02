@@ -1,6 +1,6 @@
 ---
 title: rundll32
-description: '\* * * *에 대 한 Windows 명령 항목'
+description: '* * * *에 대 한 참조 항목'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 391607f6e744fe88a60cb556067cf2699eee25f5
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: b0639206b26ea58c4ec8473c0a736fda3c435021
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80835436"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82722244"
 ---
 # <a name="rundll32"></a>rundll32
 
@@ -30,13 +30,13 @@ ms.locfileid: "80835436"
 Rundll32 <DLLname>
 ```
 
-## <a name="commands"></a>Commands
+## <a name="commands"></a>명령
 
 |매개 변수|설명|
 |---------|-----------|
-|[Rundll32.exe printui.dll, PrintUIEntry](rundll32-printui.md)|프린터 사용자 인터페이스를 표시합니다.|
+|[Rundll32](rundll32-printui.md)|프린터 사용자 인터페이스를 표시합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 Rundll32.exe는 Rundll32.exe에 의해 호출 되도록 명시적으로 작성 된 DLL 에서만 함수를 호출할 수 있습니다.
 

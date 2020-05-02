@@ -1,6 +1,6 @@
 ---
-title: Set 옵션
-description: Set 옵션에 대 한 Windows 명령 항목. 섀도 복사본 만들기에 대 한 옵션을 설정 합니다.
+title: SET 옵션
+description: 섀도 복사본 만들기 옵션을 설정 하는 Set 옵션에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a956c74619f3a6c33dfcaa62ee4c810cd93b21f1
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: a4aba049e29cd74450467cf28057a2ff4e4a7094
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80834496"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82721898"
 ---
-# <a name="set-option"></a>Set 옵션
+# <a name="set-option"></a>SET 옵션
 
 섀도 복사본 만들기에 대 한 옵션을 설정합니다. 매개 변수 없이 사용 하는 경우 **옵션을 설정** 명령 프롬프트에서 도움말을 표시 합니다.
 

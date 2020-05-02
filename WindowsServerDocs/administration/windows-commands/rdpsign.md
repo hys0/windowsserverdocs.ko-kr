@@ -9,22 +9,22 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: c9df46ab09b758cbd86334d5b418c876c41f0eff
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 4245ea533238d31457563f4d3521fdb09ff1f255
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80836676"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82722635"
 ---
 # <a name="rdpsign"></a>rdpsign
 
->적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 디지털 방식으로 원격 데스크톱 프로토콜 (.rdp) 파일에 서명할 수 있습니다.
-이 명령을 사용 하는 방법에 대 한 예는 [예제](#BKMK_examples)를 참조 하세요.
+
 
 > [!NOTE]
-> 터미널 서비스는 Windows Server 2008 R2에서 원격 데스크톱 서비스로 이름이 변경되었습니다. 최신 버전의 새로운 기능에 대 한 자세한 내용은 Windows Server TechNet 라이브러리의 [Windows server 2012에 있는 원격 데스크톱 서비스의 새로운 기능](https://technet.microsoft.com/library/hh831527) 을 참조 하십시오.
+> Windows Server 2008 R2에서는 터미널 서비스의 이름이 원격 데스크톱 서비스로 바뀌었습니다. 최신 버전의 새로운 기능에 대 한 자세한 내용은 Windows Server TechNet 라이브러리의 [Windows server 2012에 있는 원격 데스크톱 서비스의 새로운 기능](https://technet.microsoft.com/library/hh831527) 을 참조 하십시오.
 
 ## <a name="syntax"></a>구문
 ```
@@ -35,14 +35,14 @@ rdpsign /sha1 <hash> [/q | /v |] [/l] <file_name.rdp>
 
 |매개 변수|설명|
 |-------|--------|
-|/sha1 \<hash >|한 Secure Hash Algorithm 1 (SHA1) 해시는 인증서 저장소에 포함 된 서명 인증서의 지문을 지정 합니다. Windows Server 2012 R2 이상에서 사용 됩니다.|
-|/sha256 \<hash >|인증서 저장소에 포함 되는 서명 인증서의 SHA256 (Secure Hash Algorithm 256) 해시 인 지문을 지정 합니다. Windows Server 2016 이상에서/ss를 대체 합니다.|
+|/sha1 \<해시>|한 Secure Hash Algorithm 1 (SHA1) 해시는 인증서 저장소에 포함 된 서명 인증서의 지문을 지정 합니다. Windows Server 2012 R2 이상에서 사용 됩니다.|
+|/sha256 \<hash>|인증서 저장소에 포함 되는 서명 인증서의 SHA256 (Secure Hash Algorithm 256) 해시 인 지문을 지정 합니다. Windows Server 2016 이상에서/ss를 대체 합니다.|
 |/q|자동 모드입니다. 명령이 성공 하는 경우의 출력 및 명령이 실패 하는 경우 최소 출력 합니다.|
 |/v|자세한 정보 표시 모드입니다. 모든 경고, 메시지 및 상태를 표시합니다.|
 |/l|실제로 입력된 파일 중 하나를 바꾸지 않고 서명 및 출력 결과 테스트 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 -   SHA1 또는 SHA256 인증서 지 문은 신뢰할 수 있는 .rdp 파일 게시자를 나타내야 합니다. 인증서 지문을 얻으려면 인증서 스냅인을 열고 사용할 인증서 (로컬 컴퓨터의 인증서 저장소 또는 개인 인증서 저장소)를 두 번 클릭 한 다음 **자세히** 탭을 클릭 하 고 **필드** 목록에서 **지문**을 클릭 합니다.
 
     > [!NOTE]
@@ -67,6 +67,6 @@ rdpsign /sha1 <hash> [/q | /v |] [/l] <file_name.rdp>
   ```
   rdpsign /sha1 hash file1.rdp file2.rdp file3.rdp
   ```
-  ## <a name="see-also"></a>관련 항목
-  - 명령줄 [구문 키](command-line-syntax-key.md)
-  [원격 데스크톱 서비스 (Terminal Services) 명령 참조](remote-desktop-services-terminal-services-command-reference.md)
+  ## <a name="see-also"></a>참고 항목
+  - [명령줄 구문 키](command-line-syntax-key.md)
+  [원격 데스크톱 서비스 (터미널 서비스) 명령 참조](remote-desktop-services-terminal-services-command-reference.md)

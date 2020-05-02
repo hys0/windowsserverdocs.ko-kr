@@ -1,6 +1,6 @@
 ---
 title: repair-bde
-description: '\* * * *에 대 한 Windows 명령 항목'
+description: '* * * *에 대 한 참조 항목'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2107e5b7ef0339fc4f682632f3ef5a593578680a
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 501ab801e76980f7e94e88213dd3aa42ee04d4d7
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80835966"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82722403"
 ---
 # <a name="repair-bde"></a>repair-bde
 
@@ -29,7 +29,7 @@ Repair-bde 명령줄 도구에는 다음과 같은 제한이 있습니다.
 -   복구 bde 암호화 또는 암호 해독 프로세스 동안 실패 한 드라이브를 복구할 수 없습니다.
 -   복구 bde를 드라이브에 있는 모든 암호화 경우 다음 드라이브에 완벽 하 게 암호화 되어 있다고 가정 합니다.
 
-이 명령을 사용할 수 있는 방법을의 예 참조 [예제](#BKMK_Examples)합니다.
+
 
 ## <a name="syntax"></a>구문
 
@@ -41,35 +41,35 @@ repair-bde <InputVolume> <OutputVolumeorImage> [-rk] [–rp] [-pw] [–kp] [–l
 
 |매개 변수|설명|
 |---------|-----------|
-|\<InputVolume >|복구 하고자 하는 BitLocker로 암호화 된 드라이브의 드라이브 문자를 식별 합니다. 드라이브 문자는 콜론; 있어야 합니다. 예를 들어: **c:** 합니다.|
-|\<OutputVolumeorImage >|복구 된 드라이브의 콘텐츠를 저장 하는 드라이브를 식별 합니다. 출력 드라이브에 대 한 모든 정보를 덮어씁니다.|
+|\<InputVolume>|복구 하고자 하는 BitLocker로 암호화 된 드라이브의 드라이브 문자를 식별 합니다. 드라이브 문자는 콜론; 있어야 합니다. 예를 들어: **c:** 합니다.|
+|\<OutputVolumeorImage>|복구 된 드라이브의 콘텐츠를 저장 하는 드라이브를 식별 합니다. 출력 드라이브에 대 한 모든 정보를 덮어씁니다.|
 |-날짜별|볼륨의 잠금을 해제 하는 데 사용 해야 하는 복구 키의 위치를 식별 합니다. 이 명령으로도 지정할 수 있습니다 **-recoverykey**합니다.|
 |-rp|볼륨의 잠금을 해제 하는 데 사용 해야 하는 숫자로 된 복구 암호를 식별 합니다. 이 명령으로도 지정할 수 있습니다 **-recoverypassword**합니다.|
 |-pw|볼륨의 잠금을 해제 하는 데 사용 해야 하는 암호를 식별 합니다. 이 명령으로도 지정할 수 있습니다 **-암호**|
 |-kp|볼륨의 잠금을 해제 하는 데 사용할 수 있는 복구 키 패키지를 식별 합니다. 이 명령으로도 지정할 수 있습니다 **-keypackage**합니다.|
 |-lf|Repair-bde 오류, 경고 및 정보 메시지를 저장할 파일의 경로를 지정 합니다. 이 명령으로도 지정할 수 있습니다 **-로그 파일**합니다.|
 |-f|볼륨을 잠글 수 없습니다 경우에 분리 되도록 합니다. 이 명령으로도 지정할 수 있습니다 **-강제로**합니다.|
-|-? 또는 /?|명령 프롬프트에서 도움말을 표시합니다.|
+|-? 또는 /?|명령 프롬프트에 도움말을 표시합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 키 패키지의 경로를 지정 하지 않으면 **복구 bde** 키 패키지에 대 한 드라이브를 검색 합니다. 그러나 하드 드라이브가 손상 된 경우, **복구 bde** 패키지를 찾을 수 없으며 경로 제공 하 라는 메시지가 나타납니다.
 
-## <a name="examples"></a><a name=BKMK_Examples></a>예와
+## <a name="examples"></a>예
 
-다음 예제에서는 C 드라이브를 복구 하 고 내용을 F 드라이브에 저장 된 복구 키 파일 (RecoveryKey.bek)를 사용 하 여 D 드라이브에 C 드라이브에서 기록 하 고 Z 드라이브에 로그 파일 (log.txt)에이 시도의 결과 기록 합니다.
+C 드라이브를 복구 하 고 드라이브 F에 저장 된 복구 키 파일 (Recoverykey.bek .bek)을 사용 하 여 C 드라이브에서 D 드라이브에 콘텐츠를 쓰고이 시도의 결과를 Z 드라이브의 로그 파일 ()에 기록 합니다.
 ```
 repair-bde C: D: -rk F:\RecoveryKey.bek –lf Z:\log.txt
 ```
-다음 예제에서는 C 드라이브를 복구 하 고 내용을 지정 된 48 자리 복구 암호를 사용 하 여 D 드라이브에 C 드라이브에 기록 하려고 시도 합니다. 각 블록을 구분 하이픈으로 6 자리 숫자의 8 개 블록에 복구 암호를 입력 해야 합니다.
+을 사용 하 여 C 드라이브를 복구 하 고 지정 된 48 자리 복구 암호를 사용 하 여 D 드라이브에 C 드라이브에 콘텐츠를 기록 합니다. 각 블록을 구분 하이픈으로 6 자리 숫자의 8 개 블록에 복구 암호를 입력 해야 합니다.
 ```
 repair-bde C: D: -rp 111111-222222-333333-444444-555555-666666-777777-888888
 ```
-다음 예제에서는 C 드라이브를 분리할를 강제로 수행 하 고 C 드라이브를 복구 하 고 복구 키 패키지 및 6. 드라이브에 저장 된 키 복구 파일 (RecoveryKey.bek)를 사용 하 여 D 드라이브 C 드라이브에 내용을 기록 하려고 시도 합니다.
+C 드라이브를 강제로 분리 한 다음 드라이브 F에 저장 된 복구 키 패키지 및 복구 키 파일 (Recoverykey.bek)을 사용 하 여 c 드라이브에 c 드라이브에 콘텐츠를 기록 합니다.
 ```
 repair-bde C: D: -kp F:\RecoveryKeyPackage -rk F:\RecoveryKey.bek -f
 ```
-다음 예제에서는 C 드라이브 복구 및 D 드라이브 C 드라이브에서 콘텐츠를 작성 하 고 메시지가 표시 되 면 c: 드라이브의 잠금을 해제 하려면 암호를 입력 해야 합니다.
+C 드라이브를 복구 하 고 C 드라이브에서 D 드라이브에 콘텐츠를 쓴 다음, 메시지가 표시 되 면 C: 드라이브의 잠금을 해제 하는 암호를 입력 해야 합니다.
 ```
 repair-bde C: D: -pw
 ```

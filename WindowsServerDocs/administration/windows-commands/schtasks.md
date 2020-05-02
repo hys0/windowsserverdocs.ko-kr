@@ -1,6 +1,6 @@
 ---
 title: schtasks
-description: '* * * *에 대 한 Windows 명령 항목'
+description: '* * * *에 대 한 참조 항목'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2b50ca62aea7a46f9246fb8d5089c0ef41aa1316
-ms.sourcegitcommit: d669d4af166b9018bcf18dc79cb621a5fee80042
+ms.openlocfilehash: a723025846a0e1725c72d5880d1ecc97579e1a69
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82037172"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82722175"
 ---
 # <a name="schtasks"></a>schtasks
 
@@ -340,7 +340,7 @@ schtasks /create /tn <TaskName> /tr <TaskRun> /sc daily [/mo {1 - 365}] [/st <HH
 
 #### <a name="to-schedule-a-task-that-runs-every-day"></a>매일 실행 되는 작업을 예약 하려면
 
-다음 예제에서는 MyApp 프로그램이 하루에 한 번, 매일, 오전 8시 실행 되도록 예약 2002 년 12 월 31 일 될 때까지. 생략 하기 때문에 **/mo** 매개 변수를 1의 기본 간격이 매일 명령을 실행 하는 데 사용 됩니다.
+MyApp 프로그램이 매일 한 번 실행 되도록 예약 하려면 매일 오전 8:00에 2002 년 12 월 31 일 될 때까지. 생략 하기 때문에 **/mo** 매개 변수를 1의 기본 간격이 매일 명령을 실행 하는 데 사용 됩니다.
 
 이 예제에서는 로컬 컴퓨터 시스템으로 설정 되어 있으므로 **영어 (영국)** 옵션 **국가 및 언어 옵션** 에서 **제어판**, 종료 날짜 형식은 DD/MM/YYYY (31/12/2002)
 ```
@@ -349,7 +349,7 @@ schtasks /create /tn My App /tr c:\apps\myapp.exe /sc daily /st 08:00 /ed 31/12/
 
 #### <a name="to-schedule-a-task-that-runs-every-12-days"></a>12 일 마다 실행 되는 작업을 예약 하려면
 
-다음 예제에서는 MyApp 프로그램이 12 일 마다 오후 1 시에 실행 되도록 예약 (13:00) 2002 년 12 월 31 일에 시작 합니다. 명령을 사용 하 여는 **/mo** 2 일 간격을 지정 하려면 매개 변수 및 **/sd** 및 **/st** 날짜와 시간을 지정 하는 매개 변수입니다.
+MyApp 프로그램이 오후 1:00에 12 일 마다 실행 되도록 예약 하려면 (13:00) 2002 년 12 월 31 일에 시작 합니다. 명령을 사용 하 여는 **/mo** 2 일 간격을 지정 하려면 매개 변수 및 **/sd** 및 **/st** 날짜와 시간을 지정 하는 매개 변수입니다.
 
 이 예제에서는 시스템으로 설정 되어 있으므로 **영어 (짐바브웨)** 옵션 **국가 및 언어 옵션** 에서 **제어판**, 종료 날짜 형식은 MM/DD/YYYY (12/31/2002)
 ```

@@ -1,6 +1,6 @@
 ---
 title: rd
-description: '\* * * *에 대 한 Windows 명령 항목'
+description: '* * * *에 대 한 참조 항목'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 298e6b291a6aa08701b6d54a11470b0cc4bea486
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: cb169a44f9613b237af71321f9619d9ea93a6912
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80836716"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82722639"
 ---
 # <a name="rd"></a>rd
 
@@ -22,7 +22,7 @@ ms.locfileid: "80836716"
 
 디렉터리를 삭제합니다. 이 명령은 같습니다는 **rmdir** 명령입니다.
 
-이 명령을 사용하는 방법의 예는 [예](#BKMK_examples)를 참조하세요.
+
 
 ## <a name="syntax"></a>구문
 
@@ -35,19 +35,19 @@ rmdir [<Drive>:]<Path> [/s [/q]]
 
 |     매개 변수     |                                                                 설명                                                                  |
 |-------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| [\<Drive >:]<Path> |                      삭제 하려는 디렉터리의 이름과 위치를 지정 합니다. *경로* 가 필요 합니다.                       |
+| [\<드라이브>:]<Path> |                      삭제 하려는 디렉터리의 이름과 위치를 지정 합니다. *경로* 가 필요 합니다.                       |
 |        /s         |                     (지정된 된 디렉터리 및 모든 파일을 비롯 한 모든 하위) 디렉터리 트리를 삭제 합니다.                      |
 |        /q         | 자동 모드를 지정합니다. 디렉터리 트리를 삭제할 때 확인 표시 하지 않습니다. (유의 **/q** 경우에만 사용할 **/s** 지정 됩니다.) |
 |        /?         |                                                     명령 프롬프트에 도움말을 표시합니다.                                                     |
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 -   포함 하 여 파일을 포함 하는 디렉터리를 삭제할 수 없습니다 숨겨진 또는 시스템 파일입니다. 이렇게 하려고 하면 다음과 같은 메시지가 나타납니다.
 
     `The directory is not empty`
 
     모든 파일 (숨겨진 파일 및 시스템 파일 포함)을 나열 하려면 **dir/a** 명령을 사용 합니다. 다음 사용 하 여는 **attrib** 명령과 **-h** 숨겨진된 파일 특성을 제거 하려면 **-s** 시스템 파일 특성을 제거 하려면 또는 **-h-s** 모두 분리 숨김 및 시스템 파일 특성을 합니다. 숨겨진 후 및 파일 특성을 제거한, 파일을 삭제할 수 있습니다.
--   *경로*맨 앞에 백슬래시 (\)를 삽입 하는 경우 *경로* 는 현재 디렉터리에 관계 없이 루트 디렉터리에서 시작 됩니다.
+-   \) *경로의*시작 부분에 백슬래시를 삽입 하는 경우 *경로* 는 현재 디렉터리에 관계 없이 루트 디렉터리에서 시작 됩니다.
 -   사용할 수 없습니다 **rd** 현재 디렉터리를 삭제 합니다. 현재 디렉터리를 삭제 하려고 하면 다음과 같은 오류 메시지가 나타납니다.
 
     `The process cannot access the file because it is being used by another process.`
@@ -55,7 +55,7 @@ rmdir [<Drive>:]<Path> [/s [/q]]
     이 오류 메시지가 표시 되는 경우 다른 디렉터리 (현재 디렉터리의 하위 디렉터리 아님)로 변경한 다음 **rd** (필요한 경우 *경로* 지정)을 사용 해야 합니다.
 -   **rd** 다른 매개 변수와 함께 명령을 복구 콘솔에서 사용할 수 있습니다.
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 
 현재 작업 디렉터리를 삭제할 수 없습니다. 현재 디렉터리에 속하지 않는 디렉터리를 변경 해야 합니다. 예를 들어 부모 디렉터리를 변경 하려면 다음을 입력 합니다.
 ```

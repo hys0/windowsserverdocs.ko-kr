@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: 03450a370c84eb4659b9ebfde0729fee52e6c1f6
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 4212951a5aee46be893069c15dba4b210aca253d
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80835556"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82722279"
 ---
 # <a name="rpcinfo"></a>rpcinfo
 
->적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 원격 컴퓨터에서 프로그램을 나열합니다. **rpcinfo** 명령줄 유틸리티는 원격 프로시저 호출 (RPC) RPC 서버를 하 고 그 결과 보고 합니다. 
 
@@ -30,13 +30,13 @@ rpcinfo [/p [<Node>]] [/b <Program version>] [/t <Node Program> [<version>]] [/u
 #### <a name="parameters"></a>매개 변수
 |매개 변수|설명|
 |-------|--------|
-|/p [\<노드 >]|지정 된 호스트에 포트 매퍼를 사용 하 여 등록 된 모든 프로그램을 나열 합니다. 노드 (컴퓨터) 이름을 지정 하지 않는 경우 로컬 호스트의 포트 매퍼 프로그램에 쿼리 합니다.|
-|/b \<프로그램 버전 >|지정 된 프로그램 및 포트 매퍼에 등록 하는 버전에 있는 모든 네트워크 노드에서 응답을 요청 합니다. 프로그램 이름 또는 번호와 버전 번호를 지정 해야 합니다.|
-|/t \<Node Program > [\<버전 >]|지정된 된 프로그램을 호출 하는 TCP 전송 프로토콜을 사용 합니다. 노드 (컴퓨터) 이름과 프로그램 이름을 모두 지정 해야 합니다. 버전을 지정 하지 않으면 프로그램 모든 버전을 호출 합니다.|
-|/u \<Node Program > [\<버전 >]|지정된 된 프로그램을 호출 하는 UDP 전송 프로토콜을 사용 합니다. 노드 (컴퓨터) 이름과 프로그램 이름을 모두 지정 해야 합니다. 버전을 지정 하지 않으면 프로그램 모든 버전을 호출 합니다.|
+|/p [\<Node>]|지정 된 호스트에 포트 매퍼를 사용 하 여 등록 된 모든 프로그램을 나열 합니다. 노드 (컴퓨터) 이름을 지정 하지 않는 경우 로컬 호스트의 포트 매퍼 프로그램에 쿼리 합니다.|
+|/b \<프로그램 버전>|지정 된 프로그램 및 포트 매퍼에 등록 하는 버전에 있는 모든 네트워크 노드에서 응답을 요청 합니다. 프로그램 이름 또는 번호와 버전 번호를 지정 해야 합니다.|
+|/t \<노드 프로그램> [\<버전>]|지정된 된 프로그램을 호출 하는 TCP 전송 프로토콜을 사용 합니다. 노드 (컴퓨터) 이름과 프로그램 이름을 모두 지정 해야 합니다. 버전을 지정 하지 않으면 프로그램 모든 버전을 호출 합니다.|
+|/u \<노드 프로그램> [\<버전>]|지정된 된 프로그램을 호출 하는 UDP 전송 프로토콜을 사용 합니다. 노드 (컴퓨터) 이름과 프로그램 이름을 모두 지정 해야 합니다. 버전을 지정 하지 않으면 프로그램 모든 버전을 호출 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
-## <a name="examples"></a><a name="BKMK_Examples"></a>예와
+## <a name="examples"></a>예
 모든 프로그램에 등록 된 포트 맵 편집기를 나열 하려면 다음을 입력 합니다.
 ```
 rpcinfo /p [<Node>]

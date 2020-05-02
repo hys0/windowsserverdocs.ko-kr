@@ -1,6 +1,6 @@
 ---
 title: pushd
-description: '\* * * *에 대 한 Windows 명령 항목'
+description: '* * * *에 대 한 참조 항목'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e7866a54e83bd57c8689512a1b75b151f74cb93c
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: e64c4f5090183b7d7b29dc7e040ffd94dc9d57ce
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80837096"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82722769"
 ---
 # <a name="pushd"></a>pushd
 
@@ -22,7 +22,7 @@ ms.locfileid: "80837096"
 
 사용 하 여 현재 디렉터리에 저장는 **popd** 명령 및 지정된 된 디렉터리에 다음 변경 합니다.
 
-이 명령을 사용하는 방법의 예는 [예](#BKMK_examples)를 참조하세요.
+
 
 ## <a name="syntax"></a>구문
 
@@ -34,10 +34,10 @@ pushd [<Path>]
 
 |매개 변수|설명|
 |---------|-----------|
-|\<경로 >|현재 디렉터리에 디렉터리를 지정 합니다. 이 명령은 상대 경로 지원 합니다.|
+|\<경로>|현재 디렉터리에 디렉터리를 지정 합니다. 이 명령은 상대 경로 지원 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 -   **Pushd** 명령을 사용할 때마다 단일 디렉터리를 사용할 수 있도록 저장 됩니다. 그러나 **pushd** 명령을 여러 번 사용 하 여 여러 디렉터리를 저장할 수 있습니다.
 
@@ -47,9 +47,9 @@ pushd [<Path>]
 -   명령 확장을 사용 하는 경우는 **pushd** 명령에는 네트워크 경로 로컬 드라이브 문자 및 경로입니다.
 -   네트워크 경로 지정 하는 경우는 **pushd** 명령은 지정 된 네트워크 리소스를 일시적으로 가장 높은 사용 하지 않는 드라이브 문자 (z:부터 시작)를 할당 합니다. 다음 명령은 새로 할당 된 드라이브에 지정된 된 디렉터리에 현재 드라이브 및 디렉터리를 변경합니다. 사용 하는 경우는 **popd** 명령을 명령 확장을 사용 하도록 설정 된 **popd** 명령을 제거 하 여 만든 드라이브 문자 할당 **pushd**합니다.
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 
-다음 예에서는 배치 프로그램에서 **pushd** 명령과 **popd** 명령을 사용 하 여 batch 프로그램이 실행 된 디렉터리에서 현재 디렉터리를 변경한 다음 다시 변경 하는 방법을 보여 줍니다.
+일괄 처리 프로그램에서 **pushd** 명령과 **popd** 명령을 사용 하 여 batch 프로그램이 실행 된 디렉터리에서 현재 디렉터리를 변경한 다음 다시 변경 하는 방법을 보여 줍니다.
 ```
 @echo off
 rem This batch file deletes all .txt files in a specified directory

@@ -1,6 +1,6 @@
 ---
 title: Scwcmd 변환
-description: '\* * * *에 대 한 Windows 명령 항목'
+description: '* * * *에 대 한 참조 항목'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1fed9ff6369e6c966d9d1f5295db7db6648a1ab1
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 1f1116b42d356cc36f478089cdf487a38e792e87
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80835126"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82722117"
 ---
 # <a name="scwcmd-transform"></a>Scwcmd: 변환
 
@@ -27,7 +27,7 @@ ms.locfileid: "80835126"
 > [!IMPORTANT]
 > 인터넷 정보 서비스 (IIS) 보안 정책 설정 그룹 정책을 사용 하 여 배포할 수 없습니다.</br>서버를 마지막으로 시작할 때 Windows 방화벽 서비스가 자동으로 시작 되지 않으면 승인 된 응용 프로그램을 나열 하는 > 방화벽 정책을 서버에 배포 하면 안 됩니다.
 
-이 명령을 사용할 수 있는 방법을의 예 참조 [예제](#BKMK_Examples)합니다.
+
 
 ## <a name="syntax"></a>구문
 
@@ -39,15 +39,15 @@ scwcmd transform /p:<Policyfile.xml> /g:<GPODisplayName>
 
 |매개 변수|설명|
 |---------|-----------|
-|/p:\<Policyfile >|적용 해야 하는.xml 정책 파일의 경로 파일 이름을 지정 합니다. 이 매개 변수를 지정 합니다.|
-|/g:\<GPODisplayName >|GPO의 표시 이름을 지정합니다. 이 매개 변수를 지정 합니다.|
+|/p:\<Policyfile>|적용 해야 하는.xml 정책 파일의 경로 파일 이름을 지정 합니다. 이 매개 변수를 지정 합니다.|
+|/g:\<GPODisplayName>|GPO의 표시 이름을 지정합니다. 이 매개 변수를 지정 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 Scwcmd.exe은 Windows Server 2008 R2, Windows Server 2008 또는 Windows Server 2003을 실행 하는 컴퓨터에서 사용할 수만 있습니다.
 
-## <a name="examples"></a><a name=BKMK_Examples></a>예와
+## <a name="examples"></a>예
 
 FileServerPolicy.xml 라는 파일에서 FileServerSecurity 이라는 GPO를 만들려면 다음을 입력 합니다.
 ```
