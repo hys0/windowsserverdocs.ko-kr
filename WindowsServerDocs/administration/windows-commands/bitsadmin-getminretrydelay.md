@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getminretrydelay
-description: '**Bitsadmin getminretrydelay**에 대 한 Windows 명령 항목-파일을 전송 하기 전에 일시적 오류가 발생 한 후 서비스가 대기 하는 시간 (초)을 검색 합니다.'
+description: 서비스에서 임시 오류가 발생 한 후 파일을 전송 하기 전에 대기 하는 시간 (초)을 검색 하는 bitsadmin getminretrydelay 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d79ffdf1f45b0198b4af535ed83154c3c2ec24f4
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: a50b9d98fe0b873dc58b8e86dc672a8f4157208a
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850626"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717843"
 ---
 # <a name="bitsadmin-getminretrydelay"></a>bitsadmin getminretrydelay
 
@@ -30,16 +30,18 @@ bitsadmin /getminretrydelay <job>
 
 | 매개 변수 | 설명 |
 | -------------- | -------------- |
-| 제출 | 작업의 표시 이름 또는 GUID입니다. |
+| 작업(job) | 작업의 표시 이름 또는 GUID입니다. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 
-다음 예에서는 이름이 *Mydownloadjob*인 작업의 최소 다시 시도 지연을 검색 합니다.
+*Mydownloadjob*이라는 작업의 최소 다시 시도 지연 시간을 검색 하려면 다음을 수행 합니다.
 
 ```
-C:\>bitsadmin /getminretrydelay myDownloadJob
+bitsadmin /getminretrydelay myDownloadJob
 ```
 
 ## <a name="additional-references"></a>추가 참조
 
 - [명령줄 구문 키](command-line-syntax-key.md)
+
+- [bitsadmin 명령](bitsadmin.md)
