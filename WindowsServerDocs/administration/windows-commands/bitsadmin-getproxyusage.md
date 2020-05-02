@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getproxyusage
-description: 지정 된 작업에 대 한 프록시 사용 설정을 검색 하는 **bitsadmin getproxyusage**에 대 한 Windows 명령 항목입니다.
+description: 지정 된 작업에 대 한 프록시 사용 설정을 검색 하는 bitsadmin getproxyusage 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 01c9bb9a1d413fa847482f652e18eed30ad76109
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 13a3f216b1ed3c77dbbefee37d73a657525daa36
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850516"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717643"
 ---
 # <a name="bitsadmin-getproxyusage"></a>bitsadmin getproxyusage
 
@@ -30,11 +30,11 @@ bitsadmin /getproxyusage <job>
 
 | 매개 변수 | 설명 |
 | -------------- | -------------- |
-| 제출 | 작업의 표시 이름 또는 GUID입니다. |
+| 작업(job) | 작업의 표시 이름 또는 GUID입니다. |
 
-## <a name="remarks"></a>주의
+#### <a name="output"></a>출력
 
-프록시 사용 값은 다음과 같습니다.
+반환 된 프록시 사용 값은 다음과 같을 수 있습니다.
 
 - **사전 구성** -소유자의 Internet Explorer 기본값을 사용 합니다.
 
@@ -44,14 +44,16 @@ bitsadmin /getproxyusage <job>
 
 - 자동 **검색-프록시 설정을 자동으로 검색** 합니다.
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 
-다음 예제에서는 명명 된 작업에 대 한 프록시 사용을 검색 *myDownloadJob*합니다.
+이름이 *Mydownloadjob*인 작업에 대 한 프록시 사용을 검색 하려면:
 
 ```
-C:\>bitsadmin /getproxyusage myDownloadJob
+bitsadmin /getproxyusage myDownloadJob
 ```
 
 ## <a name="additional-references"></a>추가 참조
 
 - [명령줄 구문 키](command-line-syntax-key.md)
+
+- [bitsadmin 명령](bitsadmin.md)

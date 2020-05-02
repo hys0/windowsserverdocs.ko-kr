@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getreplydata
-description: '**Bitsadmin getreplydata**에 대 한 Windows 명령 항목-작업에 대 한 16 진수 형식으로 서버의 업로드 응답 데이터를 검색 합니다.'
+description: 작업에 대 한 16 진수 형식의 서버 업로드-응답 데이터를 검색 하는 bitsadmin getreplydata 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: fb83ca93f8e73445788d926e0d5e6db4c774d759
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: ea2a82403fe05776abbbf65e87a4b6e72c8767b8
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850506"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717625"
 ---
 # <a name="bitsadmin-getreplydata"></a>bitsadmin getreplydata
 
-작업에 대 한 16 진수 형식의 서버 업로드 응답 데이터를 검색 합니다.
+작업에 대 한 16 진수 형식의 서버 업로드-응답 데이터를 검색 합니다.
 
 > [!NOTE]
 > 이 명령은 BITS 1.2 이전 버전에서는 지원 되지 않습니다.
@@ -33,16 +33,18 @@ bitsadmin /getreplydata <job>
 
 | 매개 변수 | 설명 |
 | -------------- | -------------- |
-| 제출 | 작업의 표시 이름 또는 GUID입니다. |
+| 작업(job) | 작업의 표시 이름 또는 GUID입니다. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 
-다음 예제에서는 명명 된 작업에 대 한 업로드 회신 데이터를 검색 *Mydownloadjob*합니다.
+이름이 *Mydownloadjob*인 작업에 대 한 업로드-회신 데이터를 검색 하려면 다음을 수행 합니다.
 
 ```
-C:\>bitsadmin /getreplydata myDownloadJob
+bitsadmin /getreplydata myDownloadJob
 ```
 
 ## <a name="additional-references"></a>추가 참조
 
 - [명령줄 구문 키](command-line-syntax-key.md)
+
+- [bitsadmin 명령](bitsadmin.md)

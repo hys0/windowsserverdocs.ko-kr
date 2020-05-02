@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getaclflags
-description: ACL (액세스 제어 목록) 전파 플래그를 검색 하는 **bitsadmin getaclflags**에 대 한 Windows 명령 항목입니다.
+description: ACL (액세스 제어 목록) 전파 플래그를 검색 하는 bitsadmin getaclflags 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d53018e2fa5c659c8cf4b0ec985beda848a8c1af
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: a9ca541b488c3c83e7a64a138bae0914001778e3
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850796"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718180"
 ---
 # <a name="bitsadmin-getaclflags"></a>bitsadmin getaclflags
 
@@ -30,11 +30,11 @@ bitsadmin /getaclflags <job>
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| 제출 | 작업의 표시 이름 또는 GUID입니다. |
+| 작업(job) | 작업의 표시 이름 또는 GUID입니다. |
 
-## <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-다음 플래그 값 중 하나 이상을 표시합니다.
+다음 플래그 값 중 하나 이상을 반환 합니다.
 
 - **o** -파일을 사용 하 여 소유자 정보를 복사 합니다.
 
@@ -44,14 +44,16 @@ bitsadmin /getaclflags <job>
 
 - **s** -파일이 포함 된 SACL (시스템 액세스 제어 목록) 정보를 복사 합니다.
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 
-다음 예제에서는 명명 된 작업에 대 한 액세스 제어 목록 전파 플래그 *myDownloadJob*합니다.
+*Mydownloadjob*이라는 작업에 대 한 액세스 제어 목록 전파 플래그를 검색 하려면:
 
 ```
-C:\>bitsadmin /getaclflags myDownloadJob
+bitsadmin /getaclflags myDownloadJob
 ```
 
 ## <a name="additional-references"></a>추가 참조
 
 - [명령줄 구문 키](command-line-syntax-key.md)
+
+- [bitsadmin 명령](bitsadmin.md)

@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getbytestransferred
-description: 지정 된 작업에 대해 전송 된 바이트 수를 검색 하는 **bitsadmin getbytestransferred**에 대 한 Windows 명령 항목입니다.
+description: 지정 된 작업에 대해 전송 된 바이트 수를 검색 하는 bitsadmin getbytestransferred 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 957b3e60bf8a5e41b3964f4d762633472606654d
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 7c333926ed46dd2e66e0e2507f838f721a73c192
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850776"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718150"
 ---
 # <a name="bitsadmin-getbytestransferred"></a>bitsadmin getbytestransferred
 
@@ -30,16 +30,18 @@ bitsadmin /getbytestransferred <job>
 
 | 매개 변수 | 설명 |
 | -------------- | -------------- |
-| 제출 | 작업의 표시 이름 또는 GUID입니다. |
+| 작업(job) | 작업의 표시 이름 또는 GUID입니다. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 
-다음 예에서는 이름이 *Mydownloadjob*인 작업에 대해 전송 된 바이트 수를 검색 합니다.
+*Mydownloadjob*이라는 작업에 대해 전송 된 바이트 수를 검색 하려면 다음을 수행 합니다.
 
 ```
-C:\>bitsadmin /getbytestransferred myDownloadJob
+bitsadmin /getbytestransferred myDownloadJob
 ```
 
 ## <a name="additional-references"></a>추가 참조
 
 - [명령줄 구문 키](command-line-syntax-key.md)
+
+- [bitsadmin 명령](bitsadmin.md)

@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getfilestotal
-description: 지정 된 작업의 파일 수를 검색 하는 **bitsadmin getfilestotal**에 대 한 Windows 명령 항목입니다.
+description: 지정 된 작업의 파일 수를 검색 하는 bitsadmin getfilestotal 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: bad42a8bef57ca4c4a1411a12f20979e4a95d178
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 5cf3b33c15bb18c8a141408f82fdd72a6e710817
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850686"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717972"
 ---
 # <a name="bitsadmin-getfilestotal"></a>bitsadmin getfilestotal
 
@@ -30,16 +30,18 @@ bitsadmin /getfilestotal <job>
 
 | 매개 변수 | 설명 |
 | -------------- | -------------- |
-| 제출 | 작업의 표시 이름 또는 GUID입니다. |
+| 작업(job) | 작업의 표시 이름 또는 GUID입니다. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 
-다음 예제에서는 명명 된 작업에 포함 된 파일의 수를 검색 *Mydownloadjob*합니다.
+*Mydownloadjob*이라는 작업에 포함 된 파일 수를 검색 하려면 다음을 수행 합니다.
 
 ```
-C:\>bitsadmin /getfilestotal myDownloadJob
+bitsadmin /getfilestotal myDownloadJob
 ```
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 
 - [명령줄 구문 키](command-line-syntax-key.md)
+
+- [bitsadmin 명령](bitsadmin.md)

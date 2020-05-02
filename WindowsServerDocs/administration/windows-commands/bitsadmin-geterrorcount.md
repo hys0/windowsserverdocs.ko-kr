@@ -1,6 +1,6 @@
 ---
 title: bitsadmin geterrorcount
-description: 지정 된 작업에서 일시적인 오류가 발생 한 횟수를 검색 하는 **bitsadmin geterrorcount**에 대 한 Windows 명령 항목입니다.
+description: 지정 된 작업에서 일시적인 오류가 발생 한 횟수를 검색 하는 bitsadmin geterrorcount 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ef0bf043517d4edfa8d72888746ca5d9c92ecc21
-ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
+ms.openlocfilehash: 516bd02ed296a2eba75e174c6f084926bde63e90
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81123133"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718005"
 ---
 # <a name="bitsadmin-geterrorcount"></a>bitsadmin geterrorcount
 
@@ -30,16 +30,18 @@ bitsadmin /geterrorcount <job>
 
 | 매개 변수 | 설명 |
 | -------------- | -------------- |
-| 제출 | 작업의 표시 이름 또는 GUID입니다. |
+| 작업(job) | 작업의 표시 이름 또는 GUID입니다. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 
-다음 예제에서는 명명 된 작업에 대 한 오류 개수 정보를 검색 *Mydownloadjob*합니다.
+*Mydownloadjob*이라는 작업의 오류 수 정보를 검색 하려면:
 
 ```
-C:\>bitsadmin /geterrorcount myDownloadJob
+bitsadmin /geterrorcount myDownloadJob
 ```
 
 ## <a name="additional-references"></a>추가 참조
 
 - [명령줄 구문 키](command-line-syntax-key.md)
+
+- [bitsadmin 명령](bitsadmin.md)

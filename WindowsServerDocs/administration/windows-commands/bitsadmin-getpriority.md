@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getpriority
-description: '**Bitsadmin getpriority**에 대 한 Windows 명령 항목으로, 지정 된 작업의 우선 순위를 검색 합니다.'
+description: 지정 된 작업의 우선 순위를 검색 하는 bitsadmin getpriority 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -8,12 +8,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 03/01/2019
-ms.openlocfilehash: b27829a0fb852abb88c88a65e61e8d7693ca2df2
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 38f92e83ccf5b048d168ce6a21c6026f490b18bf
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850546"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717673"
 ---
 # <a name="bitsadmin-getpriority"></a>bitsadmin getpriority
 
@@ -29,30 +29,32 @@ bitsadmin /getpriority <job>
 
 | 매개 변수 | 설명 |
 | -------------- | -------------- |
-| 제출 | 작업의 표시 이름 또는 GUID입니다. |
+| 작업(job) | 작업의 표시 이름 또는 GUID입니다. |
 
-## <a name="remarks"></a>주의
+#### <a name="output"></a>출력
 
-이 명령의 우선 순위는 다음과 같을 수 있습니다.
+이 명령에 대해 반환 된 우선 순위는 다음과 같을 수 있습니다.
 
 - **전경색**
 
-- **최고**
+- **HIGH**
 
 - **일반적**
 
-- **거의**
+- **LOW**
 
 - **없습니다**
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 
-다음 예제에서는 명명 된 작업에 대 한 우선 순위를 검색 *myDownloadJob*합니다.
+*Mydownloadjob*이라는 작업의 우선 순위를 검색 하려면 다음을 수행 합니다.
 
 ```
-C:\>bitsadmin /getpriority myDownloadJob
+bitsadmin /getpriority myDownloadJob
 ```
 
 ## <a name="additional-references"></a>추가 참조
 
 - [명령줄 구문 키](command-line-syntax-key.md)
+
+- [bitsadmin 명령](bitsadmin.md)

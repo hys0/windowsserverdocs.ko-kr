@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getclientcertificate
-description: 작업에서 클라이언트 인증서를 검색 하는 **bitsadmin getclientcertificate**에 대 한 Windows 명령 항목입니다.
+description: 작업에서 클라이언트 인증서를 검색 하는 bitsadmin getclientcertificate 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7c29d5c64fd172cfdd2d5d93c5ed22d519077806
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: d2582950dd02ca1880e4765fb974c83c423b22bb
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850766"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718131"
 ---
 # <a name="bitsadmin-getclientcertificate"></a>bitsadmin getclientcertificate
 
@@ -30,16 +30,18 @@ bitsadmin /getclientcertificate <job>
 
 | 매개 변수 | 설명 |
 | -------------- | -------------- |
-| 제출 | 작업의 표시 이름 또는 GUID입니다. |
+| 작업(job) | 작업의 표시 이름 또는 GUID입니다. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 
-다음 예제에서는 명명 된 작업에 대 한 클라이언트 인증서를 검색 *Mydownloadjob*합니다.
+이름이 *Mydownloadjob*인 작업에 대 한 클라이언트 인증서를 검색 하려면:
 
 ```
-C:\>bitsadmin /getclientcertificate myDownloadJob
+bitsadmin /getclientcertificate myDownloadJob
 ```
 
 ## <a name="additional-references"></a>추가 참조
 
 - [명령줄 구문 키](command-line-syntax-key.md)
+
+- [bitsadmin 명령](bitsadmin.md)

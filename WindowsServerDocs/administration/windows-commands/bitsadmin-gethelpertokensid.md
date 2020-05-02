@@ -1,6 +1,6 @@
 ---
 title: bitsadmin gethelpertokensid
-description: BITS 전송 작업의 도우미 토큰에 대 한 SID (설정 된 경우)를 반환 하는 **bitsadmin gethelpertokensid**에 대 한 Windows 명령 항목입니다.
+description: BITS 전송 작업의 도우미 토큰에 대 한 SID를 반환 하는 bitsadmin gethelpertokensid 명령에 대 한 참조 항목입니다 (설정 된 경우).
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -8,12 +8,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 03/01/2019
-ms.openlocfilehash: a2e26ff459b068595529fbd24e6165c130660570
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: c45bf86d8a7364289db41fa390f319270a2a8386
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850646"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717901"
 ---
 # <a name="bitsadmin-gethelpertokensid"></a>bitsadmin gethelpertokensid
 
@@ -32,8 +32,18 @@ bitsadmin /gethelpertokensid <job>
 
 | 매개 변수 | 설명 |
 | -------------- | -------------- |
-| 제출 | 작업의 표시 이름 또는 GUID입니다. |
+| 작업(job) | 작업의 표시 이름 또는 GUID입니다. |
+
+## <a name="examples"></a>예
+
+*Mydownloadjob*이라는 BITS 전송 작업의 SID를 검색 하려면 다음을 수행 합니다.
+
+```
+bitsadmin /gethelpertokensid myDownloadJob
+```
 
 ## <a name="additional-references"></a>추가 참조
 
 - [명령줄 구문 키](command-line-syntax-key.md)
+
+- [bitsadmin 명령](bitsadmin.md)

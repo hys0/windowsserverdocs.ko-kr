@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getvalidationstate
-description: 작업 내에서 지정 된 파일의 콘텐츠 유효성 검사 상태를 보고 하는 **bitsadmin getvalidationstate**에 대 한 Windows 명령 항목입니다.
+description: 작업 내에서 지정 된 파일의 콘텐츠 유효성 검사 상태를 보고 하는 bitsadmin getvalidationstate 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 52d7d983cc7858607c350483ed81223d107cee25
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: ca753b20a1b7834d2e05d4ff8729a08332256f8c
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850436"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717457"
 ---
 # <a name="bitsadmin-getvalidationstate"></a>bitsadmin getvalidationstate
 
@@ -30,17 +30,19 @@ bitsadmin /getvalidationstate <job> <file_index>
 
 | 매개 변수 | 설명 |
 | -------------- | -------------- |
-| 제출 | 작업의 표시 이름 또는 GUID입니다. |
+| 작업(job) | 작업의 표시 이름 또는 GUID입니다. |
 | file_index | 0부터 시작 합니다. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 
-다음 예제에서는 이름이 *Mydownloadjob*인 작업 내에서 파일 2의 콘텐츠 유효성 검사 상태를 가져옵니다.
+*Mydownloadjob*이라는 작업 내에서 파일 2의 콘텐츠 유효성 검사 상태를 검색 하려면 다음을 수행 합니다.
 
 ```
-C:\>bitsadmin /getvalidationstate myDownloadJob 1
+bitsadmin /getvalidationstate myDownloadJob 1
 ```
 
 ## <a name="additional-references"></a>추가 참조
 
 - [명령줄 구문 키](command-line-syntax-key.md)
+
+- [bitsadmin 명령](bitsadmin.md)

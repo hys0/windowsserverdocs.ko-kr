@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getfilestransferred
-description: 지정 된 작업에 대해 전송 된 파일 수를 검색 하는 **bitsadmin getfilestransferred**에 대 한 Windows 명령 항목입니다.
+description: 지정 된 작업에 대해 전송 된 파일 수를 검색 하는 bitsadmin getfilestransferred 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 053b67f5f85066d202b446b31eb1b1698fd735b9
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: ed11739029338ecce5fc4efbe1918873a7f37f62
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850676"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717920"
 ---
 # <a name="bitsadmin-getfilestransferred"></a>bitsadmin getfilestransferred
 
@@ -30,16 +30,18 @@ bitsadmin /getfilestransferred <job>
 
 | 매개 변수 | 설명 |
 | -------------- | -------------- |
-| 제출 | 작업의 표시 이름 또는 GUID입니다. |
+| 작업(job) | 작업의 표시 이름 또는 GUID입니다. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 
-다음 예제에서는 이름이 *Mydownloadjob*인 작업에서 전송 된 파일 수를 검색 합니다.
+*Mydownloadjob*이라는 작업에서 전송 된 파일 수를 검색 하려면 다음을 수행 합니다.
 
 ```
-C:\>bitsadmin /getfilestransferred myDownloadJob
+bitsadmin /getfilestransferred myDownloadJob
 ```
 
 ## <a name="additional-references"></a>추가 참조
 
 - [명령줄 구문 키](command-line-syntax-key.md)
+
+- [bitsadmin 명령](bitsadmin.md)
