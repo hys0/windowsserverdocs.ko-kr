@@ -1,6 +1,6 @@
 ---
 title: auditpol 집합
-description: 사용자 단위 감사 정책, 시스템 감사 정책 또는 감사 옵션을 설정 하는 **auditpol set**에 대 한 Windows 명령 항목입니다.
+description: 사용자 단위 감사 정책, 시스템 감사 정책 또는 감사 옵션을 설정 하는 auditpol set 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,18 +9,20 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0773a0a9ae9237b39293bae80001616d00630436
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 73868d6044d8742d4d9e0ce76e0668402f230f86
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80851146"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718884"
 ---
 # <a name="auditpol-set"></a>auditpol 집합
 
->적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 설정 사용자 단위 감사 정책, 시스템 감사 정책 또는 감사 옵션입니다.
+
+*사용자* 및 *시스템* 정책에 대해 *설정* 작업을 수행 하려면 보안 설명자에 설정 된 해당 개체에 대 한 **쓰기** 또는 **모든** 권한이 있어야 합니다. **감사 및 보안 로그 관리** (SeSecurityPrivilege) 사용자 권한이 있는 경우에도 *설정* 작업을 수행할 수 있습니다. 그러나이 권한은 전체 *집합* 작업을 수행 하는 데 필요 없는 추가 액세스를 허용 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -49,11 +51,7 @@ auditpol /set
 | /sd | 감사 정책에 대 한 액세스 권한을 위임 하는 데 사용 되는 보안 설명자를 설정 합니다. 보안 설명자 정의 언어 (SDDL)를 사용 하 여 보안 설명자를 지정 해야 합니다. 보안 설명자는 임의 액세스 제어 목록 (DACL) 있어야 합니다. |
 | /? | 명령 프롬프트에 도움말을 표시합니다. |
 
-## <a name="remarks"></a>주의
-
-사용자별 정책 및 시스템 정책에 대 한 모든 집합 작업에 대해 작성 한 해야 하거나 보안 설명자에 있는 해당 개체에 대 한 모든 권한을 설정 합니다. 처리 하는 개체로 설정 작업을 수행할 수도 있습니다는 **관리 감사 및 보안 로그** (SeSecurityPrivilege) 사용자 권한이 있습니다. 그러나이 권한을 설정 작업을 수행할 필요가 없는 추가 액세스를 허용 합니다.
-
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 
 사용자 mikedan에 대 한 자세한 추적 범주 아래의 모든 하위 범주에 대 한 사용자 단위 감사 정책을 설정 하려면 모든 사용자의 성공 시도가 감사 됩니다.
 
@@ -97,3 +95,5 @@ auditpol /set /option:CrashOnAuditFail /value:enable
 ## <a name="additional-references"></a>추가 참조
 
 - [명령줄 구문 키](command-line-syntax-key.md)
+
+- [auditpol 명령](auditpol.md)

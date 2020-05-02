@@ -1,6 +1,6 @@
 ---
 title: 활성
-description: '**활성**에 대 한 Windows 명령 항목 (기본 디스크에서)은 포커스가 있는 파티션을 활성으로 표시 합니다.'
+description: 기본 디스크에 있는 활성 명령에 대 한 참조 항목은 포커스가 있는 파티션을 활성으로 표시 합니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,41 +9,36 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 42f2e0d367344355e8f9a570f37cfbdc5dfc4590
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 997c57b93434738c87396812c9b5e5b12d7a8e89
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80851376"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719014"
 ---
 # <a name="active"></a>활성
 
-기본 디스크에 활성으로 포커스가 있는 파티션을 표시합니다.
+기본 디스크에 활성으로 포커스가 있는 파티션을 표시합니다. 파티션만 활성으로 표시할 수 있습니다. 이 작업을 수행 하려면 파티션을 선택 해야 합니다. 사용 된 **파티션을 선택** 파티션을 선택 하 고 포커스를 이동 하는 명령입니다.
 
 > [!CAUTION]
-> DiskPart는 파티션을 운영 체제 시작 파일이 포함 될 수 인지만 확인 합니다. 파티션의 내용을 확인 하지 않습니다. 파티션을 활성으로 잘못 표시 하는 경우 운영 체제 시작 파일을 포함 하지 않는 컴퓨터 시작할 수 없습니다.
+> DiskPart는 BIOS (기본 입출력 시스템) 또는 확장 가능 펌웨어 인터페이스 (EFI)에 게 파티션 또는 볼륨이 유효한 시스템 파티션 또는 시스템 볼륨 이며 운영 체제 시작 파일을 포함할 수 있음을 알립니다. 파티션의 내용을 확인 하지 않습니다. 파티션을 활성으로 잘못 표시 하는 경우 운영 체제 시작 파일을 포함 하지 않는 컴퓨터 시작할 수 없습니다.
 
 ## <a name="syntax"></a>구문
 
 ```
 active
-```- 
+```
 
-## Remarks
+## <a name="examples"></a>예
 
--   This informs the basic input/output system (BIOS) or Extensible Firmware Interface (EFI) that the partition or volume is a valid system partition or system volume.
-
--   Only partitions can be marked as active.
-
--   A partition must be selected for this operation to succeed. Use the **select partition** command to select a partition and shift the focus to it.
-
-## <a name=BKMK_examples></a>Examples
-
-To mark the partition with focus as the active partition, type:
+파티션을 활성 파티션으로 포커스가 있는 상태를 표시 하려면 다음을 입력 합니다.
 
 ```
-활성
+active
 ```
-## Additional References
 
-- [Command-Line Syntax Key](command-line-syntax-key.md)
+## <a name="additional-references"></a>추가 참조
+
+- [명령줄 구문 키](command-line-syntax-key.md)
+
+- [파티션 선택 명령](select-partition.md)

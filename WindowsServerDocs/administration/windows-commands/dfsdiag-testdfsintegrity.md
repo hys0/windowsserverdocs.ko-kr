@@ -1,6 +1,6 @@
 ---
 title: dfsdiag Testdfs 무결성
-description: '**Dfsdiag Testdfs 무결성**에 대 한 Windows 명령 항목 분산 파일 시스템 (DFS) 네임 스페이스의 무결성을 검사 합니다.'
+description: 분산 파일 시스템 (DFS) 네임 스페이스의 무결성을 검사 하는 **Dfsdiag Testdfs 무결성**에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 714b79369898338a4e4a6e4fad8487709ab4fc60
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 21aa6ef3d7d4a7b4a9c64fc51aec77f49f1e0a0c
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80846276"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719573"
 ---
 # <a name="dfsdiag-testdfsintegrity"></a>dfsdiag Testdfs 무결성
 
->적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 다음 테스트를 수행 하 여 분산 파일 시스템 (DFS) 네임 스페이스의 무결성을 검사 합니다.
 
@@ -38,11 +38,11 @@ dfsdiag /TestDFSIntegrity /DFSRoot: <DFS root path> [/Recurse] [/Full]
 
 | 매개 변수 | 설명 |
 |-------|--------|
-| /DFSRoot: `<DFS root path>`| DFS 네임 스페이스를 진단 합니다. |
+| /DFSRoot:`<DFS root path>`| DFS 네임 스페이스를 진단 합니다. |
 | /Recurse | 네임 스페이스 interlinks 테스트 등을 수행 합니다. |
 | /Full | 모든 폴더 대상에 대 한 공유 및 NTFS Acl 및 클라이언트 쪽 구성의 일관성을 확인 합니다. 또한 online 속성이 설정 되었는지 확인 합니다. |
 
-## <a name="examples"></a><a name=BKMK_Examples></a>예와
+## <a name="examples"></a>예
 
 ```
 dfsdiag /TestDFSIntegrity /DFSRoot:\\Contoso.com\MyNamespace /Recurse /Full

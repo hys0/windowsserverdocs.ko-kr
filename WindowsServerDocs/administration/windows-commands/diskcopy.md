@@ -1,6 +1,6 @@
 ---
 title: diskcopy
-description: Windows 명령 항목-diskcopy는 원본 드라이브의 플로피 디스크 내용을 대상 드라이브의 포맷 되거나 포맷 되지 않은 플로피 디스크로 복사 합니다.
+description: 원본 드라이브의 플로피 디스크 내용을 대상 드라이브의 포맷 되거나 포맷 되지 않은 플로피 디스크로 복사 하는 diskcopy에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,18 +9,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 05/07/2018
-ms.openlocfilehash: 675694503cab207f05fd6b48e0d17c23196f85d0
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: b5c9186a539a58ed0d3362ba83d7a3bcedcaabad
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80845546"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719462"
 ---
 # <a name="diskcopy"></a>diskcopy
 
 원본 드라이브의 플로피 디스크 콘텐츠를 대상 드라이브의 포맷 되거나 포맷 되지 않은 플로피 디스크로 복사 합니다. 매개 변수 없이 사용 하는 경우 **diskcopy** 원본 디스크와 대상 디스크에 현재 드라이브를 사용 합니다.
 
-이 명령을 사용하는 방법의 예는 [예](#BKMK_examples)를 참조하세요.
+
 
 > [!NOTE]
 > 이 명령은 Windows 10에는 포함 되어 있지 않습니다.
@@ -35,12 +35,12 @@ diskcopy [<Drive1>: [<Drive2>:]] [/v]
 
 |매개 변수|설명|
 |---------|-----------|
-|\<Drive1 >|원본 디스크를 포함 하는 드라이브를 지정 합니다.|
-|\<Drive2 >|대상 디스크를 포함 하는 드라이브를 지정 합니다.|
+|\<Drive1>|원본 디스크를 포함 하는 드라이브를 지정 합니다.|
+|\<Drive2>|대상 디스크를 포함 하는 드라이브를 지정 합니다.|
 |/v|정보가 올바르게 복사 되었는지 확인 합니다. 이 옵션을 선택 하면 복사 프로세스가 느려집니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 -   디스크 사용
 
@@ -92,7 +92,7 @@ diskcopy [<Drive1>: [<Drive2>:]] [/v]
 
     To process the exit codes that are returned by **diskcomp**, you can use the *ERRORLEVEL* environment variable on the **if** command line in a batch program.
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 
 B 드라이브의 디스크를 드라이브 A의 디스크에 복사 하려면 다음을 입력 합니다.
 ```

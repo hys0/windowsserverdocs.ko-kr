@@ -1,6 +1,6 @@
 ---
 title: bdehdcfg
-description: '**Bdehdcfg**에 대 한 Windows 명령 항목으로, BitLocker 드라이브 암호화 하는 데 필요한 파티션이 있는 하드 드라이브를 준비 합니다.'
+description: BitLocker 드라이브 암호화에 필요한 파티션이 있는 하드 드라이브를 준비 하는 bdehdcfg 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c9adf8bbfb655e0820fcff6385d3663fc7abbd9a
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 3bcc901847bb8d687d59bc3270dab39de0af8d60
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80851006"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718565"
 ---
 # <a name="bdehdcfg"></a>bdehdcfg
 
@@ -23,7 +23,7 @@ BitLocker 드라이브 암호화에 필요한 파티션이 있는 하드 드라�
 > [!WARNING]
 > 알려진된와 충돌 하는 **BitLocker로 보호 되지 않는 고정된 드라이브에 대 한 쓰기 액세스 거부** 그룹 정책 설정에 있는 **컴퓨터 구성 \ 관리 템플릿 Templates\Windows Components\BitLocker Drive 고정 데이터 드라이브**합니다.
 >
->Bdehdcfg 컴퓨터에서이 정책 설정을 사용 하는 경우를 실행 하는 경우에 다음과 같은 문제가 발생할 수 있습니다.
+>이 정책 설정을 사용 하는 경우 컴퓨터에서 bdehdcfg가 실행 되는 경우 다음과 같은 문제가 발생할 수 있습니다.
 >
 >- 려 할 때 시스템 드라이브에서 드라이브를 만들고 드라이브 축소 크기 성공적으로 감소 됩니다 및 원시 파티션 생성 됩니다. 그러나 원시 파티션에 포맷 되지 않습니다. 새 활성 드라이브를 포맷할 수 없습니다. 라는 오류 메시지가 표시 됩니다. BitLocker에 대 한 드라이브를 수동으로 준비 해야 할 수도 있습니다.
 >
@@ -33,39 +33,23 @@ BitLocker 드라이브 암호화에 필요한 파티션이 있는 하드 드라�
 >
 >- 이 정책 설정은 시행 되는 경우 드라이브는 보호 되므로 하드 드라이브를 다시 분할 수 없습니다. 이전 버전의 Windows에서 조직에서 컴퓨터를 업그레이드 하는 경우 해당 컴퓨터는 단일 파티션으로 구성 된 컴퓨터에 정책 설정을 적용 하기 전에 필요한 BitLocker 시스템 파티션을 만들어야 합니다.
 
-이 명령을 사용할 수 있는 방법을의 예 참조 [예제](#BKMK_Examples)합니다.
-
 ## <a name="syntax"></a>구문
 
 ```
-bdehdcfg [–driveinfo <DriveLetter>] [-target {default|unallocated|<DriveLetter> shrink|<DriveLetter> merge}] [–newdriveletter] [–size <SizeinMB>] [-quiet]
+bdehdcfg [–driveinfo <drive_letter>] [-target {default|unallocated|<drive_letter> shrink|<drive_letter> merge}] [–newdriveletter] [–size <size_in_mb>] [-quiet]
 ```
 
 #### <a name="parameters"></a>매개 변수
 
 | 매개 변수 | 설명 |
 | --------- |----------- |
-| [Bdehdcfg: driveinfo](bdehdcfg-driveinfo.md) | 지정 된 드라이브에서 드라이브 문자, 총 크기, 최대 여유 공간, 및 파티션의 파티션 특성을 표시 합니다. 유효한 파티션으로 나열 됩니다. 4 개의 주 또는 확장 된 파티션이 이미 존재 하는 경우에 할당 되지 않은 공간 나열 되지 않습니다. |
-| [Bdehdcfg: 대상](bdehdcfg-target.md) | 시스템 드라이브로 사용할 드라이브를의 부분을 정의 하 고 부분을 활성화 합니다. |
-| [Bdehdcfg: newdriveletter](bdehdcfg-newdriveletter.md) | 시스템 드라이브로 사용할 드라이브의 부분에 새 드라이브 문자를 할당 합니다. |
-| [Bdehdcfg: 크기](bdehdcfg-size.md) | 새 시스템 드라이브를 만들 때 시스템 파티션의 크기를 결정 합니다. |
-| [Bdehdcfg: quiet](bdehdcfg-quiet.md) | 명령줄 인터페이스에서 모든 동작 및 오류가 표시 되는 것을 방지 하 고 Bdehdcfg가 후속 드라이브 준비 중에 발생할 수 있는 예/아니요 프롬프트에 대 한 예 대답을 사용 하도록 지시 합니다. |
-| [Bdehdcfg: 다시 시작](bdehdcfg-restart.md) | 드라이브를 준비 하는 완료 된 후 다시 시작 하는 컴퓨터에 지시 합니다. |
-| /? | 명령 프롬프트에서 도움말을 표시합니다. |
-
-## <a name="examples"></a><a name=BKMK_Examples></a>예와
-
-다음 예제에서는 500MB의 시스템 파티션을 만들려면 기본 드라이브에 사용 되는 Bdehdcfg를 보여 줍니다. 드라이브 문자 없이 지정 되어 있으므로 새 시스템 파티션에 드라이브 문자를 갖지 않습니다.
-
-```
-bdehdcfg -target default -size 500
-```
-
-다음 예제에서는 드라이브에 할당 되지 않은 공간이 부족 합니다. 300MB의 기본 크기의 시스템 파티션을 p (:)을 만들려면 기본 드라이브에 사용 되는 Bdehdcfg을 보여 줍니다. 이 도구는 더 이상 모든 입력에 대 한 사용자를 묻지 않습니다도 모든 오류를 표시 됩니다. 시스템 드라이브를 만든 후 컴퓨터 자동으로 다시 시작 됩니다.
-
-```
-bdehdcfg -target unallocated –newdriveletter P: -quiet -restart
-```
+| [bdehdcfg: driveinfo](bdehdcfg-driveinfo.md) | 지정 된 드라이브에서 드라이브 문자, 총 크기, 최대 여유 공간, 및 파티션의 파티션 특성을 표시 합니다. 유효한 파티션으로 나열 됩니다. 4 개의 주 또는 확장 된 파티션이 이미 존재 하는 경우에 할당 되지 않은 공간 나열 되지 않습니다. |
+| [bdehdcfg: 대상](bdehdcfg-target.md) | 시스템 드라이브로 사용할 드라이브를의 부분을 정의 하 고 부분을 활성화 합니다. |
+| [bdehdcfg: newdriveletter](bdehdcfg-newdriveletter.md) | 시스템 드라이브로 사용할 드라이브의 부분에 새 드라이브 문자를 할당 합니다. |
+| [bdehdcfg: 크기](bdehdcfg-size.md) | 새 시스템 드라이브를 만들 때 시스템 파티션의 크기를 결정 합니다. |
+| [bdehdcfg: quiet](bdehdcfg-quiet.md) | 명령줄 인터페이스에서 모든 동작 및 오류가 표시 되는 것을 방지 하 고 bdehdcfg가 후속 드라이브 준비 중에 발생할 수 있는 예/아니요 프롬프트에 대 한 예 대답을 사용 하도록 지시 합니다. |
+| [bdehdcfg: 다시 시작](bdehdcfg-restart.md) | 드라이브를 준비 하는 완료 된 후 다시 시작 하는 컴퓨터에 지시 합니다. |
+| /? | 명령 프롬프트에 도움말을 표시합니다. |
 
 ## <a name="additional-references"></a>추가 참조
 

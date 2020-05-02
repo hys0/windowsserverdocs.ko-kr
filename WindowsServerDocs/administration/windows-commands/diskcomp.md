@@ -1,6 +1,6 @@
 ---
 title: diskcomp
-description: 두 플로피 디스크의 내용을 비교 하는 diskcomp에 대 한 Windows 명령 항목입니다.
+description: 두 플로피 디스크의 내용을 비교 하는 diskcomp에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,18 +9,17 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e36e644616e25659c1a2a5ca684e975fd06fc19f
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: e1b15e9b6669a22ac95693e635bae1642c307e09
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80845556"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719489"
 ---
 # <a name="diskcomp"></a>diskcomp
 
 두 플로피 디스크의 내용을 비교 합니다. 매개 변수 없이 사용 하는 경우 **diskcomp** 는 현재 드라이브를 사용 하 여 두 디스크를 비교 합니다.
 
-이 명령을 사용하는 방법의 예는 [예](#BKMK_examples)를 참조하세요.
 
 ## <a name="syntax"></a>구문
 
@@ -32,11 +31,11 @@ diskcomp [<Drive1>: [<Drive2>:]]
 
 |매개 변수|설명|
 |---------|-----------|
-|\<Drive1 >|플로피 디스크 중 하나를 포함 하는 드라이브를 지정 합니다.|
-|\<Drive2 >|다른 플로피 디스크를 포함 하는 드라이브를 지정 합니다.|
+|\<Drive1>|플로피 디스크 중 하나를 포함 하는 드라이브를 지정 합니다.|
+|\<Drive2>|다른 플로피 디스크를 포함 하는 드라이브를 지정 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 - 디스크 사용
 
@@ -103,7 +102,7 @@ diskcomp [<Drive1>: [<Drive2>:]]
 
   **Diskcomp**에서 반환 하는 종료 코드를 처리 하려면 일괄 처리 프로그램의 **IF** 명령줄에서 ERRORLEVEL 환경 변수를 사용할 수 있습니다.
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 
 컴퓨터에 플로피 디스크 드라이브가 하나만 있는 경우 (예: 드라이브 A) 두 개의 디스크를 비교 하려면 다음을 입력 합니다.
 ```
@@ -111,7 +110,7 @@ diskcomp a: a:
 ```
 **Diskcomp** 는 필요에 따라 각 디스크를 삽입 하 라는 메시지를 표시 합니다.
 
-다음 예제에서는 **if** 명령줄에서 ERRORLEVEL 환경 변수를 사용 하는 일괄 처리 프로그램에서 **diskcomp** 종료 코드를 처리 하는 방법을 보여 줍니다.
+**명령줄에서** ERRORLEVEL 환경 변수를 사용 하는 일괄 처리 프로그램에서 **diskcomp** 종료 코드를 처리 하는 방법을 보여 줍니다.
 ```
 rem Checkout.bat compares the disks in drive A and B 
 echo off 

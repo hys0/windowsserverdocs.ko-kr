@@ -1,6 +1,6 @@
 ---
 title: atmadm
-description: Windows 명령 항목에 **대해 설명**합니다 .이 항목은 Atm 호출 관리자가 atm (비동기 전송 모드) 네트워크에서 등록 한 연결 및 주소를 모니터링 합니다.
+description: Atm 호출 관리자가 atM (비동기 전송 모드) 네트워크에서 등록 한 연결 및 주소를 모니터링 하는 atmadm 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,18 +9,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: cbfb787c472eaad4cbef5f86e7546f7b6f1da305
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 32dad00e5a4d03c905f95c48e112f512a9dbc2e5
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80851276"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718915"
 ---
 # <a name="atmadm"></a>atmadm
 
->적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Atm 호출 관리자가 atM (비동기 전송 모드) 네트워크에서 등록 한 연결 및 주소를 모니터링 합니다. **Atmadm** 을 사용 하 여 atM 어댑터에서 들어오고 나가는 호출에 대 한 통계를 표시할 수 있습니다. 매개 변수 없이 사용, **atmadm** 활성 atM 연결의 상태를 모니터링 하기 위한 통계를 표시 합니다. 
+Atm 호출 관리자가 atM (비동기 전송 모드) 네트워크에서 등록 한 연결 및 주소를 모니터링 합니다. **Atmadm** 을 사용 하 여 atM 어댑터에서 들어오고 나가는 호출에 대 한 통계를 표시할 수 있습니다. 매개 변수 없이 사용, **atmadm** 활성 atM 연결의 상태를 모니터링 하기 위한 통계를 표시 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -32,12 +32,12 @@ atmadm [/c][/a][/s]
 
 | 매개 변수 | 설명 |
 | ------- | -------- |
-| /c | 이 컴퓨터에 설치 된 atM 네트워크 어댑터에 대 한 모든 현재 연결에 대 한 호출 정보를 표시 합니다. |
+| /C | 이 컴퓨터에 설치 된 atM 네트워크 어댑터에 대 한 모든 현재 연결에 대 한 호출 정보를 표시 합니다. |
 | /a | 이 컴퓨터에 설치 된 각 어댑터에 대해 등록 된 atM NSAP (네트워크 서비스 액세스 지점) 주소를 표시 합니다. |
 | /s | 활성 atM 연결의 상태를 모니터링 하기 위한 통계를 표시 합니다. |
 | /? | 명령 프롬프트에 도움말을 표시합니다. |
 
-## <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 - **atmadm /c** 명령은 다음과 유사한 출력을 생성 합니다.
 
@@ -76,15 +76,15 @@ atmadm [/c][/a][/s]
 
     | 데이터의 형식 | 화면 표시 | 설명 |
     | -------- | --------- | -------- |
-    | 연결 정보 | In/Out | 호출의 방향입니다. 는 다른 장치의 atM 네트워크 **어댑터에 대 한 것입니다** .  **아웃** 한 것은 atM 네트워크 어댑터에서 다른 장치입니다. |
+    | 연결 정보 | 입/출력 | 호출의 방향입니다. 는 다른 장치의 atM 네트워크 **어댑터에 대 한 것입니다** .  **아웃** 한 것은 atM 네트워크 어댑터에서 다른 장치입니다. |
     | PMP | 지점 호출입니다. |
     | P-P | 지점 간 호출입니다. |
     | SVC | 전환된 된 가상 회로에 연결 되어 있습니다. |
     | PVC | 영구 가상 회로에 연결 되어 있습니다. |
     | VPI/VCI 정보 | VPI/VCI | 가상 경로 및 들어오거나 나가는 호출의 가상 채널입니다. |
     | 원격 주소/미디어 매개 변수 | 47000580FFE1000000F21A2E180000C110081500 | 호출 ( **In)** 또는 호출 된 **(Out)** atM 장치의 NSAP 주소입니다. |
-    | Tx | **Tx** 매개 변수는 다음 세 가지 요소를 포함 합니다.<p>-기본값 또는 지정 된 비트 전송률 유형 (UBR, CBR, VBR 또는 ABR)<p>-기본값 또는 지정 된 줄 속도<p>-지정 된 SDU (서비스 데이터 단위) 크기입니다. |
-    | Rx | **Rx** 매개 변수는 다음 세 가지 요소를 포함 합니다.<p>-기본값 또는 지정 된 비트 전송률 유형 (UBR, CBR, VBR 또는 ABR)<p>-기본값 또는 지정 된 줄 속도<p>-지정 된 SDU 크기입니다. |
+    | Tx | **Tx** 매개 변수는 다음 세 가지 요소를 포함 합니다.<ul><li>기본 또는 지정 된 비트 전송률 유형 (UBR, CBR, VBR 또는 ABR)</li><li>기본 또는 지정 된 줄 속도</li><li>지정 된 SDU (서비스 데이터 단위) 크기입니다.</li></ul> |
+    | Rx | **Rx** 매개 변수는 다음 세 가지 요소를 포함 합니다.<ul><li>기본 또는 지정 된 비트 전송률 유형 (UBR, CBR, VBR 또는 ABR)</li><li>기본 또는 지정 된 줄 속도</li><li>지정 된 SDU 크기입니다.</li></ul> |
 
 - **atmadm/a** 명령은 다음과 유사한 출력을 생성 합니다.
 
@@ -124,7 +124,7 @@ atmadm [/c][/a][/s]
     | 신호 및 ILMI 패킷 전송 | 통합된 로컬 관리 인터페이스 (ILMI) 보낸 패킷 수 스위치에 연결을 시도 하는이 컴퓨터입니다. |
     | 신호 및 ILMI 패킷 받음 | AtM 스위치에서 받은 ILMI 패킷 수입니다. |
 
-## <a name="examples"></a><a name=BKMK_Examples></a>예와
+## <a name="examples"></a>예
 
 이 컴퓨터에 설치 된 atM 네트워크 어댑터에 대 한 모든 현재 연결에 대 한 호출 정보를 표시 하려면 다음을 입력 합니다.
 

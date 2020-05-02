@@ -1,6 +1,6 @@
 ---
 title: dfsdiag TestReferral
-description: Dfsdiag TestReferral에 대 한 Windows 명령 항목 분산 파일 시스템 (DFS) 조회를 확인 합니다.
+description: 분산 파일 시스템 (DFS) 조회를 확인 하는 dfsdiag TestReferral에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d5c0a75d557d816ac9e19a1e22b3273195b93f53
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 6b4c616181d367a8a95efe6484f74af0ff88cc5f
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80846252"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719563"
 ---
 # <a name="dfsdiag-testreferral"></a>dfsdiag TestReferral
 
->적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 다음 테스트를 수행 하 여 분산 파일 시스템 (DFS) 조회를 확인 합니다.
 
@@ -42,10 +42,10 @@ dfsdiag /TestReferral /DFSpath:<DFS path for getting referrals> [/Full]
 
 |매개 변수|설명|
 |-------|--------|
-| /DFSpath:<path for getting referrals>|이 DFS 경로 다음 중 하나일 수 있습니다.<p>-   \(빈\): 트러스트 된 도메인을 테스트 합니다.<br />-   \\\\도메인: 도메인 컨트롤러 조회<br />-   \\\\도메인\\sysvol: SYSvol 조회.<br />\\NETLOGON: NETLOGON 조회에서 \\Doma를 \\-   합니다.<br />-   \\\\<Domain or server>\\<Namespace Root>: 네임 스페이스 루트 조회<br />-   \\\\<Domain or server>\\<Namespace root>\\<DFS folder>: DFS 폴더 \(링크\) 조회|
-|/Full|도메인 및 루트 조회에만 적용 됩니다. 레지스트리와 active directory 도메인 서비스 \(AD DS\)간에 사이트 연결 정보의 일관성을 확인 합니다.|
+| DFSpath<path for getting referrals>|이 DFS 경로 다음 중 하나일 수 있습니다.<p>-   \(blank\): 트러스트 된 도메인을 테스트 합니다.<br />-   \\\\도메인: 도메인 컨트롤러 조회<br />-   \\\\도메인\\SYSvol: SYSvol 조회<br />-   \\\\Netlogon의\\doma: netlogon 조회<br />-   \\\\<Domain or server>\\<Namespace Root>: 네임 스페이스 루트 조회<br />-   \\\\<Domain or server>\\<Namespace root>\\<DFS folder>: DFS 폴더 \(링크\) 조회|
+|/Full|도메인 및 루트 조회에만 적용 됩니다. 레지스트리와 active directory 도메인 서비스 \(AD DS\)간의 사이트 연결 정보 일관성을 확인 합니다.|
 
-## <a name="examples"></a><a name=BKMK_Examples></a>예와
+## <a name="examples"></a>예
 
 ```
 dfsdiag /TestReferral /DFSpath:\\Contoso.com\MyNamespace

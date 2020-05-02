@@ -1,6 +1,6 @@
 ---
 title: bitsadmin addfile
-description: 지정 된 작업에 파일을 추가 하는 **bitsadmin addfile**에 대 한 Windows 명령 항목입니다.
+description: 지정 된 작업에 파일을 추가 하는 bitsadmin addfile 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 330e79eb2ba5a824cea54094f64ceb6f9cfd66b9
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: eaa7d77c9d6160bbd2bdf6a1431232af22bc3e37
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850966"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718492"
 ---
 # <a name="bitsadmin-addfile"></a>bitsadmin addfile
 
@@ -23,25 +23,29 @@ ms.locfileid: "80850966"
 ## <a name="syntax"></a>구문
 
 ```
-bitsadmin /AddFile <Job> <RemoteURL> <LocalName>
+bitsadmin /addfile <job> <remoteURL> <localname>
 ```
 
-#### <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| 작업 | 작업의 표시 이름 또는 GUID입니다. |
-| RemoteURL | 서버에서 파일의 URL입니다. |
-| LocalName | 로컬 컴퓨터에 있는 파일의 이름입니다. *LocalName* 파일에 절대 경로 포함 해야 합니다. |
+| 작업(job) | 작업의 표시 이름 또는 GUID입니다. |
+| remoteURL | 서버에서 파일의 URL입니다. |
+| localname | 로컬 컴퓨터에 있는 파일의 이름입니다. *Localname* 은 파일에 대 한 절대 경로를 포함 해야 합니다. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 
-파일 작업을 추가 합니다. 추가 하려는 각 파일에 대 한이 호출을 반복 합니다. 여러 작업을 사용 하는 경우 *myDownloadJob* 해당 이름으로 바꿔야 *myDownloadJob* 작업을 고유 하 게 식별 하는 작업의 GUID를 가진 합니다.
+작업에 파일을 추가 하려면 다음을 수행 합니다.
 
 ```
-C:\>bitsadmin /addfile myDownloadJob http://downloadsrv/10mb.zip c:\10mb.zip
+bitsadmin /addfile myDownloadJob http://downloadsrv/10mb.zip c:\10mb.zip
 ```
+
+추가할 각 파일에 대해이 호출을 반복 합니다. 여러 작업을 사용 하는 경우 *myDownloadJob* 해당 이름으로 바꿔야 *myDownloadJob* 작업을 고유 하 게 식별 하는 작업의 GUID를 가진 합니다.
 
 ## <a name="additional-references"></a>추가 참조
 
-- [명령줄 구문 키](command-line-syntax-key.md)&copy;
+- [명령줄 구문 키](command-line-syntax-key.md)
+
+- [bitsadmin 명령](bitsadmin.md)

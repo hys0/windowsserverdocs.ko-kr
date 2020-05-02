@@ -1,6 +1,6 @@
 ---
 title: auditpol 가져오기
-description: '**Auditpol get**에 대 한 Windows 명령 항목은 시스템 정책, 사용자별 정책, 감사 옵션 및 감사 보안 설명자 개체를 검색 합니다.'
+description: 시스템 정책, 사용자별 정책, 감사 옵션 및 감사 보안 설명자 개체를 검색 하는 auditpol get 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,23 +9,25 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: fe2b1bd060f128e39fa1c687ec963c964798fe1b
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 859ea9e2e42af0fe7f34f4e378166685f8316b9e
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80851196"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719133"
 ---
 # <a name="auditpol-get"></a>auditpol 가져오기
 
->적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> 적용 대상: Windows Server (반기 채널), Windows Server, 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 시스템 정책, 사용자별 정책, 감사 옵션 및 감사 보안 설명자 개체를 검색 합니다.
+
+*사용자 단위* 및 *시스템* 정책에 대 한 *get* 작업을 수행 하려면 보안 설명자에 설정 된 해당 개체에 대 한 **읽기** 권한이 있어야 합니다. **감사 및 보안 로그 관리** (SeSecurityPrivilege) 사용자 권한이 있는 경우에도 *가져오기* 작업을 수행할 수 있습니다. 그러나이 권한은 전체 *가져오기* 작업을 수행 하는 데 필요 없는 추가 액세스를 허용 합니다.
 
 ## <a name="syntax"></a>구문
 
 ```
-auditpol /get 
+auditpol /get
 [/user[:<username>|<{sid}>]]
 [/category:*|<name>|<{guid}>[,:<name|<{guid}> ]]
 [/subcategory:*|<name>|<{guid}>[,:<name|<{guid}> ]]
@@ -46,12 +48,11 @@ auditpol /get
 | /r | 보고서 형식으로 쉼표로 구분 된 값 (CSV) 출력을 표시합니다. |
 | /? | 명령 프롬프트에 도움말을 표시합니다. |
 
-## <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 모든 범주 및 하위 범주는 GUID 또는 따옴표 (")로 묶은 이름으로 지정할 수 있습니다. 사용자는 SID 또는 이름으로 지정할 수 있습니다.
-사용자 정책 및 시스템 정책에 대 한 모든 가져오기 작업의 경우 보안 설명자에 설정 된 해당 개체에 대 한 읽기 권한이 있어야 합니다. 처리 하는 개체로 get 작업을 수행할 수도 있습니다는 **관리 감사 및 보안 로그** (SeSecurityPrivilege) 사용자 권한이 있습니다. 그러나이 권한은 가져오기 작업을 수행할 필요가 없는 추가 액세스를 허용 합니다.
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 
 게스트 계정에 대 한 사용자 단위 감사 정책을 검색 하 고 시스템, 자세한 추적 및 개체 액세스 범주에 대 한 출력을 표시 하려면 다음을 입력 합니다.
 
@@ -60,7 +61,7 @@ auditpol /get /user:{S-1-5-21-1443922412-3030960370-963420232-51} /category:Syst
 ```
 
 > [!NOTE]
-> 이 명령은 두 가지 경우에 유용합니다. 의심 스러운 활동에 대 한 특정 사용자 계정을 모니터링 하는 경우 추가 감사를 사용 하도록 포함 정책을 사용 하 여 특정 범주에서 결과 검색 하려면 /get 명령을 사용할 수 있습니다. 또는 계정에 대 한 감사 설정을 불필요 한 이벤트 하지만 다양 한 로깅 하는 경우 제외 정책 사용 하 여 해당 계정에 대 한 불필요 한 이벤트를 필터링 하려면 /get 명령을 사용할 수 있습니다. 목록이 모든 범주에 대 한 auditpol /list /category 명령을 사용 합니다.
+> 이 명령은 두 가지 경우에 유용합니다. 1) 의심 스러운 활동에 대 한 특정 사용자 계정을 모니터링할 때 추가 감사를 `/get` 사용 하도록 설정 하는 포함 정책을 사용 하 여 특정 범주에서 결과를 검색 하는 명령을 사용할 수 있습니다. 2) 계정에 대 한 감사 설정이 다양 하지만 불필요 한 이벤트를 기록 하는 경우 `/get` 명령을 사용 하 여 제외 정책을 통해 해당 계정에 대 한 불필요 한 이벤트를 필터링 할 수 있습니다. 모든 범주의 목록을 보려면 `auditpol /list /category` 명령을 사용 합니다.
 
 사용자 단위 감사 정책 범주 및 게스트 계정에 대 한 시스템 범주 아래의 해당 하위 범주에 대 한 포괄 및 전용 설정을 보고, 특정 하위 범주에 대 한 검색 하려면 다음을 입력 합니다.
 
@@ -105,4 +106,7 @@ auditpol /get /option:CrashOnAuditFail /r
 ```
 
 ## <a name="additional-references"></a>추가 참조
+
 - [명령줄 구문 키](command-line-syntax-key.md)
+
+- [auditpol 명령](auditpol.md)

@@ -1,6 +1,6 @@
 ---
-title: bitsadmin 캐시 및 deleteurl
-description: '**Bitsadmin cache 및 deleteurl**에 대 한 Windows 명령 항목으로, 지정 된 URL에 대 한 모든 캐시 항목을 삭제 합니다.'
+title: bitsadmin 캐시 및 deleteURL
+description: 지정 된 URL에 대 한 모든 캐시 항목을 삭제 하는 bitsadmin cache 및 deleteURL 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,37 +9,39 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 70099e795d0f05d0fcf75fbf6b82f5466d1c0c55
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 075c48e5c8c205cbbf3fe476260ec7909edcc3e6
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850936"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718442"
 ---
-# <a name="bitsadmin-cache-and-deleteurl"></a>bitsadmin 캐시 및 deleteurl
+# <a name="bitsadmin-cache-and-deleteurl"></a>bitsadmin 캐시 및 deleteURL
 
 지정된 된 URL에 대 한 모든 캐시 항목을 삭제합니다.
 
 ## <a name="syntax"></a>구문
 
 ```
-bitsadmin /deleteURL url
+bitsadmin /deleteURL URL
 ```
 
 ### <a name="parameters"></a>매개 변수
 
 | 매개 변수 | 설명 |
 | -------------- | -------------- |
-| url | 원격 파일을 식별 하는 Uniform Resource Locator |
+| URL | 원격 파일을 식별 하는 Uniform Resource Locator |
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 
-다음 예에서는에 대 한 모든 캐시 항목을 삭제 `https://www.contoso.com/en/us/default.aspx`
+다음에 대 한 `https://www.contoso.com/en/us/default.aspx`모든 캐시 항목을 삭제 하려면:
 
 ```
-C:\>bitsadmin /deleteURL https://www.contoso.com/en/us/default.aspx 
+bitsadmin /deleteURL https://www.contoso.com/en/us/default.aspx 
 ```
 
 ## <a name="additional-references"></a>추가 참조
 
 - [명령줄 구문 키](command-line-syntax-key.md)
+
+- [bitsadmin cache 명령](bitsadmin-cache.md)

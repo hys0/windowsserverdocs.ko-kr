@@ -1,6 +1,6 @@
 ---
 title: dfsdiag TestDCs
-description: 지정 된 도메인에서 도메인 컨트롤러의 구성을 확인 하는 dfsdiag TestDCs에 대 한 Windows 명령 항목입니다.
+description: 지정 된 도메인에서 도메인 컨트롤러의 구성을 확인 하는 dfsdiag TestDCs에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 092ce3710eb6d209f596683bd4ad054dadd11aa3
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 6ac7fe1a7bae6a7b3dab9004b6212b7d93774ade
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80846324"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719600"
 ---
 # <a name="dfsdiag-testdcs"></a>dfsdiag TestDCs
 
->적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 지정된 된 도메인의 각 도메인 컨트롤러에는 다음과 같은 테스트를 수행 하 여 도메인 컨트롤러의 구성을 확인 합니다.  
   
@@ -38,13 +38,13 @@ dfsdiag /TestDCs [/Domain:<Domain name>]
   
 |매개 변수|설명|  
 |-------|--------|  
-|/Domain:`<domain_name>`|확인 하려는 도메인입니다.|  
+|도메인`<domain_name>`|확인 하려는 도메인입니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
 
 /Domain은 선택적 매개 변수입니다. 기본값은 로컬 호스트에 추가 하는 로컬 도메인입니다.  
   
-## <a name="examples"></a><a name=BKMK_Examples></a>예와  
+## <a name="examples"></a>예  
 Contoso.com 도메인의 도메인 컨트롤러의 구성을 확인 하려면 다음을 입력 합니다.  
   
 ```  

@@ -1,6 +1,6 @@
 ---
-title: bitsadmin 캐시
-description: Bitsadmin cache 스위치의 목록이 포함 된 **bitsadmin cache**에 대 한 Windows 명령 항목입니다.
+title: bitsadmin cache
+description: Bitsadmin cache 스위치의 목록이 포함 된 bitsadmin cache 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 88079935942ef70f56c615c89cb4762e8012f741
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: bf54225263b238cc7b6ba04d9881f4bc224d29b9
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850846"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718267"
 ---
-# <a name="bitsadmin-cache"></a>bitsadmin 캐시
+# <a name="bitsadmin-cache"></a>bitsadmin cache
 
->적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
+Bitsadmin/cache 스위치의 목록을 포함 합니다.
 
 Bitsadmin/cache 스위치의 목록을 포함 합니다.
 
@@ -26,7 +28,7 @@ Bitsadmin/cache 스위치의 목록을 포함 합니다.
 
 ```
 bitsadmin /cache /help
-bitsadmin /cache /Clear
+bitsadmin /cache /clear
 bitsadmin /cache /delete
 bitsadmin /cache /deleteURL
 bitsadmin /cache /list
@@ -44,7 +46,7 @@ bitsadmin /cache /setexpirationtime
 | [bitsadmin cache and help](bitsadmin-cache-and-help.md) | /Cache 스위치에 대 한 명령줄 사용법을 표시 합니다. |
 | [bitsadmin cache and clear](bitsadmin-cache-clear.md) | 로컬 캐시를 제거 합니다. |
 | [bitsadmin cache and delete](bitsadmin-cache-and-delete.md) | 캐시 엔트리를 삭제합니다. |
-| [bitsadmin cache and deleteurl](bitsadmin-cache-and-deleteurl.md) | 지정된 된 URL에 대 한 모든 캐시 항목을 삭제합니다. |
+| [bitsadmin 캐시 및 deleteURL](bitsadmin-cache-and-deleteurl.md) | 지정된 된 URL에 대 한 모든 캐시 항목을 삭제합니다. |
 | [bitsadmin cache and list](bitsadmin-cache-and-list.md) | 모든 캐시 항목을 나열합니다. |
 | [bitsadmin cache and info](bitsadmin-cache-and-info.md) | 특정 캐시 엔트리를 덤프합니다. |
 | [bitsadmin cache and getlimit](bitsadmin-cache-and-getlimit.md) | 캐시 한계를 검색합니다. |
@@ -55,3 +57,5 @@ bitsadmin /cache /setexpirationtime
 ## <a name="additional-references"></a>추가 참조
 
 - [명령줄 구문 키](command-line-syntax-key.md)
+
+- [bitsadmin 명령](bitsadmin.md)

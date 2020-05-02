@@ -1,6 +1,6 @@
 ---
-title: cd
-description: Cd에 대 한 Windows 명령 항목으로, 이름을 표시 하거나 현재 디렉터리를 변경 합니다.
+title: CD
+description: Cd 명령에 대 한 참조 항목으로, 이름을 표시 하거나 현재 디렉터리를 변경 합니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,75 +9,89 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2d62f529ab6c45957f0fdea24358a2f13151adb6
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 7c9ee57590cf165ba46f394cab06817c7c13f0a9
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80848226"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719654"
 ---
-# <a name="cd"></a>cd
+# <a name="cd"></a>CD
 
-이름을 표시 하거나 현재 디렉터리를 변경 합니다. 드라이브 문자로 사용 하는 경우 (예를 들어 `cd C:`), **cd** 지정된 된 드라이브의 현재 디렉터리의 이름을 표시 합니다. 매개 변수 없이 사용 하는 경우 **cd** 디렉터리와 현재 드라이브를 표시 합니다.
+> 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
+현재 디렉터리의 이름을 표시 하거나 현재 디렉터리를 변경 합니다. 드라이브 문자로 사용 하는 경우 (예를 들어 `cd C:`), **cd** 지정된 된 드라이브의 현재 디렉터리의 이름을 표시 합니다. 매개 변수 없이 사용 하는 경우 **cd** 디렉터리와 현재 드라이브를 표시 합니다.
 
 > [!NOTE]
-> 이 명령은 같습니다는 **chdir** 명령입니다.
-
-이 명령을 사용하는 방법의 예는 [예](#BKMK_examples)를 참조하세요.
+> 이 명령은 [chdir 명령과](chdir.md)같습니다.
 
 ## <a name="syntax"></a>구문
 
 ```
-cd [/d] [<Drive>:][<Path>]
+cd [/d] [<drive>:][<path>]
 cd [..]
-chdir [/d] [<Drive>:][<Path>]
+chdir [/d] [<drive>:][<path>]
 chdir [..]
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------|-----------|
-|/d|드라이브에 대 한 현재 디렉터리와 현재 드라이브를 변경합니다.|
-|\<드라이브 >:|표시 하거나 (다른 경우 현재 드라이브)를 변경 하려면 드라이브를 지정 합니다.|
-|\<경로 >|표시 하거나 변경 하려는 디렉터리의 경로를 지정 합니다.|
-|[..]|상위 폴더를 변경 하려면 지정 합니다.|
-|/?|명령 프롬프트에 도움말을 표시합니다.|
+| 매개 변수 | 설명 |
+| --------- | ----------- |
+| /d | 드라이브에 대 한 현재 디렉터리와 현재 드라이브를 변경합니다. |
+| `<drive>:` | 표시 하거나 (다른 경우 현재 드라이브)를 변경 하려면 드라이브를 지정 합니다. |
+| `<path>` | 표시 하거나 변경 하려는 디렉터리의 경로를 지정 합니다. |
+| [..] | 상위 폴더를 변경 하려면 지정 합니다. |
+| /? | 명령 프롬프트에 도움말을 표시합니다. |
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 다음과 같은 명령 확장을 사용 하는 경우에 적용 된 **cd** 명령:
-- 디스크의 이름으로는 대/소문자를 사용 하 여 현재 디렉터리 문자열 변환 됩니다. 예를 들어 `cd C:\TEMP` 되어 디스크의 경우에는 현재 디렉터리를 C:\Temp로 설정 합니다.
-- 공백 처리 하지 않을 구분 기호로 하므로 *경로* 인용 부호를 포함 하지 않고 공백을 포함할 수 있습니다. 예를 들면 다음과 같습니다.  
+
+- 디스크의 이름으로는 대/소문자를 사용 하 여 현재 디렉터리 문자열 변환 됩니다. 예를 들어 `cd c:\temp` 되어 디스크의 경우에는 현재 디렉터리를 C:\Temp로 설정 합니다.
+
+- 공백은 구분 기호로 처리 되지 않으므로 `<path>` 따옴표 없이 공백을 포함할 수 있습니다. 다음은 그 예입니다. 
+
   ```
   cd username\programs\start menu
-  ```  
-  와 같습니다.  
   ```
-  cd username\programs\start menu
-  ```  
-  확장을 사용할 수 있는 경우 따옴표, 필요한 경우은 없습니다.
 
-명령 확장을 사용 하지 않으려면 다음을 입력 합니다.
-```
-cmd /e:off
-```
+  이 코드는 다음과 같습니다.  
+  
+  ```
+  cd "username\programs\start menu"
+  ```
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+  확장을 사용 하지 않도록 설정한 경우에는 따옴표가 필요 합니다.
 
-루트 디렉터리는 드라이브에 대 한 디렉터리 계층의 맨 위에 있습니다. 루트 디렉터리를 반환 하려면 다음을 입력 합니다.
+- 명령 확장을 사용 하지 않으려면 다음을 입력 합니다.
+
+  ```
+  cmd /e:off
+  ```
+
+## <a name="examples"></a>예
+
+루트 디렉터리로 돌아가려면 드라이브의 디렉터리 계층 구조 맨 위:
+
 ```
 cd\
 ```
-에 있는 것과에서 다른 드라이브의 기본 디렉터리를 변경 하려면 다음을 입력 합니다.
+
+사용자가 있는 것과 다른 드라이브의 기본 디렉터리를 변경 하려면 다음을 수행 합니다.
+
 ```
-cd [<Drive>:\[<Directory>]]
+cd [<drive>:[<directory>]]
 ```
+
 디렉터리 변경을 확인 하려면 다음을 입력 합니다.
+
 ```
-cd [<Drive>:]
+cd [<drive>:]
 ```
 
 ## <a name="additional-references"></a>추가 참조
 
 - [명령줄 구문 키](command-line-syntax-key.md)
+
+- [chdir 명령](chdir.md)

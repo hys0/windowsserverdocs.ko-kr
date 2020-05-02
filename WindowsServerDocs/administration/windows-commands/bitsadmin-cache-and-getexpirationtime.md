@@ -1,6 +1,6 @@
 ---
-title: bitsadmin 캐시 및 getexpirationtime
-description: 캐시 만료 시간을 검색 하는 **bitsadmin cache 및 getexpirationtime**에 대 한 Windows 명령 항목입니다.
+title: bitsadmin cache and getexpirationtime
+description: 캐시 만료 시간을 검색 하는 bitsadmin cache 및 getexpirationtime 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 44e54e29865f67b2bed22d30871e8810a0b55587
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: ecd20a6f35637be3d2f1cad08cf2d060c944857c
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850926"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718425"
 ---
-# <a name="bitsadmin-cache-and-getexpirationtime"></a>bitsadmin 캐시 및 getexpirationtime
+# <a name="bitsadmin-cache-and-getexpirationtime"></a>bitsadmin cache and getexpirationtime
 
 캐시 만료 시간을 검색합니다.
 
@@ -26,14 +26,16 @@ ms.locfileid: "80850926"
 bitsadmin /cache /getexpirationtime
 ```
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 
-다음 캐시 만료 시간을 검색합니다.
+캐시 만료 시간을 검색 하려면:
 
 ```
-C:\>bitsadmin /cache /getexpirationtime
+bitsadmin /cache /getexpirationtime
 ```
 
 ## <a name="additional-references"></a>추가 참조
 
 - [명령줄 구문 키](command-line-syntax-key.md)
+
+- [bitsadmin cache 명령](bitsadmin-cache.md)

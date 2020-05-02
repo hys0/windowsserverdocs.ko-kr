@@ -1,6 +1,6 @@
 ---
 title: dfsdiag Testdfs 구성
-description: Dfsdiag Testdfs Config에 대 한 Windows 명령 항목으로, DFS (분산 파일 시스템) 네임 스페이스의 구성을 확인 합니다.
+description: 분산 파일 시스템 (DFS) 네임 스페이스의 구성을 확인 하는 dfsdiag Testdfs Config에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ffb75ba26b4ed90dbf5c8bfda80f4a81f986e46a
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 057b0662fddb7148837be16380d190cdb37382c5
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80846336"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719583"
 ---
 # <a name="dfsdiag-testdfsconfig"></a>dfsdiag Testdfs 구성
 
->적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 다음 작업을 수행 하 여 분산 파일 시스템 (DFS) 네임 스페이스의 구성을 확인 합니다.  
   
@@ -46,7 +46,7 @@ dfsdiag /TestDFSConfig /DFSRoot:<namespace>
 |-----------------------|-----------------------------------------|
 | /DFSRoot:`<namespace>` | 진단할 네임 스페이스 (DFS 루트)입니다. |
   
-## <a name="examples"></a><a name=BKMK_Examples></a>예와  
+## <a name="examples"></a>예  
   
 ```  
 dfsdiag /TestDFSConfig /DFSRoot:\\Contoso.com\MyNamespace  

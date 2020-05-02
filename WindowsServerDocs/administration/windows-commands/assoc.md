@@ -1,6 +1,6 @@
 ---
 title: assoc
-description: 파일 이름 확장명 연결을 표시 하거나 수정 하는 assoc의 Windows 명령 항목입니다.
+description: 파일 이름 확장명 연결을 표시 하거나 수정 하는 assoc 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 442ba244a7325425df29a1ebdcdb8bc107095ebe
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: f637e1f744ec412899320cfbb368633b222da8d3
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80851296"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718959"
 ---
 # <a name="assoc"></a>assoc
 
@@ -23,12 +23,10 @@ ms.locfileid: "80851296"
 > [!NOTE]
 > 이 명령은 CMD 내 에서만 지원 됩니다. EXE 및를 PowerShell에서 사용할 수 없습니다.
 
-이 명령을 사용하는 방법의 예는 [예](#BKMK_examples)를 참조하세요.
-
 ## <a name="syntax"></a>구문
 
 ```
-assoc [<.ext>[=[<FileType>]]]
+assoc [<.ext>[=[<filetype>]]]
 ```
 
 ### <a name="parameters"></a>매개 변수
@@ -36,18 +34,18 @@ assoc [<.ext>[=[<FileType>]]]
 | 매개 변수 | 설명 |
 | --------- | ----------- |
 | `<.ext>` | 파일 이름 확장명을 지정합니다. |
-| `<FileType>` | 지정 된 파일 이름 확장명에 연결할 파일 유형을 지정 합니다. |
-| `/?` | 명령 프롬프트에 도움말을 표시합니다. |
+| `<filetype>` | 지정 된 파일 이름 확장명에 연결할 파일 유형을 지정 합니다. |
+| /? | 명령 프롬프트에 도움말을 표시합니다. |
 
-## <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 - 파일 이름 확장명에 대 한 파일 형식 연결을 제거 하려면 스페이스바를 눌러 등호 뒤 공백을 추가 합니다.
 
 - 현재 파일 형식에 정의 된 열려 있는 명령 문자열을 보려면 사용 하 여는 **ftype** 명령입니다.
 
-- 출력을 리디렉션할 **assoc** 사용 하 여 텍스트 파일에는 **>** 리디렉션 연산자입니다.
+- 출력을 리디렉션할 **assoc** 사용 하 여 텍스트 파일에는 `>` 리디렉션 연산자입니다.
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 
 파일 이름 확장명이.txt 인에 대 한 현재 파일 형식 연결을 보려면 다음을 입력 합니다.
 
@@ -79,3 +77,5 @@ assoc>assoc.txt
 ## <a name="additional-references"></a>추가 참조
 
 - [명령줄 구문 키](command-line-syntax-key.md)
+
+- [ftype 명령](ftype.md)

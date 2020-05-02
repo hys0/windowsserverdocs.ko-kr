@@ -1,6 +1,6 @@
 ---
-title: bitsadmin 캐시 및 지우기
-description: '**Bitsadmin cache**에 대 한 Windows 명령 항목과 로컬 캐시를 제거 하는 clear'
+title: bitsadmin cache and clear
+description: 로컬 캐시를 제거 하는 bitsadmin cache 및 clear 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2625268bf2bedc28e0ed5d1bda151c8802ef8d24
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 6195bfc28c59fe7609f4a8164fa080ff7f7b977d
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850856"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718280"
 ---
-# <a name="bitsadmin-cache-and-clear"></a>bitsadmin 캐시 및 지우기
+# <a name="bitsadmin-cache-and-clear"></a>bitsadmin cache and clear
 
 로컬 캐시를 제거 합니다.
 
@@ -26,14 +26,16 @@ ms.locfileid: "80850856"
 bitsadmin /cache /clear
 ```
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="examples"></a>예
 
-다음 예제에서는 로컬 캐시를 제거 합니다.
+로컬 캐시를 제거 하려면:
 
 ```
-C:\>bitsadmin /cache /clear
+bitsadmin /cache /clear
 ```
 
 ## <a name="additional-references"></a>추가 참조
 
 - [명령줄 구문 키](command-line-syntax-key.md)
+
+- [bitsadmin cache 명령](bitsadmin-cache.md)

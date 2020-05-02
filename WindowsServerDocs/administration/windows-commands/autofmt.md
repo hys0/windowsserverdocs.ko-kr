@@ -1,6 +1,6 @@
 ---
 title: autofmt
-description: Windows 복구 콘솔에서 호출 될 때 드라이브나 파티션을 포맷 하는 **autofmt**에 대 한 windows 명령 항목입니다.
+description: Windows 복구 콘솔에서 호출 될 때 드라이브나 파티션을 포맷 하는 autofmt 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,23 +9,24 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 59aec4b42652f3a42f336be81f1ba99bee128140
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: b7b82d940f2d8bd54d023a2a105208d1a18fc4c8
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80851106"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718760"
 ---
 # <a name="autofmt"></a>autofmt
 
-드라이브 또는 프로그램에서 호출할 때 파티션 형식을 지정 합니다.
+Windows 복구 콘솔에서 호출 될 때 드라이브 또는 파티션을 포맷 하는 자동 파일 시스템 형식 유틸리티를 시작 합니다.
 
-## <a name="remarks"></a>주의
-
-실행할 수 없습니다 **Autofmt** 명령줄에서 직접.
+> [!IMPORTANT]
+> **Autofmt** 는 명령줄에서 직접 실행할 수 없습니다.
 
 ## <a name="additional-references"></a>추가 참조
 
 - [명령줄 구문 키](command-line-syntax-key.md)
 
-- [파일 시스템 작업](https://go.microsoft.com/fwlink/?LinkId=4509)
+- [Windows 복구 환경 (WinRE)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference)
+
+- [Windows 복구 환경 (WinRE)을 사용 하 여 일반적인 시작 문제를 해결 하는 방법](https://support.microsoft.com/help/4026030/how-to-use-windows-recovery-environment-winre-to-troubleshoot-common-s)

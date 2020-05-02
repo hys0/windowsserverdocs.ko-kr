@@ -1,6 +1,6 @@
 ---
 title: bdehdcfg newdriveletter
-description: '**Bdehdcfg newdriveletter**에 대 한 Windows 명령 항목으로, 시스템 드라이브로 사용 되는 드라이브 부분에 새 드라이브 문자를 할당 합니다.'
+description: Bdehdcfg newdriveletter 명령에 대 한 참조 항목으로, 시스템 드라이브로 사용 되는 드라이브 부분에 새 드라이브 문자를 할당 합니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,36 +9,32 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4a8757e7d0684912525817708fbe34953b049582
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: da09ae1469c6fc8370e6bd0f2f7a8f3efd8dc4f0
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80851056"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718669"
 ---
 # <a name="bdehdcfg-newdriveletter"></a>bdehdcfg: newdriveletter
 
-시스템 드라이브로 사용할 드라이브의 부분에 새 드라이브 문자를 할당 합니다. 이 명령을 사용할 수 있는 방법을의 예제를 참조 하십시오. [예제](#BKMK_Examples)합니다.
+시스템 드라이브로 사용할 드라이브의 부분에 새 드라이브 문자를 할당 합니다. 시스템 드라이브에 드라이브 문자를 할당 하지 않는 것이 좋습니다.
 
 ## <a name="syntax"></a>구문
 
 ```
-bdehdcfg -target {default|unallocated|<DriveLetter> shrink|<DriveLetter> merge} -newdriveletter <DriveLetter>
+bdehdcfg -target {default|unallocated|<drive_letter> shrink|<drive_letter> merge} -newdriveletter <drive_letter>
 ```
 
 #### <a name="parameters"></a>매개 변수
 
 | 매개 변수 | 설명 |
 | ---------| ----------- |
-|`<DriveLetter>`|지정 된 대상 드라이브에 할당할 드라이브 문자를 정의 합니다.|
+| `<drive_letter>` | 지정 된 대상 드라이브에 할당할 드라이브 문자를 정의 합니다. |
 
-## <a name="remarks"></a>주의
+## <a name="examples"></a>예
 
-모범 사례로, 시스템 드라이브는 드라이브 문자를 할당 하지 않으면 것이 좋습니다.
-
-## <a name="examples"></a><a name="BKMK_Examples"></a>예와
-
-다음 예제에서는 드라이브 문자가 P. 할당 되 고 기본 드라이브를 보여 줍니다.
+기본 드라이브에 드라이브 문자 `P`를 할당 하려면 다음을 수행 합니다.
 
 ```
 bdehdcfg -target default -newdriveletter P:
@@ -48,4 +44,4 @@ bdehdcfg -target default -newdriveletter P:
 
 - [명령줄 구문 키](command-line-syntax-key.md)
 
-- [Bdehdcfg](bdehdcfg.md)
+- [bdehdcfg](bdehdcfg.md)

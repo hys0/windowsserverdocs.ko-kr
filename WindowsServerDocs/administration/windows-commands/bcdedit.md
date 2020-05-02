@@ -1,6 +1,6 @@
 ---
 title: bcdedit
-description: 새 저장소를 만들고, 기존 저장소를 수정 하 고, 부팅 메뉴 매개 변수를 추가 하는 **bcdedit**에 대 한 Windows 명령 항목입니다.
+description: 새 저장소를 만들고, 기존 저장소를 수정 하 고, 부팅 메뉴 매개 변수를 추가 하는 bcdedit 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 03/27/2018
-ms.openlocfilehash: f5bd39fa29dc99bba0d3600fc8609a355ffe540c
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: df68c2c1b1087f7e32dbe270657a54e072261c46
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80851076"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718693"
 ---
 # <a name="bcdedit"></a>bcdedit
 
@@ -31,21 +31,21 @@ BCDEdit는 BCD 저장소를 관리 하기 위한 명령줄 도구입니다. 다�
 
 BCDEdit 이후 버전의 Windows 및 Windows Vista의 부팅 구성을 편집 하는 기본 도구입니다. Windows Vista 배포는 %WINDIR%\System32 폴더에 포함 되어 있습니다.
 
-BCDEdit 표준 데이터 형식에만 제한 되며 주로 BCD 변경 하는 단일 일반적인 작업을 수행 하도록 구성 되었습니다. 더 복잡 한 작업 또는 비표준 데이터 형식에 대 한 BCD Windows Management Instrumentation (WMI) 응용 프로그래밍 인터페이스 (API)를 사용 하 여 강력 하 고 유연한 사용자 지정 도구를 만들려고 하는 것이 좋습니다.
+BCDEdit 표준 데이터 형식에만 제한 되며 주로 BCD 변경 하는 단일 일반적인 작업을 수행 하도록 구성 되었습니다. 더 복잡 한 작업 또는 비표준 데이터 형식에 대 한 BCD Windows Management Instrumentation (WMI) 애플리케이션 프로그래밍 인터페이스 (API)를 사용 하 여 강력 하 고 유연한 사용자 지정 도구를 만들려고 하는 것이 좋습니다.
 
 ## <a name="syntax"></a>구문
 
 ```
-BCDEdit /Command [<Argument1>] [<Argument2>] ...
+bcdedit /command [<argument1>] [<argument2>] ...
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-### <a name="general-bcdedit-command-line-option"></a>일반 BCDEdit 명령줄 옵션
+### <a name="general-bcdedit-command-line-options"></a>일반 BCDEdit 명령줄 옵션
 
 | 옵션 | 설명 |
 | ------ | ----------- |
-| /? | BCDEdit 명령 목록이 표시 됩니다. 사용 가능한 명령에 대 한 요약을 표시 인수 없이이 명령을 실행 합니다. 특정 명령에 대 한 자세한 도움말을 표시 하려면 실행 **bcdedit /?** `<command>`. 여기서 `<command>`는 검색 중인 명령 이름입니다. 예를 들어 **bcdedit /? createstore** Createstore 명령에 대 한 자세한 도움말을 표시 합니다. |
+| /? | BCDEdit 명령 목록이 표시 됩니다. 사용 가능한 명령에 대 한 요약을 표시 인수 없이이 명령을 실행 합니다. 특정 명령에 대 한 자세한 도움말을 표시 하려면 실행 **bcdedit /?** `<command>`. 여기서 `<command>` 은 검색 하는 명령 이름입니다. 예를 들어 **bcdedit /? createstore** Createstore 명령에 대 한 자세한 도움말을 표시 합니다. |
 
 #### <a name="parameters-that-operate-on-a-store"></a>저장소에서 작동 하는 매개 변수
 
@@ -58,29 +58,29 @@ BCDEdit /Command [<Argument1>] [<Argument2>] ...
 
 #### <a name="parameters-that-operate-on-entries-in-a-store"></a>저장소의 항목에서 작동 하는 매개 변수
 
-| 매개 변수 | 설명 |
+| 매개 변수 | Description |
 | ------ | ----------- |
 | /copy | 동일한 시스템 저장소에 지정 된 부팅 항목의 복사본을 만듭니다. |
-| 만들기 / | 부팅 구성 데이터 저장소에 새 항목을 만듭니다. 잘 알려진 식별자를 지정 하면 **/응용 프로그램**, **상속 /** , 및 **/device** 매개 변수를 지정할 수 없습니다. 식별자가 지정 된 열 또는 하지 잘 알려져 있는 경우는 **/응용 프로그램**, **상속 /** , 또는 **/device** 옵션을 지정 해야 합니다. |
+| 만들기 / | 부팅 구성 데이터 저장소에 새 항목을 만듭니다. 잘 알려진 식별자를 지정 하면 **/애플리케이션**, **상속 /**, 및 **/device** 매개 변수를 지정할 수 없습니다. 식별자가 지정 된 열 또는 하지 잘 알려져 있는 경우는 **/애플리케이션**, **상속 /**, 또는 **/device** 옵션을 지정 해야 합니다. |
 | /delete | 지정된 된 항목에서 요소를 삭제합니다. |
 
 #### <a name="parameters-that-operate-on-entry-options"></a>항목 옵션에서 작동 하는 매개 변수
 
-| 매개 변수 | 설명 |
+| 매개 변수 | Description |
 | ------ | ----------- |
 | /deletevalue | 부팅 항목에서 지정된 된 요소를 삭제합니다. |
 | 설정 / | 항목 옵션 값을 설정합니다. |
 
 #### <a name="parameters-that-control-output"></a>출력을 제어 하는 매개 변수
 
-| 매개 변수 | 설명 |
+| 매개 변수 | Description |
 | ------ | ----------- |
 | /enum | 저장소에 항목을 나열 합니다. **/enum** 옵션은 실행 되므로 BCEdit의 기본값은 **bcdedit** 매개 변수 없이 명령을 실행 중에 해당 하는 **활성 bcdedit /enum** 명령. |
-| /v | 자세한 정보 표시 모드입니다. 일반적으로 잘 알려진 항목 식별자는 간단한 줄임 양식으로 표시 됩니다. 지정 **/v** 명령줄 옵션을 전체에서 모든 식별자를 표시 합니다. 실행 되는 **bcdedit /v** 자체로 명령은 실행와 같습니다는 **bcdedit /enum 활성 /v** 명령 합니다. |
+| /v | 자세한 정보 표시 모드. 일반적으로 잘 알려진 항목 식별자는 간단한 줄임 양식으로 표시 됩니다. 지정 **/v** 명령줄 옵션을 전체에서 모든 식별자를 표시 합니다. 실행 되는 **bcdedit /v** 자체로 명령은 실행와 같습니다는 **bcdedit /enum 활성 /v** 명령 합니다. |
 
 #### <a name="parameters-that-control-the-boot-manager"></a>부팅 관리자를 제어 하는 매개 변수
 
-| 매개 변수 | 설명 |
+| 매개 변수 | Description |
 | ------ | ----------- |
 | /bootsequence | 다음 부팅에 사용할 일회성 표시 순서를 지정 합니다. 이 명령은 비슷합니다는 **포함** 옵션, 그 다음에는 컴퓨터에만 사용 됩니다 점을 제외 하 고 시작 합니다. 그런 다음 컴퓨터 원래 표시 순서 되돌아갑니다. |
 | /default | 부팅 관리자 제한 시간을 선택 하는 기본 항목을 지정 합니다. |
@@ -90,7 +90,7 @@ BCDEdit /Command [<Argument1>] [<Argument2>] ...
 
 #### <a name="parameters-that-control-emergency-management-services"></a>응급 관리 서비스를 제어 하는 매개 변수
 
-| 매개 변수 | 설명 |
+| 매개 변수 | Description |
 | ------ | ----------- |
 | /bootems | 지정된 된 항목에 대 한 관리 EMS (응급 서비스)를 사용 하지 않도록 설정 하거나 사용 합니다. |
 | /ems | 지정 된 운영 체제 부팅 항목에 대해 EMS를 사용 하지 않도록 설정 하거나 사용 합니다. |
@@ -98,13 +98,13 @@ BCDEdit /Command [<Argument1>] [<Argument2>] ...
 
 #### <a name="parameters-that-control-debugging"></a>디버깅을 제어 하는 매개 변수
 
-| 매개 변수 | 설명 |
+| 매개 변수 | Description |
 | ------ | ----------- |
 | /bootdebug | 사용 하거나 지정 된 부팅 항목에 대 한 부팅 디버거를 사용 하지 않도록 설정 합니다. 이 명령은 모든 부팅 항목에 대해 제대로 작동 해도 부팅 애플리케이션에만 효과적입니다. |
-| /dbgsettings | 지정 하거나 시스템에 대 한 전역 디버거 설정을 표시 합니다. 이 명령은 enablepose를 수행 하지 않습니다. 개별 전역 디버거 설정을 설정 하려면 **bcdedit/set** `<dbgsettings> <type> <value>` 명령을 사용 합니다. |
+| /dbgsettings | 지정 하거나 시스템에 대 한 전역 디버거 설정을 표시 합니다. 이 명령은 enablepose를 수행 하지 않습니다. 개별 전역 디버거 설정을 설정 하려면는 **bcdedit /set** `<dbgsettings> <type> <value>` 명령입니다. |
 | /debug | 사용 하거나 지정 된 부팅 항목에 대 한 커널 디버거를 사용 하지 않도록 설정 합니다. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>예와
+## <a name="additional-references"></a>추가 참조
 
 BCDEdit를 사용 하는 방법에 대 한 예제는 [Bcdedit 옵션 참조](https://docs.microsoft.com/windows-hardware/drivers/devtest/bcd-boot-options-reference) 문서를 참조 하세요.
 
