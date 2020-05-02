@@ -9,19 +9,19 @@ ms.technology: storage
 audience: IT Pro
 ms.topic: article
 ms.date: 10/16/2017
-ms.openlocfilehash: 0b819f15e473738996484283bceac439f482a13d
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 05c203ef610dda0443ddc845245a4072e617f7a6
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80844156"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82725434"
 ---
 # <a name="fsutil-reparsepoint"></a>Fsutil reparsepoint
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows 2008, Windows Vista
+> 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows 2008, Windows Vista
 
 쿼리 또는 삭제 재분석 지점.  **fsutil reparsepoint** 명령 지원 엔지니어가 일반적으로 사용 됩니다.
 
-이 명령을 사용하는 방법의 예는 [예](#BKMK_examples)를 참조하세요.
+
 
 ## <a name="syntax"></a>구문
 
@@ -34,11 +34,11 @@ fsutil reparsepoint [delete] <FileName>
 
 | 매개 변수  |                                                                설명                                                                |
 |------------|-------------------------------------------------------------------------------------------------------------------------------------------|
-|   query    |            연결 된 파일 또는 디렉터리를 지정 된 핸들에 의해 식별 된 재분석 지점 데이터를 검색 합니다.             |
-|   삭제   | 재분석 지점 파일 또는 디렉터리를 지정 된 핸들에 의해 식별 하지만 파일 또는 디렉터리를 삭제 하지 않습니다 삭제 합니다. |
+|   Query    |            연결 된 파일 또는 디렉터리를 지정 된 핸들에 의해 식별 된 재분석 지점 데이터를 검색 합니다.             |
+|   delete   | 재분석 지점 파일 또는 디렉터리를 지정 된 핸들에 의해 식별 하지만 파일 또는 디렉터리를 삭제 하지 않습니다 삭제 합니다. |
 | <FileName> |             파일 이름 및 확장명을 포함 하는 파일의 전체 경로를 지정 합니다 (예: C:\documents\filename.txt.).             |
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 -   재분석 지점은 사용자 정의 데이터를 포함 하는 정의 가능한 특성이 있는 NTFS 파일 시스템 개체 이며 입/출력 (i/o) 하위 시스템의 기능을 확장 하는 데 사용 됩니다.
 

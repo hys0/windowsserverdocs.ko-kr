@@ -9,19 +9,19 @@ ms.technology: storage
 audience: IT Pro
 ms.topic: article
 ms.date: 10/16/2017
-ms.openlocfilehash: 56e27c386451c561de8f62e523e2d1e59a8ce84c
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: b7af3859cd16b89587a86e3436d5c832620c4e22
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80844306"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82725491"
 ---
 # <a name="fsutil-fsinfo"></a>Fsutil fsinfo
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
+> 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
 
 모든 드라이브를 나열 하 고, 드라이브 종류 쿼리, 볼륨 정보 쿼리, NTFS 특정 볼륨 정보 쿼리 또는 파일 시스템 통계를 쿼리 합니다.
 
-이 명령을 사용하는 방법의 예는 [예](#BKMK_examples)를 참조하세요.
+
 
 ## <a name="syntax"></a>구문
 

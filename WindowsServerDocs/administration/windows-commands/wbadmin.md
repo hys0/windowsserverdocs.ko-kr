@@ -1,6 +1,6 @@
 ---
 title: wbadmin
-description: 명령 프롬프트에서 운영 체제, 볼륨, 파일, 폴더 및 응용 프로그램을 백업 하 고 복원할 수 있는 wbadmin의 Windows 명령 항목입니다.
+description: 명령 프롬프트에서 운영 체제, 볼륨, 파일, 폴더 및 응용 프로그램을 백업 및 복원할 수 있는 wbadmin에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0ca9bdc54cd77f11239d0a61cf052e7b12b02b22
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 94f07d17d46dad4e5301ba3ea6be94b10f26a3af
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80829476"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82725831"
 ---
 # <a name="wbadmin"></a>wbadmin
 
@@ -43,10 +43,10 @@ ms.locfileid: "80829476"
 |[Wbadmin start systemstatebackup](wbadmin-start-systemstatebackup.md)|시스템 상태 백업을 실행합니다.|
 |[Wbadmin delete systemstatebackup](wbadmin-delete-systemstatebackup.md)|하나 이상의 시스템 상태 백업을 삭제합니다.|
 |[Wbadmin start sysrecovery](wbadmin-start-sysrecovery.md)|전체 시스템 (최소한 모든 볼륨 운영 체제의 상태를 포함 하는)의 복구를 실행 합니다. 이 하위 명령은 Windows 복구 환경을 사용 하는 경우에 사용할 수만 있습니다.|
-|[Wbadmin restore catalog](wbadmin-restore-catalog.md)|백업 카탈로그는 로컬 컴퓨터에 손상 된 경우에서 지정 된 스토리지 위치에서 백업 카탈로그를 복구 합니다.|
+|[Wbadmin restore catalog](wbadmin-restore-catalog.md)|로컬 컴퓨터의 백업 카탈로그가 손상된 경우에 지정된 스토리지 위치에서 백업 카탈로그를 복구합니다.|
 |[Wbadmin delete catalog](wbadmin-delete-catalog.md)|로컬 컴퓨터에서 백업 카탈로그를 삭제합니다. 이 컴퓨터에 백업 카탈로그 손상 되 고 카탈로그를 복원 하는 데 사용할 수 있는 다른 위치에 저장 된 백업이 있는 경우에이 하위 명령을 사용 합니다.|
 
 ## <a name="additional-references"></a>추가 참조
 
 -   [백업 및 복구](https://go.microsoft.com/fwlink/?LinkID=195054)
--   [Windows PowerShell의 Windows Server 백업 Cmdlet](https://technet.microsoft.com/library/jj902428.aspx)
+-   [Windows PowerShell에서 Windows Server 백업 Cmdlet](https://technet.microsoft.com/library/jj902428.aspx)

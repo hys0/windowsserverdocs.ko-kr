@@ -9,19 +9,19 @@ ms.technology: storage
 audience: IT Pro
 ms.topic: article
 ms.date: 10/16/2017
-ms.openlocfilehash: cf3685bae9ed76ede4da6df244139437d92250c0
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 3b35938c21180199aabb74431d20a31167aea706
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80844336"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82725538"
 ---
 # <a name="fsutil-dirty"></a>Fsutil 커밋되지 않은 데이터
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
+> 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
 
 쿼리 또는 볼륨의 더티 비트를 설정 합니다. 볼륨의 더티 비트가 설정 됩니다, **않은** 자동으로 오류에 대 한 볼륨을 다음에 컴퓨터를 다시 확인 합니다.
 
-이 명령을 사용하는 방법의 예는 [예](#BKMK_examples)를 참조하세요.
+
 
 ## <a name="syntax"></a>구문
 
@@ -33,11 +33,11 @@ fsutil dirty {query | set} <VolumePath>
 
 |   매개 변수   |                                                 설명                                                  |
 |---------------|--------------------------------------------------------------------------------------------------------------|
-|     query     |                                  지정 된 볼륨의 더티 비트를 쿼리합니다.                                   |
-|      집합      |                                    지정 된 볼륨의 더티 비트를 설정합니다.                                    |
-| \<VolumePath > | 드라이브 이름 뒤에 콜론 또는 GUID 형식에서 지정: **볼륨 {** <em>GUID</em> **}** 합니다. |
+|     Query     |                                  지정 된 볼륨의 더티 비트를 쿼리합니다.                                   |
+|      set      |                                    지정 된 볼륨의 더티 비트를 설정합니다.                                    |
+| \<VolumePath> | 드라이브 이름 뒤에 콜론 또는 GUID 형식에서 지정: **볼륨 {**<em>GUID</em>**}** 합니다. |
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 -   볼륨의 더티 비트 파일 시스템 일관성이 없는 상태에 있을 수를 나타냅니다. 때문에 더티 비트를 설정할 수 있습니다.
 

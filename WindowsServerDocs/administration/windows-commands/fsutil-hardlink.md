@@ -9,15 +9,15 @@ ms.technology: storage
 audience: IT Pro
 ms.topic: article
 ms.date: 10/16/2017
-ms.openlocfilehash: 210196471123e9fc2456a2ee84b1949f9f883d90
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 860e843063db141c31cccdab5c3f5ffaa3a8aa7d
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80844296"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82725502"
 ---
 # <a name="fsutil-hardlink"></a>Fsutil hardlink
->적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
+> 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
 
 기존 파일 및 새 파일 간에 하드 링크를 만듭니다.
 
@@ -33,11 +33,11 @@ fsutil hardlink list <Filename>
 |매개 변수|설명|
 |-------------|---------------|
 |create|기존 파일 및 새 파일 사이 NTFS 하드 링크를 설정합니다. NTFS 하드 링크는 POSIX 하드 링크와 유사 합니다.|
-|\<NewFileName >|하드 링크를 만들려면 원하는 파일을 지정 합니다.|
-|\<ExistingFileName >|하드 링크를 만들 파일을 지정 합니다.|
+|\<NewFileName>|하드 링크를 만들려면 원하는 파일을 지정 합니다.|
+|\<ExistingFileName>|하드 링크를 만들 파일을 지정 합니다.|
 |list|목록에 하드 *Filename*합니다.<p>이 매개 변수가 적용 됩니다: Windows Server 2008 R2 및 Windows 7입니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 -   하드 링크는 파일에 대 한 디렉터리 항목입니다. 모든 파일을 하나 이상의 하드 링크 간주할 수 있습니다. NTFS 볼륨에서 각 파일에는 여러 하드 링크가 있을 수 있으므로 단일 파일이 여러 디렉터리 (또는 이름이 다른 동일한 디렉터리에도 표시 될 수 있음)에 표시 될 수 있습니다. 동일한 파일을 참조 하는 모든 링크가 하므로 프로그램 링크 연 파일을 수정 합니다. 에 대 한 모든 링크를 삭제 한 후에 파일을 파일 시스템에서 삭제 됩니다. 하드 링크를 만든 후 프로그램에서 다른 파일 이름 처럼 사용할 수 있습니다.
 

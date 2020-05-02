@@ -1,6 +1,6 @@
 ---
-title: 추출
-description: '\* * * *에 대 한 Windows 명령 항목'
+title: extract
+description: '* * * *에 대 한 참조 항목'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d66682126f1cc3c924c42b4605a537a997e8ac52
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 1cca89a356530e49fbf2b0610ff3ced1c5733847
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80844776"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82725652"
 ---
-# <a name="extract"></a>추출
+# <a name="extract"></a>extract
 
 
 
@@ -34,7 +34,7 @@ EXTRACT [/Y] /C source destination
 |---------|-----------|
 |캐비닛|파일 두 개 이상의 파일이 포함 되어 있습니다.|
 |filename|캐비닛에서 추출 하는 파일의 이름입니다. 여러 파일 이름 (공백으로 구분) 및 와일드 카드를 사용할 수 있습니다.|
-|원본|압축된 파일 (하나의 파일 캐비닛)입니다.|
+|source|압축된 파일 (하나의 파일 캐비닛)입니다.|
 |새 이름|추출 된 파일에 새 파일 이름입니다. 을 제공 하지 않으면 원래 이름이 사용 됩니다.|
 |/A|모든 캐비닛을 처리 합니다. 언급 한 첫 번째 캐비닛에 시작 해 서 캐비닛 체인을 따릅니다.|
 |/C|대상 (DMF 디스크에서 복사)을 소스 파일을 복사 합니다.|

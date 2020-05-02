@@ -1,6 +1,6 @@
 ---
 title: wbadmin get 디스크
-description: 로컬 컴퓨터에 대해 현재 온라인 상태인 내부 및 외부 디스크를 나열 하는 wbadmin get disks에 대 한 Windows 명령 항목입니다.
+description: 로컬 컴퓨터에 대해 현재 온라인 상태인 내부 및 외부 디스크를 나열 하는 wbadmin get disks에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0243edce77febddccc3497df34685113f2a1b48f
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 42c96ab4ca57f07f180a24da4991e6491f26ff64
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80829766"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82725941"
 ---
 # <a name="wbadmin-get-disks"></a>wbadmin get 디스크
 
@@ -22,7 +22,7 @@ ms.locfileid: "80829766"
 
 로컬 컴퓨터에 대 한 현재 온라인 인 내부 및 외부 디스크를 나열 합니다.
 
-이 하위 명령으로 온라인으로 전환 되는 디스크를 나열 하려면의 구성원 이어야는 **Backup Operators** 그룹 또는 **관리자** 그룹 또는 사용자 받아야 적절 한 권한을 위임 합니다. 또한 실행 해야 **wbadmin** 상승된 된 명령 프롬프트에서. (관리자 권한 명령 프롬프트 마우스를 열려면 **Command Prompt**, 를 클릭 하 고 **관리자 권한으로 실행**.)
+이 하위 명령으로 온라인으로 전환 되는 디스크를 나열 하려면의 구성원 이어야는 **Backup Operators** 그룹 또는 **관리자** 그룹 또는 사용자 받아야 적절 한 권한을 위임 합니다. 또한 실행 해야 **wbadmin** 상승된 된 명령 프롬프트에서. (관리자 권한 명령 프롬프트를 열려면 **명령 프롬프트**를 마우스 오른쪽 단추로 클릭 한 다음 **관리자 권한으로 실행**을 클릭 합니다.)
 
 ## <a name="syntax"></a>구문
 

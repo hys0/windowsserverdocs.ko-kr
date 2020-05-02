@@ -1,6 +1,6 @@
 ---
 title: extend
-description: '\* * * *에 대 한 Windows 명령 항목'
+description: '* * * *에 대 한 참조 항목'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,18 +9,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 11991f9fc338dca5201d8f9c9c598b9d7dcf239b
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 5c5dfeeaec966bfab3c1de2bb91bf79c9d870401
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80844786"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82725668"
 ---
 # <a name="extend"></a>extend
 
->적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-포커스가 있는 볼륨 또는 파티션과 해당 파일 시스템을 디스크의 할당 되지 않은\) 공간 \(무료로 확장 합니다.  
+포커스가 있는 볼륨 또는 파티션을 디스크의 사용 가능한 \(할당 되지 않은\) 공간으로 확장 합니다.  
   
   
   
@@ -35,12 +35,12 @@ extend filesystem [noerr]
   
 | 매개 변수  |                                                                                             설명                                                                                              |
 |------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 크기\=<n>  |      메가바이트에서의 공간 크기를 지정 \(MB\) 현재 볼륨 또는 파티션을 추가 합니다. 크기를 지정 하는 경우 디스크에서 사용할 수 있는 연속 된 여유 공간을 모두 사용 됩니다.       |
-| 디스크\=<n>  |                          볼륨 또는 파티션이 확장 디스크를 지정 합니다. 없는 디스크를 지정 하는 경우 현재 디스크에 볼륨 또는 파티션이 확장 됩니다.                          |
+| 크기가\=<n>  |      메가바이트에서의 공간 크기를 지정 \(MB\) 현재 볼륨 또는 파티션을 추가 합니다. 크기를 지정 하는 경우 디스크에서 사용할 수 있는 연속 된 여유 공간을 모두 사용 됩니다.       |
+| 디스크로\=<n>  |                          볼륨 또는 파티션이 확장 디스크를 지정 합니다. 없는 디스크를 지정 하는 경우 현재 디스크에 볼륨 또는 파티션이 확장 됩니다.                          |
 | 파일 시스템 |                                   포커스가 있는 볼륨의 파일 시스템을 확장 합니다. 디스크에 파일 시스템 볼륨으로 확장 되지 않은 경우에 사용할 수 있습니다.                                    |
 |   noerr    | 스크립팅 전용입니다. 오류가 발생 하면 오류가 발생 하지 않은 경우에 따라 명령을 처리 하도록 DiskPart 계속 합니다. 이 매개 변수를 크기는 오류 코드를 수행 합니다. |
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
   
 -   기본 디스크의 사용 가능한 공간이 볼륨 또는 포커스가 있는 파티션을 동일한 디스크에 있어야 합니다. 볼륨 또는 포커스가 있는 파티션을 즉시 따라야 \(다음 섹터 오프셋에서 시작 해야, 즉\)합니다.  
   
@@ -54,7 +54,7 @@ extend filesystem [noerr]
   
 -   파티션을 확장할 수는 연결 된 볼륨이 있어야 합니다.  
   
-## <a name="examples"></a><a name=BKMK_examples></a>예와  
+## <a name="examples"></a>예  
 디스크 3, 500mb 하 여 볼륨 또는 포커스가 있는 파티션을 확장 하려면 다음을 입력 합니다.  
   
 ```  
