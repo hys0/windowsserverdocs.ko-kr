@@ -1,6 +1,6 @@
 ---
-title: Sc 쿼리
-description: '* * * *에 대 한 참조 항목'
+title: Sc.exe 쿼리
+description: Sc.exe 유틸리티를 사용 하 여 서비스, 드라이버, 서비스 유형 또는 드라이버 유형에 대 한 정보를 얻는 방법에 대해 알아봅니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,30 +9,26 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6a6b4555790a8f9bb1149531251e724189177975
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 86aabbbc42c965b72f317a3bfaa99acc99c46f3b
+ms.sourcegitcommit: 95b60384b0b070263465eaffb27b8e3bb052a4de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82722179"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82850044"
 ---
-# <a name="sc-query"></a>Sc 쿼리
-
-
+# <a name="scexe-query"></a>Sc.exe 쿼리
 
 키를 가져오고 지정 된 서비스, 드라이버, 형식의 서비스 또는 드라이버의 종류에 대 한 정보를 표시 합니다.
-
-
 
 ## <a name="syntax"></a>구문
 
 ```
-sc [<ServerName>] query [<ServiceName>] [type= {driver | service | all}] [type= {own | share | interact | kernel | filesys | rec | adapt}] [state= {active | inactive | all}] [bufsize= <BufferSize>] [ri= <ResumeIndex>] [group= <GroupName>]
+sc.exe [<ServerName>] query [<ServiceName>] [type= {driver | service | all}] [type= {own | share | interact | kernel | filesys | rec | adapt}] [state= {active | inactive | all}] [bufsize= <BufferSize>] [ri= <ResumeIndex>] [group= <GroupName>]
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-|       매개 변수        |                                                                                                                          설명                                                                                                                          |
+|       매개 변수        |                                                                                                                          Description                                                                                                                          |
 |------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |     \<ServerName>      |                       서비스 위치는 원격 서버의 이름을 지정 합니다. 이름은 UNC (범용 명명 규칙) 형식 (예: \\ \\myserver)을 사용 해야 합니다. SC.exe를 로컬로 실행 하려면이 매개 변수를 생략 합니다.                        |
 |     \<ServiceName>     |                                      반환 된 서비스 이름을 지정는 **getkeyname** 작업 합니다. 이 **쿼리** 매개 변수는 다른와 함께에서 사용 하지 **쿼리** 매개 변수 (이외의 *ServerName*).                                      |
@@ -55,43 +51,43 @@ sc [<ServerName>] query [<ServiceName>] [type= {driver | service | all}] [type= 
   ```  
   나머지를 표시 하려면 **쿼리** 정보를 다시 실행 **쿼리**, 설정 **bufsize =** 바이트 및 설정의 수로 **ri =** 지정 된 인덱스입니다. 예를 들어 나머지 출력은 명령 프롬프트에서 다음을 입력 하 여 표시할 수 있습니다.  
   ```
-  sc query bufsize= 1822 ri= 79
+  sc.exe query bufsize= 1822 ri= 79
   ```
 
 ## <a name="examples"></a>예
 
 만 활성화 된 서비스에 대 한 정보를 표시 하려면 다음 명령 중 하나를 입력 합니다.
 ```
-sc query
-sc query type= service
+sc.exe query
+sc.exe query type= service
 ```
 활성화 된 서비스에 대 한 정보를 표시 하 고 2, 000 바이트의 버퍼 크기를 지정 하려면 다음을 입력 합니다.
 ```
-sc query type= all bufsize= 2000
+sc.exe query type= all bufsize= 2000
 ```
 WUAUSERV 서비스에 대 한 정보를 표시 하려면 다음을 입력 합니다.
 ```
-sc query wuauserv
+sc.exe query wuauserv
 ```
 모든 서비스 (활성 및 비활성)에 대 한 정보를 표시 하려면 다음을 입력 합니다.
 ```
-sc query state= all
+sc.exe query state= all
 ```
 모든 서비스 (활성 및 비활성), 56 줄에서 시작에 대 한 정보를 표시 하려면 다음을 입력 합니다.
 ```
-sc query state= all ri= 56
+sc.exe query state= all ri= 56
 ```
 대화형 서비스에 대 한 정보를 표시 하려면 다음을 입력 합니다.
 ```
-sc query type= service type= interact
+sc.exe query type= service type= interact
 ```
 만 드라이버에 대 한 정보를 표시 하려면 다음을 입력 합니다.
 ```
-sc query type= driver
+sc.exe query type= driver
 ```
 드라이버 인터페이스 사양 NDIS (Network) 그룹의 드라이버에 대 한 정보를 표시 하려면 다음을 입력 합니다.
 ```
-sc query type= driver group= ndis
+sc.exe query type= driver group= ndis
 ```
 
 ## <a name="additional-references"></a>추가 참조

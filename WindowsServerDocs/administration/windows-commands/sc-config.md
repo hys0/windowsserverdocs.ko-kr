@@ -1,6 +1,6 @@
 ---
-title: Sc config
-description: '* * * *에 대 한 참조 항목'
+title: Sc.exe 구성
+description: Sc.exe 유틸리티를 사용 하 여 서비스 구성을 변경 하는 방법을 알아봅니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,30 +9,26 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 06/05/2018
-ms.openlocfilehash: 45a94b3eea78552b61535542d85793bbaffd3df2
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 8f1d6b284b9bfe5a520f89c03dd0dedc263a5faf
+ms.sourcegitcommit: 95b60384b0b070263465eaffb27b8e3bb052a4de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82722220"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82850094"
 ---
-# <a name="sc-config"></a>Sc config
-
-
+# <a name="scexe-config"></a>Sc.exe 구성
 
 레지스트리 및 서비스 제어 관리자 데이터베이스에 서비스의 항목의 값을 수정 합니다.
-
-
 
 ## <a name="syntax"></a>구문
 
 ```
-sc [<ServerName>] config [<ServiceName>] [type= {own | share | kernel | filesys | rec | adapt | interact type= {own | share}}] [start= {boot | system | auto | demand | disabled | delayed-auto}] [error= {normal | severe | critical | ignore}] [binpath= <BinaryPathName>] [group= <LoadOrderGroup>] [tag= {yes | no}] [depend= <dependencies>] [obj= {<AccountName> | <ObjectName>}] [displayname= <DisplayName>] [password= <Password>]
+sc.exe [<ServerName>] config [<ServiceName>] [type= {own | share | kernel | filesys | rec | adapt | interact type= {own | share}}] [start= {boot | system | auto | demand | disabled | delayed-auto}] [error= {normal | severe | critical | ignore}] [binpath= <BinaryPathName>] [group= <LoadOrderGroup>] [tag= {yes | no}] [depend= <dependencies>] [obj= {<AccountName> | <ObjectName>}] [displayname= <DisplayName>] [password= <Password>]
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------|-----------|
 |\<ServerName>|서비스 위치는 원격 서버의 이름을 지정 합니다. 이름은 UNC (범용 명명 규칙) 형식 (예: \\ \\myserver)을 사용 해야 합니다. SC.exe를 로컬로 실행 하려면이 매개 변수를 생략 합니다.|
 |\<ServiceName>|반환 된 서비스 이름을 지정는 **getkeyname** 작업 합니다.|
@@ -57,7 +53,7 @@ sc [<ServerName>] config [<ServiceName>] [type= {own | share | kernel | filesys 
 
 NEWSERVICE 서비스에 대 한 이진 경로 지정 하려면 다음을 입력 합니다.
 ```
-sc config NewService binpath= ntsd -d c:\windows\system32\NewServ.exe
+sc.exe config NewService binpath= ntsd -d c:\windows\system32\NewServ.exe
 ```
 
 ## <a name="additional-references"></a>추가 참조

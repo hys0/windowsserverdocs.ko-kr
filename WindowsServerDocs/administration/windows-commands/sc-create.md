@@ -1,6 +1,6 @@
 ---
-title: Sc 만들기
-description: '* * * *에 대 한 참조 항목'
+title: Sc.exe 만들기
+description: Sc.exe 유틸리티를 사용 하 여 Windows Service Manager에 새 서비스를 등록 하는 방법을 알아봅니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,30 +9,26 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0406e82afbe1f70dc27236a29c3c20489f46f44e
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 9e1a581273def291502bf01e3fc9acf0c296707b
+ms.sourcegitcommit: 95b60384b0b070263465eaffb27b8e3bb052a4de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82722205"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82850104"
 ---
-# <a name="sc-create"></a>Sc 만들기
-
-
+# <a name="scexe-create"></a>Sc.exe 만들기
 
 서비스 제어 관리자 데이터베이스 및 레지스트리에서 하위 키와 서비스에 대 한 항목을 만듭니다.
-
-
 
 ## <a name="syntax"></a>구문
 
 ```
-sc [<ServerName>] create [<ServiceName>] [type= {own | share | kernel | filesys | rec | interact type= {own | share}}] [start= {boot | system | auto | demand | disabled | delayed-auto }] [error= {normal | severe | critical | ignore}] [binpath= <BinaryPathName>] [group= <LoadOrderGroup>] [tag= {yes | no}] [depend= <dependencies>] [obj= {<AccountName> | <ObjectName>}] [displayname= <DisplayName>] [password= <Password>]
+sc.exe [<ServerName>] create [<ServiceName>] [type= {own | share | kernel | filesys | rec | interact type= {own | share}}] [start= {boot | system | auto | demand | disabled | delayed-auto }] [error= {normal | severe | critical | ignore}] [binpath= <BinaryPathName>] [group= <LoadOrderGroup>] [tag= {yes | no}] [depend= <dependencies>] [obj= {<AccountName> | <ObjectName>}] [displayname= <DisplayName>] [password= <Password>]
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------|-----------|
 |\<ServerName>|서비스 위치는 원격 서버의 이름을 지정 합니다. 이름은 UNC (범용 명명 규칙) 형식 (예: \\ \\myserver)을 사용 해야 합니다. SC.exe를 로컬로 실행 하려면이 매개 변수를 생략 합니다.|
 |\<ServiceName>|반환 된 서비스 이름을 지정는 **getkeyname** 작업 합니다.|
@@ -55,10 +51,10 @@ sc [<ServerName>] create [<ServiceName>] [type= {own | share | kernel | filesys 
 
 ## <a name="examples"></a>예
 
-다음 예제에서는 사용 하는 방법을 보여는 **sc 만들** 명령:
+다음 예에서는 **sc.exe 만들기** 명령을 사용 하는 방법을 보여 줍니다.
 ```
-sc \\myserver create NewService binpath= c:\windows\system32\NewServ.exe
-sc create NewService binpath= c:\windows\system32\NewServ.exe type= share start= auto depend= +TDI NetBIOS
+sc.exe \\myserver create NewService binpath= c:\windows\system32\NewServ.exe
+sc.exe create NewService binpath= c:\windows\system32\NewServ.exe type= share start= auto depend= +TDI NetBIOS
 ```
 
 ## <a name="additional-references"></a>추가 참조

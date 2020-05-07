@@ -3,16 +3,16 @@ title: AD FS 2019 위험 평가 모델을 사용하여 플러그 인 빌드
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 04/16/2019
+ms.date: 05/05/2020
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 6433513f525572254e4aaef65e2bfc992a7c5280
-ms.sourcegitcommit: 41dc7f487d282895a242e788049285363dd19eeb
+ms.openlocfilehash: c9795ea1b945d5da773b8d257434f216d842799d
+ms.sourcegitcommit: f0f447193a0bd14d9a623aaead80329b95bf1f47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82169178"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82842842"
 ---
 # <a name="build-plug-ins-with-ad-fs-2019-risk-assessment-model"></a>AD FS 2019 위험 평가 모델을 사용하여 플러그 인 빌드
 
@@ -213,8 +213,8 @@ public abstract class ThreatDetectionModule
 |[OnAuthenticationPipelineUnload](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onauthenticationpipelineunload?view=adfs-2019) |Void|플러그 인이 파이프라인에서 언로드될 때 AD FS에 의해 호출 됩니다.| 
 |[OnConfigurationUpdate](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onconfigurationupdate?view=adfs-2019)| Void|구성 업데이트 시 AD FS에 의해 호출 됩니다. |
 |**속성** |**형식** |**정의**|
-|[이름의](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.vendorname?view=adfs-2019)|String |플러그 인을 소유 하는 공급 업체의 이름을 가져옵니다.|
-|[ModuleIdentifier](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.moduleidentifier?view=adfs-2019)|String |플러그 인의 식별자를 가져옵니다.|
+|[이름의](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.vendorname?view=adfs-2019)|문자열 |플러그 인을 소유 하는 공급 업체의 이름을 가져옵니다.|
+|[ModuleIdentifier](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.moduleidentifier?view=adfs-2019)|문자열 |플러그 인의 식별자를 가져옵니다.|
 
 이 샘플 플러그인에서는 [OnAuthenticationPipelineLoad](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onauthenticationpipelineload?view=adfs-2019) 및 [onconfigurationupdate](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onconfigurationupdate?view=adfs-2019) 메서드를 사용 하 여 AD FS DB에서 미리 정의 된 ip를 읽습니다. [OnAuthenticationPipelineLoad](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onauthenticationpipelineload?view=adfs-2019) 는 `Import-AdfsThreatDetectionModuleConfiguration` cmdlet을 사용 하 여 .Csv를 가져올 때 [onconfigurationupdate](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onconfigurationupdate?view=adfs-2019) 를 호출 하는 동안 AD FS를 사용 하 여 플러그 인을 등록할 때 호출 됩니다. 
 
@@ -313,6 +313,7 @@ IList<Claim> additionalClams
 
 **사용할 수 있는 다른 샘플 플러그 인은 무엇 인가요?**</br>
 **A:** 다음 샘플 플러그 인을 사용할 수 있습니다.
-|속성|설명| 
+
+|이름|Description| 
 |-----|-----|
 |[위험한 사용자 플러그 인](https://github.com/microsoft/adfs-sample-block-user-on-adfs-marked-risky-by-AzureAD-IdentityProtection)|Azure AD ID 보호에서 결정 한 사용자 위험 수준에 따라 인증을 차단 하거나 MFA를 적용 하는 샘플 플러그 인입니다.| 
