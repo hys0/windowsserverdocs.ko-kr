@@ -8,12 +8,12 @@ ms.date: 08/17/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: bad6ad9a95618239825366187c8083c1fe77ae94
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: cdd35ccc7800616f7803937738c942e68bf04c00
+ms.sourcegitcommit: 67116322915066b85decb4261d47cedec2cfe12f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80860086"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82903435"
 ---
 # <a name="ad-fs-single-sign-on-settings"></a>Single Sign-on 설정 AD FS
 
@@ -155,14 +155,14 @@ c:[Type == "https://schemas.microsoft.com/2014/03/psso"]
     <th></th>
     <th>아니요</th>
     <th>아니요, KMSI</th>
-    <th>예</th>
+    <th>YES</th>
     <th></th>
     <th>아니요</th>
     <th>아니요, KMSI</th>
-    <th>예</th>
+    <th>YES</th>
   </tr>
  <tr align="center">
-    <td>SSO =&gt;set Refresh Token =&gt;</td>
+    <td>SSO =&gt;새로 고침 토큰 설정 =&gt;</td>
     <td>8 시간</td>
     <td>N/A</td>
     <td>N/A</td>
@@ -173,7 +173,7 @@ c:[Type == "https://schemas.microsoft.com/2014/03/psso"]
   </tr>
 
  <tr align="center">
-    <td>PSSO =&gt;set Refresh Token =&gt;</td>
+    <td>PSS\=&gt;Set Refresh Token =&gt;</td>
     <td>N/A</td>
     <td>24 시간</td>
     <td>7 일</td>
@@ -201,6 +201,10 @@ c:[Type == "https://schemas.microsoft.com/2014/03/psso"]
 때
  - [x] 관리자가 KMSI 기능 [및]을 사용 하도록 설정 했습니다.
  - [x] 사용자가 양식 로그인 페이지에서 KMSI 확인란을 클릭 합니다.
+ 
+  
+새 새로 고침 토큰의 유효성이 이전 토큰 보다 길면 ADFS가 새로운 새로 고침 토큰을 발급 합니다. 토큰의 최대 수명은 84 일 이지만 AD FS는 14 일 슬라이딩 윈도우에서 토큰을 유효 하 게 유지 합니다. 새로 고침 토큰이 정기 SSO 시간인 8 시간 동안 유효한 경우 새 새로 고침 토큰이 발급 되지 않습니다. 
+ 
  
 **잘 알고 있어야 합니다.** <br>
 **Lastpasswordchangetimestamp** 특성이 동기화 되지 않은 페더레이션된 사용자에 게는 **최대 기간 값이 12 시간인**발급 된 세션 쿠키 및 새로 고침 토큰이 발급 됩니다.<br>
