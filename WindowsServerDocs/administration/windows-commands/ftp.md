@@ -9,25 +9,25 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8fa956124e0c227d048d4c6eec844154187d5861
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 4878377225f9c58e40256a3d151d0d8f3761afca
+ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82725043"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82993335"
 ---
 # <a name="ftp"></a>ftp
 
 > 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Ftp (파일 전송 프로토콜) 서버 서비스를 실행 하는 컴퓨터에서 파일을 전송 합니다. **ftp** 는 ASCII 텍스트 파일을 처리 하 여 대화형으로 또는 일괄 처리 모드에서 사용할 수 있습니다. 
+Ftp (파일 전송 프로토콜) 서버 서비스를 실행 하는 컴퓨터에서 파일을 전송 합니다. **ftp** 는 ASCII 텍스트 파일을 처리 하 여 대화형으로 또는 일괄 처리 모드에서 사용할 수 있습니다.
 ## <a name="syntax"></a>구문
 ```
 ftp [-v] [-d] [-i] [-n] [-g] [-s:<FileName>] [-a] [-A] [-x:<SendBuffer>] [-r:<RecvBuffer>] [-b:<AsyncBuffers>][-w:<WindowsSize>]  [-?] [<Host>]
 ```
 #### <a name="parameters"></a>매개 변수
 
-|     매개 변수     |                                                                                                                                                      설명                                                                                                                                                      |
+|     매개 변수     |                                                                                                                                                      Description                                                                                                                                                      |
 |-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |        -v         |                                                                                                                                    원격 서버 ' 응답 수를 표시를 하지 않습니다.                                                                                                                                     |
 |        -d         |                                                                                                               디버깅을 사용 하도록 설정 하 여 FTP 클라이언트와 FTP 서버 간에 전달 되는 모든 명령을 표시 합니다.                                                                                                                |
@@ -48,7 +48,7 @@ ftp [-v] [-d] [-i] [-n] [-g] [-s:<FileName>] [-a] [-A] [-x:<SendBuffer>] [-r:<Re
 - Windows Server 2003의 **ftp** 명령에 대 한 자세한 내용은 [ftp](https://technet.microsoft.com/library/cc756013(v=ws.10).aspx)를 참조 하십시오.
 - **ftp** 명령줄 매개 변수는 대/소문자를 구분 합니다.
 - 이 명령은 네트워크 연결에서 네트워크 어댑터의 속성에 구성 요소로 **인터넷 프로토콜 (tcp/ip)** 프로토콜을 설치 하는 경우에만 사용할 수 있습니다.
-- **ftp** 는 대화형으로 사용할 수 있습니다. 시작 된 후 **ftp** 사용할 수 있는 하위 환경을 만들고 **ftp** 명령입니다. 명령 프롬프트를 입력 하 여 돌아갈 수는 **종료** 명령입니다. 때는 **ftp** 으로 표시 됩니다 하위 환경이 실행 되는 **ftp >** 명령 프롬프트입니다. 자세한 내용은 참조는 **ftp** 명령입니다.
+- **ftp** 는 대화형으로 사용할 수 있습니다. 시작 된 후 **ftp** 사용할 수 있는 하위 환경을 만들고 **ftp** 명령입니다. 명령 프롬프트를 입력 하 여 돌아갈 수는 **종료** 명령입니다. 때는 **ftp** 으로 표시 됩니다 하위 환경이 실행 되는 **ftp >** 명령 프롬프트입니다. 자세한 내용은 **ftp** 명령을 참조 하십시오.
 - **ftp** 는 ipv6 프로토콜이 설치 될 때 i p v 6의 사용을 지원 합니다. 자세한 내용은 [추가 참조](ftp.md#BKMK_additionalRef)를 참조 하세요.
   ## <a name="examples"></a>예
   Ftp.example.microsoft.com 라는 ftp 서버에 로그온 하려면 다음을 입력 합니다.

@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 187dc3dad0ac9fa7767836aa27b1bce67701ac94
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 6413fe21f4b7da464347e49910fbf6cd649b319d
+ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82724784"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82993308"
 ---
 # <a name="inuse"></a>inuse
 
@@ -22,4 +22,4 @@ ms.locfileid: "82724784"
 
 사용 중인, 않으며 Windows의 이후 릴리스에서 지원 되지 않을 수도 있습니다.
 
-이 도구는 Windows Server 2003에 포함 됩니다. 자세한 내용은 참조 [Inuse](https://technet.microsoft.com/library/dd996699(v=ws.10).aspx)합니다.
+이 도구는 Windows Server 2003에 포함 됩니다. 자세한 내용은 [여유 주소](https://technet.microsoft.com/library/dd996699(v=ws.10).aspx)를 참조 하세요.

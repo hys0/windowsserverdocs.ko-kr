@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: df6a933d54e4600b2ae220841d86c82b768074fd
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 24cf05f9a7d36e05b22abd77ff49a8b42607cf15
+ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720711"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82993398"
 ---
 # <a name="winnt"></a>winnt
 
@@ -22,4 +22,4 @@ ms.locfileid: "82720711"
 
 Winnt, 않으며 Windows의 이후 릴리스에서 지원 되지 않을 수도 있습니다.
 
-이 도구는 Windows Server 2003에 포함 됩니다. 자세한 내용은 참조 [Winnt](https://technet.microsoft.com/library/cc755763(v=ws.10).aspx)합니다.
+이 도구는 Windows Server 2003에 포함 됩니다. 자세한 내용은 [Winnt](https://technet.microsoft.com/library/cc755763(v=ws.10).aspx)를 참조 하세요.

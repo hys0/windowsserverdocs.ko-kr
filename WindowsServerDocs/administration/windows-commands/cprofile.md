@@ -9,15 +9,15 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1b1103286859f1ab7c790ed20ae14f034d4030bb
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 4f1262952cc8a3c33e6fce3cd5287bb6797bc611
+ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719261"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82993295"
 ---
 # <a name="cprofile"></a>cprofile
 
-Cprofile는 더 이상 사용 되지 않으며, 이후 버전의 Windows에서는 지원 되지 않습니다.
+Cprofile는 더 이상 사용 되지 않으며 이후 버전의 Windows에서 지원 되지 않을 수 있습니다.
 
-Cprofile: 프로필을 정리 합니다. 터미널 서비스가 원격 데스크톱 서비스로 업데이트 되었습니다. 자세한 내용은 [원격 데스크톱 서비스 시작을](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/welcome-to-rds)참조 하세요.
+터미널 서비스가 원격 데스크톱 서비스로 업데이트 되었습니다. 자세한 내용은 [원격 데스크톱 서비스 시작](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/welcome-to-rds)을 참조 하세요.
