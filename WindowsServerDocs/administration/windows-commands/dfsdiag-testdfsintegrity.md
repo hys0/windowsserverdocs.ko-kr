@@ -1,6 +1,6 @@
 ---
-title: dfsdiag Testdfs 무결성
-description: 분산 파일 시스템 (DFS) 네임 스페이스의 무결성을 검사 하는 **Dfsdiag Testdfs 무결성**에 대 한 참조 항목입니다.
+title: dfsdiag testdfs 무결성
+description: 분산 파일 시스템 (DFS) 네임 스페이스의 무결성을 검사 하는 dfsdiag testdfs 무결성 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 21aa6ef3d7d4a7b4a9c64fc51aec77f49f1e0a0c
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: b54c7f597926abc91bb9201dfec1a04f44e04ecb
+ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719573"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82992955"
 ---
-# <a name="dfsdiag-testdfsintegrity"></a>dfsdiag Testdfs 무결성
+# <a name="dfsdiag-testdfsintegrity"></a>dfsdiag testdfs 무결성
 
 > 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -31,27 +31,27 @@ ms.locfileid: "82719573"
 ## <a name="syntax"></a>구문
 
 ```
-dfsdiag /TestDFSIntegrity /DFSRoot: <DFS root path> [/Recurse] [/Full]
+dfsdiag /testdfsintegrity /DFSroot: <DFS root path> [/recurse] [/full]
 ```
 
-#### <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | 설명 |
-|-------|--------|
-| /DFSRoot:`<DFS root path>`| DFS 네임 스페이스를 진단 합니다. |
-| /Recurse | 네임 스페이스 interlinks 테스트 등을 수행 합니다. |
-| /Full | 모든 폴더 대상에 대 한 공유 및 NTFS Acl 및 클라이언트 쪽 구성의 일관성을 확인 합니다. 또한 online 속성이 설정 되었는지 확인 합니다. |
+| 매개 변수 | Description |
+| --------- | ----------- |
+| /DFSroot:`<DFS root path>` | DFS 네임 스페이스를 진단 합니다. |
+| /recurse | Interlinks 네임 스페이스를 포함 하 여 테스트를 수행 합니다. |
+| /full | 모든 폴더 대상의 클라이언트 쪽 구성과 함께 공유 및 NTFS Acl의 일관성을 확인 합니다. 또한 online 속성이 설정 되었는지 확인 합니다. |
 
 ## <a name="examples"></a>예
 
+Interlinks를 포함 하 여 *com\MyNamespace*에서 DFS (분산 파일 시스템) 네임 스페이스의 무결성 및 일관성을 확인 하려면 다음을 입력 합니다.
+
 ```
-dfsdiag /TestDFSIntegrity /DFSRoot:\\Contoso.com\MyNamespace /Recurse /Full
+dfsdiag /testdfsintegrity /DFSRoot:\contoso.com\MyNamespace /recurse /full
 ```
 
 ## <a name="additional-references"></a>추가 참조
 
--   - [명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)
 
--   [dfsdiag](dfsdiag.md)
-
-
+- [dfsdiag 명령](dfsdiag.md)

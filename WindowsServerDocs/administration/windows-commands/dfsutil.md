@@ -1,6 +1,6 @@
 ---
 title: dfsutil
-description: DFS 네임 스페이스, 서버 및 클라이언트를 관리 하는 dfsutil에 대 한 참조 항목입니다. dfsutil 명령은 대부분의 명령에 대 한 설명으로 제공 된 업데이트 된 DFS 네임 스페이스 용어를 사용 하 여 원래 분산 파일 시스템 용어를 사용 합니다.
+description: DFS 네임 스페이스, 서버 및 클라이언트를 관리 하는 dfsutil 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 999eef79227d4531ba724c9cac40127297ea38a0
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: d6905d90ee42958e47dfed4869520000a4fd3ddf
+ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719521"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82992616"
 ---
 # <a name="dfsutil"></a>dfsutil
 
@@ -22,14 +22,11 @@ ms.locfileid: "82719521"
 
 Dfsutil 명령은 DFS 네임 스페이스, 서버 및 클라이언트를 관리 합니다.
 
->[!NOTE]
->**DFS 네임 스페이스 PowerShell 모듈** 은 몇 가지 dfsutil 매개 변수에 대 한 대체를 제공 하지만 다른 일부는 계속 해 서 dfsutil를 사용 해야 합니다. 업데이트 된 PowerShell에 대 한 자세한 내용은 [DFSN](https://docs.microsoft.com/powershell/module/dfsn/?view=win10-ps)를 참조 하세요.
+## <a name="functionality-available-in-powershell"></a>PowerShell에서 사용할 수 있는 기능
 
-## <a name="parameters-available-in-powershell"></a>PowerShell에서 사용할 수 있는 매개 변수
+[DFSN](https://docs.microsoft.com/powershell/module/dfsn/?view=win10-ps) PowerShell 모듈은 다음 dfsutil 매개 변수에 해당 하는 기능을 제공 합니다.
 
-PowerShell에서 다음 매개 변수를 사용할 수 있습니다.
-
-| 매개 변수 | 설명 |
+| 매개 변수 | Description |
 | --------- | ----------- |
 | root | 네임 스페이스 루트를 표시, 생성, 제거, 가져오기 및 내보냅니다. |
 | link | 폴더 (링크)를 표시, 생성, 제거 또는 이동 합니다. |
@@ -38,11 +35,11 @@ PowerShell에서 다음 매개 변수를 사용할 수 있습니다.
 | 서버 | 네임 스페이스 구성을 표시 하거나 수정 합니다. |
 | 도메인 | 도메인의 도메인 기반 네임 스페이스를 모두 표시 합니다. |
 
-## <a name="parameters-only-available-in-dfsutil"></a>Dfsutil 에서만 사용할 수 있는 매개 변수
+## <a name="functionality-available-only-in-dfsutil"></a>Dfsutil 에서만 사용할 수 있는 기능
 
-Dfsutil 에서만 다음 매개 변수를 사용할 수 있습니다.
+다음 기능은 dfsutil 매개 변수로만 사용할 수 있습니다.
 
-| 매개 변수 | 설명 |
+| 매개 변수 | Description |
 | --------- | ----------- |
 | 클라이언트 | 클라이언트 정보 또는 레지스트리 키를 표시 하거나 수정 합니다. |
 | diag | 진단을 수행 하거나 dfsdirs/dfspath를 확인 합니다. |
