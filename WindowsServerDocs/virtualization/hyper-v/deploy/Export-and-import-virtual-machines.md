@@ -1,5 +1,5 @@
 ---
-title: 가상 컴퓨터 내보내기 및 가져오기
+title: 가상 머신 내보내기 및 가져오기
 description: Hyper-v 관리자 또는 Windows PowerShell을 사용 하 여 가상 컴퓨터를 내보내고 가져오는 방법을 보여 줍니다.
 ms.prod: windows-server
 author: kbdazure
@@ -9,16 +9,16 @@ ms.technology: compute-hyper-v
 ms.date: 12/13/2016
 ms.topic: article
 ms.assetid: 7fd996f5-1ea9-4b16-9776-85fb39a3aa34
-ms.openlocfilehash: 1e9cd8710a53c1e5d9d97e464c32dbf7f17d29a7
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: f1b321c04ad0b7541f21b444499b13fd2b4e4a6d
+ms.sourcegitcommit: 32f810c5429804c384d788c680afac427976e351
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80860896"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83203553"
 ---
->적용 대상: Windows 10, Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
-
 # <a name="export-and-import-virtual-machines"></a>가상 컴퓨터 내보내기 및 가져오기
+
+> 적용 대상: Windows 10, Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
 
 이 문서에서는 가상 머신을 이동 하거나 복사 하는 빠른 방법인 가상 머신을 내보내고 가져오는 방법을 보여 줍니다. 이 문서에서는 내보내기 또는 가져오기를 수행할 때 선택할 수 있는 몇 가지 방법에 대해서도 설명 합니다.
 
@@ -38,7 +38,7 @@ ms.locfileid: "80860896"
 
 ### <a name="using-powershell"></a>PowerShell 사용
 
-관리자 권한으로 세션을 열고 \<vm 이름\> 및 \<경로\>를 바꾼 후 다음과 같은 명령을 실행 합니다.
+관리자 권한으로 세션을 열고 \< vm 이름 및 경로를 바꾼 후 다음과 같은 명령을 실행 \> 합니다 \< \> .
 
 ```powershell
 Export-VM -Name \<vm name\> -Path \<path\>
@@ -46,7 +46,7 @@ Export-VM -Name \<vm name\> -Path \<path\>
 
 자세한 내용은 [Export-VM](https://docs.microsoft.com/powershell/module/hyper-v/export-vm)을 참조 하세요.
 
-## <a name="import-a-virtual-machine"></a>가상 컴퓨터 가져오기 
+## <a name="import-a-virtual-machine"></a>가상 컴퓨터 가져오기
 
 가상 컴퓨터 가져오기는 Hyper-V 호스트를 사용하여 가상 컴퓨터를 등록합니다. 호스트 또는 새 호스트로 다시 가져올 수 있습니다. 동일한 호스트로 가져오는 경우 Hyper-v는 사용 가능한 파일에서 가상 컴퓨터를 다시 만들기 때문에 먼저 가상 컴퓨터를 내보낼 필요가 없습니다. 가상 컴퓨터를 가져오면 Hyper-v 호스트에서 해당 가상 컴퓨터를 사용할 수 있도록 등록 합니다.
 
@@ -66,18 +66,18 @@ Export-VM -Name \<vm name\> -Path \<path\>
 
 5. 가져오기 유형을 선택 하 고 **다음**을 클릭 합니다. 자세한 내용은 아래의 [가져오기 형식](#import-types)을 참조 하세요.
 
-6. **마침**을 클릭합니다.
+6. **Finish**를 클릭합니다.
 
-### <a name="import-using-powershell"></a>PowerShell을 사용 하 여 가져오기
+### <a name="import-using-powershell"></a>PowerShell을 사용하여 가져오기
 
-원하는 가져오기 유형에 대 한 예제를 따라 **가져오기 VM** cmdlet을 사용 합니다. 형식에 대 한 설명은 아래의 [가져오기 형식](#import-types)을 참조 하세요. 
+원하는 가져오기 유형에 대 한 예제를 따라 **가져오기 VM** cmdlet을 사용 합니다. 형식에 대 한 설명은 아래의 [가져오기 형식](#import-types)을 참조 하세요.
 
 #### <a name="register-in-place"></a>현재 위치의 등록
 
 이 가져오기 유형은 가져오기 시 저장 된 파일을 사용 하 고 가상 머신의 ID를 유지 합니다. 다음 명령은 가져오기 파일의 예를 보여 줍니다. 사용자 고유의 값으로 비슷한 명령을 실행 합니다.
 
 ```powershell
-Import-VM -Path 'C:\<vm export path>\2B91FEB3-F1E0-4FFF-B8BE-29CED892A95A.vmcx' 
+Import-VM -Path 'C:\<vm export path>\2B91FEB3-F1E0-4FFF-B8BE-29CED892A95A.vmcx'
 ```
 
 #### <a name="restore"></a>복원

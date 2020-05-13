@@ -7,12 +7,12 @@ ms.date: 05/05/2020
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: c9795ea1b945d5da773b8d257434f216d842799d
-ms.sourcegitcommit: f0f447193a0bd14d9a623aaead80329b95bf1f47
+ms.openlocfilehash: 358f42fa0216b44bdf9fecb2053cf9dc04e07fa0
+ms.sourcegitcommit: 32f810c5429804c384d788c680afac427976e351
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82842842"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83203574"
 ---
 # <a name="build-plug-ins-with-ad-fs-2019-risk-assessment-model"></a>AD FS 2019 위험 평가 모델을 사용하여 플러그 인 빌드
 
@@ -35,9 +35,12 @@ ms.locfileid: "82842842"
 위험 평가 플러그 인을 작성 하 고 AD FS 프로세스를 통해 실행 하는 방법을 더 잘 이해 하려면 위험한 것으로 식별 된 특정 **엑스트라넷** ip에서 들어오는 요청을 차단 하는 샘플 플러그 인을 만들어 AD FS에 플러그 인을 등록 하 고 마지막으로 기능을 테스트 합니다. 
 
 >[!NOTE]
->이 연습은 샘플 플러그 인을 만드는 방법을 보여 주기 위한 것입니다. 아니요를 사용 하는 경우 솔루션이 준비 된 솔루션을 만드는 것입니다.  
+>또는 인증을 차단 하거나 MFA (multi-factor authentication)를 적용 하도록 Azure AD ID 보호 의해 결정 된 사용자 위험 수준을 활용 하는 샘플 플러그인 인 [위험한 사용자 플러그](https://github.com/microsoft/adfs-sample-block-user-on-adfs-marked-risky-by-AzureAD-IdentityProtection)인을 빌드할 수 있습니다. 위험한 사용자 플러그 인을 빌드하는 단계는 [여기](https://github.com/microsoft/adfs-sample-block-user-on-adfs-marked-risky-by-AzureAD-IdentityProtection) 에서 제공 됩니다.
 
 ## <a name="building-a-sample-plug-in"></a>샘플 플러그 인 빌드
+
+>[!NOTE]
+>이 연습은 샘플 플러그 인을 만드는 방법을 보여 주기 위한 것입니다. 아니요를 사용 하는 경우 솔루션이 준비 된 솔루션을 만드는 것입니다. 
 
 ### <a name="pre-requisites"></a>필수 구성 요소
 이 샘플 플러그 인을 빌드하는 데 필요한 필수 구성 요소 목록은 다음과 같습니다.
@@ -61,12 +64,12 @@ ms.locfileid: "82842842"
 
    >{! 참고] AD FS 팜이 있는 경우 또는 모든 AD FS 서버에 파일을 만들 수 있습니다. 모든 파일을 사용 하 여 위험한 Ip를 AD FS으로 가져올 수 있습니다. 위의 [AD FS에 플러그 인 Dll 등록](#register-the-plug-in-dll-with-ad-fs) 섹션에서 가져오기 프로세스를 자세히 설명 합니다. 
 
-3. Visual Studio를 `ThreatDetectionModule.sln` 사용 하 여 프로젝트 열기
+3. `ThreatDetectionModule.sln`Visual Studio를 사용 하 여 프로젝트 열기
 
-4. 아래와 `Microsoft.IdentityServer.dll` 같이 솔루션 탐색기에서를 제거 합니다.</br>
+4. `Microsoft.IdentityServer.dll`아래와 같이 솔루션 탐색기에서를 제거 합니다.</br>
    ![model](media/ad-fs-risk-assessment-model/risk2.png)
 
-5. 아래와 같이 AD FS `Microsoft.IdentityServer.dll` 의에 대 한 참조를 추가 합니다.
+5. `Microsoft.IdentityServer.dll`아래와 같이 AD FS의에 대 한 참조를 추가 합니다.
 
    a.    **솔루션 탐색기** 에서 **참조** 를 마우스 오른쪽 단추로 클릭 하 고 **참조 추가** ...를 선택 합니다.</br> 
    ![모델링](media/ad-fs-risk-assessment-model/risk3.png)
@@ -74,7 +77,7 @@ ms.locfileid: "82842842"
    b.    **참조 관리자** 창에서 **찾아보기**를 선택 합니다. **참조할 파일 선택** ... 대화 상자에서 `Microsoft.IdentityServer.dll` AD FS 설치 폴더 (my의 경우 **c:\fs**)에서 선택 하 고 **추가**를 클릭 합니다.
    
    >[!NOTE]
-   >이 경우 AD FS 서버 자체에서 플러그 인을 작성 합니다. 개발 환경이 다른 서버에 있는 경우 AD FS 서버의 AD FS 설치 폴더 `Microsoft.IdentityServer.dll` 에서 개발 상자로를 복사 합니다.</br> 
+   >이 경우 AD FS 서버 자체에서 플러그 인을 작성 합니다. 개발 환경이 다른 서버에 있는 경우 `Microsoft.IdentityServer.dll` AD FS 서버의 AD FS 설치 폴더에서 개발 상자로를 복사 합니다.</br> 
    
    ![model](media/ad-fs-risk-assessment-model/risk4.png)
    
@@ -108,20 +111,20 @@ ms.locfileid: "82842842"
 
 ### <a name="register-the-plug-in-dll-with-ad-fs"></a>AD FS를 사용 하 여 플러그 인 dll 등록
 
-AD FS 서버에서 `Register-AdfsThreatDetectionModule` PowerShell 명령을 사용 하 여 AD FS에 dll을 등록 해야 하지만, 등록 하기 전에 공개 키 토큰을 가져와야 합니다. 이 공개 키 토큰은 키를 만들고 해당 키를 사용 하 여 dll에 서명 했을 때 만들어졌습니다. Dll에 대 한 공개 키 토큰을 알아보려면 다음과 같이 Sn.exe를 사용할 수 있습니다 **.**
+AD FS 서버에서 PowerShell 명령을 사용 하 여 AD FS에 dll을 등록 해야 `Register-AdfsThreatDetectionModule` 하지만, 등록 하기 전에 공개 키 토큰을 가져와야 합니다. 이 공개 키 토큰은 키를 만들고 해당 키를 사용 하 여 dll에 서명 했을 때 만들어졌습니다. Dll에 대 한 공개 키 토큰을 알아보려면 다음과 같이 Sn.exe를 사용할 수 있습니다 **.**
 
 1. **\Bin\debug** 폴더의 dll 파일을 다른 위치로 복사 합니다 (이 경우 **c:\extensions**로 복사).
 
-2. Visual Studio에 대 한 **개발자 명령 프롬프트** 를 시작 하 고 sn.exe를 포함 하는 디렉터리로 이동 합니다 .이 경우 디렉터리는 **C:\Program files (x86) \Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.7.2 Tools**) ![모델입니다 **.**](media/ad-fs-risk-assessment-model/risk12.png)
+2. Visual Studio에 대 한 **개발자 명령 프롬프트** 를 시작 하 고 sn.exe를 포함 하는 디렉터리로 이동 합니다 **.** 이 경우 디렉터리는 **C:\Program files (X86) \Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.7.2 Tools**) ![ 모델입니다.](media/ad-fs-risk-assessment-model/risk12.png)
 
-3. **-T** 매개 변수 및 파일의 위치 (이 경우 `SN -T "C:\extensions\ThreatDetectionModule.dll"`) ![모델을 사용 하 여 **SN** 명령을 실행 합니다.](media/ad-fs-risk-assessment-model/risk13.png)</br>
+3. **-T** 매개 변수 및 파일의 위치 (이 경우 **SN** `SN -T "C:\extensions\ThreatDetectionModule.dll"` ) 모델을 사용 하 여 SN 명령을 실행 합니다. ![](media/ad-fs-risk-assessment-model/risk13.png)</br>
    이 명령은 공개 키 토큰을 제공 합니다. **공개 키 토큰은 714697626ef96b35입니다**.
 
 4. AD FS 서버의 **전역 어셈블리 캐시** 에 dll을 추가 하는 것이 가장 좋습니다. 가장 좋은 방법은 프로젝트에 대 한 적절 한 설치 관리자를 만들고 설치 관리자를 사용 하 여 GAC에 파일을 추가 하는 것입니다. 다른 솔루션은 개발 컴퓨터에서 **gacutil.exe** ( [여기](https://docs.microsoft.com/dotnet/framework/tools/gacutil-exe-gac-tool)에 제공 되는 **gacutil.exe** 에 대 한 자세한 정보)를 사용 하는 것입니다.  AD FS와 동일한 서버에 visual studio가 있으므로 다음과 같이 Gacutil.exe를 사용 합니다 **.**
 
    a.    Visual Studio 개발자 명령 프롬프트에서 Gacutil.exe를 포함 하는 디렉터리로 이동 합니다 (이 경우 디렉터리가 **C:\Program files (x86) \Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.7.2 Tools**) **.**
 
-   b.    **Gacutil.exe** 명령 (내 사례 `Gacutil /IF C:\extensions\ThreatDetectionModule.dll`) ![모델 실행](media/ad-fs-risk-assessment-model/risk14.png)
+   b.    **Gacutil.exe** 명령 (내 사례 `Gacutil /IF C:\extensions\ThreatDetectionModule.dll` ) ![ 모델 실행](media/ad-fs-risk-assessment-model/risk14.png)
  
    >[!NOTE]
    >AD FS 팜이 있는 경우 팜에 있는 각 AD FS 서버에서 위의를 실행 해야 합니다. 
@@ -183,7 +186,7 @@ AD FS 서버에서 `Register-AdfsThreatDetectionModule` PowerShell 명령을 사
 
 ## <a name="plug-in-code-walkthrough"></a>플러그 인 코드 연습
 
-Visual Studio를 `ThreatDetectionModule.sln` 사용 하 여 프로젝트를 열고 화면 오른쪽의 **솔루션 탐색기** 에서 주 파일 **UserRiskAnalyzer.cs** 을 엽니다.</br>
+`ThreatDetectionModule.sln`Visual Studio를 사용 하 여 프로젝트를 열고 화면 오른쪽의 **솔루션 탐색기** 에서 주 파일 **UserRiskAnalyzer.cs** 을 엽니다.</br>
 ![model](media/ad-fs-risk-assessment-model/risk17.png)
  
 이 파일에는 추상 클래스 [ThreatDetectionModule](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule?view=adfs-2019) 및 interface [IRequestReceivedThreatDetectionModule](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.irequestreceivedthreatdetectionmodule?view=adfs-2019) 를 구현 하는 주 클래스 UserRiskAnalyzer이 포함 되어 있습니다 .이 클래스는 요청 컨텍스트에서 ip를 읽고, 가져온 ip를 AD FS DB에서 로드 된 ip와 비교 하 고, IP가 일치 하는 경우 요청을 차단 합니다. 이러한 형식에 대해 자세히 살펴보겠습니다.
@@ -213,10 +216,10 @@ public abstract class ThreatDetectionModule
 |[OnAuthenticationPipelineUnload](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onauthenticationpipelineunload?view=adfs-2019) |Void|플러그 인이 파이프라인에서 언로드될 때 AD FS에 의해 호출 됩니다.| 
 |[OnConfigurationUpdate](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onconfigurationupdate?view=adfs-2019)| Void|구성 업데이트 시 AD FS에 의해 호출 됩니다. |
 |**속성** |**형식** |**정의**|
-|[이름의](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.vendorname?view=adfs-2019)|문자열 |플러그 인을 소유 하는 공급 업체의 이름을 가져옵니다.|
-|[ModuleIdentifier](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.moduleidentifier?view=adfs-2019)|문자열 |플러그 인의 식별자를 가져옵니다.|
+|[이름의](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.vendorname?view=adfs-2019)|String |플러그 인을 소유 하는 공급 업체의 이름을 가져옵니다.|
+|[ModuleIdentifier](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.moduleidentifier?view=adfs-2019)|String |플러그 인의 식별자를 가져옵니다.|
 
-이 샘플 플러그인에서는 [OnAuthenticationPipelineLoad](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onauthenticationpipelineload?view=adfs-2019) 및 [onconfigurationupdate](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onconfigurationupdate?view=adfs-2019) 메서드를 사용 하 여 AD FS DB에서 미리 정의 된 ip를 읽습니다. [OnAuthenticationPipelineLoad](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onauthenticationpipelineload?view=adfs-2019) 는 `Import-AdfsThreatDetectionModuleConfiguration` cmdlet을 사용 하 여 .Csv를 가져올 때 [onconfigurationupdate](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onconfigurationupdate?view=adfs-2019) 를 호출 하는 동안 AD FS를 사용 하 여 플러그 인을 등록할 때 호출 됩니다. 
+이 샘플 플러그인에서는 [OnAuthenticationPipelineLoad](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onauthenticationpipelineload?view=adfs-2019) 및 [onconfigurationupdate](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onconfigurationupdate?view=adfs-2019) 메서드를 사용 하 여 AD FS DB에서 미리 정의 된 ip를 읽습니다. [OnAuthenticationPipelineLoad](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onauthenticationpipelineload?view=adfs-2019) 는 cmdlet을 사용 하 여 .csv를 가져올 때 [onconfigurationupdate](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onconfigurationupdate?view=adfs-2019) 를 호출 하는 동안 AD FS를 사용 하 여 플러그 인을 등록할 때 호출 됩니다. `Import-AdfsThreatDetectionModuleConfiguration` 
 
 #### <a name="irequestreceivedthreatdetectionmodule-interface"></a>IRequestReceivedThreatDetectionModule 인터페이스
 
@@ -258,7 +261,7 @@ IList<Claim> additionalClams
 );
 }
 ```
-인터페이스에는 [requestContext requestcontext](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.requestcontext?view=adfs-2019), [SecurityContext SecurityContext](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.securitycontext?view=adfs-2019), [ProtocolContext ProtocolContext](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.protocolcontext?view=adfs-2019)및 [IList<Claim> additionalclams](https://docs.microsoft.com/dotnet/api/system.collections.generic.ilist-1?view=netframework-4.7.2) 입력 매개 변수에 전달 된 정보를 사용 하 여 사전 인증 위험 평가 논리를 작성할 수 있는 [EvaluatePreAuthentication](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.ipreauthenticationthreatdetectionmodule.evaluatepreauthentication?view=adfs-2019) 메서드가 포함 되어 있습니다. 
+인터페이스에는 [requestContext requestcontext](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.requestcontext?view=adfs-2019), [SecurityContext SecurityContext](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.securitycontext?view=adfs-2019), [ProtocolContext ProtocolContext](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.protocolcontext?view=adfs-2019)및 [IList <Claim> additionalclams](https://docs.microsoft.com/dotnet/api/system.collections.generic.ilist-1?view=netframework-4.7.2) 입력 매개 변수에 전달 된 정보를 사용 하 여 사전 인증 위험 평가 논리를 작성할 수 있는 [EvaluatePreAuthentication](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.ipreauthenticationthreatdetectionmodule.evaluatepreauthentication?view=adfs-2019) 메서드가 포함 되어 있습니다. 
 
 >[!NOTE]
 >각 컨텍스트 형식과 함께 전달 되는 속성 목록은 [RequestContext](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.requestcontext?view=adfs-2019), [SecurityContext](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.securitycontext?view=adfs-2019)및 [ProtocolContext](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.protocolcontext?view=adfs-2019) 클래스 정의를 참조 하세요. 
@@ -285,7 +288,7 @@ IList<Claim> additionalClams
 }
 ```
 
-인터페이스에는 [requestContext requestcontext](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.requestcontext?view=adfs-2019), [SecurityContext SecurityContext](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.securitycontext?view=adfs-2019), [ProtocolContext ProtocolContext](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.protocolcontext?view=adfs-2019)및 [IList<Claim> additionalclams](https://docs.microsoft.com/dotnet/api/system.collections.generic.ilist-1?view=netframework-4.7.2) 입력 매개 변수에 전달 된 정보를 사용 하 여 인증 후 위험 평가 논리를 작성할 수 있는 [EvaluatePostAuthentication](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.ipostauthenticationthreatdetectionmodule.evaluatepostauthentication?view=adfs-2019) 메서드가 포함 되어 있습니다. 
+인터페이스에는 [requestContext requestcontext](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.requestcontext?view=adfs-2019), [SecurityContext SecurityContext](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.securitycontext?view=adfs-2019), [ProtocolContext ProtocolContext](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.protocolcontext?view=adfs-2019)및 [IList <Claim> additionalclams](https://docs.microsoft.com/dotnet/api/system.collections.generic.ilist-1?view=netframework-4.7.2) 입력 매개 변수에 전달 된 정보를 사용 하 여 인증 후 위험 평가 논리를 작성할 수 있는 [EvaluatePostAuthentication](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.ipostauthenticationthreatdetectionmodule.evaluatepostauthentication?view=adfs-2019) 메서드가 포함 되어 있습니다. 
 
 >[!NOTE]
 > 각 컨텍스트 형식과 함께 전달 되는 속성의 전체 목록은 [RequestContext](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.requestcontext?view=adfs-2019), [SecurityContext](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.securitycontext?view=adfs-2019)및 [ProtocolContext](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.protocolcontext?view=adfs-2019) 클래스 정의를 참조 하세요. 
@@ -314,6 +317,6 @@ IList<Claim> additionalClams
 **사용할 수 있는 다른 샘플 플러그 인은 무엇 인가요?**</br>
 **A:** 다음 샘플 플러그 인을 사용할 수 있습니다.
 
-|이름|Description| 
+|속성|설명| 
 |-----|-----|
 |[위험한 사용자 플러그 인](https://github.com/microsoft/adfs-sample-block-user-on-adfs-marked-risky-by-AzureAD-IdentityProtection)|Azure AD ID 보호에서 결정 한 사용자 위험 수준에 따라 인증을 차단 하거나 MFA를 적용 하는 샘플 플러그 인입니다.| 

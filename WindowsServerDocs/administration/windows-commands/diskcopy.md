@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 05/07/2018
-ms.openlocfilehash: b8fd482d7c2e5933f269320df2bff75f65195bc2
-ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
+ms.openlocfilehash: 99d1007a7c6f154b621e43d674d06f25b2911f00
+ms.sourcegitcommit: aed942d11f1a361fc1d17553a4cf190a864d1268
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82992531"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83235178"
 ---
 # <a name="diskcopy"></a>diskcopy
 
@@ -28,7 +28,7 @@ diskcopy [<drive1>: [<drive2>:]] [/v]
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | `<drive1>` | 원본 디스크를 포함 하는 드라이브를 지정 합니다. |
 | /v | 정보가 올바르게 복사 되었는지 확인 합니다. 이 옵션을 선택 하면 복사 프로세스가 느려집니다. |
@@ -74,7 +74,7 @@ diskcopy [<drive1>: [<drive2>:]] [/v]
 
 - **diskcopy** 종료 코드:
 
-    | 종료 코드 | Description |
+    | 종료 코드 | 설명 |
     | --------- | ----------- |
     | 0 | 복사 작업이 성공 했습니다. |
     | 1 | 심각 하지 않은 읽기/쓰기 오류가 발생 했습니다. |
@@ -93,7 +93,9 @@ diskcopy b: a:
 
 플로피 디스크 드라이브 A를 사용 하 여 플로피 디스크 하나를 다른 디스크에 복사 하려면 먼저 C 드라이브로 전환한 후 다음을 입력 합니다.
 
+```
 diskcopy a: a:
+```
 
 ## <a name="additional-references"></a>추가 참조
 

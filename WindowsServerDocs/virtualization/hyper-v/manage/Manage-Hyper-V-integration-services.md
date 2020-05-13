@@ -9,16 +9,16 @@ ms.date: 12/20/2016
 ms.topic: article
 ms.prod: windows-server
 ms.assetid: 9cafd6cb-dbbe-4b91-b26c-dee1c18fd8c2
-ms.openlocfilehash: 2c5e2d67b391cd53a6995957da5dab108a34e1a9
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 4237da8ee393953a8eb2a2b577c2df201f96a7be
+ms.sourcegitcommit: aed942d11f1a361fc1d17553a4cf190a864d1268
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80820716"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83235056"
 ---
->적용 대상: Windows 10, Windows Server 2012, Windows Server 2012R2, Windows Server 2016, Windows Server 2019
-
 # <a name="manage-hyper-v-integration-services"></a>Hyper-v Integration Services 관리
+
+> 적용 대상: Windows 10, Windows Server 2012, Windows Server 2012R2, Windows Server 2016, Windows Server 2019
 
 Hyper-v Integration Services Hyper-v 호스트와 양방향 통신을 활용 하 여 가상 컴퓨터 성능을 향상 시키고 편리한 기능을 제공 합니다. 이러한 서비스 중 상당수는 게스트 파일 복사와 같은 편리 하며, 다른 서비스는 가상 머신 기능 (예: 가상 장치 드라이버)에 중요 합니다. 이 서비스 및 드라이버 집합을 "통합 구성 요소" 라고도 합니다. 특정 가상 컴퓨터에 대해 개별 사용자 서비스의 작동 여부를 제어할 수 있습니다. 드라이버 구성 요소는 수동으로 서비스 하기 위한 것이 아닙니다.
 
@@ -30,9 +30,9 @@ Hyper-v Integration Services Hyper-v 호스트와 양방향 통신을 활용 하
 ## <a name="turn-an-integration-service-on-or-off-using-hyper-v-manager"></a>Hyper-v 관리자를 사용 하 여 통합 서비스 설정 또는 해제
 
 1. 가운데 창에서 가상 머신을 마우스 오른쪽 단추로 클릭 하 고 **설정**을 클릭 합니다.
-  
+
 2. **설정** 창의 왼쪽 창에 있는 **관리**에서 **Integration Services**를 클릭 합니다.
-  
+
 Integration Services 창에는 Hyper-v 호스트에서 사용할 수 있는 모든 통합 서비스와 호스트에서 가상 컴퓨터를 사용할 수 있도록 설정 되어 있는지 여부가 표시 됩니다.
 
 ### <a name="turn-an-integration-service-on-or-off-using-powershell"></a>PowerShell을 사용 하 여 통합 서비스 설정 또는 해제
@@ -42,12 +42,12 @@ PowerShell에서이 작업을 수행 하려면 [enable-vmintegrationservice](htt
 다음 예에서는 "demovm" 이라는 가상 컴퓨터에 대해 게스트 파일 복사 통합 서비스를 설정 및 해제 하는 방법을 보여 줍니다.
 
 1. 실행 중인 integration services 목록 가져오기:
-  
+
     ``` PowerShell
     Get-VMIntegrationService -VMName "DemoVM"
     ```
 
-1. 출력은 다음과 유사합니다.
+1. 출력은 다음과 같습니다.
 
     ``` PowerShell
    VMName      Name                    Enabled PrimaryStatusDescription SecondaryStatusDescription
@@ -69,15 +69,15 @@ PowerShell에서이 작업을 수행 하려면 [enable-vmintegrationservice](htt
 1. 게스트 서비스 인터페이스가 사용 되는지 확인 합니다.
 
    ```
-   Get-VMIntegrationService -VMName "DemoVM" 
-   ``` 
+   Get-VMIntegrationService -VMName "DemoVM"
+   ```
 
 1. 게스트 서비스 인터페이스를 해제 합니다.
 
     ```
     Disable-VMIntegrationService -VMName "DemoVM" -Name "Guest Service Interface"
     ```
-   
+
 ## <a name="checking-the-guests-integration-services-version"></a>게스트의 integration services 버전을 확인 하는 중
 일부 기능은 제대로 작동 하지 않을 수 있으며, 게스트의 통합 서비스가 최신이 아닌 경우에는 전혀 작동 하지 않을 수 있습니다. Windows에 대 한 버전 정보를 가져오려면 게스트 운영 체제에 로그온 하 고 명령 프롬프트를 연 후 다음 명령을 실행 합니다.
 
@@ -97,11 +97,11 @@ Integration service가 완벽 하 게 작동 하려면 호스트에서 사용 �
 
 ### <a name="use-windows-services-to-start-or-stop-an-integration-service-within-a-windows-guest"></a>Windows 서비스를 사용 하 여 Windows 게스트 내에서 통합 서비스 시작 또는 중지
 
-1. 관리자 권한으로 ```services.msc```를 실행 하거나 제어판에서 서비스 아이콘을 두 번 클릭 하 여 서비스 관리자를 엽니다.
+1. ```services.msc```관리자 권한으로을 실행 하거나 제어판에서 서비스 아이콘을 두 번 클릭 하 여 서비스 관리자를 엽니다.
 
-    ![Windows 서비스 창을 보여 주는 스크린샷](media/HVServices.png) 
+    ![Windows 서비스 창을 보여 주는 스크린샷](media/HVServices.png)
 
-1. "Hyper-v"로 시작 하는 서비스를 찾습니다. 
+1. "Hyper-v"로 시작 하는 서비스를 찾습니다.
 
 1. 시작 하거나 중지할 서비스를 마우스 오른쪽 단추로 클릭 합니다. 원하는 작업을 클릭 합니다.
 
@@ -113,7 +113,7 @@ Integration service가 완벽 하 게 작동 하려면 호스트에서 사용 �
     Get-Service -Name vm*
     ```
 
-1.  출력은 다음과 유사 하 게 표시 됩니다.
+1.  다음과 유사한 출력이 표시됩니다.
 
     ```PowerShell
     Status   Name               DisplayName
@@ -134,7 +134,7 @@ Integration service가 완벽 하 게 작동 하려면 호스트에서 사용 �
     Stop-Service -Name vmicvmsession
     ```
 
-## <a name="start-and-stop-an-integration-service-from-a-linux-guest"></a>Linux 게스트에서 통합 서비스 시작 및 중지 
+## <a name="start-and-stop-an-integration-service-from-a-linux-guest"></a>Linux 게스트에서 통합 서비스 시작 및 중지
 
 Linux 통합 서비스는 일반적으로 Linux 커널을 통해 제공됩니다. Linux integration services 드라이버의 이름은 **hv_utils**입니다.
 
@@ -142,10 +142,10 @@ Linux 통합 서비스는 일반적으로 Linux 커널을 통해 제공됩니다
 
    ``` BASH
    lsmod | grep hv_utils
-   ``` 
-  
-2. 출력은 다음과 유사 하 게 표시 됩니다.  
-  
+   ```
+
+2. 다음과 유사한 출력이 표시됩니다.
+
     ``` BASH
     Module                  Size   Used by
     hv_utils               20480   0
@@ -153,13 +153,13 @@ Linux 통합 서비스는 일반적으로 Linux 커널을 통해 제공됩니다
     ```
 
 3. 필요한 디먼 실행 중인지 확인 하려면 다음 명령을 사용 합니다.
-  
+
     ``` BASH
     ps -ef | grep hv
     ```
-  
-4. 출력은 다음과 유사 하 게 표시 됩니다. 
-  
+
+4. 다음과 유사한 출력이 표시됩니다.
+
     ```BASH
     root       236     2  0 Jul11 ?        00:00:00 [hv_vmbus_con]
     root       237     2  0 Jul11 ?        00:00:00 [hv_vmbus_ctl]
@@ -168,7 +168,7 @@ Linux 통합 서비스는 일반적으로 Linux 커널을 통해 제공됩니다
     root      1286     1  0 Jul11 ?        00:01:11 /usr/lib/linux-tools/3.13.0-32-generic/hv_kvp_daemon
     root      9333     1  0 Oct12 ?        00:00:00 /usr/lib/linux-tools/3.13.0-32-generic/hv_kvp_daemon
     root      9365     1  0 Oct12 ?        00:00:00 /usr/lib/linux-tools/3.13.0-32-generic/hv_vss_daemon
-    scooley  43774 43755  0 21:20 pts/0    00:00:00 grep --color=auto hv          
+    scooley  43774 43755  0 21:20 pts/0    00:00:00 grep --color=auto hv
     ```
 
 5. 사용할 수 있는 디먼을 보려면 다음을 실행합니다.
@@ -176,28 +176,28 @@ Linux 통합 서비스는 일반적으로 Linux 커널을 통해 제공됩니다
     ``` BASH
     compgen -c hv_
     ```
-  
-6. 출력은 다음과 유사 하 게 표시 됩니다.
-  
+
+6. 다음과 유사한 출력이 표시됩니다.
+
     ``` BASH
     hv_vss_daemon
     hv_get_dhcp_info
     hv_get_dns_info
     hv_set_ifconfig
     hv_kvp_daemon
-    hv_fcopy_daemon     
+    hv_fcopy_daemon
     ```
-  
-   나열 될 수 있는 Integration service 디먼는 다음과 같습니다. 이러한 항목이 없는 경우 시스템에서 지원 되지 않거나 설치 되지 않았을 수 있습니다. 자세한 내용은 [Windows에서 hyper-v에 대해 지원 되는 Linux 및 FreeBSD virtual machines](https://technet.microsoft.com/library/dn531030.aspx)를 참조 하세요.  
+
+   나열 될 수 있는 Integration service 디먼는 다음과 같습니다. 이러한 항목이 없는 경우 시스템에서 지원 되지 않거나 설치 되지 않았을 수 있습니다. 자세한 내용은 [Windows에서 hyper-v에 대해 지원 되는 Linux 및 FreeBSD virtual machines](https://technet.microsoft.com/library/dn531030.aspx)를 참조 하세요.
    - **hv_vss_daemon**:이 디먼은 라이브 Linux 가상 머신 백업을 만드는 데 필요 합니다.
    - **hv_kvp_daemon**:이 데몬에는 내장 및 외부 키 값 쌍을 설정 하 고 쿼리할 수 있습니다.
-   - **hv_fcopy_daemon**:이 디먼은 호스트와 게스트 간에 서비스를 복사 하는 파일을 구현 합니다.  
+   - **hv_fcopy_daemon**:이 디먼은 호스트와 게스트 간에 서비스를 복사 하는 파일을 구현 합니다.
 
 ### <a name="examples"></a>예
 
-이 예에서는 `hv_kvp_daemon`라는 KVP 디먼을 중지 하 고 시작 하는 방법을 보여 줍니다.
+이 예에서는 라는 KVP 디먼을 중지 하 고 시작 하는 방법을 보여 줍니다 `hv_kvp_daemon` .
 
-1. 프로세스 ID \(PID\)를 사용 하 여 디먼의 프로세스를 중지 합니다. PID를 찾으려면 출력의 두 번째 열을 확인 하거나 `pidof`를 사용 합니다. Hyper-v 디먼을 루트로 실행 하므로 루트 권한이 필요 합니다.
+1. 프로세스 ID PID를 \( 사용 \) 하 여 디먼 프로세스를 중지 합니다. PID를 찾으려면 출력의 두 번째 열을 확인 하거나를 사용 `pidof` 합니다. Hyper-v 디먼을 루트로 실행 하므로 루트 권한이 필요 합니다.
 
     ``` BASH
     sudo kill -15 `pidof hv_kvp_daemon`
@@ -213,9 +213,9 @@ Linux 통합 서비스는 일반적으로 Linux 커널을 통해 제공됩니다
 
     ``` BASH
     sudo hv_kvp_daemon
-    ``` 
+    ```
 
-1. `hv_kvp_daemon` 프로세스가 새로운 프로세스 ID로 나열 되는지 확인 하려면 다음을 실행 합니다.
+1. `hv_kvp_daemon`프로세스에 새 프로세스 ID가 나열 되는지 확인 하려면 다음을 실행 합니다.
 
     ```
     ps -ef | hv
@@ -244,12 +244,12 @@ Linux 통합 서비스는 일반적으로 Linux 커널을 통해 제공됩니다
 | Windows Server 2012 | Windows Update | 데이터 교환 통합 서비스가 필요합니다.* |
 | Windows Server 2008 R2(SP 1) | Windows Update | 데이터 교환 통합 서비스가 필요합니다.* |
 | Windows Server 2008(SP 2) | Windows Update | 확장 지원은 Windows Server 2016 에서만 지원 됩니다 ([자세히 읽기](https://support.microsoft.com/lifecycle?p1=12925)). |
-| Windows Home Server 2011 | Windows Update | 는 Windows Server 2016에서 지원 되지 않습니다 ([자세한 내용은 참조](https://support.microsoft.com/lifecycle?p1=15820)). |
+| Windows Home Server 2011 | Windows Update | 는 Windows Server 2016에서 지원 되지 않습니다 ([자세한 내용은 참조](https://support.microsoft.com/lifecycle?p1=15820)). |
 | Windows Small Business Server 2011 | Windows Update | 일반 지원에는 포함되지 않습니다([자세히 알아보기](https://support.microsoft.com/lifecycle?p1=15817)). |
 | - | | |
 | Linux 게스트 | 패키지 관리자 | Linux 용 Integration services는 배포판에 기본 제공 되지만 선택적 업데이트를 사용할 수 있습니다. ******** |
 
-\* 데이터 교환 통합 서비스를 사용 하도록 설정할 수 없는 경우 [다운로드 센터](https://support.microsoft.com/kb/3071740) 에서 캐비닛 (cab) 파일로 이러한 게스트에 대 한 통합 서비스를 사용할 수 있습니다. Cab 적용에 대 한 지침은이 [블로그 게시물](https://techcommunity.microsoft.com/t5/virtualization/integration-components-available-for-virtual-machines-not/ba-p/382247)에서 확인할 수 있습니다.
+\*데이터 교환 통합 서비스를 사용 하도록 설정할 수 없는 경우 [다운로드 센터](https://support.microsoft.com/kb/3071740) 에서 캐비닛 (cab) 파일로 이러한 게스트에 대 한 통합 서비스를 사용할 수 있습니다. Cab 적용에 대 한 지침은이 [블로그 게시물](https://techcommunity.microsoft.com/t5/virtualization/integration-components-available-for-virtual-machines-not/ba-p/382247)에서 확인할 수 있습니다.
 
 **Windows 8.1/Windows Server 2012R2 호스트에서 실행 되는 가상 컴퓨터의 경우:**
 
@@ -268,7 +268,7 @@ Linux 통합 서비스는 일반적으로 Linux 커널을 통해 제공됩니다
 | Windows Server 2012 | 통합 서비스 디스크 | 아래 [지침](#install-or-update-integration-services)을 참조 하세요. |
 | Windows Server 2008 R2 | 통합 서비스 디스크 | 아래 [지침](#install-or-update-integration-services)을 참조 하세요. |
 | Windows Server 2008(SP 2) | 통합 서비스 디스크 | 아래 [지침](#install-or-update-integration-services)을 참조 하세요. |
-| Windows Home Server 2011 | 통합 서비스 디스크 | 아래 [지침](#install-or-update-integration-services)을 참조 하세요. |
+| Windows Home Server 2011 | 통합 서비스 디스크 | 아래 [지침](#install-or-update-integration-services)을 참조 하세요. |
 | Windows Small Business Server 2011 | 통합 서비스 디스크 | 아래 [지침](#install-or-update-integration-services)을 참조 하세요. |
 | Windows Server 2003 R2(SP 2) | 통합 서비스 디스크 | 아래 [지침](#install-or-update-integration-services)을 참조 하세요. |
 | Windows Server 2003(SP 2) | 통합 서비스 디스크 | 아래 [지침](#install-or-update-integration-services)을 참조 하세요. |
@@ -290,7 +290,7 @@ Linux 통합 서비스는 일반적으로 Linux 커널을 통해 제공됩니다
 | Windows Server 2012 | 통합 서비스 디스크 | 아래 [지침](#install-or-update-integration-services)을 참조 하세요. |
 | Windows Server 2008 R2 | 통합 서비스 디스크 | 아래 [지침](#install-or-update-integration-services)을 참조 하세요.|
 | Windows Server 2008(SP 2) | 통합 서비스 디스크 | 아래 [지침](#install-or-update-integration-services)을 참조 하세요. |
-| Windows Home Server 2011 | 통합 서비스 디스크 | 아래 [지침](#install-or-update-integration-services)을 참조 하세요. |
+| Windows Home Server 2011 | 통합 서비스 디스크 | 아래 [지침](#install-or-update-integration-services)을 참조 하세요. |
 | Windows Small Business Server 2011 | 통합 서비스 디스크 | 아래 [지침](#install-or-update-integration-services)을 참조 하세요. |
 | Windows Server 2003 R2(SP 2) | 통합 서비스 디스크 | 아래 [지침](#install-or-update-integration-services)을 참조 하세요. |
 | Windows Server 2003(SP 2) | 통합 서비스 디스크 | 아래 [지침](#install-or-update-integration-services)을 참조 하세요. |
@@ -302,16 +302,16 @@ Linux 게스트에 대 한 자세한 내용은 [Windows에서 hyper-v에 대해 
 ## <a name="install-or-update-integration-services"></a>Integration services 설치 또는 업데이트
 
 > [!NOTE]
-> Windows Server 2016 및 Windows 10 이전 호스트의 경우 게스트 운영 체제에서 통합 서비스를 **수동으로 설치 하거나 업데이트** 해야 합니다. 
+> Windows Server 2016 및 Windows 10 이전 호스트의 경우 게스트 운영 체제에서 통합 서비스를 **수동으로 설치 하거나 업데이트** 해야 합니다.
 
 Integration services를 수동으로 설치 또는 업데이트 하는 절차는 다음과 같습니다.
 
-1.  Hyper-V 관리자를 엽니다. 서버 관리자 도구 메뉴에서 **Hyper-v 관리자**를 클릭 합니다.  
-  
-2.  가상 컴퓨터에 연결합니다. 가상 머신을 마우스 오른쪽 단추로 클릭 하 고 **연결**을 클릭 합니다.  
-  
-3.  가상 컴퓨터 연결의 동작 메뉴에서 **통합 서비스 설치 디스크 삽입**을 클릭합니다. 이렇게 하면 DVD 드라이브에 설치 디스크가 로드됩니다. 게스트 운영 체제에 따라 수동으로 설치를 시작 해야 할 수도 있습니다.  
-  
+1.  Hyper-V 관리자를 엽니다. 서버 관리자 도구 메뉴에서 **Hyper-v 관리자**를 클릭 합니다.
+
+2.  가상 머신에 연결합니다. 가상 머신을 마우스 오른쪽 단추로 클릭 하 고 **연결**을 클릭 합니다.
+
+3.  가상 컴퓨터 연결의 동작 메뉴에서 **통합 서비스 설치 디스크 삽입**을 클릭합니다. 이렇게 하면 DVD 드라이브에 설치 디스크가 로드됩니다. 게스트 운영 체제에 따라 수동으로 설치를 시작 해야 할 수도 있습니다.
+
 4.  설치를 마치고 나면 모든 통합 서비스를 사용할 수 있습니다.
 
 > [!NOTE]

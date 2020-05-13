@@ -27,12 +27,12 @@ Windows Server 기술 콘텐츠를 보관 하는 별도의 두 위치가 있습�
 
 ## <a name="markdown-info"></a>Markdown 정보
 
-Docs.microsoft.com 항목에서 Markdown를 사용 하는 방법에 대 한 자세한 내용은 [Docs Markdown reference](https://review.docs.microsoft.com/help/contribute/markdown-reference?branch=master)를 참조 하세요. 이 콘텐츠의 공개적으로 액세스할 수 있는 버전은 다음과 같습니다. [Public Docs markdown reference](https://docs.microsoft.com/contribute/how-to-write-use-markdown).
+Docs.microsoft.com 항목에서 Markdown를 사용 하는 방법에 대 한 자세한 내용은 [Docs Markdown reference](https://review.docs.microsoft.com/help/contribute/markdown-reference?branch=master)를 참조 하세요. 이 콘텐츠의 공개적으로 액세스할 수 있는 버전은 다음과 같습니다. [Public Docs markdown reference](https://docs.microsoft.com/contribute/markdown-reference).
 
-## <a name="license"></a>라이선스
+## <a name="license"></a>License
 
 모든 라이선싱 정보는 [LICENSE](https://github.com/MicrosoftDocs/windowsserverdocs-pr/blob/master/LICENSE), [LICENSE-CODE](https://github.com/MicrosoftDocs/windowsserverdocs-pr/blob/master/LICENSE-CODE) 및 [ThirdPartyNotices](https://github.com/MicrosoftDocs/windowsserverdocs-pr/blob/master/ThirdPartyNotices)를 참조하세요.
 
 ## <a name="code-of-conduct"></a>준수 사항
 
-이 프로젝트에서는 [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/)(Microsoft 오픈 소스 규정)를 채택했습니다. 자세한 내용은 [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/)(규정 FAQ)를 참조하세요. 또는 추가 질문이나 의견은 [opencode@microsoft.com](mailto:opencode@microsoft.com)으로 문의하세요.
+이 프로젝트에는 [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/)(Microsoft 오픈 소스 준수 사항)가 적용됩니다. 자세한 내용은 [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/)(준수 사항 FAQ)를 참조하거나 [opencode@microsoft.com](mailto:opencode@microsoft.com)에 추가 질문 또는 의견을 알려주세요.

@@ -7,16 +7,16 @@ ms.topic: article
 ms.prod: windows-server
 ms.service: windows-10-hyperv
 ms.assetid: cc7bb88e-ae75-4a54-9fb4-fc7c14964d67
-ms.openlocfilehash: fcf61c22a24abb6b16baf75b4846cc188dcecd49
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: ebb5f9a0ca9c50a5e5357e3dd2c755095da98d11
+ms.sourcegitcommit: 32f810c5429804c384d788c680afac427976e351
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80860796"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83203534"
 ---
->적용 대상: Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
-
 # <a name="virtual-machine-resource-controls"></a>가상 컴퓨터 리소스 컨트롤
+
+> 적용 대상: Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
 
 이 문서에서는 가상 컴퓨터에 대 한 Hyper-v 리소스 및 격리 컨트롤을 설명 합니다.  가상 컴퓨터 CPU 그룹 또는 "CPU 그룹"을 지칭 하는 이러한 기능은 Windows Server 2016에서 도입 되었습니다.  Hyper-v 관리자는 CPU 그룹을 사용 하 여 게스트 가상 컴퓨터에서 호스트의 CPU 리소스를 보다 효율적으로 관리 하 고 할당할 수 있습니다.  Hyper-v 관리자는 CPU 그룹을 사용 하 여 다음을 수행할 수 있습니다.
 
@@ -30,7 +30,7 @@ ms.locfileid: "80860796"
 
 CPU 그룹은 Hyper-v 호스트 계산 서비스 또는 HCS를 통해 관리 됩니다. HCS, genesis, HCS Api에 대 한 링크 등에 대 한 유용한 설명은 [HCS (호스트 계산 서비스)를 소개](https://blogs.technet.microsoft.com/virtualization/2017/01/27/introducing-the-host-compute-service-hcs/)하는 게시의 Microsoft 가상화 팀 블로그에서 확인할 수 있습니다.
 
->[!NOTE] 
+>[!NOTE]
 >HCS만 CPU 그룹을 만들고 관리 하는 데 사용할 수 있습니다. Hyper-v 관리자 애플릿, WMI 및 PowerShell 관리 인터페이스는 CPU 그룹을 지원 하지 않습니다.
 
 Microsoft에서는 [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?linkid=865968) 에서 HCS 인터페이스를 사용 하 여 CPU 그룹을 관리 하는 명령줄 유틸리티인 cpugroups를 제공 합니다.  이 유틸리티는 호스트의 CPU 토폴로지를 표시할 수도 있습니다.
@@ -51,7 +51,7 @@ CPU 그룹 캡은 G = *n* x *C*로 계산 됩니다. 여기서는 다음과 같�
     G = 4 * 50%
     G = 2 LP's worth of CPU time for the entire group
 
-이 예제에서 CPU 그룹 G에는 두 가지 LP의 CPU 시간이 할당 됩니다.  
+이 예제에서 CPU 그룹 G에는 두 가지 LP의 CPU 시간이 할당 됩니다.
 
 그룹에 바인딩된 가상 컴퓨터 또는 가상 프로세서의 수에 관계 없이 그룹에 적용 되는 것은 CPU 그룹에 할당 된 가상 컴퓨터의 상태 (예: 종료 또는 시작 됨)에 관계 없이 적용 됩니다. 따라서 동일한 CPU 그룹에 바인딩된 각 VM은 그룹의 총 CPU 할당에 대 한 분수를 수신 하며,이는 CPU 그룹에 바인딩된 Vm 수에 따라 변경 됩니다. 따라서 Vm이 CPU 그룹에서 바인딩되거나 바인딩되지 않은 Vm 인 경우 전체 CPU 그룹 캡은 다시 조정 해야 하며, 그에 따라 발생 하는 VM 당 cap를 유지 관리 하도록 설정 해야 합니다. VM 호스트 관리자 또는 가상화 관리 소프트웨어 계층은 원하는 VM 별 CPU 리소스 할당을 얻기 위해 필요에 따라 그룹을 관리 하는 일을 담당 합니다.
 
@@ -120,7 +120,7 @@ Hyper-v 호스트 관리자는 VM에 계산 리소스를 전용으로 사용할 
 
 CpuGroups 도구를 사용 하는 방법에 대 한 몇 가지 예를 살펴보겠습니다.
 
->[!NOTE] 
+>[!NOTE]
 >CpuGroups 도구에 대 한 명령줄 매개 변수는 공백으로만 공백을 사용 하 여 전달 됩니다. '/' 또는 '-' 문자는 원하는 명령줄 스위치를 진행 하지 않습니다.
 
 ### <a name="discovering-the-cpu-topology"></a>CPU 토폴로지 검색
@@ -128,7 +128,7 @@ CpuGroups 도구를 사용 하는 방법에 대 한 몇 가지 예를 살펴보�
 GetCpuTopology를 사용 하 여 CpuGroups를 실행 하면 아래와 같이 LP 인덱스, LP가 속한 NUMA 노드, 패키지 및 핵심 Id 및 루트 VP 인덱스를 비롯 하 여 현재 시스템에 대 한 정보가 반환 됩니다.
 
 다음 예에서는 CPU 소켓과 2 개, 총 32 LPs 및 다중 스레딩을 사용 하는 시스템을 보여 주며, 각 NUMA 노드에서 4 개의 루트 VPs 4 개의 Minroot를 사용 하도록 구성 합니다.
-Root VPs가 있는 LPs에 RootVpIndex > = 0;이 (가) 있습니다. RootVpIndex가-1 인 LPs는 루트 파티션에서 사용할 수 없지만 하이퍼바이저에서 계속 관리 되며 다른 구성 설정에서 허용 하는 대로 게스트 VPs을 실행 합니다.
+Root VPs가 있는 LPs에 RootVpIndex >= 0;이 (가) 있습니다. RootVpIndex가-1 인 LPs는 루트 파티션에서 사용할 수 없지만 하이퍼바이저에서 계속 관리 되며 다른 구성 설정에서 허용 하는 대로 게스트 VPs을 실행 합니다.
 
 ```console
 C:\vm\tools>CpuGroups.exe GetCpuTopology

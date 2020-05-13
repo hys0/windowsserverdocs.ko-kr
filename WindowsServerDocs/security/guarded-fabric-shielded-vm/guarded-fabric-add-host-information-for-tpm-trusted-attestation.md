@@ -8,23 +8,23 @@ author: rpsqrd
 ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 06/21/2019
-ms.openlocfilehash: f9a0ee9cb78a89b20140e40a2bd3ae42da56c84f
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: f1c25cc88c577ccb1bc0e8cc690114471e86b6ba
+ms.sourcegitcommit: 32f810c5429804c384d788c680afac427976e351
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80856936"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83203399"
 ---
->적용 대상: Windows Server 2019, Windows Server (반기 채널), Windows Server 2016
-
 # <a name="add-host-information-for-tpm-trusted-attestation"></a>TPM에서 신뢰할 수 있는 증명에 대 한 호스트 정보 추가
+
+> 적용 대상: Windows Server 2019, Windows Server (반기 채널), Windows Server 2016
 
 TPM 모드의 경우 패브릭 관리자는 각각 HGS 구성에 추가 해야 하는 세 가지 종류의 호스트 정보를 캡처합니다.
 
 - 각 Hyper-v 호스트에 대 한 TPM 식별자 (EKpub)
 - 코드 무결성 정책, Hyper-v 호스트에 대해 허용 되는 이진 파일 목록
 - 동일한 하드웨어 클래스에서 실행 되는 Hyper-v 호스트 집합을 나타내는 TPM 기준 (부팅 측정)
-    
+
 패브릭 관리자는 다음 절차에 설명 된 대로 정보를 캡처하여 HGS 구성에 추가 합니다.
 
 1. EKpub 정보를 포함 하는 XML 파일을 가져와 HGS 서버에 복사 합니다. 호스트 마다 하나의 XML 파일이 있습니다. 그런 다음, HGS 서버의 관리자 권한 Windows PowerShell 콘솔에서 아래 명령을 실행 합니다. 각 XML 파일에 대해이 명령을 반복 합니다.
@@ -46,7 +46,7 @@ TPM 모드의 경우 패브릭 관리자는 각각 HGS 구성에 추가 해야 �
     ```powershell
     Add-HgsAttestationCIPolicy -Path <Path> -Name '<PolicyName>'
        ```
-    
+
     > [!NOTE]
     > If you're using a signed code integrity policy, register an unsigned copy of the same policy with HGS.
     > The signature on code integrity policies is used to control updates to the policy, but is not measured into the host TPM and therefore cannot be attested to by HGS.
