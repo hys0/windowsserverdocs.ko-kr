@@ -8,16 +8,16 @@ ms.assetid: e6ba701d-7183-4c26-960e-44cc280bf3e6
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: e32033dafe48f5b5eac063af638c14267e82e62f
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 43ec26b2a1ae4616363494a5e911c0464eacdab7
+ms.sourcegitcommit: 2f072c0c02e3e0deae331ca64b375d63b89d0522
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80852316"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83404490"
 ---
 # <a name="step-8-run-the-windows-server-essentials-best-practices-analyzer"></a>8단계: Windows Server Essentials 모범 사례 분석기 실행
 
->적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials
 
 설정 및 데이터를 Windows Server Essentials로 마이그레이션한 후에는 대상 서버에서 Windows Server Essentials 모범 사례 분석기 (BPA)를 실행 해야 합니다. BPA는 Windows Server Essentials를 실행 중인 서버를 검사 하 고 문제를 설명 하 고 문제 해결을 위한 권장 사항을 제공 하는 보고서를 제공 합니다. 권장 사항은 Windows Server Essentials에 대 한 제품 지원 조직에서 개발 됩니다.  
   

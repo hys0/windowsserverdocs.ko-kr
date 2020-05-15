@@ -1,5 +1,5 @@
 ---
-title: '7단계: Windows Server Essentials 마이그레이션을 위한 마이그레이션 후 작업 수행'
+title: '7단계: Windows Server Essentials 마이그레이션에 대한 사후 마이그레이션 작업 수행'
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.date: 10/03/2016
 ms.prod: windows-server
@@ -8,22 +8,22 @@ ms.assetid: d382e3fd-d393-4bd0-883f-db50104a969f
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 579be2c36ca01a4b8ab2a34157e13e298e34c48c
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 3101a7bdc42ef754e5aafa87a8758172c42824bb
+ms.sourcegitcommit: 2f072c0c02e3e0deae331ca64b375d63b89d0522
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80852326"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83404504"
 ---
-# <a name="step-7-perform-post-migration-tasks-for-the-windows-server-essentials-migration"></a>7단계: Windows Server Essentials 마이그레이션을 위한 마이그레이션 후 작업 수행
+# <a name="step-7-perform-post-migration-tasks-for-the-windows-server-essentials-migration"></a>7단계: Windows Server Essentials 마이그레이션에 대한 사후 마이그레이션 작업 수행
 
->적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials
 
 다음 작업을 통해 원본 서버에 있던 일부 동일한 설정을 사용하여 대상 서버 설정을 완료할 수 있습니다. 마이그레이션 프로세스 중에 원본 서버에서 이러한 설정의 일부를 사용하지 않도록 설정했을 수 있으므로 대상 서버에 마이그레이션되지 않았습니다.  
   
-1.  [원본 서버에 대 한 DNS 항목 삭제](Step-7--Perform-post-migration-tasks-for-the-Windows-Server-Essentials-migration.md#BKMK_DeleteDNSEntries)  
+1.  [원본 서버의 DNS 항목 삭제](Step-7--Perform-post-migration-tasks-for-the-Windows-Server-Essentials-migration.md#BKMK_DeleteDNSEntries)  
   
-2.  [Lob (기간 업무) 및 기타 응용 프로그램 데이터 폴더 공유](Step-7--Perform-post-migration-tasks-for-the-Windows-Server-Essentials-migration.md#BKMK_ShareLineOfBusinessAndOtherApplications)  
+2.  [LOB(기간 업무) 및 기타 애플리케이션 데이터 폴더 공유](Step-7--Perform-post-migration-tasks-for-the-Windows-Server-Essentials-migration.md#BKMK_ShareLineOfBusinessAndOtherApplications)  
   
 ##  <a name="delete-dns-entries-for-the-source-server"></a><a name="BKMK_DeleteDNSEntries"></a>원본 서버에 대 한 DNS 항목 삭제  
  원본 서버 서비스를 해제하고 나서 DNS(도메인 이름 서비스) 서버에는 원본 서버를 가리키는 항목이 포함되어 있을 수 있습니다. 이러한 DNS 항목을 삭제합니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "80852326"
   
 6.  **이름 서버** 텍스트 상자에서 원본 서버를 가리키는 항목을 선택하고 **제거**를 클릭한 후 **확인**을 클릭합니다.  
   
-7.  원본 서버에 대한 모든 포인터가 제거될 때까지 5 - 6단계를 반복합니다.  
+7.  원본 서버에 대한 모든 포인터가 제거될 때까지 5~6단계를 반복합니다.  
   
 8.  **확인**을 클릭하여 **속성** 창을 닫습니다.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "80852326"
 10. 6~9단계를 반복하여 원본 서버를 가리키는 모든 역방향 조회 영역을 제거합니다.  
   
 ##  <a name="share-line-of-business-and-other-application-data-folders"></a><a name="BKMK_ShareLineOfBusinessAndOtherApplications"></a>Lob (기간 업무) 및 기타 응용 프로그램 데이터 폴더 공유  
- 대상 서버로 복사한 LOB(기간 업무) 및 기타 애플리케이션 데이터 폴더에 대해 공유 폴더 사용 권한 및 NTFS 사용 권한을 설정해야 합니다. 사용 권한을 설정하고 나서 공유 폴더가 대시보드의 **저장소** 탭에 표시됩니다.  
+ 대상 서버로 복사한 LOB(기간 업무) 및 기타 애플리케이션 데이터 폴더에 대해 공유 폴더 사용 권한 및 NTFS 사용 권한을 설정해야 합니다. 사용 권한을 설정하고 나서 공유 폴더가 대시보드의 **스토리지** 탭에 표시됩니다.  
   
  로그온 스크립트를 사용하여 공유 폴더에 드라이브를 매핑하는 경우 스크립트를 업데이트하여 대상 서버의 드라이브에 매핑해야 합니다.  
   

@@ -8,22 +8,22 @@ ms.assetid: 86244c66-2c5e-488d-adb8-112e1ca3e2e1
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: b1b7836e976ef35aec66e206ec8b1de0e2150d62
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 406010234528a094bfb36a606072f98c043c397a
+ms.sourcegitcommit: 2f072c0c02e3e0deae331ca64b375d63b89d0522
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80852336"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83404518"
 ---
 # <a name="step-6-demote-and-remove-the-source-server-from-the-new-windows-server-essentials-network"></a>6단계: 새 Windows Server Essentials 네트워크에서 원본 서버 수준 내리기 및 제거
 
->적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials
 
 Windows Server Essentials 설치를 완료 하 고 마이그레이션을 완료 한 후에는 다음 작업을 수행 해야 합니다.  
   
 1.  [Active Directory 인증서 서비스 제거](Step-6--Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_ADCS)  
   
-2.  [원본 서버에 직접 연결 된 프린터 연결 끊기](Step-6--Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_PhysicallyDisconnect)  
+2.  [원본 서버에 직접 연결된 프린터 연결 끊기](Step-6--Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_PhysicallyDisconnect)  
   
 3.  [원본 서버 수준 내리기](Step-6--Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_DemoteTheSourceServer)  
   
@@ -74,9 +74,9 @@ Windows Server Essentials 설치를 완료 하 고 마이그레이션을 완료 
   
 1. 관리자로 클라이언트 컴퓨터에 로그인합니다.  
   
-2. 관리자 권한으로 명령 프롬프트를 엽니다.  
+2. 관리자로 명령 프롬프트 창을 엽니다.  
   
-3. 명령 프롬프트에 **gpupdate /force**를 입력하고 Enter 키를 누릅니다.  
+3. 명령 프롬프트에 **gpupdate /force**을 입력하고 Enter 키를 누릅니다.  
   
 4. 프로세스를 완료하려면 로그오프한 후 다시 로그온해야 합니다. **예**를 클릭하여 확인합니다.  
   

@@ -8,16 +8,16 @@ ms.assetid: fd7196ac-cfa6-46a5-ba77-6962b47a825e
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: d253a550763f34409f25223e6319607b9abcd8e6
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 977922d8f2af23afc058162e7455ac5099e4325b
+ms.sourcegitcommit: 2f072c0c02e3e0deae331ca64b375d63b89d0522
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80852586"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83404562"
 ---
 # <a name="install-windows-server-essentials-in-migration-mode1"></a>Migration mode1에서 Windows Server Essentials 설치
 
->적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>적용 대상: Windows Server 2012 Essentials
 
 네트워크에는 Windows Server Essentials를 실행 하는 서버가 하나만 있을 수 있으며 해당 서버는 네트워크에 대 한 도메인 컨트롤러 여야 합니다.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "80852586"
   
  다음 표에는 대상 서버, 네트워크 및 도메인에서 문제를 진단하는 데 사용할 수 있는 도구가 나와 있습니다.  
   
-|도구|설명|  
+|도구|Description|  
 |----------|-----------------|  
 |Netdiag|네트워킹 및 연결 문제를 격리하도록 도와줍니다. 자세한 내용을 보고 다운로드하려면 [Netdiag](https://go.microsoft.com/fwlink/?LinkId=217388)를 참조하세요.|  
 |Dcdiag.exe|포리스트 또는 엔터프라이즈의 도메인 컨트롤러 상태를 분석하고 문제를 보고하여 문제 해결을 지원합니다. 자세한 내용을 보고 다운로드하려면 [Dcdiag](https://go.microsoft.com/fwlink/?LinkId=217389)를 참조하세요.|  

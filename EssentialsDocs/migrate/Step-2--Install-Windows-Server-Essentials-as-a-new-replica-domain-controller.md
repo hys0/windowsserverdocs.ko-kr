@@ -8,16 +8,16 @@ ms.assetid: c7ccfc34-63fd-436b-a1cd-e05810f60bfe
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 932ff1010ebe0be3b560375ac46b0372f86e3dc2
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: d5d86f5ae25c67ffb9e0f00fc5d373e6a095df98
+ms.sourcegitcommit: 2f072c0c02e3e0deae331ca64b375d63b89d0522
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80852376"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83404554"
 ---
 # <a name="step-2-install-windows-server-essentials-as-a-new-replica-domain-controller"></a>2단계: Windows Server Essentials를 새 복제본 도메인 컨트롤러로 설치
 
->적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials
 
 이 섹션에서는 windows server essentials 및 windows server 2012 R2 Standard (Windows Server Essentials Experience 역할이 사용 하도록 설정 된 상태)를 도메인 컨트롤러로 설치 하는 방법을 설명 합니다.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "80852376"
   
     3.  **connections**를 입력하고 Enter 키를 누릅니다.  
   
-    4.  **서버에 연결** *< servername\>* 을 입력 하 고 enter 키를 누릅니다. 여기서 *< servername\>* 은 대상 서버의 이름입니다.  
+    4.  **서버에 연결** *<\> ServerName* (여기서 *<servername \> * 은 대상 서버의 이름)을 입력 하 고 enter 키를 누릅니다.  
   
     5.  명령 프롬프트에 **q**를 입력하고 Enter 키를 누릅니다.  
   

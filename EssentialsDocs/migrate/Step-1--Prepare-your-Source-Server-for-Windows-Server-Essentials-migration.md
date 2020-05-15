@@ -8,16 +8,16 @@ ms.assetid: 244c8a06-04c6-4863-8b52-974786455373
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 214f25d1743cca3693907b7a7a8380fd564d4114
-ms.sourcegitcommit: 32f810c5429804c384d788c680afac427976e351
+ms.openlocfilehash: f5696c473a8fcb04a60b9a4b6c51ac206a6ef0de
+ms.sourcegitcommit: 2f072c0c02e3e0deae331ca64b375d63b89d0522
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83203473"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83404583"
 ---
 # <a name="step-1-prepare-your-source-server-for-windows-server-essentials-migration"></a>1단계: Windows Server Essentials 마이그레이션을 위한 원본 서버 준비
 
-> 적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+> 적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials
 
 이 항목에서는 원본 서버를 백업하고, 원본 서버 시스템 상태를 평가하며, 최신 서비스 팩 및 수정 프로그램을 설치하고, 네트워크 구성을 확인하는 방법을 설명합니다.
 
@@ -129,7 +129,7 @@ ms.locfileid: "83203473"
 
    BPA 도구는 서버 구성에 대한 정보를 수집한 후 정보가 올바른지 확인하고, 관리자에게 심각도별로 정렬된 정보 및 문제 목록을 제공합니다. 목록에서는 각 문제를 설명하고 권장 사항 또는 가능한 해결 방법을 제공합니다. 세 가지 보고서 유형을 사용할 수 있습니다.
 
-|보고서 종류|설명
+|보고서 종류|Description
 |-----------------|-----------------
 |목록 보고서|일차원 목록의 보고서를 표시합니다.
 |트리 보고서|계층형 목록의 보고서를 표시합니다.

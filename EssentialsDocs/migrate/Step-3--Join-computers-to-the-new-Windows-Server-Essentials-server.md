@@ -8,16 +8,16 @@ ms.assetid: a0e07d1a-8409-429b-87d7-0f4a7e14d668
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 3d004d89f6606c8b38360c9139f882f087b7c554
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 8efb8251bd85638b8ad4b760a5292a2b6d6681fd
+ms.sourcegitcommit: 2f072c0c02e3e0deae331ca64b375d63b89d0522
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80852366"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83404547"
 ---
 # <a name="step-3-join-computers-to-the-new-windows-server-essentials-server"></a>3단계: 새 Windows Server Essentials 서버에 컴퓨터 연결
 
->적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials
 
 마이그레이션 프로세스의 다음 단계는 Windows Server Essentials를 실행 하는 새 서버에 클라이언트 컴퓨터를 연결 하는 것입니다.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "80852366"
   
 2.  Internet Explorer와 같은 인터넷 브라우저를 엽니다.  
   
-3.  주소 표시줄에 **http://< servername\>/Connect**를 입력 한 다음 enter 키를 누릅니다.  
+3.  주소 표시줄에 **http://<servername \> /Connect**를 입력 한 다음 enter 키를 누릅니다.  
   
 4.  화면의 지침에 따라 클라이언트 컴퓨터를 새 Windows Server Essentials 서버에 연결 합니다.  
   

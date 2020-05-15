@@ -1,5 +1,5 @@
 ---
-title: '4단계: Windows Server Essentials 마이그레이션을 위해 대상 서버로 설정 및 데이터 이동'
+title: '4단계: Windows Server Essentials 마이그레이션을 위한 대상 서버로 설정 및 데이터 이동'
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.date: 10/03/2016
 ms.prod: windows-server
@@ -8,16 +8,16 @@ ms.assetid: e143df43-e227-4629-a4ab-9f70d9bf6e84
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: e19f3a8333cc08568f8d437da2e35a6c64920df1
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: dd3ba0b54e24a5fcafb72c970f05224c3606ff3a
+ms.sourcegitcommit: 2f072c0c02e3e0deae331ca64b375d63b89d0522
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80852356"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83404523"
 ---
-# <a name="step-4-move-settings-and-data-to-the-destination-server-for-windows-server-essentials-migration"></a>4단계: Windows Server Essentials 마이그레이션을 위해 대상 서버로 설정 및 데이터 이동
+# <a name="step-4-move-settings-and-data-to-the-destination-server-for-windows-server-essentials-migration"></a>4단계: Windows Server Essentials 마이그레이션을 위한 대상 서버로 설정 및 데이터 이동
 
->적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials
 
 이 섹션에서는 원본 서버에서 데이터 및 설정을 마이그레이션하는 방법에 대한 정보를 제공합니다. 다음과 같이 설정 및 데이터를 대상 서버로 이동합니다.  
   
@@ -25,14 +25,14 @@ ms.locfileid: "80852356"
   
 -   [네트워크 구성](Step-4--Move-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_Network)  
   
--   [허용 된 컴퓨터를 사용자 계정에 매핑](Step-4--Move-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_MapPermittedComputers)  
+-   [허용되는 컴퓨터를 사용자 계정에 매핑](Step-4--Move-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_MapPermittedComputers)  
   
 ##  <a name="copy-data-to-the-destination-server"></a><a name="BKMK_CopyData"></a>대상 서버에 데이터 복사  
  원본 서버에서 대상 서버로 데이터를 복사하기 전에 다음 작업을 수행합니다.  
   
 -   각 폴더에 대한 사용 권한을 비롯하여 원본 서버의 공유 폴더 목록을 검토합니다. 원본 서버에서 마이그레이션할 폴더 구조와 일치하도록 대상 서버에서 폴더를 만들거나 사용자 지정합니다.  
   
--   각 폴더의 크기를 검토하고 대상 서버에 충분한 저장 공간이 있는지 확인합니다.  
+-   각 폴더의 크기를 검토하고 대상 서버에 충분한 스토리지 공간이 있는지 확인합니다.  
   
 -   파일을 대상 서버에 복사하는 동안 하드 드라이브에 기록이 수행되지 않도록 원본 서버의 공유 폴더를 모든 사용자에 대해 읽기 전용으로 설정합니다.  
   
@@ -48,17 +48,17 @@ ms.locfileid: "80852356"
   
    `robocopy \\<SourceServerName>\<SharedSourceFolderName> "<PathOfTheDestination>\<SharedDestinationFolderName>" /E /B /COPY:DATSOU /LOG:C:\Copyresults.txt`
   
-    여기서 각 값은 다음과 같습니다.  
+    여기서  
   
-   - \<SourceServerName\>은 원본 서버의 이름입니다.  
+   - \<SourceServerName \> 은 원본 서버의 이름입니다.  
   
-   - \<SharedSourceFolderName\>은 원본 서버의 공유 폴더 이름입니다.  
+   - \<SharedSourceFolderName \> 은 원본 서버에 있는 공유 폴더의 이름입니다.  
   
-   - \<Paanfto Destination\>는 폴더를 이동 하려는 절대 경로입니다.  
+   - \<Paanfto Destination \> 은 폴더를 이동 하려는 절대 경로입니다.  
   
-   - \<SharedDestinationFolderName\>는 데이터가 복사 될 대상 서버의 폴더입니다.  
+   - \<SharedDestinationFolderName \> 은 데이터가 복사 될 대상 서버의 폴더입니다.  
   
-     `robocopy \\sourceserver\MyData "d:\ServerFolders\MyData" /E /B /COPY:DATSOU /LOG:C:\Copyresults.txt`를 예로 들 수 있습니다.  
+     예: `robocopy \\sourceserver\MyData "d:\ServerFolders\MyData" /E /B /COPY:DATSOU /LOG:C:\Copyresults.txt`.  
   
 3. Windows PowerShell을 사용하는 경우 다음 명령을 입력하고 Enter 키를 누릅니다.  
   

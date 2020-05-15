@@ -1,5 +1,5 @@
 ---
-title: '5단계: Windows Server Essentials 마이그레이션을 위해 대상 서버에서 폴더 리디렉션 사용'
+title: '5단계: Windows Server Essentials 마이그레이션을 위한 대상 서버에서 폴더 리디렉션 사용'
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.date: 10/03/2016
 ms.prod: windows-server
@@ -8,16 +8,16 @@ ms.assetid: d3925f80-552d-431f-b2a6-2af202e50ca4
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 710522f52791f3ee6c1c453c883f4265d08023be
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 9f698111bd88619406e47db9d484c2197e91dd83
+ms.sourcegitcommit: 2f072c0c02e3e0deae331ca64b375d63b89d0522
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80852346"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83404533"
 ---
-# <a name="step-5-enable-folder-redirection-on-the-destination-server-for-windows-server-essentials-migration"></a>5단계: Windows Server Essentials 마이그레이션을 위해 대상 서버에서 폴더 리디렉션 사용
+# <a name="step-5-enable-folder-redirection-on-the-destination-server-for-windows-server-essentials-migration"></a>5단계: Windows Server Essentials 마이그레이션을 위한 대상 서버에서 폴더 리디렉션 사용
 
->적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials
 
 원본 서버에서 폴더 리디렉션을 사용하는 경우 대상 서버에서 폴더 리디렉션을 사용하도록 설정한 다음 이전 폴더 리디렉션 그룹 정책 설정을 삭제할 수 있습니다.  
   
