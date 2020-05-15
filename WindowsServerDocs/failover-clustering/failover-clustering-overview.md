@@ -9,12 +9,12 @@ ms.author: jgerend
 ms.technology: storage-failover-clustering
 ms.date: 06/06/2019
 ms.localizationpriority: high
-ms.openlocfilehash: b646890ebc8b8e64d84e6d448ce4acb393422009
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 5b0193f18fe94f391f1bbbc41280c16e4a1bcd0c
+ms.sourcegitcommit: 32f810c5429804c384d788c680afac427976e351
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80827716"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83203505"
 ---
 # <a name="failover-clustering-in-windows-server"></a>Windows Server에서의 장애 조치(failover) 클러스터링
 
@@ -32,7 +32,7 @@ ms.locfileid: "80827716"
 | **이해**                                                               |  **계획**                          |  **배포**       |
 | -------------                                                                |  --------------                        | --------------------- |
 | [장애 조치(Failover) 클러스터링의 새로운 기능](whats-new-in-failover-clustering.md)    | [장애 조치(failover) 클러스터링 하드웨어 요구 사항 및 스토리지 옵션 계획](clustering-requirements.md)  | [장애 조치(failover) 클러스터 생성](create-failover-cluster.md) |
-| [애플리케이션 데이터용 스케일 아웃 파일 서버](sofs-overview.md)               | [CSV(클러스터 공유 볼륨) 사용](failover-cluster-csvs.md) | [2노드 파일 서버 배포](../storage/storage-spaces/storage-spaces-direct-in-vm.md) |
+| [애플리케이션 데이터용 스케일 아웃 파일 서버](sofs-overview.md)               | [CSV(클러스터 공유 볼륨) 사용](failover-cluster-csvs.md) | [2노드 파일 서버 배포](deploy-two-node-clustered-file-server.md) |
 |  [클러스터 및 풀 쿼럼](../storage/storage-spaces/understand-quorum.md)   |  [직접 스토리지 공간으로 게스트 가상 머신 클러스터 사용](../storage/storage-spaces/storage-spaces-direct-in-vm.md)       | [Active Directory Domain Services에서 클러스터 컴퓨터 계정 사전 준비](prestage-cluster-adds.md) |
 | [장애 도메인 인식](fault-domains.md)                                 |                                 | [Active Directory에서 클러스터 계정 구성](configure-ad-accounts.md) |
 | [간소화된 SMB 다중 채널 및 다중 NIC 클러스터 네트워크](smb-multichannel.md) |                       | [쿼럼 및 감시 관리](manage-cluster-quorum.md) |
