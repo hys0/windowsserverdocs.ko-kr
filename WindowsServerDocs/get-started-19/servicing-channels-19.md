@@ -8,16 +8,16 @@ author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: high
 ms.date: 05/21/2019
-ms.openlocfilehash: a10cb3b27e3434ab818b41e051edb38ab77626db
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 0190fc05a7bf82e35339d93accae3a998babe166
+ms.sourcegitcommit: 7116460855701eed4e09d615693efa4fffc40006
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80827136"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83433137"
 ---
 # <a name="windows-server-servicing-channels-ltsc-and-sac"></a>Windows Server 서비스 채널: LTSC 및 SAC
 
->적용 대상: Windows Server 2019, Windows Server 2016, Windows Server(반기 채널)
+> 적용 대상: Windows Server 2019, Windows Server 2016, Windows Server(반기 채널)
 
 Windows Server 고객, 장기 서비스 채널 및 반기 채널에 사용할 수 있는 두 기본 릴리스 채널이 있습니다.
 
@@ -27,7 +27,7 @@ Windows Server 고객, 장기 서비스 채널 및 반기 채널에 사용할 �
 
 이는 2~3년마다 새로운 Windows Server의 주 버전이 출시되는, 이미 여러분에게 친숙한 릴리스 모델(이전의 “장기 서비스 *분기*”라고 함)입니다. 사용자는 5년 동안 일반 지원을 받고 지원 기간을 5년 연장할 수 있습니다. 이 채널은 보다 장기적인 서비스 옵션과 기능적 안정성이 요구되는 시스템에 적절합니다. Windows Server 2016 이하 버전의 Windows Server 배포는 새로운 반기 채널 릴리스의 영향을 받지 않습니다. 장기 서비스 채널은 보안 및 비보안 업데이트를 계속해서 수신하지만, 새로운 기능은 수신하지 않습니다.
 
-> [!Note]  
+> [!Note]
 > **현재 LTSC 제품은 Windows Server 2019입니다**. 이 채널을 유지하고자 하는 경우 Windows Server 2019를 설치(또는 계속 사용)해야 하고, Server Core 설치 옵션 또는 Desktop 환경 포함 서버 설치 옵션으로 설치할 수 있습니다.
 
 ## <a name="semi-annual-channel"></a>반기 채널
@@ -38,7 +38,7 @@ Windows Server 고객, 장기 서비스 채널 및 반기 채널에 사용할 �
 
 반기 채널은 [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default.aspx)가 포함된 볼륨 라이선스 고객에게 제공되며, Azure Marketplace 또는 기타 클라우드/호스팅 서비스 공급자와 Visual Studio 구독과 같은 구독 프로그램을 통해서도 이용할 수 있습니다.
 
-> [!Note]  
+> [!Note]
 > **현재 반기 채널 릴리스는 Windows Server 버전 1903입니다**. 이 채널에 서버를 배치하려는 경우 Server Core 모드에서 또는 컨테이너에서 Nano 서버 실행으로 설치할 수 있는 Windows Server 버전 1903을 설치해야 합니다. 장기 서비스 채널 릴리스는 **여러 릴리스 채널**에 있기 때문에 현재 위치 업그레이드가 지원되지 않습니다. 반기 채널 릴리스는 업데이트가 아니며, 반기 채널의 다음 Windows Server 릴리스입니다.
 
 이 모델에서는 Windows Server 릴리스는 릴리스의 연도 및 월에 의해 식별됩니다. 예를 들어 2017년에 9번째 달(9월)의 릴리스는 **버전 1709**로 식별됩니다. 반기 채널에서 Windows Server 릴리스는 연간 두 번 업데이트됩니다. 각 릴리스의 지원 수명 주기는 18개월입니다.
@@ -48,7 +48,7 @@ Windows Server 고객, 장기 서비스 채널 및 반기 채널에 사용할 �
 다음과 같은 주요 차이점을 고려해야 합니다.
 
 - 혁신에 박차를 가해야 합니까? 최신 Windows Server 기능을 먼저 이용해야 합니까? 릴리스 흐름이 빠른 하이브리드 애플리케이션, DevOps 및 Hyper-V 패브릭을 지원해야 합니까? 이럴 경우 **Windows Server, 버전 1903**을 설치하여 **반기 채널에 가입**하는 방법을 고려해야 합니다. 이 항목에서 설명하는 것과 같이 1년에 두 번 새로운 버전을 받아보고 릴리스당 18개월 동안 프로덕션 환경에서 일반 지원을 받게 됩니다. 볼륨 라이선스, Azure 또는 Visual Studio Subscription 서비스를 통해 이용이 가능합니다. 현재, 반기 채널의 릴리스들은 프로덕션 환경에서 제품을 실행하고자 할 경우 볼륨 라이선스와 Software Assurance가 필요합니다.
-- 안정성과 예측 가능성이 필요합니까? 가상 머신 및 실제 서버의 기존 워크로드를 실행해야 합니까? 이러한 경우 **LTSC에 서버를 유지**하는 방법을 고려해야 합니다. 최신 LTSC 릴리스는 **Windows Server 2019**입니다. 이 항목에 설명된 대로, 2~3년마다 새로운 버전에 액세스할 수 있고 5년 동안 일반 지원을 받으며, 릴리스당 5년까지 지원 기간을 연장할 수 있습니다. LTSC 릴리스는 모든 릴리스 메커니즘을 통해 사용할 수 있습니다. LTSC 릴리스는 사용 중인 라이선스 모델에 관계없이 모든 사용자에게 제공됩니다. 
+- 안정성과 예측 가능성이 필요합니까? 가상 머신 및 실제 서버의 기존 워크로드를 실행해야 합니까? 이러한 경우 **LTSC에 서버를 유지**하는 방법을 고려해야 합니다. 최신 LTSC 릴리스는 **Windows Server 2019**입니다. 이 항목에 설명된 대로, 2~3년마다 새로운 버전에 액세스할 수 있고 5년 동안 일반 지원을 받으며, 릴리스당 5년까지 지원 기간을 연장할 수 있습니다. LTSC 릴리스는 모든 릴리스 메커니즘을 통해 사용할 수 있습니다. LTSC 릴리스는 사용 중인 라이선스 모델에 관계없이 모든 사용자에게 제공됩니다.
 
 다음 표에는 채널 간 주요 차이점이 요약되어 있습니다.
 
@@ -84,13 +84,13 @@ IT 전문가가 Windows Server를 서비스하는 데 사용할 수 있는 도�
 
 반기 채널 릴리스는 새로 설치로 설치되어야 합니다.
 
-- VLSC(볼륨 라이선스 서비스 센터): [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default.aspx)를 사용하는 볼륨 라이선스 고객은 [볼륨 라이선싱 서비스 센터](https://www.microsoft.com/Licensing/servicecenter/default.aspx)로 이동하고 **로그인**을 클릭하여 이 릴리스를 받을 수 있습니다. 그런 다음, **다운로드 및 키**를 클릭하고 이 릴리스를 검색합니다. 
+- VLSC(볼륨 라이선스 서비스 센터): [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default.aspx)를 사용하는 볼륨 라이선스 고객은 [볼륨 라이선싱 서비스 센터](https://www.microsoft.com/Licensing/servicecenter/default.aspx)로 이동하고 **로그인**을 클릭하여 이 릴리스를 받을 수 있습니다. 그런 다음, **다운로드 및 키**를 클릭하고 이 릴리스를 검색합니다.
 
 - 반기 채널 릴리스도 [Microsoft Azure](https://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.WindowsServer?tab=Overview)에서 사용할 수 있습니다.
 
 - Visual Studio 구독: Visual Studio 구독자는 [Visual Studio 구독자 다운로드 페이지](https://my.visualstudio.com/downloads?pid=2347)에서 반기 채널 릴리스를 다운로드할 수 있습니다. 이미 구독자가 아닌 경우 [Visual Studio 구독](https://www.visualstudio.com/subscriptions/) 페이지로 이동하고 가입한 다음, 위와 같이 [Visual Studio 구독자 다운로드 페이지](https://my.visualstudio.com/downloads?pid=2347)로 이동합니다. Visual Studio 구독을 통해 얻은 릴리스는 개발 및 테스트용으로만 사용됩니다.
 
-- Windows 참가자 프로그램을 통해 미리 보기 릴리스 받기: Windows Server의 초기 빌드를 테스트하는 것은 릴리스 전에 가능한 문제를 발견할 수 있는 기회이기 때문에 Microsoft와 고객 모두에게 도움이 됩니다. 또한 고객이 제품의 기능에 직접 영향을 줄 수 있는 특별한 기회도 제공합니다.   
+- Windows 참가자 프로그램을 통해 미리 보기 릴리스 받기: Windows Server의 초기 빌드를 테스트하는 것은 릴리스 전에 가능한 문제를 발견할 수 있는 기회이기 때문에 Microsoft와 고객 모두에게 도움이 됩니다. 또한 고객이 제품의 기능에 직접 영향을 줄 수 있는 특별한 기회도 제공합니다.
 Microsoft는 개발 프로세스 전체 동안 피드백을 받아 최대한 빨리 조정될 수 있도록 합니다. 초기 테스트와 피드백은 신속한 릴리스 모델에 필수적입니다. Windows 참가자 프로그램에 참여하려면 [서버용 Windows 참가자 프로그램 문서](https://docs.microsoft.com/windows-insider/at-work/)를 참조하세요.
 
 ## <a name="activating-semi-annual-channel-releases"></a>반기 채널 릴리스 정품 인증
@@ -114,15 +114,15 @@ Nano 서버는 반기 채널에서 컨테이너 운영 체제로 이용 가능�
 
 일반적으로 장기 서비스 채널 릴리스(예: Windows Server 2019)는 반기 채널의 새 버전(예: Windows Server, 버전 1809)과 동시에 출시됩니다. 따라서 서버가 반기 채널 릴리스를 실행 중인지 확인하기가 약간 까다로울 수 있습니다. 빌드 번호를 확인하는 대신 제품 이름을 확인해야 합니다. 반기 채널 릴리스는 버전 번호 없이 Windows Server Standard 또는 Windows Server Datacenter 제품 이름을 사용하지만 장기 서비스 채널 릴리스에는 버전 번호가 포함됩니다(예: Windows Server 2019 Datacenter).
 
->[!Note]  
+> [!Note]
 > 아래 지침은 수명 주기 및 일반 인벤토리만을 목적으로 하는 LTSC 및 SAC의 식별 및 차별화를 돕는 것입니다.  애플리케이션 호환성 용도 또는 특정 API 표면을 나타내는 것을 목적으로 하지 않습니다.  앱 개발자는 지침을 활용하여 구성 요소로서의 호환성, API 및 기능이 시스템 수명 주기에 걸쳐 추가될 수 있거나 아직 추가될 수 없도록 해야 합니다. [운영 체제 버전](https://docs.microsoft.com/windows/desktop/SysInfo/operating-system-version)은 앱 개발자에게 있어 좋은 출발점입니다.
 
-PowerShell을 열고 Get-ItemProperty Cmdlet 또는 Get-ComputerInfo Cmdlet을 사용하여 레지스트리에서 속성을 확인합니다.  빌드 번호와 함께 브랜딩 연도(예: 2019)의 유무 여부에 따라 LTSC 또는 SAC가 표시됩니다.  LTSC에는 있고, SAC에는 없습니다.  ReleaseId 또는 WindowsVersion의 릴리스 시점(예: 1809)과 설치가 Server Core 또는 데스크톱 환경 포함 서버인지 여부를 반환합니다. 
+PowerShell을 열고 Get-ItemProperty Cmdlet 또는 Get-ComputerInfo Cmdlet을 사용하여 레지스트리에서 속성을 확인합니다.  빌드 번호와 함께 브랜딩 연도(예: 2019)의 유무 여부에 따라 LTSC 또는 SAC가 표시됩니다.  LTSC에는 있고, SAC에는 없습니다.  ReleaseId 또는 WindowsVersion의 릴리스 시점(예: 1809)과 설치가 Server Core 또는 데스크톱 환경 포함 서버인지 여부를 반환합니다.
 
 **데스크톱 환경 포함 Windows Server 2019 Datacenter Edition(LTSC) 예시:**
 
 ````PowerShell
-Get-ItemProperty -Path HKLM:\Software\Microsoft\Windows NT\CurrentVersion | Select ProductName, ReleaseId, InstallationType, CurrentMajorVersionNumber,CurrentMinorVersionNumber,CurrentBuild
+Get-ItemProperty -Path "HKLM:\Software\Microsoft\Windows NT\CurrentVersion" | Select ProductName, ReleaseId, InstallationType, CurrentMajorVersionNumber,CurrentMinorVersionNumber,CurrentBuild
 ````
 
 ````
@@ -137,7 +137,7 @@ CurrentBuild              : 17763
 **Windows Server 버전 1809(SAC) Standard Edition Server Core 예시:**
 
 ````PowerShell
-Get-ItemProperty -Path HKLM:\Software\Microsoft\Windows NT\CurrentVersion | Select ProductName, ReleaseId, InstallationType, CurrentMajorVersionNumber,CurrentMinorVersionNumber,CurrentBuild
+Get-ItemProperty -Path "HKLM:\Software\Microsoft\Windows NT\CurrentVersion" | Select ProductName, ReleaseId, InstallationType, CurrentMajorVersionNumber,CurrentMinorVersionNumber,CurrentBuild
 ````
 
 ````
