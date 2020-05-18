@@ -1,6 +1,6 @@
 ---
-title: macOS 클라이언트 시작
-description: Mac용 원격 데스크톱 클라이언트 설정 방법 알아보기
+title: Bien démarrer avec le client macOS
+description: Découvrez comment configurer le client Bureau à distance pour Mac
 ms.prod: windows-server
 ms.technology: remote-desktop-services
 ms.topic: article
@@ -8,165 +8,154 @@ ms.assetid: 7afc65f8-3158-49c9-9d48-4dab1c69afba
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 08/27/2019
+ms.date: 05/06/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 6c87c95390b4a157b7d12e303520e519a3d157ac
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 6c219a6dbc5922e9d7240b3004c1dd92eb7d057a
+ms.sourcegitcommit: 67116322915066b85decb4261d47cedec2cfe12f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80856026"
+ms.contentlocale: fr-FR
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82903460"
 ---
-# <a name="get-started-with-the-macos-client"></a>macOS 클라이언트 시작
+# <a name="get-started-with-the-macos-client"></a>Bien démarrer avec le client macOS
 
->적용 대상: Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server 2016
+>S'applique à : Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server 2016
 
-Mac용 원격 데스크톱 클라이언트를 사용하면 Mac 컴퓨터에서 Windows 앱, 리소스 및 데스크톱으로 작업할 수 있습니다. 다음 정보를 사용하여 시작하고 궁금한 점이 있으면 [FAQ](remote-desktop-client-faq.md)를 확인하세요.
+Le client Bureau à distance sur Mac vous permet d’accéder à des applications, ressources et bureaux Windows à partir de votre ordinateur Mac. Consultez les informations suivantes. Elles constituent un excellent point de départ. Et si vous avez des questions par la suite, n’hésitez pas à consulter notre [FAQ](remote-desktop-client-faq.md).
 
 >[!NOTE]
-> - macOS 클라이언트의 새 릴리스가 궁금하신가요? [Mac의 원격 데스크톱에 대한 새로운 기능](mac-whatsnew.md)을 확인하세요.
-> - Mac 클라이언트는 macOS 10.10 이하 버전을 실행 중인 컴퓨터에서 실행됩니다.
-> - 이 문서의 정보는 Mac 클라이언트-Mac AppStore에서 사용할 수 있는 버전의 전체 버전에 주로 적용 됩니다. [베타 클라이언트 릴리스 노트](https://go.microsoft.com/fwlink/?LinkID=619698&clcid=0x409)에서 미리 보기 앱을 다운로드하여 새로운 기능을 사용해 보세요.
+> - Les nouvelles versions du client macOS vous intéressent ? Consultez [Nouveautés du Bureau à distance sur Mac](mac-whatsnew.md).
+> - Le client Mac s’exécute sur les ordinateurs exécutant Mac OS 10.10 et versions ultérieures.
+> - Les informations contenues dans cet article s’appliquent principalement à la version complète du client Mac (celle disponible dans l’App Store Mac). Testez les nouvelles fonctionnalités en téléchargeant la préversion de notre application ici : [Notes de mise à jour du client de la version bêta](https://go.microsoft.com/fwlink/?LinkID=619698&clcid=0x409).
 
-## <a name="get-the-remote-desktop-client"></a>원격 데스크톱 클라이언트 받기
-Mac에서 원격 데스크톱에 등록하려면 다음 단계를 수행하세요.
+## <a name="get-the-remote-desktop-client"></a>Obtenez le client Bureau à distance
 
-1. Microsoft 원격 데스크톱 클라이언트 다운로드는 [Mac 앱 스토어](https://itunes.apple.com/app/microsoft-remote-desktop/id1295203466?mt=12)합니다.
-2. [원격 연결을 허용하도록 PC를 설정합니다](remote-desktop-client-faq.md#how-do-i-set-up-a-pc-for-remote-desktop). (이 단계를 건너뛰면 PC에 연결할 수 없습니다.)
-3. 원격 데스크톱 연결 또는 원격 리소스를 추가합니다. Windows PC 및 원격 리소스에 직접 연결하는 연결을 사용하여 RemoteApp 프로그램, 세션 기반 데스크톱 또는 RemoteApp 프로그램 및 데스크톱 연결을 통해 온-프레미스에 게시된 가상 데스크톱을 사용합니다. 이 기능은 일반적으로 기업 환경에서 사용할 수 있습니다.
+Effectuez ces étapes pour bien démarrer avec le Bureau à distance sur votre appareil Mac:
 
-## <a name="what-about-the-mac-beta-client"></a>Mac 베타 클라이언트의 경우는 어떻습니까?
-AppCenter의 미리 보기 채널에서 새 기능을 테스트하는 중입니다. 체크 아웃 하 시겠습니까? [Mac용 Microsoft 원격 데스크톱](https://aka.ms/rdmacbeta)으로 이동하고 **다운로드**를 클릭합니다. 베타 클라이언트를 다운로드하기 위해 계정을 만들거나 AppCenter에 로그인할 필요가 없습니다.
+1. Téléchargez le client Bureau à distance Microsoft à partir de l’[App Store Mac](https://itunes.apple.com/app/microsoft-remote-desktop/id1295203466?mt=12).
+2. [Configurez votre PC pour accepter les connexions à distance](remote-desktop-client-faq.md#how-do-i-set-up-a-pc-for-remote-desktop). Si vous ignorez cette étape, vous ne pouvez pas vous connecter à votre PC.
+3. Ajoutez une connexion Bureau à distance ou une ressource distante. Utilisez une connexion pour vous connecter directement à un PC Windows, et une ressource distante pour accéder à un programme RemoteApp, un bureau basé sur une session ou un bureau virtuel publié en local à l’aide de la fonctionnalité Connexions aux programmes RemoteApp et aux services Bureau à distance. Cette fonctionnalité est généralement disponible dans les environnements d’entreprise.
 
-클라이언트가 이미 있는 경우 최신 버전을 확인 하는 업데이트를 확인할 수 있습니다. 베타 클라이언트에서 클릭 **Microsoft 원격 데스크톱 베타** 위쪽과 클릭 한 다음 **업데이트 확인**합니다. 
+## <a name="what-about-the-mac-beta-client"></a>Présentation du client de la version bêta Mac
 
-## <a name="add-a-remote-desktop-connection"></a>원격 데스크톱 연결 추가
-원격 데스크톱 연결을 만들려면 다음을 수행합니다.
+Nous testons de nouvelles fonctionnalités sur notre canal de préversion sur AppCenter. Vous voulez en savoir plus ? Rendez-vous sur la page [Bureau à distance Microsoft pour Mac](https://aka.ms/rdmacbeta) et sélectionnez **Télécharger**. Vous n’avez pas besoin de créer un compte ou de vous connecter à AppCenter pour télécharger le client de la version bêta.
 
-1. 연결 센터에서 **+** 를 클릭한 후 **데스크톱**을 클릭합니다.
-2. 다음 정보를 입력 합니다.
-   - **PC 이름** – 컴퓨터의 이름입니다.
-      - 이는 Windows 컴퓨터 이름(**시스템** 설정에서 확인할 수 있음), 도메인 이름 또는 IP 주소일 수 있습니다.
-      - 또한 이 이름 끝에 *MyDesktop:3389* 같은 포트 정보를 추가할 수도 있습니다.
-   - **사용자 계정** – 원격 PC에 액세스하는 데 사용할 사용자 계정을 추가합니다.
-     - Active Directory(AD)에 가입한 컴퓨터 또는 로컬 계정의 경우 *user_name*, *domain\user_name* 또는 <em>user_name@domain.com</em>과 같은 형식 중 하나를 사용합니다.
-     - Azure Active Directory(AAD)에 가입한 컴퓨터의 경우 *AzureAD\user_name* 또는 <em>AzureAD\user_name@domain.com</em> 형식 중 하나를 사용합니다.
-     - 암호 필요 여부를 선택할 수도 있습니다.
-     - 동일한 사용자 이름의 여러 사용자 계정을 관리하는 경우 계정을 구분하기 위해 식별 이름을 설정합니다.
-     - 앱의 기본 설정에 저장된 사용자 계정을 관리합니다. 
+Si vous avez déjà le client, vous pouvez vérifier si des mises à jour sont disponibles, pour être certain d’avoir la version la plus récente. En haut de la fenêtre du client de la version bêta, sélectionnez **Version bêta de Bureau à distance Microsoft**, puis **Rechercher des mises à jour**. 
 
-3. 또한 연결에 이러한 선택적 설정을 설정할 수 있습니다.
-   - 식별 이름 설정 
-   - 게이트웨이 추가
-   - 사운드 출력 설정
-   - 마우스 단추 전환
-   - 관리자 모드 사용
-   - 원격 세션으로 로컬 폴더 리디렉션
-   - 로컬 프린터 전송
-   - 스마트 카드 전송
-4. **Save**을 클릭합니다.
+## <a name="add-a-workspace"></a>Ajouter un espace de travail
 
-연결을 시작하려면 두 번 클릭하면 됩니다. 원격 리소스도 마찬가지입니다.
+Abonnez-vous au flux que votre administrateur vous a donné pour récupérer la liste des ressources managées disponibles sur votre appareil macOS.
 
-### <a name="export-and-import-connections"></a>연결 내보내기 및 가져오기
-원격 데스크톱 연결 정의를 내보내고 다른 디바이스에서 사용할 수 있습니다. 원격 데스크톱은 별도 저장 됩니다. RDP 파일입니다.
+Pour s’abonner à un flux :
 
-1. 연결 센터에서 원격 데스크톱을 마우스 오른쪽 단추로 클릭 합니다.
-2. 클릭 **내보내기**합니다.
-3. 원격 데스크톱을 저장 하려는 위치로 이동 합니다. RDP 파일입니다.
-4. **확인**을 클릭합니다.
+1. Sélectionnez **Ajouter un flux** dans la page principale pour vous connecter au service et récupérer vos ressources.
+2. Entrez l’URL du flux. Il peut s’agir d’une URL ou d’une adresse e-mail :
+   - Si vous utilisez une URL, utilisez celle que votre administrateur vous a donnée. En règle générale, l’URL est <https://rdweb.wvd.microsoft.com>.
+   - Pour utiliser l’e-mail, entrez votre adresse e-mail. Ceci indique au client de rechercher une URL associée à votre adresse e-mail si votre administrateur a configuré le serveur en ce sens.
+3. Sélectionnez **S’abonner**.
+4. Connectez-vous avec votre compte d’utilisateur quand vous y êtes invité.
 
-원격 데스크톱을 가져오려면 다음 단계를 따르십시오. RDP 파일입니다.
+Une fois que vous êtes connecté, la liste des ressources disponibles doit s’afficher.
 
-1. 메뉴 모음에서 **파일** > **가져오기**를 클릭합니다.
-2. 이동 하 고 있습니다. RDP 파일입니다.
-3. **열기**를 클릭합니다.
+Une fois que vous êtes abonné à un flux, son contenu est automatiquement mis à jour de façon régulière. Les ressources peuvent être ajoutées, changées ou supprimées en fonction des modifications apportées par votre administrateur.
 
-## <a name="add-a-remote-resource"></a>원격 리소스 추가
-원격 리소스는 RemoteApp 프로그램, 세션 기반 데스크톱 및 RemoteApp 및 데스크톱 연결을 사용 하 여 게시 하는 가상 데스크톱.
+### <a name="export-and-import-connections"></a>Exporter et importer des connexions
 
-- URL은 RemoteApp 및 데스크톱 연결에 대한 액세스를 제공하는 RD 웹 액세스 서버에 대한 링크를 표시합니다.
-- 구성 된 RemoteApp 및 데스크톱 연결 나열 됩니다.
+Vous pouvez exporter une définition de la connexion Bureau à distance et l’utiliser sur un autre appareil. Les Bureaux à distance sont enregistrés dans des fichiers .RDP distincts.
 
-원격 리소스를 추가하려면 다음을 수행합니다.
+1. Dans le Centre de connexion, faites un clic droit sur le Bureau à distance.
+2. Sélectionnez **Exporter**.
+3. Accédez à l’emplacement où vous souhaitez enregistrer le fichier .RDP du Bureau à distance.
+4. Sélectionnez **OK**.
 
-1. 연결 센터에서 **+** 를 클릭한 후 **원격 리소스 추가**를 클릭합니다. 
-2. 원격 리소스에 대 한 정보를 입력 합니다.
-   - **피드 URL** -URL RD 웹 액세스 서버입니다. 전자 메일 주소와 연결 된 RD 웹 액세스 서버를 검색 하도록 클라이언트를 이렇게 하면 회사 메일 계정과 –이 필드에 입력할 수도 있습니다.
-   - **사용자 이름** -에 연결 하는 RD 웹 액세스 서버에 사용할 사용자 이름입니다.
-   - **암호** -에 연결 하는 RD 웹 액세스 서버에 사용할 암호입니다.
-3. **Save**을 클릭합니다.
+Suivez cette procédure pour importer un fichier .RDP de Bureau à distance :
 
+1. Dans la barre de menus, sélectionnez **Fichier** > **Importer**.
+2. Accédez au fichier .RDP.
+3. Sélectionnez **Ouvrir**.
 
-원격 리소스 연결 센터에서 표시 됩니다.
+## <a name="add-a-remote-resource"></a>Ajouter une ressource distante
 
+Les ressources distantes peuvent être des programmes RemoteApp, des bureaux basés sur une session et des bureaux virtuels publiés à l’aide de la fonctionnalité Connexions aux programmes RemoteApp et aux services Bureau à distance.
 
-## <a name="connect-to-an-rd-gateway-to-access-internal-assets"></a>RD 게이트웨이에 연결하여 내부 자산에 액세스
+- L’URL affiche le lien vers le serveur d’accès Web des services Bureau à distance qui vous donne accès aux connexions RemoteApp et Bureau à distance.
+- Les connexions RemoteApp et Bureau à distance configurées sont affichées.
 
-원격 데스크톱 게이트웨이(RD 게이트웨이)를 사용하면 인터넷상에서 어디에서든 회사 네트워크의 원격 컴퓨터에 연결할 수 있습니다. 앱의 기본 설정에서 또는 새 데스크톱 연결을 설정하는 동안 게이트웨이를 만들고 관리할 수 있습니다.
+Pour ajouter une ressource distante :
 
-기본 설정에서 새 게이트웨이를 설정하려면 다음을 수행합니다.
+1. Dans le Centre de connexion, sélectionnez **+** , puis **Ajouter des ressources distantes**. 
+2. Entrez les informations appropriées pour la ressource distante :
+   - **URL de flux** : URL du serveur d’accès web des services Bureau à distance. Vous pouvez également entrer votre compte e-mail professionnel dans ce champ : cela indique au client de rechercher le serveur d’accès Web des services Bureau à distance qui est associé à votre adresse e-mail.
+   - **Nom d’utilisateur** : nom d’utilisateur à spécifier pour le serveur d’accès web des services Bureau à distance auquel vous vous connectez.
+   - **Mot de passe** : mot de passe à spécifier pour le serveur d’accès web des services Bureau à distance auquel vous vous connectez.
+3. Sélectionnez **Enregistrer**.
 
-1. 연결 센터에서 **기본 설정 > 게이트웨이**를 클릭합니다. 
-2. 테이블 하단에서 **+** 단추를 클릭합니다. 다음 정보를 입력합니다.
-   - **서버 이름** –를 게이트웨이로 사용 하려면 컴퓨터의 이름입니다. 이 Windows 컴퓨터 이름, 인터넷 도메인 이름으로 또는 IP 주소일 수 있습니다. 서버 이름에 포트 정보를 추가할 수도 있습니다(예: **RDGateway:443** 또는 **10.0.0.1:443**).
-   - **사용자 이름** -사용자 이름 및 암호를 연결 하는 원격 데스크톱 게이트웨이를 사용 해야 합니다. 선택할 수도 있습니다 **연결 자격 증명을 사용 하 여** 원격 데스크톱 연결에 사용 되는 동일한 사용자 이름 및 암호를 사용 하도록 합니다.
+Les ressources distantes ajoutées seront affichées dans le Centre de connexion.
 
+## <a name="connect-to-an-rd-gateway-to-access-internal-assets"></a>Se connecter à une passerelle Bureau à distance pour accéder aux ressources internes
 
-## <a name="manage-your-user-accounts"></a>사용자 계정 관리
+Une passerelle Bureau à distance vous permet de vous connecter à un ordinateur distant sur un réseau d’entreprise à partir de n’importe où sur Internet. Vous pouvez créer et gérer vos passerelles dans les préférences de l’application ou lors de l’établissement d’une nouvelle connexion Bureau.
 
-데스크톱 또는 원격 리소스에 연결할 때 다시에서 선택 하려면 사용자 계정을 저장할 수 있습니다. 원격 데스크톱 클라이언트를 사용 하 여 사용자 계정을 관리할 수 있습니다.
+Pour configurer une nouvelle passerelle dans les préférences :
 
-새 사용자 계정을 만들려면
+1. Dans le Centre de connexion, sélectionnez **Préférences > Passerelles**. 
+2. Sélectionnez le bouton **+** situé en bas de la table, puis entrez les informations suivantes :
+   - **Nom du serveur** : nom de l’ordinateur que vous souhaitez utiliser comme passerelle. Cela peut être un nom d’ordinateur Windows, un nom de domaine Internet ou une adresse IP. Vous pouvez aussi ajouter les informations de port au nom du serveur (par exemple : **RDGateway:443** ou **10.0.0.1:443**).
+   - **Nom d’utilisateur** : nom d’utilisateur et mot de passe à spécifier pour la passerelle Bureau à distance à laquelle vous vous connectez. Vous pouvez également sélectionner **Utiliser les informations d’identification de la connexion** si vous préférez garder les mêmes nom d’utilisateur et mot de passe que ceux utilisés pour la connexion Bureau à distance.
 
-1. 연결 센터에서 클릭 **설정** > **계정**을 클릭합니다.
-2. **사용자 계정 추가**를 클릭합니다.
-3. 다음 정보를 입력 합니다.
-   - **사용자 이름** -원격 연결을 사용 하도록 저장 하는 사용자의 이름입니다. user_name, domain\user_name, 또는 user_name@domain.com 형식으로 사용자 이름을 입력할 수 있습니다.
-   - **암호** -지정한 사용자의 암호입니다. 원격 연결에 사용 하 여 저장 하려는 모든 사용자 계정이 연결 된 암호가 있어야 합니다.
-   - **식별 이름** - 암호가 서로 다른 동일한 사용자 계정을 사용하는 경우 식별 이름을 설정하여 이러한 사용자 계정을 구분하세요.
-4. 누르기 **저장**, 를 누른 다음 **설정을**합니다.
+## <a name="manage-your-user-accounts"></a>Gérer vos comptes d’utilisateur
 
-## <a name="customize-your-display-resolution"></a>디스플레이 해상도 사용자 지정
-원격 데스크톱 세션에 대 한 디스플레이 해상도 지정할 수 있습니다.
+Quand vous vous connectez à un bureau ou à des ressources distantes, vous pouvez enregistrer les comptes d’utilisateur pour les resélectionner ultérieurement. Vous pouvez gérer vos comptes d’utilisateur à l’aide du client Bureau à distance.
 
-1. 연결 센터에서 클릭 **기본 설정**합니다.
-2. 클릭 **해상도**합니다. 
-3. 클릭 **+** 합니다.
-4. 해상도 높이 너비를 입력 한 다음 클릭 **확인 합니다.**
+Pour créer un compte d’utilisateur :
 
-해상도 삭제 하려면 선택한 다음 클릭 **-** 합니다.
+1. Dans le Centre de connexion, sélectionnez **Paramètres** > **Comptes**.
+2. Sélectionnez **Ajouter un compte d’utilisateur**.
+3. Entrez les informations suivantes :
+   - **Nom d’utilisateur** : nom d’utilisateur à enregistrer pour l’utiliser avec une connexion à distance. Entrez le nom d’utilisateur dans un de ces formats : nom_utilisateur, domaine\nom_utilisateur ou user_name@domain.com.
+   - **Mot de passe** : mot de passe associé à l’utilisateur spécifié. Chaque compte d’utilisateur que vous souhaitez enregistrer pour les connexions à distance doit avoir un mot de passe associé.
+   - **Nom convivial** : si vous utilisez le même compte d’utilisateur avec des mots de passe différents, définissez un nom convivial pour distinguer ces comptes d’utilisateurs.
+4. Sélectionnez **Enregistrer**, puis **Paramètres**.
 
-**디스플레이에 별도의 공간 있음** Mac OS X 10.9를 실행 중이며 Mavericks에서 **디스플레이에 별도의 공간 있음**(**시스템 기본 설정 > 미션 제어**)을 사용 중지한 경우 원격 데스크톱 클라이언트에서 동일한 옵션을 사용하여 이 설정을 구성해야 합니다.
+## <a name="customize-your-display-resolution"></a>Personnaliser la résolution de votre périphérique d’affichage
 
-### <a name="drive-redirection-for-remote-resources"></a>원격 리소스에 대 한 드라이브 리디렉션
-로컬 mac에는 원격 애플리케이션을 사용 하 여 만든 파일을 저장할 수 있도록 원격 리소스에 대 한 드라이브 리디렉션이 지원 됩니다. 리디렉션된 폴더는 항상 원격 세션에서 네트워크 드라이브로 표시 된 홈 디렉터리입니다.
+Vous pouvez spécifier la résolution du périphérique d’affichage de votre session Bureau à distance.
+
+1. Dans le Centre de connexion, sélectionnez **Préférences**.
+2. Sélectionnez **Resolution**.
+3. Sélectionnez **+** .
+4. Entrez une hauteur et une largeur de résolution, puis sélectionnez **OK**.
+
+Pour supprimer la résolution, sélectionnez-la, puis sélectionnez **-** .
+
+**Les périphériques d’affichage ont des espaces séparés** : si vous exécutez Mac OS X 10.9 et que vous avez désactivé **Les périphériques d’affichage ont des espaces séparés** dans Mavericks (**Préférences système > Contrôle des missions**), vous devez configurer ce paramètre dans le client Bureau à distance en utilisant la même option.
+
+### <a name="drive-redirection-for-remote-resources"></a>Redirection de lecteur pour les ressources distantes
+
+La redirection de lecteur est prise en charge pour les ressources distantes, de sorte que vous pouvez enregistrer les fichiers créés avec une application distante localement sur votre Mac. Le dossier redirigé est toujours votre répertoire personnel affiché en tant que lecteur réseau dans la session à distance.
 
 > [!NOTE]
-> 이 기능을 사용 하기 위해 관리자가 서버에 적절 한 설정을 설정 해야 합니다.
+> Pour utiliser cette fonctionnalité, l’administrateur doit définir les paramètres appropriés sur le serveur.
 
+## <a name="use-a-keyboard-in-a-remote-session"></a>Utiliser un clavier dans une session à distance
 
-## <a name="use-a-keyboard-in-a-remote-session"></a>원격 세션에서 키보드 사용
+Les dispositions du clavier Windows diffèrent des dispositions du clavier Mac. 
 
-Mac 자판 배열 Windows 자판 배열에서 다릅니다. 
+- La touche Commande du clavier Mac correspond à la touche Windows.
+- Pour effectuer des actions qui utilisent la touche Commande sur le Mac, vous devez utiliser la touche Ctrl (Contrôle) dans Windows. Par exemple : Copier = Ctrl + C.
+- Les touches de fonction peuvent être activés dans la session en pressant également la touche Fn (par exemple : Fn + F1).
+- La touche Alt située à droite de la barre d’espace sur le clavier Mac correspond à la touche Alt Gr/Alt droite dans Windows.
 
-- 명령 키를 Mac 키보드에서 Windows 키를 같습니다.
-- Mac에서 명령 단추를 사용하는 작업을 수행하려면 Windows의 컨트롤 단추를 사용해야 합니다(예: 복사 = Ctrl + C).
-- 또한 FN 키를 눌러 해당 세션에서 기능 키를 활성화할 수 있습니다(예: FN + F1).
-- Alt 키를를 Mac 키보드의 공간 표시줄의 오른쪽 창에서 Alt Gr/오른쪽 Alt 키를 같습니다.
+Par défaut, la session à distance utilisera les mêmes paramètres régionaux de clavier que le système d’exploitation sur lequel vous exécutez le client. Si votre Mac est en cours d’exécution sur un système d’exploitation EN-US (Anglais des États-Unis), cette langue est aussi utilisée pour les sessions à distance. Si les paramètres régionaux du clavier du système d’exploitation ne sont pas utilisés, vérifiez le paramètre du clavier sur le PC distant et modifiez-le manuellement. Si vous souhaitez obtenir davantage d’informations sur les claviers et les paramètres régionaux, veuillez consulter le [Forum aux questions du client Bureau à distance](remote-desktop-client-faq.md).
 
-기본적으로 원격 세션은 클라이언트가 실행되고 있는 OS와 동일한 키보드 로캘을 사용합니다. (Mac에서 en-us OS를 실행하는 경우 원격 세션에도 해당 로캘이 사용됩니다.) OS 키보드 로캘을 사용하지 않는 경우 원격 PC에서 키보드 설정을 확인하고 수동으로 변경합니다. 키보드 및 로캘에 대한 자세한 내용은 [원격 데스크톱 클라이언트 FAQ](remote-desktop-client-faq.md)를 참조하세요.
+## <a name="support-for-remote-desktop-gateway-pluggable-authentication-and-authorization"></a>Prise en charge de l’autorisation et de l’authentification enfichables de la passerelle des services Bureau à distance
 
-
-## <a name="support-for-remote-desktop-gateway-pluggable-authentication-and-authorization"></a>원격 데스크톱 게이트웨이 플러그 가능 인증 및 권한 부여에 대 한 지원
-
-Windows Server 2012 r 2에는 새 인증 방법, 원격 데스크톱 게이트웨이 플러그 가능 인증 및 사용자 지정 인증 루틴에 대 한 유연성을 제공 하는 권한 부여에 대 한 지원이 추가 되었습니다. 이 인증 모델은 이제 Mac 클라이언트에서 사용해 볼 수 있습니다. 
+Windows Server 2012 R2 a introduit la prise en charge d’une nouvelle méthode d’authentification, l’autorisation et l’authentification enfichables de la passerelle des services Bureau à distance, qui offre plus de souplesse pour les routines d’authentification personnalisée. Vous pouvez maintenant essayer ce modèle d’authentification avec le client Mac. 
 
 > [!IMPORTANT]
-> Windows 8.1 하기 전에 사용자 지정 인증 및 권한 부여 모델 위의 문서를 설명 하 고 있지만 지원 되지 않습니다.
+> Les modèles d’authentification et d’autorisation personnalisés avant Windows 8.1 ne sont pas pris en charge, bien que l’article ci-dessus les évoque.
 
-이 기능에 대해 자세히 알아보려면 [https://aka.ms/paa-sample](https://aka.ms/paa-sample)을 확인하세요.
-
+Pour en savoir plus sur cette fonctionnalité, veuillez consulter la page [https://aka.ms/paa-sample](https://aka.ms/paa-sample).
 
 > [!TIP]
-> 질문이 나 의견은 언제나 환영 합니다. 그러나 게시 하지 마십시오이 문서의 끝에서 주석 기능을 사용 하 여 문제 해결 도움말에 대 한 요청입니다. 대신, 이동 하려면는 [원격 데스크톱 클라이언트 포럼](https://social.technet.microsoft.com/forums/windowsserver/en-us/home?forum=winrdc) 하 고 새 스레드를 시작 합니다. 기능 제안할 사항이 있으시면 알려 고 [클라이언트 사용자 의견 포럼](https://remotedesktop.uservoice.com/forums/272085-remote-desktop-for-android)합니다.
+> Vos questions et vos commentaires sont toujours les bienvenus. Toutefois, merci de ne pas utiliser la fonctionnalité de commentaire qui figure à la fin de cet article pour nous envoyer une demande d’aide. Veuillez plutôt accéder au [forum du client Bureau à distance](https://social.technet.microsoft.com/forums/windowsserver/en-us/home?forum=winrdc) et démarrez un nouveau fil de discussion. Vous souhaitez nous suggérer une fonctionnalité ? N’hésitez pas à utiliser le [forum UserVoice pour le client](https://remotedesktop.uservoice.com/forums/272085-remote-desktop-for-android) afin de nous en faire part.

@@ -7,12 +7,12 @@ ms.date: 02/24/2020
 ms.topic: article
 ms.prod: windows-server
 ms.technology: networking
-ms.openlocfilehash: 7e7a233d17d8f2e32286a0869b283e450a34bbbc
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 2f6ba34381e813247d0838853f688abf13fbd2fa
+ms.sourcegitcommit: 1d83ca198c50eef83d105151551c6be6f308ab94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80860146"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82605543"
 ---
 # <a name="windows-time-service-tools-and-settings"></a>Windows 시간 서비스 도구 및 설정
 
@@ -307,7 +307,7 @@ Windows 시간 서비스는 다음 레지스트리 하위 키 아래에 정보�
 |**LargeSampleSkew** |모든 버전 |로깅에 대한 큰 샘플 시간차를 초 단위로 지정합니다. SEC(미국 증권 거래 위원회) 사양을 준수하려면 3초로 설정해야 합니다. **EventLogFlags**가 0x2 큰 샘플 시간차로 명시적으로 구성된 경우에만 이 설정에 대한 이벤트가 기록됩니다. 도메인 멤버의 기본값은 3입니다. 독립 실행형 클라이언트 및 서버의 기본값은 3입니다. |
 |**ResolvePeerBackOffMaxTimes** |모든 버전 |실패와 함께 동기화할 피어를 반복하여 찾으려고 할 때 대기 간격을 두 배로 늘릴 최대 횟수를 정합니다. 값이 0이면 항상 최소 대기 간격임을 의미합니다. 도메인 멤버의 기본값은 **7**입니다. 독립 실행형 클라이언트와 서버의 기본값은 **7**입니다. |
 |**ResolvePeerBackoffMinutes** |모든 버전 |동기화할 피어를 찾기 전에 대기할 초기 간격(분)을 지정합니다. 도메인 멤버의 기본값은 **15**입니다. 독립 실행형 클라이언트와 서버의 기본값은 **15**입니다.  |
-|**SpecialPollInterval** |모든 버전 |수동 피어의 특수 폴링 간격을 초 단위로 지정합니다. **SpecialInterval** 0x1 플래그를 사용하도록 설정되면 W32Time은 운영 체제가 결정한 폴링 간격 대신 이 폴링 간격을 사용합니다. 도메인 멤버의 기본값은 **3,600**입니다. 독립 실행형 클라이언트와 서버의 기본값은 **604,800**입니다.<br/><br/>빌드 1702의 새로운 기능인 **SpecialPollInterval**은 **MinPollInterval** 및 **MaxPollInterval** 구성 레지스트리 값에 포함됩니다.|
+|**SpecialPollInterval** |모든 버전 |수동 피어의 특수 폴링 간격을 초 단위로 지정합니다. **SpecialInterval** 0x1 플래그를 사용하도록 설정되면 W32Time은 운영 체제가 결정한 폴링 간격 대신 이 폴링 간격을 사용합니다. 도메인 멤버의 기본값은 **3,600**입니다. 독립 실행형 클라이언트와 서버의 기본값은 **604,800**입니다.<br/><br/>빌드 1703의 새로운 기능인 **SpecialPollInterval**은 **MinPollInterval** 및 **MaxPollInterval** 구성 레지스트리 값에 포함됩니다.|
 |**SpecialPollTimeRemaining** |모든 버전 |W32Time에서 유지 관리됩니다. 여기에는 Windows 운영 체제에서 사용하는 예약된 데이터가 포함됩니다. 컴퓨터가 다시 시작된 후 W32Time이 다시 동기화될 때까지의 시간(초)을 지정합니다. 이 설정을 변경하면 예기치 않은 결과가 발생할 수 있습니다. 도메인 멤버 및 독립 실행형 클라이언트 및 서버 모두의 기본값은 비어 있습니다. |
 
 ### <a name="hklmsystemcurrentcontrolsetservicesw32timetimeprovidersntpserver-subkey-entries"></a><a id="ntpserver"></a>"HKLM\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpServer" 하위 키 항목

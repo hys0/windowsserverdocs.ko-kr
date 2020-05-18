@@ -1,69 +1,95 @@
 ---
-title: 지원되는 원격 데스크톱 RDP 파일 설정
-description: 원격 데스크톱의 RDP 파일 설정에 대해 알아보기
+title: Paramètres pris en charge du fichier RDP du Bureau à distance
+description: Découvrez les paramètres du fichier RDP pour Bureau à distance
 ms.prod: windows-server
 ms.technology: remote-desktop-services
 ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 05/20/2019
+ms.date: 05/08/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 6af7559f1d74f2af38579ee357507bd1207f63b2
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 745f911367471d3708c57a3c777743a65c5bd4a8
+ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
 ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80855916"
+ms.contentlocale: fr-FR
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82993349"
 ---
-# <a name="supported-remote-desktop-rdp-file-settings"></a>지원되는 원격 데스크톱 RDP 파일 설정
+# <a name="supported-remote-desktop-rdp-file-settings"></a>Paramètres pris en charge du fichier RDP du Bureau à distance
 
-다음 표에는 Windows 및 HTML 클라이언트에서 사용할 수 있는 지원되는 RDP 파일 설정 목록이 나와 있습니다. 플랫폼 열의 "x"는 설정이 지원된다는 것을 나타냅니다. 하지만 이 목록은 Windows 및 HTML5 클라이언트에 지원되는 설정의 전체 목록은 아닙니다. 이 표는 Windows 및 HTML5 클라이언트는 물론 macOS, iOS 및 Android 클라이언트에 지원되는 RDP 설정을 더 많이 포함하도록 계속 업데이트될 예정입니다.
+Le tableau suivant contient la liste des paramètres du fichier RDP pris en charge et que vous pouvez utiliser avec les clients Bureau à distance.
 
-PowerShell을 사용하여 호스트 풀의 RDP 속성을 사용자 지정하는 방법에 대한 자세한 내용은 [이 설명서](https://go.microsoft.com/fwlink/?linkid=2098243&clcid=0x409)를 참조하세요.
+Le tableau met également en évidence les paramètres pris en charge en tant que propriétés personnalisées avec Windows Virtual Desktop. Vous pouvez consulter [cette documentation](https://go.microsoft.com/fwlink/?linkid=2098243&clcid=0x409) qui explique comment utiliser PowerShell pour personnaliser les propriétés RDP des pools d’hôtes Windows Virtual Desktop.
 
-| RDP 설정                        | 설명            | 값                 | 기본값          | Windows 가상 데스크톱 | Windows | HTML5   |
-|------------------------------------|------------------------|------------------------|:----------------------:|:-----------------------:|:-------:|:-------:|
-| alternate full address:s:value | 원격 컴퓨터의 IP 주소나 대체 이름을 지정합니다. | 원격 컴퓨터의 유효한 이름 또는 IP 주소(예: "10.10.15.15") | | x | x | x |
-| alternate shell:s:value        | RDP로 연결할 때 프로그램이 자동으로 시작되는지 여부를 결정합니다. 대체 셸을 지정하려면, 값의 실행 파일에 대한 유효한 경로(예: "C:\ProgramFiles\Office\word.exe")를 입력합니다. 이 설정은 RemoteApplicationMode가 사용되는 경우, 연결 시 시작될 원격 애플리케이션의 경로나 별칭도 결정합니다. | "C:\ProgramFiles\Office\word.exe" || x | x | x |
-| audiocapturemode:i:value | 오디오 입출력 리디렉션이 사용되는지 여부를 나타냅니다. | - 0: 로컬 디바이스에서 오디오 캡처를 사용하지 않도록 설정<br>- 1: 로컬 디바이스에서 오디오 캡처를 사용하도록 설정하고 원격 세션에서 오디오 애플리케이션으로 리디렉션 | 0 | x | x | |
-| audiomode:i:value | 로컬 또는 원격 머신에서 오디오 재생 여부를 결정합니다. | - 0: 로컬 컴퓨터에서 소리 재생(이 컴퓨터에서 재생)<br>- 1: 원격 컴퓨터에서 소리 재생(원격 컴퓨터에서 재생)<br>- 2: 소리 재생 안 함(재생 안 함) | 0 | x | x | x |
-| authentication level:i:value | 서버 인증 수준 설정을 정의합니다. | - 0: 서버 인증에 실패하면 경고 없이 컴퓨터에 연결(연결하고 경고를 표시 안 함)<br>- 1: 서버 인증에 실패하면 연결을 설정하지 않음(연결 안 함)<br>- 2: 서버 인증에 실패하면 경고를 표시하고 연결하거나 연결을 거부하도록 허용(메시지 표시)<br>- 3: 인증 요구 사항이 지정되지 않음 | 3 | x | x ||
-| autoreconnection enabled:i:value | 연결이 끊어지면(예: 네트워크 연결이 끊어지는 경우) 클라이언트 컴퓨터가 원격 컴퓨터에 자동으로 다시 연결을 시도할지 여부를 결정합니다. | - 0: 클라이언트 컴퓨터가 자동으로 다시 연결을 시도하지 않음<br>- 1: 클라이언트 컴퓨터가 자동으로 다시 연결을 시도| 1 | x | x | x |
-| bandwidthautodetect:i:value | 자동 네트워크 유형 검색을 사용할지 여부를 결정합니다. | - 0: 자동 네트워크 유형 검색을 사용하지 않도록 설정<br>- 1: 자동 네트워크 유형 검색을 사용하도록 설정 | 1 | x | x | x |
-| camerastoredirect:s:value | 리디렉션할 카메라를 구성합니다. 이 설정은 리디렉션에 사용하도록 설정된 카메라의 KSCATEGORY_VIDEO_CAMERA 인터페이스 목록을 사용합니다. | - * : 모든 카메라를 리디렉션합니다.<br> - camerastoredirect:s:\\?\usb#vid_0bda&pid_58b0&mi처럼 기호 링크 문자열 앞에 "-"를 추가하여 특정 카메라를 제외할 수 있습니다. | | x | x | |
-| compression:i:value | RDP에서 로컬 컴퓨터로 전송할 때 대량 압축을 사용할지 여부를 결정합니다.|- 0: RDP 대량 압축을 사용하지 않도록 설정<br>- 1: RDP 대량 압축을 사용하도록 설정 | 1 | x | x | x |
-| desktop size id:i:value | 미리 정의된 옵션 세트 중에서 원격 세션 데스크톱의 크기를 지정합니다. 이 설정은 desktopheight 또는 desktopwidth가 지정된 경우 무시됩니다.| -0: 640×480<br>- 1: 800×600<br>- 2: 1024×768<br>- 3: 1280×1024<br>- 4: 1600×1200 | 0 | x | x | x |
-| desktopheight:i:value | 원격 데스크톱 연결을 사용하여 연결할 때 원격 컴퓨터의 해상도 높이(픽셀 단위)를 결정합니다. 이 설정은 RDC의 옵션 아래 디스플레이 탭에 있는 디스플레이 구성 슬라이더의 선택 항목에 해당합니다. | 200에서 2048 사이의 숫자 값 | 기본값은 로컬 컴퓨터의 해상도로 설정됨 | x | x | x |
-| desktopwidth:i:value | 원격 데스크톱 연결을 사용하여 연결할 때 원격 컴퓨터의 해상도 너비(픽셀 단위)를 결정합니다. 이 설정은 RDC의 옵션 아래 디스플레이 탭에 있는 디스플레이 구성 슬라이더의 선택 항목에 해당합니다. | 200과 4096 사이의 숫자 값 | 기본값은 로컬 컴퓨터의 해상도로 설정됨 | x | x | x |
-| devicestoredirect:s:value | 클라이언트 컴퓨터에서 어떤 디바이스를 리디렉션하고 원격 세션에서 사용할 수 있을지를 결정합니다. | - *: 지원되는 모든 디바이스를 리디렉션(나중에 연결되는 디바이스 포함)<br> - 하나 이상의 디바이스에 유효한 하드웨어 ID | | x | x | x |
-| disableconnectionsharing:i:value | RemoteApp 또는 데스크톱이 시작될 때 원격 데스크톱 클라이언트가 열려 있는 기존 연결에 다시 연결할지 아니면 새 연결을 시작할지 결정합니다. | - 0: 기존 세션에 다시 연결<br>- 1: 새 연결 시작 | 0 | x | x | x |
-| domain:s:value | 원격 컴퓨터에 로그인할 때 사용할 사용자 계정이 있는 도메인의 이름을 지정합니다. | 유효한 도메인 이름(예: "CONTOSO") | 기본값 없음 | x | x | x |
-| drivestoredirect:s:value | 클라이언트 컴퓨터의 로컬 디스크 드라이브 중 어떤 드라이브를 리디렉션하고 원격 세션에서 사용할 수 있을지를 결정합니다. | - 지정된 값 없음: 드라이브를 리디렉션하지 않음<br>- * : 모든 디스크 드라이브를 리디렉션(나중에 연결되는 드라이브 포함)<br>- DynamicDrives: 나중에 연결된 모든 드라이브 리디렉션<br>- 드라이브 및 하나 이상의 드라이브에 대한 레이블(예: "drivestoredirect:s:C:;E:;"): 지정된 드라이브 리디렉션| 지정된 값 없음 : 드라이브를 리디렉션하지 않음 | x | x    | |
-| enablecredsspsupport:i:value | 사용 가능한 경우 RDP가 CredSSP(Credential Security Support Provider)를 인증에 사용할지 여부를 결정합니다. | - 0: 운영 체제가 CredSSP를 지원하더라도 RDP가 CredSSP를 사용하지 않음<br>- 1: 운영 체제가 CredSSP를 지원하는 경우 RDP가 CredSSP를 사용 | 1 | x | x | |
-| 리디렉션된 비디오 인코딩 capture:i:value | 리디렉션된 비디오의 인코딩을 사용하거나 사용하지 않도록 설정합니다. | - 0: 리디렉션된 비디오를 인코딩하지 않도록 설정<br>- 1: 리디렉션된 비디오를 인코딩하도록 설정 | 1 | x | x | x |
-| full address:s:value | 이 설정은 연결할 원격 컴퓨터의 이름이나 IP 주소를 지정합니다. | 유효한 컴퓨터 이름, IPv4 주소 또는 IPv6 주소입니다. | | x | x | x |
-| gatewaycredentialssource:i:value | RD 게이트웨이 인증 방법을 지정하거나 검색합니다. | - 0: 암호 요청(NTLM)<br>- 1: 스마트 카드 사용<br>- 4: 사용자가 나중에 선택하도록 허용 | 0 | x | x | x |
-| gatewayhostname:s:value | RD 게이트웨이 호스트 이름을 지정합니다. | 유효한 게이트웨이 서버 주소 ||x|x|x|
-| gatewayprofileusagemethod:i:value | 기본 RD 게이트웨이 설정을 사용할지 여부를 지정 | - 0: 관리자가 지정한 기본 프로필 모드 사용<br>- 1: 사용자가 지정한 명시적 설정 사용 | 0 | x | x | x |
-| gatewayusagemethod:i:value | RD 게이트웨이 서버를 사용하는 경우를 지정 | - 0: RD 게이트웨이 서버를 사용하지 않음<br>- 1: RD 게이트웨이 서버를 항상 사용<br>- 2: RD 세션 호스트에 직접 연결할 수 없는 경우 RD 게이트웨이 서버 사용<br>- 3: 기본 RD 게이트웨이 서버 설정 사용<br>- 4: RD 게이트웨이를 사용하지 않음, 로컬 주소에 대해 서버 무시<br>이 속성 값을 0이나 4로 설정하면 효과가 동일하지만 이 속성을 4로 설정하면 옵션이 로컬 주소를 바이패스할 수 있습니다. | | x | x | x |
-| networkautodetect:i:value | 자동 네트워크 대역폭 감지를 사용할지 여부를 결정합니다. bandwidthautodetect 옵션을 설정해야 하며 연결 유형 7과 상관 관계를 지정합니다. | - 0: 자동 네트워크 대역폭 감지를 사용하지 않습니다.<br> - 1: 자동 네트워크 대역폭 감지를 사용합니다. | 1 | x ||x|
-| promptcredentialonce:i:value | 사용자 자격 증명을 저장하고 RD 게이트웨이와 원격 컴퓨터 둘 다에 사용할지 여부를 결정합니다.|- 0: 원격 세션에서 동일한 자격 증명을 사용하지 않음<br>- 1: 원격 세션에서 동일한 자격 증명을 사용|1|x|x||
-| redirectclipboard:i:value | 클립보드 리디렉션이 사용되는지 여부를 결정합니다. | - 0: 로컬 컴퓨터의 클립보드를 원격 세션에서 사용할 수 없음<br>- 1: 로컬 컴퓨터의 클립보드를 원격 세션에서 사용할 수 있음|1|x|x|x|
-| 리디렉션된 비디오 캡처 인코딩 quality:i:value | 인코딩된 비디오의 품질을 제어합니다. | - 0: 고압축 비디오. 동작이 많으면 품질이 떨어질 수 있습니다. <br>- 1: 중간 압축<br>- 2: 그림 품질이 높은 저압축 비디오 | 0 | x | x | x |
-| redirectprinters:i:value | 원격 데스크톱 연결을 사용하여 원격 컴퓨터에 연결할 때 클라이언트 컴퓨터에 구성된 프린터가 리디렉션되고 원격 세션에서 사용할 수 있는지 여부를 결정합니다. | - 0: 로컬 컴퓨터의 프린터를 원격 세션에서 사용할 수 없음<br>- 1: 로컬 컴퓨터의 프린터를 원격 세션에서 사용할 수 있음|1|x|x|x|
-| redirectsmartcards:i:value | 원격 컴퓨터에 연결할 때 클라이언트 컴퓨터의 스마트 카드 디바이스가 리디렉션되고 원격 세션에서 사용할 수 있는지 여부를 결정합니다. |- 0: 로컬 컴퓨터의 스마트 카드 디바이스를 원격 세션에서 사용할 수 없음<br>- 1: 로컬 컴퓨터의 스마트 카드 디바이스를 원격 세션에서 사용할 수 있음|1|x|x||
-| remoteapplicationcmdline:s:value | RemoteApp에 대한 선택적 명령줄 매개 변수입니다.||x|x|x|
-| remoteapplicationexpandcmdline:i:value| RemoteApp 명령줄 매개 변수에 포함된 환경 변수를 로컬로 확장할지 아니면 원격으로 확장할지 결정합니다.|- 0: 환경 변수를 로컬 컴퓨터의 값으로 확장해야 함<br>- 1: 환경 변수를 원격 컴퓨터에서 원격 컴퓨터의 값으로 확장해야 함||x|x|x|
-| remoteapplicationexpandworkingdir | RemoteApp 작업 디렉터리 매개 변수에 포함된 환경 변수를 로컬로 확장할지 아니면 원격으로 확장할지 결정합니다. | - 0: 환경 변수를 로컬 컴퓨터의 값으로 확장해야 함<br> - 1: 환경 변수를 원격 컴퓨터에서 원격 컴퓨터의 값으로 확장해야 함.<br>RemoteApp 작업 디렉터리는 셸 작업 디렉터리 매개 변수를 통해 지정됩니다.||x|x|x|
-|remoteapplicationfile:s:value | RemoteApp이 원격 컴퓨터에서 열 파일을 지정합니다.<br>로컬 파일이 열리도록 하려면, 원본 드라이브에 대한 드라이브 리디렉션도 사용하도록 설정해야 합니다||x|x|x|
-|remoteapplicationicon:s:value | RemoteApp을 시작하는 동안 클라이언트 UI에 표시할 아이콘 파일을 지정합니다. 파일 이름을 지정하지 않으면, 클라이언트는 표준 원격 데스크톱 아이콘을 사용합니다. ".ico" 파일만 지원됩니다.||x|x|x|
-|remoteapplicationmode:i:value | RemoteApp 연결이 RemoteApp 세션으로 시작될지 여부를 결정합니다.| - 0: RemoteApp 세션을 시작하지 않음<br>- 1: RemoteApp 세션을 시작|1|x|x|x|
-|remoteapplicationname:s:value | RemoteApp을 시작하는 동안 클라이언트 인터페이스에서 RemoteApp의 이름을 지정합니다.| 예: "Excel 2016."|x|x|x|
-|remoteapplicationprogram:s:value | RemoteApp의 별칭 또는 실행 파일 이름을 지정합니다. | 예: "EXCEL." |x|x|x|
-|screen mode id:i:value | 원격 데스크톱 연결을 사용하여 원격 컴퓨터에 연결할 때 원격 세션 창이 전체 화면으로 표시될지 여부를 결정합니다. |- 1: 원격 세션이 창에 나타납니다.<br>- 2: 원격 세션이 전체 화면으로 나타납니다.|2|x|x|x|
-|smart sizing:i:value | 클라이언트 컴퓨터가 원격 컴퓨터의 콘텐츠를 클라이언트 컴퓨터의 창 크기에 맞게 조정할 수 있는지 여부를 결정합니다.|- 0: 크기 조정 시 클라이언트 창 디스플레이가 조정되지 않음<br>- 1: 크기 조정 시 클라이언트 창 디스플레이가 조정됨|0|x|x||
-| use multimon:i:value | 원격 데스크톱 연결을 사용하여 원격 컴퓨터에 연결할 때 다중 모니터 지원을 구성합니다.|- 0: 다중 모니터 지원을 사용하지 않도록 설정<br>- 1: 다중 모니터 지원을 사용하도록 설정|0|x|x||
-| username:s:value | 원격 컴퓨터에 로그인할 때 사용할 사용자 계정의 이름을 지정합니다. | 유효한 사용자 이름 ||x|x|x|
-| videoplaybackmode:i:value| 원격 데스크톱 연결에서 RDP 효율적인 멀티미디어 스트리밍을 비디오 재생에 사용할지 여부를 결정합니다.|- 0: RDP 효율적인 멀티미디어 스트리밍을 비디오 재생에 사용하지 않음<br>- 1: 가능한 경우 RDP 효율적인 멀티미디어 스트리밍을 비디오 재생에 사용|1|x|x||
-| workspaceid:s:value | 이 설정이 포함된 RDP 파일과 연결된 RemoteApp 및 데스크톱 ID를 정의합니다. | 유효한 RemoteApp 및 데스크톱 연결 ID|x|x||
+## <a name="connection-information"></a>Informations de connexion
+
+| Paramètre RDP                        | Description            | Valeurs                 | Valeur par défaut          | Windows Virtual Desktop |
+|------------------------------------|------------------------|------------------------|:----------------------:|:-----------------------:|
+| full address:s:value | Nom du PC :</br>Ce paramètre spécifie le nom ou l’adresse IP de l’ordinateur distant auquel vous souhaitez vous connecter.</br></br>Il s’agit du seul paramètre obligatoire dans un fichier RDP. | Un nom, une adresse IPv4 ou une adresse IPv6 valide. | | |
+| alternate full address:s:value | Spécifie un autre nom ou une autre adresse IP de l’ordinateur distant. | Un nom, une adresse IPv4 ou une adresse IPv6 valide. | | |
+| username:s:value | Spécifie le nom du compte d’utilisateur qui sera utilisé pour la connexion à l’ordinateur distant. | N’importe quel nom d’utilisateur valide. | | |
+| domain:s:value | Spécifie le nom du domaine au sein duquel se trouve le compte d’utilisateur qui sera utilisé pour la connexion à l’ordinateur distant. | Un nom de domaine valide, tel que « CONTOSO ». | | |
+| gatewayhostname:s:value | Spécifie le nom d’hôte de passerelle des services Bureau à distance. | Un nom, une adresse IPv4 ou une adresse IPv6 valide. | | |
+| gatewaycredentialssource:i:value | Spécifie la méthode d’authentification de passerelle des services Bureau à distance. | - 0 : Demander le mot de passe (NTLM)</br>- 1 : Utiliser la carte à puce</br>- 4 : Autoriser l’utilisateur à sélectionner ultérieurement | 0 | |
+| gatewayprofileusagemethod:i:value | Spécifie s’il faut utiliser les paramètres par défaut de la passerelle des services Bureau à distance. | - 0 : Utiliser le mode de profil par défaut, comme indiqué par l’administrateur</br>- 1 : Utiliser des paramètres explicites, comme indiqué par l’utilisateur | 0 | |
+| gatewayusagemethod:i:value | Spécifie quand utiliser une passerelle des services Bureau à distance pour la connexion. | - 0 : Ne pas utiliser de passerelle des services Bureau à distance</br>- 1 : Toujours utiliser une passerelle des services Bureau à distance</br>- 2 : Utiliser une passerelle des services Bureau à distance si une connexion directe ne peut pas être établie avec l’hôte de session RD</br>- 3 : Utiliser les paramètres par défaut de la passerelle des services Bureau à distance</br>- 4 : Ne pas utiliser une passerelle des services Bureau à distance, ignorer la passerelle pour les adresses locales</br>Un réglage de cette valeur de propriété sur 0 ou 4 est semblable, mais le réglage sur 4 active l’option permettant d’ignorer les adresses locales. | 0 | |
+| promptcredentialonce:i:value | Détermine si les informations d’identification d’un utilisateur sont enregistrées et utilisées pour la passerelle Bureau à distance et l’ordinateur distant. | - 0 : La session à distance n’utilisera pas les mêmes informations d’identification</br>- 1 : La session à distance utilisera les mêmes informations d’identification | 1 | |
+| authentication level:i:value | Définit les paramètres de niveau d’authentification du serveur. | - 0 : Si l’authentification du serveur échoue, se connecter à l’ordinateur sans avertissement (se connecter et ne pas m’avertir)</br>- 1 : Si l’authentification du serveur échoue, ne pas établir de connexion (ne pas se connecter)</br>- 2 : Si l’authentification du serveur échoue, afficher un avertissement et m’autoriser à me connecter ou à refuser la connexion (m’avertir)</br>- 3 : Aucune exigence d’authentification spécifiée. | 3 | |
+| enablecredsspsupport:i:value | Détermine l’utilisation par le client de l’authentification CredSSP (Credential Security Support Provider) si elle est disponible. | - 0 : RDP n’utilisera pas l’authentification CredSSP, même si le système d’exploitation la prend en charge</br>- 1 : RDP utilisera l’authentification CredSSP si le système d’exploitation la prend en charge | 1 | X |
+| disableconnectionsharing:i:value | Détermine si le client se reconnecte à toute session déconnectée existante ou démarre une nouvelle connexion quand une nouvelle connexion est lancée. | - 0 : Se reconnecter à une session existante</br>- 1 : Initier une nouvelle connexion | 0 | X |
+| alternate shell:s:value | Spécifie un programme à démarrer automatiquement dans la session à distance en tant que shell au lieu de l’Explorateur. | Chemin valide d’un fichier exécutable, tel que « C:\ProgramFiles\Office\word.exe » | | X |
+
+## <a name="session-behavior"></a>Comportement de la session
+
+| Paramètre RDP                        | Description            | Valeurs                 | Valeur par défaut          | Windows Virtual Desktop |
+|------------------------------------|------------------------|------------------------|:----------------------:|:-----------------------:|
+| autoreconnection enabled:i:value | Détermine si le client tente automatiquement de se reconnecter à l’ordinateur distant en cas d’arrêt de la connexion, une interruption de la connectivité réseau par exemple. | - 0 : Le client n’essaie pas de se reconnecter automatiquement</br>- 1 : Le client essaie de se reconnecter automatiquement | 1 | X |
+| bandwidthautodetect:i:value | Détermine si la détection automatique du type de réseau est activée | - 0 : Désactiver la détection automatique du type de réseau</br>- 1 : Activer la détection automatique du type de réseau | 1 | X |
+| networkautodetect:i:value | Détermine s’il faut utiliser la détection automatique de la bande passante réseau. Nécessite que bandwidthautodetect soit défini sur 1. | - 0 : Ne pas utiliser la détection automatique de la bande passante réseau</br> - 1 : Utiliser la détection automatique de la bande passante réseau | 1 | X |
+| compression:i:value | Détermine si la compression en bloc est activée lorsqu’il est transmis par RDP vers l’ordinateur local.|- 0 : Désactiver la compression en bloc RDP</br>- 1 : Activer la compression en bloc RDP | 1 | X |
+| videoplaybackmode:i:value| Détermine si la connexion utilise un streaming multimédia adapté au protocole RDP pour la lecture vidéo.|- 0 : Ne pas utiliser de diffusion multimédia en continu adaptée au protocole RDP pour la lecture vidéo</br>- 1 : Utiliser une diffusion multimédia en continu adaptée au protocole RDP pour la lecture vidéo lorsque cela est possible | 1 | X |
+
+## <a name="device-redirection"></a>Redirection d’appareils
+
+| Paramètre RDP                        | Description            | Valeurs                 | Valeur par défaut          | Windows Virtual Desktop |
+|------------------------------------|------------------------|------------------------|:----------------------:|:-----------------------:|
+| audiocapturemode:i:value | Redirection du microphone :</br>Indique si la redirection audio d’entrée est activée. | - 0 : Désactiver la capture audio à partir de l’appareil local</br>- 1 : Activer la capture audio à partir de l’appareil local et la redirection vers une application audio dans la session à distance | 0 | X |
+| encode redirected video capture:i:value | Active ou désactive l’encodage de la vidéo redirigée. | - 0 : Désactiver l’encodage de la vidéo redirigée</br>- 1 : Activer l’encodage de la vidéo redirigée | 1 | X |
+| redirected video capture encoding quality:i:value | Contrôle la qualité de la vidéo encodée. | - 0 : Vidéo à compression élevée. La qualité peut être altérée en cas de mouvements trop importants. </br>- 1 : Compression moyenne.</br>- 2 : Vidéo à faible compression avec une qualité d’image élevée. | 0 | X |
+| audiomode:i:value | Emplacement de sortie audio :</br>Détermine si la machine locale ou distante joue l’audio. | - 0 : Lire des sons sur l’ordinateur local (s’exécute sur cet ordinateur)</br>- 1 : Lire des sons sur l’ordinateur distant (s’exécute sur l’ordinateur distant)</br>- 2 : Ne pas lire les sons (ne pas lire) | 0 | X |
+| camerastoredirect:s:value | Redirection des caméras :</br>Configure les caméras à rediriger. Ce paramètre utilise une liste délimitée par des points-virgules des interfaces KSCATEGORY_VIDEO_CAMERA des caméras activées pour la redirection. | - * : Rediriger toutes les caméras</br> - Liste de caméras, par exemple camerastoredirect:s:\\?\usb#vid_0bda&pid_58b0&mi</br>- Il est possible d’exclure une caméra spécifique en ajoutant le caractère « - » devant la chaîne de liaison symbolique | Ne rediriger aucune caméra | X |
+| devicestoredirect:s:value | Redirection des appareils USB :</br>Détermine les appareils sur l’ordinateur local qui sont redirigés et disponibles dans la session à distance. | - * : Rediriger tous les appareils pris en charge, y compris ceux qui sont connectés plus tard</br> - ID de matériel valide pour un ou plusieurs appareils | Ne rediriger aucun appareil | X |
+| drivestoredirect:s:value | Redirection du lecteur/stockage :</br>Détermine les lecteurs de disque sur l’ordinateur local qui sont redirigés et disponibles dans la session à distance. | - Aucune valeur spécifiée : aucun lecteur n’est redirigé</br>- * : Rediriger tous les lecteurs de disque, y compris les disques connectés plus tard</br>- DynamicDrives : rediriger tous les lecteurs qui sont connectés ultérieurement</br>- Le lecteur et les étiquettes pour un ou plusieurs disques, comme « drivestoredirect:s:C:;E:; » : rediriger le ou les lecteurs spécifiés | Ne rediriger aucun lecteur | X |
+| redirectclipboard:i:value | Redirection du Presse-papiers :</br>Détermine si la redirection du Presse-papiers est activée. | - 0 : Le presse-papiers sur l’ordinateur local n’est pas disponible dans la session à distance</br>- 1 : Le presse-papiers sur l’ordinateur local est disponible dans la session à distance | 1 | X |
+| redirectprinters:i:value | Redirection de l’imprimante :</br>Détermine si les imprimantes configurées sur l’ordinateur client sont redirigées et disponibles dans la session à distance | - 0 : Les imprimantes sur l’ordinateur local ne sont pas disponibles dans la session à distance</br>- 1 : Les imprimantes sur l’ordinateur local sont disponibles dans la session à distance | 1 | X |
+| redirectsmartcards:i:value | Redirection des périphériques de carte à puce :</br>Détermine si les périphériques de carte à puce sur l’ordinateur client sont redirigés et disponibles dans la session à distance. |- 0 : Le périphérique de carte à puce sur l’ordinateur local n’est pas disponible dans la session à distance</br>- 1 : Le périphérique de carte à puce sur l’ordinateur local est disponible dans la session à distance | 1 | X |
+
+## <a name="display-settings"></a>Paramètres d'affichage
+
+| Paramètre RDP                        | Description            | Valeurs                 | Valeur par défaut          | Windows Virtual Desktop |
+|------------------------------------|------------------------|------------------------|:----------------------:|:-----------------------:|
+| use multimon:i:value | Détermine si la session à distance utilise un ou plusieurs affichages à partir de l’ordinateur local. | - 0 : Ne pas activer la prise en charge de plusieurs affichages</br>- 1 : Activer la prise en charge de plusieurs affichages | 0 | X |
+| selectedmonitors:s:value | Spécifie les affichages locaux à utiliser à partir de la session à distance. Les affichages sélectionnés doivent être contigus. Nécessite que use multimon soit défini sur 1.</br></br>Disponible uniquement sur les clients Boîte de réception Windows (MSTSC) et Bureau Windows (MSRDC). | Liste délimitée par des virgules des ID d’affichage spécifiques à l’ordinateur. Vous pouvez récupérer les ID en appelant mstsc.exe /l. Le premier ID listé est défini comme affichage principal dans la session. | Tous les affichages | X |
+| maximizetocurrentdisplays:i:value | Détermine sur quel affichage la session à distance passe en mode plein écran lors d’un agrandissement. Nécessite que use multimon soit défini sur 1.</br></br>Disponible uniquement sur le client Bureau Windows (MSRDC). | - 0 : La session passe en mode plein écran sur les affichages initialement sélectionnés lors d’un agrandissement</br>- 1 : La session passe dynamiquement en mode plein écran sur les affichages touchés par la fenêtre de session lors d’un agrandissement | 0 | X |
+| singlemoninwindowedmode:i:value | Détermine si une session à distance multi-affichage bascule automatiquement en mode mono-affichage en quittant le mode plein écran. Nécessite que use multimon soit défini sur 1.</br></br>Disponible uniquement sur le client Bureau Windows (MSRDC). | - 0 : La session conserve tous les affichages quand elle quitte le mode plein écran</br>- 1 : La session bascule en mode mono-affichage quand elle quitte le mode plein écran | 0 | X |
+| screen mode id:i:value | Détermine si la fenêtre de session à distance s’affiche en mode plein écran quand vous lancez la connexion. | - 1 : La session à distance s’affiche dans une fenêtre</br>- 2 : La session à distance s’affiche en plein écran | 2 | X |
+| smart sizing:i:value | Détermine si l’ordinateur local met à l’échelle le contenu de la session à distance en fonction de la taille de la fenêtre. | - 0 : Le contenu de la fenêtre locale n’est pas mis à l’échelle quand il est redimensionné</br>- 1 : Le contenu de la fenêtre locale est mis à l’échelle quand il est redimensionné | 0 | X |
+| dynamic resolution:i:value | Détermine si la résolution de la session à distance est automatiquement mise à jour quand la fenêtre locale est redimensionnée. | - 0 : La résolution de la session reste statique pendant toute la durée de la session</br>- 1 : La résolution de la session est mise à jour quand la fenêtre locale est redimensionnée | 1 | X |
+| desktop size id:i:value | Spécifie les dimensions du bureau de session à distance à partir d’un ensemble d’options prédéfinies. Ce paramètre est remplacé si les paramètres desktopheight et desktopwidth sont spécifiés.| \- 0 : 640×480</br>- 1 : 800×600</br>- 2 : 1024×768</br>- 3 : 1280×1024</br>- 4 : 1600×1200 | 1 | X |
+| desktopheight:i:value | Spécifie la hauteur de résolution (en pixels) de la session à distance. | Valeur numérique comprise entre 200 et 8192 | Correspond à l’ordinateur local | X |
+| desktopwidth:i:value | Spécifie la largeur de résolution (en pixels) de la session à distance. | Valeur numérique comprise entre 200 et 8192 | Correspond à l’ordinateur local | X |
+| desktopscalefactor:i:value | Spécifie le facteur d’échelle de la session à distance pour que le contenu apparaisse plus grand. | Valeur numérique de la liste suivante : 100, 125, 150, 175, 200, 250, 300, 400, 500 | 100 | X |
+
+## <a name="remoteapp"></a>RemoteApp
+
+| Paramètre RDP                        | Description            | Valeurs                 | Valeur par défaut          | Windows Virtual Desktop |
+|------------------------------------|------------------------|------------------------|:----------------------:|:-----------------------:|
+| remoteapplicationcmdline:s:value | Paramètres de ligne de commande facultatifs pour RemoteApp. | Paramètres de ligne de commande valides. | | |
+| remoteapplicationexpandcmdline:i:value | Détermine si les variables d’environnement contenues dans le paramètre de ligne de commande de RemoteApp doivent être développées localement ou à distance. | - 0 : Les variables d’environnement doivent être développées par les valeurs de l’ordinateur local</br>- 1 : Les variables d’environnement doivent être développées par les valeurs de l’ordinateur distant | 1 | |
+| remoteapplicationexpandworkingdir | Détermine si les variables d’environnement contenues dans le paramètre de répertoire de travail de RemoteApp doivent être développées localement ou à distance. | - 0 : Les variables d’environnement doivent être développées par les valeurs de l’ordinateur local</br> - 1 : Les variables d’environnement doivent être développées par les valeurs de l’ordinateur distant.</br>Le répertoire de travail de RemoteApp est spécifié via le paramètre de répertoire de travail de l’interpréteur de commandes. | 1 | |
+| remoteapplicationfile:s:value | Spécifie un fichier à ouvrir par la RemoteApp sur l’ordinateur distant.</br>Pour les fichiers locaux à ouvrir, vous devez également activer la redirection de lecteur pour le lecteur source. | Chemin de fichier valide. | | |
+| remoteapplicationicon:s:value | Spécifie le fichier d’icône à afficher dans l’interface utilisateur client lors du lancement d’une RemoteApp. Si aucun nom de fichier n’est spécifié, le client utilisera l’icône standard de bureau à distance. Seuls les fichiers ICO sont pris en charge. | Chemin de fichier valide. | | |
+| remoteapplicationmode:i:value | Détermine si une connexion est lancée en tant que session RemoteApp. | - 0 : Ne pas lancer une session RemoteApp</br>- 1 : Lancer une session RemoteApp | 1 | |
+| remoteapplicationname:s:value | Spécifie le nom de la RemoteApp dans l’interface client lors du démarrage de la RemoteApp.| Nom complet de l’application. Par exemple, « Excel 2016 ». | | |
+| remoteapplicationprogram:s:value | Spécifie l’alias ou le nom de l’exécutable de la RemoteApp. | Alias ou nom valide. Par exemple, « EXCEL ». | | |

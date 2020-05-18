@@ -1,6 +1,6 @@
 ---
-title: 네트워크 지침
-description: 원격 데스크톱 배포에 대한 대역폭 추천 사항입니다.
+title: Instructions relatives au réseau
+description: Recommandations en matière de bande passante pour les déploiements Bureau à distance.
 ms.prod: windows-server
 ms.technology: remote-desktop-services
 ms.author: helohr
@@ -8,52 +8,52 @@ ms.date: 12/12/2019
 ms.topic: article
 author: Heidilohr
 manager: lizross
-ms.openlocfilehash: 79db56d467ae0913446faebffc5a9598aae0b767
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: ba084c58e725627e838c07b5b5b9849d131b2038
+ms.sourcegitcommit: 32f810c5429804c384d788c680afac427976e351
 ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80852996"
+ms.contentlocale: fr-FR
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83203547"
 ---
-# <a name="network-guidance"></a>네트워크 지침
+# <a name="network-guidelines"></a>Instructions relatives au réseau
 
-원격 Windows 세션을 사용하는 경우 네트워크의 사용 가능한 대역폭이 환경의 품질에 큰 영향을 줍니다. 애플리케이션과 디스플레이 해상도가 다르면 다른 네트워크 구성이 필요하므로 네트워크를 요구 사항에 맞게 구성해야 합니다.
+Quand vous utilisez une session Windows à distance, la bande passante disponible de votre réseau a un impact significatif sur la qualité de votre expérience. Différentes applications et résolutions d’affichage appellent différentes configurations réseau. Il est donc important de vérifier que votre réseau est configuré pour répondre à vos besoins.
 
 >[!NOTE]
->다음 추천 사항은 손실이 0.1% 미만인 네트워크에 적용됩니다. 이러한 추천 사항은 VM(가상 머신)에서 호스팅하는 세션의 수에 관계없이 적용됩니다.
+>Les recommandations suivantes s’appliquent aux réseaux avec moins de 0,1 % de perte. Ces recommandations s’appliquent quel que soit le nombre de sessions que vous hébergez sur vos machines virtuelles.
 
-## <a name="applications"></a>애플리케이션
+## <a name="applications"></a>Applications
 
-다음 표에는 원활한 사용자 환경에 추천되는 최소 대역폭이 나와 있습니다. 이러한 추천 사항은 [원격 데스크톱 워크로드](remote-desktop-workloads.md)의 지침을 기반으로 합니다.
+Le tableau suivant répertorie les bandes passantes minimales recommandées pour une expérience utilisateur fluide. Ces recommandations sont basées sur les lignes directrices des [charges de travail Bureau à distance](remote-desktop-workloads.md).
 
-| 워크로드 유형   | 추천 대역폭 |
+| Type de charge de travail   | Bande passante recommandée |
 |-----------------|-----------------------|
-| Light           | 1.5Mbps              |
-| 보통          | 3Mbps                |
-| Heavy           | 5Mbps                |
-| 고급           | 15Mbps               |
+| Maigre           | 1,5 Mbits/s              |
+| Moyen          | 3 Mbits/s                |
+| Intensif           | 5 Mbits/s                |
+| Avancé           | 15 Mbits/s               |
 
-네트워크에 가해지는 스트레스는 앱 워크로드의 출력 프레임 속도와 디스플레이 해상도에 따라 달라집니다. 프레임 속도 또는 디스플레이 해상도가 증가하면 대역폭 요구 사항도 증가합니다. 예를 들어 고해상도 디스플레이가 있는 경량 워크로드에는 사용 가능한 대역폭이 일반 해상도 또는 저해상도인 경량 워크로드보다 더 많이 필요합니다.
+Gardez à l’esprit que la contrainte imposée à votre réseau dépend à la fois de la fréquence d’images de sortie de la charge de travail de votre application et de votre résolution d’affichage. Si la fréquence d’images ou la résolution d’affichage augmente, le besoin en bande passante augmente également. Par exemple, une charge de travail légère avec un affichage haute résolution nécessite plus de bande passante qu’une charge de travail légère avec une résolution normale ou basse.
 
-다음과 같은 다른 시나리오의 대역폭 요구 사항은 사용하는 방법에 따라 달라질 수 있습니다.
+Les besoins en bande passante dans d’autres scénarios peuvent varier en fonction de votre utilisation, par exemple :
 
-- 음성 또는 화상 회의
-- 실시간 통신
-- 4K 비디오 스트리밍
+- Audioconférence et vidéoconférence
+- Communication en temps réel
+- Streaming de vidéos 4K
 
-Login VSI와 같은 시뮬레이션 도구를 사용하여 배포에서 이러한 시나리오를 부하 테스트해야 합니다. 네트워크 요구 사항을 더 잘 이해하려면 원격 세션에서 부하 크기를 변경하고, 스트레스 테스트를 실행하고, 일반적인 사용자 시나리오를 테스트합니다.
+Veillez à tester le chargement de ces scénarios dans votre déploiement à l’aide d’outils de simulation comme Login VSI. Faites varier la taille de la charge, exécutez des tests de contrainte et testez les scénarios utilisateur courants dans des sessions à distance pour mieux comprendre les besoins de votre réseau.
 
-## <a name="display-resolutions"></a>디스플레이 해상도
+## <a name="display-resolutions"></a>Résolutions d’affichage
 
-다른 디스플레이 해상도를 사용하려면 다른 사용 가능한 대역폭이 필요합니다. 다음 표에는 프레임 속도가 30fps(초당 프레임)인 일반적인 디스플레이 해상도에서 원활한 사용자 환경에 추천되는 대역폭이 나와 있습니다. 이러한 추천 사항은 단일 및 다중 사용자 시나리오에 적용됩니다. 정적 텍스트 읽기와 같이 30fps 미만의 프레임 속도와 관련된 시나리오에는 사용 가능한 대역폭이 더 적게 필요합니다.
+Les besoins en bande passante varient en fonction de la résolution d’affichage. Le tableau suivant liste les bandes passantes recommandées pour une expérience utilisateur fluide à des résolutions d’affichage standard avec une fréquence de 30 images par seconde. Ces recommandations s’appliquent à des scénarios comptant un ou plusieurs utilisateurs. Gardez à l’esprit que les scénarios impliquant une fréquence inférieure à 30 images par seconde, comme la lecture de texte statique, nécessitent moins de bande passante disponible.
 
-| 30fps의 일반적인 디스플레이 해상도    | 추천 대역폭 |
+| Résolutions d’affichage standard à 30 images par seconde    | Bande passante recommandée |
 |------------------------------------------|-----------------------|
-| 약 1024x768px                      | 1.5Mbps              |
-| 약 1280x720px                      | 3Mbps                |
-| 약 1920×1080px                     | 5Mbps                |
-| 약 3840x2160px(4K)                | 15Mbps               |
+| Environ 1024 × 768 px                      | 1,5 Mbits/s              |
+| Environ 1280 × 720 px                      | 3 Mbits/s                |
+| Environ 1920 × 1080 px                     | 5 Mbits/s                |
+| Environ 3840 × 2160 px (4K)                | 15 Mbits/s               |
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>Ressources supplémentaires
 
-현재 사용 중인 Azure 지역은 네트워크 조건만큼 사용자 환경에 영향을 줄 수 있습니다. 자세한 내용은 [Windows Virtual Desktop 경험 추정기](https://azure.microsoft.com/services/virtual-desktop/assessment/)를 확인하세요.
+La région Azure dans laquelle vous vous trouvez peut affecter l’expérience utilisateur autant que les conditions réseau. Pour en savoir plus, consultez l’[estimateur d’expérience Windows Virtual Desktop](https://azure.microsoft.com/services/virtual-desktop/assessment/).

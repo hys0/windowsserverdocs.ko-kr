@@ -1,147 +1,170 @@
 ---
-title: iOS 클라이언트의 새로운 기능
-description: iOS용 데스크톱 웹 클라이언트의 최근 변경 내용 알아보기
+title: Nouveautés du client iOS
+description: En savoir plus sur les dernières modifications apportées au client Bureau à distance pour iOS
 ms.prod: windows-server
 ms.technology: remote-desktop-services
 ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 04/03/2020
+ms.date: 05/06/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 69e33ef5f187672d948b6734a9ae7f68b54b7608
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 0943379b8f251d1548a0aa920a95931dc39a0624
+ms.sourcegitcommit: 67116322915066b85decb4261d47cedec2cfe12f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80854656"
+ms.contentlocale: fr-FR
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82903447"
 ---
-# <a name="whats-new-in-the-ios-client"></a>iOS 클라이언트의 새로운 기능
+# <a name="whats-new-in-the-ios-client"></a>Nouveautés du client iOS
 
-[iOS용 원격 데스크톱 클라이언트](remote-desktop-ios.md)를 정기적으로 업데이트하여 새로운 기능을 추가하고 문제를 수정합니다. 최신 업데이트는 이 페이지에서 찾을 수 있습니다.
+Nous mettons régulièrement à jour le [client Bureau à distance pour iOS](remote-desktop-ios.md), en ajoutant de nouvelles fonctionnalités et en corrigeant les problèmes. Cette page liste les dernières mises à jour.
 
->[!IMPORTANT]
->이 앱을 최고의 iOS용 원격 데스크톱 클라이언트로 만들기 위해 최선을 다하고 있으며 사용자 의견을 소중하게 생각합니다. **도움말** > **문제 보고**에서 문제를 보고할 수 있습니다.
+## <a name="how-to-report-issues"></a>Comment signaler des problèmes
 
-## <a name="updates-for-version-1005"></a>10.0.5 버전에 대한 업데이트
+Dans le cadre de notre engagement à proposer le meilleur client Bureau à distance pour iOS possible, nous apprécions vos commentaires. Vous pouvez signaler les problèmes via **Aide** > **Signaler un problème**.
 
-*게시 날짜: 2020년 3월 9일*
+## <a name="updates-for-version-1007"></a>Mises à jour pour la version 10.0.7
 
-이 10.0.5 릴리스에 대한 버그 수정 및 기능 업데이트를 통합했습니다. 새로운 기능은 다음과 같습니다.
+*Date de publication : 29/4/2020*
 
-- 이제 실행된 RDP 파일을 자동으로 가져옵니다(일반 설정에서 토글 찾기).
-- 이제 파일 앱에서 아직 다운로드되지 않은 iCloud 기반 RDP 파일을 시작할 수 있습니다.
-- 이제 원격 세션이 iPhone의 홈 표시기 아래로 확장될 수 있습니다(디스플레이 설정에서 토글 찾기).
-- é와 같이 여러 키를 입력하여 복합 문자를 입력할 수 있는 기능이 추가되었습니다.
-- 화면 상의 iPad 부동 키보드에 대한 지원이 추가되었습니다.
-- 원격 세션에서 리디렉션된 카메라의 속성을 조정하기 위한 지원이 추가되었습니다.
-- 원격 세션에 연결할 때 클라이언트가 응답하지 않도록 하는 제스처 인식기의 버그가 수정되었습니다.
-- 이제 한 번의 위로 살짝 밀기로 앱 전환 모드로 전환할 수 있습니다(세션이 홈 표시기 영역으로 확장된 상태에서 터치 모드인 경우 제외).
-- 원격 세션에 연결하면 홈 표시기가 자동으로 사라지고 화면을 탭하면 다시 나타납니다.
-- 연결 센터에서 앱 설정을 가져오는 키보드 단축키를 추가했습니다(**Command + ,** ).
-- 연결 센터에서 모든 작업 영역을 새로 고치는 키보드 단축키를 추가했습니다(**Command + R**).
-- 원격 세션에 연결할 때 Escape에 대한 시스템 키보드 단축키를 연결했습니다(**Command +.** ).
-- 원격 세션의 Windows 화상 키보드가 너무 작은 시나리오가 해결되었습니다.
-- 연결 센터 전체에서 자동 키보드 포커스를 구현하여 데이터를 보다 원활하게 입력할 수 있습니다.
-- 자격 증명 프롬프트에서 **Enter**를 누르면 프롬프트가 해제되고 현재 흐름이 재개됩니다.
-- Shift + Option + 왼쪽, 위쪽 또는 아래쪽 화살표 키를 누를 때 클라이언트가 작동 중단되는 시나리오가 해결되었습니다.
-- SwiftPoint 디바이스를 제거할 때 발생하는 작동 중단 현상이 해결되었습니다.
-- 마지막 릴리스 이후 사용자가 보고한 기타 작동 중단 현상이 해결되었습니다.
+Dans cette mise à jour, nous avons ajouté la possibilité de trier la vue de la liste des PC (disponible sur iPhone) par nom ou heure de la dernière connexion.
 
-버그를 보고하고 함께 문제를 진단해 주신 모든 분들께 감사드립니다.
+## <a name="updates-for-version-1006"></a>Mises à jour pour la version 10.0.6
 
-## <a name="updates-for-version-1004"></a>10.0.4 버전에 대한 업데이트
+*Date de publication : 31/3/2020*
 
-*게시 날짜: 2020년 2월 3일*
+Le temps est venu d’une mise à jour rapide avec certains correctifs de bogues. Nouveautés de cette version :
 
-또 다른 업데이트를 발표할 때가 되었습니다! 버그를 보고하고 문제를 진단하기 위해 협력해 주신 모든 분들께 감사드립니다. 이 버전의 새로운 기능은 다음과 같습니다.
+- Résolution de plusieurs problèmes d’accessibilité VoiceOver.
+- Résolution d’un problème empêchant les utilisateurs de se connecter avec des informations d’identification turques.
+- Les sessions affichées dans l’interface utilisateur du sélecteur sont désormais triées par date de leur lancement.
+- Le fait de sélectionner le bouton Précédent dans le Centre de connexion vous ramène maintenant à la dernière session active.
+- Les souris Swiftpoint sont désormais relâchées quand l’utilisateur quitte le client pour rejoindre une autre application.
+- Une meilleure interopérabilité avec le service Windows Virtual Desktop.
+- Résolution des plantages signalés dans les rapports d’erreurs.
 
-- 이제 사용자 계정 및 게이트웨이를 삭제할 때 확인 UI가 표시됩니다.
-- 연결 센터의 검색 UI가 약간 수정되었습니다.
-- 사용자 이름 힌트가 있으면 RDP 파일 또는 URI에서 시작할 때 자격 증명 프롬프트 UI에 표시됩니다.
-- 확장된 화상 키보드가 iPhone 노치 아래로 확장되는 문제가 해결되었습니다.
-- 연결을 끊었다가 다시 연결한 후 외부 키보드가 작동을 멈추는 버그가 수정되었습니다.
-- 외부 키보드의 Esc 키에 대한 지원이 추가되었습니다.
-- 중국어 문자를 입력할 때 영어 문자가 표시되는 버그가 수정되었습니다.
-- 삭제 후 일부 중국어 입력이 원격 세션에 남아 있는 버그가 수정되었습니다.
-- 마지막 릴리스 이후 사용자가 보고한 기타 작동 중단 현상이 해결되었습니다.
+Nous apprécions tous les commentaires que vous nous envoyez via l’App Store, via les commentaires de l’application et par e-mail. Et nous remercions particulièrement tous ceux qui ont collaboré avec nous pour diagnostiquer des problèmes.
 
-App Store, 앱 내 피드백, 이메일을 통해 보내주신 모든 의견에 감사드립니다. 매 릴리스마다 이 앱을 더 잘 만드는 데 계속 집중할 것입니다.
+## <a name="updates-for-version-1005"></a>Mises à jour pour la version 10.0.5
 
-## <a name="updates-for-version-1003"></a>10.0.3 버전에 대한 업데이트
+*Date de publication : 09/03/20*
 
-*게시 날짜: 2020년 1월 16일*
+Nous avons rassemblé des correctifs de bogues et des mises à jour de fonctionnalités pour la version 10.0.5. Voici les nouveautés :
 
-2020년의 첫 번째 릴리스를 발표할 때가 되었습니다. 이는 새로운 기능과 버그 수정을 의미합니다. 이 업데이트에 포함된 사항은 다음과 같습니다.
+- Les fichiers RDP lancés sont désormais automatiquement importés (vous verrez le bouton bascule dans les paramètres généraux).
+- Vous pouvez maintenant lancer des fichiers RDP basés sur iCloud qui n’ont pas encore été téléchargés dans l’application Fichiers.
+- La session à distance peut maintenant s’étendre sous l’indicateur Accueil des iPhone (vous verrez le bouton bascule dans les paramètres d’affichage).
+- Prise en charge de la saisie des caractères composites nécessitant plusieurs frappes de touches (par exemple, « é »).
+- Prise en charge du clavier flottant sur l’écran de l’iPad.
+- Prise en charge de l’ajustement des propriétés des caméras redirigées à partir d’une session à distance.
+- Correction d’un bogue dans le module de reconnaissance de mouvement qui provoquait le blocage du client lors de la connexion à une session à distance.
+- Vous pouvez maintenant passer en mode de basculement d’application avec un seul balayage vers le haut (sauf lorsque vous êtes en mode tactile avec la session étendue dans la zone de l’indicateur Accueil).
+- L’indicateur Accueil se masque désormais automatiquement lorsque vous êtes connecté à une session à distance et réapparaît quand vous appuyez sur l’écran.
+- Ajout d’un raccourci clavier pour accéder aux paramètres de l’application dans le centre de connexion (**Commande + ,** ).
+- Ajout d’un raccourci clavier permettant d’actualiser tous les espaces de travail dans le centre de connexion (**Commande + R**).
+- Ajout d’un raccourci clavier système pour Échap lors d’une connexion à une session à distance (**Commande + .** ).
+- Correction des scénarios dans lesquels le clavier visuel Windows était trop petit lors d’une session à distance.
+- Implémentation du focus clavier automatique dans le centre de connexion pour faciliter l’entrée de données.
+- Si vous appuyez sur **Entrée** lorsque vous êtes invité à entrer vos informations d’identification, l’invite peut désormais être ignorée et le workflow en cours peut reprendre.
+- Correction d’un scénario dans lequel le client plantait lors de l’utilisation des touches Maj + Option + Flèche gauche, haut ou bas.
+- Correction d’un plantage qui se produisait lors de la suppression d’un appareil SwiftPoint.
+- Correction d’autres plantages signalés par les utilisateurs depuis la dernière version.
 
-- RDP 파일 및 RDP URI에서 연결을 시작할 수 있습니다.
-- 작업 영역 헤더는 이제 축소 가능합니다.
-- 이제 마우스 포인터 모드에서 확대/축소 및 이동이 지원됩니다.
-- 마우스 포인터 모드에서 길게 누르기 제스쳐를 취하면 원격 세션에서 마우스 오른쪽 단추 클릭이 트리거됩니다.
-- 마우스 포인터 모드에서 마우스 오른쪽 단추를 클릭하기 위한 강제 터치 제스처가 제거되었습니다.
-- 이제 앱이 연결되어 있지 않더라도 세션 내 전환기 화면에서는 연결을 끊을 수 있습니다.
-- 이제 세션 전환기 화면에서 빠른 해제가 지원됩니다.
-- PC와 앱은 더 이상 세션 내 전환기 화면에서 자동으로 다시 정렬되지 않습니다.
-- PC 축소판 그림 보기 타원 메뉴의 적중 테스트 영역을 확대했습니다.
-- 이제 입력 디바이스 설정 페이지에 지원되는 디바이스에 대한 링크가 포함됩니다.
-- 일부 사용자에게 Bluetooth 권한 UI가 시작 시 반복적으로 나타나는 버그가 수정되었습니다.
-- 마지막 릴리스 이후 사용자가 보고한 기타 작동 중단 현상이 해결되었습니다.
+Nous aimerions remercier tous ceux qui nous ont signalé des bogues et qui nous ont aidé à diagnostiquer les problèmes.
 
-## <a name="updates-for-version-1002"></a>10.0.2 버전에 대한 업데이트
+## <a name="updates-for-version-1004"></a>Mises à jour pour la version 10.0.4
 
-*게시 날짜: 2019년 12월 20일*
+*Date de publication : 03/02/20*
 
-버그를 수정하고 유용한 기능을 추가하기 위해 열심히 노력하고 있습니다. 이 릴리스의 새로운 기능은 다음과 같습니다.
+Voici venir une nouvelle mise à jour ! Nous aimerions remercier tous ceux qui nous ont signalé des bogues et qui nous ont aidé à diagnostiquer les problèmes. Voici les nouveautés de cette version :
 
-- 하드웨어 키보드에서 일본어 및 중국어 입력을 지원합니다.
-- 이제 PC 목록 보기에 연결된 사용자 계정의 식별 이름(있는 경우)이 표시됩니다.
-- 첫 번째 실행 경험의 권한 UI가 이제 밝은 모드에서 올바르게 렌더링됩니다.
-- 하드웨어 키보드의 Option 및 위쪽 또는 아래쪽 화살표 키를 동시에 누를 때마다 발생한 작동 중단 현상을 수정했습니다.
-- 백슬래시 키를 쉽게 찾을 수 있도록 암호 프롬프트 UI에 사용되는 화상 키보드 레이아웃을 업데이트했습니다.
-- 마지막 릴리스 이후 사용자가 보고한 기타 작동 중단 현상이 해결되었습니다.
+- L’interface utilisateur de confirmation s’affiche à présent lors de la suppression de comptes d’utilisateur et de passerelles.
+- L’interface utilisateur de recherche du centre de connexion a été légèrement retravaillée.
+- L’indication du nom d’utilisateur (quand elle existe) s’affiche désormais dans l’invite de demande d’informations d’identification lors d’un lancement à partir d’un fichier RDP ou d’un URI.
+- Correction d’un problème lors duquel le clavier visuel étendu s’étendait sous l’encoche iPhone.
+- Correction d’un bogue dans lequel les claviers externes cessaient de fonctionner après avoir été déconnectés puis reconnectés.
+- Prise en charge de la touche Échap des claviers externes.
+- Correction d’un bogue où des caractères anglais s’affichaient lors de l’entrée de caractères chinois.
+- Correction d’un bogue où certaines entrées en langue chinoise restaient dans la session à distance après leur suppression.
+- Correction d’autres plantages signalés par les utilisateurs depuis la dernière version.
 
-## <a name="updates-for-version-1001"></a>10.0.1 버전에 대한 업데이트
+Nous apprécions tous les commentaires que vous nous envoyez via l’App Store, via les commentaires de l’application et par e-mail. Nous visons toujours à améliorer cette application avec chaque version.
 
-*게시 날짜: 2019년 12월 15일*
+## <a name="updates-for-version-1003"></a>Mises à jour pour la version 10.0.3
 
-이 릴리스의 새로운 기능은 다음과 같습니다.
+*Date de publication : 16/01/20*
 
-- Windows Virtual Desktop 서비스 지원
-- 연결 센터 UI가 업데이트되었습니다.
-- 세션 내 UI가 업데이트되었습니다.
+Nous sommes en 2020 : il est temps pour notre première version de l’année, ce qui signifie nouvelles fonctionnalités et correctifs de bogues. Voici ce que comprend cette mise à jour :
 
-## <a name="updates-for-version-1000"></a>10.0.0 버전에 대한 업데이트
+- Prise en charge du lancement des connexions à partir des fichiers RDP et des URI RDP.
+- Les en-têtes d’espace de travail sont maintenant réductibles.
+- Il est désormais possible d’utiliser le zoom et le panoramique en même temps en mode Pointeur de souris.
+- Un appui prolongé en mode Pointeur de souris déclenche désormais un clic droit dans la session à distance.
+- Suppression du mouvement Force Touch pour un clic droit en mode Pointeur de souris.
+- Dans une session, l’écran du sélecteur prend maintenant en charge la déconnexion, même si aucune application n’est connectée.
+- L’abandon interactif est maintenant pris en charge dans l’écran du sélecteur de la session.
+- Les PC et les applications ne sont plus automatiquement réorganisés dans l’écran du sélecteur de la session.
+- Agrandissement de la zone de test positionnement pour le menu des miniatures du PC.
+- La page des paramètres Appareils pris en charge contient maintenant un lien vers les appareils pris en charge.
+- Correction d’un bogue qui entraînait l’affichage répété de l’interface utilisateur des autorisations Bluetooth au lancement de certains utilisateurs.
+- Correction d’autres plantages signalés par les utilisateurs depuis la dernière version.
 
-*게시 날짜: 2019년 12월 13일*
+## <a name="updates-for-version-1002"></a>Mises à jour relatives à la version 10.0.2
 
-iOS용 원격 데스크톱 클라이언트를 마지막으로 업데이트한 지 1년이 훨씬 지났습니다. 그러나 이제 흥미로운 새 업데이트가 있으며, 앞으로는 더 많은 업데이트가 정기적으로 제공됩니다. 10.0.0 버전의 새로운 기능은 다음과 같습니다.
+*Date de publication : 20/12/19*
 
-- Windows Virtual Desktop 서비스 지원
-- 새 연결 센터 UI
-- 연결된 PC와 앱 간에 전환할 수 있는 새 세션 UI
-- 보조 화상 키보드의 새 레이아웃
-- 향상된 외부 키보드 지원
-- SwiftPoint Bluetooth 마우스 지원
-- 마이크 리디렉션 지원
-- 로컬 스토리지 리디렉션 지원
-- 카메라 리디렉션 지원(Windows 10, 버전 1809 이상에만 사용할 수 있음)
-- 새 iPhone 및 iPad 디바이스 지원
-- 어두운 테마 및 밝은 테마 지원
-- 원격 PC 또는 앱에 연결할 때 휴대폰을 잠글 수 있는지 여부를 제어합니다.
-- 이제 원격 데스크톱 로고 단추를 길게 누르면 세션 내 연결 표시줄을 접을 수 있습니다.
+Nous nous efforçons de résoudre les bogues et d’ajouter des fonctionnalités utiles. Nouveautés de cette version :
 
-## <a name="updates-for-version-8142"></a>8\.1.42 버전에 대한 업데이트
+- Prise en charge des entrées en japonais et en chinois sur les claviers matériels.
+- Le mode liste des PC affiche maintenant le nom convivial du compte d’utilisateur associé, s’il en existe un.
+- Lors de la première exécution, l’interface utilisateur des autorisations s’affiche désormais correctement en mode Clair.
+- Correction d’un plantage qui se produisait chaque fois qu’un utilisateur appuyait simultanément sur les touches Option et Flèche haut (ou bas) sur un clavier matériel.
+- Mise à jour de la disposition du clavier visuel utilisée dans l’invite de mot de passe pour faciliter la recherche de la barre oblique inverse.
+- Correction d’autres plantages signalés par les utilisateurs depuis la dernière version.
 
-*게시 날짜: 06/20/2018*
+## <a name="updates-for-version-1001"></a>Mises à jour pour la version 10.0.1
 
-- 버그 픽스 및 성능 향상
+*Date de publication : 15/12/19*
 
-## <a name="updates-for-version-8141"></a>8\.1.41 버전에 대한 업데이트
+Nouveautés de cette version :
 
-*게시 날짜: 03/28/2018*
+- Prise en charge du service Windows Virtual Desktop.
+- Mise à jour de l’interface utilisateur du Centre de connexion.
+- Mise à jour de l’interface utilisateur de la session.
 
-- CVE-2018-0886에 설명된 CredSSP 암호화 오라클 수정을 해결하기 위해 업데이트됩니다.
+## <a name="updates-for-version-1000"></a>Mises à jour pour la version 10.0.0
 
-## <a name="how-to-report-issues"></a>문제를 보고하는 방법
+*Date de publication : 13/12/19*
 
-이 앱을 최대한 활용할 수 있도록 노력하고 있으며 사용자 의견을 소중하게 생각합니다. 발생한 문제는 클라이언트에서 **설정** > **문제 보고**로 차례로 이동하여 보고할 수 있습니다.
+La dernière mise à jour du client Bureau à distance pour iOS remonte à plus d’un an. Nous sommes de retour avec une nouvelle mise à jour très intéressante qui sera suivie de bien d’autres à intervalles réguliers. Voici les nouveautés de la version 10.0.0 :
+
+- Prise en charge du service Windows Virtual Desktop.
+- Nouvelle interface utilisateur du Centre de connexion.
+- Nouvelle interface utilisateur dans la session permettant de basculer entre PC connectés et applications.
+- Nouvelle disposition pour le clavier visuel auxiliaire.
+- Prise en charge améliorée des claviers externes.
+- Prise en charge des souris Bluetooth SwiftPoint.
+- Prise en charge de la redirection du microphone.
+- Prise en charge de la redirection du stockage local.
+- Prise en charge de la redirection de l’appareil photo (disponible uniquement pour Windows 10 version 1809 ou ultérieure).
+- Prise en charge des nouveaux appareils iPhone et iPad.
+- Prise en charge des thèmes sombres et clairs.
+- Possibilité de contrôler si votre téléphone peut être verrouillé quand il est connecté à une application ou un PC distant.
+- Possibilité de réduire la barre de connexion dans la session en appuyant sur le bouton du logo Bureau à distance.
+
+## <a name="updates-for-version-8142"></a>Mises à jour pour la version 8.1.42
+
+*Date de publication : 20/06/2018*
+
+- Améliorations des performances et corrections des bogues.
+
+## <a name="updates-for-version-8141"></a>Mises à jour pour la version 8.1.41
+
+*Date de publication : 28/03/2018*
+
+- Mises à jour pour traiter la correction du chiffrement de l’oracle CredSSP décrite dans CVE-2018-0886.
+
+## <a name="how-to-report-issues"></a>Comment signaler des problèmes
+
+Dans le cadre de notre engagement à proposer la meilleure application possible, nous apprécions vos commentaires. Pour nous signaler des problèmes, accédez à **Paramètres** > **Signaler un problème** dans le client.

@@ -1,6 +1,6 @@
 ---
-title: 가상 머신 크기 조정
-description: 각 워크로드 유형에 대한 크기 추천 사항입니다.
+title: Dimensionamento delle macchine virtuali
+description: Indicazioni relative alle dimensioni per ogni tipo di carico di lavoro.
 ms.prod: windows-server
 ms.technology: remote-desktop-services
 ms.author: helohr
@@ -8,42 +8,42 @@ ms.date: 12/02/2019
 ms.topic: article
 author: Heidilohr
 manager: lizross
-ms.openlocfilehash: 1d6a7daa3966488c951117b083411587d13be56b
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: beacd246639b5586c071a24bdd7b09c6aceeadab
+ms.sourcegitcommit: 32f810c5429804c384d788c680afac427976e351
 ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80857106"
+ms.contentlocale: it-IT
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83203391"
 ---
-# <a name="virtual-machine-sizing-guidance"></a>가상 머신 크기 조정 지침
+# <a name="virtual-machine-sizing-guidelines"></a>Linee guida per il dimensionamento delle macchine virtuali
 
-원격 데스크톱 서비스 또는 Windows Virtual Desktop에서 VM(가상 머신)을 실행하는지 여부에 관계없이 워크로드 유형마다 서로 다른 세션 호스트 VM 구성이 필요합니다. 최상의 환경을 위해 사용자의 요구 사항에 따라 배포의 크기를 조정합니다.
+Indipendentemente dal fatto che la tua macchina virtuale sia in esecuzione in Servizi Desktop remoto o Desktop virtuale di Windows, tipi di carichi di lavoro diversi richiedono diverse configurazioni di macchine virtuali (VM) host di sessione. Per ottenere la migliore esperienza possibile, ridimensiona la distribuzione in base alle esigenze dei tuoi utenti.
 
-## <a name="multi-session-recommendations"></a>다중 세션 추천 사항
+## <a name="multi-session-recommendations"></a>Indicazioni per scenari multisessione
 
-다음 표에는 추천되는 vCPU(가상 중앙 처리 장치)당 최대 사용자 수와 각 워크로드에 대한 최소 VM 구성이 나와 있습니다. 이러한 추천 사항은 [원격 데스크톱 워크로드](remote-desktop-workloads.md)를 기반으로 합니다.
+La tabella seguente indica il numero massimo di utenti suggerito per ogni CPU virtuale (vCPU) e la configurazione minima delle macchine virtuali per ogni carico di lavoro. Queste indicazioni sono basate sui [carichi di lavoro di Desktop remoto](remote-desktop-workloads.md).
 
-| 워크로드 유형 | vCPU당 최대 사용자 수 | 최소 vCPU/RAM/OS 스토리지 구성 | Azure 인스턴스 예제 | 최소 프로필 컨테이너 스토리지 크기 |
+| Tipo di carico di lavoro | Numero massimo di utenti per vCPU | Spazio di archiviazione minimo vCPU/RAM/sistema operativo | Istanze di Azure di esempio | Spazio di archiviazione minimo contenitore profili |
 | --- | --- | --- | --- | --- |
-| Light | 6 | 2개 vCPU, 8GB RAM, 16GB 스토리지 | D2s_v3, F2s_v2 | 30GB |
-| 보통 | 4 | 4개 vCPU, 16GB RAM, 32GB 스토리지 | D4s_v3, F4s_v2 | 30GB |
-| Heavy | 2 | 4개 vCPU, 16GB RAM, 32GB 스토리지 | D4s_v3, F4s_v2 | 30GB |
-| 고급 | 1 | 6개 vCPU, 56GB RAM, 340GB 스토리지 | D4s_v3, F4s_v2, NV6 | 30GB |
+| Leggero | 6 | 2 vCPU, 8 GB di RAM, 16 GB di spazio di archiviazione | D2s_v3, F2s_v2 | 30 GB |
+| Medio | 4 | 4 vCPU, 16 GB di RAM, 32 GB di spazio di archiviazione | D4s_v3, F4s_v2 | 30 GB |
+| Pesante | 2 | 4 vCPU, 16 GB di RAM, 32 GB di spazio di archiviazione | D4s_v3, F4s_v2 | 30 GB |
+| Potenza | 1 | 6 vCPU, 56 GB di RAM, 340 GB di spazio di archiviazione | D4s_v3, F4s_v2, NV6 | 30 GB |
 
-## <a name="single-session-recommendations"></a>단일 세션 추천 사항
+## <a name="single-session-recommendations"></a>Indicazioni per scenari a sessione singola
 
-단일 세션 시나리오에 대한 VM 크기 조정 추천 사항의 경우 VM당 둘 이상의 물리적 CPU 코어(일반적으로 하이퍼스레딩을 사용하는 4개 vCPU)를 사용하는 것이 좋습니다. 단일 세션 시나리오에 대해 더 구체적인 VM 크기 조정 추천 사항이 필요한 경우 워크로드와 관련하여 소프트웨어 공급업체에 문의하세요. 단일 세션 VM에 대한 VM 크기 조정은 물리적 디바이스 지침에 따라 다를 수 있습니다.
+Per indicazioni sul dimensionamento delle macchine virtuali per scenari a sessione singola, è consigliabile avere almeno due core CPU fisici per macchina virtuale (in genere, quattro vCPU con hyperthreading). Se sono necessarie indicazioni più specifiche per il dimensionamento delle macchine virtuali per scenari a sessione singola, rivolgiti ai fornitori di software specifici per il tuo carico di lavoro. Il dimensionamento delle macchine virtuali a sessione singola è probabilmente in linea con le linee guida relative ai dispositivi fisici.
 
-## <a name="general-virtual-machine-recommendations"></a>일반 가상 머신 추천 사항
+## <a name="general-virtual-machine-recommendations"></a>Indicazioni generali relative alle macchine virtuali
 
-운영 체제를 실행하기 위한 VM 요구 사항은 [Windows 10 컴퓨터 사양 및 시스템 요구 사항](https://www.microsoft.com/windows/windows-10-specifications)을 참조하세요.
+Per i requisiti delle macchine virtuali per l'esecuzione del sistema operativo, vedi [Specifiche e requisiti di sistema dei computer Windows 10](https://www.microsoft.com/windows/windows-10-specifications).
 
-SLA(서비스 수준 계약)가 필요한 프로덕션 워크로드에는 OS 디스크의 프리미엄 SSD 스토리지를 사용하는 것이 좋습니다. 자세한 내용은 [Virtual Machines에 대한 SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_8/)를 참조하세요.
+Per i carichi di lavoro di produzione che richiedono un contratto di servizio (SLA) è consigliabile usare la risorsa di archiviazione Premium SSD nel disco del sistema operativo. Per altri dettagli, vedi il [contratto di servizio per le macchine virtuali](https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_8/).
 
-GPU(그래픽 처리 장치)는 그래픽 집약적 프로그램을 비디오 렌더링, 3D 디자인 및 시뮬레이션에 정기적으로 사용하는 사용자에게 적합합니다. 그래픽 가속에 대한 자세한 내용은 [그래픽 렌더링 기술 선택](rds-graphics-virtualization.md)을 참조하세요. Azure에는 몇 가지 그래픽 가속 배포 옵션 및 여러 사용 가능한 GPU VM 크기가 있습니다. 자세한 내용은 [GPU 최적화 가상 머신 크기](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-gpu)를 참조하세요.
+Le unità di elaborazione grafica (GPU) rappresentano una buona scelta per gli utenti che usano regolarmente programmi con uso elevato di grafica per rendering video, progettazione 3D e simulazioni. Per altre informazioni sull'accelerazione grafica, vedi [Scegliere la tecnologia per il rendering della grafica](rds-graphics-virtualization.md). Azure offre diverse opzioni di distribuzione dell'accelerazione grafica e più dimensioni di macchine virtuali disponibili per le GPU. Per altre informazioni, vedi [Dimensioni delle macchine virtuali ottimizzate per le GPU](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-gpu).
 
-[B 시리즈 버스트 가능 VM](https://docs.microsoft.com/azure/virtual-machines/windows/b-series-burstable)은 최대 CPU 성능이 반드시 필요한 것이 아닌 사용자에게 적합합니다. VM 유형 및 크기에 대한 자세한 내용은 [Azure의 Windows 가상 머신 크기](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) 및 [Virtual Machine 시리즈 페이지](https://azure.microsoft.com/pricing/details/virtual-machines/series/)의 가격 정보를 참조하세요.
+Le [macchine virtuali della serie B con possibilità di burst](https://docs.microsoft.com/azure/virtual-machines/windows/b-series-burstable) sono una buona scelta per gli utenti che non hanno sempre la necessità di prestazioni massime della CPU. Per altre informazioni sui tipi e sulle dimensioni delle macchine virtuali, vedi [Dimensioni per le macchine virtuali Windows in Azure](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) e consulta le informazioni sui prezzi alla [pagina Serie di macchine virtuali](https://azure.microsoft.com/pricing/details/virtual-machines/series/).
 
-## <a name="test-your-workload"></a>워크로드 테스트
+## <a name="test-your-workload"></a>Testare il carico di lavoro
 
-마지막으로, 시뮬레이션 도구를 사용하여 스트레스 테스트와 실제 사용량 시뮬레이션을 모두 사용하여 배포를 테스트하는 것이 좋습니다. 시스템에서 사용자의 요구 사항을 충족할 수 있을 만큼 응답성이 뛰어나고 탄력적인지 확인하고, 예기치 않은 상황을 방지할 수 있도록 로드 크기를 다양하게 변경해야 합니다.
+Infine, ti consigliamo di usare gli strumenti di simulazione per testare la distribuzione sia con test di stress sia con simulazioni di utilizzo reale. Verifica che il sistema sia sufficientemente reattivo e resiliente da soddisfare le esigenze degli utenti e ricorda di variare le dimensioni del carico per evitare sorprese.

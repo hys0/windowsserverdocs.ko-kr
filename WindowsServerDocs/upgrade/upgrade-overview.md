@@ -1,27 +1,27 @@
 ---
 title: Windows Server 업그레이드 개요 | Microsoft Docs
-description: 실제 업그레이드를 수행하기 전에 고려해야 할 사항을 비롯한 몇 가지 일반적인 Windows Server 업그레이드 정보를 알아봅니다.
+description: 실제 업그레이드를 수행하기 전에 고려해야 할 사항을 비롯한 몇 가지 일반적인 Windows Server 업그레이드 정보입니다.
 ms.prod: windows-server
 ms.technology: server-general
 ms.topic: upgrade
 author: RobHindman
 ms.author: robhind
 ms.date: 09/10/2019
-ms.openlocfilehash: 1ac4cbe8b9bda4ac2de2c7ad7ec27b1534c0de72
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 2cf1916974b252669b64f10837d647a5cd60650a
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80854236"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82725938"
 ---
-# <a name="overview-about-windows-server-upgrades"></a>Windows Server 업그레이드 개요
+# <a name="overview-of-windows-server-upgrades"></a>Windows Server 업그레이드 개요
 
-최신 버전의 Windows Server로 업그레이드하는 프로세스는 작업을 시작하는 운영 체제와 진행 경로에 따라 크게 다를 수 있습니다. 다음 용어를 사용하여 새로운 Windows Server 배포에 포함될 수 있는 다양한 작업 간을 구분할 수 있습니다.
+최신 버전의 Windows Server로 업그레이드하는 프로세스는 작업을 시작하는 운영 체제와 진행 경로에 따라 크게 다를 수 있습니다. 다음 용어를 사용하여 새로운 Windows Server 배포에 포함될 수 있는 다양한 작업을 구분할 수 있습니다.
 
 - **업그레이드** "현재 위치 업그레이드"라고도 합니다. 이전 버전의 운영 체제에서 최신 버전으로 이동하면서도 동일한 실제 하드웨어를 유지합니다. **이는 이 섹션에서 다룰 메서드입니다.**
 
-    >[!Important]
-    >퍼블릭 또는 프라이빗 클라우드 회사에서 현재 위치 업그레이드를 지원할 수도 있습니다. 그러나 자세한 내용은 클라우드 공급자에게 문의해야 합니다. 또한 **VHD에서 부팅**하도록 구성된 모든 Windows 서버에서 현재 위치 업그레이드를 수행할 수 없습니다.
+    > [!Important]
+    > 퍼블릭 또는 프라이빗 클라우드 회사에서 현재 위치 업그레이드를 지원할 수도 있습니다. 그러나 자세한 내용은 클라우드 공급자에게 문의해야 합니다. 또한 **VHD에서 부팅**하도록 구성된 모든 Windows 서버에서 현재 위치 업그레이드를 수행할 수 없습니다. Windows Storage Server 버전에서 Windows Server 2019로의 현재 위치 업그레이드는 지원되지 않습니다. 대신 **마이그레이션** 또는 **설치**를 수행할 수 있습니다.
 
 - **설치** "새로 설치"라고도 합니다. 이전 버전의 운영 체제에서 최신 버전으로 이동하여 이전 버전의 운영 체제를 삭제합니다.
 
@@ -42,4 +42,3 @@ ms.locfileid: "80854236"
 Windows Server는 일반적으로 하나 이상의 버전 때로는 두 개의 버전을 통해 업그레이드할 수 있습니다. 예를 들어 Windows Server 2012 R2 및 Windows Server 2016은 모두 Windows Server 2019로 바로 업그레이드할 수 있습니다.
 
 평가판 운영 체제를 일반 정품 버전으로 업그레이드하거나, 이전 일반 정품 버전을 새 버전으로 업그레이드하거나, 경우에 따라 운영 체제의 볼륨 라이선스 버전을 일반 정품 버전으로 업그레이드할 수도 있습니다. 현재 위치 업그레이드 이외의 업그레이드 옵션에 대한 자세한 내용은 [Windows Server에 대한 업그레이드 및 변환 옵션](../get-started/supported-upgrade-paths.md)을 참조하세요.
-""'

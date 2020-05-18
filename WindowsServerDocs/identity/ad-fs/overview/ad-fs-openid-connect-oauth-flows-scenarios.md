@@ -1,6 +1,6 @@
 ---
 ms.assetid: 8a64545b-16bd-4c13-a664-cdf4c6ff6ea0
-title: AD FS OpenID Connect/OAuth 흐름 및 애플리케이션 시나리오
+title: Flux OpenID Connect/OAuth avec AD FS et scénarios d’application
 author: billmath
 ms.author: billmath
 manager: femila
@@ -8,43 +8,43 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: b0b7fef9c74ba5da1b94772cb5f6ff3d717a5359
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 3804cfdf49d97f9b889129802e0d2c51730e3c86
+ms.sourcegitcommit: 67116322915066b85decb4261d47cedec2cfe12f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80855976"
+ms.contentlocale: fr-FR
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82903468"
 ---
-# <a name="ad-fs-openid-connectoauth-flows-and-application-scenarios"></a>AD FS OpenID Connect/OAuth 흐름 및 애플리케이션 시나리오
-적용 대상: AD FS 2016 이상
+# <a name="ad-fs-openid-connectoauth-flows-and-application-scenarios"></a>Flux OpenID Connect/OAuth avec AD FS et scénarios d’application
+S’applique à AD FS 2016 et versions ultérieures
 
 
-|시나리오|시나리오 연습에 사용되는 샘플|OAuth 2.0 흐름/권한 부여|클라이언트 유형|
+|Scénario|Procédure pas à pas de scénario utilisant des exemples|Canal/octroi OAuth 2.0|Type de client|
 |-----|-----|-----|-----|
-|단일 페이지 앱</br> | &bull; [ADAL 사용 샘플](../development/Single-Page-Application-with-AD-FS.md)|[암시적](#implicit-grant-flow)|공용| 
-|사용자를 로그인하는 웹앱</br> | &bull; [OWIN 사용 샘플](../development/enabling-openid-connect-with-ad-fs.md)|[권한 부여 코드](#authorization-code-grant-flow)|퍼블릭, 비밀|  
-|웹 API를 호출하는 네이티브 앱</br>|&bull; [MSAL 사용 샘플](../development/msal/adfs-msal-native-app-web-api.md)</br>&bull; [ADAL 사용 샘플](../development/native-client-with-ad-fs.md)|[권한 부여 코드](#authorization-code-grant-flow)|공용|   
-|웹 API를 호출하는 웹앱</br>|&bull; [MSAL 사용 샘플](../development/msal/adfs-msal-web-app-web-api.md)</br>&bull; [ADAL 사용 샘플](../development/enabling-oauth-confidential-clients-with-ad-fs.md)|[권한 부여 코드](#authorization-code-grant-flow)|비밀| 
-|사용자를 대신하여(OBO) 다른 웹 API를 호출하는 웹 API</br>|&bull; [MSAL 사용 샘플](../development/msal/adfs-msal-web-api-web-api.md)</br>&bull; [ADAL 사용 샘플](../development/ad-fs-on-behalf-of-authentication-in-windows-server.md)|[On-Behalf-Of](#on-behalf-of-flow)|비밀 역할을 하는 웹앱| 
-|웹 API를 호출하는 디먼 앱||[클라이언트 자격 증명](#client-credentials-grant-flow)|비밀| 
-|사용자 자격 증명을 사용하여 웹 API를 호출하는 웹앱||[리소스 소유자 암호 자격 증명](#resource-owner-password-credentials-grant-flow-not-recommended)|퍼블릭, 비밀| 
-|웹 API를 호출하는 브라우저 없는 앱||[디바이스 코드](#device-code-flow)|퍼블릭, 비밀| 
+|Application monopage</br> | &bull; [Exemple utilisant ADAL](../development/Single-Page-Application-with-AD-FS.md)|[Implicite](#implicit-grant-flow)|Public| 
+|Application web qui connecte des utilisateurs</br> | &bull; [Exemple utilisant OWIN](../development/enabling-openid-connect-with-ad-fs.md)|[Code d’autorisation](#authorization-code-grant-flow)|Public, confidentiel|  
+|Une application native appelle une API web</br>|&bull; [Exemple utilisant MSAL](../development/msal/adfs-msal-native-app-web-api.md)</br>&bull; [Exemple utilisant ADAL](../development/native-client-with-ad-fs.md)|[Code d’autorisation](#authorization-code-grant-flow)|Public|   
+|Une application web appelle une API web</br>|&bull; [Exemple utilisant MSAL](../development/msal/adfs-msal-web-app-web-api.md)</br>&bull; [Exemple utilisant ADAL](../development/enabling-oauth-confidential-clients-with-ad-fs.md)|[Code d’autorisation](#authorization-code-grant-flow)|Confidentiel| 
+|Une API web appelle une autre API web pour le compte de l’utilisateur</br>|&bull; [Exemple utilisant MSAL](../development/msal/adfs-msal-web-api-web-api.md)</br>&bull; [Exemple utilisant ADAL](../development/ad-fs-on-behalf-of-authentication-in-windows-server.md)|[On-behalf-of](#on-behalf-of-flow)|L’application web agit en tant que confidentielle| 
+|L’application démon appelle une API web||[Informations d’identification du client](#client-credentials-grant-flow)|Confidentiel| 
+|Une application web appelle une API web à l’aide d’informations d’identification utilisateur||[Informations d’identification du mot de passe du propriétaire de la ressource](#resource-owner-password-credentials-grant-flow-not-recommended)|Public, confidentiel| 
+|Une application sans navigateur appelle une API web||[Code d’appareil](#device-code-flow)|Public, confidentiel| 
 
-## <a name="implicit-grant-flow"></a>암시적 권한 부여 흐름 
+## <a name="implicit-grant-flow"></a>Octroi de flux implicite 
  
-단일 페이지 애플리케이션(AngularJS, Ember.js, React.js 등)의 경우 AD FS는 OAuth 2.0 암시적 권한 부여 흐름을 지원합니다. 암시적 흐름은  [OAuth 2.0 사양](https://tools.ietf.org/html/rfc6749#section-4.2)에서 설명하고 있습니다. 주요 이점은 백 엔드 서버 자격 증명 교환을 수행하지 않고도 앱에서 AD FS로부터 토큰을 가져올 수 있다는 이 있습니다. 이렇게 하면 앱에서 사용자를 로그인하고, 세션을 유지 관리하며, 클라이언트 JavaScript 코드 내에서 토큰을 다른 웹 API에 가져올 수 있습니다. 특히 [클라이언트](https://tools.ietf.org/html/rfc6749#section-10.3)를 기준으로 암시적 흐름을 사용하는 경우 고려해야 할 몇 가지 중요한 보안 고려 사항이 있습니다.  
+Pour les applications monopages (AngularJS, Ember.js, React.js, et ainsi de suite), AD FS prend en charge le flux d’octroi implicite OAuth 2.0. Le flux implicite est décrit dans la  [Spécification OAuth 2.0](https://tools.ietf.org/html/rfc6749#section-4.2). Son principal avantage est qu’il permet à l’application d’obtenir des jetons à partir d’AD FS sans effectuer d’échange d’informations d’identification de serveur back-end. Cela permet à l’application de connecter l’utilisateur, de maintenir la session et de recevoir des jetons pour d’autres API web dans le code JavaScript du client. Il existe quelques considérations importantes en matière de sécurité à prendre en compte lors de l’utilisation du flux implicite, spécifiquement liées au  [client](https://tools.ietf.org/html/rfc6749#section-10.3).  
  
-암시적 흐름과 AD FS를 사용하여 인증을 JavaScript 앱에 추가하려면 아래의 일반 단계를 따릅니다.  
+Si vous souhaitez utiliser le flux implicite et AD FS pour ajouter l’authentification à votre application JavaScript, effectuez les étapes générales ci-dessous.  
   
-### <a name="protocol-diagram"></a>프로토콜 다이어그램
+### <a name="protocol-diagram"></a>Diagramme de protocole
 
-다음 다이어그램에서는 전체적인 암시적 로그인 흐름을 보여 주며, 이어지는 섹션에서 각 단계에 대해 자세히 설명합니다.  
+Le diagramme suivant illustre l’intégralité du flux de connexion implicite, et les sections qui suivent décrivent chaque étape plus en détail.  
 
-![암시적 로그인](media/adfs-scenarios-for-developers/implicit.png)
+![Connexion implicite](media/adfs-scenarios-for-developers/implicit.png)
 
-### <a name="request-id-token-and-access-token"></a>요청 ID 토큰 및 액세스 토큰 
+### <a name="request-id-token-and-access-token"></a>Demander le jeton d’ID et le jeton d’accès 
  
-처음에 사용자를 앱에 로그인하려면 OpenID Connect 인증 요청을 보내고 AD FS 엔드포인트에서 id_token 및 액세스 토큰을 가져올 수 있습니다.  
+Pour connecter initialement l’utilisateur à votre application, vous pouvez envoyer une requête d’authentification OpenID Connect et obtenir id_token et un jeton d’accès à partir du point de terminaison AD FS.  
  
 ```
 // Line breaks for legibility only 
@@ -59,25 +59,25 @@ client_id=6731de76-14a6-49ae-97bc-6eba6914391e
 ```
 
 
-|매개 변수|필수/선택|설명| 
+|Paramètre|Obligatoire ou facultatif|Description| 
 |-----|-----|-----|
-|client_id|필수|AD FS에서 앱에 할당한 애플리케이션(클라이언트) ID입니다.| 
-|response_type|필수|OpenID Connect 로그인에 대한 `id_token` 을 포함해야 합니다.  `token` response_type도 포함할 수 있습니다. 여기서 토큰을 사용하면 앱에서 토큰 엔드포인트에 대한 두 번째 요청을 수행하지 않고도 권한 부여 엔드포인트에서 액세스 토큰을 즉시 받을 수 있습니다.| 
-|redirect_uri|필수|앱에서 인증 응답을 보내고 받을 수 있는 앱의 redirect_uri입니다. AD FS에서 구성한 redirect_uri 중 하나와 정확히 일치해야 합니다.| 
-|nonce|필수|앱에서 생성하여 요청에 포함된 값이며, 결과 id_token에 클레임으로 포함됩니다. 그러면 앱에서 이 값을 확인하여 토큰 재생 공격을 완화할 수 있습니다. 이 값은 일반적으로 요청의 출처를 식별하는 데 사용할 수 있는 임의의 고유 문자열입니다. id_token이 요청된 경우에만 필요합니다.|
-|scope|선택적|공백으로 구분된 범위의 목록입니다. OpenID Connect의 경우 `openid` 범위를 포함해야 합니다.|
-|리소스|선택적|웹 API의 URL입니다.</br>참고 - MSAL 클라이언트 라이브러리를 사용하는 경우 리소스 매개 변수를 보내지 않습니다. 대신 리소스 URL을 범위 매개 변수(`scope = [resource url]//[scope values e.g., openid]`)의 일부로 보냅니다.</br>리소스가 여기 또는 범위에 전달되지 않으면 ADFS에서 기본 urn:microsoft:userinfo 리소스를 사용합니다. MFA, 발급 또는 권한 부여 정책과 같은 userinfo 리소스 정책은 사용자 지정할 수 없습니다.| 
-|response_mode|선택적| 결과 토큰을 앱으로 다시 보내는 데 사용해야 하는 메서드를 지정합니다. 기본값은 `fragment`입니다.| 
-|state|선택적|토큰 응답에도 반환되는 요청에 포함된 값입니다. 원하는 콘텐츠의 문자열일 수 있습니다. 임의로 생성된 고유 값은 일반적으로 사이트 간 요청 위조 공격을 방지하는 데 사용됩니다. 또한 state는 인증 요청이 발생하기 전에 앱에서 사용자 상태에 대한 정보(예: 페이지 또는 보기)를 인코딩하는 데 사용됩니다.| 
-|prompt|선택적|필요한 사용자 상호 작용 유형을 나타냅니다. 현재 유일하게 유효한 값은 login 및 none입니다.</br>- `prompt=login` 은 사용자가 해당 요청에 대한 자격 증명을 입력하도록 하여 Single Sign-On을 부정합니다. </br>- `prompt=none` 은 반대의 경우로, 사용자에게 대화형 프롬프트가 표시되지 않습니다. Single Sign-On을 통해 요청을 자동으로 완료할 수 없으면 AD FS에서 interaction_required 오류를 반환합니다.| 
-|login_hint|선택적|사용자 이름을 미리 알고 있는 경우 사용자 로그인 페이지의 사용자 이름/이메일 주소 필드를 미리 채우는 데 사용할 수 있습니다. 앱에서 다시 인증하는 동안 이 매개 변수를 사용하는 경우가 많으며, `id_token`의  `upn` 클레임을 사용하여 이전 로그인에서 사용자 이름을 이미 추출했습니다.| 
-|domain_hint|선택적|포함되는 경우 사용자가 로그인 페이지에서 수행하는 도메인 기반 검색 프로세스를 건너뛰어 약간 더 간소화된 사용자 환경을 제공합니다.| 
+|client_id|obligatoire|ID d’application (client) qu’AD FS a affecté à votre application.| 
+|response_type|obligatoire|Doit inclure  `id_token` pour la connexion à OpenID Connect. Peut également inclure response_type  `token`. L’utilisation de token ici permet à votre application de recevoir immédiatement un jeton d’accès à partir du point de terminaison d’autorisation, sans avoir à effectuer de deuxième requête au point de terminaison de jeton.| 
+|redirect_uri|obligatoire|redirect_uri de votre application, où les réponses d’authentification peuvent être envoyées et reçues par votre application. Doit correspondre exactement à l’un des redirect_uris que vous avez configurés dans AD FS.| 
+|nonce|obligatoire|Valeur incluse dans la requête, générée par l’application, qui sera incluse dans l’id_token résultant en tant que revendication. L’application peut ensuite vérifier cette valeur pour atténuer les attaques par relecture de jetons. La valeur est généralement une chaîne unique et aléatoire qui peut être utilisée pour identifier l’origine de la requête. Obligatoire uniquement quand un id_token est demandé.|
+|scope|facultatif|Liste d’étendues séparées par des espaces. Pour OpenID Connect, elle doit inclure l’étendue  `openid`.|
+|resource|facultatif|URL de votre API web.</br>Remarque : Si vous utilisez la bibliothèque de client MSAL, le paramètre de ressource n’est pas envoyé. Au lieu de cela, l’URL de la ressource est envoyée dans le cadre du paramètre scope : `scope = [resource url]//[scope values e.g., openid]`</br>Si la ressource n’est pas passée ici ou dans l’étendue, ADFS utilise une ressource par défaut urn:microsoft:userinfo. Les stratégies de ressources userinfo, telles que MFA, Émission ou stratégie d’autorisation, ne peuvent pas être personnalisées.| 
+|response_mode|facultatif| Spécifie la méthode à utiliser pour renvoyer le jeton résultant à votre application. La valeur par défaut est `fragment`.| 
+|state|facultatif|Valeur incluse dans la requête, qui est également retournée dans la réponse de jeton. Il peut s’agir d’une chaîne de tout contenu que vous souhaitez. Une valeur unique générée de manière aléatoire est généralement utilisée pour empêcher les attaques par falsification de requêtes intersites. Le paramètre state sert également à encoder les informations sur l’état de l’utilisateur dans l’application avant la requête d’authentification, comme la page ou la vue sur laquelle il se trouvait.| 
+|prompt|facultatif|Indique le type d’interaction utilisateur qui est requise. Les seules valeurs valides pour l’instant sont login et none.</br>- `prompt=login` forcera l’utilisateur à entrer ses informations d’identification dans cette requête, annulant l’authentification unique. </br>- `prompt=none` est l’inverse. Cela permet de s’assurer que l’utilisateur ne reçoit aucune invite interactive. Si la requête ne peut pas être effectuée en mode silencieux par le biais de l’authentification unique, AD FS retourne une erreur interaction_required.| 
+|login_hint|facultatif|Peut être utilisé pour préremplir le champ Nom d’utilisateur/Adresse e-mail de la page de connexion pour l’utilisateur, si vous connaissez son nom d’utilisateur à l’avance. Souvent, les applications utilisent ce paramètre lors de la réauthentification, après avoir extrait le nom d’utilisateur d’une connexion précédente à l’aide de la revendication `upn` à partir de `id_token`.| 
+|domain_hint|facultatif|Si ce paramètre est inclus, le processus de découverte basé sur le domaine appliqué pour l’utilisateur dans la page de connexion est ignoré, ce qui se traduit par une expérience utilisateur légèrement plus fluide.| 
 
-이 시점에서 사용자에게 자격 증명을 입력하고 인증을 완료하라는 메시지가 표시됩니다. 사용자가 인증되면 AD FS 권한 부여 엔드포인트에서 response_mode 매개 변수에 지정된 메서드를 사용하여 표시된 redirect_uri에서 앱에 대한 응답을 반환합니다.  
+À ce stade, l’utilisateur sera invité à entrer ses informations d’identification et à terminer l’authentification. Une fois que l’utilisateur s’est authentifié, le point de terminaison d’autorisation AD FS retournera une réponse à votre application, au redirect_uri indiqué, à l’aide de la méthode spécifiée dans le paramètre response_mode.  
  
-### <a name="successful-response"></a>성공적인 응답 
+### <a name="successful-response"></a>Réponse positive 
  
- `response_mode=fragment and response_type=id_token+token` 을 사용한 성공적인 응답은 다음과 같습니다.  
+Une réponse positive à l’aide de `response_mode=fragment and response_type=id_token+token` se présente comme suit :  
  
 ```
 // Line breaks for legibility only 
@@ -92,31 +92,31 @@ access_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik5HVEZEstZnl0aEV...
 ```
 
 
-|매개 변수|설명| 
+|Paramètre|Description| 
 |-----|-----|
-|access_token|response_type에 `token`이 포함된 경우 포함됩니다.|
-|token_type|response_type에 `token`이 포함된 경우 포함됩니다. 항상 Bearer입니다.| 
-|expires_in| response_type에 `token`이 포함된 경우 포함됩니다. 캐싱을 위해 토큰이 유효한 시간(초)을 나타냅니다.| 
-|scope| access_token이 유효한 범위를 나타냅니다.|  
-|id_token|response_type에 `id_token`이 포함된 경우 포함됩니다. 서명된 JWT(JSON 웹 토큰)입니다. 앱에서 이 토큰의 세그먼트를 디코딩하여 로그인한 사용자에 대한 정보를 요청할 수 있습니다. 앱에서 값을 캐시하고 표시할 수 있지만, 권한 부여 또는 보안 경계에 이러한 값을 사용하지 않아야 합니다.| 
-|state|state 매개 변수가 요청에 포함된 경우 동일한 값이 응답에 표시됩니다. 앱은 요청 및 응답의 state 값이 동일한지 확인해야 합니다.|
+|access_token|Inclus si response_type inclut `token`.|
+|token_type|Inclus si response_type inclut `token`. Sera toujours Bearer.| 
+|expires_in| Inclus si response_type inclut `token`. Indique le nombre de secondes pendant lesquelles le jeton est valide, à des fins de mise en cache.| 
+|scope| Indique la ou les étendues pour lesquelles access_token est valide.|  
+|id_token|Inclus si response_type inclut `id_token`. Il s’agit d’un jeton web JSON (JWT) signé. L’application peut décoder les segments de ce jeton pour demander des informations sur l’utilisateur qui s’est connecté. L’application peut mettre en cache les valeurs et les afficher, mais elle ne doit pas se reposer sur elles pour les limites d’autorisation ou de sécurité.| 
+|state|Si un paramètre state est inclus dans la requête, la même valeur doit apparaître dans la réponse. L’application doit vérifier que les valeurs state de la requête et de la réponse sont identiques.|
 
-### <a name="refresh-tokens"></a>새로 고침 토큰 
-암시적 권한 부여는 새로 고침 토큰을 제공하지 않습니다.  `id_tokens`및  `access_tokens`는 모두 짧은 시간 후에 만료되므로 앱에서 이러한 토큰을 주기적으로 새로 고칠 수 있도록 준비해야 합니다. 토큰 형식 중 하나를 새로 고치려면 `prompt=none`  매개 변수를 통해 위와 동일한 숨겨진 iframe 요청을 수행하여 ID 플랫폼의 동작을 제어할 수 있습니다. `new id_token`을 받으려면 `response_type=id_token`을 사용해야 합니다. 
+### <a name="refresh-tokens"></a>Jetons d’actualisation 
+L’octroi implicite ne fournit pas de jetons d’actualisation.  `id_tokens` et `access_tokens` expirent après un bref laps de temps ; votre application doit donc être prête à actualiser ces jetons régulièrement. Pour actualiser l’un ou l’autre type de jeton, vous pouvez exécuter la même requête iframe masquée que ci-dessus en utilisant le paramètre `prompt=none` pour contrôler le comportement de la plateforme d’identité. Si vous souhaitez recevoir un `new id_token`, veillez à utiliser `response_type=id_token`. 
 
-## <a name="authorization-code-grant-flow"></a>인증 코드 부여 흐름 
+## <a name="authorization-code-grant-flow"></a>Flux d’octroi de code d’autorisation 
  
-웹앱에서 OAuth 2.0 인증 코드 부여를 사용하여 웹 API와 같은 보호된 리소스에 액세스할 수 있습니다. OAuth 2.0 인증 코드 흐름은 [OAuth 2.0 사양의 4.1 섹션](https://tools.ietf.org/html/rfc6749)에서 설명하고 있습니다. 웹앱 및 기본적으로 설치된 앱을 포함하여 대부분의 앱 유형에서 인증 및 권한 부여를 수행하는 데 사용됩니다. 이 흐름을 통해 앱에서 AD FS를 신뢰하는 리소스에 액세스하는 데 사용할 수 있는 access_token을 안전하게 획득할 수 있습니다.  
+Vous pouvez utiliser l’octroi du code d’autorisation OAuth 2.0 dans les applications web pour accéder à des ressources protégées, telles que des API web. Le flux de code d’autorisation OAuth 2.0 est décrit dans la [section 4.1 de la spécification OAuth 2.0](https://tools.ietf.org/html/rfc6749). Il est utilisé pour effectuer l’authentification et l’autorisation dans la plupart des types d’applications, notamment les applications web et les applications installées en mode natif. Le flux permet aux applications d’acquérir en toute sécurité des access_tokens qui peuvent être utilisés pour accéder à des ressources qui approuvent AD FS.  
  
-### <a name="protocol-diagram"></a>프로토콜 다이어그램 
+### <a name="protocol-diagram"></a>Diagramme de protocole 
  
-네이티브 애플리케이션의 인증 흐름은 개략적으로 다음과 같습니다.
+À un niveau élevé, le flux d’authentification pour une application native ressemble un peu à ce qui suit :
 
-![인증 코드 부여 흐름](media/adfs-scenarios-for-developers/authorization.png)
+![Flux d’octroi de code d’autorisation](media/adfs-scenarios-for-developers/authorization.png)
 
-### <a name="request-an-authorization-code"></a>인증 코드 요청 
+### <a name="request-an-authorization-code"></a>Demander un code d’autorisation 
  
-인증 코드 흐름은 클라이언트에서 사용자를 /authorization 엔드포인트에 연결하면서 시작됩니다. 이 요청에서 클라이언트는 사용자로부터 획득해야 하는 권한을 나타냅니다. 
+Le flux de code d’autorisation commence par le client qui dirige l’utilisateur vers le point de terminaison /authorize. Dans cette requête, le client indique les autorisations qu’il doit obtenir de la part de l’utilisateur : 
  
 ```
 // Line breaks for legibility only 
@@ -131,26 +131,26 @@ client_id=6731de76-14a6-49ae-97bc-6eba6914391e
 &state=12345 
 ```
 
-|매개 변수|필수/선택|설명|
+|Paramètre|Obligatoire ou facultatif|Description|
 |-----|-----|-----| 
-|client_id|필수|AD FS에서 앱에 할당한 애플리케이션(클라이언트) ID입니다.|  
-|response_type|필수| 인증 코드 흐름에 대한 코드를 포함해야 합니다.| 
-|redirect_uri|필수|앱에서 인증 응답을 보내고 받을 수 있는 앱의 `redirect_uri`입니다. AD FS에서 클라이언트에 대해 등록한 redirect_uri 중 하나와 정확히 일치해야 합니다.|  
-|리소스|선택적|웹 API의 URL입니다.</br>참고 - MSAL 클라이언트 라이브러리를 사용하는 경우 리소스 매개 변수를 보내지 않습니다. 대신 리소스 URL을 범위 매개 변수(`scope = [resource url]//[scope values e.g., openid]`)의 일부로 보냅니다.</br>리소스가 여기 또는 범위에 전달되지 않으면 ADFS에서 기본 urn:microsoft:userinfo 리소스를 사용합니다. MFA, 발급 또는 권한 부여 정책과 같은 userinfo 리소스 정책은 사용자 지정할 수 없습니다.| 
-|scope|선택적|공백으로 구분된 범위 목록입니다.|
-|response_mode|선택적|결과 토큰을 앱으로 다시 보내는 데 사용해야 하는 메서드를 지정합니다. 다음 중 하나일 수 있습니다. </br>- query </br>- fragment </br>- form_post</br>`query` 는 코드를 리디렉션 URI에 대한 쿼리 문자열 매개 변수로 제공합니다. 코드를 요청하는 경우 쿼리, 조각 또는 form_post를 사용할 수 있습니다. `form_post` 는 리디렉션 URI에 대한 코드가 포함된 POST를 실행합니다.|
-|state|선택적|토큰 응답에도 반환되는 요청에 포함된 값입니다. 원하는 콘텐츠의 문자열일 수 있습니다. 임의로 생성된 고유 값은 일반적으로 사이트 간 요청 위조 공격을 방지하는 데 사용됩니다. 또한 이 값은 인증 요청이 발생하기 전에 앱에서 사용자 상태에 대한 정보(예: 페이지 또는 보기)를 인코딩할 수도 있습니다.|
-|prompt|선택적|필요한 사용자 상호 작용 유형을 나타냅니다. 현재 유일하게 유효한 값은 login 및 none입니다.</br>- `prompt=login` 은 사용자가 해당 요청에 대한 자격 증명을 입력하도록 하여 Single Sign-On을 부정합니다. </br>- `prompt=none` 은 반대의 경우로, 사용자에게 대화형 프롬프트가 표시되지 않습니다. Single Sign-On을 통해 요청을 자동으로 완료할 수 없으면 AD FS에서 interaction_required 오류를 반환합니다.|
-|login_hint|선택적|사용자 이름을 미리 알고 있는 경우 사용자 로그인 페이지의 사용자 이름/이메일 주소 필드를 미리 채우는 데 사용할 수 있습니다. 앱에서 다시 인증하는 동안 이 매개 변수를 사용하는 경우가 많으며, `id_token`의 `upn` 클레임을 사용하여 이전 로그인에서 사용자 이름을 이미 추출했습니다.|
-|domain_hint|선택적|포함되는 경우 사용자가 로그인 페이지에서 수행하는 도메인 기반 검색 프로세스를 건너뛰어 약간 더 간소화된 사용자 환경을 제공합니다.|
-|code_challenge_method|선택적|code_challenge 매개 변수의 code_verifier를 인코딩하는 데 사용되는 메서드입니다. 다음 값 중 하나일 수 있습니다. </br>- plain </br>- S256 </br>제외되는 경우 `code_challenge` 가 포함되면 code_challenge는일반 텍스트로 간주됩니다. AD FS는 일반 및 S256을 모두 지원합니다. 자세한 내용은  [PKCE RFC](https://tools.ietf.org/html/rfc7636)를 참조하세요.|
-|code_challenge|선택적| 네이티브 클라이언트에서 PKCE(코드 교환용 증명 키)를 통해 인증 코드 부여를 보호하는 데 사용됩니다.  `code_challenge_method` 가 포함되는 경우 필수입니다. 자세한 내용은  [PKCE RFC](https://tools.ietf.org/html/rfc7636)를 참조하세요.|
+|client_id|obligatoire|ID d’application (client) qu’AD FS a affecté à votre application.|  
+|response_type|obligatoire| Doit inclure du code pour le flux de code d’autorisation.| 
+|redirect_uri|obligatoire|`redirect_uri` de votre application, où les réponses d’authentification peuvent être envoyées et reçues par votre application. Doit correspondre exactement à l’un des redirect_uris que vous avez inscrits dans AD FS pour le client.|  
+|resource|facultatif|URL de votre API web.</br>Remarque : Si vous utilisez la bibliothèque de client MSAL, le paramètre de ressource n’est pas envoyé. Au lieu de cela, l’URL de la ressource est envoyée dans le cadre du paramètre scope : `scope = [resource url]//[scope values e.g., openid]`</br>Si la ressource n’est pas passée ici ou dans l’étendue, ADFS utilise une ressource par défaut urn:microsoft:userinfo. Les stratégies de ressources userinfo, telles que MFA, Émission ou stratégie d’autorisation, ne peuvent pas être personnalisées.| 
+|scope|facultatif|Liste d’étendues séparées par des espaces.|
+|response_mode|facultatif|Spécifie la méthode à utiliser pour renvoyer le jeton résultant à votre application. Il peut s’agir de l’un des éléments suivants : </br>- query </br>- fragment </br>- form_post</br>`query` fournit le code en tant que paramètre de chaîne de requête sur votre URI de redirection. Si vous demandez le code, vous pouvez utiliser query, fragment ou form_post. `form_post` exécute une requête POST contenant le code de votre URI de redirection.|
+|state|facultatif|Valeur incluse dans la requête, qui est également retournée dans la réponse de jeton. Il peut s’agir d’une chaîne de tout contenu que vous souhaitez. Une valeur unique générée de manière aléatoire est généralement utilisée pour empêcher les attaques par falsification de requêtes intersites. La valeur peut également encoder les informations sur l’état de l’utilisateur dans l’application avant la requête d’authentification, comme la page ou la vue sur laquelle il se trouvait.|
+|prompt|facultatif|Indique le type d’interaction utilisateur qui est requise. Les seules valeurs valides pour l’instant sont login et none.</br>- `prompt=login` forcera l’utilisateur à entrer ses informations d’identification dans cette requête, annulant l’authentification unique. </br>- `prompt=none` est l’inverse. Cela permet de s’assurer que l’utilisateur ne reçoit aucune invite interactive. Si la requête ne peut pas être effectuée en mode silencieux par le biais de l’authentification unique, AD FS retourne une erreur interaction_required.|
+|login_hint|facultatif|Peut être utilisé pour préremplir le champ Nom d’utilisateur/Adresse e-mail de la page de connexion pour l’utilisateur, si vous connaissez son nom d’utilisateur à l’avance. Souvent, les applications utilisent ce paramètre lors de la réauthentification, après avoir extrait le nom d’utilisateur d’une connexion précédente à l’aide de la revendication `upn`à partir de `id_token`.|
+|domain_hint|facultatif|Si ce paramètre est inclus, le processus de découverte basé sur le domaine appliqué pour l’utilisateur dans la page de connexion est ignoré, ce qui se traduit par une expérience utilisateur légèrement plus fluide.|
+|code_challenge_method|facultatif|Méthode utilisée pour encoder le code_verifier pour le paramètre code_challenge. Peut avoir l’une des valeurs suivantes : </br>- plain </br>- S256 </br>S’il est absent, code_challenge est supposé être en texte brut si `code_challenge` est inclus. AD FS prend en charge les méthodes plain et S256. Pour plus d’informations, consultez la [RFC PKCE](https://tools.ietf.org/html/rfc7636).|
+|code_challenge|facultatif| Sert à sécuriser les octrois de code d’autorisation par le biais de PKCE (Proof Key for Code Exchange) à partir d’un client natif. Obligatoire si `code_challenge_method` est inclus. Pour plus d’informations, consultez la [RFC PKCE](https://tools.ietf.org/html/rfc7636).|
 
-이 시점에서 사용자에게 자격 증명을 입력하고 인증을 완료하라는 메시지가 표시됩니다. 사용자가 인증되면 AD FS에서 `response_mode`  매개 변수에 지정된 메서드를 사용하여 표시된 `redirect_uri`에서 앱에 대한 응답을 반환합니다.  
+À ce stade, l’utilisateur sera invité à entrer ses informations d’identification et à terminer l’authentification. Une fois que l’utilisateur s’est authentifié, AD FS retournera une réponse à votre application, au `redirect_uri` indiqué, à l’aide de la méthode spécifiée dans le paramètre `response_mode`.  
  
-### <a name="successful-response"></a>성공적인 응답 
+### <a name="successful-response"></a>Réponse positive 
  
-response_mode=query를 사용한 성공적인 응답은 다음과 같습니다. 
+Une réponse positive à l’aide de response_mode=query ressemble à ceci : 
  
 ```
 GET https://adfs.contoso.com/common/oauth2/nativeclient? 
@@ -159,14 +159,14 @@ code=AwABAAAAvPM1KaPlrEqdFSBzjqfTGBCmLdgfSTLEMPGYuNHSUYBrq...
 ```
 
 
-|매개 변수|설명|
+|Paramètre|Description|
 |-----|-----|
-|code|앱에서 요청한 `authorization_code`입니다. 앱에서 권한 부여 코드를 사용하여 대상 리소스에 대한 액세스 토큰을 요청할 수 있습니다. authorization_code는 수명이 짧으며, 일반적으로 약 10분 후에 만료됩니다.|
-|state|`state` 매개 변수가 요청에 포함된 경우 동일한 값이 응답에 표시됩니다. 앱은 요청 및 응답의 state 값이 동일한지 확인해야 합니다.|
+|code|`authorization_code` que l’application a demandé. L’application peut utiliser le code d’autorisation afin de demander un jeton d’accès pour la ressource cible. Les authorization_codes ont une courte durée de vie ; ils expirent en général après une dizaine de minutes.|
+|state|Si un paramètre `state` est inclus dans la requête, la même valeur doit apparaître dans la réponse. L’application doit vérifier que les valeurs state de la requête et de la réponse sont identiques.|
 
-### <a name="request-an-access-token"></a>액세스 토큰 요청 
+### <a name="request-an-access-token"></a>Demander un jeton d’accès 
  
-이제 `authorization_code`를 획득하고 사용자가 권한을 부여했으므로 `access_token` 에 대한 코드를 원하는 리소스로 사용할 수 있습니다. 이렇게 하려면 POST 요청을 /token 엔드포인트에 보냅니다.  
+Maintenant que vous avez acquis un `authorization_code` et que l’utilisateur vous a octroyé une autorisation, vous pouvez échanger le code contre un `access_token` à la ressource souhaitée. Pour ce faire, envoyez une requête POST au point de terminaison /token :  
  
 ```
 // Line breaks for legibility only 
@@ -182,18 +182,18 @@ client_id=6731de76-14a6-49ae-97bc-6eba6914391e
 &client_secret=JqQX2PNo9bpM0uEihUPzyrh    // NOTE: Only required for confidential clients (web apps)  
 ```
 
-|매개 변수|필수/선택|설명|
+|Paramètre|Obligatoire/facultatif|Description|
 |-----|-----|-----| 
-|client_id|필수|AD FS에서 앱에 할당한 애플리케이션(클라이언트) ID입니다.| 
-|grant_type|필수|인증 코드 흐름에 대해 `authorization_code` 여야 합니다.| 
-|code|필수|흐름의 첫 번째 레그에서 획득한 `authorization_code`입니다.| 
-|redirect_uri|필수|`authorization_code`를 획득하는 데 사용된 것과 동일한 `redirect_uri` 값입니다.| 
-|client_secret|웹앱의 경우 필수|AD FS에서 앱을 등록하는 동안 만든 애플리케이션 비밀입니다. client_secret을 디바이스에 안정적으로 저장할 수 없으므로 네이티브 앱에서 애플리케이션 비밀을 사용하면 안 됩니다. client_secret을 서버 쪽에 안전하게 저장할 수 있는 웹앱 및 웹 API에 필요합니다. 클라이언트 암호는 보내기 전에 URL로 인코딩해야 합니다. 이러한 앱은 JWT에 서명하고 이를 client_assertion 매개 변수로 추가하여 키 기반 인증을 사용할 수도 있습니다.| 
-|code_verifier|선택적|authorization_code를 가져오는 데 사용된 것과 동일한 `code_verifier`입니다. PKCE를 인증 코드 부여 요청에 사용한 경우에 필요합니다. 자세한 내용은  [PKCE RFC](https://tools.ietf.org/html/rfc7636)를 참조하세요.</br>참고 – AD FS 2019 이상에 적용됩니다.| 
+|client_id|obligatoire|ID d’application (client) qu’AD FS a affecté à votre application.| 
+|grant_type|obligatoire|Doit être `authorization_code` pour le flux de code d’autorisation.| 
+|code|obligatoire|`authorization_code` que vous avez acquis lors de la première phase du flux.| 
+|redirect_uri|obligatoire|Même valeur `redirect_uri` que celle utilisée pour acquérir l’`authorization_code`.| 
+|client_secret|obligatoire pour les applications web|Il s’agit du secret d’application que vous avez créé lors de l’inscription de l’application dans AD FS. Vous ne devez pas utiliser le secret d’application dans une application native, car les client_secrets ne peuvent pas être stockés de manière fiable sur des appareils. Il est obligatoire pour les applications web et les API web, qui ont la capacité à stocker le client_secret de façon sécurisée côté serveur. La clé secrète client doit être encodée sous forme d’URL avant d’être envoyée. Ces applications peuvent également utiliser l’authentification basée sur des clés en signant un jeton JWT et en l’ajoutant en tant que paramètre client_assertion.| 
+|code_verifier|facultatif|Même `code_verifier` que celui utilisé pour obtenir l’authorization_code. Obligatoire si PKCE a été utilisé dans la requête d’octroi de code d’autorisation. Pour plus d’informations, consultez la [RFC PKCE](https://tools.ietf.org/html/rfc7636).</br>Remarque : S’applique à AD FS 2019 et versions ultérieures| 
 
-### <a name="successful-response"></a>성공적인 응답 
+### <a name="successful-response"></a>Réponse positive 
  
-성공적인 토큰 응답은 다음과 같습니다. 
+Une réponse de jeton positive se présente comme suit : 
  
 ```
 { 
@@ -207,16 +207,16 @@ client_id=6731de76-14a6-49ae-97bc-6eba6914391e
 ```
 
 
-|매개 변수|설명| 
+|Paramètre|Description| 
 |-----|-----|
-|access_token|요청된 액세스 토큰입니다. 앱에서 이 토큰을 사용하여 보안 리소스(웹 API)를 인증할 수 있습니다.| 
-|token_type|토큰 형식 값을 나타냅니다. AD FS에서 지원하는 유일한 형식은 Bearer입니다.
-|expires_in|액세스 토큰의 유효 기간(초)입니다.
-|refresh_token|OAuth 2.0 새로 고침 토큰입니다. 현재 액세스 토큰이 만료되면 앱에서 이 토큰을 사용하여 추가 액세스 토큰을 획득할 수 있습니다. refresh_token은 수명이 길며, 리소스에 대한 액세스를 오랫동안 유지하는 데 사용할 수 있습니다.| 
-|refresh_token_expires_in|새로 고침 토큰의 유효 기간(초)입니다.| 
-|id_token|JWT(JSON 웹 토큰)입니다. 앱에서 이 토큰의 세그먼트를 디코딩하여 로그인한 사용자에 대한 정보를 요청할 수 있습니다. 앱에서 값을 캐시하고 표시할 수 있지만, 권한 부여 또는 보안 경계에 이러한 값을 사용하지 않아야 합니다.|
+|access_token|Jeton d’accès demandé. L’application peut utiliser ce jeton pour s’authentifier auprès de la ressource sécurisée (API web).| 
+|token_type|Indique la valeur du type de jeton. Le seul type pris en charge par AD FS est Bearer.
+|expires_in|Durée de validité du jeton d’accès (en secondes).
+|refresh_token|Jeton d’actualisation OAuth 2.0. L’application peut utiliser ce jeton pour acquérir des jetons d’accès supplémentaires après l’expiration du jeton d’accès actif. Les refresh_tokens ont une longue durée de vie, et peuvent être utilisés pour maintenir l’accès aux ressources pendant des périodes prolongées.| 
+|refresh_token_expires_in|Durée de validité du jeton d’actualisation (en secondes).| 
+|id_token|Jeton web JSON (JWT). L’application peut décoder les segments de ce jeton pour demander des informations sur l’utilisateur qui s’est connecté. L’application peut mettre en cache les valeurs et les afficher, mais elle ne doit pas se reposer sur elles pour les limites d’autorisation ou de sécurité.|
 
-### <a name="use-the-access-token"></a>액세스 토큰 사용 
+### <a name="use-the-access-token"></a>Utiliser le jeton d’accès 
  
 ```
 GET /v1.0/me/messages 
@@ -224,13 +224,13 @@ Host: https://webapi.com
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik5HVEZ2ZEstZnl0aEV1Q... 
  ```
 
-### <a name="refresh-the-access-token"></a>액세스 토큰 새로 고침 
+### <a name="refresh-token-grant-flow"></a>Flux d’octroi des jetons d’actualisation
+ 
+Les access_tokens ont une courte durée de vie, et vous devez les actualiser une fois qu’ils ont expiré pour continuer à accéder aux ressources. Pour ce faire, vous devez envoyer une autre requête POST au point de terminaison `/token`, cette fois ci en fournissant le refresh_token plutôt que le code. Les jetons d’actualisation sont valides pour toutes les autorisations pour lesquelles votre client a déjà reçu un jeton d’accès. 
  
-access_token은 수명이 짧으며, 만료된 후 새로 고쳐야 리소스에 계속 액세스할 수 있습니다. 이렇게 하려면 다른 POST 요청을 `/token` 엔드포인트에 제출합니다. 이번에는 코드 대신 refresh_token을 제공합니다. 새로 고침 토큰은 클라이언트에서 이미 액세스 토큰을 받은 모든 권한에 유효합니다. 
+Les jetons d’actualisation n’ont pas de durée de vie spécifiée. En règle générale, les durées de vie des jetons d’actualisation sont relativement longues. Toutefois, dans certains cas ils expirent, sont révoqués ou ne disposent pas de privilèges suffisants pour l’action souhaitée. Votre application doit prévoir et gérer correctement les erreurs retournées par le point de terminaison d’émission de jeton.  
  
-새로 고침 토큰에는 지정된 수명이 없습니다. 일반적으로 새로 고침 토큰의 수명은 비교적 깁니다. 그러나 경우에 따라 새로 고침 토큰이 만료되거나, 해지되거나, 원하는 작업에 대한 충분한 권한이 없습니다. 애플리케이션은 토큰 발급 엔드포인트에서 반환되는 오류를 올바르게 예상하고 처리해야 합니다.  
- 
-새 액세스 토큰을 획득하는 데 사용할 때 새로 고침 토큰이 해지되지 않지만, 이전의 새로 고침 토큰은 삭제해야 합니다. OAuth 2.0 사양은 다음과 같습니다. "권한 부여 서버는 신규 새로 고침 토큰을 발급할 수 있습니다. 이 경우 클라이언트는 이전 새로 고침 토큰을 삭제하고 신규 새로 고침 토큰으로 바꿔야 합니다. 권한 부여 서버는 신규 새로 고침 토큰을 클라이언트에 발급한 후에 이전 새로 고침 토큰을 해지할 수 있습니다." 
+Bien que les jetons d’actualisation ne soient pas révoqués quand ils sont utilisés pour acquérir de nouveaux jetons d’accès, vous êtes censé supprimer l’ancien jeton d’actualisation. Conformément à la spécification OAuth 2.0 : « Le serveur d’autorisation PEUT émettre un nouveau jeton d’actualisation, auquel cas le client DOIT supprimer l’ancien jeton d’actualisation et le remplacer par le nouveau jeton d’actualisation. Le serveur d’autorisation PEUT révoquer l’ancien jeton d’actualisation après l’émission d’un nouveau jeton d’actualisation au client. » AD FS émet un jeton d’actualisation quand la durée de vie du nouveau jeton d’actualisation est supérieure à la durée de vie du jeton d’actualisation précédent.  Pour plus d’informations sur les durées de vie des jetons d’actualisation AD FS, consultez [Paramètres d’authentification unique AD FS](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/ad-fs-single-sign-on-settings).
  
 ```
 // Line breaks for legibility only 
@@ -246,17 +246,17 @@ client_id=6731de76-14a6-49ae-97bc-6eba6914391e
 ```
 
 
-|매개 변수|필수/선택|설명| 
+|Paramètre|Obligatoire ou facultatif|Description| 
 |-----|-----|-----|
-|client_id|필수|AD FS에서 앱에 할당한 애플리케이션(클라이언트) ID입니다.| 
-|grant_type|필수|인증 코드 흐름의 이 레그에 대해 `refresh_token` 이어야 합니다.| 
-|리소스|선택적|웹 API의 URL입니다.</br>참고 - MSAL 클라이언트 라이브러리를 사용하는 경우 리소스 매개 변수를 보내지 않습니다. 대신 리소스 URL을 범위 매개 변수(`scope = [resource url]//[scope values e.g., openid]`)의 일부로 보냅니다.</br>리소스가 여기 또는 범위에 전달되지 않으면 ADFS에서 기본 urn:microsoft:userinfo 리소스를 사용합니다. MFA, 발급 또는 권한 부여 정책과 같은 userinfo 리소스 정책은 사용자 지정할 수 없습니다.|
-|scope|선택적|공백으로 구분된 범위 목록입니다.| 
-|refresh_token|필수|흐름의 두 번째 레그에서 획득한 refresh_token입니다.| 
-|client_secret|웹앱의 경우 필수| 앱에 대한 앱 등록 포털에서 만든 애플리케이션 비밀입니다. client_secret을 디바이스에 안정적으로 저장할 수 없으므로 네이티브 앱에서 사용하면 안 됩니다. client_secret을 서버 쪽에 안전하게 저장할 수 있는 웹앱 및 웹 API에 필요합니다. 이러한 앱은 JWT에 서명하고 이를 client_assertion 매개 변수로 추가하여 키 기반 인증을 사용할 수도 있습니다.|
+|client_id|obligatoire|ID d’application (client) qu’AD FS a affecté à votre application.| 
+|grant_type|obligatoire|Doit être `refresh_token` pour cette phase du flux de code d’autorisation.| 
+|resource|facultatif|URL de votre API web.</br>Remarque : Si vous utilisez la bibliothèque de client MSAL, le paramètre de ressource n’est pas envoyé. Au lieu de cela, l’URL de la ressource est envoyée dans le cadre du paramètre scope : `scope = [resource url]//[scope values e.g., openid]`</br>Si la ressource n’est pas passée ici ou dans l’étendue, ADFS utilise une ressource par défaut urn:microsoft:userinfo. Les stratégies de ressources userinfo, telles que MFA, Émission ou stratégie d’autorisation, ne peuvent pas être personnalisées.|
+|scope|facultatif|Liste d’étendues séparées par des espaces.| 
+|refresh_token|obligatoire|refresh_token que vous avez acquis lors de la deuxième phase du flux.| 
+|client_secret|obligatoire pour les applications web| Secret d’application que vous avez créé dans le portail d’inscription des applications pour votre application. Vous ne devez pas l’utiliser dans une application native, car les client_secrets ne peuvent pas être stockés de manière fiable sur des appareils. Il est obligatoire pour les applications web et les API web, qui ont la capacité à stocker le client_secret de façon sécurisée côté serveur. Ces applications peuvent également utiliser l’authentification basée sur des clés en signant un jeton JWT et en l’ajoutant en tant que paramètre client_assertion.|
 
-### <a name="successful-response"></a>성공적인 응답 
-성공적인 토큰 응답은 다음과 같습니다. 
+### <a name="successful-response"></a>Réponse positive 
+Une réponse de jeton positive se présente comme suit : 
  
 ```
 { 
@@ -268,57 +268,57 @@ client_id=6731de76-14a6-49ae-97bc-6eba6914391e
     "id_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJhdWQiOiIyZDRkMTFhMi1mODE0LTQ2YTctOD...", 
 }  
 ```
-|매개 변수|설명| 
+|Paramètre|Description| 
 |-----|-----|
-|access_token|요청된 액세스 토큰입니다. 앱에서 이 토큰을 사용하여 보안 리소스(예: 웹 API)를 인증할 수 있습니다.| 
-|token_type|토큰 형식 값을 나타냅니다. AD FS에서 지원하는 유일한 형식은 Bearer입니다.|
-|expires_in|액세스 토큰의 유효 기간(초)입니다.|
-|scope|access_token의 유효 범위입니다.| 
-|refresh_token|OAuth 2.0 새로 고침 토큰입니다. 현재 액세스 토큰이 만료되면 앱에서 이 토큰을 사용하여 추가 액세스 토큰을 획득할 수 있습니다. refresh_token은 수명이 길며, 리소스에 대한 액세스를 오랫동안 유지하는 데 사용할 수 있습니다.| 
-|refresh_token_expires_in|새로 고침 토큰의 유효 기간(초)입니다.| 
-|id_token|JWT(JSON 웹 토큰)입니다. 앱에서 이 토큰의 세그먼트를 디코딩하여 로그인한 사용자에 대한 정보를 요청할 수 있습니다. 앱에서 값을 캐시하고 표시할 수 있지만, 권한 부여 또는 보안 경계에 이러한 값을 사용하지 않아야 합니다.|
+|access_token|Jeton d’accès demandé. L’application peut utiliser ce jeton pour s’authentifier auprès de la ressource sécurisée, telle qu’une API web.| 
+|token_type|Indique la valeur du type de jeton. Le seul type pris en charge par AD FS est Bearer.|
+|expires_in|Durée de validité du jeton d’accès (en secondes).|
+|scope|Étendues pour lesquelles l’access_token est valide.| 
+|refresh_token|Jeton d’actualisation OAuth 2.0. L’application peut utiliser ce jeton pour acquérir des jetons d’accès supplémentaires après l’expiration du jeton d’accès actif. Les refresh_tokens ont une longue durée de vie, et peuvent être utilisés pour maintenir l’accès aux ressources pendant des périodes prolongées.| 
+|refresh_token_expires_in|Durée de validité du jeton d’actualisation (en secondes).| 
+|id_token|Jeton web JSON (JWT). L’application peut décoder les segments de ce jeton pour demander des informations sur l’utilisateur qui s’est connecté. L’application peut mettre en cache les valeurs et les afficher, mais elle ne doit pas se reposer sur elles pour les limites d’autorisation ou de sécurité.|
 
-## <a name="on-behalf-of-flow"></a>On-Behalf-Of 흐름 
+## <a name="on-behalf-of-flow"></a>Flux On-Behalf-Of 
  
-OAuth 2.0 OBO(On-Behalf-Of) 흐름은 애플리케이션에서 서비스/웹 API를 호출하고, 이에 따라 다른 서비스/웹 API를 호출해야 하는 사용 사례를 처리합니다. 이 개념은 요청 체인을 통해 위임된 사용자 ID 및 권한을 전파하는 것입니다. 중간 계층 서비스에서 다운스트림 서비스에 인증된 요청을 수행하려면 사용자를 대신하여 AD FS에서 액세스 토큰을 보호해야 합니다.  
+Le flux OBO (On-Behalf-Of) OAuth 2.0 est utilisé dans le cas d’usage où une application appelle un service ou une API web, qui à son tour doit appeler un autre service/API web. L’idée est de propager l’identité de l’utilisateur déléguée et les autorisations dans la chaîne de requête. Pour que le service de niveau intermédiaire puisse effectuer des requêtes authentifiées auprès du service en aval, il doit sécuriser un jeton d’accès AD FS pour le compte de l’utilisateur.  
  
-### <a name="protocol-diagram"></a>프로토콜 다이어그램 
-위에서 설명한 OAuth 2.0 인증 코드 부여 흐름을 사용하여 애플리케이션에서 사용자를 인증했다고 가정합니다. 이 시점에서 애플리케이션에는 중간 계층 웹 API(API A)에 액세스하기 위한 사용자의 클레임과 동의가 포함된 API A(토큰 A)에 대한 액세스 토큰이 있습니다. 클라이언트에서 토큰의 user_impersonation 범위를 요청하는지 확인합니다. 이제 API A는 다운스트림 웹 API(API B)에 인증된 요청을 수행해야 합니다. 
+### <a name="protocol-diagram"></a>Diagramme de protocole 
+Supposez que l’utilisateur a été authentifié sur une application à l’aide du processus d’octroi de code d’autorisation OAuth 2.0 décrit ci-dessus. À ce stade, l’application dispose d’un jeton d’accès pour l’API A (jeton A) avec les revendications et le consentement de l’utilisateur pour accéder à l’API web de niveau intermédiaire (API A). Assurez-vous que le client demande l’étendue user_impersonation dans le jeton. Désormais, l’API A doit effectuer une requête authentifiée auprès de l’API web en aval (API B). 
 
-다음 단계는 OBO 흐름을 구성하며, 다음 다이어그램의 지원을 통해 설명됩니다. 
+Les étapes qui suivent constituent le flux OBO et sont expliquées avec l’aide du diagramme suivant. 
 
-![On-Behalf-Of 흐름](media/adfs-scenarios-for-developers/obo.png)
+![Flux On-Behalf-Of](media/adfs-scenarios-for-developers/obo.png)
 
-  1. 클라이언트 애플리케이션은 토큰 A를 사용하여 API A에 요청을 합니다.  
-  참고: AD FS에서 OBO 흐름을 구성하는 동안 `user_impersonation` 범위가 선택되고 클라이언트가 요청에서 `user_impersonation` 범위를 요청합니다. 
-  2. API A에서 AD FS 토큰 발급 엔드포인트를 인증하고 API B에 액세스하기 위한 토큰을 요청합니다. 참고: AD FS에서 이 흐름을 구성하는 동안 API A도 API A의 리소스 ID와 동일한 값이 있는 clientID를 사용하는 서버 애플리케이션으로 등록되어 있어야 합니다.
-  3. AD FS 토큰 발급 엔드포인트에서 토큰 A를 사용하여 API A의 자격 증명에 대한 유효성을 검사하고, API B(토큰 B)에 대한 액세스 토큰을 발급합니다. 
-  4. 토큰 B가 API B에 대한 요청의 권한 부여 헤더에 설정됩니다. 
-  5. API B에서 보안 리소스의 데이터를 반환합니다. 
+  1. L’application cliente envoie une requête à l’API A avec le jeton A.  
+  Remarque: Lors de la configuration du flux OBO dans AD FS, assurez-vous que l’étendue `user_impersonation` est sélectionnée et que le client demande bien l’étendue `user_impersonation` dans la requête. 
+  2. L’API A s’authentifie auprès du point de terminaison d’émission de jetons AD FS et demande un jeton pour accéder à l’API B. Remarque : Lors de la configuration de ce flux dans AD FS, veillez à ce que l’API A soit également inscrite en tant qu’application serveur avec un clientID ayant la même valeur que l’ID de ressource dans l’API A.
+  3. Le point de terminaison d’émission de jetons AD FS valide les informations d’identification de l’API A avec le jeton A, et émet le jeton d’accès pour l’API B (jeton B). 
+  4. Le jeton B est défini dans l’en-tête d’autorisation de la requête à l’API B. 
+  5. Les données de la ressource sécurisée sont retournées par l’API B. 
 
-### <a name="service-to-service-access-token-request"></a>서비스 간 액세스 토큰 요청 
+### <a name="service-to-service-access-token-request"></a>Requête de jeton d’accès de service à service 
  
-액세스 토큰을 요청하려면 다음 매개 변수를 사용하여 AD FS 토큰 엔드포인트에 대한 HTTP POST를 수행합니다.  
+Pour demander un jeton d’accès, exécutez une requête POST HTTP sur le point de terminaison de jeton AD FS avec les paramètres suivants.  
 
 
-### <a name="first-case-access-token-request-with-a-shared-secret"></a>첫 번째 사례: 공유 비밀을 사용하여 액세스 토큰 요청 
+### <a name="first-case-access-token-request-with-a-shared-secret"></a>Premier cas : requête de jeton d’accès avec un secret partagé 
  
-공유 비밀을 사용하는 경우 서비스 간 액세스 토큰 요청에 포함되는 매개 변수는 다음과 같습니다. 
+Lors de l’utilisation d’un secret partagé, une requête de jeton d’accès de service à service contient les paramètres suivants : 
 
 
-|매개 변수|필수/선택|설명|
+|Paramètre|Obligatoire ou facultatif|Description|
 |-----|-----|-----| 
-|grant_type|필수|토큰 요청의 유형입니다. JWT를 사용하는 요청의 경우 값은 urn:ietf:params:oauth:grant-type:jwt-bearer여야 합니다.|  
-|client_id|필수|첫 번째 웹 API를 서버 앱(중간 계층 앱)으로 등록할 때 구성하는 클라이언트 ID입니다. 첫 번째 레그(예: 첫 번째 웹 API의 URL)에서 사용된 리소스 ID와 동일해야 합니다.| 
-|client_secret|필수|AD FS에서 서버 앱을 등록하는 동안 만든 애플리케이션 비밀입니다.| 
-|assertion|필수|요청에 사용된 토큰의 값입니다.|  
-|requested_token_use|필수|요청을 처리하는 방법을 지정합니다. OBO 흐름에서 이 값은 on_behalf_of로 설정해야 합니다.| 
-|리소스|필수|첫 번째 웹 API를 서버 앱(중간 계층 앱)으로 등록하는 동안 제공된 리소스 ID입니다. 이 리소스 ID는 클라이언트를 대신하여 앱에서 호출하는 두 번째 웹 API 중간 계층의 URL이어야 합니다.|
-|scope|선택적|공백으로 구분된 토큰 요청에 대한 범위의 목록입니다.| 
+|grant_type|obligatoire|Type de requête de jeton. Pour une requête utilisant un jeton JWT, la valeur doit être urn:ietf:params:oauth:grant-type:jwt-bearer.|  
+|client_id|obligatoire|ID client que vous configurez lors de l’inscription de votre première API web en tant qu’application serveur (application de niveau intermédiaire). Il doit être identique à l’ID de ressource utilisé lors de la première phase, autrement dit correspondre à l’URL de la première API web.| 
+|client_secret|obligatoire|Secret d’application que vous avez créé lors de l’inscription de l’application serveur dans AD FS.| 
+|assertion|obligatoire|Valeur du jeton utilisé dans la requête.|  
+|requested_token_use|obligatoire|Spécifie comment la requête doit être traitée. Dans le flux OBO, ce paramètre doit avoir la valeur on_behalf_of.| 
+|resource|obligatoire|ID de ressource fourni lors de l’inscription de la première API web en tant qu’application serveur (application de niveau intermédiaire). L’ID de ressource doit être l’URL de la deuxième API web que l’application de niveau intermédiaire appellera pour le compte du client.|
+|scope|facultatif|Liste d’étendues séparées par des espaces pour la requête de jeton.| 
 
-#### <a name="example"></a>예제 
+#### <a name="example"></a>Exemple 
  
-다음 `HTTP POST`에서 액세스 토큰 및 새로 고침 토큰을 요청합니다. 
+La requête `HTTP POST` suivante demande un jeton d’accès et un jeton d’actualisation. 
  
 ```
 //line breaks for legibility only 
@@ -336,27 +336,27 @@ grant_type=urn:ietf:params:oauth:grant-type:jwt-bearer
 &scope=openid    
 ```
 
-### <a name="second-case-access-token-request-with-a-certificate"></a>두 번째 사례: 인증서를 사용하여 액세스 토큰 요청 
+### <a name="second-case-access-token-request-with-a-certificate"></a>Deuxième cas : requête de jeton d’accès avec un certificat 
  
-인증서를 사용하는 서비스 간 액세스 토큰 요청에 포함되는 매개 변수는 다음과 같습니다. 
+Une requête de jeton d’accès de service à service avec un certificat contient les paramètres suivants : 
 
 
-|매개 변수|필수/선택|설명|
+|Paramètre|Obligatoire ou facultatif|Description|
 |-----|-----|-----| 
-|grant_type|필수|토큰 요청의 유형입니다. JWT를 사용하는 요청의 경우 값은 urn:ietf:params:oauth:grant-type:jwt-bearer여야 합니다. |
-|client_id|필수|첫 번째 웹 API를 서버 앱(중간 계층 앱)으로 등록할 때 구성하는 클라이언트 ID입니다. 첫 번째 레그(예: 첫 번째 웹 API의 URL)에서 사용된 리소스 ID와 동일해야 합니다.|  
-|client_assertion_type|필수|값은 urn:ietf:params:oauth:client-assertion-type:jwt-bearer여야 합니다.| 
-|client_assertion|필수|애플리케이션에 대한 자격 증명으로 등록한 인증서를 사용하여 만들고 서명해야 하는 어설션(JSON 웹 토큰)입니다.|  
-|assertion|필수|요청에 사용된 토큰의 값입니다.| 
-|requested_token_use|필수|요청을 처리하는 방법을 지정합니다. OBO 흐름에서 이 값은 on_behalf_of로 설정해야 합니다.| 
-|리소스|필수|첫 번째 웹 API를 서버 앱(중간 계층 앱)으로 등록하는 동안 제공된 리소스 ID입니다. 이 리소스 ID는 클라이언트를 대신하여 앱에서 호출하는 두 번째 웹 API 중간 계층의 URL이어야 합니다.|
-|scope|선택적|공백으로 구분된 토큰 요청에 대한 범위의 목록입니다.|
+|grant_type|obligatoire|Type de requête de jeton. Pour une requête utilisant un jeton JWT, la valeur doit être urn:ietf:params:oauth:grant-type:jwt-bearer. |
+|client_id|obligatoire|ID client que vous configurez lors de l’inscription de votre première API web en tant qu’application serveur (application de niveau intermédiaire). Il doit être identique à l’ID de ressource utilisé lors de la première phase, autrement dit correspondre à l’URL de la première API web.|  
+|client_assertion_type|obligatoire|La valeur doit être urn:ietf:params:oauth:client-assertion-type:jwt-bearer.| 
+|client_assertion|obligatoire|Assertion (jeton web JSON) que vous devez créer et signer avec le certificat que vous avez inscrit en tant qu’informations d’identification pour votre application.|  
+|assertion|obligatoire|Valeur du jeton utilisé dans la requête.| 
+|requested_token_use|obligatoire|Spécifie comment la requête doit être traitée. Dans le flux OBO, ce paramètre doit avoir la valeur on_behalf_of.| 
+|resource|obligatoire|ID de ressource fourni lors de l’inscription de la première API web en tant qu’application serveur (application de niveau intermédiaire). L’ID de ressource doit être l’URL de la deuxième API web que l’application de niveau intermédiaire appellera pour le compte du client.|
+|scope|facultatif|Liste d’étendues séparées par des espaces pour la requête de jeton.|
 
 
-client_secret 매개 변수가 client_assertion_type 및 client_assertion의 두 가지 매개 변수로 대체된다는 점을 제외하고는 매개 변수가 공유 비밀을 통한 요청의 경우와 거의 동일합니다. 
+Notez que les paramètres sont presque les mêmes que dans le cas de la requête par secret partagé, sauf que le paramètre client_secret est remplacé par deux paramètres : client_assertion_type et client_assertion. 
 
-#### <a name="example"></a>예제 
-인증서를 사용하여 웹 API에 대한 액세스 토큰을 요청하는 HTTP POST는 다음과 같습니다.
+#### <a name="example"></a>Exemple 
+La requête POST HTTP suivante demande un jeton d’accès pour l’API web avec un certificat.
 
 ``` 
 // line breaks for legibility only 
@@ -374,24 +374,24 @@ grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer
 &scope= openid 
 ```    
 
-### <a name="service-to-service-access-token-response"></a>서비스 간 액세스 토큰 응답 
+### <a name="service-to-service-access-token-response"></a>Réponse de jeton d’accès de service à service 
  
-성공 응답은 다음 매개 변수가 JSON OAuth 2.0 응답입니다. 
+Une réponse positive est une réponse JSON OAuth 2.0 avec les paramètres suivants. 
 
 
-|매개 변수|설명|
+|Paramètre|Description|
 |-----|-----| 
-|token_type|토큰 형식 값을 나타냅니다. AD FS에서 지원하는 유일한 형식은 Bearer입니다. | 
-|scope|토큰에 부여된 액세스의 범위입니다.| 
-|expires_in|액세스 토큰의 유효 시간(초)입니다.| 
-|access_token|요청된 액세스 토큰입니다. 호출 서비스에서 이 토큰을 사용하여 수신 서비스를 인증할 수 있습니다.| 
-|id_token|JWT(JSON 웹 토큰)입니다. 앱에서 이 토큰의 세그먼트를 디코딩하여 로그인한 사용자에 대한 정보를 요청할 수 있습니다. 앱에서 값을 캐시하고 표시할 수 있지만, 권한 부여 또는 보안 경계에 이러한 값을 사용하지 않아야 합니다.| 
-|refresh_token|요청된 액세스 토큰에 대한 새로 고침 토큰입니다. 현재 액세스 토큰이 만료되면 호출 서비스에서 이 토큰을 사용하여 다른 액세스 토큰을 요청할 수 있습니다.|
-|Refresh_token_expires_in|새로 고침 토큰의 유효 시간(초)입니다. 
+|token_type|Indique la valeur du type de jeton. Le seul type pris en charge par AD FS est Bearer. | 
+|scope|Étendue de l’accès accordé dans le jeton.| 
+|expires_in|Durée, en secondes, pendant laquelle le jeton d’accès est valide.| 
+|access_token|Jeton d’accès demandé. Le service appelant peut utiliser ce jeton pour s’authentifier auprès du service cible.| 
+|id_token|Jeton web JSON (JWT). L’application peut décoder les segments de ce jeton pour demander des informations sur l’utilisateur qui s’est connecté. L’application peut mettre en cache les valeurs et les afficher, mais elle ne doit pas se reposer sur elles pour les limites d’autorisation ou de sécurité.| 
+|refresh_token|Jeton d’actualisation pour le jeton d’accès demandé. Le service appelant peut utiliser ce jeton pour demander un autre jeton d’accès après l’expiration du jeton d’accès actif.|
+|refresh_token_expires_in|Durée, en secondes, pendant laquelle le jeton d’actualisation est valide. 
 
-### <a name="success-response-example"></a>성공 응답 예제 
+### <a name="success-response-example"></a>Exemple de réponse positive 
  
-다음 예제에서는 웹 API의 액세스 토큰 요청에 대한 성공 응답을 보여 줍니다. 
+L’exemple suivant montre une réponse positive à une requête de jeton d’accès pour l’API web. 
 
 ``` 
 { 
@@ -406,32 +406,32 @@ grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer
 ```  
  
  
-액세스 토큰을 사용하여 보안 리소스에 액세스합니다. 이제 중간 계층 서비스는 Authorization 헤더에 토큰을 설정하여 위에서 획득한 토큰을 통해 다운스트림 웹 API에 인증된 요청을 수행할 수 있습니다.  
+Utilisez le jeton d’accès pour accéder à la ressource sécurisée. Maintenant, le service de niveau intermédiaire peut utiliser le jeton acquis ci-dessus pour effectuer des requêtes authentifiées à l’API web en aval, en définissant le jeton dans l’en-tête d’autorisation.  
 
-#### <a name="example"></a>예제 
+#### <a name="example"></a>Exemple 
 ``` 
 GET /v1.0/me HTTP/1.1 
 Host: https://secondwebapi.com 
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJub25jZSI6IkFRQUJBQUFBQUFCbmZpRy1tQ… 
 ``` 
 
-## <a name="client-credentials-grant-flow"></a>클라이언트 자격 증명 부여 흐름 
+## <a name="client-credentials-grant-flow"></a>Flux d’octroi des informations d’identification du client 
  
-[RFC 6749](https://tools.ietf.org/html/rfc6749#section-4.4)에 지정된 OAuth 2.0 클라이언트 자격 증명 부여를 사용하여 애플리케이션의 ID를 통해 웹 호스팅 리소스에 액세스할 수 있습니다. 이 유형의 부여는 일반적으로 사용자와의 즉각적인 상호 작용 없이 백그라운드에서 실행되어야 하는 서버 간 상호 작용에 사용됩니다. 이러한 유형의 애플리케이션을 종종 디먼 또는 서비스 계정이라고 합니다. 
+Vous pouvez utiliser l’octroi d’informations d’identification du client OAuth 2.0 spécifié dans la [RFC 6749](https://tools.ietf.org/html/rfc6749#section-4.4) pour accéder à des ressources hébergées sur le web à l’aide de l’identité d’une application. Ce type d’octroi est couramment utilisé pour les interactions de serveur à serveur qui doivent s’exécuter en arrière-plan, sans interaction immédiate avec un utilisateur. Ces types d’applications sont souvent appelés démons ou comptes de service. 
 
-OAuth 2.0 클라이언트 자격 증명 부여 흐름을 사용하면 웹 서비스(비밀 클라이언트)에서 다른 웹 서비스를 호출할 때 사용자를 가장하는 대신 고유한 자격 증명을 사용하여 인증할 수 있습니다. 이 시나리오에서 클라이언트는 일반적으로 중간 계층 웹 서비스, 디먼 서비스 또는 웹 사이트입니다. 또한 AD FS는 더 높은 수준의 보증을 위해 호출 서비스에서 공유 비밀 대신 인증서를 자격 증명으로 사용할 수 있습니다. 
+Le flux d’octroi d’informations d’identification du client OAuth 2.0 permet à un service web (un client confidentiel) d’utiliser ses propres informations d’identification, au lieu d’emprunter l’identité d’un utilisateur, pour s’authentifier lors de l’appel d’un autre service web. Dans ce scénario, le client est généralement un service web de niveau intermédiaire, un service démon ou un site web. Pour un niveau d’assurance plus élevé, AD FS autorise également le service appelant à utiliser un certificat (plutôt qu’un secret partagé) comme informations d’identification. 
 
-### <a name="protocol-diagram"></a>프로토콜 다이어그램 
+### <a name="protocol-diagram"></a>Diagramme de protocole 
 
-다음 다이어그램에서는 클라이언트 자격 증명 부여 흐름을 보여 줍니다. 
+Le diagramme suivant illustre le flux d’octroi des informations d’identification du client. 
 
-![클라이언트 자격 증명](media/adfs-scenarios-for-developers/credentials.png)
+![Informations d’identification du client](media/adfs-scenarios-for-developers/credentials.png)
 
-### <a name="request-a-token"></a>토큰 요청 
+### <a name="request-a-token"></a>Demander un jeton 
  
-클라이언트 자격 증명 부여를 사용하여 토큰을 가져오려면 `POST` 요청을 /token AD FS 엔드포인트에 보냅니다.  
+Pour obtenir un jeton à l’aide de l’octroi des informations d’identification du client, envoyez une requête `POST` au point de terminaison AD FS /token :  
  
-### <a name="first-case-access-token-request-with-a-shared-secret"></a>첫 번째 사례: 공유 비밀을 사용하여 액세스 토큰 요청 
+### <a name="first-case-access-token-request-with-a-shared-secret"></a>Premier cas : requête de jeton d’accès avec un secret partagé 
  
 ```
 POST /adfs/oauth2/token HTTP/1.1            
@@ -445,14 +445,14 @@ client_id=535fb089-9ff3-47b6-9bfb-4f1264799865
 &grant_type=client_credentials 
 ```
 
-|매개 변수|필수/선택|설명|
+|Paramètre|Obligatoire ou facultatif|Description|
 |-----|-----|-----| 
-|client_id|필수|AD FS에서 앱에 할당한 애플리케이션(클라이언트) ID입니다.| 
-|scope|선택적|사용자가 동의하도록 하려는 공백으로 구분된 범위의 목록입니다.| 
-|client_secret|필수|앱 등록 포털에서 앱에 대해 생성한 클라이언트 암호입니다. 클라이언트 암호는 보내기 전에 URL로 인코딩해야 합니다.| 
-|grant_type|필수| `client_credentials`로 설정해야 합니다.|
+|client_id|obligatoire|ID d’application (client) qu’AD FS a affecté à votre application.| 
+|scope|facultatif|Liste des étendues, séparées par des espaces, auxquelles l’utilisateur doit donner son consentement.| 
+|client_secret|obligatoire|Clé secrète client que vous avez générée pour votre application dans le portail d’inscription des applications. La clé secrète client doit être encodée sous forme d’URL avant d’être envoyée.| 
+|grant_type|obligatoire|Doit avoir la valeur `client_credentials`.|
 
-### <a name="second-case-access-token-request-with-a-certificate"></a>두 번째 사례: 인증서를 사용하여 액세스 토큰 요청 
+### <a name="second-case-access-token-request-with-a-certificate"></a>Deuxième cas : requête de jeton d’accès avec un certificat 
 
 ``` 
 POST /adfs/oauth2/token HTTP/1.1                
@@ -468,17 +468,17 @@ Content-Type: application/x-www-form-urlencoded
 &grant_type=client_credentials  
 ```
 
-|매개 변수|필수/선택|설명| 
+|Paramètre|Obligatoire ou facultatif|Description| 
 |-----|-----|-----|
-|client_assertion_type|필수|값은 urn:ietf:params:oauth:client-assertion-type:jwt-bearer로 설정해야 합니다.| 
-|client_assertion|필수|애플리케이션에 대한 자격 증명으로 등록한 인증서를 사용하여 만들고 서명해야 하는 어설션(JSON 웹 토큰)입니다.|  
-|grant_type|필수| `client_credentials`로 설정해야 합니다.|
-|client_id|선택적|AD FS에서 앱에 할당한 애플리케이션(클라이언트) ID입니다. client_assertion의 일부이므로 여기에 전달할 필요가 없습니다.| 
-|scope|선택적|사용자가 동의하도록 하려는 공백으로 구분된 범위의 목록입니다.| 
+|client_assertion_type|obligatoire|La valeur doit être urn:ietf:params:oauth:client-assertion-type:jwt-bearer.| 
+|client_assertion|obligatoire|Assertion (jeton web JSON) que vous devez créer et signer avec le certificat que vous avez inscrit en tant qu’informations d’identification pour votre application.|  
+|grant_type|obligatoire|Doit avoir la valeur `client_credentials`.|
+|client_id|facultatif|ID d’application (client) qu’AD FS a affecté à votre application. Fait partie de client_assertion. Il n’est donc pas nécessaire de le transmettre ici.| 
+|scope|facultatif|Liste des étendues, séparées par des espaces, auxquelles l’utilisateur doit donner son consentement.| 
 
-### <a name="use-a-token"></a>토큰 사용 
+### <a name="use-a-token"></a>Utiliser un jeton 
  
-이제 토큰을 획득했으므로 토큰을 사용하여 리소스에 대한 요청을 수행합니다. 토큰이 만료되면 /token 엔드포인트에 요청을 반복하여 새 액세스 토큰을 획득합니다.  
+Maintenant que vous avez acquis un jeton, utilisez-le pour exécuter des requêtes sur la ressource. Quand le jeton expire, répétez la requête sur le point de terminaison /token pour obtenir un nouveau jeton d’accès.  
  
 ```
 GET /v1.0/me/messages 
@@ -486,18 +486,18 @@ Host: https://webapi.com
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik5HVEZ2ZEstZnl0aEV1Q...  
 ```
 
-## <a name="resource-owner-password-credentials-grant-flow-not-recommended"></a>리소스 소유자 암호 자격 증명 부여 흐름(추천되지 않음) 
+## <a name="resource-owner-password-credentials-grant-flow-not-recommended"></a>Flux d’octroi des informations d’identification du mot de passe du propriétaire de la ressource (non recommandé) 
  
-ROPC(리소스 소유자 암호 자격 증명) 부여를 사용하면 애플리케이션에서 사용자의 암호를 직접 처리하여 사용자를 로그인할 수 있습니다. ROPC 흐름에는 높은 수준의 신뢰와 사용자 공개가 필요하며, 더 안전한 다른 흐름을 사용할 수 없는 경우에만 이 흐름을 사용해야 합니다.  
+L’octroi des informations d’identification du mot de passe du propriétaire de la ressource (ROPC) permet à une application de connecter l’utilisateur en gérant directement son mot de passe. Le flux ROPC nécessite un degré élevé de confiance et d’exposition de l’utilisateur. Vous ne devez utiliser ce flux que quand d’autres flux, plus sécurisés, ne peuvent pas être utilisés.  
  
-### <a name="protocol-diagram"></a>프로토콜 다이어그램 
+### <a name="protocol-diagram"></a>Diagramme de protocole 
  
-다음 다이어그램에서는 ROPC 흐름을 보여 줍니다.
+Le diagramme suivant illustre le flux ROPC.
 
-![ROPC 흐름](media/adfs-scenarios-for-developers/resource.png)
+![Flux ROPC](media/adfs-scenarios-for-developers/resource.png)
 
-### <a name="authorization-request"></a>권한 부여 요청 
-ROPC 흐름은 단일 요청입니다. 즉, 클라이언트 ID 및 사용자의 자격 증명을 IDP로 보낸 다음, 응답으로 토큰을 받습니다. 이렇게 하려면 먼저 클라이언트에서 사용자의 이메일 주소(UPN) 및 암호를 요청해야 합니다. 요청이 성공하는 즉시 클라이언트는 메모리에서 사용자의 자격 증명을 안전하게 해제해야 합니다. 이를 저장하면 안 됩니다.  
+### <a name="authorization-request"></a>Requête d’autorisation 
+Le flux ROPC est constitué d’une requête unique : il envoie l’identification du client et les informations d’identification de l’utilisateur au fournisseur d’identité, puis reçoit les jetons en retour. Le client doit demander l’adresse e-mail de l’utilisateur (UPN) et le mot de passe avant de procéder. Immédiatement après une requête réussie, le client doit libérer de la mémoire, de manière sécurisée, les informations d’identification de l’utilisateur. Il ne doit jamais les enregistrer.  
 
 ```
 // Line breaks and spaces are for legibility only. 
@@ -514,16 +514,16 @@ client_id=6731de76-14a6-49ae-97bc-6eba6914391e
 ```
 
 
-|매개 변수|필수/선택|설명| 
+|Paramètre|Obligatoire ou facultatif|Description| 
 |-----|-----|-----|
-|client_id|필수|클라이언트 ID| 
-|grant_type|필수|password로 설정해야 합니다.| 
-|username|필수|사용자의 전자 메일 주소입니다.| 
-|password|필수|사용자의 암호입니다.| 
-|scope|선택적|공백으로 구분된 범위의 목록입니다.|
+|client_id|obligatoire|ID de client| 
+|grant_type|obligatoire|Doit être défini sur password.| 
+|username|obligatoire|Adresse de messagerie de l’utilisateur.| 
+|password|obligatoire|Mot de passe de l’utilisateur.| 
+|scope|facultatif|Liste d’étendues séparées par des espaces.|
 
-### <a name="successful-authentication-response"></a>성공적인 인증 응답 
-다음 예제에서는 성공적인 토큰 응답을 보여 줍니다. 
+### <a name="successful-authentication-response"></a>Réponse d’authentification positive 
+L’exemple suivant montre une réponse de jeton positive : 
 
 ```
 { 
@@ -538,30 +538,30 @@ client_id=6731de76-14a6-49ae-97bc-6eba6914391e
 ```
 
 
-|매개 변수|설명| 
+|Paramètre|Description| 
 |-----|-----|
-|token_type|항상 Bearer로 설정합니다.| 
-|scope|액세스 토큰이 반환된 경우 이 매개 변수는 액세스 토큰의 유효 범위를 나열합니다.| 
-|expires_in|포함된 액세스 토큰의 유효 시간(초)입니다.| 
-|access_token|요청된 범위에 대해 발급됩니다.| 
-|id_token|JWT(JSON 웹 토큰)입니다. 앱에서 이 토큰의 세그먼트를 디코딩하여 로그인한 사용자에 대한 정보를 요청할 수 있습니다. 앱에서 값을 캐시하고 표시할 수 있지만, 권한 부여 또는 보안 경계에 이러한 값을 사용하지 않아야 합니다.| 
-|refresh_token_expires_in|포함된 새로 고침 토큰의 유효 시간(초)입니다.| 
-|refresh_token|원본의 범위 매개 변수에 offline_access가 포함된 경우 발급됩니다.|
+|token_type|Toujours défini sur Bearer.| 
+|scope|Si un jeton d’accès a été retourné, ce paramètre liste les étendues pour lesquelles le jeton d’accès est valide.| 
+|expires_in|Nombre de secondes pendant lesquelles le jeton d’accès inclus est valide.| 
+|access_token|Émis pour les étendues qui ont été demandées.| 
+|id_token|Jeton web JSON (JWT). L’application peut décoder les segments de ce jeton pour demander des informations sur l’utilisateur qui s’est connecté. L’application peut mettre en cache les valeurs et les afficher, mais elle ne doit pas se reposer sur elles pour les limites d’autorisation ou de sécurité.| 
+|refresh_token_expires_in|Nombre de secondes pendant lesquelles le jeton d’actualisation inclus est valide.| 
+|refresh_token|Émis si le paramètre d’étendue d’origine incluait offline_access.|
 
-위의 인증 코드 부여 흐름 섹션에서 설명한 것과 동일한 흐름을 사용하여 새로 고침 토큰을 통해 새 액세스 토큰을 획득하고 토큰을 새로 고칠 수 있습니다.   
+Vous pouvez utiliser le jeton d’actualisation pour acquérir de nouveaux jetons d’accès et jetons d’actualisation en appliquant le même processus que celui décrit dans la section relative au flux d’octroi de code d’authentification ci-dessus.   
 
-## <a name="device-code-flow"></a>디바이스 코드 흐름 
+## <a name="device-code-flow"></a>Flux de code d’appareil 
  
-디바이스 코드 부여를 사용하면 사용자가 스마트 TV, IoT 디바이스 또는 프린터와 같은 입력 제한 디바이스에 로그인할 수 있습니다. 이 흐름을 사용하도록 설정하기 위해 디바이스에서 사용자가 다른 디바이스의 브라우저에 있는 웹 페이지를 방문하여 로그인하도록 합니다. 사용자가 로그인하면 디바이스에서 액세스 토큰을 가져오고 필요에 따라 해당 토큰을 새로 고칠 수 있습니다. 
+L’octroi de code d’appareil permet aux utilisateurs de se connecter à des appareils avec restriction d’entrée, tels qu’une imprimante, un appareil IoT ou un téléviseur intelligent. Pour activer ce flux, l’appareil fait en sorte que l’utilisateur accède à une page web dans son navigateur sur un autre  appareil pour se connecter. Une fois que l’utilisateur s’est connecté, l’appareil peut recevoir des jetons d’accès et des jetons d’actualisation en fonction des besoins. 
  
-### <a name="protocol-diagram"></a>프로토콜 다이어그램 
+### <a name="protocol-diagram"></a>Diagramme de protocole 
  
-전체 디바이스 코드 흐름은 다음 다이어그램과 비슷합니다. 이 문서의 뒷부분에서 각 단계에 대해 설명합니다. 
+Le diagramme suivant illustre l’intégralité du flux de code d’appareil. Chacune des étapes est décrite plus loin dans cet article. 
  
-![디바이스 코드 흐름](media/adfs-scenarios-for-developers/device.png)
+![Flux de code d’appareil](media/adfs-scenarios-for-developers/device.png)
 
-### <a name="device-authorization-request"></a>디바이스 권한 부여 요청 
-클라이언트에서 먼저 인증을 시작하는 데 사용되는 디바이스 및 사용자 코드에 대한 인증 서버를 확인해야 합니다. 클라이언트는 /devicecode 엔드포인트에서 이 요청을 수집합니다. 이 요청에서 클라이언트는 사용자로부터 획득해야 하는 권한도 포함해야 합니다. 사용자는 이 요청을 보낸 시점부터 15분(일반적인 terms_in 값) 동안만 로그인할 수 있으므로 사용자가 로그인할 준비가 되었음을 나타내는 경우에만 이 요청을 수행합니다. 
+### <a name="device-authorization-request"></a>Requête d’autorisation de l’appareil 
+Le client doit d’abord demander au serveur d’authentification un appareil et un code utilisateur utilisés pour lancer l’authentification. Le client collecte cette requête à partir du point de terminaison /devicecode. Dans cette requête, le client doit également inclure les autorisations qu’il doit obtenir de la part de l’utilisateur. À partir du moment où cette requête est envoyée, l’utilisateur ne dispose que de 15 minutes pour se connecter (la valeur habituelle du paramètre expires_in). Vous ne devez donc effectuer cette requête que quand l’utilisateur a indiqué qu’il est prêt à se connecter. 
 
 ```
 // Line breaks are for legibility only. 
@@ -574,27 +574,27 @@ scope=openid
 ```
 
 
-|매개 변수|조건|설명|
+|Paramètre|Condition|Description|
 |-----|-----|-----| 
-|client_id|필수|AD FS에서 앱에 할당한 애플리케이션(클라이언트) ID입니다.| 
-|scope|선택적|공백으로 구분된 범위의 목록입니다.|
+|client_id|obligatoire|ID d’application (client) qu’AD FS a affecté à votre application.| 
+|scope|facultatif|Liste d’étendues séparées par des espaces.|
 
-### <a name="device-authorization-response"></a>디바이스 권한 부여 응답 
-성공적인 응답은 사용자가 로그인할 수 있게 하는 데 필요한 정보가 포함된 JSON 개체입니다. 
+### <a name="device-authorization-response"></a>Réponse d’autorisation de l’appareil 
+Une réponse positive est un objet JSON contenant les informations requises pour permettre à l’utilisateur de se connecter. 
 
 
-|매개 변수|설명|
+|Paramètre|Description|
 |-----|-----| 
-|device_code|클라이언트와 권한 부여 서버 간의 세션을 확인하는 데 사용되는 긴 문자열입니다. 클라이언트에서 이 매개 변수를 사용하여 권한 부여 서버의 액세스 토큰을 요청합니다.| 
-|user_code|보조 디바이스의 세션을 식별하는 데 사용되어 사용자에게 표시되는 짧은 문자열입니다.| 
-|verification_uri|로그인하기 위해 사용자가 user_code를 사용하여 이동해야 하는 URI입니다.| 
-|verification_uri_complete|로그인하기 위해 사용자가 user_code를 사용하여 이동해야 하는 URI입니다. user_code를 사용하여 미리 채워져 있으므로 사용자가 user_code를 입력할 필요가 없습니다.| 
-|expires_in|device_code 및 user_code가 만료될 때까지의 시간(초)입니다.| 
-|interval|클라이언트에서 폴링 요청 간에 가 대기해야 하는 시간(초)입니다.| 
-|message|사용자를 위한 지침이 포함된 사람이 읽을 수 있는 문자열입니다. 이는 쿼리 매개 변수를 ?mkt=xx-XX 형식의 요청에 포함시키고 해당 언어 문화권 코드를 입력하여 지역화할 수 있습니다.  
+|device_code|Chaîne longue servant à vérifier la session entre le client et le serveur d’autorisation. Le client utilise ce paramètre pour demander le jeton d’accès au serveur d’autorisation.| 
+|user_code|Courte chaîne présentée à l’utilisateur, servant à identifier la session sur un appareil secondaire.| 
+|verification_uri|URI auquel l’utilisateur doit accéder avec le user_code afin de se connecter.| 
+|verification_uri_complete|URI auquel l’utilisateur doit accéder avec le user_code afin de se connecter. Il est prérempli avec user_code, afin que l’utilisateur n’ait pas besoin d’entrer user_code.| 
+|expires_in|Nombre de secondes avant l’expiration du device_code et du user_code.| 
+|interval|Nombre de secondes pendant lesquelles le client doit attendre entre les requêtes d’interrogation.| 
+|message|Chaîne explicite avec des instructions destinées à l’utilisateur. Elle peut être localisée en incluant un paramètre de requête dans la requête au format ?mkt=xx-XX, en spécifiant le code de culture de langue approprié.  
 
-### <a name="authenticating-the-user"></a>사용자 인증 
-user_code 및 verification_uri를 받은 후 클라이언트에서 사용자에게 이러한 항목을 표시하여 휴대폰 또는 PC 브라우저를 통해 로그인하도록 지시합니다. 또한 클라이언트에서 QR 코드 또는 비슷한 메커니즘을 사용하여 verfication_uri_complete을 표시할 수 있습니다. 이 경우 사용자에 대한 user_code를 입력하는 단계가 수행됩니다. 사용자가 verification_uri에서 인증하는 동안 클라이언트에서 device_code를 사용하여 요청된 토큰에 대한 /token 엔드포인트를 폴링해야 합니다. 
+### <a name="authenticating-the-user"></a>Authentification de l’utilisateur 
+Une fois qu’il a reçu le user_code et le verification_uri, le client les présente à l’utilisateur, et lui demande de se connecter à l’aide du navigateur de son téléphone mobile ou de son PC. Le client peut aussi utiliser un code QR ou un mécanisme similaire pour afficher le verfication_uri_complete, afin d’effectuer l’étape d’entrée du user_code pour l’utilisateur. Pendant que l’utilisateur s’authentifie à verification_uri, le client doit interroger le point de terminaison /token pour obtenir le jeton demandé à l’aide du device_code. 
 
 ```
 POST https://adfs.contoso.com /adfs/oauth2/token 
@@ -606,26 +606,26 @@ device_code: GMMhmHCXhWEzkobqIHGG_EnNYYsAkukHspeYUk9E8
 ```
 
 
-|매개 변수|필수|설명|
+|Paramètre|obligatoire|Description|
 |-----|-----|-----| 
-|grant_type|필수|urn:ietf:params:oauth:grant-type:device_code여야 합니다.| 
-|client_id|필수|초기 요청에 사용된 client_id와 일치해야 합니다.| 
-|code|필수|디바이스 권한 부여 요청에서 반환된 device_code입니다.|
+|grant_type|obligatoire|Doit être urn:ietf:params:oauth:grant-type:device_code.| 
+|client_id|obligatoire|Doit correspondre au client_id utilisé dans la requête initiale.| 
+|code|obligatoire|device_code retourné dans la requête d’autorisation de l’appareil.|
 
-### <a name="successful-authentication-response"></a>성공적인 인증 응답 
-성공적인 토큰 응답은 다음과 같습니다.  
+### <a name="successful-authentication-response"></a>Réponse d’authentification positive 
+Une réponse de jeton positive se présente comme suit :  
 
 
-|매개 변수|설명|
+|Paramètre|Description|
 |-----|-----| 
-|token_type|항상 Bearer입니다.| 
-|scope|액세스 토큰이 반환된 경우 이 매개 변수는 액세스 토큰의 유효 범위를 나열합니다.| 
-|expires_in|포함된 액세스 토큰이 유효하게 될 때까지의 시간(초)입니다.| 
-|access_token|요청된 범위에 대해 발급됩니다.| 
-|id_token|원본의 범위 매개 변수에 openid 범위가 포함된 경우 발급됩니다.| 
-|refresh_token|원본의 범위 매개 변수에 offline_access가 포함된 경우 발급됩니다.| 
-|refresh_token_expires_in|포함된 새로 고침 토큰이 유효하게 될 때까지의 시간(초)입니다.| 
+|token_type|Toujours Bearer.| 
+|scope|Si un jeton d’accès a été retourné, ce paramètre liste les étendues pour lesquelles le jeton d’accès est valide.| 
+|expires_in|Nombre de secondes pendant lesquelles le jeton d’accès inclus est valide.| 
+|access_token|Émis pour les étendues qui ont été demandées.| 
+|id_token|Émis si le paramètre d’étendue d’origine incluait l’étendue openid.| 
+|refresh_token|Émis si le paramètre d’étendue d’origine incluait offline_access.| 
+|refresh_token_expires_in|Nombre de secondes pendant lesquelles le jeton d’actualisation inclus est valide.| 
 
 
-## <a name="related-content"></a>관련 콘텐츠  
-관련 흐름을 사용하는 방법에 대한 단계별 지침을 제공하는 전체 연습 문서 목록은 [AD FS 개발](../AD-FS-Development.md)을 참조하세요. 
+## <a name="related-content"></a>Contenu associé  
+Pour obtenir la liste complète des articles de procédure pas à pas, consultez la page [Développement AD FS](../AD-FS-Development.md), qui fournit des instructions pas à pas sur l’utilisation des flux associés. 

@@ -1,283 +1,286 @@
 ---
 ms.assetid: acc9101b-841c-4540-8b3c-62a53869ef7a
-title: AD FS FAQ
-description: AD FS에 대한 질문과 대답
+title: Perguntas frequentes sobre o AD FS
+description: Perguntas frequentes sobre o AD FS
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 04/17/2019
+ms.date: 04/29/2020
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: a1041bdc189238c7da32896e6f867f730e392d24
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: b1b6f7d38c4474ba3f69c4eac0c4569375185eb8
+ms.sourcegitcommit: 6d3f8780b67aa7865a9372cf2c1e10c79ebea8b1
 ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80814433"
+ms.contentlocale: pt-BR
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82587670"
 ---
-# <a name="ad-fs-frequently-asked-questions-faq"></a>AD FS FAQ(질문과 대답)
+# <a name="ad-fs-frequently-asked-questions-faq"></a>Perguntas frequentes do AD FS
 
 
-다음 설명서는 Active Directory Federation Services와 관련하여 자주 묻는 질문과 대답입니다.  이 문서는 질문 유형에 따라 그룹으로 분할되어 있습니다.
+A documentação a seguir é uma home page de perguntas frequentes sobre os Serviços de Federação do Active Directory (AD FS).  O documento foi dividido em grupos, de acordo com o tipo de pergunta.
 
-## <a name="deployment"></a>배포
+## <a name="deployment"></a>Implantação
 
-### <a name="how-can-i-upgrademigrate-from-previous-versions-of-ad-fs"></a>이전 버전의 AD FS에서 업그레이드/마이그레이션하는 방법
-다음 중 하나를 사용하여 AD FS를 업그레이드할 수 있습니다.
-
-
-- Windows Server 2012 R2 AD FS에서 Windows Server 2016 AD FS 이상으로 업그레이드. 이 방법론은 Windows Server 2016 AD FS에서 Windows Server 2019 AD FS로 업그레이드하는 경우에도 동일합니다. 
-    - [WID 데이터베이스를 사용하여 Windows Server 2016에서 AD FS로 업그레이드](../deployment/Upgrading-to-AD-FS-in-Windows-Server-2016.md)
-    - [SQL 데이터베이스를 사용하여 Windows Server 2016에서 AD FS로 업그레이드](../deployment/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL.md)
-- Windows Server 2012 AD FS에서 Windows Server 2012 R2 AD FS로 업그레이드
-    - [Windows Server 2012 R2에서 AD FS로 마이그레이션](https://technet.microsoft.com/library/dn486815.aspx)
-- AD FS 2.0에서 Windows Server 2012 AD FS로 업그레이드
-    - [Windows Server 2012에서 AD FS로 마이그레이션](https://technet.microsoft.com/library/jj647765.aspx)
-- AD FS 1.x에서 AD FS 2.0으로 업그레이드
-    - [AD FS 1.x에서 AD FS 2.0으로 업그레이드](https://technet.microsoft.com/library/ff678035.aspx)
-
-AD FS 2.0 또는 2.1(Windows Server 2008 R2 또는 Windows Server 2012)에서 업그레이드하려면 기본 제공 스크립트(C:\Windows\ADFS에 있음)를 사용해야 합니다.
-
-### <a name="why-does-ad-fs-installation-require-a-reboot-of-the-server"></a>AD FS 설치에서 서버를 다시 부팅해야 하는 이유는 무엇인가요?
-
-HTTP/2 지원이 Windows Server 2016에 추가되었지만, 클라이언트 인증서 인증에는 HTTP/2를 사용할 수 없습니다.  많은 AD FS 시나리오에서 클라이언트 인증서 인증을 사용하고 상당한 수의 클라이언트에서 HTTP/1.1을 사용하여 요청을 다시 시도하도록 지원하지 않으므로 AD FS 팜 구성에서는 로컬 서버의 HTTP 설정을 HTTP/1.1로 다시 구성합니다.  이로 인해 서버를 다시 부팅해야 합니다.  
-
-### <a name="is-using-windows-2016-wap-servers-to-publish-the-ad-fs-farm-to-the-internet-without-upgrading-the-back-end-ad-fs-farm-supported"></a>지원되는 백 엔드 AD FS 팜을 업그레이드하지 않고 Windows 2016 WAP 서버를 사용하여 AD FS 팜을 인터넷에 게시하나요?
-예, 이 구성은 지원되지만, 새로운 AD FS 2016 기능이 이 구성에 지원되지 않습니다.  이 구성은 AD FS 2012 R2에서 AD FS 2016으로 마이그레이션하는 단계 중에 일시적으로 수행되며 장기간 배포하면 안 됩니다.
-
-### <a name="is-it-possible-to-deploy-ad-fs-for-office-365-without-publishing-a-proxy-to-office-365"></a>프록시를 Office 365에 게시하지 않고 Office 365용 AD FS를 배포할 수 있나요?
-예, 지원됩니다. 하지만 다음과 같이 부작용이 있습니다.
-
-1. Azure AD에서 페더레이션 메타데이터에 액세스할 수 없으므로 토큰 서명 인증서 업데이트를 수동으로 관리해야 합니다. 토큰 서명 인증서를 수동으로 업데이트하는 방법에 대한 자세한 내용은 [Office 365 및 Azure Active Directory에 대한 페더레이션 인증서 갱신](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-o365-certs)을 참조하세요.
-2. 레거시 인증 흐름(예: ExO 프록시 인증 흐름)을 사용할 수 없습니다.
-
-### <a name="what-are-load-balancing-requirements-for-ad-fs-and-wap-servers"></a>AD FS 및 WAP 서버에 대한 부하 분산 요구 사항은 무엇인가요?
-
-AD FS는 상태 비저장 시스템입니다. 따라서 로그인에 대한 부하 분산은 매우 간단합니다. 부하 분산 시스템에 대한 주요 추천 사항은 다음과 같습니다.
+### <a name="how-can-i-upgrademigrate-from-previous-versions-of-ad-fs"></a>Como posso fazer a atualização/migração de versões anteriores do AD FS?
+Atualize o AD FS usando um dos seguintes procedimentos:
 
 
-- 부하 분산 장치는 IP 선호도를 사용하여 구성하면 안 됩니다. 이로 인해 특정 Exchange Online 시나리오에서 서버의 하위 세트에 과도한 부하가 발생할 수 있습니다.
-- 부하 분산 장치는 HTTPS 연결을 종료하고 ADFS 서버에 대한 새 연결을 다시 시작하면 안 됩니다.
-- 부하 분산 장치는 ADFS로 보낼 때 HTTP 패킷에서 연결 IP 주소를 원본 IP로 변환해야 합니다. 부하 분산 장치가 HTTP 패킷에서 원본 IP를 보낼 수 없는 경우 부하 분산 장치에서 IP 주소를 x-forwarded-for 헤더에 추가(또는 기존의 경우 추가)해야 합니다. 이는 특정 IP 관련 기능(금지된 IP, 엑스트라넷 스마트 잠금,...)을 올바르게 처리하는 데 필요하며, 부적절하게 구성되면 보안이 저하될 수 있습니다.
-- 부하 분산 장치는 SNI를 지원해야 합니다. 그렇지 않으면 AD FS에서 HTTPS 바인딩을 만들어 SNI를 지원하지 않는 클라이언트를 처리하도록 구성되어 있는지 확인합니다.
-- 부하 분산 장치는 AD FS HTTP 상태 프로브 엔드포인트를 사용하여 AD FS 또는 WAP 서버가 작동되는지 여부를 확인하고, 200 OK가 반환되지 않으면 해당 서버를 제외해야 합니다.
+- AD FS do Windows Server 2012 R2 para o AD FS do Windows Server 2016 ou posterior. Observe que a metodologia é a mesma se você está atualizando o AD FS do Windows Server 2016 para o AD FS do Windows Server 2019. 
+    - [Como atualizar para o AD FS no Windows Server 2016 por meio de um banco de dados WID](../deployment/Upgrading-to-AD-FS-in-Windows-Server-2016.md)
+    - [Como atualizar para o AD FS no Windows Server 2016 por meio de um banco de dados SQL](../deployment/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL.md)
+- AD FS do Windows Server 2012 para o AD FS do Windows Server 2012 R2
+    - [Migração para o AD FS no Windows Server 2012 R2](https://technet.microsoft.com/library/dn486815.aspx)
+- AD FS 2.0 para o AD FS do Windows Server 2012
+    - [Migração para o AD FS no Windows Server 2012](https://technet.microsoft.com/library/jj647765.aspx)
+- AD FS 1.x para o AD FS 2.0
+    - [Atualização do AD FS 1.x para o AD FS 2.0](https://technet.microsoft.com/library/ff678035.aspx)
 
-### <a name="what-multi-forest-configurations-are-supported-by-ad-fs"></a>AD FS에서 지원하는 다중 포리스트 구성은 무엇인가요?
+Caso precise atualizar o AD FS 2.0 ou 2.1 (Windows Server 2008 R2 ou Windows Server 2012), use os scripts nativos (localizados em C:\Windows\ADFS).
 
-AD FS는 여러 개의 다중 포리스트 구성을 지원하며, 기본 AD DS 트러스트 네트워크를 사용하여 여러 신뢰할 수 있는 영역에서 사용자를 인증합니다. 이는 트러스트 하위 시스템이 문제 없이 제대로 작동하도록 하기 위한 더 간단한 설정이므로 양방향 포리스트 트러스트를 사용하는 것이 좋습니다. 또한
+### <a name="why-does-ad-fs-installation-require-a-reboot-of-the-server"></a>Por que a instalação do AD FS exige uma reinicialização do servidor?
 
-- 파트너 ID가 포함된 DMZ 포리스트와 같은 단방향 포리스트 트러스트의 경우 ADFS를 회사 포리스트에 배포하고, DMZ 포리스트를 LDAP를 통해 연결된 다른 로컬 클레임 공급자 트러스트로 처리하는 것이 좋습니다. 이 경우 Windows 통합 인증은 DMZ 포리스트 사용자에게 작동하지 않으며, LDAP에 유일하게 지원되는 메커니즘이므로 암호 인증을 수행해야 합니다. 이 옵션을 수행할 수 없는 경우 다른 ADFS를 DMZ 포리스트에 설정하고, 이를 클레임 공급자 트러스트로 회사 포리스트의 ADFS에 추가해야 합니다. 사용자는 홈 영역 검색을 수행해야 하지만 Windows 통합 인증 및 암호 인증은 모두 작동합니다. 회사 포리스트의 ADFS는 DMZ 포리스트에서 사용자에 대한 추가 사용자 정보를 가져올 수 없으므로 DMZ 포리스트에 있는 ADFS의 발급 규칙을 적절하게 변경하세요.
-- 도메인 수준 트러스트가 지원되며 작동할 수 있지만 포리스트 수준 트러스트 모델로 이동하는 것이 좋습니다. 또한 이름에 대한 UPN 라우팅 및 NETBIOS 이름 확인이 정확하게 작동해야 합니다.
+O suporte ao HTTP/2 foi adicionado no Windows Server 2016, mas o HTTP/2 não pode ser usado para autenticação de certificado de cliente.  Como muitos cenários do AD FS usam a autenticação de certificado de cliente e um número significativo de clientes não dá suporte a solicitações de repetição usando o HTTP/1.1, a configuração de farm do AD FS redefine as configurações de HTTP do servidor local como HTTP/1.1.  Isso exige uma reinicialização do servidor.  
+
+### <a name="is-using-windows-2016-wap-servers-to-publish-the-ad-fs-farm-to-the-internet-without-upgrading-the-back-end-ad-fs-farm-supported"></a>Há suporte para o uso de Servidores WAP do Windows 2016 para publicação do farm do AD FS na Internet sem a atualização do farm do AD FS de back-end?
+Sim, há suporte para essa configuração; no entanto, não há suporte para os novos recursos do AD FS 2016 nessa configuração.  Essa configuração destina-se a ser temporária durante a fase de migração do AD FS 2012 R2 para o AD FS 2016 e não deve ser implantada por um longo tempo.
+
+### <a name="is-it-possible-to-deploy-ad-fs-for-office-365-without-publishing-a-proxy-to-office-365"></a>É possível implantar o AD FS para o Office 365 sem publicar um proxy no Office 365?
+Sim, há suporte para isso. No entanto, como efeito colateral
+
+1. Você precisará gerenciar manualmente a atualização dos certificados de autenticação de tokens, porque o Azure AD não poderá acessar os metadados de federação. Para obter mais informações sobre como atualizar manualmente o certificado de autenticação de tokens, leia [Renovar certificados de federação para o Office 365 e o Azure Active Directory](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-o365-certs)
+2. Você não poderá aproveitar os fluxos de autenticação herdados (por exemplo, fluxo de autenticação de proxy ExO)
+
+### <a name="what-are-load-balancing-requirements-for-ad-fs-and-wap-servers"></a>Quais são os requisitos de balanceamento de carga para servidores AD FS e WAP?
+
+O AD FS é um sistema sem estado. Portanto, o balanceamento de carga é bem simples para logons. Veja a seguir as principais recomendações para sistemas de balanceamento de carga.
+
+
+- Os balanceadores de carga não DEVEM ser configurados com a afinidade de IP. Isso pode colocar uma carga indevida em um subconjunto dos servidores em alguns cenários do Exchange Online.
+- Os balanceadores de carga não DEVEM encerrar as conexões HTTPS e reiniciar uma nova conexão com o servidor ADFS.
+- Os balanceadores de carga DEVEM garantir que o endereço IP de conexão seja convertido como o IP de origem no pacote HTTP ao ser enviado ao ADFS. Caso um balanceador de carga não possa enviar o IP de origem no pacote HTTP, o balanceador de carga DEVERÁ adicionar (ou acrescentar, no caso de um existente) o endereço IP ao cabeçalho x-forwarded-for. Isso é necessário para o tratamento correto de determinados recursos relacionados ao IP (IP banido, bloqueio inteligente de extranet etc.) e poderá levar à uma segurança reduzida se for configurado incorretamente.
+- Os balanceadores de carga DEVEM dar suporte ao SNI. Caso contrário, verifique se o AD FS está configurado para criar associações HTTPS a fim de lidar com clientes não compatíveis com o SNI.
+- Os balanceadores de carga DEVEM usar o ponto de extremidade de investigação de integridade HTTP do AD FS para detectar se os servidores AD FS ou WAP estão em funcionamento e os excluir se uma mensagem 200 OK não é retornada.
+
+### <a name="what-multi-forest-configurations-are-supported-by-ad-fs"></a>Há suporte para quais configurações de várias florestas no AD FS?
+
+O AD FS dá suporte a diversas configurações de várias florestas e se baseia na rede de confiança subjacente do AD DS para autenticar os usuários em vários realms confiáveis. Recomendamos expressamente as relações de confiança de florestas bidirecionais, pois essa é uma configuração mais simples, a fim de garantir que o subsistema da relação de confiança funcione corretamente sem problemas. Além disso:
+
+- No caso de uma relação de confiança de floresta unidirecional, como uma floresta DMZ que contém identidades de parceiros, recomendamos implantar o ADFS na floresta CORP e tratar a floresta DMZ como outra relação de confiança do provedor de declarações local conectada via LDAP. Nesse caso, a autenticação integrada do Windows não funcionará para os usuários da floresta DMZ. Eles precisarão realizar a autenticação de senha, pois esse é o único mecanismo compatível com o LDAP. Caso não possa escolher essa opção, você precisará configurar outro ADFS na floresta DMZ e adicioná-lo como uma relação de confiança do provedor de declarações ao ADFS na floresta CORP. Os usuários precisarão realizar a descoberta de realm inicial, mas a autenticação integrada do Windows e a autenticação de senha funcionarão. Faça as alterações apropriadas nas regras de emissão no ADFS da floresta DMZ, pois o ADFS na floresta CORP não poderá obter informações extras sobre o usuário da floresta DMZ.
+- Embora as relações de confiança no nível do domínio tenham suporte e possam funcionar, recomendamos expressamente que você migre para um modelo de relação de confiança no nível da floresta. Além disso, você precisará garantir que os roteiros UPN e a resolução de nomes NetBIOS funcionem com precisão.
 
 >[!NOTE]  
->선택적 인증이 양방향 트러스트 구성에 사용되는 경우 호출자 사용자에게 대상 서비스 계정에 대한 "인증 허용" 권한이 부여되어야 합니다. 
+>Se a autenticação eletiva for usada com uma configuração de relação de confiança bidirecional, garanta que o usuário chamador receba a permissão "permitir autenticação" na conta de serviço de destino. 
+
+### <a name="does-ad-fs-extranet-smart-lockout-support-ipv6"></a>O Bloqueio Inteligente de Extranet do AD FS é compatível com IPv6?
+Sim, os endereços IPv6 são considerados para locais familiares/desconhecidos.
 
 
-## <a name="design"></a>디자인
+## <a name="design"></a>Design
 
-### <a name="what-third-party-multi-factor-authentication-providers-are-available-for-ad-fs"></a>AD FS에 사용할 수 있는 타사 다단계 인증 공급자는 무엇인가요?
-AD FS는 타사 MFA 공급자에서 통합할 수 있는 확장 가능한 메커니즘을 제공합니다. 이에 대해 설정된 인증 프로그램이 없습니다. 공급업체에서 릴리스하기 전에 필요한 유효성 검사를 수행했다고 가정합니다. 
+### <a name="what-third-party-multi-factor-authentication-providers-are-available-for-ad-fs"></a>Quais provedores de autenticação multifator de terceiros estão disponíveis para o AD FS?
+O AD FS fornece um mecanismo extensível para provedores de MFA de terceiros a serem integrados. Não há nenhum programa de certificação definido para isso. Supõe-se que o fornecedor executou as validações necessárias antes do lançamento. 
 
-Microsoft에 통지한 공급업체 목록은 [AD FS에 대한 MFA 공급자](../operations/Configure-Additional-Authentication-Methods-for-AD-FS.md)에 게시됩니다.  언제든지 알 수 없는 공급자가 있을 수 있으며, 이에 대해 확인되는 대로 이 목록이 업데이트됩니다.
+A lista de fornecedores que notificaram a Microsoft foi publicada em [Provedores de MFA para o AD FS](../operations/Configure-Additional-Authentication-Methods-for-AD-FS.md).  Pode sempre haver provedores disponíveis que desconhecemos, por isso, atualizaremos a lista à medida que ficarmos cientes deles.
 
-### <a name="are-third-party-proxies-supported-with-ad-fs"></a>타사 프록시가 AD FS에 지원되나요?
-예, 타사 프록시는 웹 애플리케이션 프록시 앞에 배치할 수 있지만, 타사 프록시에서 웹 애플리케이션 프록시 대신 사용할 [MS-ADFSPIP 프로토콜](https://msdn.microsoft.com/library/dn392811.aspx)을 지원해야 합니다.
+### <a name="are-third-party-proxies-supported-with-ad-fs"></a>Há suporte para proxies de terceiros no AD FS?
+Sim, os proxies de terceiros podem ser colocados na frente do Proxy de aplicativo Web, mas qualquer proxy de terceiros precisa dar suporte ao [protocolo MS-ADFSPIP](https://msdn.microsoft.com/library/dn392811.aspx) a ser usado no lugar do Proxy de aplicativo Web.
 
-알고 있는 타사 공급자 목록은 아래와 같습니다.  언제든지 알 수 없는 공급자가 있을 수 있으며, 이에 대해 확인되는 대로 이 목록이 업데이트됩니다.
+Veja abaixo uma lista de provedores de terceiros dos quais estamos cientes.  Pode sempre haver provedores disponíveis que desconhecemos, por isso, atualizaremos a lista à medida que ficarmos cientes deles.
 
-- [F5 액세스 정책 관리자](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-third-party-integration-13-1-0/12.html#guid-1ee8fbb3-1b33-4982-8bb3-05ae6868d9ee)
+- [F5 Access Policy Manager](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-third-party-integration-13-1-0/12.html#guid-1ee8fbb3-1b33-4982-8bb3-05ae6868d9ee)
 
 
-### <a name="where-is-the-capacity-planning-sizing-spreadsheet-for-ad-fs-2016"></a>AD FS 2016의 용량 계획 크기 조정 스프레드시트는 어디에 있나요?
-AD FS 2016 버전의 스프레드시트는 [여기](http://adfsdocs.blob.core.windows.net/adfs/ADFSCapacity2016.xlsx)서 다운로드할 수 있습니다.
-이는 Windows Server 2012 R2의 AD FS에도 사용할 수 있습니다.
+### <a name="where-is-the-capacity-planning-sizing-spreadsheet-for-ad-fs-2016"></a>Em que local se encontra a planilha de dimensionamento do planejamento da capacidade do AD FS 2016?
+A versão do AD FS 2016 da planilha pode ser baixada [aqui](http://adfsdocs.blob.core.windows.net/adfs/ADFSCapacity2016.xlsx).
+Isso também pode ser usado para o AD FS no Windows Server 2012 R2.
 
-### <a name="how-can-i-ensure-my-ad-fs-and-wap-servers-support-apples-atp-requirements"></a>AD FS 및 WAP 서버에서 Apple의 ATP 요구 사항을 지원하도록 하려면 어떻게 해야 하나요?
+### <a name="how-can-i-ensure-my-ad-fs-and-wap-servers-support-apples-atp-requirements"></a>Como garantir que meus servidores AD FS e WAP darão suporte aos requisitos de ATP da Apple?
 
-Apple은 AD FS를 인증하는 iOS 앱의 호출에 영향을 줄 수 있는 ATS(App Transport Security)라는 일단의 요구 사항을 발표했습니다.  AD FS 및 WAP 서버에서 [ATS를 사용한 연결 요구 사항](https://developer.apple.com/library/prerelease/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW57)을 지원하는지 확인하여 해당 서버에서 준수하는지 확인할 수 있습니다.  
-특히 AD FS 및 WAP 서버에서 TLS 1.2를 지원하고 TLS 연결의 협상된 암호 그룹에서 완벽한 전달 보안을 지원하는지 확인해야 합니다.
+A Apple lançou um conjunto de requisitos chamados ATS (App Transport Security) que possam afetar chamadas em aplicativos iOS que se autenticam no AD FS.  Você pode garantir que os seus servidores AD FS e WAP estejam em conformidade verificando se eles dão suporte aos [requisitos de conexão com o ATS](https://developer.apple.com/library/prerelease/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW57).  
+Em particular, você deve verificar se os seus servidores AD FS e WAP dão suporte ao TLS 1.2 e se o pacote de criptografia negociado da conexão TLS dará suporte ao PFS.
 
-[AD FS의 SSL 프로토콜 관리](../operations/Manage-SSL-Protocols-in-AD-FS.md)를 사용하여 SSL 2.0 및 3.0 과 TLS 버전 1.0, 1.1 및 1.2를 사용하거나 사용하지 않도록 설정할 수 있습니다.
+Você pode habilitar e desabilitar o SSL 2.0 e 3.0 e as versões do TLS 1.0, 1.1 e 1.2 usando [Gerenciar protocolos SSL no AD FS](../operations/Manage-SSL-Protocols-in-AD-FS.md).
 
-AD FS 및 WAP 서버에서 ATP를 지원하는 TLS 암호 그룹만 협상하도록 하려면 [ATP 규격 암호 그룹 목록](https://developer.apple.com/library/prerelease/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW57)에 없는 모든 암호 그룹을 사용하지 않도록 설정할 수 있습니다.  이렇게 하려면 [Windows TLS PowerShell cmdlet](https://technet.microsoft.com/itpro/powershell/windows/tls/index)을 사용합니다.
+Para garantir que os servidores AD FS e WAP negociem somente conjuntos de criptografia TLS que dão suporte a ATP, desabilite todos os conjuntos de criptografia que não estejam na [lista de conjuntos de criptografia em conformidade com ATP](https://developer.apple.com/library/prerelease/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW57).  Para fazer isso, use os [cmdlets do PowerShell do TLS no Windows](https://technet.microsoft.com/itpro/powershell/windows/tls/index).
 
-## <a name="developer"></a>Developer
+## <a name="developer"></a>Desenvolvedor
 
-### <a name="when-generating-an-id_token-with-adfs-for-a-user-authenticated-against-ad-how-is-the-sub-claim-generated-in-the-id_token"></a>ADFS를 사용하여 AD에 대해 인증된 사용자에 대한 id_token을 생성하는 경우 "sub" 클레임은 id_token에서 어떻게 생성되나요?
-"sub" 클레임의 값은 클라이언트 ID + 앵커 클레임 값의 해시입니다.
+### <a name="when-generating-an-id_token-with-adfs-for-a-user-authenticated-against-ad-how-is-the-sub-claim-generated-in-the-id_token"></a>Ao gerar um id_token com o ADFS para um usuário autenticado no AD, como a "subdeclaração" é gerada no id_token?
+O valor da "subdeclaração" é o hash da ID do cliente + o valor da declaração de âncora.
 
-### <a name="what-is-the-lifetime-of-the-refresh-tokenaccess-token-when-the-user-logs-in-via-a-remote-claims-provider-trust-over-ws-fedsaml-p"></a>사용자가 WS-Fed/SAML-P에 대한 원격 클레임 공급자 트러스트를 통해 로그인하는 경우 새로 고침 토큰/액세스 토큰의 수명은 어떻게 되나요?
-새로 고침 토큰의 수명은 ADFS에서 원격 클레임 공급자 트러스트로부터 가져온 토큰의 수명입니다. 액세스 토큰의 수명은 액세스 토큰을 발급하는 신뢰 당사자의 토큰 수명입니다.
+### <a name="what-is-the-lifetime-of-the-refresh-tokenaccess-token-when-the-user-logs-in-via-a-remote-claims-provider-trust-over-ws-fedsaml-p"></a>Qual é o tempo de vida do token de atualização/token de acesso quando o usuário faz logon por meio de uma relação de confiança remota do provedor de declarações por meio do WS-Fed/SAML-P?
+O tempo de vida do token de atualização será o tempo de vida do token que o ADFS obteve da relação de confiança remota do provedor de declarações. O tempo de vida do token de acesso será o tempo de vida do token da terceira parte confiável para o qual o token de acesso está sendo emitido.
 
-### <a name="i-need-to-return-profile-and-email-scopes-as-well-in-addition-to-the-openid-scope-can-i-obtain-additional-information-using-scopes-how-to-do-it-in-ad-fs"></a>OpenId 범위뿐만 아니라 프로필과 이메일 범위도 반환해야 합니다. 범위를 사용하여 추가 정보를 가져올 수 있나요? AD FS에서는 어떻게 해야 하나요?
-사용자 지정된 id_token을 사용하여 id_token 자체에 관련 정보를 추가할 수 있습니다. 자세한 내용은 [id_token에서 내보낼 클레임 사용자 지정](../development/Custom-Id-Tokens-in-AD-FS.md) 문서를 참조하세요.
+### <a name="i-need-to-return-profile-and-email-scopes-as-well-in-addition-to-the-openid-scope-can-i-obtain-additional-information-using-scopes-how-to-do-it-in-ad-fs"></a>Preciso retornar escopos de perfil e email além do escopo do OpenId. Posso obter informações adicionais usando escopos? Como fazer isso no AD FS?
+Use id_token personalizado para adicionar informações relevantes no próprio id_token. Para obter mais informações, confira o artigo [Personalizar declarações a serem emitidas no id_token](../development/Custom-Id-Tokens-in-AD-FS.md).
 
-### <a name="how-to-issue-json-blobs-inside-jwt-tokens"></a>JWT 토큰 내에서 json Blob을 발급하는 방법은 어떻게 되나요?
-이를 위해 특수한 ValueType("<http://www.w3.org/2001/XMLSchema#json>") 및 이스케이프 문자(\x22)가 AD FS 2016에 추가되었습니다. 발급 규칙에 대해 아래 샘플을 확인하고, 액세스 토큰의 최종 출력도 확인하세요.
+### <a name="how-to-issue-json-blobs-inside-jwt-tokens"></a>Como emitir blobs JSON dentro de tokens JWT?
+Um ValueType especial ("<http://www.w3.org/2001/XMLSchema#json>") e um caractere de escape (\x22) para isso foram adicionados no AD FS 2016. Use a amostra abaixo para a regra de emissão e também a saída final do token de acesso.
 
-발급 규칙 샘플:
+Regra de emissão da amostra:
 
     => issue(Type = "array_in_json", ValueType = "http://www.w3.org/2001/XMLSchema#json", Value = "{\x22Items\x22:[{\x22Name\x22:\x22Apple\x22,\x22Price\x22:12.3},{\x22Name\x22:\x22Grape\x22,\x22Price\x22:3.21}],\x22Date\x22:\x2221/11/2010\x22}");
 
-액세스 토큰에서 발급된 클레임:
+Declaração emitida no token de acesso:
 
     "array_in_json":{"Items":[{"Name":"Apple","Price":12.3},{"Name":"Grape","Price":3.21}],"Date":"21/11/2010"}
 
-### <a name="can-i-pass-resource-value-as-part-of-the-scope-value-like-how-requests-are-done-against-azure-ad"></a>Azure AD에 대한 요청 수행 방식과 같이 리소스 값을 범위 값의 일부로 전달할 수 있나요?
-서버 2019에서 AD FS를 사용하면 이제 범위 매개 변수에 포함된 리소스 값을 전달할 수 있습니다. 이제 범위 매개 변수를 공백으로 구분된 목록으로 구성할 수 있습니다. 여기서 각 항목은 리소스/범위로 구조화됩니다. 예를 들면 다음과 같습니다.  
-**<올바른 샘플 요청 만들기>**
+### <a name="can-i-pass-resource-value-as-part-of-the-scope-value-like-how-requests-are-done-against-azure-ad"></a>Posso transmitir o valor do recurso como parte do valor do escopo assim como as solicitações são feitas no Azure AD?
+Com o AD FS no Server 2019, agora você pode transmitir o valor do recurso inserido no parâmetro de escopo. O parâmetro de escopo agora pode ser organizado como uma lista separada por espaço, em que cada entrada é estruturada como recurso/escopo. Por exemplo  
+**< criar uma solicitação de exemplo válida>**
 
-### <a name="does-ad-fs-support-pkce-extension"></a>AD FS에서 PKCE 확장을 지원하나요?
-서버 2019의 AD FS는 OAuth 인증 코드 부여 흐름에 대한 PKCE(코드 교환용 증명 키)를 지원합니다.
+### <a name="does-ad-fs-support-pkce-extension"></a>O AD FS dá suporte à extensão da PKCE?
+O AD FS no Server 2019 dá suporte à PKCE (Chave de Prova para Troca de Código) para o fluxo de concessão de código de autorização OAuth
 
-### <a name="what-permitted-scopes-are-supported-by-ad-fs"></a>AD FS는 어떤 허용 범위를 지원하나요?
-- aza - [broker 클라이언트용 OAuth 2.0 프로토콜 확장](https://docs.microsoft.com/openspecs/windows_protocols/ms-oapxbc/2f7d8875-0383-4058-956d-2fb216b44706)을 사용하고 "aza" 범위가 범위 매개 변수에 포함된 경우 서버에서 새 주 새로 고침 토큰을 발급하고, 이를 응답의 refresh_token 필드에 설정합니다. 또한 새 주 새로 고침 토큰이 강제로 적용되는 경우 refresh_token_expires_in 필드를 이 토큰의 수명으로 설정합니다.
-- openid - 이 범위를 사용하면 애플리케이션에서 OpenID Connect 권한 부여 프로토콜을 사용하도록 요청할 수 있습니다.
-- logon_cert - logon_cert 범위를 사용하면 애플리케이션에서 로그온 인증서를 요청할 수 있습니다. 이 인증서는 인증된 사용자를 대화형으로 로그온하는 데 사용할 수 있습니다. AD FS 서버는 응답에서 access_token 매개 변수를 생략하는 대신, base64로 인코딩된 CMS 인증서 체인 또는 CMC 전체 PKI 응답을 제공합니다. 자세한 내용은 [여기](https://docs.microsoft.com/openspecs/windows_protocols/ms-oapx/32ce8878-7d33-4c02-818b-6c9164cc731e)서 확인할 수 있습니다. 
-- user_impersonation - AD FS에서 On-Behalf-Of 액세스 토큰을 성공적으로 요청하려면 user_imperation 범위가 필요합니다. 이 범위를 사용하는 방법에 대한 자세한 내용은 [AD FS 2016에서 OAuth를 사용하는 OBO(On-Behalf-Of)를 통해 다중 계층 애플리케이션 빌드](../../ad-fs/development/ad-fs-on-behalf-of-authentication-in-windows-server.md)를 참조하세요.
-- vpn_cert - vpn_cert 범위를 사용하면 애플리케이션에서 VPN 인증서를 요청할 수 있습니다. 이 인증서는 EAP-TLS 인증을 사용하여 VPN 연결을 설정하는 데 사용할 수 있습니다. 이 범위는 더 이상 지원되지 않습니다.
-- email - 이 범위를 사용하면 애플리케이션에서 로그인한 사용자에 대한 이메일 클레임을 요청할 수 있습니다. 이 범위는 더 이상 지원되지 않습니다. 
-- profile - 이 범위를 사용하면 애플리케이션에서 로그인 사용자에 대한 프로필 관련 클레임을 요청할 수 있습니다. 이 범위는 더 이상 지원되지 않습니다. 
-
-
-## <a name="operations"></a>작업
-
-### <a name="how-do-i-replace-the-ssl-certificate-for-ad-fs"></a>AD FS용 SSL 인증서를 바꾸려면 어떻게 해야 하나요?
-AD FS SSL 인증서는 AD FS 관리 스냅인에 있는 AD FS 서비스 통신 인증서와 다릅니다.  AD FS SSL 인증서를 변경하려면 PowerShell을 사용해야 합니다. 아래 문서의 지침을 따르세요.
-
-[AD FS 및 WAP 2016의 SSL 인증서 관리](../operations/Manage-SSL-Certificates-AD-FS-WAP-2016.md)
-
-### <a name="how-can-i-enable-or-disable-tlsssl-settings-for-ad-fs"></a>AD FS에 대한 TLS/SSL 설정을 사용하거나 사용하지 않도록 설정하려면 어떻게 해야 하나요?
-SSL 프로토콜 및 암호 그룹을 사용하거나 사용하지 않도록 설정하려면 다음을 사용하세요.
-
-[AD FS의 SSL 프로토콜 관리](../operations/Manage-SSL-Protocols-in-AD-FS.md)
-
-### <a name="does-the-proxy-ssl-certificate-have-to-be-the-same-as-the-ad-fs-ssl-certificate"></a>프록시 SSL 인증서는 AD FS SSL 인증서와 동일해야 하나요?  
-프록시 SSL 인증서 및 AD FS SSL 인증서와 관련하여 다음 지침을 사용하세요.
+### <a name="what-permitted-scopes-are-supported-by-ad-fs"></a>Há suporte para quais escopos permitidos no AD FS?
+- aza: se você estiver usando [Extensões de Protocolo OAuth 2.0 para Clientes de Agente](https://docs.microsoft.com/openspecs/windows_protocols/ms-oapxbc/2f7d8875-0383-4058-956d-2fb216b44706) e se o parâmetro de escopo contiver o escopo "aza", o servidor emitirá um novo token de atualização primário e o definirá no campo refresh_token da resposta, além de configurar o campo refresh_token_expires_in para o tempo de vida do novo token de atualização primário, caso um seja imposto.
+- openid: permite que o aplicativo solicite o uso do protocolo de autorização OpenID Connect.
+- logon_cert: o escopo logon_cert permite que um aplicativo solicite certificados de logon, que podem ser usados para fazer logon de maneira interativa dos usuários autenticados. O servidor do AD FS omite o parâmetro access_token da resposta e, em vez disso, fornece uma cadeia de certificados CMS codificada em Base64 ou uma resposta de PKI completa de CMC. Mais detalhes disponíveis [aqui](https://docs.microsoft.com/openspecs/windows_protocols/ms-oapx/32ce8878-7d33-4c02-818b-6c9164cc731e). 
+- user_impersonation: o escopo user_impersonation é necessário para solicitar com êxito um token de acesso em nome do AD FS. Para obter detalhes sobre como usar esse escopo, veja [Criar um aplicativo de várias camadas usando o OBO (On-Behalf-Of) no OAuth com o AD FS 2016](../../ad-fs/development/ad-fs-on-behalf-of-authentication-in-windows-server.md).
+- vpn_cert: o escopo vpn_cert permite que um aplicativo solicite certificados VPN, que podem ser usados para estabelecer conexões VPN usando a autenticação EAP-TLS. Não há mais suporte para isso.
+- email: permite que o aplicativo solicite a declaração de email para o usuário conectado. Não há mais suporte para isso. 
+- profile: permite que o aplicativo solicite declarações relacionadas ao perfil para o usuário de conexão. Não há mais suporte para isso. 
 
 
-- 프록시를 사용 하는 경우 Windows 통합 인증을 프록시 SSL 인증서를 사용 하는 AD FS 프록시 요청 동일 해야 (동일한 키를 사용 하 여) 페더레이션 서버 SSL 인증서로
-- "ExtendedProtectionTokenCheck"는 AD FS 속성 설정 (기본 AD FS에서 설정), 프록시 SSL 인증서 동일 해야 (동일한 키를 사용 하 여) 페더레이션 서버 SSL 인증서로
-- 그렇지 않으면 AD FS SSL 인증서와 다른 키가 프록시 SSL 인증서에 있을 수 있지만 동일한 [요구 사항](../overview/AD-FS-2016-Requirements.md)을 충족해야 합니다.
+## <a name="operations"></a>Operações
 
-### <a name="why-do-i-only-see-a-password-login-on-ad-fs-and-not-my-other-authentication-methods-that-i-have-configured"></a>AD FS에서만 암호 로그인이 표시되고 구성한 다른 인증 방법이 표시되지 않는 이유는 무엇인가요? 
-구성되고 사용하도록 설정된 인증 방법에 매핑되는 특정 인증 URI가 애플리케이션에 명시적으로 필요한 경우에만 AD FS에서 단일 인증 방법을 로그인 화면에 표시합니다. 이는 WS-Federation 요청의 'wauth' 매개 변수와 SAML 프로토콜 요청의 'RequestedAuthnCtxRef' 매개 변수로 전달됩니다. 따라서 요청된 인증 방법(예: 암호 로그인)만 표시됩니다.
+### <a name="how-do-i-replace-the-ssl-certificate-for-ad-fs"></a>Como fazer para substituir o certificado SSL para o AD FS?
+O certificado SSL do AD FS não é o mesmo que o certificado de comunicações do Serviço do AD FS encontrado no snap-in Gerenciamento do AD FS.  Para alterar o certificado SSL do AD FS, você precisará usar o PowerShell. Siga as diretrizes do artigo abaixo:
 
-Azure AD에서 AD FS를 사용하는 경우 애플리케이션에서 prople=login 매개 변수를 Azure AD로 보내는 것이 일반적입니다. Azure AD는 기본적으로 이 매개 변수에서 AD FS에 대한 새 암호 기반 로그인을 요청하도록 변환합니다. 이는 네트워크 내의 AD FS에서 암호 로그인을 확인하거나 인증서를 사용하여 로그인하는 옵션이 표시되지 않는 가장 일반적인 이유입니다. 이 문제는 Azure AD의 페더레이션된 도메인 설정을 변경하여 쉽게 해결할 수 있습니다. 
+[Como gerenciar certificados SSL no AD FS e no WAP 2016](../operations/Manage-SSL-Certificates-AD-FS-WAP-2016.md)
 
-이를 구성하는 방법에 대한 자세한 내용은 [Active Directory Federation Services prompt=login 매개 변수 지원](../operations/AD-FS-Prompt-Login.md)을 참조하세요.
+### <a name="how-can-i-enable-or-disable-tlsssl-settings-for-ad-fs"></a>Como fazer para habilitar ou desabilitar as configurações de TLS/SSL no AD FS?
+Para desabilitar ou habilitar protocolos SSL e conjuntos de criptografia, use o seguinte:
 
-### <a name="how-can-i-change-the-ad-fs-service-account"></a>AD FS 서비스 계정을 변경하려면 어떻게 해야 하나요?
-AD FS 서비스 계정을 변경하려면 AD FS 도구 상자인 [서비스 계정 Powershell 모듈](https://github.com/Microsoft/adfsToolbox/tree/master/serviceAccountModule)을 사용하는 지침을 따르세요.
+[Gerenciar protocolos SSL no AD FS](../operations/Manage-SSL-Protocols-in-AD-FS.md)
 
-### <a name="how-can-i-configure-browsers-to-use-windows-integrated-authentication-wia-with-ad-fs"></a>AD FS에서 WIA(Windows 통합 인증)를 사용하도록 브라우저를 구성하려면 어떻게 해야 하나요?
-
-브라우저를 구성하는 방법에 대한 자세한 내용은 [AD FS에서 WIA(Windows 통합 인증)를 사용하도록 브라우저 구성](../operations/Configure-AD-FS-Browser-WIA.md)을 참조하세요.
-
-### <a name="can-i-turn-off-browserssoenabled"></a>BrowserSsoEnabled를 해제할 수 있나요?
-ADFS의 디바이스 또는 ADFS를 사용하는 비즈니스용 Windows Hello 인증서 등록을 기반으로 하는 액세스 제어 정책이 없는 경우 BrowserSsoEnabled를 해제할 수 있습니다. BrowserSsoEnabled를 사용하면 ADFS에서 디바이스 정보가 포함된 클라이언트로부터 PRT(주 새로 고침 토큰)를 수집할 수 있습니다. 해당 디바이스가 없으면 ADFS의 인증이 Windows 10 디바이스에서 작동하지 않습니다.
-
-### <a name="how-long-are-ad-fs-tokens-valid"></a>AD FS 토큰의 유효 기간은 얼마인가요?
-
-이 질문은 종종 '새 자격 증명을 입력하지 않고도 사용자가 SSO(Single Sign-On)를 얼마나 오래 사용할 수 있나요?, 그리고 관리자 권한으로 이를 어떻게 제어할 수 있나요?'를 의미합니다.  이 동작 및 이를 제어하는 구성 설정은 [AD FS Single Sign-On 설정](https://technet.microsoft.com/windows-server-docs/identity/ad-fs/operations/ad-fs-2016-single-sign-on-settings) 문서에서 설명하고 있습니다.
-
-아래에는 다양한 쿠키 및 토큰의 기본 수명과 이 수명을 제어하는 매개 변수가 나와 있습니다.
-
-**등록된 디바이스**
-
-- PRT 및 SSO 쿠키: 최대 90일이며, PSSOLifeTimeMins로 관리됩니다. (제공된 디바이스는 최소 14일마다 사용되며, DeviceUsageWindow로 제어됩니다.)
-
-- 새로 고침 토큰: 일관된 동작을 제공하기 위해 위 항목을 기준으로 계산됩니다.
-
-- access_token: 기본적으로 1시간이며,신뢰 당사자를 기준으로 합니다.
-
-- id_token: access_token과 동일
-
-**등록 취소된 디바이스**
-
-- SSO 쿠키: 기본적으로 8시간이며, SSOLifetimeMins로 제어됩니다.  KMSI(로그인 유지)를 사용하도록 설정되면 기본값이 24시간이며, KMSILifetimeMins를 통해 구성할 수 있습니다.
+### <a name="does-the-proxy-ssl-certificate-have-to-be-the-same-as-the-ad-fs-ssl-certificate"></a>O certificado SSL de proxy deve ser o mesmo que o certificado SSL do AD FS?  
+Use as seguintes diretrizes com relação ao certificado SSL de proxy e ao certificado SSL do AD FS:
 
 
-- 새로 고침 토큰: 기본적으로 8시간입니다. KMSI를 사용하도록 설정되면 24시간입니다.
+- Se o proxy for usado para usar um proxy de solicitações do AD FS que usam a Autenticação Integrada do Windows, o certificado SSL do proxy precisará ser igual (usar a mesma chave) o certificado SSL do servidor de federação
+- Se a propriedade “ExtendedProtectionTokenCheck” do AD FS estiver habilitada (a configuração padrão no AD FS), o certificado SSL de proxy precisará ser o mesmo (usar a mesma chave) que o certificado SSL do servidor de federação
+- Caso contrário, o certificado SSL de proxy poderá ter uma chave diferente daquela do certificado SSL do AD FS, mas precisará atender aos mesmos [requisitos](../overview/AD-FS-2016-Requirements.md)
 
-- access_token: 기본적으로 1시간이며,신뢰 당사자를 기준으로 합니다.
+### <a name="why-do-i-only-see-a-password-login-on-ad-fs-and-not-my-other-authentication-methods-that-i-have-configured"></a>Por que só vejo um logon com senha no AD FS e não meus outros métodos de autenticação que configurei? 
+O AD FS mostra apenas um só método de autenticação na tela de logon quando o aplicativo exige explicitamente um URI de autenticação específico que é mapeado para um método de autenticação configurado e habilitado. Isso é transmitido no parâmetro 'wauth' de solicitações do Web Services Federation e o parâmetro 'RequestedAuthnCtxRef' em uma solicitação do protocolo SAML. Como resultado, apenas o método de autenticação solicitado é exibido (por exemplo, logon com senha).
 
-- id_token: access_token과 동일
+Quando AD FS é usado com o Azure AD, é comum que os aplicativos enviem o parâmetro prompt=login ao Azure AD. Por padrão, o Azure AD converte isso para solicitar um novo logon baseado em senha ao AD FS. Esse é o motivo mais comum para ver um logon com senha no AD FS dentro da rede ou não ver uma opção para fazer logon com o certificado. Isso pode ser corrigido com facilidade com uma alteração nas configurações de domínio federado no Azure AD. 
 
-### <a name="does-ad-fs-support-http-strict-transport-security-hsts"></a>AD FS에서 HSTS(HTTP Strict Transport Security)를 지원하나요?  
+Para obter informações sobre como configurar isso, confira [Suporte do parâmetro prompt=login do AD FS (Serviços de Federação do Active Directory)](../operations/AD-FS-Prompt-Login.md).
 
-HTTP HSTS(HTTP Strict Transport Security)는 HTTP 및 HTTPS 엔드포인트를 모두 사용하는 서비스에 대한 프로토콜 다운그레이드 공격 및 쿠키 하이재킹을 완화하는 데 도움이 되는 웹 보안 정책 메커니즘입니다. 이를 통해 웹 서버에서 웹 브라우저(또는 기타 준수 사용자 에이전트)가 HTTP 프로토콜이 아니라 HTTPS를 통해서만 상호 작용해야 한다고 선언할 수 있습니다.
+### <a name="how-can-i-change-the-ad-fs-service-account"></a>Como alterar a conta de serviço do AD FS?
+Para alterar a conta de serviço do AD FS, siga as instruções usando a caixa de ferramentas [Módulo do PowerShell da Conta de Serviço](https://github.com/Microsoft/adfsToolbox/tree/master/serviceAccountModule) do AD FS.
 
-웹 인증 트래픽에 대한 모든 AD FS 엔드포인트는 HTTPS를 통해서만 열립니다.  결과적으로 AD FS는 HTTP Strict Transport Security 정책 메커니즘에서 제공하는 위협을 효과적으로 완화합니다(설계상 HTTP에는 수신기가 없으므로 HTTP로 다운그레이드하지 않음). 또한 AD FS는 모든 쿠키를 보안 플래그로 표시하여 쿠키가 HTTP 프로토콜 엔드포인트를 사용하는 쿠키를 다른 서버로 보내지 않도록 방지합니다.
+### <a name="how-can-i-configure-browsers-to-use-windows-integrated-authentication-wia-with-ad-fs"></a>Como configurar navegadores para usar a WIA (autenticação integrada do Windows) com o AD FS?
 
-따라서 다운그레이드할 수 없으므로 AD FS 서버에서 HSTS를 구현할 필요가 없습니다.  AD FS 서버는 규정 준수를 위해 HTTP를 사용할 수 없고 모든 쿠키가 안전한 것으로 표시되므로 이러한 요구 사항을 충족합니다.
+Para obter informações sobre como configurar navegadores, confira [Configurar navegadores para usar a WIA (autenticação integrada do Windows) com o AD FS](../operations/Configure-AD-FS-Browser-WIA.md).
 
-또한 AD FS 2016(최신 패치 포함) 및 AD FS 2019는 HSTS 헤더를 내보낼 수 있습니다. 이를 구성하려면 [AD FS를 사용하여 HTTP 보안 응답 헤더 사용자 지정](../operations/customize-http-security-headers-ad-fs.md)을 참조하세요.
+### <a name="can-i-turn-off-browserssoenabled"></a>Posso desligar o BrowserSsoEnabled?
+Se você não tiver políticas de controle de acesso baseadas no dispositivo no ADFS ou no registro de certificado do Windows Hello para Empresas que usem o ADFS, você poderá desligar o BrowserSsoEnabled. O BrowserSsoEnabled permite que o ADFS colete um PRT (token de atualização primário) do cliente que contém informações sobre o dispositivo. Sem essa autenticação de dispositivo, o ADFS não funcionará em dispositivos Windows 10.
 
-### <a name="x-ms-forwarded-client-ip-does-not-contain-the-ip-of-the-client-but-contains-ip-of-the-firewall-in-front-of-the-proxy-where-can-i-get-the-right-ip-of-the-client"></a>x-ms-forwarded-client-ip는 클라이언트의 IP를 포함하지 않지만 프록시 앞에 방화벽의 IP를 포함합니다. 클라이언트의 올바른 IP는 어디서 가져올 수 있나요?
-WAP 앞에서 SSL 종료를 수행하지 않는 것이 좋습니다. SSL 종료가 WAP 앞에서 수행되는 경우 x-ms-forwarded-client-ip에는 WAP 앞에 있는 네트워크 디바이스의 IP가 포함됩니다. AD FS에서 지원하는 다양한 IP 관련 클레임에 대한 간단한 설명은 다음과 같습니다.
- - x-ms-client-ip: STS에 연결된 디바이스의 네트워크 IP입니다.  엑스트라넷 요청의 경우 이 클레임에는 항상 WAP의 IP가 포함됩니다.
- - x-ms-forwarded-client-ip: Exchange Online을 통해 ADFS에 전달된 값과 WAP에 연결된 디바이스의 IP 주소를 포함하는 다중 값 클레임입니다.
- - Userip: 엑스트라넷 요청의 경우 이 클레임에는 x-ms-forwarded-client-ip 값이 포함됩니다.  인트라넷 요청의 경우 이 클레임에는 x-ms-client-ip와 동일한 값이 포함됩니다.
+### <a name="how-long-are-ad-fs-tokens-valid"></a>Por quanto tempo os tokens do AD FS são válidos?
 
- 또한 AD FS 2016(최신 패치 포함) 이상 버전에서는 x-forwarded-for 헤더 캡처도 지원합니다. 계층 3에서 전달하지 않는 부하 분산 장치 또는 네트워크 디바이스(IP가 유지됨)는 들어오는 클라이언트 IP를 업계 표준 x-forwarded-for 헤더에 추가해야 합니다. 
+Geralmente, essa pergunta significa 'por quanto tempo os usuários obtêm o SSO (logon único) sem precisar inserir novas credenciais e como eu, como administrador, controlo isso?'  Esse comportamento e as definições de configuração que o controlam são descritos no artigo [Configurações de logon único do AD FS](https://technet.microsoft.com/windows-server-docs/identity/ad-fs/operations/ad-fs-2016-single-sign-on-settings).
 
-### <a name="i-am-trying-to-get-additional-claims-on-the-user-info-endpoint-but-its-only-returning-subject-how-can-i-get-additional-claims"></a>userinfo 엔드포인트에서 추가 클레임을 가져오려고 했지만 주체만 반환됩니다. 추가 클레임을 가져오려면 어떻게 해야 하나요?
-AD FS userinfo 엔드포인트는 항상 OpenID 표준에 지정된 대로 주체 클레임을 반환합니다. AD FS는 userinfo 엔드포인트를 통해 요청된 추가 클레임을 제공하지 않습니다. ID 토큰에 추가 클레임이 필요한 경우 [AD FS의 사용자 지정 ID 토큰](../development/custom-id-tokens-in-ad-fs.md)을 참조하세요.
+Os tempos de vida padrão dos vários cookies e tokens são listados abaixo (bem como os parâmetros que controlam os tempos de vida):
 
-### <a name="why-do-i-see-a-lot-of-1021-errors-on-my-ad-fs-servers"></a>AD FS 서버에서 1021 오류가 많이 표시되는 이유는 무엇인가요?
-이 이벤트는 일반적으로 00000003-0000-0000-c000-000000000000 리소스에 대한 AD FS의 잘못된 리소스 액세스에 대해 기록됩니다. 이 오류는 Azure AD Graph 서비스에 대한 액세스 토큰을 가져오려는 클라이언트의 잘못된 동작으로 인해 발생합니다. 리소스가 AD FS에 없으므로 이 경우 AD FS 서버에서 1021 이벤트 ID가 생성됩니다. AD FS의 00000003-0000-0000-c000-000000000000 리소스에 대한 경고 또는 오류는 무시해도 안전합니다.
+**Dispositivos registrados**
 
-### <a name="why-am-i-seeing-a-warning-for-failure-to-add-the-ad-fs-service-account-to-the-enterprise-key-admins-group"></a>AD FS 서비스 계정을 엔터프라이즈 키 관리 그룹에 추가하지 못했다는 경고가 표시되는 이유는 무엇인가요?
-이 그룹은 FSMO PDC 역할이 있는 Windows 2016 도메인 컨트롤러가 도메인에 있는 경우에만 만들어집니다. 이 오류를 해결하려면 그룹을 수동으로 만들고 아래 절차에 따라 서비스 계정을 그룹의 멤버로 추가한 후 필요한 권한을 부여할 수 있습니다.
-1.    **Active Directory 사용자 및 컴퓨터**를 엽니다.
-2.    탐색 창에서 도메인 이름을 **마우스 오른쪽 단추로 클릭**하고 [속성]을 **클릭**합니다.
-3.    [보안]을 **클릭**합니다([보안] 탭이 없으면 [보기] 메뉴에서 [고급 기능]을 켭니다).
-4.    [고급]을 **클릭**합니다. [추가]를 **클릭**합니다. [보안 주체 선택]을 **클릭**합니다.
-5.    [사용자, 컴퓨터, 서비스 계정 또는 그룹 선택] 대화 상자가 표시됩니다.  [선택할 개체 이름 입력] 텍스트 상자에서 '키 관리 그룹'을 입력합니다.  확인을 클릭합니다.
-6.    [적용 대상] 목록 상자에서 **하위 사용자 개체**를 선택합니다.
-7.    스크롤 막대를 사용하여 페이지 아래쪽으로 스크롤하고, [모두 지우기]를 **클릭**합니다.
-8.    **속성** 섹션에서 **msDS-KeyCredentialLink 읽기** 및 **msDS-KeyCredentialLink 쓰기**를 선택합니다.
+- Cookies de PRT e SSO: máximo de 90 dias, controlado por PSSOLifeTimeMins. (O dispositivo fornecido é usado, pelo menos, a cada 14 dias, que é controlado por DeviceUsageWindow)
 
-### <a name="why-does-modern-authentication-from-android-devices-fail-if-the-server-does-not-send-all-the-intermediate-certificates-in-the-chain-with-the-ssl-cert"></a>서버에서 SSL 인증서를 사용하여 체인의 모든 중간 인증서를 보내지 않는 경우 Android 디바이스의 최신 인증이 실패하는 이유는 무엇인가요?
+- Token de atualização: calculado com base nas informações acima para fornecer um comportamento consistente
 
-페더레이션 사용자는 Android ADAL 라이브러리를 사용하는 앱에 대한 Azure AD 인증이 실패할 수 있습니다. 앱에서 로그인 페이지를 표시하려고 하면 **AuthenticationException**이 발생합니다. Chrome에서는 AD FS 로그인 페이지가 안전하지 않은 것으로 호출될 수 있습니다.
+- access_token: 1 hora por padrão, com base na terceira parte confiável
 
-모든 버전과 모든 디바이스에서 Android는 인증서의 **authorityInformationAccess** 필드에서 추가 인증서 다운로드를 지원하지 않습니다. 이는 Chrome 브라우저에서도 마찬가지입니다. 전체 인증서 체인이 AD FS에서 전달되지 않으면 중간 인증서가 없는 서버 인증 인증서로 인해 이 오류가 발생합니다.
+- id_token: igual ao token de acesso
 
-이 문제에 대한 적절한 해결 방법은 AD FS 및 WAP 서버에서 SSL 인증서와 함께 필요한 중간 인증서를 보내도록 구성하는 것입니다.
+**Dispositivos não registrados**
 
-한 머신에서 컴퓨터(AD FS 및 WAP 서버)의 개인 저장소로 가져올 SSL 인증서를 내보내는 경우 프라이빗 키를 내보내고 **개인 정보 교환 - PKCS #12**를 선택해야 합니다.
+- Cookies de SSO: 8 horas por padrão, controladas por SSOLifetimeMins.  Quando o KMSI (Manter-me conectado) está habilitado, o padrão é 24 horas e é configurável por meio de KMSILifetimeMins.
 
-**확장 속성 모두 내보내기**뿐만 아니라 **가능한 경우 인증 경로에 있는 인증서 모두 포함**에 대한 확인란도 선택해야 합니다.  
 
-Windows Server에서 certlm.msc를 실행하고, *.PFX를 컴퓨터의 개인 인증서 저장소로 가져옵니다. 이로 인해 서버에서 전체 인증서 체인을 ADAL 라이브러리로 전달합니다.
+- Token de atualização: 8 horas por padrão. 24 horas com o KMSI habilitado
+
+- access_token: 1 hora por padrão, com base na terceira parte confiável
+
+- id_token: igual ao token de acesso
+
+### <a name="does-ad-fs-support-http-strict-transport-security-hsts"></a>O AD FS dá suporte ao HSTS (HTTP Strict Transport Security)?  
+
+O HSTS (HTTP Strict Transport Security) é um mecanismo de política de segurança da Web que ajuda a atenuar ataques de downgrade de protocolo e sequestro de cookie nos serviços que têm pontos de extremidade HTTP e HTTPS. Ele permite que os servidores Web declarem que os navegadores da Web (ou outros agentes de usuário em conformidade) só devem interagir com ele usando HTTPS e nunca por meio do protocolo HTTP.
+
+Todos os pontos de extremidade do AD FS para o tráfego de autenticação na Web são abertos exclusivamente via HTTPS.  Como resultado, o AD FS atenua efetivamente as ameaças fornecidas pelo mecanismo de política do HTTP Strict Transport Security (por design, não há nenhum downgrade para HTTP, pois não há ouvintes em HTTP). Além disso, o AD FS impede que os cookies sejam enviados a outro servidor com pontos de extremidade de protocolo HTTP marcando todos os cookies com o sinalizador de segurança.
+
+Portanto, a implementação do HSTS em um servidor AD FS não é necessária porque nunca é possível fazer downgrade dele.  Para fins de conformidade, os servidores AD FS atendem a esses requisitos, porque eles nunca podem usar HTTP e todos os cookies são marcados como seguros.
+
+Além disso, o AD FS 2016 (com os patches mais atualizados) e o AD FS 2019 dão suporte à emissão do cabeçalho HSTS. Para configurar isso, confira [Personalizar cabeçalhos de resposta de segurança HTTP com o AD FS](../operations/customize-http-security-headers-ad-fs.md)
+
+### <a name="x-ms-forwarded-client-ip-does-not-contain-the-ip-of-the-client-but-contains-ip-of-the-firewall-in-front-of-the-proxy-where-can-i-get-the-right-ip-of-the-client"></a>O x-ms-forwarded-client-ip não contém o IP do cliente, mas contém o IP do firewall na frente do proxy. Em que local posso obter o IP correto do cliente?
+Não é recomendável fazer uma terminação SSL antes do WAP. Caso a terminação SSL seja feita na frente do WAP, o x-ms-forwarded-client-ip conterá o IP do dispositivo de rede na frente do WAP. Veja abaixo uma breve descrição das várias declarações relacionadas a IP compatíveis com o AD FS:
+ - x-ms-client-ip: IP de rede do dispositivo que se conectou ao STS.  No caso de uma solicitação da extranet, isso sempre conterá o IP do WAP.
+ - x-ms-forwarded-client-ip: declaração de vários valores que conterá os valores encaminhados ao ADFS pelo Exchange Online, além do endereço IP do dispositivo que se conectou ao WAP.
+ - Userip: para solicitações da extranet, essa declaração conterá o valor de x-ms-forwarded-client-ip.  Para solicitações da intranet, essa declaração conterá o mesmo valor de x-ms-client-ip.
+
+ Além disso, o AD FS 2016 (com os patches mais atualizados) e as versões posteriores também dão suporte à captura do cabeçalho x-forwarded-for. Qualquer balanceador de carga ou dispositivo de rede que não faça o encaminhamento na camada 3 (o IP é preservado) deverá adicionar o IP do cliente de entrada ao cabeçalho x-forwarded-for padrão do setor. 
+
+### <a name="i-am-trying-to-get-additional-claims-on-the-user-info-endpoint-but-its-only-returning-subject-how-can-i-get-additional-claims"></a>Estou tentando obter declarações adicionais no ponto de extremidade de informações do usuário, mas ele só retorna a entidade. Como posso obter declarações adicionais?
+O ponto de extremidade UserInfo do AD FS sempre retorna a declaração da entidade, conforme especificado nos padrões do OpenID. O AD FS não fornece declarações adicionais solicitadas por meio do ponto de extremidade UserInfo. Caso você precise de declarações adicionais no token de ID, confira [Tokens de ID personalizados no AD FS](../development/custom-id-tokens-in-ad-fs.md).
+
+### <a name="why-do-i-see-a-lot-of-1021-errors-on-my-ad-fs-servers"></a>Por que vejo muitos erros 1021 em meus servidores AD FS?
+Esse evento é registrado em log normalmente para um acesso de recurso inválido no AD FS para o recurso 00000003-0000-0000-c000-000000000000. Esse erro é causado por um comportamento incorreto do cliente, em que ele tenta obter um token de acesso para o serviço do Azure AD Graph. Como o recurso não está presente no AD FS, isso resulta na ID de evento 1021 nos servidores AD FS. É seguro ignorar os avisos ou os erros para o recurso 00000003-0000-0000-c000-000000000000 no AD FS.
+
+### <a name="why-am-i-seeing-a-warning-for-failure-to-add-the-ad-fs-service-account-to-the-enterprise-key-admins-group"></a>Por que estou vendo um aviso de falha ao adicionar a conta de serviço do AD FS ao grupo de Administradores de Chaves Empresariais?
+Esse grupo só é criado quando um controlador de domínio do Windows 2016 com a função de controlador de domínio primário do FSMO existe no domínio. Para resolver o erro, crie o grupo manualmente e siga as instruções abaixo para dar a permissão necessária depois de adicionar a conta de serviço como membro do grupo.
+1.    Abra **Usuários e Computadores do Active Directory**.
+2.    **Clique com o botão direito do mouse** no nome de domínio no painel de navegação e **clique** em Propriedades.
+3.    **Clique** em Segurança (se a guia Segurança estiver ausente, ative Recursos Avançados no menu Exibir).
+4.    **Clique** em Avançado. **Clique** em Adicionar. **Clique** em Selecionar uma entidade.
+5.    A caixa de diálogo Selecionar Usuário, Computador, Conta de Serviço ou Grupo será exibida.  Na caixa de texto Insira o nome do objeto a ser selecionado, digite Grupo de Administradores de Chaves.  Clique em OK.
+6.    Na caixa de listagem Aplicável a, selecione **objetos de Usuário descendente**.
+7.    Usando a barra de rolagem, role a página até a parte inferior da página e **clique** em Desmarcar tudo.
+8.    Na seção **Propriedades**, selecione **Ler msDS-KeyCredentialLink** e **Gravar msDS-KeyCrendentialLink**.
+
+### <a name="why-does-modern-authentication-from-android-devices-fail-if-the-server-does-not-send-all-the-intermediate-certificates-in-the-chain-with-the-ssl-cert"></a>Por que a autenticação moderna em dispositivos Android falha se o servidor não envia todos os certificados intermediários na cadeia com o certificado SSL?
+
+Os usuários federados podem observar uma falha na autenticação no Azure AD para os aplicativos que usam a biblioteca ADAL do Android. O aplicativo receberá uma **AuthenticationException** quando tentar mostrar a página de logon. No Chrome, a página de logon do AD FS poderá ser chamada de não segura.
+
+O Android, em todas as versões e todos os dispositivos, não dá suporte ao download de certificados adicionais por meio do campo **authorityInformationAccess** do certificado. Isso também é verdadeiro para o navegador Chrome. Qualquer certificado de autenticação de servidor que não contiver certificados intermediários resultará nesse erro se a cadeia de certificados inteira não for transmitida pelo AD FS.
+
+Uma solução adequada para esse problema é configurar os servidores AD FS e WAP para enviar os certificados intermediários necessários juntamente com o certificado SSL.
+
+Ao exportar o certificado SSL, de um computador, para ser importado para o repositório pessoal do computador, do servidor AD FS e WAP, lembre-se de exportar a Chave privada e selecionar **Troca de Informações Pessoais –PKCS nº 12**.
+
+É importante que a caixa de seleção **Incluir todos os certificados no caminho do certificado, se possível** esteja marcada, bem como **Exportar todas as propriedades estendidas**.  
+
+Execute certlm.msc nos servidores Windows e importe o *.PFX no repositório de certificados pessoal do computador. Isso fará com que o servidor transmita toda a cadeia de certificados para a biblioteca ADAL.
 
 >[!NOTE]
-> 네트워크 부하 분산 장치의 인증서 저장소도 있는 경우 전체 인증서 체인을 포함하도록 업데이트해야 합니다.
+> O repositório de certificados de balanceadores de carga de rede também deve ser atualizado para incluir toda a cadeia de certificados, se presente
 
-### <a name="does-ad-fs-support-head-requests"></a>AD FS에서 HEAD 요청을 지원하나요?
-AD FS는 HEAD 요청을 지원하지 않습니다.  애플리케이션에서 AD FS 엔드포인트에 대해 HEAD 요청을 사용하지 않아야 합니다.  이로 인해 예기치 않았거나 지연된 HTTP 오류 응답이 발생할 수 있습니다.  또한 AD FS 이벤트 로그에 예기치 않은 오류 이벤트가 표시될 수 있습니다.
+### <a name="does-ad-fs-support-head-requests"></a>O AD FS dá suporte a solicitações HEAD?
+O AD FS não dá suporte a solicitações HEAD.  Os aplicativos não devem usar solicitações HEAD em pontos de extremidade do AD FS.  Isso poderá causar respostas de erro HTTP inesperadas e/ou atrasadas.  Além disso, você poderá receber eventos de erro inesperados no log de eventos do AD FS.
 
-### <a name="why-am-i-not-seeing-a-refresh-token-when-i-am-logging-in-with-a-remote-idp"></a>원격 IdP를 사용하여 로그인할 때 새로 고침 토큰이 표시되지 않는 이유는 무엇인가요?
-IdP에서 발급한 토큰의 유효 기간이 1시간 미만인 경우 새로 고침 토큰이 발급되지 않습니다. 새로 고침 토큰이 발급되도록 하려면 IdP에서 발급한 토큰의 유효 기간을 1시간 넘게 늘립니다.
+### <a name="why-am-i-not-seeing-a-refresh-token-when-i-am-logging-in-with-a-remote-idp"></a>Por que não vejo um token de atualização quando faço logon com um IdP remoto?
+Um token de atualização não é emitido se o token emitido pelo IdP tem uma validade inferior a 1 hora. Para garantir que um token de atualização seja emitido, aumente a validade do token emitido pelo IdP para acima de 1 hora.
 
-### <a name="do-we-have-any-way-to-change-rp-token-encryption-algorithm"></a>RP 토큰 암호화 알고리즘을 변경할 수 있는 방법이 있나요?
-RP 토큰 암호화는 기본적으로 AES256으로 설정되며, 다른 값으로 변경할 수 없습니다.
+### <a name="do-we-have-any-way-to-change-rp-token-encryption-algorithm"></a>Há alguma maneira de alterar o algoritmo de criptografia de token RP?
+Por padrão, a criptografia de token RP é definida como AES256 e não pode ser alterada para nenhum outro valor.
 
-### <a name="on-a-mixed-mode-farm-i-get-error-when-trying-to-set-the-new-ssl-certificate-using-set-adfssslcertificate--thumbprint-how-can-i-update-the-ssl-certificate-in-a-mixed-mode-ad-fs-farm"></a>혼합 모드 팜에서 Set-AdfsSslCertificate -Thumbprint를 사용하여 새 SSL 인증서를 설정하려고 하면 오류가 발생합니다. 혼합 모드 AD FS 팜에서 SSL 인증서를 업데이트하려면 어떻게 해야 하나요?
-혼합 모드 AD FS 팜은 전환(transitionary) 상태가 됩니다. 계획하는 동안 업그레이드 프로세스 전에 SSL 인증서를 롤오버하거나, 프로세스를 완료하고 SSL 인증서를 업데이트하기 전에 팜 동작 수준을 높이는 것이 좋습니다. 이 작업이 수행되지 않은 경우 아래 지침에 따라 SSL 인증서를 업데이트할 수 있습니다. 
+### <a name="on-a-mixed-mode-farm-i-get-error-when-trying-to-set-the-new-ssl-certificate-using-set-adfssslcertificate--thumbprint-how-can-i-update-the-ssl-certificate-in-a-mixed-mode-ad-fs-farm"></a>Em um farm de modo misto, recebo um erro ao tentar definir o novo certificado SSL usando Set-AdfsSslCertificate -Thumbprint. Como posso atualizar o certificado SSL em um farm do AD FS de modo misto?
+Os farms do AD FS de modo misto devem ser um estado de transição. É recomendável que, durante o planejamento, o certificado SSL seja substituído antes do processo de atualização ou conclua o processo e aumente o nível de comportamento do farm antes de atualizar o certificado SSL. Caso isso não tenha sido feito, as instruções abaixo fornecerão a capacidade de atualizar o certificado SSL. 
 
-WAP 서버에서도 Set-WebApplicationProxySslCertificate를 계속 사용할 수 있습니다. ADFS 서버에서 netsh를 사용해야 합니다. 아래에 제공된 단계를 따르세요.
+Em servidores WAP, você ainda poderá usar Set-WebApplicationProxySslCertificate. Nos servidores ADFS, você precisará usar o netsh. Siga as etapas conforme indicado abaixo:
 
-1. 유지 관리(예: 부하 분산 장치에서 제거)를 위해 ADFS 2016 서버의 하위 세트를 선택합니다.
-2. #1에서 선택한 서버에서 MMC를 통해 새 인증서를 가져옵니다.
-3. 기존 인증서를 삭제합니다.
+1. Selecione o subconjunto de servidores ADFS 2016 para manutenção (por exemplo, remoção do balanceador de carga)
+2. Nos servidores selecionados na etapa 1, importe o novo certificado via MMC
+3. Excluir os certificados existentes
 
     a. netsh http delete sslcert hostnameport=fs.contoso.com:443 b. netsh http delete sslcert hostnameport=localhost:443 c. netsh http delete sslcert hostnameport=fs.contoso.com:49443
 
-4.  새 인증서를 추가합니다.
+4.  Adicionar o novo certificado
 
     a. netsh http add sslcert hostnameport=fs.contoso.com:443 certhash=CERTTHUMBPRINT appid={5d89a20c-beab-4389-9447-324788eb944a} certstorename=MY sslctlstorename=AdfsTrustedDevices
 
@@ -285,28 +288,36 @@ WAP 서버에서도 Set-WebApplicationProxySslCertificate를 계속 사용할 �
 
     c. netsh http add sslcert hostnameport=fs.contoso.com:49443 certhash=CERTTHUMBPRINT appid={5d89a20c-beab-4389-9447-324788eb944a} certstorename=MY sslctlstorename=AdfsTrustedDevices
 
-5. 선택한 서버에서 ADFS 서비스를 다시 시작합니다.
-6. 유지 관리를 위해 WAP 서버의 하위 세트를 제거합니다.
-7. 선택한 WAP 서버에서 MMC를 통해 새 인증서를 가져옵니다.
-8. cmdlet을 사용하여 WAP에서 새 인증서를 설정합니다.
+5. Reiniciar o serviço ADFS no servidor selecionado
+6. Remover o subconjunto de servidores WAP para manutenção
+7. Nos servidores WAP selecionados, importe o novo certificado via MMC
+8. Definir o novo certificado no WAP usando o cmdlet
 
     a. Set-WebApplicationProxySslCertificate -Thumbprint " CERTTHUMBPRINT"
 
-9. 선택한 WAP 서버에서 서비스를 다시 시작합니다.
-10. 선택한 WAP 및 AD FS 서버를 프로덕션 환경에 다시 배치합니다.
+9. Reiniciar o serviço nos servidores WAP selecionados
+10. Coloque os servidores WAP e AD FS selecionados novamente no ambiente de produção.
 
-나머지 AD FS 및 WAP 서버에서 비슷한 방식으로 업데이트를 수행합니다.
+Execute a atualização no restante dos servidores AD FS e WAP de maneira semelhante.
 
-### <a name="is-adfs-supported-when-web-application-proxy-wap-servers-are-behind-azure-web-application-firewallwaf"></a>WAP(웹 애플리케이션 프록시) 서버가 Azure WAF(웹 애플리케이션 방화벽) 뒤에 있는 경우 ADFS가 지원되나요?
-ADFS 및 웹 애플리케이션 서버는 엔드포인트에서 SSL 종료를 수행하지 않는 방화벽을 지원합니다. 또한 ADFS/WAP 서버에는 일반적인 웹 공격(예: 사이트 간 스크립팅, ADFS 프록시)을 방지하고 [MS-ADFSPIP 프로토콜](https://msdn.microsoft.com/library/dn392811.aspx)에 정의된 모든 요구 사항을 충족하는 메커니즘이 기본 제공되어 있습니다.
+### <a name="is-adfs-supported-when-web-application-proxy-wap-servers-are-behind-azure-web-application-firewallwaf"></a>Há suporte para o ADFS quando os servidores WAP (Proxy de aplicativo Web) estão atrás do WAF (firewall do aplicativo Web do Azure)?
+Os servidores de aplicativos Web e do ADFS dão suporte a qualquer firewall que não execute a terminação SSL no ponto de extremidade. Além disso, os servidores ADFS/WAP têm mecanismos internos para impedir ataques comuns da Web, como scripts intersite e proxy do ADFS, além de atender a todos os requisitos definidos pelo [protocolo MS-ADFSPIPFSPIP](https://msdn.microsoft.com/library/dn392811.aspx).
 
-### <a name="i-am-seeing-an-event-441-a-token-with-a-bad-token-binding-key-was-found-what-should-i-do-to-resolve-this"></a>"이벤트 441: 토큰 바인딩 키가 잘못된 토큰을 발견했습니다."라는 메시지가 표시됩니다. 이 문제를 해결하려면 어떻게 해야 하나요?
-AD FS 2016에서는 토큰 바인딩을 사용하도록 자동으로 설정되며, 프록시 및 페더레이션 시나리오에서 알려진 여러 문제가 발생하여 이 오류가 발생합니다. 이 문제를 해결하려면 다음 Powershell 명령을 실행하고 토큰 바인딩 지원을 제거합니다.
+### <a name="i-am-seeing-an-event-441-a-token-with-a-bad-token-binding-key-was-found-what-should-i-do-to-resolve-this"></a>Estou recebendo uma mensagem "Evento 441: Foi encontrado um token com uma chave de associação de token inválida." O que devo fazer para resolver isso?
+No AD FS 2016, a associação de token é habilitada automaticamente e causa vários problemas conhecidos com cenários de proxy e federação que resultam nesse erro. Para resolver isso, execute o comando do PowerShell a seguir e remova o suporte de associação de token.
 
 `Set-AdfsProperties -IgnoreTokenBinding $true`
 
-### <a name="i-have-upgraded-my-farm-from-ad-fs-in-windows-server-2016-to-ad-fs-in-windows-server-2019-the-farm-behavior-level-for-the-ad-fs-farm-has-been-successfully-raised-to-2019-but-the-web-application-proxy-configuration-is-still-displayed-as-windows-server-2016"></a>팜을 Windows Server 2016의 AD FS에서 Windows Server 2019의 AD FS로 업그레이드했습니다. AD FS 팜의 팜 동작 수준이 성공적으로 2019로 높아졌지만 웹 애플리케이션 프록시 구성이 여전히 Windows Server 2016으로 표시되나요?
-Windows Server 2019로 업그레이드한 후에도 웹 애플리케이션 프록시의 구성 버전은 계속 Windows Server 2016으로 표시됩니다. 웹 애플리케이션 프록시에는 Windows Server 2019에 대한 새로운 버전 관련 기능이 없으며, AD FS에서 팜 동작 수준이 성공적으로 높아진 경우 웹 애플리케이션 프록시는 설계상 Windows Server 2016으로 계속 표시됩니다.
+### <a name="i-have-upgraded-my-farm-from-ad-fs-in-windows-server-2016-to-ad-fs-in-windows-server-2019-the-farm-behavior-level-for-the-ad-fs-farm-has-been-successfully-raised-to-2019-but-the-web-application-proxy-configuration-is-still-displayed-as-windows-server-2016"></a>Atualizei meu farm do AD FS no Windows Server 2016 para o AD FS no Windows Server 2019. O nível de comportamento do farm do AD FS foi aumentado com êxito no 2019, mas a configuração do Proxy de aplicativo Web ainda é exibida como Windows Server 2016?
+Após uma atualização para o Windows Server 2019, a versão de configuração do Proxy de aplicativo Web continuará sendo exibida como Windows Server 2016. O Proxy de aplicativo Web não tem novos recursos específicos da versão para o Windows Server 2019 e, se o nível de comportamento do farm for aumentado com êxito no AD FS, o Proxy de aplicativo Web continuará sendo exibido como o Windows Server 2016 por design.
 
-### <a name="can-i-estimate-the-size-of-the-adfsartifactstore-before-enabling-esl"></a>ESL을 사용하도록 설정하기 전에 ADFSArtifactStore의 크기를 예측할 수 있나요?
-ESL을 사용하도록 설정하면 AD FS는 ADFSArtifactStore 데이터베이스에서 사용자의 계정 활동과 알려진 위치를 추적합니다. 이 데이터베이스는 추적된 사용자 및 알려진 위치의 수를 기준으로 크기를 조정합니다. ESL을 사용하도록 계획하는 경우 ADFSArtifactStore 데이터베이스의 크기가 사용자 100,000명당 최대 1GB의 속도로 확장한다고 예측할 수 있습니다. AD FS 팜에서 WID(Windows 내부 데이터베이스)를 사용하는 경우 데이터베이스 파일의 기본 위치는 C:\Windows\WID\Data입니다. 이 드라이브를 채우지 않도록 방지하려면 ESL을 사용하도록 설정하기 전에 최소 5GB의 사용 가능한 스토리지가 있어야 합니다. 디스크 스토리지 외에도 500,000명 이하의 사용자 인구에 대해 최대 1GB의 RAM을 추가하여 ESL을 사용하도록 설정한 후 총 프로세스 메모리를 늘리도록 계획합니다.
+### <a name="can-i-estimate-the-size-of-the-adfsartifactstore-before-enabling-esl"></a>Posso estimar o tamanho do ADFSArtifactStore antes de habilitar o ESL?
+Com o ESL habilitado, o AD FS acompanha a atividade da conta e as localizações conhecidas para os usuários no banco de dados ADFSArtifactStore. Esse banco de dados é dimensionado em tamanho em relação ao número de usuários e localizações conhecidas acompanhados. Ao planejar a habilitação do ESL, você pode estimar o aumento do tamanho do banco de dados ADFSArtifactStore a uma taxa de até 1 GB a cada 100.000 usuários. Se o farm do AD FS estiver usando o WID (Banco de Dados Interno do Windows), a localização padrão dos arquivos de banco de dados será C:\Windows\WID\Data. Para evitar o preenchimento desta unidade, verifique se você tem um mínimo de 5 GB de armazenamento livre antes de habilitar o ESL. Além do armazenamento em disco, planeje um aumento da memória total do processo depois de habilitar o ESL em até um 1 GB de RAM adicional para populações de usuário de 500.000 ou menos.
+
+### <a name="i-am-seeing-event-570-active-directory-trust-enumeration-was-unable-to-enumerate-one-of-more-domains-due-to-the-following-error-enumeration-will-continue-but-the-active-directory-identifier-list-may-not-be-correct-validate-that-all-expected-active-directory-identifiers-are-present-by-running-get-adfsdirectoryproperties-on-ad-fs-2019-what-is-the-mitigation-for-this-event"></a>Estou vendo o Evento 570 (a enumeração de confiança do Active Directory não pôde enumerar um ou mais domínios devido ao erro a seguir. A enumeração continuará, mas a lista de identificadores do Active Directory pode não estar correta. Valide se todos os identificadores do Active Directory esperados estão presentes executando Get-ADFSDirectoryProperties) no AD FS 2019. Qual é a mitigação para este evento?
+Esse evento ocorre quando as florestas não são confiáveis enquanto o AD FS tenta enumerar todas as florestas em uma cadeia de florestas confiáveis e se conectar em todas as florestas. Por exemplo, se a Floresta A e a Floresta B do AD FS forem confiáveis e a Floresta B e a Floresta C forem confiáveis, o AD FS enumerará todas as três florestas e tentará encontrar uma relação de confiança entre a Floresta A e a C. Se os usuários da floresta com falha devem ser autenticados pelo AD FS, configure uma relação de confiança entre a floresta do AD FS e a floresta com falha. Se os usuários da floresta com falha não devem ser autenticados pelo AD FS, esse erro deve ser ignorado.
+
+### <a name="i-am-seeing-an-event-id-364-microsoftidentityserverauthenticationfailedexception-msis5015-authentication-of-the-presented-token-failed-token-binding-claim-in-token-must-match-the-binding-provided-by-the-channel-what-should-i-do-to-resolve-this"></a>Estou recebendo uma mensagem "Evento ID 364: Microsoft.IdentityServer.AuthenticationFailedException: MSIS5015: Falha na autenticação do token apresentado. A declaração de Associação do Token no token deve corresponder à associação fornecida pelo canal". O que devo fazer para resolver isso?
+No AD FS 2016, a associação de token é habilitada automaticamente e causa vários problemas conhecidos com cenários de proxy e federação que resultam nesse erro. Para resolver isso, execute o comando do PowerShell a seguir e remova o suporte de associação de token.
+
+`Set-AdfsProperties -IgnoreTokenBinding $true`
