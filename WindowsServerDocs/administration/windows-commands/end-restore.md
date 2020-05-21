@@ -1,6 +1,6 @@
 ---
 title: 복원 종료
-description: '* * * *에 대 한 참조 항목'
+description: 복원 세션을 종료 하 고 관련 기록기에 **postrestore** 이벤트를 발급 하는 end restore 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0136d10a1332c9f6700cab0ad8bc7e0bfb8eba4c
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 1fc76727a4c668c7440fefe9dfc3ceaa08ee7cd4
+ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720836"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83436898"
 ---
 # <a name="end-restore"></a>복원 종료
-
-
 
 복원 세션을 종료 시킵니다 문제는 **PostRestore** 관련 된 작성기에는 이벤트입니다.
 

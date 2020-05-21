@@ -1,6 +1,6 @@
 ---
 title: eventtriggers
-description: '* * * *에 대 한 참조 항목'
+description: 더 이상 사용 되지 않으며 이후 버전의 Windows에서 지원 되지 않는 eventtrigger 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,17 +9,13 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1f0e504974c1e8db5477f9c198e875ec4dc8db6f
-ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
+ms.openlocfilehash: 64120df16d92484bfee8cfc1645c102fc325e400
+ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82992370"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83436858"
 ---
 # <a name="eventtriggers"></a>eventtriggers
 
-
-
-Eventtrigger, 않으며 Windows의 이후 릴리스에서 지원 되지 않을 수도 있습니다.
-
-이 도구는 Windows Server 2003에 포함 됩니다. 자세한 내용은 [Eventtriggers](https://technet.microsoft.com/library/cc773308(v=ws.10).aspx)을 참조 하세요.
+Eventtrigger 명령은 더 이상 사용 되지 않으며 이후 버전의 Windows에서는 지원 되지 않습니다.

@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 094416a0d7b3adf5c99579ea51b7f343a6dec4f7
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 4e0ebf422019d6e8023a2a3cc5da2085635c8422
+ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82722735"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83436348"
 ---
 # <a name="qprocess"></a>qprocess
 
@@ -29,6 +29,6 @@ ms.locfileid: "82722735"
 이 명령은 같습니다는 **쿼리 프로세스** 명령입니다.
 
 ## <a name="additional-references"></a>추가 참조
-[쿼리 프로세스](query-process.md)  
-- [명령줄 구문 키](command-line-syntax-key.md)  
-[원격 데스크톱 서비스(터미널 서비스) 명령 참조](remote-desktop-services-terminal-services-command-reference.md)  
+[쿼리 프로세스](query-process.md)
+- [명령줄 구문 키](command-line-syntax-key.md) 
+ [원격 데스크톱 서비스 (터미널 서비스) 명령 참조](remote-desktop-services-terminal-services-command-reference.md)

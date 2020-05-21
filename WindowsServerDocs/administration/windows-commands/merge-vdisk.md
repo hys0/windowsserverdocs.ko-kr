@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1bfcdde34d2c7dd6146222d04e982aa1ec8009c2
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: cec8eeaa80436dbb34eb055950169b6895efa544
+ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82723998"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83437148"
 ---
 # <a name="merge-vdisk"></a>Vdisk를 병합 합니다.
 
@@ -28,12 +28,12 @@ ms.locfileid: "82723998"
 > merge vdisk depth=<n>
 > ```
 > #### <a name="parameters"></a>매개 변수
-> 
+>
 > | 매개 변수 |                                                                                    설명                                                                                    |
 > |-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 > | 깊이 =<n> | 병합 부모 VHD 파일의 수를 나타냅니다. 예를 들어 **깊이 = 1** 차이점 보관용 체인의 한 수준으로 차이점 보관용 VHD를 병합할 나타냅니다. |
-> 
-> ## <a name="remarks"></a>설명
+>
+>#### <a name="remarks"></a>설명
 > - VHD는 선택 하 고이 작업이 성공 하기 위해 분리 해야 합니다. 사용 하 여는 **vdisk 선택** VHD를 선택 하 고 포커스를 이동 하는 명령입니다.
 > - 이 매개 변수에서 부모 VHD를 수정합니다. 결과적으로, 부모에 종속 되어 있는 기타 차이점 보관용 Vhd를 더 이상 유효 하지 않습니다.
 >   ## <a name="examples"></a>예

@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a7a119cda5fad594638211bfcdbdc269fff13d20
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 6b0d122beac43abfd826cb406adac4aa277fc72e
+ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82722710"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83436278"
 ---
 # <a name="query-session"></a>세션 쿼리
 
@@ -30,7 +30,7 @@ ms.locfileid: "82722710"
 > query session [<SessionName> | <UserName> | <SessionID>] [/server:<ServerName>] [/mode] [/flow] [/connect] [/counter]
 > ```
 > ### <a name="parameters"></a>매개 변수
-> 
+>
 > |      매개 변수       |                                                      설명                                                      |
 > |----------------------|-----------------------------------------------------------------------------------------------------------------------|
 > |    <SessionName>     |                               쿼리 하려는 세션의 이름을 지정 합니다.                               |
@@ -42,8 +42,8 @@ ms.locfileid: "82722710"
 > |       연결 /       |                                          현재의 연결 설정을 표시 합니다.                                           |
 > |       카운터 /       | 현재 카운터 정보를 표시, 만들어진 세션의 총 수를 포함 하 여 연결이 해제 및 다시 연결 합니다. |
 > |          /?          |                                         명령 프롬프트에 도움말을 표시합니다.                                          |
-> 
-> ## <a name="remarks"></a>설명
+>
+>#### <a name="remarks"></a>설명
 > - 항상 사용자는 사용자가 현재 로그온 세션을 쿼리할 수 있습니다. 다른 세션을 쿼리하려면 사용자에 게 쿼리 정보 특별 한 액세스 권한이 있어야 합니다.
 > - <세션 *이름*>, <*사용자 이름*> 또는 <*SessionID*>를 사용 하 여 세션을 지정 하지 않으면 **쿼리 세션** 은 시스템의 모든 활성 세션에 대 한 정보를 표시 합니다.
 > - 때 **세션 쿼리** 정보를 반환, 보다 큼 (>) 기호는 현재 세션 앞에 표시 됩니다. 다음은 예제 출력 **세션 쿼리**:
@@ -67,6 +67,6 @@ ms.locfileid: "82722710"
 >   query session modeM02
 >   ```
 >   ## <a name="additional-references"></a>추가 참조
->   - [명령줄 구문 키](command-line-syntax-key.md)
->   [쿼리](query.md)
->   [원격 데스크톱 서비스 (Terminal Services) 명령 참조](remote-desktop-services-terminal-services-command-reference.md)
+>   - [명령줄 구문 키](command-line-syntax-key.md) 
+>    [쿼리](query.md) 
+>    [원격 데스크톱 서비스 (터미널 서비스) 명령 참조](remote-desktop-services-terminal-services-command-reference.md)

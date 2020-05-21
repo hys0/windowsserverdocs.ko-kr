@@ -1,5 +1,5 @@
 ---
-title: Windows 10 장치에 대한 OMA-DM 기반 VPNv2 프로필 만들기
+title: Windows 10 디바이스에 대한 OMA-DM 기반 VPNv2 프로필 만들기
 description: '두 가지 방법 중 하나를 사용 하 여 OMA DM 기반 VPNv2 프로필을 만들 수 있습니다. '
 ms.prod: windows-server
 ms.technology: networking-ras
@@ -9,14 +9,14 @@ ms.author: v-tea
 author: Teresa-MOTIV
 ms.localizationpriority: medium
 ms.reviewer: deverette
-ms.openlocfilehash: 8829d6515c92751b85320a7c622a82b32ffb82ab
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: b1316fe2feba674beb915b6ea22b1c0361ae1243
+ms.sourcegitcommit: 7116460855701eed4e09d615693efa4fffc40006
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80818876"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83433157"
 ---
-# <a name="step-75-create-oma-dm-based-vpnv2-profiles-to-windows-10-devices"></a>7\.5단계. Windows 10 장치에 대 한 OMA DM 기반 VPNv2 프로필 만들기
+# <a name="step-75-create-oma-dm-based-vpnv2-profiles-to-windows-10-devices"></a>7.5단계. Windows 10 장치에 대 한 OMA DM 기반 VPNv2 프로필 만들기
 
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
@@ -27,7 +27,7 @@ ms.locfileid: "80818876"
 
 ## <a name="managed-deployment-using-intune"></a>Intune을 사용 하 여 관리 되는 배포
 
-이 섹션에서 설명 하는 모든 내용은 조건부 액세스를 사용 하 여 VPN 작업을 수행 하는 데 필요한 최소입니다. 또한 분할 터널링, WIP를 사용 하 여 사용자 지정 Intune 장치 구성 프로필을 만들어 AutoVPN 작동 또는 SSO에 대해 다루지 않습니다. 아래 설정을 5 단계에서 만든 VPN 프로필에 통합 합니다 [. Windows 10 클라이언트 Always On VPN 연결을 구성](always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md)합니다.  이 예제에서는 [Intune 정책을 사용 하 여 VPN 클라이언트 구성](always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md#configure-the-vpn-client-by-using-intune) 에 통합 합니다. 
+이 섹션에서 설명 하는 모든 내용은 조건부 액세스를 사용 하 여 VPN 작업을 수행 하는 데 필요한 최소입니다. 또한 분할 터널링, WIP를 사용 하 여 사용자 지정 Intune 장치 구성 프로필을 만들어 AutoVPN 작동 또는 SSO에 대해 다루지 않습니다. 아래 설정을 5 단계에서 만든 VPN 프로필에 통합 합니다 [. Windows 10 클라이언트 Always On VPN 연결을 구성](always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md)합니다.이 예제에서는 [Intune 정책을 사용 하 여 VPN 클라이언트 구성](always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md#configure-the-vpn-client-by-using-intune) 에 통합 합니다. 
 
 **인지**
 
@@ -36,24 +36,24 @@ Windows 10 클라이언트 컴퓨터는 이미 Intune을 사용 하 여 VPN 연�
 
 **여기서**
 
-1. Azure Portal에서 **intune** > **장치 구성** > **프로필** 을 선택 하 고 이전에 [Intune을 사용 하 여 vpn 클라이언트 구성](always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md#configure-the-vpn-client-by-using-intune)에서 만든 vpn 프로필을 선택 합니다.
+1. Azure Portal에서 **intune**  >  **장치 구성**  >  **프로필** 을 선택 하 고 [intune을 사용 하 여 vpn 클라이언트 구성](always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md#configure-the-vpn-client-by-using-intune)에서 이전에 만든 vpn 프로필을 선택 합니다.
     
-2. 정책 편집기에서 **속성** > **설정** > **기본 VPN**을 선택 합니다. 검색 된 첫 번째 인증서를 사용할 수 있도록 허용 하는 대신 사용자의 인증서 저장소에서 AAD 조건부 액세스 인증서를 검색 하는 데 필요한 논리를 VPN 클라이언트에 부여 하는 필터를 포함 하도록 기존 **EAP Xml** 을 확장 합니다.
+2. 정책 편집기에서 **속성**  >  **설정**  >  **기본 VPN**을 선택 합니다. 검색 된 첫 번째 인증서를 사용할 수 있도록 허용 하는 대신 사용자의 인증서 저장소에서 AAD 조건부 액세스 인증서를 검색 하는 데 필요한 논리를 VPN 클라이언트에 부여 하는 필터를 포함 하도록 기존 **EAP Xml** 을 확장 합니다.
 
     >[!NOTE]
     >이를 사용 하지 않으면 VPN 클라이언트가 온-프레미스 인증 기관에서 발급 된 사용자 인증서를 검색 하 여 VPN 연결이 실패할 수 있습니다.
 
     ![Intune 포털](../../media/Always-On-Vpn/intune-eap-xml.png)
 
-3. **\</AcceptServerName >\</Acceptservername >** 로 끝나는 섹션을 찾아 VPN 클라이언트에 AAD 조건부 액세스 인증서를 선택 하는 논리를 제공 하도록 두 값 사이에 다음 문자열을 삽입 합니다.
+3. ** \< /Semservername>\< rrtype>** 로 끝나는 섹션을 찾아이 두 값 사이에 다음 문자열을 삽입 하 여 VPN 클라이언트에 AAD 조건부 액세스 인증서를 선택 하는 논리를 제공 합니다.
 
     ```XML
-    <TLSExtensions xmlns="https://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV2"><FilteringInfo xmlns="https://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV3"><EKUMapping><EKUMap><EKUName>AAD Conditional Access</EKUName><EKUOID>1.3.6.1.4.1.311.87</EKUOID></EKUMap></EKUMapping><ClientAuthEKUList Enabled="true"><EKUMapInList><EKUName>AAD Conditional Access</EKUName></EKUMapInList></ClientAuthEKUList></FilteringInfo></TLSExtensions>
+    <TLSExtensions xmlns="http://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV2"><FilteringInfo xmlns="http://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV3"><EKUMapping><EKUMap><EKUName>AAD Conditional Access</EKUName><EKUOID>1.3.6.1.4.1.311.87</EKUOID></EKUMap></EKUMapping><ClientAuthEKUList Enabled="true"><EKUMapInList><EKUName>AAD Conditional Access</EKUName></EKUMapInList></ClientAuthEKUList></FilteringInfo></TLSExtensions>
     ```
 
 4. **조건부 액세스** 블레이드를 선택 하 고 **이 VPN 연결에 대 한 조건부 액세스** 를 mtd **설정**합니다.
    
-   이 설정을 사용 하도록 설정 하면 VPNv2 Profile XML에서 **true\</사용 > 설정 >\<DeviceCompliance >\<** 설정 됩니다.
+   이 설정을 사용 하도록 설정 하면 VPNv2 Profile XML에서 ** \< DeviceCompliance>\< enabled>true \< /enabled>** 설정이 변경 됩니다.
 
     ![Always On VPN에 대 한 조건부 액세스-속성](../../media/Always-On-Vpn/vpn-conditional-access-azure-ad.png)
 
@@ -67,7 +67,7 @@ Windows 10 클라이언트 컴퓨터는 이미 Intune을 사용 하 여 VPN 연�
 
 ## <a name="force-mdm-policy-sync-on-the-client"></a>클라이언트에서 MDM 정책 동기화 강제 적용
 
-VPN 프로필이 클라이언트 장치에 표시 되지 않는 경우 설정\\네트워크 & 인터넷\\VPN에서 MDM 정책을 강제로 동기화 할 수 있습니다.
+VPN 프로필이 클라이언트 장치에 표시 되지 않는 경우 설정 \\ 네트워크 & 인터넷 \\ VPN에서 MDM 정책을 강제로 동기화 할 수 있습니다.
 
 1. 도메인에 가입 된 클라이언트 컴퓨터에 **VPN 사용자** 그룹의 구성원으로 로그인 합니다.
 
@@ -75,16 +75,16 @@ VPN 프로필이 클라이언트 장치에 표시 되지 않는 경우 설정\\�
 
 3. 왼쪽 탐색 창에서 **회사 또는 학교 액세스**를 선택 합니다.
 
-4. 회사 또는 학교 액세스에서 **< \domain >에 연결 됨**을 선택한 다음 **정보**를 선택 합니다.
+4. 회사 또는 학교 액세스에서 **< \domain>에 연결 됨**을 선택한 다음 **정보**를 선택 합니다.
 
-5. **동기화** 를 선택 하 고 Vpn 프로필이 설정\\네트워크 & 인터넷\\vpn에 나타나는지 확인 합니다.
+5. **동기화** 를 선택 하 고 Vpn 프로필이 설정 \\ 네트워크 & 인터넷 vpn에 표시 되는지 확인 \\ 합니다.
 
 
 ## <a name="next-steps"></a>다음 단계
 
 Azure AD 조건부 액세스를 사용 하도록 VPN 프로필을 구성 하는 작업을 완료 했습니다. 
 
-|원하는 경우  |다음을 참조 하세요.  |
+|다음을 원하는 경우...  |다음을 참조 하세요.  |
 |---------|---------|
 |Vpn을 사용 하 여 조건부 액세스의 작동 방식에 대 한 자세한 정보  |[Vpn 및 조건부 액세스](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access):이 페이지에서는 vpn에서 조건부 액세스가 작동 하는 방식에 대 한 자세한 정보를 제공 합니다.      |
 |고급 VPN 기능에 대 한 자세한 정보  |[고급 Vpn 기능](always-on-vpn/deploy/always-on-vpn-adv-options.md#advanced-vpn-features):이 페이지에서는 Vpn 트래픽 필터를 사용 하도록 설정 하는 방법, 앱 트리거를 사용 하 여 자동 vpn 연결을 구성 하는 방법 및 Azure AD에서 발급 한 인증서를 사용 하 여 클라이언트에서 vpn 연결만 허용 하도록 NPS를 구성 하는 방법을 설명 합니다.        |

@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c8a0a4608a16df0336b90ea5df281278ae47a503
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 9b3ae6858a70d22b3ad928474648a3b2ee156235
+ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82722697"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83436238"
 ---
 # <a name="query-termserver"></a>termserver 쿼리
 
@@ -29,7 +29,7 @@ ms.locfileid: "82722697"
 > query termserver [<ServerName>] [/domain:<Domain>] [/address] [/continue]
 > ```
 > ### <a name="parameters"></a>매개 변수
-> 
+>
 > |    매개 변수     |                                                                        설명                                                                         |
 > |------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
 > |   <ServerName>   |                                               Rd 세션 호스트 서버를 식별 하는 이름을 지정 합니다.                                               |
@@ -37,8 +37,8 @@ ms.locfileid: "82722697"
 > |     / 주소     |                                                  각 서버에 대 한 네트워크 및 노드 주소를 표시합니다.                                                  |
 > |    계속 해 서 /     |                                              각 정보 화면에 표시 되 면 일시 중지를 방지 합니다.                                               |
 > |        /?        |                                                            명령 프롬프트에 도움말을 표시합니다.                                                            |
-> 
-> ## <a name="remarks"></a>설명
+>
+>#### <a name="remarks"></a>설명
 > - **query termserver** 는 네트워크에서 연결 된 모든 Rd 세션 호스트 서버를 검색 하 고 다음 정보를 반환 합니다.
 >   - 서버 이름
 >   - 네트워크 (및 노드 주소/주소 옵션을 사용 하는 경우)
@@ -60,6 +60,6 @@ ms.locfileid: "82722697"
 >   query termserver Server3 /address
 >   ```
 >   ## <a name="additional-references"></a>추가 참조
->   - [명령줄 구문 키](command-line-syntax-key.md)
->   [쿼리](query.md)
->   [원격 데스크톱 서비스 (Terminal Services) 명령 참조](remote-desktop-services-terminal-services-command-reference.md)
+>   - [명령줄 구문 키](command-line-syntax-key.md) 
+>    [쿼리](query.md) 
+>    [원격 데스크톱 서비스 (터미널 서비스) 명령 참조](remote-desktop-services-terminal-services-command-reference.md)

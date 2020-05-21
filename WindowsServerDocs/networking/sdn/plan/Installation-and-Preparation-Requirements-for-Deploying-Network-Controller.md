@@ -9,12 +9,12 @@ ms.assetid: 7f899e62-6e5b-4fca-9a59-130d4766ee2f
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 08/10/2018
-ms.openlocfilehash: da9164eea4ab7e2fb38864fb69c47252448b77b6
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: f5a7ec331c9d70214cbd0a772de6e2b2c7f4f58e
+ms.sourcegitcommit: 7116460855701eed4e09d615693efa4fffc40006
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80854426"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83433177"
 ---
 # <a name="requirements-for-deploying-network-controller"></a>네트워크 컨트롤러 배포를 위한 요구 사항
 
@@ -36,7 +36,7 @@ ms.locfileid: "80854426"
 
 네트워크 컨트롤러를 배포 하기 전에 보안 그룹, 로그 파일 위치 (필요한 경우) 및 동적 DNS 등록을 구성 해야 합니다.
 
-### <a name="step-1-configure-your-security-groups"></a>1단계. 보안 그룹 구성
+### <a name="step-1-configure-your-security-groups"></a>1단계: 보안 그룹 구성
 
 가장 먼저 할 일은 Kerberos 인증에 대 한 두 개의 보안 그룹을 만드는 것입니다. 
 
@@ -87,7 +87,7 @@ ms.locfileid: "80854426"
 
    c. **보안 주체 선택**을 클릭합니다. 
 
-   . **사용자, 컴퓨터, 서비스 계정 또는 그룹 선택** 대화 상자에서 **개체 유형**을 클릭 합니다. 
+   d. **사용자, 컴퓨터, 서비스 계정 또는 그룹 선택** 대화 상자에서 **개체 유형**을 클릭 합니다. 
 
    e. **개체 유형**에서 **컴퓨터**를 선택 하 고 **확인**을 클릭 합니다.
 
@@ -125,10 +125,6 @@ ms.locfileid: "80854426"
 3 개의 게이트웨이 가상 머신이 있습니다. 둘 중 하나가 활성 상태이 고 하나는 중복 됩니다.
 
 ![SDN NC 계획](../../media/Plan-a-Software-Defined-Network-Infrastructure/SDN-GW-Deployment.png)  
-
-
-
-T P 5 기반 배포 자동화의 경우 Active Directory를 사용 가능 하 고 이러한 서브넷에서 연결할 수 있어야 합니다. Active Directory에 대 한 자세한 내용은 [Active Directory Domain Services 개요](https://docs.microsoft.com/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview)를 참조 하세요.  
 
 >[!IMPORTANT] 
 >VMM을 사용 하 여 배포 하는 경우 인프라 가상 컴퓨터 (VMM 서버, AD/DNS, SQL Server 등)가 다이어그램에 표시 된 네 개의 호스트에서 호스팅되지 않도록 합니다.  

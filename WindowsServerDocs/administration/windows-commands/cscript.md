@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: bfba4b6a1c75183d58664e74da22bb7f8b866739
-ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
+ms.openlocfilehash: 24d5d46a0a994ca44230076786fbd59c00cbdc57
+ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82993155"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83437058"
 ---
 # <a name="cscript"></a>cscript
 
@@ -33,24 +33,24 @@ cscript <scriptname.extension> [/b] [/d] [/e:<engine>] [{/h:cscript | /h:wscript
 
 #### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | scriptname | 선택적 파일 이름 확장명을 가진 스크립트 파일의 경로 파일 이름을 지정합니다. |
 | /b | 경고, 스크립팅 오류 또는 입력된 프롬프트를 표시 하지 않는 일괄 처리 모드를 지정 합니다. |
 | /d | 디버거를 시작합니다. |
 | /e:`<engine>` | 스크립트를 실행 하는 데 사용 되는 엔진을 지정 합니다. |
 | /h:cscript | 스크립트를 실행 하기 위한 기본 스크립트 호스트로 cscript.exe를 등록 합니다. |
-| /h:wscript | 스크립트를 실행 하기 위한 기본 스크립트 호스트로 wscript.exe를 등록 합니다. 기본값입니다. |
-| /i | 경고, 스크립팅 오류 및 입력된 프롬프트를 표시 하는 대화형 모드를 지정 합니다. 이는 기본값과의 `/b`반대입니다. |
+| /h:wscript | 스크립트를 실행 하기 위한 기본 스크립트 호스트로 wscript.exe를 등록 합니다. 이것이 기본값입니다. |
+| /i | 경고, 스크립팅 오류 및 입력된 프롬프트를 표시 하는 대화형 모드를 지정 합니다. 이는 기본값과의 반대입니다 `/b` . |
 | /작업 (<identifier> | .Wsf 스크립트 파일의 *식별자* 로 식별 된 작업을 실행 합니다. |
-| /logo | 스크립트를 실행 하기 전에 Windows 스크립트 호스트 배너 콘솔에 표시 되도록 지정 합니다. 이는 기본값과의 `/nologo`반대입니다. |
+| /logo | 스크립트를 실행 하기 전에 Windows 스크립트 호스트 배너 콘솔에 표시 되도록 지정 합니다. 이는 기본값과의 반대입니다 `/nologo` . |
 | /nologo | 스크립트를 실행 하기 전에 Windows 스크립트 호스트 배너가 표시 되지 않도록 지정 합니다. |
 | /s | 현재 사용자에 대 한 현재 명령 프롬프트 옵션을 저장합니다. |
 | /t:<seconds> | 스크립트를 초 단위로 실행할 수 있는 최대 시간을 지정 합니다. 최대 32, 767 초를 지정할 수 있습니다. 기본값은 시간 제한이 없습니다. |
 | /U | 입력 및 출력을 콘솔에서 리디렉션에 대 한 유니코드를 지정 합니다. |
 | /x | 스크립트 디버거를 시작 합니다. |
 | /? | 사용 가능한 명령 매개 변수를 표시 하 고 사용 하기 위한 도움말을 제공 합니다. 이는 매개 변수 없이 **cscript.exe** 를 입력 하는 것과 동일 하며 스크립트가 없습니다. |
-| scriptarguments | 스크립트에 전달 되는 인수를 지정 합니다. 각 스크립트 인수 앞에는 슬래시 (**/**)를 붙여야 합니다. |
+| scriptarguments | 스크립트에 전달 되는 인수를 지정 합니다. 각 스크립트 인수 앞에는 슬래시 ()를 붙여야 합니다 **/** . |
 
 #### <a name="remarks"></a>설명
 

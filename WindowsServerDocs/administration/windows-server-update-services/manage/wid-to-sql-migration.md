@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dougkim
 ms.date: 07/25/2018
-ms.openlocfilehash: 7238d71ed35b5c9645e6b4061717011cc2a02820
-ms.sourcegitcommit: 32f810c5429804c384d788c680afac427976e351
+ms.openlocfilehash: facd846dd0c20ee2e5001b0592651ce310e19097
+ms.sourcegitcommit: 29f7a4811b4d36d60b8b7c55ce57d4ee7d52e263
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83203570"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83716888"
 ---
 # <a name="migrating-the-wsus-database-from-wid-to-sql"></a>WID에서 SQL로 WSUS 데이터베이스 마이그레이션
 
@@ -67,7 +67,7 @@ PowerShell (승격)에서 다음을 실행 합니다.
 
 ### <a name="copy-the-susdb-files-to-the-sql-server"></a>SUSDB 파일을 SQL Server에 복사 합니다.
 
-1. WID 데이터 폴더 (**%** SUSDB; Windows\WID\Data * *)에서 SQL 인스턴스 데이터 폴더로 **SUSDB** 및을 복사 합니다. ** \_ ** \*
+1. WID 데이터 폴더 (**%** **SUSDB** ;)에서 SQL 인스턴스 데이터 폴더로 및 SUSDB을 복사 합니다. ** \_ ** \\ ** \\ \\ **
 
 > [!TIP]
 > 예를 들어 SQL 인스턴스 폴더가 **C:\Program FILES\MICROSOFT sql Server\MSSQL12. 인 경우 MSSQLSERVER\MSSQL**및 WID 데이터 폴더는 **C:\WINDOWS\WID\DATA** 로 SUSDB 파일을 **C:\WINDOWS\WID\DATA** 에서 **C:\Program Files\Microsoft SQL Server\MSSQL12.로 복사 합니다. MSSQLSERVER\MSSQL\Data**

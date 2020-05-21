@@ -1,6 +1,6 @@
 ---
 title: 파일 시스템
-description: '* * * *에 대 한 참조 항목'
+description: 포커스가 있는 볼륨의 현재 파일 시스템에 대 한 정보를 표시 하 고 볼륨의 형식을 지정 하는 데 지원 되는 파일 시스템을 나열 하는 파일 시스템 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,18 +9,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7e94144b4f0aa747cef560045cdf03efd130c5d0
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 8c31a8978beecda223bc75b1374ef4ac473bf1c6
+ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82725631"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83437168"
 ---
 # <a name="filesystems"></a>파일 시스템
 
-
-
 포커스가 있는 볼륨의 현재 파일 시스템에 대 한 정보를 표시 하 고 볼륨을 포맷에 대해 지원 되는 파일 시스템을 나열 합니다.
+
+이 작업을 수행 하려면 볼륨을 선택 해야 합니다. 볼륨 [선택 명령을](select-volume.md) 사용 하 여 볼륨을 선택 하 고 포커스를 이동 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -28,9 +28,6 @@ ms.locfileid: "82725631"
 filesystems
 ```
 
-## <a name="remarks"></a>설명
-
--   이 작업을 수행 하려면 볼륨을 선택 해야 합니다. 사용 하 여는 **볼륨 선택** 볼륨을 선택 하 고 포커스를 이동 하는 명령입니다.
-
 ## <a name="additional-references"></a>추가 참조
 
+- [명령줄 구문 키](command-line-syntax-key.md)

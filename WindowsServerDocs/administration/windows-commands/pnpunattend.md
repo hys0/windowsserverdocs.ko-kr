@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: 569b879caf29aac6d1592d822072f35021cec9d3
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: d62edde425a00db23f150246df65166234604cef
+ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82723301"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83436468"
 ---
 # <a name="pnpunattend"></a>pnpunattend
 
@@ -43,15 +43,15 @@ PnPUnattend.exe auditSystem [/help] [/?] [/h] [/s] [/L]
 2. 장치에 대 한 드라이버 패키지를 다운로드 하 고 압축을 풉니다. 운영 체제 버전의 INF 파일을 포함 하는 하위 폴더의 내용 및 만든 비디오 폴더의 하위 폴더를 복사 합니다. 예를 들어 비디오 드라이버 파일을 C:\vom\videos에 복사 합니다.
 3. 1 단계에서 만든 폴더에 시스템 환경 경로 변수를 추가 합니다 (예: **C:\vom\video**).
 4. 다음 레지스트리 키를 만든 다음 만든 **Driverpaths** 키에 대해 **값 데이터** 를 **1**로 설정 합니다.
-5. Windows® 7 **HKEY_LOCAL_Machine \software\microsoft\windows NT\CurrentVersion\\**레지스트리 경로를 탐색 한 다음 키를 **만듭니다.\\ **
-6. Windows Vista의 경우 레지스트리 경로 **HK_LM \software\microsoft\windows NT\CurrentVersion\\**로 이동한 다음 keys = **\UnattendSettings\PnPUnattend\DriverPaths**를 만듭니다.
+5. Windows® 7 **HKEY_LOCAL_Machine \Software\microsoft\windows NT\CurrentVersion \\ **레지스트리 경로를 탐색 한 다음 키를 **만듭니다 \\ .**
+6. Windows Vista의 경우 레지스트리 경로 **HK_LM \Software\microsoft\windows NT\CurrentVersion \\ **로 이동한 다음 keys = **\UnattendSettings\PnPUnattend\DriverPaths**를 만듭니다.
 
 ## <a name="examples"></a>예
 
 **PNPUnattend** 를 사용 하 여 컴퓨터에서 가능한 드라이버 업데이트를 감사 한 다음 결과를 명령 프롬프트에 보고 하는 방법을 보여 줍니다.
 
 ```
-pnpunattend auditsystem /s /l 
+pnpunattend auditsystem /s /l
 ```
 
 ## <a name="additional-references"></a>추가 참조

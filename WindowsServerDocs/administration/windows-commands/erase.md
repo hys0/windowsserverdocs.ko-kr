@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0ec812e9a455cc0060a3f0a6be4d0e7227821a0b
-ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
+ms.openlocfilehash: 96e0f97e27de8933de44c437508ef59803765771
+ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82992383"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83437128"
 ---
 # <a name="erase"></a>erase
 
@@ -32,7 +32,7 @@ del [/p] [/f] [/s] [/q] [/a[:]<attributes>] <names>
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | `<names>` | 하나 이상의 파일 또는 디렉터리 목록을 지정합니다. 여러 파일을 삭제 하려면 와일드 카드를 사용할 수 있습니다. 디렉터리를 지정 하는 경우 디렉터리 내의 모든 파일이 삭제 됩니다. |
 | /p | 지정된 된 파일을 삭제 하기 전에 확인 메시지를 표시 합니다. |
@@ -44,7 +44,7 @@ del [/p] [/f] [/s] [/q] [/a[:]<attributes>] <names>
 
 #### <a name="remarks"></a>설명
 
-- 명령을 사용 하는 `erase /p` 경우 다음과 같은 메시지가 표시 됩니다.
+- 명령을 사용 하는 경우 `erase /p` 다음과 같은 메시지가 표시 됩니다.
 
     `FileName, Delete (Y/N)?`
 
@@ -52,7 +52,7 @@ del [/p] [/f] [/s] [/q] [/a[:]<attributes>] <names>
 
 - 명령 확장을 사용 하지 않도록 설정 하면 삭제 되는 파일의 이름을 표시 하는 대신 **/s** 매개 변수를 통해 찾지 못한 파일의 이름이 표시 됩니다.
 
-- `<names>` 매개 변수에 특정 폴더를 지정 하면 포함 된 파일도 모두 삭제 됩니다. 예를 들어 *\work* 폴더의 모든 파일을 삭제 하려면 다음을 입력 합니다.
+- 매개 변수에 특정 폴더를 지정 하면 `<names>` 포함 된 파일도 모두 삭제 됩니다. 예를 들어 *\work* 폴더의 모든 파일을 삭제 하려면 다음을 입력 합니다.
 
   ```
   erase \work
@@ -73,7 +73,7 @@ del [/p] [/f] [/s] [/q] [/a[:]<attributes>] <names>
   > [!NOTE]
   > **Erase** 명령과 함께 와일드 카드 문자를 사용 하기 전에 **dir** 명령과 동일한 와일드 카드 문자를 사용 하 여 삭제 될 모든 파일을 나열 합니다.
 
-## <a name="examples"></a>예
+### <a name="examples"></a>예
 
 C 드라이브에 Test 라는 폴더에 있는 모든 파일을 삭제 하려면 다음 중 하나를 입력 합니다.
 

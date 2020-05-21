@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 81132ebf6b75115086ed7cc2ab9f73d9d06e65e4
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 9ac3e5a458d88d945e857cd1922783e5b0ff5cf0
+ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82722716"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83436288"
 ---
 # <a name="query-process"></a>쿼리 프로세스
 
@@ -30,7 +30,7 @@ ms.locfileid: "82722716"
 > query process [* | <ProcessID> | <UserName> | <SessionName> | /id:<nn> | <ProgramName>] [/server:<ServerName>]
 > ```
 > ### <a name="parameters"></a>매개 변수
-> 
+>
 > |      매개 변수       |                                                                 설명                                                                  |
 > |----------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
 > |          \*          |                                                    모든 세션에 대 한 프로세스를 나열 합니다.                                                     |
@@ -41,10 +41,10 @@ ms.locfileid: "82722716"
 > |    <ProgramName>     |                     쿼리 하려는 프로세스의 프로그램의 이름을 지정 합니다. .Exe 확장명은 필수입니다.                     |
 > | /server:<ServerName> | 나열 하려는 프로세스의 rd 세션 호스트 서버를 지정 합니다. 지정 하지 않으면 서버에 현재 로그온이 사용 됩니다. |
 > |          /?          |                                                     명령 프롬프트에 도움말을 표시합니다.                                                     |
-> 
-> ## <a name="remarks"></a>설명
+>
+>#### <a name="remarks"></a>설명
 > - 관리자 권한을 갖기 때문에 모든 **쿼리 프로세스** 함수입니다.
-> - <*UserName*>, <*세션 이름*>, **/id:**<*nn*>, <*ProgramName*> 또는 **\\*** 매개 변수를 지정 하지 않으면 **쿼리 프로세스** 에 현재 사용자에 속한 프로세스만 표시 됩니다.
+> - <*UserName*>, <*세션 이름*>, **/id:** < *nn*>, <*ProgramName*> 또는 **\\** * 매개 변수를 지정 하지 않으면 **쿼리 프로세스** 에 현재 사용자에 속한 프로세스만 표시 됩니다.
 > - 세션이 지정 된 경우 활성 세션을 식별 해야 합니다.
 > - **쿼리 프로세스** 는 다음 정보를 반환 합니다.
 >   -   프로세스를 소유 하는 사용자
@@ -63,6 +63,6 @@ ms.locfileid: "82722716"
 >   query process /ID:2
 >   ```
 >   ## <a name="additional-references"></a>추가 참조
->   - [명령줄 구문 키](command-line-syntax-key.md)
->   [쿼리](query.md)
->   [원격 데스크톱 서비스 (Terminal Services) 명령 참조](remote-desktop-services-terminal-services-command-reference.md)
+>   - [명령줄 구문 키](command-line-syntax-key.md) 
+>    [쿼리](query.md) 
+>    [원격 데스크톱 서비스 (터미널 서비스) 명령 참조](remote-desktop-services-terminal-services-command-reference.md)

@@ -8,12 +8,12 @@ ms.author: jgerend
 ms.technology: storage
 ms.date: 05/18/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: bc715b3df9e4f4dd6d2de82be9346edc7d88805e
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 38eda178b6c9e34fec1d63ed6c59f01023b859c4
+ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720257"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83436680"
 ---
 # <a name="vssadmin-list-shadows"></a>Vssadmin list 그림자
 
@@ -31,8 +31,8 @@ vssadmin list shadows [/for=<ForVolumeSpec>] [/shadow=<ShadowID>]
 
 |매개 변수|설명|
 |---|---|
-|/for =\<ForVolumeSpec>|섀도 복사본이 나열 될 볼륨을 지정 합니다.|
-|/shadow =\<ShadowID>|ShadowID에 지정 된 섀도 복사본을 나열 합니다. 섀도 복사본 ID를 가져오려면 **vssadmin list shadows** 명령을 사용 합니다. 섀도 복사본 ID를 입력할 때 다음 형식을 사용 합니다. 여기서 각 *X* 는 16 진수 문자를 나타냅니다.<br><br>XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX-XXXX-XXXX|
+|/for = \< ForVolumeSpec>|섀도 복사본이 나열 될 볼륨을 지정 합니다.|
+|/shadow = \< ShadowID>|ShadowID에 지정 된 섀도 복사본을 나열 합니다. 섀도 복사본 ID를 가져오려면 **vssadmin list shadows** 명령을 사용 합니다. 섀도 복사본 ID를 입력할 때 다음 형식을 사용 합니다. 여기서 각 *X* 는 16 진수 문자를 나타냅니다.<br><br>XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX-XXXX-XXXX|
 
 ## <a name="additional-references"></a>추가 참조
 

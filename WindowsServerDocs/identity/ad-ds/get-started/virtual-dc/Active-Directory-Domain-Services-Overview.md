@@ -1,6 +1,6 @@
 ---
 ms.assetid: f052dfcd-dace-4485-8d0a-cc7df5cf3751
-title: Active Directory 도메인 서비스 개요
+title: Active Directory Domain Services 개요
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -8,14 +8,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 3c11e4a925eae89355da301d0b0facb62a53a942
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 13d32a4fc11611f030006ad9628d2e84a045e511
+ms.sourcegitcommit: c710fea2c0591febfc1bc9a705d59979be6f699b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80824566"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83705572"
 ---
-# <a name="active-directory-domain-services-overview"></a>Active Directory 도메인 서비스 개요
+# <a name="active-directory-domain-services-overview"></a>Active Directory Domain Services 개요
 
 >적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -24,7 +24,7 @@ ms.locfileid: "80824566"
 
 Active Directory는 네트워크의 개체에 대한 정보를 저장하고 관리자 및 사용자가 이러한 정보를 쉽게 찾아서 사용할 수 있게 해줍니다. Active Directory는 논리적이고 계층적인 디렉터리 정보 구성을 위한 기초로 구조화된 데이터 저장소를 사용합니다.
 
-이 데이터 저장소 (디렉터리 라고도 함)에는 Active Directory 개체에 대 한 정보가 포함 되어 있습니다. 일반적으로 이러한 개체에는 서버, 볼륨, 프린터, 네트워크 사용자 및 컴퓨터 계정 등의 공유 리소스가 포함 됩니다. Active Directory 데이터 저장소에 대 한 자세한 내용은 [디렉터리 데이터 저장소](https://technet.microsoft.com/library/cc736627(v=ws.10).aspx)를 참조 하세요.
+이 데이터 저장소 (디렉터리 라고도 함)에는 Active Directory 개체에 대 한 정보가 포함 되어 있습니다. 일반적으로 이러한 개체에는 서버, 볼륨, 프린터, 네트워크 사용자 및 컴퓨터 계정 등의 공유 리소스가 포함 됩니다. Active Directory 데이터 저장소에 대 한 자세한 내용은 [디렉터리 데이터 저장소](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc736627(v=ws.10))를 참조 하세요.
 
 보안은 디렉터리의 개체에 대 한 로그온 인증 및 액세스 제어를 통해 Active Directory와 통합 됩니다. 관리자는 단일 네트워크 로그온을 통해 네트워크에서 디렉터리 데이터 및 조직을 관리할 수 있으며, 권한 있는 네트워크 사용자는 네트워크의 모든 위치에서 리소스에 액세스할 수 있습니다. 정책 기반 관리를 사용하면 가장 복잡한 네트워크조차 쉽게 관리할 수 있습니다. Active Directory 보안에 대 한 자세한 내용은 [보안 개요](../../plan/security-best-practices/best-practices-for-securing-active-directory.md)를 참조 하세요.
 
@@ -43,15 +43,15 @@ Active Directory에도 다음이 포함 됩니다.
 ## <a name="understanding-active-directory"></a>Active Directory 이해
  이 섹션에서는 핵심 Active Directory 개념에 대 한 링크를 제공 합니다.
  
-* [Active Directory 구조 및 저장소 기술](https://technet.microsoft.com/library/cc759186(v=ws.10).aspx)
-* [도메인 컨트롤러 역할](https://technet.microsoft.com/library/cc786438(v=ws.10).aspx) 
+* [Active Directory 구조 및 저장소 기술](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc759186(v=ws.10))
+* [도메인 컨트롤러 역할](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc786438(v=ws.10)) 
 * [Active Directory 스키마](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771796(v=ws.10))
 * [트러스트 이해](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771568(v=ws.10)) 
-* [Active Directory 복제 기술](https://technet.microsoft.com/library/cc786438(v=ws.10).aspx) 
-* [Active Directory 검색 및 게시 기술](https://technet.microsoft.com/library/cc775686(v=ws.10).aspx) 
+* [Active Directory 복제 기술](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc776877(v=ws.10)) 
+* [Active Directory 검색 및 게시 기술](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc775686(v=ws.10)) 
 * [DNS 및 그룹 정책 상호 운용](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd197486(v=ws.10))
-* [스키마 이해](https://technet.microsoft.com/library/cc759402(v=ws.10).aspx) 
+* [스키마 이해](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc759402(v=ws.10)) 
 
-Active Directory 개념에 대 한 자세한 목록은 [Active Directory 이해](https://technet.microsoft.com/library/cc781408(v=ws.10).aspx)를 참조 하세요. 
+Active Directory 개념에 대 한 자세한 목록은 [Active Directory 이해](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc781408(v=ws.10))를 참조 하세요. 
 
 

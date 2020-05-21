@@ -9,19 +9,22 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 43108fad0e1981bffd110264809acf30c1c12ba1
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: eb4a9fa3105247695f1a50e5fc483ce608cd4816
+ms.sourcegitcommit: 7116460855701eed4e09d615693efa4fffc40006
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82725012"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83433127"
 ---
 # <a name="ftype"></a>ftype
 
 
 
-표시 하거나 파일 이름 확장명 연결에 사용 되는 파일 형식을 수정 합니다. 할당 연산자 (**=**) 없이 사용 하는 경우 **ftype** 지정 된 파일 형식에 대 한 현재 열려 있는 명령 문자열을 표시 합니다. 매개 변수 없이 사용 하는 경우 **ftype** 열려 있는 명령 문자열을 정의 하는 파일 형식이 표시 됩니다.
+표시 하거나 파일 이름 확장명 연결에 사용 되는 파일 형식을 수정 합니다. 할당 연산자 () 없이 사용 **=** 하는 경우 **ftype** 지정 된 파일 형식에 대 한 현재 열려 있는 명령 문자열을 표시 합니다. 매개 변수 없이 사용 하는 경우 **ftype** 열려 있는 명령 문자열을 정의 하는 파일 형식이 표시 됩니다.
 
+> [!NOTE]
+> 이 명령은 CMD 내 에서만 지원 됩니다. EXE 및를 PowerShell에서 사용할 수 없습니다.  
+> 를 `cmd /c ftype` 해결 방법으로 사용할 수는 있지만
 
 
 ## <a name="syntax"></a>구문

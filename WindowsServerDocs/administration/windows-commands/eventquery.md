@@ -1,6 +1,6 @@
 ---
 title: eventquery
-description: '* * * *에 대 한 참조 항목'
+description: 더 이상 사용 되지 않으며 이후 버전의 Windows에서 지원 되지 않는 eventquery.vbs 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,13 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3f0e4294354470dcfb3a33191cc36edfa556bb02
-ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
+ms.openlocfilehash: 5031d18311c177c7f745bc771c212727ce700ee3
+ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82992388"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83436868"
 ---
 # <a name="eventquery"></a>eventquery
 
-> 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
-eventquery.vbs는 더 이상 사용 되지 않으며 이후 버전의 Windows에서 지원 되지 않을 수 있습니다.
-이 도구는 Windows Server 2003에 포함 됩니다. 자세한 내용은 [eventquery.vbs](https://technet.microsoft.com/library/cc772995(v=ws.10).aspx)를 참조 하세요.
+Eventquery.vbs 명령은 더 이상 사용 되지 않으며 이후 버전의 Windows에서는 지원 되지 않습니다.

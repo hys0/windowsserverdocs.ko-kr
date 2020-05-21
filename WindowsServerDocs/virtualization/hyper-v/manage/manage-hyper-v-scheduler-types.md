@@ -9,12 +9,12 @@ ms.prod: windows-server-hyper-v
 ms.technology: virtualization
 ms.localizationpriority: low
 ms.assetid: 6cb13f84-cb50-4e60-a685-54f67c9146be
-ms.openlocfilehash: 8ba413b831c7b11780113ee2ffd3cce598781a44
-ms.sourcegitcommit: 2a15de216edde8b8e240a4aa679dc6d470e4159e
+ms.openlocfilehash: f82aab1b3a3af61afa08a1849392297ca5def2ab
+ms.sourcegitcommit: 9889f20270e8eb7508d06cbf844cba9159e39697
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77465577"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83551106"
 ---
 # <a name="managing-hyper-v-hypervisor-scheduler-types"></a>Hyper-v 하이퍼바이저 스케줄러 형식 관리
 
@@ -22,8 +22,8 @@ ms.locfileid: "77465577"
 
 이 문서에서는 Windows Server 2016에 처음 도입 된 가상 프로세서 예약 논리의 새로운 모드에 대해 설명 합니다. 이러한 모드 또는 스케줄러 형식은 Hyper-v 하이퍼바이저가 게스트 가상 프로세서에서 작업을 할당 하 고 관리 하는 방법을 결정 합니다. Hyper-v 호스트 관리자는 게스트 Vm (가상 컴퓨터)에 가장 적합 한 하이퍼바이저 스케줄러 유형을 선택 하 고 예약 논리를 활용 하도록 Vm을 구성할 수 있습니다.
 
->[!NOTE]
->이 문서에 설명 된 하이퍼바이저 scheduler 기능을 사용 하려면 업데이트가 필요 합니다. 자세한 내용은 [필수 업데이트](#required-updates)를 참조 하세요.
+> [!NOTE]
+> 이 문서에 설명 된 하이퍼바이저 scheduler 기능을 사용 하려면 업데이트가 필요 합니다. 자세한 내용은 [필수 업데이트](#required-updates)를 참조 하세요.
 
 ## <a name="background"></a>배경
 
@@ -31,7 +31,7 @@ Hyper-v 가상 프로세서 예약의 기반이 되는 논리 및 제어에 대�
 
 ### <a name="understanding-smt"></a>SMT 이해
 
-동시 다중 스레딩 (SMT)은 최신 프로세서 디자인에서 사용 되는 기술로, 개별 독립 실행 스레드에서 프로세서의 리소스를 공유할 수 있도록 합니다. SMT는 일반적으로 가능한 경우 계산을 병렬화 하 여 대부분의 워크 로드에 대 한 적절 한 성능 향상을 제공 합니다. 공유 프로세서 리소스가 발생 합니다.
+동시 다중 스레딩 (SMT)은 최신 프로세서 디자인에서 사용 되는 기술로, 개별 독립 실행 스레드에서 프로세서의 리소스를 공유할 수 있도록 합니다. 일반적으로 SMT는 가능한 경우 계산을 병렬화 하 여 대부분의 워크 로드에 대 한 성능 향상을 제공 하 고, 공유 프로세서 리소스에 대 한 스레드 간의 경합이 발생할 경우 성능 향상 이나 성능 저하가 발생 하지 않습니다.
 SMT를 지 원하는 프로세서는 Intel 및 AMD 둘 다에서 사용할 수 있습니다. Intel은 intel 하이퍼 스레딩 기술 또는 Intel HT로 제공 되는 SMT 서비스를 나타냅니다.
 
 이 문서의 목적상, Hyper-v에서 사용 되는 SMT 및 사용 방법에 대 한 설명은 Intel 및 AMD 시스템에 동일 하 게 적용 됩니다.
@@ -48,7 +48,7 @@ SMT를 지 원하는 프로세서는 Intel 및 AMD 둘 다에서 사용할 수 �
 
 * 루트 파티션은 게스트 가상 컴퓨터 보다 고유한 속성과 훨씬 더 많은 권한을가지고 있지만 가상 컴퓨터 파티션입니다. 루트 파티션은 모든 게스트 가상 컴퓨터를 제어 하는 관리 서비스를 제공 하 고, 게스트에 대 한 가상 장치 지원을 제공 하 고, 게스트 가상 컴퓨터의 모든 장치 i/o를 관리 합니다. 루트 파티션에서 응용 프로그램 워크 로드를 실행 하지 않는 것이 좋습니다.
 
-* 루트 파티션의 각 가상 프로세서 (VP)는 1:1를 기본 논리적 프로세서 (LP)에 매핑합니다. 호스트 VP는 항상 동일한 기본 LP에서 실행 됩니다. 루트 파티션의 VPs는 마이그레이션하지 않습니다.
+* 루트 파티션의 각 가상 프로세서 (VP)는 1:1를 기본 논리적 프로세서 (LP)에 매핑합니다. 호스트 VP는 항상 동일한 기본 LP에서 실행 되며 루트 파티션의 VPs는 마이그레이션하지 않습니다.
 
 * 기본적으로 호스트 VPs 실행 되는 LPs는 게스트 VPs 실행할 수도 있습니다.
 
@@ -58,22 +58,18 @@ SMT를 지 원하는 프로세서는 Intel 및 AMD 둘 다에서 사용할 수 �
 
 Windows Server 2016부터 Hyper-v 하이퍼바이저는 기본 논리 프로세서에서 하이퍼바이저가 가상 프로세서를 예약 하는 방법을 결정 하는 여러 가지 스케줄러 논리 모드를 지원 합니다. 이러한 스케줄러 유형은 다음과 같습니다.
 
-- [클래식, 양호 공유 스케줄러](#the-classic-scheduler)
-- [핵심 스케줄러](#the-core-scheduler)
-- [루트 스케줄러](#the-root-scheduler)
-
 ### <a name="the-classic-scheduler"></a>클래식 스케줄러
 
 클래식 스케줄러는 Windows Server 2016 Hyper-v를 포함 하 여 처음부터 모든 버전의 Windows Hyper-v 하이퍼바이저에 대 한 기본값입니다. 클래식 스케줄러는 게스트 가상 프로세서에 대해 공평 하 게 공유 되 고 선점형 라운드 로빈 예약 모델을 제공 합니다.
 
-클래식 스케줄러 형식은 사설 클라우드, 호스팅 공급자 등에 대해 기존의 Hyper-v 사용에 가장 적합 합니다. 성능 특징을 잘 이해 하 고 VPs에 대 한 과도 한 구독, 여러 유형의 Vm 및 워크 로드를 동시에 실행 하는 등 광범위 한 가상화 시나리오를 지원 하도록 최적화 되어 있으며, 더 큰 확장성을 실행 합니다. 성능 Vm-제한 없이 Hyper-v의 전체 기능 집합을 지원 합니다.
+클래식 스케줄러 형식은 사설 클라우드, 호스팅 공급자 등에 대해 기존의 Hyper-v 사용에 가장 적합 합니다. 성능 특징을 잘 이해 하 고 VPs에 대 한 과도 한 구독, 여러 유형의 Vm 및 워크 로드를 동시에 실행 하는 등의 다양 한 가상화 시나리오를 지원 하 고, 더 큰 규모의 고성능 Vm을 실행 하 고, 제한 없이 Hyper-v의 전체 기능 집합을 지 원하는 등 다양 한 가상화 시나리오를 지원 하도록 최적화 되어 있습니다.
 
 ### <a name="the-core-scheduler"></a>핵심 스케줄러
 
 하이퍼바이저 코어 스케줄러는 Windows Server 2016 및 Windows 10 버전 1607에 도입 된 클래식 스케줄러 논리의 새로운 대안입니다. 핵심 스케줄러는 게스트 워크 로드 격리를 위한 강력한 보안 경계를 제공 하 고, SMT 지원 가상화 호스트에서 실행 되는 Vm 내부의 워크 로드에 대 한 성능 가변성을 줄입니다. 핵심 스케줄러를 사용 하면 동일한 SMT 지원 가상화 호스트에서 smt 및 비 SMT 가상 컴퓨터를 동시에 실행할 수 있습니다.
 
 핵심 스케줄러는 가상화 호스트의 SMT 토폴로지를 활용 하 고 필요에 따라 호스트를 게스트 가상 컴퓨터에 표시 하 고, 동일한 가상 컴퓨터에서 SMT 논리적 프로세서 그룹으로의 게스트 가상 프로세서 그룹을 예약 합니다. 이는 대칭적으로 수행 되므로 LPs가 2 그룹에 있는 경우 VPs가 2 그룹으로 예약 되 고 코어는 Vm 간에 공유 되지 않습니다.
-SMT를 사용 하지 않고 가상 컴퓨터에 대 한 VP가 예약 된 경우 해당 부사장은 실행 될 때 전체 코어를 사용 합니다.
+SMT를 사용 하지 않고 가상 컴퓨터에 대 한 VP가 예약 된 경우 해당 VP는 실행 될 때 전체 코어를 사용 합니다.
 
 핵심 스케줄러의 전체 결과는 다음과 같습니다.
 
@@ -101,11 +97,11 @@ SMT를 사용 하지 않고 가상 컴퓨터에 대 한 VP가 예약 된 경우 
 
 #### <a name="root-scheduler-use-on-client-systems"></a>클라이언트 시스템에서 루트 스케줄러 사용
 
-Windows 10 버전 1803부터 루트 스케줄러는 기본적으로 클라이언트 시스템 에서만 사용 됩니다 .이 경우 하이퍼바이저는 가상화 기반 보안 및 WDAG 워크 로드 격리를 지원 하 고,는 이후 시스템의 적절 한 운영에 사용 될 수 있습니다. 다른 유형의 핵심 아키텍처. 클라이언트 시스템에 대해 지원 되는 유일한 하이퍼바이저 스케줄러 구성입니다. 관리자는 Windows 10 클라이언트 시스템의 기본 하이퍼바이저 스케줄러 유형을 재정의 하려고 해서는 안 됩니다.
+Windows 10 버전 1803부터 루트 스케줄러는 기본적으로 클라이언트 시스템 에서만 사용 됩니다 .이 경우 하이퍼바이저는 가상화 기반 보안 및 WDAG 워크 로드 격리를 지원 하 고, 다른 유형의 핵심 아키텍처를 사용 하는 향후 시스템의 적절 한 작업에 사용할 수 있습니다. 클라이언트 시스템에 대해 지원 되는 유일한 하이퍼바이저 스케줄러 구성입니다. 관리자는 Windows 10 클라이언트 시스템의 기본 하이퍼바이저 스케줄러 유형을 재정의 하려고 해서는 안 됩니다.
 
 #### <a name="virtual-machine-cpu-resource-controls-and-the-root-scheduler"></a>가상 컴퓨터 CPU 리소스 컨트롤 및 루트 스케줄러
 
-루트 운영 체제의 스케줄러 논리가 글로벌 기반으로 호스트 리소스를 관리 하 고 VM에 대 한 지식이 없으므로 Hyper-v에서 제공 하는 가상 컴퓨터 프로세서 리소스 컨트롤은 하이퍼바이저 루트 스케줄러를 사용 하도록 설정할 때 지원 되지 않습니다. 특정 구성 설정. Cap, 가중치 및 예약과 같은 Hyper-v VM 별 프로세서 리소스 컨트롤은 하이퍼바이저에서 클래식 및 핵심 스케줄러 유형과 같은 VP 일정을 직접 제어 하는 경우에만 적용할 수 있습니다.
+루트 운영 체제의 스케줄러 논리가 글로벌 기반으로 호스트 리소스를 관리 하 고 VM의 특정 구성 설정을 알고 있지 않으므로 Hyper-v에서 제공 하는 가상 컴퓨터 프로세서 리소스 컨트롤은 하이퍼바이저 루트 스케줄러를 사용 하도록 설정할 때 지원 되지 않습니다. Cap, 가중치 및 예약과 같은 Hyper-v VM 별 프로세서 리소스 컨트롤은 하이퍼바이저에서 클래식 및 핵심 스케줄러 유형과 같은 VP 일정을 직접 제어 하는 경우에만 적용할 수 있습니다.
 
 #### <a name="root-scheduler-use-on-server-systems"></a>서버 시스템에서 루트 스케줄러 사용
 
@@ -122,11 +118,11 @@ Windows 10 버전 1803부터 루트 스케줄러는 기본적으로 클라이언
 Set-VMProcessor -VMName <VMName> -HwThreadCountPerCore <n>
 ```
 
-여기서 <n>는 게스트 VM에 표시 되는 코어 당 SMT 스레드 수입니다.  
-<n> = 0은 HwThreadCountPerCore 값을 코어 당 호스트의 SMT 스레드 수 값과 일치 하도록 설정 합니다.
+여기서 <n> 는 게스트 VM에서 볼 수 있는 코어 당 SMT 스레드 수입니다.
+<n>= 0은 HwThreadCountPerCore 값을 코어 값 당 호스트의 SMT 스레드 수와 일치 하도록 설정 합니다.
 
->[!NOTE] 
->HwThreadCountPerCore = 0 설정은 Windows Server 2019부터 지원 됩니다.
+> [!NOTE]
+> HwThreadCountPerCore = 0 설정은 Windows Server 2019부터 지원 됩니다.
 
 다음은 두 개의 가상 프로세서와 SMT를 사용 하는 가상 머신에서 실행 되는 게스트 운영 체제에서 가져온 시스템 정보의 예입니다. 게스트 운영 체제가 동일한 코어에 속하는 2 개의 논리적 프로세서를 검색 하 고 있습니다.
 
@@ -136,24 +132,24 @@ Set-VMProcessor -VMName <VMName> -HwThreadCountPerCore <n>
 
 Windows Server 2016 Hyper-v에서는 기본적으로 클래식 하이퍼바이저 스케줄러 모델을 사용 합니다. 하이퍼바이저는 선택적으로 핵심 스케줄러를 사용 하도록 구성 하 여 게스트 VPs이 해당 물리적 SMT 쌍에서 실행 되도록 제한 하 고 게스트 VPs에 대 한 SMT 일정에 따라 가상 컴퓨터를 사용할 수 있도록 하 여 보안을 강화할 수 있습니다.
 
->[!NOTE]
->Microsoft는 Windows Server 2016 Hyper-v를 실행 하는 모든 고객이 잠재적으로 악성 게스트 Vm 으로부터 가상화 호스트가 최적으로 보호 되도록 핵심 스케줄러를 선택 하는 것을 권장 합니다.
+> [!NOTE]
+> Microsoft는 Windows Server 2016 Hyper-v를 실행 하는 모든 고객이 잠재적으로 악성 게스트 Vm 으로부터 가상화 호스트가 최적으로 보호 되도록 핵심 스케줄러를 선택 하는 것을 권장 합니다.
 
 ## <a name="windows-server-2019-hyper-v-defaults-to-using-the-core-scheduler"></a>Windows Server 2019 Hyper-v는 기본적으로 핵심 스케줄러를 사용 합니다.
 
-최적의 보안 구성으로 Hyper-v 호스트를 배포 하기 위해 Windows Server 2019 Hyper-v에서는 기본적으로 핵심 하이퍼바이저 스케줄러 모델을 사용 합니다. 호스트 관리자는 필요에 따라 레거시 클래식 스케줄러를 사용 하도록 호스트를 구성할 수 있습니다. 관리자는 스케줄러 형식 기본 설정을 재정의 하기 전에 각 스케줄러 형식이 가상화 호스트의 보안 및 성능에 미치는 영향을 신중 하 게 읽고 이해 하 고 고려해 야 합니다.  자세한 내용은 [hyper-v scheduler 형식 선택 이해](https://docs.microsoft.com/windows-server/virtualization/hyper-v/manage/understanding-hyper-v-scheduler-type-selection) 를 참조 하세요.
+최적의 보안 구성으로 Hyper-v 호스트를 배포 하기 위해 Windows Server 2019 Hyper-v는 이제 기본적으로 핵심 하이퍼바이저 스케줄러 모델을 사용 합니다. 호스트 관리자는 필요에 따라 레거시 클래식 스케줄러를 사용 하도록 호스트를 구성할 수 있습니다. 관리자는 스케줄러 형식 기본 설정을 재정의 하기 전에 각 스케줄러 형식이 가상화 호스트의 보안 및 성능에 미치는 영향을 신중 하 게 읽고 이해 하 고 고려해 야 합니다.  자세한 내용은 [hyper-v scheduler 형식 선택 이해](https://docs.microsoft.com/windows-server/virtualization/hyper-v/manage/understanding-hyper-v-scheduler-type-selection) 를 참조 하세요.
 
 ### <a name="required-updates"></a>필수 업데이트
 
->[!NOTE]
->이 문서에 설명 된 하이퍼바이저 스케줄러 기능을 사용 하려면 다음 업데이트가 필요 합니다. 이러한 업데이트에는 호스트 구성에 필요한 새로운 ' hypervisorschedulertype ' BCD 옵션을 지원 하기 위한 변경 내용이 포함 되어 있습니다.
+> [!NOTE]
+> 이 문서에 설명 된 하이퍼바이저 스케줄러 기능을 사용 하려면 다음 업데이트가 필요 합니다. 이러한 업데이트에는 `hypervisorschedulertype` 호스트 구성에 필요한 새 BCD 옵션을 지원 하기 위한 변경 내용이 포함 됩니다.
 
-| 버전 | 릴리스  | 업데이트 필요 | 기술 자료 문서 |
+| 버전 | Release  | 업데이트 필요 | KB 문서 |
 |--------------------|------|---------|-------------:|
 |Windows Server 2016 | 1607 | 2018.07 C | [KB4338822](https://support.microsoft.com/help/4338822/windows-10-update-kb4338822) |
 |Windows Server 2016 | 1703 | 2018.07 C | [KB4338827](https://support.microsoft.com/help/4338827/windows-10-update-kb4338827) |
 |Windows Server 2016 | 1709 | 2018.07 C | [KB4338817](https://support.microsoft.com/help/4338817/windows-10-update-kb4338817) |
-|시작 | 1804 | 없음 | 없음 |
+|Windows Server 2019 | 1804 | None | None |
 
 ## <a name="selecting-the-hypervisor-scheduler-type-on-windows-server"></a>Windows Server에서 하이퍼바이저 스케줄러 유형 선택
 
@@ -161,20 +157,20 @@ Windows Server 2016 Hyper-v에서는 기본적으로 클래식 하이퍼바이�
 
 스케줄러 형식을 선택 하려면 관리자 권한으로 명령 프롬프트를 엽니다.
 
-``` command
-     bcdedit /set hypervisorschedulertype type
+```
+bcdedit /set hypervisorschedulertype type
 ```
 
-여기서 `type`은 다음 중 하나입니다.
+여기서 `type` 은 다음 중 하나입니다.
 
-* 클래식
-* Core
-* 루트
+* Classic
+* 코어
+* Root
 
 하이퍼바이저 스케줄러 형식에 대 한 변경 내용을 적용 하려면 시스템을 다시 부팅 해야 합니다.
 
->[!NOTE]
->하이퍼바이저 루트 스케줄러는 현재 Windows Server Hyper-v에서 지원 되지 않습니다. Hyper-v 관리자는 서버 가상화 시나리오에서 사용할 루트 스케줄러를 구성 하려고 해서는 안 됩니다.
+> [!NOTE]
+> 하이퍼바이저 루트 스케줄러는 현재 Windows Server Hyper-v에서 지원 되지 않습니다. Hyper-v 관리자는 서버 가상화 시나리오에서 사용할 루트 스케줄러를 구성 하려고 해서는 안 됩니다.
 
 ## <a name="determining-the-current-scheduler-type"></a>현재 스케줄러 형식 확인
 
@@ -182,13 +178,13 @@ Windows Server 2016 Hyper-v에서는 기본적으로 클래식 하이퍼바이�
 
 하이퍼바이저 시작 이벤트 ID 2는 하이퍼바이저 스케줄러 유형을 나타냅니다. 여기서는 다음과 같습니다.
 
-    1 = Classic scheduler, SMT disabled
+- 1 = 클래식 스케줄러, SMT 사용 안 함
 
-    2 = Classic scheduler
+- 2 = 클래식 스케줄러
 
-    3 = Core scheduler
+- 3 = 코어 스케줄러
 
-    4 = Root scheduler
+- 4 = 루트 스케줄러
 
 ![하이퍼바이저 시작 이벤트 ID 2 세부 정보를 보여 주는 스크린샷](media/Hyper-V-CoreScheduler-EventID2-Details.png)
 
