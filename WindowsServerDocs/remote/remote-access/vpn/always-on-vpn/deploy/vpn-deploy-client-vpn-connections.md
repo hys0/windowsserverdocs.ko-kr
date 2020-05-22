@@ -10,12 +10,12 @@ ms.localizationpriority: medium
 ms.author: v-tea
 author: Teresa-MOTIV
 ms.reviewer: deverette
-ms.openlocfilehash: ecaf35f9cfe825d2bb617acbd9554bf1eb0eff1e
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 9f942d7af5215680cf2707901293161a6208708b
+ms.sourcegitcommit: 599162b515c50106fd910f5c180e1a30bbc389b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80860506"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83775357"
 ---
 # <a name="step-6-configure-windows-10-client-always-on-vpn-connections"></a>6단계. Windows 10 클라이언트 Always On VPN 연결 구성
 
@@ -183,7 +183,7 @@ XML 태그를 처음부터 만드는 방법을 설명 하는 대신 Windows의 �
 
     c.  연결 하기 전에 알림에서 **사용자에 게 새 서버 또는 신뢰할 수 있는 ca에 대 한 권한을 부여 하지 않음**을 클릭 합니다.
 
-    .  인증 방법 선택에서 **스마트 카드 또는 기타 인증서**를 클릭 하 고 **구성**을 클릭 합니다. 스마트 카드 또는 기타 인증서 속성 대화 상자가 열립니다.
+    d.  인증 방법 선택에서 **스마트 카드 또는 기타 인증서**를 클릭 하 고 **구성**을 클릭 합니다. 스마트 카드 또는 기타 인증서 속성 대화 상자가 열립니다.
 
     e.  **이 컴퓨터에서 인증서 사용**을 클릭 합니다.
 
@@ -195,7 +195,7 @@ XML 태그를 처음부터 만드는 방법을 설명 하는 대신 Windows의 �
 
     i.  **확인** 을 클릭 하 여 스마트 카드 또는 기타 인증서 속성 대화 상자를 닫습니다.
 
-    j.  **확인** 을 클릭 하 여 보호 된 EAP 속성 대화 상자를 닫습니다.
+    j.  클릭 **확인** 를 닫으려면는 보호 된 EAP 속성 대화 상자입니다.
 
 14. **확인** 을 클릭 하 여 템플릿 속성 대화 상자를 닫습니다.
 
@@ -227,7 +227,7 @@ XML 태그를 처음부터 만드는 방법을 설명 하는 대신 Windows의 �
 
 3. 스크립트를 실행 하 여 데스크톱에 **VPN_Profile** 및 **VPN_Profile** 을 생성 합니다.
 
-#### <a name="listing-1-understanding-makeprofileps1"></a>나열 1. MakeProfile 이해. ps1
+#### <a name="listing-1-understanding-makeprofileps1"></a>목록 1. MakeProfile 이해. ps1
 
 이 섹션에서는 VPNv2 CSP에서 프로 파일링을 구성 하기 위해 특히 VPN 프로필을 만드는 방법을 이해 하는 데 사용할 수 있는 예제 코드에 대해 설명 합니다.
 
@@ -263,7 +263,7 @@ Windows PowerShell 또는 Microsoft 끝점 Configuration Manager의 **VPN_Profil
 
 ```xml
 $TemplateName = 'Template'
-$ProfileName = 'Contoso AlwaysOn VPN'
+$ProfileName = 'Contoso%20AlwaysOn%20VPN'
 $Servers = 'vpn.contoso.com'
 $DnsSuffix = 'corp.contoso.com'
 $DomainName = '.corp.contoso.com'
@@ -700,7 +700,7 @@ Configuration Manager를 사용 하 여 Windows 10 클라이언트 컴퓨터에 
 
 ### <a name="create-a-user-group"></a>사용자 그룹 만들기
 
-1.  Configuration Manager 콘솔에서 사용자 컬렉션\\자산 및 준수를 엽니다.
+1.  Configuration Manager 콘솔에서 자산 및 준수 \\ 사용자 컬렉션을 엽니다.
 
 2.  **홈** 리본의 **만들기** 그룹에서 **사용자 컬렉션 만들기**를 클릭 합니다.
 
@@ -718,19 +718,19 @@ Configuration Manager를 사용 하 여 Windows 10 클라이언트 컴퓨터에 
 
     b.  **시작** 페이지에서 **다음**을 클릭합니다.
 
-    c.  리소스 검색 페이지의 **값**에 추가 하려는 사용자의 이름을 입력 합니다. 리소스 이름에는 사용자의 도메인이 포함 됩니다. 부분 일치를 기반으로 결과를 포함 하려면 검색 조건의 한쪽 끝에 **%** 문자를 삽입 합니다. 예를 들어 "lori" 문자열을 포함 하는 모든 사용자를 찾으려면 **% lori%** 를 입력 합니다. **다음**을 클릭합니다.
+    c.  리소스 검색 페이지의 **값**에 추가 하려는 사용자의 이름을 입력 합니다. 리소스 이름에는 사용자의 도메인이 포함 됩니다. 부분 일치를 기반으로 결과를 포함 하려면 **%** 검색 조건의 한쪽 끝에 문자를 삽입 합니다. 예를 들어 "lori" 문자열을 포함 하는 모든 사용자를 찾으려면 **% lori%** 를 입력 합니다. **다음**을 클릭합니다.
 
-    .  리소스 선택 페이지에서 그룹에 추가 하려는 사용자를 선택 하 고 **다음**을 클릭 합니다.
+    d.  리소스 선택 페이지에서 그룹에 추가 하려는 사용자를 선택 하 고 **다음**을 클릭 합니다.
 
     e.  요약 페이지에서 **다음**을 클릭 합니다.
 
-    f.  완료 페이지에서 **닫기**를 클릭 합니다.
+    f.  완료 페이지에서 **닫기**를 클릭합니다.
 
 6.  사용자 컬렉션 만들기 마법사의 멤버 관리 규칙 페이지로 돌아가 **다음**을 클릭 합니다.
 
 7.  요약 페이지에서 **다음**을 클릭 합니다.
 
-8.  완료 페이지에서 **닫기**를 클릭 합니다.
+8.  완료 페이지에서 **닫기**를 클릭합니다.
 
 VPN 프로필을 받을 사용자 그룹을 만든 후에는 [프로 파일링 구성 파일 만들기](#create-the-profilexml-configuration-files)섹션에서 만든 Windows PowerShell 구성 스크립트를 배포 하기 위한 패키지 및 프로그램을 만들 수 있습니다.
 
@@ -738,7 +738,7 @@ VPN 프로필을 받을 사용자 그룹을 만든 후에는 [프로 파일링 �
 
 1.  사이트 서버 컴퓨터 계정에서 액세스할 수 있는 네트워크 공유에서 스크립트 VPN_Profile. p s 1을 호스팅합니다.
 
-2.  Configuration Manager 콘솔에서 **소프트웨어 라이브러리\\응용 프로그램 관리\\패키지**를 엽니다.
+2.  Configuration Manager 콘솔에서 **소프트웨어 라이브러리 \\ 응용 프로그램 관리 \\ 패키지**를 엽니다.
 
 3.  **홈** 리본의 **만들기** 그룹에서 **패키지 만들기** 를 클릭 하 여 패키지 및 프로그램 만들기 마법사를 시작 합니다.
 
@@ -749,7 +749,7 @@ VPN 프로필을 받을 사용자 그룹을 만든 후에는 [프로 파일링 �
     b. **이 패키지에 소스 파일 포함** 확인란을 선택 하 고 **찾아보기**를 클릭 합니다.
 
     c. 원본 폴더 설정 대화 상자에서 **찾아보기**를 클릭 하 고 VPN_Profile. p s 1을 포함 하는 파일 공유를 선택한 다음 **확인**을 클릭 합니다.
-        로컬 경로가 아닌 네트워크 경로를 선택 해야 합니다. 즉, 경로는 *c:\\vpnscript*가 아닌 *\\fileserver\\vpnscript*와 같아야 합니다.
+        로컬 경로가 아닌 네트워크 경로를 선택 해야 합니다. 즉, 경로는 *c: \\ vpnscript*가 아닌 * \\ fileserver \\ vpnscript*와 같아야 합니다.
 
 1.  **다음**을 클릭합니다.
 
@@ -763,7 +763,7 @@ VPN 프로필을 받을 사용자 그룹을 만든 후에는 [프로 파일링 �
 
     c.  **실행 모드**에서 **관리자 권한으로 실행**을 클릭 합니다.
 
-    .  **다음**을 클릭합니다.
+    d.  **다음**을 클릭합니다.
 
 4.  요구 사항 페이지에서 다음 단계를 완료 합니다.
 
@@ -773,19 +773,19 @@ VPN 프로필을 받을 사용자 그룹을 만든 후에는 [프로 파일링 �
 
     c.  **예상 디스크 공간**에 **1**을 입력 합니다.
 
-    .  **최대 허용 실행 시간 (분)** 에 **15**를 입력 합니다.
+    d.  **최대 허용 실행 시간 (분)** 에 **15**를 입력 합니다.
 
     e.  **다음**을 클릭합니다.
 
 5.  요약 페이지에서 **다음**을 클릭 합니다.
 
-6.  완료 페이지에서 **닫기**를 클릭 합니다.
+6.  완료 페이지에서 **닫기**를 클릭합니다.
 
 패키지와 프로그램을 만들었으면 **VPN 사용자** 그룹에 배포 해야 합니다.
 
 ### <a name="deploy-the-profilexml-configuration-script"></a>ProfileXML 구성 스크립트 배포
 
-1.  Configuration Manager 콘솔에서 소프트웨어 라이브러리\\응용 프로그램 관리\\패키지를 엽니다.
+1.  Configuration Manager 콘솔에서 소프트웨어 라이브러리 \\ 응용 프로그램 관리 패키지를 엽니다 \\ .
 
 2.  **패키지**에서 **WINDOWS 10 Always On VPN 프로필**을 클릭 합니다.
 
@@ -805,7 +805,7 @@ VPN 프로필을 받을 사용자 그룹을 만든 후에는 [프로 파일링 �
 
     c.  **VPN 사용자**를 클릭 하 고 **확인**을 클릭 합니다.
 
-    .  **다음**을 클릭합니다.
+    d.  **다음**을 클릭합니다.
 
 6.  콘텐츠 페이지에서 다음 단계를 완료 합니다.
 
@@ -833,7 +833,7 @@ VPN 프로필을 받을 사용자 그룹을 만든 후에는 [프로 파일링 �
 
 10. 요약 페이지에서 **다음**을 클릭 합니다.
 
-11. 완료 페이지에서 **닫기**를 클릭 합니다.
+11. 완료 페이지에서 **닫기**를 클릭합니다.
 
 ProfileXML 구성 스크립트를 배포한 후 사용자 컬렉션을 빌드할 때 선택한 사용자 계정을 사용 하 여 Windows 10 클라이언트 컴퓨터에 로그인 합니다. VPN 클라이언트의 구성을 확인 합니다.
 
@@ -842,7 +842,7 @@ ProfileXML 구성 스크립트를 배포한 후 사용자 컬렉션을 빌드할
 
 ### <a name="verify-the-configuration-of-the-vpn-client"></a>VPN 클라이언트의 구성 확인
 
-1.  제어판의 **시스템\\보안**에서 **Configuration Manager**를 클릭 합니다. 
+1.  제어판의 **시스템 \\ 보안**에서 **Configuration Manager**을 클릭 합니다. 
 
 2.  Configuration Manager 속성 대화 상자의 **동작** 탭에서 다음 단계를 완료 합니다.
 
@@ -863,13 +863,13 @@ Intune을 사용 하 여 Windows 10 원격 액세스 Always On VPN 프로필을 
 >[!NOTE]
 >이제 Intune에서 Azure AD 그룹을 사용 합니다. Azure AD Connect VPN 사용자 그룹을 온-프레미스에서 Azure AD로 동기화 하 고 사용자가 VPN 사용자 그룹에 할당 되 면 진행할 준비가 된 것입니다.
 
-VPN 장치 구성 정책을 만들어 그룹에 추가 된 모든 사용자에 대 한 Windows 10 클라이언트 컴퓨터를 구성 합니다. Intune 템플릿에서 VPN 매개 변수를 제공 하기 때문에 VPN_ProfileXML 파일의 \<EapHostConfig > \</Srhostconfig > 부분만 복사 합니다.
+VPN 장치 구성 정책을 만들어 그룹에 추가 된 모든 사용자에 대 한 Windows 10 클라이언트 컴퓨터를 구성 합니다. Intune 템플릿에서 VPN 매개 변수를 제공 하기 때문에 \< VPN_ProfileXML 파일의 eaphostconfig> \< /srhostconfig> 부분만 복사 합니다.
 
 ### <a name="create-the-always-on-vpn-configuration-policy"></a>Always On VPN 구성 정책 만들기
 
-1.    로그인은 [Azure 포털](https://portal.azure.com/)합니다.
+1.    [Azure Portal](https://portal.azure.com/)에 로그인합니다.
 
-2.    **Intune** > **장치 구성** > **프로필**로 이동 합니다.
+2.    **Intune**  >  **장치 구성**  >  **프로필**로 이동 합니다.
 
 3.    **프로필 만들기** 를 클릭 하 여 프로필 만들기 마법사를 시작 합니다.
 
@@ -905,12 +905,12 @@ VPN 장치 구성 정책을 만들어 그룹에 추가 된 모든 사용자에 �
     <EapHostConfig xmlns="https://www.microsoft.com/provisioning/EapHostConfig"><EapMethod><Type xmlns="https://www.microsoft.com/provisioning/EapCommon">25</Type><VendorId xmlns="https://www.microsoft.com/provisioning/EapCommon">0</VendorId><VendorType xmlns="https://www.microsoft.com/provisioning/EapCommon">0</VendorType><AuthorId xmlns="https://www.microsoft.com/provisioning/EapCommon">0</AuthorId></EapMethod><Config xmlns="https://www.microsoft.com/provisioning/EapHostConfig"><Eap xmlns="https://www.microsoft.com/provisioning/BaseEapConnectionPropertiesV1"><Type>25</Type><EapType xmlns="https://www.microsoft.com/provisioning/MsPeapConnectionPropertiesV1"><ServerValidation><DisableUserPromptForServerValidation>true</DisableUserPromptForServerValidation><ServerNames>NPS.contoso.com</ServerNames><TrustedRootCA>5a 89 fe cb 5b 49 a7 0b 1a 52 63 b7 35 ee d7 1c c2 68 be 4b </TrustedRootCA></ServerValidation><FastReconnect>true</FastReconnect><InnerEapOptional>false</InnerEapOptional><Eap xmlns="https://www.microsoft.com/provisioning/BaseEapConnectionPropertiesV1"><Type>13</Type><EapType xmlns="https://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV1"><CredentialsSource><CertificateStore><SimpleCertSelection>true</SimpleCertSelection></CertificateStore></CredentialsSource><ServerValidation><DisableUserPromptForServerValidation>true</DisableUserPromptForServerValidation><ServerNames>NPS.contoso.com</ServerNames><TrustedRootCA>5a 89 fe cb 5b 49 a7 0b 1a 52 63 b7 35 ee d7 1c c2 68 be 4b </TrustedRootCA></ServerValidation><DifferentUsername>false</DifferentUsername><PerformServerValidation xmlns="https://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV2">true</PerformServerValidation><AcceptServerName xmlns="https://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV2">true</AcceptServerName></EapType></Eap><EnableQuarantineChecks>false</EnableQuarantineChecks><RequireCryptoBinding>false</RequireCryptoBinding><PeapExtensions><PerformServerValidation xmlns="https://www.microsoft.com/provisioning/MsPeapConnectionPropertiesV2">true</PerformServerValidation><AcceptServerName xmlns="https://www.microsoft.com/provisioning/MsPeapConnectionPropertiesV2">true</AcceptServerName></PeapExtensions></EapType></Eap></Config></EapHostConfig>
     ```
 
-4.  **\<TrustedRootCA > 5a 89 fe cb 5b 49 a7 0b 1a 52 63 b7 35 ee d7 1c c2 68** 을 두 위치에서 온-프레미스 루트 인증 기관의 인증서 지문이 있는 샘플의 TrustedRootCA >\/< 4b로 바꿉니다.
+4.  ** \< TrustedRootCA>5a 89 fe cb 5b 49 a7 0b 1a 52 63 b7 35 ee d7 1c c2 68 \/ ** 을 두 위치 모두에서 온-프레미스 루트 인증 기관의 인증서 지문을 사용 하 여 샘플의 4b<TrustedRootCA>바꿉니다.
   
     >[!Important]
-    >아래의 \<TrustedRootCA >\</TrustedRootCA > 섹션에서 샘플 지문을 사용 하지 마십시오.  TrustedRootCA는 RRAS 및 NPS 서버에 대 한 서버 인증 인증서를 발급 한 온-프레미스 루트 인증 기관의 인증서 지문 이어야 합니다. **이 인증서는 클라우드 루트 인증서와 중간 발급 CA 인증서 지문이**아니어야 합니다.
+    >\<아래 TrustedRootCA>\< /TrustedRootCA> 섹션에서 샘플 지문을 사용 하지 마십시오.  TrustedRootCA는 RRAS 및 NPS 서버에 대 한 서버 인증 인증서를 발급 한 온-프레미스 루트 인증 기관의 인증서 지문 이어야 합니다. **이 인증서는 클라우드 루트 인증서와 중간 발급 CA 인증서 지문이**아니어야 합니다.
 
-5.  샘플 XML에서 **\<ServerNames >\</ServerNames >** 를 인증이 수행 되는 도메인에 가입 된 NPS의 FQDN으로 바꿉니다. 
+5.  샘플 XML에서 ** \< ServerNames>NPS.contoso.com \< /ServerNames>** 를 인증이 발생 하는 도메인에 가입 된 NPS의 FQDN으로 바꿉니다. 
 
 6.  수정 된 XML 문자열을 복사 하 여 기본 VPN 탭 아래의 **EAP xml** 상자에 붙여 넣고 **확인**을 클릭 합니다.
     Intune에서 EAP를 사용 하는 Always On VPN 장치 구성 정책이 만들어집니다.
@@ -920,7 +920,7 @@ VPN 장치 구성 정책을 만들어 그룹에 추가 된 모든 사용자에 �
 
 구성 정책을 테스트 하려면 **ALWAYS ON VPN Users** 그룹에 추가한 사용자로 Windows 10 클라이언트 컴퓨터에 로그인 한 후 Intune과 동기화 합니다.
 
-1.  시작 메뉴에서 **설정**을 클릭 합니다.
+1.  시작 메뉴에서 **설정**을 클릭합니다.
 
 2.  설정에서 **계정**을 클릭 하 고 **회사 또는 학교 액세스**를 클릭 합니다.
 
@@ -934,7 +934,7 @@ VPN 장치 구성 정책을 만들어 그룹에 추가 된 모든 사용자에 �
 
 Always On VPN 배포를 완료 했습니다.  구성할 수 있는 다른 기능에 대해서는 아래 표를 참조 하세요.
 
-|원하는 경우  |다음을 참조 하세요.  |
+|다음을 원하는 경우...  |다음을 참조 하세요.  |
 |---------|---------|
-|VPN에 대 한 조건부 액세스 구성    |[7 단계. 필드 Azure AD를 사용 하 여 VPN 연결에 대 한 조건부 액세스 구성](../../ad-ca-vpn-connectivity-windows10.md):이 단계에서는 권한 있는 VPN 사용자가 [Azure Active Directory (Azure ad) 조건부 액세스](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)를 사용 하 여 리소스에 액세스 하는 방법을 미세 조정할 수 있습니다. Vpn (가상 사설망) 연결에 대 한 Azure AD 조건부 액세스를 사용 하 여 VPN 연결을 보호할 수 있습니다. 조건부 액세스는 Azure AD(Azure Active Directory)에 연결된 애플리케이션에 대한 액세스 규칙을 만드는 데 사용되는 정책 기반 평가 엔진입니다.         |
+|VPN에 대 한 조건부 액세스 구성    |[7 단계. 필드 Azure AD를 사용 하 여 VPN 연결에 대 한 조건부 액세스 구성](../../ad-ca-vpn-connectivity-windows10.md):이 단계에서는 권한 있는 VPN 사용자가 [Azure Active Directory (Azure ad) 조건부 액세스](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)를 사용 하 여 리소스에 액세스 하는 방법을 미세 조정할 수 있습니다. Vpn (가상 사설망) 연결에 대 한 Azure AD 조건부 액세스를 사용 하 여 VPN 연결을 보호할 수 있습니다. 조건부 액세스는 모든 Azure Active Directory (Azure AD) 연결 된 응용 프로그램에 대 한 액세스 규칙을 만들 수 있는 정책 기반 평가 엔진입니다.         |
 |고급 VPN 기능에 대 한 자세한 정보  |[고급 Vpn 기능](always-on-vpn-adv-options.md#advanced-vpn-features):이 페이지에서는 Vpn 트래픽 필터를 사용 하도록 설정 하는 방법, 앱 트리거를 사용 하 여 자동 vpn 연결을 구성 하는 방법 및 Azure AD에서 발급 한 인증서를 사용 하 여 클라이언트에서 vpn 연결만 허용 하도록 NPS를 구성 하는 방법을 설명 합니다.        |
