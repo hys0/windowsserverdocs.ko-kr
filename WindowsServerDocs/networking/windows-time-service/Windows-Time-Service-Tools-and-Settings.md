@@ -7,12 +7,12 @@ ms.date: 02/24/2020
 ms.topic: article
 ms.prod: windows-server
 ms.technology: networking
-ms.openlocfilehash: 2f6ba34381e813247d0838853f688abf13fbd2fa
-ms.sourcegitcommit: 1d83ca198c50eef83d105151551c6be6f308ab94
+ms.openlocfilehash: 76ec8a817f0c500380c9bef6fc1ee7eb8dddc105
+ms.sourcegitcommit: 319796ec327530c9656ac103b89bd48cc8d373f6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82605543"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83790569"
 ---
 # <a name="windows-time-service-tools-and-settings"></a>Windows 시간 서비스 도구 및 설정
 
@@ -87,6 +87,15 @@ W32tm /query /computer:contosoW1 /configuration
 ```
 
 이 명령의 출력은 Windows 시간 클라이언트에 대해 설정된 구성 매개 변수 목록입니다.
+
+> [!IMPORTANT]  
+> [Windows Server 2016은 시간 동기화 알고리즘](https://aka.ms/WS2016Time)을 RFC 사양에 맞게 개선했습니다. 따라서 로컬 Windows Time 클라이언트가 여러 피어를 가리키도록 설정하려면 세 개 이상의 다른 시간 서버를 준비하는 것이 좋습니다.
+>  
+> 시간 서버가 두 대뿐인 경우 **UseAsFallbackOnly** 플래그(0x2)를 지정하여 시간 서버 중 하나의 우선 순위를 낮춰야 합니다. 예를 들어, clock.adatum.com보다 ntpserver.contoso.com의 우선 순위를 높게 지정하려면 다음 명령을 실행합니다.
+> ```cmd
+> w32tm /config /manualpeerlist:"ntpserver.contoso.com,0x8 clock.adatum.com,0xa" /syncfromflags:manual /update
+> ```
+> 지정된 플래그의 의미는 ["HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Parameters" 하위 키 항목](#parameters)을 참조하세요.
 
 ## <a name="using-group-policy-to-configure-the-windows-time-service"></a>그룹 정책을 사용하여 Windows 시간 서비스 구성
 

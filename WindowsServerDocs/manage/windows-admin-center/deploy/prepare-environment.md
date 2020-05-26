@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.date: 06/07/2019
 ms.localizationpriority: medium
 ms.prod: windows-server
-ms.openlocfilehash: 7a4dacd611741942e874e831fd9598aeda5e97b3
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 7b42db8c0be5e1a447ad0a3b794b07672c164514
+ms.sourcegitcommit: 7116460855701eed4e09d615693efa4fffc40006
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "81269280"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83433147"
 ---
 # <a name="prepare-your-environment-for-windows-admin-center"></a>Windows Admin Center에 대한 환경 준비
 
@@ -35,7 +35,7 @@ Windows Admin Center에는 기본적으로 Windows Server 2012 및 2012 R2에 �
 
 WMF가 설치되어 있는지, 그리고 버전이 5.1 이상인지 확인하려면 PowerShell에 `$PSVersiontable`을 입력합니다.
 
-설치되어있지 않은 경우 [WMF 5.1을 다운로드하여 설치](https://docs.microsoft.com/powershell/wmf/setup/install-configure)할 수 있습니다.
+설치되어있지 않은 경우 [WMF 5.1을 다운로드하여 설치](https://docs.microsoft.com/powershell/scripting/wmf/setup/install-configure)할 수 있습니다.
 
 ## <a name="prepare-microsoft-hyper-v-server-2016"></a>Microsoft Hyper-V Server 2016 준비
 
@@ -91,9 +91,9 @@ Windows Admin Center로 Microsoft Hyper-V Server 2012 R2를 관리하려면 이�
 
 Windows Admin Center에는 기본적으로 Microsoft Hyper-V Server 2012 R2에 포함되지 않은 PowerShell 기능이 필요합니다. Windows Admin Center로 Microsoft Hyper-V Server 2012 R2를 관리하려면 WMF 버전 5.1 이상을 설치해야 합니다.
 
-WMF가 설치되어 있는지, 그리고 버전이 5.1 이상인지 확인하려면 PowerShell에 `$PSVersiontable`을 입력합니다. 
+WMF가 설치되어 있는지, 그리고 버전이 5.1 이상인지 확인하려면 PowerShell에 `$PSVersiontable`을 입력합니다.
 
-설치가 되어 있지 않는 경우에 [WMF 5.1을 다운로드](https://docs.microsoft.com/powershell/wmf/setup/install-configure)할 수 있습니다.
+설치가 되어 있지 않는 경우에 [WMF 5.1을 다운로드](https://docs.microsoft.com/powershell/scripting/wmf/setup/install-configure)할 수 있습니다.
 
 ### <a name="step-2-enable-remote-management"></a>2단계: 원격 관리를 사용하도록 설정
 

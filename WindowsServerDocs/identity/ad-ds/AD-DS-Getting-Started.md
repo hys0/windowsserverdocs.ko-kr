@@ -8,16 +8,16 @@ ms.date: 08/07/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: b9e8d4d2169ef1af5406dc3d6a7deff9828ee501
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 4880145d385498e6191937272495ddf8def07ba5
+ms.sourcegitcommit: 599162b515c50106fd910f5c180e1a30bbc389b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80825596"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83775332"
 ---
 # <a name="ad-ds-getting-started"></a>AD DS 시작
 
->적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Active Directory는 네트워크의 개체에 대한 정보를 저장하고 관리자 및 사용자가 이러한 정보를 쉽게 찾아서 사용할 수 있게 해줍니다. Active Directory는 논리적이고 계층적인 디렉터리 정보 구성을 위한 기초로 구조화된 데이터 저장소를 사용합니다.  
   

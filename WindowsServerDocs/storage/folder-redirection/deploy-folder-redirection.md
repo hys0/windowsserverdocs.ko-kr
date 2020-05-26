@@ -8,12 +8,12 @@ ms.author: jgerend
 ms.technology: storage
 ms.date: 06/06/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: e8e6e5a29c75c117f6faa3c1d1b3f288582d81a2
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 4a53f28867904c163346fb7943790ff0659ab006
+ms.sourcegitcommit: 29f7a4811b4d36d60b8b7c55ce57d4ee7d52e263
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80855886"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83716878"
 ---
 # <a name="deploy-folder-redirection-with-offline-files"></a>오프라인 파일을 사용한 폴더 리디렉션 배포
 
@@ -199,6 +199,6 @@ Windows Server 2019, Windows Server 2016 및 Windows Server 2012에서 파일 �
 * [폴더 리디렉션, 오프라인 파일 및 로밍 사용자 프로필](folder-redirection-rup-overview.md)
 * [폴더 리디렉션 및 로밍 사용자 프로필용 기본 컴퓨터 배포](deploy-primary-computers.md)
 * [고급 오프라인 파일 기능 사용](enable-always-offline.md)
-* [복제된 사용자 프로필 데이터에 대한 Microsoft의 지원 정책](https://blogs.technet.microsoft.com/askds/2010/09/01/microsofts-support-statement-around-replicated-user-profile-data/)
+* [복제된 사용자 프로필 데이터에 대한 Microsoft의 지원 정책](https://docs.microsoft.com/archive/blogs/askds/microsofts-support-statement-around-replicated-user-profile-data)
 * [DISM을 사용하여 앱을 테스트용으로 로드](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh852635(v=win.10)>)
 * [Windows 런타임 기반 앱의 패키징, 배포 및 쿼리 문제 해결](https://msdn.microsoft.com/library/windows/desktop/hh973484.aspx)
