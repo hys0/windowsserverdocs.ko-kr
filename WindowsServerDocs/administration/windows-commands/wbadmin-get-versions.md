@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 542f65b7d87eacb102f64fb4103e6c684df4faa5
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 1eabc053e5cb1bdd517cfb02a13e955707ffacf6
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720149"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83820513"
 ---
 # <a name="wbadmin-get-versions"></a>wbadmin get 버전
 
@@ -49,13 +49,13 @@ H 볼륨에 저장 되어 있는 사용 가능한 백업 목록을 보려면 다
 ```
 wbadmin get versions -backupTarget:h:
 ```
-컴퓨터 server01의 원격 공유 폴더 \\ \\servername\share에 저장 된 사용 가능한 백업 목록을 보려면 다음을 입력 합니다.
+컴퓨터 server01의 원격 공유 폴더 servername\share에 저장 된 사용 가능한 백업 목록을 보려면 \\ \\ 다음을 입력 합니다.
 ```
 wbadmin get versions -backupTarget:\\servername\share -machine:server01
 ```
 
 ## <a name="additional-references"></a>추가 참조
 
--   - [명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
 -   [Get WBBackupTarget](https://technet.microsoft.com/library/jj902447.aspx) cmdlet

@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e3355aa310bb9919b5218052878d94416f577381
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: bee9dabe0e9344c7870e53ed34e4c9dd057cfc42
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82723838"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83820843"
 ---
 # <a name="mstsc"></a>mstsc
 
@@ -37,7 +37,7 @@ mstsc.exe /migrate
 |        매개 변수        |                                                         설명                                                         |
 |-------------------------|-----------------------------------------------------------------------------------------------------------------------------|
 |    <Connection File>    |                                   연결에.rdp 파일의 이름을 지정합니다.                                    |
-|  /v: <Server\>[: <Port\>] |                원격 컴퓨터와 선택적으로 연결 하려면 포트 번호를 지정 합니다.                 |
+|  /v: <Server \> [: <Port \> ] |                원격 컴퓨터와 선택적으로 연결 하려면 포트 번호를 지정 합니다.                 |
 |         /admin          |                                   서버 관리에 대 한 세션에 연결할 수 있습니다.                                   |
 |           /f            |                                    전체 화면 모드에서 원격 데스크톱 연결를 시작 합니다.                                    |
 |       /w<Width>        |                                      원격 데스크톱 창의 너비를 지정합니다.                                      |
@@ -63,5 +63,5 @@ mstsc.exe /migrate
     ```
 
 ## <a name="additional-references"></a>추가 참조
--   - [명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)
 -   [원격 데스크톱 서비스(터미널 서비스) 명령 참조](remote-desktop-services-terminal-services-command-reference.md)

@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ce7d1805a98a3029ce9b83a1b475ecd8bdb0a4ab
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 34fc591e4b6903e67873cbce39e1f1080955d6c1
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82724052"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83820760"
 ---
 # <a name="manage-bde-upgrade"></a>manage-bde: upgrade
 
@@ -47,6 +47,6 @@ manage-bde –upgrade C:
 
 ## <a name="additional-references"></a>추가 참조
 
--   - [명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)
 -   [Manage-bde](manage-bde.md)
 -   [Windows Vista에서 BitLocker로 보호 된 컴퓨터를 Windows 7로 업그레이드](https://technet.microsoft.com/library/ee424325(v=ws.10).aspx)

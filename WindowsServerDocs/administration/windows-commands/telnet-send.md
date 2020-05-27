@@ -9,24 +9,24 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 432401bbe2050a7954967a73b5ba8abeee5bb1d3
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 5dd4bf9828c4b71e7b2291dfd5d453c43679e059
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82721493"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83821073"
 ---
 # <a name="telnet-send"></a>텔넷: 송신
 
 > 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-텔넷 서버에 텔넷 명령을 보냅니다.   
+텔넷 서버에 텔넷 명령을 보냅니다.
 
-## <a name="syntax"></a>구문  
-```  
-sen[d] {ao | ayt | brk | esc | ip | synch | <string>} [?]  
-```  
-#### <a name="parameters"></a>매개 변수  
+## <a name="syntax"></a>구문
+```
+sen[d] {ao | ayt | brk | esc | ip | synch | <string>} [?]
+```
+#### <a name="parameters"></a>매개 변수
 
 | 매개 변수 |                     설명                      |
 |-----------|------------------------------------------------------|
@@ -39,10 +39,10 @@ sen[d] {ao | ayt | brk | esc | ip | synch | <string>} [?]
 | <string>  | 텔넷 서버에 입력 하는 모든 문자열을 보냅니다. |
 |     ?     |     이 명령과 관련 된 도움말을 표시 합니다.      |
 
-## <a name="examples"></a>예  
-그러면 텔넷 서버에 전송 됩니다.  
-```  
-sen ayt  
-```  
-## <a name="additional-references"></a>추가 참조  
--   - [명령줄 구문 키](command-line-syntax-key.md)  
+## <a name="examples"></a>예
+그러면 텔넷 서버에 전송 됩니다.
+```
+sen ayt
+```
+## <a name="additional-references"></a>추가 참조
+- [명령줄 구문 키](command-line-syntax-key.md)

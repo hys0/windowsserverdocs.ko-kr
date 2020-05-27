@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d4d81acd98a280ce110c5677f627fee8a9394e1a
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: 8551b6fc76984b06f28bdda92dcd63791721ec90
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83436958"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83821293"
 ---
 # <a name="unlodctr"></a>unlodctr
 
@@ -44,5 +44,5 @@ SMTP (Simple Mail Transfer Protocol) 서비스에 대 한 현재 성능 레지�
 unlodctr SMTPSVC
 ```
 ## <a name="additional-references"></a>추가 참조
--   - [명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)
 

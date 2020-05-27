@@ -1,5 +1,5 @@
 ---
-title: 별칭 추가
+title: add alias
 description: 별칭 환경에 별칭을 추가 하는 add alias 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
@@ -9,30 +9,30 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 807981c3581eea328291f2389e08065edbd280d3
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 66301a39a1e969e270b42b5ce92a73392a134357
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719025"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83819663"
 ---
-# <a name="add-alias"></a>별칭 추가
+# <a name="add-alias"></a>add alias
 
 별칭 환경에 별칭을 추가합니다. 매개 변수 없이 사용 하는 경우 **별칭 추가** 명령 프롬프트에서 도움말을 표시 합니다. 별칭 메타 데이터 파일에 저장 되 고으로 로드 되는 **메타 데이터를 로드** 명령입니다.
 
 ## <a name="syntax"></a>구문
 
 ```
-add alias <AliasName> <AliasValue>
+add alias <aliasname> <aliasvalue>
 ```
 
 ### <a name="parameters"></a>매개 변수
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `<AliasName>` | 별칭의 이름을 지정합니다. |
-| `<AliasValue>` | 별칭 값을 지정합니다. |
-| `/?` | 명령 프롬프트에 도움말을 표시합니다. |
+| `<aliasname>` | 별칭의 이름을 지정합니다. |
+| `<aliasvalue>` | 별칭 값을 지정합니다. |
+| `? | 명령 프롬프트에 도움말을 표시합니다. |
 
 ## <a name="examples"></a>예
 
@@ -42,14 +42,14 @@ add alias <AliasName> <AliasValue>
 list shadows all
 ```
 
-다음 발췌에서는 기본 별칭 VSS_SHADOW_x가 할당 된 섀도 복사본을 보여 줍니다.
+다음 발췌에서는 기본 별칭 *VSS_SHADOW_x*가 할당 된 섀도 복사본을 보여 줍니다.
 
 ```
 * Shadow Copy ID = {ff47165a-1946-4a0c-b7f4-80f46a309278}
 %VSS_SHADOW_1%
 ```
 
-이 섀도 복사본에 system1 파티션이나 라는 이름의 새 별칭을 할당 하려면 다음을 입력 합니다.
+이름이 *System1* 인 새 별칭을이 섀도 복사본에 할당 하려면 다음을 입력 합니다.
 
 ```
 add alias System1 %VSS_SHADOW_1%

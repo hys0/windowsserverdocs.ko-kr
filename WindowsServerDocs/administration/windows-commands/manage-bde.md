@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 567e0ed45f6bef42e82c3a68b3c0cbbb352b12d9
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 4f103a8277f84487e2434034a149e056a8deee57
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82724038"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83820783"
 ---
 # <a name="manage-bde"></a>manage-bde
 
@@ -25,7 +25,7 @@ ms.locfileid: "82724038"
 ## <a name="syntax"></a>구문
 
 ```
-manage-bde [-status] [–on] [–off] [–pause] [–resume] [–lock] [–unlock] [–autounlock] [–protectors] [–tpm] 
+manage-bde [-status] [–on] [–off] [–pause] [–resume] [–lock] [–unlock] [–autounlock] [–protectors] [–tpm]
 [–SetIdentifier] [-ForceRecovery] [–changepassword] [–changepin] [–changekey] [-KeyPackage] [–upgrade] [-WipeFreeSpace] [{-?|/?}] [{-help|-h}]
 ```
 
@@ -71,5 +71,5 @@ manage-bde –unlock E: -recoverypassword 111111-222222-333333-444444-555555-666
 
 ## <a name="additional-references"></a>추가 참조
 
--   - [명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)
 -   [명령줄을 사용 하 여 BitLocker를 사용 하도록 설정](https://technet.microsoft.com/library/dd894351(v=ws.10).aspx)

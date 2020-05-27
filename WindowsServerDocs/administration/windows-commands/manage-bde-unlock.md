@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3fd303116e101c8c8503d220ba382d6cdd994ad3
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: cb1fc1c14a29b8fed515adb0f74ae99ff5d76cf4
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82724063"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83820743"
 ---
 # <a name="manage-bde-unlock"></a>manage-bde: unlock
 
@@ -55,5 +55,5 @@ manage-bde –unlock E: -recoverykey F:\Backupkeys\recoverykey.bek
 
 ## <a name="additional-references"></a>추가 참조
 
--   - [명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)
 -   [Manage-bde](manage-bde.md)

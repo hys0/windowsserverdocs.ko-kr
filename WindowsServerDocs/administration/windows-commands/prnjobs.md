@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: a40a8cbc3c8b13c99cc440b8de797898a5a6249b
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 002098ba64e97c243d1cb53813b9fa858d32c752
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82722837"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83821243"
 ---
 # <a name="prnjobs"></a>prnjobs
 
@@ -24,7 +24,7 @@ ms.locfileid: "82722837"
 
 ## <a name="syntax"></a>구문
 ```
-cscript Prnjobs {-z | -m | -x | -l | -?} [-s <ServerName>] 
+cscript Prnjobs {-z | -m | -x | -l | -?} [-s <ServerName>]
 [-p <printerName>] [-j <JobID>] [-u <UserName>] [-w <Password>]
 ```
 
@@ -36,14 +36,14 @@ cscript Prnjobs {-z | -m | -x | -l | -?} [-s <ServerName>]
 |              -M              |                                                                                                                                                                지정 된 인쇄 작업을 다시 시작 되는 **-j** 매개 변수입니다.                                                                                                                                                                 |
 |              -X              |                                                                                                                                                                지정 된 인쇄 작업을 취소는 **-j** 매개 변수입니다.                                                                                                                                                                 |
 |              -l              |                                                                                                                                                                        인쇄 큐에 있는 모든 인쇄 작업을 나열 합니다.                                                                                                                                                                         |
-|       -s \<ServerName>       |                                                                                                                  프린터를 관리 하려면를 호스트 하는 원격 컴퓨터의 이름을 지정 합니다. 컴퓨터를 지정 하지 않으면 로컬 컴퓨터가 사용 됩니다.                                                                                                                  |
-|      -p \<printerName>       |                                                                                                                                                           관리 하려는 프린터의 이름을 지정 합니다. 필수 사항입니다.                                                                                                                                                            |
-|         -j \<JobID>          |                                                                                                                                                                인쇄 작업 취소 하 시겠습니까 (ID 번호)으로 지정 합니다.                                                                                                                                                                 |
-| -u \<UserName>-w<Password> | 프린터를 관리 하려면를 호스트 하는 컴퓨터에 연결할 수 있는 권한이 있는 계정을 지정 합니다. 대상 컴퓨터의 로컬 관리자 그룹의 모든 구성원이 이러한 권한이 있지만 사용 권한을 다른 사용자에 게 부여 될 수도 있습니다. 계정을 지정 하지 않으면, 작동 하려면 명령에 대 한 이러한 사용 권한이 있는 계정으로 로그온 해야 합니다. |
+|       -s \< ServerName>       |                                                                                                                  프린터를 관리 하려면를 호스트 하는 원격 컴퓨터의 이름을 지정 합니다. 컴퓨터를 지정 하지 않으면 로컬 컴퓨터가 사용 됩니다.                                                                                                                  |
+|      -p \< printerName>       |                                                                                                                                                           관리 하려는 프린터의 이름을 지정 합니다. 필수 사항입니다.                                                                                                                                                            |
+|         -j \< JobID>          |                                                                                                                                                                인쇄 작업 취소 하 시겠습니까 (ID 번호)으로 지정 합니다.                                                                                                                                                                 |
+| -u \< UserName>-w<Password> | 프린터를 관리 하려면를 호스트 하는 컴퓨터에 연결할 수 있는 권한이 있는 계정을 지정 합니다. 대상 컴퓨터의 로컬 관리자 그룹의 모든 구성원이 이러한 권한이 있지만 사용 권한을 다른 사용자에 게 부여 될 수도 있습니다. 계정을 지정 하지 않으면, 작동 하려면 명령에 대 한 이러한 사용 권한이 있는 계정으로 로그온 해야 합니다. |
 |              /?              |                                                                                                                                                                           명령 프롬프트에 도움말을 표시합니다.                                                                                                                                                                            |
 
 ## <a name="remarks"></a>설명
--   **Prnjobs.vbs** 명령은%windir%\system32\ printing_Admin_Scripts\\ <language> 디렉터리에 있는 Visual Basic 스크립트입니다. 이 명령을 사용 하려면 명령 프롬프트에서 **cscript** 다음에 prnjobs.vbs 파일의 전체 경로를 입력 하거나 디렉터리를 적절 한 폴더로 변경 합니다. 다음은 그 예입니다. 
+-   **Prnjobs.vbs** 명령은%windir%\system32\ printing_Admin_Scripts 디렉터리에 있는 Visual Basic 스크립트입니다 \\ <language> . 이 명령을 사용 하려면 명령 프롬프트에서 **cscript** 다음에 prnjobs.vbs 파일의 전체 경로를 입력 하거나 디렉터리를 적절 한 폴더로 변경 합니다. 다음은 그 예입니다.
     ```
     cscript %WINdir%\System32\printing_Admin_Scripts\en-US\prnjobs.vbs
     ```
@@ -61,5 +61,5 @@ cscript prnjobs.vbs -l -p colorprinter_2
 
 ## <a name="additional-references"></a>추가 참조
 
--   - [명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)
 -   [인쇄 명령 참조](print-command-reference.md)

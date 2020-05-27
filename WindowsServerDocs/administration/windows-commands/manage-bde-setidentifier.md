@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: dec19003f9a3421cfd2c73ba892f68aebfb8e133
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: f3e0b553c324099ed3f80c158a5f14d9a31e4d54
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82724090"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83820613"
 ---
 # <a name="manage-bde-setidentifier"></a>manage-bde: setidentifier
 
@@ -47,6 +47,6 @@ manage-bde –setidentifier C:
 
 ## <a name="additional-references"></a>추가 참조
 
--   - [명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)
 -   [Manage-bde](manage-bde.md)
 -   [BitLocker와 함께 데이터 복구 에이전트를 사용합니다.](https://technet.microsoft.com/library/dd875560(WS.10).aspx)

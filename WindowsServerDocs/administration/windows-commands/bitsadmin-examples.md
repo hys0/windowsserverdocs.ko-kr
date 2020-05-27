@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 05/31/2018
-ms.openlocfilehash: 2fcf7d3716ae45c24510b433ab125551a6d04c85
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 1db9dd387d7b9cc39c582ce79e5163c83579b613
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718205"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83819633"
 ---
 # <a name="bitsadmin-examples"></a>bitsadmin examples
 
-다음 예제에서는 `bitsadmin` 도구를 사용 하 여 가장 일반적인 작업을 수행 하는 방법을 보여 줍니다.
+다음 예제에서는 도구를 사용 하 여 가장 일반적인 작업을 수행 하는 방법을 보여 줍니다 `bitsadmin` .
 
 ## <a name="transfer-a-file"></a>파일 전송
 
@@ -64,7 +64,7 @@ bitsadmin /resume myDownloadJob
 
 ## <a name="determine-the-progress-of-the-download-job"></a>다운로드 작업의 진행 상황 확인
 
-**/Sinfo** 스위치는 작업 상태 및 전송 된 파일 수와 바이트 수를 반환 합니다. 상태가로 `TRANSFERRED`표시 되 면 BITS가 작업의 모든 파일을 성공적으로 전송 했음을 의미 합니다. 또한 **/verbose** 인수를 추가 하 여 작업에 대 한 전체 세부 정보를 가져오고, **/list** 또는 **/cmonitor** 를 추가 하 여 전송 큐의 모든 작업을 가져올 수 있습니다.
+**/Sinfo** 스위치는 작업 상태 및 전송 된 파일 수와 바이트 수를 반환 합니다. 상태가로 표시 되 면 `TRANSFERRED` BITS가 작업의 모든 파일을 성공적으로 전송 했음을 의미 합니다. 또한 **/verbose** 인수를 추가 하 여 작업에 대 한 전체 세부 정보를 가져오고, **/list** 또는 **/cmonitor** 를 추가 하 여 전송 큐의 모든 작업을 가져올 수 있습니다.
 
 작업 상태를 반환 하려면:
 
@@ -76,13 +76,13 @@ bitsadmin /info myDownloadJob /verbose
 
 ## <a name="complete-the-download-job"></a>다운로드 작업 완료
 
-상태가 다음으로 `TRANSFERRED`변경 된 후 작업을 완료 하려면:
+상태가 다음으로 변경 된 후 작업을 완료 하려면 `TRANSFERRED` :
 
 ```
 bitsadmin /complete myDownloadJob
 ```
 
-작업의 파일을 `/complete` 사용할 수 있게 하려면 먼저 스위치를 실행 해야 합니다. 여러 작업에서 *Mydownloadjob* 을 이름으로 사용 하는 경우 작업의 GUID를 사용 하 여 완료를 위해 고유 하 게 식별 해야 합니다.
+`/complete`작업의 파일을 사용할 수 있게 하려면 먼저 스위치를 실행 해야 합니다. 여러 작업에서 *Mydownloadjob* 을 이름으로 사용 하는 경우 작업의 GUID를 사용 하 여 완료를 위해 고유 하 게 식별 해야 합니다.
 
 ## <a name="monitor-jobs-in-the-transfer-queue-using-the-list-switch"></a>/List 스위치를 사용 하 여 전송 큐의 작업 모니터링
 
@@ -142,7 +142,7 @@ RETRY DELAY: 600 NO PROGRESS TIMEOUT: 1209600 ERROR COUNT: 0
 PROXY USAGE: PRECONFIG PROXY LIST: NULL PROXY BYPASS LIST: NULL
 ERROR FILE:    https://downloadsrv/10mb.zip -> c:\10mb.zip
 ERROR CODE:    0x80072ee7 - The server name or address could not be resolved
-ERROR CONTEXT: 0x00000005 - The error occurred while the remote file was being 
+ERROR CONTEXT: 0x00000005 - The error occurred while the remote file was being
 processed.
 DESCRIPTION:
 JOB FILES:

@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 08/06/2018
-ms.openlocfilehash: e01049a5fb3dc419e219fe4ec8b11dcdc790f919
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: c248a5d7c6a25ccb6fa2917358223fd255a3c600
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82724115"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83820633"
 ---
 # <a name="manage-bde-protectors"></a>manage-bde: 보호기
 
@@ -45,8 +45,8 @@ manage-bde -protectors [{-get|-add|-delete|-disable|-enable|-adbackup|-aadbackup
 ### <a name="-add-syntax-and-parameters"></a><a name=BKMK_addprotectors></a>-구문 및 매개 변수를 추가 합니다.
 ```
 manage-bde  -protectors  -add [<Drive>] [-forceupgrade] [-recoverypassword <NumericalPassword>] [-recoverykey <pathToExternalKeydirectory>]
-[-startupkey <pathToExternalKeydirectory>] [-certificate {-cf <pathToCertificateFile>|-ct <CertificateThumbprint>}] [-tpm] [-tpmandpin] 
-[-tpmandstartupkey <pathToExternalKeydirectory>] [-tpmandpinandstartupkey <pathToExternalKeydirectory>] [-password][-adaccountorgroup <securityidentifier> [-computername <Name>] 
+[-startupkey <pathToExternalKeydirectory>] [-certificate {-cf <pathToCertificateFile>|-ct <CertificateThumbprint>}] [-tpm] [-tpmandpin]
+[-tpmandstartupkey <pathToExternalKeydirectory>] [-tpmandpinandstartupkey <pathToExternalKeydirectory>] [-password][-adaccountorgroup <securityidentifier> [-computername <Name>]
 [{-?|/?}] [{-help|-h}]
 ```
 
@@ -74,7 +74,7 @@ manage-bde  -protectors  -add [<Drive>] [-forceupgrade] [-recoverypassword <Nume
 
 ### <a name="-delete-syntax-and-parameters"></a><a name=BKMK_deleteprotectors></a>-구문 및 매개 변수를 삭제 합니다.
 ```
-manage-bde  -protectors  -delete <Drive> [-type {recoverypassword|externalkey|certificate|tpm|tpmandstartupkey|tpmandpin|tpmandpinandstartupkey|Password|Identity}] 
+manage-bde  -protectors  -delete <Drive> [-type {recoverypassword|externalkey|certificate|tpm|tpmandstartupkey|tpmandpin|tpmandpinandstartupkey|Password|Identity}]
 [-id <KeyProtectorID>] [-computername <Name>] [{-?|/?}] [{-help|-h}]
 ```
 
@@ -90,7 +90,7 @@ manage-bde  -protectors  -delete <Drive> [-type {recoverypassword|externalkey|ce
 |       tpmandpin        |                                    드라이브와 연결 된 모든 TPM 및 PIN 기반 키 보호기를 삭제 해야 함을 지정 합니다.                                    |
 | tpmandpinandstartupkey |                             드라이브와 연결 된 모든 TPM, PIN 및 시작 키 보호기를 삭제 해야 함을 지정 합니다.                             |
 |        password        |                                        드라이브와 연결 된 모든 암호 키 보호기를 삭제 해야 함을 지정 합니다.                                         |
-|        ID        |                                        드라이브와 연결 된 모든 identity 키 보호기를 삭제 해야 함을 지정 합니다.                                         |
+|        identity        |                                        드라이브와 연결 된 모든 identity 키 보호기를 삭제 해야 함을 지정 합니다.                                         |
 |          -id           |                키 식별자를 사용 하 여 삭제할 키 보호기를 식별 합니다. 이 매개 변수는 다른 옵션에는 **-형식** 매개 변수입니다.                 |
 |    <KeyProtectorID>    |        삭제 하는 드라이브에는 개별 키 보호기를 식별 합니다. Id 키 보호기를 사용 하 여 표시할 수는 **관리 bde-보호기-가져오기** 명령입니다.         |
 |     -computername      | 다른 컴퓨터에서 BitLocker 보호를 수정 하는 데 manage-bde.exe를 사용 하도록 지정 합니다. 사용할 수도 있습니다 **-cn** 이 명령의 축약된 버전으로 합니다. |
@@ -134,5 +134,5 @@ manage-bde  -protectors -delete C: -type tpmandstartupkey
 manage-bde  -protectors  -adbackup C:
 ```
 ## <a name="additional-references"></a>추가 참조
--   - [명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)
 -   [manage-bde](manage-bde.md)

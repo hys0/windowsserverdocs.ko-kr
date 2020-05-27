@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3043a4af6c2ac4a6c58b973cca5abd066109eac5
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: b93ad6ceadb08f6df8390edc3fc454d951519aad
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82722045"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83821102"
 ---
 # <a name="seceditvalidate"></a>secedit: 유효성 검사
 
@@ -25,7 +25,7 @@ ms.locfileid: "82722045"
 ## <a name="syntax"></a>구문
 
 ```
-Secedit /validate <configuration file name>  
+Secedit /validate <configuration file name>
 
 ```
 
@@ -56,4 +56,4 @@ Secedit /validate secRBKcontoso.inf
 
 -   [Secedit:generaterollback](secedit-generaterollback.md)
 -   [Secedit](secedit.md)
--   - [명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

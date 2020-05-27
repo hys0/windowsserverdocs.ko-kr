@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: de9ce6b64f996e50fb85a8c612104bc6851ebdfd
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 82a399284862ef59f417efa0b6f17ab6e8c4cb71
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720138"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83820493"
 ---
 # <a name="wbadmin-restore-catalog"></a>wbadmin 복원 카탈로그
 
@@ -49,13 +49,13 @@ D: 디스크에 저장 된 백업에서 카탈로그를 복원 하려면 다음�
 ```
 wbadmin restore catalog -backupTarget:d
 ```
-Server01의 공유 폴더 \\ \\servername\share에 저장 된 백업에서 카탈로그를 복원 하려면 다음을 입력 합니다.
+Server01의 공유 폴더 servername\share에 저장 된 백업에서 카탈로그를 복원 하려면 \\ \\ 다음을 입력 합니다.
 ```
 wbadmin restore catalog -backupTarget:\\servername\share -machine:server01
 ```
 
 ## <a name="additional-references"></a>추가 참조
 
--   - [명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
 -   [복원 WBCatalog](https://technet.microsoft.com/library/jj902437.aspx) cmdlet

@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: 8be1897b241871bcb65126b39f201769f82f50bf
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: 6943a9762aed0a6c2ac71c73565ab49811a8e307
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83436818"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83821173"
 ---
 # <a name="pathping"></a>pathping
 
@@ -88,4 +88,4 @@ Trace complete.
 주소 열에서 세로 막대 ()로 식별 되는 링크에 대해 표시 되는 손실 율은 **|** 경로에서 전달 되는 패킷의 손실을 유발 하는 링크 정체를 표시 합니다. **address** IP 주소로 식별 되는 라우터에 대해 표시 되는 손실 요금은 이러한 라우터가 오버 로드 될 수 있음을 표시 합니다.
 
 ## <a name="additional-references"></a>추가 참조
--   - [명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

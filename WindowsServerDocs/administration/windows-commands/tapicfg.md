@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: a10d36c92da9fb27281a0137fbfd01e4098f51d5
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: c9b73a7b5d3a24e4fda34b772239fb987b671d06
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83437088"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83821313"
 ---
 # <a name="tapicfg"></a>tapicfg
 
@@ -133,4 +133,4 @@ tapicfg install /directory:tapifiction.testdom.microsoft.com /server:testdc.test
 tapicfg show /defaultonly
 ```
 ## <a name="additional-references"></a>추가 참조
--   - [명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

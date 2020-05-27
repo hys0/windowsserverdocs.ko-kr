@@ -9,18 +9,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7b1dbe232ce297e987118616681b82332e81e930
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 4daea8d096e6063b984a4657536c8a2b043b5025
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82723786"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83820863"
 ---
 # <a name="netstat"></a>netstat
 
 > 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-활성 TCP 연결을 대기할 컴퓨터는 수신 대기, 이더넷 통계, IP 라우팅 테이블, (IP, ICMP, TCP 및 UDP 프로토콜)에 대 한 IPv4 통계 및 IPv6 (에 대 한 통계는 IPv6, ICMPv6, i p v 6 통해 TCP 및 UDP IPv6 프로토콜을 통해) 포트를 표시 합니다. 매개 변수 없이 사용 **netstat** 활성 TCP 연결을 표시 합니다. 
+활성 TCP 연결을 대기할 컴퓨터는 수신 대기, 이더넷 통계, IP 라우팅 테이블, (IP, ICMP, TCP 및 UDP 프로토콜)에 대 한 IPv4 통계 및 IPv6 (에 대 한 통계는 IPv6, ICMPv6, i p v 6 통해 TCP 및 UDP IPv6 프로토콜을 통해) 포트를 표시 합니다. 매개 변수 없이 사용 **netstat** 활성 TCP 연결을 표시 합니다.
 
 ## <a name="syntax"></a>구문
 ```
@@ -42,7 +42,7 @@ netstat [-a] [-e] [-n] [-o] [-p <Protocol>] [-r] [-s] [<Interval>]
 |      /?       |                                                                                                                                 명령 프롬프트에 도움말을 표시합니다.                                                                                                                                  |
 
 ## <a name="remarks"></a>설명
--   이 명령에 사용 되는 매개 변수는 슬래시 (**-****/**) 대신 하이픈 ()을 접두사로 사용 해야 합니다.
+-   이 명령에 사용 되는 매개 변수는 **-** 슬래시 () 대신 하이픈 ()을 접두사로 사용 해야 합니다 **/** .
 -   **netstat** 는 다음에 대 한 통계를 제공 합니다.
     -   프로토콜 (TCP 또는 UDP) 프로토콜의 이름입니다.
     -   로컬 주소 로컬 컴퓨터의 IP 주소와 사용 중인 포트 번호입니다. IP 주소에 해당 하는 로컬 컴퓨터의 이름 및 포트의 이름을 확인할 수는 **-n** 매개 변수를 지정 합니다. 포트 연결이 아직 설정 되지 포트 번호는 별표 (*)로 표시 됩니다.
@@ -69,4 +69,4 @@ netstat -n -o
 ```
 
 ## <a name="additional-references"></a>추가 참조
--   - [명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

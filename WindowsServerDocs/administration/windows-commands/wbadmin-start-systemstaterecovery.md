@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: fa111934f93bf7fea5aade1f39b4fc6a014d6c9e
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: edbd6acefe2ef921b9325de4808753d5929efd1e
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82725873"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83821383"
 ---
 # <a name="wbadmin-start-systemstaterecovery"></a>wbadmin 시작 systemstaterecovery
 
@@ -70,17 +70,17 @@ wbadmin start systemstaterecovery
 
 ## <a name="examples"></a>예
 
-- 03/31/2013에서 오전 9:00에 백업 시스템 상태 복구를 수행 하려면 다음을 입력 합니다.  
+- 03/31/2013에서 오전 9:00에 백업 시스템 상태 복구를 수행 하려면 다음을 입력 합니다.
   ```
   wbadmin start systemstaterecovery -version:03/31/2013-09:00
-  ```  
-- 04/30/2013에서 오전 9:00에 백업 시스템 상태 복구를 수행 하려면 server01에 대 한 공유 리소스 \\ \\servername\share에 저장 된 다음을 입력 합니다.  
+  ```
+- 04/30/2013에서 오전 9:00에 백업 시스템 상태 복구를 수행 하려면 \\ \\ server01에 대 한 공유 리소스 servername\share에 저장 된 다음을 입력 합니다.
   ```
   wbadmin start systemstaterecovery -version:04/30/2013-09:00 -backupTarget:\\servername\share -machine:server01
   ```
 
 ## <a name="additional-references"></a>추가 참조
 
--   - [명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
 -   [시작 WBSystemStateRecovery](https://technet.microsoft.com/library/jj902449.aspx) cmdlet

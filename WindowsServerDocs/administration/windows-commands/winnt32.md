@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 00a45890f9b579c0261a074dace707a9e5c769bb
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: 81068055a23147ad6fafa1c9fa27a63174d52574
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83436808"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83820931"
 ---
 # <a name="winnt32"></a>winnt32
 
@@ -71,5 +71,5 @@ Itanium 기반 컴퓨터에서는 **winnt32** 확장 가능 펌웨어 인터페�
 사용 하는 **/unattend** 설치를 자동화 하는 명령줄 옵션은 읽기 있으며는 Microsoft 라이선스 계약에 대 한 Windows Server 2003을 허용 합니다. 자신의 소유가 아닌 조직을 대신 하 여 Windows Server 2003을 설치 하려면이 명령줄 옵션을 사용 하기 전에 확인 해야 하는 최종 사용자 (여부는 개인 또는 단일 엔터티)에서, 읽기, 받고 해당 제품에 대 한 Microsoft 사용권 계약의 조건에 동의 합니다.  Oem은 최종 사용자에 게 판매 되는 컴퓨터에이 키를 지정 하지 않을 수 있습니다.
 
 ## <a name="additional-references"></a>추가 참조
--   - [명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)
 

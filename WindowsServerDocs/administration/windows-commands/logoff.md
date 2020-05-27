@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 86acf174bfdebdeab6db7476713dd2d91f21b1a0
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 3daecbc2f4034070a5b805c75a6b647ba168e2c5
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82724261"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83820543"
 ---
 # <a name="logoff"></a>로그오프
 
@@ -61,5 +61,5 @@ logoff [<SessionName> | <SessionID>] [/server:<ServerName>] [/v]
   ```
 
 ## <a name="additional-references"></a>추가 참조
--   - [명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)
 -   [원격 데스크톱 서비스(터미널 서비스) 명령 참조](remote-desktop-services-terminal-services-command-reference.md)

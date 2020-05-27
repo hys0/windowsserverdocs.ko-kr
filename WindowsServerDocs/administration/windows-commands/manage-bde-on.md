@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 55f9dc446b17b8e61655686b9f4b6259b12dafc9
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 471bea3946aff39689ad219585d10c2d43f99a93
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82724132"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83820653"
 ---
 # <a name="manage-bde-on"></a>manage-bde: on
 
@@ -27,7 +27,7 @@ ms.locfileid: "82724132"
 ```
 manage-bde –on <Drive> {[-recoveryPassword <NumericalPassword>]|[-recoverykey <PathToExternalDirectory>]|[-startupkey <PathToExternalKeyDirectory>]|[-certificate]|
 [-tpmandpin]|[-tpmandpinandstartupkey <PathToExternalKeyDirectory>]|[-tpmandstartupkey <PathToExternalKeyDirectory>]|[-password]|[-ADAccountOrGroup <Domain\Account>]}
-[-UsedSpaceOnly][-encryptionmethod {aes128_diffuser|aes256_diffuser|aes128|aes256}] [-skiphardwaretest] [-discoveryvolumetype <FileSystemType>] [-ForceEncryptionType <type>] [-RemoveVolumeShadowCopies][-computername <Name>] 
+[-UsedSpaceOnly][-encryptionmethod {aes128_diffuser|aes256_diffuser|aes128|aes256}] [-skiphardwaretest] [-discoveryvolumetype <FileSystemType>] [-ForceEncryptionType <type>] [-RemoveVolumeShadowCopies][-computername <Name>]
 [{-?|/?}] [{-help|-h}]
 ```
 
@@ -47,7 +47,7 @@ manage-bde –on <Drive> {[-recoveryPassword <NumericalPassword>]|[-recoverykey 
 |-tpmandstartupkey|운영 체제 드라이브에 대 한 TPM 및 시작 키 보호기를 추가합니다. 사용할 수도 있습니다 **-tsk** 이 명령의 축약된 버전으로 합니다.|
 |-tpmandpinandstartupkey|TPM, PIN 및 운영 체제 드라이브에 대 한 시작 키 보호기를 추가합니다. 사용할 수도 있습니다 **-tpsk** 이 명령의 축약된 버전으로 합니다.|
 |-암호|데이터 드라이브에 암호 키 보호기를 추가합니다. 사용할 수도 있습니다 **-pw** 이 명령의 축약된 버전으로 합니다.|
-|-ADAccountOrGroup|볼륨에 대 한 SID 기반 id 보호기를 추가합니다. 볼륨에서 사용자 또는 컴퓨터에 적절 한 자격 증명 하는 경우 자동으로 잠금이 해제 됩니다. 컴퓨터 계정을 지정 하는 경우 컴퓨터 이름 **$** 에를 추가 하 고 **– service** 를 지정 하 여 사용자 대신 BitLocker 서버의 콘텐츠에서 잠금 해제가 발생 하도록 지정 합니다. 사용할 수도 있습니다 **-sid** 이 명령의 축약된 버전으로 합니다.|
+|-ADAccountOrGroup|볼륨에 대 한 SID 기반 id 보호기를 추가합니다. 볼륨에서 사용자 또는 컴퓨터에 적절 한 자격 증명 하는 경우 자동으로 잠금이 해제 됩니다. 컴퓨터 계정을 지정 하는 경우 **$** 컴퓨터 이름에를 추가 하 고 **– service** 를 지정 하 여 사용자 대신 BitLocker 서버의 콘텐츠에서 잠금 해제가 발생 하도록 지정 합니다. 사용할 수도 있습니다 **-sid** 이 명령의 축약된 버전으로 합니다.|
 |-UsedSpaceOnly|사용 중인 공간만 암호화를 암호화 모드를 설정합니다. 사용 중인된 공간을 포함 하는 볼륨의 섹션을 암호화 됩니다 하지 않지만 사용 가능한 공간이 없습니다. 이 옵션을 지정 하지 않으면 모든 공간을 사용 하 고 볼륨에 여유 공간이 암호화 됩니다... 사용할 수도 있습니다 **-사용** 이 명령의 축약된 버전으로 합니다.|
 |-encryptionMethod|암호화 알고리즘 및 키 크기를 구성합니다. 사용할 수도 있습니다 **-em** 이 명령의 축약된 버전으로 합니다.|
 |-skiphardwaretest|하드웨어 테스트 없이 암호화를 시작합니다. 사용할 수도 있습니다 **-s** 이 명령의 축약된 버전으로 합니다.|
@@ -85,5 +85,5 @@ manage-bde –on C: -fet Hardware
 
 ## <a name="additional-references"></a>추가 참조
 
--   - [명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)
 -   [Manage-bde](manage-bde.md)

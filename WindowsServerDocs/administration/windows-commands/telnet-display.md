@@ -9,29 +9,29 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6d868f606a2d34d36fd2dafb83f0c3eb8352c6e3
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 79c43a6fcc81ea6832dff585bff90b1fb7f23581
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82721516"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83821333"
 ---
 # <a name="telnet-display"></a>텔넷: 표시
 
 > 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-운영 매개 변수를 표시 합니다.   
+운영 매개 변수를 표시 합니다.
 
-## <a name="syntax"></a>구문  
-```  
-d[isplay]  
-```  
-#### <a name="parameters"></a>매개 변수  
-none  
-## <a name="examples"></a>예  
-운영 매개 변수를 표시 합니다.  
-```  
-d  
-```  
-## <a name="additional-references"></a>추가 참조  
--   - [명령줄 구문 키](command-line-syntax-key.md)  
+## <a name="syntax"></a>구문
+```
+d[isplay]
+```
+#### <a name="parameters"></a>매개 변수
+없음
+## <a name="examples"></a>예
+운영 매개 변수를 표시 합니다.
+```
+d
+```
+## <a name="additional-references"></a>추가 참조
+- [명령줄 구문 키](command-line-syntax-key.md)

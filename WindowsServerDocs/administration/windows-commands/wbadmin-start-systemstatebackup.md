@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7c4ca390d910a5a38919d60421091264aa56de33
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 5de3531f19312b9d0d7969a63639db6388487bc2
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82725908"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83821183"
 ---
 # <a name="wbadmin-start-systemstatebackup"></a>wbadmin 시작 systemstatebackup
 
@@ -39,12 +39,12 @@ wbadmin start systemstatebackup
 
 |   매개 변수   |                                                                                                                                                                                                                      설명                                                                                                                                                                                                                      |
 |---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| -backupTarget | 백업을 저장할 위치를 지정 합니다. 저장소 위치에는 드라이브 문자 또는 guid 기반 볼륨 형식 ( \\ \\? \Volume{*guid*} 형식)이 필요 합니다.</br>Windows Server 2008를 실행 하는 컴퓨터에서는 공유 네트워크 폴더에 대 한 시스템 상태 백업이 지원 되지 않습니다. 서버에서 Windows server 2008 R2 이상을 실행 하는 경우에는 명령줄 **:\\\\servername\sharedFolder\\ ** 를 사용 하 여 시스템 상태 백업을 저장할 수 있습니다. |
+| -backupTarget | 백업을 저장할 위치를 지정 합니다. 저장소 위치에는 드라이브 문자 또는 GUID 기반 볼륨 형식 ( \\ \\ ? \Volume{*guid*} 형식)이 필요 합니다.</br>Windows Server 2008를 실행 하는 컴퓨터에서는 공유 네트워크 폴더에 대 한 시스템 상태 백업이 지원 되지 않습니다. 서버에서 Windows Server 2008 R2 이상을 실행 하는 경우에는 명령줄 **: \\ \\ \\ servername\sharedFolder** 를 사용 하 여 시스템 상태 백업을 저장할 수 있습니다. |
 |    -quiet     |                                                                                                                                                                                                   사용자에 게 하위 명령 프롬프트 없이 실행 됩니다.                                                                                                                                                                                                    |
 
 ## <a name="remarks"></a>설명
 
-시스템 상태 파일을 포함 하는 볼륨에 시스템 상태 백업을 저장 하는 방법에 대 한 자세한 내용은 Microsoft 기술 자료 문서 944530 () ([https://go.microsoft.com/fwlink/?LinkId=110439](https://go.microsoft.com/fwlink/?LinkId=110439)영문)을 참조 하십시오.
+시스템 상태 파일을 포함 하는 볼륨에 시스템 상태 백업을 저장 하는 방법에 대 한 자세한 내용은 Microsoft 기술 자료 문서 944530 () (영문)을 참조 하십시오 [https://go.microsoft.com/fwlink/?LinkId=110439](https://go.microsoft.com/fwlink/?LinkId=110439) .
 
 ## <a name="examples"></a>예
 
@@ -55,6 +55,6 @@ wbadmin start systemstatebackup -backupTarget:f:
 
 ## <a name="additional-references"></a>추가 참조
 
--   - [명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
 -   [WBBackup](https://technet.microsoft.com/library/jj902459.aspx) cmdlet

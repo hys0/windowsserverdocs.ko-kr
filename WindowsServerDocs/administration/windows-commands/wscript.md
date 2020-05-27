@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 08/21/2018
-ms.openlocfilehash: cf2d23c7d5773662f679a9a20b0aaba118f35548
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 9b4727e985070e2e76fd53038d33148003d87ebb
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720635"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83820893"
 ---
 # <a name="wscript"></a>wscript
 
@@ -39,11 +39,11 @@ wscript [<scriptname>] [/b] [/d] [/e:<engine>] [{/h:cscript|/h:wscript}] [/i] [/
 |/h:cscript|스크립트를 실행 하기 위한 기본 스크립트 호스트로 **cscript.exe** 를 등록 합니다.|
 |/h:wscript|스크립트를 실행 하기 위한 기본 스크립트 호스트로 **wscript.exe** 를 등록 합니다. 이는 **/h** 옵션을 생략 한 경우의 기본값입니다.|
 |/i|경고, 스크립팅 오류 및 입력된 프롬프트를 표시 하는 대화형 모드를 지정 합니다.</br>기본값은 **/b**와 반대입니다.|
-|/작업:\<식별자>|**.Wsf** 스크립트 파일의 *식별자* 로 식별 된 작업을 실행 합니다.|
+|/작업: \< 식별자>|**.Wsf** 스크립트 파일의 *식별자* 로 식별 된 작업을 실행 합니다.|
 |/logo|스크립트를 실행 하기 전에 Windows 스크립트 호스트 배너 콘솔에 표시 되도록 지정 합니다.</br>이 기본값은 **/nologo**와 반대입니다.|
 |/nologo|스크립트를 실행 하기 전에 Windows 스크립트 호스트 배너가 표시 되지 않도록 지정 합니다. 이는 **/hi 로고**와 반대입니다.|
 |/s|현재 사용자에 대 한 현재 명령 프롬프트 옵션을 저장 합니다.|
-|/t:\<number>|스크립트를 초 단위로 실행할 수 있는 최대 시간을 지정 합니다. 최대 32, 767 초를 지정할 수 있습니다.</br>기본값은 시간 제한이 없습니다.|
+|/t: \< number>|스크립트를 초 단위로 실행할 수 있는 최대 시간을 지정 합니다. 최대 32, 767 초를 지정할 수 있습니다.</br>기본값은 시간 제한이 없습니다.|
 |/x|스크립트 디버거를 시작 합니다.|
 |ScriptArguments|스크립트에 전달 되는 인수를 지정 합니다. 각 스크립트 인수 앞에 슬래시 (/) 해야 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
@@ -61,4 +61,4 @@ wscript [<scriptname>] [/b] [/d] [/e:<engine>] [{/h:cscript|/h:wscript}] [/i] [/
 
 ## <a name="additional-references"></a>추가 참조
 
--   - [명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

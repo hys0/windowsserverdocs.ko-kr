@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ee6caac0002cecb9eaecd00f6d3d4a2d23456d72
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: 273381fa62f42e9cf084c2b7dbf30ed7211295fb
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83436968"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83821013"
 ---
 # <a name="tlntadmn"></a>tlntadmn
 
@@ -66,4 +66,4 @@ tlntadmn -s
 
 ## <a name="additional-references"></a>추가 참조
 -   [텔넷 운영 가이드](https://technet.microsoft.com/library/cc753164(v=ws.10).aspx)
--   - [명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

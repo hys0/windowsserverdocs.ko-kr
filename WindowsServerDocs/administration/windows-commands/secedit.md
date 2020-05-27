@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 89405e767e3fa06dbe0caf742fc898974b217552
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 56c9cdecfe2a5553230f1c8120c827e7f05d0ba9
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82722026"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83821099"
 ---
 # <a name="secedit"></a>secedit
 
@@ -25,7 +25,7 @@ ms.locfileid: "82722026"
 ## <a name="syntax"></a>구문
 
 ```
-secedit 
+secedit
 [/analyze /db <database file name> /cfg <configuration file name> [/overwrite] /log <log file name> [/quiet]]
 [/configure /db <database file name> [/cfg <configuration filename>] [/overwrite] [/areas [securitypolicy | group_mgmt | user_rights | regkeys | filestore | services]] [/log <log file name>] [/quiet]]
 [/export /db <database file name> [/mergedpolicy] /cfg <configuration file name> [/areas [securitypolicy | group_mgmt | user_rights | regkeys | filestore | services]] [/log <log file name>]]
@@ -55,9 +55,9 @@ secedit
 |           파일           |                                                                                                                                                                                                                                                               설명                                                                                                                                                                                                                                                                |
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |        Scesrv.log        |                                                                                                                             **위치**: %windir%\security\logs</br>**만든**: 운영 체제</br>**파일 유형**: 텍스트</br>**새로 고침 빈도**: 덮어쓸 때 secedit / 분석 / 구성/내보내기 또는 /import 실행 됩니다.</br>**콘텐츠**: 정책 유형별로 그룹화 된 분석의 결과 포함 합니다.                                                                                                                             |
-| *사용자가 선택한 이름*.sdb |                                                                                    **위치**: %windir%\*사용자 계정<em>\Documents\Security\Database</br></em>*만든 사람*<em>: 보안 구성 및 분석 스냅인 실행</br></em>*파일 형식*<em>: 소유</br></em>*새로 고침 빈도*<em>: 새 보안 템플릿이 만들어질 때마다 업데이트 됩니다.</br></em>*콘텐츠*\*: 로컬 보안 정책 및 사용자가 만든 보안 템플릿.                                                                                    |
-| *사용자가 선택한 이름*.log | **위치**: %windir% 기본적으로 사용자 정의 하지만\*사용자 계정<em>\Documents\Security\Logs</br></em>*만든 사람*<em>:/analyze 및/configure 하위 명령 (또는 보안 구성 및 분석 스냅인을 사용 하 여 실행)</br></em>*파일 형식*<em>: 텍스트</br></em>*새로 고침 빈도*<em>:/analyze 및/configure 하위 명령 (또는 보안 구성 및 분석 스냅인 사용)을 실행 합니다. 쓰거나.</br></em>*콘텐츠*\*:</br>1. 로그 파일 이름</br>2. 날짜 및 시간</br>3. 분석 또는 조사의 결과입니다. |
-| *사용자가 선택한 이름*.inf |                                                                                     **위치**: %windir%\*사용자 계정<em>\Documents\Security\Templates</br></em>*만든 사람*<em>: 보안 템플릿 스냅인 실행</br></em>*파일 형식*<em>: 텍스트</br></em>*새로 고침 빈도*<em>: 보안 템플릿이 업데이트 될 때마다</br></em>*콘텐츠*\*: 스냅인을 사용 하 여 선택한 각 정책의 템플릿에 대 한 설정 정보를 포함 합니다.                                                                                     |
+| *사용자가 선택한 이름*.sdb |                                                                                    **위치**: %windir%\*사용자 계정<em>\Documents\Security\Database</br></em>*만든 사람* <em> : 보안 구성 및 분석 스냅인 실행</br></em>*파일 형식* <em> : 소유</br></em>*새로 고침 빈도* <em> : 새 보안 템플릿이 만들어질 때마다 업데이트 됩니다.</br></em>*콘텐츠* \* : 로컬 보안 정책 및 사용자가 만든 보안 템플릿.                                                                                    |
+| *사용자가 선택한 이름*.log | **위치**: %windir% 기본적으로 사용자 정의 하지만\*사용자 계정<em>\Documents\Security\Logs</br></em>*만든 사람* <em> :/analyze 및/configure 하위 명령 (또는 보안 구성 및 분석 스냅인을 사용 하 여 실행)</br></em>*파일 형식* <em> : 텍스트</br></em>*새로 고침 빈도* <em> :/analyze 및/configure 하위 명령 (또는 보안 구성 및 분석 스냅인 사용)을 실행 하 고 덮어씁니다.</br></em>*콘텐츠* \* :</br>1. 로그 파일 이름</br>2. 날짜 및 시간</br>3. 분석 또는 조사의 결과입니다. |
+| *사용자가 선택한 이름*.inf |                                                                                     **위치**: %windir%\*사용자 계정<em>\Documents\Security\Templates</br></em>*만든 사람* <em> : 보안 템플릿 스냅인 실행</br></em>*파일 형식* <em> : 텍스트</br></em>*새로 고침 빈도* <em> : 보안 템플릿이 업데이트 될 때마다</br></em>*콘텐츠* \* : 스냅인을 사용 하 여 선택한 각 정책의 템플릿에 대 한 설정 정보를 포함 합니다.                                                                                     |
 
 > [!NOTE]
 > Microsoft Management Console (MMC) 및 보안 구성 및 분석 스냅인 Server Core에서 사용할 수 없는 경우
@@ -65,4 +65,4 @@ secedit
 ## <a name="additional-references"></a>추가 참조
 
 이 명령을 사용할 수 있는 방법을 예제를 보려면 하위 명령 파일의 예 섹션을 참조 합니다.
--   - [명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

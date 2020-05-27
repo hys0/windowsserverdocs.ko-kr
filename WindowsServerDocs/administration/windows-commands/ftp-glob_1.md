@@ -1,39 +1,43 @@
 ---
-title: ftp glob_1
-description: '* * * *에 대 한 참조 항목'
+title: ftp glob
+description: 로컬 파일 이름에 대 한 와일드 카드 확장 허용을 설정/해제 하는 ftp glob 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
-ms.assetid: 111494f9-0083-4f48-9d35-46366debafae vhorne
+ms.assetid: 111494f9-0083-4f48-9d35-46366debafae
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 455709d58d30eda6929f8dee0f7ce6f8d14a596b
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 35adf2af74a2bcaf952e7bbb58f550fac968aa6f
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82725287"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83819723"
 ---
-# <a name="ftp-glob_1"></a>ftp: glob_1
+# <a name="ftp-glob"></a>ftp glob
 
 > 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-로컬 파일 이름의 와일드 카드 확장을 설정/해제 합니다.   
-## <a name="syntax"></a>구문  
-```  
-glob  
-```  
-#### <a name="parameters"></a>매개 변수  
-none  
-## <a name="remarks"></a>설명  
-- 기본적으로 와일드 카드 사용는 on입니다.  
-- 와일드 카드 사용는 로컬 파일 또는 경로 이름에 와일드 카드 문자로 별표 (*) 및 물음표 (?)를 사용할 수 있습니다.  
-  ## <a name="examples"></a>예  
-  로컬 파일 이름의 와일드 카드 확장을 설정/해제 합니다.  
-  ```  
-  glob  
-  ```  
-  ## <a name="additional-references"></a>추가 참조  
-- - [명령줄 구문 키](command-line-syntax-key.md)  
+로컬 파일 이름에 대 한 와일드 카드 확장 허용을 설정/해제 합니다. 기본적으로 와일드 카드 사용 (와일드 카드 확장)이 설정 되어 있습니다. 와일드 카드 사용가 설정 되어 있으면 로컬 파일 또는 경로 이름에 별표 (*) 및 물음표 (?)를 와일드 카드 문자로 사용할 수 있습니다.
+
+## <a name="syntax"></a>구문
+
+```
+glob
+```
+
+### <a name="examples"></a>예
+
+로컬 파일 이름의 와일드 카드 확장을 허용할지 여부를 전환 하려면 다음을 입력 합니다.
+
+```
+glob
+```
+
+## <a name="additional-references"></a>추가 참조
+
+- [명령줄 구문 키](command-line-syntax-key.md)
+
+- [추가 FTP 지침](https://docs.microsoft.com/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))

@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ab0419060121033571eeba643cc0e2d42b45c743
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 60c824de891917a2652776ee86b389f04d8eada8
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82721302"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83821373"
 ---
 # <a name="tpmvscmgr"></a>tpmvscmgr
 
@@ -77,10 +77,10 @@ tpmvscmgr.exe create /name VirtualSmartCardForCorpAccess /AdminKey RANDOM /PIN P
 ```
 다음 명령은 임의 관리자 키를 가진 가상 스마트 카드를 만듭니다. 키 생성 cardis 후 자동으로 삭제 됩니다. 이 해야 함을 의미 사용자 PIN을 잊은 또는 PIN 변경 하려는 경우 사용자는 카드를 삭제 하 고 다시 만드십시오. 카드를 삭제 하려면 사용자에는 다음 명령을 실행할 수 있습니다.
 ```
-tpmvscmgr.exe destroy /instance <instance ID> 
+tpmvscmgr.exe destroy /instance <instance ID>
 ```
-여기서 \<instance ID>은 사용자가 카드를 만들 때 화면에 인쇄 되는 값입니다. 특히, 만든 첫 번째 카드, 인스턴스 ID가 ROOT\SMARTCARDREADER\0000입니다.
+여기서 \< INSTANCE ID>은 사용자가 카드를 만들 때 화면에 인쇄 되는 값입니다. 특히, 만든 첫 번째 카드, 인스턴스 ID가 ROOT\SMARTCARDREADER\0000입니다.
 
 ## <a name="additional-references"></a>추가 참조
 
--   - [명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

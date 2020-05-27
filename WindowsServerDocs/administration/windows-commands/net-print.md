@@ -1,6 +1,6 @@
 ---
-title: Net 인쇄
-description: '* * * *에 대 한 참조 항목'
+title: net 인쇄
+description: 지정 된 프린터 큐 또는 인쇄 작업에 대 한 정보를 표시 하는 net print 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,21 +9,23 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1f2febdb79f4d0429cfb1cd423188ed9fafc198c
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: 44b781cb0c3b9fb7def5ee72bcc1242ac83ba4b2
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83437258"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83820883"
 ---
-# <a name="net-print"></a>Net 인쇄
+# <a name="net-print"></a>net 인쇄
 
 > 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 지정된 된 프린터 큐 또는 지정된 된 인쇄 작업에 대 한 정보를 표시 하거나 지정 된 인쇄 작업을 제어 합니다.
+
 > [!NOTE]
 > 이 명령은 Windows 7 및 Windows Server 2008 r 2에서 더 이상 사용 되지 되었습니다. 그러나 prnjobs.vbs, WMI(Windows Management Instrumentation) (WMI) 또는 Windows PowerShell cmdlet을 사용 하 여 여러 가지 동일한 작업을 수행할 수 있습니다. 자세한 내용은 [prnjobs.vbs](prnjobs.md), [WMI(Windows Management Instrumentation)](https://go.microsoft.com/fwlink/?LinkID=29991) ( https://go.microsoft.com/fwlink/?LinkID=29991) , [Windows PowerShell](https://go.microsoft.com/fwlink/?LinkID=128426) () https://go.microsoft.com/fwlink/?LinkID=128426) 및 [TechNet 스크립트 센터 갤러리](https://go.microsoft.com/fwlink/?LinkId=164635) (를 참조 하세요 https://go.microsoft.com/fwlink/?LinkId=164635) .
-> ## <a name="syntax"></a>구문
+
+## <a name="syntax"></a>구문
 > ```
 > Net print {\\<computerName>\<Sharename> |
 > \\<computerName> <JobNumber> [/hold | /release | /delete]} [help]

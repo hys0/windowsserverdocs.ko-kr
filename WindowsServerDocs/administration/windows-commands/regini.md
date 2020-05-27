@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: 632573f317eafa254f6c434f959a06f2c24f7353
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 33e0dcaa59be3c1748763cce5c9979fe318b271a
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80836246"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83820153"
 ---
 # <a name="regini"></a>regini
 
@@ -32,15 +32,15 @@ regini [-m \\machinename | -h hivefile hiveroot][-i n] [-o outputWidth][-b] text
 
 | 매개 변수 | 설명 |
 
-|-m \<\\\\ComputerName >|레지스트리를 수정할 수 있는 원격 컴퓨터 이름을 지정 합니다. **\\ComputerName\\** 형식을 사용 합니다.|
+|-m \< \\ \\ ComputerName>|레지스트리를 수정할 수 있는 원격 컴퓨터 이름을 지정 합니다. ** \\ \\ ComputerName**형식을 사용 합니다.|
 |---------------------|-|
-|-h \<hivefile hiveroot >|수정 하려면 로컬 레지스트리 하이브를 지정 합니다. 형식에서 하이브 파일의 이름 및 루트 하이브를 지정 해야 **hivefile hiveroot**합니다.|
-|-i \<n >|명령 출력에서 레지스트리 키의 트리 구조를 나타내기 위해 사용 하는 들여쓰기 수준을 지정 합니다. 레지스트리 키의 현재 권한을 이진 형식으로 가져오는 **Regdmp** 도구는 들여쓰기를 4의 배수로 사용 하므로 기본값은 **4**입니다.|
-|-o \<outputwidth >|문자에서 명령 출력의 너비를 지정합니다. 출력 명령 창에 표시 하려면, 기본값은 창의 너비입니다. 기본값은 파일에 출력 하는 경우 **240** 문자입니다.|
-|-b|지정 하는 **Regini.exe** 출력은 이전 버전의 호환 **Regini.exe**합니다. 자세한 내용은 설명 단원을 참조하십시오.|
+|-h \< hivefile hiveroot>|수정 하려면 로컬 레지스트리 하이브를 지정 합니다. 형식에서 하이브 파일의 이름 및 루트 하이브를 지정 해야 **hivefile hiveroot**합니다.|
+|-i \< n>|명령 출력에서 레지스트리 키의 트리 구조를 나타내기 위해 사용 하는 들여쓰기 수준을 지정 합니다. 레지스트리 키의 현재 권한을 이진 형식으로 가져오는 **Regdmp** 도구는 들여쓰기를 4의 배수로 사용 하므로 기본값은 **4**입니다.|
+|-o \< outputwidth>|문자에서 명령 출력의 너비를 지정합니다. 출력 명령 창에 표시 하려면, 기본값은 창의 너비입니다. 기본값은 파일에 출력 하는 경우 **240** 문자입니다.|
+|-b|지정 하는 **Regini.exe** 출력은 이전 버전의 호환 **Regini.exe**합니다. 자세한 내용은 설명 단원을 참조 하십시오.|
 |textfiles|레지스트리 데이터를 포함 하는 하나 이상의 텍스트 파일의 이름을 지정 합니다. ANSI 또는 유니코드 텍스트 파일을 나열할 수 있습니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 다음과 같은 지침이 적용 주로 사용 하 여 적용 하는 레지스트리 데이터를 포함 하는 텍스트 파일의 내용을 **Regini.exe**합니다.
 -   줄 끝 주석 문자로 세미콜론을 사용 합니다. 행의 첫 번째 공백이 아닌 문자 여야 합니다.
@@ -49,4 +49,4 @@ regini [-m \\machinename | -h hivefile hiveroot][-i n] [-o outputWidth][-b] text
 
 ## <a name="additional-references"></a>추가 참조
 
--   - [명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)
