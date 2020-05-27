@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 70b40b6fe16ce37f6fe7cb64c09463db8db4b47c
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: fdbb9fe636bb30be90164d9a2163c495a9c2e704
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718975"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83819653"
 ---
 # <a name="arp"></a>arp
 
@@ -54,13 +54,13 @@ arp [/a [<inetaddr>] [/n <ifaceaddr>]] [/g [<inetaddr>] [-n <ifaceaddr>]] [/d <i
 arp /a
 ```
 
-IP 주소가 10.0.0.99 할당 된 인터페이스에 대 한 arp 캐시 테이블을 표시 하려면 다음을 입력 합니다.
+IP 주소가 *10.0.0.99*할당 된 인터페이스에 대 한 arp 캐시 테이블을 표시 하려면 다음을 입력 합니다.
 
 ```
 arp /a /n 10.0.0.99
 ```
 
-10.0.0.80 IP 주소를 확인 하는 고정 arp 캐시 항목을 추가 하려면 다음을 입력 합니다.
+*10.0.0.80* IP 주소를 확인 하는 고정 arp 캐시 항목을 추가 하려면 *다음을 입력*합니다.
 
 ```
 arp /s 10.0.0.80 00-AA-00-4F-2A-9C

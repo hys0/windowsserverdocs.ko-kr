@@ -9,18 +9,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a4384ce8d4f23966aea278e90b9ddddc42da6e77
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: bf914e4e7da4f00c547353da4fc8d04ad6828646
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82724230"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83820523"
 ---
 # <a name="macfile"></a>macfile
 
 > 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Macintosh 서버, 볼륨, 디렉터리 및 파일에 대 한 파일 서버를 관리합니다. 미리 정해진 시간에 또는 배치 파일에는 일련의 명령 포함 하 고 수동으로 시작 되 게 여 관리 작업을 자동화할 수 있습니다. 
+Macintosh 서버, 볼륨, 디렉터리 및 파일에 대 한 파일 서버를 관리합니다. 미리 정해진 시간에 또는 배치 파일에는 일련의 명령 포함 하 고 수동으로 시작 되 게 여 관리 작업을 자동화할 수 있습니다.
 -   [Macintosh에서 액세스할 수 있는 볼륨의 디렉터리를 수정 하려면](#BKMK_Moddirs)
 -   [Macintosh 파일의 데이터 및 리소스 포크 조인 하려면](#BKMK_Joinforks)
 -   [로그온 메시지를 변경 하 고 세션 제한 하려면](#BKMK_LogonLimit)
@@ -34,9 +34,9 @@ macfile directory[/server:\\<computerName>] /path:<directory> [/owner:<OwnerName
 ```
 
 #### <a name="parameters"></a>매개 변수
--   /server:\\ \\ <computerName> 디렉터리를 변경할 서버를 지정 합니다. 생략 하면 로컬 컴퓨터에서 작업이 수행 됩니다.
+-   /server: \\ \\ <computerName> 디렉터리를 변경할 서버를 지정 합니다. 생략 하면 로컬 컴퓨터에서 작업이 수행 됩니다.
 -   /path:<directory> 필요 합니다. 변경 하려는 디렉터리의 경로를 지정 합니다. 디렉터리가 있어야 합니다. **macfile 디렉터리** 는 디렉터리를 만들지 않습니다.
--   /owner:<OwnerName> 디렉터리의 소유자를 변경 합니다. 생략 하면 소유자 변경 되지 않습니다.
+-   /owner: <OwnerName> 디렉터리의 소유자를 변경 합니다. 생략 하면 소유자 변경 되지 않습니다.
 -   그룹 /:<GroupName> 디렉터리와 연결 된 지정 또는 변경 내용을 기본 Macintosh 그룹입니다. 생략 하면 주 그룹 변경 되지 않습니다.
 -   /permissions:<Permissions> 소유자, 주 그룹 및 전역 (모든 사람)에 대 한 디렉터리 사용 권한을 설정 합니다. 11 자리 수는 사용 권한을 설정 하는 데 사용 됩니다. 숫자 1에 권한을 부여 하 고 0 해지 권한 (예를 들어 11111011000) 키를 누릅니다. 생략 하면 사용 권한을 그대로 유지 됩니다.
     숫자의 위치는 다음 표에 설명 된 대로 어떤 사용 권한이 설정 되어를 결정 합니다.
@@ -94,7 +94,7 @@ Macintosh에서 액세스할 수 있는 볼륨 D:\Release에 treeapp 파일을 �
 ```
 macfile forkize /resourcefork:c:\cross\mac\appcode /type:APPL /creator:MAGNOLIA /targetfile:D:\Release\treeapp
 ```
-파일 작성자를 Microsoft Word 5.1으로 변경 하려면 \SERverA 파일 디렉터리의 파일에서 .txt 파일에 대해 서버 \\에서 다음을 입력 합니다.
+파일 작성자를 Microsoft Word 5.1으로 변경 하려면 \SERverA 파일 디렉터리의 파일에서 .txt 파일에 대해 서버에서 \\ 다음을 입력 합니다.
 ```
 macfile forkize /server:\\servera /creator:MSWD /type:TEXT /targetfile:d:\Word documents\Group files\Word.txt
 ```
@@ -157,7 +157,7 @@ macfile volume /add /name:US Marketing Statistics /guestsallowed:false /path:e:\
 ```
 macfile volume /set /name:US Marketing Statistics /readonly:true /password:saturn /maxusers:5
 ```
-서버 \\\Magnolia에서 E 드라이브의 트리 디렉터리를 사용 하 여 가로 디자인 이라는 볼륨을 추가 하 고 게스트에서 볼륨에 액세스할 수 있도록 지정 하려면 다음을 입력 합니다.
+서버 \\ \Magnolia에서 E 드라이브의 트리 디렉터리를 사용 하 여 가로 디자인 이라는 볼륨을 추가 하 고 게스트에서 볼륨에 액세스할 수 있도록 지정 하려면 다음을 입력 합니다.
 ```
 macfile volume /add /server:\\Magnolia /name:Landscape Design /path:e:\trees
 ```
@@ -167,4 +167,4 @@ macfile volume /remove /name:Sales Reports
 ```
 
 ## <a name="additional-references"></a>추가 참조
--   - [명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

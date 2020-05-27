@@ -9,24 +9,24 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f523c55f5974599c152f4fbae7d8143d5362af62
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 0a63c74e3d25e11ccc8129a6ce28fd505e9227eb
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82724240"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83820533"
 ---
 # <a name="lpr"></a>lpr
 
 > 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-인쇄 준비 과정에서 LPD (Line printer Daemon) 서비스를 실행 하는 컴퓨터 또는 프린터 공유 장치에 파일을 보냅니다.  
+인쇄 준비 과정에서 LPD (Line printer Daemon) 서비스를 실행 하는 컴퓨터 또는 프린터 공유 장치에 파일을 보냅니다.
 
-## <a name="syntax"></a>구문  
-```  
-lpr [-S <ServerName>] -P <printerName> [-C <BannerContent>] [-J <JobName>] [-o | -o l] [-x] [-d] <filename>  
-```  
-### <a name="parameters"></a>매개 변수  
+## <a name="syntax"></a>구문
+```
+lpr [-S <ServerName>] -P <printerName> [-C <BannerContent>] [-J <JobName>] [-o | -o l] [-x] [-d] <filename>
+```
+### <a name="parameters"></a>매개 변수
 
 |     매개 변수      |                                                                                                           설명                                                                                                           |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -40,19 +40,19 @@ lpr [-S <ServerName>] -P <printerName> [-C <BannerContent>] [-J <JobName>] [-o |
 |     <FileName>     |                                                                                      인쇄할 파일 이름을 사용 하 여 지정 합니다. 필수 사항입니다.                                                                                      |
 |         /?         |                                                                                              명령 프롬프트에 도움말을 표시합니다.                                                                                               |
 
-## <a name="remarks"></a>설명  
-- 프린터 이름을 찾으려면 프린터 폴더를 엽니다.  
-- **-S**, **-P**, **-C**, 및 **-J** 매개 변수는 대/소문자 구분 및 대문자로 입력 해야 합니다.  
-  ## <a name="examples"></a>예  
-  이 예제에서는에서 10.0.0.45에서 LPD 호스트의 Laserprinter1 프린터 큐에 문서 .txt 텍스트 파일을 인쇄 하는 방법을 보여 줍니다.  
-  ```  
-  lpr -S 10.0.0.45 -P Laserprinter1 -o Document.txt  
-  ```  
-  이 예제에서는에서 10.0.0.45에서 LPD 호스트의 Laserprinter1 프린터 큐에 PostScript_file를 인쇄 하는 방법을 보여 줍니다.  
-  ```  
-  lpr -S 10.0.0.45 -P Laserprinter1 -o l PostScript_file.ps  
-  ```  
+## <a name="remarks"></a>설명
+- 프린터 이름을 찾으려면 프린터 폴더를 엽니다.
+- **-S**, **-P**, **-C**, 및 **-J** 매개 변수는 대/소문자 구분 및 대문자로 입력 해야 합니다.
+  ## <a name="examples"></a>예
+  이 예제에서는에서 10.0.0.45에서 LPD 호스트의 Laserprinter1 프린터 큐에 문서 .txt 텍스트 파일을 인쇄 하는 방법을 보여 줍니다.
+  ```
+  lpr -S 10.0.0.45 -P Laserprinter1 -o Document.txt
+  ```
+  이 예제에서는에서 10.0.0.45에서 LPD 호스트의 Laserprinter1 프린터 큐에 PostScript_file를 인쇄 하는 방법을 보여 줍니다.
+  ```
+  lpr -S 10.0.0.45 -P Laserprinter1 -o l PostScript_file.ps
+  ```
 
-## <a name="additional-references"></a>추가 참조  
--   - [명령줄 구문 키](command-line-syntax-key.md)  
--   [인쇄 명령 참조](print-command-reference.md)  
+## <a name="additional-references"></a>추가 참조
+- [명령줄 구문 키](command-line-syntax-key.md)
+-   [인쇄 명령 참조](print-command-reference.md)

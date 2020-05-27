@@ -9,19 +9,19 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f637e1f744ec412899320cfbb368633b222da8d3
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 58735201a1a0711db4d0cee9c292363acf5121f3
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718959"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83819643"
 ---
 # <a name="assoc"></a>assoc
 
 표시 하거나 파일 이름 확장명 연결을 수정 합니다. 매개 변수 없이 사용 하는 경우 **assoc** 모든는 현재 파일 이름 확장명 연결의 목록이 표시 됩니다.
 
 > [!NOTE]
-> 이 명령은 CMD 내 에서만 지원 됩니다. EXE 및를 PowerShell에서 사용할 수 없습니다.
+> 이 명령은 cmd.exe 내 에서만 지원 되며 PowerShell에서 사용할 수 없습니다.
 
 ## <a name="syntax"></a>구문
 
@@ -56,7 +56,7 @@ assoc .txt
 파일 이름 확장명이.bak에 대 한 파일 형식 연결을 제거 하려면 다음을 입력 합니다.
 
 ```
-assoc .bak= 
+assoc .bak=
 ```
 
 > [!NOTE]

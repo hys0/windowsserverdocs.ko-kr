@@ -1,6 +1,6 @@
 ---
 title: cacls
-description: 지정 된 파일의 DACL (임의 액세스 제어 목록)을 표시 하거나 수정 하는 cacls 명령에 대 한 참조 항목입니다.
+description: Cacls 명령에 대 한 참조 항목입니다. 이 명령은 더 이상 사용 되지 않으며 이후 버전의 Windows에서는 지원 되지 않습니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,31 +9,31 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d827199ea319bd41511f9abadfde8c6e8949976e
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 8602157bf87e523d6d842d5636031c61b52e8ef4
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82726025"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83819253"
 ---
 # <a name="cacls"></a>cacls
 
 >[!IMPORTANT]
-> 이 명령은 더 이상 사용 되지 않습니다. [Icacls](icacls.md) 를 대신 사용 하세요.  
+> 이 명령은 더 이상 사용 되지 않습니다. [Icacls](icacls.md) 를 대신 사용 하세요.
 
-표시 하거나 지정 된 파일에 대해 임의 액세스 제어 목록 (DACL)을 수정 합니다.  
+표시 하거나 지정 된 파일에 대해 임의 액세스 제어 목록 (DACL)을 수정 합니다.
 
 ## <a name="syntax"></a>구문
 
-```  
-cacls <filename> [/t] [/m] [/l] [/s[:sddl]] [/e] [/c] [/g user:<perm>] [/r user [...]] [/p user:<perm> [...]] [/d user [...]]  
+```
+cacls <filename> [/t] [/m] [/l] [/s[:sddl]] [/e] [/c] [/g user:<perm>] [/r user [...]] [/p user:<perm> [...]] [/d user [...]]
 ```
 
 ### <a name="parameters"></a>매개 변수
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `<filename>` | 필수 사항입니다. 지정 된 파일의 Acl을 표시합니다. |
+| `<filename>` | 필수 요소. 지정 된 파일의 Acl을 표시합니다. |
 | /t | 현재 디렉터리와 모든 하위 디렉터리에서 지정 된 파일의 Acl을 변경합니다. |
 | /m | 볼륨의 Acl 디렉터리에 탑재 합니다. |
 | /l | 는 대상 대신 기호화 된 링크 자체에서 작동 합니다. |
@@ -63,7 +63,7 @@ cacls <filename> [/t] [/m] [/l] [/s[:sddl]] [/e] [/c] [/g user:<perm>] [/r user 
 
 - 와일드 카드를 사용할 수 있습니다 (**?** 및 **&#42;**)를 지정 하 여 여러 파일을 지정 합니다.
 
-- 둘 이상의 사용자를 지정할 수 있습니다.  
+- 둘 이상의 사용자를 지정할 수 있습니다.
 
 ## <a name="additional-references"></a>추가 참조
 

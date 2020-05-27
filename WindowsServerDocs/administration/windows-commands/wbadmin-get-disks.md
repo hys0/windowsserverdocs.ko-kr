@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 42c96ab4ca57f07f180a24da4991e6491f26ff64
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 299a80d5ff7115b65b5550464a6a9a6457649499
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82725941"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83819273"
 ---
 # <a name="wbadmin-get-disks"></a>wbadmin get 디스크
 
@@ -36,6 +36,6 @@ wbadmin get disks
 
 ## <a name="additional-references"></a>추가 참조
 
--   - [명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
 -   [Get WBDisk](https://technet.microsoft.com/library/jj902446.aspx) cmdlet

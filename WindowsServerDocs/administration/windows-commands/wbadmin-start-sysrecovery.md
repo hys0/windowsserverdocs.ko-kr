@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ba3d826b0312091f00ef01d2efe9ee63572fade1
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: a7c32818461c46a7d582029ec127c574d6a8f3e3
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82725889"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83819113"
 ---
 # <a name="wbadmin-start-sysrecovery"></a>wbadmin 시작 sysrecovery
 
@@ -60,13 +60,13 @@ wbadmin start sysrecovery
 ```
 wbadmin start sysrecovery -version:03/31/2013-09:00 -backupTarget:d:
 ```
-2013 년 4 월 30 일 오전 9:00에 실행 된 백업에서 정보 복구를 시작 하려면 servername\shared: server01에 있는 공유 폴더 \\ \\에 있습니다.
+2013 년 4 월 30 일 오전 9:00에 실행 된 백업에서 정보 복구를 시작 하려면 \\ \\ servername\shared: server01에 있는 공유 폴더에 있습니다.
 ```
 wbadmin start sysrecovery -version:04/30/2013-09:00 -backupTarget:\\servername\share -machine:server01
 ```
 
 ## <a name="additional-references"></a>추가 참조
 
--   - [명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
 -   [WBBareMetalRecovery](https://technet.microsoft.com/library/jj902461.aspx) cmdlet

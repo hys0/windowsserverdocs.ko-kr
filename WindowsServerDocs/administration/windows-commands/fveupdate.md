@@ -1,6 +1,6 @@
 ---
 title: fveupdate
-description: '* * * *에 대 한 참조 항목'
+description: Fveupdate 도구에 대 한 참조 항목으로, 컴퓨터를 업그레이드할 때 설치 프로그램에서 사용 하는 내부 도구입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,15 +9,17 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e2105b7549b58a2a29ea761834c00cea32f54f71
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 2f9b2ef409ade13e9b78c068f128fe0cccb0a189
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82724993"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83819087"
 ---
 # <a name="fveupdate"></a>fveupdate
 
+FveUpdate은 컴퓨터를 업그레이드할 때 설치 프로그램에서 사용 하는 내부 도구입니다. 최신 버전으로 BitLocker와 연관 된 메타 데이터를 업데이트 합니다. 이 도구는 독립적으로 실행할 수 없습니다.
 
+## <a name="additional-references"></a>추가 참조
 
-FveUpdate는 컴퓨터가 Windows Vista 또는 Windows Server 2008에서 Windows 7 또는 Windows Server 2008 r 2로 업그레이드 될 때 설치 프로그램에서 실행 되는 내부적으로 사용 되는 도구입니다. 최신 버전으로 BitLocker와 연관 된 메타 데이터를 업데이트 합니다. 이 도구는 독립적으로 실행할 수 없습니다.
+- [명령줄 구문 키](command-line-syntax-key.md)

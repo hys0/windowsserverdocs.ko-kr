@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0cd4eeec1113717a40dca43f0320f2db3c4c414e
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 288c5bb14602e895648cfdc1535b734a823b7233
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82722129"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83820963"
 ---
 # <a name="scwcmd-rollback"></a>Scwcmd: 롤백
 
@@ -32,9 +32,9 @@ scwcmd rollback /m:<ComputerName> [/u:<UserName>] [/pw:<Password>]
 
 |매개 변수|설명|
 |---------|-----------|
-|/m:\<ComputerName>|NetBIOS 이름, DNS 이름 또는 롤백 작업을 수행할 수 해야 하는 컴퓨터의 IP 주소를 지정 합니다.|
-|/u:\<UserName>|원격 롤백을 수행할 때 사용 하는 다른 사용자 계정을 지정 합니다. 기본값은 로그온 된 사용자입니다.|
-|/pw:\<암호>|원격 롤백을 수행할 때 사용 하는 대체 사용자 자격 증명을 지정 합니다. 기본값은 로그온 된 사용자입니다.|
+|/m: \< ComputerName>|NetBIOS 이름, DNS 이름 또는 롤백 작업을 수행할 수 해야 하는 컴퓨터의 IP 주소를 지정 합니다.|
+|/u: \< UserName>|원격 롤백을 수행할 때 사용 하는 다른 사용자 계정을 지정 합니다. 기본값은 로그온 된 사용자입니다.|
+|/pw: \< 암호>|원격 롤백을 수행할 때 사용 하는 대체 사용자 자격 증명을 지정 합니다. 기본값은 로그온 된 사용자입니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
 ## <a name="remarks"></a>설명
@@ -50,4 +50,4 @@ scwcmd rollback /m:172.16.0.0
 
 ## <a name="additional-references"></a>추가 참조
 
--   - [명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)

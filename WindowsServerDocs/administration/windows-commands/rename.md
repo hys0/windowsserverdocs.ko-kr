@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 96f70e0f4130b0bc2c2d85462ee0d2eabb7a7888
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 8cc81d813f1e7d0474337adc1afa22a0cf1040c5
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82722409"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83820123"
 ---
 # <a name="rename"></a>이름 바꾸기
 
@@ -23,5 +23,5 @@ ms.locfileid: "82722409"
 이 동일는 **ren** 명령입니다.
 구문 및 매개 변수에 대 한 [ren](ren.md) 를 참조 하세요.
 ## <a name="additional-references"></a>추가 참조
--   - [명령줄 구문 키](command-line-syntax-key.md)
+- [명령줄 구문 키](command-line-syntax-key.md)
 

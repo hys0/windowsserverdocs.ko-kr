@@ -1,6 +1,6 @@
 ---
-title: 수입
-description: '* * * *에 대 한 참조 항목'
+title: diskshadow 가져오기
+description: 로드 된 메타 데이터 파일에서 시스템으로 전송 가능한 섀도 복사본을 가져오는 가져오기 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,20 +9,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 72cbd6195de64a6a0a7f2c258e19b2d5eb1378b1
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: f4eaf4afcbe2485a893a3e5335c595b3d9b256b5
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82724852"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83818513"
 ---
-# <a name="import"></a>수입
-
-
+# <a name="import-diskshadow"></a>가져오기 (diskshadow)
 
 시스템에 로드 된 메타 데이터 파일에서 전송 가능한 섀도 복사본을 가져옵니다.
 
-
+> 중요 한 이 명령을 사용 하려면 먼저 [메타 데이터 로드 명령을](load-metadata.md) 사용 하 여 DiskShadow 메타 데이터 파일을 로드 해야 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -30,14 +28,14 @@ ms.locfileid: "82724852"
 import
 ```
 
-## <a name="remarks"></a>설명
+#### <a name="remarks"></a>설명
 
--   전송 가능한 섀도 복사본 즉시 시스템에 저장 되지 않습니다. 세부 정보는 DiskShadow에서 자동으로 요청 하 고 작업 디렉터리에.cab 메타 데이터 파일에 저장 된 백업 구성 요소 문서 XML 파일을에 저장 됩니다. 사용 하 여이 파일의 이름과 경로 변경할 수는 **메타 데이터 설정** 명령입니다.
--   사용 하려면 먼저 **가져오기**, 를 사용 하 여 DiskShadow 메타 데이터 파일을 로드 해야는 **메타 데이터를 로드** 명령입니다.
+- 전송 가능한 섀도 복사본은 시스템에 즉시 저장 되지 않습니다. 세부 정보는 DiskShadow에서 자동으로 요청 하 고 작업 디렉터리에.cab 메타 데이터 파일에 저장 된 백업 구성 요소 문서 XML 파일을에 저장 됩니다. [Set metadata 명령을](set-metadata.md) 사용 하 여이 XML 파일의 경로와 이름을 변경 합니다.
 
 ## <a name="examples"></a>예
 
 다음은의 사용을 보여 주는 샘플 DiskShadow 스크립트는 **가져올** 명령:
+
 ```
 #Sample DiskShadow script demonstrating IMPORT
 SET CONTEXT PERSISTENT
@@ -58,3 +56,5 @@ IMPORT
 ## <a name="additional-references"></a>추가 참조
 
 - [명령줄 구문 키](command-line-syntax-key.md)
+
+- [diskshadow 명령](diskshadow.md)

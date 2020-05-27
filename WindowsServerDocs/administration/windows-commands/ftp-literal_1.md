@@ -1,42 +1,54 @@
 ---
-title: ftp literal_1
-description: '* * * *에 대 한 참조 항목'
+title: ftp 리터럴
+description: 원격 ftp 서버에 축 자 인수를 보내는 ftp 리터럴 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
-ms.assetid: fb81aa2d-07fa-4e79-bf44-1fb5526fdf14 vhorne
+ms.assetid: fb81aa2d-07fa-4e79-bf44-1fb5526fdf14
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: fc4f8aff5a22da93330a12a75e5f368285366216
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 5015f2184c9273aae6dbd01b18ee1f540d5b9aa3
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82725254"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83820163"
 ---
-# <a name="ftp-literal_1"></a>ftp: literal_1
+# <a name="ftp-literal"></a>ftp 리터럴
 
-> 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012은 원격 ftp 서버에 축 자 인수를 보냅니다. 단일 ftp 회신 코드가 반환 됩니다.   
+> 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-## <a name="syntax"></a>구문  
-```  
-literal <Argument> [ ]  
-```  
-#### <a name="parameters"></a>매개 변수  
+축 자 인수를 원격 ftp 서버에 보냅니다. 단일 ftp 회신 코드가 반환 됩니다.
 
-| 매개 변수  |                    설명                    |
-|------------|---------------------------------------------------|
-| <Argument> | Ftp 서버에 보낼 인수를 지정 합니다. |
+> [!NOTE]
+> 이 명령은 [ftp quote 명령과](ftp-quote.md)동일 합니다.
 
-## <a name="remarks"></a>설명  
-**리터럴** 명령은 **quote** 명령과 동일 합니다.  
-## <a name="examples"></a>예  
-**Quit** 명령을 원격 ftp 서버에 보냅니다.  
-```  
-literal quit  
-```  
-## <a name="additional-references"></a>추가 참조  
--   [ftp: 따옴표](ftp-quote.md)  
--   - [명령줄 구문 키](command-line-syntax-key.md)  
+## <a name="syntax"></a>구문
+
+```
+literal <argument> [ ]
+```
+
+### <a name="parameters"></a>매개 변수
+
+| 매개 변수 | 설명 |
+| --------- | ----------- |
+| `<argument>` | Ftp 서버에 보낼 인수를 지정 합니다. |
+
+### <a name="examples"></a>예
+
+**Quit** 명령을 원격 ftp 서버에 보내려면 다음을 입력 합니다.
+
+```
+literal quit
+```
+
+## <a name="additional-references"></a>추가 참조
+
+- [명령줄 구문 키](command-line-syntax-key.md)
+
+- [ftp 인용 명령](ftp-quote.md)
+
+- [추가 FTP 지침](https://docs.microsoft.com/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))

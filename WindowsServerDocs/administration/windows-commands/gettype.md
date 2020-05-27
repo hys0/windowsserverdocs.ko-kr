@@ -1,6 +1,6 @@
 ---
 title: gettype
-description: '* * * *에 대 한 참조 항목'
+description: Gettype 명령에 대 한 참조 항목입니다. 이 명령은 더 이상 사용 되지 않으며 이후 버전의 Windows에서는 지원 되지 않습니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,17 +9,19 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d7509878f2040a29355d913eca536a066361675c
-ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
+ms.openlocfilehash: 1acd3747082d23f9129a766344061af2140692f9
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82993328"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83818983"
 ---
 # <a name="gettype"></a>gettype
 
+**Gettype** 명령은 더 이상 사용 되지 않으며 이후 버전의 Windows에서 지원 되지 않을 수 있습니다.
 
+이 도구는 Windows Server 2003에 포함 됩니다. 자세한 내용은 [gettype](https://docs.microsoft.com/previous-versions/orphan-topics/ws.10/cc773104(v=ws.10))을 참조 하세요.
 
-Gettype, 않으며 Windows의 이후 릴리스에서 지원 되지 않을 수도 있습니다.
+## <a name="additional-references"></a>추가 참조
 
-이 도구는 Windows Server 2003에 포함 됩니다. 자세한 내용은 [Gettype](https://technet.microsoft.com/library/cc773104(v=ws.10).aspx)을 참조 하세요.
+- [명령줄 구문 키](command-line-syntax-key.md)
