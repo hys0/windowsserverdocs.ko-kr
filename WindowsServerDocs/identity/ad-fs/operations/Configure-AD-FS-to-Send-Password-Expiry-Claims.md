@@ -8,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: a0c04f42cbe29b1ea36d09f1f148fb28280d7fec
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 84014df358726cd3d2d90bb68c18f9a051bc6308
+ms.sourcegitcommit: c857cb5eb487a0050352af86c96bbbacfe66962e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80859896"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83865464"
 ---
 # <a name="configure-ad-fs-to-send-password-expiry-claims"></a>암호 만료 클레임을 보내도록 AD FS 구성
 
@@ -24,8 +24,8 @@ ADFS로 보호 되는 신뢰 당사자 트러스트 (응용 프로그램)에 암
 
 ```
 @RuleName = "Issue Password Expiry Claims"
-c1:[Type == "https://schemas.microsoft.com/ws/2012/01/passwordexpirationtime"]
- => issue(store = "_PasswordExpiryStore", types = ("https://schemas.microsoft.com/ws/2012/01/passwordexpirationtime", "https://schemas.microsoft.com/ws/2012/01/passwordexpirationdays", "https://schemas.microsoft.com/ws/2012/01/passwordchangeurl"), query = "{0};", param = c1.Value);
+c1:[Type == "http://schemas.microsoft.com/ws/2012/01/passwordexpirationtime"]
+ => issue(store = "_PasswordExpiryStore", types = ("http://schemas.microsoft.com/ws/2012/01/passwordexpirationtime", "http://schemas.microsoft.com/ws/2012/01/passwordexpirationdays", "http://schemas.microsoft.com/ws/2012/01/passwordchangeurl"), query = "{0};", param = c1.Value);
 ```
 
 > [!NOTE]

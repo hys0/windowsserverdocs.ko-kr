@@ -1,6 +1,6 @@
 ---
 title: Azure AD를 사용하여 VPN 인증에 대한 루트 인증서 만들기
-description: Azure AD는 vpn 연결을 위해 Azure AD에 인증할 때 VPN 인증서를 사용 하 여 Windows 10 클라이언트에 발급 된 인증서에 서명 합니다. 기본으로 표시 된 인증서는 Azure AD에서 사용 하는 발급자입니다.
+description: Azure AD는 VPN 연결에 대해 Azure AD에 인증할 때 Windows 10 클라이언트에 발급된 인증서를 등록하기 위해 VPN 인증서를 사용합니다. 기본으로 표시 된 인증서는 Azure AD에서 사용 하는 발급자입니다.
 ms.prod: windows-server
 ms.technology: networking-ras
 ms.topic: article
@@ -9,24 +9,24 @@ ms.author: v-tea
 author: Teresa-MOTIV
 ms.localizationpriority: medium
 ms.reviewer: deverette
-ms.openlocfilehash: f4501c244726ee9b23a6d517c4b835f0c9418302
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 5058095fa4bd6f7ba769fd274f46bc8b96878158
+ms.sourcegitcommit: 430c6564c18f89eecb5bbc39cfee1a6f1d8ff85b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80818806"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83855677"
 ---
-# <a name="step-72-create-conditional-access-root-certificates-for-vpn-authentication-with-azure-ad"></a>7\.2단계. Azure AD를 사용 하 여 VPN 인증에 대 한 조건부 액세스 루트 인증서 만들기
+# <a name="step-72-create-conditional-access-root-certificates-for-vpn-authentication-with-azure-ad"></a>7.2단계. Azure AD를 사용 하 여 VPN 인증에 대 한 조건부 액세스 루트 인증서 만들기
 
 >적용 대상: Windows Server (반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 - [**이전:** 7.1 단계. EAP-TLS를 구성 하 여 CRL (인증서 해지 목록) 검사 무시](vpn-config-eap-tls-to-ignore-crl-checking.md)
 - [**다음:** 7.3 단계. 조건부 액세스 정책 구성](vpn-config-conditional-access-policy.md)
 
-이 단계에서는 Azure AD를 사용 하 여 VPN 인증에 대 한 조건부 액세스 루트 인증서를 구성 하 여 테 넌 트에서 VPN 서버 라는 클라우드 앱을 자동으로 만듭니다. VPN 연결에 대 한 조건부 액세스를 구성 하려면 다음을 수행 해야 합니다.
+이 단계에서는 Azure AD를 사용 하 여 VPN 인증에 대 한 조건부 액세스 루트 인증서를 구성 하 여 테 넌 트에서 VPN 서버 라는 클라우드 앱을 자동으로 만듭니다. VPN 연결에 대한 조건부 액세스를 구성하려면 다음을 수행해야 합니다.
 
 1. Azure Portal에서 VPN 인증서를 만듭니다.
-2. VPN 인증서를 다운로드 합니다.
+2. VPN 인증서를 다운로드합니다.
 3. VPN 및 NPS 서버에 인증서를 배포 합니다.
 
 > [!IMPORTANT]
@@ -41,11 +41,12 @@ ms.locfileid: "80818806"
 
 **여기서**
 
-1. 전역 관리자 권한으로 [Azure Portal](https://portal.azure.com) 에 로그인 합니다.
-2. 왼쪽 메뉴에서 **Azure Active Directory**를 클릭 합니다.
-3. **Azure Active Directory** 페이지의 **관리** 섹션에서 **조건부 액세스**를 클릭 합니다.
-4. **조건부 액세스** 페이지의 **관리** 섹션에서 **VPN 연결 (미리 보기)** 을 클릭 합니다.
-5. **VPN 연결** 페이지에서 **새 인증서**를 클릭 합니다.
+1. 전역 관리자 권한으로 [Azure Portal](https://portal.azure.com)에 로그인합니다.
+2. 왼쪽 메뉴에서 **Azure Active Directory**를 클릭합니다.
+3. **Azure Active Directory** 페이지의 **관리** 섹션에서 **보안**을 클릭 합니다.
+4. **보안** 페이지의 **보호** 섹션에서 **조건부 액세스**를 클릭 합니다.
+5. **조건부 액세스 | 정책** 페이지의 **관리** 섹션에서 **VPN 연결**을 클릭 합니다.
+5. **VPN 연결** 페이지에서 **새 인증서**를 클릭합니다.
 6. **새로 만들기** 페이지에서 다음 단계를 수행 합니다. a. **기간 선택**에서 1, 2 또는 3 년을 선택 합니다.
    b. **만들기**를 선택합니다.
 

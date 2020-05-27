@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c87a6cb5e3fb52af9a13a7be35218e35b24d7ddc
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: ca2a10a5d52c9d175d453a164f3ab4f47ca0841d
+ms.sourcegitcommit: 430c6564c18f89eecb5bbc39cfee1a6f1d8ff85b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83436928"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83855667"
 ---
 # <a name="echo"></a>echo
 
@@ -29,9 +29,9 @@ echo [on | off]
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | 설명 |
+| 매개 변수 | Description |
 | --------- | ----------- |
-| sign-on | 해제 | 또는 명령 에코 기능의 해제를 설정 합니다. 기본적으로 켜져 명령 에코 합니다. |
+| [ \| 꺼짐] | 또는 명령 에코 기능의 해제를 설정 합니다. 기본적으로 켜져 명령 에코 합니다. |
 | `<message>` | 화면에 표시할 텍스트를 지정 합니다. |
 | /? | 명령 프롬프트에 도움말을 표시합니다. |
 
