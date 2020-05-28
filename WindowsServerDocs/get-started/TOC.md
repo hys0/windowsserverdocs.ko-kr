@@ -1,6 +1,7 @@
 # 시작
 ## [Windows Server 2016 시작](Server-Basics.md)
 ## [Windows Server의 새로운 기능](whats-new-in-windows-server.md)
+### [Windows Server 2004의 새로운 기능](whats-new-in-windows-server-2004.md)
 ### [Windows Server 2019의 새로운 기능](../get-started-19/whats-new-19.md)
 ### [Windows Server 2016의 새로운 기능](whats-new-in-windows-server-2016.md)
 ### [Windows Server 2016에 사용할 수 있는 Express 업데이트](express-updates.md)
