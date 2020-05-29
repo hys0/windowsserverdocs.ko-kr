@@ -93,6 +93,12 @@
 #### [DHCP 서브넷 선택 옵션](technologies/dhcp/dhcp-subnet-options.md)
 #### [DNS 레코드 등록에 대한 DHCP 로깅 이벤트](technologies/dhcp/dhcp-dns-events.md)
 ### [Windows PowerShell을 사용하여 DHCP 배포](technologies/dhcp/dhcp-deploy-wps.md)
+### [DHCP 문제 해결](../troubleshoot/troubleshoot-dhcp-issue.md)
+#### [DHCP(Dynamic Host Configuration Protocol) 기본 사항](../troubleshoot/dynamic-host-configuration-protocol-basics.md)
+#### [DHCP 문제 해결을 위한 일반 지침](../troubleshoot/general-guidance-to-troubleshoot-dhcp.md)
+##### [DHCP 서버 없이 자동 TCP/IP 주소 지정을 사용하는 방법](../troubleshoot/how-to-use-automatic-tcpip-addressing-without-a-dh.md)
+#### [DHCP 클라이언트의 문제 해결](../troubleshoot/troubleshoot-problems-on-dhcp-client.md)
+#### [DHCP 서버의 문제 해결](../troubleshoot/troubleshoot-problems-on-dhcp-server.md)
 
 ## [HPN(고성능 네트워킹)](technologies/hpn/hpn-top.md)
 ### [네트워크 오프로드 및 최적화 기술](technologies/hpn/network-offload-and-optimization.md)
