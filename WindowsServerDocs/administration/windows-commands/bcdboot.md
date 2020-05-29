@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: cde91738f524350f72f0278495e4bd46a3960e6f
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 67aacb3a575e0cdd08af5372b403916961d223c6
+ms.sourcegitcommit: ef089864980a1d4793a35cbf4cbdd02ce1962054
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718706"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84149776"
 ---
 # <a name="bcdboot"></a>bcdboot
 
@@ -30,13 +30,13 @@ bcdboot <source> [/l] [/s]
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| source | 부팅 환경 파일을 복사 하기 위한 원본으로 사용 하 여 Windows 디렉터리의 위치를 지정 합니다. |
+| 원본 | 부팅 환경 파일을 복사 하기 위한 원본으로 사용 하 여 Windows 디렉터리의 위치를 지정 합니다. |
 | /l | 로캘을 지정 합니다. 기본 로캘은 영어 (미국)입니다. |
 | /s | 시스템 파티션의 볼륨 문자를 지정합니다. 기본값은 시스템 파티션을 펌웨어에서 식별 합니다. |
 
 ## <a name="examples"></a>예
 
-BCDboot와이 명령을 사용 하는 방법에 대 한 예제를 찾을 수 있는 위치에 대 한 자세한 내용은 [Bcdboot 명령줄 옵션](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh824874(v=win.10)x) 항목을 참조 하세요.
+BCDboot와이 명령을 사용 하는 방법에 대 한 예제를 찾을 수 있는 위치에 대 한 자세한 내용은 [Bcdboot 명령줄 옵션](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh824874(v=win.10)) 항목을 참조 하세요.
 
 ## <a name="additional-references"></a>추가 참조
 
