@@ -8,16 +8,16 @@ ms.author: jgerend
 ms.technology: storage
 ms.date: 06/06/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 4a53f28867904c163346fb7943790ff0659ab006
-ms.sourcegitcommit: 29f7a4811b4d36d60b8b7c55ce57d4ee7d52e263
+ms.openlocfilehash: fbdef69f62a76fcc8d01aa0319b2b0859fc4f7cd
+ms.sourcegitcommit: 6973690a8705b24d09eb98f1713743d5e6079161
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83716878"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84211912"
 ---
 # <a name="deploy-folder-redirection-with-offline-files"></a>오프라인 파일을 사용한 폴더 리디렉션 배포
 
->적용 대상: Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Vista, Windows Server 2019, Windows Server 2016, Windows Server 2012, Windows Server 2012 R2, Windows Server 2008 R2, Windows Server(반기 채널)
+> 적용 대상: Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Vista, Windows Server 2019, Windows Server 2016, Windows Server 2012, Windows Server 2012 R2, Windows Server 2008 R2, Windows Server(반기 채널)
 
 이 토픽에서는 Windows Server를 사용하여 오프라인 파일로 Windows 클라이언트 컴퓨터에 폴더 리디렉션을 배포하는 방법을 설명합니다.
 
@@ -83,9 +83,9 @@ Windows Server 2019, Windows Server 2016 및 Windows Server 2012에서 파일 �
 7. **사용 권한** 페이지에서 **사용 권한 사용자 지정**을 선택합니다. 고급 보안 설정 대화 상자가 나타납니다.
 8. **상속 사용 안 함**을 선택한 다음, **상속된 사용 권한을 이 개체에 대한 명시적 사용 권한으로 변환합니다.** 를 선택합니다.
 9. 표 1에 설명되고 그림 1에 표시된 대로, 나열되지 않은 그룹 및 계정에 대한 권한을 제거하고, 1단계에서 만든 폴더 리디렉션 사용자 그룹에 특정 권한을 추가하여 사용 권한을 설정합니다.
-    
+
     ![리디렉션된 폴더 공유에 대한 사용 권한 설정](media/deploy-folder-redirection/setting-the-permissions-for-the-redirected-folders-share.png)
-    
+
     **그림 1** 리디렉션된 폴더 공유에 대한 사용 권한 설정
 10. **SMB 공유 - 고급** 프로필을 선택한 경우 **관리 속성** 페이지에서 **사용자 파일** 폴더 사용량 값을 선택합니다.
 11. **SMB 공유 - 고급** 프로필을 선택한 경우 **할당량** 페이지에서 필요에 따라 공유의 사용자에게 적용할 할당량을 선택합니다.
@@ -95,7 +95,6 @@ Windows Server 2019, Windows Server 2016 및 Windows Server 2012에서 파일 �
 
 | 사용자 계정  | 액세스  | 적용 대상  |
 | --------- | --------- | --------- |
-| 사용자 계정 | 액세스 | 적용 대상 |
 | System     | 모든 권한        |    이 폴더, 하위 폴더 및 파일     |
 | Administrators     | 모든 권한       | 이 폴더만        |
 | 만든 이/소유자     |   모든 권한      |   하위 폴더 및 파일만      |
@@ -117,11 +116,11 @@ Windows Server 2019, Windows Server 2016 및 Windows Server 2012에서 파일 �
 7. **보안 필터링** 섹션에서 **추가**를 선택합니다.
 8. **사용자, 컴퓨터 또는 그룹 선택** 대화 상자에 1단계에서 만든 보안 그룹의 이름(예: **폴더 리디렉션 사용자**)을 입력한 다음, **확인**을 선택합니다.
 9. **위임** 탭을 선택하고 **추가**를 선택하고 **인증된 사용자**를 입력한 다음, **확인**을 선택하고 다시 **확인**을 선택하여 기본 읽기 권한을 적용합니다.
-    
+
     [MS16-072](https://support.microsoft.com/help/3163622/ms16-072-security-update-for-group-policy-june-14-2016)의 보안 변경으로 인해 이 단계가 필요합니다.
 
 > [!IMPORTANT]
-> [MS16-072](https://support.microsoft.com/help/3163622/ms16-072-security-update-for-group-policy-june-14-2016)의 보안 변경으로 인해, 이제 인증된 사용자 그룹에 폴더 리디렉션 GPO에 대한 읽기 권한을 위임해야 합니다. 그렇지 않으면 GPO가 사용자에게 적용되지 않거나, 이미 적용된 경우 GPO가 제거되고 폴더가 다시 로컬 PC로 리디렉션됩니다. 자세한 내용은 [그룹 정책 보안 업데이트 MS16-072 배포](https://blogs.technet.microsoft.com/askds/2016/06/22/deploying-group-policy-security-update-ms16-072-kb3163622/)를 참조하세요.
+> [MS16-072](https://support.microsoft.com/help/3163622/ms16-072-security-update-for-group-policy-june-14-2016)의 보안 변경으로 인해, 이제 인증된 사용자 그룹에 폴더 리디렉션 GPO에 대한 읽기 권한을 위임해야 합니다. 그렇지 않으면 GPO가 사용자에게 적용되지 않거나, 이미 적용된 경우 GPO가 제거되고 폴더가 다시 로컬 PC로 리디렉션됩니다. 자세한 내용은 [그룹 정책 보안 업데이트 MS16-072 배포](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/deploying-group-policy-security-update-ms16-072-kb3163622/ba-p/400434)를 참조하세요.
 
 ## <a name="step-4-configure-folder-redirection-with-offline-files"></a>4단계: 오프라인 파일을 사용한 폴더 리디렉션 구성
 
@@ -165,7 +164,7 @@ Windows Server 2019, Windows Server 2016 및 Windows Server 2012에서 파일 �
 
 1. 폴더 리디렉션을 사용하도록 설정한 사용자 계정으로 기본 컴퓨터(기본 컴퓨터 지원을 사용하도록 설정한 경우)에 로그인합니다.
 2. 사용자가 이전에 컴퓨터에 로그인한 경우 관리자 권한 명령 프롬프트를 열고 다음 명령을 입력하여 클라이언트 컴퓨터에 최신 그룹 정책 설정이 적용되었는지 확인합니다.
-    
+
     ```PowerShell
     gpupdate /force
     ```
@@ -201,4 +200,4 @@ Windows Server 2019, Windows Server 2016 및 Windows Server 2012에서 파일 �
 * [고급 오프라인 파일 기능 사용](enable-always-offline.md)
 * [복제된 사용자 프로필 데이터에 대한 Microsoft의 지원 정책](https://docs.microsoft.com/archive/blogs/askds/microsofts-support-statement-around-replicated-user-profile-data)
 * [DISM을 사용하여 앱을 테스트용으로 로드](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh852635(v=win.10)>)
-* [Windows 런타임 기반 앱의 패키징, 배포 및 쿼리 문제 해결](https://msdn.microsoft.com/library/windows/desktop/hh973484.aspx)
+* [Windows 런타임 기반 앱의 패키징, 배포 및 쿼리 문제 해결](https://docs.microsoft.com/windows/win32/appxpkg/troubleshooting)
