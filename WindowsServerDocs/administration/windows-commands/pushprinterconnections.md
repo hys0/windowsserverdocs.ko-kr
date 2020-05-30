@@ -4,17 +4,17 @@ description: '* * * *에 대 한 참조 항목'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
-ms.assetid: c30afb97-b149-478f-a4b9-2cbc25361818 vhorne
+ms.assetid: c30afb97-b149-478f-a4b9-2cbc25361818
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 55294b27ec51edb7083debf15e332117b9b4e1df
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 1ed83b51da5ad7ad0a6b4dc0afd1d6bc30803a98
+ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83821233"
+ms.lasthandoff: 05/30/2020
+ms.locfileid: "84222043"
 ---
 # <a name="pushprinterconnections"></a>pushprinterconnections
 

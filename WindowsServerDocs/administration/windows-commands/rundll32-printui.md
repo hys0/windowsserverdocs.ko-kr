@@ -4,17 +4,17 @@ description: 여러 프린터 구성 작업을 자동화 하는 rundll32.exe pri
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
-ms.assetid: 12fb48b6-5dd8-4cc0-8808-e6a681aceb84 jpjofre
+ms.assetid: 12fb48b6-5dd8-4cc0-8808-e6a681aceb84
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 05/25/2018
-ms.openlocfilehash: 4eb68d3ddb9b114abb5f32ddeb41de889943fa48
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 3644af74918089e837b01c531099c0e61a6eb771
+ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82722246"
+ms.lasthandoff: 05/30/2020
+ms.locfileid: "84223059"
 ---
 # <a name="rundll32-printuidllprintuientry"></a>rundll32.exe printui.dll, PrintUIEntry
 
@@ -22,29 +22,29 @@ ms.locfileid: "82722246"
 
 여러 프린터 구성 작업을 자동화합니다. printui.dll는 프린터 구성 대화 상자에서 사용 하는 함수를 포함 하는 실행 파일입니다. 이러한 함수 라고도에서 스크립트 또는 명령줄 배치 파일 내에서 또는 명령 프롬프트에서 대화형으로 실행할 수 있습니다.
 
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>구문
 
-```  
-rundll32 printui.dll PrintUIEntry [BaseParameter] [ModificationParameter1] [ModificationParameter2] [ModificationParameterN]  
-```  
-
-이 항목의 예제에서는 이전 구문을 사용 하지만에서는 다음과 같은 대체 구문을 사용할 수도 있습니다.  
-
-```  
-rundll32 printui.dll,PrintUIEntry [BaseParameter] [ModificationParameter1] [ModificationParameter2] [ModificationParameterN]  
+```
+rundll32 printui.dll PrintUIEntry [BaseParameter] [ModificationParameter1] [ModificationParameter2] [ModificationParameterN]
 ```
 
-```  
-rundll32 printui PrintUIEntry [BaseParameter] [ModificationParameter1] [ModificationParameter2] [ModificationParameterN]  
+이 항목의 예제에서는 이전 구문을 사용 하지만에서는 다음과 같은 대체 구문을 사용할 수도 있습니다.
+
+```
+rundll32 printui.dll,PrintUIEntry [BaseParameter] [ModificationParameter1] [ModificationParameter2] [ModificationParameterN]
 ```
 
-```  
-rundll32 printui,PrintUIEntry [BaseParameter] [ModificationParameter1] [ModificationParameter2] [ModificationParameterN]  
+```
+rundll32 printui PrintUIEntry [BaseParameter] [ModificationParameter1] [ModificationParameter2] [ModificationParameterN]
+```
+
+```
+rundll32 printui,PrintUIEntry [BaseParameter] [ModificationParameter1] [ModificationParameter2] [ModificationParameterN]
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-두 가지 방법으로 매개 변수: 기본 매개 변수 및 매개 변수 수정 합니다. 기본 매개 변수는 명령을 수행 하는 함수를 지정 합니다. 지정된 된 명령 줄에서 이러한 매개 변수 중 하나에만 나타날 수 있습니다. 그런 다음 기본 매개 변수 (일부 수정 매개 변수는 모든 기본 매개 변수 지원)에 적용할 수 있는 경우 하나 이상의 수정 매개 변수를 사용 하 여 기본 매개 변수를 수정할 수 있습니다.  
+두 가지 방법으로 매개 변수: 기본 매개 변수 및 매개 변수 수정 합니다. 기본 매개 변수는 명령을 수행 하는 함수를 지정 합니다. 지정된 된 명령 줄에서 이러한 매개 변수 중 하나에만 나타날 수 있습니다. 그런 다음 기본 매개 변수 (일부 수정 매개 변수는 모든 기본 매개 변수 지원)에 적용할 수 있는 경우 하나 이상의 수정 매개 변수를 사용 하 여 기본 매개 변수를 수정할 수 있습니다.
 
 |     기본 매개 변수     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       설명                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 |-------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -100,39 +100,39 @@ rundll32 printui,PrintUIEntry [BaseParameter] [ModificationParameter1] [Modifica
 |        /W [flags]        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  프린터 추가 마법사, 프린터 드라이버 추가 마법사 및 네트워크 프린터 설치 마법사에 대 한 매개 변수 또는 옵션을 지정 합니다.<p>**r**: 마지막 페이지에서 다시 시작 해야 하는 마법사를 사용 합니다.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 |        /G [flags]        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              글로벌 매개 변수 및 사용 하 여 원하는 옵션을 지정 합니다.<p>**w**: 사용자에 게 설치 드라이버 경고를 표시 하지 않습니다.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 
-## <a name="remarks"></a>설명  
-- **PrintUIEntry** 키워드는 대/소문자를 구분 하 고이 항목의 예제에 표시 된 정확한 대/소문자를이 명령에 대 한 구문을 입력 해야 합니다.  
-- 명령 프롬프트에서 추가 예제: **rundll32 합니다 /?**  
-  ## <a name="examples"></a>예  
-  이 명령이 실행 되는 사용자 계정에 대해 표시 되는 컴퓨터에 대해 새 원격 프린터 printer1를 추가 하려면 다음을 입력 합니다.  
-  ```  
-  rundll32 printui.dll PrintUIEntry /in /n\\client1\printer1  
-  ```  
-  프린터 추가 마법사를 사용 하 여 프린터를 추가 하 고 드라이브 c:에 있는 InfFile .inf 파일을 사용 하 여를 추가 하려면 다음을 입력 합니다.  
-  ```  
-  rundll32 printui.dll PrintUIEntry /ii /f c:\Infpath\InfFile.inf  
-  ```  
-  기존 프린터인 printer1을 삭제 하려면 Client1 컴퓨터에서 다음을 입력 합니다.  
-  ```  
-  rundll32 printui.dll PrintUIEntry /dn /n\\client1\printer1  
-  ```  
-  컴퓨터별 프린터 연결 (마다 printer2)을 추가 하려면 컴퓨터의 모든 사용자에 대해 Client2를 입력 합니다 (사용자가 로그온 할 때 연결이 적용 됨).  
-  ```  
-  rundll32 printui.dll PrintUIEntry /ga /n\\client2\printer2  
-  ```  
-  컴퓨터 당 프린터 연결을 삭제 하려면 마다 printer2를 사용 하 여 컴퓨터의 모든 사용자에 대해 Client2를 입력 합니다. 즉, 사용자가 로그온 할 때 연결이 삭제 됩니다.  
-  ```  
-  rundll32 printui.dll PrintUIEntry /gd /n\\client2\printer2  
-  ```  
-  인쇄 서버 printServer1의 속성을 보려면 다음을 입력 합니다.  
-  ```  
-  rundll32 printui.dll PrintUIEntry /s /t1 /c\\printserver1  
-  ```  
-  Printer3 프린터의 속성을 보려면 다음을 입력 합니다.  
-  ```  
-  rundll32 printui.dll PrintUIEntry /p /n\\printer3  
-  ```  
-  ## <a name="additional-references"></a>추가 참조  
+## <a name="remarks"></a>설명
+- **PrintUIEntry** 키워드는 대/소문자를 구분 하 고이 항목의 예제에 표시 된 정확한 대/소문자를이 명령에 대 한 구문을 입력 해야 합니다.
+- 명령 프롬프트에서 추가 예제: **rundll32 합니다 /?**
+  ## <a name="examples"></a>예
+  이 명령이 실행 되는 사용자 계정에 대해 표시 되는 컴퓨터에 대해 새 원격 프린터 printer1를 추가 하려면 다음을 입력 합니다.
+  ```
+  rundll32 printui.dll PrintUIEntry /in /n\\client1\printer1
+  ```
+  프린터 추가 마법사를 사용 하 여 프린터를 추가 하 고 드라이브 c:에 있는 InfFile .inf 파일을 사용 하 여를 추가 하려면 다음을 입력 합니다.
+  ```
+  rundll32 printui.dll PrintUIEntry /ii /f c:\Infpath\InfFile.inf
+  ```
+  기존 프린터인 printer1을 삭제 하려면 Client1 컴퓨터에서 다음을 입력 합니다.
+  ```
+  rundll32 printui.dll PrintUIEntry /dn /n\\client1\printer1
+  ```
+  컴퓨터별 프린터 연결 (마다 printer2)을 추가 하려면 컴퓨터의 모든 사용자에 대해 Client2를 입력 합니다 (사용자가 로그온 할 때 연결이 적용 됨).
+  ```
+  rundll32 printui.dll PrintUIEntry /ga /n\\client2\printer2
+  ```
+  컴퓨터 당 프린터 연결을 삭제 하려면 마다 printer2를 사용 하 여 컴퓨터의 모든 사용자에 대해 Client2를 입력 합니다. 즉, 사용자가 로그온 할 때 연결이 삭제 됩니다.
+  ```
+  rundll32 printui.dll PrintUIEntry /gd /n\\client2\printer2
+  ```
+  인쇄 서버 printServer1의 속성을 보려면 다음을 입력 합니다.
+  ```
+  rundll32 printui.dll PrintUIEntry /s /t1 /c\\printserver1
+  ```
+  Printer3 프린터의 속성을 보려면 다음을 입력 합니다.
+  ```
+  rundll32 printui.dll PrintUIEntry /p /n\\printer3
+  ```
+  ## <a name="additional-references"></a>추가 참조
 
-- [rundll32](rundll32.md)  
-- [인쇄 명령 참조](print-command-reference.md)  
+- [rundll32](rundll32.md)
+- [인쇄 명령 참조](print-command-reference.md)

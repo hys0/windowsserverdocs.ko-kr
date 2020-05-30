@@ -4,29 +4,29 @@ description: 옵션을 설정 하는 텔넷 집합에 대 한 참조 항목입�
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
-ms.assetid: 67316b5f-9c6f-43e3-86d5-dcff9ae2ac3e vhorne
+ms.assetid: 67316b5f-9c6f-43e3-86d5-dcff9ae2ac3e
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5a785a9448860752c79dc1c2369b8dd870409990
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 477c2ee259301af26870339a2c329c2c3502963b
+ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82721479"
+ms.lasthandoff: 05/30/2020
+ms.locfileid: "84222671"
 ---
 # <a name="telnet-set"></a>텔넷: 설정
 
 > 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-옵션을 설정합니다.   
+옵션을 설정합니다.
 
-## <a name="syntax"></a>구문  
-```  
-set [bsasdel] [crlf] [delasbs] [escape <Char>] [localecho] [logfile <FileName>] [logging] [mode {console | stream}] [ntlm] [term {ansi | vt100 | vt52 | vtnt}] [?]  
-```  
-#### <a name="parameters"></a>매개 변수  
+## <a name="syntax"></a>구문
+```
+set [bsasdel] [crlf] [delasbs] [escape <Char>] [localecho] [logfile <FileName>] [logging] [mode {console | stream}] [ntlm] [term {ansi | vt100 | vt52 | vtnt}] [?]
+```
+#### <a name="parameters"></a>매개 변수
 
 |                    매개 변수                     |                                                                                                                                              설명                                                                                                                                              |
 |--------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -42,13 +42,13 @@ set [bsasdel] [crlf] [delasbs] [escape <Char>] [localecho] [logfile <FileName>] 
 | {ansi & #124, v t 100 & #124, v t 52 & #124, vtnt} 용어 |                                                                                                                                        터미널 유형을 설정합니다.                                                                                                                                        |
 |                        ?                         |                                                                                                                                    이 명령에 대 한 도움말을 표시 합니다.                                                                                                                                    |
 
-## <a name="remarks"></a>설명  
-1. 사용할 수는 **설정 되지 않은** 명령을 이전에 설정 된 옵션을 해제 합니다.  
-2. 영어가 아닌 버전의 telnet에서는 **codeset** <option> 를 사용할 수 있습니다. **Codeset** <option> 는 현재 코드 집합을 옵션으로 설정 합니다 .이 옵션은 **shift JIS**, **일본어 EUC**, **jis 간지**, **jis 간지 (78)**, **DEC 간지**, **NEC 간지**중 하나일 수 있습니다. 원격 컴퓨터에서 설정 하는 동일한 코드를 설정 해야 합니다.  
-   ## <a name="examples"></a>예  
-   로그 파일을 설정 하 고 로컬 파일 tnlog.txt에 로깅을 시작합니다  
-   ```  
-   set logfile tnlog.txt  
-   ```  
-   ## <a name="additional-references"></a>추가 참조  
-3. - [명령줄 구문 키](command-line-syntax-key.md)  
+## <a name="remarks"></a>설명
+1. 사용할 수는 **설정 되지 않은** 명령을 이전에 설정 된 옵션을 해제 합니다.
+2. 영어가 아닌 버전의 telnet에서는 **codeset** 를 <option> 사용할 수 있습니다. **Codeset** <option> 현재 코드를 옵션으로 설정 합니다 .이 옵션은 **SHIFT JIS**, **일본어 EUC**, **jis 간지**, **Jis 간지 (78)**, **DEC 간지**, **NEC 간지**중 하나일 수 있습니다. 원격 컴퓨터에서 설정 하는 동일한 코드를 설정 해야 합니다.
+   ## <a name="examples"></a>예
+   로그 파일을 설정 하 고 로컬 파일 tnlog.txt에 로깅을 시작합니다
+   ```
+   set logfile tnlog.txt
+   ```
+   ## <a name="additional-references"></a>추가 참조
+3. - [명령줄 구문 키](command-line-syntax-key.md)

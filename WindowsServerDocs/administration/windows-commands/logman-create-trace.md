@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 08a9b0a74c6da894eeadef8aef86f25761d6616e
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 015fb7842146e372b36c71fe95a3598bdfa48676
+ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820453"
+ms.lasthandoff: 05/30/2020
+ms.locfileid: "84222982"
 ---
 # <a name="logman-create-trace"></a>logman 추적 만들기
 
@@ -69,7 +69,7 @@ logman create trace <[-n] <name>> [options]
 
 ### <a name="examples"></a>예
 
-256 개 이하의 버퍼를 사용 하 여 trace_log 이라는 이벤트 추적 데이터 수집기를 만들려면 각 버퍼의 크기가 64kb 이며, 그 결과를 c:\logfile에 배치 하려면 다음을 입력 합니다.
+256 개 이하의 버퍼를 사용 하 여 *trace_log*이라는 이벤트 추적 데이터 수집기를 만들려면 각 버퍼의 크기가 64kb 이며, 그 결과를 c:\logfile에 배치 하려면 다음을 입력 합니다.
 
 ```
 logman create trace trace_log -nb 16 256 -bs 64 -o c:\logfile
@@ -79,4 +79,6 @@ logman create trace trace_log -nb 16 256 -bs 64 -o c:\logfile
 
 - [명령줄 구문 키](command-line-syntax-key.md)
 
-- [logman](logman.md)
+- [logman update 추적 명령](logman-update-trace.md)
+
+- [logman 명령](logman.md)

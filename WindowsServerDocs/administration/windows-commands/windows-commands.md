@@ -1,6 +1,6 @@
 ---
 title: Windows 명령
-description: 참고
+description: 참조
 ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: c703d07c-8227-4e86-94a6-8ef390f94cdc
@@ -9,12 +9,12 @@ ms.author: jgerend
 manager: dongill
 ms.date: 06/26/2019
 ms.prod: windows-server
-ms.openlocfilehash: 7baec3bbe532bbcedb8c17628fd88d2c8eac34c6
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: cfb391c68cfb551ef2179e7210dff3a26d540fde
+ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720728"
+ms.lasthandoff: 05/30/2020
+ms.locfileid: "84222640"
 ---
 # <a name="windows-commands"></a>Windows 명령
 
@@ -24,40 +24,40 @@ ms.locfileid: "82720728"
 
 다음 ㄱ-ㅎ 메뉴에서 특정 명령에 대 한 정보를 찾기 위해 명령을 첫 글자를 클릭 하 고 명령 이름을 클릭 합니다.
 
-[A](#a) |
-[B](#b) | 
-[M](#m)[D](#d) | 
-[V](#v)[C](#c) |
-[J](#j) | 
-[W](#w)[F](#f) | 
-[S](#s)[E](#e) | 
-[R](#r)[G](#g) | 
-[U](#u)[H](#h) | 
-[X](#x) [I](#i) | 
-[T](#t)[L](#l)[N](#n)[Q](#q)[O](#o)[P](#p)[K](#k)C D E F G H I J | 
-K L M | 
-N | 
-O | 
-P | 
-Q R S T U V W X | | 
- | 
- | 
- | 
- | 
- | 
- | 
- | 
- Y | -
+[A](#a)  |
+ [B](#b)  |
+ [C](#c)  |
+ [D](#d)  |
+ [E](#e)  |
+ [F](#f)  |
+ [G](#g)  |
+ [H](#h)  |
+ [I](#i)  |
+ [J](#j)  |
+ [K](#k)  |
+ [L](#l)  |
+ [M](#m)  |
+ [N](#n)  |
+ [O](#o)  |
+ [P](#p)  |
+ [Q](#q)  |
+ [R](#r)  |
+ [S](#s)  |
+ [T](#t)  |
+ [U](#u)  |
+ [V](#v)  |
+ [W](#w)  |
+ [X](#x) | Y | -
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>필수 구성 요소
 
 이 항목에 포함 된 정보는 다음에 적용 됩니다.
 
--   시작
+-   Windows Server 2019
 -   Windows Server(반기 채널)
 -   Windows Server 2016
 -   Windows Server 2012 R2
--   Windows Server 2012 
+-   Windows Server 2012
 -   Windows Server 2008 R2
 -   Windows Server 2008
 -   Windows 10
@@ -71,48 +71,48 @@ Windows에는 명령 셸 및 [PowerShell](https://docs.microsoft.com/powershell/
 
 PowerShell은 cmdlet 이라는 PowerShell 명령을 실행 하기 위해 명령 셸의 기능을 확장 하도록 설계 되었습니다. Cmdlet은 Windows 명령과 비슷하지만 보다 확장 가능한 스크립트 언어를 제공 합니다. Powershell에서 Windows 명령 및 PowerShell cmdlet을 실행할 수 있지만 명령 셸은 PowerShell cmdlet이 아닌 Windows 명령만 실행할 수 있습니다.
 
-가장 강력 하 고 최신 Windows automation의 경우 windows 용 windows 명령 또는 windows 스크립트 호스트 대신 PowerShell을 사용 하는 것이 좋습니다. 
+가장 강력 하 고 최신 Windows automation의 경우 windows 용 windows 명령 또는 windows 스크립트 호스트 대신 PowerShell을 사용 하는 것이 좋습니다.
 > [!NOTE]
->Powershell의 오픈 소스 버전인 powershell [Core](https://docs.microsoft.com/powershell/scripting/whats-new/what-s-new-in-powershell-core-60?view=powershell-6)를 다운로드 하 여 설치할 수도 있습니다. 
+>Powershell의 오픈 소스 버전인 powershell [Core](https://docs.microsoft.com/powershell/scripting/whats-new/what-s-new-in-powershell-core-60?view=powershell-6)를 다운로드 하 여 설치할 수도 있습니다.
 
 > [!CAUTION]
 > 레지스트리를 잘못 편집하면 시스템에 심각한 손상을 줄 수 있습니다. 레지스트리를 다음과 같이 변경 하기 전에 컴퓨터의 중요 한 데이터를 백업 해야 합니다.
 
 > [!NOTE]
 > 컴퓨터 또는 사용자 로그온 세션의 명령 셸에서 파일 및 디렉터리 이름 완성을 사용 하거나 사용 하지 않도록 설정 하려면 **regedit.exe** 를 실행 하 고 다음 **reg_DWOrd 값**을 설정 합니다.
-> 
+>
 > HKEY_LOCAL_MACHINE \Software\Microsoft\Command Processor\completionChar\ reg_DWOrd
-> 
+>
 > **Reg_DWOrd** 값을 설정 하려면 특정 함수에 대 한 제어 문자의 16 진수 값을 사용 합니다 (예: **0 9** 은 Tab, **0 08** 은 백스페이스). 사용자 지정 설정이 컴퓨터 설정 보다 우선 하며 명령줄 옵션 레지스트리 설정 보다 우선 합니다.
 
 ## <a name="command-line-reference-a-z"></a>명령줄 참조 ㄱ-ㅎ
 
 특정 Windows 명령에 대 한 정보를 찾으려면 다음 A-z 메뉴에서 명령이 시작 되는 문자를 클릭 하 고 명령 이름을 클릭 합니다.
 
-[A](#a) |
-[B](#b) | 
-[M](#m)[D](#d) | 
-[V](#v)[C](#c) |
-[J](#j) | 
-[W](#w)[F](#f) | 
-[S](#s)[E](#e) | 
-[R](#r)[G](#g) | 
-[U](#u)[H](#h) | 
-[X](#x) [I](#i) | 
-[T](#t)[L](#l)[N](#n)[Q](#q)[O](#o)[P](#p)[K](#k)C D E F G H I J | 
-K L M | 
-N | 
-O | 
-P | 
-Q R S T U V W X | | 
- | 
- | 
- | 
- | 
- | 
- | 
- | 
- Y | -
+[A](#a)  |
+ [B](#b)  |
+ [C](#c)  |
+ [D](#d)  |
+ [E](#e)  |
+ [F](#f)  |
+ [G](#g)  |
+ [H](#h)  |
+ [I](#i)  |
+ [J](#j)  |
+ [K](#k)  |
+ [L](#l)  |
+ [M](#m)  |
+ [N](#n)  |
+ [O](#o)  |
+ [P](#p)  |
+ [Q](#q)  |
+ [R](#r)  |
+ [S](#s)  |
+ [T](#t)  |
+ [U](#u)  |
+ [V](#v)  |
+ [W](#w)  |
+ [X](#x) | Y | -
 
 ### <a name="a"></a>A
 -   [append](append.md)
@@ -298,7 +298,7 @@ Q R S T U V W X | |
   -   [fsutil usn](fsutil-usn.md)
   -   [fsutil volume](fsutil-volume.md)
   -   [fsutil wim](fsutil-wim.md)
-- [p](ftp.md)
+- [ftp](ftp.md)
 - [ftype](ftype.md)
 - [fveupdate](fveupdate.md)
 
@@ -351,14 +351,14 @@ Q R S T U V W X | |
   -   [ksetup: setenctypeattr](ksetup-setenctypeattr.md)
   -   [ksetup: getenctypeattr](ksetup-getenctypeattr.md)
   -   [ksetup: addenctypeattr](ksetup-addenctypeattr.md)
-  -   [ksetup: delenctypeattr](ksetup-delenctypeattr.md) 
+  -   [ksetup: delenctypeattr](ksetup-delenctypeattr.md)
 - [ktmutil](ktmutil.md)
 - [ktpass](ktpass.md)
 
 ### <a name="l"></a>L
 - [label](label.md)
 - [lodctr](lodctr.md)
-- [logman](logman.md)
+- [logman 명령](logman.md)
   -   [logman create](logman-create.md)
   -   [logman query](logman-query.md)
   -   [logman start &124; 막을](logman-start-stop.md)
@@ -527,7 +527,7 @@ Q R S T U V W X | |
 - [scwcmd](Scwcmd.md)
   -   [scwcmd: 분석](scwcmd-analyze.md)
   -   [scwcmd: 구성](scwcmd-configure.md)
-  -   [scwcmd: 등록](scwcmd-register.md) 
+  -   [scwcmd: 등록](scwcmd-register.md)
   -   [scwcmd: 롤백](scwcmd-rollback.md) 
   -   [scwcmd: 변환](scwcmd-transform.md) 
   -   [scwcmd: 뷰](scwcmd-view.md) 
@@ -589,7 +589,7 @@ Q R S T U V W X | |
 -   [verifier](verifier.md)
 -   [verify](verify_1.md)
 -   [vol](vol.md)
--   [list](vssadmin.md)- 
+-   [list](vssadmin.md)-
 
 ### <a name="w"></a>W
 - [waitfor](waitfor.md)

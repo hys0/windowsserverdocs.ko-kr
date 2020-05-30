@@ -4,17 +4,17 @@ description: 원격 컴퓨터와 파일을 전송 합니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
-ms.assetid: 772f19a8-dafe-45cd-878a-f5691f6568ef vhorne
+ms.assetid: 772f19a8-dafe-45cd-878a-f5691f6568ef
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: fb9977d0bc4f45b610d8bf3409c6beeadfaf7ee5
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 8b3674cbfdbc01811ece57e2f9cbbea3aa31251d
+ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83821023"
+ms.lasthandoff: 05/30/2020
+ms.locfileid: "84223045"
 ---
 # <a name="tftp"></a>tftp
 
@@ -34,8 +34,8 @@ tftp [-i] [<Host>] [{get | put}] <Source> [<Destination>]
 |\<Host\>|로컬 또는 원격 컴퓨터를 지정합니다.|
 |put|파일 전송 *소스* 파일을 로컬 컴퓨터에 *대상* 원격 컴퓨터에 있습니다. Tftp 프로토콜은 사용자 인증을 지원 하지 않으므로 사용자는 원격 컴퓨터에 로그온 해야 하며 파일은 원격 컴퓨터에서 쓸 수 있어야 합니다.|
 |Get|파일 전송 *대상* 파일을 원격 컴퓨터에서 *소스* 로컬 컴퓨터에 있습니다.|
-|\<원본\>|전송할 파일을 지정 합니다.|
-|\<대상\>|파일 전송 위치를 지정 합니다.|
+|\<Source\>|전송할 파일을 지정 합니다.|
+|\<Destination\>|파일 전송 위치를 지정 합니다.|
 
 ## <a name="remarks"></a>설명
 -   기능 추가 마법사를 사용 하 여 tftp 클라이언트를 설치할 수 있습니다.

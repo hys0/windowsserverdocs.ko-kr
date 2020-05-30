@@ -4,17 +4,17 @@ description: 컴퓨터에서 장치 드라이버를 감사 하는 방법 및 자
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
-ms.assetid: 4fa88932-cff0-4dfc-936c-98c0e3dfbeb8 britw
+ms.assetid: 4fa88932-cff0-4dfc-936c-98c0e3dfbeb8
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: 5feafc4d99d4fdea2a7da888c8e818088dd7f6e0
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: e79dd4869a88dc48e579451bfdf2f8fecc55e4f9
+ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83821213"
+ms.lasthandoff: 05/30/2020
+ms.locfileid: "84222023"
 ---
 # <a name="pnpunattend"></a>pnpunattend
 
@@ -31,9 +31,9 @@ PnPUnattend.exe auditSystem [/help] [/?] [/h] [/s] [/L]
 |매개 변수|설명|
 |---------|-----------|
 |auditSystem|온라인 드라이버 설치를 지정 합니다.</br>**Pnpunattend** 가 **/help** 또는 **/?** 를 사용 하 여 실행 되는 경우를 제외 하 고는 필수 항목입니다. 필요합니다.|
-|/s|(선택 사항) 를 설치 하지 않고 드라이버를 검색 하도록 지정 합니다.|
-|/L|(선택 사항) 명령 프롬프트에서이 명령에 대 한 로그 정보를 표시 하도록 지정 합니다.|
-|/?|(선택 사항) 명령 프롬프트에서이 명령에 대 한 도움말을 표시 합니다.|
+|/s|선택 사항입니다. 를 설치 하지 않고 드라이버를 검색 하도록 지정 합니다.|
+|/L|선택 사항입니다. 명령 프롬프트에서이 명령에 대 한 로그 정보를 표시 하도록 지정 합니다.|
+|/?|선택 사항입니다. 명령 프롬프트에서이 명령에 대 한 도움말을 표시 합니다.|
 
 ## <a name="remarks"></a>설명
 
