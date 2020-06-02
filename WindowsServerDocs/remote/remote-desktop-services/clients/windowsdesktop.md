@@ -1,144 +1,158 @@
 ---
-title: Bien démarrer avec le client Windows Desktop
-description: Informations de base sur le client Windows Desktop.
+title: Windows 데스크톱 클라이언트 시작
+description: Windows 데스크톱 클라이언트에 대한 기본 정보입니다.
 ms.prod: windows-server
 ms.technology: remote-desktop-services
 ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 04/28/2020
+ms.date: 05/26/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 368dc3889c5275512e345c26fcef504c6ceaa8c2
-ms.sourcegitcommit: d06650cfab2972551c3a269b3271596f55c1bd3b
+ms.openlocfilehash: c229eefbc0cc00ed1af940cd986c89e979873d29
+ms.sourcegitcommit: 4fec7d82f0772d03a9e8cac20092a4309b0f796e
 ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82726707"
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84025504"
 ---
-# <a name="get-started-with-the-windows-desktop-client"></a>Bien démarrer avec le client Windows Desktop
+# <a name="get-started-with-the-windows-desktop-client"></a>Windows 데스크톱 클라이언트 시작
 
->S’applique à : Windows 10, Windows 10 IoT Entreprise et Windows 7
+>적용 대상: Windows 10, Windows 10 IoT Enterprise 및 Windows 7
 
-Vous pouvez utiliser le client Bureau à distance pour Windows Desktop afin d’accéder aux applications et aux appareils de bureau Windows à distance à partir d’un autre appareil Windows.
+Windows 데스크톱용 원격 데스크톱 클라이언트를 사용하여 다른 Windows 디바이스에서 원격으로 Windows 앱 및 데스크톱에 액세스할 수 있습니다.
 
 > [!NOTE]
-> - Cette documentation ne concerne pas le client Connexion Bureau à distance (MSTSC) fourni avec Windows. Elle s’applique au client Bureau à distance (MSRDC).
-> - Actuellement, ce client ne permet d’accéder aux applications et aux appareils de bureau Windows à distance qu’à partir de [Windows Virtual Desktop](https://aka.ms/wvd).
-> - Vous êtes curieux de découvrir les nouvelles versions du client Windows Desktop ? Consultez [Nouveautés du client Windows Desktop](windowsdesktop-whatsnew.md).
+> - 이 설명서는 Windows와 함께 제공되는 원격 데스크톱 연결(MSTSC) 클라이언트를 위한 것이 아니라 새로운 원격 데스크톱(MSRDC) 클라이언트를 위한 것입니다.
+> - 이 클라이언트는 현재 [Windows Virtual Desktop](https://aka.ms/wvd)에서 원격 앱 및 데스크톱에만 액세스하도록 지원합니다.
+> - Windows 데스크톱 클라이언트의 새 릴리스가 궁금하신가요? [Windows 데스크톱 클라이언트의 새로운 기능](windowsdesktop-whatsnew.md)을 확인하세요.
 
-## <a name="install-the-client"></a>Installer le client
+## <a name="install-the-client"></a>클라이언트 설치
 
-Choisissez le client qui correspond à la version de Windows. Le nouveau client Bureau à distance (MSRDC) prend en charge les appareils clients Windows 10, Windows 10 IoT Entreprise et Windows 7.
+Windows 버전과 일치하는 클라이언트를 선택합니다. 새 원격 데스크톱 클라이언트(MSRDC)는 Windows 10, Windows 10 IoT Enterprise 및 Windows 7 클라이언트 디바이스를 지원합니다.
 
-- [Windows 64 bits](https://go.microsoft.com/fwlink/?linkid=2068602)
-- [Windows 32 bits](https://go.microsoft.com/fwlink/?linkid=2098960)
+- [Windows 64비트](https://go.microsoft.com/fwlink/?linkid=2068602)
+- [Windows 32비트](https://go.microsoft.com/fwlink/?linkid=2098960)
 - [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2098961)
 
-Vous pouvez installer le client pour l’utilisateur actuel, ce qui ne nécessite pas de droits d’administrateur, ou votre administrateur peut installer et configurer le client afin que tous les utilisateurs de l’appareil puissent y accéder.
+관리자 권한이 필요하지 않은 현재 사용자의 클라이언트를 설치하거나, 디바이스의 모든 사용자가 클라이언트에 액세스할 수 있도록 관리자가 클라이언트를 설치 및 구성할 수 있습니다.
 
-Une fois le client installé, vous pouvez le lancer à partir du menu Démarrer en recherchant **Bureau à distance**.
+클라이언트가 설치되면 **원격 데스크톱**을 검색하여 [시작] 메뉴에서 해당 클라이언트를 시작할 수 있습니다.
 
-## <a name="update-the-client"></a>Mettre à jour le client
+## <a name="update-the-client"></a>클라이언트 업데이트
 
-Tant que votre administrateur ne désactive pas les notifications, vous êtes averti chaque fois qu’une nouvelle version du client est disponible. La notification s’affiche dans le Centre de connexion ou dans le Centre de notifications Windows. Pour mettre à jour votre client, il vous suffit de sélectionner la notification.
+관리자가 알림을 사용하도록 설정한 경우 새 버전의 클라이언트를 사용할 수 있을 때마다 알림이 표시됩니다. 알림은 연결 센터 또는 Windows Action Center에 표시됩니다. 클라이언트를 업데이트하려면 알림만 선택하면 됩니다.
 
-Vous pouvez également rechercher manuellement les nouvelles mises à jour du client :
+또한 클라이언트에 대한 새 업데이트를 수동으로 검색할 수도 있습니다.
 
-1. Dans le Centre de connexion, appuyez sur le menu de dépassement ( **...** ) dans la barre de commandes en haut du client.
-2. Sélectionnez **À propos de** dans le menu déroulant.
-3. Le client recherche automatiquement les mises à jour.
-4. Si une mise à jour est disponible, appuyez sur **Installer la mise à jour** pour mettre à jour le client.
+1. 연결 센터에서 클라이언트 위쪽의 명령 표시줄에 있는 오버플로 메뉴( **...** )를 탭합니다.
+2. 드롭다운 메뉴에서 **정보**를 선택합니다.
+3. 클라이언트에서 자동으로 업데이트를 검색합니다.
+4. 사용할 수 있는 업데이트가 있으면 **업데이트 설치**를 탭하여 해당 클라이언트를 업데이트합니다.
 
-## <a name="workspaces"></a>Espaces de travail
+## <a name="workspaces"></a>작업 영역
 
-Vous pouvez obtenir la liste des ressources managées auxquelles vous pouvez accéder, notamment les applications et les appareils de bureau, en vous abonnant à l’espace de travail fourni par votre administrateur. Quand vous vous abonnez, les ressources deviennent disponibles sur votre ordinateur local. Le client Windows Desktop prend actuellement en charge les ressources publiées à partir de Windows Virtual Desktop.
+관리자가 제공한 작업 영역을 구독하여 앱 및 데스크톱과 같이 액세스할 수 있는 관리형 리소스의 목록을 가져옵니다. 구독하면 로컬 PC에서 리소스를 사용할 수 있게 됩니다. Windows 데스크톱 클라이언트는 현재 Windows Virtual Desktop에서 게시된 리소스를 지원합니다.
 
-### <a name="subscribe-to-a-workspace"></a>S’abonner à un espace de travail
+### <a name="subscribe-to-a-workspace"></a>작업 영역 구독
 
-1. Dans la page principale du client, également appelée Centre de connexion, cliquez sur **S’abonner**.
-2. Connectez-vous avec votre compte d’utilisateur quand vous y êtes invité.
-3. Les ressources qui apparaissent dans le Centre de connexion sont regroupées par espace de travail.
+작업 영역을 구독하는 방법에는 두 가지가 있습니다. 클라이언트가 회사 또는 학교 계정에서 사용 가능한 리소스를 찾거나 클라이언트가 찾을 수 없는 경우 리소스가 있는 URL을 직접 지정할 수 있습니다. 작업 영역을 구독하면 리소스를 다음 방법 중 하나를 사용하여 시작할 수 있습니다.
 
-Pour lancer des ressources, utilisez l’une des méthodes suivantes :
+- [연결 센터]로 이동하여 시작할 리소스를 두 번 클릭합니다.
+- [시작] 메뉴로 이동하여 작업 영역 이름이 있는 폴더를 찾거나 검색 창에서 리소스 이름을 입력할 수도 있습니다.
 
-- Accédez au Centre de connexion, puis double-cliquez sur une ressource pour la lancer.
-- Vous pouvez également accéder au menu Démarrer et rechercher un dossier avec le nom de l’espace de travail ou entrer le nom de la ressource dans la barre de recherche.
+#### <a name="subscribe-with-a-user-account"></a>사용자 계정으로 구독
 
-### <a name="workspace-details"></a>Détails de l’espace de travail
+1. 클라이언트의 기본 페이지에서 **구독**을 탭합니다.
+2. 메시지가 표시되면 사용자 계정으로 로그인합니다.
+3. 해당 리소스가 작업 영역별로 그룹화된 연결 센터에 표시됩니다.
 
-Une fois abonné, vous pouvez afficher des informations supplémentaires sur un espace de travail dans le panneau Détails :
+#### <a name="subscribe-with-url"></a>URL로 구독
 
-- Nom de l’espace de travail
-- URL et nom d’utilisateur utilisés pour s’abonner
-- Nombre d’applications et d’appareils de bureau
-- Date/heure de la dernière actualisation
-- État de la dernière actualisation
+1. 클라이언트의 기본 페이지에서 **URL로 구독**을 탭합니다.
+2. 작업 영역 URL 또는 이메일 주소를 입력합니다.
+   - **작업 영역 URL**을 사용하는 경우 관리자가 제공한 URL을 사용합니다. Windows Virtual Desktop에서 리소스에 액세스하는 경우 다음 URL 중 하나를 사용할 수 있습니다.
+     - Windows 가상 데스크톱 2019년 가을: `https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfeeddiscovery.aspx`
+     - Windows 가상 데스크톱 2020년 봄: `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`
+   - **이메일**을 사용하려면 이메일 주소를 입력하세요. 그러면 관리자가 [이메일 검색](../rds-email-discovery.md)을 설정한 경우 클라이언트가 이메일 주소와 연결된 URL을 검색합니다.
+3. **다음**을 탭합니다.
+4. 메시지가 표시되면 사용자 계정으로 로그인합니다.
+5. 해당 리소스가 작업 영역별로 그룹화된 연결 센터에 표시됩니다.
 
-Accès au panneau Détails :
+### <a name="workspace-details"></a>작업 영역 세부 정보
 
-1. Dans le Centre de connexion, appuyez sur le menu de dépassement ( **...** ) à côté de l’espace de travail.
-2. Sélectionnez **Détails** dans le menu déroulant.
-3. Le panneau Détails s’affiche sur le côté droit du client.
+구독하면 작업 영역에 대한 추가 정보가 [세부 정보] 패널에 표시됩니다.
 
-Une fois que vous êtes abonné, l’espace de travail est automatiquement actualisé à intervalles réguliers. Les ressources peuvent être ajoutées, changées ou supprimées en fonction des modifications apportées par votre administrateur.
+- 작업 영역의 이름
+- 구독하는 데 사용되는 URL 및 사용자 이름
+- 앱 및 데스크톱의 수
+- 마지막 새로 고침 날짜/시간
+- 마지막 새로 고침 상태
 
-Vous pouvez également rechercher manuellement les mises à jour des ressources si nécessaire en sélectionnant **Actualiser** dans le panneau Détails.
+[세부 정보] 패널에 액세스하려면 다음을 수행합니다.
 
-### <a name="refreshing-a-workspace"></a>Actualisation d’un espace de travail
+1. 연결 센터에서 [작업 영역] 옆에 있는 오버플로 메뉴( **...** )를 탭합니다.
+2. 드롭다운 메뉴에서 **세부 정보**를 선택합니다.
+3. [세부 정보] 패널이 클라이언트의 오른쪽에 표시됩니다.
 
-Vous pouvez actualiser manuellement un espace de travail en sélectionnant **Actualiser** dans le menu de dépassement ( **...** ) à côté de l’espace de travail.
+구독이 완료되면 작업 영역이 정기적으로 자동으로 새로 고침됩니다. 관리자가 변경한 내용에 따라 리소스를 추가, 변경 또는 제거할 수 있습니다.
 
-### <a name="unsubscribe-from-a-workspace"></a>Se désabonner d’un espace de travail
+또한 필요한 경우 세부 정보 패널에서 **새로 고침**을 선택하여 리소스에 대한 업데이트를 수동으로 찾을 수도 있습니다.
 
-Cette section vous apprend à vous désabonner d’un espace de travail. Vous pouvez vous désabonner pour vous réabonner avec un autre compte ou supprimer vos ressources du système.
+### <a name="refreshing-a-workspace"></a>작업 영역 새로 고침
 
-1. Dans le Centre de connexion, appuyez sur le menu de dépassement ( **...** ) à côté de l’espace de travail.
-2. Dans le menu déroulant, sélectionnez **Se désabonner**.
-3. Passez en revue la boîte de dialogue et sélectionnez **Continuer**.
+작업 영역 옆의 오버플로 메뉴( **...** )에서 **새로 고침**을 선택하여 작업 영역을 수동으로 새로 고칠 수 있습니다.
 
-## <a name="managed-desktops"></a>Bureaux gérés
+### <a name="unsubscribe-from-a-workspace"></a>작업 영역에서 구독 취소
 
-Les espaces de travail peuvent contenir plusieurs ressources gérées, notamment des bureaux. Quand vous accédez à un bureau géré, vous avez accès à toutes les applications installées par votre administrateur.
+이 섹션에서는 작업 영역에서 구독을 취소하는 방법을 설명합니다. 구독을 취소하여 다른 계정으로 다시 구독하거나 시스템에서 리소스를 제거할 수 있습니다.
 
-### <a name="desktop-settings"></a>Paramètres du bureau
+1. 연결 센터에서 [작업 영역] 옆에 있는 오버플로 메뉴( **...** )를 탭합니다.
+2. 드롭다운 메뉴에서 **구독 취소**를 선택합니다.
+3. 대화 상자를 검토하고 **계속**을 선택합니다.
 
-Vous pouvez configurer certains paramètres des ressources de bureau pour que l’expérience réponde à vos besoins. Pour accéder à la liste des paramètres disponibles, cliquez avec le bouton droit sur la ressource de bureau, puis sélectionnez **Paramètres**.
+## <a name="managed-desktops"></a>관리형 데스크톱
 
-Le client utilise les paramètres configurés par votre administrateur, sauf si vous désactivez l’option **Utiliser les paramètres par défaut**. Dans ce cas, vous pouvez configurer les options suivantes :
+작업 영역에는 데스크톱을 포함하여 여러 관리형 리소스가 포함될 수 있습니다. 관리형 데스크톱에 액세스하는 경우 관리자가 설치한 모든 앱에 액세스할 수 있습니다.
 
-- L’option **Configuration de l’affichage** sélectionne les affichages à utiliser pour la session ouverte et détermine les paramètres supplémentaires disponibles.
-  - L’option **Tous les affichages** garantit que la session utilise toujours tous vos affichages locaux, même si certains d’entre eux sont ajoutés ou supprimés ultérieurement.
-  - L’option **Monoaffichage** garantit que la session utilise toujours un seul affichage et vous permet de configurer ses propriétés.
-  - L’option **Affichages spécifiques** vous permet de choisir les affichages à utiliser pour la session et fournit une option permettant de changer dynamiquement la liste des affichages au cours de la session.
-- **Sélectionner les écrans à utiliser pour la session** spécifie les écrans locaux à utiliser pour la session. Tous les écrans sélectionnés doivent être adjacents. Ce paramètre n’est disponible qu’en mode **Affichages spécifiques**.
-- L’option **Agrandir sur les affichages actifs** détermine les affichages utilisés par les sessions en mode plein écran. Quand elle est activée, la session passe en mode plein écran sur les affichages touchés par la fenêtre de session. Vous pouvez ainsi changer les affichages au cours de la session. Quand elle est désactivée, la session passe en mode plein écran dans les mêmes affichages sur lesquels elle se trouvait la dernière fois qu’elle était en mode plein écran. Ce paramètre n’est disponible qu’en mode **Affichages spécifiques**, sinon il est désactivé.
-- L’option **Monoaffichage en mode fenêtré** détermine les affichages qui sont disponibles dans la session quand elle quitte le mode plein écran. Quand elle est activée, la session bascule vers un affichage unique en mode fenêtré. Quand elle est désactivée, la session conserve les mêmes affichages en mode fenêtré qu’en mode plein écran. Ce paramètre n’est disponible que dans les modes **Tous les affichages** et **Affichages spécifiques**, sinon il est désactivé.
-- **Démarrer en plein écran** détermine si la session est lancée en mode plein écran ou en mode fenêtré. Ce paramètre n’est disponible qu’en mode **Monoaffichage**, sinon il est désactivé.
-- **Ajuster la session à la fenêtre** détermine la façon dont la session est affichée quand la résolution du bureau à distance diffère de la taille de la fenêtre locale. Si cette option est activée, le contenu de la session est redimensionné pour tenir à l’intérieur de la fenêtre et les proportions de la session sont conservées. Si cette option est désactivée, des barres de défilement ou des zones noires apparaissent quand la résolution et la taille de la fenêtre ne correspondent pas. Ce paramètre est disponible dans tous les modes.
-- **Mettre à jour la résolution en cas de redimensionnement** met automatiquement à jour la résolution du bureau à distance quand vous redimensionnez la session en mode fenêtré. Quand cette option est désactivée, la session reste toujours à la résolution que vous spécifiez dans **Résolution**. Ce paramètre n’est disponible qu’en mode **Monoaffichage**, sinon il est désactivé.
-- **Résolution** vous permet de spécifier la résolution du bureau à distance. La session conserve cette résolution pendant toute sa durée. Ce paramètre est disponible uniquement en mode **Monoaffichage** et quand l’option **Mettre à jour la résolution en cas de redimensionnement** est désactivée.
-- **Changer la taille du texte et des applications** permet de spécifier la taille du contenu de la session. Ce paramètre s’applique uniquement en cas de connexion à Windows 8.1 et ultérieur ou à Windows Server 2012 R2 et ultérieur. Ce paramètre est disponible uniquement en mode **Monoaffichage** et quand l’option **Mettre à jour la résolution en cas de redimensionnement** est désactivée.
+### <a name="desktop-settings"></a>데스크톱 설정
 
-## <a name="provide-feedback"></a>Fournir un commentaire
+환경에서 사용자의 요구 사항이 충족되는지 확인하도록 데스크톱 리소스에 대한 설정 중 일부를 구성할 수 있습니다. 사용 가능한 설정 목록에 액세스하려면 데스크톱 리소스를 마우스 오른쪽 단추로 클릭하고 **설정**을 선택합니다.
 
-Vous souhaitez suggérer une fonctionnalité ou signaler un problème ? Dites-nous laquelle sur le [Hub de commentaires](feedback-hub://?tabid=2&contextid=883). Vous pouvez également accéder au hub de commentaires par le biais du client :
+**기본 설정 사용** 옵션을 해제하지 않으면 클라이언트에서 관리자가 구성한 설정을 사용합니다. 이 경우 구성할 수 있는 옵션은 다음과 같습니다.
 
-1. Dans le Centre de connexion, appuyez sur l’option **Envoyer des commentaires** dans la barre de commandes en haut du client pour ouvrir l’application Hub de commentaires.
-2. Entrez les informations demandées dans les champs **Résumé** et **Détails**. Quand vous avez terminé, appuyez sur **Suivant**.
-3. Indiquez s’il s’agit d’un **Problème** ou d’une **Suggestion**.
-4. Vérifiez si la catégorie figure dans **Applications** > **Bureau à distance**. Si c’est le cas, appuyez sur **Suivant**.
-5. Passez en revue les rubriques de commentaires existantes pour voir si quelqu’un d’autre a signalé le même problème. Si ce n’est pas le cas, sélectionnez **Créer un bogue**, puis appuyez sur **Suivant**.
-6. La page suivante vous permet de donner davantage d’informations pour nous aider à résoudre le problème. Vous pouvez fournir plus de détails, envoyer des captures d’écran et même créer un enregistrement du problème pour nous montrer ce qui se passe. Pour créer un enregistrement, sélectionnez **Démarrer l’enregistrement**, puis effectuez les opérations ayant conduit au problème. Quand vous avez terminé, revenez au Hub de commentaires et sélectionnez **Arrêter l’enregistrement**.
-7. Si vous êtes satisfait des informations fournies, appuyez sur **Envoyer**.
-8. Dans la page « Merci pour vos commentaires ! », appuyez sur **Partager mes commentaires** pour générer un lien que vous pouvez partager avec d’autres utilisateurs au besoin.
+- **디스플레이 구성**은 데스크톱 세션에 사용할 디스플레이를 선택합니다. 이에 따라 사용 가능한 추가 설정이 달라집니다.
+  - **모든 디스플레이**는 로컬 디스플레이 중 일부가 나중에 추가되거나 제거될 경우에도 세션이 항상 모든 로컬 디스플레이를 사용합니다.
+  - **단일 디스플레이**는 세션에서 항상 단일 디스플레이를 사용합니다. 사용자가 해당 속성을 구성할 수 있습니다.
+  - **디스플레이 선택**은 세션에 사용할 디스플레이를 선택할 수 있으며 세션 중에 디스플레이 목록을 동적으로 변경하는 옵션을 제공합니다.
+- **세션에 사용할 디스플레이 선택**은 세션에 사용할 로컬 디스플레이를 지정합니다. 선택된 디스플레이는 서로 인접해야 합니다. 이 설정은 **디스플레이 선택** 모드에서만 사용할 수 있습니다.
+- **현재 디스플레이에 맞게 최대화**는 세션이 전체 화면 모드로 전환될 때 사용할 디스플레이를 지정합니다. 사용하도록 설정하면 세션 창이 열리는 디스플레이에서 해당 세션이 전체 화면으로 표시됩니다. 이 옵션을 사용하면 세션 중에 디스플레이를 변경할 수 있습니다. 사용하지 않도록 설정하면 마지막으로 전체 화면으로 표시되었던 디스플레이에 세션이 전체 화면으로 표시됩니다. 이 설정은 **디스플레이 선택** 모드에서만 사용할 수 있으며 다른 모드에서는 사용할 수 없습니다.
+- **창 모드에서 단일 디스플레이**는 전체 화면을 닫을 때 세션에서 사용 가능한 디스플레이를 지정합니다. 사용하도록 설정하면 세션이 창 모드에서 단일 디스플레이로 전환됩니다. 사용하지 않도록 설정하면 세션이 창 모드에서 전체 화면이었을 때와 동일한 디스플레이를 유지합니다. 이 설정은 **모든 디스플레이** 및 **디스플레이 선택** 모드에서만 사용할 수 있으며 다른 모드에서는 사용할 수 없습니다.
+- **전체 화면에서 시작**은 세션을 전체 화면 모드 또는 창 모드에서 시작할지 여부를 결정합니다. 이 설정은 **단일 디스플레이**에서만 사용할 수 있으며 다른 모드에서는 사용할 수 없습니다.
+- **창에 세션 맞추기**는 원격 데스크톱의 해상도가 로컬 창의 크기와 다를 때 세션이 표시되는 방법을 결정합니다. 사용하도록 설정되면 세션의 가로 세로 비율을 유지하면서 세션 콘텐츠의 크기가 창 내부에 맞게 조정됩니다. 사용하지 않도록 설정되면 해상도와 창 크기가 일치하지 않을 때 스크롤 막대 또는 검은색 영역이 표시됩니다. 이 설정은 모든 모드에서 사용할 수 있습니다.
+- **크기 조정 시 해상도 업데이트**는 창 모드에서 세션의 크기를 조정할 때 원격 데스크톱 해상도를 자동으로 업데이트합니다. 사용하지 않도록 설정된 경우 세션은 항상 **해상도**에서 지정하는 해상도로 유지됩니다. 이 설정은 **단일 디스플레이**에서만 사용할 수 있으며 다른 모드에서는 사용할 수 없습니다.
+- **해상도**를 사용하면 원격 데스크톱의 해상도를 지정할 수 있습니다. 세션에서 전체 기간 동안 이 해상도를 유지합니다. 이 설정은 **크기 조정 시 해상도 업데이트**가 사용하지 않도록 설정된 경우 **단일 디스플레이** 모드에서만 사용할 수 있습니다.
+- **텍스트 및 앱의 크기 변경**은 세션 콘텐츠의 크기를 지정합니다. 이 설정은 Windows 8.1 이상 또는 Windows Server 2012 R2 이상에 연결할 때만 적용됩니다. 이 설정은 **크기 조정 시 해상도 업데이트**가 사용하지 않도록 설정된 경우 **단일 디스플레이** 모드에서만 사용할 수 있습니다.
 
-### <a name="access-client-logs"></a>Accéder aux journaux du client
+## <a name="provide-feedback"></a>피드백 제공
 
-L’examen d’un problème peut vous amener à consulter les journaux du client.
+기능을 제안하거나 문제를 보고하고 싶은가요? [피드백 허브](feedback-hub://?tabid=2&contextid=883)를 사용하여 의견을 알려주세요. 피드백 허브는 클라이언트를 통해 액세스할 수도 있습니다.
 
-Pour récupérer les journaux du client :
+1. 연결 센터에서 클라이언트 위쪽의 명령 모음에 있는  **사용자 의견 보내기** 옵션을 탭하여 피드백 허브 앱을 엽니다.
+2. **요약** 및 **세부 정보** 필드에서 필요한 정보를 입력합니다. 완료되면 **다음**을 탭합니다.
+3. **문제** 또는 **제안**인지 여부를 선택합니다.
+4. 범주가 **앱** > **원격 데스크톱**에 있는지 확인합니다. 그럴 경우 **다음**을 탭합니다.
+5. 기존 피드백 항목을 검토하여 다른 사용자가 동일한 문제를 보고했는지 확인합니다. 그렇지 않으면 **새 버그 만들기**를 선택하고, **다음**을 탭합니다.
+6. 다음 페이지에서 문제를 해결하는 데 도움이 되도록 자세한 정보를 제공할 수 있습니다. 자세한 정보를 작성하고, 스크린샷을 제출하고, 문제 기록을 만들어 발생한 상황을 보여 줄 수도 있습니다. 기록을 만들려면 **기록 시작**을 선택한 다음, 문제가 발생한 지점까지 수행한 작업을 수행합니다. 완료되면 피드백 허브로 돌아가서 **기록 중지**를 선택합니다.
+7. 정보에 만족하는 경우 **제출**을 탭합니다.
+8. "피드백을 주셔서 감사합니다!" 페이지에서 **내 피드백 공유**를 탭하여 필요에 따라 다른 사용자와 공유할 수 있는 피드백에 대한 링크를 생성합니다.
 
-1. Assurez-vous qu’aucune session n’est active et que le processus client ne s’exécute pas en arrière-plan en cliquant avec le bouton droit sur l’icône **Bureau à distance** dans la barre d’état système et en sélectionnant **Déconnecter toutes les sessions**.
-2. Ouvrez l’**Explorateur de fichiers**.
-3. Accédez au dossier **%temp%\DiagOutputDir\RdClientAutoTrace**.
+### <a name="access-client-logs"></a>클라이언트 로그 액세스
+
+문제를 조사할 때 클라이언트 로그가 필요할 수 있습니다.
+
+클라이언트 로그를 검색하려면,
+
+1. 시스템 트레이에서 **원격 데스크톱** 아이콘을 마우스 오른쪽 단추로 클릭하고 **모든 세션의 연결 끊기**를 선택하여 활성 상태의 세션이 없고 클라이언트 프로세스가 백그라운드에서 실행되고 있지 않은지 확인합니다.
+2. **파일 탐색기**를 엽니다.
+3. **%temp%\DiagOutputDir\RdClientAutoTrace** 폴더로 이동합니다.
