@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 01/05/2019
-ms.openlocfilehash: eba7092a9a26b25b1fe77b39b8098d117b38981a
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: c55d6ae5ff701555eb9bfb7135ffa28692bd4391
+ms.sourcegitcommit: 4894649cc47dfa535306cc334871f81155198f76
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83821003"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84254726"
 ---
 # <a name="xcopy"></a>xcopy
 
@@ -32,8 +32,8 @@ Xcopy <Source> [<Destination>] [/w] [/p] [/c] [/v] [/q] [/f] [/l] [/g] [/d [:MM-
 
 |매개 변수|설명|
 |---------|-----------|
-|\<원본>|필수 사항입니다. 복사 하려는 파일의 이름과 위치를 지정 합니다. 이 매개 변수는 드라이브 또는 경로 포함 해야 합니다.|
-|[ \< Destination>]|복사 하려는 파일의 대상을 지정 합니다. 이 매개 변수는 드라이브 문자 및 콜론, 디렉터리 이름, 파일 이름, 또는 이들의 조합을 포함할 수 있습니다.|
+|\<Source>|필수 요소. 복사 하려는 파일의 이름과 위치를 지정 합니다. 이 매개 변수는 드라이브 또는 경로 포함 해야 합니다.|
+|[\<Destination>]|복사 하려는 파일의 대상을 지정 합니다. 이 매개 변수는 드라이브 문자 및 콜론, 디렉터리 이름, 파일 이름, 또는 이들의 조합을 포함할 수 있습니다.|
 |/w|메시지를 표시 하 고 파일을 복사 하기 전에 사용자의 응답을 대기 합니다.</br>**파일 복사를 시작 하려면 아무 키나를 누르십시오**|
 |/p|각 대상 파일을 만들 것인지 여부를 확인 하 라는 메시지가 표시 됩니다.|
 |/C|오류를 무시합니다.|
@@ -109,7 +109,7 @@ Xcopy <Source> [<Destination>] [/w] [/p] [/c] [/v] [/q] [/f] [/l] [/g] [/d [:MM-
 
   **Xcopy**에서 반환 된 종료 코드를 처리 하려면 일괄 처리 프로그램의 **If** 명령줄에서 **ErrorLevel** 매개 변수를 사용 합니다. **If**를 사용 하 여 종료 코드를 처리 하는 일괄 처리 프로그램의 예는 [추가 참조](#additional-references)를 참조 하세요. 다음 표에서 종료 코드와 설명을 나열합니다.
 
-  |종료 코드|설명|
+  |종료 코드|Description|
   |---------|-----------|
   |0|파일이 오류 없이 복사 되었습니다.|
   |1|복사할 파일이 없습니다.|
@@ -192,7 +192,7 @@ copyit c:\prgmcode b:
 
 명령 인터프리터 대체 항목 **C:\Prgmcode** 에 대 한 *%1* 및 **b:** 에 대 한 *%2*, 를 사용 하 여 **xcopy** 와 **/e** 및 **/s** 명령줄 옵션입니다. **Xcopy** 에서 오류가 발생 하는 경우 batch 프로그램은 종료 코드를 읽고 적절 한 **ERRORLEVEL** 문에 표시 된 레이블로 이동한 다음 적절 한 메시지를 표시 하 고 일괄 처리 프로그램에서 종료 합니다.
 
-**9.** 이 예제에서는 비어 있지 않은 모든 디렉터리와 이름이 별표 기호로 지정 된 패턴과 일치 하는 파일을 포함 합니다.
+**9.** 이 예제에서는 비어 있지 않은 모든 디렉터리를 복사 하 고 이름이 별표 기호로 지정 된 패턴과 일치 하는 파일을 복사 합니다.
 
 ```
 xcopy .\toc*.yml ..\..\Copy-To\ /S /Y
@@ -208,10 +208,10 @@ rem  3 File(s) copied
 
 ## <a name="additional-references"></a>추가 참조
 
--   [복사](copy.md)
--   [이동](move.md)
--   [Dir](dir.md)
--   [특성과](attrib.md)
--   [Diskcopy](diskcopy.md)
--   [때](if.md)
+- [복사](copy.md)
+- [이동](move.md)
+- [Dir](dir.md)
+- [특성과](attrib.md)
+- [Diskcopy](diskcopy.md)
+- [때](if.md)
 - [명령줄 구문 키](command-line-syntax-key.md)

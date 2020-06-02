@@ -1,23 +1,26 @@
 ---
-title: Migration mode1에서 Windows Server Essentials 설치
+title: 마이그레이션 모드에서 Windows Server Essentials 설치
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
-ms.date: 10/03/2016
+ms.date: 04/29/2020
 ms.prod: windows-server
 ms.topic: article
 ms.assetid: fd7196ac-cfa6-46a5-ba77-6962b47a825e
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 977922d8f2af23afc058162e7455ac5099e4325b
-ms.sourcegitcommit: 2f072c0c02e3e0deae331ca64b375d63b89d0522
+ms.custom:
+- CI ID 117135
+- CSSTroubleshoot
+ms.openlocfilehash: e1a5efc373b884051b538f3f6cd09fecd34c7e09
+ms.sourcegitcommit: 4894649cc47dfa535306cc334871f81155198f76
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83404562"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84254706"
 ---
-# <a name="install-windows-server-essentials-in-migration-mode1"></a>Migration mode1에서 Windows Server Essentials 설치
+# <a name="install-windows-server-essentials-in-migration-mode"></a>마이그레이션 모드에서 Windows Server Essentials 설치
 
->적용 대상: Windows Server 2012 Essentials
+> 적용 대상: Windows Server 2012 Essentials
 
 네트워크에는 Windows Server Essentials를 실행 하는 서버가 하나만 있을 수 있으며 해당 서버는 네트워크에 대 한 도메인 컨트롤러 여야 합니다.  
   
