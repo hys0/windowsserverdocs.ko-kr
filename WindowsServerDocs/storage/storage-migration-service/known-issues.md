@@ -4,16 +4,16 @@ description: Microsoft 지원에 대 한 로그를 수집 하는 방법과 같�
 author: nedpyle
 ms.author: nedpyle
 manager: tiaascs
-ms.date: 02/10/2020
+ms.date: 06/02/2020
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
-ms.openlocfilehash: f8a1e70bba740875e19660d5a729a952c9fae8f2
-ms.sourcegitcommit: d56c042c58833bdaa9a6fe54dd68f540af12fc6e
+ms.openlocfilehash: 5a4a99434d67c08551d97589f8f2638e1024754d
+ms.sourcegitcommit: 5fac756c2c9920757e33ef0a68528cda0c85dd04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80661073"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306502"
 ---
 # <a name="storage-migration-service-known-issues"></a>저장소 마이그레이션 서비스의 알려진 문제
 
@@ -64,7 +64,7 @@ Windows 관리 센터를 사용 하 여 [Windows server 2019 Evaluation 릴리�
 
 Windows 관리 센터 또는 PowerShell을 사용 하 여 전송 작업에 대 한 자세한 오류 전용 CSV 로그를 다운로드 하는 경우 오류 메시지가 표시 됩니다.
 
- >   전송 로그-방화벽에서 파일 공유를 사용할 수 있는지 확인 하세요. :이 요청 작업이 net.tcp:/localhost: 28940/sms/service/1/transfer에서 구성 된 시간 제한 (00:01:00) 내에 회신을 받지 못했습니다. 이 작업에 할당된 시간이 보다 긴 시간 제한의 일부일 수 있습니다. 서비스가 아직 작업을 처리 중이거나 서비스가 회신 메시지를 보낼 수 없었기 때문일 수 있습니다. 채널/프록시를 IContextChannel로 캐스팅 하 고 OperationTimeout 속성을 설정 하 여 작업 시간 제한을 늘리고 서비스가 클라이언트에 연결할 수 있는지 확인 하세요.
+ >   전송 로그-방화벽에서 파일 공유를 사용할 수 있는지 확인 하세요. :이 요청 작업이 net.tcp:/localhost: 28940/sms/service/1/transfer에서 구성 된 시간 제한 (00:01:00) 내에 회신을 받지 못했습니다. 이 작업에 할당된 시간은 더 긴 시간 제한의 일부였을 수 있습니다. 서비스에서 작업을 아직 처리 중이거나 회신 메시지를 보낼 수 없기 때문일 수 있습니다. 채널/프록시를 IContextChannel로 캐스팅 하 고 OperationTimeout 속성을 설정 하 여 작업 시간 제한을 늘리고 서비스가 클라이언트에 연결할 수 있는지 확인 하세요.
 
 이 문제는 저장소 마이그레이션 서비스에서 허용 하는 기본 1 분 제한 시간 내에 필터링 할 수 없는 너무 많은 전송 된 파일에 의해 발생 합니다. 
 
@@ -90,7 +90,7 @@ Windows 관리 센터 또는 PowerShell을 사용 하 여 전송 작업에 대 �
 7. "WcfOperationTimeoutInMinutes"을 마우스 오른쪽 단추로 클릭 한 다음 수정을 클릭 합니다. 
 8. 기본 데이터 상자에서 "10 진수"를 클릭 합니다.
 9. 값 데이터 상자에 "10"을 입력 한 다음 확인을 클릭 합니다.
-10. 레지스트리 편집기를 종료 합니다.
+10. 레지스트리 편집기를 종료합니다.
 11. 오류 전용 CSV 파일 다운로드를 다시 시도 합니다. 
 
 이후 버전의 Windows Server 2019에서이 동작을 변경 하려고 합니다.  
@@ -136,7 +136,7 @@ Windows Server 2019 대상 컴퓨터에 저장소 마이그레이션 서비스 �
 
 ## <a name="dfsr-hashes-mismatch-when-using-storage-migration-service-to-preseed-data"></a>저장소 마이그레이션 서비스를 사용 하 여 데이터를 사전 시드 하는 경우 DFSR 해시가 일치 하지 않음
 
-저장소 마이그레이션 서비스를 사용 하 여 파일을 새 대상으로 전송 하는 경우, 미리 시드 된 복제 또는 DFSR 데이터베이스 복제를 통해 기존 DFSR 서버와 해당 데이터를 복제 하도록 DFSR (DFS 복제)을 구성 하면 모든 파일에서 해시가 발생 합니다. 불일치 및가 다시 복제 됩니다. SMS를 사용 하 여 전송 하 고 나면 데이터 스트림, 보안 스트림, 크기 및 특성이 모두 정확히 일치 하는 것으로 나타납니다. ICACLS 또는 DFSR 데이터베이스 복제 디버그 로그를 사용 하 여 파일을 검사 하면 다음과 같은 결과가 나타납니다.
+저장소 마이그레이션 서비스를 사용 하 여 파일을 새 대상으로 전송 하는 경우에는 미리 시드 된 복제 또는 DFS 복제 데이터베이스 복제를 통해 기존 서버와 해당 데이터를 복제 하도록 DFS 복제를 구성 하면 모든 파일에 해시가 일치 하지 않아 다시 복제 됩니다. 데이터 스트림, 보안 스트림, 크기 및 특성은 모두 저장소 마이그레이션 서비스를 사용 하 여 전송 된 후 완벽 하 게 일치 하는 것으로 나타납니다. ICACLS 또는 DFS 복제 데이터베이스 복제 디버그 로그를 사용 하 여 파일을 검사 하면 다음과 같은 결과가 나타납니다.
 
 원본 파일:
 
@@ -260,7 +260,7 @@ StorageMigrationService-프록시/디버그 로그를 검사 하면 다음이 �
     Description:
     02/14/2020-13:18:21.097 [Erro] Failed device discovery stage SystemInfo with error: (0x80005000) Unknown error (0x80005000)   
   
-이 오류는 'meghan@contoso.com'와 같은 UPN (사용자 계정 이름) 형식으로 마이그레이션 자격 증명을 제공 하는 경우 저장소 마이그레이션 서비스의 코드 오류로 인해 발생 합니다. 저장소 마이그레이션 서비스 오 케 스트레이 터 서비스에서이 형식을 올바르게 구문 분석 하지 못했습니다. 그러면 KB4512534 및 19H1의 클러스터 마이그레이션 지원에 추가 된 도메인 조회에 실패 하 게 됩니다.
+이 오류는 ' ' 등의 UPN (사용자 계정 이름) 형식으로 마이그레이션 자격 증명을 제공 하는 경우 저장소 마이그레이션 서비스의 코드 오류로 인해 발생 meghan@contoso.com 합니다. 저장소 마이그레이션 서비스 오 케 스트레이 터 서비스에서이 형식을 올바르게 구문 분석 하지 못했습니다. 그러면 KB4512534 및 19H1의 클러스터 마이그레이션 지원에 추가 된 도메인 조회에 실패 하 게 됩니다.
 
 이 문제를 해결 하려면 ' Contoso\Meghan '과 같은 도메인 \ 사용자 형식으로 자격 증명을 제공 하십시오.
 
@@ -291,7 +291,7 @@ StorageMigrationService-프록시/디버그 로그를 검사 하면 다음이 �
     DLL not found
     [Error] Failed device discovery stage VolumeInfo with error: (0x80131524) Unable to load DLL 'Microsoft.FailoverClusters.FrameworkSupport.dll': The specified module could not be found. (Exception from HRESULT: 0x8007007E)   
 
-이 문제를 해결 하려면 Storage Migration Service orchestrator를 실행 하는 서버에 "장애 조치 (Failover) 클러스터 관리 도구" (RSAT-클러스터링-Mgmt)를 설치 합니다. 
+이 문제를 해결 하려면 저장소 마이그레이션 서비스 orchestrator를 실행 하는 서버에 "장애 조치 (Failover) 클러스터 관리 도구" (RSAT-클러스터링-Mgmt)를 설치 합니다. 
 
 ## <a name="error-there-are-no-more-endpoints-available-from-the-endpoint-mapper-when-running-inventory-against-a-windows-server-2003-source-computer"></a>Windows Server 2003 원본 컴퓨터에 대해 인벤토리를 실행 하는 경우 "끝점 매퍼에서 사용할 수 있는 끝점이 더 이상 없습니다." 오류가 발생 합니다.
 
@@ -301,7 +301,7 @@ Windows Server 2003 원본 컴퓨터에 대해 저장소 마이그레이션 서�
 
 이 문제는 [KB4537818](https://support.microsoft.com/help/4537818/windows-10-update-kb4537818) 업데이트에서 해결 됩니다.
 
-## <a name="uninstalling-a-cumulutative-update-prevents-storage-migration-service-from-starting"></a>Cumulutative 업데이트를 제거 하면 저장소 마이그레이션 서비스를 시작할 수 없습니다.
+## <a name="uninstalling-a-cumulative-update-prevents-storage-migration-service-from-starting"></a>누적 업데이트를 제거 하면 저장소 마이그레이션 서비스를 시작할 수 없습니다.
 
 Windows Server 누적 업데이트를 제거 하면 저장소 마이그레이션 서비스가 시작 되지 않을 수 있습니다. 이 문제를 해결 하기 위해 Storage Migration Service 데이터베이스를 백업 및 삭제할 수 있습니다.
 
@@ -345,9 +345,9 @@ Windows Server 2008 R2 클러스터 원본에서 잘라내기를 실행 하려�
 
 이 문제는 이전 버전의 Windows Server에서 API 누락으로 인해 발생 합니다. 현재 Windows Server 2008 및 Windows Server 2003 클러스터를 마이그레이션할 수 있는 방법은 없습니다. 인벤토리를 수행 하 고 Windows Server 2008 R2 클러스터에서 문제 없이 전송 한 다음 수동으로 클러스터의 원본 파일 서버 리소스 (netname 및 IP 주소)를 변경 하 고 대상 클러스터 netname 및 IP 주소를 원래 원본과 일치 하도록 변경 하 여 수동으로 조치를 수행할 수 있습니다. 
 
-## <a name="cutover-hangs-on-38-mapping-network-interfaces-on-the-source-computer-when-using-dhcp"></a>"38% 매핑 네트워크 인터페이스를 원본 컴퓨터에서 중단" 하는 방법 " DHCP를 사용 하는 경우 
+## <a name="cutover-hangs-on-38-mapping-network-interfaces-on-the-source-computer-when-using-static-ips"></a>"38% 매핑 네트워크 인터페이스를 원본 컴퓨터에서 중단" 하는 방법 " 고정 Ip를 사용 하는 경우 
 
-원본 컴퓨터의 전환을 실행 하려고 할 때 하나 이상의 네트워크 인터페이스에서 새 정적 (DHCP 아님) IP 주소를 사용 하도록 원본 컴퓨터를 설정 하 고, 이동이 중단 되는 것은 "38% 원본에서 네트워크 인터페이스 매핑 ..." 단계에서 중단 됩니다. SMS 이벤트 로그에 다음과 같은 오류가 표시 됩니다.
+원본 컴퓨터의 전환을 실행 하려고 시도 하는 경우 하나 이상의 네트워크 인터페이스에서 DHCP가 아닌 새 IP 주소를 사용 하도록 원본 컴퓨터를 설정 하 고, 이동은 "38% 원본 컴퓨터의 네트워크 인터페이스 매핑 ..." 단계에서 중단 됩니다. 저장소 마이그레이션 서비스 이벤트 로그에 다음과 같은 오류가 표시 됩니다.
 
     Log Name:      Microsoft-Windows-StorageMigrationService-Proxy/Admin
     Source:        Microsoft-Windows-StorageMigrationService-Proxy
@@ -372,9 +372,13 @@ Windows Server 2008 R2 클러스터 원본에서 잘라내기를 실행 하려�
 
 원본 컴퓨터를 검사 하면 원래 IP 주소를 변경할 수 없다는 것을 볼 수 있습니다. 
 
-새 고정 IP 주소, 서브넷 및 게이트웨이를 지정 하는 경우에만 Windows 관리 센터 "구성에서 구성" 화면에서 "DHCP 사용"을 선택한 경우에는이 문제가 발생 하지 않습니다. 
+이 문제는 새 고정 IP 주소를 지정 하는 경우에만 Windows 관리 센터의 "가공선 사용" 화면에서 "DHCP 사용"을 선택한 경우에는 발생 하지 않습니다. 
 
-이 문제는 [KB4537818](https://support.microsoft.com/help/4537818/windows-10-update-kb4537818) 업데이트에서 해결 됩니다.
+이 문제에 대 한 두 가지 솔루션이 있습니다. 
+
+1. 이 문제는 먼저 [KB4537818](https://support.microsoft.com/help/4537818/windows-10-update-kb4537818) 업데이트에 의해 해결 되었습니다. 이전 코드에서 오류가 있으면 모든 고정 IP 주소를 사용할 수 없습니다.
+
+2. 원본 컴퓨터의 네트워크 인터페이스에 기본 게이트웨이 IP 주소를 지정 하지 않은 경우에는 KB4537818 업데이트를 사용 하는 경우에도이 문제가 발생 합니다. 이 문제를 해결 하려면 네트워크 연결 애플릿 (NCPA.)을 사용 하 여 네트워크 인터페이스에서 유효한 기본 IP 주소를 설정 합니다. CPL) 또는 Set-NetRoute Powershell cmdlet.   
 
 ## <a name="slower-than-expected-re-transfer-performance"></a>예상 되는 다시 전송 성능 보다 느림
 
@@ -389,7 +393,7 @@ Windows Server 2008 R2 클러스터 원본에서 잘라내기를 실행 하려�
  1. 데이터가 마이그레이션되지 않으며 대상에 공유가 생성 되지 않습니다.
  2. Windows 관리 센터에 오류 메시지가 표시 되지 않은 빨간색 오류 기호가 표시 됩니다.
  3. 하나 이상의 AD 사용자 및 도메인 로컬 그룹의 이름 및/또는 Windows 2000 이전 로그온 특성이 변경 되었습니다.
- 4. SMS orchestrator에서 이벤트 3509이 표시 됩니다.
+ 4. 저장소 마이그레이션 서비스 오 케 스트레이 터에 이벤트 3509이 표시 됩니다.
  
         Log Name:      Microsoft-Windows-StorageMigrationService/Admin
         Source:        Microsoft-Windows-StorageMigrationService
@@ -415,7 +419,7 @@ Windows Server 2008 R2 클러스터 원본에서 잘라내기를 실행 하려�
 
 이미 전송을 한 번 더 실행 한 경우:
 
- 1. DC에 대해 다음 AD PowerShell 명령을 사용 하 여 수정 된 모든 사용자 또는 그룹을 찾습니다 (도메인 dinstringuished 이름에 맞게 SearchBase 변경). 
+ 1. DC에 대해 다음 AD PowerShell 명령을 사용 하 여 수정 된 모든 사용자 또는 그룹을 찾습니다 (도메인 고유 이름에 맞게 SearchBase 변경). 
 
     ```PowerShell
     Get-ADObject -Filter 'Description -like "*storage migration service renamed*"' -SearchBase 'DC=<domain>,DC=<TLD>' | ft name,distinguishedname
@@ -479,7 +483,7 @@ Windows Server 2008 R2 클러스터 원본에서 잘라내기를 실행 하려�
        at Microsoft.Win32.RegistryKey.Win32ErrorStatic(Int32 errorCode, String str)
        at Microsoft.Win32.RegistryKey.OpenRemoteBaseKey(RegistryHive hKey, String machineName, RegistryView view)
 
-이 단계에서 저장소 마이그레이션 서비스 오 케 스트레이 터가 원격 레지스트리 읽기를 시도 하 여 원본 컴퓨터 구성을 확인 하 고 있지만 레지스트리 경로가 존재 하지 않는다는 것을 원본 서버에서 거부 하 고 있습니다. 다음과 같은 문제가 원인일 수 있습니다.
+이 단계에서 저장소 마이그레이션 서비스 오 케 스트레이 터가 원격 레지스트리 읽기를 시도 하 여 원본 컴퓨터 구성을 확인 하 고 있지만 레지스트리 경로가 존재 하지 않는다는 것을 원본 서버에서 거부 하 고 있습니다. 이 오류의 원인은 다음과 같습니다.
 
  - 원본 컴퓨터에서 원격 레지스트리 서비스가 실행 되 고 있지 않습니다.
  - 방화벽에서 Orchestrator의 원본 서버에 대 한 원격 레지스트리 연결을 허용 하지 않습니다.
@@ -488,7 +492,7 @@ Windows Server 2008 R2 클러스터 원본에서 잘라내기를 실행 하려�
  
  ## <a name="cutover-hangs-on-38-mapping-network-interfaces-on-the-source-computer"></a>"38% 매핑 네트워크 인터페이스를 원본 컴퓨터에서 중단" 하는 방법 " 
 
-원본 컴퓨터에 대 한 잘라내기를 실행 하려고 할 때 잘라내기는 "38% 원본에서의 네트워크 인터페이스 매핑 ..." 단계에서 중단 됩니다. SMS 이벤트 로그에 다음과 같은 오류가 표시 됩니다.
+원본 컴퓨터에 대 한 잘라내기를 실행 하려고 할 때 잘라내기는 "38% 원본 컴퓨터의 네트워크 인터페이스 매핑 ..." 단계에서 중단 됩니다. 저장소 마이그레이션 서비스 이벤트 로그에 다음과 같은 오류가 표시 됩니다.
 
     Log Name:      Microsoft-Windows-StorageMigrationService-Proxy/Admin
     Source:        Microsoft-Windows-StorageMigrationService-Proxy

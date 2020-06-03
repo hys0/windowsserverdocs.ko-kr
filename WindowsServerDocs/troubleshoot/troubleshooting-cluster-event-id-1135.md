@@ -2,18 +2,16 @@
 title: 이벤트 ID가 1135 인 클러스터 문제 해결
 description: 이벤트 ID 1135를 사용 하 여 클러스터 서비스 시작 문제를 해결 하는 방법을 설명 합니다.
 ms.date: 05/28/2020
-ms.openlocfilehash: 73357cc5b696a969de82123d3ca2a6fbb36fdc40
-ms.sourcegitcommit: ef089864980a1d4793a35cbf4cbdd02ce1962054
+ms.openlocfilehash: d59f8b89e89ea7ff42aecd79670465aee8d63524
+ms.sourcegitcommit: 5fac756c2c9920757e33ef0a68528cda0c85dd04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84150461"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306532"
 ---
 # <a name="troubleshooting-cluster-issue-with-event-id-1135"></a>이벤트 ID가 1135 인 클러스터 문제 해결
 
 이 문서는 장애 조치 (Failover) 클러스터링 환경에서 클러스터 서비스를 시작 하는 동안 기록 될 수 있는 이벤트 ID 1135를 진단 하 고 해결 하는 데 도움이 됩니다.
-
-이 문서에서는 문제 해결에 대 한 정보를 제공 합니다.
 
 ## <a name="start-page"></a>시작 페이지
 

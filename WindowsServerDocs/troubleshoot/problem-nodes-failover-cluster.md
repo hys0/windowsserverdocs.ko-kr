@@ -6,16 +6,16 @@ ms.technology: server-general
 ms.date: 05/28/2020
 author: Deland-Han
 ms.author: delhan
-ms.openlocfilehash: 30714e8a9c5ca4ad13ed6757c6ce1da211b279ac
-ms.sourcegitcommit: ef089864980a1d4793a35cbf4cbdd02ce1962054
+ms.openlocfilehash: 08f5e7ef2ddd0f11abee7d0f21b56c3d5a601d3d
+ms.sourcegitcommit: 5fac756c2c9920757e33ef0a68528cda0c85dd04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84150231"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306522"
 ---
 # <a name="having-a-problem-with-nodes-being-removed-from-active-failover-cluster-membership"></a>능동 장애 조치 (Failover) 클러스터 멤버 자격에서 제거 되는 노드에 문제가 있음
 
-이 문서에서는 노드가 활성 장애 조치 (failover) 클러스터 멤버 자격에서 무작위로 제거 되는 문제를 해결 하는 방법을 소개 합니다.
+이 문서에서는 노드가 활성 장애 조치 (failover) 클러스터 구성원 자격에서 무작위로 제거 되는 문제를 해결 하는 방법을 소개 합니다.
 
 ## <a name="symptoms"></a>증상
 
