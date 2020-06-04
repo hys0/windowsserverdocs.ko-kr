@@ -1,6 +1,6 @@
 ---
-title: Vdisk를 병합 합니다.
-description: '* * * *에 대 한 참조 항목'
+title: merge vdisk
+description: 차이점 보관용 VHD (가상 하드 디스크)를 해당 부모 VHD와 병합 하는 merge vdisk 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,45 +9,56 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: cec8eeaa80436dbb34eb055950169b6895efa544
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: ccd288baff691576c15c3e9c686b6708d1c45ee8
+ms.sourcegitcommit: 5e313a004663adb54c90962cfdad9ae889246151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83437148"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84354623"
 ---
-# <a name="merge-vdisk"></a>Vdisk를 병합 합니다.
+# <a name="merge-vdisk"></a>merge vdisk
 
 > 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-차이점 보관용 가상 하드 디스크 (VHD) VHD 해당 부모와 함께 병합합니다. 부모 VHD 차이점 보관용 VHD에서 수정 내용을 적용 하도록 수정 됩니다.
-> [!NOTE]
-> 이 명령은 Windows 7과 Windows Server 2008 r 2에 적용 됩니다.
-> ## <a name="syntax"></a>구문
-> ```
-> merge vdisk depth=<n>
-> ```
-> #### <a name="parameters"></a>매개 변수
->
-> | 매개 변수 |                                                                                    설명                                                                                    |
-> |-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-> | 깊이 =<n> | 병합 부모 VHD 파일의 수를 나타냅니다. 예를 들어 **깊이 = 1** 차이점 보관용 체인의 한 수준으로 차이점 보관용 VHD를 병합할 나타냅니다. |
->
->#### <a name="remarks"></a>설명
-> - VHD는 선택 하 고이 작업이 성공 하기 위해 분리 해야 합니다. 사용 하 여는 **vdisk 선택** VHD를 선택 하 고 포커스를 이동 하는 명령입니다.
-> - 이 매개 변수에서 부모 VHD를 수정합니다. 결과적으로, 부모에 종속 되어 있는 기타 차이점 보관용 Vhd를 더 이상 유효 하지 않습니다.
->   ## <a name="examples"></a>예
->   VHD 부모를 사용 하 여 차이점 보관용 VHD를 병합 하려면 다음을 입력 합니다.
->   ```
->   merge vdisk depth=1
->   ```
->   ## <a name="additional-references"></a>추가 참조
-> - - [명령줄 구문 키](command-line-syntax-key.md)
-> - [연결 vdisk](attach-vdisk.md)
-> - [compact vdisk](compact-vdisk.md)
+차이점 보관용 가상 하드 디스크 (VHD) VHD 해당 부모와 함께 병합합니다. 부모 VHD 차이점 보관용 VHD에서 수정 내용을 적용 하도록 수정 됩니다. 이 명령은 부모 VHD를 수정 합니다. 결과적으로, 부모에 종속 되어 있는 기타 차이점 보관용 Vhd를 더 이상 유효 하지 않습니다.
 
--   [세부 정보 vdisk](detail-vdisk.md)
--   [Vdisk를 분리 합니다.](detach-vdisk.md)
--   [vdisk 확장](expand-vdisk.md)
--   [vdisk 선택](select-vdisk.md)
--   [list_1](list_1.md)
+> [!IMPORTANT]
+> 이 작업이 성공 하려면 VHD를 선택 하 고 분리 해야 합니다. 사용 하 여는 **vdisk 선택** VHD를 선택 하 고 포커스를 이동 하는 명령입니다.
+
+## <a name="syntax"></a>구문
+
+```
+merge vdisk depth=<n>
+```
+
+### <a name="parameters"></a>매개 변수
+
+| 매개 변수 | Description |
+| --------- | ----------- |
+| 깊이 =`<n>` | 병합 부모 VHD 파일의 수를 나타냅니다. 예를 들어는 `depth=1` 차이점 보관용 VHD가 차이점 보관용 체인의 한 수준과 병합 됨을 나타냅니다. |
+
+### <a name="examples"></a>예
+
+VHD 부모를 사용 하 여 차이점 보관용 VHD를 병합 하려면 다음을 입력 합니다.
+
+```
+merge vdisk depth=1
+```
+
+## <a name="additional-references"></a>추가 참조
+
+- [명령줄 구문 키](command-line-syntax-key.md)
+
+- [vdisk 명령 연결](attach-vdisk.md)
+
+- [compact vdisk 명령](compact-vdisk.md)
+
+- [detail vdisk 명령](detail-vdisk.md)
+
+- [vdisk 명령 분리](detach-vdisk.md)
+
+- [확장 vdisk 명령](expand-vdisk.md)
+
+- [vdisk 명령 선택](select-vdisk.md)
+
+- [list 명령](list.md)

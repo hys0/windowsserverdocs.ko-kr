@@ -1,6 +1,6 @@
 ---
 title: mqtgsvc
-description: '* * * *에 대 한 참조 항목'
+description: 트리거 규칙이 true로 평가 되는 경우 들어오는 메시지의 큐를 모니터링 하 고 실행 파일 또는 COM 구성 요소의 형태로 작업을 수행 하는 mqtgsvc 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,29 +9,25 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ca75ea9fca34a5803db8f05b37e5aef226b2fb33
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 70937c4918b2b01425417368bfa347bd02e5bf22
+ms.sourcegitcommit: 5e313a004663adb54c90962cfdad9ae889246151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820803"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84354414"
 ---
 # <a name="mqtgsvc"></a>mqtgsvc
 
-
-
-들어오는 메시지에 대 한 큐를 모니터링 하 고 트리거 규칙 true로 평가 되는 경우 실행 파일 또는 COM 구성 요소 형식의 동작을 수행 합니다. 메시지 큐 트리거 서비스를 사용 방법의 예 참조 [메시지 큐 트리거](https://go.microsoft.com/fwlink/?LinkId=248725)MSDN에 있습니다.
+들어오는 메시지에 대 한 큐를 모니터링 하 고 트리거 규칙 true로 평가 되는 경우 실행 파일 또는 COM 구성 요소 형식의 동작을 수행 합니다. 메시지 큐 트리거 서비스를 사용 하는 방법에 대 한 예제는 [메시지 큐 트리거](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms703197(v=vs.85))를 참조 하세요.
 
 ## <a name="syntax"></a>구문
 
 ```
-Mqtgsvc.exe
+mqtgsvc.exe
 ```
-
-#### <a name="parameters"></a>매개 변수
-
-None
 
 ## <a name="additional-references"></a>추가 참조
 
 - [명령줄 구문 키](command-line-syntax-key.md)
+
+- [MSMQ Powershell 참조](https://docs.microsoft.com/powershell/module/msmq/?view=win10-ps)

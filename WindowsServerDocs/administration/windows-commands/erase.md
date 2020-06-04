@@ -9,19 +9,20 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 96e0f97e27de8933de44c437508ef59803765771
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: 1525f20549b6571975cb622534f8504eb4fa1f79
+ms.sourcegitcommit: 5e313a004663adb54c90962cfdad9ae889246151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83437128"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84354683"
 ---
 # <a name="erase"></a>erase
 
-하나 이상의 파일을 삭제합니다. 이 명령은 **del** 명령과 동일한 작업을 수행 합니다.
+하나 이상의 파일을 삭제합니다. 삭제 **를 사용 하 여 디스크** 에서 파일을 삭제 하면 해당 파일을 검색할 수 없습니다.
 
-> [!WARNING]
-> 삭제 **를 사용 하 여 디스크** 에서 파일을 삭제 하면 해당 파일을 검색할 수 없습니다.
+> [!NOTE]
+> 이 명령은 [del 명령과](del.md)동일 합니다.
+
 
 ## <a name="syntax"></a>구문
 
@@ -32,7 +33,7 @@ del [/p] [/f] [/s] [/q] [/a[:]<attributes>] <names>
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | 설명 |
+| 매개 변수 | Description |
 | --------- | ----------- |
 | `<names>` | 하나 이상의 파일 또는 디렉터리 목록을 지정합니다. 여러 파일을 삭제 하려면 와일드 카드를 사용할 수 있습니다. 디렉터리를 지정 하는 경우 디렉터리 내의 모든 파일이 삭제 됩니다. |
 | /p | 지정된 된 파일을 삭제 하기 전에 확인 메시지를 표시 합니다. |
@@ -97,3 +98,5 @@ erase /a:r *.*
 ## <a name="additional-references"></a>추가 참조
 
 - [명령줄 구문 키](command-line-syntax-key.md)
+
+- [del 명령](del.md)
