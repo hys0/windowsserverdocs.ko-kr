@@ -8,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: cb5fd0ff432e441900e379d3fe798dbe6aef855f
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: f43b3052d64c7a5766e014aa47063c7e17a7d2ab
+ms.sourcegitcommit: 2cc251eb5bc3069bf09bc08e06c3478fcbe1f321
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80816106"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84333944"
 ---
 # <a name="update-password-customization"></a>사용자 지정 암호를 업데이트 합니다. 
 
@@ -22,9 +22,9 @@ ms.locfileid: "80816106"
   
 페이지에 대한 고유한 설명을 제공하여 암호 업데이트 페이지를 사용자 지정할 수 있습니다.  
   
-> 암호 업데이트 페이지를 사용하도록 설정하려면 AD FS 관리에서 끝점으로 이동합니다. 암호 업데이트 엔드포인트은 기타(/adfs/portal/updatepassword/)의 맨 아래에 있습니다. 엔드포인트을 사용하도록 설정한 후에는 AD FS 서비스를 다시 시작해야 합니다. 이 작업은 수동으로 수행해야 합니다. 그런 다음 작업 공간에 연결된 장치에서 https://<fqdn>/adfs/portal/updatepassword/로 이동하면 암호 업데이트 페이지를 볼 수 있습니다.  
+> 암호 업데이트 페이지를 사용하도록 설정하려면 AD FS 관리에서 엔드포인트로 이동합니다. 암호 업데이트 엔드포인트는 기타(/adfs/portal/updatepassword/)의 맨 아래에 있습니다. 엔드포인트를 사용하도록 설정한 후에는 AD FS 서비스를 다시 시작해야 합니다. 이 작업은 수동으로 수행해야 합니다. 외부에서 암호 업데이트 웹 페이지를 사용 하 고 웹 응용 프로그램 프록시를 사용 하는 경우 프록시 (프록시 사용)에서 사용 하도록 설정 해야 합니다. 그런 다음 작업 공간에 연결된 디바이스에서 https://<fqdn>/adfs/portal/updatepassword/로 이동하면 암호 업데이트 페이지를 볼 수 있습니다.  
   
-![update](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom5.png)  
+![업데이트](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom5.png)  
   
 ## <a name="customize-the-update-password-page-description"></a>암호 업데이트 페이지 설명 사용자 지정  
 암호 업데이트 페이지 설명을 사용자 지정 하려면 다음 Windows PowerShell cmdlet 및 구문을 사용 합니다.  

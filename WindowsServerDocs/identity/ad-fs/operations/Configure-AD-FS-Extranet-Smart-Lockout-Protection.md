@@ -8,12 +8,12 @@ ms.date: 05/20/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 843ed0b3ebf25d662d0b90c17f8fe23548829a7e
-ms.sourcegitcommit: 371e59315db0cca5bdb713264a62b215ab43fd0f
+ms.openlocfilehash: 13f25252d60cb0bde67cca1e1aa5106435c3f361
+ms.sourcegitcommit: 2cc251eb5bc3069bf09bc08e06c3478fcbe1f321
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82192607"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84333919"
 ---
 # <a name="ad-fs-extranet-lockout-and-extranet-smart-lockout"></a>AD FS 엑스트라넷 잠금 및 엑스트라넷 스마트 잠금
 
@@ -57,7 +57,7 @@ ESL를 사용 하는 경우 아티팩트 데이터베이스 AdfsArtifactStore의
 IPv4 및 IPv6 주소가 지원 됩니다.
 
 ### <a name="anatomy-of-a-transaction"></a>트랜잭션 분석
-- **사전 인증 확인**: 인증 요청 중에 ESL은 표시 된 모든 ip를 확인 합니다. 이러한 ip는 네트워크 IP, 전달 된 IP 및 선택적인 x 전달-IP의 조합입니다. 감사 로그에서 이러한 Ip는 x-m-전달 <IpAddress> -클라이언트-ip, x--------------ip의 순서로 필드에 나열 됩니다.
+- **사전 인증 확인**: 인증 요청 중에 ESL은 표시 된 모든 ip를 확인 합니다. 이러한 ip는 네트워크 IP, 전달 된 IP 및 선택적인 x 전달-IP의 조합입니다. 감사 로그에서 이러한 Ip는 x-m-전달-클라이언트-ip, x-------------- <IpAddress> ip의 순서로 필드에 나열 됩니다.
 
   ADFS는 이러한 Ip를 기반으로 요청이 친숙 한 위치 또는 익숙하지 않은 위치에서 온 것인지를 확인 한 다음 각 badPwdCount가 설정 된 임계값 제한 보다 작음을 확인 하거나 마지막으로 **실패** 한 시도가 관찰 창 시간 프레임 보다 오래 발생 했는지 확인 합니다. 이러한 조건 중 하나가 true 이면 ADFS는 추가 처리 및 자격 증명 유효성 검사를 위해이 트랜잭션을 허용 합니다. 두 조건이 모두 false 이면 관찰 창이 통과할 때까지 계정이 이미 잠긴 상태입니다. 관찰 창이 전달 된 후에는 사용자가 인증을 시도할 수 있습니다. 2019에서 ADFS는 IP 주소가 친숙 한 위치와 일치 하는지 여부에 따라 적절 한 임계값 제한을 확인 합니다.
 - **성공한 로그인**: 로그인이 성공 하면 요청의 ip가 사용자의 친숙 한 위치 IP 목록에 추가 됩니다.  
@@ -151,7 +151,7 @@ AccountActivity 테이블은 ' 로그 전용 ' 모드 및 ' 적용 ' 모드로 �
 
 `ExtranetObservationWindow (new-timespan -Minutes 30)`
 
-`ExtranetLockoutThreshold: – 2x AD Threshold Value`
+`ExtranetLockoutThreshold: Half of AD Threshold Value`
 
 AD 값: 20, ExtranetLockoutThreshold: 10
 
@@ -251,7 +251,7 @@ AD FS는 보안 감사 로그에 엑스트라넷 잠금 이벤트를 기록 합�
 로그 전용 모드에서는 잠금 이벤트에 대 한 보안 감사 로그를 확인할 수 있습니다. 발견 된 모든 이벤트에 대해 ADFSAccountActivity cmdlet을 사용 하 여 사용자 상태를 확인 하 여 친숙 한 IP 주소나 익숙하지 않은 IP 주소에서 잠금이 발생 했는지 확인 하 고 해당 사용자에 대 한 친숙 한 IP 주소 목록을 다시 확인할 수 있습니다.
 
 
-|이벤트 ID|설명|
+|이벤트 ID|Description|
 |-----|-----|
 |1203|이 이벤트는 잘못 된 암호 시도에 대해 기록 됩니다. BadPwdCount이 ExtranetLockoutThreshold에 지정 된 값에 도달 하는 즉시, ExtranetObservationWindow에 지정 된 기간 동안 ADFS에서 계정이 잠깁니다.</br>작업 ID: %1</br>XML: %2|
 |1201|이 이벤트는 사용자가 잠길 때마다 기록 됩니다. </br>작업 ID: %1</br>XML: %2|

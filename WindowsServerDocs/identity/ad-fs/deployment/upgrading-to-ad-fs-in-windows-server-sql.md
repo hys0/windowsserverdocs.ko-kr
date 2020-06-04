@@ -8,12 +8,12 @@ ms.prod: windows-server
 ms.assetid: 70f279bf-aea1-4f4f-9ab3-e9157233e267
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: e9488357eecb4a2093d6989e4ebfcc195ce68567
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 090e5c9ffbbaaa6720eb8e938019c08baff681cf
+ms.sourcegitcommit: 2cc251eb5bc3069bf09bc08e06c3478fcbe1f321
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80854006"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84333934"
 ---
 # <a name="upgrading-to-ad-fs-in-windows-server-2016-with-sql-server"></a>SQL Server를 사용 하 여 Windows Server 2016의 AD FS로 업그레이드
 
@@ -53,12 +53,12 @@ Windows server 2016 AD FS 서버는 windows server 2012 R2 팜에 추가할 수 
 1.  서버 관리자 사용 하 여 Windows Server 2016에 Active Directory Federation Services 역할 설치  
 
 2.  AD FS 구성 마법사를 사용 하 여 새 Windows Server 2016 서버를 기존 AD FS 팜에 가입 시킵니다.  **시작** 화면에서 **다음**을 클릭 합니다.
- ![팜 참가](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/configure1.png)  
+ ![팜 조인](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/configure1.png)  
 3.  **Active Directory Domain Services에 연결** 화면에서 페더레이션 서비스 구성을 수행할 수 있는 권한이 있는**관리자 계정을 p)** **다음**을 클릭 합니다.
 4.  **팜 지정** 화면에서 SQL server 및 인스턴스 이름을 입력 하 고 **다음**을 클릭 합니다.
-![팜 참가](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/configure3.png)
+![팜 조인](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/configure3.png)
 5.  **SSL 인증서 지정** 화면에서 인증서를 지정 하 고 **다음**을 클릭 합니다.
-![팜 참가](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/configure4.png)
+![팜 조인](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/configure4.png)
 6.  **서비스 계정 지정** 화면에서 서비스 계정을 지정 하 고 **다음**을 클릭 합니다.
 7.  **검토 옵션** 화면에서 옵션을 검토 하 고 **다음**을 클릭 합니다.
 8.  필수 구성 요소 **확인** 화면에서 모든 필수 구성 요소 검사를 통과 했는지 확인 하 고 **구성**을 클릭 합니다.
@@ -71,11 +71,11 @@ Windows server 2016 AD FS 서버는 windows server 2012 R2 팜에 추가할 수 
 >SQL을 데이터베이스로 사용할 때 AdfsSyncProperties-Role을 사용 하 여 기본 AD FS 서버를 설정할 필요가 없습니다.  이 구성에서는 모든 노드가 주 복제본으로 간주 되기 때문입니다.
 
 1.  서버 관리자의 Windows Server 2012 R2 AD FS 서버에서 **관리**아래의 **역할 및 기능 제거** 를 사용 합니다.
-서버](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/remove1.png) ![제거
+![서버 제거](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/remove1.png)
 2.  **시작하기 전** 화면에서 **다음**을 클릭합니다.
 3.  **서버 선택** 화면에서 **다음**을 클릭 합니다.
 4.  **서버 역할** 화면에서 **Active Directory Federation Services** 옆의 확인란을 제거 하 고 **다음**을 클릭 합니다.
-서버](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/remove2.png) ![제거
+![서버 제거](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/remove2.png)
 5.  **기능** 화면에서 **다음**을 클릭 합니다.
 6.  **확인** 화면에서 **제거**를 클릭 합니다.
 7.  이 작업이 완료 되 면 서버를 다시 시작 합니다.
@@ -84,13 +84,13 @@ Windows server 2016 AD FS 서버는 windows server 2012 R2 팜에 추가할 수 
 이 단계 전에는 forestprep 및 domainprep이 Active Directory 환경에서 실행 되었으며 Active Directory에 Windows Server 2016 스키마가 있는지 확인 해야 합니다.  이 문서는 Windows 2016 도메인 컨트롤러에서 시작 되었으며 AD가 설치 될 때 실행 되기 때문에 실행이 필요 하지 않았습니다.
 
 >[!NOTE]
->아래 프로세스를 시작 하기 전에 설정에서 Windows 업데이트를 실행 하 여 Windows Server 2016이 최신 상태 인지 확인 합니다.  업데이트가 더 이상 필요하지 않을 때까지 이 프로세스를 계속합니다.
+>아래 프로세스를 시작 하기 전에 설정에서 Windows 업데이트를 실행 하 여 Windows Server 2016이 최신 상태 인지 확인 합니다.  추가 업데이트가 필요 하지 않을 때까지이 프로세스를 계속 합니다. 또한 ADFS 서비스 계정 계정에 SQL server 및 ADFS 팜의 각 서버에 대 한 관리 권한이 있는지 확인 합니다.
 
 1. 이제 Windows Server 2016 서버에서 PowerShell을 열고 다음을 실행 합니다. **$cred = Get 자격 증명** 을 입력 하 고 enter 키를 누릅니다.
 2. SQL Server에 대 한 관리자 권한이 있는 자격 증명을 입력 합니다.
 3. 이제 PowerShell에서 다음을 입력 합니다. **AdfsFarmBehaviorLevelRaise-Credential $cred**
 2. 메시지가 표시 되 면 **Y**를 입력 합니다.  그러면 수준이 시작 됩니다.  이 작업이 완료 되 면 FBL 성공적으로 발생 합니다.  
-업데이트를 완료 ![](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/finish1.png)
+![업데이트 완료](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/finish1.png)
 3. 이제 AD FS 관리로 이동 하면 Windows Server 2016에 AD FS에 추가 된 새 노드가 표시 됩니다.  
 4. 마찬가지로 PowerShell cmdlt: AdfsFarmInformation를 사용 하 여 현재 FBL를 표시할 수 있습니다.  
 ![업데이트 완료](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/finish2.png)
