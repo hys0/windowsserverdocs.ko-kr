@@ -7,17 +7,21 @@ ms.technology: server-general
 author: kaushika-msft
 ms.author: kaushika-msft; v-tea
 ms.localizationpriority: medium
-ms.openlocfilehash: 8a550ddd72dcdf8c1967fe4740dc0fe5f2ad93e7
-ms.sourcegitcommit: df94dac422d13566c32e1cdb8c6e7a4e82747947
+ms.custom:
+- CI ID 116803
+- CSSTroubleshoot
+manager: dcscontentpm
+ms.openlocfilehash: fe07636908dffc6bb59c544d512b132e7640bf51
+ms.sourcegitcommit: 75b4cf49dd918ff98258dcae6e6e8d7825c9adec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84205634"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84269219"
 ---
 # <a name="resolve-windows-activation-error-codes"></a>Windows 정품 인증 오류 코드 해결
 
-> **홈 사용자**  
-> 이 문서는 지원 담당자 및 IT 전문가용으로 제작되었습니다. Windows 정품 인증 오류 메시지에 대한 자세한 정보를 찾고 있다면 [Windows 정품 인증 오류에 대한 도움말 보기](https://support.microsoft.com/help/10738/windows-10-get-help-with-activation-errors)를 참조하세요.  
+> [!NOTE]  
+> 이 문서는 기술 지원 담당자 및 IT 전문가용으로 제작되었습니다. Windows 정품 인증 오류 메시지에 대한 자세한 정보를 찾고 있다면 [Windows 정품 인증 오류에 대한 도움말 보기](https://support.microsoft.com/help/10738/windows-10-get-help-with-activation-errors)를 참조하세요.  
 
 이 문서에서는 MAK(복수 정품 인증 키) 또는 KMS(키 관리 서비스)를 사용하여 하나 이상의 Windows 기반 컴퓨터에서 볼륨 정품 인증을 수행할 때 발생할 수 있는 오류 메시지에 대처할 수 있도록 문제 해결 정보를 제공합니다. 다음 표에서 오류 코드를 찾은 다음, 링크를 선택하여 해당 오류 코드에 대한 자세한 내용과 오류 해결 방법을 확인하세요.
 
@@ -29,7 +33,11 @@ ms.locfileid: "84205634"
 
 ## <a name="diagnostic-tool"></a>진단 도구
 
-Microsoft SaRA(지원 및 복구 도우미)는 Windows KMS 정품 인증 문제 해결을 간소화합니다. [여기](https://aka.ms/SaRA-WindowsActivation)서 진단 도구를 다운로드하세요.
+> [!NOTE]  
+> 이 도구는 Windows의 Enterprise, Professional 또는 Server 버전을 실행하는 컴퓨터에서 Windows 정품 인증 문제를 해결하는 데 도움이 됩니다.
+
+
+Microsoft SaRA(지원 및 복구 도우미)는 Windows KMS 정품 인증 문제 해결을 간소화합니다. [여기](https://aka.ms/SaRA-WindowsActivation)에서 진단 도구를 다운로드합니다.
 
 이 도구는 Windows 정품 인증을 시도합니다. 정품 인증 오류 코드를 반환하는 경우 이 도구는 알려진 오류 코드에 대한 대상 솔루션이 표시됩니다.
 
@@ -52,8 +60,8 @@ Microsoft SaRA(지원 및 복구 도우미)는 Windows KMS 정품 인증 문제 
 |[0xC004C001](#0xc004c001-the-activation-server-determined-the-specified-product-key-is-invalid) |정품 인증 서버에서 지정한 제품 키가 잘못된 것으로 확인되었습니다. |MAK|
 |[0xC004C003](#0xc004c003-the-activation-server-determined-the-specified-product-key-is-blocked) |정품 인증 서버에서 지정한 제품 키가 차단된 것으로 확인되었습니다. |MAK |
 |[0xC004C008](#0xc004c008-the-activation-server-determined-that-the-specified-product-key-could-not-be-used) |정품 인증 서버에서 지정한 제품 키가 사용된 것으로 확인되었습니다. |KMS |
-|[0xC004C020](#0xc004c020-the-activation-server-reported-that-the-multiple-activation-key-has-exceeded-its-limit) |정품 인증 서버에서 복수 정품 인증 키가 잠금 해제 제한을 초과한 것이 확인되었습니다. |MAK |
-|[0xC004C021](#0xc004c021-the-activation-server-reported-that-the-multiple-activation-key-extension-limit-has-been-exceeded) |정품 인증 서버에서 MAK(복수 정품 인증 키) 연장 제한이 초과되었다고 보고했습니다. |MAK |
+|[0xC004C020](#0xc004c020-the-activation-server-reported-that-the-multiple-activation-key-has-exceeded-its-limit) |정품 인증 서버에서 복수 정품 인증 키가 제한을 초과했다고 보고했습니다. |MAK |
+|[0xC004C021](#0xc004c021-the-activation-server-reported-that-the-multiple-activation-key-extension-limit-has-been-exceeded) |정품 인증 서버에서 복수 정품 인증 키 연장 제한을 초과했다고 보고했습니다. |MAK |
 |[0xC004F009](#0xc004f009-the-software-protection-service-reported-that-the-grace-period-expired) |소프트웨어 보호 서비스에서 유예 기간이 만료되었다고 보고했습니다. |MAK |
 |[0xC004F00F](#0xc004f00f-the-software-licensing-server-reported-that-the-hardware-id-binding-is-beyond-level-of-tolerance) |소프트웨어 라이선스 서버에서 하드웨어 ID 바인딩이 오차 허용 수준을 벗어났다고 보고했습니다. |MAK<br />KMS 클라이언트<br />KMS 호스트 |
 |[0xC004F014](#0xc004f014-the-software-protection-service-reported-that-the-product-key-is-not-available) |소프트웨어 보호 서비스에서 제품 키를 사용할 수 없다고 보고했습니다. |MAK<br />KMS 클라이언트 |
@@ -224,7 +232,7 @@ KMS 키가 정품 인증 제한을 초과했습니다. KMS 호스트 키는 최�
 
 추가 정품 인증이 필요하면 [Microsoft 라이선싱 정품 인증 센터](https://www.microsoft.com/Licensing/existing-customer/activation-centers)에 문의하세요.  
 
-### <a name="0xc004c020-the-activation-server-reported-that-the-multiple-activation-key-has-exceeded-its-limit"></a>0xC004C020 정품 인증 서버에서 복수 정품 인증 키가 잠금 해제 제한을 초과한 것이 확인되었습니다.
+### <a name="0xc004c020-the-activation-server-reported-that-the-multiple-activation-key-has-exceeded-its-limit"></a>0xC004C020 정품 인증 서버에서 복수 정품 인증 키가 제한을 초과했다고 보고했습니다.
 
 #### <a name="possible-cause"></a>가능한 원인
 
@@ -234,7 +242,7 @@ MAK가 정품 인증 제한을 초과했습니다. 기본적으로 MAK는 정품
 
 추가 정품 인증이 필요하면 [Microsoft 라이선싱 정품 인증 센터](https://www.microsoft.com/Licensing/existing-customer/activation-centers)에 문의하세요.
 
-### <a name="0xc004c021-the-activation-server-reported-that-the-multiple-activation-key-extension-limit-has-been-exceeded"></a>0xC004C021 정품 인증 서버에서 복수 정품 인증 키 연장 제한이 초과되었다고 보고했습니다.
+### <a name="0xc004c021-the-activation-server-reported-that-the-multiple-activation-key-extension-limit-has-been-exceeded"></a>0xC004C021 정품 인증 서버에서 복수 정품 인증 키 연장 제한을 초과했다고 보고했습니다.
 
 #### <a name="possible-cause"></a>가능한 원인
 
