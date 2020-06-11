@@ -8,12 +8,12 @@ ms.date: 01/18/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 4aa2f219852dc97833365645e7455f8141a0988e
-ms.sourcegitcommit: d23f880e144acf0912831557c70f777d48e3152b
+ms.openlocfilehash: c443d596e8e35f7ccf4aa23b622323122a2778e9
+ms.sourcegitcommit: 76a3b5f66e47e08e8235e2d152185b304d03b68b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84632787"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84663186"
 ---
 # <a name="configuring-ad-fs-for-user-certificate-authentication"></a>사용자 인증서 인증을 위한 AD FS 구성
 
@@ -29,7 +29,7 @@ ms.locfileid: "84632787"
 4) 대체 인증서 인증 모드에서 AD FS 사용 하는 경우 AD FS 및 WAP 서버에 "certauth" 접두사가 붙은 AD FS 호스트 이름 (예: "certauth.fs.contoso.com")이 포함 된 SSL 인증서가 있고이 호스트 이름에 대 한 트래픽은 방화벽을 통해 허용 되는지 확인 합니다.
 5) 엑스트라넷에서 인증서 인증을 사용 하는 경우 인증서에 지정 된 목록에 있는 하나 이상의 CDP 또는 OCSP 위치를 인터넷에서 액세스할 수 있어야 합니다.
 6) 또한 Azure AD 인증서 인증의 경우, Exchange ActiveSync 클라이언트의 경우 클라이언트 인증서 주체 이름 또는 주체 대체 이름 필드의 RFC822 이름 값에 Exchange online의 사용자 라우팅할 수 있는 전자 메일 주소가 있어야 합니다. Azure Active Directory RFC822 값을 디렉터리의 프록시 주소 특성에 매핑합니다.
-7) 스마트 카드/인증서 기반 인증을 사용 하는 경우 인증서의 주체는 AD 계정의 UserPricipalName 일치 하지 않을 수 있습니다. 이 경우 "사용자를 찾을 수 없음"으로 로그인이 실패 합니다.
+7) AD FS는 스마트 카드/인증서 기반 인증을 사용 하는 사용자 이름 힌트를 지원 하지 않습니다. 
 
 
 ## <a name="configure-ad-fs-for-user-certificate-authentication"></a>사용자 인증서 인증을 위한 AD FS 구성  
