@@ -6,21 +6,21 @@ ms.technology: server-general
 ms.date: 1/24/2020
 author: kaushika-msft
 ms.author: kaushika
-ms.openlocfilehash: e5fdae6e005adf6ea221fb3c2bf3ea09bfbfb03a
-ms.sourcegitcommit: 5c93c685dca3cafeea916cedcc0f915c528484ca
+ms.openlocfilehash: f3012f499e67f73ec9e8ab20b24df122492ea0ea
+ms.sourcegitcommit: fa9a8badf4eb366aeeca7d2905e2cad711ee8dae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "81119253"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84714905"
 ---
 # <a name="troubleshooting-windows-server-components"></a>Windows Server 구성 요소 문제 해결
 
 > [!TIP]
-> 이전 버전의 Windows Server에 대한 자세한 내용이 궁금하십니까? docs.microsoft.com에서 다른 [Windows Server 라이브러리](/previous-versions/windows/)를 확인하세요.  
+> 이전 버전의 Windows Server에 대한 정보를 찾으시나요? docs.microsoft.com에서 다른 [Windows Server 라이브러리](/previous-versions/windows/)를 확인하세요.  
 >   
 > [이 사이트에서 특정 정보를 검색](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions)할 수도 있습니다.
 
-Microsoft에서는 Windows Server 용 업데이트를 정기적으로 모두 릴리스 합니다. 서버가 보안 업데이트를 포함한 향후 업데이트를 받을 수 있도록 업데이트된 상태로 유지해야 합니다. 릴리스된 업데이트의 전체 목록은 [Windows 10 및 Windows Server 2016 업데이트 기록](https://support.microsoft.com/help/4000825/windows-10-windows-server-2016-update-history)을 확인하세요.
+Microsoft에서는 Windows Server 용 업데이트를 정기적으로 모두 릴리스 합니다. 서버에서 보안 업데이트를 비롯 한 향후 업데이트를 받을 수 있도록 하려면 서버를 업데이트 된 상태로 유지 하는 것이 중요 합니다. 릴리스된 업데이트의 전체 목록은 [windows 10 및 Windows Server 2016 업데이트 기록](https://support.microsoft.com/help/4000825/windows-10-windows-server-2016-update-history) 을 참조 하세요.
 
 이 섹션에서는 Windows Server의 문제를 해결 하는 데 도움이 되는 고급 문제 해결 항목 및 링크를 제공 합니다. 추가 항목이 사용 가능 해지면 추가 됩니다.
 
@@ -39,7 +39,7 @@ Microsoft에서는 Windows Server 용 업데이트를 정기적으로 모두 릴
 ## <a name="troubleshoot-startup-and-restart"></a>시작 및 다시 시작 문제 해결
 
 - [Windows 시작에 대 한 고급 문제 해결](https://docs.microsoft.com/windows/client-management/troubleshoot-windows-startup)
-- [64 비트 버전의 Windows에서 적절 한 페이지 파일 크기를 확인 하는 방법](https://docs.microsoft.com/windows/client-management/determine-appropriate-page-file-size)
+- [How to determine the appropriate page file size for 64-bit versions of Windows](https://docs.microsoft.com/windows/client-management/determine-appropriate-page-file-size)(Windows 64비트 버전에 적절한 페이지 파일 크기를 결정하는 방법)
 - [커널 또는 전체 크래시 덤프 생성](https://docs.microsoft.com/windows/client-management/generate-kernel-or-complete-crash-dump)
 - [페이지 파일 소개](https://docs.microsoft.com/windows/client-management/introduction-page-file)
 - [Windows에서 시스템 오류 및 복구 옵션 구성](https://docs.microsoft.com/windows/client-management/system-failure-recovery-options)
@@ -63,7 +63,7 @@ Microsoft에서는 Windows Server 용 업데이트를 정기적으로 모두 릴
 
 ## <a name="troubleshoot-ad-fs"></a>문제 해결 AD FS
 
-- [문제 해결 AD FS](https://docs.microsoft.com/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-overview)
+- [AD FS 문제 해결](https://docs.microsoft.com/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-overview)
 - [AD FS 문제 해결-감사 이벤트 및 로깅](https://docs.microsoft.com/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-logging)
 - [AD FS 문제 해결-SQL 연결](https://docs.microsoft.com/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-sql)
 - [AD FS 문제 해결-클레임 발급](https://docs.microsoft.com/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-claims-issuance)
@@ -87,7 +87,7 @@ Microsoft에서는 Windows Server 용 업데이트를 정기적으로 모두 릴
 
 ## <a name="troubleshoot-dfsr"></a>DFSR 문제 해결
 
-- [DFS 복제: FAQ (질문과 대답)](https://docs.microsoft.com/windows-server/storage/dfs-replication/dfsr-faq)
+- [DFS 복제: FAQ(질문과 대답)](https://docs.microsoft.com/windows-server/storage/dfs-replication/dfsr-faq)
 
 ## <a name="troubleshoot-directaccess"></a>DirectAccess 문제 해결
 
@@ -108,6 +108,19 @@ Microsoft에서는 Windows Server 용 업데이트를 정기적으로 모두 릴
 
 - [Windows 오류 보고를 사용하여 장애 조치(failover) 클러스터 문제 해결](https://docs.microsoft.com/windows-server/failover-clustering/troubleshooting-using-wer-reports)
 - [클러스터 인식 업데이트-질문과 대답](https://docs.microsoft.com/windows-server/failover-clustering/cluster-aware-updating-faq)
+- [이벤트 ID가 1135 인 클러스터 문제 해결](https://docs.microsoft.com/windows-server/troubleshoot/troubleshooting-cluster-event-id-1135)
+- [능동 장애 조치 (Failover) 클러스터 멤버 자격에서 제거 되는 노드에 문제가 있음](https://docs.microsoft.com/windows-server/troubleshoot/problem-nodes-failover-cluster)
+- [VMWare ESX의 장애 조치 (Failover) 클러스터 구성원에서 제거 되는 노드](https://docs.microsoft.com/windows-server/troubleshoot/nodes-failover-cluster-vmware)
+- [SQL AlwaysOn을 사용한 IaaS - 장애 조치(failover) 클러스터 네트워크 임계값 조정](https://docs.microsoft.com/windows-server/troubleshoot/iaas-sql-failover-cluster)
+
+## <a name="troubleshoot-dhcp"></a>DHCP 문제 해결
+
+- [DHCP (Dynamic Host Configuration Protocol)에 대 한 문제 해결 가이드](https://docs.microsoft.com/windows-server/troubleshoot/troubleshoot-dhcp-issue)
+- [DHCP (동적 호스트 구성 프로토콜) 기본 사항](https://docs.microsoft.com/windows-server/troubleshoot/dynamic-host-configuration-protocol-basics)
+- [DHCP 문제 해결을 위한 일반 지침](https://docs.microsoft.com/windows-server/troubleshoot/general-guidance-to-troubleshoot-dhcp)
+- [DHCP 서버 없이 자동 TCP/IP 주소 지정을 사용하는 방법](https://docs.microsoft.com/windows-server/troubleshoot/how-to-use-automatic-tcpip-addressing-without-a-dh)
+- [DHCP 클라이언트의 문제 해결](https://docs.microsoft.com/windows-server/troubleshoot/troubleshoot-problems-on-dhcp-client)
+- [DHCP 서버의 문제 해결](https://docs.microsoft.com/windows-server/troubleshoot/troubleshoot-problems-on-dhcp-server)
 
 ## <a name="troubleshoot-fsrm"></a>FSRM 문제 해결
 
@@ -149,7 +162,7 @@ Microsoft에서는 Windows Server 용 업데이트를 정기적으로 모두 릴
 - [스토리지 공간 다이렉트-질문과 대답](https://docs.microsoft.com/windows-server/storage/storage-spaces/storage-spaces-direct-faq)
 - [상태 및 작동 상태 스토리지 공간 다이렉트](https://docs.microsoft.com/windows-server/storage/storage-spaces/storage-spaces-states)
 - [스토리지 공간 다이렉트를 사용 하 여 진단 데이터 수집](https://docs.microsoft.com/windows-server/storage/storage-spaces/data-collection)
-- [Windows의 저장소 클래스 메모리 (NVDIMM-N) 상태 관리](https://docs.microsoft.com/windows-server/storage/storage-spaces/storage-class-memory-health)
+- [Windows의 스토리지 클래스 메모리(NVDIMM-N) 상태 관리](https://docs.microsoft.com/windows-server/storage/storage-spaces/storage-class-memory-health)
 
 ## <a name="troubleshoot-sdn"></a>SDN 문제 해결
 
@@ -183,11 +196,11 @@ Microsoft에서는 Windows Server 용 업데이트를 정기적으로 모두 릴
 ## <a name="troubleshoot-storage-replica"></a>저장소 복제본 문제 해결
 
 - [저장소 복제본의 알려진 문제](https://docs.microsoft.com/windows-server/storage/storage-replica/storage-replica-known-issues)
-- [저장소 복제본에 대 한 질문과 대답](https://docs.microsoft.com/windows-server/storage/storage-replica/storage-replica-frequently-asked-questions)
+- [스토리지 복제본에 대한 질문과 대답](https://docs.microsoft.com/windows-server/storage/storage-replica/storage-replica-frequently-asked-questions)
 
 ## <a name="troubleshoot-user-profiles"></a>사용자 프로필 문제 해결
 
-- [이벤트를 사용 하 여 사용자 프로필 문제 해결](https://docs.microsoft.com/windows-server/storage/folder-redirection/troubleshoot-user-profiles-events)
+- [이벤트를 사용한 사용자 프로필 문제 해결](https://docs.microsoft.com/windows-server/storage/folder-redirection/troubleshoot-user-profiles-events)
 
 ## <a name="troubleshoot-vrss"></a>VRSS 문제 해결
 
@@ -201,4 +214,4 @@ Microsoft에서는 Windows Server 용 업데이트를 정기적으로 모두 릴
 
 - [Windows 관리 센터 일반적인 문제 해결 단계](https://docs.microsoft.com/windows-server/manage/windows-admin-center/support/troubleshooting)
 - [Windows 관리 센터의 알려진 문제](https://docs.microsoft.com/windows-server/manage/windows-admin-center/support/known-issues)
-- [Windows 관리 센터 질문과 대답](https://docs.microsoft.com/windows-server/manage/windows-admin-center/understand/faq)
+- [Windows Admin Center 질문과 대답](https://docs.microsoft.com/windows-server/manage/windows-admin-center/understand/faq)
