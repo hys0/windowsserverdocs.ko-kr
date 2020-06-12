@@ -31,6 +31,8 @@
 ### [SYSVOL 복제를 DFS 복제로 마이그레이션](dfs-replication/migrate-sysvol-to-dfsr.md)
 ### [robocopy를 사용하여 DFS 복제용 파일 미리 시드](dfs-replication/preseed-dfsr-with-robocopy.md)
 ### [DFS 복제: FAQ(질문과 대답)](dfs-replication/dfsr-faq.md)
+### [복제된 폴더에 필요한 최소 준비 영역 DFSR을 결정하는 방법](../troubleshoot/how-to-determine-the-minimum-staging-area-dfsr-needs-for-a-replicated-folder.md)
+### [DFSR에서 분산 파일 잠금 이해(부족)](../troubleshoot/understanding-the-lack-of-distributed-file-locking-in-dfsr.md)
 ## [디스크의 관리](disk-management/overview-of-disk-management.md)
 ## [파일 서버 및 SMB](file-server/file-server-smb-overview.md)
 ### [SMB 다이렉트](file-server/smb-direct.md)
