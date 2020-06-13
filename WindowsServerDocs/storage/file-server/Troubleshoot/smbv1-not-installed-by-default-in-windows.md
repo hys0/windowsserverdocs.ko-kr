@@ -6,12 +6,12 @@ manager: dcscontentpm
 ms.topic: article
 ms.author: delhan
 ms.date: 12/25/2019
-ms.openlocfilehash: fdc90c6e5d6790348fafc12079eec5ac7e387b3f
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: a1e1a30530f937289770bcef9e71189bf69719ce
+ms.sourcegitcommit: 7200143aa787c7ac05ae0e012263b1c9a95b87ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80815316"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84721761"
 ---
 # <a name="smbv1-is-not-installed-by-default-in-windows-10-version-1709-windows-server-version-1709-and-later-versions"></a>SMBv1는 Windows 10 버전 1709, Windows Server 버전 1709 이상 버전에서 기본적으로 설치 되지 않습니다.
 
@@ -30,7 +30,7 @@ SMBv1는 Windows 10의 Windows 10 크리에이터 업데이트 및 Windows Serve
 - Windows 10 Enterprise 및 Windows 10 교육용 버전의 전체 업그레이드 및 Insider 항공편은 SMBv1을 자동으로 제거 하지 않습니다. 관리자는 이러한 관리 되는 환경에서 SMBv1 제거를 결정 해야 합니다. Windows 10 버전 1809 (RS5) 이상 버전에서 관리자는 "SMB 1.0/CIFS 자동 제거" 기능을 설정 하 여 SMBv1 자동 제거를 활성화할 수 있습니다.    
 - 15 일 후 SMBv1 자동 제거는 일회성 작업입니다. 관리자가 SMBv1를 다시 설치 하는 경우 추가 시도는 제거 되지 않습니다.
 - SMB 버전 2.02, 2.1, 3.0, 3.02 및 3.1.1 기능은 기본적으로 SMBv2 이진 파일의 일부로 완전히 지원 되 고 포함 되어 있습니다.    
-- 컴퓨터 브라우저 서비스는 SMBv1를 사용 하므로 SMBv1 클라이언트나 서버가 제거 되 면 서비스가 제거 됩니다. 즉, Explorer Networkcan 레거시 NetBIOS 데이터 그램 검색 방법을 통해 Windows 컴퓨터를 더 이상 표시할 수 없습니다.    
+- 컴퓨터 브라우저 서비스는 SMBv1를 사용 하므로 SMBv1 클라이언트나 서버가 제거 되 면 서비스가 제거 됩니다. 즉, Explorer 네트워크가 레거시 NetBIOS 데이터 그램 검색 방법을 통해 Windows 컴퓨터를 더 이상 표시할 수 없습니다.    
 - SMBv1는 Windows 10 및 Windows Server 2016의 모든 버전에서 계속 다시 설치할 수 있습니다.    
  
   > [!NOTE]
@@ -108,12 +108,12 @@ Guidance:
 The client has SMB1 disabled or uninstalled. For more information: https://go.microsoft.com/fwlink/?linkid=852747.     
 ```
 
-이러한 장치는 Windows를 실행할 가능성이 없습니다. 이전 버전의 Linux, Samba 또는 기타 타사 소프트웨어를 실행 하 여 SMB 서비스를 제공할 가능성이 높습니다. 이러한 버전의 Linux와 Samba는 더 이상 지원 되지 않는 경우가 많습니다. 
+이러한 장치는 Windows를 실행할 가능성이 없습니다.이전 버전의 Linux, Samba 또는 기타 타사 소프트웨어를 실행 하 여 SMB 서비스를 제공할 가능성이 높습니다. 이러한 버전의 Linux와 Samba는 더 이상 지원 되지 않는 경우가 많습니다. 
 
 > [!NOTE]
 > Windows 10, 버전 1709을 "가를 크리에이터 업데이트" 라고도 합니다.   
 
-## <a name="more-information"></a>자세한 내용
+## <a name="more-information"></a>추가 정보
 
 이 문제를 해결 하려면 SMBv1만 지 원하는 제품의 제조업체에 문의 하 고 SMBv 2.02 이상 버전을 지 원하는 소프트웨어 또는 펌웨어 업데이트를 요청 하십시오. 알려진 공급 업체의 최신 목록과 SMBv1 요구 사항은 다음 Windows 및 Windows Server Storage 엔지니어링 팀 블로그 문서를 참조 하세요. 
 
@@ -122,7 +122,7 @@ The client has SMB1 disabled or uninstalled. For more information: https://go.mi
 
 Oplock를 사용 하지 않도록 설정 하는 요구 사항과 같이 레거시 소프트웨어 동작에 대 한 응용 프로그램 호환성을 제공 하기 위해 SMBv1가 필요한 경우 Windows에서는 임대 모드 라고 하는 새 SMB 공유 플래그를 제공 합니다. 이 플래그는 공유에서 임대 및 oplock와 같은 최신 SMB 의미 체계를 사용 하지 않도록 설정할지 여부를 지정 합니다.
 
-Oplock 또는 임대를 사용 하지 않고 공유를 지정 하 여 레거시 응용 프로그램이 SMBv2 이상 버전에서 작동 하도록 할 수 있습니다. 이렇게 하려면 **new-smbshare** 또는 **new-smbshare** PowerShell Cmdlet을 **-LeasingMode None** 매개 변수와 함께 사용 합니다.
+Oplock 또는 임대를 사용 하지 않고 공유를 지정 하 여 레거시 응용 프로그램이 SMBv2 이상 버전에서 작동 하도록 할 수 있습니다. 이렇게 하려면 **new-smbshare** 또는 **new-smbshare** PowerShell Cmdlet을 **-LeasingMode None**   매개 변수와 함께 사용 합니다.
 
 > [!NOTE]
 > 이 옵션은 공급 업체에 필요한 경우 타사 응용 프로그램에서 레거시 지원을 위해 필요한 공유 에서만 사용 해야 합니다. 스케일 아웃 파일 서버에서 사용 되는 사용자 데이터 공유 또는 CA 공유에 대해 임대 모드를 지정 하지 마십시오. 이는 oplock 및 임대 제거로 인해 대부분의 응용 프로그램에서 불안정 및 데이터가 손상 되기 때문입니다. 임대 모드는 공유 모드 에서만 작동 합니다. 모든 클라이언트 운영 체제에서 사용할 수 있습니다.
@@ -140,7 +140,7 @@ Oplock 또는 임대를 사용 하지 않고 공유를 지정 하 여 레거시 
 이러한 설정이 있는 서브넷 내의 모든 Windows 장치가 검색을 위해 네트워크에 표시 됩니다. 이는 WS 검색 프로토콜을 사용 합니다. Windows 장치가 표시 된 후에도이 찾아보기 목록에 해당 장치가 표시 되지 않으면 다른 공급 업체 및 제조업체에 문의 하십시오. 이 프로토콜을 사용 하지 않도록 설정 하거나 SMBv1만 지원할 수 있습니다.
 
 > [!NOTE]
-> 장치를 검색 하 고 검색 해야 하는이 기능을 사용 하도록 설정 하는 대신 드라이브와 프린터를 매핑하는 것이 좋습니다. 매핑된 리소스를 쉽게 찾을 수 있고, 교육을 줄이고, 사용 하기 더 안전 합니다. 이러한 리소스는 그룹 정책를 통해 자동으로 제공 되는 경우에 특히 그렇습니다. 관리자는 IP 주소, Active Directory Domain Services (AD DS), Bonjour, Mdn, uPnP 등을 사용 하 여 레거시 컴퓨터 브라우저 서비스가 아닌 방법으로 위치에 대 한 프린터를 구성할 수 있습니다.
+> 장치를 검색 하 고 검색 해야 하는이 기능을 사용 하도록 설정 하는 대신 드라이브와 프린터를 매핑하는 것이 좋습니다. 매핑된 리소스를 쉽게 찾을 수 있고, 교육을 줄이고, 사용 하기 더 안전 합니다. 이러한 리소스는 그룹 정책를 통해 자동으로 제공 되는 경우에 특히 그렇습니다.관리자는 IP 주소, Active Directory Domain Services (AD DS), Bonjour, Mdn, uPnP 등을 사용 하 여 레거시 컴퓨터 브라우저 서비스가 아닌 방법으로 위치에 대 한 프린터를 구성할 수 있습니다.
 
 이러한 해결 방법을 사용할 수 없거나 응용 프로그램 제조업체에서 지원 되는 버전의 SMB를 제공할 수 없는 경우 [Windows에서 SMBv1, SMBv2 및 SMBv3를 검색, 사용 및 사용 하지 않도록 설정 하는 방법](detect-enable-and-disable-smbv1-v2-v3.md)의 단계에 따라 SMBv1을 수동으로 다시 사용 하도록 설정할 수 있습니다.
 

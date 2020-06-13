@@ -1,6 +1,6 @@
 ---
 title: nfsstat
-description: '* * * *에 대 한 참조 항목'
+description: Nfsstat 명령에 대 한 참조 항목으로, NFS (네트워크 파일 시스템) 및 RPC (원격 프로시저 호출) 호출에 대 한 통계 정보를 표시 합니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,25 +9,70 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4e2c02fdfeb9923993a1d4471862a6c8487c9d86
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 85eb1184d3eb8ee731cf698a6d805e3f11d878ce
+ms.sourcegitcommit: 99d548141428c964facf666c10b6709d80fbb215
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82723750"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84721516"
 ---
 # <a name="nfsstat"></a>nfsstat
 
-
-
-사용할 수 있습니다 **nfsstat** 를 표시 하거나 NFS 용 서버에 대 한 호출의 횟수를 다시 설정 합니다.
+NFS (네트워크 파일 시스템) 및 RPC (원격 프로시저 호출) 호출에 대 한 통계 정보를 표시 하는 명령줄 유틸리티입니다. 매개 변수 없이 사용 하는 경우이 명령은 모든 통계를 다시 설정 하지 않고 모든 통계 데이터를 표시 합니다.
 
 ## <a name="syntax"></a>구문
 
 ```
-nfsstat [-z]
+nfsstat [-c][-s][-n][-r][-z][-m]
 ```
 
-## <a name="description"></a>Description
+### <a name="parameters"></a>매개 변수
 
-없이 사용할 경우는 **-z** 옵션을는 **nfsstat** 서비스가 시작 되거나 카운터를 사용 하 여 다시 설정 될 때 카운터는 0으로 설정 된 후 서버에 대 한 NFS V2, NFS V3 및 탑재 V3 호출의 수를 표시 하는 명령줄 유틸리티 **nfsstat z**합니다.
+| 매개 변수 | Description |
+| --------- | ----------- |
+| -c | 클라이언트에서 보내고 거부 한 클라이언트 쪽 NFS 및 RPC 및 NFS 호출만 표시 합니다. NFS 또는 RPC 정보만 표시 하려면이 플래그를 **-n** 또는 **-r** 매개 변수와 결합 합니다. |
+| -S | 서버에서 보내고 거부 한 서버 쪽 NFS 및 RPC 및 NFS 호출만 표시 합니다. NFS 또는 RPC 정보만 표시 하려면이 플래그를 **-n** 또는 **-r** 매개 변수와 결합 합니다. |
+| -M | 탑재 옵션에 의해 설정 된 탑재 플래그, 시스템 내부에 있는 탑재 플래그 및 기타 탑재 정보를 표시 합니다. |
+| -n | 클라이언트와 서버 모두에 대 한 NFS 정보를 표시 합니다. NFS 클라이언트나 서버 정보만 표시 하려면이 플래그를 **-c** 또는 **-s** 매개 변수와 결합 합니다. |
+| -r | 클라이언트와 서버 모두에 대 한 RPC 정보를 표시 합니다. RPC 클라이언트나 서버 정보만 표시 하려면이 플래그를 **-c** 또는 **-s** 매개 변수와 결합 합니다. |
+| -Z | 호출 통계를 다시 설정 합니다. 이 플래그는 루트 사용자만 사용할 수 있으며 다른 매개 변수와 결합 하 여 특정 통계 집합을 표시 한 후 다시 설정할 수 있습니다. |
+
+### <a name="examples"></a>예제
+
+클라이언트에서 보내고 거부 한 RPC 및 NFS 호출 수에 대 한 정보를 표시 하려면 다음을 입력 합니다.
+
+```
+nfsstat -c
+```
+
+클라이언트 NFS 호출 관련 정보를 표시 하 고 인쇄 하려면 다음을 입력 합니다.
+
+```
+nfsstat -cn
+```
+
+클라이언트와 서버 모두에 대 한 RPC 호출 관련 정보를 표시 하려면 다음을 입력 합니다.
+
+```
+nfsstat -r
+```
+
+서버에서 받아서 거부 한 RPC 및 NFS 호출 수에 대 한 정보를 표시 하려면 다음을 입력 합니다.
+
+```
+nfsstat -s
+```
+
+클라이언트와 서버에서 모든 호출 관련 정보를 0으로 다시 설정 하려면 다음을 입력 합니다.
+
+```
+nfsstat -z
+```
+
+## <a name="additional-references"></a>추가 참조
+
+- [명령줄 구문 키](command-line-syntax-key.md)
+
+- [네트워크 파일 시스템 서비스 명령 참조](services-for-network-file-system-command-reference.md)
+
+- [NFS cmdlet 참조](https://docs.microsoft.com/powershell/module/nfs)

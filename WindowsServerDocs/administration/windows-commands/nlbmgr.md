@@ -1,6 +1,6 @@
 ---
 title: nlbmgr
-description: '* * * *에 대 한 참조 항목'
+description: 네트워크 부하 분산 관리자를 사용 하 여 단일 컴퓨터에서 네트워크 부하 분산 클러스터 및 모든 클러스터 호스트를 구성 하 고 관리 하는 데 도움이 되는 nlbmgr 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,32 +9,39 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a055eb30984bd1832d84bce40607eb0722b175b2
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 2eb7f802944260f7274e7ace30b7b55e9c4b27ad
+ms.sourcegitcommit: 99d548141428c964facf666c10b6709d80fbb215
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820853"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84721506"
 ---
 # <a name="nlbmgr"></a>nlbmgr
 
 > 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-네트워크 부하 분산 관리자를 사용 하 고 수 있으며 구성 단일 컴퓨터에서 네트워크 로드 균형 조정 클러스터 및 모든 클러스터 호스트를 관리할 다른 호스트에 클러스터 구성을 복제할 수도 있습니다. 명령줄 사용 하는 명령에서 네트워크 부하 분산 관리자를 시작할 수 있습니다 **nlbmgr.exe**, 에 설치 되는 **systemroot\System32** 폴더입니다.
-## <a name="syntax"></a>구문
-```
-nlbmgr [/help] [/noping] [/hostlist <filename>] [/autorefresh <interval>]
-```
-#### <a name="parameters"></a>매개 변수
+네트워크 부하 분산 관리자를 사용 하 여 단일 컴퓨터에서 네트워크 부하 분산 클러스터 및 모든 클러스터 호스트를 구성 하 고 관리 합니다. 또한이 명령을 사용 하 여 클러스터 구성을 다른 호스트로 복제할 수 있습니다.
 
-|        매개 변수        |                                                                                                                                                                                                설명                                                                                                                                                                                                |
-|-------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|          /help          |                                                                                                                                                                                   명령 프롬프트에 도움말을 표시합니다.                                                                                                                                                                                    |
-|         /noping         | Windows Management Instrumentation (WMI)을 통해 연락할 하려고 하기 전에 호스트를 ping에서 네트워크 부하 분산 관리자를 방지 합니다. 모든 사용 가능한 네트워크 어댑터에서 제어 메시지 ICMP (Internet Protocol)를 사용 하지 않도록 설정한 경우이 옵션을 사용 합니다. 네트워크 부하 분산 관리자를 사용할 수 있는 호스트에 연결 하려고 하는 경우이 옵션을 사용할 때 지연이 발생 합니다. |
-|  /hostlist<filename>   |                                                                                                                                                                네트워크 로드 균형 조정 관리자 파일 이름에 지정 된 호스트를 로드 합니다.                                                                                                                                                                 |
-| /autorefresh<interval> |                                                                                                          해당 호스트와 클러스터 정보를 새로 고치려면 네트워크 로드 균형 조정을 사용 하면 모든 <interval> 초입니다. 없는 간격을 지정 하는 경우 정보 60 초 마다 새로 고쳐집니다.                                                                                                          |
-|           /?            |                                                                                                                                                                                   명령 프롬프트에 도움말을 표시합니다.                                                                                                                                                                                    |
+**Systemroot\System32** 폴더에 설치 된 명령 **nlbmgr.exe**를 사용 하 여 명령줄에서 네트워크 부하 분산 관리자를 시작할 수 있습니다.
+
+## <a name="syntax"></a>구문
+
+```
+nlbmgr [/noping][/hostlist <filename>][/autorefresh <interval>][/help | /?]
+```
+
+### <a name="parameters"></a>매개 변수
+
+| 매개 변수 | Description |
+| --------- | ----------- |
+| /noping | WMI(Windows Management Instrumentation) (WMI)를 통해 연결을 시도 하기 전에 네트워크 부하 분산 관리자가 호스트를 ping 하지 못하도록 합니다. 모든 사용 가능한 네트워크 어댑터에서 제어 메시지 ICMP (Internet Protocol)를 사용 하지 않도록 설정한 경우이 옵션을 사용 합니다. 네트워크 부하 분산 관리자가 사용할 수 없는 호스트에 연결 하려고 시도 하는 경우이 옵션을 사용 하면 지연이 발생 합니다. |
+| /hostlist`<filename>` | 파일 이름에 지정 된 호스트를 네트워크 부하 분산 관리자에 로드 합니다. |
+| /autorefresh`<interval>` | 네트워크 부하 분산 관리자가 초당 호스트 및 클러스터 정보를 새로 고치도록 `<interval>` 합니다. 없는 간격을 지정 하는 경우 정보 60 초 마다 새로 고쳐집니다. |
+| /? | 명령 프롬프트에 도움말을 표시합니다. |
+| /help | 명령 프롬프트에 도움말을 표시합니다. |
 
 ## <a name="additional-references"></a>추가 참조
+
 - [명령줄 구문 키](command-line-syntax-key.md)
 
+- [NetworkLoadBalancingClusters cmdlet 참조](https://docs.microsoft.com/powershell/module/networkloadbalancingclusters)

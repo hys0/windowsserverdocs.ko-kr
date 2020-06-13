@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ce18c615d45d4922c8819d30ff47d54328111170
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: 3ad664548dce51d7631a6d1a02d628af91e1921f
+ms.sourcegitcommit: 99d548141428c964facf666c10b6709d80fbb215
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84222934"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84721145"
 ---
 # <a name="logman-import-and-logman-export"></a>logman 가져오기 및 logman 내보내기
 
@@ -25,13 +25,13 @@ XML 파일에서 데이터 수집기 집합을 가져오거나 데이터 수집�
 ## <a name="syntax"></a>구문
 
 ```
-logman import <[-n] <name>> <-xml <name>> [options]
-logman export <[-n] <name>> <-xml <name>> [options]
+logman import <[-n] <name> <-xml <name> [options]
+logman export <[-n] <name> <-xml <name> [options]
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | 설명 |
+| 매개 변수 | Description |
 | --------- | ----------- |
 | -s`<computer name>` | 지정된 된 원격 컴퓨터에서 명령을 수행 합니다. |
 | -config`<value>` | 명령 옵션을 포함 하는 설정 파일을 지정 합니다. |
@@ -42,9 +42,9 @@ logman export <[-n] <name>> <-xml <name>> [options]
 | -y | 메시지를 표시 하지 않고 모든 질문에 답변 합니다. |
 | /? | 도움말 상황에 맞는 표시 합니다. |
 
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 
-XML 파일 *c:\windows\ perf_log* 를 컴퓨터 *server_1* 에서 *perf_log*라는 데이터 수집기 집합으로 가져오려면 다음을 입력 합니다.
+XML 파일 *c:\windows\perf_log.xml* 를 컴퓨터 *server_1* 에서 *perf_log*라는 데이터 수집기 집합으로 가져오려면 다음을 입력 합니다.
 
 ```
 logman import perf_log -s server_1 -xml c:\windows\perf_log.xml

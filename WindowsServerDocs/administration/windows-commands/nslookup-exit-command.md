@@ -1,6 +1,6 @@
 ---
-title: nslookup exit Command
-description: '* * * *에 대 한 참조 항목'
+title: nslookup 종료
+description: Nslookup 명령줄 도구를 종료 하는 nslookup exit 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,30 +9,29 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 25696b5889d4b430586285de1f4d6471f9e28b27
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: c233e39d711c37540c30bc64296c6b24b57689c8
+ms.sourcegitcommit: 99d548141428c964facf666c10b6709d80fbb215
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82723732"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84721486"
 ---
-# <a name="nslookup-exit-command"></a>nslookup exit Command
+# <a name="nslookup-exit"></a>nslookup/종료
 
-
-
-종료 **nslookup**합니다.
+Nslookup 명령줄 도구를 종료 합니다.
 
 ## <a name="syntax"></a>구문
 
 ```
-Nslookup /exit
+nslookup /exit
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | 설명 |
-|-----------|-------------|
-|   {도움말   |     ?}      |
+| 매개 변수 | Description |
+| --------- | ----------- |
+| /? | 명령 프롬프트에 도움말을 표시합니다. |
+| /help | 명령 프롬프트에 도움말을 표시합니다. |
 
 ## <a name="additional-references"></a>추가 참조
 

@@ -1,6 +1,6 @@
 ---
 title: nslookup set all
-description: '* * * *에 대 한 참조 항목'
+description: 현재 구성 설정 값을 출력 하는 nslookup set all 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,34 +9,29 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 04ffa560f45a0569c063ac35a7aa0e056e8d1a73
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: b541f1f68fd3f43a8e4ab05f8e3e4351b7d8bc71
+ms.sourcegitcommit: 99d548141428c964facf666c10b6709d80fbb215
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82723666"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84721646"
 ---
 # <a name="nslookup-set-all"></a>nslookup set all
 
-
-
-구성 설정의 현재 값을 인쇄합니다.
+기본 서버 및 컴퓨터 (호스트)를 포함 하 여 현재 구성 설정 값을 출력 합니다.
 
 ## <a name="syntax"></a>구문
 
 ```
-set all 
+set all
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | 설명 |
-|-----------|-------------|
-|   {도움말   |     ?}      |
-
-## <a name="remarks"></a>설명
-
--   **모든 설정** 기본 서버 및 컴퓨터 (호스트)에 대 한 정보를 표시 합니다.
+| 매개 변수 | Description |
+| --------- | ----------- |
+| /? | 명령 프롬프트에 도움말을 표시합니다. |
+| /help | 명령 프롬프트에 도움말을 표시합니다. |
 
 ## <a name="additional-references"></a>추가 참조
 

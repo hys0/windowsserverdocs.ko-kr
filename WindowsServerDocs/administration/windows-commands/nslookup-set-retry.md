@@ -1,6 +1,6 @@
 ---
 title: nslookup set retry
-description: '* * * *에 대 한 참조 항목'
+description: 지정 된 서버에서 정보를 가져오려고 시도 하는 횟수를 설정 하는 nslookup set retry 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,31 +9,38 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1baeeaefedc211434f46bd0cfad713f093a873bf
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 268a9f0023c0e7e19e8ed413895f639444fe3b88
+ms.sourcegitcommit: 99d548141428c964facf666c10b6709d80fbb215
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82723581"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84721466"
 ---
 # <a name="nslookup-set-retry"></a>nslookup set retry
 
 > 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-재시도 횟수를 설정합니다.
+특정 시간 내에 응답이 수신 되지 않으면 시간 제한 기간이 두 배가 되 고 요청이 다시 전송 됩니다. 이 명령은 요청을 서버에 다시 보내는 횟수를 설정 합니다.
+
+> [!NOTE]
+> 요청 시간이 초과 되기 전 까지의 시간을 변경 하려면 [nslookup set timeout](nslookup-set-timeout.md) 명령을 사용 합니다.
+
 ## <a name="syntax"></a>구문
+
 ```
-set retry=<Number>
+set retry=<number>
 ```
+
 ### <a name="parameters"></a>매개 변수
 
-|    매개 변수    |                                      설명                                       |
-|-----------------|----------------------------------------------------------------------------------------|
-|    <Number>     | 재시도 횟수에 대 한 새 값을 지정합니다. 재시도 횟수 기본값은 4입니다. |
-| {도움말 및 #124;?} |                 간단한 요약이 표시 되며 **nslookup** 하위 명령입니다.                  |
+| 매개 변수 | Description |
+| ---------- | ---------- |
+| `<number>` | 재시도 횟수에 대 한 새 값을 지정합니다. 기본 다시 시도 횟수는 **4**입니다. |
+| /? | 명령 프롬프트에 도움말을 표시합니다. |
+| /help | 명령 프롬프트에 도움말을 표시합니다. |
 
-## <a name="remarks"></a>설명
-- 요청에 회신 하는 특정 시간 내에 수신 되지 않으면, 제한 시간을 두 배로 증가 하 고는 요청을 다시 보냅니다. 다시 시도 값을 포기 하기 전에 다시는 요청을 보내는 횟수를 제어 합니다. 와 제한 시간을 변경할 수는 **제한 시간 설정** 하위 명령.
-  ## <a name="additional-references"></a>추가 참조
-  - [명령줄 구문 키](command-line-syntax-key.md)
-  [nslookup 설정 시간 제한](nslookup-set-timeout.md)
+## <a name="additional-references"></a>추가 참조
+
+- [명령줄 구문 키](command-line-syntax-key.md)
+
+- [nslookup set timeout](nslookup-set-timeout.md)

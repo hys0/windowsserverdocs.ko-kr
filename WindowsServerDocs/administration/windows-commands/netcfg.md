@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6910f7e3f3d2f100942897bd9712293f7eb0f4d9
-ms.sourcegitcommit: 5e313a004663adb54c90962cfdad9ae889246151
+ms.openlocfilehash: 5a308441df55873b205972d703ec52f53345beb5
+ms.sourcegitcommit: 99d548141428c964facf666c10b6709d80fbb215
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84354263"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84721556"
 ---
 # <a name="netcfg"></a>netcfg
 
@@ -40,9 +40,9 @@ netcfg [/v] [/e] [/winpe] [/l ] /c /i
 | /i | 구성 요소 ID를 제공 합니다. |
 | /s | 어댑터에 대 한 **\ta** 또는 net 구성 요소의 **n** 을 포함 하 여 표시할 구성 요소의 유형을 제공 합니다. |
 | /b | 경로 이름을 포함 하는 문자열이 뒤에 오는 경우 바인딩 경로를 표시 합니다. |
-| /? | 명령 프롬프트에 도움말을 표시합니다. |                                                    |
+| /? | 명령 프롬프트에 도움말을 표시합니다. |
 
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 
 C:\oemdir\example.inf를 사용 하 여 프로토콜 *예제* 를 설치 하려면 다음을 입력 합니다.
 

@@ -1,6 +1,6 @@
 ---
 title: nslookup set class
-description: '* * * *에 대 한 참조 항목'
+description: 쿼리 클래스를 변경 하는 nslookup set 클래스 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,31 +9,30 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b1ae3a5336815a5273aafa976b1dcad8b60fac9b
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: e939be13eedcab557dc6dcbe16f2e83f810c20d5
+ms.sourcegitcommit: 99d548141428c964facf666c10b6709d80fbb215
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82723652"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84721566"
 ---
 # <a name="nslookup-set-class"></a>nslookup set class
-
-
 
 쿼리 클래스를 변경 합니다. 클래스는 프로토콜 그룹 정보를 지정합니다.
 
 ## <a name="syntax"></a>구문
 
 ```
-set class=<Class>
+set class=<class>
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 |                                                                                                                                    설명                                                                                                                                    |
-|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| \<Class>  | 기본 클래스는 IN입니다. 다음은이 명령에 대 한 유효한 값을 나열 합니다.</br>-IN: 인터넷 클래스를 지정 합니다.</br>-비정상: 비정상 클래스를 지정 합니다.</br>-HESIOD: MIT 아테나 Hesiod 클래스를 지정 합니다.</br>-ANY: 이전에 나열 된 와일드 카드를 지정 합니다. |
-|   {도움말   |                                                                                                                                        ?}                                                                                                                                         |
+| 매개 변수 | Description |
+| --------- | ----------- |
+| `<class>` | 유효한 값은 다음과 같습니다.<ul><li>**에서:** 인터넷 클래스를 지정 합니다. 이것은 기본값입니다.</li><li>비정상 상황 **:** 비정상 클래스를 지정 합니다.</li><li>**HESIOD:** MIT 아테나 Hesiod 클래스를 지정 합니다.</li><li>**ANY:** 이전에 나열 된 값을 사용 하도록 지정 합니다.</li></ul> |
+| /? | 명령 프롬프트에 도움말을 표시합니다. |
+| /help | 명령 프롬프트에 도움말을 표시합니다. |
 
 ## <a name="additional-references"></a>추가 참조
 

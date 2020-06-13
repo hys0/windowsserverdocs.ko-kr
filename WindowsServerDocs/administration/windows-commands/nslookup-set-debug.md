@@ -1,6 +1,6 @@
 ---
 title: nslookup set debug
-description: '* * * *에 대 한 참조 항목'
+description: 디버깅 모드를 설정 및 해제 하는 nslookup set debug 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 92a6f53105c682500d68fa7bf07fdcbacea75f34
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 910dd197fe756e733b61318243130e85b4410eb1
+ms.sourcegitcommit: 99d548141428c964facf666c10b6709d80fbb215
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82723638"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84721176"
 ---
 # <a name="nslookup-set-debug"></a>nslookup set debug
-
-
 
 디버깅 모드를 설정 하거나 해제 합니다.
 
@@ -30,15 +28,12 @@ set [no]debug
 
 ### <a name="parameters"></a>매개 변수
 
-|  매개 변수  |                         설명                          |
-|-------------|--------------------------------------------------------------|
-| **nodebug** | 디버깅 모드를 해제합니다. 기본 구문은 **nodebug**합니다. |
-|  **디버그**  |                   디버깅 모드를 설정합니다.                   |
-|  \*\*{도움말  |                            ?}\*\*                            |
-
-## <a name="remarks"></a>설명
-
--   디버깅 모드를 켜면, 서버 및 응답을 보내는 방법에 대 한 자세한 내용은 인쇄 됩니다.
+| 매개 변수 | Description |
+| ---------- | ---------- |
+| nodebug | 디버깅 모드를 해제 합니다. 이것은 기본값입니다. |
+| debug | 디버깅 모드를 설정 합니다. 디버깅 모드를 설정 하 여 서버에 전송 된 패킷과 결과 답변에 대 한 자세한 정보를 볼 수 있습니다. |
+| /? | 명령 프롬프트에 도움말을 표시합니다. |
+| /help | 명령 프롬프트에 도움말을 표시합니다. |
 
 ## <a name="additional-references"></a>추가 참조
 

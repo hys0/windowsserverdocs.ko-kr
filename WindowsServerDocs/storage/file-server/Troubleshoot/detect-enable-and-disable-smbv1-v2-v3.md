@@ -6,12 +6,12 @@ manager: dcscontentpm
 ms.topic: article
 ms.author: delhan
 ms.date: 12/25/2019
-ms.openlocfilehash: d6c47843dedaf45842f70d1bb408b59d63c03eb4
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: dd2f4c6b6bb17231ac04b3344e9a39df2cad79d0
+ms.sourcegitcommit: fb808a6fc851a3e5c47e6a7654366145d2f19554
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80815506"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84740646"
 ---
 # <a name="how-to-detect-enable-and-disable-smbv1-smbv2-and-smbv3-in-windows"></a>Windows에서 SMBv1, SMBv2 및 SMBv3를 검색, 활성화 및 비활성화 하는 방법
 
@@ -35,7 +35,7 @@ Windows 7 및 Windows Server 2008 r 2에서 SMBv2를 사용 하지 않도록 설
 - 대량 MTU 지원-gigabye (GB) 이더넷의 전체 사용    
 - 향상 된 에너지 효율성-서버에 대 한 열린 파일이 있는 클라이언트는 절전 모드로 전환할 수 있습니다.    
 
-Windows 8, Windows 8.1, Windows 10, Windows Server 2012 및 Windows Server 2016에서 SMBv3를 사용 하지 않도록 설정 하면 다음 기능 및 이전 목록에서 설명 하는 SMBv2 기능이 비활성화 됩니다. 
+Windows 8, Windows 8.1, Windows 10, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 및 Windows Server 2019에서 SMBv3를 사용 하지 않도록 설정 하면 다음 기능 및 이전 목록에서 설명 하는 SMBv2 기능이 비활성화 됩니다. 
  
 - 투명 한 장애 조치 (failover)-유지 관리 또는 장애 조치 (failover) 중 클러스터 노드에 중단 없이 클라이언트 다시    
 - Scale Out – 모든 파일 클러스터 노드의 공유 데이터에 대 한 동시 액세스     
@@ -45,7 +45,7 @@ Windows 8, Windows 8.1, Windows 10, Windows Server 2012 및 Windows Server 2016�
 - 디렉터리 임대-캐싱을 통해 지점의 응용 프로그램 응답 시간을 향상 시킵니다.    
 - 성능 최적화-작은 임의 읽기/쓰기 i/o에 대 한 최적화
 
-##  <a name="more-information"></a>자세한 내용
+##  <a name="more-information"></a>추가 정보
 
 SMBv2 프로토콜은 Windows Vista 및 Windows Server 2008에서 도입 되었습니다.
 
@@ -57,11 +57,11 @@ SMBv2 및 SMBv3 기능에 대 한 자세한 내용은 다음 문서를 참조 �
 
 [SMB의 새로운 기능](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff625695(v=ws.10))  
 
-## <a name="how-to-gracefully-remove-smb-v1-in-windows-81-windows-10-windows-2012-r2-and-windows-server-2016"></a>Windows 8.1, Windows 10, Windows 2012 R2 및 Windows Server 2016에서 SMB v1을 적절 하 게 제거 하는 방법
+## <a name="how-to-gracefully-remove-smb-v1-in-windows-81-windows-10-windows-2012-r2-windows-server-2016-and-windows-server-2019"></a>Windows 8.1, Windows 10, Windows 2012 R2, Windows Server 2016 및 Windows Server 2019에서 SMB v1을 적절 하 게 제거 하는 방법
 
-#### <a name="windows-server-2012-r2--2016-powershell-methods"></a>Windows Server 2012 R2 & 2016: PowerShell 메서드
+#### <a name="powershell-methods"></a>PowerShell 메서드
 
-##### <a name="smb-v1"></a>SMB v1
+##### <a name="smb-v1-client-and-server"></a>SMB v1 (클라이언트 및 서버)
 
 - 탐색 
 
@@ -75,33 +75,13 @@ SMBv2 및 SMBv3 기능에 대 한 자세한 내용은 다음 문서를 참조 �
   Disable-WindowsOptionalFeature -Online -FeatureName smb1protocol
   ```
 
-- 활성화 
+- [도메인에 조인된 컴퓨터를 디바이스로 등록]을 
 
   ```PowerShell
   Enable-WindowsOptionalFeature -Online -FeatureName smb1protocol
   ```
 
-##### <a name="smb-v2v3"></a>SMB v2/v3
-
-- 탐색
-  
-  ```PowerShell
-  Get-SmbServerConfiguration | Select EnableSMB2Protocol
-  ```
-
-- 하지
-
-  ```PowerShell
-  Set-SmbServerConfiguration -EnableSMB2Protocol $false
-  ```
-
-- 활성화
-
-  ```PowerShell
-  Set-SmbServerConfiguration -EnableSMB2Protocol $true 
-  ```
-
-#### <a name="windows-server-2012-r2-and-windows-server-2016-server-manager-method-for-disabling-smb"></a>Windows Server 2012 R2 및 Windows Server 2016: SMB를 사용 하지 않도록 설정 하는 서버 관리자 방법
+#### <a name="windows-server-2012-r2-windows-server-2016-windows-server-2019-server-manager-method-for-disabling-smb"></a>Windows Server 2012 R2, Windows Server 2016, Windows Server 2019: SMB를 사용 하지 않도록 설정 하는 서버 관리자 방법
 
 ##### <a name="smb-v1"></a>SMB v1
 
@@ -123,13 +103,13 @@ SMBv2 및 SMBv3 기능에 대 한 자세한 내용은 다음 문서를 참조 �
   Disable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol
   ```
 
-- 활성화 
+- [도메인에 조인된 컴퓨터를 디바이스로 등록]을 
 
   ```PowerShell
   Enable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol
   ```
 
-##### <a name="smb-v2v3protocol"></a>SMB v2/v3 프로토콜
+##### <a name="smb-v2v3protocol-only-disables-smb-v2v3-server"></a>SMB v2/v3 프로토콜 (SMB v2/v3 서버만 사용 안 함)
 
 - 탐색 
   
@@ -143,7 +123,7 @@ SMBv2 및 SMBv3 기능에 대 한 자세한 내용은 다음 문서를 참조 �
   Set-SmbServerConfiguration –EnableSMB2Protocol $false
   ```
 
-- 활성화
+- [도메인에 조인된 컴퓨터를 디바이스로 등록]을
 
   ```PowerShell
   Set-SmbServerConfiguration –EnableSMB2Protocol $true
@@ -178,7 +158,7 @@ Windows 8 및 Windows Server 2012에는 새로운 **SMBServerConfiguration** win
   Set-SmbServerConfiguration -EnableSMB1Protocol $false
   ```
 
-- 활성화 
+- [도메인에 조인된 컴퓨터를 디바이스로 등록]을 
   ```PowerShell
   Set-SmbServerConfiguration -EnableSMB1Protocol $true
   ```
@@ -198,7 +178,7 @@ Windows 8 및 Windows Server 2012에는 새로운 **SMBServerConfiguration** win
   Set-SmbServerConfiguration -EnableSMB2Protocol $false
   ```
 
-- 활성화
+- [도메인에 조인된 컴퓨터를 디바이스로 등록]을
   
   ```PowerShell
   Set-SmbServerConfiguration -EnableSMB2Protocol $true
@@ -206,7 +186,7 @@ Windows 8 및 Windows Server 2012에는 새로운 **SMBServerConfiguration** win
 
 ### <a name="for-windows-7-windows-server-2008-r2-windows-vista-and-windows-server-2008"></a>Windows 7, windows Server 2008 R2, Windows Vista 및 Windows Server 2008의 경우
 
-Windows 7, Windows Server 2008 R2, Windows Vista 또는 Windows Server 2008 SMB 서버에서 SMB 프로토콜을 사용 하거나 사용 하지 않도록 설정 하려면 Windows PowerShell 또는 레지스트리 편집기를 사용 합니다. 
+Windows 7, Windows Server 2008 R2, Windows Vista 또는 Windows Server 2008를 실행 하는 SMB 서버에서 SMB 프로토콜을 사용 하거나 사용 하지 않도록 설정 하려면 Windows PowerShell 또는 레지스트리 편집기를 사용 합니다. 
 
 #### <a name="powershell-methods"></a>PowerShell 메서드
 
@@ -229,7 +209,7 @@ Get-Item HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters | ForEa
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" SMB1 -Type DWORD -Value 0 –Force
 ```
 
-활성화  
+[도메인에 조인된 컴퓨터를 디바이스로 등록]을  
 
 ```PowerShell
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" SMB1 -Type DWORD -Value 1 –Force
@@ -250,7 +230,7 @@ Get-ItemProperty HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" SMB2 -Type DWORD -Value 0 –Force  
 ```
 
-활성화
+[도메인에 조인된 컴퓨터를 디바이스로 등록]을
 
 ```PowerShell
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" SMB2 -Type DWORD -Value 1 –Force 
@@ -262,7 +242,7 @@ Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Par
 #### <a name="registry-editor"></a>레지스트리 편집기
 
 > [!IMPORTANT]
-> 이 섹션의 단계를 신중하게 따릅니다. 레지스트리를 잘못 수정하면 심각한 문제가 발생할 수 있습니다. 수정하기 전에, 문제가 발생할 경우를 대비하여 [복원을 위해 레지스트리를 백업](https://support.microsoft.com/help/322756)해 두세요.
+> 이 섹션의 단계를 신중하게 따릅니다. 레지스트리를 잘못 수정할 경우 심각한 문제가 발생할 수 있습니다. 수정하기 전에, 문제가 발생할 경우를 대비하여 [복원을 위해 레지스트리를 백업](https://support.microsoft.com/help/322756)해 두세요.
  
 SMB 서버에서 SMBv1를 사용 하거나 사용 하지 않도록 설정 하려면 다음 레지스트리 키를 구성 합니다.
 
@@ -287,7 +267,7 @@ Default: 1 = Enabled (No registry key is created)
 ```
 
 > [!NOTE]
-> 변경한 후에는 컴퓨터를 다시 시작 해야 합니다. 
+> 이러한 변경을 수행한 후에는 컴퓨터를 다시 시작 해야 합니다. 
 
 ## <a name="how-to-detect-status-enable-and-disable-smb-protocols-on-the-smb-client"></a>SMB 클라이언트에서 상태를 검색 하 고 SMB 프로토콜을 사용 하도록 설정 하 고 해제 하는 방법
 
@@ -298,7 +278,7 @@ Default: 1 = Enabled (No registry key is created)
 
 ##### <a name="smb-v1-on-smb-client"></a>SMB 클라이언트의 SMB v1
 
-- 검색
+- Detect
   
   ```cmd
   sc.exe qc lanmanworkstation
@@ -311,7 +291,7 @@ Default: 1 = Enabled (No registry key is created)
   sc.exe config mrxsmb10 start= disabled
   ```
 
-- 활성화
+- [도메인에 조인된 컴퓨터를 디바이스로 등록]을
 
   ```cmd
   sc.exe config lanmanworkstation depend= bowser/mrxsmb10/mrxsmb20/nsi
@@ -334,7 +314,7 @@ Default: 1 = Enabled (No registry key is created)
   sc.exe config mrxsmb20 start= disabled 
   ```
 
-- 활성화
+- [도메인에 조인된 컴퓨터를 디바이스로 등록]을
 
   ```cmd
   sc.exe config lanmanworkstation depend= bowser/mrxsmb10/mrxsmb20/nsi
@@ -357,7 +337,7 @@ Default: 1 = Enabled (No registry key is created)
 
 그룹 정책를 사용 하 여이를 구성 하려면 다음 단계를 수행 합니다.
  
-1. 열기는 **그룹 정책 관리 콘솔**합니다. 새 기본 설정 항목을 추가할 그룹 정책 개체를 마우스 오른쪽 단추로 클릭한 다음 **편집**을 클릭합니다.
+1. **그룹 정책 관리 콘솔**을 엽니다. 새 기본 설정 항목을 추가할 그룹 정책 개체를 마우스 오른쪽 단추로 클릭한 다음 **편집**을 클릭합니다.
 
 2. 콘솔 트리의 **컴퓨터 구성**에서 **기본 설정** 폴더를 확장 한 다음 **Windows 설정** 폴더를 확장 합니다.
 
@@ -399,11 +379,11 @@ SMBv1 client를 사용 하지 않도록 설정 하려면 서비스 레지스트�
 레지스트리 항목: **DependOnService** REG_MULTI_SZ: **"브라우저", "MRxSmb20", "NSI"**   
 
 > [!NOTE]
->이제 종속성으로 제거 되는 기본 포함 MRxSMB10를  합니다.
+> 이제 종속성으로 제거 되는 기본 포함 MRxSMB10입니다.
 
 그룹 정책를 사용 하 여이를 구성 하려면 다음 단계를 수행 합니다.
  
-1. 열기는 **그룹 정책 관리 콘솔**합니다. 새 기본 설정 항목을 추가할 그룹 정책 개체를 마우스 오른쪽 단추로 클릭한 다음 **편집**을 클릭합니다.
+1. **그룹 정책 관리 콘솔**을 엽니다. 새 기본 설정 항목을 추가할 그룹 정책 개체를 마우스 오른쪽 단추로 클릭한 다음 **편집**을 클릭합니다.
 
 2. 콘솔 트리의 **컴퓨터 구성**에서 **기본 설정** 폴더를 확장 한 다음 **Windows 설정** 폴더를 확장 합니다.
 
