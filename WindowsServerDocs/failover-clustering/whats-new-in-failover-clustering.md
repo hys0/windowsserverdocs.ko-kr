@@ -8,12 +8,12 @@ manager: lizross
 author: JasonGerend
 ms.author: jgerend
 ms.date: 10/18/2018
-ms.openlocfilehash: cdc9280c4c7129d2e76341bd97b0ae3b8209888f
-ms.sourcegitcommit: 7200143aa787c7ac05ae0e012263b1c9a95b87ed
+ms.openlocfilehash: 431854f2e063454124092151c6788263db57b5f2
+ms.sourcegitcommit: 568b924d32421256f64abfee171304f1daf320d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721741"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85070150"
 ---
 # <a name="whats-new-in-failover-clustering"></a>장애 조치(failover) 클러스터링의 새로운 기능
 
@@ -212,5 +212,5 @@ Windows Server 2012 R2 및 이전 버전에서는 동일한 도메인에 가입 
 
 ## <a name="see-also"></a>참고 항목
 
-* [스토리지](../storage/storage.md)  
+* [스토리지](../storage/storage.yml)  
 * [Windows Server 2016에서 제공 되는 저장소의 새로운 기능](../storage/whats-new-in-storage.md)  

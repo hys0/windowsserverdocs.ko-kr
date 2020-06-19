@@ -9,12 +9,12 @@ manager: dougkim
 ms.author: jgerend
 ms.date: 06/15/2020
 description: 작업 폴더 개요-사용자가 Pc 및 장치에서 작업 파일에 액세스할 수 있는 일관 된 방법을 제공 하는 Windows Server의 서버 역할입니다.
-ms.openlocfilehash: 8bd60cc0ab57935a7ce2da0ca33bd0d4c840fa2b
-ms.sourcegitcommit: cb266c8ea42b9800babbbe96b17885e82b55787d
+ms.openlocfilehash: 4e670d61729d35ee9569b09e91ef5a953961241e
+ms.sourcegitcommit: 568b924d32421256f64abfee171304f1daf320d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84795730"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85070093"
 ---
 # <a name="work-folders-overview"></a>클라우드 폴더 개요
 
@@ -141,8 +141,8 @@ Windows 10, Windows 7 또는 Android 또는 iOS 장치에서 클라우드 폴더
 | - | ------------------ | ------------------- | -------------------------- | -------------- |
 | **기술 요약** | Pc 및 장치를 사용 하 여 파일 서버에 저장 된 파일을 동기화 합니다. | 회사 네트워크에 대 한 액세스 권한이 있는 Pc를 사용 하 여 파일 서버에 저장 된 파일을 동기화 합니다 (클라우드 폴더로 대체 가능). | 회사 및 장치가 회사 네트워크 내부 또는 외부에 있는 Office 365 또는 SharePoint에 저장 된 파일을 동기화 하 고 문서 공동 작업 기능을 제공 합니다. | Pc, Mac 컴퓨터 및 장치를 사용 하 여 OneDrive에 저장 된 개인 파일을 동기화 합니다. |
 | **작업 파일에 대 한 사용자 액세스를 제공 하기 위한 것입니다.** | 예 | 예 | 예 | 예 |
-| **클라우드 서비스** | 없음 | 없음 | Office 365 | Microsoft OneDrive |
-| **내부 네트워크 서버** | Windows Server 2012 R2 또는 Windows Server 2016를 실행 하는 파일 서버 | 파일 서버 | SharePoint server (선택 사항) | 없음 |
+| **클라우드 서비스** | None | None | Office 365 | Microsoft OneDrive |
+| **내부 네트워크 서버** | Windows Server 2012 R2 또는 Windows Server 2016를 실행 하는 파일 서버 | 파일 서버 | SharePoint server (선택 사항) | None |
 | **지원되는 클라이언트** | Pc, iOS, Android | 회사 네트워크의 Pc 또는 DirectAccess, Vpn 또는 기타 원격 액세스 기술을 통해 연결 된 Pc | Pc, iOS, Android, Windows Phone | Pc, Mac 컴퓨터, Windows Phone, iOS, Android |
   
 > [!NOTE]
@@ -164,7 +164,7 @@ Windows 10, Windows 7 또는 Android 또는 iOS 장치에서 클라우드 폴더
   
 Microsoft Azure 가상 컴퓨터를 시작 하는 방법에 대 한 자세한 내용은 [Windows azure 웹 사이트](http://www.windowsazure.com/documentation/services/virtual-machines)를 참조 하십시오.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
  자세한 내용은 다음 리소스를 참조하세요.  
   
@@ -175,4 +175,4 @@ Microsoft Azure 가상 컴퓨터를 시작 하는 방법에 대 한 자세한 �
 | **작업** | -   [클라우드 폴더 iPad 앱: FAQ](https://windows.microsoft.com/windows/work-folders-ipad-faq) (사용자 용)<br />-   [클라우드 폴더 인증서 관리](https://blogs.technet.com/b/filecab/archive/2013/08/09/work-folders-certificate-management.aspx) (블로그 게시물)<br />-   [Windows Server 2012 R2 클라우드 폴더 배포 모니터링](https://blogs.technet.com/b/filecab/archive/2013/10/15/monitoring-windows-server-2012-r2-work-folders-deployments.aspx) (블로그 게시물)<br />-   [Windows PowerShell의 SyncShare (작업 폴더) Cmdlet](https://docs.microsoft.com/powershell/module/syncshare/?view=win10-ps)<br />-   [Windows Server 2012 R2 Preview 버전용 Storage 및 File Services PowerShell Cmdlet 빠른 참조 카드](https://blogs.technet.com/b/filecab/archive/2013/07/30/storage-and-file-services-powershell-cmdlets-quick-reference-card-for-windows-server-2012-r2-preview-edition.aspx) |
 | **문제 해결** | -   [Windows Server 2012 R2 – IIS 웹 사이트 및 작업 폴더와의 포트 충돌 해결](https://blogs.technet.com/b/filecab/archive/2013/10/15/windows-server-2012-r2-resolving-port-conflict-with-iis-websites-and-work-folders.aspx) (블로그 게시물)<br />-   [클라우드 폴더의 일반적인 오류](https://social.technet.microsoft.com/wiki/contents/articles/30578.common-errors-in-work-folders.aspx) |
 | **커뮤니티 리소스** | -   [파일 서비스 및 저장소 포럼](https://social.technet.microsoft.com/Forums/windowsserver/home?forum=winserverfiles)<br />-   [Microsoft의 저장소 팀-파일 캐비닛 블로그](https://blogs.technet.com/b/filecab/)<br />-   [디렉터리 서비스 팀 블로그 확인](https://blogs.technet.com/b/askds/) |  
-| **관련 기술** | -   [Windows Server 2016의 저장소](../storage.md)<br>-   [파일 및 저장소 서비스](https://technet.microsoft.com/library/hh831487(v=ws.11).aspx)<br />-   [파일 서버 리소스 관리자](https://technet.microsoft.com/library/hh831701(v=ws.11).aspx)<br />-   [폴더 리디렉션, 오프라인 파일 및 로밍 사용자 프로필](https://technet.microsoft.com/library/hh848267(v=ws.11).aspx)<br />-   [BranchCache](https://technet.microsoft.com/library/hh831696(v=ws.11).aspx)<br />-   [DFS 네임 스페이스 및 DFS 복제](https://technet.microsoft.com/library/jj127250(v=ws.11).aspx) |
+| **관련 기술** | -   [Windows Server 2016의 저장소](../storage.yml)<br>-   [파일 및 저장소 서비스](https://technet.microsoft.com/library/hh831487(v=ws.11).aspx)<br />-   [파일 서버 리소스 관리자](https://technet.microsoft.com/library/hh831701(v=ws.11).aspx)<br />-   [폴더 리디렉션, 오프라인 파일 및 로밍 사용자 프로필](https://technet.microsoft.com/library/hh848267(v=ws.11).aspx)<br />-   [BranchCache](https://technet.microsoft.com/library/hh831696(v=ws.11).aspx)<br />-   [DFS 네임 스페이스 및 DFS 복제](https://technet.microsoft.com/library/jj127250(v=ws.11).aspx) |

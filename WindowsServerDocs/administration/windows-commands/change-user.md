@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5ae082ebd2b5cf98be891d8f557f9e42d7724d22
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: de96280f42f1e3002c4379390367856dcdcb885a
+ms.sourcegitcommit: 568b924d32421256f64abfee171304f1daf320d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716089"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85070183"
 ---
 # <a name="change-user"></a>change user
 
@@ -33,7 +33,7 @@ change user {/execute | /install | /query}
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | 설명 |
+| 매개 변수 | Description |
 | --------- | ----------- |
 | / 실행 | .Ini 파일을 홈 디렉터리에 매핑할을 수 있습니다. 이 값은 기본 설정입니다. |
 | /install | 홈 디렉터리에.ini 파일 매핑을 사용 하지 않습니다. 모든.ini 파일 읽고 시스템 디렉터리에 기록 됩니다. 원격 데스크톱 세션 호스트 서버에 응용 프로그램을 설치할 때 .ini 파일 매핑을 사용 하지 않도록 설정 해야 합니다. |
@@ -50,11 +50,11 @@ change user {/execute | /install | /query}
 
 - 시스템에서 **change user/install**을 실행 하는 경우 몇 가지 현상이 발생 합니다. 만든 모든 레지스트리 항목은 **\Software** 하위 키 또는 **\software** 하위 키에서 **HKEY_LOCAL_MACHINE \software\microsoft\windows NT\Currentversion\Terminal Server\Install**아래에 숨겨집니다. 하위 키에 추가 **HKEY_CURRENT_USER** 아래에 복사 됩니다는 **\SOFTWARE** 하위, 키 및 하위 키에 추가 **HKEY_LOCAL_MACHINE** 아래에 복사 됩니다는 **\MACHINE** 하위 키입니다. 응용 프로그램이 GetWindowsdirectory와 같은 시스템 호출을 사용 하 여 Windows 디렉터리를 쿼리하면, rd 세션 호스트 서버는 systemroot 디렉터리를 반환 합니다. .Ini 파일 항목을 모두 WritePrivateProfileString, 같은 시스템 호출을 사용 하 여 추가 되 면 시스템 루트 디렉터리에 있는.ini 파일에 추가 됩니다.
 
-- **사용자/execute를 변경**하기 위해 시스템에서를 반환 하 고 응용 프로그램이 존재 하지 않는 **HKEY_CURRENT_USER** 에서 레지스트리 항목을 읽으려고 하는 경우 원격 데스크톱 서비스는 키 복사본이 **\terminal Server\Install** 하위 키 아래에 있는지 확인 합니다. 이 경우 하위 키가 **HKEY_CURRRENT_USER**의 적절 한 위치에 복사 됩니다. 애플리케이션을 존재 하지 않는.ini 파일에서 읽은 하려고 하는 경우 해당.ini 파일 시스템 루트 아래 원격 데스크톱 서비스를 검색 합니다. .Ini 파일 시스템 루트에 있으면 사용자의 홈 디렉터리의 \Windows 하위 디렉터리에 복사 됩니다. 응용 프로그램에서 Windows 디렉터리를 쿼리하면 rd 세션 호스트 서버는 사용자의 홈 디렉터리에 대 한 \Windows 하위 디렉터리를 반환 합니다.
+- **사용자/execute를 변경**하기 위해 시스템에서를 반환 하 고 응용 프로그램이 존재 하지 않는 **HKEY_CURRENT_USER** 에서 레지스트리 항목을 읽으려고 하는 경우 원격 데스크톱 서비스는 키 복사본이 **\terminal Server\Install** 하위 키 아래에 있는지 확인 합니다. 하위 키 아래에서 적절 한 위치에 복사 됩니다 그렇지 않으면 **HKEY_CURRENT_USER**합니다. 애플리케이션을 존재 하지 않는.ini 파일에서 읽은 하려고 하는 경우 해당.ini 파일 시스템 루트 아래 원격 데스크톱 서비스를 검색 합니다. .Ini 파일 시스템 루트에 있으면 사용자의 홈 디렉터리의 \Windows 하위 디렉터리에 복사 됩니다. 응용 프로그램에서 Windows 디렉터리를 쿼리하면 rd 세션 호스트 서버는 사용자의 홈 디렉터리에 대 한 \Windows 하위 디렉터리를 반환 합니다.
 
 - 로그온 할 때 원격 데스크톱 서비스는 시스템.ini 파일이 컴퓨터에.ini 파일 보다 최신 인지 확인 합니다. 시스템 버전 새 버전인 경우.ini 파일은 대체 또는 최신 버전으로 병합 합니다. 이 든 아니든 INISYNC 비트가 0x40에 따라 달라 집니다, 그리고이.ini 파일에 대해 설정 됩니다. .Ini 파일의 이전 버전은 Inifile.ctx로 이름이 변경 됩니다. 시스템 레지스트리 값을 아래 하는 경우는 **\Terminal Server\Install** 하위 키 아래에서 사용 중인 버전 보다 최신인 **HKEY_CURRENT_USER**, 하위 키의 버전 삭제 되어의 새 하위 키로 대체 **\Terminal Server\Install**합니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 - .Ini 파일을 홈 디렉터리에 매핑할을 사용 하지 않으려면 다음을 입력 합니다.
 

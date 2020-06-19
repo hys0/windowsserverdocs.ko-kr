@@ -1,0 +1,120 @@
+### YamlMime:Landing
+title: 네트워킹 설명서
+summary: 네트워킹 소프트웨어 정의 된 데이터 센터 (SDDC) 플랫폼의 기본적인 일부인 및 Windows Server 2016 조직에 대해 완벽 하 게 실현된 SDDC 솔루션으로 이동 하는 데 도움이 하는 새로운 기능과 향상 된 네트워킹 SDN (소프트웨어) 기술을 제공 합니다.
+metadata:
+  title: 네트워킹 설명서
+  description: 이 항목에서는 Windows Server 2016에서 사용할 수 있는 소프트웨어 정의 네트워킹 및 네트워크 플랫폼 기술을 개략적으로 살펴봅니다.
+  layout: LandingPage
+  ms.technology: networking
+  ms.topic: landing-page
+  manager: dougkim
+  author: AnirbanPaul
+  ms.author: anpaul
+  ms.date: 06/11/2020
+  ms.assetid: daaf6b61-5953-4c2d-b6b8-7c885b552646
+  ms.localizationpriority: medium
+  ms.openlocfilehash: 9b419210689e0ca11bfc2c285cd6669d3a883679
+  ms.sourcegitcommit: 568b924d32421256f64abfee171304f1daf320d2
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 06/18/2020
+  ms.locfileid: "85071008"
+landingContent:
+- title: 네트워킹 정보
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Windows Server에서 지원하는 네트워킹 시나리오
+      url: windows-server-supported-networking-scenarios.md
+  - linkListType: whats-new
+    links:
+    - text: 네트워킹의 새로운 기능
+      url: What-s-New-in-Networking.md
+  - linkListType: reference
+    links:
+    - text: Windows Server 라이브러리
+      url: /previous-versions/windows/
+    - text: Windows Server 2003/2003 R2 사용되지 않는 콘텐츠
+      url: https://www.microsoft.com/download/details.aspx?id=53314
+- title: 소프트웨어 방식 네트워킹
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: SDN(소프트웨어 정의 네트워킹)
+      url: sdn/index.yml
+    - text: 네트워크 컨트롤러
+      url: sdn/technologies/network-controller/Network-Controller.md
+    - text: SDN에 대한 SLB(소프트웨어 부하 분산)
+      url: sdn/technologies/network-function-virtualization/software-load-balancing-for-sdn.md
+    - text: SDN용 RAS 게이트웨이
+      url: sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md
+    - text: 네트워크 기능 가상화
+      url: sdn/technologies/network-function-virtualization/Network-Function-Virtualization.md
+    - text: 데이터 센터 방화벽 개요
+      url: sdn/technologies/network-function-virtualization/Datacenter-Firewall-Overview.md
+  - linkListType: deploy
+    links:
+    - text: 스크립트를 사용하여 SDN 인프라 배포
+      url: sdn/deploy/Deploy-a-Software-Defined-Network-infrastructure-using-scripts.md
+- title: 네트워킹 기술
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: BranchCache
+      url: branchcache/BranchCache.md
+    - text: 핵심 네트워크 가이드
+      url: core-network-guide/core-network-guide-windows-server.md
+    - text: DirectAccess
+      url: ../remote/remote-access/da-stub.md
+    - text: DNS(Domain Name System)
+      url: dns/dns-top.md
+    - text: DHCP(Dynamic Host Configuration Protocol)
+      url: technologies/dhcp/dhcp-top.md
+    - text: Hyper-V 네트워크 가상화
+      url: sdn/technologies/hyper-v-network-virtualization/Hyper-V-Network-Virtualization.md
+    - text: Hyper-V 가상 스위치
+      url: ../virtualization/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md
+    - text: IPAM(IP 주소 관리)
+      url: technologies/ipam/ipam-top.md
+    - text: NLB(네트워크 부하 분산)
+      url: technologies/Network-Load-Balancing.md
+- title: 네트워킹 기술
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 네트워크 정책 서버
+      url: technologies/nps/nps-top.md
+    - text: Netsh(네트워크 셸)
+      url: technologies/netsh/netsh.md
+    - text: 네트워크 하위 시스템 성능 튜닝
+      url: technologies/network-subsystem/net-sub-performance-top.md
+    - text: NIC 팀
+      url: technologies/nic-teaming/NIC-Teaming.md
+    - text: QoS(서비스 품질) 정책
+      url: technologies/qos/qos-policy-top.md
+    - text: WINS(Windows Internet Name Service)
+      url: technologies/wins/wins-top.md
+    - text: 원격 액세스
+      url: ../remote/remote-access/remote-access.md
+    - text: Windows 컨테이너 네트워킹
+      url: /virtualization/windowscontainers/container-networking/architecture
+    - text: VPN(가상 사설망)
+      url: ../remote/remote-access/vpn/vpn-top.md
+  - linkListType: reference
+    links:
+    - text: Windows Server 2016에서 웹 응용 프로그램 프록시
+      url: /windows-server/remote/remote-access/web-application-proxy/web-application-proxy-windows-server
+    - text: 원격 액세스 Always On VPN 배포 가이드
+      url: /windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy
+- title: 고성능 네트워킹
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 고성능 네트워킹
+      url: technologies/hpn/hpn-top.md
+    - text: 수렴형 NIC(네트워크 인터페이스 카드)
+      url: technologies/conv-nic/cnic-top.md
+    - text: DCB(데이터 센터 브리징)
+      url: technologies/dcb/dcb-top.md
+    - text: vRSS(가상 수신측 배율)
+      url: technologies/vrss/vrss-top.md

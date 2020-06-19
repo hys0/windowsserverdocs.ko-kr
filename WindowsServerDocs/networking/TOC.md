@@ -1,4 +1,4 @@
-# [네트워킹](Networking.md)
+# [네트워킹 설명서](index.yml)
 ## [Windows Server에서 지원하는 네트워킹 시나리오](windows-server-supported-networking-scenarios.md)
 
 ## [네트워킹의 새로운 기능](What-s-New-in-Networking.md)

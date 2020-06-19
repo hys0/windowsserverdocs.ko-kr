@@ -8,12 +8,12 @@ ms.author: jgerend
 ms.technology: storage
 ms.date: 07/09/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 72f71bc6605103f8240bcd531da3a5b58d470181
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 2589e21c54fa864629f81b5889d0442c6f0de254
+ms.sourcegitcommit: 568b924d32421256f64abfee171304f1daf320d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403049"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85070556"
 ---
 # <a name="network-file-system-overview"></a>네트워크 파일 시스템 개요
 
@@ -33,7 +33,7 @@ Windows는 운영 체제 버전 및 제품군에 따라 여러 버전의 NFS 클
 
 | 운영 체제 | NFS 서버 버전 |NFS 클라이언트 버전|
 | ----------------- | ------------------- | ----------------- |
-| Windows 7, Windows 8.1, Windows 10 | 해당 사항 없음 | NFSv2, NFSv3 |
+| Windows 7, Windows 8.1, Windows 10 | 해당 없음 | NFSv2, NFSv3 |
 | Windows Server 2008, Windows Server 2008 R2 | NFSv2, NFSv3 | NFSv2, NFSv3 |
 | Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019 | NFSv2, NFSv3, NFSv 4.1  | NFSv2, NFSv3 |
 
@@ -49,7 +49,7 @@ NFS를 사용할 수 있는 몇 가지 방법은 다음과 같습니다.
 
 네트워크 파일 시스템의 새롭고 변경 된 기능에는 NFS 버전 4.1 및 향상 된 배포 및 관리 효율성에 대 한 지원이 포함 됩니다. Windows Server 2012에서 새로 또는 변경 된 기능에 대 한 자세한 내용은 다음 표를 참조 하십시오.
 
-|기능|새로운 기능 또는 업데이트된 기능|설명|
+|기능|새로운 기능 또는 업데이트된 기능|Description|
 |---|---|---|
 |[NFS 버전 4.1](#nfs-version-41)|단추를 사용하여 새|NFS 버전 3과 비교 하 여 보안, 성능 및 상호 운용성이 향상 되었습니다.|
 |[NFS 인프라](#nfs-infrastructure)|업데이트됨|배포 및 관리 효율성을 향상 하 고 보안을 강화 합니다.|
@@ -114,8 +114,8 @@ Windows Server 2012의 NFS에는 nfs 용으로 제공 되는 몇 가지 새로�
 
 다음 표에서는 NFS를 평가 하기 위한 추가 리소스를 제공 합니다.
 
-|콘텐츠 형식|참조|
+|콘텐츠 유형|참조|
 |---|---|
 |배포|[네트워크 파일 시스템 배포](deploy-nfs.md)|
 |작업|[Windows PowerShell의 NFS cmdlet](https://docs.microsoft.com/powershell/module/nfs/?view=win10-ps)|
-|관련 기술|[Windows Server의 스토리지](../storage.md)|
+|관련 기술|[Windows Server의 스토리지](../storage.yml)|

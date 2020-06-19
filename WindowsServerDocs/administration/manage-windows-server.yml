@@ -1,0 +1,71 @@
+### YamlMime:Landing
+title: Windows Server 관리 설명서
+summary: 필요한 기능에 대한 특정 역할을 포함하여 사용자 환경에 Windows Server를 배포했다면, 이제 다음 단계는 이러한 서버를 관리하는 것입니다. Windows Server에는 Windows Server 환경을 이해하고 특정 서버를 관리하며 성능을 미세 조정하여 결국은 많은 관리 작업을 자동화할 수 있도록 도와주는 다양한 도구들이 포함되어 있습니다.
+metadata:
+  title: Windows Server 관리 설명서
+  description: Windows Server 관리에 대 한 도구, 권장 사항 및 지침에 대해 알아봅니다.
+  ms.topic: landing-page
+  author: lizap
+  ms.author: elizapo
+  ms.date: 06/09/2020
+  ms.openlocfilehash: a115a703071b52e7a27d925578d7703f270b925b
+  ms.sourcegitcommit: 568b924d32421256f64abfee171304f1daf320d2
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 06/18/2020
+  ms.locfileid: "85070971"
+landingContent:
+- title: Windows Server 시스템 및 환경 관리
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Windows Admin Center로 온-프레미스 시스템, 원격 시스템 및 UI가 없는 시스템 관리
+      url: ../manage/windows-admin-center/overview.md
+    - text: 서버 관리자를 사용하여 온-프레미스 시스템 관리
+      url: server-manager/server-manager.md
+    - text: RSAT(원격 서버 관리 도구)를 사용하여 원격 시스템과 UI가 포함되지 않은 시스템을 관리
+      url: ../remote/remote-server-administration-tools.md
+    - text: Windows Server 시스템에 대한 업데이트 관리
+      url: windows-server-update-services/get-started/windows-server-update-services-wsus.md
+- title: 환경에 대한 정보 수집
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 이벤트 컬렉션 설치 및 부팅
+      url: get-started-with-setup-and-boot-event-collection.md
+    - text: 소프트웨어 인벤토리 로깅(SIL)
+      url: software-inventory-logging/get-started-with-software-inventory-logging.md
+    - text: 사용자 액세스 로깅(UAL)
+      url: user-access-logging/get-started-with-user-access-logging.md
+- title: 성능을 위해 Windows Server 환경 조정
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 성능 튜닝 지침
+      url: performance-tuning/index.md
+    - text: Microsoft Server Performance Advisor
+      url: server-performance-advisor/microsoft-server-performance-advisor.md
+- title: Windows Server 관리 자동화
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Windows PowerShell
+      url: https://docs.microsoft.com/powershell/scripting/overview
+    - text: Windows 명령
+      url: windows-commands/windows-commands.md
+    - text: 시스템 인사이트
+      url: ..\manage\system-insights\overview.md
+- title: 온-프레미스, 원격 및 가상 서버 액세스
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 원격 데스크톱 서비스
+      url: ../remote/remote-desktop-services/welcome-to-rds.md
+- title: 이전 버전의 Windows Server
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Windows 이전 버전 설명서
+      url: https://docs.microsoft.com/previous-versions/windows/
+    - text: 특정 정보 검색
+      url: https://docs.microsoft.com/search/?search=Windows+Server&dataSource=previousVersions

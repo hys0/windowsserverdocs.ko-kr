@@ -1,0 +1,53 @@
+### YamlMime:Landing
+title: Id 및 액세스 설명서
+summary: 액세스 및 ID 기술을 통해 일부 애플리케이션 및 서비스가 클라우드에, 나머지가 온-프레미스에 호스팅된 온-프레미스와 클라우드 전용 및 하이브리드 배포에서 Active Directory 환경을 보호합니다.
+metadata:
+  title: Id 및 액세스 설명서
+  description: 액세스 및 ID 기술을 통해 일부 애플리케이션 및 서비스가 클라우드에, 나머지가 온-프레미스에 호스팅된 온-프레미스와 클라우드 전용 및 하이브리드 배포에서 Active Directory 환경을 보호합니다.
+  ms.topic: landing-page
+  author: billmath
+  ms.author: billmath
+  ms.date: 5/18/2020
+  ms.openlocfilehash: 10723952ab4b146c491f469e6569670ad0f1c5e1
+  ms.sourcegitcommit: 5bc5aaf341c711113ca03d1482f933b05b146007
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 06/19/2020
+  ms.locfileid: "85095688"
+landingContent:
+- title: Id 및 액세스 기술 정보
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: 새로운 기능은 무엇입니까?
+      url: ad-fs/overview/whats-new-active-directory-federation-services-windows-server.md
+  - linkListType: overview
+    links:
+    - text: Active Directory Domain Services(AD DS)용 권한 있는 액세스 관리
+      url: https://technet.microsoft.com/library/dn903243.aspx
+    - text: '엔터프라이즈용 Windows 10: 작업에 디바이스를 사용하는 방법'
+      url: https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-windows10-devices-overview/?rnd=1
+    - text: Active Directory Domain Services
+      url: ../identity/ad-ds/Active-Directory-Domain-Services.md
+    - text: Active Directory Federation Services
+      url: Active-Directory-Federation-Services.md
+- title: 솔루션 및 시나리오 가이드
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: 어디에서든 모든 디바이스에서 회사 리소스에 안전하게 액세스
+      url: https://technet.microsoft.com/library/dn550982.aspx
+    - text: 회사 애플리케이션 전반에 SSO 및 연속된 두 번째 단계 인증을 위한 모든 디바이스의 작업 공간 연결
+      url: https://technet.microsoft.com/library/dn280945.aspx
+    - text: 추가 다단계 인증을 사용하여 중요한 애플리케이션에 대한 위험 관리
+      url: https://technet.microsoft.com/library/dn280949.aspx
+    - text: 조건부 액세스 제어를 사용한 위험 관리
+      url: https://technet.microsoft.com/library/dn280937.aspx
+- title: 이전 버전의 Windows Server
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Windows 이전 버전 설명서
+      url: https://docs.microsoft.com/previous-versions/windows/
+    - text: 특정 정보 검색
+      url: https://docs.microsoft.com/search/?search=Windows+Server&dataSource=previousVersions

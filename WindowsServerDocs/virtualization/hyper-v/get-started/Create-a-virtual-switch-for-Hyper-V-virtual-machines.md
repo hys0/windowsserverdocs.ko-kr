@@ -9,12 +9,12 @@ ms.assetid: fdc8063c-47ce-4448-b445-d7ff9894dc17
 author: kbdazure
 ms.author: kathydav
 ms.date: 10/04/2016
-ms.openlocfilehash: e27d1286945671d3f44fe2fa3220a2e223ad7c4f
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 654e574ffd44e7bbc7712defe165d75e4eae5663
+ms.sourcegitcommit: 568b924d32421256f64abfee171304f1daf320d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80860846"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85070514"
 ---
 # <a name="create-a-virtual-switch-for-hyper-v-virtual-machines"></a>Hyper-v 가상 컴퓨터에 대 한 가상 스위치 만들기
 
@@ -22,23 +22,23 @@ ms.locfileid: "80860846"
   
 가상 스위치에 가상 컴퓨터를 다른 컴퓨터와 통신 하는 Hyper-v 호스트에 만들어진 있습니다. Windows Server에 Hyper-v 역할을 처음 설치할 때 가상 스위치를 만들 수 있습니다. 추가 가상 스위치를 만들려면 Hyper-v 관리자 또는 Windows PowerShell을 사용 합니다. 가상 스위치에 대 한 자세한 참조 [Hyper-v 가상 스위치](../../hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md)합니다.  
   
-가상 컴퓨터 네트워킹 복잡 한 주제를 수 있습니다. 처럼 사용할 수 있는 몇 가지 새로운 가상 스위치 기능 되며 [포함 된 팀 전환 (SET)](../../hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md#switch-embedded-teaming-set)합니다. 하지만 기본 네트워킹은 매우 쉽습니다. 이 항목에서는 Hyper-v에서 네트워크로 연결 된 가상 컴퓨터를 만들 수 있도록 데 필요한 만큼만 다룹니다. 네트워킹 인프라를 설정 하는 방법을 하는 방법에 대 한 자세한 내용은 검토는 [네트워킹](../../../networking/Networking.md) 설명서입니다.   
+가상 머신 네트워킹 복잡한 주제를 수 있습니다. 처럼 사용할 수 있는 몇 가지 새로운 가상 스위치 기능 되며 [포함 된 팀 전환 (SET)](../../hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md#switch-embedded-teaming-set)합니다. 하지만 기본 네트워킹은 매우 쉽습니다. 이 항목에서는 Hyper-v에서 네트워크로 연결 된 가상 컴퓨터를 만들 수 있도록 데 필요한 만큼만 다룹니다. 네트워킹 인프라를 설정 하는 방법을 하는 방법에 대 한 자세한 내용은 검토는 [네트워킹](../../../networking/index.yml) 설명서입니다.   
   
 ## <a name="create-a-virtual-switch-by-using-hyper-v-manager"></a>Hyper-v 관리자를 사용 하 여 가상 스위치 만들기  
   
 1.  Hyper-v 관리자를 열고 Hyper-v 호스트 컴퓨터 이름을 선택 합니다.  
   
-2.  선택 **작업** > **가상 스위치 관리자**합니다.  
+2.  **작업**  >  **가상 스위치 관리자**를 선택 합니다.  
   
     ![작업 메뉴 옵션을 보여 주는 스크린 샷 > 가상 스위치 관리자](../media/Hyper-V-Action-VSwitchManager.png)  
   
 3.  원하는 가상 스위치의 형식을 선택 합니다.  
   
-    |연결 형식|설명|  
+    |연결 형식|Description|  
     |-------------------|---------------|  
     |외부|서버와 외부 네트워크에 있는 클라이언트와 통신 하는 실제 네트워크에 가상 컴퓨터에 액세스를 제공 합니다. 상호 통신에 동일한 Hyper-v 서버에 가상 컴퓨터를 허용 합니다.|  
     |내부|가상 컴퓨터와 관리 호스트 운영 체제 및 동일한 Hyper-v 서버에 가상 컴퓨터 간의 통신을 허용 합니다.|  
-    |프라이빗|동일한 Hyper-v 서버에서 가상 컴퓨터 간의 통신만 허용합니다. 프라이빗 네트워크는 Hyper-v 서버에서 모든 외부 네트워크 트래픽으로부터 격리 됩니다. 이 유형의 네트워크와 격리 된 테스트 도메인과 같은 격리 된 네트워킹 환경을 만들어야 하는 경우에 유용 합니다.|  
+    |Private|동일한 Hyper-v 서버에서 가상 컴퓨터 간의 통신만 허용합니다. 개인 네트워크는 Hyper-v 서버에서 모든 외부 네트워크 트래픽으로부터 격리 됩니다. 이 유형의 네트워크와 격리 된 테스트 도메인과 같은 격리 된 네트워킹 환경을 만들어야 하는 경우에 유용 합니다.|  
   
 4.  선택 **가상 스위치를 만들**합니다.  
   
@@ -48,10 +48,10 @@ ms.locfileid: "80860846"
   
     ![외부 네트워크 옵션을 보여 주는 스크린 샷](../media/Hyper-V-NewVSwitch-ExternalOptions.png)  
   
-    |설정 이름|설명|  
+    |설정 이름|Description|  
     |----------------|---------------|  
-    |관리 운영 체제가 이 네트워크 어댑터를 공유할 수 있도록 허용|Hyper-v 호스트가 가상 스위치의 사용을 공유할 수 있도록 하 고 가상 컴퓨터와 nic 팀이 옵션을 선택 합니다. 이 옵션을 사용 호스트 사용할 수 설정을 구성 하는 가상 스위치와 같은 서비스 품질 (QoS) 설정, 보안 설정 또는 Hyper-v 가상 스위치의 다른 기능.|  
-    |단일 루트 I/O 가상화(SR-IOV) 사용|가상 컴퓨터 스위치를 무시 하 고 실제 NIC에 직접 이동에 대 한 가상 컴퓨터 트래픽을 허용 하려는 경우에이 옵션을 선택 합니다. 자세한 내용은 참조 [단일 루트 I/O 가상화](https://technet.microsoft.com/library/dn641211.aspx#Sec4) 포스터 도우미 참조에서: Hyper-v 네트워킹.|  
+    |이 네트워크 어댑터를 공유하는 관리 운영 체제 허용|Hyper-v 호스트가 가상 스위치의 사용을 공유할 수 있도록 하고 가상 머신과 nic 팀이 옵션을 선택합니다. 이 옵션을 사용 호스트 사용할 수 설정을 구성 하는 가상 스위치와 같은 서비스 품질 (QoS) 설정, 보안 설정 또는 Hyper-v 가상 스위치의 다른 기능.|  
+    |단일 루트 I/O 가상화 (SR-IOV) 사용|가상 머신 스위치를 무시 하고 실제 NIC에 직접 이동에 대한 가상 머신 트래픽을 허용하려는 경우에 이 옵션을 선택합니다. 자세한 내용은 참조 [단일 루트 I/O 가상화](https://technet.microsoft.com/library/dn641211.aspx#Sec4) 포스터 도우미 참조에서: Hyper-v 네트워킹.|  
   
 7.  관리 Hyper-v 호스트 운영 체제 또는 동일한 가상 스위치를 공유 하는 다른 가상 컴퓨터에서 네트워크 트래픽을 격리 하려면 **관리 운영 체제에 대 한 가상 LAN Id 사용**을 선택 합니다. 원하는 수의 VLAN ID를 변경 하거나 기본값을 그대로 적용 수 있습니다. 이 관리 운영 체제에서이 가상 스위치를 통해 모든 네트워크 통신에 사용할 가상 LAN id입니다.  
   
@@ -65,9 +65,9 @@ ms.locfileid: "80860846"
   
 ## <a name="create-a-virtual-switch-by-using-windows-powershell"></a>Windows PowerShell을 사용 하 여 가상 스위치 만들기  
   
-1.  Windows 데스크톱에서 시작 단추를 클릭하고 **Windows PowerShell** 이름의 일부를 입력합니다.  
+1.  Windows 바탕 화면에서 시작 단추를 클릭 하 고 이름의 일부를 입력 **Windows PowerShell**합니다.  
   
-2.  Windows PowerShell을 마우스 오른쪽 단추로 클릭 하 고 선택 **관리자 권한으로 실행**합니다.  
+2.  Windows PowerShell을 마우스 오른쪽 단추로 클릭 하 고 **관리자 권한으로 실행**을 선택 합니다.  
   
 3.  실행 하 여 기존 네트워크 어댑터를 찾을 [Get-netadapter](https://technet.microsoft.com/library/jj130867.aspx) cmdlet입니다. 가상 스위치를 사용 하 여 원하는 네트워크 어댑터 이름을 기록해 둡니다.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "80860846"
     New-VMSwitch -name InternalSwitch -SwitchType Internal  
     ```  
   
-    프라이빗 스위치를 만들려면 다음 명령을 실행 합니다.  
+    개인 스위치를 만들려면 다음 명령을 실행 합니다.  
   
     ```  
     New-VMSwitch -name PrivateSwitch -SwitchType Private  
@@ -97,7 +97,7 @@ Windows Server 2016에서 개선 된 또는 새 가상 스위치 기능을 소�
 
   
 ## <a name="next-step"></a>다음 단계  
-[Hyper-V에서 가상 머신 만들기](Create-a-virtual-machine-in-Hyper-V.md)  
+[Hyper-v에서 가상 머신 만들기](Create-a-virtual-machine-in-Hyper-V.md)  
   
 
 
