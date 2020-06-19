@@ -7,12 +7,12 @@ author: rpsqrd
 ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 09/25/2019
-ms.openlocfilehash: 09e09fa30a38ef5f6046f623e24be0bc7b6ce87e
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: abc1a2af7353bd85e0ae7ac55debc36d63d1782f
+ms.sourcegitcommit: fe89b8001ad664b3618708b013490de93501db05
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80856756"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84942292"
 ---
 # <a name="create-a-shielded-vm-using-powershell"></a>PowerShell을 사용 하 여 보호 된 VM 만들기
 
@@ -22,7 +22,7 @@ ms.locfileid: "80856756"
 
 간단히 말해서 모든 컴퓨터에 템플릿 디스크, 보호 데이터 파일, 무인 설치 응답 파일 및 기타 보안 아티팩트를 만든 다음, 이러한 파일을 보호 된 호스트에 복사 하 고 보호 된 VM을 프로 비전 합니다.
 
-## <a name="create-a-signed-template-disk"></a>서명 된 템플릿 디스크 만들기
+## <a name="create-a-signed-template-disk"></a>서명된 템플릿 디스크 만들기
 
 새 차폐 VM을 만들려면 먼저 서명 된 OS 볼륨 (또는 Linux의 부팅 및 루트 파티션)으로 미리 암호화 된 보호 된 VM 템플릿 디스크가 필요 합니다.
 템플릿 디스크를 만드는 방법에 대 한 자세한 내용은 아래 링크를 참조 하세요.
@@ -42,7 +42,7 @@ Save-VolumeSignatureCatalog -TemplateDiskPath "C:\temp\MyTemplateDisk.vhdx" -Vol
 차폐 VM을 실행 하려는 각 가상화 패브릭에 대해 패브릭의 HGS 클러스터에 대 한 보호자 메타 데이터를 가져와야 합니다.
 호스팅 공급자는이 정보를 제공할 수 있어야 합니다.
 
-엔터프라이즈 환경에 있고 HGS 서버와 통신할 수 있는 경우 *http://\<HGSCLUSTERNAME\>/KeyProtection/service/metadata/2014-07/metadata.xml* 에서 보호자 메타 데이터를 사용할 수 있습니다.
+엔터프라이즈 환경에 있고 HGS 서버와 통신할 수 있는 경우 *Http:// \<HGSCLUSTERNAME\> /KeyProtection/service/metadata/2014-07/* 에서 보호자 메타 데이터를 사용할 수 있습니다 metadata.xml
 
 ## <a name="create-shielding-data-pdk-file"></a>보호 데이터 파일 (PDK) 만들기
 
@@ -51,7 +51,7 @@ Save-VolumeSignatureCatalog -TemplateDiskPath "C:\temp\MyTemplateDisk.vhdx" -Vol
 테 넌 트/v m 소유자가 만든 후에는 결과 PDK 파일을 보호 된 패브릭에 복사 해야 합니다.
 자세한 내용은 [보호 데이터 란 무엇 이며 필요한 이유는 무엇 인가요?](guarded-fabric-and-shielded-vms.md#what-is-shielding-data-and-why-is-it-necessary)를 참조 하세요.
 
-또한 무인 설치 응답 파일 (Windows의 경우 unattend.xml은 Linux에 따라 다름)이 필요 합니다. 응답 파일에 포함할 내용에 대 한 지침은 [응답 파일 만들기](guarded-fabric-tenant-creates-shielding-data.md#create-an-answer-file) 를 참조 하세요.
+또한 무인 설치 응답 파일 (Windows의 경우 unattend.xml는 Linux에 따라 다름)이 필요 합니다. 응답 파일에 포함할 내용에 대 한 지침은 [응답 파일 만들기](guarded-fabric-tenant-creates-shielding-data.md#create-an-answer-file) 를 참조 하세요.
 
 보호 된 Vm에 대 한 원격 서버 관리 도구가 설치 된 컴퓨터에서 다음 cmdlet을 실행 합니다.
 Linux VM에 대 한 PDK를 만드는 경우 Windows Server 버전 1709 이상을 실행 하는 서버에서이 작업을 수행 해야 합니다.
@@ -72,6 +72,10 @@ New-ShieldingDataFile -ShieldingDataFilePath 'C:\temp\Contoso.pdk' -Owner $Owner
 ```
     
 ## <a name="provision-shielded-vm-on-a-guarded-host"></a>보호 된 호스트에서 보호 된 VM 프로 비전
+Windows Server 2016를 실행 하는 호스트에서 프로 비전 작업의 신호 완료를 위해 VM을 종료 하는 작업을 모니터링 하 고 프로 비전이 실패 한 경우 Hyper-v 이벤트 로그에서 오류 정보를 확인할 수 있습니다.
+
+새 보호 된 VM을 만들기 전에 매번 새 템플릿 디스크를 만들 수도 있습니다.
+
 배포 준비를 위해 템플릿 디스크 파일 (ServerOS .vhdx) 및 PDK 파일 (contoso. pdk)을 보호 된 호스트로 복사 합니다.
 
 보호 된 호스트에서 프로 비전 프로세스를 간소화 하는 ShieldedVM cmdlet이 포함 된 보호 된 패브릭 도구 PowerShell 모듈을 설치 합니다. 보호 된 호스트에서 인터넷에 액세스할 수 있는 경우 다음 명령을 실행 합니다.
@@ -80,7 +84,7 @@ New-ShieldingDataFile -ShieldingDataFilePath 'C:\temp\Contoso.pdk' -Owner $Owner
 Install-Module GuardedFabricTools -Repository PSGallery -MinimumVersion 1.0.0
 ```
 
-인터넷에 액세스할 수 있는 다른 컴퓨터에 모듈을 다운로드 하 고 결과 모듈을 복사 하 여 보호 된 호스트에서 `C:\Program Files\WindowsPowerShell\Modules` 수도 있습니다.
+인터넷에 액세스할 수 있는 다른 컴퓨터에 모듈을 다운로드 하 여 `C:\Program Files\WindowsPowerShell\Modules` 보호 된 호스트의 결과 모듈을에 복사할 수도 있습니다.
 
 ```powershell
 Save-Module GuardedFabricTools -Repository PSGallery -MinimumVersion 1.0.0 -Path C:\temp\
@@ -105,13 +109,13 @@ New-ShieldedVM -Name 'MyStaticIPVM' -TemplateDiskPath 'C:\temp\MyTemplateDisk.vh
 
 ```
 
-템플릿 디스크에 Linux 기반 OS가 포함 된 경우 명령을 실행할 때 `-Linux` 플래그를 포함 합니다.
+템플릿 디스크에 Linux 기반 OS가 포함 된 경우 `-Linux` 명령을 실행할 때 플래그를 포함 합니다.
 
 ```powershell
 New-ShieldedVM -Name 'MyLinuxVM' -TemplateDiskPath 'C:\temp\MyTemplateDisk.vhdx' -ShieldingDataFilePath 'C:\temp\Contoso.pdk' -Wait -Linux
 ```
 
-Cmdlet에 전달할 수 있는 다른 옵션에 대 한 자세한 내용은 `Get-Help New-ShieldedVM -Full`를 사용 하 여 도움말 콘텐츠를 확인 하세요.
+`Get-Help New-ShieldedVM -Full`Cmdlet에 전달할 수 있는 다른 옵션에 대 한 자세한 내용은를 사용 하 여 도움말 콘텐츠를 확인 하세요.
 
 VM이 프로 비전을 완료 하면 OS 특정 특수화 단계가 시작 되 고 그 후에 사용할 준비가 됩니다.
 VM이 실행 되 고 있는 경우 (RDP, PowerShell, SSH 또는 선호 하는 관리 도구를 사용 하 여) 해당 네트워크에 연결할 수 있도록 VM을 유효한 네트워크에 연결 해야 합니다.

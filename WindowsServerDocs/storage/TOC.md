@@ -1,4 +1,4 @@
-# [스토리지](storage.md)
+# [스토리지](storage.yml)
 ## [스토리지의 새로운 기능](whats-new-in-storage.md)
 ## [데이터 중복 제거](data-deduplication/overview.md)
 ### [데이터 중복 제거의 새로운 기능](data-deduplication/whats-new.md)

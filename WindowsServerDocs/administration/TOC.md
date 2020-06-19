@@ -1,4 +1,4 @@
-# [관리](manage-windows-server.md)
+# [관리](manage-windows-server.yml)
 ## [Windows Admin Center를 사용하여 환경 관리(새로운 기능!)](../manage/windows-admin-center/overview.md)
 ## Windows Server 시스템 및 환경 관리
 ### [Windows Server 하이브리드 클라우드 인쇄 관리](hybrid-cloud-print/hybrid-cloud-print-overview.md)

@@ -1,4 +1,4 @@
-# [ID 및 액세스](Identity-and-Access.md)
+# [ID 및 액세스](Identity-and-Access.yml)
 
 ## [솔루션 및 시나리오 가이드](solution-guides/Solutions-and-Scenario-Guides.md)
 ### [동적 액세스 제어: 시나리오 개요](solution-guides/Dynamic-Access-Control--Scenario-Overview.md)
