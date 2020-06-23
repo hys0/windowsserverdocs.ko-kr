@@ -8,12 +8,12 @@ ms.assetid: cb7f3d7d-4225-409a-9f6b-34a106e8dd24
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 6f81041a2a1938add2fd8bfc03aa492d1da266cd
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 0c0e72f37057d50f7d7164ea84c9c7771fca0de8
+ms.sourcegitcommit: 56ac7cf3f4bbcc5175f140d2df5f37cc42ba76d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80852106"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85217573"
 ---
 # <a name="use-shared-folders-in-windows-server-essentials"></a>Windows Server Essentials에서 공유 폴더 사용
 
@@ -28,9 +28,9 @@ ms.locfileid: "80852106"
   
 -   [원격 웹 액세스 사용](Use-Shared-Folders-in-Windows-Server-Essentials.md#BKMK_UsingRWA)  
   
--   [Windows Phone 용 My Server 앱 사용](Use-Shared-Folders-in-Windows-Server-Essentials.md#BKMK_Phone)  
+-   [Windows Phone용 내 서버 앱 사용](Use-Shared-Folders-in-Windows-Server-Essentials.md#BKMK_Phone)  
   
--   [Windows 8 용 My Server 앱 사용](Use-Shared-Folders-in-Windows-Server-Essentials.md#BKMK_App)  
+-   [Windows 8용 내 서버 앱 사용](Use-Shared-Folders-in-Windows-Server-Essentials.md#BKMK_App)  
   
 ##  <a name="using-the-windows-server-essentials-launchpad"></a><a name="BKMK_UsingLaunchpad"></a>Windows Server Essentials 실행 패드 사용  
  서버에 컴퓨터 연결 마법사를 사용하여 서버에 연결된 컴퓨터에서 실행 패드를 사용할 수 있습니다. 서버에 컴퓨터를 연결하는 방법에 대한 자세한 내용은 [서버에 컴퓨터 연결](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9)을 참조하세요.  
@@ -39,9 +39,9 @@ ms.locfileid: "80852106"
   
 -   [원격 웹 액세스 사용](../use/Use-Shared-Folders-in-Windows-Server-Essentials.md#BKMK_UsingRWA)  
   
--   [Windows Phone 용 My Server 앱 사용](../use/Use-Shared-Folders-in-Windows-Server-Essentials.md#BKMK_Phone)  
+-   [Windows Phone용 내 서버 앱 사용](../use/Use-Shared-Folders-in-Windows-Server-Essentials.md#BKMK_Phone)  
   
--   [Windows 8 용 My Server 앱 사용](../use/Use-Shared-Folders-in-Windows-Server-Essentials.md#BKMK_App)  
+-   [Windows 8용 내 서버 앱 사용](../use/Use-Shared-Folders-in-Windows-Server-Essentials.md#BKMK_App)  
   
 ##  <a name="using-the-windows-server-essentials-launchpad"></a><a name="BKMK_UsingLaunchpad"></a>Windows Server Essentials 실행 패드 사용  
  서버에 컴퓨터 연결 마법사를 사용하여 서버에 연결된 컴퓨터에서 실행 패드를 사용할 수 있습니다. 서버에 컴퓨터를 연결하는 방법에 대한 자세한 내용은 [서버에 컴퓨터 연결](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_9)을 참조하세요.  
@@ -63,9 +63,9 @@ ms.locfileid: "80852106"
   
 ##  <a name="using-remote-web-access"></a><a name="BKMK_UsingRWA"></a>원격 웹 액세스 사용  
 
- 원격 웹 액세스 웹 사이트를 사용하여 원격 컴퓨터에서 공유 파일 및 폴더에 액세스할 수는 있습니다. 서버 네트워크 내의 컴퓨터에서 원격 웹 액세스 웹 사이트에 액세스 하려면 인터넷 브라우저를 열고 https://< servername\>/remote를 입력 합니다. 원격 웹 액세스를 사용하여 공유 폴더에 있는 파일을 보고 관리할 수 있습니다. 단계별 지침은 [원격 웹 액세스 사용](Use-Remote-Web-Access-in-Windows-Server-Essentials.md)을 참조 하세요.  
+ 원격 웹 액세스 웹 사이트를 사용하여 원격 컴퓨터에서 공유 파일 및 폴더에 액세스할 수는 있습니다. 서버 네트워크 내의 컴퓨터에서 원격 웹 액세스 웹 사이트에 액세스 하려면 인터넷 브라우저를 열고 https://<servername \> /remote 입력 합니다. 원격 웹 액세스를 사용하여 공유 폴더에 있는 파일을 보고 관리할 수 있습니다. 단계별 지침은 [원격 웹 액세스 사용](Use-Remote-Web-Access-in-Windows-Server-Essentials.md)을 참조 하세요.  
 
- 원격 웹 액세스 웹 사이트를 사용하여 원격 컴퓨터에서 공유 파일 및 폴더에 액세스할 수는 있습니다. 서버 네트워크 내의 컴퓨터에서 원격 웹 액세스 웹 사이트에 액세스 하려면 인터넷 브라우저를 열고 https://< servername\>/remote를 입력 합니다. 원격 웹 액세스를 사용하여 공유 폴더에 있는 파일을 보고 관리할 수 있습니다. 단계별 지침은 [원격 웹 액세스 사용](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md)을 참조 하세요.  
+ 원격 웹 액세스 웹 사이트를 사용하여 원격 컴퓨터에서 공유 파일 및 폴더에 액세스할 수는 있습니다. 서버 네트워크 내의 컴퓨터에서 원격 웹 액세스 웹 사이트에 액세스 하려면 인터넷 브라우저를 열고 https://<servername \> /remote 입력 합니다. 원격 웹 액세스를 사용하여 공유 폴더에 있는 파일을 보고 관리할 수 있습니다. 단계별 지침은 [원격 웹 액세스 사용](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md)을 참조 하세요.  
 
   
 > [!NOTE]
@@ -94,18 +94,11 @@ ms.locfileid: "80852106"
   
 -   [서버 폴더 관리](../manage/Manage-Server-Folders-in-Windows-Server-Essentials.md)  
   
--   [서버 저장소 관리](../manage/Manage-Server-Storage-in-Windows-Server-Essentials.md)  
-  
+-   [서버 스토리지 관리](../manage/Manage-Server-Storage-in-Windows-Server-Essentials.md)  
 
 -   [연결](Get-Connected-in-Windows-Server-Essentials.md)  
   
 -   [원격으로 작업](Work-Remotely-in-Windows-Server-Essentials.md)  
   
 -   [디지털 미디어 재생](Play-Digital-Media-in-Windows-Server-Essentials.md)
-
--   [연결](../use/Get-Connected-in-Windows-Server-Essentials.md)  
-  
--   [원격으로 작업](../use/Work-Remotely-in-Windows-Server-Essentials.md)  
-  
--   [디지털 미디어 재생](../use/Play-Digital-Media-in-Windows-Server-Essentials.md)
 

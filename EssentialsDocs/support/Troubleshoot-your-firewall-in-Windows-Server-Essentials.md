@@ -8,12 +8,12 @@ ms.assetid: 51d94b67-8b9b-4159-80dd-f652d73a43cb
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 1ff27915f3d6c92416ed22b7e143bdc1cf3b385f
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 6764645182a6f31c0aec4b5d9b9963d64500ea9a
+ms.sourcegitcommit: 56ac7cf3f4bbcc5175f140d2df5f37cc42ba76d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80853186"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85217443"
 ---
 # <a name="troubleshoot-your-firewall-in-windows-server-essentials"></a>Windows Server Essentials에서 방화벽 문제 해결
  
@@ -31,7 +31,7 @@ ms.locfileid: "80853186"
   
    고급 네트워크 설정을 사용하거나 타사 방화벽을 사용하는 경우 방화벽에서 추가 포트를 열어야 할 수도 있습니다. 다음 표의 포트는 IANA(Internet Assigned Numbers Authority)에 등록되어 있습니다.  
   
-|포트 번호|설명|  
+|포트 번호|Description|  
 |-----------------|-----------------|  
 |65500|인증서 웹 서비스|  
 |65510 및 65515|클라이언트 컴퓨터 배포 웹 사이트|  
@@ -48,9 +48,6 @@ ms.locfileid: "80853186"
 -   [원격 액세스 관리](../manage/Manage-Anywhere-Access-in-Windows-Server-Essentials.md)  
   
 -   [Windows Server Essentials 관리](../manage/Manage-Windows-Server-Essentials.md)  
-  
-
--   [Windows Server Essentials 지원](Support-Windows-Server-Essentials.md)
 
 -   [Windows Server Essentials 지원](../support/Support-Windows-Server-Essentials.md)
 

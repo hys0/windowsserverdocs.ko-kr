@@ -8,12 +8,12 @@ ms.assetid: 47ea21a0-5e05-4b4b-8fa4-338c82601276
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 5a26f331c8bfe6d30dc74d555ba5f4a4cdbd6232
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 17ed30b708ce76396d49b4dc1c3c4a4785b67fe8
+ms.sourcegitcommit: 56ac7cf3f4bbcc5175f140d2df5f37cc42ba76d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80852126"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85217583"
 ---
 # <a name="use-remote-web-access-in-windows-server-essentials"></a>Windows Server Essentials에서 원격 웹 액세스 사용
 
@@ -23,14 +23,14 @@ ms.locfileid: "80852126"
   
   원격 웹 액세스를 사용하면 자리를 비울 때 Windows Server Essentials 네트워크에 연결된 상태를 유지할 수 있습니다. 원격 웹 액세스에 로그온 할 때 Windows Server Essentials 네트워크의 컴퓨터에 연결 하 고, 대시보드를 열어 Windows Server Essentials 네트워크를 관리 하 고, 서버의 모든 공유 폴더와 미디어 파일에 액세스할 수 있습니다.  
   
- 이 항목은 다음과 같은 섹션으로 구성됩니다.  
+ 이 항목에는 다음 섹션이 포함되어 있습니다.  
   
 
 -   [원격 웹 액세스에 연결](Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_Connect)  
   
 -   [파일 및 폴더 공유](Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_SharedFolders)  
   
--   [모바일 장치에서 연결](Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_ConnectMobile)  
+-   [모바일 디바이스에서 연결](Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_ConnectMobile)  
   
 ##  <a name="connect-to-remote-web-access"></a><a name="BKMK_Connect"></a>원격 웹 액세스에 연결  
   
@@ -42,7 +42,7 @@ ms.locfileid: "80852126"
   
 -   [파일 및 폴더 공유](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_SharedFolders)  
   
--   [모바일 장치에서 연결](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_ConnectMobile)  
+-   [모바일 디바이스에서 연결](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_ConnectMobile)  
   
 ##  <a name="connect-to-remote-web-access"></a><a name="BKMK_Connect"></a>원격 웹 액세스에 연결  
   
@@ -56,7 +56,7 @@ ms.locfileid: "80852126"
   
 ##### <a name="to-log-on-to-remote-web-access-from-a-network-computer"></a>네트워크 컴퓨터에서 원격 웹 액세스에 로그온하려면  
   
-1.  웹 브라우저를 열고 주소 표시줄에 **https://** _< 서버 이름\>_ **/Remote** 를 입력 한 다음 enter 키를 누릅니다.  
+1.  웹 브라우저를 열고 주소 표시줄에 **https://** _<\> 서버 이름_**/remote** 를 입력 한 다음 enter 키를 누릅니다.  
   
     > [!NOTE]
     >  S가 https에 포함 되어 있는지 확인 합니다.  
@@ -65,7 +65,7 @@ ms.locfileid: "80852126"
   
 ##### <a name="to-log-on-to-remote-web-access-from-a-remote-computer"></a>원격 컴퓨터에서 원격 웹 액세스에 로그온하려면  
   
-1.  웹 브라우저를 열고 주소 표시줄에 **https://** _</remote domainname\>_ **/remote** 를 입력 한 다음 enter 키를 누릅니다.  
+1.  웹 브라우저를 열고 주소 표시줄에 **https://** _<\> _**/remote** 를 입력 한 다음 enter 키를 누릅니다.  
   
     > [!NOTE]
     >  도메인 이름 정보에 대해서는 네트워크 관리자에게 문의하세요. S가 https에 포함 되어 있는지 확인 합니다.  
@@ -83,15 +83,15 @@ ms.locfileid: "80852126"
   
      컴퓨터가 켜져 있고 원격 연결에 사용할 수 있습니다. 이 상태가 표시되더라도 타사 방화벽이 연결을 차단하면 이 컴퓨터에 연결하지 못할 수 있습니다.  
   
--   **오프 라인 또는 절전 모드**  
+-   **오프라인 또는 절전 모드**  
   
      컴퓨터가 꺼져 있거나 절전 모드 또는 최대 절전 모드에 있습니다. 컴퓨터가 오프라인이거나 절전 모드이면 컴퓨터를 사용할 수 있을 때 알 수 있도록 상태가 실시간으로 업데이트됩니다.  
   
--   **지원 되지 않는 운영 체제**  
+-   **지원되지 않는 운영 체제**  
   
      컴퓨터의 운영 체제에서 원격 데스크톱을 지원하지 않습니다. 변경 사항이 있으면 서버에서 이 상태가 업데이트되는 데 최대 6시간이 걸릴 수 있습니다.  
   
--   **연결 사용 안 함**  
+-   **연결을 사용할 수 없게 설정함**  
   
      컴퓨터 연결이 방화벽으로 차단되거나 원격 데스크톱이 컴퓨터 또는 그룹 정책에서 사용 안 함으로 설정되었습니다. 변경 사항이 있으면 서버에서 이 상태가 업데이트되는 데 최대 6시간이 걸릴 수 있습니다.  
   
@@ -107,10 +107,6 @@ ms.locfileid: "80852126"
 -   [원격 웹 액세스에서 파일 업로드 및 다운로드](Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_UploadRWA)  
   
 -   [원격 웹 액세스에서 파일 및 폴더 만들기, 이름 바꾸기, 이동, 삭제 또는 복사](Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_2)  
-
--   [원격 웹 액세스에서 파일 업로드 및 다운로드](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_UploadRWA)  
-  
--   [원격 웹 액세스에서 파일 및 폴더 만들기, 이름 바꾸기, 이동, 삭제 또는 복사](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_2)  
 
   
 ###  <a name="upload-and-download-files-in-remote-web-access"></a><a name="BKMK_UploadRWA"></a>원격 웹 액세스에서 파일 업로드 및 다운로드  
@@ -189,7 +185,7 @@ ms.locfileid: "80852126"
 > [!NOTE]
 >  이러한 옵션은 컴퓨터에 여러 파일 또는 폴더를 다운로드하는 경우에만 사용할 수 있습니다.  
   
-- **자동 압축 풀기 실행 파일 (.exe)**  
+- **자동 압축 풀기 실행 파일(.exe)**  
   
   > [!NOTE]
   >   이 섹션은 Windows Server Essentials를 실행 하는 서버에 적용 됩니다.  
@@ -199,7 +195,7 @@ ms.locfileid: "80852126"
   > [!NOTE]
   >  이 옵션은 유니코드 문자를 지원합니다.  
   
-- **Windows 압축 폴더 (.zip)**  
+- **Windows 압축 폴더(.zip)**  
   
    파일을 압축하면 원본 파일보다 더 작은 압축 버전 파일이 생성됩니다. 압축 버전 파일에는 .zip 파일 이름 확장명이 있습니다. 압축으로 크기가 최대한 감소하는 파일 형식은 텍스트 기반 파일 형식(예: .txt, .doc, .xls) 및 압축되지 않은 파일 형식을 사용하는 그래픽 파일(예: .bmp)입니다. 일부 그래픽 파일(예: .jpg 및 .gif 파일)은 이미 압축을 사용하고 압축으로 파일 크기가 거의 감소하지 않습니다. 또한 많은 그래픽이 포함된 Word 문서는 대부분 텍스트인 문서만큼 크기가 많이 감소하지 않습니다.  
   
@@ -258,7 +254,7 @@ ms.locfileid: "80852126"
   
 3.  폴더 이름을 입력하고 **확인**을 클릭합니다.  
   
-##### <a name="to-rename-a-file-or-folder"></a>파일 또는 폴더의 이름을 바꾸려면  
+##### <a name="to-rename-a-file-or-folder"></a>파일 또는 폴더 이름 바꾸기  
   
 1.  원격 웹 액세스에서 **공유 폴더** 탭을 클릭한 다음 공유 폴더 링크를 클릭합니다. 해당 공유 폴더에 있는 파일 및 폴더 목록이 표시됩니다.  
   
@@ -293,13 +289,9 @@ ms.locfileid: "80852126"
 ##  <a name="connect-from-a-mobile-device"></a><a name="BKMK_ConnectMobile"></a>모바일 장치에서 연결  
   
 
--   [모바일 장치에서 원격 웹 액세스 사용](Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_8)  
+-   [모바일 디바이스에서 원격 웹 액세스 사용](Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_8)  
   
--   [모바일 장치에 대해 지원 되는 웹 브라우저](Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_9)  
-
--   [모바일 장치에서 원격 웹 액세스 사용](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_8)  
-  
--   [모바일 장치에 대해 지원 되는 웹 브라우저](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_9)  
+-   [모바일 디바이스에 대해 지원되는 웹 브라우저](Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_9)   
 
   
 ###  <a name="use-remote-web-access-from-a-mobile-device"></a><a name="BKMK_8"></a>모바일 장치에서 원격 웹 액세스 사용  
@@ -310,13 +302,13 @@ ms.locfileid: "80852126"
   
 ##### <a name="to-log-on-to-remote-web-access-from-a-mobile-device"></a>모바일 디바이스에서 원격 웹 액세스에 로그온하려면  
   
-1.  웹 브라우저를 열고 주소 표시줄에 **https://** _</remote domainname\>_ **/remote** 을 입력 합니다.  S가 https에 포함 되어 있는지 확인 합니다.  
+1.  웹 브라우저를 열고 주소 표시줄에 **https://** _<도메인 \> 이름_**/remote** 을 입력 합니다.  S가 https에 포함 되어 있는지 확인 합니다.  
   
 2.  원격 웹 액세스 로그온 페이지에서 텍스트 상자에 사용자 이름과 암호를 입력 한 다음 화살표를 클릭 합니다. 원격 웹 액세스의 모바일 버전에 로그온됩니다.  
   
 ##### <a name="to-switch-to-the-desktop-version-of-remote-web-access"></a>원격 웹 액세스의 데스크톱 버전으로 전환하려면  
   
-1.  웹 브라우저를 열고 주소 표시줄에 **https://** _</remote domainname\>_ **/remote** 을 입력 합니다.  S가 https에 포함 되어 있는지 확인 합니다.  
+1.  웹 브라우저를 열고 주소 표시줄에 **https://** _<도메인 \> 이름_**/remote** 을 입력 합니다.  S가 https에 포함 되어 있는지 확인 합니다.  
   
 2.  원격 웹 액세스 로그온 페이지에서 텍스트 상자에 사용자 이름과 암호를 입력 하 고 **데스크톱 버전 보기**를 클릭 한 다음 화살표를 클릭 합니다. 원격 웹 액세스의 데스크톱 버전에 로그온됩니다.  
   
@@ -324,7 +316,7 @@ ms.locfileid: "80852126"
   
 1. 로그오프합니다.  
   
-2. 웹 브라우저를 열고 주소 표시줄에 **https://** _< 해당 domainname\>_ **/remote/m** 을 입력 합니다. S가 https에 포함 되어 있는지 확인 합니다.  
+2. 웹 브라우저를 열고 주소 표시줄에 **https://** _<\> _**를 입력** 합니다. S가 https에 포함 되어 있는지 확인 합니다.  
   
 3. 원격 웹 액세스의 모바일 버전이 표시 됩니다. 원격 웹 액세스 로그온 페이지에서 텍스트 상자에 사용자 이름과 암호를 입력 한 다음 화살표를 클릭 합니다. 원격 웹 액세스의 모바일 버전에 로그온 되어 있습니다.  
   
@@ -349,14 +341,9 @@ ms.locfileid: "80852126"
   
 ## <a name="see-also"></a>참고 항목  
   
--   [원격 웹 액세스 관리](../manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md)  
-  
+-   [원격 웹 액세스 관리](../manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md)
 
--   [원격으로 작업](Work-Remotely-in-Windows-Server-Essentials.md)  
+-   [원격으로 작업](Work-Remotely-in-Windows-Server-Essentials.md)
   
 -   [Windows Server Essentials 사용](Use-Windows-Server-Essentials.md)
-
--   [원격으로 작업](../use/Work-Remotely-in-Windows-Server-Essentials.md)  
-  
--   [Windows Server Essentials 사용](../use/Use-Windows-Server-Essentials.md)
 

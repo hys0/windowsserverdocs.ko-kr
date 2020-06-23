@@ -8,12 +8,12 @@ ms.assetid: 68f2b05c-09eb-4cba-8db4-a91353b513c6
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 9ebb4f27201e7cdb8e412bc35b217185616df3cb
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 313b4fae48a5b70cb16cae0cfb3a7bc048ef97a3
+ms.sourcegitcommit: 56ac7cf3f4bbcc5175f140d2df5f37cc42ba76d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80852256"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85217563"
 ---
 # <a name="troubleshoot-anywhere-access-in-windows-server-essentials"></a>Windows Server Essentials에서 원격 액세스 문제 해결
 
@@ -50,11 +50,6 @@ ms.locfileid: "80852256"
 
 -   [원격 웹 액세스 연결 문제 해결](Troubleshoot-Remote-Web-Access-connectivity-in-Windows-Server-Essentials.md)  
   
--   [방화벽 문제 해결](Troubleshoot-your-firewall-in-Windows-Server-Essentials.md)  
-
--   [원격 웹 액세스 연결 문제 해결](../support/Troubleshoot-Remote-Web-Access-connectivity-in-Windows-Server-Essentials.md)  
-  
--   [방화벽 문제 해결](../support/Troubleshoot-your-firewall-in-Windows-Server-Essentials.md)  
-
+-   [방화벽 문제 해결](Troubleshoot-your-firewall-in-Windows-Server-Essentials.md)
   
 -   Windows server essentials 커뮤니티에서 보고 한 최신 문제는 [Windows Server Essentials 포럼](https://social.technet.microsoft.com/Forums/winserveressentials/threads) 을 참조 하세요.

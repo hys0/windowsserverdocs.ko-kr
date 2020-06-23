@@ -8,12 +8,12 @@ ms.assetid: e45b3d89-c057-4c70-a627-86fb06dd22aa
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 2d98d4cc561a3c29ce73455f38f787709149d056
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 6e3c6d58744f24e3027dedc41ad94ee133786a54
+ms.sourcegitcommit: 56ac7cf3f4bbcc5175f140d2df5f37cc42ba76d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80852196"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85217503"
 ---
 # <a name="troubleshoot-connecting-computers-to-the-server-in-windows-server-essentials"></a>Windows Server Essentials에서 서버에 컴퓨터 연결 시 발생하는 문제 해결
 
@@ -49,31 +49,9 @@ ms.locfileid: "80852196"
   
 -   문제 11: [문제 11](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_UpgradeClientOS)  
 
--   문제 1: [문제 1](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BMRK_Package)  
-  
--   문제 2: [문제 2](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssue2)  
-  
--   문제 3: [문제 3](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssue2a)  
-  
--   문제 4: [문제 4](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssueNetFramework)  
-  
--   문제 5: [문제 5](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_Time)  
-  
--   문제 6: [문제 6](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ServiceStopped)  
-  
--   문제 7: [문제 7](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssueReconnect)  
-  
--   문제 8: [문제 8](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_JoinWin7)  
-  
--   문제 9: [문제 9](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssueAutologon)  
-  
--   문제 10: [문제 10](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssueOldLogs)  
-  
--   문제 11: [문제 11](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_UpgradeClientOS)  
-
   
 ##  <a name="issue-1"></a><a name="BMRK_Package"></a>문제 1  
- **문제**  
+ **문제점**  
   
  패키지 설치가 실패 했습니다. Windows Server Essentials 커넥터를 다시 설치하세요. 문제가 계속 되 면 컴퓨터를 서버에 연결할 때 네트워크 관리자에 게 오류를 문의 하십시오.  
   
@@ -86,7 +64,7 @@ ms.locfileid: "80852196"
  다른 모든 업데이트 또는 애플리케이션 설치를 완료합니다. 메시지가 표시되면 컴퓨터를 다시 시작합니다.  
   
 ##  <a name="issue-2"></a><a name="BKMK_ConnectorIssue2"></a>문제 2  
- **문제**  
+ **문제점**  
   
  Windows Server Essentials에 컴퓨터를 연결할 수 없습니다.  
   
@@ -99,7 +77,7 @@ ms.locfileid: "80852196"
  클라이언트 컴퓨터의 이름을 ASCII 문자만 포함 된 이름으로 바꾸고 Windows Server Essentials에 컴퓨터를 다시 추가 해 봅니다.  
   
 ##  <a name="issue-3"></a><a name="BKMK_ConnectorIssue2a"></a>문제 3  
- **문제**  
+ **문제점**  
   
  서버에 컴퓨터를 연결할 때 Connector 소프트웨어 설치를 취소 했습니다. 오류가 발생 함  
   
@@ -115,7 +93,7 @@ ms.locfileid: "80852196"
   
 1.  Windows Server Essentials 대시보드를 엽니다.  
   
-2.  **저장소**, **서버 폴더**를 차례로 클릭합니다.  
+2.  **스토리지**, **서버 폴더**를 차례로 클릭합니다.  
   
 3.  서버 폴더를 마우스 오른쪽 단추로 클릭한 다음 **폴더 열기**를 클릭합니다. **폴더 열기** 옵션이 표시되지 않는 경우 폴더에 대한 사용 권한을 설정할 필요가 없습니다.  
   
@@ -130,13 +108,13 @@ ms.locfileid: "80852196"
 8.  **확인**을 두 번 클릭하여 사용 권한을 업데이트하고 **속성**을 닫습니다.  
   
 ##  <a name="issue-4"></a><a name="BKMK_ConnectorIssueNetFramework"></a>문제 4  
- **문제**  
+ **문제점**  
   
  이 응용 프로그램을 실행 하려면을 (를) 가져옵니다. 서버에 컴퓨터를 연결할 때 다음 버전의 .NET Framework V 4.5.50709 "오류 중 하나를 설치 해야 합니다.  
   
  **설명**  
   
- Windows Server Essentials 또는 Windows Server Essentials를 실행 하는 서버에 컴퓨터를 연결 하면 마법사가 컴퓨터에 .NET Framework 버전 4.5.50709 설치를 시도 합니다. 그러나 .NET Framework 버전 4.5의 이전 버전이 있는 경우 업데이트 된 릴리스를 설치할 수 없으며이 오류 메시지와 함께 연결 시도가 실패 합니다 .이 응용 프로그램을 실행 하려면 다음 버전의 .NET Framework 중 하나를 설치 해야 합니다. V 4.5.50709. 적절 한 버전의 .NET Framework를 얻는 방법에 대 한 지침은 할당 게시자에 게 문의 하세요.  
+ Windows Server Essentials 또는 Windows Server Essentials를 실행 하는 서버에 컴퓨터를 연결 하면 마법사가 컴퓨터에 .NET Framework 버전 4.5.50709 설치를 시도 합니다. 그러나 .NET Framework 버전 4.5의 이전 릴리스가 있는 경우 업데이트 된 릴리스를 설치할 수 없으며이 오류 메시지와 함께 연결 시도가 실패 합니다 .이 응용 프로그램을 실행 하려면 .NET Framework 다음 버전 중 하나를 설치 해야 합니다. V 4.5.50709. 적절 한 버전의 .NET Framework를 얻는 방법에 대 한 지침은 할당 게시자에 게 문의 하세요.  
   
  **해결 방법**  
   
@@ -153,7 +131,7 @@ ms.locfileid: "80852196"
 4.  .NET Framework 4.5를 제거한 후 컴퓨터를 서버에 연결합니다. .NET Framework 4.5의 올바른 릴리스가 커넥터 소프트웨어와 함께 설치됩니다.  
   
 ##  <a name="issue-5"></a><a name="BKMK_Time"></a>문제 5  
- **문제**  
+ **문제점**  
   
  서버를 사용할 수 없습니다. 이 문제를 해결 하려면 네트워크를 담당 하는 사용자에 게 문의 하세요. 오류가 표시됨  
   
@@ -205,7 +183,7 @@ ms.locfileid: "80852196"
 6.  클라이언트 컴퓨터에서 클라이언트 컴퓨터를 서버에 다시 연결합니다. 지침은 서버에 컴퓨터 연결을 참조하세요.  
   
 ##  <a name="issue-6"></a><a name="BKMK_ServiceStopped"></a>문제 6  
- **문제**  
+ **문제점**  
   
  예기치 않은 오류가 발생 했습니다. 이 문제를 해결 하려면 네트워크를 담당 하는 사용자에 게 문의 하세요. 오류가 표시됨  
   
@@ -228,7 +206,7 @@ ms.locfileid: "80852196"
 3.  **동작** 창에서 **시작**을 클릭합니다.  
   
 ##  <a name="issue-7"></a><a name="BKMK_ConnectorIssueReconnect"></a>문제 7  
- **문제**  
+ **문제점**  
   
  연결 시도가 실패 한 후 컴퓨터를 서버에 다시 연결 하려고 하면이 이름을 가진 컴퓨터가 서버에 이미 연결 되어 있는 것입니다. 경고가 표시 됩니다.  
   
@@ -239,7 +217,7 @@ ms.locfileid: "80852196"
  **해결 방법** 동일한 이름을 가진 다른 컴퓨터가 서버에 연결되어 있지 않은 것을 확신하는 경우 **다음**을 클릭하고 지침에 따라 **서버에 컴퓨터 연결** 마법사를 완료합니다.  
   
 ##  <a name="issue-8"></a><a name="BKMK_JoinWin7"></a>문제 8  
- **문제**  
+ **문제점**  
   
  Windows 7 Home을 실행하는 클라이언트 컴퓨터를 서버에 연결하려고 하면 커넥터 소프트웨어를 실행하기 위한 웹 페이지가 열리지만 클라이언트 컴퓨터가 서버에 연결할 수 없음  
   
@@ -252,7 +230,7 @@ ms.locfileid: "80852196"
  라우터에서 멀티캐스트를 사용하지 않도록 설정합니다. 일부 라우터에서는 RIP-2M 라우팅 프로토콜을 사용하지 않도록 설정하는 작업이 포함될 수도 있습니다. 자세한 내용은 라우터 제조업체에서 제공한 설명서를 참조하세요.  
   
 ##  <a name="issue-9"></a><a name="BKMK_ConnectorIssueAutologon"></a>문제 9  
- **문제**  
+ **문제점**  
   
  컴퓨터를 서버에 연결한 후 자동 로그온이 작동 중지됨  
   
@@ -266,13 +244,13 @@ ms.locfileid: "80852196"
 >  Windows Server Essentials 도메인 계정에는 기본 암호 정책 요구 사항을 충족 하는 암호가 필요 합니다.  
   
 ##  <a name="issue-10"></a><a name="BKMK_ConnectorIssueOldLogs"></a>문제 10  
- **문제**  
+ **문제점**  
   
  커넥터 소프트웨어의 시험판 버전을 제거하는 경우 기존 로그가 제거되지 않음  
   
  **설명**  
   
- Windows Server Essentials의 시험판 (베타 또는 RC) 버전에서 릴리스 버전으로 업데이트 한 후에는 서버에 연결 된 각 컴퓨터에서 커넥터 소프트웨어를 제거한 다음 컴퓨터를 다시 연결 하 여 릴리스를 설치 해야 합니다. 커넥터 소프트웨어의 버전입니다.  
+ Windows Server Essentials의 시험판 (베타 또는 RC) 버전에서 릴리스 버전으로 업데이트 한 후에는 서버에 연결 된 각 컴퓨터에서 커넥터 소프트웨어를 제거한 다음 컴퓨터를 다시 연결 하 여 커넥터 소프트웨어의 릴리스 버전을 설치 해야 합니다.  
   
  그러나 네트워크 컴퓨터에서 커넥터 소프트웨어를 제거할 때 해당 컴퓨터의 %ProgramData%\Microsoft\Windows Server\Logs\ 폴더에 있는 기존 로그 파일은 삭제되지 않습니다. Logs 폴더를 삭제 하지 않으면 Windows Server Essentials의 릴리스 버전에 컴퓨터를 연결할 때 로그 파일이 손상 될 수 있습니다.  
   
@@ -287,7 +265,7 @@ ms.locfileid: "80852196"
 3.  서버에 컴퓨터를 다시 연결합니다. 그러면 커넥터 소프트웨어의 릴리스 버전이 설치되고 새 Logs 폴더와 로그 파일이 생성됩니다.  
   
 ##  <a name="issue-11"></a><a name="BKMK_UpgradeClientOS"></a>문제 11  
- **문제**  
+ **문제점**  
   
  클라이언트 컴퓨터의 운영 체제를 업그레이드하려고 함  
   
@@ -297,7 +275,7 @@ ms.locfileid: "80852196"
   
  **해결 방법**  
   
- 클라이언트 운영 체제를 다른 버전으로 업그레이드하기 전에(예: Windows XP를 Windows Vista로 업그레이드 또는 Windows Vista를 Windows 7으로 업그레이드) 커넥터 소프트웨어를 제거해야 합니다. 제어판의 **프로그램 추가/제거**를 사용합니다. 클라이언트 운영 체제 업그레이드가 완료 된 후 웹 브라우저에서 http://<*server*>/connect를 열어 클라이언트 커넥터를 다시 설치할 수 있습니다. 여기서 <*Server*>는 Windows server Essentials 서버의 이름입니다.  
+ 클라이언트 운영 체제를 다른 버전으로 업그레이드하기 전에(예: Windows XP를 Windows Vista로 업그레이드 또는 Windows Vista를 Windows 7으로 업그레이드) 커넥터 소프트웨어를 제거해야 합니다. 제어판의 **프로그램 추가/제거**를 사용합니다. 클라이언트 운영 체제 업그레이드가 완료 된 후 웹 브라우저에서 http://<*server*>/connect를 열어 클라이언트 커넥터를 다시 설치할 수 있습니다. 여기서 <*Server*>은 Windows server Essentials 서버의 이름입니다.  
   
  커넥터 소프트웨어가 설치되어 있는 클라이언트를 이미 업그레이드한 경우 **프로그램 추가/제거** 또는 **프로그램 및 기능**을 사용하여 커넥터 소프트웨어를 제거합니다. 그런 다음 커넥터 소프트웨어를 다시 설치합니다.  
   
@@ -305,4 +283,4 @@ ms.locfileid: "80852196"
   
 -   [Windows Server Essentials 관리](../manage/Manage-Windows-Server-Essentials.md)  
   
--   [Windows 2012 Server Essentials ConnectComputer 문제 해결 (TechNet Wiki)](https://social.technet.microsoft.com/wiki/contents/articles/14370.windows-2012-server-essentials-connectcomputer-troubleshooting.aspx)
+-   [Windows 2012 Server Essentials ConnectComputer 문제 해결(TechNet Wiki)](https://social.technet.microsoft.com/wiki/contents/articles/14370.windows-2012-server-essentials-connectcomputer-troubleshooting.aspx)

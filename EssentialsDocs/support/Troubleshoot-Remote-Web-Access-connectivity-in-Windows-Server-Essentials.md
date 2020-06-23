@@ -8,12 +8,12 @@ ms.assetid: d3642575-b3ee-4488-b654-5bf9d3b8c935
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 62f3bf875b03328b0016261bf6aff7a39c4b65bc
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 9fb3628ed519d5faae04787dbb84da37f27d96fb
+ms.sourcegitcommit: 56ac7cf3f4bbcc5175f140d2df5f37cc42ba76d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80852246"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85217493"
 ---
 # <a name="troubleshoot-remote-web-access-connectivity-in-windows-server-essentials"></a>Windows Server Essentials에서 원격 웹 액세스 연결 문제 해결
  
@@ -65,10 +65,10 @@ ms.locfileid: "80852246"
   > [!NOTE]
   >  이 표에서 Windows Server Essentials를 실행하는 컴퓨터의 IP 주소는 192.168.0.100입니다. 컴퓨터의 IP 주소를 확인하고 해당 IP 주소를 표에 있는 IP 주소로 대체해야 합니다.  
   
-  |IP 주소|프로토콜(TCP/UDP)|일정|인바운드 필터|  
+  |IP 주소|프로토콜(TCP/UDP)|예약|인바운드 필터|  
   |----------------|---------------------------|--------------|--------------------|  
-  |192.168.0.100|TCP 80|항상|Allow All|  
-  |192.168.0.100|TCP 443|항상|Allow All|  
+  |192.168.0.100|TCP 80|항상|모두 허용|  
+  |192.168.0.100|TCP 443|항상|모두 허용|  
   
    라우터를 수동으로 구성한 후 **시작** 페이지에서 **라우터 설정 건너뛰기** 옵션을 선택 하 여 원격 웹 액세스 켜기 마법사를 실행 합니다.  
   
@@ -86,9 +86,6 @@ ms.locfileid: "80852246"
 -   [원격 액세스 관리](../manage/Manage-Anywhere-Access-in-Windows-Server-Essentials.md)  
   
 -   [Windows Server Essentials 관리](../manage/Manage-Windows-Server-Essentials.md)  
-  
-
--   [Windows Server Essentials 지원](Support-Windows-Server-Essentials.md)
 
 -   [Windows Server Essentials 지원](../support/Support-Windows-Server-Essentials.md)
 

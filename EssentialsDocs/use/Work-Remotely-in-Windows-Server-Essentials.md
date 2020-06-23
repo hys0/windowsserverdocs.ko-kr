@@ -8,12 +8,12 @@ ms.assetid: 8b183f8f-1279-4fdf-a495-c7c801563cb0
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: ec6b97dd153802ea2ff8b55f6ba58f3208e4abb1
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 8ba2cca1e346a99cc62d84ede885663fe81dfbd2
+ms.sourcegitcommit: 56ac7cf3f4bbcc5175f140d2df5f37cc42ba76d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80852086"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85217533"
 ---
 # <a name="work-remotely-in-windows-server-essentials"></a>Windows Server Essentials에서 원격으로 작업
 
@@ -24,26 +24,15 @@ ms.locfileid: "80852086"
  다음 항목을 통해 서버 리소스에 원격으로 액세스할 수 있습니다.  
   
 
--      [Windows Server Essentials에서 원격 웹 액세스 사용](Work-Remotely-in-Windows-Server-Essentials.md#BKMA_RWA)  
+-   [Windows Server Essentials에서 원격 웹 액세스 사용](Work-Remotely-in-Windows-Server-Essentials.md#BKMA_RWA)  
      
--   [VPN을 사용 하 여 Windows Server Essentials에 연결](Work-Remotely-in-Windows-Server-Essentials.md#BKMK_3)  
+-   [VPN을 사용하여 Windows Server Essentials에 연결](Work-Remotely-in-Windows-Server-Essentials.md#BKMK_3)  
   
 -   [내 서버 앱을 사용 하 여 Windows Server Essentials에 연결](Work-Remotely-in-Windows-Server-Essentials.md#BKMK_App)  
   
--   [Windows Phone에 대해 내 서버 앱 사용](Work-Remotely-in-Windows-Server-Essentials.md#BKMK_2)  
+-   [Windows Phone용 내 서버 앱 사용](Work-Remotely-in-Windows-Server-Essentials.md#BKMK_2)  
   
 -   [Windows Server Essentials에서 Microsoft Office 365 사용](Work-Remotely-in-Windows-Server-Essentials.md#BKMK_O365)  
-
--   [Windows Server Essentials에서 원격 웹 액세스 사용](../use/Work-Remotely-in-Windows-Server-Essentials.md#BKMA_RWA)  
-  
--   [VPN을 사용 하 여 Windows Server Essentials에 연결](../use/Work-Remotely-in-Windows-Server-Essentials.md#BKMK_3)  
-  
--   [내 서버 앱을 사용 하 여 Windows Server Essentials에 연결](../use/Work-Remotely-in-Windows-Server-Essentials.md#BKMK_App)  
-  
--   [Windows Phone에 대해 내 서버 앱 사용](../use/Work-Remotely-in-Windows-Server-Essentials.md#BKMK_2)  
-  
--   [Windows Server Essentials에서 Microsoft Office 365 사용](../use/Work-Remotely-in-Windows-Server-Essentials.md#BKMK_O365)  
-
   
 > [!NOTE]
 >  서버에서 원격 액세스를 구성 하는 방법에 대 한 자세한 내용은 [원격 액세스 관리](../manage/Manage-Anywhere-Access-in-Windows-Server-Essentials.md)를 참조 하세요.  
@@ -51,8 +40,6 @@ ms.locfileid: "80852086"
 ##  <a name="use-remote-web-access-in-windows-server-essentials"></a><a name="BKMA_RWA"></a>Windows Server Essentials에서 원격 웹 액세스 사용  
 
  원격 웹 액세스를 사용하면 자리를 비울 때 Windows Server Essentials 네트워크에 연결된 상태를 유지할 수 있습니다. 자세한 내용은 [Use Remote 웹 액세스](Use-Remote-Web-Access-in-Windows-Server-Essentials.md)항목을 참조 하세요.  
-
- 원격 웹 액세스를 사용하면 자리를 비울 때 Windows Server Essentials 네트워크에 연결된 상태를 유지할 수 있습니다. 자세한 내용은 [Use Remote 웹 액세스](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md)항목을 참조 하세요.  
 
   
 ##  <a name="use-vpn-to-connect-to-windows-server-essentials"></a><a name="BKMK_3"></a>VPN을 사용 하 여 Windows Server Essentials에 연결  
@@ -80,13 +67,13 @@ ms.locfileid: "80852086"
 
   
 ##  <a name="use-the-my-server-app-for-windows-phone"></a><a name="BKMK_2"></a>Windows Phone에 대해 내 서버 앱 사용  
- Windows Phone (Windows Server 2012) 용 My Server Windows 앱 2012 및 windows Server 2008 R2 Windows Phone 앱 (Windows Server Essentials의 경우)은 원격 작업을 수행 하는 동안 스마트폰을 통해 서버에 원활 하 게 연결할 수 있도록 설계 되었습니다. 위치도. 원격 액세스를 위해 서버를 구성한 후 Windows Server Essentials에 액세스 하는 다양 한 방법 중 하나입니다.  
+ Windows Phone (Windows Server 2012) 용 My Server Windows 앱 2012 및 windows Server 2008 R2 Windows Phone 앱 (Windows Server Essentials의 경우)은 원격 위치에서 작업 하는 동안 smart 휴대폰을 통해 서버에 원활 하 게 연결할 수 있도록 설계 되었습니다. 원격 액세스를 위해 서버를 구성한 후 Windows Server Essentials에 액세스 하는 다양 한 방법 중 하나입니다.  
   
  다음 Windows Phone 스토어에서 앱을 다운로드할 수 있습니다.  
   
-- [Windows Phone 용 My Server 설치](http://www.windowsphone.com/store/app/my-server/6c2f98d5-6fcf-4e1d-b8b1-cde62ea1a94a)  
+- [Windows Phone용 My Server 설치](http://www.windowsphone.com/store/app/my-server/6c2f98d5-6fcf-4e1d-b8b1-cde62ea1a94a)  
   
-- [Windows Phone 용 My Server 2012 R2 설치](http://www.windowsphone.com/store/app/my-server-2012-r2/44f596b5-0477-4096-b96e-ddd6ef64ad6b)  
+- [Windows Phone용 My Server 2012 R2 설치](http://www.windowsphone.com/store/app/my-server-2012-r2/44f596b5-0477-4096-b96e-ddd6ef64ad6b)  
   
   My Server phone 앱에 대 한 자세한 내용은 블로그 항목 [Windows Server Essentials 용 My Server phone 앱](https://blogs.technet.com/b/sbs/archive/2012/09/18/my-server-phone-app-for-windows-server-2012-essentials.aspx)을 참조 하세요. My Server 2012 R2 phone 앱에 대한 자세한 내용은 블로그 항목 [My Server 2012 R2 Windows 및 Windows Phone 앱](https://blogs.technet.com/b/sbs/archive/2013/11/19/my-server-2012-r2-windows-and-windows-phone-apps.aspx)을 참조하세요.  
   
@@ -94,23 +81,14 @@ ms.locfileid: "80852086"
 
  Office 365는 거의 모든 위치 및 모든 디바이스에서 메일, 중요한 문서, 연락처 및 일정에 액세스할 수 있는 간편한 웹 사용 가능한 도구 집합입니다. 자세한 내용은 [빠른 시작 가이드 Microsoft Office 365를 사용](Quick-Start-Guide-to-Using-Microsoft-Office-365-with-Windows-Server-Essentials.md)하는 방법을 참조 하세요.  
 
- Office 365는 거의 모든 위치 및 모든 디바이스에서 메일, 중요한 문서, 연락처 및 일정에 액세스할 수 있는 간편한 웹 사용 가능한 도구 집합입니다. 자세한 내용은 [빠른 시작 가이드 Microsoft Office 365를 사용](../use/Quick-Start-Guide-to-Using-Microsoft-Office-365-with-Windows-Server-Essentials.md)하는 방법을 참조 하세요.  
-
   
 ## <a name="see-also"></a>참고 항목  
   
 -   [원격 액세스 관리](../manage/Manage-Anywhere-Access-in-Windows-Server-Essentials.md)  
-  
 
 -   [연결](Get-Connected-in-Windows-Server-Essentials.md)  
   
 -   [공유 폴더 사용](Use-Shared-Folders-in-Windows-Server-Essentials.md)  
   
 -   [디지털 미디어 재생](Play-Digital-Media-in-Windows-Server-Essentials.md)
-
--   [연결](../use/Get-Connected-in-Windows-Server-Essentials.md)  
-  
--   [공유 폴더 사용](../use/Use-Shared-Folders-in-Windows-Server-Essentials.md)  
-  
--   [디지털 미디어 재생](../use/Play-Digital-Media-in-Windows-Server-Essentials.md)
 

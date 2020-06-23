@@ -8,12 +8,12 @@ ms.assetid: 5f570492-ee21-471b-92c1-3fd9bfb84f55
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: ad75f815173c53ca40fdc5146f6f27fbc1e2740b
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 3f2cd1a9746b03ba7642e78c468dafd718f84959
+ms.sourcegitcommit: 56ac7cf3f4bbcc5175f140d2df5f37cc42ba76d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80852146"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85217613"
 ---
 # <a name="play-digital-media-in-windows-server-essentials"></a>Windows Server Essentials에서 디지털 미디어 재생
 
@@ -28,7 +28,7 @@ ms.locfileid: "80852146"
   
 -   [디지털 미디어 재생 및 공유](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_2)  
   
--   [원격 위치에서 공유 된 디지털 미디어 파일 재생](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_3)  
+-   [원격 위치에서 공유 디지털 미디어 파일 재생](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_3)  
   
 -   [서버에 디지털 미디어 파일 추가](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_4)  
   
@@ -37,20 +37,6 @@ ms.locfileid: "80852146"
 -   [간편한 파일 업로드 도구](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_6)  
   
 -   [공유 디지털 미디어 보기 및 찾아보기](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_7)  
-
--   [디지털 미디어 개요](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_1)  
-  
--   [디지털 미디어 재생 및 공유](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_2)  
-  
--   [원격 위치에서 공유 된 디지털 미디어 파일 재생](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_3)  
-  
--   [서버에 디지털 미디어 파일 추가](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_4)  
-  
--   [다운로드 형식 옵션](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_5)  
-  
--   [간편한 파일 업로드 도구](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_6)  
-  
--   [공유 디지털 미디어 보기 및 찾아보기](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_7)  
 
   
 ##  <a name="digital-media-overview"></a><a name="BKMK_1"></a>디지털 미디어 개요  
@@ -85,38 +71,24 @@ ms.locfileid: "80852146"
   
 -   [Windows Media Player, Xbox 360 또는 네트워크의 네트워크로 연결 된 디지털 미디어 플레이어로 Windows Server Essentials의 미디어 파일 보내기](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_SendToDevice)  
 
--   [네트워크의 컴퓨터 또는 디지털 미디어 플레이어에서 Windows Server Essentials의 미디어 파일 검색 및 재생](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_2.1)  
-  
--   [Windows Media Player, Xbox 360 또는 네트워크의 네트워크로 연결 된 디지털 미디어 플레이어로 Windows Server Essentials의 미디어 파일 보내기](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_SendToDevice)  
 
   
 ###  <a name="search-for-and-play-media-files-on-windows-server-essentials-from-a-computer-or-digital-media-player-on-the-network"></a><a name="BKMK_2.1"></a>네트워크의 컴퓨터 또는 디지털 미디어 플레이어에서 Windows Server Essentials의 미디어 파일 검색 및 재생  
  장치가 Windows Server Essentials 네트워크에 가입 된 경우 다음과 같은 방법으로 디지털 미디어 파일을 검색 하 고 재생할 수 있습니다.  
   
 
--   [Windows Media Center를 실행 하는 컴퓨터에서 미디어 파일 검색 및 재생](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_WMC)  
+-   [Windows Media Center를 실행하는 컴퓨터에서 미디어 파일 검색 및 재생](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_WMC)  
   
--   [Windows Media Player를 사용 하 여 Windows를 실행 하는 컴퓨터에서 미디어 파일 검색 및 재생](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_MWP)  
+-   [Windows Media Player를 사용하여 Windows를 실행하는 컴퓨터에서 미디어 파일 검색 및 재생](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_MWP)  
   
--   [Xbox 360를 사용 하 여 미디어 파일 검색 및 재생](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_Xbox)  
+-   [Xbox 360을 사용하여 미디어 파일 검색 및 재생](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_Xbox)  
   
 -   [Windows Server Essentials와 호환 되는 다른 디지털 미디어 플레이어 또는 수신기를 사용 하 여 미디어 파일 검색 및 재생](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_Other)  
   
--   [실행 패드의 공유 폴더 기능을 사용 하 여 미디어 파일 검색 및 재생](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_SharedFolders)  
+-   [실행 패드의 공유 폴더 기능을 사용하여 미디어 파일 검색 및 재생](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_SharedFolders)  
   
--   [원격 웹 액세스를 사용 하 여 공유 미디어 검색 및 재생](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_RWA2)  
+-   [원격 웹 액세스를 사용하여 공유 미디어 검색 및 재생](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_RWA2)  
 
--   [Windows Media Center를 실행 하는 컴퓨터에서 미디어 파일 검색 및 재생](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_WMC)  
-  
--   [Windows Media Player를 사용 하 여 Windows를 실행 하는 컴퓨터에서 미디어 파일 검색 및 재생](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_MWP)  
-  
--   [Xbox 360를 사용 하 여 미디어 파일 검색 및 재생](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_Xbox)  
-  
--   [Windows Server Essentials와 호환 되는 다른 디지털 미디어 플레이어 또는 수신기를 사용 하 여 미디어 파일 검색 및 재생](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_Other)  
-  
--   [실행 패드의 공유 폴더 기능을 사용 하 여 미디어 파일 검색 및 재생](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_SharedFolders)  
-  
--   [원격 웹 액세스를 사용 하 여 공유 미디어 검색 및 재생](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_RWA2)  
 
   
 ####  <a name="search-for-and-play-media-files-from-a-computer-that-is-running-windows-media-center"></a><a name="BKMK_WMC"></a>Windows Media Center를 실행 하는 컴퓨터에서 미디어 파일 검색 및 재생  
@@ -125,7 +97,7 @@ ms.locfileid: "80852146"
   
 2.  **Windows Media Center** 페이지에서 검색할 미디어 유형으로 스크롤하고 미디어 라이브러리를 클릭합니다.  
   
-3.  원하는 파일을 수동으로 검색하거나, **검색** 을 클릭하고 찾으려는 파일의 이름을 입력합니다.  
+3.  원하는 파일을 수동으로 검색하거나, **검색**을 클릭하고 찾으려는 파일의 이름을 입력합니다.  
   
 4.  미디어 파일 이미지를 클릭하여 파일을 확인하고 재생합니다.  
   
@@ -155,7 +127,7 @@ ms.locfileid: "80852146"
   
 ####  <a name="search-for-and-play-media-files-by-using-other-digital-media-players-or-receivers-that-are-compatible-with-windows-server-essentials"></a><a name="BKMK_Other"></a>Windows Server Essentials와 호환 되는 다른 디지털 미디어 플레이어 또는 수신기를 사용 하 여 미디어 파일 검색 및 재생  
   
-1.  [Windows 호환성 센터](https://www.microsoft.com/windows/compatibility/CompatCenter/Home) 로 이동하여 사용 중인 호환 장치 목록에 디지털 미디어 플레이어 또는 수신기가 표시되는지 확인합니다.  
+1.  [Windows 호환성 센터](https://www.microsoft.com/windows/compatibility/CompatCenter/Home) 로 이동하여 사용 중인 호환 디바이스 목록에 디지털 미디어 플레이어 또는 수신기가 표시되는지 확인합니다.  
   
 2.  사용 중인 디지털 미디어 플레이어에 따라 검색 단계가 달라지므로 자세한 지침은 디바이스에 대한 도움말을 참조하세요.  
   
@@ -188,10 +160,10 @@ ms.locfileid: "80852146"
   
 1. 인터넷 브라우저를 엽니다.  
   
-2. 원격 웹 액세스 웹 사이트로 이동합니다. 인터넷 브라우저의 주소 표시줄에 **https://<\>/remote** 를 입력 한 다음 enter 키를 누릅니다.  
+2. 원격 웹 액세스 웹 사이트로 이동합니다. 인터넷 브라우저의 주소 표시줄에 **https://<\> /remote** 를 입력 한 다음 enter 키를 누릅니다.  
   
    > [!NOTE]
-   >  *< domainname\>* 은 자리 표시자입니다. 서버에 고유한 이름이 되므로 사용자가 입력 하는 주소는 **https://contoso.com/remote** 처럼 보입니다. 도메인 이름을 잘 모르면 서버에서 원격 액세스 기능이 설정될 때 도메인 이름을 선택한 관리자에게 문의하세요. 자세한 내용은 [원격 웹 액세스 설정](../manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_TurnOnRWA)을 참조하세요.  
+   >  *<도메인 이름 \> * 는 자리 표시자입니다. 서버에 고유한 이름이 되므로 사용자가 입력 하는 주소는와 같이 표시 됩니다 **https://contoso.com/remote** . 도메인 이름을 잘 모르면 서버에서 원격 액세스 기능이 설정될 때 도메인 이름을 선택한 관리자에게 문의하세요. 자세한 내용은 [원격 웹 액세스 설정](../manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_TurnOnRWA)을 참조하세요.  
   
 3. 원격 웹 액세스 로그인 페이지에서 사용자 계정 이름과 암호를 입력하고 화살표를 클릭합니다.  
   
@@ -237,14 +209,14 @@ ms.locfileid: "80852146"
   
  다운로드 요구 사항에 맞는 다음 옵션을 선택합니다.  
   
-- **압축 ZIP 파일 (.zip)**  
+- **압축 ZIP 파일(.zip)**  
   
    파일을 압축하면 원본 파일보다 더 작은 압축 버전 파일이 생성됩니다. 압축 버전 파일에는 .zip 파일 이름 확장명이 있습니다. 압축으로 크기가 최대한 감소하는 파일 형식은 텍스트 기반 파일 형식(예: .txt, .doc, .xls) 및 압축되지 않은 파일 형식을 사용하는 그래픽 파일(예: .bmp)입니다. 일부 그래픽 파일(예: .jpg 및 .gif 파일)은 이미 압축을 사용하고 압축으로 파일 크기가 거의 감소하지 않습니다. 또한 많은 그래픽이 포함된 Word 문서는 대부분 텍스트인 문서만큼 크기가 많이 감소하지 않습니다.  
   
   > [!NOTE]
   >  이 옵션은 국제 파일 이름에 대한 제한된 지원을 제공합니다.  
   
-- **자동 압축 풀기 실행 파일 (.exe)**  
+- **자동 압축 풀기 실행 파일(.exe)**  
   
    자동 압축 풀기 실행 파일은 압축된 파일과 압축 풀기(실행 파일) 프로그램을 결합하는 다운로드할 수 있는 파일입니다. 실행 프로그램을 실행하면 압축된 파일의 압축이 자동으로 풀립니다. 이 방법은 받는 사람에게 적합한 압축 풀기 유틸리티가 있는지에 관계없이 압축된 데이터를 배포하는 일반적인 방법입니다.  
   
@@ -295,10 +267,4 @@ ms.locfileid: "80852146"
 -   [공유 폴더 사용](Use-Shared-Folders-in-Windows-Server-Essentials.md)  
   
 -   [원격으로 작업](Work-Remotely-in-Windows-Server-Essentials.md)
-
--   [연결](../use/Get-Connected-in-Windows-Server-Essentials.md)  
-  
--   [공유 폴더 사용](../use/Use-Shared-Folders-in-Windows-Server-Essentials.md)  
-  
--   [원격으로 작업](../use/Work-Remotely-in-Windows-Server-Essentials.md)
 
