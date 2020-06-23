@@ -1,89 +1,60 @@
-### YamlMime:YamlDocument
-documentType: LandingData
+### YamlMime:Landing
 title: SDN(소프트웨어 정의 네트워킹)
+summary: SDN(소프트웨어 정의 네트워킹)의 기능, 기술 및 배포에 대해 알아봅니다.
 metadata:
-  document_id: null
   title: SDN(소프트웨어 정의 네트워킹)
-  description: 'SDN(소프트웨어 정의 네트워킹)의 기능, 기술 및 배포에 대해 알아봅니다.'
-  text: SDN(소프트웨어 정의 네트워킹)을 사용하면 데이터 센터 네트워킹을 동적으로 관리하여 워크로드 및 애플리케이션 요구 사항을 충족시킬 수 있습니다. 네트워크 정책은 새 워크로드를 배포하거나 가상 또는 실제 네트워크에서 워크로드를 이동하는 경우에도 규모에 따라 일관되게 구현할 수 있습니다.
-  keywords: 'Windows Server, Windows Server 2016 소프트웨어 정의 네트워킹, SDN'
-  ms.localizationpriority: medium
+  description: SDN(소프트웨어 정의 네트워킹)의 기능, 기술 및 배포에 대해 알아봅니다.
+  ms.service: help
+  ms.topic: landing-page
   author: AnirbanPaul
   ms.author: anpaul
-  ms.date: 09/04/2018
-  ms.topic: article
-  ms.devlang: na
-sections:
-  - title: 자세한 정보...
-  - items:
-      - type: markdown
-        text: 네트워크를 스위치 및 라우터와 같은 실제 하드웨어 네트워크 요소로 가상화하는 소프트웨어 정의 네트워킹을 구현할 준비를 합니다.
-  - items:
-      - type: list
-        style: cards
-        className: cardsE
-        columns: 3
-        items:
-          - href: \windows-server\networking\sdn\sdn-whats-new
-            html: <p>SDN의 새로운 기능과 업데이트된 기능을 알아보세요.</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_whats-new.svg'
-            title: Windows Server 2019 SDN의 새로운 기능
-          - href: \windows-server\networking\sdn\software-defined-networking
-            html: <p>실제 및 가상 네트워크 디바이스를 중앙 집중식으로 구성하고 관리하는 방법을 알아보세요.</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_overview.svg'
-            title: SDN(소프트웨어 정의 네트워킹) 개요
-          - href: \windows-server\networking\sdn\technologies\Software-Defined-Networking-Technologies
-            html: <p>Windows Server 2016에 포함된 SDN 기술을 알아보세요.</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_tools.svg'
-            title: SDN 아키텍처의 주요 구성 요소
-          - href: \windows-server\networking\sdn\security\sdn-security-top
-            html: <p>인증 및 가상 암호화를 포함하여 SDN 보안을 구현하고 관리하는 방법을 알아보세요.</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_security-management.svg'
-            title: SDN 보안
-          - href: 'https://youtu.be/f501zUUcXD0'
-            html: <p>Windows Server SDN 엔지니어인 Greg Cusanza 및 Matt McSpirit이 Windows Server 2016에서 소프트웨어 정의 네트워킹 기능을 시연하는 비디오를 시청하세요.</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_video.svg'
-            title: Microsoft SDN 메커니즘
-  - title: 시작...
-    items:
-      - type: paragraph
-        text: '데이터 센터의 라우터, 스위치 및 게이트웨이와 같은 실제 및 가상 네트워크 디바이스를 계획, 구성 및 관리할 수 있습니다.'
-      - type: list
-        style: cards
-        className: cardsE
-        columns: 3
-        items:
-          - href: \windows-server\networking\sdn\plan\Plan-a-Software-Defined-Network-Infrastructure
-            html: <p>SDN 인프라를 배포하는 데 필요한 항목을 검색합니다.</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_design.svg'
-            title: SDN 인프라 계획
-          - href: \windows-server\networking\sdn\deploy\Deploy-a-Software-Defined-Network-Infrastructure
-            html: <p>제대로 작동하는 인프라에 필요한 모든 기술을 배포합니다. </p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_deploy.svg'
-            title: SDN 인프라 배포
-          - href: \windows-server\networking\sdn\manage\manage-sdn
-            html: <p> </p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_management.svg'
-            title: SDN 인프라 관리
-          - href: \windows-server\networking\sdn\troubleshoot\troubleshoot-windows-server-software-defined-networking-stack
-            html: <p> </p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_debug.svg'
-            title: SDN 인프라 문제 해결 및 진단
-  - items:
-      - type: list
-        style: cards
-        className: cardsL
-        items:
-          - title: SDN 학습 리소스
-            html: |-
-              <p><a class="barLink" href="https://blogs.technet.microsoft.com/networking/2017/03/06/troubleshoot-configuring-sdn-ras-gateway-vpn-bandwidth-settings-in-virtual-machine-manager/">VMM에서 SDN RAS 게이트웨이의 VPN 대역폭 설정 구성과 관련된 문제 해결</a></p></div>
-              <p><a class="barLink" href="https://download.microsoft.com/download/1/5/A/15AC87E7-E99C-4E98-B6AF-9346790AD2DF/Software_Defined_Networking_is_built_in_with_Windows_Server_2016_solution_brief_EN_US.pdf/">Microsoft 소프트웨어 정의 네트워킹 데이터시트</a></p></div>
+  ms.date: 06/12/2020
+  ms.openlocfilehash: 4314579da8e247f6b013e68faa3bb2d193ff2cea
+  ms.sourcegitcommit: 56ac7cf3f4bbcc5175f140d2df5f37cc42ba76d1
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 06/23/2020
+  ms.locfileid: "85217623"
+landingContent:
+- title: 소프트웨어 정의 네트워킹 정보
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: SDN(소프트웨어 정의 네트워킹) 개요
+      url: '\windows-server\networking\sdn\software-defined-networking'
+    - text: SDN 보안
+      url: '\windows-server\networking\sdn\security\sdn-security-top'
+  - linkListType: whats-new
+    links:
+    - text: Windows Server 2019 SDN의 새로운 기능
+      url: '\windows-server\networking\sdn\sdn-whats-new'
+  - linkListType: concept
+    links:
+    - text: SDN 아키텍처의 주요 구성 요소
+      url: '\windows-server\networking\sdn\technologies\Software-Defined-Networking-Technologies'
+  - linkListType: video
+    links:
+    - text: Microsoft SDN 메커니즘
+      url: https://youtu.be/f501zUUcXD0
+- title: 시작
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: SDN 인프라 계획
+      url: '\windows-server\networking\sdn\plan\Plan-a-Software-Defined-Network-Infrastructure'
+    - text: SDN 인프라 배포
+      url: '\windows-server\networking\sdn\deploy\Deploy-a-Software-Defined-Network-Infrastructure'
+    - text: SDN 인프라 관리
+      url: '\windows-server\networking\sdn\manage\manage-sdn'
+  - linkListType: overview
+    links:
+    - text: SDN 인프라 문제 해결 및 진단
+      url: '\windows-server\networking\sdn\troubleshoot\troubleshoot-windows-server-software-defined-networking-stack'
+- title: SDN 학습 리소스
+  linkLists:
+  - linkListType: learn
+    links:
+    - text: VMM에서 SDN RAS 게이트웨이 VPN 대역폭 설정 구성과 관련된 문제 해결
+      url: https://blogs.technet.microsoft.com/networking/2017/03/06/troubleshoot-configuring-sdn-ras-gateway-vpn-bandwidth-settings-in-virtual-machine-manager/
+    - text: Microsoft 소프트웨어 정의 네트워킹 데이터시트
+      url: https://download.microsoft.com/download/1/5/A/15AC87E7-E99C-4E98-B6AF-9346790AD2DF/Software_Defined_Networking_is_built_in_with_Windows_Server_2016_solution_brief_EN_US.pdf
