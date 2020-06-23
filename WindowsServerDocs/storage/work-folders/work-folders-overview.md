@@ -9,12 +9,12 @@ manager: dougkim
 ms.author: jgerend
 ms.date: 06/15/2020
 description: 작업 폴더 개요-사용자가 Pc 및 장치에서 작업 파일에 액세스할 수 있는 일관 된 방법을 제공 하는 Windows Server의 서버 역할입니다.
-ms.openlocfilehash: 4e670d61729d35ee9569b09e91ef5a953961241e
-ms.sourcegitcommit: 568b924d32421256f64abfee171304f1daf320d2
+ms.openlocfilehash: f48c03d97cab94f836ef6fafa77fccf07a04331b
+ms.sourcegitcommit: 44a96d505b5c96da62937f5dd2d724342ee9d835
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85070093"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141032"
 ---
 # <a name="work-folders-overview"></a>클라우드 폴더 개요
 
@@ -60,7 +60,7 @@ Windows 10, Windows 7 또는 Android 또는 iOS 장치에서 클라우드 폴더
 | ------------------- | ------------------ | ----------------- |  
 | 서버 관리자의 클라우드 폴더 역할 서비스 | Windows Server 2019, Windows Server 2016 또는 Windows Server 2012 R2 | 파일 및 저장소 서비스는 동기화 공유 (사용자의 작업 파일을 저장 하는 폴더)를 설정 하 고, 작업 폴더를 모니터링 하 고, 동기화 공유 및 사용자 액세스를 관리 하는 방법을 제공 합니다. |
 | 클라우드 폴더 cmdlet | Windows Server 2019, Windows Server 2016 또는 Windows Server 2012 R2 | 클라우드 폴더 서버를 관리 하기 위한 포괄적인 cmdlet이 포함 된 Windows PowerShell 모듈입니다. |  
-| Windows와 클라우드 폴더 통합 | 윈도우 10<p> Windows 8.1<p> Windows RT 8.1<p> Windows 7 (다운로드 필요) | 클라우드 폴더는 Windows 컴퓨터에서 다음과 같은 기능을 제공 합니다.<p> -작업 폴더를 설정 및 모니터링 하는 제어판 항목<br />-클라우드 폴더의 파일에 쉽게 액세스할 수 있도록 하는 파일 탐색기 통합<br />-배터리 수명 및 시스템 성능을 최대화 하는 동시에 중앙 파일 서버와 파일을 전송 하는 동기화 엔진 |
+| Windows와 클라우드 폴더 통합 | Windows 10<p> Windows 8.1<p> Windows RT 8.1<p> Windows 7 (다운로드 필요) | 클라우드 폴더는 Windows 컴퓨터에서 다음과 같은 기능을 제공 합니다.<p> -작업 폴더를 설정 및 모니터링 하는 제어판 항목<br />-클라우드 폴더의 파일에 쉽게 액세스할 수 있도록 하는 파일 탐색기 통합<br />-배터리 수명 및 시스템 성능을 최대화 하는 동시에 중앙 파일 서버와 파일을 전송 하는 동기화 엔진 |
 | 장치에 대 한 클라우드 폴더 앱 | Android<p> Apple iPhone 및 iPad® | 인기 있는 장치가 클라우드 폴더의 파일에 액세스할 수 있도록 허용 하는 앱 |  
   
 ## <a name="new-and-changed-functionality"></a>새로운 기능 및 변경된 기능
@@ -103,7 +103,7 @@ Windows 10, Windows 7 또는 Android 또는 iOS 장치에서 클라우드 폴더
   
 -   Pc 및 장치는 다음 운영 체제 중 하나를 실행 해야 합니다.  
   
-    -   윈도우 10  
+    -   Windows 10  
   
     -   Windows 8.1  
   
@@ -137,12 +137,12 @@ Windows 10, Windows 7 또는 Android 또는 iOS 장치에서 클라우드 폴더
 
 다음 표에서는 다양 한 Microsoft 동기화 기술의 배치 방법과 각 동기화 기술이 사용 되는 시기에 대해 설명 합니다.  
   
-| | 클라우드 폴더 | 오프라인 파일 | 비즈니스용 OneDrive | OneDrive |
+| | 클라우드 폴더 | 오프라인 파일 | OneDrive for Business | OneDrive |
 | - | ------------------ | ------------------- | -------------------------- | -------------- |
 | **기술 요약** | Pc 및 장치를 사용 하 여 파일 서버에 저장 된 파일을 동기화 합니다. | 회사 네트워크에 대 한 액세스 권한이 있는 Pc를 사용 하 여 파일 서버에 저장 된 파일을 동기화 합니다 (클라우드 폴더로 대체 가능). | 회사 및 장치가 회사 네트워크 내부 또는 외부에 있는 Office 365 또는 SharePoint에 저장 된 파일을 동기화 하 고 문서 공동 작업 기능을 제공 합니다. | Pc, Mac 컴퓨터 및 장치를 사용 하 여 OneDrive에 저장 된 개인 파일을 동기화 합니다. |
-| **작업 파일에 대 한 사용자 액세스를 제공 하기 위한 것입니다.** | 예 | 예 | 예 | 예 |
-| **클라우드 서비스** | None | None | Office 365 | Microsoft OneDrive |
-| **내부 네트워크 서버** | Windows Server 2012 R2 또는 Windows Server 2016를 실행 하는 파일 서버 | 파일 서버 | SharePoint server (선택 사항) | None |
+| **작업 파일에 대 한 사용자 액세스를 제공 하기 위한 것입니다.** | Yes | 예 | 예 | 예 |
+| **클라우드 서비스** | 없음 | 없음 | Office 365 | Microsoft OneDrive |
+| **내부 네트워크 서버** | Windows Server 2012 R2, Windows Server 2016 및 Windows Server 2019를 실행 하는 파일 서버 | 파일 서버 | SharePoint server (선택 사항) | 없음 |
 | **지원되는 클라이언트** | Pc, iOS, Android | 회사 네트워크의 Pc 또는 DirectAccess, Vpn 또는 기타 원격 액세스 기술을 통해 연결 된 Pc | Pc, iOS, Android, Windows Phone | Pc, Mac 컴퓨터, Windows Phone, iOS, Android |
   
 > [!NOTE]
@@ -160,7 +160,7 @@ Windows 10, Windows 7 또는 Android 또는 iOS 장치에서 클라우드 폴더
   
 ## <a name="interoperability-with-windows-azure-virtual-machines"></a>Microsoft Azure 가상 컴퓨터와의 상호 운용성
 
- Windows Azure의 가상 머신에서이 Windows Server 역할 서비스를 실행할 수 있습니다. 이 시나리오는 Windows Server 2012 R2 및 Windows Server 2016에서 테스트 되었습니다.  
+ Windows Azure의 가상 머신에서이 Windows Server 역할 서비스를 실행할 수 있습니다. 이 시나리오는 Windows Server 2012 R2, Windows Server 2016 및 Windows Server 2019를 사용 하 여 테스트 되었습니다.  
   
 Microsoft Azure 가상 컴퓨터를 시작 하는 방법에 대 한 자세한 내용은 [Windows azure 웹 사이트](http://www.windowsazure.com/documentation/services/virtual-machines)를 참조 하십시오.  
   
