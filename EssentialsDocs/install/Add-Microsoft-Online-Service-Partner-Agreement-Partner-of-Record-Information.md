@@ -8,19 +8,19 @@ ms.assetid: 9bd191d6-ecc5-4230-a88e-f3fc281cb956
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 7a297ed077f4c1457bd1e59fc0ea22feedd5de0d
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 8b397a8fd2047c1a6fcaf5de2f5e1af167f1029f
+ms.sourcegitcommit: 6d6a0225b1f83b71fcb494b94d666cd5e54c7566
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80817588"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85267454"
 ---
 # <a name="add-microsoft-online-service-partner-agreement-partner-of-record-information"></a>Microsoft 온라인 서비스 파트너 계약 공식 파트너 정보 추가
 
 >적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 ##  <a name="BKMK_3rdLevelDomanNames"></a>   
- Office 365에 대 한 MOSPA (Microsoft 온라인 서비스 파트너 계약) 파트너인 경우 Office 365 통합 모듈을 통해 Windows Server Essentials에서 구독 요청이 발생 했을 때 올바르게 보정 되도록 하려면 다음을 만들어야 합니다. POR ID (레코드 파트너 id)를 포함 하는 레지스트리 키입니다. 다음 정보가 Office 365 등록 URL을 통해 서비스 공급자에게 전달됩니다.  
+ Office 365에 대 한 MOSPA (Microsoft 온라인 서비스 파트너 계약) 파트너인 경우 Office 365 통합 모듈을 통해 Windows Server Essentials에서 구독 요청이 발생 했을 때 올바르게 보정 되도록 하려면 POR (레코드 파트너) id가 포함 된 레지스트리 키를 만들어야 합니다. 다음 정보가 Office 365 등록 URL을 통해 서비스 공급자에게 전달됩니다.  
   
 -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Server\MSO  
   
@@ -48,15 +48,10 @@ ms.locfileid: "80817588"
   
 8.  **값 데이터** 입력란에 POR ID를 입력하고 **확인**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 
- [이미지  만들기 및 사용자 지정](Creating-and-Customizing-the-Image.md)  
+ [이미지 만들기 및 사용자 지정](Creating-and-Customizing-the-Image.md)   
  [추가 사용자 지정](Additional-Customizations.md)   
- [배포할 이미지를 준비 하는 중](Preparing-the-Image-for-Deployment.md)   
+ [배포를 위한 이미지 준비](Preparing-the-Image-for-Deployment.md)   
  [사용자 환경 테스트](Testing-the-Customer-Experience.md)
-
- [이미지  만들기 및 사용자 지정](../install/Creating-and-Customizing-the-Image.md)  
- [추가 사용자 지정](../install/Additional-Customizations.md)   
- [배포할 이미지를 준비 하는 중](../install/Preparing-the-Image-for-Deployment.md)   
- [사용자 환경 테스트](../install/Testing-the-Customer-Experience.md)
 

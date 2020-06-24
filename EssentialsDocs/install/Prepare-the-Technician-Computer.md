@@ -8,12 +8,12 @@ ms.assetid: 8841c3aa-7aaa-4cc0-b1e1-ab0643f29586
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 0976028d743b70fe3e8c527903bbbe3d1197e13f
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 8c6e72be42672cff246beec54f7a47865da146f0
+ms.sourcegitcommit: 6d6a0225b1f83b71fcb494b94d666cd5e54c7566
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80819916"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85267544"
 ---
 # <a name="prepare-the-technician-computer"></a>기술자 컴퓨터 준비
 
@@ -25,17 +25,11 @@ ms.locfileid: "80819916"
   
 -   [Microsoft 웹 사이트](https://go.microsoft.com/fwlink/?LinkID=248647)에서 windows 7, windows 8 또는 windows 10을 실행 하는 컴퓨터에 windows ADK를 설치 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 
- [Windows Server ESSENTIALS ADK를 사용 하 여 시작](Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
- [이미지  만들기 및 사용자 지정](Creating-and-Customizing-the-Image.md)  
+ [Windows Server Essentials ADK 시작 하기](Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
+ [이미지 만들기 및 사용자 지정](Creating-and-Customizing-the-Image.md)   
  [추가 사용자 지정](Additional-Customizations.md)   
- [배포할 이미지를 준비 하는 중](Preparing-the-Image-for-Deployment.md)   
+ [배포를 위한 이미지 준비](Preparing-the-Image-for-Deployment.md)   
  [사용자 환경 테스트](Testing-the-Customer-Experience.md)
-
- [Windows Server ESSENTIALS ADK를 사용 하 여 시작](../install/Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
- [이미지  만들기 및 사용자 지정](../install/Creating-and-Customizing-the-Image.md)  
- [추가 사용자 지정](../install/Additional-Customizations.md)   
- [배포할 이미지를 준비 하는 중](../install/Preparing-the-Image-for-Deployment.md)   
- [사용자 환경 테스트](../install/Testing-the-Customer-Experience.md)
 

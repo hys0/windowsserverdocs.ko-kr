@@ -8,12 +8,12 @@ ms.assetid: 98f13f63-4480-40ba-a7ef-d1d9b7582e5f
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: c1fd1d21277d32672398d1dd201e2dda24682c2d
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 64e982f7932f8ba3ecf83ffe6443391522ad0f12
+ms.sourcegitcommit: 6d6a0225b1f83b71fcb494b94d666cd5e54c7566
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80820026"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85267554"
 ---
 # <a name="install-or-remove-language-packs"></a>언어 팩 설치 또는 제거
 
@@ -32,11 +32,11 @@ ms.locfileid: "80820026"
   
  언어 팩을 설치하려면 다음 명령을 사용해야 합니다.  
   
- **dism.exe/online/Add-Package/PackagePath: C:\\< cab 파일 디렉터리의 전체 경로\>\lp.cab**  
+ **dism.exe/online/Add-Package/PackagePath: C: \\<cab 파일 디렉터리의 전체 경로 \>\lp.cab**  
   
  예를 들어, 다음 명령은 독일어 언어 팩을 추가하는 방법을 보여 줍니다.  
   
- **dism.exe/online/Add-Package/PackagePath: C:\Users\Administrator\Desktop\WindowsHomeServer-Product-r\de-de\lp.cab**  
+ **dism.exe /online /Add-Package /PackagePath:C:\Users\Administrator\Desktop\WindowsHomeServer-Product-r\de-de\lp.cab**  
   
 > [!IMPORTANT]
 >  운영 체제를 완전히 지역화 하려면 Windows Server Essentials 용 언어 팩도 적용 해야 합니다.  
@@ -44,21 +44,16 @@ ms.locfileid: "80820026"
 ## <a name="removing-language-packs-from-an-image"></a>이미지에서 언어 팩 제거  
  다음 명령을 사용하여 더 이상 이미지에 포함시키지 않을 언어 팩을 제거할 수 있습니다.  
   
- **dism.exe/online/Remove-Package/PackagePath: C:\\< cab 파일 디렉터리의 전체 경로\>\lp.cab**  
+ **dism.exe/online/Remove-Package/PackagePath: C: \\<cab 파일 디렉터리의 전체 경로 \>\lp.cab**  
   
  예를 들어, 다음 명령은 독일어 언어 팩을 제거하는 방법을 보여 줍니다.  
   
- **dism.exe/online/Remove-Package/PackagePath: C:\Users\Administrator\Desktop\WindowsHomeServer-Product-r\de-de\lp.cab**  
+ **dism.exe /online /Remove-Package /PackagePath:C:\Users\Administrator\Desktop\WindowsHomeServer-Product-r\de-de\lp.cab**  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 
- [이미지  만들기 및 사용자 지정](Creating-and-Customizing-the-Image.md)  
+ [이미지 만들기 및 사용자 지정](Creating-and-Customizing-the-Image.md)   
  [추가 사용자 지정](Additional-Customizations.md)   
- [배포할 이미지를 준비 하는 중](Preparing-the-Image-for-Deployment.md)   
+ [배포를 위한 이미지 준비](Preparing-the-Image-for-Deployment.md)   
  [사용자 환경 테스트](Testing-the-Customer-Experience.md)
-
- [이미지  만들기 및 사용자 지정](../install/Creating-and-Customizing-the-Image.md)  
- [추가 사용자 지정](../install/Additional-Customizations.md)   
- [배포할 이미지를 준비 하는 중](../install/Preparing-the-Image-for-Deployment.md)   
- [사용자 환경 테스트](../install/Testing-the-Customer-Experience.md)
 

@@ -1,5 +1,5 @@
 ---
-title: 서버 저장소 구성
+title: 서버 스토리지 구성
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.date: 10/03/2016
 ms.prod: windows-server
@@ -8,14 +8,14 @@ ms.assetid: ef7ddcdd-3a74-40ca-9487-c3a6fc5155a5
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: b543e473c545f9446ab33b8f81d5b2e5fa4ed877
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: cc76e39e84e78d210287f96353e4e4b68178f63e
+ms.sourcegitcommit: 6d6a0225b1f83b71fcb494b94d666cd5e54c7566
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80817226"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85267434"
 ---
-# <a name="configure-server-storage"></a>서버 저장소 구성
+# <a name="configure-server-storage"></a>서버 스토리지 구성
 
 >적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
@@ -27,7 +27,7 @@ ms.locfileid: "80817226"
   
 |서버 수준|디스크 구성|  
 |------------------|------------------------|  
-|항목|-두 개의 실제 디스크<br /><br /> -다음을 포함 하는 RAID 1 미러된 세트로 구성 됩니다.<br /><br /> -C: 볼륨? 60GB<br /><br /> -D: 볼륨? 1000 GB|  
+|입력|-두 개의 실제 디스크<br /><br /> -다음을 포함 하는 RAID 1 미러된 세트로 구성 됩니다.<br /><br /> -C: 볼륨? 60GB<br /><br /> -D: 볼륨? 1000GB|  
 |중간|-실제 디스크 3 개<br /><br /> -다음을 포함 하는 RAID 5 세트로 구성 됩니다.<br /><br /> -C: 볼륨? 60GB<br /><br /> -D: 볼륨? 1500 GB|  
 |높음|-전체 실제 디스크 5 개 이상<br /><br /> -C: 볼륨을 포함 하는 RAID 1 미러된 집합의 두 디스크 100GB<br /><br /> -다음을 포함 하는 RAID 5 집합의 나머지 모든 디스크:<br /><br /> -D: 볼륨? 1500 GB<br /><br /> -E: 볼륨? 1500 GB|  
   
@@ -39,17 +39,11 @@ ms.locfileid: "80817226"
 ## <a name="partition-configuration"></a>파티션 구성  
  서버의 초기 구성 동안 공유 폴더 및 클라이언트 컴퓨터 백업 폴더를 포함하는 일련의 기본 서버 폴더가 디스크 0의 가장 큰 데이터 파티션에 만들어집니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 
- [Windows Server ESSENTIALS ADK를 사용 하 여 시작](Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
- [이미지  만들기 및 사용자 지정](Creating-and-Customizing-the-Image.md)  
+ [Windows Server Essentials ADK 시작 하기](Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
+ [이미지 만들기 및 사용자 지정](Creating-and-Customizing-the-Image.md)   
  [추가 사용자 지정](Additional-Customizations.md)   
- [배포할 이미지를 준비 하는 중](Preparing-the-Image-for-Deployment.md)   
+ [배포를 위한 이미지 준비](Preparing-the-Image-for-Deployment.md)   
  [사용자 환경 테스트](Testing-the-Customer-Experience.md)
-
- [Windows Server ESSENTIALS ADK를 사용 하 여 시작](../install/Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
- [이미지  만들기 및 사용자 지정](../install/Creating-and-Customizing-the-Image.md)  
- [추가 사용자 지정](../install/Additional-Customizations.md)   
- [배포할 이미지를 준비 하는 중](../install/Preparing-the-Image-for-Deployment.md)   
- [사용자 환경 테스트](../install/Testing-the-Customer-Experience.md)
 

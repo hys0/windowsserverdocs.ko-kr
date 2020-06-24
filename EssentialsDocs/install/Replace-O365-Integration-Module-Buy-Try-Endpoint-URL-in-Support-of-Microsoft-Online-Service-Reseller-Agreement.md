@@ -1,5 +1,5 @@
 ---
-title: Microsoft 온라인 서비스 재판매인 계약을 지원하기 위해 O365 통합 모듈 구입-평가판 끝점 URL 바꾸기
+title: Microsoft 온라인 서비스 재판매인 계약을 지원하기 위해 O365 통합 모듈 구매-평가판 엔드포인트 URL 바꾸기
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.date: 10/03/2016
 ms.prod: windows-server
@@ -8,14 +8,14 @@ ms.assetid: 9860a6b9-baea-4bf0-9a9f-6f1a288f996e
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: a517fd56c16860b0c3bfeeaf5cac0d4049b9041e
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 10f7e58aad26f85455388654c65b73fd72f9ae13
+ms.sourcegitcommit: fdc3ce1992f4dd6ea1771479d525126abbbcfa72
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80819876"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85256653"
 ---
-# <a name="replace-o365-integration-module-buy-try-endpoint-url-in-support-of-microsoft-online-service-reseller-agreement"></a>Microsoft 온라인 서비스 재판매인 계약을 지원하기 위해 O365 통합 모듈 구입-평가판 끝점 URL 바꾸기
+# <a name="replace-o365-integration-module-buy-try-endpoint-url-in-support-of-microsoft-online-service-reseller-agreement"></a>Microsoft 온라인 서비스 재판매인 계약을 지원하기 위해 O365 통합 모듈 구매-평가판 엔드포인트 URL 바꾸기
 
 >적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
@@ -32,7 +32,7 @@ ms.locfileid: "80819876"
   
     -   키 이름 = MOSRASTDBUY  
   
-    -   값 = *xxxxx*, 여기서 xxxxx는 기업 정기 가입 구입 URL입니다. 예: 값 = http://syndicatepartner.office365.com/enterprisebuy.html  
+    -   값 = *xxxxx*, 여기서 xxxxx는 기업 정기 가입 구입 URL입니다. 예를 들면 Value =입니다.http://syndicatepartner.office365.com/enterprisebuy.html  
   
 2.  Office 365 Enterprise 정기 가입 평가판 엔드포인트입니다.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "80819876"
   
     -   키 이름 = MOSRASTDTRY  
   
-    -   값 = *xxxxx*, 여기서 xxxxx는 기업 정기 가입 구입 URL입니다. 예: 값 = http://syndicatepartner.office365.com/enterprisetry.html  
+    -   값 = *xxxxx*, 여기서 xxxxx는 기업 정기 가입 구입 URL입니다. 예를 들면 Value =입니다.http://syndicatepartner.office365.com/enterprisetry.html  
   
 3.  Office 365 Small Business Premium subscription 구매 끝점입니다.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "80819876"
   
     -   키 이름 = MOSRALITEBUY  
   
-    -   값 = *xxxxx*, 여기서 xxxxx는 기업 정기 가입 구입 URL입니다. 예: 값 = http://syndicatepartner.office365.com/smallbizbuy.html  
+    -   값 = *xxxxx*, 여기서 xxxxx는 기업 정기 가입 구입 URL입니다. 예를 들면 Value =입니다.http://syndicatepartner.office365.com/smallbizbuy.html  
   
 4.  Office 365 Small Business Premium 정기 가입 평가판 끝점입니다.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "80819876"
   
     -   키 이름 = MOSRALITETRY  
   
-    -   값 = *xxxxx*, 여기서 xxxxx는 기업 정기 가입 구입 URL입니다. 예: 값 = http://syndicatepartner.office365.com/smallbiztry.html  
+    -   값 = *xxxxx*, 여기서 xxxxx는 기업 정기 가입 구입 URL입니다. 예를 들면 Value =입니다.http://syndicatepartner.office365.com/smallbiztry.html  
   
 #### <a name="to-add-an-endpoint-url-key-to-the-registry"></a>레지스트리에 엔드포인트 URL 키를 추가하려면  
   
@@ -88,13 +88,10 @@ ms.locfileid: "80819876"
   
 7.  4단계에 나열된 각 문자열 이름에 대해 4-6단계를 반복합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 
- [이미지  만들기 및 사용자 지정](Creating-and-Customizing-the-Image.md)  
+ [이미지 만들기 및 사용자 지정](Creating-and-Customizing-the-Image.md)   
  [추가 사용자 지정](Additional-Customizations.md)   
- [배포할 이미지를 준비 하는 중](Preparing-the-Image-for-Deployment.md)   
- [사용자 환경 테스트](Testing-the-Customer-Experience.md) [이미지 만들기 및 사용자 지정](../install/Creating-and-Customizing-the-Image.md)   
- [추가 사용자 지정](../install/Additional-Customizations.md)   
- [배포할 이미지를 준비 하는 중](../install/Preparing-the-Image-for-Deployment.md)   
- [사용자 환경 테스트](../install/Testing-the-Customer-Experience.md)
-
+ [배포를 위한 이미지 준비](Preparing-the-Image-for-Deployment.md)   
+ [사용자 환경 테스트](Testing-the-Customer-Experience.md)
+ 

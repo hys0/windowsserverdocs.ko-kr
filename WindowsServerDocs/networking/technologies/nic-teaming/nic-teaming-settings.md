@@ -9,12 +9,12 @@ ms.assetid: a4caaa86-5799-4580-8775-03ee213784a3
 ms.author: lizross
 author: eross-msft
 ms.date: 09/13/2018
-ms.openlocfilehash: 8ae461f8e9236451e9a6b442cafecee4981ed8ce
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 133e44c83032976f08819529508b3990b6e78596
+ms.sourcegitcommit: fdc3ce1992f4dd6ea1771479d525126abbbcfa72
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80853716"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85256683"
 ---
 # <a name="nic-teaming-settings"></a>NIC 팀 설정
 이 항목에서는 팀 및 부하 분산 모드와 같은 NIC 팀 속성에 대 한 개요를 제공 합니다. 또한 대기 어댑터 설정 및 주 팀 인터페이스 속성에 대 한 세부 정보도 제공 합니다. NIC 팀에 네트워크 어댑터가 두 개 이상 있는 경우 내결함성을 위해 대기 어댑터를 지정할 필요가 없습니다.
@@ -29,7 +29,7 @@ ms.locfileid: "80853716"
 >[!TIP]
 >NIC 팀의 성능을 최적화 하려면 부하 분산 모드를 동적 배포로 사용 하는 것이 좋습니다.  
   
-### <a name="switch-independent"></a>스위치 독립적
+### <a name="switch-independent"></a>스위치에 독립적
   
 [!INCLUDE [switch-independent-shortdesc-include](../../includes/switch-independent-shortdesc-include.md)] 
   
@@ -74,11 +74,11 @@ TCP 포트 해시는 트래픽 스트림의 가장 세부적인 배포를 생성
   
 [!INCLUDE [hyper-v-port-shortdesc-include](../../includes/hyper-v-port-shortdesc-include.md)]  
   
-인접 스위치는 항상 하나의 포트에서 특정 MAC 주소를 확인 하기 때문에 스위치는 대상 MAC (VM MAC) 주소를 기반으로 하는 여러 링크에서 수신 부하 (스위치에서 호스트로의 트래픽)를 배포 합니다. 특히 유용 가상 컴퓨터 큐 (Vmq)를 사용 하는 큐 트래픽이 도착 하는 데 필요한 특정 NIC에 배치할 수 있으므로 합니다.  
+인접 스위치는 항상 하나의 포트에서 특정 MAC 주소를 확인 하기 때문에 스위치는 대상 MAC (VM MAC) 주소를 기반으로 하는 여러 링크에서 수신 부하 (스위치에서 호스트로의 트래픽)를 배포 합니다. 트래픽이 도착할 것으로 예상되는 특정 NIC에 대기열을 배치할 수 있기 때문에 VMQ (VMQ)가 사용될 때 특히 유용합니다.  
   
 그러나 호스트에 몇 가지 Vm만 있는 경우이 모드는 균형이 분포를 달성 하기 위해 충분히 세부적인 아닐 수도 있습니다. 이 모드는 항상 단일 인터페이스에서 사용할 수 있는 대역폭을 단일 VM (즉, 단일 스위치 포트에서 트래픽)를 제한 합니다. 일부 경우에는 스위치가 스위치 포트에 둘 이상의 MAC 주소로 구성 될 수 있으므로 NIC 팀은 원본 MAC 주소를 사용 하는 대신 Hyper-v 가상 스위치 포트를 식별자로 사용 합니다.  
   
-### <a name="dynamic"></a>Dynamic
+### <a name="dynamic"></a>동적
   
 [!INCLUDE [dynamic-shortdesc-include](../../includes/dynamic-shortdesc-include.md)]
   
@@ -108,7 +108,7 @@ NIC가 2 개인 팀이 있고 하나의 NIC를 대기 어댑터로 구성 하도
   
 Vlan을 사용 하는 경우이 대화 상자를 사용 하 여 VLAN 번호를 지정할 수 있습니다.  
   
-Vlan을 사용 하 고 있는지 여부에 관계 없이 NIC 팀에 대 한 tNIC 이름을 지정할 수 있습니다.  
+Vlan을 사용 하 고 있는지 여부에 관계 없이 NIC 팀에 대 한 NIC 이름을 지정할 수 있습니다.  
   
 
 

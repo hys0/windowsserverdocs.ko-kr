@@ -7,12 +7,12 @@ ms.topic: article
 ms.assetid: c7da0f6c-9732-4784-9c28-7dad72c4071d
 author: daveba
 ms.author: daveba
-ms.openlocfilehash: b71fc748f7cc8d82420b7a62fe502135036db727
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 9cafaf25a18ffe17894e11ff0676e492656e5831
+ms.sourcegitcommit: fdc3ce1992f4dd6ea1771479d525126abbbcfa72
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80312111"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85256672"
 ---
 # <a name="create-a-server-recovery-dvd-for-multi-language-support"></a>다국어 지원을 위한 서버 복구 DVD 만들기
 
@@ -44,13 +44,13 @@ ms.locfileid: "80312111"
   
 2.  배포 가능 미디어 만들기  
   
-### <a name="prerequisites"></a>필수 조건  
+### <a name="prerequisites"></a>필수 구성 요소  
  Windows 설치 프로그램에 다국어 지원을 추가하려면 다음이 필요합니다.  
   
 
--   사용자 지정 WinPE 이미지를 만드는 데 필요한 모든 도구 및 원본 파일을 제공하는 관리자 컴퓨터. 자세한 내용은 [Prepare the Technician Computer](Prepare-the-Technician-Computer.md)를 참조하세요.  
+-   사용자 지정 WinPE 이미지를 만드는 데 필요한 모든 도구 및 원본 파일을 제공하는 관리자 컴퓨터. 자세한 정보는 [관리자 컴퓨터 준비](Prepare-the-Technician-Computer.md)를 참조하세요.  
 
--   사용자 지정 WinPE 이미지를 만드는 데 필요한 모든 도구 및 원본 파일을 제공하는 관리자 컴퓨터. 자세한 내용은 [Prepare the Technician Computer](../install/Prepare-the-Technician-Computer.md)를 참조하세요.  
+-   사용자 지정 WinPE 이미지를 만드는 데 필요한 모든 도구 및 원본 파일을 제공하는 관리자 컴퓨터. 자세한 정보는 [관리자 컴퓨터 준비](../install/Prepare-the-Technician-Computer.md)를 참조하세요.  
 
   
 -   Windows Server Essentials DVD.  
@@ -66,7 +66,7 @@ ms.locfileid: "80312111"
 > [!NOTE]
 >  Windows Server 2012 용 언어 팩을 설치 했는지 확인 합니다. 이렇게 하면 적절한 브랜딩을 가져오게 됩니다. Windows Server 2012 다국어 사용자 인터페이스 언어 팩은 [Microsoft.com](https://www.microsoft.com/OEM/en/installation/downloads/Pages/technical-downloads.aspx)에서 사용할 수 있습니다. Windows Server Essentials 언어 팩을 설치 하려면 먼저 [연습: 다국어 Windows 이미지 만들기](https://technet.microsoft.com/library/jj126995.aspx) 에 설명 된 지침에 따라 다국어 windows 이미지를 만듭니다.  
 >   
->  Windows Server Essentials 언어 팩은 \Language pack의 언어 팩 미디어\\< CultureName\>에서 다운로드할 수 있습니다.  
+>  Windows Server Essentials 언어 팩은 \Language pack의 언어 팩 미디어<CultureName에서 다운로드할 수 있습니다 \\ \> .  
   
 > [!NOTE]
 >  Windows Server 2012을 출시 하기 전에는 일부 언어 팩만 사용할 수 있는 것은 아닙니다.  
@@ -102,15 +102,10 @@ ms.locfileid: "80312111"
     Dism /Unmount-Wim /MountDir:C:\InstallMount /Commit  
     ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 
- [이미지  만들기 및 사용자 지정](Creating-and-Customizing-the-Image.md)  
+ [이미지 만들기 및 사용자 지정](Creating-and-Customizing-the-Image.md)   
  [추가 사용자 지정](Additional-Customizations.md)   
- [배포할 이미지를 준비 하는 중](Preparing-the-Image-for-Deployment.md)   
+ [배포를 위한 이미지 준비](Preparing-the-Image-for-Deployment.md)   
  [사용자 환경 테스트](Testing-the-Customer-Experience.md)
-
- [이미지  만들기 및 사용자 지정](../install/Creating-and-Customizing-the-Image.md)  
- [추가 사용자 지정](../install/Additional-Customizations.md)   
- [배포할 이미지를 준비 하는 중](../install/Preparing-the-Image-for-Deployment.md)   
- [사용자 환경 테스트](../install/Testing-the-Customer-Experience.md)
 

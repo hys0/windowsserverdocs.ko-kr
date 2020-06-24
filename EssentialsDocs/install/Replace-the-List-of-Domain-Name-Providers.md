@@ -8,12 +8,12 @@ ms.assetid: 104d0412-2d77-4cd4-99f7-65a885522850
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: e55dc757b93c7e11b29ed4fd579362900e54f909
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: d5281afa423360779924ff212ff300195fac5695
+ms.sourcegitcommit: 6d6a0225b1f83b71fcb494b94d666cd5e54c7566
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80819846"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85267504"
 ---
 # <a name="replace-the-list-of-domain-name-providers"></a>도메인 이름 공급자 목록 바꾸기
 
@@ -24,11 +24,11 @@ ms.locfileid: "80819846"
 
 -   [조회 서비스 파일 만들기](Replace-the-List-of-Domain-Name-Providers.md#BKMK_ReferralFiles)  
 
--   [참조 컴퓨터의 레지스트리에 항목을 추가 합니다.](Replace-the-List-of-Domain-Name-Providers.md#BKMK_AddRegistry)  
+-   [참조 컴퓨터에서 레지스트리에 항목 추가](Replace-the-List-of-Domain-Name-Providers.md#BKMK_AddRegistry)  
 
 -   [조회 서비스 파일 만들기](../install/Replace-the-List-of-Domain-Name-Providers.md#BKMK_ReferralFiles)  
 
--   [참조 컴퓨터의 레지스트리에 항목을 추가 합니다.](../install/Replace-the-List-of-Domain-Name-Providers.md#BKMK_AddRegistry)  
+-   [참조 컴퓨터에서 레지스트리에 항목 추가](../install/Replace-the-List-of-Domain-Name-Providers.md#BKMK_AddRegistry)  
 
 
 ###  <a name="create-the-referral-service-files"></a><a name="BKMK_ReferralFiles"></a>조회 서비스 파일 만들기  
@@ -63,7 +63,7 @@ ms.locfileid: "80819846"
 
 ##### <a name="to-add-a-key-to-the-registry"></a>레지스트리에 키를 추가하려면  
 
-1.  참조 컴퓨터에서 **시작**을 클릭하고 **regedit**을 입력한 다음 **Enter** 키를 누릅니다.  
+1.  참조 컴퓨터에서 **시작**을 클릭하고 **regedit**를 입력한 다음 **Enter** 키를 누릅니다.  
 
 2.  왼쪽 창에서 **HKEY_LOCAL_MACHINE**, **소프트웨어**, **Microsoft**, **Windows Server**, **도메인 관리자**를 차례로 확장한 다음 **공급자**를 확장합니다.  
 
@@ -85,7 +85,7 @@ ms.locfileid: "80819846"
 ~~~
 
 ###  <a name="domain-name-status-issues"></a><a name="BKMK_ReplaceDomainNameProviders"></a>도메인 이름 상태 문제  
- 파트너가 도메인 이름 공급자를 추가 하 고 Windows Server Essentials SDK의 API (응용 프로그래밍 인터페이스)를 사용 하 여 인증서에 대 한 알 수 없음, 실패 및 Certificaterequestnotsubmitted로 설정한 상태를 설정 하는 경우 고객은 잘못 된 정보를 수신 합니다. 메시지 및 구성 결과. 이는 작업이 상태를 반환하는 대신 오류로 처리되기 때문입니다.  
+ 파트너가 도메인 이름 공급자를 추가 하 고 Windows Server Essentials SDK의 API (응용 프로그래밍 인터페이스)를 사용 하 여 인증서에 대 한 알 수 없음, 실패 및 Certificaterequestnotsubmitted로 설정한 상태를 설정 하는 경우 고객은 잘못 된 메시지 및 구성 결과를 수신 합니다. 이는 작업이 상태를 반환하는 대신 오류로 처리되기 때문입니다.  
 
  다음 도메인 상태는 실패를 나타내며 오류로 보고됩니다.  
 
@@ -103,21 +103,16 @@ ms.locfileid: "80819846"
 
   다음 도메인 상태는 성공을 나타내며 성공으로 보고됩니다.  
 
-- 준비  
+- Ready  
 
-- 보류 중  
+- Pending  
 
 - InRenewal  
 
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 
- [이미지  만들기 및 사용자 지정](Creating-and-Customizing-the-Image.md)  
+ [이미지 만들기 및 사용자 지정](Creating-and-Customizing-the-Image.md)   
  [추가 사용자 지정](Additional-Customizations.md)   
- [배포할 이미지를 준비 하는 중](Preparing-the-Image-for-Deployment.md)   
+ [배포를 위한 이미지 준비](Preparing-the-Image-for-Deployment.md)   
  [사용자 환경 테스트](Testing-the-Customer-Experience.md)
-
- [이미지  만들기 및 사용자 지정](../install/Creating-and-Customizing-the-Image.md)  
- [추가 사용자 지정](../install/Additional-Customizations.md)   
- [배포할 이미지를 준비 하는 중](../install/Preparing-the-Image-for-Deployment.md)   
- [사용자 환경 테스트](../install/Testing-the-Customer-Experience.md)
 

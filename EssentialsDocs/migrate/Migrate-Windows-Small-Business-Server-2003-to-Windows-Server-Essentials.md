@@ -8,18 +8,18 @@ ms.assetid: 119a7fbc-2c76-4aa3-8a7f-c7073d461b5b
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: f7dfa203f999e23b52c8fcf1f861a59f4f399d95
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 4d9b5bd8fc3bbf9f54d79d18a7a2d1426d6d87cc
+ms.sourcegitcommit: fdc3ce1992f4dd6ea1771479d525126abbbcfa72
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80852526"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85256582"
 ---
 # <a name="migrate-windows-small-business-server-2003-to-windows-server-essentials"></a>Windows Small Business Server 2003에서 Windows Server Essentials로 마이그레이션
 
 >적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-이 가이드에서는 기존 Windows SBS 2003 도메인을 새 하드웨어의 Windows Server&reg; 2012 Essentials로 마이그레이션한 다음 설정 및 데이터를 마이그레이션하는 방법에 대해 설명 합니다. 또한 마이그레이션을 완료 한 후에 Windows Server Essentials 네트워크에서 기존 서버를 제거 하는 방법을 설명 합니다.  
+이 가이드에서는 기존 Windows SBS 2003 도메인을 &reg; 새 하드웨어의 Windows Server 2012 Essentials로 마이그레이션한 다음 설정 및 데이터를 마이그레이션하는 방법에 대해 설명 합니다. 또한 마이그레이션을 완료 한 후에 Windows Server Essentials 네트워크에서 기존 서버를 제거 하는 방법을 설명 합니다.  
   
 > [!IMPORTANT]
 >   Windows Server Essentials에는 64 비트 환경이 필요 합니다.  Windows Server Essentials는 32 비트 환경을 지원 하지 않습니다.  
@@ -30,12 +30,10 @@ ms.locfileid: "80852526"
 > [!NOTE]
 > 
 >  최신 버전의 Windows Server Essentials로 서버 데이터를 마이그레이션하려면 [Windows Server essentials로 마이그레이션](Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md)을 참조 하세요.  
-> 
->  최신 버전의 Windows Server Essentials로 서버 데이터를 마이그레이션하려면 [Windows Server essentials로 마이그레이션](../migrate/Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md)을 참조 하세요.  
 
   
 ## <a name="additional-resources"></a>추가 리소스  
- 마이그레이션 프로세스에 도움이 되는 추가 정보, 도구 및 커뮤니티 리소스에 대한 링크는 [Windows Small Business Server 마이그레이션](https://go.microsoft.com/fwlink/?LinkId=217520) 웹 사이트를 참조하세요.  
+ 마이그레이션 프로세스를 안내 하는 데 도움이 되는 추가 정보, 도구 및 커뮤니티 리소스에 대 한 링크는 [Windows Small Business Server 마이그레이션](https://go.microsoft.com/fwlink/?LinkId=217520) 웹 사이트를 참조 하세요.  
   
 ## <a name="terms-and-definitions"></a>용어 및 정의  
  **원본 서버:** 설정 및 데이터를 마이그레이션하는 기존 서버입니다.  

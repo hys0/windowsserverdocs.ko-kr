@@ -8,12 +8,12 @@ ms.assetid: e95cf219-46a4-4041-bd81-0c4c2a0622cf
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 65d3f3f30a69e9879e722cbdab260fb9715af545
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 46ee8e19f50b1bce48bd1e7c773bbd802d85b550
+ms.sourcegitcommit: 6d6a0225b1f83b71fcb494b94d666cd5e54c7566
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80820036"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85267573"
 ---
 # <a name="install-and-configure-windows-server-essentials"></a>Windows Server Essentials 설치 및 구성
 
@@ -31,10 +31,6 @@ ms.locfileid: "80820036"
 1.  [1 단계: Windows Server Essentials 운영 체제 설치](Install-and-Configure-Windows-Server-Essentials.md#BKMK_ManualInstallation) 이 단계에서는 서버에 운영 체제를 설치 합니다.  
   
 2.  [2 단계: Windows Server Essentials 운영 체제 구성](Install-and-Configure-Windows-Server-Essentials.md#BKMK_Step2Configure) 이 단계에서는 회사, 도메인 설정 및 네트워크 관리자에 대 한 정보를 제공 하 여 설치를 완료 합니다. 이러한 정보는 서버를 사용할 수 있도록 준비하는 데 사용됩니다.  
-
-1.  [1 단계: Windows Server Essentials 운영 체제 설치](../install/Install-and-Configure-Windows-Server-Essentials.md#BKMK_ManualInstallation) 이 단계에서는 서버에 운영 체제를 설치 합니다.  
-  
-2.  [2 단계: Windows Server Essentials 운영 체제 구성](../install/Install-and-Configure-Windows-Server-Essentials.md#BKMK_Step2Configure) 이 단계에서는 회사, 도메인 설정 및 네트워크 관리자에 대 한 정보를 제공 하 여 설치를 완료 합니다. 이러한 정보는 서버를 사용할 수 있도록 준비하는 데 사용됩니다.  
 
   
 ###  <a name="step-1-install-the-windows-server-essentials-operating-system"></a><a name="BKMK_ManualInstallation"></a>1 단계: Windows Server Essentials 운영 체제 설치  
@@ -113,11 +109,11 @@ ms.locfileid: "80820036"
 > [!IMPORTANT]
 >  이 단계를 시작하기 전에 켜져 있고 제대로 작동하는 라우터 또는 스위치에 로컬 네트워크 어댑터가 연결되어 있는지 확인합니다.  
   
- **예상 완료 시간:** 약 30분입니다.  
+ **예상 완료 시간:** 약 30 분  
   
 ##### <a name="to-configure-the-operating-system"></a>운영 체제를 구성하려면  
   
-1.  **날짜 및 시간 설정 확인** 페이지에서 **시스템 날짜 및 시간 설정 변경**을 클릭하여 서버의 날짜, 시간 및 표준 시간대 설정을 선택합니다. 작업이 완료되면 **다음**을 클릭합니다.  
+1.  **날짜 및 시간 설정 확인** 페이지에서 **시스템 날짜 및 시간 설정 변경**을 클릭하여 서버의 날짜, 시간 및 표준 시간대 설정을 선택합니다. 작업을 마쳤으면 **다음**을 클릭합니다.  
   
     > [!IMPORTANT]
     >  가상 컴퓨터에 Windows Server Essentials를 설치 하는 경우 호스트 운영 체제에서 사용 되는 것과 동일한 표준 시간대 설정을 선택 해야 합니다. 표준 시간대 설정이 다르면 서버가 설치되지 않을 수도 있습니다.  
@@ -162,14 +158,14 @@ ms.locfileid: "80820036"
   
  다음 표는 설정 작업 목록에 나타날 수 있는 항목을 정의합니다.  
   
-|작업|설명
+|Task|Description
 |----------|-----------------|  
 |다른 Microsoft 제품에 대한 업데이트 가져오기|Microsoft 업데이트를 사용 하 여 Windows Server Essentials 및 기타 Microsoft 제품에 대 한 업데이트를 자동으로 얻도록 지정할 수 있는 도구를 실행 하는 링크에 액세스 하려면이 작업을 클릭 합니다.  
 |사용자 계정 추가|사용자 계정 추가에 대한 간략한 정보를 보려면 이 작업을 클릭합니다. **사용자 계정 추가 마법사**를 실행하는 링크가 제공됩니다. 자세한 내용은 [사용자 계정 추가](../manage/Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Manage1)(영문)를 참조하세요.  
 |서버 폴더 추가|서버 폴더 추가에 대한 간략한 정보를 보려면 이 작업을 클릭합니다. **폴더 추가 마법사**를 실행하는 링크가 제공됩니다. 서버 폴더에 대한 온라인 도움말 항목 링크도 제공됩니다. 자세한 내용은 [서버 폴더 추가 또는 이동](../manage/Manage-Server-Folders-in-Windows-Server-Essentials.md#BKMK_5)(영문)을 참조하세요. 
-|서버 백업 설정|서버 백업을 사용한 데이터 보호에 대해 간략한 정보를 보려면 이 작업을 클릭합니다. **서버 백업 설정 마법사** 를 실행하는 링크가 제공됩니다. 자세한 내용은 [서버 백업 설정 또는 사용자 지정](../manage/Manage-Server-Backup-in-Windows-Server-Essentials.md#BKMK_1)을 참조하세요. 
+|서버 백업 설정|서버 백업을 사용한 데이터 보호에 대해 간략한 정보를 보려면 이 작업을 클릭합니다. **서버 백업 설정 마법사**를 실행하는 링크가 제공됩니다. 자세한 내용은 [서버 백업 설정 또는 사용자 지정](../manage/Manage-Server-Backup-in-Windows-Server-Essentials.md#BKMK_1)을 참조하세요. 
 |원격 액세스 설정|Windows Server Essentials의 원격 액세스 기능에 대 한 간략 한 정보를 보려면이 작업을 클릭 합니다. **원격 액세스 설정** 페이지 링크가 제공됩니다. 자세한 내용은 [원격 액세스 관리](../manage/Manage-Anywhere-Access-in-Windows-Server-Essentials.md)를 참조 하세요. 
-|전자 메일 경고 알림 설정|메일 경고 알림에 대한 간략한 정보를 보려면 이 작업을 클릭합니다. **경고에 대한 전자 메일 알림 설정** 도구를 실행하는 링크가 제공됩니다. 자세한 내용은 [경고에 대한 전자 메일 알림 설정](../manage/Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_Email)(영문)을 참조하세요.  
+|메일 경고 알림 설정|메일 경고 알림에 대한 간략한 정보를 보려면 이 작업을 클릭합니다. **경고에 대한 전자 메일 알림 설정** 도구를 실행하는 링크가 제공됩니다. 자세한 내용은 [경고에 대한 전자 메일 알림 설정](../manage/Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_Email)(영문)을 참조하세요.  
 |미디어 서버 설정|미디어 서버를 사용한 음악, 비디오 및 이미지 파일 공유에 대해 간략한 정보를 보려면 이 작업을 클릭합니다. **미디어 설정** 페이지 링크가 제공됩니다. 미디어 설정에 대한 온라인 도움말 항목 링크도 제공됩니다. 자세한 내용은 [디지털 미디어 관리](../manage/Manage-Digital-Media-in-Windows-Server-Essentials.md)를 참조 하세요. 
 |컴퓨터 연결|네트워크 컴퓨터를 서버에 연결하는 방법에 대해 간략한 정보를 보려면 이 작업을 클릭합니다. 자세한 내용은 [서버에 컴퓨터 연결](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_9)을 참조하세요.
   

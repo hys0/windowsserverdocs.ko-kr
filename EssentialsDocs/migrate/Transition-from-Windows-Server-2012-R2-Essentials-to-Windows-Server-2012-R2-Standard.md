@@ -8,12 +8,12 @@ ms.assetid: a14689e3-2310-4229-bd3e-dafc0e739e02
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: f7914ff205382ed2c74cb130061f850e2c0675f5
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 145d4ef1039093f224e1dc73cb5d8286ddd8e494
+ms.sourcegitcommit: fdc3ce1992f4dd6ea1771479d525126abbbcfa72
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80852296"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85256483"
 ---
 # <a name="transition-from-windows-server-essentials-to-windows-server-2012-r2-standard"></a>Windows Server Essentials에서 Windows Server 2012 R2 Standard로 전환
 
@@ -41,7 +41,7 @@ Windows Server 2016은 클라우드 컴퓨팅으로 쉽게 전환할 수 있도�
   
     2.  다음 명령을 실행합니다.  
   
-         **dism/online/set-edition: ServerStandard/geteula:** *eula 경로* (여기서 *eula 경로* 는 eula 파일을 저장 하려는 위치를 나타냅니다 (예: c:\ ws8std_eula .rtf). 이때 .rtf를 파일 이름 확장명으로 사용해야 합니다.  
+         **dism /online /set-edition:ServerStandard /geteula:** *eula 경로* (여기서 *eula 경로* 는 EULA 파일을 저장 하려는 위치를 나타냅니다. 예: C:\ws8std_eula.rtf). 이때 .rtf를 파일 이름 확장명으로 사용해야 합니다.  
   
     3.  파일을 저장한 위치를 열고 열려는 파일을 두 번 클릭합니다.  
   
@@ -71,6 +71,4 @@ Windows Server 2016은 클라우드 컴퓨팅으로 쉽게 전환할 수 있도�
   
 
 -   [Windows Server Essentials로 서버 데이터 마이그레이션](Migrate-Server-Data-to-Windows-Server-Essentials.md)
-
--   [Windows Server Essentials로 서버 데이터 마이그레이션](../migrate/Migrate-Server-Data-to-Windows-Server-Essentials.md)
 

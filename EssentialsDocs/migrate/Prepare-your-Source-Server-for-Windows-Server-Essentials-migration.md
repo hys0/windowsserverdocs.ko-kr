@@ -8,12 +8,12 @@ ms.assetid: f5861ae9-77cb-4d37-b4c5-8f0757213385
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: d7a718e9e84866b6a1f626499b7e2bec58de498f
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 1af895dd6711446408b063f5715ba2a5a73857c3
+ms.sourcegitcommit: 6d6a0225b1f83b71fcb494b94d666cd5e54c7566
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80852406"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85267395"
 ---
 # <a name="prepare-your-source-server-for-windows-server-essentials-migration1"></a>Windows Server Essentials migration1에 대 한 원본 서버 준비
 
@@ -22,31 +22,21 @@ ms.locfileid: "80852406"
 다음 예비 단계를 완료하여 원본 서버의 설정 및 데이터가 대상 서버로 마이그레이션되었는지 확인합니다.  
   
 #### <a name="to-prepare-for-migration"></a>마이그레이션을 준비하려면  
-  
+
 
 1.  [원본 서버 백업](Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_BackUpYourSourceServerToPrepareForMigration)  
   
 2.  [최신 서비스 팩 설치](Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_InstallTheMostRecentServicePacksToPrepareForMigration)  
   
-3.  [원본 서버의 상태 평가](Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_UseWindowsBestPracticeAnalyzer)  
+3.  [원본 서버 상태 평가](Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_UseWindowsBestPracticeAnalyzer)  
   
 4.  [원본 서버에서 마이그레이션 준비 도구 실행](Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_MPT)  
   
-5.  [Lob (기간 업무) 응용 프로그램 마이그레이션 계획 만들기](Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_PlanToMigrateLineOfBusinessApplications)  
+5.  [LOB(기간 업무) 애플리케이션 마이그레이션 계획 수립](Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_PlanToMigrateLineOfBusinessApplications)  
 
-1.  [원본 서버 백업](../migrate/Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_BackUpYourSourceServerToPrepareForMigration)  
-  
-2.  [최신 서비스 팩 설치](../migrate/Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_InstallTheMostRecentServicePacksToPrepareForMigration)  
-  
-3.  [원본 서버의 상태 평가](../migrate/Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_UseWindowsBestPracticeAnalyzer)  
-  
-4.  [원본 서버에서 마이그레이션 준비 도구 실행](../migrate/Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_MPT)  
-  
-5.  [Lob (기간 업무) 응용 프로그램 마이그레이션 계획 만들기](../migrate/Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_PlanToMigrateLineOfBusinessApplications)  
-
-  
 ###  <a name="back-up-your-source-server"></a><a name="BKMK_BackUpYourSourceServerToPrepareForMigration"></a>원본 서버 백업  
  마이그레이션 프로세스를 시작하기 전에 원본 서버를 백업합니다. 백업을 생성하면 마이그레이션 중 복구할 수 없는 오류가 발생할 경우 데이터가 손실되는 것을 방지할 수 있습니다.  
+ 
   
 ##### <a name="to-back-up-the-source-server"></a>원본 서버를 백업하려면  
   
@@ -77,7 +67,7 @@ ms.locfileid: "80852406"
 #### <a name="run-the-windows-server-solutions-best-practices-analyzer"></a>Windows Server Solutions 모범 사례 분석기를 실행합니다.  
  Windows Server Solutions BPA(모범 사례 분석기)를 실행하여 마이그레이션 프로세스를 시작하기 전에 서버, 네트워크 또는 도메인에 문제가 없는지 확인합니다. BPA는 다음 원본에서 구성 정보를 수집합니다.  
   
--   WMI (Active Directory&reg; WMI(Windows Management Instrumentation))  
+-   &reg;WMI (Active Directory WMI(Windows Management Instrumentation)  
   
 -   레지스트리  
   
@@ -100,13 +90,13 @@ ms.locfileid: "80852406"
   
    서버 구성에 대한 정보를 수집하고 나서 Windows Server Solutions BPA에서는 정보가 올바른지 확인하고 관리자에게 심각도별로 정렬된 정보 및 문제 목록을 제공합니다. 목록에서는 각 문제를 설명하고 권장 사항 또는 가능한 해결 방법을 제공합니다. 세 가지 보고서 유형을 사용할 수 있습니다.  
   
-|보고서 유형|설명|  
+|보고서 유형|Description|  
 |-----------------|-----------------|  
 |목록 보고서|일차원 목록의 보고서를 표시합니다.|  
 |트리 보고서|계층형 목록의 보고서를 표시합니다.|  
 |기타 보고서|실행 시간 로그와 같은 보고서를 표시합니다.|  
   
- 문제에 대한 설명 및 해결 방법을 보려면 보고서에서 해당 문제를 클릭합니다. Windows SBS 2011 Essentials BPA에서 보고 하는 모든 문제가 마이그레이션에 영향을 주는 것은 아니지만 마이그레이션에 성공 하려면 가능한 한 많은 문제를 해결 해야 합니다.  
+ 문제에 대한 설명 및 해결 방법을 보려면 보고서에서 해당 문제를 클릭합니다. Windows SBS 2011 Essentials BPA에서 보고하는 모든 문제가 마이그레이션에 영향을 주는 것은 아니지만 마이그레이션에 성공하려면 가능한 한 많은 문제를 해결해야 합니다.  
   
 ####  <a name="synchronize-the-source-server-time-with-an-external-time-source"></a><a name="BKMK_SynchronizeTheSourceServerTimeWithAnExternalTimeSource"></a>원본 서버 시간을 외부 시간 원본과 동기화  
  원본 서버의 시간과 대상 서버의 시간은 5분 이내로 설정해야 하며 날짜 및 시간대는 두 서버에서 동일해야 합니다. 원본 서버가 가상 머신에서 실행 중인 경우, 호스트 서버의 날짜, 시간 및 시간대는 원본 서버 및 대상 서버의 설정과 일치해야 합니다. Windows Server Essentials가 성공적으로 설치 되도록 하려면 원본 서버 시간을 인터넷의 NTP (Network Time Protocol) 서버와 동기화 해야 합니다.  
@@ -154,13 +144,13 @@ ms.locfileid: "80852406"
   
    Windows Update 에이전트 최신 버전을 사용하여 서버 업데이트 프로세스가 올바르게 작동하는지 확인할 수 있습니다.  
   
-   원본 서버에 Windows 업데이트 Agent를 설치 하려면 먼저 Windows PowerShell 2.0 및 Microsoft 기준선 구성 분석기 2.0를 설치 해야 합니다.  
+   원본 서버에 Windows 업데이트 에이전트를 설치하려면 먼저 Windows PowerShell 2.0과 Microsoft Baseline Configuration Analyzer 2.0을 설치해야 합니다.  
   
 -   Windows PowerShell 2.0을 다운로드 하 고 설치 하려면 Microsoft 기술 자료 [문서 968929](https://go.microsoft.com/fwlink/p/?LinkId=241483) 를 참조 하십시오.  
   
 -   Microsoft 기준선 구성 분석기 2.0을 다운로드 하 고 설치 하려면 microsoft 다운로드 센터에서 [Microsoft 기준선 구성 분석기 2.0](https://go.microsoft.com/fwlink/p/?LinkId=241484) 를 참조 하세요.  
   
--   Windows 업데이트 에이전트의 최신 버전을 다운로드하고 설치하려면 Microsoft 기술 자료에서 [문서 949104](https://go.microsoft.com/fwlink/p/?LinkId=237493)를 참조하세요.  
+-   최신 버전의 Windows 업데이트 에이전트를 다운로드 하 고 설치 하려면 Microsoft 기술 자료 [문서 949104](https://go.microsoft.com/fwlink/p/?LinkId=237493) 를 참조 하십시오.  
   
 ##### <a name="to-install-and-run-the-migration-preparation-tool-on-the-source-server"></a>원본 서버에서 마이그레이션 준비 도구를 설치하려면  
   

@@ -8,12 +8,12 @@ ms.assetid: d9f18b29-8e03-439e-bdf0-1dac5e4f70c5
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 50d5265b4059629082b4c7ef74b0186b5d4277e7
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: fd54bb227a5abd333cfbe5e9eac7741a826857eb
+ms.sourcegitcommit: fdc3ce1992f4dd6ea1771479d525126abbbcfa72
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80852606"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85256663"
 ---
 # <a name="demote-and-remove-the-source-server-from-the-new-windows-server-essentials-network1"></a>새 Windows Server Essentials에서 원본 서버 수준 내리기 및 제거
 
@@ -22,7 +22,7 @@ ms.locfileid: "80852606"
 Windows Server Essentials 설치를 완료 하 고 마이그레이션 마법사의 작업을 완료 한 후에는 다음 작업을 수행 해야 합니다.  
   
 
-1.  [Exchange Server 2003를 제거](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_UninstallExchangeServer2003)합니다.  
+1.  [Exchange Server 2003 제거](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_UninstallExchangeServer2003).  
   
 2.  [원본 서버에 직접 연결된 프린터 연결 끊기](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_PhysicallyDisconnect).  
   
@@ -32,25 +32,15 @@ Windows Server Essentials 설치를 완료 하 고 마이그레이션 마법사�
   
 5.  [원본 서버 제거 및 용도 변경](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_RemoveTheSourceServer).  
 
-1.  [Exchange Server 2003를 제거](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_UninstallExchangeServer2003)합니다.  
-  
-2.  [원본 서버에 직접 연결된 프린터 연결 끊기](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_PhysicallyDisconnect).  
-  
-3.  [원본 서버 수준 내리기](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_DemoteTheSourceServer).  
-  
-4.  [원본 서버에서 라우터로 DHCP 서버 역할을 이동](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_MoveTheDHCPRole)합니다.  
-  
-5.  [원본 서버 제거 및 용도 변경](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_RemoveTheSourceServer).  
-
   
 ###  <a name="uninstall-exchange-server-2003"></a><a name="BKMK_UninstallExchangeServer2003"></a>Exchange Server 2003 제거  
   
 > [!IMPORTANT]
->  사서함을 대상 서버로 이동 하 고 원본 서버에서 Exchange Server 2003을 제거 하기 전에 사용자 계정을 추가 하면 해당 사서함이 원본 서버에 추가 됩니다. 이것은 정상적인 현상입니다. 이 시간 동안 추가된 모든 사용자 계정에 대해 사서함을 대상 서버로 이동해야 합니다. Exchange Server 2003을 제거 하기 전에 Windows Server Essentials 마이그레이션에 대 한 Exchange Server 사서함 및 설정 이동의 지침을 반복 합니다.  
+>  사서함을 대상 서버로 이동하고 나서 원본 서버에서 Exchange Server 2003을 제거하기 전에 사용자 계정을 추가하면 사서함이 원본 서버에 추가됩니다. 이것은 의도적인 것입니다. 이 시간 동안 추가된 모든 사용자 계정에 대해 사서함을 대상 서버로 이동해야 합니다. Exchange Server 2003을 제거 하기 전에 Windows Server Essentials 마이그레이션에 대 한 Exchange Server 사서함 및 설정 이동의 지침을 반복 합니다.  
   
- 수준을 내리기 전에 원본 서버에서 Exchange Server 2003을 제거 해야 합니다. 그러면 Active Directory Domain Services (AD DS)에서 원본 서버의 Exchange Server에 대 한 모든 참조가 제거 됩니다. Exchange Server 2003를 제거 하려면 Windows Small Business Server 2003 미디어가 있어야 합니다.  
+ 수준을 내리기 전에 원본 서버에서 Exchange Server 2003을 제거해야 합니다. 그러면 원본 서버에서 AD DS(Active Directory Domain Services)의 Exchange Server에 대한 참조가 모두 제거됩니다. Exchange Server 2003을 제거하려면 Windows Small Business Server 2003 미디어가 있어야 합니다.  
   
-##### <a name="to-uninstall-exchange-server-2003-from-the-source-server"></a>원본 서버에서 Exchange Server 2003를 제거 하려면  
+##### <a name="to-uninstall-exchange-server-2003-from-the-source-server"></a>원본 서버에서 Exchange Server 2003을 제거하려면  
   
 1. 관리자로 원본 서버에 로그온합니다.  
   
@@ -65,13 +55,11 @@ Windows Server Essentials 설치를 완료 하 고 마이그레이션 마법사�
    > [!NOTE]
    > 
    >  Exchange Server에서는 서버에 사서함 또는 공용 폴더가 없는지 확인합니다. 데이터가 남아 있으면 **제거**를 클릭할 때 오류 메시지가 나타납니다. 이 문제를 방지 하려면 항목의 모든 절차를 완료 했는지 확인 하세요. [SBS 2003 설정 및 데이터를 대상 서버로 이동](Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md)합니다.  
-   > 
-   >  Exchange Server에서는 서버에 사서함 또는 공용 폴더가 없는지 확인합니다. 데이터가 남아 있으면 **제거**를 클릭할 때 오류 메시지가 나타납니다. 이 문제를 방지 하려면 항목의 모든 절차를 완료 했는지 확인 하세요. [SBS 2003 설정 및 데이터를 대상 서버로 이동](../migrate/Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md)합니다.  
 
   
 6. **다음**을 클릭합니다.  
   
-7. 메시지가 표시 되 면 Windows Small Business Server 2003 CD # 3을 삽입 하 고 화면의 지침을 따릅니다.  
+7. 메시지가 표시되면 Windows Small Business Server 2003 CD#3을 넣고 화면의 지침을 따릅니다.  
   
 ###  <a name="disconnect-printers-that-are-directly-connected-to-the-source-server"></a><a name="BKMK_PhysicallyDisconnect"></a>원본 서버에 직접 연결 된 프린터 연결 끊기  
  원본 서버에서 수준을 내리기 전에 원본 서버에 직접 연결되거나 원본 서버를 통해 공유되는 모든 프린터의 연결을 실제로 끊습니다. 원본 서버에 직접 연결된 프린터에 대한 Active Directory 개체가 남아 있는지 확인합니다. 그런 다음 프린터를 대상 서버에 직접 연결 하 고 Windows Server Essentials에서 공유할 수 있습니다.  
@@ -86,9 +74,9 @@ Windows Server Essentials 설치를 완료 하 고 마이그레이션 마법사�
   
 1.  관리자로 클라이언트 컴퓨터에 로그온합니다.  
   
-2.  관리자 권한으로 명령 프롬프트를 엽니다.  
+2.  관리자로 명령 프롬프트 창을 엽니다.  
   
-3.  명령 프롬프트에 **gpupdate /force**를 입력하고 Enter 키를 누릅니다.  
+3.  명령 프롬프트에 **gpupdate /force**을 입력하고 Enter 키를 누릅니다.  
   
 4.  프로세스를 완료하려면 로그오프한 후 다시 로그온해야 합니다. **예**를 클릭하여 확인합니다.  
   
@@ -105,7 +93,7 @@ Windows Server Essentials 설치를 완료 하 고 마이그레이션 마법사�
   
 4. **요약** 대화 상자에 AD DS 컴퓨터에서 제거 되 고 서버가 도메인의 구성원이 될 것 이라는 알림이 표시 됩니다. **다음**을 클릭합니다.  
   
-5. **마침**을 클릭합니다. 원본 서버가 다시 시작됩니다.  
+5. **Finish**를 클릭합니다. 원본 서버가 다시 시작됩니다.  
   
 6. 원본 서버가 다시 시작되고 나면 네트워크에서 연결을 끊기 전에 원본 서버를 작업 그룹의 구성원으로 추가합니다.  
   
@@ -125,9 +113,7 @@ Windows Server Essentials 설치를 완료 하 고 마이그레이션 마법사�
   
 > [!NOTE]
 > 
->  마이그레이션 프로세스를 시작하기 전에 이미 이 작업을 수행했으면 [원본 서버 제거 및 용도 변경](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_RemoveTheSourceServer) 섹션을 계속 진행합니다.  
-> 
->  마이그레이션 프로세스를 시작하기 전에 이미 이 작업을 수행했으면 [원본 서버 제거 및 용도 변경](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_RemoveTheSourceServer) 섹션을 계속 진행합니다.  
+>  마이그레이션 프로세스를 시작하기 전에 이미 이 작업을 수행했으면 [원본 서버 제거 및 용도 변경](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_RemoveTheSourceServer) 섹션을 계속 진행합니다.
 
   
  원본 서버에서 DHCP 역할을 실행하고 있으면 다음 단계를 수행하여 DHCP 역할을 라우터로 이동합니다.  

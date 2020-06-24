@@ -8,12 +8,12 @@ ms.assetid: 2fe8e35c-69f9-40b3-a270-22e2402510d8
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: ddcdb9576072af6b7014f6dc9b0c38e9f5bdd25d
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 69a57333990a225663d2cd3cc61c75947d07cdab
+ms.sourcegitcommit: 6d6a0225b1f83b71fcb494b94d666cd5e54c7566
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80818366"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85267374"
 ---
 # <a name="create-a-bootable-usb-flash-drive"></a>부팅 가능 USB 플래시 드라이브 만들기
 
@@ -36,9 +36,9 @@ Windows Server Essentials를 배포 하는 데 사용할 부팅 가능 USB 플�
   
 1.  실행 중인 컴퓨터에 USB 플래시 드라이브를 삽입합니다.  
   
-2.  관리자 권한으로 명령 프롬프트를 엽니다.  
+2.  관리자로 명령 프롬프트 창을 엽니다.  
   
-3.  `diskpart`을(를) 입력합니다.  
+3.  `diskpart`.  
   
 4.  새 명령줄 창이 열리면 USB 플래시 드라이브 숫자 또는 드라이브 문자를 결정하고 명령 프롬프트에 `list disk`을(를) 입력한 후 ENTER를 클릭합니다. `list disk` 명령이 컴퓨터에 있는 모든 디스크를 표시합니다. USB 플래시 드라이브의 드라이브 번호 또는 드라이브 문자를 확인합니다.  
   
@@ -61,18 +61,12 @@ Windows Server Essentials를 배포 하는 데 사용할 부팅 가능 USB 플�
   
 12. 사용자 지정 이미지 준비가 완료되면 해당 이미지를 USB 플래시 드라이브 루트에 저장합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 
- [Windows Server ESSENTIALS ADK를 사용 하 여 시작](Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
- [이미지  만들기 및 사용자 지정](Creating-and-Customizing-the-Image.md)  
+ [Windows Server Essentials ADK 시작 하기](Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
+ [이미지 만들기 및 사용자 지정](Creating-and-Customizing-the-Image.md)   
  [추가 사용자 지정](Additional-Customizations.md)   
- [배포할 이미지를 준비 하는 중](Preparing-the-Image-for-Deployment.md)   
- [사용자 환경 테스트](Testing-the-Customer-Experience.md)   
+ [배포를 위한 이미지 준비](Preparing-the-Image-for-Deployment.md)   
+ [사용자 환경 테스트](Testing-the-Customer-Experience.md)     
 
- [Windows Server ESSENTIALS ADK를 사용 하 여 시작](../install/Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
- [이미지  만들기 및 사용자 지정](../install/Creating-and-Customizing-the-Image.md)  
- [추가 사용자 지정](../install/Additional-Customizations.md)   
- [배포할 이미지를 준비 하는 중](../install/Preparing-the-Image-for-Deployment.md)   
- [사용자 환경 테스트](../install/Testing-the-Customer-Experience.md)   
-
- [어떻게 도와 드릴 수 있나요?](https://windows.microsoft.com/windows/support)
+ [도움 요청하기](https://windows.microsoft.com/windows/support)

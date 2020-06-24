@@ -8,63 +8,39 @@ ms.assetid: a455c6b4-b29f-4f76-8c6b-1578b6537717
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 9ddeaedb09346216585b2eb1237ed9340da59756
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 4066e003e2b32ddf746b9a37a10ebecfa3c50851
+ms.sourcegitcommit: 6d6a0225b1f83b71fcb494b94d666cd5e54c7566
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80817976"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85267624"
 ---
 # <a name="deploy-windows-server-essentials-experience-as-a-hosted-server"></a>Windows Server Essentials Experienc를 호스트된 서버로 배포
 
 >적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-이 문서에는 랩에 설치 된 Windows server Essentials Experience 역할 (문서의 나머지 부분에서는 Windows Server Essentials 라고 함)을 사용 하 여 Microsoft Windows Server 16을 배포 하려는 호스팅 서비스 공급자와 관련 된 정보가 포함 되어 있습니다. 고객에 게 Windows Server Essentials Experience를 서비스로 제공 하려고 합니다. 이 설명서는 다음 섹션으로 구성되어 있습니다.  
+이 문서에는 Windows server essentials Experience 역할 (문서의 나머지 부분에서는 Windows Server Essentials 라고 함)을 사용 하 여 Microsoft Windows Server 16을 배포 하 고 고객에 게 Windows Server Essentials Experience를 서비스로 제공 하려는 호스팅 서비스 공급자와 관련 된 정보가 포함 되어 있습니다. 이 문서에는 다음과 같은 섹션이 포함되어 있습니다.  
   
 
 -   [Windows Server 필수 패키지 환경 개요](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_WSEEOverview)  
   
 -   [Windows Server 필수 패키지 환경 호스팅의 이점](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_Benefits)  
   
--   [지원 되는 배포 옵션](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_SupportedDeployment)  
+-   [지원되는 배포 옵션](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_SupportedDeployment)  
   
--   [지원 되는 네트워크 토폴로지](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_SupportedToplogy)  
-  
--   [Windows Server 필수 패키지 환경 역할 이미지 사용자 지정](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_CustomizeImage)  
-  
--   [Windows Server 필수 패키지 환경 배포 자동화](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_AutomateDeployment)  
-  
--   [Windows Small Business Server에서 Windows Server 필수 패키지 환경으로 데이터 마이그레이션](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_Migrate)  
-  
--   [Windows PowerShell을 사용 하 여 일반적인 작업 수행](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_PowerShell)  
-  
--   [Windows Server Essentials와 메일 통합](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_EmailIntegration)  
-  
--   [네이티브 도구를 사용 하 여 모니터링 및 관리](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_Monitoring)  
-  
--   [테스트 시나리오](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_Scenarios)  
-  
--   [지원 정보](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_Support)  
-
--   [Windows Server 필수 패키지 환경 개요](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_WSEEOverview)  
-  
--   [Windows Server 필수 패키지 환경 호스팅의 이점](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_Benefits)  
-  
--   [지원 되는 배포 옵션](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_SupportedDeployment)  
-  
--   [지원 되는 네트워크 토폴로지](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_SupportedToplogy)  
+-   [지원되는 네트워크 토폴로지](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_SupportedToplogy)  
   
 -   [Windows Server 필수 패키지 환경 역할 이미지 사용자 지정](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_CustomizeImage)  
   
--   [Windows Server 필수 패키지 환경 배포 자동화](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_AutomateDeployment)  
+-   [Windows Server 필수 패키지 배포 자동화](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_AutomateDeployment)  
   
 -   [Windows Small Business Server에서 Windows Server 필수 패키지 환경으로 데이터 마이그레이션](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_Migrate)  
   
--   [Windows PowerShell을 사용 하 여 일반적인 작업 수행](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_PowerShell)  
+-   [Windows PowerShell을 사용하여 일반적인 작업 수행](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_PowerShell)  
   
 -   [Windows Server Essentials와 메일 통합](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_EmailIntegration)  
   
--   [네이티브 도구를 사용 하 여 모니터링 및 관리](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_Monitoring)  
+-   [네이티브 도구를 사용하여 모니터링 및 관리](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_Monitoring)  
   
 -   [테스트 시나리오](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_Scenarios)  
   
@@ -91,7 +67,7 @@ ms.locfileid: "80817976"
   
 -   **효율적인 배포** Windows Server 필수 패키지 환경 역할을 설정 하기만 하면 가장 일반적으로 사용 되는 역할 및 기능 중 일부는 small 및 중간 규모 비즈니스에 대 한 모범 사례를 사용 하 여 설정 및 구성 됩니다. Windows Server Essentials 기능을 사용자 지정하거나 몇 가지 온-프레미스 기능을 숨길 수 있습니다. Windows Azure 팩 사용 하는 경우 windows server 2012 r 2에서 Windows Server Essentials Experience 용 갤러리 템플릿을 다운로드할 수 있습니다.  
   
--   **단순화된 대시보드** Windows Server Essentials Dashboard는 서버 폴더, 서버 저장소, 백업 및 복원, 사용자 또는 그룹 계정, 장치, 원격 액세스 및 전자 메일 관리와 같은 일반적인 작업을 단순화합니다. 중소기업 고객은 지원 센터에 기술 지원을 요청하는 대신 매일 관리 작업을 수행할 수 있습니다.  
+-   **단순화된 대시보드** Windows Server Essentials Dashboard는 서버 폴더, 서버 저장소, 백업 및 복원, 사용자 또는 그룹 계정, 장치, 원격 액세스 및 메일 관리와 같은 일반적인 작업을 단순화합니다. 중소기업 고객은 지원 센터에 기술 지원을 요청하는 대신 매일 관리 작업을 수행할 수 있습니다.  
   
 -   **확장성** Windows Server Essentials Dashboard 및 Windows Server Essentials Connector 소프트웨어는 확장할 수 있습니다. 고객이 해당 서버 및 서비스의 모든 항목에 대한 하나의 진입점을 갖도록 사용자 고유의 브랜딩 및 서비스 통합을 추가할 수 있습니다.  
   
@@ -167,7 +143,7 @@ Install-WssVpnServer -IPv4AddressRange ('192.168.0.160','192.168.0.240') -ApplyT
 ##  <a name="customize-the-image-of-windows-server-essentials-experience-role"></a><a name="BKMK_CustomizeImage"></a>Windows Server 필수 패키지 환경 역할 이미지 사용자 지정  
  Windows Server 필수 패키지 환경 역할을 구성하기 전에 이미지를 사용자 지정할 수 있습니다. 표준 Windows Server Sysprep 프로세스에 대한 자세한 내용은 [Windows 평가 및 배포 키트](https://msdn.microsoft.com/library/hh825420.aspx)를 참조하세요. Sysprep을 사용하여 이미지를 준비한 후 이미지를 사용하거나 새 배포를 위해 Install.wim으로 다시 봉인할 수 있습니다.  
   
- 가상 컴퓨터 관리자를 사용하는 경우 실행 중인 인스턴스를 사용하여 템플릿을 만들 수 있습니다. 이 프로세스에서는 Sysprep을 사용하여 인스턴스를 준비하고 컴퓨터를 종료합니다. 라이브러리에 템플릿을 저장한 후 개별적으로 사용할 수 있습니다.  
+ Virtual Machine Manager를 사용하는 경우 실행 중인 인스턴스를 사용하여 템플릿을 만들 수 있습니다. 이 프로세스에서는 Sysprep을 사용하여 인스턴스를 준비하고 컴퓨터를 종료합니다. 라이브러리에 템플릿을 저장한 후 개별적으로 사용할 수 있습니다.  
   
  Windows Server 필수 패키지 환경 역할을 설치한 후 Windows Server Essentials에서 기능을 사용자 지정할 수 있습니다. 가장 중요한 사용자 지정 중 하나는 **IsHosted** 레지스트리 키 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Server\Deployment\IsHosted**입니다.  
   
@@ -181,7 +157,7 @@ Install-WssVpnServer -IPv4AddressRange ('192.168.0.160','192.168.0.240') -ApplyT
   
 - **서버 백업** 서버 백업 서비스는 사용하지 않도록 설정되며, 서버 백업 UI가 대시보드에서 숨겨집니다.  
   
-- **저장소 공간** 저장소 공간을 만들거나 관리하기 위한 UI가 대시보드에서 숨겨집니다.  
+- **스토리지 공간** 스토리지 공간을 만들거나 관리하기 위한 UI가 대시보드에서 숨겨집니다.  
   
 - **원격 액세스** 원격 액세스 설정 마법사를 실행할 때 라우터 및 VPN 구성은 기본적으로 건너뜁니다.  
   
@@ -195,7 +171,7 @@ Install-WssVpnServer -IPv4AddressRange ('192.168.0.160','192.168.0.240') -ApplyT
 -   Windows PowerShell을 사용 하 여 Windows Server 필수 패키지 환경 역할을 설치 하는 방법에 대 한 자세한 내용은 [Windows Server Essentials 설치 및 구성](https://technet.microsoft.com/library/dn281793.aspx)을 참조 하세요.  
   
 > [!NOTE]
->  호스트 가상 컴퓨터 및 Windows Server 필수 패키지 환경의 표준 시간대 설정이 동일 해야 합니다. 그렇지 않으면 여러 오류가 발생할 수 있습니다. 여기에는 서버에 대 한 초기 구성이 인증서 관련 작업에서 실패 하거나, Windows Server Essentials Experience 역할이 설치 된 후 몇 시간 동안 인증서가 작동 하지 않을 수 있으며, 장치 정보가 업데이트 되지 않습니다. 올바른.  
+>  호스트 가상 컴퓨터 및 Windows Server 필수 패키지 환경의 표준 시간대 설정이 동일 해야 합니다. 그렇지 않으면 여러 오류가 발생할 수 있습니다. 여기에는 서버에 대 한 초기 구성이 인증서 관련 작업에서 실패 하거나, Windows Server Essentials Experience 역할이 설치 된 후 몇 시간 동안 인증서가 작동 하지 않을 수 있으며, 장치 정보가 올바르게 업데이트 되지 않습니다.  
   
  배포 후 Windows PowerShell cmdlet **Get-WssConfigurationStatus**를 사용하여 초기 구성에 성공했는지 확인합니다. 반환된 상태는 **Notstarted**, **FinishedWithWarning**, **Running**, **Finished**, **Failed**또는 **PendingReboot**중 하나여야 합니다.  
   
@@ -236,7 +212,7 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Ã‚Â  -Name 
 ### <a name="add-user"></a>사용자 추가  
  **구문**:  
   
- AllowVpnAccess 추가 [-Name] < string\> [-Password] < securestring\> [-AccessLevel < string\> {User &#124; Administrator}] [-FirstName < string\>] [-LastName < string\>] [-allowremoteaccess] [-] [< CommonParameters\>]  
+ AllowVpnAccess 추가 [-Name] <string \> [-Password] <securestring \> [-accesslevel <string \> {User &#124; Administrator}] [-FirstName <string \> ] [-LastName <string \> ] [-Allowremoteaccess] [-] [<CommonParameters \> ]  
   
  **예**:  
   
@@ -247,7 +223,7 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Ã‚Â  -Name 
 ### <a name="add-server-folder"></a>서버 폴더 추가  
  **구문**:  
   
- -WssFolder [-Name] < string\> [-Path] < string\> [[-Description] < string\>] [-KeepPermissions] [< CommonParameters\>]  
+ -WssFolder [-Name] <string \> [-Path] <string \> [[-Description] <string \> ] [-keeppermissions] [<CommonParameters \> ]  
   
  **예**:  
   
@@ -270,13 +246,13 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Ã‚Â  -Name 
 ### <a name="system-center-monitoring-pack"></a>System Center 모니터링 팩  
  Windows Server Essentials Experience 용 System Center 모니터링 팩은 상태 경고 시스템을 모니터링 하 여 소규모 비즈니스 조직 전용 Windows Server Essentials를 실행 하는 다 수의 서버를 관리할 수 있도록 합니다. 자세한 내용은 [Windows Server Essentials 용 System Center 관리 팩](https://www.microsoft.com/download/details.aspx?id=40809)을 참조 하세요.  
   
-### <a name="backup-and-restore"></a>Backup 및 Restore 메서드  
+### <a name="backup-and-restore"></a>백업 및 복원  
   Windows server Essentials Experience를 사용 하는 windows server 2012 R2를 사용 하면 네트워크에서 서버 및 클라이언트 컴퓨터를 백업할 수 있습니다.  
   
 #### <a name="server-backup"></a>서버 백업  
  Windows Server Essentials는 서버를 백업하는 두 가지 방법 즉, 온-프레미스 백업 및 오프-프레미스 백업을 지원합니다. 사용자 고유의 서버 백업 솔루션을 배포하려는 경우 이러한 옵션을 사용자 지정하면 됩니다.  
   
--   **온-프레미스 백업** 정기적으로 별도의 디스크에 블록 수준 증분 백업을 수행할 수 있습니다. 호스팅 서비스 공급자는 Windows Server Essentials를 실행하는 가상 컴퓨터에 가상 하드 디스크를 연결한 후 이 가상 하드 디스크에 백업하도록 서버를 구성할 수 있습니다. 가상 하드 디스크는 Windows Server Essentials를 실행하는 가상 컴퓨터와 다른 실제 디스크에 있어야 합니다.  
+-   **온-프레미스 백업** 정기적으로 별도의 디스크에 블록 수준 증분 백업을 수행할 수 있습니다. 호스팅 서비스 공급자는 Windows Server Essentials를 실행하는 가상 머신에 가상 하드 디스크를 연결한 후 이 가상 하드 디스크에 백업하도록 서버를 구성할 수 있습니다. 가상 하드 디스크는 Windows Server Essentials를 실행하는 가상 머신과 다른 실제 디스크에 있어야합니다.  
   
     > [!NOTE]
     >  가상 컴퓨터에 대한 다른 백업 솔루션이 있으며 사용자에게 Windows Server Essentials 기본 서버 백업 기능이 표시되지 않기를 원하는 경우 이 기능을 끄고 대시보드에서 관련 사용자 인터페이스를 제거할 수 있습니다. 자세한 내용은 [Windows Server 2012 R2에서 Windows Server Essentials 사용자 지정 및 배포](https://technet.microsoft.com/library/dn293413.aspx) 의 [서버 백업 사용자 지정](https://technet.microsoft.com/library/dn293241.aspx)섹션을 참조하세요.  
@@ -302,21 +278,21 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Ã‚Â  -Name 
   
  전체 클라이언트 컴퓨터 백업에 대한 몇 가지 고려 사항은 다음과 같습니다.  
   
--   **성능** 초기 클라이언트 백업은 업로드할 데이터 양 때문에 시간이 많이 걸릴 수 있습니다.  
+-   **성능** 초기 클라이언트 백업은 업로드할 데이터의 양으로 인해 시간이 많이 걸릴 수 있습니다.  
   
--   **안정성** 클라이언트 쪽 인터넷 연결이 안정적이지 않은 경우가 있습니다. 클라이언트 백업은 자동으로 다시 시작 하도록 설계 되었으며, 클라이언트 백업 데이터베이스는 40 GB의 데이터가 백업 될 때마다 검사점을 만듭니다. 인터넷 연결이 불안정할 것으로 예상되는 경우 이 값을 더 작은 숫자로 변경할 수 있습니다.  
+-   **안정성** 클라이언트 쪽에서 인터넷 연결이 안정적이 지 않은 경우가 있습니다. 클라이언트 백업은 자동으로 다시 시작 하도록 설계 되었으며, 클라이언트 백업 데이터베이스는 40 GB의 데이터가 백업 될 때마다 검사점을 만듭니다. 인터넷 연결이 불안정할 것으로 예상되는 경우 이 값을 더 작은 숫자로 변경할 수 있습니다.  
   
-    -   검사점 작업을 사용하려면: 서버에서 레지스트리 키 **HKLM\Software\Microsoft\Windows Server\Backup\GetCheckPointJobs** 를 1로 설정합니다.  
+    -   검사점 작업을 사용 하도록 설정 하려면 서버에서 레지스트리 키 **HKLM\Software\Microsoft\Windows Server\Backup\GetCheckPointJobs** 를 1로 설정 합니다.  
   
     -   검사점 임계값을 변경하려면: 클라이언트에서 **HKLM\Software\Microsoft\Windows Server\Backup\CheckPointThreshold** 를 기본값 40GB에서 다른 값으로 변경합니다.  
   
--   **클라이언트 완전 복구** Windows 사전 설치 환경은 VPN 연결을 지원하지 않으므로 클라이언트 완전 복구는 지원되지 않습니다. [Windows Server 2012 R2에서 Windows Server Essentials 사용자 지정 및 배포](https://technet.microsoft.com/library/dn293241.aspx)의 단계에 따라 클라이언트 복원 서비스 작업을 숨겨야 합니다.  
+-   **클라이언트 완전 복구** Windows 사전 설치 환경은 VPN 연결을 지원하지 않으므로 클라이언트 완전 복구는 지원되지 않습니다. [Windows server 2012 r 2에서 Windows Server Essentials 사용자 지정 및 배포](https://technet.microsoft.com/library/dn293241.aspx)의 단계에 따라 클라이언트 복원 서비스 작업을 숨겨야 합니다.  
   
-##### <a name="file-history"></a>파일 기록  
+##### <a name="file-history"></a>파일 히스토리  
  파일 히스토리는 프로필 데이터(라이브러리, 데스크톱, 연락처, 즐겨찾기)를 네트워크 공유에 백업하는 Windows 8.1 및 Windows 8 기능입니다. Windows Server Essentials 네트워크에 가입된, Windows 8.1 또는 Windows 8을 실행하는 모든 컴퓨터의 파일 히스토리 설정을 중앙에서 관리할 수 있습니다. 백업 데이터는 Windows Server Essentials를 실행하는 서버에 저장됩니다. [Windows Server 2012 R2에서 Windows Server Essentials 사용자 지정 및 배포](https://technet.microsoft.com/library/dn293241.aspx)의 단계에 따라 클라이언트 복원 서비스 작업을 숨겨야 합니다.  
   
-### <a name="storage-management"></a>저장소 관리  
- 스토리지 공간을 사용하면 개별 하드 드라이브의 실제 스토리지 용량을 집계하고, 하드 드라이브를 동적으로 추가하며, 지정된 복원력 수준으로 데이터 볼륨을 만들 수 있습니다. 호스트 또는 가상 컴퓨터에서 이렇게 할 수 있습니다. Windows Server Essentials를 실행하는 가상 컴퓨터에서 이 기능을 숨기려면 [Windows Server 2012 R2에서 Windows Server Essentials 사용자 지정 및 배포](https://technet.microsoft.com/library/dn293241.aspx)의 지침에 따르세요.  
+### <a name="storage-management"></a>스토리지 관리  
+ 스토리지 공간을 사용하면 개별 하드 드라이브의 실제 스토리지 용량을 집계하고, 하드 드라이브를 동적으로 추가하며, 지정된 복원력 수준으로 데이터 볼륨을 만들 수 있습니다. 호스트 또는 가상 머신에서 이렇게 할 수 있습니다. Windows Server Essentials를 실행하는 가상 머신에서 이 기능을 숨기려면 [Windows Server 2012 R2에서 Windows Server Essentials 사용자 지정 및 배포](https://technet.microsoft.com/library/dn293241.aspx)의 지침에 따르세요.  
   
 ##  <a name="test-scenarios"></a><a name="BKMK_Scenarios"></a>테스트 시나리오  
  호스팅 관점에서 다음과 같은 시나리오를 테스트하는 것이 좋습니다.  
@@ -349,15 +325,15 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Ã‚Â  -Name 
   
 -   원격 액세스(가상 사설망, 원격 웹 액세스 및 DirectAccess)를 구성합니다.  
   
--   저장소 및 서버 폴더를 구성합니다.  
+-   스토리지 및 서버 폴더를 구성합니다.  
   
 -   BranchCache를 설정합니다.  
   
 -   (해당하는 경우) 서버 백업, 온라인 백업, 클라이언트 백업 및 파일 히스토리를 구성합니다.  
   
--   (해당하는 경우) 저장소 공간을 구성하고 관리합니다.  
+-   (해당하는 경우) 스토리지 공간을 구성하고 관리합니다.  
   
--   (해당하는 경우) 전자 메일 솔루션 통합(Office 365 및 호스트된 Exchange Server)을 구성합니다.  
+-   (해당하는 경우) 메일 솔루션 통합(Office 365 및 호스트된 Exchange Server)을 구성합니다.  
   
 -   (해당하는 경우) 다른 Microsoft 온라인 서비스와의 통합을 구성합니다.  
   
@@ -396,7 +372,7 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Ã‚Â  -Name 
   
 -   [Windows Server Essentials 소프트웨어 개발 키트](https://msdn.microsoft.com/library/gg513877.aspx) SDK  
   
--   [Windows Server 2012 r 2에서 Windows Server Essentials 사용자 지정 및 배포](https://technet.microsoft.com/library/dn293241.aspx)  
+-   [Windows Server 2012 R2에서 Windows Server Essentials 사용자 지정 및 배포](https://technet.microsoft.com/library/dn293241.aspx)  
   
 ## <a name="see-also"></a>참고 항목  
   

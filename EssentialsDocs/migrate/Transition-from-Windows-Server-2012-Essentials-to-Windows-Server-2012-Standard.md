@@ -8,18 +8,18 @@ ms.assetid: 51bcf124-c215-4e9d-9fa8-a90fa2c2fa22
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: aace7849244bb65ec0042971e6ec899f554a62d2
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 20b38be01d091f5dfeb819712c57c1f87eaf770f
+ms.sourcegitcommit: fdc3ce1992f4dd6ea1771479d525126abbbcfa72
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80852306"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85256632"
 ---
 # <a name="transition-from-windows-server-essentials-to-windows-server-2012-standard"></a>Windows Server Essentials에서 Windows Server 2012 Standard로 전환
 
 >적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
- Windows Server&reg; 2012 Essentials는 최대 25 명의 사용자와 50 장치를 지원 합니다. 비즈니스 요구 사항이 제한을 초과 하는 경우 Windows Server Essentials에서 Windows Server 2012 Standard로의 내부 라이선스 전환을 수행 하 여 라이선스를 준수할 수 있습니다.  
+ Windows Server &reg; 2012 Essentials는 최대 25 명의 사용자와 50 장치를 지원 합니다. 비즈니스 요구 사항이 제한을 초과 하는 경우 Windows Server Essentials에서 Windows Server 2012 Standard로의 내부 라이선스 전환을 수행 하 여 라이선스를 준수할 수 있습니다.  
   
 ## <a name="how-the-transition-affects-user-and-device-limits"></a>전환이 사용자 및 디바이스 제한에 미치는 영향  
  Windows Server 2012 Standard로 전환 하면 사용자 계정 및 장치 제한이 제거 되지만 Windows Server Essentials에 고유한 기능 (예: 대시보드, 원격 웹 액세스 및 클라이언트 컴퓨터 백업)은 계속 사용할 수 있습니다. 그러나 이러한 기능에는 최대 75개의 사용자 계정과 75대의 디바이스를 지원하는 기술적 제한이 있습니다. 75 개 이상의 사용자 계정 또는 장치를 추가 해야 하는 경우 Windows Server Essentials 기능을 끄고 Windows Server 2012 표준 네이티브 도구를 사용 하 여 사용자 계정 및 장치를 관리 해야 합니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "80852306"
   
 2. 관리자 권한으로 Windows PowerShell을 열고 다음 명령을 실행합니다.  
   
-    **dism/online/set-edition: ServerStandard/accepteula/productkey:** *제품 키*  
+    **dism /online /set-edition:ServerStandard /accepteula /productkey:** *제품 키*  
   
     여기서 *제품 키는* Windows Server 2012 Standard의 제품 키입니다.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "80852306"
   
  **Windows Server Essentials 기능 해제 마법사** 를 사용 하 여 기능을 제거할 수 있습니다. 또한 Windows Server Essentials 서버 소프트웨어에서 만든 파일의 서버를 정리 합니다.  이러한 정리 작업에는 즉시 수행되는 작업과 서버가 다시 시작된 후에 시작되는 작업이 있습니다.  
   
- **Windows Server Essentials 기능 해제 마법사** 를 완료 하려면 먼저 모든 추가 기능을 수동으로 제거 해야 합니다. 설치된 추가 기능 목록을 보려면 대시보드에서 응용 프로그램 페이지를 엽니다. 마법사에서 설치된 추가 기능을 검색한 경우 경고 메시지와 함께 추가 기능을 제거할지 묻는 메시지가 표시됩니다.  
+ **Windows Server Essentials 기능 해제 마법사** 를 완료 하려면 먼저 모든 추가 기능을 수동으로 제거 해야 합니다. 설치된 추가 기능 목록을 보려면 대시보드에서 애플리케이션 페이지를 엽니다. 마법사에서 설치된 추가 기능을 검색한 경우 경고 메시지와 함께 추가 기능을 제거할지 묻는 메시지가 표시됩니다.  
   
  **Windows Server Essentials 기능 해제 마법사** 를 사용 하 여 Windows server essentials 기능을 해제 한 후 클라이언트 컴퓨터의 백업 파일을 유지할지 여부를 선택할 수 있습니다.  
   
@@ -107,8 +107,4 @@ ms.locfileid: "80852306"
 -   [Windows Server 2012 R2 Standard로 전환](Transition-from-Windows-Server-2012-R2-Essentials-to-Windows-Server-2012-R2-Standard.md)  
   
 -   [Windows Server Essentials로 서버 데이터 마이그레이션](Migrate-Server-Data-to-Windows-Server-Essentials.md)
-
--   [Windows Server 2012 R2 Standard로 전환](../migrate/Transition-from-Windows-Server-2012-R2-Essentials-to-Windows-Server-2012-R2-Standard.md)  
-  
--   [Windows Server Essentials로 서버 데이터 마이그레이션](../migrate/Migrate-Server-Data-to-Windows-Server-Essentials.md)
 

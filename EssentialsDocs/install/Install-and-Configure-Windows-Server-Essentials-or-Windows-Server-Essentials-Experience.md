@@ -1,5 +1,5 @@
 ---
-title: Windows Server Essentials 또는 Windows Server 필수 패키지 환경 설치 및 구성
+title: Windows Server Essentials 또는 Windows Server Essentials Experience 설치 및 구성
 description: Windows Server Essentials를 사용 하는 방법을 설명 합니다.
 ms.date: 10/03/2016
 ms.prod: windows-server
@@ -8,20 +8,20 @@ ms.assetid: 48ea6cd4-3955-4aaf-9236-2515a6c3e730
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 2605483de447e78fc1bd091d911867656c8ab8b6
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 46fd1ec7f76c6381ed9d725f5628a9a8fc760e9d
+ms.sourcegitcommit: 6d6a0225b1f83b71fcb494b94d666cd5e54c7566
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80820055"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85267584"
 ---
-# <a name="install-and-configure-windows-server-essentials-or-windows-server-essentials-experience"></a>Windows Server Essentials 또는 Windows Server 필수 패키지 환경 설치 및 구성
+# <a name="install-and-configure-windows-server-essentials-or-windows-server-essentials-experience"></a>Windows Server Essentials 또는 Windows Server Essentials Experience 설치 및 구성
 
 >적용 대상: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 Windows Server Essentials는 최대 25 명의 사용자와 50 장치를 갖춘 중소기업에 적합 한 첫 번째 서버입니다. 최대 100 명의 사용자 및 200 장치를 사용 하는 조직의 경우 이제 windows server Essentials Experience 역할이 설치 된 Windows Server 2012 R2를 사용할 수 있습니다. 이 항목에서는 이러한 두 가지 시나리오를 모두 설명합니다.  
   
-Windows server Essentials Experience는 windows server 2016의 역할입니다 .이를 통해 windows server Essentials에서 제공 하는 모든 기능 (예: 원격 웹 액세스 및 PC 백업)을 활용할 수 있습니다 .이는에서 적용 되는 잠금 및 제한을 사용 하지 않습니다.  Windows Server Essentials. 이 서버 역할은 Windows Server Essentials 에서도 사용할 수 있으며 기본적으로 사용 하도록 설정 되어 있습니다.
+Windows server Essentials Experience는 windows server essentials에서 적용 되는 잠금 및 제한 없이 Windows server Essentials에서 사용할 수 있는 모든 기능 (예: 원격 웹 액세스 및 PC 백업)을 활용할 수 있도록 하는 Windows Server 2016의 역할입니다. 이 서버 역할은 Windows Server Essentials 에서도 사용할 수 있으며 기본적으로 사용 하도록 설정 되어 있습니다.
   
 Windows Server Essentials 또는 Essentials Experience 역할을 설치 하기 전에 다음 제한 사항에 유의 하세요.  
   
@@ -45,14 +45,14 @@ Windows Server Essentials 또는 Essentials Experience 역할을 설치 하기 �
   
 -    Windows server Essentials Experience 역할이 설치 된 windows Server 2016  
  
-|배포 환경|설명|관련 섹션|  
+|배포 환경|Description|관련 섹션|  
 |----------------------------|-----------------|---------------------|  
-|새 Active Directory 환경|Windows Server Essentials를 설치하여 새 Active Directory 환경을 만들 수 있습니다.|[Windows Server Essentials를 배포 하 여 새 Active Directory 환경 설정](Install-and-Configure-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md#BKMK_NewAD)|  
+|새 Active Directory 환경|Windows Server Essentials를 설치하여 새 Active Directory 환경을 만들 수 있습니다.|[Windows Server Essentials를 배포하여 새 Active Directory 환경 설정](Install-and-Configure-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md#BKMK_NewAD)|  
 |기존 Active Directory 환경|기존 Active Directory 환경에 Windows Server Essentials를 설치할 수 있습니다.|[기존 Active Directory 환경에 Windows Server Essentials 배포](Install-and-Configure-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md#BKMK_ExistingAD)|  
-|가상 환경|Windows Server Essentials를 가상 컴퓨터로 배포할 수 있습니다.|[환경 가상화](Install-and-Configure-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md#BKMK_VirtualWSE)|  
-|자동 배포|Windows PowerShell을 사용하여 Windows Server Essentials의 배포를 자동화할 수 있습니다.|[Windows PowerShell을 사용 하 여 Windows Server Essentials 설치 및 구성](Install-and-Configure-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md#BKMK_PowerShell)|  
+|가상 환경|Windows Server Essentials를 가상 머신으로 배포할 수 있습니다.|[환경 가상화](Install-and-Configure-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md#BKMK_VirtualWSE)|  
+|자동화된 배포|Windows PowerShell을 사용하여 Windows Server Essentials의 배포를 자동화할 수 있습니다.|[Windows PowerShell을 사용하여 Windows Server Essentials 설치 및 구성](Install-and-Configure-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md#BKMK_PowerShell)|  
   
-## <a name="before-you-begin"></a>시작하기 전 주의 사항  
+## <a name="before-you-begin"></a>시작하기 전에  
  설치를 시작하기 전에 다음 문서를 검토하세요.  
   
 -   [Windows Server Essentials 제품 개요](https://www.microsoft.com/server-cloud/windows-server-essentials/windows-server-2012-r2-essentials.aspx)  
@@ -77,7 +77,7 @@ Windows Server Essentials 또는 Essentials Experience 역할을 설치 하기 �
   
    2.  **시간 설정**에서 날짜, 시간 및 표준 시간대가 올바른지 확인한 후 **다음**을 클릭합니다.  
   
-   3.  **회사 정보**에 해당 회사 이름(예: **Contoso,Ltd.** )을 입력한 후 **다음**을 클릭합니다. 필요에 따라 내부 도메인 이름 및 서버 이름을 변경할 수 있습니다.  
+   3.  **회사 정보**에 해당 회사 이름(예: **Contoso,Ltd.**)을 입력한 후 **다음**을 클릭합니다. 필요에 따라 내부 도메인 이름 및 서버 이름을 변경할 수 있습니다.  
   
    4.  **네트워크 관리자 만들기**에 새 관리자 계정 이름 및 암호를 입력합니다.  
   
@@ -166,14 +166,11 @@ Windows Server Essentials 또는 Essentials Experience 역할을 설치 하기 �
 ##  <a name="virtualize-your-environment"></a><a name="BKMK_VirtualWSE"></a>환경 가상화  
   Windows Server Essentials, Windows Server 2012 R2 Standard 및 Windows Server 2012 R2 Datacenter를 가상 컴퓨터로 실행할 수 있습니다. Hyper-V를 실행하는 서버에서 Hyper-V 관리 도구를 사용하여 가상 컴퓨터를 실행합니다. 라이선스 관점에서 Windows Server Essentials를 사용 하면 Hyper-v 역할을 설정 하 고 환경을 가상화 할 수 있습니다. 라이선스를 통해 Windows Server Essentials를 실행 하는 다른 게스트 운영 체제를 설정할 수 있습니다. 시스템 공급자의 구성에 따라 Windows Server Essentials를 사용 하면 가상화 된 환경을 원활 하 게 설정할 수 있습니다.  
   
-#### <a name="to-deploy-windows-server-essentials-as-a-virtual-machine"></a>Windows Server Essentials를 가상 컴퓨터로 배포하려면  
+#### <a name="to-deploy-windows-server-essentials-as-a-virtual-machine"></a>Windows Server Essentials를 가상 머신으로 배포하려면  
   
 1.  Windows 시작 페이지가 표시 된 후 (시스템 공급자의 구성에 따라), **시작 하기 전에** 페이지에 Windows Server Essentials를 가상 인스턴스로 또는 실제 하드웨어에 설정 하는 옵션이 제공 됩니다. 이러한 옵션의 가용성은 시스템 공급자에 의해 미리 정의되며, 두 옵션을 모두 항상 사용할 수 있는 것은 아닙니다. Windows Server Essentials를 가상 컴퓨터로 설치 하려면 **Windows Server Essentials 설치**에서 **가상 인스턴스로 설치**를 선택한 다음 **구성**을 클릭 합니다.  
   
-2.  마법사가 가상 컴퓨터를 프로비전하며, 이 작업은 5분 정도 걸립니다.  
-  
-
-3.  그런 다음 windows server [Essentials 배포](Install-and-Configure-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md#BKMK_WSEDeploy) 섹션의 앞부분에서 설명한 대로 Windows server essentials를 구성 합니다.  
+2.  마법사가 가상 머신을 프로비전하며, 이 작업은 5분 정도 걸립니다.
 
 3.  그런 다음 windows server [Essentials 배포](Install-and-Configure-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md#BKMK_WSEDeploy) 섹션의 앞부분에서 설명한 대로 Windows server essentials를 구성 합니다.  
 
