@@ -8,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 3036176127cbb5401c582d81ddb2704d790a209a
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 18a293f4ec7d96516bd89396c13562ba68dc471f
+ms.sourcegitcommit: a1641b80c88205c0253f354f2d427d77bb879643
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80821686"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85345437"
 ---
 # <a name="appendix-c-protected-accounts-and-groups-in-active-directory"></a>부록 C: Active Directory의 보호된 계정 및 그룹
 
@@ -35,14 +35,12 @@ Active Directory 내에서 높은 권한 있는 계정 및 그룹의 기본 집�
 | --- | --- | --- | --- |
 |Account Operators|Account Operators|Account Operators|Account Operators|
 |관리자|관리자|관리자|관리자|
-|Administrators|Administrators|Administrators|Administrators|
+|관리자|관리자|관리자|관리자|
 |Backup Operators|Backup Operators|Backup Operators|Backup Operators|
 |Cert Publishers|||
-|Domain Admins|Domain Admins|Domain Admins|Domain Admins|
-|도메인 컨트롤러|도메인 컨트롤러|도메인 컨트롤러|도메인 컨트롤러|
-|Enterprise Admins|Enterprise Admins|Enterprise Admins|Enterprise Admins|
-||||엔터프라이즈 키 관리자|
-||||주요 관리자|
+|도메인 관리자|도메인 관리자|도메인 관리자|도메인 관리자|
+|도메인 컨트롤러 하나 이상|도메인 컨트롤러 하나 이상|도메인 컨트롤러 하나 이상|도메인 컨트롤러 하나 이상|
+|엔터프라이즈 관리자|엔터프라이즈 관리자|엔터프라이즈 관리자|엔터프라이즈 관리자|
 |Krbtgt|Krbtgt|Krbtgt|Krbtgt|
 |Print Operators|Print Operators|Print Operators|Print Operators|
 |||Read-only Domain Controllers|Read-only Domain Controllers|
@@ -52,7 +50,7 @@ Active Directory 내에서 높은 권한 있는 계정 및 그룹의 기본 집�
 
 #### <a name="adminsdholder"></a>AdminSDHolder
 
-AdminSDHolder 개체의 목적은 도메인의 보호 된 계정 및 그룹에 대 한 "템플릿" 권한을 제공 하는 것입니다. AdminSDHolder는 모든 Active Directory 도메인의 시스템 컨테이너에 개체로 자동으로 생성 됩니다. 경로는 **cn = AdminSDHolder, cn = System, dc = < domain_component >, dc = < domain_component >?입니다** .  
+AdminSDHolder 개체의 목적은 도메인의 보호 된 계정 및 그룹에 대 한 "템플릿" 권한을 제공 하는 것입니다. AdminSDHolder는 모든 Active Directory 도메인의 시스템 컨테이너에 개체로 자동으로 생성 됩니다. 경로는 **cn = AdminSDHolder, cn = System, dc =<domain_component>, dc =<domain_component>?입니다** .  
 
 Administrators 그룹에서 소유 하는 Active Directory 도메인의 대부분 개체와 달리 AdminSDHolder는 Domain Admins 그룹에서 소유 합니다. 기본적으로 EAs는 도메인의 도메인 관리자 및 관리자 그룹이 될 때 도메인의 모든 AdminSDHolder 개체를 변경할 수 있습니다. 또한 AdminSDHolder의 기본 소유자는 도메인의 Domain Admins 그룹 이지만 Administrators 또는 Enterprise Admins의 구성원은 개체의 소유권을 가져올 수 있습니다.  
 
@@ -78,7 +76,7 @@ AdminSDHolder 변경을 테스트 하는 더 좋은 방법은 SDProp를 수동�
 
 Ldp.exe를 사용 하거나 LDAP 수정 스크립트를 실행 하 여 SDProp를 강제로 실행할 수 있습니다. Ldp.exe를 사용 하 여 SDProp를 실행 하려면 도메인에서 AdminSDHolder 개체를 변경한 후 다음 단계를 수행 합니다.  
 
-1. **Ldp.exe**를 실행 합니다.  
+1. **Ldp.exe**를 시작 합니다.  
 2. Ldp 대화 상자에서 **연결** 을 클릭 하 고 **연결**을 클릭 합니다.  
 
    ![보호 된 계정 및 그룹](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_9.gif)  
@@ -114,9 +112,9 @@ LDIFDE 또는 스크립트를 통해 SDProp를 수동으로 실행 하려는 경
 
 ###### <a name="running-sdprop-manually-in-windows-server-2012-or-windows-server-2008-r2"></a>Windows Server 2012 또는 Windows Server 2008 r 2에서 수동으로 SDProp 실행
 
-또한 Ldp.exe를 사용 하거나 LDAP 수정 스크립트를 실행 하 여 SDProp를 강제로 실행할 수 있습니다. Ldp.exe를 사용 하 여 SDProp를 실행 하려면 도메인에서 AdminSDHolder 개체를 변경한 후 다음 단계를 수행 합니다.  
+Ldp.exe를 사용 하거나 LDAP 수정 스크립트를 실행 하 여 SDProp를 강제로 실행할 수도 있습니다. Ldp.exe를 사용 하 여 SDProp를 실행 하려면 도메인에서 AdminSDHolder 개체를 변경한 후 다음 단계를 수행 합니다.  
 
-1. **Ldp.exe**를 실행 합니다.  
+1. **Ldp.exe**를 시작 합니다.  
 
 2. **Ldp** 대화 상자에서 **연결**을 클릭 하 고 **연결**을 클릭 합니다.  
 
