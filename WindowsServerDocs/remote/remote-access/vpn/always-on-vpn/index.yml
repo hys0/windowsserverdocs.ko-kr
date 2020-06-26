@@ -1,100 +1,76 @@
-### YamlMime:YamlDocument
-documentType: LandingData
-title: 원격 액세스 Always On VPN
+### YamlMime:Landing
+title: Always On VPN 설명서
+summary: Always On VPN의 기능, 기술 및 배포에 대해 알아봅니다.
 metadata:
-  document_id: null
-  title: 원격 액세스 Always On VPN
-  description: 'Always On VPN의 기능, 기술 및 배포에 대해 알아봅니다.'
-  text: 'Always On VPN은 모든 연결된 디바이스, 심지어 개인적으로 소유한 디바이스에도 원격 액세스용 단일 통합 솔루션을 제공합니다. Always On VPN을 사용하는 경우 연결 형식이 사용자 또는 디바이스만으로 지정될 필요가 없지만 둘 모두를 조합할 수는 있습니다. 예를 들어 원격 디바이스 관리를 위해 디바이스 인증을 사용하도록 설정한 다음, 내부 회사 사이트 및 서비스에 연결하는 데 사용자 인증을 사용하도록 설정할 수 있습니다.'
-  keywords: 'Windows 10, Windows Server, Windows Server 2016, 원격 액세스, VPN'
-  ms.localizationpriority: high
+  title: Always On VPN 설명서
+  description: Always On VPN의 기능, 기술 및 배포에 대해 알아봅니다.
+  ms.service: help
+  ms.topic: landing-page
   author: eross-msft
   ms.author: lizross
-  ms.date: 11/05/2018
-  ms.topic: article
-  ms.devlang: na
-sections:
-  - title: 자세한 정보...
-  - items:
-      - type: markdown
-        text: Windows 10을 실행하는 원격 클라이언트 컴퓨터에 대해 아래에 언급된 네 가지 시나리오 중 하나를 사용하여 원격 액세스를 지점 및 사이트 간 연결용 단일 테넌트 VPN RAS 게이트웨이로 배포할 준비를 합니다.  현재 DirectAccess를 사용하는 경우 DirectAccess 양식을 Always On VPN으로 마이그레이션하기 전에 Always On VPN 기능을 신중하게 조사하여 모든 원격 액세스 요구 사항을 처리하는지 확인하는 것이 좋습니다.
-  - items:
-      - type: list
-        style: cards
-        className: cardsE
-        columns: 3
-        items:
-          - href: \windows-server\remote\remote-access\vpn\always-on-vpn\deploy\always-on-vpn-deploy
-            html: <p>Always On VPN 배포 및 시작 위치를 알아보세요.</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_get-started.svg'
-            title: 둘러보기 시작
-          - href: \windows-server\remote\remote-access\vpn\vpn-map-da
-            html: <p>Always On VPN의 특징과 기능을 알아보세요.</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_quick-start.svg'
-            title: Always On VPN 특징 및 기능
-          - href: \windows-server\remote\remote-access\vpn\always-on-vpn\always-on-vpn-enhancements
-            html: '<p>통합, 보안, 연결, 네트워킹 제어 및 호환성에서 향상된 주요 기능을 알아보세요.</p>'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_whats-new.svg'
-            title: Always On VPN의 향상된 기능
-          - href: \windows-server\remote\remote-access\vpn\always-on-vpn\always-on-vpn-technology-overview
-            html: <p>Always On VPN 배포에 사용되는 기술을 알아보세요.</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_overview.svg'
-            title: 기술 개요
-          - href: \windows-server\remote\remote-access\vpn\always-on-vpn\deploy\always-on-vpn-adv-options
-            html: <p>VPN 연결의 보안 및 가용성을 향상시키기 위해 추가할 수 있는 고급 VPN 기능을 알아보세요.</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_advanced.svg'
-            title: 고급 기능을 사용하여 Always On VPN 확장
-  - title: 시작...
-    items:
-      - type: paragraph
-        text: 도메인에 조인된 Windows 10 클라이언트 컴퓨터에 대한 Always On VPN 연결을 배포합니다. DirectAccess에서 Always On VPN으로 마이그레이션하고 Azure AD를 사용하여 조건부 액세스를 구성할 수도 있습니다.
-      - type: list
-        style: cards
-        className: cardsE
-        columns: 3
-        items:
-          - href: \windows-server\remote\remote-access\vpn\always-on-vpn\deploy\always-on-vpn-deploy-deployment
-            html: <p>VPN 연결을 배포하는 데 필요한 항목을 검색합니다.</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_architecture.svg'
-            title: 배포 워크플로 및 시나리오
-          - href: \windows-server\remote\remote-access\vpn\always-on-vpn\deploy\always-on-vpn-deploy-planning
-            html: <p>Always On VPN 배포를 계획하고 준비합니다.</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_guidelines.svg'
-            title: Always On VPN 배포 계획
-          - href: \windows-server\remote\remote-access\vpn\always-on-vpn\deploy\vpn-deploy-server-infrastructure
-            html: <p>Windows 10 클라이언트 VPN 연결과 함께 VPN 인프라 설정 및 구성을 시작합니다.</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_setup.svg'
-            title: VPN 인프라 배포
-          - href: \windows-server\remote\remote-access\vpn\ad-ca-vpn-connectivity-windows10
-            html: <p>Azure AD 조건부 액세스를 사용하여 VPN 사용자가 리소스에 액세스하는 방법을 자세히 튜닝합니다.</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_setup.svg'
-            title: 조건부 액세스 구성
-  - items:
-      - type: list
-        style: cards
-        className: cardsL
-        items:
-          - title: Always On VPN 문제 해결
-            html: |-
-              <p><a class="barLink" href="/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting#vpnprofileps1-script-issues">VPN_Profile.ps1 스크립트 문제</a></p>
-              <p><a class="barLink" href="/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting#always-on-vpn-client-connection-issues">Always On VPN 클라이언트 연결 문제</a></p>
-              <p><a class="barLink" href="/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting#azure-ad-conditional-access-connection-issues">Azure AD 조건부 액세스 연결 문제</a></p>
-              <p><a class="barLink" href="/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting#error-codes">오류 코드</a></p><br>
-              <p><a class="barLink" href="/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting#logs">로그 파일</a></p></div>
-          - title: 추가 리소스
-            html: |-
-              <p><a class="barLink" href="https://docs.microsoft.com/windows/access-protection/vpn/vpn-guide">Windows 10 VPN 기술 가이드</a></p>
-              <p><a class="barLink" href="https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/vpnv2-csp">VPNv2 CSP</a></p>
-              <p><a class="barLink" href="https://technet.microsoft.com/library/hh831740.aspx">Active Directory 인증서 서비스 개요</a></p>
-              <p><a class="barLink" href="https://technet.microsoft.com/library/cc730705.aspx">인증서 템플릿</a></p>
-              <p><a class="barLink" href="https://social.technet.microsoft.com/wiki/contents/articles/2901.public-key-infrastructure-design-guidance.aspx">공개 키 인프라 디자인 지침</a></p><p></p>
-              <p><a class="barLink" href="https://social.technet.microsoft.com/wiki/contents/articles/15037.ad-cs-step-by-step-guide-two-tier-pki-hierarchy-deployment.aspx">AD CS 단계별 가이드 - 2계층 PKI 계층 구조 배포</a></p>
+  ms.date: 06/10/2020
+  ms.openlocfilehash: 2196c278e66adbf910646ab1c080efe39e2a4fe7
+  ms.sourcegitcommit: 1c9cb4be74d92afb938cad870c0b4bf506b89e98
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 06/24/2020
+  ms.locfileid: "85332615"
+landingContent:
+- title: Always On VPN 정보
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Always On VPN 특징 및 기능
+      url: /windows-server/remote/remote-access/vpn/vpn-map-da
+    - text: 기술 개요
+      url: /windows-server/remote/remote-access/vpn/always-on-vpn/always-on-vpn-technology-overview
+    - text: Always On VPN의 향상된 기능
+      url: /windows-server/remote/remote-access/vpn/always-on-vpn/always-on-vpn-technology-overview
+    - text: Always On VPN 고급 기능
+      url: /windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-adv-options
+    - text: Windows Server 및 Windows 10에 대한 Always On VPN 배포
+      url: /windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy
+- title: Always On VPN 배포
+  linkLists:
+  - linkListType: deploy
+    links:
+    - text: 배포 워크플로 및 시나리오
+      url: /windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment
+    - text: Always On VPN 배포 계획
+      url: /windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-planning
+    - text: VPN 인프라 배포
+      url: /windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-server-infrastructure
+    - text: 조건부 액세스 구성
+      url: /windows-server/remote/remote-access/vpn/ad-ca-vpn-connectivity-windows10
+- title: 문제 해결
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: VPN_Profile.ps1 스크립트 문제
+      url: /windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting#vpnprofileps1-script-issues
+    - text: Always On VPN 클라이언트 연결 문제
+      url: /windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting#always-on-vpn-client-connection-issues
+    - text: Azure AD 조건부 액세스 연결 문제
+      url: /windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting#azure-ad-conditional-access-connection-issues
+  - linkListType: reference
+    links:
+    - text: 오류 코드
+      url: /windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting#error-codes
+    - text: 로그 파일
+      url: /windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting#logs
+- title: 추가 리소스
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Windows 10 VPN 기술 가이드
+      url: https://docs.microsoft.com/windows/access-protection/vpn/vpn-guide
+    - text: VPNv2 CSP
+      url: https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/vpnv2-csp
+    - text: Active Directory 인증서 서비스
+      url: https://technet.microsoft.com/library/hh831740.aspx
+    - text: 인증서 템플릿
+      url: https://technet.microsoft.com/library/cc730705.aspx
+    - text: 공개 키 인프라 디자인 지침
+      url: https://social.technet.microsoft.com/wiki/contents/articles/2901.public-key-infrastructure-design-guidance.aspx
+    - text: AD CS 단계별 가이드 - 2계층 PKI 계층 구조 배포
+      url: https://social.technet.microsoft.com/wiki/contents/articles/15037.ad-cs-step-by-step-guide-two-tier-pki-hierarchy-deployment.aspx
