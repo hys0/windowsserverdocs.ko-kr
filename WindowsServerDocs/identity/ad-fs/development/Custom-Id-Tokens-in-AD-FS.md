@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: windows-server
 ms.reviewer: anandy
 ms.technology: identity-adfs
-ms.openlocfilehash: 331e5ff2dbe7f172488543d1d1f5ed0f757cd584
-ms.sourcegitcommit: 2cc251eb5bc3069bf09bc08e06c3478fcbe1f321
+ms.openlocfilehash: 9ffc8351c2c5033346f04e3cd4dc6f8ba4914149
+ms.sourcegitcommit: fea590c092d7abcb55be2b424458faa413795f5c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84333954"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85372210"
 ---
 # <a name="customize-claims-to-be-emitted-in-id_token-when-using-openid-connect-or-oauth-with-ad-fs-2016-or-later"></a>Openid connect Connect 또는 OAuth를 AD FS 2016 이상 사용 하는 경우 id_token에서 내보낼 클레임 사용자 지정
 
@@ -40,7 +40,7 @@ ms.locfileid: "84333954"
 
 ![제한](media/Custom-Id-Tokens-in-AD-FS/restrict2.png)
 
-AD FS 서버에 설치 된 [KB4019472](https://support.microsoft.com/help/4019472/windows-10-update-kb4019472)
+AD FS 서버에 설치 된 [KB4019472](https://support.microsoft.com/help/4019472/windows-10-update-kb4019472) 이상 보안 업데이트 사용
 1. `response_mode`form_post로 설정 됨
 2. 공용 및 기밀 클라이언트는 모두 ID 토큰에서 사용자 지정 클레임을 가져올 수 있습니다.
 3. `allatclaims`클라이언트에 범위 할당 – RP 쌍
@@ -60,50 +60,50 @@ Grant-AdfsApplicationPermission -ClientRoleIdentifier "https://my/privateclient"
 1. AD FS 관리에서 애플리케이션 그룹을 마우스 오른쪽 단추로 클릭 하 고 선택 **애플리케이션 그룹 추가**합니다.
 2. 응용 프로그램 그룹 마법사에서 이름에 **ADFSSSO** 를 입력 하 고 클라이언트-서버 응용 프로그램에서 **웹 응용 프로그램 템플릿에 액세스 하는 네이티브 응용 프로그램** 을 선택 합니다. **다음**을 클릭합니다.
 
-   ![클라이언트](media/Custom-Id-Tokens-in-AD-FS/clientsnap1.png)
+   ![Client](media/Custom-Id-Tokens-in-AD-FS/clientsnap1.png)
 
 3. 복사는 **클라이언트 식별자** 값입니다.  그는 나중에 값으로 ida: ClientId 애플리케이션 web.config 파일에 대 한 합니다.
 4. **리디렉션 URI**에 대해 다음을 입력  -  **https://localhost:44320/** 합니다.  **추가**를 클릭합니다. **다음**을 클릭합니다.
 
-   ![클라이언트](media/Custom-Id-Tokens-in-AD-FS/clientsnap2.png)
+   ![Client](media/Custom-Id-Tokens-in-AD-FS/clientsnap2.png)
 
-5. **웹 API 구성** 화면에서 **식별자**에 대해 다음을 입력 합니다  -  **https://contoso.com/WebApp** .  **추가**를 클릭합니다. **다음**을 클릭합니다.  이 값은 나중에 응용 프로그램 web.config 파일에서 **ida: ResourceID** 에 사용 됩니다.
+5. **웹 API 구성** 화면에서 **식별자**에 대해 다음을 입력 합니다  -  **https://contoso.com/WebApp** .  **추가**를 클릭합니다. **다음**을 클릭합니다.  이 값은 나중에 응용 프로그램 web.config 파일의 **ida: ResourceID** 에 사용 됩니다.
 
-   ![클라이언트](media/Custom-Id-Tokens-in-AD-FS/clientsnap3.png)
+   ![Client](media/Custom-Id-Tokens-in-AD-FS/clientsnap3.png)
 
 6. 에 **액세스 제어 정책 선택** 화면에서 **모든 사용자 허용** 클릭 **다음**합니다.
 
-   ![클라이언트](media/Custom-Id-Tokens-in-AD-FS/clientsnap4.png)
+   ![Client](media/Custom-Id-Tokens-in-AD-FS/clientsnap4.png)
 
 7. **응용 프로그램 사용 권한 구성** 화면에서 **openid connect** 및 **allatclaims** 선택 되어 있는지 확인 하 고 **다음**을 클릭 합니다.
 
-   ![클라이언트](media/Custom-Id-Tokens-in-AD-FS/clientsnap5.PNG)
+   ![Client](media/Custom-Id-Tokens-in-AD-FS/clientsnap5.PNG)
 
 8. **요약** 화면에서 **다음**을 클릭 합니다.
 
-   ![클라이언트](media/Custom-Id-Tokens-in-AD-FS/clientsnap6.PNG)
+   ![Client](media/Custom-Id-Tokens-in-AD-FS/clientsnap6.PNG)
 
 9. 에 **Complete** 화면에서 **닫기**합니다.
 10. AD FS 관리에서 응용 프로그램 그룹을 클릭 하 여 모든 응용 프로그램 그룹 목록을 가져옵니다. **ADFSSSO** 를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다. **ADFSSSO-WEB API** 를 선택 하 고 **편집 ...** 을 클릭 합니다.
 
-    ![클라이언트](media/Custom-Id-Tokens-in-AD-FS/clientsnap7.PNG)
+    ![Client](media/Custom-Id-Tokens-in-AD-FS/clientsnap7.PNG)
 
 11. **ADFSSSO-WEB API 속성** 화면에서 **발급 변환 규칙** 탭을 선택 하 고 **규칙 추가** ...를 클릭 합니다.
 
-    ![클라이언트](media/Custom-Id-Tokens-in-AD-FS/clientsnap8.PNG)
+    ![Client](media/Custom-Id-Tokens-in-AD-FS/clientsnap8.PNG)
 
 12. **변환 클레임 규칙 추가 마법사** 화면에서 드롭다운에서 **사용자 지정 규칙을 사용 하 여 클레임 보내기** 를 선택 하 고 **다음** 을 클릭 합니다.
 
-    ![클라이언트](media/Custom-Id-Tokens-in-AD-FS/clientsnap9.PNG)
+    ![Client](media/Custom-Id-Tokens-in-AD-FS/clientsnap9.PNG)
 
-13. **변환 클레임 규칙 추가 마법사** 화면에서 **클레임 규칙 이름** 에 **ForCustomIDToken** 를 입력 하 고 **사용자 지정 규칙**에 다음 클레임 규칙을 입력 합니다. **마침** 클릭
+13. **변환 클레임 규칙 추가 마법사** 화면에서 **클레임 규칙 이름** 에 **ForCustomIDToken** 를 입력 하 고 **사용자 지정 규칙**에 다음 클레임 규칙을 입력 합니다. **마침**을 클릭합니다.
 
     ```
     x:[]
     => issue(claim=x);
     ```
 
-    ![클라이언트](media/Custom-Id-Tokens-in-AD-FS/clientsnap10.PNG)
+    ![Client](media/Custom-Id-Tokens-in-AD-FS/clientsnap10.PNG)
 
     > [!NOTE]
     > PowerShell을 사용 하 여 및 범위를 할당할 수도 있습니다 `allatclaims` `openid` .

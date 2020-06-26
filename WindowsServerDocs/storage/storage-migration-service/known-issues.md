@@ -8,12 +8,12 @@ ms.date: 06/02/2020
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
-ms.openlocfilehash: 5a4a99434d67c08551d97589f8f2638e1024754d
-ms.sourcegitcommit: 5fac756c2c9920757e33ef0a68528cda0c85dd04
+ms.openlocfilehash: 638f4d122b25c870ed323b94d32b6cefca4be5ff
+ms.sourcegitcommit: fea590c092d7abcb55be2b424458faa413795f5c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84306502"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85372200"
 ---
 # <a name="storage-migration-service-known-issues"></a>저장소 마이그레이션 서비스의 알려진 문제
 
@@ -70,7 +70,7 @@ Windows 관리 센터 또는 PowerShell을 사용 하 여 전송 작업에 대 �
 
 이 문제를 해결하려면
 
-1. Orchestrator 컴퓨터에서 Notepad.exe를 사용 하 여 *%SYSTEMROOT%\SMS\Microsoft.StorageMigration.Service.exe.config* 파일을 편집 하 여 "sendTimeout"를 1 분 기본값에서 10 분으로 변경 합니다.
+1. Orchestrator 컴퓨터에서 Notepad.exe를 사용 하 여 *% SYSTEMROOT% \SMS\Microsoft.StorageMigration.Service.exe.config* 파일을 편집 하 여 기본값인 1 분에서 10 분으로 "sendTimeout"를 변경 합니다.
 
    ```
      <bindings>
@@ -80,7 +80,7 @@ Windows 관리 센터 또는 PowerShell을 사용 하 여 전송 작업에 대 �
    ```
 
 2. Orchestrator 컴퓨터에서 "Storage Migration Service" 서비스를 다시 시작 합니다. 
-3. Orchestrator 컴퓨터에서 Regedit.exe를 시작 합니다.
+3. Orchestrator 컴퓨터에서를 시작 Regedit.exe
 4. 다음 레지스트리 하위 키를 찾아 클릭합니다. 
 
    `HKEY_LOCAL_MACHINE\Software\Microsoft\SMSPowershell`
@@ -142,11 +142,11 @@ Windows Server 2019 대상 컴퓨터에 저장소 마이그레이션 서비스 �
 
   icacls d:\test\Source:
 
-  icacls d:\test\thatcher.png/save D:AI (A;; FA;;; BA) (A;; 0) x1200a9;;D D) (A;; 0) x1301bf;;D U) (A; ID; FA;;;) BA) (A; ID; FA;;;) SY) (A; ID; 0x1200a9;;;) BU
+  icacls d:\test\thatcher.png/save out.txt/t thatcher.png D:AI (A;; FA;;; BA) (A;; 0) x1200a9;;D D) (A;; 0) x1301bf;;D U) (A; ID; FA;;;) BA) (A; ID; FA;;;) SY) (A; ID; 0x1200a9;;;) BU
 
 대상 파일:
 
-  icacls d:\test\thatcher.png/save D:AI (A;; FA;;; BA) (A;; 0) x1301bf;;D U) (A;; 0) x1200a9;;D D) (A; ID; FA;;;) BA) (A; ID; FA;;;) SY) (A; ID; 0x1200a9;;;) BU)**S: PAINO_ACCESS_CONTROL**
+  icacls d:\test\thatcher.png/save out.txt/t thatcher.png D:AI (A;; FA;;; BA) (A;; 0) x1301bf;;D U) (A;; 0) x1200a9;;D D) (A; ID; FA;;;) BA) (A; ID; FA;;;) SY) (A; ID; 0x1200a9;;;) BU)**S: PAINO_ACCESS_CONTROL**
 
 DFSR 디버그 로그:
 
@@ -378,7 +378,7 @@ Windows Server 2008 R2 클러스터 원본에서 잘라내기를 실행 하려�
 
 1. 이 문제는 먼저 [KB4537818](https://support.microsoft.com/help/4537818/windows-10-update-kb4537818) 업데이트에 의해 해결 되었습니다. 이전 코드에서 오류가 있으면 모든 고정 IP 주소를 사용할 수 없습니다.
 
-2. 원본 컴퓨터의 네트워크 인터페이스에 기본 게이트웨이 IP 주소를 지정 하지 않은 경우에는 KB4537818 업데이트를 사용 하는 경우에도이 문제가 발생 합니다. 이 문제를 해결 하려면 네트워크 연결 애플릿 (NCPA.)을 사용 하 여 네트워크 인터페이스에서 유효한 기본 IP 주소를 설정 합니다. CPL) 또는 Set-NetRoute Powershell cmdlet.   
+2. 원본 컴퓨터의 네트워크 인터페이스에 기본 게이트웨이 IP 주소를 지정 하지 않은 경우에는 KB4537818 업데이트를 사용 하는 경우에도이 문제가 발생 합니다. 이 문제를 해결 하려면 네트워크 연결 애플릿 (NCPA.CPL) 또는 설정-NetRoute Powershell cmdlet을 사용 하 여 네트워크 인터페이스에서 유효한 기본 IP 주소를 설정 합니다.   
 
 ## <a name="slower-than-expected-re-transfer-performance"></a>예상 되는 다시 전송 성능 보다 느림
 
@@ -431,7 +431,7 @@ Windows Server 2008 R2 클러스터 원본에서 잘라내기를 실행 하려�
  
  전송 목적으로 도메인 컨트롤러에서 저장소 마이그레이션 서비스를 사용 하려는 경우 Windows 관리 센터의 전송 설정 페이지에서 항상 "사용자 및 그룹을 전송 하지 않음"을 선택 해야 합니다.
  
- ## <a name="error-53-failed-to-inventory-all-specified-devices-when-running-inventory"></a>인벤토리를 실행 하는 경우 오류 53, "지정 된 모든 장치를 인벤토리 하지 못했습니다." 
+## <a name="error-53-failed-to-inventory-all-specified-devices-when-running-inventory"></a>인벤토리를 실행 하는 경우 오류 53, "지정 된 모든 장치를 인벤토리 하지 못했습니다." 
 
 인벤토리를 실행 하려고 할 때 다음을 수신 합니다.
 
@@ -490,7 +490,7 @@ Windows Server 2008 R2 클러스터 원본에서 잘라내기를 실행 하려�
  - 원본 컴퓨터에 연결할 수 있는 원격 레지스트리 권한이 원본 마이그레이션 계정에 없습니다.
  - 원본 컴퓨터의 레지스트리 내에서 "HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Windows NT\CurrentVersion" 또는 "HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Services\LanmanServer" 아래의 원본 마이그레이션 계정에 읽기 권한이 없습니다.
  
- ## <a name="cutover-hangs-on-38-mapping-network-interfaces-on-the-source-computer"></a>"38% 매핑 네트워크 인터페이스를 원본 컴퓨터에서 중단" 하는 방법 " 
+## <a name="cutover-hangs-on-38-mapping-network-interfaces-on-the-source-computer"></a>"38% 매핑 네트워크 인터페이스를 원본 컴퓨터에서 중단" 하는 방법 " 
 
 원본 컴퓨터에 대 한 잘라내기를 실행 하려고 할 때 잘라내기는 "38% 원본 컴퓨터의 네트워크 인터페이스 매핑 ..." 단계에서 중단 됩니다. 저장소 마이그레이션 서비스 이벤트 로그에 다음과 같은 오류가 표시 됩니다.
 
@@ -532,6 +532,16 @@ Storage Migration Service는 중지 프로세스의 일부로 일시적으로 [L
 2. 이 충돌 정책을 적용 하는 GPO를 일시적으로 사용 하지 않도록 설정 합니다.
 3. 이 설정을 사용 안 함으로 설정 하 고 원본 서버의 특정 OU에 적용 되는 새 GPO를 일시적으로 만들어 다른 Gpo 보다 우선 순위가 높습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="inventory-or-transfer-fail-when-using-credentials-from-a-different-domain"></a>다른 도메인의 자격 증명을 사용 하는 경우 인벤토리 또는 전송이 실패 함
+
+대상 서버와 다른 도메인의 마이그레이션 자격 증명을 사용 하 여 인벤토리를 실행 하거나 저장소 마이그레이션 서비스로 전송 하 고 Windows Server를 대상으로 하는 경우 다음과 같은 오류가 표시 됩니다. 
+
+    The server was unable to process the request due to an internal error
+    
+    04/28/2020-11:31:01.169 [Erro] Failed device discovery stage SystemInfo with error: (0x490) Could not find computer object 'myserver' in Active Directory    [d:\os\src\base\dms\proxy\discovery\discoveryproxy\DeviceDiscoveryOperation.cs::TryStage::1042]
+
+이 문제는 저장소 마이그레이션 서비스의 코드 오류로 인해 발생 합니다. 이 문제를 해결 하려면 원본 및 대상 컴퓨터가 속한 도메인과 동일한 도메인의 마이그레이션 자격 증명을 사용 합니다. 예를 들어 원본 컴퓨터와 대상 컴퓨터가 "contoso.com" 포리스트의 "corp.contoso.com" 도메인에 속하는 경우 ' contoso\myaccount ' 자격 증명이 아닌 ' corp\myaccount '를 사용 하 여 마이그레이션을 수행 합니다.
+
+## <a name="see-also"></a>참조
 
 - [Storage Migration Service 개요](overview.md)
