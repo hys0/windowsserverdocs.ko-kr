@@ -7,12 +7,12 @@ ms.technology: storage-health-service
 ms.topic: article
 author: cosmosdarwin
 ms.date: 10/05/2017
-ms.openlocfilehash: 5fe2f98c89d97325c1f59dc6ba292831e0ffa5ff
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: de2e9939302c0b9937fb54b4082feeecf6de5295
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720559"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85473110"
 ---
 # <a name="health-service-faults"></a>상태 관리 서비스 오류
 
@@ -20,9 +20,9 @@ ms.locfileid: "82720559"
 
 ## <a name="what-are-faults"></a>오류 란?
 
-상태 관리 서비스은 스토리지 공간 다이렉트 클러스터를 지속적으로 모니터링 하 여 문제를 감지 하 고 "오류"를 생성 합니다. 새 cmdlet 중 하나는 모든 현재 오류를 표시 하므로 모든 엔터티 또는 기능을 차례로 확인 하지 않고도 배포 상태를 쉽게 확인할 수 있습니다. 오류는 정확하고, 이해하기 쉽고, 조치 가능하도록 설계되었습니다.  
+상태 관리 서비스은 스토리지 공간 다이렉트 클러스터를 지속적으로 모니터링 하 여 문제를 감지 하 고 "오류"를 생성 합니다. 새 cmdlet 중 하나는 모든 현재 오류를 표시 하므로 모든 엔터티 또는 기능을 차례로 확인 하지 않고도 배포 상태를 쉽게 확인할 수 있습니다. 오류는 정확하고, 이해하기 쉽고, 조치 가능하도록 설계되었습니다.
 
-각 오류에는 5 개의 중요 한 필드가 포함 됩니다.  
+각 오류에는 5 개의 중요 한 필드가 포함 됩니다.
 
 -   심각도
 -   문제에 대한 설명
@@ -30,51 +30,51 @@ ms.locfileid: "82720559"
 -   오류가 있는 엔터티에 대한 식별 정보
 -   물리적 위치(해당되는 경우)
 
-예를 들어 다음은 일반적인 오류입니다.  
+예를 들어 다음은 일반적인 오류입니다.
 
 ```
-Severity: MINOR                                         
-Reason: Connectivity has been lost to the physical disk.                           
-Recommendation: Check that the physical disk is working and properly connected.    
-Part: Manufacturer Contoso, Model XYZ9000, Serial 123456789                        
+Severity: MINOR
+Reason: Connectivity has been lost to the physical disk.
+Recommendation: Check that the physical disk is working and properly connected.
+Part: Manufacturer Contoso, Model XYZ9000, Serial 123456789
 Location: Seattle DC, Rack B07, Node 4, Slot 11
 ```
 
  >[!NOTE]
- > 물리적 위치는 장애 도메인 구성에서 파생됩니다. 장애 도메인에 대 한 자세한 내용은 [Windows Server 2016의 장애 도메인](fault-domains.md)을 참조 하세요. 이 정보를 제공하지 않으면 위치 필드가 유용하지 않습니다. 예를 들어 슬롯 번호만 표시될 수 있습니다.  
+ > 물리적 위치는 장애 도메인 구성에서 파생됩니다. 장애 도메인에 대 한 자세한 내용은 [Windows Server 2016의 장애 도메인](fault-domains.md)을 참조 하세요. 이 정보를 제공하지 않으면 위치 필드가 유용하지 않습니다. 예를 들어 슬롯 번호만 표시될 수 있습니다.
 
 ## <a name="root-cause-analysis"></a>근본 원인 분석
 
-상태 관리 서비스는 오류가 발생 한 엔터티 간의 잠재적 인과 관계을 평가 하 여 동일한 기본 문제로 인해 발생 하는 오류를 식별 하 고 결합할 수 있습니다. 효과 체인을 인식하면 보고 내용이 깔끔해집니다. 예를 들어 서버가 다운 된 경우 서버 내의 드라이브가 연결 되지 않은 상태 여야 합니다. 따라서 근본 원인 (이 경우에는 서버)에 대해 하나의 오류가 발생 합니다.  
+상태 관리 서비스는 오류가 발생 한 엔터티 간의 잠재적 인과 관계을 평가 하 여 동일한 기본 문제로 인해 발생 하는 오류를 식별 하 고 결합할 수 있습니다. 효과 체인을 인식하면 보고 내용이 깔끔해집니다. 예를 들어 서버가 다운 된 경우 서버 내의 드라이브가 연결 되지 않은 상태 여야 합니다. 따라서 근본 원인 (이 경우에는 서버)에 대해 하나의 오류가 발생 합니다.
 
 ## <a name="usage-in-powershell"></a>PowerShell에서 사용
 
 PowerShell에서 현재 오류를 확인 하려면 다음 cmdlet을 실행 합니다.
 
 ```PowerShell
-Get-StorageSubSystem Cluster* | Debug-StorageSubSystem  
+Get-StorageSubSystem Cluster* | Debug-StorageSubSystem
 ```
 
-그러면 전체 스토리지 공간 다이렉트 클러스터에 영향을 주는 오류가 반환 됩니다. 대체로 이러한 오류는 하드웨어 또는 구성과 관련이 있습니다. 오류가 없는 경우이 cmdlet은 아무 것도 반환 하지 않습니다.  
+그러면 전체 스토리지 공간 다이렉트 클러스터에 영향을 주는 오류가 반환 됩니다. 대체로 이러한 오류는 하드웨어 또는 구성과 관련이 있습니다. 오류가 없는 경우이 cmdlet은 아무 것도 반환 하지 않습니다.
 
 >[!NOTE]
 > 프로덕션 환경이 아닌 환경에서 사용자의 책임에 따라 오류를 직접 트리거할 수 있습니다. 예를 들어 하나의 실제 디스크를 제거 하거나 한 노드를 종료 하 여이 기능을 시험해 볼 수 있습니다. 오류가 표시 되 면 실제 디스크를 다시 삽입 하거나 노드를 다시 시작 하면 오류가 다시 사라집니다.
 
-다음 cmdlet을 사용 하 여 특정 볼륨 또는 파일 공유에만 영향을 주는 오류를 볼 수도 있습니다.  
+다음 cmdlet을 사용 하 여 특정 볼륨 또는 파일 공유에만 영향을 주는 오류를 볼 수도 있습니다.
 
 ```PowerShell
-Get-Volume -FileSystemLabel <Label> | Debug-Volume  
+Get-Volume -FileSystemLabel <Label> | Debug-Volume
 
-Get-FileShare -Name <Name> | Debug-FileShare  
+Get-FileShare -Name <Name> | Debug-FileShare
 ```
 
-이렇게 하면 특정 볼륨 또는 파일 공유에만 영향을 주는 오류가 반환 됩니다. 대부분의 경우 이러한 오류는 용량 계획, 데이터 복원 력 또는 Storage 서비스 품질 또는 저장소 복제본과 같은 기능과 관련이 있습니다. 
+이렇게 하면 특정 볼륨 또는 파일 공유에만 영향을 주는 오류가 반환 됩니다. 대부분의 경우 이러한 오류는 용량 계획, 데이터 복원 력 또는 Storage 서비스 품질 또는 저장소 복제본과 같은 기능과 관련이 있습니다.
 
 ## <a name="usage-in-net-and-c"></a>.NET 및 C에서 사용 #
 
 ### <a name="connect"></a>연결
 
-상태 관리 서비스를 쿼리하려면 클러스터로 **CimSession** 를 설정 해야 합니다. 이렇게 하려면 전체 .NET 에서만 사용할 수 있는 몇 가지 항목이 필요 합니다. 즉, 웹 또는 모바일 앱에서 바로이 작업을 수행할 수 없습니다. 이러한 코드 샘플은이 데이터\#액세스 계층에 가장 간단한 선택 인 C를 사용 합니다.
+상태 관리 서비스를 쿼리하려면 클러스터로 **CimSession** 를 설정 해야 합니다. 이렇게 하려면 전체 .NET 에서만 사용할 수 있는 몇 가지 항목이 필요 합니다. 즉, 웹 또는 모바일 앱에서 바로이 작업을 수행할 수 없습니다. 이러한 코드 샘플은 \# 이 데이터 액세스 계층에 가장 간단한 선택 인 C를 사용 합니다.
 
 ```
 using System.Security;
@@ -105,7 +105,7 @@ public CimSession Connect(string Domain = "...", string Computer = "...", string
 
 **CimSession** 가 설정 되 면 클러스터에서 WMI(WINDOWS MANAGEMENT INSTRUMENTATION) (WMI)를 쿼리할 수 있습니다.
 
-오류나 메트릭을 얻기 전에 여러 관련 개체의 인스턴스를 가져와야 합니다. 먼저 클러스터에서 스토리지 공간 다이렉트를 나타내는 **MSFT\_storagesubsystem** 입니다. 이를 사용 하 여 클러스터의 **모든\_msft StorageNode** 및 모든 **msft\_볼륨**, 데이터 볼륨을 가져올 수 있습니다. 마지막으로, 상태 관리 서비스 **\_MSFT storagehealth**가 필요 합니다.
+오류나 메트릭을 얻기 전에 여러 관련 개체의 인스턴스를 가져와야 합니다. 먼저 클러스터에서 스토리지 공간 다이렉트를 나타내는 **MSFT \_ storagesubsystem** 입니다. 이를 사용 하 여 클러스터의 모든 **msft \_ StorageNode** 및 모든 **msft \_ 볼륨**, 데이터 볼륨을 가져올 수 있습니다. 마지막으로, 상태 관리 서비스 **MSFT \_ storagehealth**가 필요 합니다.
 
 ```
 CimInstance Cluster;
@@ -153,7 +153,7 @@ foreach (CimInstance Node in Nodes)
 
 Windows Server 2016의 각 범위에서 사용할 수 있는 오류의 전체 목록은 아래에 설명 되어 있습니다.
 
-```       
+```
 public void GetFaults(CimSession Session, CimInstance Target)
 {
     // Set Parameters (None)
@@ -176,7 +176,7 @@ public void GetFaults(CimSession Session, CimInstance Target)
 
 고유한 오류 표현을 생성 하 고 유지 하는 것이 적합할 수 있습니다. 예를 들어이 **Myfault** 클래스는 나중에 업데이트 또는 제거 알림을 연결 하는 데 사용할 수 있는 **FaultId**를 비롯 하 여 오류에 대 한 몇 가지 주요 속성을 저장 하거나, 어떤 이유로 든 동일한 오류가 여러 번 감지 되는 경우 중복을 제거 합니다.
 
-```       
+```
 public class MyFault {
     public String FaultId { get; set; }
     public String Reason { get; set; }
@@ -212,9 +212,9 @@ foreach (CimInstance DiagnoseResult in DiagnoseResults)
 
 오류가 생성, 제거 또는 업데이트 되 면 상태 관리 서비스에서 WMI 이벤트를 생성 합니다. 이는 자주 폴링하는 대신 응용 프로그램 상태를 동기화 상태로 유지 하는 데 필수적 이며, 예를 들어 전자 메일 경고를 보낼 시기를 결정 하는 등의 작업에 도움이 될 수 있습니다. 이러한 이벤트를 구독 하기 위해이 샘플 코드는 관찰자 디자인 패턴을 다시 사용 합니다.
 
-먼저 **MSFT\_storagefaultevent** 이벤트를 구독 합니다.
+먼저 **MSFT \_ storagefaultevent** 이벤트를 구독 합니다.
 
-```      
+```
 public void ListenForFaultEvents()
 {
     IObservable<CimSubscriptionResult> Events = Session.SubscribeAsync(
@@ -222,7 +222,7 @@ public void ListenForFaultEvents()
     // Subscribe the Observer
     FaultsObserver<CimSubscriptionResult> Observer = new FaultsObserver<CimSubscriptionResult>(this);
     IDisposable Disposeable = Events.Subscribe(Observer);
-}   
+}
 ```
 
 다음으로, 새 이벤트가 생성 될 때마다 **Onnext ()** 메서드가 호출 되는 관찰자를 구현 합니다.
@@ -241,7 +241,7 @@ class FaultsObserver : IObserver
 
         if (SubscriptionResult != null)
         {
-            // Unpack            
+            // Unpack
             CimKeyedCollection<CimProperty> Properties = SubscriptionResult.Instance.CimInstanceProperties;
             String ChangeType = Properties["ChangeType"].Value.ToString();
             String FaultId = Properties["FaultId"].Value.ToString();
@@ -283,7 +283,7 @@ class FaultsObserver : IObserver
 
 ### <a name="properties-of-faults"></a>오류의 속성
 
-이 표에서는 오류 개체의 몇 가지 주요 속성을 보여 줍니다. 전체 스키마의 경우 *storagewmi .mof*에서 **\_MSFT StorageDiagnoseResult** 클래스를 검사 합니다.
+이 표에서는 오류 개체의 몇 가지 주요 속성을 보여 줍니다. 전체 스키마의 경우 *storagewmi .mof*에서 **MSFT \_ StorageDiagnoseResult** 클래스를 검사 합니다.
 
 | **속성**              | **예제**                                                     |
 |---------------------------|-----------------------------------------------------------------|
@@ -307,7 +307,7 @@ class FaultsObserver : IObserver
 
 ## <a name="properties-of-fault-events"></a>오류 이벤트의 속성
 
-이 표에서는 오류 이벤트의 몇 가지 주요 속성을 보여 줍니다. 전체 스키마의 경우 *storagewmi .mof*에서 **\_MSFT storagefaultevent** 클래스를 검사 합니다.
+이 표에서는 오류 이벤트의 몇 가지 주요 속성을 보여 줍니다. 전체 스키마의 경우 *storagewmi .mof*에서 **MSFT \_ storagefaultevent** 클래스를 검사 합니다.
 
 오류를 생성, 제거 또는 업데이트 하 고 있는지 여부를 나타내는 **FaultId** **를 확인**합니다. 이벤트에는 영향을 받는 오류의 모든 속성도 포함 됩니다.
 
@@ -326,7 +326,7 @@ class FaultsObserver : IObserver
 
 ## <a name="coverage"></a>적용 범위
 
-Windows Server 2016에서 상태 관리 서비스는 다음과 같은 오류 검사를 제공 합니다.  
+Windows Server 2016에서 상태 관리 서비스는 다음과 같은 오류 검사를 제공 합니다.
 
 ### <a name="physicaldisk-8"></a>**PhysicalDisk (8)**
 
@@ -513,12 +513,12 @@ Windows Server 2016에서 상태 관리 서비스는 다음과 같은 오류 검
 * 이유: *"하나 이상의 저장소 소비자 (일반적으로 Virtual Machines)에서 id가 {id} 인 존재 하지 않는 정책을 사용 하 고 있습니다."*
 * RecommendedAction: *"누락 된 저장소 QoS 정책을 다시 만듭니다."*
 
-<sup>1</sup> 은 볼륨이 80% 전체 (사소한 심각도) 또는 90% full (주요 심각도)에 도달 했음을 나타냅니다.  
-<sup>2</sup> 는 일부의 볼륨이 10% (부), 30% (주) 또는 50% (위험), 24 시간 기간의 최소 IOPS를 충족 하지 못했음을 나타냅니다.  
+<sup>1</sup> 은 볼륨이 80% 전체 (사소한 심각도) 또는 90% full (주요 심각도)에 도달 했음을 나타냅니다.
+<sup>2</sup> 는 일부의 볼륨이 10% (부), 30% (주) 또는 50% (위험), 24 시간 기간의 최소 IOPS를 충족 하지 못했음을 나타냅니다.
 
 >[!NOTE]
-> 팬, 전원 공급 장치 및 센서와 같은 스토리지 엔클로저 구성 요소의 상태는 SCSI(SCSI Enclosure Services)에서 파생됩니다. 공급업체에서 이 정보를 제공하지 않은 경우 상태 관리 서비스에서 정보를 표시할 수 없습니다.  
+> 팬, 전원 공급 장치 및 센서와 같은 스토리지 엔클로저 구성 요소의 상태는 SCSI(SCSI Enclosure Services)에서 파생됩니다. 공급업체에서 이 정보를 제공하지 않은 경우 상태 관리 서비스에서 정보를 표시할 수 없습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="additional-references"></a>추가 참조
 
 - [Windows Server 2016의 상태 관리 서비스](health-service-overview.md)

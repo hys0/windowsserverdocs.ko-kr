@@ -8,12 +8,12 @@ author: JasonGerend
 manager: dougkim
 ms.author: jgerend
 ms.date: 09/11/2018
-ms.openlocfilehash: 31853f1adaed6794138861da0991aa47e79602bc
-ms.sourcegitcommit: 568b924d32421256f64abfee171304f1daf320d2
+ms.openlocfilehash: 6799e0e3b47d6cc98cbb42407ffbed1a9578675a
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85070570"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85473440"
 ---
 # <a name="iscsi-target-server-scalability-limits"></a>iSCSI 대상 서버 확장성 제한
 
@@ -35,44 +35,44 @@ ms.locfileid: "85070570"
 <th><p>항목</p></th>
 <th><p>지원 제한</p></th>
 <th><p>강제적?</p></th>
-<th><p>의견</p></th>
+<th><p>주석</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><p>iSCSI 대상 서버당 iSCSI 대상 인스턴스</p></td>
 <td><p>256</p></td>
-<td><p>예</p></td>
+<td><p>No</p></td>
 <td></td>
 </tr>
 <tr class="even">
 <td><p>iscsi 대상 서버당 Lu (iSCSI 논리 단위) 또는 가상 디스크</p></td>
 <td><p>512</p></td>
-<td><p>예</p></td>
+<td><p>No</p></td>
 <td><p>포함 된 테스트 구성: 평균 64의 평균을 가진 대상 인스턴스당 8 Lu, 대상 당 LU가 하나씩 있는 256 대상 인스턴스</p></td>
 </tr>
 <tr class="odd">
 <td><p>iscsi 대상 인스턴스당 iSCSI Lu 또는 가상 디스크</p></td>
 <td><p>256 (Windows Server 2012의 경우 128)</p></td>
-<td><p>예</p></td>
+<td><p>Yes</p></td>
 <td></td>
 </tr>
 <tr class="even">
 <td><p>ISCSI 대상 인스턴스에 동시에 연결할 수 있는 세션</p></td>
 <td><p>544 (Windows Server 2012의 경우 512)</p></td>
-<td><p>예</p></td>
+<td><p>Yes</p></td>
 <td></td>
 </tr>
 <tr class="odd">
 <td><p>LU 당 스냅숏</p></td>
 <td><p>512</p></td>
-<td><p>예</p></td>
+<td><p>Yes</p></td>
 <td><p>독립 iSCSI 응용 프로그램 볼륨당 512 스냅숏의 제한이 있습니다.</p></td>
 </tr>
 <tr class="even">
 <td><p>저장소 어플라이언스 당 로컬로 탑재 된 가상 디스크 또는 스냅숏</p></td>
 <td><p>32</p></td>
-<td><p>예</p></td>
+<td><p>Yes</p></td>
 <td><p>로컬로 탑재 된 가상 디스크는 모든 iSCSI 관련 기능을 제공&#39;않으며 사용 되지 않습니다. 자세한 내용은 <a href="https://technet.microsoft.com/library/dn303411.aspx">Windows Server 2012 r 2에서 제거 되었거나 더 이상 사용 되지 않는 기능</a>을 참조 하세요.</p></td>
 </tr>
 </tbody>
@@ -92,27 +92,27 @@ ms.locfileid: "85070570"
 <th><p>항목</p></th>
 <th><p>지원 제한</p></th>
 <th><p>강제적?</p></th>
-<th><p>의견</p></th>
+<th><p>주석</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><p>장애 조치 (Failover) 클러스터 노드</p></td>
 <td><p>8 (Windows Server 2012에서 5)</p></td>
-<td><p>예</p></td>
+<td><p>No</p></td>
 <td></td>
 </tr>
 <tr class="even">
 <td><p>여러 활성 클러스터 노드</p></td>
 <td><p>지원됨</p></td>
-<td> 
+<td>
 <p>해당 없음</p></td>
 <td><p>장애 조치 (failover) 클러스터의 각 활성 노드는 가능한 소유자 노드 역할을 하는 다른 노드와 다른 iSCSI 대상 서버 클러스터형 인스턴스를 소유 합니다.</p></td>
 </tr>
 <tr class="odd">
 <td><p>오류 복구 수준 (ERL)</p></td>
 <td><p>0</p></td>
-<td><p>예</p></td>
+<td><p>Yes</p></td>
 <td></td>
 </tr>
 <tr class="even">
@@ -124,7 +124,7 @@ ms.locfileid: "85070570"
 <tr class="odd">
 <td><p>ISCSI 대상 인스턴스에 동시에 연결할 수 있는 세션</p></td>
 <td><p>544 (Windows Server 2012의 경우 512)</p></td>
-<td><p>예</p></td>
+<td><p>No</p></td>
 <td></td>
 </tr>
 <tr class="even">
@@ -142,7 +142,7 @@ ms.locfileid: "85070570"
 <tr class="even">
 <td><p>독립 실행형 iSCSI 대상 서버를 클러스터링 된 iSCSI 대상 서버로 변환 하거나 그 반대로 변환</p></td>
 <td><p>지원되지 않음</p></td>
-<td><p>예</p></td>
+<td><p>No</p></td>
 <td><p>스냅숏 메타 데이터를 포함 한 iSCSI 대상 인스턴스 및 가상 디스크 구성 데이터는 변환 중에 손실 됩니다.</p></td>
 </tr>
 </tbody>
@@ -162,26 +162,26 @@ ms.locfileid: "85070570"
 <th><p>항목</p></th>
 <th><p>지원 제한</p></th>
 <th><p>강제적?</p></th>
-<th><p>의견</p></th>
+<th><p>주석</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><p>최대 활성 네트워크 어댑터 수</p></td>
 <td><p>8</p></td>
-<td><p>예</p></td>
+<td><p>No</p></td>
 <td><p>어플라이언스의 총 네트워크 어댑터 수가 아니라 iSCSI 트래픽에 전용으로 적용 되는 네트워크 어댑터에 적용 됩니다.</p></td>
 </tr>
 <tr class="even">
 <td><p>지원 되는 포털 (IP 주소)</p></td>
 <td><p>64</p></td>
-<td><p>예</p></td>
+<td><p>Yes</p></td>
 <td></td>
 </tr>
 <tr class="odd">
 <td><p>네트워크 포트 속도</p></td>
 <td><p>1Gbps, 10gbps, 40Gbps, 56 Gbps (Windows Server 2012 R2 이상에만 해당)</p></td>
-<td><p>예</p></td>
+<td><p>No</p></td>
 <td></td>
 </tr>
 <tr class="even">
@@ -243,14 +243,14 @@ ms.locfileid: "85070570"
 <th><p>항목</p></th>
 <th><p>지원 제한</p></th>
 <th><p>강제적?</p></th>
-<th><p>의견</p></th>
+<th><p>주석</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><p>ISCSI 초기자에서 기본 디스크의 가상 디스크를 동적 디스크로 변환 </p></td>
 <td><p>예</p></td>
-<td><p>예</p></td>
+<td><p>아니요</p></td>
 <td></td>
 </tr>
 <tr class="even">
@@ -264,40 +264,40 @@ ms.locfileid: "85070570"
 <td><p>VHD 최소 형식 크기</p></td>
 <td><p>.vhdx: 3MB</p>
 <p>.vhd: 8mb</p></td>
-<td><p>예</p></td>
+<td><p>Yes</p></td>
 <td><p>모든 지원 되는 VHD 형식 (부모, 차이점 보관용 및 고정)에 적용 됩니다.</p></td>
 </tr>
 <tr class="even">
 <td><p>부모 VHD 최대 크기</p></td>
 <td><p>.vhdx: 64 TB</p>
 <p>.vhd: 2tb</p></td>
-<td><p>예</p></td>
+<td><p>Yes</p></td>
 <td></td>
 </tr>
 <tr class="odd">
 <td><p>고정 VHD 최대 크기</p></td>
 <td><p>.vhdx: 64 TB</p>
 <p>.vhd: 16TB</p></td>
-<td><p>예</p></td>
+<td><p>Yes</p></td>
 <td></td>
 </tr>
 <tr class="even">
 <td><p>차이점 보관용 VHD 최대 크기</p></td>
 <td><p>.vhdx: 64 TB</p>
 <p>.vhd: 2tb</p></td>
-<td><p>예</p></td>
+<td><p>Yes</p></td>
 <td></td>
 </tr>
 <tr class="odd">
 <td><p>VHD 고정 형식</p></td>
 <td><p>지원됨</p></td>
-<td><p>예</p></td>
+<td><p>No</p></td>
 <td></td>
 </tr>
 <tr class="even">
 <td><p>VHD 차이점 보관용 형식</p></td>
 <td><p>지원됨</p></td>
-<td><p>예</p></td>
+<td><p>No</p></td>
 <td><p>스냅숏은 차이점 보관용 VHD 기반 iSCSI 가상 디스크를 만들 수 없습니다.</p></td>
 </tr>
 <tr class="odd">
@@ -310,7 +310,7 @@ ms.locfileid: "85070570"
 <td><p>VHD 동적 형식</p></td>
 <td><p>.vhdx: 예</p>
 <p>.vhd: 예 (Windows Server 2012의 경우 아니요)</p></td>
-<td><p>예</p></td>
+<td><p>Yes</p></td>
 <td><p>매핑 해제&#39;t가 지원 됩니다.</p></td>
 </tr>
 <tr class="odd">
@@ -376,7 +376,7 @@ ms.locfileid: "85070570"
 <tr class="header">
 <th><p>항목</p></th>
 <th><p>지원 제한</p></th>
-<th><p>의견</p></th>
+<th><p>주석</p></th>
 </tr>
 </thead>
 <tbody>
@@ -462,7 +462,7 @@ ISCSI 대상 저장소 공급자에 대 한 자세한 내용은 [Iscsi 대상 �
 <td><p>시작자</p></td>
 <td><p>Windows Server 2012 R2</p></td>
 <td><p>Windows Server 2012</p></td>
-<td><p>주석</p></td>
+<td><p>의견</p></td>
 </tr>
 <tr class="even">
 <td><p>Windows Server 2012 R2</p></td>
@@ -537,7 +537,7 @@ ISCSI 대상 서버에서 호스트 되는 가상 디스크에서 디스크 없�
 
   - IPXE를 사용 하는 CD 또는 USB 디스크
 
-## <a name="see-also"></a>참고 항목
+## <a name="additional-references"></a>추가 참조
 
 다음 목록에서는 iSCSI 대상 서버 및 관련 기술에 대한 추가 리소스를 제공합니다.
 

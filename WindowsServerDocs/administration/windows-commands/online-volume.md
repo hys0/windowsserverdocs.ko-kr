@@ -1,6 +1,6 @@
 ---
-title: 온라인 볼륨
-description: '* * * *에 대 한 참조 항목'
+title: online volume
+description: 온라인 볼륨 명령에 대 한 참조 항목으로, 오프 라인 볼륨을 온라인 상태로 전환 합니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,24 +9,22 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: bb2ee396e4fa8a2e61001df0d979d85dabe1aa32
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 83a1e4bf1d6afe9485ab71c9af372166797900b3
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82723428"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85472669"
 ---
-# <a name="online-volume"></a>온라인 볼륨
+# <a name="online-disk"></a>online disk
 
+오프 라인 볼륨을 온라인 상태로 전환 합니다. 이 명령은 실패 하거나, 실패 하거나, 중복 된 중복성 상태가 아닌 볼륨에서 작동 합니다.
 
-
-볼륨을 온라인 상태로 현재 오프 라인 상태를 제공 합니다.
-
-> [!IMPORTANT]
-> 모든 버전의 Windows Vista에서는이 명령을 사용할 수 없습니다.
+> [!NOTE]
+> **온라인 볼륨** 명령을 성공적으로 수행 하려면 볼륨을 선택 해야 합니다. 사용 하 여는 [볼륨 선택](select-volume.md) 볼륨을 선택 하 고 포커스를 이동 하는 명령입니다.
 
 > [!IMPORTANT]
-> 이 명령은 읽기 전용 볼륨에 사용 되는 경우 실패 합니다.
+> 이 명령은 읽기 전용 디스크에서 사용 되는 경우 실패 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -36,18 +34,14 @@ online volume [noerr]
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------|-----------|
-|noerr|스크립팅 전용입니다. 오류가 발생 하면 오류가 발생 하지 않은 경우에 따라 명령을 처리 하도록 DiskPart 계속 합니다. 이 매개 변수를 크기는 오류 코드를 수행 합니다.|
+| 매개 변수 | 설명 |
+|--|--|
+| noerr | 스크립팅 전용입니다. 오류가 발생 하면 오류가 발생 하지 않은 경우에 따라 명령을 처리 하도록 DiskPart 계속 합니다. 이 매개 변수를 크기는 오류 코드를 수행 합니다. |
 
-## <a name="remarks"></a>설명
+### <a name="examples"></a>예제
 
--   이 명령은 실패 한, 실패 또는 중복 실패 상태에 있는 볼륨에서 작동 합니다.
--   이 명령을 성공적으로 볼륨을 선택 해야 합니다. 사용 하 여는 **볼륨 선택** 볼륨을 선택 하 고 포커스를 이동 하는 명령입니다.
+온라인으로 포커스가 있는 볼륨을 사용 하려면 다음을 입력 합니다.
 
-## <a name="examples"></a>예
-
-온라인에 포커스가 있는 볼륨을 상태로 전환 하려면 다음을 입력 합니다.
 ```
 online volume
 ```
@@ -55,4 +49,3 @@ online volume
 ## <a name="additional-references"></a>추가 참조
 
 - [명령줄 구문 키](command-line-syntax-key.md)
-

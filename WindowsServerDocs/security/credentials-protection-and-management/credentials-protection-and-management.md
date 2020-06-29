@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: c836da8f83510e6547e0e182ac06fd2151dd9c41
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 9eb93e46adb0e8a7c956bd8db2795fe06bc04724
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80857066"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85472950"
 ---
 # <a name="credentials-protection-and-management"></a>자격 증명 보호 및 관리
 
@@ -58,7 +58,7 @@ LSA 보호 구성에 대한 자세한 내용은 [Configuring Additional LSA Prot
 
 -   사용자
 
--   컴퓨터
+-   Computer
 
 -   관리 서비스 계정
 
@@ -68,7 +68,7 @@ LSA 보호 구성에 대한 자세한 내용은 [Configuring Additional LSA Prot
 
 보호된 계정을 구성하는 방법에 대한 자세한 내용은 [보호된 계정을 구성하는 방법](how-to-configure-protected-accounts.md)을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="additional-references"></a>추가 참조
 LSA 및 LSASS에 대한 자세한 내용은 [Windows 로그온 및 인증 기술 개요](https://technet.microsoft.com/library/dn169029(v=ws.10).aspx)를 참조하세요.
 
 

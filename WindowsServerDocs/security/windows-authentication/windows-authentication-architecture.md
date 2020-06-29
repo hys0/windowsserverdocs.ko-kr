@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: f2a2b9db60842ba7889116cf35163c579d9131d1
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: da4f173a5d91f73c73d3f537f58228890f90b136
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80861726"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85471678"
 ---
 # <a name="windows-authentication-architecture"></a>Windows 인증 아키텍처
 
@@ -40,7 +40,7 @@ SSPI (Security Support Provider Interface)는 배포 응용 프로그램 프로�
 
 SSPI는 GSSAPI (Generic Security Service API)의 구현입니다. SSPI는 배포 응용 프로그램이 보안 프로토콜의 세부 정보를 알지 못해도 인증 된 연결을 얻기 위해 여러 보안 공급자 중 하나를 호출할 수 있는 메커니즘을 제공 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="additional-references"></a>추가 참조
 
 -   [보안 지원 공급자 인터페이스 아키텍처](security-support-provider-interface-architecture.md)
 

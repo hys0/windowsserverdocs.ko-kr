@@ -8,12 +8,12 @@ ms.author: jgerend
 manager: lizross
 ms.technology: storage-failover-clustering
 ms.date: 01/14/2020
-ms.openlocfilehash: eea98579a66f1db7f7ec873bda6a2c934841736f
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 24be2b39c8130b97d22ee182c0064986b3378549
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720515"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85472980"
 ---
 # <a name="failover-clustering-system-log-events"></a>장애 조치 (Failover) 클러스터링 시스템 로그 이벤트
 
@@ -185,7 +185,7 @@ RPC 서비스에 인터페이스를 등록할 수 없어 클러스터 서비스�
 
 ### <a name="event-1024-cp_reg_ckpt_restore_failed"></a>이벤트 1024: CP_REG_CKPT_RESTORE_FAILED
 
-클러스터 리소스 ' %1 '에 대 한 레지스트리 검사점을 레지스트리 키 HKEY_LOCAL_MACHINE\\%2 (으)로 복원할 수 없습니다. 리소스가 제대로 작동 하지 않을 수 있습니다.
+클러스터 리소스 ' %1 '에 대 한 레지스트리 검사점을 레지스트리 키 HKEY_LOCAL_MACHINE %2 (으)로 복원할 수 없습니다 \\ . 리소스가 제대로 작동 하지 않을 수 있습니다.
 이 레지스트리 하위 트리에서 레지스트리 키에 대 한 열린 핸들이 있는 다른 프로세스가 없는지 확인 합니다.
 
 ### <a name="event-1034-res_disk_missing"></a>이벤트 1034: RES_DISK_MISSING
@@ -464,7 +464,7 @@ DFS 네임 스페이스에 대 한 클러스터 파일 공유 리소스 ' %1 '�
 
 ### <a name="event-1234-cluster_event_account_missing_privs"></a>이벤트 1234: CLUSTER_EVENT_ACCOUNT_MISSING_PRIVS
 
-클러스터 서비스 서비스 계정에 필요한 권한이 하나 이상 누락 된 것을 발견 했습니다. 누락 된 권한 목록은 ' %1 '이 고 현재 서비스 계정에 부여 되지 않았습니다. ' Sc.exe qprivs clussvc '를 사용 하 여 클러스터 서비스 (ClusSvc)의 권한을 확인 합니다. 또한 기본 권한을 변경 했을 수 있는 Active Directory Domain Services의 보안 정책 또는 그룹 정책을 확인 합니다. 다음 명령을 입력 하 여 올바르게 작동 하는 데 필요한 권한을 클러스터 서비스에 부여 합니다.
+클러스터 서비스 서비스 계정에 필요한 권한이 하나 이상 누락 된 것을 발견 했습니다. 누락 된 권한 목록은 ' %1 '이 고 현재 서비스 계정에 부여 되지 않았습니다. ' sc.exe qprivs clussvc '를 사용 하 여 클러스터 서비스 (ClusSvc)의 권한을 확인 합니다. 또한 기본 권한을 변경 했을 수 있는 Active Directory Domain Services의 보안 정책 또는 그룹 정책을 확인 합니다. 다음 명령을 입력 하 여 올바르게 작동 하는 데 필요한 권한을 클러스터 서비스에 부여 합니다.
 
 ```
 sc.exe privs
@@ -600,7 +600,7 @@ IPv6 터널 주소 리소스 ' %1 '을 (를) 온라인 상태로 만들지 못�
 
 ### <a name="event-1567-service_failed_to_change_log_size"></a>이벤트 1567: SERVICE_FAILED_TO_CHANGE_LOG_SIZE
 
-클러스터 서비스에서 추적 로그 크기를 변경 하지 못했습니다. ' Get-Cluster \| Format-List \*' PowerShell cmdlet을 사용 하 여 clusterlogsize 설정을 확인 하세요. 또한 성능 모니터 스냅인을 사용 하 여 FailoverClustering에 대 한 이벤트 추적 세션 설정을 확인 합니다.
+클러스터 서비스에서 추적 로그 크기를 변경 하지 못했습니다. ' Get-Cluster \| Format-List ' PowerShell cmdlet을 사용 하 여 ClusterLogSize 설정을 확인 하세요 \* . 또한 성능 모니터 스냅인을 사용 하 여 FailoverClustering에 대 한 이벤트 추적 세션 설정을 확인 합니다.
 
 ### <a name="event-1567-res_vipaddr_address_interface_failed"></a>이벤트 1567: RES_VIPADDR_ADDRESS_INTERFACE_FAILED
 
@@ -608,7 +608,7 @@ IP 인터페이스 ' %1 ' (주소 ' %2 ')에 대 한 상태 검사에 실패 했
 
 ### <a name="event-1568-res_cloud_witness_cant_communicate_to_azure"></a>이벤트 1568: RES_CLOUD_WITNESS_CANT_COMMUNICATE_TO_AZURE
 
-클라우드 감시 리소스가 Microsoft Azure storage 서비스에 연결할 수 없습니다.<br><br>클러스터 리소스: %1 <br>클러스터 노드: %2 
+클라우드 감시 리소스가 Microsoft Azure storage 서비스에 연결할 수 없습니다.<br><br>클러스터 리소스: %1 <br>클러스터 노드: %2
 
 #### <a name="guidance"></a>지침
 
@@ -620,7 +620,7 @@ IP 인터페이스 ' %1 ' (주소 ' %2 ')에 대 한 상태 검사에 실패 했
 
 ### <a name="event-1569-res_cloud_witness_token_expired"></a>이벤트 1569: RES_CLOUD_WITNESS_TOKEN_EXPIRED
 
-클라우드 감시 리소스에서 Microsoft Azure 저장소 서비스로 인증 하지 못했습니다. Microsoft Azure 저장소 계정에 연결 하는 동안 액세스 거부 오류가 반환 되었습니다. <br><br>클러스터 리소스: %1 
+클라우드 감시 리소스에서 Microsoft Azure 저장소 서비스로 인증 하지 못했습니다. Microsoft Azure 저장소 계정에 연결 하는 동안 액세스 거부 오류가 반환 되었습니다. <br><br>클러스터 리소스: %1
 
 #### <a name="guidance"></a>지침
 
@@ -664,11 +664,11 @@ IP 인터페이스 ' %1 ' (주소 ' %2 ')에 대 한 상태 검사에 실패 했
 
 ### <a name="event-1606-res_disk_cno_check_failed"></a>이벤트 1606: RES_DISK_CNO_CHECK_FAILED
 
-클러스터 디스크 리소스 ' %1 '에 BitLocker로 보호 된 볼륨 ' %2 '이 (가) 포함 되어 있지만이 볼륨의 Active Directory 클러스터 이름 계정 (클러스터 이름 개체 또는 CNO 라고도 함)이 볼륨에 대 한 BitLocker 보호기가 아닙니다. BitLocker로 보호 되는 볼륨에 필요 합니다. 이를 해결 하려면 먼저 클러스터에서 디스크를 제거 합니다. 그런 다음 Manage-bde.exe 명령줄 도구를 사용 하 여 클러스터 이름에 대 한 도메인\\ClusterName\$ 형식을 사용 하 여 클러스터 이름을 ADAccountOrGroup 보호기로 추가 합니다. 그런 다음 클러스터에 디스크를 다시 추가 합니다. 자세한 내용은 Manage-bde.exe에 대 한 설명서를 참조 하세요.
+클러스터 디스크 리소스 ' %1 '에 BitLocker로 보호 된 볼륨 ' %2 '이 (가) 포함 되어 있지만이 볼륨의 Active Directory 클러스터 이름 계정 (클러스터 이름 개체 또는 CNO 라고도 함)이 볼륨에 대 한 BitLocker 보호기가 아닙니다. BitLocker로 보호 되는 볼륨에 필요 합니다. 이를 해결 하려면 먼저 클러스터에서 디스크를 제거 합니다. 그런 다음 Manage-bde.exe 명령줄 도구를 사용 하 여 클러스터 이름에 대 한 도메인 ClusterName 형식을 사용 하 여 클러스터 이름을 ADAccountOrGroup 보호기로 추가 \\ \$ 합니다. 그런 다음 클러스터에 디스크를 다시 추가 합니다. 자세한 내용은 Manage-bde.exe에 대 한 설명서를 참조 하세요.
 
 ### <a name="event-1607-res_disk_cno_unlock_failed"></a>이벤트 1607: RES_DISK_CNO_UNLOCK_FAILED
 
-클러스터 디스크 리소스 ' %1 '이 (가) BitLocker로 보호 되는 볼륨 ' %2 '의 잠금을 해제할 수 없습니다. 클러스터 이름 개체 (CNO)가이 볼륨의 유효한 BitLocker 보호기로 설정 되어 있지 않습니다. 이를 해결 하려면 클러스터에서 디스크를 제거 합니다. 그런 다음 Manage-bde.exe 명령줄 도구를 사용 하 여 도메인\\ClusterName\$형식을 사용 하 여 클러스터 이름을 ADAccountOrGroup 보호기로 추가 하 고 디스크를 클러스터에 다시 추가 합니다. 자세한 내용은 Manage-bde.exe에 대 한 설명서를 참조 하세요.
+클러스터 디스크 리소스 ' %1 '이 (가) BitLocker로 보호 되는 볼륨 ' %2 '의 잠금을 해제할 수 없습니다. 클러스터 이름 개체 (CNO)가이 볼륨의 유효한 BitLocker 보호기로 설정 되어 있지 않습니다. 이를 해결 하려면 클러스터에서 디스크를 제거 합니다. 그런 다음 Manage-bde.exe 명령줄 도구를 사용 하 여 도메인 ClusterName 형식을 사용 하 여 클러스터 이름을 ADAccountOrGroup 보호기로 추가 하 \\ \$ 고 디스크를 클러스터에 다시 추가 합니다. 자세한 내용은 Manage-bde.exe에 대 한 설명서를 참조 하세요.
 
 ### <a name="event-1608-res_fileserver_leader_failed"></a>이벤트 1608: RES_FILESERVER_LEADER_FAILED
 
@@ -725,7 +725,7 @@ IP 인터페이스 ' %1 ' (주소 ' %2 ')에 대 한 상태 검사에 실패 했
 
 ### <a name="event-1683-res_netname_computer_account_no_dc"></a>이벤트 1683: RES_NETNAME_COMPUTER_ACCOUNT_NO_DC
 
-클러스터 서비스가 도메인에서 사용 가능한 도메인 컨트롤러에 연결할 수 없습니다. 이는 클러스터 네트워크 이름 인증에 따라 달라 지는 기능에 영향을 줄 수 있습니다.<br><br>DC 서버: %1 
+클러스터 서비스가 도메인에서 사용 가능한 도메인 컨트롤러에 연결할 수 없습니다. 이는 클러스터 네트워크 이름 인증에 따라 달라 지는 기능에 영향을 줄 수 있습니다.<br><br>DC 서버: %1
 
 #### <a name="guidance"></a>지침
 
@@ -780,7 +780,7 @@ Active Directory에서 네트워크 이름에 대 한 컴퓨터 개체를 사용
 
 ### <a name="event-4613-nodecleanup_clear_clusdisk_database_failed"></a>이벤트 4613: NODECLEANUP_CLEAR_CLUSDISK_DATABASE_FAILED
 
-클러스터를 삭제 하는 동안 클러스터 서비스에서 ID가 ' %2 ' 인 클러스터 된 디스크를 제대로 정리 하지 못했습니다. 오류 코드는 ' %1 '입니다. 정리가 성공적으로 완료 될 때까지이 디스크에 액세스할 수 없습니다. 수동 정리의 경우 Windows 레지스트리에서\\' HKEY_LOCAL_MACHINE SYSTEM\\CurrentControlSet\\Services\\ClusDisk\\Parameters ' 키의 ' AttachedDisks ' 값을 삭제 합니다.
+클러스터를 삭제 하는 동안 클러스터 서비스에서 ID가 ' %2 ' 인 클러스터 된 디스크를 제대로 정리 하지 못했습니다. 오류 코드는 ' %1 '입니다. 정리가 성공적으로 완료 될 때까지이 디스크에 액세스할 수 없습니다. 수동 정리의 경우 \\ Windows 레지스트리에서 ' HKEY_LOCAL_MACHINE SYSTEM \\ CurrentControlSet \\ Services \\ ClusDisk \\ Parameters ' 키의 ' AttachedDisks ' 값을 삭제 합니다.
 
 ### <a name="event-4615-nodecleanup_disable_cluster_service_failed"></a>이벤트 4615: NODECLEANUP_DISABLE_CLUSTER_SERVICE_FAILED
 
@@ -1106,7 +1106,7 @@ Chkdsk 출력이 ' %3 ' 파일에 기록 됩니다.<br> Chkdsk는 응용 프로�
 
 ### <a name="event-1605-res_disk_spotfix_performed"></a>이벤트 1605: RES_DISK_SPOTFIX_PERFORMED
 
-클러스터 디스크 리소스 ' %1 '이 (가) 볼륨 ' %2 '에서 Chkdsk.exe/spotfix 실행을 완료 했습니다.
+클러스터 디스크 리소스 ' %1 '이 (가) 볼륨 ' %2 '에서/spotfix ChkDsk.exe 실행을 완료 했습니다.
 반환 코드는 ' %4 '입니다. ChkDsk의 출력이 ' %3 ' 파일에 기록 되었습니다.<br>
 ChkDsk에서 추가 정보는 응용 프로그램 이벤트 로그를 확인 하십시오.
 
@@ -1251,6 +1251,6 @@ ChkDsk에서 추가 정보는 응용 프로그램 이벤트 로그를 확인 하
 클러스터 물리적 디스크 리소스 ' %1 '이 (가) 소프트웨어 스냅숏을 삭제 했습니다. ' %2 ' 클러스터 공유 볼륨의 소프트웨어 스냅숏이 ' %3 ' 일 보다 오래 되어 삭제 되었습니다. 스냅숏 ID는 ' %4 ' 이며 ' %6 '의 ' %5 ' 노드에서 만들어졌습니다.
 백업 작업이 완료 된 후 백업 응용 프로그램에서 스냅숏을 삭제할 것으로 예상 됩니다. 스냅숏이 존재 하는 것으로 예상 되는 시간이 초과 되었습니다. 백업 응용 프로그램에서 백업 작업이 성공적으로 완료 되는지 확인 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="additional-references"></a>추가 참조
 
 -   [Windows Server 2008의 장애 조치 (Failover) 클러스터링 구성 요소에 대 한 자세한 이벤트 정보](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753362(v%3dws.10))

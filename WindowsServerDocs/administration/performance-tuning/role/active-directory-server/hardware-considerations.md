@@ -7,14 +7,14 @@ ms.topic: article
 ms.author: timwi; chrisrob; herbertm; kenbrumf;  mleary; shawnrab
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: c40faca06668adf6fd29a5e4e753e5790b8104b7
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 1fef257f860895b20c1ca1a24b6fa50e16f70c8c
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80851916"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85471578"
 ---
-# <a name="hardware-considerations-in-adds-performance-tuning"></a>성능 튜닝 추가의 하드웨어 고려 사항 
+# <a name="hardware-considerations-in-adds-performance-tuning"></a>성능 튜닝 추가의 하드웨어 고려 사항
 
 >[!Important]
 > 다음은 [Active Directory Domain Services의 용량 계획](https://go.microsoft.com/fwlink/?LinkId=324566) 문서에 자세히 설명 된 Active Directory 워크 로드에 대 한 서버 하드웨어 최적화에 대 한 주요 권장 사항 및 고려 사항에 대 한 요약입니다. 독자 들은 이러한 권장 사항에 대 한 보다 기술적 이해와 의미를 위해 [Active Directory Domain Services에 대 한 용량 계획](https://go.microsoft.com/fwlink/?LinkId=324566) 을 검토 하는 것이 좋습니다.
@@ -25,9 +25,9 @@ Active Directory는 메모리를 허용 하는 만큼의 데이터베이스를 �
 
 -   Active Directory 모범 사례는 전체 DIT를 메모리로 로드 하 고 바이러스 백신, 백업 소프트웨어, 모니터링 등의 기타 설치 된 응용 프로그램을 수용 하는 데 충분 한 RAM을 설정 하는 것이 좋습니다.
 
-    -   레거시 플랫폼의 제한 사항은 [Windows Server 2003 또는 windows 2000 server를 실행 하는 도메인 컨트롤러의 lsass.exe 프로세스에서 메모리 사용량](https://support.microsoft.com/kb/308356)을 참조 하세요.
+    -   레거시 플랫폼의 제한 사항은 [Windows server 2003 또는 windows 2000 server를 실행 하는 도메인 컨트롤러에서 Lsass.exe 프로세스의 메모리 사용량](https://support.microsoft.com/kb/308356)을 참조 하세요.
 
-    -   메모리\\장기 평균 대기 캐시 수명 &gt; 30 분 성능 카운터를 사용 합니다.
+    -   메모리 \\ 장기 평균 대기 캐시 수명 &gt; 30 분 성능 카운터를 사용 합니다.
 
 -   운영 체제, 로그 및 데이터베이스를 별도의 볼륨에 배치 합니다. DIT의 모든 또는 과반수를 캐시할 수 있는 경우 캐시가 준비 안정 된 상태에 있으면이는 관련성이 낮고 저장소 레이아웃의 유연성이 약간 향상 됩니다. 전체 DIT를 캐시할 수 없는 시나리오에서는 운영 체제, 로그 및 데이터베이스를 별도의 볼륨에 분할 하는 것이 더 중요 합니다.
 
@@ -41,13 +41,13 @@ Active Directory는 메모리를 허용 하는 만큼의 데이터베이스를 �
 
 -   각 볼륨에 대 한 디스크 하위 시스템 성능을 개별적으로 검토 합니다. 대부분의 Active Directory 시나리오는 주로 읽기 기반 이므로 DIT를 호스트 하는 볼륨에 대 한 통계를 검사 하는 것이 가장 중요 합니다. 그러나 운영 체제 및 로그 파일 드라이브를 비롯 한 나머지 드라이브 모니터링은 간과 하지 마십시오. 저장소 성능에 대 한 병목 현상이 발생 하지 않도록 도메인 컨트롤러가 올바르게 구성 되었는지 확인 하려면 표준 저장소 권장 사항에 대 한 저장소 하위 시스템 섹션을 참조 하세요. 많은 환경에서 원리는 부하 급증 또는 급증을 수용할 수 있는 충분 한 헤드 공간이 있는지 확인 하는 것입니다. 이러한 임계값은 부하의 급증 또는 급증을 수용 하는 헤드 공간이 제한 되 고 클라이언트 응답성이 저하 되는 경고 임계값입니다. 간단히 말해서 이러한 임계값을 초과 하는 것은 단기 (5 ~ 15 분의 하루에 몇 번)에서 잘못 된 것 이지만 이러한 종류의 통계를 사용 하 여 지속적으로 실행 되는 시스템은 데이터베이스를 완전히 캐싱하지 않으며 taxed 될 수 있으므로 조사 해야 합니다.
 
-    -   Database = =&gt; Instances (lsass/NTDSA)\\i/o 데이터베이스 읽기 평균 대기 시간 &lt; 15ms
+    -   Database = = &gt; Instances (lsass/NTDSA) \\ I/o 데이터베이스 읽기 평균 대기 시간 &lt; 15ms
 
-    -   Database = =&gt; 인스턴스 (lsass/NTDSA)\\i/o Database Reads/sec &lt; 10
+    -   Database = = &gt; Instances (lsass/NTDSA) \\ I/o 데이터베이스 읽기/초 &lt; 10
 
-    -   Database = =&gt; 인스턴스 (lsass/NTDSA)\\i/o 로그 쓰기 평균 대기 시간 &lt; 10ms
+    -   Database = = &gt; Instances (lsass/NTDSA) \\ I/o 로그 쓰기 평균 대기 시간 &lt; 10ms
 
-    -   Database = =&gt; 인스턴스 (lsass/NTDSA)\\i/o 로그 쓰기/초 – 정보 제공 용입니다.
+    -   Database = = &gt; Instances (lsass/NTDSA) \\ I/o Log Writes/sec – 정보용 으로만 제공 됩니다.
 
         데이터의 일관성을 유지 하려면 모든 변경 내용을 로그에 써야 합니다. 여기에는 올바른 또는 잘못 된 숫자가 없으며, 저장소에서 지 원하는 정도를 측정 한 것입니다.
 
@@ -61,7 +61,7 @@ Active Directory는 메모리를 허용 하는 만큼의 데이터베이스를 �
 
 -   CPU 부하를 줄이기 위해 하드웨어를 추가 하거나, 부하를 최적화 하 고, 다른 곳에서 클라이언트를 추가 하거나, 환경에서 로드를 제거 합니다.
 
--   프로세서 정보 (총\_)\\% 프로세서 사용률 &lt; 60% 성능 카운터를 사용 합니다.
+-   프로세서 정보 ( \_ 총) \\ % 프로세서 사용률 &lt; 60% 성능 카운터를 사용 합니다.
 
 ## <a name="avoid-overloading-the-network-adapter"></a>네트워크 어댑터 오버 로드 방지
 
@@ -69,11 +69,11 @@ Active Directory는 메모리를 허용 하는 만큼의 데이터베이스를 �
 
 -   네트워크 하위 시스템을 튜닝 하는 방법에 대 한 자세한 내용은 [네트워크 하위 시스템에 대 한 성능 조정](../../../../networking/technologies/network-subsystem/net-sub-performance-top.md)을 참조 하세요.
 
--   Compare NetworkInterface (\*)\\Bytes Sent/Sec with NetworkInterface (\*)\\Current 대역폭 성능 카운터를 사용 합니다. 비율은 60% 미만 이어야 합니다.
+-   Compare NetworkInterface ( \* ) \\ Bytes Sent/Sec with NetworkInterface ( \* ) \\ Current 대역폭 성능 카운터를 사용 합니다. 비율은 60% 미만 이어야 합니다.
 
-## <a name="see-also"></a>참고 항목
-- [성능 튜닝 Active Directory 서버](index.md)
+## <a name="additional-references"></a>추가 참조
+- [Active Directory 서버 성능 조정](index.md)
 - [LDAP 고려 사항](ldap-considerations.md)
 - [적절한 도메인 컨트롤러 배치 및 사이트 고려 사항](site-definition-considerations.md)
-- [ADDS 성능 문제 해결](troubleshoot.md) 
+- [ADDS 성능 문제 해결](troubleshoot.md)
 - [Active Directory 도메인 서비스의 용량 계획](https://go.microsoft.com/fwlink/?LinkId=324566)

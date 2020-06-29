@@ -7,12 +7,12 @@ ms.topic: landing-page
 ms.author: timwi; chrisrob; herbertm; kenbrumf;  mleary; shawnrab; v-tea
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 643a603e89adeb0c1f3c70b0b0cabbf6bcb54731
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 33dad41e01cab4c36ea55bcb84e8033bd358d617
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80851906"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85471568"
 ---
 # <a name="performance-tuning-active-directory-servers"></a>Active Directory 서버 성능 조정
 
@@ -44,12 +44,12 @@ Active Directory와 클라이언트 성능 최적화는 지난 몇 세대의 운
 
 팀 블로그 ["디렉터리 서비스 팀에게 요청"](https://techcommunity.microsoft.com/t5/Ask-the-Directory-Services-Team/bg-p/AskDS)을 팔로잉하여 ADDS 관리를 위한 최신 뉴스, 지침 및 모범 사례에 대한 정보를 얻으세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="additional-references"></a>추가 참조
 
 - [AD DS 용량 계획](capacity-planning-for-active-directory-domain-services.md)
 - [하드웨어 고려 사항](hardware-considerations.md)
 - [메모리 사용량 고려 사항](memory-usage-considerations.md)
 - [LDAP 고려 사항](ldap-considerations.md)
 - [적절한 도메인 컨트롤러 배치 및 사이트 고려 사항](site-definition-considerations.md)
-- [AD DS 성능 문제 해결](troubleshoot.md)  
-  
+- [AD DS 성능 문제 해결](troubleshoot.md)
+

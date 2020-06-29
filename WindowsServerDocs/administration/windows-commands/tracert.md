@@ -9,18 +9,19 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 00ae2f60181126657bfb3fe77144e6bc33167b4d
-ms.sourcegitcommit: ef089864980a1d4793a35cbf4cbdd02ce1962054
+ms.openlocfilehash: a6ef48350a0b8a4f67f1e564a9ca16db8b4dd5e6
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84149756"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85472930"
 ---
 # <a name="tracert"></a>tracert
 
 > 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 TTL (time to Live) 필드 값을 증분 방식으로 증가 시켜 ICMP (Internet Control Message Protocol) echo Request 또는 ICMPv6 메시지를 대상으로 전송 하 여 대상에 사용 되는 경로를 결정 합니다. 표시 된 경로 원본 호스트와 대상 간의 경로에 있는 라우터/쪽 근처 라우터 인터페이스의 목록입니다. 근처/쪽 인터페이스는 경로 있는 송신 호스트에 가장 가까운 라우터 인터페이스입니다. 매개 변수 없이 사용, tracert 도움말을 표시 합니다.
+
 
 ## <a name="syntax"></a>구문
 
@@ -38,8 +39,8 @@ tracert [/d] [/h <MaximumHops>] [/j <Hostlist>] [/w <timeout>] [/R] [/S <Srcaddr
 |/w\<timeout>|받은 ICMP 시간 초과 또는 지정 된 에코 요청 메시지에 해당 하는 echo Reply 메시지에 해당 하는 대기 시간 (밀리초)을 지정 합니다. 제한 시간 내에 받지 못한, 별표 (*)이 표시 됩니다. 기본 제한 시간은 4000 (4 초)입니다.|
 |/R|대상를 중간 대상으로 사용 하 고 역방향 경로를 테스트 하 여 로컬 호스트에 에코 요청 메시지를 전송 하는 데 IPv6 라우팅 확장 헤더를 사용 하도록 지정 합니다.|
 |/S\<Srcaddr>|에코 요청 메시지에 사용할 원본 주소를 지정 합니다. IPv6 주소를 추적 하는 경우에이 매개 변수를 사용 합니다.|
-|/4|Tracert에서이 추적에 IPv4만 사용할 수 있도록 지정 합니다.|
-|/6|Tracert에서이 추적에 i p v 6만 사용할 수 있도록 지정 합니다.|
+|/4|tracert.exe이 추적에 IPv4만 사용할 수 있도록 지정 합니다.|
+|/6|tracert.exe이 추적에 i p v 6만 사용할 수 있도록 지정 합니다.|
 |\<TargetName>|식별 된 대상 지정 IP 주소 또는 호스트 이름으로 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
@@ -49,7 +50,7 @@ tracert [/d] [/h <MaximumHops>] [/j <Hostlist>] [/w <timeout>] [/R] [/S <Srcaddr
 - 경로를 추적 하 고 각 라우터와 연결에 대 한 네트워크 대기 시간 및 패킷 손실을 제공 하려면 [**pathping**](pathping.md) 명령을 사용 합니다.
 - 이 명령은 네트워크 연결에서 네트워크 어댑터의 속성에 구성 요소로 인터넷 프로토콜 (TCP/IP) 프로토콜을 설치 하는 경우에 사용할 수입니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 Corp7.microsoft.com 명명 된 호스트에 대 한 경로 추적 하려면 다음을 입력 합니다.
 ```

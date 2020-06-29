@@ -7,12 +7,12 @@ ms.technology: storage-health-service
 ms.topic: article
 author: cosmosdarwin
 ms.date: 08/14/2017
-ms.openlocfilehash: a8262567abdd18847e99026c43d722351a00d3f2
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: d2284587ca68bbcf8648adeb2de361cb95e0f6d2
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720545"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85473260"
 ---
 # <a name="health-service-settings"></a>상태 관리 서비스 설정
 
@@ -24,13 +24,13 @@ ms.locfileid: "82720545"
 
 다음 PowerShell cmdlet을 사용 하 여 설정을 설정 하거나 수정할 수 있습니다.
 
-### <a name="usage"></a>사용
+### <a name="usage"></a>사용법
 
 ```PowerShell
-Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name <SettingName> -Value <Value>  
+Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name <SettingName> -Value <Value>
 ```
 
-#### <a name="example"></a>예제
+#### <a name="example"></a>예
 
 ```PowerShell
 Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name "System.Storage.Volume.CapacityThreshold.Warning" -Value 70
@@ -99,7 +99,7 @@ Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name "System.Storage.V
 "System.LogLevel" = 4
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="additional-references"></a>추가 참조
 
 - [Windows Server 2016의 상태 관리 서비스](health-service-overview.md)
 - [Windows Server 2016의 스토리지 공간 다이렉트](../storage/storage-spaces/storage-spaces-direct-overview.md)

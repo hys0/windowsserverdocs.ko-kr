@@ -3,16 +3,16 @@ title: Windows Server 분산 전원 계획에 대 한 프로세서 전원 관리
 description: Windows Server 분산 전원 계획에 대 한 프로세서 전원 관리 (PPM) 튜닝
 ms.prod: windows-server
 ms.technology: performance-tuning-guide
-ms.topic: article
+ms.topic: conceptual
 ms.author: qizha;tristanb
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 5c7319c843609f8bf846dd6ccf4bc2bf91f3b942
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 25244ecb653f7a1b8461130bba40901b35945765
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80851976"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85471618"
 ---
 # <a name="processor-power-management-ppm-tuning-for-the-windows-server-balanced-power-plan"></a>Windows Server 분산 전원 계획에 대 한 프로세서 전원 관리 (PPM) 튜닝
 
@@ -25,30 +25,29 @@ Windows server 2008부터 Windows Server는 **균형**, **고성능**및 **전�
 
 ## <a name="windows-processor-power-tuning-methodology"></a>Windows 프로세서 전원 조정 방법
 
-
 ### <a name="tested-workloads"></a>테스트 된 워크 로드
 
 작업은 "일반" Windows Server 워크 로드의 모범 사례 집합을 포함 하도록 선택 됩니다. 물론이 집합은 전체 실제 서버 환경의 전체를 제공 하기 위한 것이 아닙니다.
 
 각 전원 정책의 튜닝은 다음과 같은 5 가지 워크 로드에 의해 데이터 기반입니다.
 
--   **IIS 웹 서버 작업**
+- **IIS 웹 서버 작업**
 
     웹 기본 이라는 Microsoft 내부 벤치 마크는 IIS 웹 서버를 실행 하는 플랫폼의 에너지 효율성을 최적화 하는 데 사용 됩니다. 설치에는 웹 서버와 웹 액세스 트래픽을 시뮬레이트하는 여러 클라이언트가 포함 되어 있습니다. 동적, 정적 핫 (메모리 내) 및 정적 콜드 (디스크 액세스 필요) 웹 페이지의 분포는 프로덕션 서버의 통계 연구를 기반으로 합니다. 서버 CPU 코어를 전체 사용률 (테스트 된 스펙트럼의 한 쪽 끝)에 푸시 하려면 충분 한 빠른 네트워크 및 디스크 리소스가 필요 합니다.
 
--   **SQL Server 데이터베이스 작업**
+- **SQL Server 데이터베이스 작업**
 
     [TPC (TPC)](http://www.tpc.org/tpce/default.asp) 벤치 마크는 데이터베이스 성능 분석에 널리 사용 되는 벤치 마크입니다. PPM 튜닝 최적화에 대 한 OLTP 워크 로드를 생성 하는 데 사용 됩니다. 이 워크 로드에는 상당한 디스크 i/o가 있으므로 저장소 시스템 및 메모리 크기에 대 한 성능 요구 사항이 높습니다.
 
--   **파일 서버 작업**
+- **파일 서버 작업**
 
     [Fsct](http://www.snia.org/sites/default/files2/sdc_archives/2009_presentations/tuesday/BartoszNyczkowski-JianYan_FileServerCapacityTool.pdf) 라는 Microsoft에서 개발한 벤치 마크는 SMB 파일 서버 작업을 생성 하는 데 사용 됩니다. 서버에 많은 파일 집합을 만들고 많은 클라이언트 시스템 (실제 또는 가상화 된)을 사용 하 여 파일 열기, 닫기, 읽기 및 쓰기 작업을 생성 합니다. 작업 조합은 프로덕션 서버에 대 한 통계 연구를 기반으로 합니다. CPU, 디스크 및 네트워크 리소스를 과부하 합니다.
 
--   **SPECpower – JAVA 워크 로드**
+- **SPECpower – JAVA 워크 로드**
 
-    [SPECpower\_ssj2008](http://spec.org/power_ssj2008/) 은 전력 및 성능 특징을 공동으로 평가 하는 최초의 업계 표준 사양 벤치 마크입니다. 다양 한 CPU 로드 수준에서 서버 쪽 Java 워크 로드입니다. 디스크 또는 네트워크 리소스가 많이 필요 하지는 않지만 메모리 대역폭을 위한 특정 요구 사항이 있습니다. 거의 모든 CPU 작업은 사용자 모드에서 수행 됩니다. 커널 모드 작업은 전원 관리 결정을 제외 하 고 벤치 마크의 전원 및 성능 특징에 큰 영향을 주지 않습니다.
+    [SPECpower \_ ssj2008](http://spec.org/power_ssj2008/) 는 전력 및 성능 특징을 공동으로 평가 하는 최초의 업계 표준 사양 벤치 마크입니다. 다양 한 CPU 로드 수준에서 서버 쪽 Java 워크 로드입니다. 디스크 또는 네트워크 리소스가 많이 필요 하지는 않지만 메모리 대역폭을 위한 특정 요구 사항이 있습니다. 거의 모든 CPU 작업은 사용자 모드에서 수행 됩니다. 커널 모드 작업은 전원 관리 결정을 제외 하 고 벤치 마크의 전원 및 성능 특징에 큰 영향을 주지 않습니다.
 
--   **응용 프로그램 서버 워크 로드**
+- **응용 프로그램 서버 워크 로드**
 
     [SAP SD](http://global.sap.com/campaigns/benchmark/index.epx) 벤치 마크는 응용 프로그램 서버 워크 로드를 생성 하는 데 사용 됩니다. 데이터베이스와 응용 프로그램 서버가 같은 서버 호스트에 있는 2 계층 설정이 사용 됩니다. 또한이 워크 로드는 다른 테스트 된 작업과 다른 성능 메트릭으로 응답 시간을 활용 합니다. 따라서이는 응답성에서 PPM 매개 변수의 영향을 확인 하는 데 사용 됩니다. 그럼에도 불구 하 고 대기 시간이 중요 한 모든 프로덕션 워크 로드를 나타내지는 않습니다.
 
@@ -126,7 +125,7 @@ Windows Server 2008부터 Microsoft는 Intel 및 AMD를 사용 하 여 각 Windo
 이는 대부분의 경우 특정 서버에서 특정 작업에 대 한 직접 조정 작업을 수행할 필요가 없기 때문에 Windows에서 **균형** 있는 전원 계획을 처음으로 제공 하는 것입니다.
 
 ## <a name="see-also"></a>참고 항목
-- [서버 하드웨어 성능 고려 사항](../index.md)
+- [서버 하드웨어에 대한 성능 고려 사항](../index.md)
 - [서버 하드웨어에 대한 전원 고려 사항](../power.md)
 - [전원 및 성능 튜닝](power-performance-tuning.md)
 - [프로세서 전원 관리 튜닝](processor-power-management-tuning.md)

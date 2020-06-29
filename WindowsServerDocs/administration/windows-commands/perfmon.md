@@ -1,6 +1,6 @@
 ---
 title: perfmon
-description: Perfmon에 대 한 참조 항목
+description: 특정 독립 실행형 모드에서 Windows 안정성 및 성능 모니터를 시작 하는 perfmon 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/25/2018
-ms.openlocfilehash: 5742b51ffd4fca16c1054e373636afbe39968c96
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 96d1589dcd75814c37c2ad295cf60887eb07739c
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82723320"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85472479"
 ---
 # <a name="perfmon"></a>perfmon
 
@@ -28,13 +28,15 @@ perfmon </res|report|rel|sys>
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------|-----------|
-|/res|리소스 보기를 시작 합니다.|
-|/report|시스템 진단 데이터 수집기 집합을 시작 하 고 결과 보고서를 표시 합니다.|
-|/rel|안정성 모니터를 시작 합니다.|
-|/sys|성능 모니터를 시작 합니다.|
+| 매개 변수 | 설명 |
+|--|--|
+| /res | 리소스 뷰를 시작 합니다. |
+| /report | 시스템 진단 데이터 수집기 집합을 시작 하 고 결과에 대 한 보고서를 표시 합니다. |
+| /rel | 안정성 모니터를 시작 합니다. |
+| /sys | 성능 모니터를 시작 합니다. |
 
 ## <a name="additional-references"></a>추가 참조
 
-[Windows 성능 모니터](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749154(v%3dws.11))
+- [명령줄 구문 키](command-line-syntax-key.md)
+
+- [Windows 성능 모니터](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749154(v%3dws.11))

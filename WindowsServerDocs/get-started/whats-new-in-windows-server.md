@@ -8,18 +8,18 @@ ms.topic: article
 author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: medium
-ms.openlocfilehash: 6c424d19c006cfae6343d577dc08ff3553a5616b
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 46b4502bb0408b3fb7afe51234c81695ec54e48b
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80825876"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85473140"
 ---
 # <a name="whats-new-in-windows-server"></a>Windows Server의 새로운 기능
 
 > 적용 대상: Windows Server 2019, Windows Server 2016, Windows Server(반기 채널)
 
-이러한 각 Windows Server 릴리스에 대한 새로운 기능을 찾을 수 있습니다.  
+이러한 각 Windows Server 릴리스에 대한 새로운 기능을 찾을 수 있습니다.
 
 LTSC(장기 서비스 채널) 릴리스:
 
@@ -35,7 +35,7 @@ LTSC(장기 서비스 채널) 릴리스:
 
 Windows 서버 반기 채널 릴리스는 더 빠른 속도로 새로운 운영 체제 기능을 제공합니다. 새 릴리스는 6개월마다 나오며 18개월 동안 지원됩니다. 지원 날짜는 [Windows Server 릴리스 정보](windows-server-release-info.md) 및 [수명 주기 지원 페이지](https://support.microsoft.com/lifecycle)를 확인하고 가능하면 항상 최신 릴리스를 사용합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="additional-references"></a>추가 참조
 
 - [릴리스 정보: Windows Server 2019의 중요한 이슈](../get-started-19/rel-notes-19.md)
 - [릴리스 정보: Windows Server 2016의 중요한 이슈](Windows-Server-2016-GA-Release-Notes.md)

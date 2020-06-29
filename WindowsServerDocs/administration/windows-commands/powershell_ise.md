@@ -1,6 +1,6 @@
 ---
 title: PowerShell_ise
-description: '* * * *에 대 한 참조 항목'
+description: Windows PowerShell ISE (통합 스크립팅 환경) 세션을 시작 하는 PowerShell_ise 명령에 대 한 참조 항목입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,59 +9,65 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8529e19e30b72c9b9c8f8c30e1ca39c5e8f1f40e
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: 4c1b525c0178b08e34851b800be8ce4791f38913
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83436528"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85472338"
 ---
 # <a name="powershell_ise"></a>PowerShell_ise
 
-
-
 Windows PowerShell ISE (통합 스크립팅 환경)는 그래픽 지원 환경에서 스크립트 및 모듈을 읽고, 쓰고, 실행 하 고, 디버그 하 고, 테스트할 수 있는 그래픽 호스트 응용 프로그램입니다. IntelliSense, 표시 명령, 코드 조각, 탭 완성, 구문 색 지정, 시각적 디버깅 및 상황에 맞는 도움말과 같은 주요 기능을 통해 풍부한 스크립팅 환경을 제공 합니다.
 
-**PowerShell_ISE** 도구는 Windows PowerShell ISE 세션을 시작 합니다. **PowerShell_ISE**를 사용 하는 경우 선택적 매개 변수를 사용 하 여 Windows PowerShell ISE에서 파일을 열거나 프로필 또는 다중 스레드 아파트를 사용 하 여 Windows PowerShell ISE 세션을 시작할 수 있습니다.
+## <a name="using-powershellexe"></a>PowerShell.exe 사용
 
-**PowerShell_ISE** 는 windows powershell 2.0에서 도입 되었으며 windows powershell 3.0에서 크게 확장 되었습니다.
+**PowerShell_ISE.exe** 도구는 Windows PowerShell ISE 세션을 시작 합니다. **PowerShell_ISE.exe**를 사용 하는 경우 선택적 매개 변수를 사용 하 여 Windows PowerShell ISE에서 파일을 열거나 프로필 또는 다중 스레드 아파트를 사용 하 여 Windows PowerShell ISE 세션을 시작할 수 있습니다.
 
-## <a name="using-powershell_iseexe"></a>PowerShell_ISE 사용
+- 명령 프롬프트 창에서 Windows PowerShell ISE 세션을 시작 하려면 Windows PowerShell에서 또는 **시작** 메뉴에서 다음을 입력 합니다.
 
-다음과 같이 **PowerShell_ISE** 를 사용 하 여 Windows PowerShell 세션을 시작 하 고 종료할 수 있습니다.
-- Windows PowerShell ISE 세션을 시작 하려면 Windows PowerShell의 명령 프롬프트 창에서 또는 시작 메뉴에서 다음을 입력 합니다.
+  ```powershell
+  PowerShell_Ise.exe
   ```
-  PowerShell_Ise
+
+- 스크립트 (ps1), 스크립트 모듈 (.psm1), 모듈 매니페스트 (. psd1), XML 파일 또는 지원 되는 기타 Windows PowerShell ISE 파일을 열려면 다음을 입력 합니다.
+
+  ```powershell
+  PowerShell_Ise.exe <filepath>
   ```
-- 스크립트 (ps1), 스크립트 모듈 (.psm1), 모듈 매니페스트 (. psd1), XML 파일 또는 지원 되는 기타 Windows PowerShell ISE 파일을 열려면 다음 명령 형식을 사용 합니다.
-  ```
-  PowerShell_Ise <FilePath>
-  ```
+
   Windows PowerShell 3.0에서는 다음과 같이 선택적 **파일** 매개 변수를 사용할 수 있습니다.
-  ```
-  PowerShell_Ise -File <FilePath>
-  ```
-- Windows PowerShell 프로필 없이 Windows PowerShell ISE 세션을 시작 하려면 **Noprofile** 매개 변수를 사용 합니다. **Noprofile** 매개 변수는 Windows PowerShell 3.0에서 도입 되었습니다.
-  ```
-  PowerShell_Ise -NoProfile
-  ```
-- 명령 프롬프트 창에서 **PowerShell_ISE** 도움말 파일을 보려면 다음 명령 형식을 사용 합니다.
-  ```
-  PowerShell_Ise -help, -?, /?
-  ```
-  **PowerShell_ISE** 명령줄 매개 변수의 전체 목록은 [about_PowerShell_Ise](https://go.microsoft.com/fwlink/?LinkId=256512)를 참조 하세요.
 
-## <a name="start-windows-powershell-ise-in-other-ways"></a>다른 방법으로 Windows PowerShell ISE 시작
+  ```powershell
+  PowerShell_Ise.exe -file <filepath>
+  ```
 
-Windows PowerShell ISE를 시작 하는 다른 방법에 대 한 자세한 내용은 [Windows PowerShell 시작](https://go.microsoft.com/fwlink/?LinkID=135259)을 참조 하세요.
+- Windows PowerShell 프로필 없이 Windows PowerShell ISE 세션을 시작 하려면 **Noprofile** 매개 변수를 사용 합니다. **Noprofile** 매개 변수는 Windows PowerShell 3.0에 도입 되었습니다 .에는 다음을 입력 합니다.
 
-## <a name="remarks"></a>설명
+  ```powershell
+  PowerShell_Ise.exe -NoProfile
+  ```
 
-Windows PowerShell은 Windows Server 운영 체제의 Server Core 설치 옵션에서 실행 됩니다. 그러나 Windows PowerShell ISE에는 그래픽 사용자 인터페이스가 필요 하기 때문에 Server Core 설치에서 실행 되지 않습니다.
+- PowerShell_ISE.exe 도움말 파일을 보려면 다음을 입력 합니다.
+
+    ```powershell
+    PowerShell_Ise.exe -help
+    PowerShell_Ise.exe -?
+    PowerShell_Ise.exe /?
+    ```
+
+### <a name="remarks"></a>설명
+
+- **PowerShell_ISE.exe** 명령줄 매개 변수의 전체 목록은 [about_PowerShell_Ise.Exe](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_powershell_ise_exe)를 참조 하세요.
+
+- Windows PowerShell을 시작 하는 다른 방법에 대 한 자세한 내용은 [Windows Powershell 시작](https://docs.microsoft.com/powershell/scripting/windows-powershell/starting-windows-powershell)을 참조 하세요.
+
+- Windows PowerShell은 Windows Server 운영 체제의 Server Core 설치 옵션에서 실행 됩니다. 그러나 Windows PowerShell ISE에는 그래픽 사용자 인터페이스가 필요 하기 때문에 Server Core 설치에서 실행 되지 않습니다.
 
 ## <a name="additional-references"></a>추가 참조
 
-[about_PowerShell_Ise](https://go.microsoft.com/fwlink/?LinkId=256512) 
- [about_PowerShell](https://go.microsoft.com/fwlink/?LinkID=113439) 
- [Windows PowerShell](https://go.microsoft.com/fwlink/?LinkID=107116) 
- [Windows PowerShell을 사용한 스크립팅](https://technet.microsoft.com/scriptcenter/dd742419) 참고 항목
+- [about_PowerShell_Ise.exe] (https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_powershell_ise_exe
+
+- [about_PowerShell.Exe](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_powershell_exe)
+
+- [Windows PowerShell](https://docs.microsoft.com/powershell/)

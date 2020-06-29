@@ -1,6 +1,6 @@
 ---
-title: 사용자 쿼리
-description: '* * * *에 대 한 참조 항목'
+title: query user
+description: 사용자 세션에 대 한 정보를 표시 하는 사용자 쿼리 명령에 대 한 참조 항목 원격 데스크톱 세션 호스트 서버입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,57 +9,76 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e8c095226a5445e976e47e461044ec002dc007fe
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 7885df2287134cca9935926abd926a077ac8fdb3
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82722689"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85471948"
 ---
-# <a name="query-user"></a>사용자 쿼리
+# <a name="query-user"></a>query user
 
 > 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-원격 데스크톱 세션 호스트 (rd 세션 호스트) 서버에서 사용자 세션에 대 한 정보를 표시 합니다.
+원격 데스크톱 세션 호스트 서버의 사용자 세션에 대 한 정보를 표시 합니다. 특정 사용자가 특정 원격 데스크톱 세션 호스트 서버에 로그온 했는지 여부를 확인 하려면이 명령을 사용할 수 있습니다. 이 명령은 다음 정보를 반환합니다.
+
+- 사용자의 이름
+
+- 원격 데스크톱 세션 호스트 서버의 세션 이름
+
+- 세션 ID
+
+- 세션의 상태 (활성 또는 연결 끊김)
+
+- 유휴 시간 (세션에서 마지막 키 입력 또는 마우스 이동 이후 경과 된 시간 (분))
+
+- 사용자가 로그온 한 날짜 및 시간
 
 > [!NOTE]
-> Windows Server 2008 R2에서는 터미널 서비스의 이름이 원격 데스크톱 서비스로 바뀌었습니다. 최신 버전의 새로운 기능에 대 한 자세한 내용은 Windows Server TechNet 라이브러리의 [Windows server 2012에 있는 원격 데스크톱 서비스의 새로운 기능](https://technet.microsoft.com/library/hh831527) 을 참조 하십시오.
-> ## <a name="syntax"></a>구문
-> ```
-> query user [<UserName> | <SessionName> | <SessionID>] [/server:<ServerName>]
-> ```
-> ### <a name="parameters"></a>매개 변수
-> 
-> |      매개 변수       |                                                     설명                                                     |
-> |----------------------|---------------------------------------------------------------------------------------------------------------------|
-> |      <UserName>      |                            쿼리 하려는 사용자의 로그온 이름을 지정 합니다.                             |
-> |    <SessionName>     |                              쿼리 하려는 세션의 이름을 지정 합니다.                              |
-> |     <SessionID>      |                               쿼리 하려는 세션의 ID를 지정 합니다.                               |
-> | /server:<ServerName> | 쿼리할 rd 세션 호스트 서버를 지정 합니다. 그렇지 않으면 현재 rd 세션 호스트 서버가 사용 됩니다. |
-> |          /?          |                                        명령 프롬프트에 도움말을 표시합니다.                                         |
-> 
-> ## <a name="remarks"></a>설명
-> - 특정 사용자가 특정 rd 세션 호스트 서버에 로그온 했는지 여부를 확인 하려면이 명령을 사용할 수 있습니다. **쿼리 사용자** 는 다음 정보를 반환 합니다.
->   -   사용자의 이름
->   -   Rd 세션 호스트 서버의 세션 이름
->   -   세션 ID
->   -   (활성 또는 연결 끊기) 세션의 상태
->   -   유휴 시간 (세션에서 마지막 키 입력 이나 마우스 이동 이후 분 수)
->   -   사용자 로그온 날짜 및 시간
-> - **쿼리 사용자**를 사용 하려면 모든 권한 또는 쿼리 정보 특별 한 액세스 권한이 있어야 합니다.
-> - 사용자 *이름*>, <*세션 이름*> 또는 <*SessionID*>를 <지정 하지 않고 **쿼리 사용자** 를 사용 하는 경우 서버에 로그온 한 모든 사용자의 목록이 반환 됩니다. 또는 사용할 수도 있습니다 **세션 쿼리** 서버에서 모든 세션의 목록을 표시 합니다.
-> - 때 **쿼리 사용자에 게** 정보를 반환, 보다 큼 (>) 기호는 현재 세션 앞에 표시 됩니다.
-> - **/server** 매개 변수는 사용 하는 경우에 필요 **쿼리 사용자에 게** 원격 서버에서.
->   ## <a name="examples"></a>예
-> - 시스템에 로그온 한 모든 사용자에 대 한 정보를 표시 하려면 다음을 입력 합니다.
->   ```
->   query user
->   ```
-> - 서버 SERver1의 사용자 USER1에 대 한 정보를 표시 하려면 다음을 입력 합니다.
->   ```
->   query user USER1 /server:SERver1
->   ```
->   ## <a name="additional-references"></a>추가 참조
->   - [명령줄 구문 키](command-line-syntax-key.md)
->   [쿼리](query.md)
->   [원격 데스크톱 서비스 (Terminal Services) 명령 참조](remote-desktop-services-terminal-services-command-reference.md)
+> 최신 버전의 새로운 기능을 확인 하려면 [Windows Server에서 원격 데스크톱 서비스의 새로운 기능](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn283323(v=ws.11))을 참조 하세요.
+
+## <a name="syntax"></a>구문
+
+```
+query user [<username> | <sessionname> | <sessionID>] [/server:<servername>]
+```
+
+### <a name="parameters"></a>매개 변수
+
+| 매개 변수 | 설명 |
+|--|--|
+| `<username>` | 쿼리 하려는 사용자의 로그온 이름을 지정 합니다. |
+| `<sessionname>` | 쿼리 하려는 세션의 이름을 지정 합니다. |
+| `<sessionID>` | 쿼리 하려는 세션의 ID를 지정 합니다. |
+| /server:`<servername>` | 쿼리 하려는 원격 데스크톱 세션 호스트 서버를 지정 합니다. 그렇지 않으면 현재 원격 데스크톱 세션 호스트 서버가 사용 됩니다. 이 매개 변수는 원격 서버에서이 명령을 사용 하는 경우에만 필요 합니다. |
+| /? | 명령 프롬프트에 도움말을 표시합니다. |
+
+#### <a name="remarks"></a>설명
+
+- 이 명령을 사용 하려면 모든 권한 또는 특별 한 액세스 권한이 있어야 합니다.
+
+- <*username*>, <*세션 이름*> 또는 *sessionID* 매개 변수를 사용 하 여 사용자를 지정 하지 않으면 서버에 로그온 한 모든 사용자의 목록이 반환 됩니다. 또는 **쿼리 세션** 명령을 사용 하 여 서버에 있는 모든 세션의 목록을 표시할 수도 있습니다.
+
+- **쿼리 사용자가** 정보를 반환 하면 보다 큼 `(>)` 기호가 현재 세션 앞에 표시 됩니다.
+
+### <a name="examples"></a>예제
+
+시스템에 로그온 한 모든 사용자에 대 한 정보를 표시 하려면 다음을 입력 합니다.
+
+```
+query user
+```
+
+서버 *Server1*의 사용자 *USER1* 에 대 한 정보를 표시 하려면 다음을 입력 합니다.
+
+```
+query user USER1 /server:Server1
+```
+
+## <a name="additional-references"></a>추가 참조
+
+- [명령줄 구문 키](command-line-syntax-key.md)
+
+- [쿼리 명령](query.md)
+
+- [원격 데스크톱 서비스(터미널 서비스) 명령 참조](remote-desktop-services-terminal-services-command-reference.md)

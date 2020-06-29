@@ -1,18 +1,18 @@
 ---
-title: 전원 및 성능 조정
-description: Windows Server 분산 전원 계획에 대 한 프로세서 전원 관리 (PPM) 튜닝
+title: Windows Server의 전원 및 성능 조정에 대 한 개요
+description: Windows Server의 프로세서 전원 관리 (PPM) 조정에 대 한 개요입니다.
 ms.prod: windows-server
 ms.technology: performance-tuning-guide
-ms.topic: article
+ms.topic: conceptual
 ms.author: qizha;tristanb
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 1457328a151c87d2d4cb41c4ee91b4759f4fb8e2
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 67e72967d29fc96fe3f57b714bd8aaf19f406565
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80851996"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85471658"
 ---
 # <a name="power-and-performance-tuning"></a>전원 및 성능 조정
 
@@ -58,14 +58,14 @@ Windows Server 2016는 광범위 한 고객 워크 로드에서 성능에 최소
 
 ## <a name="diagnosing-energy-efficiency-issues"></a>에너지 효율성 문제 진단
 
-**PowerCfg** 는 서버의 유휴 에너지 효율성을 분석 하는 데 사용할 수 있는 명령줄 옵션을 지원 합니다. **/Wvhs** 옵션을 사용 하 여 PowerCfg를 실행 하는 경우이 도구는 60 초 테스트를 수행 하 여 잠재적인 에너지 효율성 문제를 검색 합니다. 이 도구는 현재 디렉터리에 간단한 HTML 보고서를 생성 합니다.
+**PowerCfg.exe** 은 서버의 유휴 에너지 효율성을 분석 하는 데 사용할 수 있는 명령줄 옵션을 지원 합니다. **/Cvhs** 옵션과 함께 PowerCfg.exe를 실행 하는 경우이 도구는 60 초 테스트를 수행 하 여 잠재적인 에너지 효율성 문제를 검색 합니다. 이 도구는 현재 디렉터리에 간단한 HTML 보고서를 생성 합니다.
 
 > [!Important]
-> 정확한 분석을 수행 하려면 **PowerCfg**를 실행 하기 전에 모든 로컬 앱이 닫혀 있는지 확인 하세요. 
+> 정확한 분석을 위해 **PowerCfg.exe**를 실행 하기 전에 모든 로컬 앱이 닫혀 있는지 확인 합니다. 
 
 단축 된 타이머 틱 비율, 전원 관리를 지원 하지 않는 드라이버 및 과도 한 CPU 사용률은 **powercfg/energy** 명령에 의해 검색 되는 동작 문제 중 일부입니다. 이 도구는 전원 관리 문제를 식별 하 고 해결 하는 간단한 방법을 제공 하며,이로 인해 큰 데이터 센터에서 상당한 비용을 절감할 수 있습니다.
 
-PowerCfg에 대 한 자세한 내용은 [powercfg를 사용 하 여 시스템 에너지 효율성 평가](https://msdn.microsoft.com/windows/hardware/gg463250.aspx)를 참조 하세요.
+PowerCfg.exe에 대 한 자세한 내용은 [PowerCfg를 사용 하 여 시스템 에너지 효율성 평가](https://msdn.microsoft.com/windows/hardware/gg463250.aspx)를 참조 하세요.
 
 ## <a name="using-power-plans-in-windows-server"></a>Windows Server에서 전원 계획 사용
 
@@ -73,7 +73,7 @@ Windows Server 2016에는 다양 한 비즈니스 요구 사항을 충족 하도
 
 | **계획** | **설명** | **적용 되는 일반적인 시나리오** | **구현 주요 사항** |
 |------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 균형 조정 (권장) | 기본 설정. 성능 영향을 최소화 하면서 우수한 에너지 효율성을 목표로 합니다. | 일반 컴퓨팅 | 요구에 맞게 용량을 일치 시킵니다. 에너지 절약 기능을 통해 성능과 성능이 균형을 유지 합니다. |
+| 균형 조정 (권장) | 기본 설정입니다. 성능 영향을 최소화 하면서 우수한 에너지 효율성을 목표로 합니다. | 일반 컴퓨팅 | 요구에 맞게 용량을 일치 시킵니다. 에너지 절약 기능을 통해 성능과 성능이 균형을 유지 합니다. |
 | 고성능 | 에너지 소비량을 높일 때 성능을 향상 시킵니다. 전원 및 열 제한, 운영 비용 및 안정성 고려 사항이 적용 됩니다. | 낮은 대기 시간 앱 및 프로세서 성능 변경에 민감한 앱 코드 | 프로세서는 항상 최고 성능 상태 ("터보" 주파수 포함)로 잠깁니다. 모든 코어는 파킹 해제입니다. 열 출력이 중요할 수 있습니다. |
 | 전원 보호기 | 에너지를 절약 하 고 운영 비용을 절감 하기 위해 성능을 제한 합니다. 성능이 적절 한지 확인 하기 위해 철저 한 테스트 없이는 권장 되지 않습니다. | 전원 예산이 제한 된 배포 및 열 제약 조건 | Caps processor frequency (지원 되는 경우)의 백분율 (지원 되는 경우) 및 다른 에너지 절약 기능을 사용 하도록 설정 합니다. |
 
@@ -115,10 +115,10 @@ Windows Server 2016에서 상승 모드의 기본값은 3입니다.
 | 0 (사용 안 함) | 사용 안 함 | 사용 안 함 |
 | 1 (사용) | 사용 | 효율적 사용 |
 | 2 (적극적인) | 사용 | Aggressive |
-| 3 (효율적으로 사용) | 효율적인 경우 | 효율적 사용 |
-| 4 (효율적인 적극적) | 효율적인 경우 | Aggressive |
+| 3 (효율적으로 사용) | 떨어지는 | 효율적 사용 |
+| 4 (효율적인 적극적) | 떨어지는 | Aggressive |
 
- 
+
 다음 명령을 사용 하 여 현재 전원 계획에서 프로세서 성능 향상 모드를 사용 하도록 설정 합니다 (GUID 별칭을 사용 하 여 정책을 지정).
 
 ``` syntax
@@ -129,7 +129,7 @@ Powercfg -setactive scheme_current
 > [!Important]
 > 새 설정을 사용 하도록 설정 하려면 **powercfg-setactive** 명령을 실행 해야 합니다. 서버를 다시 부팅할 필요는 없습니다.
 
-현재 선택 된 계획 이외의 전원 계획에 대해이 값을 설정 하려면 CURRENT 스키마 대신\_최대 (전원 보호기), 구성표\_MIN (고성능) 및 구성표\_균형 조정 (균형 조정\_)과 같은 별칭을 사용할 수 있습니다. 해당 전원 계획을 사용 하도록 설정 하려면 이전에 표시 된 powercfg setactive 명령의 "scheme current"를 원하는 별칭으로 바꿉니다.
+현재 선택 된 계획 이외의 전원 계획에 대해이 값을 설정 하려면 \_ 현재 구성표 대신 최대 구성표 (전원 보호기), 구성표 \_ 최소 (고성능) 및 구성표 \_ 균형 조정 (균형 조정) 등의 별칭을 사용할 수 있습니다 \_ . 해당 전원 계획을 사용 하도록 설정 하려면 이전에 표시 된 powercfg setactive 명령의 "scheme current"를 원하는 별칭으로 바꿉니다.
 
 예를 들어 전원 보호기 계획의 상승 모드를 조정 하 고 해당 전원 보호기를 현재 계획으로 설정 하려면 다음 명령을 실행 합니다.
 
@@ -220,8 +220,9 @@ Powercfg -setacvalueindex scheme_current sub_processor DISTRIBUTEUTIL 0
 Powercfg -setactive scheme_current
 ```
 
-## <a name="see-also"></a>참고 항목
-- [서버 하드웨어 성능 고려 사항](../index.md)
+## <a name="additional-references"></a>추가 참조
+
+- [서버 하드웨어에 대한 성능 고려 사항](../index.md)
 - [서버 하드웨어에 대한 전원 고려 사항](../power.md)
 - [프로세서 전원 관리 튜닝](processor-power-management-tuning.md)
 - [분산 전원 계획에 추천되는 매개 변수](recommended-balanced-plan-parameters.md)

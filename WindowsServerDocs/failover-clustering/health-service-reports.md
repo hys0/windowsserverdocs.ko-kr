@@ -7,20 +7,20 @@ ms.technology: storage-health-service
 ms.topic: article
 author: cosmosdarwin
 ms.date: 10/05/2017
-ms.openlocfilehash: 0a03dc5d646d24c9f24f979df36fb3fe1eafe631
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: a1aedd4dc48abb38c33679f219a6825c6a9141bb
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720550"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85473030"
 ---
 # <a name="health-service-reports"></a>상태 관리 서비스 보고서
 
 > 적용 대상: Windows Server 2019, Windows Server 2016
 
-## <a name="what-are-reports"></a>보고서 란?  
+## <a name="what-are-reports"></a>보고서 란?
 
-상태 관리 서비스은 스토리지 공간 다이렉트 클러스터에서 라이브 성능 및 용량 정보를 가져오는 데 필요한 작업을 줄입니다. 새 cmdlet 중 하나는 클러스터 멤버 자격을 검색 하는 기본 제공 논리를 사용 하 여 노드 간에 효율적이 고 동적으로 수집 되는 필수 메트릭의 큐 레이트 목록을 제공 합니다. 모든 값은 실시간 및 지정 시간 값으로만 제공됩니다.  
+상태 관리 서비스은 스토리지 공간 다이렉트 클러스터에서 라이브 성능 및 용량 정보를 가져오는 데 필요한 작업을 줄입니다. 새 cmdlet 중 하나는 클러스터 멤버 자격을 검색 하는 기본 제공 논리를 사용 하 여 노드 간에 효율적이 고 동적으로 수집 되는 필수 메트릭의 큐 레이트 목록을 제공 합니다. 모든 값은 실시간 및 지정 시간 값으로만 제공됩니다.
 
 ## <a name="usage-in-powershell"></a>PowerShell에서 사용
 
@@ -30,16 +30,16 @@ ms.locfileid: "82720550"
 Get-StorageSubSystem Cluster* | Get-StorageHealthReport
 ```
 
-선택적 **Count** 매개 변수는 1 초 간격으로 반환할 값 집합 수를 나타냅니다.  
+선택적 **Count** 매개 변수는 1 초 간격으로 반환할 값 집합 수를 나타냅니다.
 
 ```PowerShell
-Get-StorageSubSystem Cluster* | Get-StorageHealthReport -Count <Count>  
+Get-StorageSubSystem Cluster* | Get-StorageHealthReport -Count <Count>
 ```
 
-특정 볼륨 또는 서버에 대 한 메트릭을 가져올 수도 있습니다.  
+특정 볼륨 또는 서버에 대 한 메트릭을 가져올 수도 있습니다.
 
 ```PowerShell
-Get-Volume -FileSystemLabel <Label> | Get-StorageHealthReport -Count <Count>  
+Get-Volume -FileSystemLabel <Label> | Get-StorageHealthReport -Count <Count>
 
 Get-StorageNode -Name <Name> | Get-StorageHealthReport -Count <Count>
 ```
@@ -48,7 +48,7 @@ Get-StorageNode -Name <Name> | Get-StorageHealthReport -Count <Count>
 
 ### <a name="connect"></a>연결
 
-상태 관리 서비스를 쿼리하려면 클러스터로 **CimSession** 를 설정 해야 합니다. 이렇게 하려면 전체 .NET 에서만 사용할 수 있는 몇 가지 항목이 필요 합니다. 즉, 웹 또는 모바일 앱에서 바로이 작업을 수행할 수 없습니다. 이러한 코드 샘플은이 데이터\#액세스 계층에 가장 간단한 선택 인 C를 사용 합니다.
+상태 관리 서비스를 쿼리하려면 클러스터로 **CimSession** 를 설정 해야 합니다. 이렇게 하려면 전체 .NET 에서만 사용할 수 있는 몇 가지 항목이 필요 합니다. 즉, 웹 또는 모바일 앱에서 바로이 작업을 수행할 수 없습니다. 이러한 코드 샘플은 \# 이 데이터 액세스 계층에 가장 간단한 선택 인 C를 사용 합니다.
 
 ```
 using System.Security;
@@ -79,7 +79,7 @@ public CimSession Connect(string Domain = "...", string Computer = "...", string
 
 **CimSession** 가 설정 되 면 클러스터에서 WMI(WINDOWS MANAGEMENT INSTRUMENTATION) (WMI)를 쿼리할 수 있습니다.
 
-오류나 메트릭을 얻기 전에 여러 관련 개체의 인스턴스를 가져와야 합니다. 먼저 클러스터에서 스토리지 공간 다이렉트를 나타내는 **MSFT\_storagesubsystem** 입니다. 이를 사용 하 여 클러스터의 **모든\_msft StorageNode** 및 모든 **msft\_볼륨**, 데이터 볼륨을 가져올 수 있습니다. 마지막으로, 상태 관리 서비스 **\_MSFT storagehealth**가 필요 합니다.
+오류나 메트릭을 얻기 전에 여러 관련 개체의 인스턴스를 가져와야 합니다. 먼저 클러스터에서 스토리지 공간 다이렉트를 나타내는 **MSFT \_ storagesubsystem** 입니다. 이를 사용 하 여 클러스터의 모든 **msft \_ StorageNode** 및 모든 **msft \_ 볼륨**, 데이터 볼륨을 가져올 수 있습니다. 마지막으로, 상태 관리 서비스 **MSFT \_ storagehealth**가 필요 합니다.
 
 ```
 CimInstance Cluster;
@@ -207,13 +207,13 @@ public void BeginStreamingMetrics(CimSession Session, CimInstance HealthService,
 
 메트릭의 모든 샘플은 개별 메트릭에 해당 하는 많은 "레코드"를 포함 하는 하나의 "보고서"입니다.
 
-전체 스키마에 대해 *storagewmi .mof*에서 **\_msft StorageHealthReport** 및 **msft\_HealthRecord** 클래스를 검사 합니다.
+전체 스키마에 대해 *storagewmi .mof*에서 **Msft \_ StorageHealthReport** 및 **msft \_ HealthRecord** 클래스를 검사 합니다.
 
 각 메트릭에는이 테이블 당 세 가지 속성만 있습니다.
 
 | **속성** | **예제**       |
 | -------------|-------------------|
-| 속성         | IOLatencyAverage  |
+| 이름         | IOLatencyAverage  |
 | 값        | 0.00021           |
 | 단위        | 3                 |
 
@@ -280,6 +280,6 @@ Windows Server 2016의 각 범위에 사용할 수 있는 메트릭은 다음과
 | IOThroughputTotal   | 1         |
 | IOThroughputWrite   | 1         |
 
-## <a name="see-also"></a>참고 항목
+## <a name="additional-references"></a>추가 참조
 
 - [Windows Server 2016의 상태 관리 서비스](health-service-overview.md)

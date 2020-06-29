@@ -7,14 +7,14 @@ ms.topic: article
 author: cosmosdarwin
 ms.date: 10/08/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: b06d69c020ea38a2fb9f23df2cfd9cd4191ae315
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 5e7a4469a3f72737801a5110e322533df9764e20
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80857556"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85473590"
 ---
-# <a name="drive-symmetry-considerations-for-storage-spaces-direct"></a>스토리지 공간 다이렉트에 대 한 드라이브 대칭 고려 사항 
+# <a name="drive-symmetry-considerations-for-storage-spaces-direct"></a>스토리지 공간 다이렉트에 대 한 드라이브 대칭 고려 사항
 
 > 적용 대상: Windows Server 2019, Windows Server 2016
 
@@ -26,13 +26,13 @@ ms.locfileid: "80857556"
 
 ## <a name="constraints"></a>제약 조건
 
-### <a name="type"></a>형식
+### <a name="type"></a>Type
 
 모든 서버의 [드라이브 유형은](choosing-drives.md#drive-types)동일 해야 합니다.
 
 예를 들어 한 서버에 NVMe가 있으면 *모두* nvme가 있어야 합니다.
 
-### <a name="number"></a>번호
+### <a name="number"></a>Number
 
 모든 서버의 드라이브 수는 각 유형과 동일 해야 합니다.
 
@@ -86,11 +86,11 @@ ms.locfileid: "80857556"
    > [!TIP]
    > 캐시 바인딩에 대해 자세히 알아보려면 [캐시 이해](understand-the-cache.md) 를 참조 하세요.
 
-## <a name="example-configurations"></a>구성 예
+## <a name="example-configurations"></a>예제 구성
 
 다음은 지원 되는 구성 및 지원 되지 않는 구성입니다.
 
-### <a name="supported-supported-different-models-between-servers"></a>![지원](media/drive-symmetry-considerations/supported.png) 지원 됨: 서버 간 다른 모델
+### <a name="supported-supported-different-models-between-servers"></a>![지원됨](media/drive-symmetry-considerations/supported.png) 지원 됨: 서버 간 다른 모델
 
 처음 두 서버는 NVMe 모델 "X"를 사용 하지만 세 번째 서버는 NVMe 모델 "Z"를 사용 합니다 .이는 매우 유사 합니다.
 
@@ -101,7 +101,7 @@ ms.locfileid: "80857556"
 
 지원됩니다.
 
-### <a name="supported-supported-different-models-within-server"></a>![지원](media/drive-symmetry-considerations/supported.png) 지원 됨: 서버 내의 다른 모델
+### <a name="supported-supported-different-models-within-server"></a>![지원됨](media/drive-symmetry-considerations/supported.png) 지원 됨: 서버 내의 다른 모델
 
 모든 서버는 매우 유사한 HDD 모델 "Y"와 "Z"의 여러 조합을 사용 합니다. 모든 서버에는 총 10 개의 HDD가 있습니다.
 
@@ -113,7 +113,7 @@ ms.locfileid: "80857556"
 
 지원됩니다.
 
-### <a name="supported-supported-different-sizes-across-servers"></a>![지원](media/drive-symmetry-considerations/supported.png) 지원 됨: 서버 간 다양 한 크기
+### <a name="supported-supported-different-sizes-across-servers"></a>![지원됨](media/drive-symmetry-considerations/supported.png) 지원 됨: 서버 간 다양 한 크기
 
 처음 두 서버는 4 TB HDD를 사용 하지만 세 번째 서버는 매우 유사한 6tb HDD를 사용 합니다.
 
@@ -124,7 +124,7 @@ ms.locfileid: "80857556"
 
 이는 지원 되지만 용량이 더 이상 발생 하지 않습니다.
 
-### <a name="supported-supported-different-sizes-within-server"></a>![지원](media/drive-symmetry-considerations/supported.png) 지원 됨: 서버 내의 다른 크기
+### <a name="supported-supported-different-sizes-within-server"></a>![지원됨](media/drive-symmetry-considerations/supported.png) 지원 됨: 서버 내의 다른 크기
 
 모든 서버는 1.2 TB와 매우 유사한 1.6 TB SSD 조합을 사용 합니다. 모든 서버에는 총 4 개의 SSD가 있습니다.
 
@@ -146,7 +146,7 @@ ms.locfileid: "80857556"
 | -                   | 6 x SSD (캐시)     | 6 x SSD (캐시)     |
 | 18 x HDD (용량) | 18 x HDD (용량) | 18 x HDD (용량) |
 
-이는 지원 되지 않습니다. 드라이브의 유형은 모든 서버에서 동일 해야 합니다.
+지원되지 않습니다. 드라이브의 유형은 모든 서버에서 동일 해야 합니다.
 
 ### <a name="unsupported-not-supported-different-number-of-each-type-across-servers"></a>![지원되지 않는](media/drive-symmetry-considerations/unsupported.png) 지원 되지 않음: 서버 간 각 유형의 수가 다릅니다.
 
@@ -157,17 +157,17 @@ ms.locfileid: "80857556"
 | 2 x NVMe (캐시)    | 2 x NVMe (캐시)    | 4 x NVMe (캐시)    |
 | 10 x HDD (용량) | 10 x HDD (용량) | 20 x HDD (용량) |
 
-이는 지원 되지 않습니다. 각 유형의 드라이브 수는 모든 서버에서 동일 해야 합니다.
+지원되지 않습니다. 각 유형의 드라이브 수는 모든 서버에서 동일 해야 합니다.
 
 ### <a name="unsupported-not-supported-only-hdd-drives"></a>![지원되지 않는](media/drive-symmetry-considerations/unsupported.png) 지원 되지 않음: HDD 드라이브만
 
 모든 서버에는 연결 된 HDD 드라이브만 있습니다.
 
 |서버 1|서버 2|서버 3|
-|-|-|-| 
+|-|-|-|
 |18 x HDD (용량) |18 x HDD (용량)|18 x HDD (용량)|
 
-이는 지원 되지 않습니다. 각 서버에 연결 된 최소 두 개의 캐시 드라이브 (NvME 또는 SSD)를 추가 해야 합니다.
+지원되지 않습니다. 각 서버에 연결 된 최소 두 개의 캐시 드라이브 (NvME 또는 SSD)를 추가 해야 합니다.
 
 ## <a name="summary"></a>요약
 
@@ -180,7 +180,7 @@ ms.locfileid: "80857556"
 | 모든 서버에서 동일한 드라이브 모델        | 권장   |
 | 모든 서버에서 동일한 드라이브 크기         | 권장   |
 
-## <a name="see-also"></a>참고 항목
+## <a name="additional-references"></a>추가 참조
 
 - [하드웨어 요구 사항 스토리지 공간 다이렉트](storage-spaces-direct-hardware-requirements.md)
 - [스토리지 공간 다이렉트 개요](storage-spaces-direct-overview.md)
