@@ -6,22 +6,22 @@ ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
 ms.date: 03/29/2018
-ms.openlocfilehash: 26454881279e1d33392a827f794788370def2cab
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: ce3b32bdb0dfb51237f934f23207167a215a0024
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80858976"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85475610"
 ---
 # <a name="delimit-the-allocation-of-volumes-in-storage-spaces-direct"></a>스토리지 공간 다이렉트 볼륨의 할당을 구분 합니다.
-> 적용 대상: Windows Server 2019
+> 적용 대상: 시작
 
 Windows Server 2019에는 스토리지 공간 다이렉트 볼륨의 할당을 수동으로 구분 하는 옵션이 도입 되었습니다. 이렇게 하면 특정 조건에 따라 내결함성이 크게 향상 되지만 몇 가지 추가 관리 고려 사항과 복잡성이 적용 됩니다. 이 항목에서는 PowerShell의 작동 방식에 대해 설명 하 고 예제를 제공 합니다.
 
    > [!IMPORTANT]
-   > 이 기능은 Windows Server 2019에 새로 있습니다. Windows Server 2016에서는 사용할 수 없습니다. 
+   > 이 기능은 Windows Server 2019에 새로 있습니다. Windows Server 2016에서는 사용할 수 없습니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 ### <a name="green-checkmark-icon-consider-using-this-option-if"></a>![녹색 확인 표시 아이콘입니다.](media/delimit-volume-allocation/supported.png) 다음 경우에이 옵션을 사용 하는 것이 좋습니다.
 
@@ -74,7 +74,7 @@ Windows Server 2019에는 스토리지 공간 다이렉트 볼륨의 할당을 �
 
 ## <a name="usage-in-powershell"></a>PowerShell에서 사용
 
-`New-Volume` cmdlet을 사용 하 여 스토리지 공간 다이렉트에서 볼륨을 만들 수 있습니다.
+Cmdlet을 사용 `New-Volume` 하 여 스토리지 공간 다이렉트에서 볼륨을 만들 수 있습니다.
 
 예를 들어 일반 3 방향 미러 볼륨을 만들려면 다음을 수행 합니다.
 
@@ -86,7 +86,7 @@ New-Volume -FriendlyName "MyRegularVolume" -Size 100GB
 
 3 방향 미러 볼륨을 만들고 해당 할당을 구분 하려면 다음을 수행 합니다.
 
-1. 먼저 클러스터의 서버를 `$Servers`변수에 할당 합니다.
+1. 먼저 클러스터의 서버를 변수에 할당 합니다 `$Servers` .
 
     ```PowerShell
     $Servers = Get-StorageFaultDomain -Type StorageScaleUnit | Sort FriendlyName
@@ -95,7 +95,7 @@ New-Volume -FriendlyName "MyRegularVolume" -Size 100GB
    > [!TIP]
    > 스토리지 공간 다이렉트에서 ' 저장소 배율 단위 ' 라는 용어는 직접 연결 된 드라이브 및 드라이브와 직접 연결 된 외부 인클로저를 포함 하 여 한 서버에 연결 된 모든 원시 저장소를 나타냅니다. 이 컨텍스트에서는 ' server '와 같습니다.
 
-2. 새 `-StorageFaultDomainsToUse` 매개 변수와 함께 사용할 서버를 지정 하 고 `$Servers`에 인덱싱을 지정 합니다. 예를 들어 첫 번째, 두 번째, 세 번째 및 네 번째 서버 (인덱스 0, 1, 2, 3)에 대 한 할당을 구분 하려면 다음을 수행 합니다.
+2. 새 매개 변수와 함께 사용할 서버를 지정 하 `-StorageFaultDomainsToUse` 고를로 인덱싱합니다 `$Servers` . 예를 들어 첫 번째, 두 번째, 세 번째 및 네 번째 서버 (인덱스 0, 1, 2, 3)에 대 한 할당을 구분 하려면 다음을 수행 합니다.
 
     ```PowerShell
     New-Volume -FriendlyName "MyVolume" -Size 100GB -StorageFaultDomainsToUse $Servers[0,1,2,3]
@@ -103,21 +103,21 @@ New-Volume -FriendlyName "MyRegularVolume" -Size 100GB
 
 ### <a name="see-a-delimited-allocation"></a>구분 된 할당 보기
 
-*Myvolume* 을 할당 하는 방법을 확인 하려면 [부록](#appendix)에서 `Get-VirtualDiskFootprintBySSU.ps1` 스크립트를 사용 합니다.
+*Myvolume* 을 할당 하는 방법을 확인 하려면 `Get-VirtualDiskFootprintBySSU.ps1` [부록](#appendix):
 
 ```PowerShell
 PS C:\> .\Get-VirtualDiskFootprintBySSU.ps1
 
 VirtualDiskFriendlyName TotalFootprint Server1 Server2 Server3 Server4 Server5 Server6
 ----------------------- -------------- ------- ------- ------- ------- ------- -------
-MyVolume                300 GB         100 GB  100 GB  100 GB  100 GB  0       0      
+MyVolume                300 GB         100 GB  100 GB  100 GB  100 GB  0       0
 ```
 
 Server1, Server2, Server3 및 Server4만 *Myvolume*의 줄임를 포함 합니다.
 
 ### <a name="change-a-delimited-allocation"></a>구분 된 할당 변경
 
-새 `Add-StorageFaultDomain` 및 `Remove-StorageFaultDomain` cmdlet을 사용 하 여 할당을 구분 하는 방법을 변경할 수 있습니다.
+새 `Add-StorageFaultDomain` 및 cmdlet을 사용 `Remove-StorageFaultDomain` 하 여 할당을 구분 하는 방법을 변경할 수 있습니다.
 
 예를 들어 *Myvolume* 을 한 서버에서 이동 하려면 다음을 수행 합니다.
 
@@ -139,16 +139,16 @@ Server1, Server2, Server3 및 Server4만 *Myvolume*의 줄임를 포함 합니�
     Get-StoragePool S2D* | Optimize-StoragePool
     ```
 
-`Get-StorageJob`를 사용 하 여 리 밸런스의 진행률을 모니터링할 수 있습니다.
+를 사용 하 여 리 밸런스의 진행률을 모니터링할 수 있습니다 `Get-StorageJob` .
 
-완료 되 면 `Get-VirtualDiskFootprintBySSU.ps1`를 다시 실행 하 여 *Myvolume* 이 이동 했는지 확인 합니다.
+완료 되 면 *Myvolume* 이를 실행 하 여 이동 되었는지 확인 `Get-VirtualDiskFootprintBySSU.ps1` 합니다.
 
 ```PowerShell
 PS C:\> .\Get-VirtualDiskFootprintBySSU.ps1
 
 VirtualDiskFriendlyName TotalFootprint Server1 Server2 Server3 Server4 Server5 Server6
 ----------------------- -------------- ------- ------- ------- ------- ------- -------
-MyVolume                300 GB         0       100 GB  100 GB  100 GB  100 GB  0      
+MyVolume                300 GB         0       100 GB  100 GB  100 GB  100 GB  0
 ```
 
 S e r v e r 1에 *Myvolume* 의 줄임이 더 이상 포함 되지 않습니다. 대신 Server5이 수행 합니다.
@@ -167,11 +167,11 @@ S e r v e r 1에 *Myvolume* 의 줄임이 더 이상 포함 되지 않습니다.
 
 ### <a name="stagger-delimited-allocation-volumes"></a>분리 된 할당 볼륨
 
-내결함성을 최대화 하려면 각 볼륨의 할당을 고유 하 게 지정 합니다. 즉, *모든* 서버를 다른 볼륨과 공유 하지 않습니다. 즉, 일부 중복이 보장 됩니다. 
+내결함성을 최대화 하려면 각 볼륨의 할당을 고유 하 게 지정 합니다. 즉, *모든* 서버를 다른 볼륨과 공유 하지 않습니다. 즉, 일부 중복이 보장 됩니다.
 
 예를 들어 8 개 노드 시스템: 볼륨 1: 서버 1, 2, 3, 4 볼륨 2: 서버 5, 6, 7, 8 볼륨 3: 서버 3, 4, 5, 6 볼륨 4: 서버 1, 2, 7, 8
 
-## <a name="analysis"></a>분석과
+## <a name="analysis"></a>분석
 
 이 섹션에서는 오류가 발생 한 횟수와 클러스터 크기의 기능으로 볼륨이 온라인 상태가 되 고 온라인 상태를 유지 하 고 액세스할 수 있는 전체 저장소의 예상 비율에 액세스할 수 있는 수학적 확률을 파생 합니다.
 
@@ -200,7 +200,7 @@ S e r v e r 1에 *Myvolume* 의 줄임이 더 이상 포함 되지 않습니다.
 
 아니요, 일반 할당과 동일 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="additional-references"></a>추가 참조
 
 - [스토리지 공간 다이렉트 개요](storage-spaces-direct-overview.md)
 - [스토리지 공간 다이렉트의 내결함성](storage-spaces-fault-tolerance.md)
@@ -209,7 +209,7 @@ S e r v e r 1에 *Myvolume* 의 줄임이 더 이상 포함 되지 않습니다.
 
 이 스크립트는 볼륨을 할당 하는 방법을 확인 하는 데 도움이 됩니다.
 
-위에서 설명한 대로 사용 하려면 복사/붙여넣기 및 다른 이름으로 저장을 `Get-VirtualDiskFootprintBySSU.ps1`합니다.
+위에서 설명한 대로이를 사용 하려면 복사/붙여넣기 및 다른 이름으로 저장을 사용 `Get-VirtualDiskFootprintBySSU.ps1` 합니다.
 
 ```PowerShell
 Function ConvertTo-PrettyCapacity {

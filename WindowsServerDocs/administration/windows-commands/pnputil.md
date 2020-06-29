@@ -37,7 +37,7 @@ pnputil.exe [-f | -i] [ -? | -a | -d | -e ] <INF name>
 | -i | 식별 된 INF 파일을 설치 하도록 지정 합니다. **-F** 매개 변수와 함께 사용할 수 없습니다. |
 | /? | 명령 프롬프트에 도움말을 표시합니다. |
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 USBCAM 라는 INF 파일을 추가 합니다. INF, 형식:
 

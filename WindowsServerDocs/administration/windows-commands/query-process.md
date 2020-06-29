@@ -62,7 +62,7 @@ query process [*|<processID>|<username>|<sessionname>|/id:<nn>|<programname>] [/
 
 - **쿼리 프로세스** 에서 정보를 반환 하는 경우 `(>)` 현재 세션에 속하는 각 프로세스 앞에 보다 큼 기호가 표시 됩니다.
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 모든 세션에서 사용 중인 프로세스에 대 한 정보를 표시 하려면 다음을 입력 합니다.
 

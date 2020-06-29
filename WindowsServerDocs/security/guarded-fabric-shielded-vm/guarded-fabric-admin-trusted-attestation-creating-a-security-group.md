@@ -8,12 +8,12 @@ author: rpsqrd
 ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: b6fac7792b91e7415d0714b43201c404da2155bf
-ms.sourcegitcommit: 32f810c5429804c384d788c680afac427976e351
+ms.openlocfilehash: 84bf134ac5224f224339cc1ec216bded8cbcc792
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83203411"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85475680"
 ---
 # <a name="create-a-security-group-for-guarded-hosts-and-register-the-group-with-hgs"></a>보호 된 호스트에 대 한 보안 그룹을 만들고 HGS로 그룹 등록
 
@@ -56,6 +56,6 @@ ms.locfileid: "83203411"
 > [증명 확인](guarded-fabric-confirm-hosts-can-attest-successfully.md)
 
 
-## <a name="see-also"></a>참고 항목
+## <a name="additional-references"></a>추가 참조
 
 - [보호된 호스트 및 보호된 VM에 대해 호스트 보호 서비스 배포](guarded-fabric-deploying-hgs-overview.md)

@@ -8,16 +8,16 @@ author: rpsqrd
 ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: 664b3cfc1e529fe3591f6477ae0eb0b64e32441a
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 24714e7af844116629fa4c0eebf5050f9c150c50
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80856736"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85475540"
 ---
 # <a name="create-a-host-key-and-add-it-to-hgs"></a>호스트 키를 만들어 HGS에 추가
 
->적용 대상: Windows Server 2019
+>적용 대상: 시작
 
 
 이 항목에서는 호스트 키 증명 (키 모드)을 사용 하 여 보호 된 호스트가 되도록 Hyper-v 호스트를 준비 하는 방법을 설명 합니다. 호스트 키 쌍을 만들고 (기존 인증서 사용), 키의 공개 절반을 HGS에 추가 합니다.
@@ -29,7 +29,7 @@ ms.locfileid: "80856736"
 
     ```powershell
     Install-WindowsFeature Hyper-V, HostGuardian -IncludeManagementTools -Restart
-    ``` 
+    ```
 
 3.    호스트 키를 자동으로 생성 하거나 기존 인증서를 선택 합니다. 사용자 지정 인증서를 사용 하는 경우 적어도 2048 비트 RSA 키, 클라이언트 인증 EKU 및 디지털 서명 키 사용이 있어야 합니다.
 
@@ -37,7 +37,7 @@ ms.locfileid: "80856736"
     Set-HgsClientHostKey
     ```
 
-    또는 고유한 인증서를 사용 하려는 경우 지문을 지정할 수 있습니다. 
+    또는 고유한 인증서를 사용 하려는 경우 지문을 지정할 수 있습니다.
     이는 여러 컴퓨터에서 인증서를 공유 하거나 TPM 또는 HSM에 바인딩된 인증서를 사용 하려는 경우에 유용할 수 있습니다. 다음은 TPM 바인딩된 인증서를 만드는 예제입니다 (개인 키를 도난당 하 고 다른 컴퓨터에서 사용 하 고 TPM 1.2만 필요).
 
     ```powershell
@@ -59,13 +59,13 @@ ms.locfileid: "80856736"
 
 ```powershell
 Add-HgsAttestationHostKey -Name MyHost01 -Path "C:\temp\MyHost01-HostKey.cer"
-``` 
+```
 
 ## <a name="next-step"></a>다음 단계
 
 > [!div class="nextstepaction"]
 > [호스트가 성공적으로 증명 될 수 있는지 확인](guarded-fabric-confirm-hosts-can-attest-successfully.md)
 
-## <a name="see-also"></a>참고 항목
+## <a name="additional-references"></a>추가 참조
 
-- [보호 된 호스트 및 보호 된 Vm에 대 한 호스트 보호자 서비스 배포](guarded-fabric-deploying-hgs-overview.md)
+- [보호된 호스트 및 보호된 VM에 대해 호스트 보호 서비스 배포](guarded-fabric-deploying-hgs-overview.md)

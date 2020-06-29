@@ -45,7 +45,7 @@ path ;
 
 - 배치 하는 경우는 **경로** Windows 운영 체제는 자동으로 지정된 된 MS-DOS 하위 시스템 검색 경로 추가 컴퓨터에 로그온 할 때마다 Autoexec.nt 파일에 명령 합니다. Cmd.exe는 Autoexec.nt 파일을 사용 하지 않습니다. 바로 가기에서 시작할 때 Cmd.exe 내 컴퓨터/속성/고급/환경에 설정 된 환경 변수를 상속 합니다.
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 외부 명령에 대 한 *c:\user\taxes*, *b:\user\invest*및 *b:\bin* 경로를 검색 하려면 다음을 입력 합니다.
 

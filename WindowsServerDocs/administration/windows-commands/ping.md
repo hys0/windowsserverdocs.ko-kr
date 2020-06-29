@@ -67,7 +67,7 @@ C:\>ping example.microsoft.com
     Reply from 192.168.239.132: bytes=32 time=120ms TTL=124
 ```
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 대상 10.0.99.221를 ping 하 고 10.0.99.221를 호스트 이름으로 확인 하려면 다음을 입력 합니다.
 

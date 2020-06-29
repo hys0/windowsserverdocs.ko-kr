@@ -47,7 +47,7 @@ ms.locfileid: "85472819"
 
 <br />
 
-## <a name="additional-considerations"></a>기타 고려 사항
+## <a name="additional-considerations"></a>추가 고려 사항
 
 명령줄 도구를 사용 하 여 원격 리소스를 관리 하려면:
 

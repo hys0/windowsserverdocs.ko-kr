@@ -9,12 +9,12 @@ author: rpsqrd
 ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: a5ca3ab29b83d0cb6cb2d55507471790f65800a2
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: c6753ae5d767f0c71b86fc47c1d8bf9971a2a5cc
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80856726"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85475530"
 ---
 # <a name="shielded-vms-for-tenants---creating-a-new-shielded-vm-on-premises-and-moving-it-to-a-guarded-fabric"></a>테 넌 트 용 보호 된 VM-온-프레미스에서 새 차폐 VM 만들기 및 보호 된 패브릭으로 이동
 
@@ -28,13 +28,13 @@ ms.locfileid: "80856726"
 
 1.  절차를 시작 하기 전에 다음 역할 및 기능이 설치 된 Windows Server 2016를 실행 하는 Hyper-v 호스트에 있는지 확인 합니다.
 
-    - Role
+    - 역할
 
         - Hyper-V
 
     - 기능
 
-        - 원격 서버 관리 도구\\기능 관리 도구\\보호 된 VM 도구
+        - 원격 서버 관리 도구 \\ 기능 관리 도구 \\ 차폐 VM 도구
 
     > [!NOTE]
     > 여기에서 사용 된 호스트는 보호 된 패브릭의 *호스트가 아니어야 합니다* . 이는 보호 된 패브릭에 이동 하기 전에 Vm이 준비 되는 별도의 호스트입니다.
@@ -51,9 +51,9 @@ ms.locfileid: "80856726"
 
 4.  이후 절차에서 필요한 보호자 키를 가져오려면 다음 명령을 실행 합니다.
 
-    파일 이름&gt;&lt;&gt;&lt;경로에 대해 이전 단계에서 저장 한 XML 파일의 경로와 파일 이름 (예: **C:\\temp\\GuardianKey** )으로 바꿉니다.
+    &lt;경로 &gt; &lt; 파일 이름에 대해 &gt; 이전 단계에서 저장 한 XML 파일의 경로와 파일 이름을 바꿉니다 (예: **C: \\ temp \\GuardianKey.xml**
 
-    &lt;GuardianName&gt;의 경우 호스팅 공급자 또는 엔터프라이즈 데이터 센터 (예: **HostingProvider1**)의 이름을 지정 합니다. 다음 절차의 이름을 기록 합니다.
+    GuardianName에 대해 &lt; &gt; 호스팅 공급자 또는 엔터프라이즈 데이터 센터의 이름을 지정 합니다 (예: **HostingProvider1**). 다음 절차의 이름을 기록 합니다.
 
     HGS 서버가 자체 서명 된 인증서로 설정 된 경우 **에만-allowunroot root** 를 포함 합니다. (이러한 인증서는 HGS의 키 보호 서비스의 일부입니다.)
 
@@ -73,11 +73,11 @@ ms.locfileid: "80856726"
 
 1. 테 넌 트 Hyper-v 호스트에서 새 2 세대 가상 머신을 만들려면 다음 명령을 실행 합니다.
 
-   &lt;ShieldedVMname&gt;의 경우 VM의 이름을 지정 합니다 (예: **ShieldVM1** ).
-    
-   &lt;VHDPath&gt;의 경우 VM의 VHDX를 저장할 위치를 지정 합니다 (예: **C:\\vm\\ShieldVM1\\ShieldVM1** ).
-    
-   &lt;nnGB&gt;의 경우 VHDX의 크기 (예: **60Gb** )를 지정 합니다.
+   ShieldedVMname의 경우 &lt; &gt; VM의 이름을 지정 합니다 (예: **ShieldVM1** ).
+
+   VHDPath의 경우 &lt; &gt; VM의 VHDX를 저장할 위치를 지정 합니다 (예: **C: \\ vm \\ ShieldVM1 \\ ShieldVM1** ).
+
+   NnGB의 경우 &lt; &gt; VHDX의 크기 (예: **60gb** )를 지정 합니다.
 
        New-VM -Generation 2 -Name "<ShieldedVMname>" -NewVHDPath <VHDPath>.vhdx -NewVHDSizeBytes <nnGB>
 
@@ -87,7 +87,7 @@ ms.locfileid: "80856726"
 
 4. 새 키 보호기를 만들려면 (이 섹션의 앞부분에서 설명) 다음 명령을 실행 합니다.
 
-   &lt;GuardianName&gt;의 경우 이전 절차에서 지정한 이름 (예: **HostingProvider1** )을 사용 합니다.
+   GuardianName의 경우 &lt; &gt; 이전 절차에서 지정한 이름 (예: **HostingProvider1** )을 사용 합니다.
 
    자체 서명 된 인증서를 허용 하는 **-allowunroot** 를 포함 합니다.
 
@@ -97,9 +97,9 @@ ms.locfileid: "80856726"
 
        $KP = New-HgsKeyProtector -Owner $Owner -Guardian $Guardian -AllowUntrustedRoot
 
-   보호 된 VM을 실행할 수 있는 두 개 이상의 데이터 센터 (예: 재해 복구 사이트 및 공용 클라우드 공급자)에 대 한 보호자의 목록을 원하는 경우 **보호자 매개 변수에** 보호자 목록을 제공할 수 있습니다. 자세한 내용은 [HgsKeyProtector] (https://docs.microsoft.com/powershell/module/hgsclient/new-hgskeyprotector?view=win10-ps를 참조 하세요.
+   보호 된 VM을 실행할 수 있는 두 개 이상의 데이터 센터 (예: 재해 복구 사이트 및 공용 클라우드 공급자)에 대 한 보호자의 목록을 원하는 경우 **보호자 매개 변수에** 보호자 목록을 제공할 수 있습니다. 자세한 내용은 [HgsKeyProtector] (을 참조 하세요 https://docs.microsoft.com/powershell/module/hgsclient/new-hgskeyprotector?view=win10-ps .
 
-5. 키 보호기를 사용 하 여 vTPM을 사용 하도록 설정 하려면 다음 명령을 실행 합니다. &lt;ShieldedVMname&gt;의 경우 이전 단계에서 사용 된 것과 동일한 VM 이름을 사용 합니다.
+5. 키 보호기를 사용 하 여 vTPM을 사용 하도록 설정 하려면 다음 명령을 실행 합니다. ShieldedVMname의 경우 &lt; &gt; 이전 단계에서 사용 된 것과 동일한 VM 이름을 사용 합니다.
 
        $VMName="<ShieldedVMname>"
 
@@ -130,7 +130,7 @@ ms.locfileid: "80856726"
 
     Hyper-v 관리자 또는 Windows PowerShell을 사용 하 여 보호 된 VM을 가져옵니다. Vm을 시작 하려면 vm 소유자에서 vm 구성 파일을 가져와야 합니다. 이는 키 보호기와 VM의 가상 TPM이 구성 파일에 저장 되기 때문입니다. VM이 보호 된 패브릭에서 실행 되도록 구성 된 경우 성공적으로 시작할 수 있어야 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="additional-references"></a>추가 참조
 
 - [보호 된 호스트 및 보호 된 Vm에 대 한 호스팅 서비스 공급자 구성 단계](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 - [보호된 패브릭 및 보호된 VM](guarded-fabric-and-shielded-vms-top-node.md)

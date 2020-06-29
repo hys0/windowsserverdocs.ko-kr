@@ -62,7 +62,7 @@ cscript prncnfg {-g | -t | -x | -?} [-S <Servername>] [-P <Printername>] [-z <ne
 | `{+|-}`양방향 텍스트 | 프린터 스풀러에 상태 정보를 전송 하는지 여부를 지정 합니다. |
 | /? | 명령 프롬프트에 도움말을 표시합니다. |
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 *HRServer*이라는 원격 컴퓨터에서 호스트 하는 인쇄 큐가 있는 *colorprinter_2* 이라는 프린터에 대 한 구성 정보를 표시 하려면 다음을 입력 합니다.
 
