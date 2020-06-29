@@ -8,12 +8,12 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 46ed1256ed9039311939f9de12ea46416443be9c
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: e200901d8ddd59f0c0bc45b34681f3aa41b44923
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "71402149"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85474420"
 ---
 # <a name="overview-of-disk-management"></a>디스크 관리 개요
 
@@ -49,7 +49,7 @@ Windows에서 다른 도구를 사용하는 몇 가지 일반적인 작업은 �
 
 디스크 관리에서는 EFI 시스템 파티션과 복구 파티션이 100% 비었다고 표시될 수도 있지만, 거짓말입니다. 이 파티션들은 일반적으로 사용자의 PC가 제대로 작동하는 데 필요한 정말 중요한 파일들로 가득 차있습니다. PC를 시작하고 문제로부터 복구하는 데 도움을 주기 위해서는 그냥 내버려 두는 것이 가장 좋습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="additional-references"></a>추가 참조
 
 - [디스크 관리](manage-disks.md)
 - [기본 볼륨 관리](manage-basic-volumes.md)

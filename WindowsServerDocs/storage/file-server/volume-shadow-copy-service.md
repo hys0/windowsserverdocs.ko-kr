@@ -6,12 +6,12 @@ ms.technology: storage
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.openlocfilehash: 1ab941e25da7171349bb24762940af3bf886c165
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: d90030fe183e5cfcb94866e87793c0419b636433
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "77675364"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85475450"
 ---
 # <a name="volume-shadow-copy-service"></a>볼륨 섀도 복사본 서비스
 
@@ -620,6 +620,6 @@ VSS에서 사용할 수 있는 레지스트리 키는 다음과 같습니다.
 </tbody>
 </table>
 
-## <a name="see-also"></a>참고 항목
+## <a name="additional-references"></a>추가 참조
 
 [Windows 개발자 센터의 볼륨 섀도 복사본 서비스](https://docs.microsoft.com/windows/desktop/vss/volume-shadow-copy-service-overview)

@@ -7,23 +7,23 @@ ms.topic: article
 author: cosmosdarwin
 ms.date: 09/07/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: ab9b6016d49725b7f25d2ad3c40bd6265ac811a9
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 0c8adf5f5586bd9f86ed3c4cd42b6172ff3f91e7
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80856156"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85474700"
 ---
 # <a name="performance-history-for-storage-spaces-direct"></a>스토리지 공간 다이렉트에 대 한 성능 기록
 
-> 적용 대상: Windows Server 2019
+> 적용 대상: 시작
 
 성능 기록은 관리자가 호스트 서버, 드라이브, 볼륨, 가상 컴퓨터 등에서 기록 된 계산, 메모리, 네트워크 및 저장소 측정에 쉽게 액세스할 수 있도록 하 [스토리지 공간 다이렉트](storage-spaces-direct-overview.md) 는 새로운 기능입니다. 최대 1 년 동안 성능 기록이 자동으로 수집 되 고 클러스터에 저장 됩니다.
 
    > [!IMPORTANT]
    > 이 기능은 Windows Server 2019에 새로 있습니다. Windows Server 2016에서는 사용할 수 없습니다.
 
-## <a name="get-started"></a>시작
+## <a name="get-started"></a>시작하기
 
 성능 기록은 Windows Server 2019의 스토리지 공간 다이렉트를 사용 하 여 기본적으로 수집 됩니다. 모든 항목을 설치, 구성 또는 시작할 필요는 없습니다. 인터넷 연결이 필요 하지 않으며, System Center가 필요 하지 않으며, 외부 데이터베이스가 필요 하지 않습니다.
 
@@ -31,29 +31,29 @@ ms.locfileid: "80856156"
 
 ![Windows 관리 센터의 성능 기록](media/performance-history/perf-history-in-wac.png)
 
-프로그래밍 방식으로 쿼리 및 처리 하려면 새 `Get-ClusterPerf` cmdlet을 사용 합니다. [PowerShell에서 사용을](#usage-in-powershell)참조 하세요.
+프로그래밍 방식으로 쿼리 및 처리 하려면 새 cmdlet을 사용 `Get-ClusterPerf` 합니다. [PowerShell에서 사용을](#usage-in-powershell)참조 하세요.
 
 ## <a name="whats-collected"></a>수집 되는 내용
 
 성능 기록은 다음과 같은 7 가지 유형의 개체에 대해 수집 됩니다.
 
-![개체 형식](media/performance-history/types-of-object.png)
+![개체의 유형](media/performance-history/types-of-object.png)
 
-각 개체 유형에는 여러 계열이 있습니다. 예를 들어 각 서버에 대해 `ClusterNode.Cpu.Usage` 수집 됩니다.
+각 개체 유형에는 여러 계열이 있습니다. 예를 들어 `ClusterNode.Cpu.Usage` 는 각 서버에 대해 수집 됩니다.
 
 각 개체 형식에 대해 수집 된 내용과이를 해석 하는 방법에 대 한 자세한 내용은 다음 하위 항목을 참조 하세요.
 
-| 개체             | 계열                                                                               |
+| Object             | 계열                                                                               |
 |--------------------|--------------------------------------------------------------------------------------|
 | 드라이브             | [드라이브에 대해 수집 되는 내용](performance-history-for-drives.md)                     |
 | 네트워크 어댑터   | [네트워크 어댑터용으로 수집 되는 내용](performance-history-for-network-adapters.md) |
 | 서버            | [서버에 대해 수집 되는 내용](performance-history-for-servers.md)                   |
 | 가상 하드 디스크 | [가상 하드 디스크에 대해 수집 되는 내용](performance-history-for-vhds.md)           |
-| 가상 컴퓨터   | [Virtual machines에 대해 수집 되는 내용](performance-history-for-vms.md)              |
+| 가상 머신   | [Virtual machines에 대해 수집 되는 내용](performance-history-for-vms.md)              |
 | 볼륨            | [볼륨에 대해 수집 되는 내용](performance-history-for-volumes.md)                   |
 | 클러스터           | [클러스터에 대해 수집 되는 내용](performance-history-for-clusters.md)                 |
 
-많은 계열은 피어 개체에서 부모로 집계 됩니다. 예를 들어 `NetAdapter.Bandwidth.Inbound`는 각 네트워크 어댑터에 대해 개별적으로 수집 되 고 전체 서버에 집계 됩니다. 마찬가지로 `ClusterNode.Cpu.Usage` 전체 클러스터에 집계 됩니다. 합니다.
+많은 계열은 피어 개체에서 부모로 집계 됩니다. 예를 들어 `NetAdapter.Bandwidth.Inbound` 는 각 네트워크 어댑터에 대해 개별적으로 수집 되 고 전체 서버에 집계 됩니다. 마찬가지로는 `ClusterNode.Cpu.Usage` 전체 클러스터로 집계 됩니다.
 
 ## <a name="timeframes"></a>기간
 
@@ -67,17 +67,17 @@ PowerShell에서 `-TimeFrame` 매개 변수를 사용 합니다.
 
 사용 가능한 기간은 다음과 같습니다.
 
-| 기한   | 측정 빈도 | 보존 기간 |
+| 시간 범위   | 측정 빈도 | 보존 기간 |
 |-------------|-----------------------|--------------|
 | `LastHour`  | 10 초 마다         | 1시간       |
-| `LastDay`   | 5 분 마다       | 25 시간     |
+| `LastDay`   | 5분마다       | 25 시간     |
 | `LastWeek`  | 15분마다      | 8일       |
-| `LastMonth` | 1 시간 마다          | 35 일      |
+| `LastMonth` | 1 시간 마다          | 35일      |
 | `LastYear`  | 1 일 마다           | 400 일     |
 
 ## <a name="usage-in-powershell"></a>PowerShell에서 사용
 
-`Get-ClusterPerformanceHistory` cmdlet을 사용 하 여 PowerShell에서 성능 기록을 쿼리하고 처리 합니다.
+Cmdlet을 사용 `Get-ClusterPerformanceHistory` 하 여 PowerShell에서 성능 기록을 쿼리하고 처리 합니다.
 
 ```PowerShell
 Get-ClusterPerformanceHistory
@@ -135,18 +135,18 @@ Get-VM "MyVM" | Get-ClusterPerf -VMSeriesName "VM.Cpu.Usage" -TimeFrame LastHour
 
 ### <a name="specify-the-timeframe"></a>기간 지정
 
-`-TimeFrame` 매개 변수를 사용 하 여 원하는 기록 기간을 지정할 수 있습니다.
+매개 변수를 사용 하 여 원하는 기록 기간을 지정할 수 있습니다 `-TimeFrame` .
 
    > [!TIP]
    > 탭 완성 기능을 사용 하 여 사용 가능한 기간을 검색 합니다.
 
 을 지정 하지 않으면 `MostRecent` 측정이 반환 됩니다.
 
-## <a name="how-it-works"></a>작동 방식
+## <a name="how-it-works"></a>작동 방법
 
 ### <a name="performance-history-storage"></a>성능 기록 저장소
 
-스토리지 공간 다이렉트를 사용 하도록 설정 하면 `ClusterPerformanceHistory` 라는 약 10gb 볼륨이 생성 되 고 확장 가능한 저장소 엔진 (Microsoft JET 라고도 함)의 인스턴스가 프로 비전 됩니다. 이 경량 데이터베이스는 관리자 개입 또는 관리 없이 성능 기록을 저장 합니다.
+스토리지 공간 다이렉트를 사용 하도록 설정 하 고 나면 이라는 약 10gb 볼륨이 `ClusterPerformanceHistory` 만들어지고, 확장 가능한 저장소 엔진 (MICROSOFT JET 라고도 함)의 인스턴스가 프로 비전 됩니다. 이 경량 데이터베이스는 관리자 개입 또는 관리 없이 성능 기록을 저장 합니다.
 
 ![성능 기록 저장소에 대 한 볼륨](media/performance-history/perf-history-volume.png)
 
@@ -158,11 +158,11 @@ Get-VM "MyVM" | Get-ClusterPerf -VMSeriesName "VM.Cpu.Usage" -TimeFrame LastHour
 
 성능 기록은 클러스터의 어디에서 나 가상 컴퓨터와 같은 관련 개체를 자동으로 검색 하 여 성능 카운터 스트리밍을 시작 합니다. 카운터는 데이터베이스에 집계, 동기화 및 삽입 됩니다. 스트리밍은 지속적으로 실행 되며 시스템에 미치는 영향을 최소화 하기 위해 최적화 됩니다.
 
-컬렉션은 항상 사용 가능한 상태 관리 서비스에 의해 처리 됩니다. 실행 중인 노드가 중단 되 면 나중에 클러스터의 다른 노드에서 다시 시작 합니다. 성능 기록은 잠깐 경과할 수 있지만 자동으로 다시 시작 됩니다. PowerShell에서 `Get-ClusterResource Health`를 실행 하 여 상태 관리 서비스 및 해당 소유자 노드를 확인할 수 있습니다.
+컬렉션은 항상 사용 가능한 상태 관리 서비스에 의해 처리 됩니다. 실행 중인 노드가 중단 되 면 나중에 클러스터의 다른 노드에서 다시 시작 합니다. 성능 기록은 잠깐 경과할 수 있지만 자동으로 다시 시작 됩니다. PowerShell에서를 실행 하 여 상태 관리 서비스 및 해당 소유자 노드를 확인할 수 있습니다 `Get-ClusterResource Health` .
 
 ### <a name="handling-measurement-gaps"></a>측정 간격 처리
 
-시간 범위에 설명 된 대로 [측정을 더](#timeframes)작은 계열로 병합 하면 누락 된 데이터 기간이 제외 됩니다. 예를 들어 서버가 30 분 동안 다운 된 경우 다음 30 분 동안 50% CPU에서 실행 하면 해당 시간에 대 한 `ClusterNode.Cpu.Usage` 평균이 50% (25% 아님)로 올바르게 기록 됩니다.
+시간 범위에 설명 된 대로 [측정을 더](#timeframes)작은 계열로 병합 하면 누락 된 데이터 기간이 제외 됩니다. 예를 들어 서버가 30 분 동안 다운 된 후 다음 30 분 동안 50% CPU에서 실행 되는 경우 `ClusterNode.Cpu.Usage` 해당 시간의 평균은 50% (25% 아님)로 올바르게 기록 됩니다.
 
 ### <a name="extensibility-and-customization"></a>확장성 및 사용자 지정
 
@@ -176,7 +176,7 @@ Get-VM "MyVM" | Get-ClusterPerf -VMSeriesName "VM.Cpu.Usage" -TimeFrame LastHour
 
 ### <a name="how-do-i-enable-this-feature"></a>어떻게 할까요?이 기능을 사용 하도록 설정 하 시겠습니까?
 
-`Stop-ClusterPerformanceHistory`하지 않으면 기본적으로 성능 기록이 사용 됩니다.
+사용자가 아닌 경우 `Stop-ClusterPerformanceHistory` 에는 기본적으로 성능 기록이 사용 됩니다.
 
 다시 사용 하도록 설정 하려면 다음 PowerShell cmdlet을 관리자 권한으로 실행 합니다.
 
@@ -192,25 +192,25 @@ Start-ClusterPerformanceHistory
 Stop-ClusterPerformanceHistory
 ```
 
-기존 측정값을 삭제 하려면 `-DeleteHistory` 플래그를 사용 합니다.
+기존 측정값을 삭제 하려면 플래그를 사용 합니다 `-DeleteHistory` .
 
 ```PowerShell
 Stop-ClusterPerformanceHistory -DeleteHistory
 ```
 
    > [!TIP]
-   > 초기 배포 중에 `Enable-ClusterStorageSpacesDirect`의 `-CollectPerformanceHistory` 매개 변수를 `$False`로 설정 하 여 성능 기록을 시작 하지 못하게 할 수 있습니다.
+   > 초기 배포 중에의 매개 변수를로 설정 하 여 성능 기록이 시작 되지 않도록 할 수 있습니다 `-CollectPerformanceHistory` `Enable-ClusterStorageSpacesDirect` `$False` .
 
 ## <a name="troubleshooting"></a>문제 해결
 
 ### <a name="the-cmdlet-doesnt-work"></a>Cmdlet이 작동 하지 않습니다.
 
-" *' Get-ClusterPerf ' 라는 오류 메시지는 cmdlet의 이름으로 인식 되지*않습니다." 라는 오류 메시지는 해당 기능을 사용할 수 없거나 설치 되지 않았음을 의미 합니다. Windows Server Insider Preview 빌드 17692 이상, 장애 조치 (Failover) 클러스터링을 설치 했으며 스토리지 공간 다이렉트 실행 중인지 확인 합니다.
+"*' Get-ClusterPerf ' 라는 오류 메시지는 cmdlet의 이름으로 인식 되지*않습니다." 라는 오류 메시지는 해당 기능을 사용할 수 없거나 설치 되지 않았음을 의미 합니다. Windows Server Insider Preview 빌드 17692 이상, 장애 조치 (Failover) 클러스터링을 설치 했으며 스토리지 공간 다이렉트 실행 중인지 확인 합니다.
 
    > [!NOTE]
    > 이 기능은 Windows Server 2016 이전 버전에서는 사용할 수 없습니다.
 
-### <a name="no-data-available"></a>데이터를 사용할 수 없습니다. 
+### <a name="no-data-available"></a>데이터를 사용할 수 없습니다.
 
 그림과 같이 "*사용할 수 있는 데이터 없음*"이 차트에 표시 되는 경우 문제를 해결 하는 방법은 다음과 같습니다.
 
@@ -222,10 +222,10 @@ Stop-ClusterPerformanceHistory -DeleteHistory
 
 3. 특정 특수 개체는 성능 기록에서 제외 됩니다. 예를 들어 클러스터 되지 않은 가상 머신과 CSV (클러스터 공유 볼륨) 파일 시스템을 사용 하지 않는 볼륨이 있습니다. 자세한 인쇄를 위해 [볼륨의 성능 기록과](performance-history-for-volumes.md)같은 개체 유형에 대 한 하위 항목을 확인 합니다.
 
-4. 문제가 지속 되 면 관리자 권한으로 PowerShell을 열고 `Get-ClusterPerf` cmdlet을 실행 합니다. Cmdlet은 ClusterPerformanceHistory 볼륨이 없는 경우와 같은 일반적인 문제를 식별 하는 문제 해결 논리를 포함 하며 수정 지침을 제공 합니다.
+4. 문제가 지속 되 면 관리자 권한으로 PowerShell을 열고 cmdlet을 실행 `Get-ClusterPerf` 합니다. Cmdlet은 ClusterPerformanceHistory 볼륨이 없는 경우와 같은 일반적인 문제를 식별 하는 문제 해결 논리를 포함 하며 수정 지침을 제공 합니다.
 
-5. 이전 단계에서 명령을 실행 해도 아무 것도 반환 되지 않으면 PowerShell에서 `Stop-ClusterResource Health ; Start-ClusterResource Health`를 실행 하 여 성능 기록을 수집 하는 상태 관리 서비스을 다시 시작 해 볼 수 있습니다.
+5. 이전 단계에서 명령을 실행 해도 아무 것도 반환 되지 않으면 PowerShell에서를 실행 하 여 상태 관리 서비스 (성능 기록 수집)를 다시 시작 해 볼 수 있습니다 `Stop-ClusterResource Health ; Start-ClusterResource Health` .
 
-## <a name="see-also"></a>참고 항목
+## <a name="additional-references"></a>추가 참조
 
 - [스토리지 공간 다이렉트 개요](storage-spaces-direct-overview.md)

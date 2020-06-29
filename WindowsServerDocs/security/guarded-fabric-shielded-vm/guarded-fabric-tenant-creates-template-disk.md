@@ -8,25 +8,25 @@ author: rpsqrd
 ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: 1f51a0f90f60847929f6fe46732c98f355a6a859
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: d5cdaf915de94e73374459c41b090f197b8f56ef
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80856446"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85475080"
 ---
 # <a name="shielded-vms-for-tenants---creating-a-template-disk-optional"></a>테 넌 트 용 보호 된 Vm-템플릿 디스크 만들기 (선택 사항)
 
 >적용 대상: Windows Server 2019, Windows Server (반기 채널), Windows Server 2016
 
-새 보호 된 VM을 만들려면 특별히 준비 되 고 서명 된 템플릿 디스크를 사용 해야 합니다. 서명 된 템플릿 디스크의 메타 데이터는 디스크가 생성 된 후 수정 되지 않고 보호 된 Vm을 만드는 데 사용할 수 있는 디스크를 제한 하는 테 넌 트로 사용할 수 있도록 하는 데 도움이 됩니다. 이 디스크를 제공 하는 한 가지 방법은이 항목에서 설명 하는 것 처럼 사용자를 위한 테 넌 트를 만드는 것입니다. 
+새 보호 된 VM을 만들려면 특별히 준비 되 고 서명 된 템플릿 디스크를 사용 해야 합니다. 서명 된 템플릿 디스크의 메타 데이터는 디스크가 생성 된 후 수정 되지 않고 보호 된 Vm을 만드는 데 사용할 수 있는 디스크를 제한 하는 테 넌 트로 사용할 수 있도록 하는 데 도움이 됩니다. 이 디스크를 제공 하는 한 가지 방법은이 항목에서 설명 하는 것 처럼 사용자를 위한 테 넌 트를 만드는 것입니다.
 
 > [!IMPORTANT]
 > 선호 하는 경우 호스팅 서비스 공급자가 제공 하는 템플릿 디스크를 대신 사용할 수 있습니다. 이 작업을 수행 하는 경우 해당 템플릿 디스크를 사용 하 여 테스트 VM을 배포 하 고 사용자 고유의 도구 (바이러스 백신, 취약성 스캐너 등)를 실행 하 여 디스크가 신뢰할 수 있는 상태 인지 실제로 확인 하는 것이 중요 합니다.
 
 ## <a name="prepare-an-operating-system-vhdx"></a>운영 체제 VHDX 준비
 
-보호 된 템플릿 디스크를 만들려면 먼저 템플릿 디스크 마법사를 통해 실행 되는 OS 디스크를 준비 해야 합니다. 이 디스크는 보호 된 Vm에서 OS 디스크로 사용 됩니다. 기존 도구를 사용 하 여이 디스크를 만들 수 있습니다 (예: DISM (Microsoft Desktop Image Service Manager)). 또는 새 VHDX를 사용 하 여 VM을 수동으로 설정 하 고 해당 디스크에 OS를 설치 합니다. 디스크를 설정 하는 경우 2 세대 및/또는 차폐 Vm과 관련 된 다음 요구 사항을 준수 해야 합니다. 
+보호 된 템플릿 디스크를 만들려면 먼저 템플릿 디스크 마법사를 통해 실행 되는 OS 디스크를 준비 해야 합니다. 이 디스크는 보호 된 Vm에서 OS 디스크로 사용 됩니다. 기존 도구를 사용 하 여이 디스크를 만들 수 있습니다 (예: DISM (Microsoft Desktop Image Service Manager)). 또는 새 VHDX를 사용 하 여 VM을 수동으로 설정 하 고 해당 디스크에 OS를 설치 합니다. 디스크를 설정 하는 경우 2 세대 및/또는 차폐 Vm과 관련 된 다음 요구 사항을 준수 해야 합니다.
 
 | VHDX에 대 한 요구 사항 | 이유 |
 |-----------|----|
@@ -35,10 +35,10 @@ ms.locfileid: "80856446"
 |디스크에 파티션이 두 개 이상 있습니다. 한 파티션에는 Windows가 설치 된 드라이브가 포함 되어야 합니다. BitLocker가 암호화 하는 드라이브입니다. 다른 파티션은 부팅 로더를 포함 하 고 컴퓨터를 시작할 수 있도록 암호화 되지 않은 상태로 유지 되는 활성 파티션입니다.|BitLocker에 필요|
 |파일 시스템이 NTFS입니다. | BitLocker에 필요|
 |VHDX에 설치 된 운영 체제는 다음 중 하나입니다.<br>-Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 또는 Windows Server 2012 <br>-Windows 10, Windows 8.1, Windows 8| 2 세대 가상 컴퓨터 및 Microsoft 보안 부팅 템플릿을 지 원하는 데 필요 합니다.|
-|운영 체제를 일반화 해야 합니다 (sysprep.exe 실행). | 템플릿 프로 비전에는 특정 테 넌 트의 작업에 대 한 특수화 Vm이 포함 됩니다.| 
+|운영 체제는 일반화 되어야 합니다 (sysprep.exe 실행). | 템플릿 프로 비전에는 특정 테 넌 트의 작업에 대 한 특수화 Vm이 포함 됩니다.|
 
 > [!NOTE]
-> 이 단계에서는 템플릿 디스크를 VMM 라이브러리에 복사 하지 마십시오. 
+> 이 단계에서는 템플릿 디스크를 VMM 라이브러리에 복사 하지 마십시오.
 
 ### <a name="required-packages-to-create-a-nano-server-template-disk"></a>Nano Server 템플릿 디스크를 만드는 데 필요한 패키지
 
@@ -72,7 +72,7 @@ Windows Server 2016를 실행 하는 컴퓨터에서 다음 단계를 수행 합
 
         New-SelfSignedCertificate -DnsName publisher.fabrikam.com
 
-4. 시작 메뉴의 **관리 도구** 폴더에서 **템플릿 디스크 마법사** 를 시작 하거나 명령 프롬프트에 템플릿 **disk마법사나 .Exe** 를 입력 하 여 템플릿 디스크 마법사를 시작 합니다.
+4. 시작 메뉴의 **관리 도구** 폴더에서 또는 명령 프롬프트에 **TemplateDiskWizard.exe** 를 입력 하 여 **템플릿 디스크 마법사** 를 시작 합니다.
 
 5. **인증서** 페이지에서 **찾아보기** 를 클릭 하 여 인증서 목록을 표시 합니다. 디스크 템플릿에 서명 하는 데 사용할 인증서를 선택 합니다. **확인**을 클릭하고 **다음**을 클릭합니다.
 
@@ -84,14 +84,14 @@ Windows Server 2016를 실행 하는 컴퓨터에서 다음 단계를 수행 합
 
 8. 마법사의 설정 검토 페이지에서 선택 사항을 검토 합니다. **생성**을 클릭 하면 마법사가 템플릿 디스크에서 BitLocker를 사용 하도록 설정 하 고, 디스크의 해시를 계산 하 고, VHDX 메타 데이터에 저장 되는 볼륨 서명 카탈로그를 만듭니다.
 
-    템플릿 디스크를 탑재 하거나 이동 하기 전에 서명 프로세스가 완료 될 때까지 기다립니다. 디스크 크기에 따라이 프로세스를 완료 하는 데 다소 시간이 걸릴 수 있습니다. 
+    템플릿 디스크를 탑재 하거나 이동 하기 전에 서명 프로세스가 완료 될 때까지 기다립니다. 디스크 크기에 따라이 프로세스를 완료 하는 데 다소 시간이 걸릴 수 있습니다.
 
 9. **요약** 페이지에서 디스크 템플릿에 대 한 정보, 템플릿 서명에 사용 된 인증서 및 인증서 발급자가 표시 됩니다. **닫기**를 클릭하여 마법사를 종료합니다.
 
 
 보호 된 [VM을 정의 하는 차폐 데이터 만들기](guarded-fabric-tenant-creates-shielding-data.md)에 설명 된 대로 사용자가 만드는 보호 데이터 파일과 함께 보호 된 디스크 템플릿을 호스팅 서비스 공급자에 제공 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="additional-references"></a>추가 참조
 
 - [보호된 VM 배포](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 - [보호된 패브릭 및 보호된 VM](guarded-fabric-and-shielded-vms-top-node.md)

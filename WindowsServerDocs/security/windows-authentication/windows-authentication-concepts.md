@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: 4051bfea26d5c96d02132b50373f56b7b17ce5fb
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 0b26dca42d64338adeb8d818629e6a5f8b037f30
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80857476"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85475240"
 ---
 # <a name="windows-authentication-concepts"></a>Windows 인증 개념
 
@@ -54,7 +54,7 @@ Passport가 유효한 것으로 입증 되 고 휴대용이 소유자가 되는 
 ## <a name="credentials"></a>자격 증명
 Passport 및 연결 된 visas는 휴대용에 대해 허용 되는 자격 증명입니다. 그러나 이러한 자격 증명을 사용 하 여 한 국가 내의 모든 리소스에 대 한 액세스를 허용 하지 않을 수도 있습니다. 예를 들어 회의에 참석 하려면 추가 자격 증명이 필요 합니다. Windows에서 자격 증명을 관리 하 여 계정 소유자가 자격 증명을 반복적으로 제공 하지 않고도 네트워크를 통해 리소스에 액세스할 수 있도록 할 수 있습니다. 이 유형의 액세스를 통해 사용자는 다른 계정 식별자 나 암호를 입력 하지 않고 사용할 권한이 있는 모든 응용 프로그램 및 데이터 원본에 액세스할 수 있습니다. Windows 플랫폼은 운영 체제의 LSA (로컬 보안 기관)에서 사용자 자격 증명을 로컬로 캐싱하여 네트워크에서 단일 사용자 id (Active Directory에서 유지 관리)를 사용 하는 기능을 말합니다. 사용자가 도메인에 로그온 하면 Windows 인증 패키지는 자격 증명을 투명 하 게 사용 하 여 네트워크 리소스에 대 한 자격 증명을 인증할 때 Single Sign-On을 제공 합니다. 자격 증명에 대 한 자세한 내용은 [Windows 인증의 자격 증명 프로세스](credentials-processes-in-windows-authentication.md)를 참조 하세요.
 
-휴대용에 대 한 다단계 인증의 형태는 passport 및 회의 등록 정보 등의 id를 인증 하기 위해 여러 문서를 제공 하 고 제공 해야 할 수 있습니다. Windows는 스마트 카드, 가상 스마트 카드 및 생체 인식 기술을 통해이 양식이 나 인증을 구현 합니다. 
+휴대용에 대 한 다단계 인증의 형태는 passport 및 회의 등록 정보 등의 id를 인증 하기 위해 여러 문서를 제공 하 고 제공 해야 할 수 있습니다. Windows는 스마트 카드, 가상 스마트 카드 및 생체 인식 기술을 통해이 양식이 나 인증을 구현 합니다.
 
 ## <a name="security-principals-and-accounts"></a>보안 주체 및 계정
 Windows에서 작업을 시작할 수 있는 모든 사용자, 서비스, 그룹 또는 컴퓨터는 보안 주체입니다. 보안 주체에는 컴퓨터에 로컬인 계정이 나 도메인 기반 계정이 있습니다. 예를 들어 Windows 클라이언트 도메인에 가입 된 컴퓨터는 사용자가 로그온 하지 않은 경우에도 도메인 컨트롤러와 통신 하 여 네트워크 도메인에 참여할 수 있습니다. 통신을 시작 하려면 컴퓨터에 도메인의 활성 계정이 있어야 합니다. 컴퓨터의 통신을 수락 하기 전에 도메인 컨트롤러의 로컬 보안 기관에서 컴퓨터의 id를 인증 한 다음 사용자 보안 주체와 마찬가지로 컴퓨터의 보안 컨텍스트를 정의 합니다. 이 보안 컨텍스트는 특정 컴퓨터 또는 사용자, 서비스, 그룹 또는 네트워크의 컴퓨터에 있는 사용자 또는 서비스의 id와 기능을 정의 합니다. 예를 들어, 파일 공유 또는 프린터와 같이 액세스할 수 있는 리소스 및 해당 리소스의 사용자, 서비스 또는 컴퓨터에서 수행할 수 있는 읽기, 쓰기, 수정 등의 작업을 정의 합니다. 자세한 내용은 [보안 주체](https://technet.microsoft.com/itpro/windows/keep-secure/security-principals)를 참조 하세요.
@@ -79,7 +79,7 @@ Windows에서 작업을 시작할 수 있는 모든 사용자, 서비스, 그룹
 
 -   [특수 Id](https://technet.microsoft.com/itpro/windows/keep-secure/special-identities)
 
-## <a name="delegated-authentication"></a>위임 된 인증
+## <a name="delegated-authentication"></a>위임된 인증
 여행 비유를 사용 하기 위해 해당 대리인이 잘 알려진 경우에만 국가에서 공식 정부 위임의 모든 구성원에 대해 동일한 액세스 권한을 발급할 수 있습니다. 이 위임을 사용 하면 한 멤버가 다른 멤버의 기관에 대해 작업을 수행할 수 있습니다. Windows에서 위임 된 인증은 네트워크 서비스에서 사용자의 인증 요청을 수락 하 고 두 번째 네트워크 서비스에 대 한 새 연결을 시작 하기 위해 해당 사용자의 id를 사용 하는 경우에 발생 합니다. 위임 된 인증을 지원 하려면 클라이언트 인증 요청 처리를 담당 하는 웹 서버, 프런트 엔드 또는 첫 번째 계층 서버, 그리고 정보를 저장 하는 대량 데이터베이스와 같은 백 엔드 또는 n 계층 서버를 설정 해야 합니다. 조직의 사용자에 게 위임 된 인증을 설정 하는 권한을 위임 하 여 관리자의 관리 부하를 줄일 수 있습니다.
 
 위임에 대해 신뢰할 수 있는 서비스 또는 컴퓨터를 설정 하면 해당 서비스 또는 컴퓨터가 위임 된 인증을 완료 하 고 요청을 받는 사용자에 대 한 티켓을 받은 다음 해당 사용자에 대 한 정보에 액세스할 수 있습니다. 이 모델은 올바른 액세스 제어 토큰을 사용 하 여 자격 증명을 제공 하는 사용자 또는 서비스에 대해서만 백 엔드 서버에서 데이터 액세스를 제한 합니다. 또한 이러한 백 엔드 리소스에 대 한 액세스 감사를 허용 합니다. 클라이언트를 대신해 서버에 위임 된 자격 증명을 사용 하 여 모든 데이터에 액세스 하도록 요구 하 여 서버가 손상 되지 않도록 하 고 다른 서버에 저장 된 중요 한 정보에 대 한 액세스 권한을 얻을 수 있습니다. 위임 된 인증은 여러 컴퓨터에서 Single Sign-On 기능을 사용 하도록 설계 된 다중 계층 응용 프로그램에 유용 합니다.
@@ -103,7 +103,7 @@ Windows에서 작업을 시작할 수 있는 모든 사용자, 서비스, 그룹
 
 제한 된 위임에 대 한 자세한 내용은 [Kerberos 제한 위임 개요](../kerberos/kerberos-constrained-delegation-overview.md)를 참조 하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="additional-references"></a>추가 참조
 [Windows 로그온 및 인증 기술 개요](https://technet.microsoft.com/library/dn269029.aspx)
 
 

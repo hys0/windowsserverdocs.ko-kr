@@ -8,19 +8,19 @@ author: rpsqrd
 ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: 9972ec77b78c6c4efa2d52fffd44d27d71a1afe0
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 85cfdbe5e95c9177194a2b6ac7b5d22e1fd9fc0e
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80856366"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85475016"
 ---
 # <a name="shielded-vms---preparing-a-vm-shielding-helper-vhd"></a>차폐 Vm-VM 실딩 도우미 VHD 준비
 
 >적용 대상: Windows Server 2019, Windows Server (반기 채널), Windows Server 2016
 
 > [!IMPORTANT]
-> 이러한 절차를 시작 하기 전에 Windows Server 2016에 대 한 최신 누적 업데이트를 설치 했거나 최신 Windows 10 [원격 서버 관리 도구](https://www.microsoft.com/download/details.aspx?id=45520)를 사용 하 고 있는지 확인 합니다. 그렇지 않으면 프로시저가 작동 하지 않습니다. 
+> 이러한 절차를 시작 하기 전에 Windows Server 2016에 대 한 최신 누적 업데이트를 설치 했거나 최신 Windows 10 [원격 서버 관리 도구](https://www.microsoft.com/download/details.aspx?id=45520)를 사용 하 고 있는지 확인 합니다. 그렇지 않으면 프로시저가 작동 하지 않습니다.
 
 이 섹션에서는 기존 Vm을 보호 된 Vm으로 변환 하는 작업을 지원 하기 위해 호스팅 서비스 공급자가 수행 하는 단계를 간략하게 설명 합니다.
 
@@ -59,7 +59,7 @@ VMM 콘솔에서 설정 창을 열고 **일반**에서 **보호자 서비스 설
 
 ![VMM-호스트 보호자 서비스 설정](../media/Guarded-Fabric-Shielded-VM/guarded-host-vmm-hgs-settings-01.png)
 
-## <a name="see-also"></a>참고 항목
+## <a name="additional-references"></a>추가 참조
 
 - [보호 된 호스트 및 보호 된 Vm에 대 한 호스팅 서비스 공급자 구성 단계](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 - [보호된 패브릭 및 보호된 VM](guarded-fabric-and-shielded-vms-top-node.md)

@@ -8,12 +8,12 @@ ms.topic: article
 author: eldenchristensen
 ms.date: 02/20/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: d9ebc40b69373dafbebdb87f2abe624a5a7a4375
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: fff78ddc831ae9f6cba103d7630da3afec2c87d7
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80858956"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85474240"
 ---
 # <a name="using-storage-spaces-direct-with-the-csv-in-memory-read-cache"></a>CSV 메모리 내 읽기 캐시와 스토리지 공간 다이렉트 사용
 > 적용 대상: Windows Server 2016, Windows Server 2019
@@ -24,7 +24,7 @@ ms.locfileid: "80858956"
 
 메모리 내 캐시는 서버 로컬 이므로 하이퍼 수렴 형 스토리지 공간 다이렉트 배포에 대 한 데이터 집약성이 향상 됩니다. 최근 읽기는 가상 머신이 실행 되는 호스트의 메모리에 캐시 되므로 네트워크를 통한 읽기 빈도를 줄일 수 있습니다. 이로 인해 대기 시간이 단축 되 고 저장소 성능이 향상 됩니다.
 
-## <a name="planning-considerations"></a>계획 시 고려 사항
+## <a name="planning-considerations"></a>고려 사항 계획
 
 메모리 내 읽기 캐시는 VDI (가상 데스크톱 인프라)와 같은 읽기 집약적인 작업에 가장 효과적입니다. 반대로 작업 부하가 매우 많은 경우 캐시는 값 보다 더 많은 오버 헤드를 발생 시킬 수 있으므로 사용 하지 않도록 설정 해야 합니다.
 
@@ -42,8 +42,8 @@ CSV 메모리 내 읽기 캐시는 동일한 기능을 가진 Windows Server 201
 
 | OS 버전          | 기본 CSV 캐시 크기 |
 |---------------------|------------------------|
-| Windows Server 2016 | 0 (사용 안 함)           |
-| Windows Server 2019 | GiB 1                   |
+| Windows Server 2016 | 0(사용 안 함)           |
+| Windows Server 2019 | GiB 1                   |
 
 PowerShell을 사용 하 여 할당 된 메모리의 양을 확인 하려면 다음을 실행 합니다.
 
@@ -51,7 +51,7 @@ PowerShell을 사용 하 여 할당 된 메모리의 양을 확인 하려면 다
 (Get-Cluster).BlockCacheSize
 ```
 
-반환 되는 값은 서버 당 mebibytes (MiB)에 있습니다. 예를 들어 `1024`은 1 개 gid bibyte (GiB)를 나타냅니다.
+반환 되는 값은 서버 당 mebibytes (MiB)에 있습니다. 예를 들어는 `1024` 1 개의 gid (GiB)를 나타냅니다.
 
 할당 되는 메모리의 양을 변경 하려면 PowerShell을 사용 하 여이 값을 수정 합니다. 예를 들어 서버당 2 GiB를 할당 하려면 다음을 실행 합니다.
 
@@ -69,6 +69,6 @@ Get-ClusterSharedVolume | ForEach {
 }
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="additional-references"></a>추가 참조
 
 - [스토리지 공간 다이렉트 개요](storage-spaces-direct-overview.md)

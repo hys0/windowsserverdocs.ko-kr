@@ -8,12 +8,12 @@ author: rpsqrd
 ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: 0f678172d397ff61fd336b7c844d43f77bea7fad
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 59b6aaa22fa89620df2ce6757b2d9f5ffe91c652
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80856836"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85475350"
 ---
 # <a name="deploy-guarded-hosts"></a>보호된 호스트 배포
 
@@ -28,16 +28,16 @@ ms.locfileid: "80856836"
 
 **호스트 키 증명의 경우**:
 1. [호스트 키 만들기](guarded-fabric-create-host-key.md#create-a-host-key): 패브릭 도메인에서 HGS 도메인으로 DNS 전달자를 설정 하는 방법을 알려줍니다.
-2. [증명 서비스에 호스트 키 추가](guarded-fabric-create-host-key.md#add-the-host-key-to-the-attestation-service): 패브릭 도메인에서 Active Directory 보안 그룹을 설정 하 고, 보호 된 호스트를 해당 그룹의 구성원으로 추가 하 고,이 그룹 식별자를 HGS 관리자에 게 제공 하는 방법을 알려줍니다. 
+2. [증명 서비스에 호스트 키 추가](guarded-fabric-create-host-key.md#add-the-host-key-to-the-attestation-service): 패브릭 도메인에서 Active Directory 보안 그룹을 설정 하 고, 보호 된 호스트를 해당 그룹의 구성원으로 추가 하 고,이 그룹 식별자를 HGS 관리자에 게 제공 하는 방법을 알려줍니다.
 3. [보호 된 호스트가 증명할 수 있는지 확인](guarded-fabric-confirm-hosts-can-attest-successfully.md)
 
 
 **관리자가 신뢰할 수 있는 증명의 경우**:
 1. [패브릭 Dns 구성](guarded-fabric-configuring-fabric-dns.md): 패브릭 도메인에서 HGS 도메인으로 DNS 전달자를 설정 하는 방법을 설명 합니다.
-2. [보안 그룹 만들기](guarded-fabric-admin-trusted-attestation-creating-a-security-group.md): 패브릭 도메인에서 Active Directory 보안 그룹을 설정 하 고, 보호 된 호스트를 해당 그룹의 구성원으로 추가 하 고,이 그룹 식별자를 HGS 관리자에 게 제공 하는 방법을 알려줍니다. 
+2. [보안 그룹 만들기](guarded-fabric-admin-trusted-attestation-creating-a-security-group.md): 패브릭 도메인에서 Active Directory 보안 그룹을 설정 하 고, 보호 된 호스트를 해당 그룹의 구성원으로 추가 하 고,이 그룹 식별자를 HGS 관리자에 게 제공 하는 방법을 알려줍니다.
 3. [보호 된 호스트가 증명할 수 있는지 확인](guarded-fabric-confirm-hosts-can-attest-successfully.md)
 
 
-## <a name="see-also"></a>참고 항목
+## <a name="additional-references"></a>추가 참조
 
 - [보호 된 패브릭 및 보호 된 Vm에 대 한 배포 작업](guarded-fabric-deploying-hgs-overview.md#deployment-tasks-for-guarded-fabrics-and-shielded-vms)

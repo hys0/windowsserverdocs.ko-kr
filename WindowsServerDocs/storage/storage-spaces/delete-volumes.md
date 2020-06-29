@@ -8,12 +8,12 @@ ms.author: jgerend
 manager: daveba
 ms.technology: storage-spaces
 ms.date: 05/07/2019
-ms.openlocfilehash: a144479c196f42939aee6eb26227ed2e2b22d87a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 34df5ecc2ff085535878133db98cf345990165e0
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402861"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85475230"
 ---
 # <a name="deleting-volumes-in-storage-spaces-direct"></a>스토리지 공간 다이렉트 볼륨 삭제
 > 적용 대상: Windows Server 2019, Windows Server 2016
@@ -31,7 +31,7 @@ Windows 관리 센터에서 볼륨을 삭제 하려면 다음을 수행 합니�
 4. 볼륨 세부 정보 페이지의 맨 위에서 **삭제**를 선택 합니다.
 5. 확인 대화 상자에서 확인란을 선택 하 여 볼륨을 삭제할 것임을 확인 하 고 **삭제**를 선택 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="additional-references"></a>추가 참조
 
 - [Windows Server 2016의 스토리지 공간 다이렉트](storage-spaces-direct-overview.md)
 - [스토리지 공간 다이렉트에서 볼륨 계획](plan-volumes.md)

@@ -7,16 +7,16 @@ ms.topic: article
 author: cosmosdarwin
 ms.date: 09/07/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: aefc9c3c33cb93be241aae4ef18d815a9f8defef
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 418ab095f5f0af35f3aa176614ad73f48d727a35
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80856146"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85474690"
 ---
 # <a name="performance-history-for-virtual-machines"></a>가상 컴퓨터에 대 한 성능 기록
 
-> 적용 대상: Windows Server 2019
+> 적용 대상: 시작
 
 [스토리지 공간 다이렉트에 대 한 성능 기록](performance-history.md) 의이 하위 항목에서는 VM (가상 컴퓨터)에 대해 수집 된 성능 기록에 대해 자세히 설명 합니다. 성능 기록은 실행 중인 모든 클러스터 된 VM에 대해 사용할 수 있습니다.
 
@@ -41,7 +41,7 @@ ms.locfileid: "80856146"
 | `vmnetworkadapter.bandwidth.outbound` | 초당 비트 수 |
 | `vmnetworkadapter.bandwidth.total`    | 초당 비트 수 |
 
-또한 VM에 연결 된 모든 VHD에 대해 `vhd.iops.total`와 같은 모든 VHD (가상 하드 디스크) 시리즈를 집계 합니다.
+또한 VM에 연결 된 모든 VHD에 대해와 같은 모든 VHD (가상 하드 디스크) 시리즈를 `vhd.iops.total` 집계 합니다.
 
 ## <a name="how-to-interpret"></a>해석 방법
 
@@ -61,7 +61,7 @@ ms.locfileid: "80856146"
 | `vmnetworkadapter.bandwidth.total`    | 가상 컴퓨터에서 모든 가상 네트워크 어댑터에 대해 받거나 보낸 데이터의 총 비율입니다.          |
 
    > [!NOTE]
-   > 카운터는 샘플링 되지 않고 전체 간격으로 측정 됩니다. 예를 들어 VM이 9 초 동안 유휴 상태 이지만 10 초 동안 50%의 호스트 CPU를 사용 하도록 급증 하는 경우 해당 `vm.cpu.usage` 10 초 간격 동안 평균 5%로 기록 됩니다. 이렇게 하면 성능 기록이 모든 활동을 캡처하고 소음에 대해 강력 하 게 됩니다.
+   > 카운터는 샘플링 되지 않고 전체 간격으로 측정 됩니다. 예를 들어 VM이 9 초 동안 유휴 상태 이지만 10 초 동안 50%의 호스트 CPU를 사용 하도록 급증 하는 경우 `vm.cpu.usage` 이 10 초 간격 동안 평균 5%로 기록 됩니다. 이렇게 하면 성능 기록이 모든 활동을 캡처하고 소음에 대해 강력 하 게 됩니다.
 
 ## <a name="usage-in-powershell"></a>PowerShell에서 사용
 
@@ -74,6 +74,6 @@ Get-VM <Name> | Get-ClusterPerf
    > [!NOTE]
    > VM cmdlet은 클러스터가 아닌 로컬 (지정 된) 서버의 가상 컴퓨터만 반환 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="additional-references"></a>추가 참조
 
 - [스토리지 공간 다이렉트에 대 한 성능 기록](performance-history.md)

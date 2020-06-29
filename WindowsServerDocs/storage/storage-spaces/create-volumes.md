@@ -1,5 +1,5 @@
 ---
-title: 저장소 공간 다이렉트에서 볼륨 만들기
+title: 스토리지 공간 다이렉트에서 볼륨 만들기
 description: Windows 관리 센터 및 PowerShell을 사용 하 여 스토리지 공간 다이렉트에서 볼륨을 만드는 방법
 ms.prod: windows-server
 ms.reviewer: cosmosdarwin
@@ -8,25 +8,25 @@ ms.author: cosdar
 manager: eldenc
 ms.technology: storage-spaces
 ms.date: 02/25/2020
-ms.openlocfilehash: fb53ae74e471d590f83e1017662f33bb5a4b7c1d
-ms.sourcegitcommit: 92e0e4224563106adc9a7f1e90f27da468859d90
+ms.openlocfilehash: 40750acb260335e858a7763c950dfc4ad2cd7979
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77608806"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85473830"
 ---
-# <a name="creating-volumes-in-storage-spaces-direct"></a>저장소 공간 다이렉트에서 볼륨 만들기
+# <a name="creating-volumes-in-storage-spaces-direct"></a>스토리지 공간 다이렉트에서 볼륨 만들기
 
 > 적용 대상: Windows Server 2019, Windows Server 2016
 
 이 항목에서는 Windows 관리 센터 및 PowerShell을 사용 하 여 스토리지 공간 다이렉트 클러스터에서 볼륨을 만드는 방법에 대해 설명 합니다.
 
 > [!TIP]
-> 아직 확인하지 않은 경우 [저장소 공간 다이렉트에서 볼륨 계획](plan-volumes.md)을 먼저 확인하세요.
+> 아직 스토리지 공간 다이렉트 하지 않은 경우 먼저 [계획 볼륨](plan-volumes.md) 을 확인 하세요.
 
 ## <a name="create-a-three-way-mirror-volume"></a>3 방향 미러 볼륨 만들기
 
-Windows 관리 센터에서 3 방향 미러 볼륨을 만들려면 다음을 수행 합니다. 
+Windows 관리 센터에서 3 방향 미러 볼륨을 만들려면 다음을 수행 합니다.
 
 1. Windows 관리 센터에서 스토리지 공간 다이렉트 클러스터에 연결한 다음 **도구** 창에서 **볼륨** 을 선택 합니다.
 2. 볼륨 페이지에서 **인벤토리** 탭을 선택한 후 **볼륨 만들기**를 선택 합니다.
@@ -94,35 +94,35 @@ Windows 관리 센터에서 볼륨을 열고 볼륨에 파일을 추가 하려�
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/PRibTacyKko]
 
-## <a name="create-volumes-using-powershell"></a>PowerShell을 사용하여 볼륨 만들기
+## <a name="create-volumes-using-powershell"></a>PowerShell을 사용 하 여 볼륨 만들기
 
-**New-Volume** cmdlet을 사용하여 저장소 공간 다이렉트용 볼륨을 만드는 것이 좋습니다. 가장 빠르고 간단한 환경을 제공합니다. 이 단일 cmdlet은 가상 디스크를 자동으로 만들어서 분할 및 포맷하고, 이와 일치하는 이름으로 볼륨을 만들어 클러스터 공유 볼륨에 추가합니다. 이 모든 과정이 하나의 간편한 단계만으로 진행됩니다.
+스토리지 공간 다이렉트에 대 한 볼륨을 만들려면 **새 볼륨** cmdlet을 사용 하는 것이 좋습니다. 가장 빠르고 간단한 환경을 제공 합니다. 이 단일 cmdlet은 가상 디스크를 자동으로 만들고, 파티션을 만들고 포맷 하며, 이름이 일치 하는 볼륨을 만들고 클러스터 공유 볼륨에 추가 합니다. 전체를 한 번의 단계로 수행할 수 있습니다.
 
-**New-Volume** cmdlet에는 사용자가 항상 제공해야 할 네 가지 매개 변수가 있습니다.
+**새 볼륨** cmdlet에는 항상 제공 해야 하는 4 개의 매개 변수가 있습니다.
 
-- **FriendlyName:** 원하는 문자열. 예: *"Volume1"*
-- **FileSystem:** **CSVFS_ReFS**(권장) 또는 **CSVFS_NTFS**
-- **StoragePoolFriendlyName:** 저장소 풀의 이름. 예: *"S2D on ClusterName"*
-- **Size:** 볼륨의 크기. 예: *"10TB"*
+- **FriendlyName:** 원하는 모든 문자열 (예: *"Volume1"* )
+- **파일 시스템:** **CSVFS_ReFS** (권장) 또는 **CSVFS_NTFS**
+- **Storagepoolfriendlyname:** 저장소 풀의 이름 (예: *"S2D On ClusterName")*
+- **크기:** 볼륨의 크기 (예: *"10Tb")*
 
    > [!NOTE]
-   > PowerShell을 비롯한 Windows는 2진수(밑 2)를 사용하여 계산되지만 드라이브는 대개 10진수(밑 10)를 사용하여 레이블이 지정됩니다. 따라서 1,000,000,000,000바이트로 정의되는 "테라바이트" 드라이브는 Windows에서 약 "909GB"로 나타납니다. 이는 예정된 동작입니다. **New-Volume**을 사용하여 볼륨을 만들 때 **Size** 매개 변수를 이진수(밑2)로 지정해야 합니다. 예를 들어, "909GB" 또는 "0.909495TB"로 지정하면 약 1,000,000,000,000바이트의 볼륨이 생성됩니다.
+   > PowerShell을 포함 한 Windows는 이진 (밑 2) 숫자를 사용 하 여 계산 하는 반면 드라이브는 종종 10 진수 (밑수 10)를 사용 하 여 지정 됩니다. 이는 1조 바이트로 정의 된 "1 테라바이트" 드라이브가 Windows에 "909 GB"로 표시 되는 이유를 설명 합니다. 예상된 동작입니다. **새 볼륨**을 사용 하 여 볼륨을 만들 때는 **Size** 매개 변수를 이진 (밑수 2) 숫자에 지정 해야 합니다. 예를 들어 "909GB" 또는 "0.909495 TB"를 지정 하면 약 1조 바이트의 볼륨이 만들어집니다.
 
-### <a name="example-with-2-or-3-servers"></a>예: 서버 2개 또는 3개
+### <a name="example-with-2-or-3-servers"></a>예: 2 개 또는 3 대 서버
 
-두 개의 서버에만 배포하는 경우 작업을 쉽게 하기 위해 저장소 공간 다이렉트는 복원력을 위해 양방향 미러링을 자동 사용합니다. 세 개의 서버에만 배포하는 경우에는 3방향 미러링을 자동 사용합니다.
+작업을 더 쉽게 수행 하기 위해 배포에 서버가 두 개만 있는 경우 스토리지 공간 다이렉트는 복원 력을 위해 양방향 미러링을 자동으로 사용 합니다. 배포에 서버가 3 개만 있으면 3 방향 미러링이 자동으로 사용 됩니다.
 
 ```PowerShell
 New-Volume -FriendlyName "Volume1" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -Size 1TB
 ```
 
-### <a name="example-with-4-servers"></a>예: 4개 이상의 서버
+### <a name="example-with-4-servers"></a>예: 4 + 서버 사용
 
-4개 이상의 서버가 있는 경우 **ResiliencySettingName** 매개 변수를 복구 유형을 선택적으로 사용하여 복원력 유형을 선택합니다.
+서버를 4 개 이상 사용 하는 경우 선택적 **ResiliencySettingName** 매개 변수를 사용 하 여 복원 력 유형을 선택할 수 있습니다.
 
--   **ResiliencySettingName:** **Mirror** 또는 **Parity**.
+-   **ResiliencySettingName:** **미러** 또는 **패리티**중 하나입니다.
 
-다음 예제에서 *"Volume2"* 는 3방향 미러링을 사용하며 *"Volume3"* 는 이중 패리티("삭제 코딩"(erasure coding)이라고도 함)를 사용합니다.
+다음 예제에서 *"Volume2"* 는 3 방향 미러링을 사용 하 고 *"Volume3"* 는 이중 패리티 (종종 "지우기 코딩" 이라고 함)를 사용 합니다.
 
 ```PowerShell
 New-Volume -FriendlyName "Volume2" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -Size 1TB -ResiliencySettingName Mirror
@@ -131,11 +131,11 @@ New-Volume -FriendlyName "Volume3" -FileSystem CSVFS_ReFS -StoragePoolFriendlyNa
 
 ### <a name="example-using-storage-tiers"></a>예: 저장소 계층 사용
 
-세 가지 유형의 드라이브를 통한 배포에서 하나의 볼륨은 SSD 및 HDD 계층에 걸쳐 확장되어 각 부분에 부분적으로 상주할 수 있습니다. 마찬가지로, 4개 이상의 서버를 통한 배포에서 하나의 볼륨은 미러링과 이중 패리티를 혼합하여 각 부분에 부분적으로 상주할 수 있습니다.
+3 가지 유형의 드라이브가 있는 배포에서는 한 볼륨이 SSD 및 HDD 계층에 부분적으로 걸쳐 배치 될 수 있습니다. 마찬가지로, 4 개 이상의 서버를 포함 하는 배포에서 한 볼륨이 미러링 및 이중 패리티를 혼합 하 여 각각에 부분적으로 배치할 수 있습니다.
 
-이러한 볼륨을 쉽게 만들 수 있도록 저장소 공간 다이렉트는 *성능* 및 *용량*이라는 기본 계층 템플릿을 제공합니다. 이러한 템플릿에는 보다 빠른 용량 드라이브(해당하는 경우)에서의 3방향 미러링 및 느린 용량 드라이브에서의 이중 패리티(해당하는 경우)에 대한 정의가 캡슐화됩니다.
+이러한 볼륨을 만들 수 있도록 스토리지 공간 다이렉트는 *성능* 및 *용량*이라는 기본 계층 템플릿을 제공 합니다. 더 빠른 용량 드라이브 (해당 하는 경우)에 대 한 3 방향 미러링의 정의와 더 느린 용량 드라이브 (해당 하는 경우)에 대 한 이중 패리티를 캡슐화 합니다.
 
-**Get-StorageTier** cmdlet을 실행하여 확인할 수 있습니다.
+이러한 항목은 **Get StorageTier** cmdlet을 실행 하 여 확인할 수 있습니다.
 
 ```PowerShell
 Get-StorageTier | Select FriendlyName, ResiliencySettingName, PhysicalDiskRedundancy
@@ -143,15 +143,15 @@ Get-StorageTier | Select FriendlyName, ResiliencySettingName, PhysicalDiskRedund
 
 ![저장소 계층 PowerShell 스크린샷](media/creating-volumes/storage-tiers-screenshot.png)
 
-계층화된 볼륨을 만들려면 **New-Volume** cmdlet의 **StorageTierFriendlyNames** 및 **StorageTierSizes** 매개 변수를 사용하여 이러한 계층 템플릿을 참조하세요. 예를 들어 다음 cmdlet은 3방향 미러링과 30:70 비율의 이중 패리티를 혼합하는 하나의 볼륨을 만듭니다.
+계층화 된 볼륨을 만들려면 **새 볼륨** Cmdlet의 **StorageTierFriendlyNames** 및 **StorageTierSizes** 매개 변수를 사용 하 여 이러한 계층 템플릿을 참조 합니다. 예를 들어 다음 cmdlet은 3 방향 미러링과 이중 패리티를 30:70 비율로 혼합 하는 볼륨 하나를 만듭니다.
 
 ```PowerShell
 New-Volume -FriendlyName "Volume4" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -StorageTierFriendlyNames Performance, Capacity -StorageTierSizes 300GB, 700GB
 ```
 
-작업을 완료했습니다. 필요에 따라 반복하여 두 개 이상의 볼륨을 만듭니다.
+작업을 완료했습니다. 필요에 따라 반복 하 여 둘 이상의 볼륨을 만듭니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="additional-references"></a>추가 참조
 
 - [스토리지 공간 다이렉트 개요](storage-spaces-direct-overview.md)
 - [스토리지 공간 다이렉트에서 볼륨 계획](plan-volumes.md)

@@ -6,16 +6,16 @@ ms.author: cosdar
 ms.prod: windows-server
 ms.technology: manage
 ms.date: 11/04/2019
-ms.openlocfilehash: 62bf21dd0afcb99aa77cff8a733e80fc4cffe2fb
-ms.sourcegitcommit: 1da993bbb7d578a542e224dde07f93adfcd2f489
+ms.openlocfilehash: 088fb7b8f03ab7e575b562572f2e29e1b5774760
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73587233"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85474490"
 ---
 # <a name="deploy-hyperconverged-infrastructure-with-windows-admin-center"></a>Windows 관리 센터를 사용 하 여 하이퍼 수렴 형 인프라 배포
 
-> 적용 대상: Windows 관리 센터, Windows 관리 센터 미리 보기
+> 적용 대상: Windows Admin Center, Windows Admin Center 미리 보기
 
 Windows 관리 센터 [버전 1910](https://docs.microsoft.com/windows-server/manage/windows-admin-center/understand/windows-admin-center) 이상을 사용 하 여 두 개 이상의 적합 한 windows server를 사용 하 여 하이퍼 수렴 형 인프라를 배포할 수 있습니다. 이 새로운 기능을 사용 하면 기능을 설치 하 고, 네트워킹을 구성 하 고, 클러스터를 만들고, 선택 하는 경우 스토리지 공간 다이렉트 및/또는 SDN (소프트웨어 정의 네트워킹)을 배포 하는 과정을 안내 하는 다단계 워크플로의 형태를 사용할 수 있습니다.
 
@@ -26,12 +26,12 @@ Windows 관리 센터 [버전 1910](https://docs.microsoft.com/windows-server/ma
 
 ## <a name="preview-the-workflow"></a>워크플로 미리 보기
 
-### <a name="1-prerequisites"></a>1. 필수 구성 요소
+### <a name="1-prerequisites"></a>1. 사전 요구 사항
 
 Windows 관리 센터의 클러스터 만들기 워크플로는 운영 체제 미 설치 운영 체제 설치를 수행 하지 않으므로 먼저 각 서버에 Windows Server를 설치 해야 합니다. 지원 되는 버전은 Windows Server 2016, Windows Server 2019 및 Windows Server Insider Preview입니다. 또한 워크플로를 시작 하기 전에 Windows 관리 센터가 실행 되는 위치와 동일한 Active Directory 도메인에 각 서버를 조인 해야 합니다.
 
 ### <a name="2-install-windows-admin-center"></a>2. Windows 관리 센터 설치
- 
+
 지침에 따라 Windows 관리 센터의 최신 버전을 다운로드 하 여 [설치](https://docs.microsoft.com/windows-server/manage/windows-admin-center/understand/windows-admin-center) 합니다.
 
 ### <a name="3-install-the-cluster-creation-extension"></a>3. 클러스터 생성 확장을 설치 합니다.
@@ -68,7 +68,7 @@ Windows 관리 센터의 클러스터 만들기 워크플로는 운영 체제 �
 
 이러한 Windows PowerShell cmdlet을 사용 하 여 워크플로를 수행 하는 작업을 확인 합니다.
 
-설치 된 Windows 기능을 확인 하려면 `Get-WindowsFeature` cmdlet을 사용 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+설치 된 Windows 기능을 확인 하려면 cmdlet을 사용 `Get-WindowsFeature` 합니다. 예를 들면 다음과 같습니다.
 
 ```PowerShell
 Get-WindowsFeature "Hyper-V", "Failover-Clustering", "Data-Center-Bridging", "BitLocker"
@@ -176,7 +176,7 @@ Get-VMSwitch | Remove-VMSwitch
 ```
 
 > [!Note]
-> `Remove-VMSwitch` cmdlet은 가상 어댑터를 자동으로 제거 하 고 실제 어댑터의 스위치 포함 팀을 실행 취소 합니다.
+> `Remove-VMSwitch`Cmdlet은 가상 어댑터를 자동으로 제거 하 고 실제 어댑터의 스위치 포함 팀을 실행 취소 합니다.
 
 이름, IPv4 주소 및 VLAN ID와 같은 네트워크 어댑터 속성을 수정한 경우:
 
@@ -191,14 +191,14 @@ Get-NetAdapter | Where Name -Ne "Management" | Set-NetAdapter -VlanID 0
 
 이제 워크플로를 시작할 준비가 되었습니다.
 
-## <a name="feedback"></a>Feedback
+## <a name="feedback"></a>피드백
 
 이 미리 보기 릴리스는 모든 사용자 의견을 제공 합니다. 팀에 연결할 수 있는 몇 가지 방법은 다음과 같습니다.
 
 - [UserVoice의 기능 요청 제출 및 투표](https://windowsserver.uservoice.com/forums/295071/category/319162?query=%5Bhci%5D)
 - [Microsoft 기술 커뮤니티의 Windows 관리 센터 포럼 참여](https://techcommunity.microsoft.com/t5/Windows-Server-Management/bd-p/WindowsServerManagement)
 - 전자 메일 hci [at] microsoft.com
-- [@servermgmt](https://twitter.com/servermgmt) 트 윗
+- 트 윗[@servermgmt](https://twitter.com/servermgmt)
 
 ## <a name="report-an-issue"></a>문제 보고
 
@@ -206,13 +206,13 @@ Get-NetAdapter | Where Name -Ne "Management" | Set-NetAdapter -VlanID 0
 
 가능 하면 문제를 신속 하 게 재현 하 고 해결 하는 데 도움이 되도록 다음 정보를 포함 합니다.
 
-- 선택한 클러스터의 유형 (예: *"Hyperconverged 형"* )
-- 문제가 발생 한 단계 (예: *"3.2 클러스터 만들기"* )
-- 클러스터 생성 확장의 버전입니다. **설정** > **확장** > **설치 된 확장** 으로 이동 하 여 **버전** 열을 확인 합니다 (예: *"1.0.30"* ).
+- 선택한 클러스터의 유형 (예: *"Hyperconverged 형"*)
+- 문제가 발생 한 단계 (예: *"3.2 클러스터 만들기"*)
+- 클러스터 생성 확장의 버전입니다. **설정**  >  **확장**  >  **설치 된 확장** 으로 이동 하 여 **버전** 열을 확인 합니다 (예: *"1.0.30"*).
 - 화면에 있든, 브라우저 콘솔에 있든, **F12**키를 눌러 열 수 있는 오류 메시지입니다.
-- 사용자 환경에 대 한 기타 관련 정보 
+- 사용자 환경에 대 한 기타 관련 정보
 
-## <a name="see-also"></a>참고 항목
+## <a name="additional-references"></a>추가 참조
 
 - [Hello, Windows 관리 센터](https://docs.microsoft.com/windows-server/manage/windows-admin-center/understand/windows-admin-center)
 - [스토리지 공간 다이렉트 배포](https://docs.microsoft.com/windows-server/storage/storage-spaces/deploy-storage-spaces-direct)

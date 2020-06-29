@@ -7,16 +7,16 @@ ms.topic: article
 author: cosmosdarwin
 ms.date: 02/02/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: a6c6065b8d7963ada5d80844b270fe088eaa6e56
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 7e1620f7010d4f37713de20f2b4c12f100be61dc
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80859456"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85474770"
 ---
 # <a name="performance-history-for-drives"></a>드라이브에 대 한 성능 기록
 
-> 적용 대상: Windows Server 2019
+> 적용 대상: 시작
 
 [스토리지 공간 다이렉트에 대 한 성능 기록](performance-history.md) 의이 하위 항목에서는 드라이브에 대해 수집 된 성능 기록에 대해 자세히 설명 합니다. 성능 기록은 버스 또는 미디어 유형에 관계 없이 클러스터 저장소 하위 시스템의 모든 드라이브에 대해 사용할 수 있습니다. 그러나 OS 부팅 드라이브에는 사용할 수 없습니다.
 
@@ -59,7 +59,7 @@ ms.locfileid: "80859456"
 
 ## <a name="where-they-come-from"></a>원본 위치
 
-`iops.*`, `throughput.*`및 `latency.*` 계열은 드라이브가 연결 된 서버에 설정 된 `Physical Disk` 성능 카운터에서 수집 됩니다. 이러한 카운터는 `partmgr.sys`로 측정 되며 Windows 소프트웨어 스택 또는 네트워크 홉을 많이 포함 하지 않습니다. 장치 하드웨어 성능을 나타냅니다.
+`iops.*`, `throughput.*` 및 계열은 드라이브가 `latency.*` 연결 된 `Physical Disk` 서버에 설정 된 성능 카운터에서 장치당 하나씩 수집 됩니다. 이러한 카운터는로 측정 되며 `partmgr.sys` Windows 소프트웨어 스택 및 네트워크 홉을 많이 포함 하지 않습니다. 장치 하드웨어 성능을 나타냅니다.
 
 | 계열                          | 원본 카운터           |
 |---------------------------------|--------------------------|
@@ -74,9 +74,9 @@ ms.locfileid: "80859456"
 | `physicaldisk.latency.average`  | `Avg. Disk sec/Transfer` |
 
    > [!NOTE]
-   > 카운터는 샘플링 되지 않고 전체 간격으로 측정 됩니다. 예를 들어 드라이브가 9 초 동안 유휴 상태 이지만 10 초 내에 30 개의 Io를 완료 하는 경우 해당 `physicaldisk.iops.total`는 10 초 간격 동안 평균 초당 3 개의 Io로 기록 됩니다. 이렇게 하면 성능 기록이 모든 활동을 캡처하고 소음에 대해 강력 하 게 됩니다.
+   > 카운터는 샘플링 되지 않고 전체 간격으로 측정 됩니다. 예를 들어 드라이브가 9 초 동안 유휴 상태 이지만 10 초 내에 30 개의 Io를 완료 하는 경우 `physicaldisk.iops.total` 이 10 초 간격 동안 평균 초당 3 개의 io로 기록 됩니다. 이렇게 하면 성능 기록이 모든 활동을 캡처하고 소음에 대해 강력 하 게 됩니다.
 
-`size.*` 시리즈는 WMI의 `MSFT_PhysicalDisk` 클래스에서 하나씩 수집 됩니다.
+`size.*`계열은 `MSFT_PhysicalDisk` WMI의 클래스에서 하나씩 수집 됩니다.
 
 | 계열                          | Source 속성        |
 |---------------------------------|------------------------|
@@ -91,6 +91,6 @@ ms.locfileid: "80859456"
 Get-PhysicalDisk -SerialNumber <SerialNumber> | Get-ClusterPerf
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="additional-references"></a>추가 참조
 
 - [스토리지 공간 다이렉트에 대 한 성능 기록](performance-history.md)

@@ -7,16 +7,16 @@ ms.topic: article
 author: cosmosdarwin
 ms.date: 02/09/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 5f6acf062d2dba7c2a1a04d8a3f7cb4d7bd51a4d
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: e8e8b6ce7a6ab676e1fca32f360370180b38eae2
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80856136"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85474650"
 ---
 # <a name="performance-history-for-volumes"></a>볼륨에 대 한 성능 기록
 
-> 적용 대상: Windows Server 2019
+> 적용 대상: 시작
 
 [스토리지 공간 다이렉트에 대 한 성능 기록](performance-history.md) 의이 하위 항목에서는 볼륨에 대해 수집 된 성능 기록에 대해 자세히 설명 합니다. 성능 기록은 클러스터의 모든 CSV (클러스터 공유 볼륨)에서 사용할 수 있습니다. 그러나 OS 부팅 볼륨 또는 다른 비 CSV 저장소에는 사용할 수 없습니다.
 
@@ -59,7 +59,7 @@ ms.locfileid: "80856136"
 
 ## <a name="where-they-come-from"></a>원본 위치
 
-`iops.*`, `throughput.*`및 `latency.*` 계열은 `Cluster CSVFS` 성능 카운터 집합에서 수집 됩니다. 클러스터의 모든 서버에는 소유권에 관계 없이 모든 CSV 볼륨에 대 한 인스턴스가 있습니다. 볼륨 `MyVolume`에 대해 기록 된 성능 기록은 클러스터의 모든 서버에 있는 `MyVolume` 인스턴스의 집합체입니다.
+`iops.*`, `throughput.*` 및 `latency.*` 계열은 성능 카운터 집합에서 수집 됩니다 `Cluster CSVFS` . 클러스터의 모든 서버에는 소유권에 관계 없이 모든 CSV 볼륨에 대 한 인스턴스가 있습니다. 볼륨에 대해 기록 된 성능 기록은 `MyVolume` `MyVolume` 클러스터의 모든 서버에 있는 인스턴스의 집합체입니다.
 
 | 계열                    | 원본 카운터         |
 |---------------------------|------------------------|
@@ -74,12 +74,12 @@ ms.locfileid: "80856136"
 | `volume.latency.average`  | *위의 평균* |
 
    > [!NOTE]
-   > 카운터는 샘플링 되지 않고 전체 간격으로 측정 됩니다. 예를 들어 볼륨이 9 초 동안 유휴 상태 이지만 10 초 내에 30 개의 Io를 완료 하는 경우 해당 `volume.iops.total`는 10 초 간격 동안 평균 초당 3 개의 Io로 기록 됩니다. 이렇게 하면 성능 기록이 모든 활동을 캡처하고 소음에 대해 강력 하 게 됩니다.
+   > 카운터는 샘플링 되지 않고 전체 간격으로 측정 됩니다. 예를 들어 볼륨이 9 초 동안 유휴 상태 이지만 10 초 내에 30 개의 Io를 완료 하는 경우 `volume.iops.total` 이 10 초 간격 동안 평균 초당 3 개의 io로 기록 됩니다. 이렇게 하면 성능 기록이 모든 활동을 캡처하고 소음에 대해 강력 하 게 됩니다.
 
    > [!TIP]
    > 이러한 카운터는 인기 있는 [VM](https://github.com/Microsoft/diskspd/blob/master/Frameworks/VMFleet/watch-cluster.ps1) 및 벤치 마크 프레임 워크에서 사용 하는 것과 동일한 카운터입니다.
 
-`size.*` 시리즈는 WMI의 `MSFT_Volume` 클래스 (볼륨당 하나의 인스턴스)에서 수집 됩니다.
+`size.*`계열은 `MSFT_Volume` WMI의 클래스에서 볼륨당 하나의 인스턴스로 수집 됩니다.
 
 | 계열                    | Source 속성 |
 |---------------------------|-----------------|
@@ -94,6 +94,6 @@ ms.locfileid: "80856136"
 Get-Volume -FriendlyName <FriendlyName> | Get-ClusterPerf
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="additional-references"></a>추가 참조
 
 - [스토리지 공간 다이렉트에 대 한 성능 기록](performance-history.md)

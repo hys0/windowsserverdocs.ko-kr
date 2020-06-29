@@ -7,16 +7,16 @@ ms.topic: article
 author: cosmosdarwin
 ms.date: 02/02/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: e2379ce540cb26c02bc79f591d2a597874ab287c
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 597abd8e389421eb6875ff3cc94b457f341be3b7
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80856216"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85474750"
 ---
 # <a name="performance-history-for-network-adapters"></a>네트워크 어댑터에 대 한 성능 기록
 
-> 적용 대상: Windows Server 2019
+> 적용 대상: 시작
 
 [스토리지 공간 다이렉트에 대 한 성능 기록](performance-history.md) 의이 하위 항목에서는 네트워크 어댑터에 대해 수집 된 성능 기록에 대해 자세히 설명 합니다. 네트워크 어댑터 성능 기록은 클러스터의 모든 서버에 있는 모든 실제 네트워크 어댑터에 대해 사용할 수 있습니다. Rdma를 사용 하는 모든 실제 네트워크 어댑터에 대해 RDMA (원격 직접 메모리 액세스) 성능 기록을 사용할 수 있습니다.
 
@@ -52,24 +52,24 @@ ms.locfileid: "80856216"
 
 ## <a name="where-they-come-from"></a>원본 위치
 
-`bytes.*` 시리즈는 네트워크 어댑터가 설치 된 서버에 설정 된 `Network Adapter` 성능 카운터에서 수집 되며 네트워크 어댑터 당 하나의 인스턴스입니다.
+이 시리즈는 네트워크 어댑터가 `bytes.*` `Network Adapter` 설치 된 서버에 설정 된 성능 카운터에서 네트워크 어댑터 당 하나의 인스턴스로 수집 됩니다.
 
 | 계열                           | 원본 카운터           |
 |----------------------------------|--------------------------|
-| `netadapter.bandwidth.inbound`   | 8 × `Bytes Received/sec` |
-| `netadapter.bandwidth.outbound`  | 8 × `Bytes Sent/sec`     |
-| `netadapter.bandwidth.total`     | 8 × `Bytes Total/sec`    |
+| `netadapter.bandwidth.inbound`   | 8 ×`Bytes Received/sec` |
+| `netadapter.bandwidth.outbound`  | 8 ×`Bytes Sent/sec`     |
+| `netadapter.bandwidth.total`     | 8 ×`Bytes Total/sec`    |
 
-`rdma.*` 시리즈는 네트워크 어댑터가 설치 된 서버에 설정 된 `RDMA Activity` 성능 카운터에서 수집 되며, RDMA를 사용 하도록 설정 된 네트워크 어댑터 당 하나의 인스턴스입니다.
+`rdma.*`시리즈는 `RDMA Activity` 네트워크 어댑터가 설치 된 서버에 설정 된 성능 카운터에서 수집 되며, RDMA를 사용 하도록 설정 된 네트워크 어댑터 당 하나의 인스턴스입니다.
 
 | 계열                               | 원본 카운터           |
 |--------------------------------------|--------------------------|
-| `netadapter.bandwidth.rdma.inbound`  | 8 × `Inbound bytes/sec`  |
-| `netadapter.bandwidth.rdma.outbound` | 8 × `Outbound bytes/sec` |
+| `netadapter.bandwidth.rdma.inbound`  | 8 ×`Inbound bytes/sec`  |
+| `netadapter.bandwidth.rdma.outbound` | 8 ×`Outbound bytes/sec` |
 | `netadapter.bandwidth.rdma.total`    | 위의 8 × *합계*   |
 
    > [!NOTE]
-   > 카운터는 샘플링 되지 않고 전체 간격으로 측정 됩니다. 예를 들어 네트워크 어댑터가 9 초 동안 유휴 상태 이지만 10 초 안에 200 비트를 전송 하는 경우 해당 `netadapter.bandwidth.total`는 10 초 간격 동안 평균 초당 20 비트로 기록 됩니다. 이렇게 하면 성능 기록이 모든 활동을 캡처하고 소음에 대해 강력 하 게 됩니다.
+   > 카운터는 샘플링 되지 않고 전체 간격으로 측정 됩니다. 예를 들어 네트워크 어댑터가 9 초 동안 유휴 상태 이지만 10 초 안에 200 비트를 전송 하는 경우 `netadapter.bandwidth.total` 이 10 초 간격 동안 평균 초당 20 비트로 기록 됩니다. 이렇게 하면 성능 기록이 모든 활동을 캡처하고 소음에 대해 강력 하 게 됩니다.
 
 ## <a name="usage-in-powershell"></a>PowerShell에서 사용
 
@@ -79,6 +79,6 @@ ms.locfileid: "80856216"
 Get-NetAdapter <Name> | Get-ClusterPerf
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="additional-references"></a>추가 참조
 
 - [스토리지 공간 다이렉트에 대 한 성능 기록](performance-history.md)

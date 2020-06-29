@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 05/16/2018
-ms.openlocfilehash: d0c066b063cbfc8def54c2e0d02cbb0eaf7f1d40
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 79477aa441b82854852fe35a9b45bafdee664532
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80852926"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85475270"
 ---
 # <a name="datagram-transport-layer-security-protocol"></a>데이터그램 전송 계층 보안 프로토콜
 
@@ -29,9 +29,8 @@ Windows Server 2012 및 Windows 8의 Schannel SSP에서 도입 된 DTLS 프로�
 
 구성에 사용할 수 있는 암호 그룹은 TLS에 대해 구성할 수 있는 것 보다 먼저 패턴화 됩니다. RC4는 허용 되지 않습니다. Schannel은 CNG (Cryptography Next Generation)를 계속 사용 합니다. 이는 Windows Vista에 도입 된 FIPS 140 인증을 활용 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="additional-references"></a>추가 참조
 
 [IETF RFC 4347 데이터 그램 전송 계층 보안](http://tools.ietf.org/html/rfc4347)
 
 
-                                        

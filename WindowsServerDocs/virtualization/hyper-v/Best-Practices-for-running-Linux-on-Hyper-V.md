@@ -9,12 +9,12 @@ ms.assetid: a08648eb-eea0-4e2b-87fb-52bfe8953491
 author: shirgall
 ms.author: kathydav
 ms.date: 04/15/2020
-ms.openlocfilehash: d8861369abe24ea0d34dce209a5d98e854c4c95d
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 75b471d4083ef1597d5edcc775ea6fc847992483
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82072239"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85474470"
 ---
 # <a name="best-practices-for-running-linux-on-hyper-v"></a>Hyper-v에서 Linux를 실행 하기 위한 모범 사례
 
@@ -78,7 +78,7 @@ Linux 가상 컴퓨터 장애 조치 클러스터링을 사용 하 여 배포할
 
 Linux 커널은 요청 순서를 변경 하기 위해 두 개의 디스크 i/o 스케줄러 집합을 제공 합니다.  하나는 이전 ' blk ' 하위 시스템에 대 한 집합이 고, 한 집합은 최신 ' blk ' 하위 시스템에 대 한 집합입니다. 어떤 경우 든 현재 고체 상태 디스크를 사용 하는 경우 예약 결정을 기본 Hyper-v 하이퍼바이저에 전달 하는 스케줄러를 사용 하는 것이 좋습니다. ' Blk ' 하위 시스템을 사용 하는 Linux 커널의 경우 "noop" 스케줄러입니다. ' Blk-mq ' 하위 시스템을 사용 하는 Linux 커널의 경우 "none" 스케줄러입니다.
 
-특정 디스크의 경우 사용 가능한 스케줄러는 다음 파일 시스템 위치에 표시 될 수 있습니다./sys/class/block///`<diskname>` 이 파일 시스템 위치에 작성 하 여 스케줄러를 변경할 수 있습니다. 다시 부팅을 유지 하려면 초기화 스크립트에 변경 내용을 추가 해야 합니다. 자세한 내용은 Linux 배포판 설명서를 참조 하세요.
+특정 디스크의 경우 사용 가능한 스케줄러는 다음 파일 시스템 위치에 표시 될 수 있습니다./sys/class/block/// `<diskname>` 이 파일 시스템 위치에 작성 하 여 스케줄러를 변경할 수 있습니다. 다시 부팅을 유지 하려면 초기화 스크립트에 변경 내용을 추가 해야 합니다. 자세한 내용은 Linux 배포판 설명서를 참조 하세요.
 
 ## <a name="numa"></a>NUMA
 
@@ -94,7 +94,7 @@ Hyper-v는 파티션, 볼륨 또는 디스크에 있을 수 있는 파일 시스
 
 VHD 또는 VHDX 크기를 조정한 후 관리자 fdisk와 같은 유틸리티를 사용 해야 하거나 parted 파티션, 볼륨 및 디스크의 크기에 대 한 변경 내용을 반영 하도록 파일 시스템 구조를 업데이트 합니다. 축소 하거나 VHD 또는 VHDX GUID 파티션 테이블 (GPT)이 있는 차트의 크기를 확장 하면 경고 파티션 레이아웃을 확인 하는 파티션 관리 도구가 사용 될 때 첫 번째 및 보조 GPT 헤더를 해결 하려면 관리자를 열라는 경고가 표시 됩니다. 이 단계를 직접 데이터 손실 없이 수행 해도 됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="additional-references"></a>추가 참조
 
 * [Windows에서 Hyper-v에 대 한 지원 되는 Linux 및 FreeBSD 가상 컴퓨터](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)
 

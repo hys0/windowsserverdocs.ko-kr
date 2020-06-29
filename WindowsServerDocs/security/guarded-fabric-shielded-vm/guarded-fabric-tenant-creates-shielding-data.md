@@ -8,12 +8,12 @@ author: rpsqrd
 ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 09/25/2019
-ms.openlocfilehash: 6ff502e7246c899a7b4f29125266bf05d07e40ef
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 30f8f4db8f6bbfd4ead6ce2a31af3b2f6adbf72c
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80856456"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85475100"
 ---
 # <a name="shielded-vms-for-tenants---creating-shielding-data-to-define-a-shielded-vm"></a>테 넌 트 용 보호 된 vm-보호 된 VM을 정의 하는 보호 데이터 만들기
 
@@ -56,7 +56,7 @@ ms.locfileid: "80856456"
 
 VMM에서 서명 된 템플릿 디스크는 일반화 되므로 프로 비전 프로세스 중에 보호 된 Vm을 특수화 하려면 테 넌 트가 응답 파일을 제공 해야 합니다. 응답 파일 (무인 파일 이라고 함)은 의도 한 역할에 대 한 VM을 구성할 수 있습니다. 즉, Windows 기능을 설치 하 고, 이전 단계에서 만든 RDP 인증서를 등록 하 고, 다른 사용자 지정 작업을 수행할 수 있습니다. 또한 기본 관리자의 암호 및 제품 키를 비롯 하 여 Windows 설치 프로그램에 필요한 정보를 제공 합니다.
 
-**ShieldingDataAnswerFile** 함수를 가져오고 사용 하 여 보호 된 vm을 만들기 위한 응답 파일 (unattend.xml 파일)을 생성 하는 방법에 대 한 자세한 내용은 [ShieldingDataAnswerFile 함수를 사용 하 여 응답 파일 생성](guarded-fabric-sample-unattend-xml-file.md)을 참조 하세요. 함수를 사용 하면 다음과 같은 선택 사항을 반영 하는 응답 파일을 보다 쉽게 생성할 수 있습니다.
+**ShieldingDataAnswerFile** 함수를 가져오고 사용 하 여 보호 된 vm을 만들기 위한 응답 파일 (Unattend.xml 파일)을 생성 하는 방법에 대 한 자세한 내용은 [ShieldingDataAnswerFile 함수를 사용 하 여 응답 파일 생성](guarded-fabric-sample-unattend-xml-file.md)을 참조 하세요. 함수를 사용 하면 다음과 같은 선택 사항을 반영 하는 응답 파일을 보다 쉽게 생성할 수 있습니다.
 
 - VM이 초기화 프로세스가 끝날 때 도메인에 가입 되어 있나요?
 - VM 당 볼륨 라이선스 또는 특정 제품 키를 사용 하 시겠습니까?
@@ -66,7 +66,7 @@ VMM에서 서명 된 템플릿 디스크는 일반화 되므로 프로 비전 �
 
 보호 데이터 파일에 사용 되는 응답 파일은 해당 보호 데이터 파일을 사용 하 여 만든 모든 VM에서 사용 됩니다. 따라서 VM 관련 정보를 응답 파일에 하드 코딩 하지 않도록 해야 합니다. VMM은 무인 파일에서 일부 대체 문자열 (아래 표 참조)을 지원 하 여 VM에서 VM으로 변경 될 수 있는 특수화 값을 처리 합니다. 이러한 항목은 사용할 필요가 없습니다. 그러나 존재 하는 경우 VMM은이를 활용 합니다.
 
-차폐 Vm에 대 한 unattend.xml 파일을 만드는 경우 다음 제한 사항에 유의 하세요.
+보호 된 Vm에 대 한 unattend.xml 파일을 만드는 경우 다음 제한 사항에 유의 하세요.
 
 - VMM을 사용 하 여 데이터 센터를 관리 하는 경우 무인 파일은 구성 된 후에 VM을 해제 해야 합니다. 이는 VMM이 VM에서 프로 비전을 완료 하 고 사용할 준비가 된 테 넌 트에 보고 해야 하는 시기를 알 수 있도록 하기 위한 것입니다. VMM은 프로 비전 중에 해제 된 것을 감지 하면 VM을 자동으로 다시 켭니다.
 
@@ -76,9 +76,9 @@ VMM에서 서명 된 템플릿 디스크는 일반화 되므로 프로 비전 �
 
     | 대체 가능 요소 | 대체 문자열 |
     |-----------|-----------|
-    | ComputerName        | @ComputerName@      |
-    | 표준 시간대            | @TimeZone@          |
-    | 제품 키          | @ProductKey@        |
+    | 컴퓨터 이름        | @ComputerName@      |
+    | TimeZone            | @TimeZone@          |
+    | ProductKey          | @ProductKey@        |
     | IPAddr4-1           | @IP4Addr-1@         |
     | IPAddr6-1           | @IP6Addr-1@         |
     | MACAddr-1           | @MACAddr-1@         |
@@ -100,11 +100,11 @@ VMM에서 서명 된 템플릿 디스크는 일반화 되므로 프로 비전 �
     | @Prefix-2-1@        | 24                   |
     | @NextHop-2-1@       | 10.0.20.1            |
 
-대체 문자열을 사용 하는 경우 VM 프로 비전 프로세스 중에 문자열이 채워지는지 확인 하는 것이 중요 합니다. @ProductKey@과 같은 문자열이 배포 시 제공 되지 않는 경우 무인 파일에 &lt;ProductKey&gt; 노드를 비워 두면 특수화 프로세스가 실패 하 고 VM에 연결할 수 없게 됩니다.
+대체 문자열을 사용 하는 경우 VM 프로 비전 프로세스 중에 문자열이 채워지는지 확인 하는 것이 중요 합니다. 배포 시 @와 같은 문자열을 @ProductKey 제공 하지 않으면 &lt; &gt; 무인 파일에 ProductKey 노드를 비워 두면 특수화 프로세스가 실패 하 고 VM에 연결할 수 없게 됩니다.
 
 또한 테이블의 끝 부분을 향하는 네트워킹 관련 대체 문자열은 VMM 고정 IP 주소 풀을 활용 하는 경우에만 사용 됩니다. 호스팅 서비스 공급자는 이러한 대체 문자열이 필요한 지 여부를 알려줄 수 있어야 합니다. VMM 템플릿의 고정 IP 주소에 대 한 자세한 내용은 VMM 설명서에서 다음 항목을 참조 하십시오.
 
-- [IP 주소 풀에 대 한 지침](https://technet.microsoft.com/system-center-docs/vmm/plan/plan-network#guidelines-for-ip-address-pools)
+- [IP 주소 풀에 대한 지침](https://technet.microsoft.com/system-center-docs/vmm/plan/plan-network#guidelines-for-ip-address-pools)
 - [VMM 패브릭에서 고정 IP 주소 풀 설정](https://technet.microsoft.com/system-center-docs/vmm/manage/manage-network-static-address-pools)
 
 마지막으로, 보호 된 VM 배포 프로세스는 OS 드라이브만 암호화 한다는 점에 유의 해야 합니다. 하나 이상의 데이터 드라이브를 사용 하 여 보호 된 VM을 배포 하는 경우 테 넌 트 도메인의 무인 명령 또는 그룹 정책 설정을 추가 하 여 데이터 드라이브를 자동으로 암호화 하는 것이 좋습니다.
@@ -161,13 +161,13 @@ VMM에서 서명 된 템플릿 디스크는 일반화 되므로 프로 비전 �
 
 보호 데이터 파일 마법사를 실행 하 여 PDK (보호 데이터) 파일을 만듭니다. 여기서는 이전 단계에서 가져온 RDP 인증서, 무인 파일, 볼륨 서명 카탈로그, 소유자 보호자 및 다운로드 된 보호자 메타 데이터를 추가 합니다.
 
-1. 서버 관리자 또는 다음 Windows PowerShell 명령을 사용 하 여 컴퓨터에 **보호 된 VM 도구 &gt; 원격 서버 관리 도구 &gt; 기능 관리 도구** 를 설치 합니다.
+1. 서버 관리자 또는 다음 Windows PowerShell 명령을 사용 하 여 컴퓨터에 ** &gt; 보호 된 &gt; VM 도구 원격 서버 관리 도구 기능 관리 도구** 를 설치 합니다.
 
     ```powershell
     Install-WindowsFeature RSAT-Shielded-VM-Tools
     ```
 
-2. 시작 메뉴의 관리자 도구 섹션에서 보호 데이터 파일 마법사를 열거나 다음 실행 파일을 실행 하 여 **C:\\Windows\\System32\\ShieldingDataFileWizard**를 실행 합니다.
+2. 시작 메뉴의 관리자 도구 섹션에서 보호 데이터 파일 마법사를 열거나 다음 실행 파일을 실행 하 여 **C: \\ Windows \\ System32 \\ShieldingDataFileWizard.exe**를 실행 합니다.
 
 3. 첫 번째 페이지에서 두 번째 파일 선택 상자를 사용 하 여 보호 데이터 파일의 위치 및 파일 이름을 선택 합니다. 일반적으로 보호 데이터 (예: HR, IT, 재무) 및 실행 중인 작업 역할 (예: 파일 서버, 웹 서버 또는 무인 파일에 의해 구성 된 모든 항목)을 사용 하 여 만든 Vm을 소유한 엔터티 뒤에 보호 데이터 파일의 이름을 표시 합니다. **보호 된 템플릿에 대 한 보호 데이터**로 설정 된 라디오 단추를 그대로 둡니다.
 
@@ -198,9 +198,9 @@ VMM에서 서명 된 템플릿 디스크는 일반화 되므로 프로 비전 �
 
 5. 볼륨 ID 한정자 페이지에서 **추가** 를 클릭 하 여 보호 데이터 파일에서 서명 된 템플릿 디스크에 권한을 부여 합니다. 대화 상자에서 VSC를 선택 하면 해당 디스크의 이름, 버전 및 해당 디스크에 서명 하는 데 사용 된 인증서에 대 한 정보가 표시 됩니다. 권한을 부여 하려는 각 템플릿 디스크에 대해이 프로세스를 반복 합니다.
 
-6. **특수화 값** 페이지에서 **찾아보기** 를 클릭 하 여 vm을 특수화 하는 데 사용 되는 unattend.xml 파일을 선택 합니다.
+6. **특수화 값** 페이지에서 **찾아보기** 를 클릭 하 여 vm을 특수화 하는 데 사용할 unattend.xml 파일을 선택 합니다.
 
-    아래쪽의 **추가** 단추를 사용 하 여 특수화 프로세스 중에 필요한 PDK에 추가 파일을 추가 합니다. 예를 들어 무인 파일이 VM에 RDP 인증서를 설치 하는 경우 ( [ShieldingDataAnswerFile 함수를 사용 하 여 응답 파일 생성](guarded-fabric-sample-unattend-xml-file.md)에 설명 된 대로) RDP 인증서 PFX 파일 및 RDPCertificateConfig 스크립트를 여기에 추가 해야 합니다. 여기에서 지정 하는 모든 파일은 생성 된 VM에서 C:\\임시\\에 자동으로 복사 됩니다. 무인 파일은 경로를 기준으로 파일을 참조할 때 해당 폴더에 있을 것으로 간주 해야 합니다.
+    아래쪽의 **추가** 단추를 사용 하 여 특수화 프로세스 중에 필요한 PDK에 추가 파일을 추가 합니다. 예를 들어 무인 파일이 VM에 RDP 인증서를 설치 하는 경우 ( [ShieldingDataAnswerFile 함수를 사용 하 여 응답 파일 생성](guarded-fabric-sample-unattend-xml-file.md)에 설명 된 대로) RDP 인증서 PFX 파일 및 RDPCertificateConfig.ps1 스크립트를 여기에 추가 해야 합니다. 여기에서 지정 하는 모든 파일은 \\ 생성 된 VM의 C: temp에 자동으로 복사 됩니다 \\ . 무인 파일은 경로를 기준으로 파일을 참조할 때 해당 폴더에 있을 것으로 간주 해야 합니다.
 
 7. 다음 페이지에서 선택 항목을 검토 하 고 **생성**을 클릭 합니다.
 
@@ -230,11 +230,11 @@ Import-HgsGuardian -Name 'EAST-US Datacenter' -Path '.\EastUSGuardian.xml'
 ```
 
 > [!TIP]
-> 자체 서명 된 인증서를 사용 했거나 HGS에 등록 된 인증서가 만료 된 경우 HgsGuardian 명령을 사용 하 여 `-AllowUntrustedRoot` 및/또는 `-AllowExpired` 플래그를 사용 하 여 보안 검사를 무시 해야 할 수 있습니다.
+> 자체 서명 된 인증서를 사용 했거나 HGS에 등록 된 인증서가 만료 된 경우 HgsGuardian 명령을 사용 하 여 `-AllowUntrustedRoot` 및/또는 플래그를 사용 하 여 보안 검사를 무시 해야 할 수 있습니다 `-AllowExpired` .
 
 또한이 보호 데이터 파일 및 [보호 데이터 응답 파일](#create-an-answer-file) 에서 사용 하려는 각 템플릿 디스크에 대 한 [볼륨 서명 카탈로그를 가져와야](#get-the-volume-signature-catalog-file) 운영 체제에서 해당 특수화 작업을 자동으로 완료할 수 있습니다.
 마지막으로 VM을 완전히 차폐 또는 vTPM 사용으로 설정할지 결정 합니다.
-기본 콘솔 연결과 PowerShell Direct를 허용 하는 vTPM 사용 VM에 대해 완전히 보호 된 VM 또는 `-Policy EncryptionSupported`에 대 한 `-Policy Shielded`를 사용 합니다.
+`-Policy Shielded`완전 차폐 vm에 사용 하거나 `-Policy EncryptionSupported` 기본 콘솔 연결 및 PowerShell Direct를 허용 하는 VTPM 사용 VM에 사용 합니다.
 
 모든 것이 준비 되 면 다음 명령을 실행 하 여 보호 데이터 파일을 만듭니다.
 
@@ -244,18 +244,18 @@ New-ShieldingDataFile -ShieldingDataFilePath "C:\temp\Marketing-LBI.pdk" -Policy
 ```
 
 > [!TIP]
-> 사용자 지정 RDP 인증서, SSH 키 또는 보호 데이터 파일에 포함 되어야 하는 기타 파일을 사용 하는 경우에는 `-OtherFile` 매개 변수를 사용 하 여 포함 해야 합니다. 쉼표로 구분 된 파일 경로 목록 (예:)을 제공할 수 있습니다 `-OtherFile "C:\source\myRDPCert.pfx", "C:\source\RDPCertificateConfig.ps1"`
+> 사용자 지정 RDP 인증서, SSH 키 또는 보호 데이터 파일에 포함 해야 하는 기타 파일을 사용 하는 경우 `-OtherFile` 매개 변수를 사용 하 여 포함 합니다. 다음과 같이 쉼표로 구분 된 파일 경로 목록을 제공할 수 있습니다.`-OtherFile "C:\source\myRDPCert.pfx", "C:\source\RDPCertificateConfig.ps1"`
 
 위의 명령에서 "Owner" (HgsGuardian에서 가져옴) 라는 보호자는 나중에 VM의 보안 구성을 변경할 수 있으며, ' 미국 동부 데이터 센터 '는 VM을 실행할 수 있지만 설정을 변경할 수는 없습니다.
-둘 이상의 보호자를 사용 하는 경우 보호자의 이름을 `'EAST-US Datacenter', 'EMEA Datacenter'`와 같이 쉼표로 구분 합니다.
+둘 이상의 보호자를 사용 하는 경우와 같이 보호자의 이름을 쉼표로 구분 합니다 `'EAST-US Datacenter', 'EMEA Datacenter'` .
 볼륨 ID 한정자는 템플릿 디스크 또는 이후 버전 (GreaterThanOrEquals)의 정확한 버전 (Equals)만 신뢰 하는지 여부를 지정 합니다.
 배포 시 고려 되는 버전 비교의 경우 디스크 이름 및 서명 인증서가 정확 하 게 일치 해야 합니다.
-`-VolumeIDQualifier` 매개 변수에 볼륨 ID 한정자의 쉼표로 구분 된 목록을 제공 하 여 둘 이상의 템플릿 디스크를 신뢰할 수 있습니다.
-마지막으로, VM과 응답 파일을 함께 제공 해야 하는 다른 파일이 있는 경우 `-OtherFile` 매개 변수를 사용 하 여 쉼표로 구분 된 파일 경로 목록을 제공 합니다.
+매개 변수에 볼륨 ID 한정자의 쉼표로 구분 된 목록을 제공 하 여 둘 이상의 템플릿 디스크를 신뢰할 수 있습니다 `-VolumeIDQualifier` .
+마지막으로, VM과 응답 파일을 함께 제공 해야 하는 다른 파일이 있는 경우 `-OtherFile` 매개 변수를 사용 하 고 쉼표로 구분 된 파일 경로 목록을 제공 합니다.
 
 보호 데이터 파일을 구성 하는 다른 방법에 대 한 자세한 내용은 [ShieldingDataFile](https://docs.microsoft.com/powershell/module/shieldedvmdatafile/New-ShieldingDataFile?view=win10-ps) 및 [VolumeIDQualifier](https://docs.microsoft.com/powershell/module/shieldedvmdatafile/New-VolumeIDQualifier?view=win10-ps) 에 대 한 cmdlet 설명서를 참조 하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="additional-references"></a>추가 참조
 
 - [보호된 VM 배포](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 - [보호된 패브릭 및 보호된 VM](guarded-fabric-and-shielded-vms-top-node.md)

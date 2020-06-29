@@ -1,5 +1,5 @@
 ---
-title: 보호된 VM - 호스팅 서비스 공급자가 Microsoft Azure 팩 설정
+title: 보호 된 Vm-호스팅 서비스 공급자 Windows Azure 팩 설정
 ms.prod: windows-server
 ms.topic: article
 ms.assetid: d528c689-58b0-425c-9740-25e2553ed689
@@ -8,14 +8,14 @@ author: rpsqrd
 ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: 1d759af575f98d305a67734d0e23680f701f6b72
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 4632c218f0638885e3094446704a91c442859d4c
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80856716"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85473970"
 ---
-# <a name="shielded-vms---hosting-service-provider-sets-up-windows-azure-pack"></a>보호된 VM - 호스팅 서비스 공급자가 Microsoft Azure 팩 설정
+# <a name="shielded-vms---hosting-service-provider-sets-up-windows-azure-pack"></a>보호 된 Vm-호스팅 서비스 공급자 Windows Azure 팩 설정
 
 이 항목에서는 테 넌 트가 보호 된 Vm을 배포 하는 데 사용할 수 있도록 호스팅 서비스 공급자가 Windows Azure 팩를 구성 하는 방법을 설명 합니다. Windows Azure 팩은 테 넌 트가 간단한 웹 인터페이스를 통해 자체 Vm을 배포 하 고 관리할 수 있도록 System Center Virtual Machine Manager의 기능을 확장 하는 웹 포털입니다. Windows Azure 팩는 보호 된 Vm을 완벽 하 게 지원 하 고 테 넌 트가 해당 보호 데이터 파일을 훨씬 더 쉽게 만들고 관리할 수 있게 해줍니다.
 
@@ -27,7 +27,7 @@ ms.locfileid: "80856716"
 
 1. 호스팅 패브릭에 대 한 System Center 2016-Virtual Machine Manager (VMM)의 구성을 완료 합니다. 여기에는 VM 템플릿 및 VM 클라우드 설정이 포함 되며 Windows Azure 팩를 통해 노출 됩니다.
 
-    [시나리오-VMM에서 보호 된 호스트 및 보호 된 가상 컴퓨터 배포](https://technet.microsoft.com/system-center-docs/vmm/scenario/guarded-overview)
+    [시나리오 - VMM에서 보호된 호스트 및 보호된 가상 컴퓨터 배포](https://technet.microsoft.com/system-center-docs/vmm/scenario/guarded-overview)
 
 2. SPF (System Center 2016-Service Provider Foundation)를 설치 하 고 구성 합니다. 이 소프트웨어를 통해 Windows Azure 팩 VMM 서버와 통신할 수 있습니다.
 
@@ -52,7 +52,7 @@ ms.locfileid: "80856716"
 
 3.  웹 플랫폼 설치 관리자를 열고 **제품** 탭 아래에서 **Windows Azure 팩: 포털 및 API Express** 를 찾습니다. **추가**를 클릭 한 다음 창 맨 아래에서 **설치** 를 클릭 합니다.
 
-4.  설치를 계속합니다. 설치가 완료 되 면 구성 사이트 (*https://&lt;wapserver&gt;: 30101/* )가 웹 브라우저에서 열립니다. 이 웹 사이트에서 SQL server에 대 한 정보를 제공 하 고 WAP 구성을 완료 합니다.
+4.  설치를 계속합니다. 설치가 완료 되 면 구성 사이트 (*https:// &lt; wapserver &gt; : 30101/*)가 웹 브라우저에서 열립니다. 이 웹 사이트에서 SQL server에 대 한 정보를 제공 하 고 WAP 구성을 완료 합니다.
 
 Windows Azure 팩 설정에 대 한 도움말은 [Windows Azure 팩 express 배포 설치](https://technet.microsoft.com/dn296439.aspx)를 참조 하세요.
 
@@ -63,7 +63,7 @@ Windows Azure 팩 설정에 대 한 도움말은 [Windows Azure 팩 express 배�
 
 Windows Azure 팩를 사용 하기 전에 인프라에 대해를 이미 설치 하 고 구성 해야 합니다.
 
-1.  *Https://&lt;wapserver&gt;: 30091*Windows Azure 팩 관리 포털로 이동한 후 관리자 자격 증명을 사용 하 여 로그인 합니다.
+1.  *Https:// &lt; wapserver &gt; : 30091*에서 Windows Azure 팩 관리 포털로 이동한 후 관리자 자격 증명을 사용 하 여 로그인 합니다.
 
 2.  왼쪽 창에서 **VM 클라우드**를 클릭 합니다.
 
@@ -77,7 +77,7 @@ Windows Azure 팩를 사용 하기 전에 인프라에 대해를 이미 설치 �
 
 테 넌 트가 WAP에서 Vm을 만들 수 있도록 하려면 먼저 테 넌 트가 구독할 수 있는 호스팅 계획을 만들어야 합니다. 계획은 테 넌 트에 대해 허용 되는 VM 클라우드, 템플릿, 네트워크 및 청구 엔터티를 정의 합니다.
 
-1. 포털의 아래쪽 창에서 **+ 새로** 만들기 &gt; **계획** &gt; **계획 만들기**를 클릭 합니다.
+1. 포털의 아래쪽 창에서 **+ 새로** &gt; **PLAN** &gt; **만들기 계획 만들기 계획**을 클릭 합니다.
 
 2. 마법사의 첫 번째 단계에서 계획의 이름을 선택 합니다. 구독할 때 테 넌 트에 표시 되는 이름입니다.
 
@@ -98,7 +98,7 @@ Windows Azure 팩를 사용 하기 전에 인프라에 대해를 이미 설치 �
 9. 이 계획에서 적용 하려는 할당량을 선택 합니다. (예: CPU 코어 및 RAM 사용에 대 한 제한). **Virtual Machines 보호** 가능 확인란을 선택 된 상태로 두어야 합니다.
 
    ![Windows Azure 팩의 가상 컴퓨터 클라우드에 대 한 설정](../media/Guarded-Fabric-Shielded-VM/guarded-host-azure-pack-03-virtual-machine-clouds.png)
-    
+
 10. **템플릿**섹션까지 아래로 스크롤한 다음 테 넌 트에 제공할 하나 이상의 템플릿을 선택 합니다. 테 넌 트에 차폐 템플릿 및 보호 되지 않는 템플릿을 둘 다 제공할 수 있지만 테 넌 트의 무결성과 VM의 비밀에 대 한 종단 간 보증을 제공 하기 위해 차폐 템플릿을 제공 해야 합니다.
 
 11. **네트워크** 섹션에서 테 넌 트에 대해 하나 이상의 네트워크를 추가 합니다.
@@ -113,7 +113,7 @@ Windows Azure 팩를 사용 하기 전에 인프라에 대해를 이미 설치 �
 
     이 시점에서 Windows Azure 팩 구성 되 고 테 넌 트가 방금 만든 계획을 구독 하 고 보호 된 Vm을 배포할 수 있습니다. 테 넌 트가 완료 해야 하는 추가 단계는 [테 넌 트에 대 한 보호 된 vm-Windows Azure 팩를 사용 하 여 보호 된 Vm 배포](guarded-fabric-shielded-vm-windows-azure-pack.md)를 참조 하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="additional-references"></a>추가 참조
 
 - [보호 된 호스트 및 보호 된 Vm에 대 한 호스팅 서비스 공급자 구성 단계](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 - [보호된 패브릭 및 보호된 VM](guarded-fabric-and-shielded-vms-top-node.md)

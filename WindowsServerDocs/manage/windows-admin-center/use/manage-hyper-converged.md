@@ -8,12 +8,12 @@ ms.author: jol
 ms.date: 03/01/2019
 ms.localizationpriority: medium
 ms.prod: windows-server
-ms.openlocfilehash: 6795464bfbadd12fc220e941ad2175eb83d0f050
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: 71e45622292f7393b19978ec3235492c5065a8a1
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79322865"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85474030"
 ---
 # <a name="manage-hyper-converged-infrastructure-with-windows-admin-center"></a>Windows 관리 센터를 사용 하 여 하이퍼 수렴 형 인프라 관리
 
@@ -29,7 +29,7 @@ ms.locfileid: "79322865"
 > [!IMPORTANT]
 > 이 문서에서 설명 하는 일부 기능은 Windows 관리 센터 미리 보기 에서만 사용할 수 있습니다. [이 버전을 가져올 어떻게 할까요? 있나요?](https://aka.ms/windowsadmincenter)
 
-## <a name="what-is-windows-admin-center"></a>Windows Admin Center란
+## <a name="what-is-windows-admin-center"></a>Windows Admin Center란?
 
 [Windows 관리 센터](../overview.md) 는 windows Server를 위한 차세대 관리 도구로 서, 서버 관리자와 같은 기존의 후속 "도구"입니다. 무료 이며 인터넷 연결 없이 설치 하 고 사용할 수 있습니다. Windows 관리 센터를 사용 하 여 Windows Server 2016 또는 Windows Server 2019를 실행 하는 하이퍼 수렴 형 인프라를 관리 하 고 모니터링할 수 있습니다.
 
@@ -46,7 +46,7 @@ ms.locfileid: "79322865"
 
 하이퍼 수렴 형 인프라의 Windows 관리 센터는 Microsoft에서 적극적으로 개발 하 고 있습니다. 기존 기능을 개선 하 고 새로운 기능을 추가 하는 빈번한 업데이트를 받습니다.
 
-## <a name="before-you-start"></a>시작하기 전 확인 사항
+## <a name="before-you-start"></a>시작하기 전에
 
 Windows 관리 센터에서 클러스터를 하이퍼 수렴 형 인프라로 관리 하려면 Windows Server 2016 또는 Windows Server 2019를 실행 하 고 Hyper-v를 사용 하도록 설정 하 고 스토리지 공간 다이렉트를 사용 하도록 설정 해야 합니다. 필요에 따라 Windows 관리 센터를 통해 소프트웨어 정의 네트워킹을 사용 하도록 설정 하 고 관리할 수도 있습니다.
 
@@ -57,7 +57,7 @@ Windows 관리 센터에서 클러스터를 하이퍼 수렴 형 인프라로 �
 
 하이퍼 수렴 형 인프라를 위한 windows 관리 센터는 Windows Server 2016이 출시 된 후 추가 된 관리 Api에 따라 달라 집니다. Windows 관리 센터를 사용 하 여 Windows Server 2016 클러스터를 관리 하려면 먼저 다음 두 단계를 수행 해야 합니다.
 
-1. 클러스터의 모든 서버에서 [KB4103723 (Windows server 2016 용 2018-05 누적 업데이트)](https://support.microsoft.com/help/4103723/windows-10-update-kb4103723) 이상을 설치 했는지 확인 합니다. 이 업데이트를 다운로드 하 고 설치 하려면 **설정** > **업데이트 & 보안** > **Windows 업데이트** 로 이동 하 고 **Microsoft 업데이트에서 온라인 업데이트 확인**을 선택 합니다.
+1. 클러스터의 모든 서버에서 [KB4103723 (Windows server 2016 용 2018-05 누적 업데이트)](https://support.microsoft.com/help/4103723/windows-10-update-kb4103723) 이상을 설치 했는지 확인 합니다. 이 업데이트를 다운로드 하 고 설치 하려면 **설정**  >  **업데이트 & 보안**  >  **Windows 업데이트** 로 이동 하 고 **Microsoft 업데이트에서 온라인 업데이트 확인**을 선택 합니다.
 2. 클러스터에서 관리자 권한으로 다음 PowerShell cmdlet을 실행 합니다.
 
 ```powershell
@@ -76,7 +76,7 @@ Windows 관리 센터에서 클러스터를 하이퍼 수렴 형 인프라로 �
 다음 단계로 SDN (소프트웨어 방식 네트워킹)을 사용 하도록 Windows Server 2016 또는 2019를 실행 하는 하이퍼 수렴 형 인프라를 구성할 수 있습니다.
 
 1. 하이퍼 수렴 형 인프라 호스트에 설치한 os와 동일한 OS의 VHD를 준비 합니다. 이 VHD는 모든 NC/SLB/GW Vm에 사용 됩니다.
-2. [https://github.com/Microsoft/SDN/tree/master/SDNExpress](https://github.com/Microsoft/SDN/tree/master/SDNExpress)에서 SDN Express 아래의 모든 폴더와 파일을 다운로드 합니다.
+2. SDN Express에서 모든 폴더와 파일을 다운로드 [https://github.com/Microsoft/SDN/tree/master/SDNExpress](https://github.com/Microsoft/SDN/tree/master/SDNExpress) 합니다.
 3. 배포 콘솔을 사용 하 여 다른 VM을 준비 합니다. 이 VM은 SDN 호스트에 액세스할 수 있어야 합니다. 또한 VM에는 RSAT Hyper-v 도구가 설치 되어 있어야 합니다.
 4. SDN Express에 대해 다운로드 한 모든 항목을 배포 콘솔 VM에 복사 합니다. 및은이 **Sdnexpress** 폴더를 공유 합니다. 구성 파일 줄 8에서 정의한 대로 모든 호스트가 **Sdnexpress** 공유 폴더에 액세스할 수 있는지 확인 합니다.
    ```
@@ -87,12 +87,12 @@ Windows 관리 센터에서 클러스터를 하이퍼 수렴 형 인프라로 �
 7. 관리자 권한으로 PowerShell을 실행 하 여 SDN을 배포 합니다.
 
 ```powershell
-    .\SDNExpress.ps1 -ConfigurationDataFile .\your_fabricconfig.PSD1 -verbose 
+    .\SDNExpress.ps1 -ConfigurationDataFile .\your_fabricconfig.PSD1 -verbose
 ```
 
 배포에는 약 30 ~ 45 분이 소요 됩니다.
 
-## <a name="get-started"></a>시작
+## <a name="get-started"></a>시작하기
 
 하이퍼 수렴 형 인프라를 배포한 후에는 Windows 관리 센터를 사용 하 여 관리할 수 있습니다.
 
@@ -161,11 +161,11 @@ Windows Admin Center는 Windows 이외에 추가 비용이 들지 않습니다.
 
 ### <a name="does-windows-admin-center-require-system-center"></a>Windows Admin Center에 System Center가 필요합니까?
 
-No.
+아니요.
 
 ### <a name="does-it-require-an-internet-connection"></a>인터넷 연결이 필요 한가요?
 
-No.
+아니요.
 
 Windows 관리 센터는 Microsoft Azure 클라우드와 강력 하 고 편리한 통합 기능을 제공 하지만 하이퍼 수렴 형 인프라의 핵심 관리 및 모니터링 환경은 완전히 온-프레미스입니다. 인터넷 연결 없이 설치 하 고 사용할 수 있습니다.
 
@@ -187,53 +187,53 @@ Windows 관리 센터는 Microsoft Azure 클라우드와 강력 하 고 편리�
 <table>
     <tr style="border: 0;">
         <td style="padding: 5px; border: 0;">
-            <strong>볼륨, 3 방향 미러를 만듭니다</strong>
+            <strong>볼륨 만들기, 3 방향 미러</strong>
             <iframe width="375" height="210" src="https://www.youtube-nocookie.com/embed/o66etKq70N8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
         </td>
         <td style="padding: 5px; border: 0;">
-            <strong>볼륨
-             미러 가속 패리티를 만듭니다</strong> .<iframe width="375" height="210" src="https://www.youtube-nocookie.com/embed/R72QHudqWpE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+            <strong>볼륨 만들기, 미러 가속 패리티</strong>
+            <iframe width="375" height="210" src="https://www.youtube-nocookie.com/embed/R72QHudqWpE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
         </td>
     </tr>
     <tr style="border: 0;">
         <td style="padding: 5px; border: 0;">
-            <strong>볼륨을 열고 파일을 추가</strong>
+            <strong>볼륨을 열고 파일 추가</strong>
             <iframe width="375" height="210" src="https://www.youtube-nocookie.com/embed/j59z7ulohs4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
         </td>
         <td style="padding: 5px; border: 0;">
-            <strong>중복 제거 및 압축
-             설정</strong><iframe width="375" height="210" src="https://www.youtube-nocookie.com/embed/PRibTacyKko" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+            <strong>중복 제거 및 압축 설정</strong>
+            <iframe width="375" height="210" src="https://www.youtube-nocookie.com/embed/PRibTacyKko" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
         </td>
     </tr>
     <tr style="border: 0;">
         <td style="padding: 5px; border: 0;">
-            <strong>볼륨
-             확장</strong><iframe width="375" height="210" src="https://www.youtube-nocookie.com/embed/hqyBzipBoTI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+            <strong>볼륨 확장</strong>
+            <iframe width="375" height="210" src="https://www.youtube-nocookie.com/embed/hqyBzipBoTI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
         </td>
         <td style="padding: 5px; border: 0;">
-            <strong>볼륨
-             삭제</strong><iframe width="375" height="210" src="https://www.youtube-nocookie.com/embed/DbjF8r2F6Jo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+            <strong>볼륨 삭제</strong>
+            <iframe width="375" height="210" src="https://www.youtube-nocookie.com/embed/DbjF8r2F6Jo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
         </td>
     </tr>
 </table>
 
-### <a name="create-a-new-virtual-machine"></a>새 가상 컴퓨터 만들기
+### <a name="create-a-new-virtual-machine"></a>새 가상 머신 만들기
 
 1. 왼쪽 탐색 창에서 **Virtual Machines** 도구를 클릭 합니다.
 2. Virtual Machines 도구 맨 위에서 **인벤토리** 탭을 선택한 다음 **새로** 만들기를 클릭 하 여 새 가상 컴퓨터를 만듭니다.
 3. 가상 컴퓨터 이름을 입력 하 고 1 세대와 2 세대 가상 컴퓨터를 선택 합니다.
 4. 그런 다음 uou는 처음에 가상 머신을 만들거나 권장 호스트를 사용할 호스트를 선택할 수 있습니다.
-5. 가상 컴퓨터 파일의 경로를 선택 하십시오. 드롭다운 목록에서 볼륨을 선택 하거나 **찾아보기** 를 클릭 하 여 폴더 선택기를 사용 하 여 폴더를 선택 합니다. 가상 컴퓨터 구성 파일 및 가상 하드 디스크 파일은 선택한 볼륨 또는 경로의 `\Hyper-V\[virtual machine name]` 경로 아래에 있는 단일 폴더에 저장 됩니다.
+5. 가상 컴퓨터 파일의 경로를 선택 하십시오. 드롭다운 목록에서 볼륨을 선택 하거나 **찾아보기** 를 클릭 하 여 폴더 선택기를 사용 하 여 폴더를 선택 합니다. 가상 컴퓨터 구성 파일 및 가상 하드 디스크 파일은 `\Hyper-V\[virtual machine name]` 선택한 볼륨 또는 경로의 경로 아래에 있는 단일 폴더에 저장 됩니다.
 6. 가상 프로세서 수를 선택 하 고, 중첩 된 가상화를 사용 하도록 설정할지 여부를 선택 하 고, 메모리 설정, 네트워크 어댑터, 가상 하드 디스크를 구성 하 고, .iso 이미지 파일이 나 네트워크에서 운영 체제를 설치할지 여부를 선택 합니다.
 7. **만들기**를 클릭하여 가상 컴퓨터를 만듭니다.
 8. 가상 컴퓨터를 만들고 가상 컴퓨터 목록에 표시 되 면 가상 컴퓨터를 시작할 수 있습니다.
-9. 가상 컴퓨터가 시작 되 면 VMConnect를 통해 가상 컴퓨터의 콘솔에 연결 하 여 운영 체제를 설치할 수 있습니다. 목록에서 가상 컴퓨터를 선택 하 고 **추가** > **연결** 을 클릭 하 여 .rdp 파일을 다운로드 합니다. 원격 데스크톱 연결 앱에서 .rdp 파일을 엽니다. 가상 컴퓨터의 콘솔에 연결 하는 중 이므로 Hyper-v 호스트의 관리자 자격 증명을 입력 해야 합니다.
+9. 가상 컴퓨터가 시작 되 면 VMConnect를 통해 가상 컴퓨터의 콘솔에 연결 하 여 운영 체제를 설치할 수 있습니다. 목록에서 가상 컴퓨터를 선택 하 고 **추가**  >  **연결** 을 클릭 하 여 .rdp 파일을 다운로드 합니다. 원격 데스크톱 연결 앱에서 .rdp 파일을 엽니다. 가상 컴퓨터의 콘솔에 연결 하는 중 이므로 Hyper-v 호스트의 관리자 자격 증명을 입력 해야 합니다.
 
 [Windows 관리 센터를 사용 하 여 가상 머신 관리에 대해 자세히 알아보세요](manage-virtual-machines.md).
 
 ### <a name="pause-and-safely-restart-a-server"></a>서버 일시 중지 및 안전 하 게 다시 시작
 
-1. **대시보드의**왼쪽 탐색 영역에서 **서버** 를 선택 하거나 대시보드의 오른쪽 아래에 있는 타일에서 **서버 > 보기** 링크를 클릭 합니다.
+1. **대시보드의**왼쪽 탐색 영역에서 **서버** 를 선택 하거나 대시보드의 오른쪽 아래에 있는 타일에서 **서버 >보기** 링크를 클릭 합니다.
 2. 위쪽의 **요약** 에서 **인벤토리** 탭으로 전환 합니다.
 3. 서버 이름을 클릭 하 여 **서버 세부 정보** 페이지를 엽니다.
 4. **유지 관리를 위해 서버 일시 중지를**클릭 합니다. 계속 하는 것이 안전 하면 가상 컴퓨터를 클러스터의 다른 서버로 이동 합니다. 이 경우 서버는 상태 드레이닝을 갖습니다. 원하는 경우 **virtual machines > Inventory** 페이지에서 가상 컴퓨터 이동을 볼 수 있습니다. 여기서 호스트 서버는 표에서 명확 하 게 표시 됩니다. 모든 가상 머신이 이동 하면 서버 상태가 **일시 중지**됩니다.
@@ -245,7 +245,7 @@ Windows 관리 센터는 Microsoft Azure 클라우드와 강력 하 고 편리�
 ### <a name="replace-a-failed-drive"></a>실패 한 드라이브 바꾸기
 
 1. 드라이브에 오류가 발생 하면 **대시보드의**왼쪽 상단 **경고** 영역에 경고가 표시 됩니다.
-2. 왼쪽의 탐색에서 **드라이브** 를 선택 하거나 오른쪽 아래 모서리의 타일에서 드라이브 **> 보기** 링크를 클릭 하 여 드라이브를 찾아보고 자신의 상태를 확인할 수도 있습니다. **인벤토리** 탭에서 그리드는 정렬, 그룹화 및 키워드 검색을 지원 합니다.
+2. 왼쪽의 탐색에서 **드라이브** 를 선택 하거나 오른쪽 아래 모서리의 타일에서 드라이브 **>보기** 링크를 클릭 하 여 드라이브를 찾아보고 자신의 상태를 확인할 수도 있습니다. **인벤토리** 탭에서 그리드는 정렬, 그룹화 및 키워드 검색을 지원 합니다.
 3. **대시보드에서**경고를 클릭 하 여 드라이브의 실제 위치와 같은 세부 정보를 확인 합니다.
 4. 자세히 **알아보려면 드라이브 세부 정보 페이지** 의 **드라이브로 이동** 바로 가기를 클릭 합니다.
 5. 하드웨어에서 지 원하는 경우 **라이트 켜기/끄기를** 클릭 하 여 드라이브의 표시기 조명을 제어할 수 있습니다.
@@ -278,15 +278,15 @@ Windows 관리 센터는 Microsoft Azure 클라우드와 강력 하 고 편리�
 
 ![SDN 인프라 모니터링](../media/manage-hyper-converged/sdn-monitoring.png)
 
-## <a name="feedback"></a>Feedback
+## <a name="feedback"></a>피드백
 
 사용자 의견에 대 한 모든 것입니다. 자주 업데이트 하는 가장 중요 한 혜택은 작업 및 개선 해야 할 작업을 파악 하는 것입니다. 다음은 사용자가 생각 하는 내용을 알려 주는 몇 가지 방법입니다.
 
 - [UserVoice의 기능 요청 제출 및 투표](https://windowsserver.uservoice.com/forums/295071/category/319162?query=%5Bhci%5D)
 - [Microsoft 기술 커뮤니티의 Windows 관리 센터 포럼 참여](https://techcommunity.microsoft.com/t5/Windows-Server-Management/bd-p/WindowsServerManagement)
-- `@servermgmt` 트 윗
+- 트 윗`@servermgmt`
 
-### <a name="see-also"></a>참고 항목
+### <a name="additional-references"></a>추가 참조
 
 - [Windows Admin Center](../overview.md)
 - [스토리지 공간 다이렉트](https://docs.microsoft.com/windows-server/storage/storage-spaces/storage-spaces-direct-overview)

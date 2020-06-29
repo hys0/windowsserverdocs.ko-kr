@@ -8,12 +8,12 @@ author: rpsqrd
 ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: be099a234b7e2e73375d23b19161e59876f71d61
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 526ded03c877613766b8a0b762f1db1a693d2019
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80856506"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85475000"
 ---
 # <a name="create-os-specialization-answer-file"></a>OS 전문화 응답 파일 만들기
 
@@ -22,7 +22,7 @@ ms.locfileid: "80856506"
 보호 된 Vm 배포를 준비 하는 경우 운영 체제 특수화 응답 파일을 만들어야 할 수 있습니다. Windows에서이를 일반적으로 "unattend.xml" 파일 이라고 합니다. **ShieldingDataAnswerFile** Windows PowerShell 함수를 사용 하면이 작업을 수행할 수 있습니다. 그런 다음 System Center Virtual Machine Manager (또는 기타 패브릭 컨트롤러)를 사용 하 여 템플릿에서 보호 된 Vm을 만들 때 응답 파일을 사용할 수 있습니다.
 
 보호 된 Vm의 무인 파일에 대 한 일반적인 지침은 [응답 파일 만들기](guarded-fabric-tenant-creates-shielding-data.md#create-an-answer-file)를 참조 하세요.
- 
+
 ## <a name="downloading-the-new-shieldingdataanswerfile-function"></a>ShieldingDataAnswerFile 함수 다운로드
 
 [PowerShell 갤러리](https://aka.ms/gftools)에서 **ShieldingDataAnswerFile** 함수를 가져올 수 있습니다. 컴퓨터가 인터넷에 연결 되어 있는 경우 다음 명령을 사용 하 여 PowerShell에서 설치할 수 있습니다.
@@ -31,9 +31,9 @@ ms.locfileid: "80856506"
 Install-Module GuardedFabricTools -Repository PSGallery -MinimumVersion 1.0.0
 ```
 
-`unattend.xml` 출력을 추가 아티팩트와 함께 보호 데이터로 패키지 하 여 템플릿에서 보호 된 Vm을 만드는 데 사용할 수 있습니다.
+`unattend.xml`출력은 추가 아티팩트와 함께 보호 데이터에 패키지할 수 있으므로 템플릿에서 보호 된 vm을 만드는 데 사용할 수 있습니다.
 
-다음 섹션에서는 다양 한 옵션을 포함 하는 `unattend.xml` 파일에 함수 매개 변수를 사용 하는 방법을 보여 줍니다.
+다음 섹션에서는 `unattend.xml` 다양 한 옵션을 포함 하는 파일에 대 한 함수 매개 변수를 사용 하는 방법을 보여 줍니다.
 
 - [기본 Windows 응답 파일](#basic-windows-answer-file)
 - [도메인 가입을 사용 하는 Windows 응답 파일](#windows-answer-file-with-domain-join)
@@ -92,7 +92,7 @@ IP 풀을 사용 하 여 고정 IP 주소에 대 한 세 가지 구성 요소인
 
 ![고정 IP를 사용 하도록 하드웨어 구성](../media/Guarded-Fabric-Shielded-VM/guarded-host-unattend-static-ip-address-pool-network-adapter-settings.png)
 
-그런 다음 `-StaticIPPool` 매개 변수를 사용 하 여 응답 파일에 고정 IP 요소를 포함할 수 있습니다. 응답 파일의 `@IPAddr-1@`, `@NextHop-1-1@`및 `@DNSAddr-1-1@` 매개 변수는 배포 시 Virtual Machine Manager에서 지정한 실제 값으로 대체 됩니다.
+그런 다음 매개 변수를 사용 `-StaticIPPool` 하 여 응답 파일에 고정 IP 요소를 포함할 수 있습니다. `@IPAddr-1@` `@NextHop-1-1@` 응답 파일의, 및 매개 변수는 `@DNSAddr-1-1@` 배포 시 Virtual Machine Manager에서 지정한 실제 값으로 대체 됩니다.
 
 ```powershell
 $adminCred = Get-Credential -Message "Local administrator account"
@@ -128,7 +128,7 @@ $rootPassword = Read-Host -Prompt "Root password" -AsSecureString
 New-ShieldingDataAnswerFile -Path '.\ShieldedVMAnswerFile.xml' -RootPassword $rootPassword -RootSshKey '~\.ssh\id_rsa.pub'
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="additional-references"></a>추가 참조
 
 - [보호된 VM 배포](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 - [보호된 패브릭 및 보호된 VM](guarded-fabric-and-shielded-vms-top-node.md)

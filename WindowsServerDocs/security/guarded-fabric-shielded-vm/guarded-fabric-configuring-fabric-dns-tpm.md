@@ -8,12 +8,12 @@ author: rpsqrd
 ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: 3dcaa102926c85749ad95d0d1dadb2e05353654a
-ms.sourcegitcommit: 32f810c5429804c384d788c680afac427976e351
+ms.openlocfilehash: ed4c15d38c12ee4486be0994d3ede8274dd0aae5
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83203417"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85475370"
 ---
 # <a name="next-step"></a>다음 단계
 
@@ -24,7 +24,7 @@ ms.locfileid: "83203417"
 > [!div class="nextstepaction"]
 > [HTTPS 구성](guarded-fabric-configure-hgs-https.md)
 
-## <a name="see-also"></a>참고 항목
+## <a name="additional-references"></a>추가 참조
 
 - [보호 되는 호스트가 될 Hyper-v 호스트의 구성 단계](guarded-fabric-configure-hgs-with-authorized-hyper-v-hosts.md)
 - [보호 된 패브릭 및 보호 된 Vm에 대 한 배포 작업](guarded-fabric-deploying-hgs-overview.md#deployment-tasks-for-guarded-fabrics-and-shielded-vms)

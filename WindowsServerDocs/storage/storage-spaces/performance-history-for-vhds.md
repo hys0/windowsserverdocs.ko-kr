@@ -7,16 +7,16 @@ ms.topic: article
 author: cosmosdarwin
 ms.date: 02/09/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: d917c2d75c1e4078438b94e8aa4a6f921019af5a
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 18694975e48d199f2f690aebe8af2a4613a4b1f0
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80856166"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85474710"
 ---
 # <a name="performance-history-for-virtual-hard-disks"></a>가상 하드 디스크에 대 한 성능 기록
 
-> 적용 대상: Windows Server 2019
+> 적용 대상: 시작
 
 [스토리지 공간 다이렉트에 대 한 성능 기록](performance-history.md) 의이 하위 항목에서는 VHD (가상 하드 디스크) 파일에 대해 수집 된 성능 기록에 대해 자세히 설명 합니다. 실행 중인 클러스터 된 가상 컴퓨터에 연결 된 모든 VHD에 대 한 성능 기록을 사용할 수 있습니다. VHD 및 VHDX 형식 모두에 대해 성능 기록을 사용할 수 있지만 공유 VHDX 파일에는 사용할 수 없습니다.
 
@@ -55,7 +55,7 @@ ms.locfileid: "80856166"
 
 ## <a name="where-they-come-from"></a>원본 위치
 
-`iops.*`, `throughput.*`및 `latency.*` 시리즈는 가상 머신이 실행 되는 서버에 설정 된 `Hyper-V Virtual Storage Device` 성능 카운터에서 수집 됩니다 (VHD 또는 VHDX 당 인스턴스 하나).
+`iops.*`, `throughput.*` 및 시리즈는 `latency.*` `Hyper-V Virtual Storage Device` 가상 머신이 실행 되는 서버에 설정 된 성능 카운터에서 수집 됩니다 (VHD 또는 VHDX 당 인스턴스 하나).
 
 | 계열                    | 원본 카운터         |
 |---------------------------|------------------------|
@@ -68,7 +68,7 @@ ms.locfileid: "80856166"
 | `vhd.latency.average`     | `Latency`              |
 
    > [!NOTE]
-   > 카운터는 샘플링 되지 않고 전체 간격으로 측정 됩니다. 예를 들어 VHD가 9 초 동안 비활성 상태 이지만 10 초 이내에 30 개의 Io를 완료 하는 경우 해당 `vhd.iops.total`는 10 초 간격 동안 평균 초당 3 개의 IOs로 기록 됩니다. 이렇게 하면 성능 기록이 모든 활동을 캡처하고 소음에 대해 강력 하 게 됩니다.
+   > 카운터는 샘플링 되지 않고 전체 간격으로 측정 됩니다. 예를 들어 VHD가 9 초 동안 비활성 상태 이지만 10 초 내에 30 개의 Io를 완료 하는 경우 `vhd.iops.total` 이 10 초 간격 동안 평균 초당 3 개의 io로 기록 됩니다. 이렇게 하면 성능 기록이 모든 활동을 캡처하고 소음에 대해 강력 하 게 됩니다.
 
 ## <a name="usage-in-powershell"></a>PowerShell에서 사용
 
@@ -87,6 +87,6 @@ Get-VHD <Path> | Get-ClusterPerf
    > [!NOTE]
    > 가져올 VHD cmdlet에는 파일 경로를 제공 해야 합니다. 열거를 지원 하지 않습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="additional-references"></a>추가 참조
 
 - [스토리지 공간 다이렉트에 대 한 성능 기록](performance-history.md)

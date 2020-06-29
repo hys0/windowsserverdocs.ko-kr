@@ -8,12 +8,12 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 8ad14225592d627b6ff88b9e2286b686aa549392
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: f8ad7ca8fedfa3493a7f5369f8f603913879b50d
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "75351948"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85475430"
 ---
 # <a name="change-a-dynamic-disk-back-to-a-basic-disk"></a>동적 디스크를 기본 디스크로 다시 변경
 
@@ -68,6 +68,6 @@ ms.locfileid: "75351948"
 -   디스크를 기본 디스크로 변경하기 전에 디스크에 어떤 볼륨이나 데이터가 있어서는 안 됩니다. 데이터를 보관하려는 경우 디스크를 기본 디스크로 변환하기 전에 데이터를 백업하거나 다른 볼륨으로 이동합니다.
 -   동적 디스크를 기본 디스크로 변경하고 나면 디스크에 파티션 및 논리 드라이브만 만들 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="additional-references"></a>추가 참조
 
 -   [명령줄 구문 표기법](https://technet.microsoft.com/library/cc742449(v=ws.11).aspx)
