@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 5/22/2017
-ms.openlocfilehash: 3bb365c627840d4152b0dc450e24dd83d82103ca
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 07095fbbe16464645564f07434285c76b8cfd4a1
+ms.sourcegitcommit: fb808a6fc851a3e5c47e6a7654366145d2f19554
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80828636"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84740636"
 ---
 # <a name="windows-server-update-services-wsus"></a>WSUS(Windows Server Update Services)
 
->적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 WSUS(Windows Server Update Services)를 사용하면 정보 기술 관리자가 최신 Microsoft 제품 업데이트를 배포할 수 있습니다. WSUS 네트워크에 있는 컴퓨터에 Microsoft Update를 통해 릴리스되는 업데이트의 배포를 완벽 하 게 관리를 사용할 수 있습니다. 이 항목에서는 이 서버 역할에 대한 개요와 WSUS를 배포 및 관리하는 방법을 자세히 설명합니다.
 

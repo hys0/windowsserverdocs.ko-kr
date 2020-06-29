@@ -8,12 +8,12 @@ ms.date: 07/06/2018
 ms.topic: article
 author: heidilohr
 manager: lizross
-ms.openlocfilehash: 64e433ed379ca322996bcfe2d0ddd513e074b85e
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 2ee11e40d5fb69141ad5dd5342f8574b22232bbd
+ms.sourcegitcommit: 568b924d32421256f64abfee171304f1daf320d2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80854716"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85070484"
 ---
 # <a name="desktop-hosting-service"></a>데스크톱 호스팅 서비스
 
@@ -70,7 +70,7 @@ SQL Database를 배포하는 방법은 여러 가지가 있습니다.
 
 자세한 내용은 다음 문서를 참조하세요.
 
-* [Windows Server의 스토리지](../../storage/storage.md)
+* [Windows Server의 스토리지](../../storage/storage.yml)
 * [Azure Portal에서 Windows VM에 관리형 데이터 디스크를 연결하는 방법](https://docs.microsoft.com/azure/virtual-machines/windows/attach-managed-disk-portal?toc=%2Fazure%2Fvirtual-machines%2Fwindows%2Fclassic%2Ftoc.json)
 
 ### <a name="user-profile-disks"></a>사용자 프로필 디스크

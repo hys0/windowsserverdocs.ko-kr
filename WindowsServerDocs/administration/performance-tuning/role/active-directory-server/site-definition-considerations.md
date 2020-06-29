@@ -7,14 +7,14 @@ ms.topic: article
 ms.author: timwi; chrisrob; herbertm; kenbrumf;  mleary; shawnrab
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: aac7b8f37de2132778bd681d2f2e29ad0ad0810d
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 19574c859e038374a4cf3fe1e452adae0891e067
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80851876"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85471488"
 ---
-# <a name="proper-placement-of-domain-controllers-and-site-considerations"></a>도메인 컨트롤러 및 사이트 고려 사항에 대 한 적절 한 배치
+# <a name="proper-placement-of-domain-controllers-and-site-considerations"></a>적절한 도메인 컨트롤러 배치 및 사이트 고려 사항
 
 적절 한 사이트 정의는 성능에 매우 중요 합니다. 사이트를 벗어난 클라이언트는 인증 및 쿼리에 대해 성능이 저하 될 수 있습니다. 또한 클라이언트에 i p v 6이 도입 됨에 따라 IPv4 또는 IPv6 주소에서 요청을 가져올 수 있으며 IPv6에 대 한 사이트를 올바르게 정의 해야 Active Directory. 운영 체제는 모두 구성 된 경우 i p v 6로 IPv6을 선호 합니다.
 
@@ -34,7 +34,7 @@ Windows Server 2008부터 도메인 컨트롤러는 클라이언트에서 사용
 
 ## <a name="optimization-considerations-for-trusts"></a>트러스트에 대 한 최적화 고려 사항
 
-포리스트 간 시나리오에서 트러스트는 다음 도메인 계층 구조에 따라 처리 됩니다. 도메인 계층 구조-자식 도메인&gt; 자식 도메인-&gt; 포리스트 루트 도메인-&gt; 자식 도메인-&gt;. 즉, 트러스트 계층의 Dc 전송을 인증 요청의 집계로 인해 포리스트 루트 및 각 부모의 보안 채널이 오버 로드 될 수 있습니다. 이로 인해 높은 지역 분산의 Active Directory에 대 한 지연이 발생할 수 있습니다 .이 경우에는 위의 흐름에 영향을 줄 수 있는 매우 잠재적인 링크를 전송 해야 합니다. 오버 로드는 포리스트 간 및 하위 수준 신뢰 시나리오에서 발생할 수 있습니다. 다음 권장 사항은 모든 시나리오에 적용 됩니다.
+포리스트 간 시나리오에서 트러스트는 다음 도메인 계층 구조에 따라 처리 됩니다.-자식 도메인-자식 도메인- &gt; &gt; 포리스트 루트 도메인- &gt; 하위 도메인 &gt; -하위 도메인 즉, 트러스트 계층의 Dc 전송을 인증 요청의 집계로 인해 포리스트 루트 및 각 부모의 보안 채널이 오버 로드 될 수 있습니다. 이로 인해 높은 지역 분산의 Active Directory에 대 한 지연이 발생할 수 있습니다 .이 경우에는 위의 흐름에 영향을 줄 수 있는 매우 잠재적인 링크를 전송 해야 합니다. 오버 로드는 포리스트 간 및 하위 수준 신뢰 시나리오에서 발생할 수 있습니다. 다음 권장 사항은 모든 시나리오에 적용 됩니다.
 
 -   보안 채널을 통한 부하를 지원 하도록 MaxConcurrentAPI를 적절히 조정 합니다. 자세한 내용은 [MaxConcurrentApi 설정을 사용 하 여 NTLM 인증에 대 한 성능 조정을 수행 하는 방법](https://support.microsoft.com/kb/2688798/EN-US)을 참조 하세요.
 
@@ -67,7 +67,7 @@ Windows Server 2008부터 도메인 컨트롤러는 클라이언트에서 사용
         > [!NOTE]
         > 클라이언트에서 사용할 수 있는 도메인 컨트롤러 수에 대 한 실질적인 제한은 약 50입니다. 이러한 도메인 컨트롤러는 가장 많은 사이트에서 가장 높은 용량의 도메인 컨트롤러 여야 합니다.
 
-    
+
     -  트러스트 된 도메인 및 트러스팅 도메인의 도메인 컨트롤러를 동일한 물리적 위치에 배치 하는 것이 좋습니다.
 
 모든 신뢰 시나리오의 경우 자격 증명은 인증 요청에 지정 된 도메인에 따라 라우팅됩니다. 이는 LookupAccountName 및 Lsn에 대 한 쿼리의 경우에도 마찬가지입니다 .이는 다른 사용자 뿐만 아니라 가장 일반적으로 사용 되는 Api입니다. 이러한 Api에 대 한 도메인 매개 변수에 NULL 값이 전달 되 면 도메인 컨트롤러는 사용 가능한 모든 트러스트 된 도메인에 지정 된 계정 이름을 찾으려고 시도 합니다.
@@ -76,9 +76,9 @@ Windows Server 2008부터 도메인 컨트롤러는 클라이언트에서 사용
 
 -   사용 가능한 모든 트러스트에서 NULL 도메인이 지정 된 인증 요청 전달을 사용 하지 않도록 설정 합니다. [Active Directory 도메인 컨트롤러에 외부 트러스트가 많은 경우 Lsass.exe 프로세스가 응답 하지 않을 수 있습니다.](https://support.microsoft.com/kb/923241/EN-US)
 
-## <a name="see-also"></a>참고 항목
-- [성능 튜닝 Active Directory 서버](index.md)
+## <a name="additional-references"></a>추가 참조
+- [Active Directory 서버 성능 조정](index.md)
 - [하드웨어 고려 사항](hardware-considerations.md)
 - [LDAP 고려 사항](ldap-considerations.md)
-- [ADDS 성능 문제 해결](troubleshoot.md) 
+- [ADDS 성능 문제 해결](troubleshoot.md)
 - [Active Directory 도메인 서비스의 용량 계획](https://go.microsoft.com/fwlink/?LinkId=324566)

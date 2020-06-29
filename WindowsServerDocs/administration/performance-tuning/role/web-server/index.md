@@ -7,12 +7,12 @@ ms.topic: landing-page
 ms.author: davso; ericam; yashi
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: ec36d87957e5bbe897597e330e766c3193cd30d0
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 249500249921d21184dc8cd14993741392927586
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80851696"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85471208"
 ---
 # <a name="performance-tuning-web-servers"></a>웹 서버 성능 튜닝
 
@@ -57,7 +57,7 @@ ms.locfileid: "80851696"
 >[!Warning]
 > 증분 백업 유틸리티 같은 일부 애플리케이션은 이 업데이트 정보에 의존하며, 이 정보가 없으면 올바르게 작동하지 않습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="additional-references"></a>추가 참조
 - [IIS 10.0 성능 튜닝](tuning-iis-10.md)
 - [HTTP 1.1/2 튜닝](http-performance.md)
 

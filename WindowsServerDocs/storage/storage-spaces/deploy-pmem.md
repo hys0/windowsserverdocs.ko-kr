@@ -1,5 +1,5 @@
 ---
-title: 영구적 메모리 이해 및 배포
+title: 영구 메모리 이해 및 배포
 description: 영구적 메모리가 무엇 인지, Windows Server 2019에서 저장소 공간 다이렉트를 사용 하 여 설정 하는 방법에 대 한 자세한 정보를 제공 합니다.
 ms.prod: windows-server
 ms.author: adagashe
@@ -8,16 +8,16 @@ ms.topic: article
 author: adagashe
 ms.date: 1/27/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 43268986f0ef42aabc218062ac19f1d98f27be6d
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 2f5f88ac2ec728e176735ad58d9d67112583c527
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80861036"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469648"
 ---
-# <a name="understand-and-deploy-persistent-memory"></a>영구적 메모리 이해 및 배포
+# <a name="understand-and-deploy-persistent-memory"></a>영구 메모리 이해 및 배포
 
-> 적용 대상: Windows Server 2019
+> 적용 대상: 시작
 
 영구적 메모리 (또는 PMem)는 경제적인 대용량 및 지 속성의 고유한 조합을 제공 하는 새로운 유형의 메모리 기술입니다. 이 문서에서는 PMem의 배경 및 스토리지 공간 다이렉트을 사용 하 여 Windows Server 2019에 배포 하는 단계를 제공 합니다.
 
@@ -27,7 +27,7 @@ PMem은 전원 주기를 통해 해당 콘텐츠를 유지 하는 비 휘발성 
 
 이러한 혜택 중 일부를 보려면 Microsoft Ignite 2018의 다음 데모를 살펴보겠습니다.
 
-[![Microsoft Ignite 2018 Pmem demo 데모](http://img.youtube.com/vi/8WMXkMLJORc/0.jpg)](http://www.youtube.com/watch?v=8WMXkMLJORc)
+[![Microsoft Ignite 2018 Pmem 데모](http://img.youtube.com/vi/8WMXkMLJORc/0.jpg)](http://www.youtube.com/watch?v=8WMXkMLJORc)
 
 내결함성 기능을 제공 하는 모든 저장소 시스템은 반드시 분산 된 쓰기 복사본을 만듭니다. 이러한 작업은 네트워크를 트래버스 하 고 백 엔드 쓰기 강화 합니다. 이러한 이유로, 일반적으로 가장 큰 IOPS 벤치 마크 번호는 읽기 전용을 측정 하 여 수행 됩니다. 특히 저장소 시스템에서 가능 하면 로컬 복사를 읽을 수 있는 일반적인 의미의 최적화가 있는 경우입니다. 스토리지 공간 다이렉트는이 작업을 위해 최적화 되어 있습니다.
 
@@ -37,40 +37,40 @@ PMem은 전원 주기를 통해 해당 콘텐츠를 유지 하는 비 휘발성 
 
 비디오를 자세히 시청 하는 경우 훨씬 더 jaw 된 것은 대기 시간입니다. 13.7 M s IOPS를 초과 하는 경우에도 Windows의 파일 시스템은 40 μs 보다 일관 된 대기 시간을 보고 합니다. (마이크로초의 경우 1 초에 해당 하는 1 1/1000000) 이 속도는 일반적인 모든 플래시 공급 업체 다니며 오늘 광고 하는 것 보다 더 빠른 크기의 순서입니다.
 
-스토리지 공간 다이렉트 Windows Server 2019 및 Intel&reg; Optane&trade; DC 영구 메모리의는 혁신적인 성능을 제공 합니다. 예측 가능 하 고 매우 짧은 대기 시간과 함께 13.7 M IOPS에 대 한 업계 최고의 HCI 벤치 마크는 6.7 M IOPS의 이전 업계 최고의 벤치 마크를 2 배 이상 제공 합니다. 그 외에도, 이번에는 12 개의 서버 노드만 2 년 전에 25%&mdash;필요 했습니다.
+Windows Server 2019 및 Intel &reg; Optane &trade; DC 영구 메모리의 스토리지 공간 다이렉트은 혁신적인 성능을 제공 합니다. 예측 가능 하 고 매우 짧은 대기 시간과 함께 13.7 M IOPS에 대 한 업계 최고의 HCI 벤치 마크는 6.7 M IOPS의 이전 업계 최고의 벤치 마크를 2 배 이상 제공 합니다. 이번에는 &mdash; 2 년 전에는 12 개의 서버 노드만 25% 미만으로 필요 했습니다.
 
 ![IOPS 향상](media/deploy-pmem/iops-gains.png)
 
-테스트 하드웨어는 3 방향 미러링과 구분 된 ReFS 볼륨, **12** x INTEL&reg; S2600WFT, **384 GiB** memory, 2 x 28 코어 "CASCADELAKE," **1.5 TB** Intel&reg; Optane&trade; DC 영구적 메모리를 캐시로, **32 TB** NVME (4 x 8 TB Intel&reg; DC P4510)를 용량, **2** x Mellanox connectx-3-4 25 Gbps로 사용 하도록 구성 된 12-서버 클러스터 였습니다.
+테스트 하드웨어는 3 방향 미러링과 구분 된 ReFS 볼륨, **12** x intel &reg; S2600WFT, **384 GiB** memory, 2 x 28-코어 "CascadeLake," **1.5 TB** intel &reg; OPTANE &trade; DC 영구적 메모리를 캐시로, **32 TB** NVMe (4 x 8 TB intel &reg; DC P4510)를 용량, **2** x Mellanox connectx-3-4 25 Gbps로 사용 하도록 구성 된 12-서버 클러스터 였습니다.
 
-다음 표에서는 전체 성능 수치를 보여 줍니다.  
+다음 표에서는 전체 성능 수치를 보여 줍니다.
 
-| 벤치                   | 성능         |
+| 벤치마크                   | 성능         |
 |-----------------------------|---------------------|
 | 4K 100% 무작위 읽기         | 1380만 IOPS   |
 | 4K 90/10% 무작위 읽기/쓰기 | 945만 IOPS   |
 | 2mb 순차 읽기         | 549 g b/초 처리량 |
 
-### <a name="supported-hardware"></a>지원 되는 하드웨어
+### <a name="supported-hardware"></a>지원되는 하드웨어
 
-다음 표에서는 Windows Server 2019 및 Windows Server 2016에 대해 지원 되는 영구 메모리 하드웨어를 보여 줍니다.  
+다음 표에서는 Windows Server 2019 및 Windows Server 2016에 대해 지원 되는 영구 메모리 하드웨어를 보여 줍니다.
 
-| 영구적 메모리 기술                                      | Windows Server 2016 | Windows Server 2019 |
+| 영구적 메모리 기술                                      | Windows Server 2016 | Windows Server 2019 |
 |-------------------------------------------------------------------|--------------------------|--------------------------|
-| 영구 모드의 **nvdimm-n**                                  | 지원함                | 지원함                |
-| 앱 직접 모드의 **Intel Optane&trade; DC 영구 메모리**             | 지원되지 않음            | 지원함                |
-| **Intel Optane&trade; DC 영구적 메모리** (메모리 모드) | 지원함            | 지원함                |
+| 영구 모드의 **nvdimm-n**                                  | 지원됨                | 지원 여부                |
+| **Intel Optane &trade; **앱 직접 모드의 DC 영구 메모리             | 지원되지 않음            | 지원됨                |
+| **Intel Optane &trade; 메모리 모드의 DC 영구적 메모리** | 지원됨            | 지원 여부                |
 
-> [!NOTE]  
+> [!NOTE]
 > Intel Optane는 *메모리* (휘발성) 및 *App Direct* (영구) 모드를 모두 지원 합니다.
-   
-> [!NOTE]  
-> 여러 네임 스페이스로 나뉜 앱 직접 모드에서 여러 Intel&reg; Optane&trade; PMem 모듈이 있는 시스템을 다시 시작 하는 경우 관련 된 논리 저장소 디스크의 일부 또는 전체에 대 한 액세스 권한이 손실 될 수 있습니다. 이 문제는 버전 1903 이전 버전의 Windows Server 2019 버전에서 발생 합니다.
->   
+
+> [!NOTE]
+> &reg; &trade; 여러 네임 스페이스로 나뉜 앱 직접 모드에서 여러 Intel Optane PMem 모듈이 있는 시스템을 다시 시작 하는 경우 관련 된 논리 저장소 디스크의 일부 또는 전체에 대 한 액세스 권한이 손실 될 수 있습니다. 이 문제는 버전 1903 이전 버전의 Windows Server 2019 버전에서 발생 합니다.
+>
 > 이 액세스 손실는 PMem 모듈이 학습 되지 않거나 시스템이 시작 될 때 실패 하는 경우에 발생 합니다. 이러한 경우에는 실패 한 모듈에 실제로 매핑되지 않는 네임 스페이스를 포함 하 여 시스템의 모든 PMem 모듈에 있는 모든 저장소 네임 스페이스에 오류가 발생 합니다.
->   
+>
 > 모든 네임 스페이스에 대 한 액세스를 복원 하려면 실패 한 모듈을 바꿉니다.
->   
+>
 > Windows Server 2019 버전 1903 또는 최신 버전에서 모듈이 실패 하면 영향을 받는 모듈에 실제로 매핑되는 네임 스페이스에만 액세스할 수 있습니다. 다른 네임 스페이스는 영향을 받지 않습니다.
 
 이제 영구 메모리를 구성 하는 방법을 살펴보겠습니다.
@@ -90,7 +90,7 @@ DiskNumber Size   HealthStatus AtomicityType CanBeRemoved PhysicalDeviceIds Unsa
 3          252 GB Healthy      None          True         {1020, 1120}      0
 ```
 
-논리적 PMem 디스크 #2는 물리적 장치 Id20 및 Id120를 사용 하 고, 논리적 PMem 디스크 #3는 물리적 장치 Id1020 및 Id1120를 사용 하는 것을 볼 수 있습니다.  
+논리적 PMem 디스크 #2는 물리적 장치 Id20 및 Id120를 사용 하 고, 논리적 PMem 디스크 #3는 물리적 장치 Id1020 및 Id1120를 사용 하는 것을 볼 수 있습니다.
 
 논리 드라이브에서 사용 하는 인터리브 집합에 대 한 추가 정보를 검색 하려면 **PmemPhysicalDevice** cmdlet을 실행 합니다.
 
@@ -148,7 +148,7 @@ DiskNumber Size   HealthStatus AtomicityType CanBeRemoved PhysicalDeviceIds Unsa
 3          252 GB Healthy      None          True         {1020, 1120}      0
 ```
 
-PhysicalDisk을 실행할 수 있습니다.  **여기서 MediaType** 은 동일한 결과를 얻기 위해 **PmemDisk** 대신 합니다. 새로 만든 PMem 디스크는 PowerShell 및 Windows 관리 센터에 표시 되는 드라이브와 일대일로 일치 합니다.
+PhysicalDisk을 실행할 수 있습니다. ** 여기서 MediaType** 은 동일한 결과를 얻기 위해 **PmemDisk** 대신 합니다. 새로 만든 PMem 디스크는 PowerShell 및 Windows 관리 센터에 표시 되는 드라이브와 일대일로 일치 합니다.
 
 ### <a name="using-persistent-memory-for-cache-or-capacity"></a>캐시 또는 용량에 영구적 메모리 사용
 
@@ -158,9 +158,9 @@ Windows Server 2019에 대 한 스토리지 공간 다이렉트는 영구적 메
 
 ### <a name="understanding-dax"></a>DAX 이해
 
-영구 메모리에 액세스 하는 방법에는 두 가지가 있습니다. 가정합니다.
+영구 메모리에 액세스 하는 방법에는 두 가지가 있습니다. 아래에 이 계정과 키의 예제가 나와 있습니다.
 
-1. **직접 액세스 (DAX)** : 메모리와 같이 작동 하 여 가장 짧은 대기 시간을 가져옵니다. 앱은 스택을 무시 하 고 영구적 메모리를 직접 수정 합니다. DAX는 NTFS와 함께 사용 하는 경우에만 사용할 수 있습니다.
+1. **직접 액세스 (DAX)**: 메모리와 같이 작동 하 여 가장 짧은 대기 시간을 가져옵니다. 앱은 스택을 무시 하 고 영구적 메모리를 직접 수정 합니다. DAX는 NTFS와 함께 사용 하는 경우에만 사용할 수 있습니다.
 1. 응용 프로그램 호환성을 위해 저장소와 같이 작동 하는 **액세스를 차단**합니다. 이 구성 데이터는 스택을 통해 흐릅니다. NTFS 및 ReFS와 함께이 구성을 사용할 수 있습니다.
 
 다음 그림은 DAX 구성의 예를 보여 줍니다.
@@ -253,7 +253,7 @@ SerialNumber               HealthStatus OperationalStatus  OperationalDetails
 802c-01-1602-117cb64f      Warning      Predictive Failure {Threshold Exceeded,NVDIMM_N Error}
 ```
 
-**HealthStatus** 는 PMem 디스크가 정상 상태 인지 여부를 표시 합니다.  
+**HealthStatus** 는 PMem 디스크가 정상 상태 인지 여부를 표시 합니다.
 
 **UnsafeshutdownCount** 값은이 논리 디스크에 대 한 데이터 손실을 유발할 수 있는 종료 횟수를 추적 합니다. 이 디스크의 모든 기본 PMem 장치에 대 한 안전 하지 않은 종료 횟수의 합계입니다. 상태에 대 한 자세한 내용을 보려면 **PmemPhysicalDevice** cmdlet을 사용 하 여 **OperationalStatus**와 같은 정보를 찾습니다.
 
@@ -289,7 +289,7 @@ Remove the persistent memory disk(s)?
 Removing the persistent memory disk. This may take a few moments.
 ```
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > 영구적 메모리 디스크를 제거 하면 해당 디스크의 데이터가 손실 됩니다.
 
 필요할 수 있는 다른 cmdlet은 **PmemPhysicalDevice**입니다. 이 cmdlet은 실제 영구적 메모리 장치에서 레이블 저장소 영역을 초기화 하 고 PMem 장치에서 손상 된 레이블 저장소 정보를 지울 수 있습니다.
@@ -306,11 +306,11 @@ Initializing the physical persistent memory device. This may take a few moments.
 Initializing the physical persistent memory device. This may take a few moments.
 ```
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > **PmemPhysicalDevice** 는 영구적 메모리의 데이터 손실을 일으킵니다. 영구적 메모리 관련 문제를 해결 하는 마지막 수단으로 사용 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="additional-references"></a>추가 참조
 
 - [스토리지 공간 다이렉트 개요](storage-spaces-direct-overview.md)
-- [Windows의 저장소 클래스 메모리 (NVDIMM-N) 상태 관리](storage-class-memory-health.md)
+- [Windows의 스토리지 클래스 메모리(NVDIMM-N) 상태 관리](storage-class-memory-health.md)
 - [캐시 이해](understand-the-cache.md)

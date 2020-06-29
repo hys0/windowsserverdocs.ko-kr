@@ -10,12 +10,12 @@ author: jasongerend
 ms.author: jgerend
 manager: dongill
 ms.localizationpriority: medium
-ms.openlocfilehash: 0c140c61a5887cc63b2a9d0b468f8d1daf02cd76
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: c3eb62d53ef11d5531590e1a6d46cd6cacaf2e4a
+ms.sourcegitcommit: 5bc5aaf341c711113ca03d1482f933b05b146007
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "76822716"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85094534"
 ---
 # <a name="whats-new-in-windows-server-2016"></a>Windows Server 2016의 새로운 기능
 
@@ -59,7 +59,7 @@ Windows Server 2016에서는 손상된 패브릭에서 모든 2세대 가상 머
 
 보호된 가상 컴퓨터 작업에 대한 지침은 [Windows Server 2016(TPM)에 대한 보호된 VM 및 보호된 패브릭 유효성 검사 가이드](https://aka.ms/shieldedvms)를 참조하세요.  
 
-## <a name="identity-and-access"></a>[ID 및 액세스](../identity/Identity-and-Access.md)  
+## <a name="identity-and-access"></a>[ID 및 액세스](../identity/Identity-and-Access.yml)  
 ID의 새로운 기능은 조직에서 Active Directory 환경을 보호하고 클라우드 전용 배포 및 하이브리드 배포(일부 애플리케이션 및 서비스는 클라우드에서 호스트되고 다른 애플리케이션 및 서비스는 온-프레미스에서 호스트됨)로 마이그레이션할 수 있는 기능을 개선합니다.  
 
 ### <a name="active-directory-certificate-services"></a>Active Directory 인증서 서비스  
@@ -74,7 +74,7 @@ Active Directory Federation Services의 새로운 기능 Windows Server 2016의 
 ### <a name="web-application-proxy"></a>웹 애플리케이션 프록시  
 최신 버전의 웹 애플리케이션 프록시는 더 많은 애플리케이션 및 향상된 사용자 환경의 게시 및 사전 인증을 사용할 수 있는 새로운 기능에 초점을 맞춥니다. SharePoint 앱을 더 쉽게 게시할 수 있도록 Exchange ActiveSync 및 와일드카드 도메인과 같은 다양한 클라이언트 앱에 대한 사전 인증을 포함하는 새로운 기능의 전체 목록을 확인하세요. 자세한 내용은 [Windows Server 2016의 웹 애플리케이션 프록시](../remote/remote-access/web-application-proxy/web-application-proxy-windows-server.md)를 참조하세요.  
 
-##  <a name="administration"></a>[관리](../administration/manage-windows-server.md)  
+##  <a name="administration"></a>[관리](../administration/manage-windows-server.yml)  
 관리 및 자동화 영역은 Windows PowerShell을 포함하여 Windows Server 2016을 실행하고 관리하려는 IT 전문가를 위한 도구 및 참조 정보에 중점을 둡니다.
 
 Windows PowerShell 5.1에서는 클래스를 사용하는 개발에 대한 지원, 새로운 보안 기능 등 용도를 확장하고, 사용 편의성을 개선하며, Windows 기반 환경을 보다 쉽게 포괄적으로 제어하고 관리할 수 있는 중요한 새로운 기능을 제공합니다. 자세한 내용은 [WMF 5.1의 새 시나리오 및 기능](https://docs.microsoft.com/powershell/wmf/5.1/scenarios-features)을 참조하세요.
@@ -98,7 +98,7 @@ Windows Server 2016 및 Windows 10에는 IT 전문가 및 개발 운영자가 �
 
 자세한 내용은 [Blue Team을 소중히 여기는 PowerShell](https://blogs.msdn.microsoft.com/powershell/2015/06/09/powershell-the-blue-team/)을 참조하세요.
 
-## <a name="networking"></a>[네트워킹](../networking/Networking.md)  
+## <a name="networking"></a>[네트워킹](../networking/index.yml)  
 이 영역에서는 IT 전문가가 Windows Server 2016을 디자인, 배포 및 유지 관리하는 데 유용한 네트워킹 제품과 기능을 설명합니다.  
 
 ### <a name="software-defined-networking"></a>소프트웨어 정의 네트워킹
@@ -132,7 +132,7 @@ Device Guard는 서버에서 어떤 코드를 실행할 수 있는지를 지정�
 제어 흐름 보호(CFG)는 메모리 손상 취약점에 대처하기 위해 만든 플랫폼 보안 기능입니다. 자세한 내용은 [제어 흐름 보호](https://msdn.microsoft.com/library/windows/desktop/mt637065(v=vs.85).aspx)를 참조하세요.
 
 
-## <a name="storage"></a>[스토리지](../storage/storage.md)
+## <a name="storage"></a>[스토리지](../storage/storage.yml)
 
 Windows Server 2016의 스토리지에는 소프트웨어 정의 스토리지와 기존의 파일 서버에 대한 새로운 기능과 향상된 기능이 포함됩니다. 몇 가지 새로운 기능은 다음과 같으며 향상된 기능 및 추가 정보는 [Windows Server 2016에서 제공되는 스토리지의 새로운 기능](../storage/whats-new-in-storage.md)을 참조하세요.
 

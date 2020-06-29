@@ -7,12 +7,12 @@ ms.topic: article
 ms.author: asmahi; sandysp; jopoulso
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 5f683b85657b8dd263e93380b71c646ad677950c
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: b513dd3346d593ec4c823808f540bce68dd472ce
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80851726"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85471368"
 ---
 # <a name="hyper-v-memory-performance"></a>Hyper-v 메모리 성능
 
@@ -41,7 +41,7 @@ ms.locfileid: "80851726"
 
 Windows Server 2016의 hyper-v는 루트 파티션의 높은 성능과 안정성을 보장 하면서 자식 파티션에 안전 하 게 할당할 수 있는 메모리 양을 확인 하기 위해 루트 파티션의 관리 운영 체제의 런타임 상태를 모니터링 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="additional-references"></a>추가 참조
 
 -   [Hyper-V 용어](terminology.md)
 

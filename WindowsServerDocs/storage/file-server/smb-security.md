@@ -8,12 +8,12 @@ ms.author: jgerend
 ms.technology: storage
 ms.date: 07/09/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: d7b96574dcfc2a4417aa36780d7bd87c2556f61f
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 658875f132712d34a2c59967ebd316e8c5edca7c
+ms.sourcegitcommit: 568b924d32421256f64abfee171304f1daf320d2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "75950267"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85070546"
 ---
 # <a name="smb-security-enhancements"></a>SMB 보안 강화
 
@@ -122,5 +122,5 @@ Set-SmbServerConfiguration –EnableSMB1Protocol $false
 다음은 Windows Server 2012의 SMB 및 관련 기술에 대한 추가 리소스입니다.
 
 - [서버 메시지 블록](file-server-smb-overview.md)
-- [Windows Server의 스토리지](../storage.md)
+- [Windows Server의 스토리지](../storage.yml)
 - [애플리케이션 데이터를 위한 스케일 아웃 파일 서버](../../failover-clustering/sofs-overview.md)

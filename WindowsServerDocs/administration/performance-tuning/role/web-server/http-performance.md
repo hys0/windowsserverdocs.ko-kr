@@ -7,12 +7,12 @@ ms.topic: article
 ms.author: ivanpash; gmonte
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 5e62f7428f015193896aba5c7d9c146bd11e7225
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: a0a4464d7a13911ec9cc7d104b6fe9292a64586e
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80851686"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85471248"
 ---
 # <a name="performance-tuning-http-112"></a>성능 튜닝 HTTP 1.1/2
 
@@ -20,6 +20,6 @@ HTTP/2는 클라이언트 쪽의 성능을 향상 시키기 위한 것입니다 
 
 일부 상황에서는 http/1.1 대체 (http/2 연결을 다시 설정 하 고 대신 HTTP/1.1을 사용 하도록 새 연결을 설정) 해야 합니다. 특히 TLS 재협상 및 HTTP 인증 (기본 및 다이제스트 제외)에는 HTTP/1.1 대체가 필요 합니다. 이로 인해 오버 헤드가 발생 하는 경우에도 이러한 작업에는 약간의 지연이 포함 되어 있으므로 특히 성능이 중요 하지 않습니다.
 
-## <a name="see-also"></a>참고 항목
-- [웹 서버 성능 조정](index.md) 
+## <a name="additional-references"></a>추가 참조
+- [웹 서버 성능 조정](index.md)
 - [IIS 10.0 성능 튜닝](tuning-iis-10.md)

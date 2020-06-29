@@ -8,12 +8,12 @@ ms.author: jgerend
 ms.technology: storage
 ms.date: 06/17/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: b98877d0a94ff8033b65bf74d0118e2a5f1ea092
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 450e5a4e800a8631adacb9826db63e747ecce4e1
+ms.sourcegitcommit: 568b924d32421256f64abfee171304f1daf320d2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "71402079"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85070526"
 ---
 # <a name="ntfs-overview"></a>NTFS 개요
 
@@ -100,4 +100,4 @@ NTFS는 긴 파일 이름과 확장된 길이의 경로를 지원하며, 최댓�
 - [NTFS 상태 및 Chkdsk](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831536(v%3dws.11))
 - [자동 복구 NTFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771388(v=ws.10))(Windows Server 2008에 도입됨)
 - [트랜잭션 NTFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc730726(v%3dws.10))(Windows Server 2008에 도입됨)
-- [Windows Server의 스토리지](../storage.md)
+- [Windows Server의 스토리지](../storage.yml)

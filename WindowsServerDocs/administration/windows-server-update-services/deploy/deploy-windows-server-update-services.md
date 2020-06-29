@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: aa724fc028e245ab404375ba94b074f10078d755
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: b9cc96badad864a0d76ef6295c604ff22ca4455f
+ms.sourcegitcommit: fb808a6fc851a3e5c47e6a7654366145d2f19554
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80828766"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84740616"
 ---
 # <a name="deploy-windows-server-update-services"></a>Windows Server Update Services 배포
 
->적용 대상: Windows Server(반기 채널), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>적용 대상: Windows Server(반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 WSUS(Windows Server Update Services)를 사용하면 정보 기술 관리자가 최신 Microsoft 제품 업데이트를 배포할 수 있습니다. WSUS는 업데이트를 관리 및 분산하는 데 설치할 수 있는 Windows Server 서버 역할입니다. WSUS 서버는 조직 내 다른 WSUS 서버의 업데이트 원본이 될 수 있습니다. 업데이트 원본으로 사용되는 WSUS 서버를 업스트림 서버라고 합니다.  
 

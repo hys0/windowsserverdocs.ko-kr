@@ -8,12 +8,12 @@ ms.author: jgerend
 ms.technology: storage
 ms.date: 04/05/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: a7c37638e25fc0d16447ab57bf369255dab9c859
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 5f2e8a0816fdd78491c18e196a57a38734e3368e
+ms.sourcegitcommit: 5bc5aaf341c711113ca03d1482f933b05b146007
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "75950253"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85094509"
 ---
 # <a name="folder-redirection-offline-files-and-roaming-user-profiles-overview"></a>폴더 리디렉션, 오프라인 파일 및 로밍 사용자 프로필 개요
 
@@ -135,4 +135,4 @@ Windows 8 및 Windows Server 2012 이전에 요금제 네트워크 연결에서 
 | 배포 | [폴더 리디렉션, 오프라인 파일 및 로밍 사용자 프로필 배포](deploy-folder-redirection.md)<br>[최종 사용자 데이터 일원화 솔루션 구현: 폴더 리디렉션 및 오프라인 파일 기술 유효성 검사 및 배포](https://download.microsoft.com/download/3/0/1/3019A3DA-2F41-4F2D-BBC9-A6D24C4C68C4/Implementing%20an%20End-User%20Data%20Centralization%20Solution.docx)<br>[로밍 사용자 데이터 배포 관리 가이드](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-vista/cc766489(v=ws.10)>)<br>[Windows 7 컴퓨터에 대한 새로운 오프라인 파일 기능 구성 단계별 가이드](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff633429(v=ws.10)>)<br>[폴더 리디렉션 사용](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753996(v=ws.11)>)<br>[폴더 리디렉션 구현](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc737434(v=ws.10)>)(Windows Server 2003) |
 | 도구 및 설정 | [MSDN의 오프라인 파일](https://msdn.microsoft.com/library/cc296092.aspx)<br>[오프라인 파일 그룹 정책 참조](https://msdn.microsoft.com/library/ms878937.aspx)(Windows 2000) |
 | 커뮤니티 리소스 | [파일 및 스토리지 서비스 포럼](https://social.technet.microsoft.com/forums/windowsserver/home?forum=winserverfiles)<br>[Hey, Scripting Guy! Windows에서 오프라인 파일 기능을 사용하여 작업하는 방법을 알려주세요.](<https://blogs.technet.microsoft.com/heyscriptingguy/2009/06/02/hey-scripting-guy-how-can-i-enable-and-disable-offline-files/>)<br>[Hey, Scripting Guy! 오프라인 파일을 사용하거나 사용하지 않도록 설정하는 방법을 알려주세요.](<https://blogs.technet.microsoft.com/heyscriptingguy/2009/06/02/hey-scripting-guy-how-can-i-enable-and-disable-offline-files/>) |
-| 관련 기술|[Windows Server의 ID 및 액세스](../../identity/identity-and-access.md)<br>[Windows Server의 스토리지](../storage.md)<br>[원격 액세스 및 서버 관리](../../remote/index.md) |
+| 관련 기술|[Windows Server의 ID 및 액세스](../../identity/identity-and-access.yml)<br>[Windows Server의 스토리지](../storage.yml)<br>[원격 액세스 및 서버 관리](../../remote/index.md) |

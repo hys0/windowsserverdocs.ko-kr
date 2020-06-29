@@ -7,12 +7,12 @@ ms.topic: article
 ms.author: asmahi; sandysp; jopoulso
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 17551da6cd270f05cf2d6b1a8147958f82b2c9b3
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: dcf43bf41edada0a2e3df6fde825ff128a119a8f
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80851806"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85471358"
 ---
 # <a name="hyper-v-network-io-performance"></a>Hyper-v 네트워크 i/o 성능
 
@@ -35,7 +35,7 @@ ms.locfileid: "80851806"
 
 Windows Server 2012 r 2에서는 네트워크를 통해 전송 하기 전에 메모리를 압축 하거나, 하드웨어에서 지 원하는 경우 RDMA (원격 직접 메모리 액세스)를 사용 하 여 실시간 마이그레이션를 가속화 하는 옵션을 도입 했습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="additional-references"></a>추가 참조
 
 -   [Hyper-V 용어](terminology.md)
 

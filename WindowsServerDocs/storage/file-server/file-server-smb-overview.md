@@ -8,12 +8,12 @@ ms.author: jgerend
 ms.technology: storage
 ms.date: 01/10/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: aafcfcd4d0f2f14836c5b7dee2bdbccbf99fa887
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 2c64914e840c4e8a84603144fd499e091f0cb46c
+ms.sourcegitcommit: 568b924d32421256f64abfee171304f1daf320d2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "78169623"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85070540"
 ---
 # <a name="overview-of-file-sharing-using-the-smb-3-protocol-in-windows-server"></a>Windows Server에서 SMB 3 프로토콜을 사용하여 파일 공유 개요
 
@@ -119,7 +119,7 @@ SMB 다이렉트의 요구 사항은 다음과 같습니다.
 
 다음 목록은 Windows Server 2012 R2, Windows Server 2012 및 Windows Server 2016의 SMB 및 관련 기술에 대한 웹의 추가 리소스입니다.
 
-* [Windows Server의 스토리지](../storage.md)
+* [Windows Server의 스토리지](../storage.yml)
 * [애플리케이션 데이터를 위한 스케일 아웃 파일 서버](../../failover-clustering/sofs-overview.md)
 * [SMB 다이렉트를 사용하여 파일 서버의 성능 향상](smb-direct.md)
 * [SMB를 통한 Hyper-V 배포](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134187(v%3dws.11)>)

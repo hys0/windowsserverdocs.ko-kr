@@ -4,16 +4,17 @@ description: Microsoft 하이브리드 클라우드 인쇄를 설정 하는 방�
 ms.prod: windows-server
 ms.technology: windows server 2016
 ms.assetid: fc239aec-e719-47ea-92fc-d82a7247c5e9
+ms.topic: how-to
 author: msjimwu
 ms.author: coreyp
 manager: dongill
 ms.date: 3/15/2018
-ms.openlocfilehash: c06aafb015b065f307eca02abc7a6adaa8ba763c
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: fe1f2b11921950ea725cb996ce58e75033aaae4a
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80852116"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85470208"
 ---
 # <a name="deploy-windows-server-hybrid-cloud-print"></a>Windows Server 하이브리드 클라우드 인쇄 배포
 
@@ -23,7 +24,7 @@ IT 관리자를 위한이 항목에서는 Microsoft의 HCP (하이브리드 클�
 
 ## <a name="pre-requisites"></a>필수 구성 요소
 
-이 설치를 시작 하기 전에 획득 해야 하는 여러 구독, 서비스 및 컴퓨터가 있습니다. 보기는 다음과 같습니다.
+이 설치를 시작 하기 전에 획득 해야 하는 여러 구독, 서비스 및 컴퓨터가 있습니다. 다음과 같습니다.
 
 - Azure AD premium 구독.
 
@@ -68,7 +69,7 @@ IT 관리자를 위한이 항목에서는 Microsoft의 HCP (하이브리드 클�
 HCP 서비스와 인증 된 통신을 사용 하도록 설정 하려면 3 개의 응용 프로그램을 만들어야 합니다. 2 개의 HCP 서비스를 나타내는 2 개의 웹 응용 프로그램과 해당 서비스와 통신 하는 네이티브 응용 프로그램 1 개를 만들어야 합니다.
 
 1. 웹 앱을 등록 하려면 Azure Portal 로그인 합니다.
-    - Azure Active Directory에서 **앱 등록** > **새 등록**으로 이동 합니다.
+    - Azure Active Directory에서 **앱 등록**  >  **새 등록**으로 이동 합니다.
 
     ![AAD 앱 등록 1](../media/hybrid-cloud-print/AAD-AppRegistration.png)
 
@@ -103,8 +104,8 @@ HCP 서비스와 인증 된 통신을 사용 하도록 설정 하려면 3 개의
 
     ![AAD 노출 API 5](../media/hybrid-cloud-print/AAD-AppRegistration-ECP-ExposeAPI-ScopeName.png)
 
-3. API 권한 추가
-    - 앱 등록 블레이드로 돌아갑니다. 네이티브 앱을 클릭 하 고 API 권한을 선택 합니다. **권한 추가**를 클릭 합니다.
+3. API 사용 권한 추가
+    - 앱 등록 블레이드로 돌아갑니다. 네이티브 앱을 클릭 하 고 API 권한을 선택 합니다. **권한 추가**를 클릭합니다.
 
     ![AAD API 권한 1](../media/hybrid-cloud-print/AAD-AppRegistration-APIPermission.png)
 
@@ -133,33 +134,33 @@ HCP 서비스와 인증 된 통신을 사용 하도록 설정 하려면 3 개의
     ![AAD API 권한 7](../media/hybrid-cloud-print/AAD-AppRegistration-APIPermission-Verify.png)
 
 4. 웹 응용 프로그램에 대 한 응용 프로그램 프록시 구성
-    - **모든 응용 프로그램** > **Azure Active Directory** > **엔터프라이즈 응용 프로그램** 으로 이동 합니다. 검색 서비스를 검색 하 고 클릭 합니다.
+    - **Azure Active Directory**  >  **Enterprise 응용 프로그램**  >  **모든 응용 프로그램**으로 이동 합니다. 검색 서비스를 검색 하 고 클릭 합니다.
 
     ![AAD 앱 프록시 1](../media/hybrid-cloud-print/AAD-EnterpriseApp-AllApps.png)
 
-    - **응용 프로그램 프록시**를 클릭 합니다. `https://<fully qualified domain name of the Print Server>/mcs/`형식을 사용 하 여 내부 Url을 입력 합니다. **저장** 을 클릭 하 여 완료 합니다.
+    - **응용 프로그램 프록시**를 클릭 합니다. 형식을 사용 하 여 내부 Url을 입력 `https://<fully qualified domain name of the Print Server>/mcs/` 합니다. **저장** 을 클릭 하 여 완료 합니다.
 
     ![AAD 앱 프록시 2](../media/hybrid-cloud-print/AAD-EnterpriseApp-Mopria-AppProxy.png)
 
-    - 엔터프라이즈 클라우드 인쇄 서비스에 대해 반복 합니다. 내부 URL은 `https://<fully qualified domain name of the Print Server>/ecp/`입니다.
+    - 엔터프라이즈 클라우드 인쇄 서비스에 대해 반복 합니다. 내부 URL은 `https://<fully qualified domain name of the Print Server>/ecp/` 입니다.
 
     ![AAD 앱 프록시 3](../media/hybrid-cloud-print/AAD-EnterpriseApp-ECP-AppProxy.png)
 
-    - **Azure Active Directory** > **앱 등록**로 이동 합니다. Monode.js a 검색 서비스를 클릭 합니다. **개요**에서 응용 프로그램 ID URI는 **응용 프로그램 프록시**의 기본값에서 외부 URL로 변경 되었습니다. URI는 인쇄 서버를 설치 하는 동안, 클라이언트 MDM 정책에서, 프린터를 게시 하는 데 사용 됩니다.
+    - **Azure Active Directory**  >  **앱 등록**로 이동 합니다. Monode.js a 검색 서비스를 클릭 합니다. **개요**에서 응용 프로그램 ID URI는 **응용 프로그램 프록시**의 기본값에서 외부 URL로 변경 되었습니다. URI는 인쇄 서버를 설치 하는 동안, 클라이언트 MDM 정책에서, 프린터를 게시 하는 데 사용 됩니다.
 
     ![AAD 앱 프록시 4](../media/hybrid-cloud-print/AAD-AppRegistration-Mopria-Overview.png)
 
 5. 응용 프로그램에 사용자 할당
-    - **모든 응용 프로그램** > **Azure Active Directory** > **엔터프라이즈 응용 프로그램** 으로 이동 합니다. 검색 서비스를 검색 하 고 클릭 합니다.
+    - **Azure Active Directory**  >  **Enterprise 응용 프로그램**  >  **모든 응용 프로그램**으로 이동 합니다. 검색 서비스를 검색 하 고 클릭 합니다.
     - **사용자 및 그룹** 을 클릭 하 고 사용자를 할당 하거나 **속성** 을 클릭 하 고 **사용자 할당 필요?** 를 **아니요** 로 변경 합니다.
     - 엔터프라이즈 클라우드 인쇄 서비스에 대해 반복 합니다.
 
 6. 네이티브 앱에서 리디렉션 URI 구성
-    - **Azure Active Directory** > **앱 등록**로 이동 합니다. 네이티브 앱을 클릭 합니다. **개요** 로 이동 하 여 **응용 프로그램 (클라이언트) ID**를 복사 합니다.
+    - **Azure Active Directory**  >  **앱 등록**로 이동 합니다. 네이티브 앱을 클릭 합니다. **개요** 로 이동 하 여 **응용 프로그램 (클라이언트) ID**를 복사 합니다.
 
     ![AAD 리디렉션 URI 1](../media/hybrid-cloud-print/AAD-AppRegistration-Native-Overview.png)
 
-    - **인증**으로 이동 합니다. **유형** 드롭다운 상자를 `Public...`로 변경 하 고 아래 형식을 사용 하 여 두 개의 리디렉션 uri를 입력 합니다. 여기서 `<NativeClientAppID>`은 이전 단계에서 가져온 것입니다.
+    - **인증**으로 이동 합니다. **유형** 드롭다운 상자를로 변경 하 `Public...` 고 아래 형식을 사용 하 여 두 개의 리디렉션 uri를 입력 합니다 `<NativeClientAppID>` . 여기서은 이전 단계에서 가져온 것입니다.
 
         `ms-appx-web://Microsoft.AAD.BrokerPlugin/<NativeClientAppID>`
 
@@ -174,7 +175,7 @@ HCP 서비스와 인증 된 통신을 사용 하도록 설정 하려면 3 개의
 1. 인쇄 서버에 사용할 수 있는 Windows 업데이트 모두 설치 되어 있는지 확인 합니다. 참고: 빌드 17763.165 이상에서 서버 2019을 패치 해야 합니다.
     - 다음 서버 역할을 설치 합니다.
         - 인쇄 서버 역할
-        - IIS (인터넷 정보 서비스)
+        - IIS(인터넷 정보 서비스)
     - 서버 역할을 설치 하는 방법에 대 한 자세한 내용은 역할 [및 기능 추가 마법사를 사용 하 여 역할, 역할 서비스 및 기능 설치](https://docs.microsoft.com/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#BKMK_installarfw) 를 참조 하세요.
 
     ![인쇄 서버 역할](../media/hybrid-cloud-print/PrintServer-Roles.png)
@@ -182,7 +183,7 @@ HCP 서비스와 인증 된 통신을 사용 하도록 설정 하려면 3 개의
 2. 하이브리드 클라우드 인쇄 PowerShell 모듈을 설치 합니다.
     - 관리자 권한 PowerShell 명령 프롬프트에서 다음 명령을 실행 합니다.
 
-        컴퓨터가 PowerShell 갤러리에 도달할 수 있는지 확인 `find-module -Name PublishCloudPrinter` (PSGallery)
+        `find-module -Name PublishCloudPrinter`컴퓨터가 PowerShell 갤러리에 연결할 수 있는지 확인 하려면 (PSGallery)
 
         `install-module -Name PublishCloudPrinter`
 
@@ -211,7 +212,7 @@ HCP 서비스와 인증 된 통신을 사용 하도록 설정 하려면 3 개의
 
     ![인쇄 서버 클라우드 인쇄 배포](../media/hybrid-cloud-print/PrintServer-CloudPrintDeploy.png)
 
-    - 로그 파일을 확인 하 여 오류가 있는지 확인 합니다. `C:\Program Files\WindowsPowerShell\Modules\PublishCloudPrinter\1.0.0.0\CloudPrintDeploy.log`
+    - 로그 파일을 확인 하 여 오류가 있는지 확인 합니다.`C:\Program Files\WindowsPowerShell\Modules\PublishCloudPrinter\1.0.0.0\CloudPrintDeploy.log`
 
 4. 관리자 권한 명령 프롬프트에서 **Regitedit** 를 실행 합니다. Computer \ HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Windows\CurrentVersion\CloudPrint\EnterpriseCloudPrintService.로 이동 합니다.
     - AzureAudience Enterprise Cloud 인쇄 앱의 응용 프로그램 ID URI로 설정 되었는지 확인 합니다.
@@ -267,7 +268,7 @@ HCP 서비스와 인증 된 통신을 사용 하도록 설정 하려면 3 개의
     xcopy /y $source\$ef6.$version\lib\net46\System.Data.SQLite.EF6.dll $target\
     ```
 
-10. C:\inetpub\wwwroot\MopriaCloudService\web.config 파일을 업데이트 하 여 다음 `<runtime>/<assemblyBinding>` 섹션에 SQLite 버전 x. x. x를 포함 합니다. 이는 이전 단계에서 사용 되는 버전과 동일 합니다.
+10. 다음 섹션에서 SQLite 버전 x. x. x를 포함 하도록 c:\inetpub\wwwroot\MopriaCloudService\web.config 파일을 업데이트 합니다. `<runtime>/<assemblyBinding>` 이는 이전 단계에서 사용 되는 버전과 동일 합니다.
 
     ```xml
     ...
@@ -291,8 +292,8 @@ HCP 서비스와 인증 된 통신을 사용 하도록 설정 하려면 3 개의
     ```
 
 11. SQLite 데이터베이스를 만듭니다.
-    - `https://www.sqlite.org/`에서 SQLite Tools 바이너리를 다운로드 하 여 설치 합니다.
-    - `c:\inetpub\wwwroot\MopriaCloudService\Database` 디렉터리로 이동 합니다.
+    - 에서 SQLite Tools 바이너리를 다운로드 하 여 설치 `https://www.sqlite.org/` 합니다.
+    - 디렉터리로 이동 `c:\inetpub\wwwroot\MopriaCloudService\Database` 합니다.
     - 다음 명령을 실행 하 여이 디렉터리에 데이터베이스를 만듭니다.
 
         `sqlite3.exe MopriaDeviceDb.db .read MopriaSQLiteDb.sql`
@@ -302,14 +303,14 @@ HCP 서비스와 인증 된 통신을 사용 하도록 설정 하려면 3 개의
 
     ![인쇄 서버 Mopria 레지스트리 키](../media/hybrid-cloud-print/PrintServer-SQLiteDB.png)
 
-### <a name="step-5-optional---configure-pre-authentication-with-azure-ad"></a>5 단계 \[선택\]-Azure AD를 사용 하 여 사전 인증 구성
+### <a name="step-5-optional---configure-pre-authentication-with-azure-ad"></a>5 단계 \[ 선택 사항 \] -Azure AD를 사용 하 여 사전 인증 구성
 
 1. [응용 프로그램 프록시를 사용 하 여 앱에 Single Sign-On에 대 한 Kerberos 제한 위임](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-configure-single-sign-on-with-kcd)문서를 검토 합니다.
 
 2. 온-프레미스 Active Directory를 구성 합니다.
-    - Active Directory 컴퓨터에서 서버 관리자를 열고 **도구** > **Active Directory 사용자 및 컴퓨터**로 이동 합니다.
+    - Active Directory 컴퓨터에서 서버 관리자를 열고 **도구**  >  **Active Directory 사용자 및 컴퓨터**로 이동 합니다.
     - **컴퓨터** 노드로 이동 하 여 커넥터 서버를 선택 합니다.
-    - 마우스 오른쪽 단추를 클릭 하 고 **속성** -> **위임** 탭을 선택 합니다.
+    - 마우스 오른쪽 단추를 클릭 하 고 **속성**  ->  **위임**   탭을 선택 합니다.
     -  **지정한 서비스에 대 한 위임용 으로만이 컴퓨터 트러스트를**선택 합니다.
     -  **모든 인증 프로토콜 사용**을 선택 합니다.
     -  **이 계정이 위임 된 자격 증명을 제공할 수 있는 서비스**입니다.
@@ -325,10 +326,10 @@ HCP 서비스와 인증 된 통신을 사용 하도록 설정 하려면 3 개의
     ![인쇄 서버 IIS 인증](../media/hybrid-cloud-print/PrintServer-IIS-Authentication.png)
 
 4. Single Sign-on을 구성 합니다.
-    - Azure Portal에서 **Azure Active Directory** > **Enterprise applications** > **모든 응용 프로그램**으로 이동 합니다.
+    - Azure Portal에서 **Azure Active Directory**  >  **Enterprise 응용 프로그램**  >  **모든 응용 프로그램**으로 이동 합니다.
     - MopriaDiscoveryService 앱을 선택 합니다.
     - **응용 프로그램 프록시**로 이동 합니다. 사전 인증 방법을 **Azure Active Directory**로 변경 합니다.
-    - **Single sign-on**으로 이동 합니다. Single Sign-On 방법으로 Windows 통합 인증을 선택 합니다.
+    - **Single Sign-On**으로 이동합니다. Single Sign-On 방법으로 Windows 통합 인증을 선택 합니다.
     - **내부 응용 프로그램 spn** 을 인쇄 서버 컴퓨터의 spn으로 설정 합니다.
     - **위임 된 로그인 id** 를 사용자 계정 이름으로 설정 합니다.
     - EntperiseCloudPrint 앱에 대해 반복 합니다.
@@ -338,12 +339,12 @@ HCP 서비스와 인증 된 통신을 사용 하도록 설정 하려면 3 개의
 
 1. MDM 공급자에 로그인 합니다.
 2. 엔터프라이즈 클라우드 인쇄 정책 그룹을 찾고 아래 지침에 따라 정책을 구성 합니다.
-    - CloudPrintOAuthAuthority = `https://login.microsoftonline.com/<Azure AD Directory ID>`입니다. 디렉터리 ID는 Azure Active Directory > 속성에서 찾을 수 있습니다.
-    - CloudPrintOAuthClientId = 응용 프로그램 \(Native app의 클라이언트\) ID 값입니다. Azure Active Directory > 앱 등록에서이를 검색 하 > 네이티브 앱 > 개요를 선택할 수 있습니다.
+    - CloudPrintOAuthAuthority = `https://login.microsoftonline.com/<Azure AD Directory ID>` 입니다. 디렉터리 ID는 Azure Active Directory > 속성에서 찾을 수 있습니다.
+    - CloudPrintOAuthClientId = \( \) 네이티브 앱의 응용 프로그램 클라이언트 ID 값입니다. Azure Active Directory > 앱 등록에서이를 검색 하 > 네이티브 앱 > 개요를 선택할 수 있습니다.
     - Cloud프린터 검색 끝점 = Moapp.config의 외부 URL 검색 서비스 앱입니다. Azure Active Directory > 엔터프라이즈 응용 프로그램에서이를 찾을 수 > 응용 프로그램 프록시 > Mopria 검색 서비스 앱을 선택 합니다. **이는 정확히 동일 하지만 후행/를 포함 하지 않아야 합니다**.
     - MopriaDiscoveryResourceId = Mocea 검색 서비스 앱의 응용 프로그램 ID URI입니다. 이는 Azure Active Directory > > 앱 등록에서 찾을 수 있으며, 검색 서비스 앱 > 개요를 선택 합니다. **후행/와 정확히 동일 해야 합니다**.
     - CloudPrintResourceId = 엔터프라이즈 클라우드 인쇄 앱의 응용 프로그램 ID URI입니다. Azure Active Directory > 앱 등록에서이를 찾을 수 > Enterprise Cloud 인쇄 앱 > 개요를 선택 합니다. **후행/와 정확히 동일 해야 합니다**.
-    - Discoverymax프린터 Limit = \<양의 정수\>입니다.
+    - Discoverymax프린터 Limit = \<a positive integer\> 입니다.
 
 > 참고: Microsoft Intune 서비스를 사용 하는 경우 클라우드 프린터 범주에서 이러한 설정을 찾을 수 있습니다.
 
@@ -360,9 +361,9 @@ HCP 서비스와 인증 된 통신을 사용 하도록 설정 하려면 3 개의
 
     - OMA-URI 값
         - CloudPrintOAuthAuthority =./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/CloudPrintOAuthAuthority
-            - 값 = https://login.microsoftonline.com/<Azure AD Directory ID>
+            - 값 =https://login.microsoftonline.com/<Azure AD Directory ID>
         - CloudPrintOAuthClientId =./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/CloudPrintOAuthClientId
-            - 값 = < Azure AD 네이티브 앱의 응용 프로그램 ID >
+            - 값 = <Azure AD 네이티브 앱의 응용 프로그램 ID>
         - Cloud프린터 Discoveryendpoint =./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/CloudPrinterDiscoveryEndPoint
             - 값 = Moapp.config의 외부 URL (정확히 동일 해야 하지만 뒤에 오는/는 제외)
         - MopriaDiscoveryResourceId =./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/MopriaDiscoveryResourceId
@@ -371,7 +372,7 @@ HCP 서비스와 인증 된 통신을 사용 하도록 설정 하려면 3 개의
             - 값 = 엔터프라이즈 클라우드 인쇄 앱의 응용 프로그램 ID URI
         - Discoverymax프린터 Limit =./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/DiscoveryMaxPrinterLimit
             - 값 = 양의 정수
-    
+
 ### <a name="step-7---publish-the-shared-printer"></a>7 단계-공유 프린터 게시
 
 1. 인쇄 서버에 원하는 프린터를 설치 합니다.
@@ -380,8 +381,8 @@ HCP 서비스와 인증 된 통신을 사용 하도록 설정 하려면 3 개의
 4. 변경 내용을 저장 하 고 프린터 속성 창을 닫습니다.
 5. Windows 10이 하 버전의 생성자 업데이트를 준비 합니다. 컴퓨터를 Azure AD에 가입 하 고 온-프레미스 Active Directory와 동기화 된 사용자로 로그인 하 고 MopriaDeviceDb. db 파일에 대 한 적절 한 사용 권한이 부여 되었습니다.
 6. Windows 10 컴퓨터에서 관리자 권한 Windows PowerShell 명령 프롬프트를 엽니다.
-    - 다음 명령을 실행 합니다.
-        - 컴퓨터가 PowerShell 갤러리에 도달할 수 있는지 확인 `find-module -Name PublishCloudPrinter` (PSGallery)
+    - 다음 명령을 실행합니다.
+        - `find-module -Name PublishCloudPrinter`컴퓨터가 PowerShell 갤러리에 연결할 수 있는지 확인 하려면 (PSGallery)
         - `install-module -Name PublishCloudPrinter`
 
             > 참고: ' PSGallery '는 신뢰할 수 없는 리포지토리입니다. 라는 메시지가 표시 될 수 있습니다.  ' Y '를 입력 하 여 설치를 계속 합니다.
@@ -398,7 +399,7 @@ HCP 서비스와 인증 된 통신을 사용 하도록 설정 하려면 3 개의
             `{attrs: [{category:country, vs:USA, depth:0}, {category:organization, vs:Microsoft, depth:1}, {category:site, vs:Redmond, WA, depth:2}, {category:building, vs:Building 1, depth:3}, {category:floor_number, vs:1, depth:4}, {category:room_name, vs:1111, depth:5}]}`
 
         - Sddl = 프린터에 대 한 권한을 나타내는 SDDL 문자열입니다.
-            - 인쇄 서버에 관리자로 로그온 한 후 게시할 프린터에 대해 다음 PowerShell 명령을 실행 합니다. `(Get-Printer PrinterName -full).PermissionSDDL`합니다.
+            - 인쇄 서버에 관리자로 로그온 한 후 게시할 프린터에 대해 다음 PowerShell 명령을 실행 `(Get-Printer PrinterName -full).PermissionSDDL` 합니다.
             - 위의 명령에서 결과에 **O:ba** 를 접두사로 추가 합니다. 예를 들어 이전 명령에서 반환 된 문자열이 G:DUD: (A; OICI; FA;;;) 인 경우 WD), SDDL = O:BAG: DUD: (A; O:BAG; FA;;;) WD).
         - DiscoveryEndpoint = Azure Portal에 로그인 한 다음 엔터프라이즈 응용 프로그램에서 문자열을 가져옵니다. > Mopria 검색 서비스 앱 > 응용 프로그램 프록시 > 외부 URL입니다. 후행/를 생략 합니다.
         - PrintServerEndpoint = Azure Portal에 로그인 한 다음 엔터프라이즈 응용 프로그램 > 엔터프라이즈 클라우드 인쇄 앱 > 응용 프로그램 프록시 > 외부 URL에서 문자열을 가져옵니다. 후행/를 생략 합니다.
@@ -406,11 +407,11 @@ HCP 서비스와 인증 된 통신을 사용 하도록 설정 하려면 3 개의
         - AzureTenantGuid = Azure AD 테 넌 트의 디렉터리 ID입니다.
         - DiscoveryResourceId = Mopria 검색 서비스 응용 프로그램의 응용 프로그램 ID URI입니다.
 
-    - 모든 필수 매개 변수 값은 명령줄에도 입력할 수 있습니다. 구문:
+    - 모든 필수 매개 변수 값은 명령줄에도 입력할 수 있습니다. 구문은 다음과 같습니다.
 
         `Publish-CloudPrinter -Printer <string> -Manufacturer <string> -Model <string> -OrgLocation <string> -Sddl <string> -DiscoveryEndpoint <string> -PrintServerEndpoint <string> -AzureClientId <string> -AzureTenantGuid <string> -DiscoveryResourceId <string>`
 
-        샘플 명령:
+        명령 샘플:
 
         `Publish-CloudPrinter -Printer HcpTestPrinter -Manufacturer Manufacturer1 -Model Model1 -OrgLocation '{attrs: [{category:country, vs:USA, depth:0}, {category:organization, vs:MyCompany, depth:1}, {category:site, vs:MyCity, State, depth:2}, {category:building, vs:Building 1, depth:3}, {category:floor_name, vs:1, depth:4}, {category:room_name, vs:1111, depth:5}]}' -Sddl O:BAG:DUD:(A;OICI;FA;;;WD) -DiscoveryEndpoint https://mopriadiscoveryservice-contoso.msappproxy.net/mcs -PrintServerEndpoint https://enterprisecloudprint-contoso.msappproxy.net/ecp -AzureClientId dbe4feeb-cb69-40fc-91aa-73272f6d8fe1 -AzureTenantGuid 8de6a14a-5a23-4c1c-9ae4-1481ce356034 -DiscoveryResourceId https://mopriadiscoveryservice-contoso.msappproxy.net/mcs/`
 
@@ -418,16 +419,16 @@ HCP 서비스와 인증 된 통신을 사용 하도록 설정 하려면 3 개의
 
         `Publish-CloudPrinter -Query -DiscoveryEndpoint <string> -AzureClientId <string> -AzureTenantGuid <string> -DiscoveryResourceId <string>`
 
-        샘플 명령:
+        명령 샘플:
 
         `Publish-CloudPrinter -Query -DiscoveryEndpoint https://mopriadiscoveryservice-contoso.msappproxy.net/mcs -AzureClientId dbe4feeb-cb69-40fc-91aa-73272f6d8fe1 -AzureTenantGuid 8de6a14a-5a23-4c1c-9ae4-1481ce356034 -DiscoveryResourceId https://mopriadiscoveryservice-contoso.msappproxy.net/mcs/`
 
 ## <a name="verify-the-deployment"></a>배포 확인
 
 MDM 정책이 구성 된 Azure AD 조인 장치에서 다음을 수행 합니다.
-- 웹 브라우저를 *열고 https://mopriadiscoveryservice-msappproxy.net/mcs/services*로 이동 합니다.
+- 웹 브라우저를 열고 msappproxy.net/mcs/services로 이동 합니다 https://mopriadiscoveryservice- *tenant-name*.
 - 이 끝점의 기능 집합을 설명 하는 JSON 텍스트가 표시 되어야 합니다.
-- **설정** > **장치** > **프린터 & 스캐너**로 이동 합니다.
+- **설정**  >  **장치**  >  **프린터 & 스캐너**로 이동 합니다.
     - **프린터 또는 스캐너 추가**를 클릭 합니다.
     - 클라우드 프린터 검색 (또는 최신 Windows 10 컴퓨터에서 내 조직의 프린터 검색) 링크를 확인 해야 합니다.
     - 링크를 클릭 합니다.
@@ -437,18 +438,18 @@ MDM 정책이 구성 된 Azure AD 조인 장치에서 다음을 수행 합니다
     - 프린터를 선택 하 고 **장치 추가** 단추를 클릭 합니다.
     - 프린터를 성공적으로 설치한 후 즐겨 찾는 앱에서 프린터로 인쇄 합니다.
 
-> 참고: EcpPrintTest 프린터를 사용 하는 경우 인쇄 서버 컴퓨터의 C:\\Ecpprinttest\\Ecpprinttest .xps 위치에서 출력 파일을 찾을 수 있습니다.
+> 참고: EcpPrintTest 프린터를 사용 하는 경우 인쇄 서버 컴퓨터의 C: \\ ecpprinttest \\ ecpprinttest .xps 위치에서 출력 파일을 찾을 수 있습니다.
 
 ## <a name="troubleshooting"></a>문제 해결
 
 다음은 HCP 배포 중에 발생 하는 일반적인 문제입니다.
 
-|오류 |권장 단계 |
+|오류 |권장되는 단계 |
 |------|------|
 |CloudPrintDeploy PowerShell 스크립트 실패 | <ul><li>Windows Server에 최신 업데이트가 있는지 확인 합니다.</li><li>WSUS (Windows Server Update Services)를 사용 하는 경우 [wsus/SCCM을 사용 하는 경우 필요에 따라 기능을 설정 하 고 언어 팩을 사용 하도록 설정 하는 방법](https://docs.microsoft.com/windows/deployment/update/fod-and-lang-packs)을 참조 하세요.</li></ul> |
-|SQLite를 설치 하지 못했습니다. 메시지: ' System.web ' 패키지에 대 한 종속성 루프가 검색 되었습니다. | Install-Package system.object-providername nuget-SkipDependencies<br>EF6-providername nuget-SkipDependencies을 설치 합니다.<br>설치-패키지 시스템. n a m.<br><br>패키지를 성공적으로 다운로드 한 후에는 모두 동일한 버전 인지 확인 합니다. 그렇지 않으면-requiredversion 매개 변수를 위의 명령에 추가 하 고 동일한 버전으로 설정 합니다. |
-|프린터를 게시 하지 못했습니다. | <ul><li>통과 인증 인증의 경우 프린터를 게시 하는 사용자에 게 게시 데이터베이스에 대 한 적절 한 권한이 부여 되었는지 확인 합니다.</li><li>Azure AD 사전 인증의 경우 IIS에서 Windows 인증이 사용 되도록 설정 되어 있는지 확인 합니다. 5\.3 단계를 참조 하세요. 또한 먼저 통과 인증을 시도 합니다. 통과 인증 인증을 사용할 경우 응용 프로그램 프록시와 관련 된 문제일 수 있습니다. [응용 프로그램 프록시 문제 및 오류 메시지 문제 해결을](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-troubleshoot)참조 하세요. 통과로 전환 하면 Single Sign-On 설정이 다시 설정 됩니다. 5 단계를 다시 방문 하 여 Azure AD 사전 인증을 다시 설정 합니다.</li></ul> |
-|인쇄 작업이 프린터 상태로 전송 되는 상태로 유지 됩니다. | <ul><li>커넥터 서버에서 TLS 1.2를 사용 하도록 설정 했는지 확인 합니다. 2\.1 단계에서 연결 된 문서를 참조 하세요.</li><li>커넥터 서버에서 HTTP2이 사용 되지 않도록 설정 되어 있는지 확인 합니다. 2\.1 단계에서 연결 된 문서를 참조 하세요.</li></ul> |
+|SQLite를 설치 하지 못했습니다. 메시지: ' System.web ' 패키지에 대 한 종속성 루프가 검색 되었습니다. | Install-Package system.object-providername nuget-SkipDependencies<br>EF6-providername nuget-SkipDependencies을 설치 합니다.<br>설치-패키지 시스템.. n a m.<br><br>패키지를 성공적으로 다운로드 한 후에는 모두 동일한 버전 인지 확인 합니다. 그렇지 않으면-requiredversion 매개 변수를 위의 명령에 추가 하 고 동일한 버전으로 설정 합니다. |
+|프린터를 게시 하지 못했습니다. | <ul><li>통과 인증 인증의 경우 프린터를 게시 하는 사용자에 게 게시 데이터베이스에 대 한 적절 한 권한이 부여 되었는지 확인 합니다.</li><li>Azure AD 사전 인증의 경우 IIS에서 Windows 인증이 사용 되도록 설정 되어 있는지 확인 합니다. 5.3 단계를 참조 하세요. 또한 먼저 통과 인증을 시도 합니다. 통과 인증 인증을 사용할 경우 응용 프로그램 프록시와 관련 된 문제일 수 있습니다. [응용 프로그램 프록시 문제 및 오류 메시지 문제 해결을](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-troubleshoot)참조 하세요. 통과로 전환 하면 Single Sign-On 설정이 다시 설정 됩니다. 5 단계를 다시 방문 하 여 Azure AD 사전 인증을 다시 설정 합니다.</li></ul> |
+|인쇄 작업이 프린터 상태로 전송 되는 상태로 유지 됩니다. | <ul><li>커넥터 서버에서 TLS 1.2를 사용 하도록 설정 했는지 확인 합니다. 2.1 단계에서 연결 된 문서를 참조 하세요.</li><li>커넥터 서버에서 HTTP2이 사용 되지 않도록 설정 되어 있는지 확인 합니다. 2.1 단계에서 연결 된 문서를 참조 하세요.</li></ul> |
 
 다음은 문제 해결에 도움이 될 수 있는 로그의 위치입니다.
 

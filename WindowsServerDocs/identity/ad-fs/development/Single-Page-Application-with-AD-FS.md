@@ -1,5 +1,5 @@
 ---
-title: OAuth 및 ADAL을 사용 하 여 단일 페이지 웹 응용 프로그램을 빌드합니다. AD FS 2016 이상 버전
+title: AD FS 2016 이상에서 OAuth 및 ADAL.JS를 사용 하 여 단일 페이지 웹 응용 프로그램 빌드
 description: JavaScript 용 ADAL을 사용 하 여 AD FS에 대 한 인증을 위한 지침을 제공 하는 연습은 AngularJS 기반 단일 페이지 응용 프로그램을 보호 합니다.
 author: billmath
 ms.author: billmath
@@ -8,14 +8,14 @@ ms.date: 06/13/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: active-directory-federation-services
-ms.openlocfilehash: f62b6ad288e2733083d535260f0b3f5ffb5b50bf
-ms.sourcegitcommit: f829a48b9b0c7b9ed6e181b37be828230c80fb8a
+ms.openlocfilehash: 09b789937c9ff1dad90c3533616a4ed800204267
+ms.sourcegitcommit: 046123d4f2d24dc00b35ea99adee6f8d322c76bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82173628"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85416296"
 ---
-# <a name="build-a-single-page-web-application-using-oauth-and-adaljs-with-ad-fs-2016-or-later"></a>OAuth 및 ADAL을 사용 하 여 단일 페이지 웹 응용 프로그램을 빌드합니다. AD FS 2016 이상 버전
+# <a name="build-a-single-page-web-application-using-oauth-and-adaljs-with-ad-fs-2016-or-later"></a>AD FS 2016 이상에서 OAuth 및 ADAL.JS를 사용 하 여 단일 페이지 웹 응용 프로그램 빌드
 
 이 연습에서는 ASP.NET Web API 백 엔드로 구현 된 AngularJS 기반 단일 페이지 응용 프로그램을 보호 하는 JavaScript 용 ADAL을 사용 하 여 AD FS에 대 한 인증을 위한 지침을 제공 합니다.
 
@@ -66,18 +66,18 @@ Azure AD를 AngularJS 단일 페이지 앱에 통합 하기 위해 만든 샘플
 ## <a name="about-the-code"></a>코드 정보
 인증 논리를 포함 하는 키 파일은 다음과 같습니다.
 
-**Node.js** -adal 모듈 종속성을 삽입 하 고, AAD와의 프로토콜 상호 작용을 위한 adal에서 사용 되는 앱 구성 값을 제공 하 고, 이전 인증 없이는 액세스할 수 없는 경로를 나타냅니다.
+ADAL 모듈 종속성을 삽입 하는 **App.js** 는 ADAL에서 AAD와의 프로토콜 상호 작용에 사용 되는 앱 구성 값을 제공 하 고 이전 인증 없이는 액세스할 수 없는 경로를 나타냅니다.
 
-**index .html** -adal에 대 한 참조를 포함 합니다.
+**index.html** -adal.js에 대 한 참조를 포함 합니다.
 
-**HomeController**-ADAL에서 login () 및 logOut () 메서드를 활용 하는 방법을 보여 줍니다.
+**HomeController.js**-ADAL에서 login () 및 logOut () 메서드를 활용 하는 방법을 보여 줍니다.
 
-**Userdatacontroller** -캐시 된 id_token에서 사용자 정보를 추출 하는 방법을 보여 줍니다.
+**UserDataController.js** -캐시 된 id_token에서 사용자 정보를 추출 하는 방법을 보여 줍니다.
 
 **Startup.Auth.cs** -전달자 인증을 위해 Active Directory 페더레이션 서비스를 사용 하는 WebAPI에 대 한 구성을 포함 합니다.
 
 ## <a name="registering-the-public-client-in-ad-fs"></a>AD FS에서 공용 클라이언트 등록
-이 샘플에서 WebAPI는에서 https://localhost:44326/수신 대기 하도록 구성 됩니다. **웹 응용 프로그램에 액세스 하** 는 응용 프로그램 그룹 웹 브라우저는 암시적 허용 흐름 응용 프로그램을 구성 하는 데 사용할 수 있습니다.
+이 샘플에서 WebAPI는에서 수신 대기 하도록 구성 됩니다 https://localhost:44326/ . **웹 응용 프로그램에 액세스 하** 는 응용 프로그램 그룹 웹 브라우저는 암시적 허용 흐름 응용 프로그램을 구성 하는 데 사용할 수 있습니다.
 
 1. AD FS management console을 열고 **응용 프로그램 그룹 추가**를 클릭 합니다. **응용 프로그램 그룹 추가 마법사** 에서 응용 프로그램의 이름을 입력 하 고 아래와 같이 **클라이언트-서버 응용 프로그램** 섹션에서 **웹 응용 프로그램 템플릿에 액세스 하는 웹 브라우저** 를 선택 합니다.
 
@@ -98,7 +98,7 @@ Azure AD를 AngularJS 단일 페이지 앱에 통합 하기 위해 만든 샘플
 ## <a name="modifying-the-sample"></a>이 샘플을 수정합니다.
 ADAL JS 구성
 
-**응용 프로그램 .js** 파일을 열고 **adalProvider** 정의를 다음과 같이 변경 합니다.
+**app.js** 파일을 열고 **adalProvider.init** 정의를 다음과 같이 변경 합니다.
 
     adalProvider.init(
         {
@@ -112,7 +112,7 @@ ADAL JS 구성
 
 |구성|Description|
 |--------|--------|
-|인스턴스|STS URL (예:https://fs.contoso.com/|
+|instance|STS URL (예:https://fs.contoso.com/|
 |tenant|' Adfs '로 유지|
 |clientID|단일 페이지 응용 프로그램에 대 한 공용 클라이언트를 구성 하는 동안 지정한 클라이언트 ID입니다.|
 
@@ -154,31 +154,31 @@ ADAL JS 구성
 ## <a name="add-application-configuration-for-ad-fs"></a>AD FS에 대 한 응용 프로그램 구성 추가
 아래와 같이 appsettings를 변경 합니다.
 ```xml
-    <appSettings>
-        <add key="ida:Audience" value="https://localhost:44326/" />
-        <add key="ida:AdfsMetadataEndpoint" value="https://fs.contoso.com/federationmetadata/2007-06/federationmetadata.xml" />
-        <add key="ida:Issuer" value="https://fs.contoso.com/adfs" />
-    </appSettings>
-    ```
+<appSettings>
+    <add key="ida:Audience" value="https://localhost:44326/" />
+    <add key="ida:AdfsMetadataEndpoint" value="https://fs.contoso.com/federationmetadata/2007-06/federationmetadata.xml" />
+    <add key="ida:Issuer" value="https://fs.contoso.com/adfs" />
+</appSettings>
+```
 
-## Running the solution
-Clean the solution, rebuild the solution and run it. If you want to see detailed traces, launch Fiddler and enable HTTPS decryption.
+## <a name="running-the-solution"></a>솔루션을 실행합니다.
+솔루션을 정리 하 고 솔루션을 다시 빌드하고 실행 합니다. 자세한 추적을 표시 하려면 Fiddler를 시작 하 고 HTTPS 암호 해독을 사용 하도록 설정 합니다.
 
-The browser (use Chrome browser) will load the SPA and you will be presented with the following screen:
+브라우저 (Chrome 브라우저 사용)가 SPA를 로드 하 고 다음 화면이 표시 됩니다.
 
-![Register the client](media/Single-Page-Application-with-AD-FS/singleapp3.PNG)
+![클라이언트 등록](media/Single-Page-Application-with-AD-FS/singleapp3.PNG)
 
-Click on Login.  The ToDo List will trigger the authentication flow and ADAL JS will direct the authentication to AD FS
+로그인을 클릭 합니다.  할 일 목록에는 인증 흐름이 트리거되고 ADAL JS는 인증을 AD FS 합니다.
 
-![Login](media/Single-Page-Application-with-AD-FS/singleapp4a.PNG)
+![로그인](media/Single-Page-Application-with-AD-FS/singleapp4a.PNG)
 
-In Fiddler you can see the token being returned as part of the URL in the # fragment.
+Fiddler에서는 # 조각에서 URL의 일부로 반환 되는 토큰을 볼 수 있습니다.
 
 ![Fiddler](media/Single-Page-Application-with-AD-FS/singleapp5a.PNG)
 
-You will be able to now call the backend API to add ToDo List items for the logged-in user:
+이제 백 엔드 API를 호출 하 여 로그인 한 사용자에 대 한 ToDo 목록 항목을 추가할 수 있습니다.
 
 ![Fiddler](media/Single-Page-Application-with-AD-FS/singleapp6.PNG)
 
-## Next Steps
-[AD FS Development](../../ad-fs/AD-FS-Development.md)  
+## <a name="next-steps"></a>다음 단계
+[AD FS 개발](../../ad-fs/AD-FS-Development.md)  

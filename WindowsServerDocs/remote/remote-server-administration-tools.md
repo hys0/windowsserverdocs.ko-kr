@@ -8,12 +8,12 @@ ms.assetid: d54a1f5e-af68-497e-99be-97775769a7a7
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dansimp
-ms.openlocfilehash: 307da083db2e5cc76c4eda825f0e080d7f026821
-ms.sourcegitcommit: 7288aca86fc76b9ff6177a17027118d1f21707a9
+ms.openlocfilehash: 69b31c8ef0ce093604ee9fd8fe382d75f7f88595
+ms.sourcegitcommit: aeefdf7814a4672b2dcd7537204205bb7ee5f9a0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83380696"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84514913"
 ---
 # <a name="remote-server-administration-tools"></a>원격 서버 관리 도구
 
@@ -56,7 +56,7 @@ Windows 10용 원격 서버 관리 도구는 x86 기반 버전과 x64 기반 버
 
 Windows 10 2018년 10월 업데이트부터는 RSAT가 Windows 10에 **주문형 기능** 세트로 바로 포함되어 있습니다. 이제 RSAT 패키지를 다운로드하는 대신, **설정**에서 **선택적 기능 관리**로 이동하여 **기능 추가**를 클릭하면 사용 가능한 RSAT 도구 목록을 볼 수 있습니다. 필요한 특정 RSAT 도구를 선택하여 설치하십시오. 설치 진행률을 보려면 **뒤로** 단추를 클릭하여 **선택적 기능 관리** 페이지에서 상태를 확인합니다.
         
-[**주문형 기능**을 통해 사용 가능한 RSAT 도구 목록](https://docs.microsoft.co    /wi    dows-hardware/manufacture/desktop/features-on-demand-non-language-fod#remote-server-administration-tools-rsat)을 참조하세요. 그래픽 **설정** 앱을 통한 설치 외에도 [**DISM/Add-Capability**](https://docs.microsoft.com/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities#using-dism-add-capability-to-add-or-remove-fods)를 사용하여 명령줄 또는 자동화를 통해 특정 RSAT 도구를 설치할 수 있습니다.
+[**주문형 기능**을 통해 사용 가능한 RSAT 도구 목록](https://docs.microsoft.com/windows-hardware/manufacture/desktop/features-on-demand-non-language-fod#remote-server-administration-tools-rsat)을 참조하세요. 그래픽 **설정** 앱을 통한 설치 외에도 [**DISM/Add-Capability**](https://docs.microsoft.com/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities#using-dism-add-capability-to-add-or-remove-fods)를 사용하여 명령줄 또는 자동화를 통해 특정 RSAT 도구를 설치할 수 있습니다.
 
 주문형 기능의 장점 중 하나는 설치된 기능이 Windows 10 버전 업그레이드에서도 유지된다는 점입니다.        
         

@@ -7,12 +7,12 @@ ms.topic: article
 ms.author: asmahi; sandysp; jopoulso
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: fc1d6bdb848ea9662ba9b3d3119f286af3476688
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: d165413dfbf89b2debd77806110ca80e9b6af7c8
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80851756"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85471298"
 ---
 # <a name="hyper-v-processor-performance"></a>Hyper-v 프로세서 성능
 
@@ -41,7 +41,7 @@ Windows Server 2016의 hyper-v는 가상 컴퓨터당 최대 240 개의 가상 �
 
 -   기본적으로 사용 하도록 설정 된 예약 된 작업 및 서비스를 검토 합니다.
 
--   **Logman 쿼리** 를 실행 하 여 기본적으로 설정 된 ETW 추적 공급자를 검토 합니다.
+-   **logman.exe 쿼리** 를 실행 하 여 기본적으로 설정 된 ETW 추적 공급자를 검토 합니다.
 
 -   정기 작업 (예: 타이머)을 줄이기 위해 서버 응용 프로그램을 개선 합니다.
 
@@ -59,17 +59,17 @@ Windows Server 2016의 hyper-v는 가상 컴퓨터당 최대 240 개의 가상 �
 
 대규모 확장 워크 로드 가상화를 사용 하도록 설정 하기 위해 Windows Server 2016의 Hyper-v는 가상 머신 확장 제한을 확장 했습니다. 단일 가상 머신에 최대 240 개의 가상 프로세서와 12tb의 메모리를 할당할 수 있습니다. 이러한 큰 가상 컴퓨터를 만들 때 호스트 시스템의 여러 NUMA 노드에 있는 메모리가 사용 될 가능성이 높습니다. 이러한 가상 컴퓨터 구성에서 가상 프로세서와 메모리가 동일한 NUMA 노드에서 할당 되지 않은 경우 NUMA 최적화를 활용할 수 없어 워크 로드의 성능이 저하 될 수 있습니다.
 
-Windows Server 2016에서 Hyper-v는 가상 컴퓨터에 가상 NUMA 토폴로지를 제공 합니다. 기본적으로 이 가상 NUMA 토폴로지는 기본 호스트 컴퓨터의 NUMA 토폴로지와 일치하도록 최적화됩니다. 가상 NUMA 토폴로지를 가상 컴퓨터에 노출하면 게스트 운영 체제와 이 운영 체제 내에서 실행되는 모든 NUMA 인식 애플리케이션이 실제 컴퓨터에서 실행될 때와 마찬가지로 NUMA 성능 최적화를 활용할 수 있습니다.
+Windows Server 2016에서 Hyper-v는 가상 컴퓨터에 가상 NUMA 토폴로지를 제공 합니다. 기본적으로 이 가상 NUMA 토폴로지는 기본 호스트 컴퓨터의 NUMA 토폴로지와 일치하도록 최적화됩니다. 가상 NUMA 토폴로지를 가상 머신에 노출하면 게스트 운영 체제와 이 운영 체제 내에서 실행되는 모든 NUMA 인식 애플리케이션이 실제 컴퓨터에서 실행될 때와 마찬가지로 NUMA 성능 최적화를 활용할 수 있습니다.
 
-워크 로드의 관점에서 가상 및 실제 NUMA는 차이가 없습니다. 가상 컴퓨터 내에서 워크로드가 데이터에 로컬 메모리를 할당하고 동일한 NUMA 노드에서 해당 데이터에 액세스할 경우 기본 실제 시스템에서 신속한 로컬 메모리 액세스가 발생합니다. 원격 메모리 액세스로 인해 성능 저하가 방지됩니다. NUMA 인식 응용 프로그램만 vNUMA를 활용할 수 있습니다.
+워크 로드의 관점에서 가상 및 실제 NUMA는 차이가 없습니다. 가상 머신 내에서 워크로드가 데이터에 로컬 메모리를 할당하고 동일한 NUMA 노드에서 해당 데이터에 액세스할 경우 기본 실제 시스템에서 신속한 로컬 메모리 액세스가 발생합니다. 원격 메모리 액세스로 인해 성능 저하가 방지됩니다. NUMA 인식 응용 프로그램만 vNUMA를 활용할 수 있습니다.
 
 Microsoft SQL Server은 NUMA 인식 응용 프로그램의 예입니다. 자세한 내용은 [균일 하지 않은 메모리 액세스 이해](https://technet.microsoft.com/library/ms178144.aspx)를 참조 하세요.
 
-가상 NUMA와 동적 메모리 기능은 동시에 사용할 수 없습니다. 동적 메모리가 설정된 가상 컴퓨터는 가상 NUMA 노드를 하나만 포함할 수 있으며, 가상 NUMA 설정에 관계없이 가상 컴퓨터에 NUMA 토폴로지가 제공되지 않습니다.
+가상 NUMA와 동적 메모리 기능은 동시에 사용할 수 없습니다. 동적 메모리가 설정된 가상 머신은 가상 NUMA 노드를 하나만 포함할 수 있으며, 가상 NUMA 설정과 관계없이 가상 머신에 NUMA 토폴로지가 제공되지 않습니다.
 
 가상 NUMA에 대 한 자세한 내용은 [Hyper-v 가상 Numa 개요](https://technet.microsoft.com/library/dn282282.aspx)를 참조 하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="additional-references"></a>추가 참조
 
 -   [Hyper-V 용어](terminology.md)
 

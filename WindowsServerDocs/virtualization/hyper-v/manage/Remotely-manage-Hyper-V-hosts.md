@@ -9,18 +9,18 @@ ms.assetid: 2d34e98c-6134-479b-8000-3eb360b8b8a3
 author: kbdazure
 ms.author: kathydav
 ms.date: 12/06/2016
-ms.openlocfilehash: 592bb6352c4ca56770e1a3051ecbc88d9d378467
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: bbd96e35cbab94f3e10a4f62f785db7724308a0f
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80859416"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85471108"
 ---
-# <a name="remotely-manage-hyper-v-hosts-with-hyper-v-manager"></a>Hyper-v 관리자를 사용 하 여 Hyper-v 호스트 원격 관리
+# <a name="remotely-manage-hyper-v-hosts-with-hyper-v-manager"></a>Hyper-V 관리자를 사용하여 원격으로 Hyper-V 호스트 관리
 
 >적용 대상: Windows Server 2016, Windows Server 2012 R2, Windows 10, Windows 8.1
 
-이 문서에서는 Hyper-v 호스트와 Hyper-v 관리자 버전의 지원 되는 조합을 나열 하 고 원격 및 로컬 Hyper-v 호스트에 연결 하 여 관리할 수 있도록 하는 방법을 설명 합니다. 
+이 문서에서는 Hyper-v 호스트와 Hyper-v 관리자 버전의 지원 되는 조합을 나열 하 고 원격 및 로컬 Hyper-v 호스트에 연결 하 여 관리할 수 있도록 하는 방법을 설명 합니다.
 
 Hyper-v 관리자를 사용 하면 몇 가지 Hyper-v 호스트 (원격 및 로컬)를 관리할 수 있습니다. Hyper-v 관리 도구를 설치할 때 설치 됩니다 .이 도구는 전체 Hyper-v 설치 또는 도구 전용 설치를 통해 수행할 수 있습니다. 도구 전용 설치를 사용 하는 경우 Hyper-v를 호스팅하기 위한 하드웨어 요구 사항을 충족 하지 않는 컴퓨터의 도구를 사용할 수 있습니다. Hyper-v 호스트의 하드웨어에 대 한 자세한 내용은 [시스템 요구 사항](../System-requirements-for-Hyper-V-on-Windows.md)을 참조 하세요.
 
@@ -49,7 +49,7 @@ Hyper-v 관리자에서 hyper-v 호스트에 연결 하려면 왼쪽 창에서 *
 
 ## <a name="manage-hyper-v-on-a-local-computer"></a>로컬 컴퓨터의 Hyper-v 관리
 
-Hyper-v 관리자는 로컬 컴퓨터를 포함 하 여 컴퓨터를 추가할 때까지 Hyper-v를 호스트 하는 컴퓨터를 나열 하지 않습니다. 이렇게 하려면 다음과 같이 하십시오.
+Hyper-v 관리자는 로컬 컴퓨터를 포함 하 여 컴퓨터를 추가할 때까지 Hyper-v를 호스트 하는 컴퓨터를 나열 하지 않습니다. 다음을 수행합니다.
 
 1. 왼쪽 창에서 **Hyper-v 관리자**를 마우스 오른쪽 단추로 클릭 합니다.
 2. **서버에 연결을**클릭 합니다.
@@ -61,13 +61,13 @@ Hyper-v 관리자는 로컬 컴퓨터를 포함 하 여 컴퓨터를 추가할 �
 * 하드웨어가 요구 사항을 충족 하는지 확인 합니다. [시스템 요구 사항](../System-requirements-for-Hyper-V-on-Windows.md)을 참조 하세요.
 * 사용자 계정이 Administrators 그룹이 나 Hyper-v Administrators 그룹에 속해 있는지 확인 합니다.
 
-## <a name="manage-hyper-v-hosts-remotely"></a>원격으로 Hyper-v 호스트 관리  
+## <a name="manage-hyper-v-hosts-remotely"></a>원격으로 Hyper-v 호스트 관리
 
 원격 Hyper-v 호스트를 관리 하려면 로컬 컴퓨터와 원격 호스트에서 원격 관리를 사용 하도록 설정 합니다.
 
-Windows Server에서 서버 관리자 \>**로컬 서버** \>**원격 관리** 를 열고 **이 컴퓨터에 원격 연결 허용**을 클릭 합니다. 
+Windows server에서 서버 관리자 \> **로컬 서버** \> **원격 관리** 를 열고 **이 컴퓨터에 원격 연결 허용**을 클릭 합니다.
 
-또는 두 운영 체제에서 관리자 권한으로 Windows PowerShell을 열고 다음을 실행 합니다. 
+또는 두 운영 체제에서 관리자 권한으로 Windows PowerShell을 열고 다음을 실행 합니다.
 
 ```
 Enable-PSRemoting
@@ -77,13 +77,13 @@ Enable-PSRemoting
 
 Windows 8.1 및 이전 버전의 경우 원격 관리는 호스트가 동일한 도메인에 있고 로컬 사용자 계정도 원격 호스트에 있는 경우에만 작동 합니다.
 
-Hyper-v 관리자에 원격 Hyper-v 호스트를 추가 하려면 **컴퓨터 선택** 대화 상자에서 **다른 컴퓨터** 를 선택 하 고 원격 호스트의 호스트 이름, NetBIOS 이름 또는 FQDN (정규화 된 도메인 이름 \(FQDN\)을 입력 합니다.
+Hyper-v 관리자에 원격 Hyper-v 호스트를 추가 하려면 **컴퓨터 선택** 대화 상자에서 **다른 컴퓨터** 를 선택 하 고 원격 호스트의 호스트 이름, NetBIOS 이름 또는 fqdn (정규화 된 도메인 이름)을 입력 합니다 \( \) .
 
-Windows Server 2016 및 Windows 10의 hyper-v 관리자는 다음 섹션에 설명 된 것 처럼 이전 버전 보다 더 많은 유형의 원격 연결을 제공 합니다.  
+Windows Server 2016 및 Windows 10의 hyper-v 관리자는 다음 섹션에 설명 된 것 처럼 이전 버전 보다 더 많은 유형의 원격 연결을 제공 합니다.
 
 ### <a name="connect-to-a-windows-2016-or-windows-10-remote-host-as-a-different-user"></a>다른 사용자로 Windows 2016 또는 Windows 10 원격 호스트에 연결
 
-이를 통해 hyper-v 호스트에서 hyper-v 관리자 그룹 또는 Administrators 그룹의 구성원 인 사용자로 로컬 컴퓨터에서 실행 되 고 있지 않은 경우 Hyper-v 호스트에 연결할 수 있습니다. 이렇게 하려면 다음과 같이 하십시오.
+이를 통해 hyper-v 호스트에서 hyper-v 관리자 그룹 또는 Administrators 그룹의 구성원 인 사용자로 로컬 컴퓨터에서 실행 되 고 있지 않은 경우 Hyper-v 호스트에 연결할 수 있습니다. 다음을 수행합니다.
 
 1. 왼쪽 창에서 **Hyper-v 관리자**를 마우스 오른쪽 단추로 클릭 합니다.
 1. **서버에 연결을**클릭 합니다.
@@ -95,7 +95,7 @@ Windows Server 2016 및 Windows 10의 hyper-v 관리자는 다음 섹션에 설�
 
 ### <a name="connect-to-a-windows-2016-or-windows-10-remote-host-using-ip-address"></a>IP 주소를 사용 하 여 Windows 2016 또는 Windows 10 원격 호스트에 연결
 
-이렇게 하려면 다음과 같이 하십시오.
+다음을 수행합니다.
 
 1. 왼쪽 창에서 **Hyper-v 관리자**를 마우스 오른쪽 단추로 클릭 합니다.
 1. **서버에 연결을**클릭 합니다.
@@ -106,18 +106,18 @@ Windows Server 2016 및 Windows 10의 hyper-v 관리자는 다음 섹션에 설�
 
 ### <a name="connect-to-a-windows-2016-or-windows-10-remote-host-outside-your-domain-or-with-no-domain"></a>도메인 외부 또는 도메인 외부의 Windows 2016 또는 Windows 10 원격 호스트에 연결
 
-이렇게 하려면 다음과 같이 하십시오.
+다음을 수행합니다.
 
 1. 관리할 Hyper-v 호스트에서 관리자 권한으로 Windows PowerShell 세션을 엽니다.
 
-1. 개인 네트워크 영역에 대해 필요한 방화벽 규칙을 만듭니다.   
-   
+1. 개인 네트워크 영역에 대해 필요한 방화벽 규칙을 만듭니다.
+
    ```
    Enable-PSRemoting
    ```
 
 2. 공용 영역에 대 한 원격 액세스를 허용 하려면 CredSSP 및 WinRM에 대 한 방화벽 규칙을 사용 하도록 설정 합니다.
-  
+
    ```
    Enable-WSManCredSSP -Role server
    ```
@@ -127,7 +127,7 @@ Windows Server 2016 및 Windows 10의 hyper-v 관리자는 다음 섹션에 설�
 그런 다음 Hyper-v 호스트를 관리 하는 데 사용할 컴퓨터를 구성 합니다.
 
 1. 관리자 권한으로 Windows PowerShell 세션을 엽니다.
-1. 다음 명령을 실행 합니다.
+1. 다음 명령을 실행합니다.
 
      ```
      Set-Item WSMan:\localhost\Client\TrustedHosts -Value "fqdn-of-hyper-v-host"
@@ -135,10 +135,10 @@ Windows Server 2016 및 Windows 10의 hyper-v 관리자는 다음 섹션에 설�
      ```
      Enable-WSManCredSSP -Role client -DelegateComputer "fqdn-of-hyper-v-host"
      ```
-1. 다음 그룹 정책을 구성 해야 할 수도 있습니다. 
-    * **NTLM 전용 서버 인증을 사용 하 여 새 자격 증명을 위임할 수 있는** **컴퓨터 구성** \> **관리 템플릿** \> **시스템** \> **자격 증명 \> 위임**
+1. 다음 그룹 정책을 구성 해야 할 수도 있습니다.
+    * **컴퓨터 구성** \> **관리 템플릿** \> **시스템** \> **자격 증명 위임** \> **NTLM 전용 서버 인증을 사용 하 여 새 자격 증명 위임 허용**
     * **사용** 을 클릭 하 고 *wsman/hyper-v-호스트*를 추가 합니다.
-1. 열기 **Hyper-v 관리자**합니다.
+1. **Hyper-v 관리자**를 엽니다.
 1. 왼쪽 창에서 **Hyper-v 관리자**를 마우스 오른쪽 단추로 클릭 합니다.
 1. **서버에 연결을**클릭 합니다.
 
@@ -151,11 +151,11 @@ Cmdlet에 대 한 자세한 내용은 [enable-wsmancredssp 및 Enable-](https://
 
 UI 도구를 사용 하려면 Hyper-v 관리자를 실행 하는 컴퓨터의 운영 체제에 적합 한 도구를 선택 합니다.
 
-Windows Server에서 **역할 및 기능 추가** **\> \>** 서버 관리자을 엽니다. **기능** 페이지로 이동 하 여 **원격 서버 관리 도구** \> **역할 관리** 도구 \> **hyper-v 관리**도구를 확장 합니다. 
+Windows Server에서 \> **Manage** \> **역할 및 기능 추가**서버 관리자 관리를 엽니다. **기능** 페이지로 이동 하 여 **원격 서버 관리 도구** \> **역할 관리 도구** \> **hyper-v 관리 도구**를 확장 합니다.
 
 Windows에서 hyper-v 관리자는 [hyper-v가 포함 된 모든 Windows 운영 체제](https://msdn.microsoft.com/virtualization/hyperv_on_windows/quick_start/walkthrough_compatibility)에서 사용할 수 있습니다.
 
-1. Windows 바탕 화면에서 시작 단추를 클릭 하 고 **프로그램 및 기능**을 입력 하기 시작 합니다. 
+1. Windows 바탕 화면에서 시작 단추를 클릭 하 고 **프로그램 및 기능**을 입력 하기 시작 합니다.
 1. 검색 결과에서 **프로그램 및 기능**을 클릭 합니다.
 1. 왼쪽 창에서 **Windows 기능 사용/사용 안 함**을 클릭 합니다.
 1. Hyper-v 폴더를 확장 하 고 **Hyper-v 관리 도구를 클릭**합니다.
@@ -167,7 +167,7 @@ Windows PowerShell을 사용 하려면 관리자 권한으로 다음 명령을 �
 add-windowsfeature rsat-hyper-v-tools
 ```
 
-## <a name="see-also"></a>참고 항목  
- 
-[Hyper-V 설치](../get-started/Install-the-Hyper-V-role-on-Windows-Server.md) 
+## <a name="additional-references"></a>추가 참조
+
+[Hyper-V 설치](../get-started/Install-the-Hyper-V-role-on-Windows-Server.md)
 
