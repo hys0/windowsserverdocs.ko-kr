@@ -7,12 +7,12 @@ author: daniellee-msft
 ms.author: jol
 ms.localizationpriority: medium
 ms.prod: windows-server
-ms.openlocfilehash: 2b8a9f5ebab22891b8b97c9c56bba3837cbb9371
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 4ba2e760d57f1c3f59e40b78b449a8831b8093d2
+ms.sourcegitcommit: fe89b8001ad664b3618708b013490de93501db05
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "81269300"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84942312"
 ---
 # <a name="install-and-manage-extensions"></a>확장 설치 및 관리
 
@@ -56,12 +56,12 @@ Windows Admin Center가 인터넷에 연결되어 있지 않거나 프록시 뒤
 
 ### <a name="manually-downloading-extension-packages"></a>수동으로 확장 패키지 다운로드
 
-1. 인터넷에 연결된 다른 컴퓨터에서 웹 브라우저를 열고, [https://msft-sme.myget.org/gallery/windows-admin-center-feed](https://msft-sme.myget.org/gallery/windows-admin-center-feed) URL로 이동합니다. 
+1. 인터넷에 연결된 다른 컴퓨터에서 웹 브라우저를 열고, [https://dev.azure.com/WindowsAdminCenter/Windows%20Admin%20Center%20Feed/_packaging?_a=feed&feed=WAC](https://dev.azure.com/WindowsAdminCenter/Windows%20Admin%20Center%20Feed/_packaging?_a=feed&feed=WAC) URL로 이동합니다. 
 
-   * 계정을 msft-sme.myget.org에 만들고 로그인하여 확장 패키지를 확인해야 할 수 있습니다.
+   * Microsoft 계정을 만들고 로그인하여 확장 패키지를 확인해야 할 수 있습니다.
 
 2. 설치하려는 패키지의 이름을 클릭하여 패키지 세부 정보 페이지를 봅니다.
-3. 패키지 세부 정보 페이지의 오른쪽 창에서 **다운로드** 링크를 클릭하여 확장에 대한 .nupkg 파일을 다운로드합니다.
+3. 패키지 세부 정보 페이지의 상단 탐색 모음에서 **다운로드** 링크를 클릭하여 확장에 대한 .nupkg 파일을 다운로드합니다.
 4. 다운로드하려는 모든 패키지에 대해 2단계와 3단계를 반복합니다.
 5. 패키지 파일을 Windows Admin Center가 설치된 컴퓨터 또는 컴퓨터의 로컬 디스크에서 액세스할 수 있는 파일 공유에 복사합니다.
 6. [지침에 따라 다른 피드의 확장을 설치합니다](#installing-extensions-from-a-different-feed).

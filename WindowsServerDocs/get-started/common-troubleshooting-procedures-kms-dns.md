@@ -6,19 +6,19 @@ ms.technology: server-general
 author: Teresa-Motiv
 ms.author: v-tea
 ms.localizationpriority: medium
-ms.openlocfilehash: 76665d91cc1e2997a837721ffbc51b0513dd7c1a
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: f6e600b41e4a485084bd0622c2be0753d0b11c0c
+ms.sourcegitcommit: 6d7a394edefba684f7b6983c65026679c1b7a485
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "81524938"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84776715"
 ---
 # <a name="guidelines-for-troubleshooting-dns-related-activation-issues"></a>DNS 관련 정품 인증 문제 해결을 위한 지침
 
 다음 조건 중 하나 이상을 충족하는 경우 다음 방법을 사용해야 할 수도 있습니다.
 
 - 볼륨 라이선스 미디어와&nbsp;볼륨 라이선스 일반 제품 키를 사용하여 다음 운영 체제 중 하나를 설치합니다.
-   - 시작
+   - Windows Server 2019
    - Windows Server 2016
    - Windows Server 2012 R2
    - Windows Server 2012
@@ -29,7 +29,7 @@ ms.locfileid: "81524938"
    - Windows 8
 - 정품 인증 마법사는 KMS 호스트 컴퓨터에 연결할 수 없습니다.
 
-클라이언트 시스템을 정품 인증하려고 시도하면 정품 인증 마법사가 DNS를 사용하여 KMS 소프트웨어를 실행하는 해당 컴퓨터를 찾습니다. 마법사가 DNS를 쿼리하고 KMS 호스트 컴퓨터의 DNS 항목을 찾지 못하는 경우 마법사가 오류를 보고합니다.   
+클라이언트 시스템을 정품 인증하려고 시도하면 정품 인증 마법사가 DNS를 사용하여 KMS 소프트웨어를 실행하는 해당 컴퓨터를 찾습니다. 마법사가 DNS를 쿼리하고 KMS 호스트 컴퓨터의 DNS 항목을 찾지 못하는 경우 마법사가 오류를 보고합니다.
 
 <a id="list"></a>다음 목록을 검토하여 상황에 맞는 접근 방식을 찾아보세요.
 
@@ -37,7 +37,7 @@ ms.locfileid: "81524938"
 - KMS 호스트를 설치하고 구성해야 하는 경우 [정품 인증할 클라이언트의 KMS 호스트 구성](#configure-a-kms-host-for-the-clients-to-activate-against) 절차를 따릅니다.
 - 클라이언트가 기존 KMS 호스트를 찾을 수 없는 경우 다음 절차에 따라 라우팅 구성 문제를 해결합니다. 다음 절차는 가장 간단한 것부터 가장 복잡한 순서대로 정렬되어 있습니다.
   - [DNS 서버에 대한 기본 IP 연결 확인](#verify-basic-ip-connectivity-to-the-dns-server)
-  - [KMS 호스트 구성 확인](#verify-the-configuration-of-the-kms-host)  
+  - [KMS 호스트 구성 확인](#verify-the-configuration-of-the-kms-host)
   - [라우팅 이슈의 유형 확인](#determine-the-type-of-routing-issue)
   - [DNS 구성 확인](#verify-the-dns-configuration)
   - [수동으로 KMS SRV 레코드 만들기](#manually-create-a-kms-srv-record)
@@ -56,7 +56,7 @@ KMS 호스트를 설치할 수 없거나 어떤 이유로 KMS 정품 인증을 �
     slmgr -ipk xxxxx-xxxxx-xxxxx-xxxxx-xxxxx
    ```
    > [!NOTE]
-   > **xxxxx-xxxxx-xxxxx-xxxxx-xxxxx** 자리 표시자는 MAK 제품 키를 나타냅니다.  
+   > **xxxxx-xxxxx-xxxxx-xxxxx-xxxxx** 자리 표시자는 MAK 제품 키를 나타냅니다.
 
 [절차 목록으로 돌아갑니다.](#list)
 
@@ -84,33 +84,33 @@ ping 명령을 사용하여 DNS 서버에 대한 기본 IP 연결을 확인합�
 
 ## <a name="verify-the-configuration-of-the-kms-host"></a>KMS 호스트 구성 확인
 
-KMS 호스트 서버의 레지스트리를 검사하여 DNS에 등록하는지 확인합니다. 기본적으로 KMS 호스트 서버는 24시간마다 한 번씩 DNS SRV 레코드를 동적으로 등록합니다. 
+KMS 호스트 서버의 레지스트리를 검사하여 DNS에 등록하는지 확인합니다. 기본적으로 KMS 호스트 서버는 24시간마다 한 번씩 DNS SRV 레코드를 동적으로 등록합니다.
 > [!IMPORTANT]
-> 이 섹션의 단계를 신중하게 따릅니다. 레지스트리를 잘못 수정할 경우 심각한 문제가 발생할 수 있습니다. 수정하기 전에, 문제가 발생할 경우를 대비하여 [복원을 위해 레지스트리를 백업](https://support.microsoft.com/help/322756)해 두세요.  
+> 이 섹션의 단계를 신중하게 따릅니다. 레지스트리를 잘못 수정할 경우 심각한 문제가 발생할 수 있습니다. 수정하기 전에, 문제가 발생할 경우를 대비하여 [복원을 위해 레지스트리를 백업](https://support.microsoft.com/help/322756)해 두세요.
 
 이 설정을 확인하려면 다음 단계를 수행합니다.
 1. 레지스트리 편집기를 시작합니다. 이렇게 하려면 **시작**을 마우스 오른쪽 단추로 클릭하고, **실행**을 선택하고, **regedit**를 입력한 다음, Enter 키를 누릅니다.
 1. **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SL** 하위 키를 찾아서 **DisableDnsPublishing** 항목의 값을 확인합니다. 이 항목의 가능한 값은 다음과 같습니다.
    - **0** 또는 정의되지 않음(기본값): KMS 호스트 서버는 24시간마다 한 번씩 SRV 레코드를 등록합니다.
-   - **1**: KMS 호스트 서버는 SRV 레코드를 자동으로 등록하지 않습니다. 현재 구현된 시스템에서 동적 업데이트를 지원하지 않는 경우 [수동으로 KMS SRV 레코드 만들기](#manually-create-a-kms-srv-record)를 참조하세요.  
+   - **1**: KMS 호스트 서버는 SRV 레코드를 자동으로 등록하지 않습니다. 현재 구현된 시스템에서 동적 업데이트를 지원하지 않는 경우 [수동으로 KMS SRV 레코드 만들기](#manually-create-a-kms-srv-record)를 참조하세요.
 1. **DisableDnsPublishing** 항목이 없는 경우 새로 만듭니다(형식은 DWORD). 동적 등록을 사용할 수 있는 경우 값을 정의되지 않은 상태로 두거나 **0**으로 설정합니다.
 
 [절차 목록으로 돌아갑니다.](#list)
 
 ## <a name="determine-the-type-of-routing-issue"></a>라우팅 이슈의 유형 확인
 
-다음 명령을 사용하여 이름 확인 이슈인지 아니면 SRV 레코드 이슈인지 확인할 수 있습니다.  
+다음 명령을 사용하여 이름 확인 이슈인지 아니면 SRV 레코드 이슈인지 확인할 수 있습니다.
 
-1. KMS 클라이언트에서 관리자 권한으로 명령 프롬프트 창을 엽니다.  
+1. KMS 클라이언트에서 관리자 권한으로 명령 프롬프트 창을 엽니다.
 1. 명령 프롬프트에서 다음 명령을 실행합니다.
    ```cmd
    cscript \windows\system32\slmgr.vbs -skms <KMS_FQDN>:<port>
    cscript \windows\system32\slmgr.vbs -ato
    ```
    > [!NOTE]
-   > 이 명령에서 <KMS_FQDN>은 KMS 호스트 컴퓨터의 FQDN(정규화된 도메인 이름)을 나타내고, \<port\>는 KMS에서 사용하는 TCP 포트를 나타냅니다.  
+   > 이 명령에서 <KMS_FQDN>은 KMS 호스트 컴퓨터의 FQDN(정규화된 도메인 이름)을 나타내고, \<port\>는 KMS에서 사용하는 TCP 포트를 나타냅니다.
 
-   이러한 명령으로 문제가 해결되면 SRV 레코드 이슈인 것입니다. [수동으로 KMS 클라이언트에 KMS 호스트 할당](#manually-assign-a-kms-host-to-a-kms-client) 절차에 설명된 명령 중 하나를 사용하여 문제를 해결할 수 있습니다.  
+   이러한 명령으로 문제가 해결되면 SRV 레코드 이슈인 것입니다. [수동으로 KMS 클라이언트에 KMS 호스트 할당](#manually-assign-a-kms-host-to-a-kms-client) 절차에 설명된 명령 중 하나를 사용하여 문제를 해결할 수 있습니다.
 
 1. 문제가 지속되면 다음 명령을 실행합니다.
    ```cmd
@@ -118,7 +118,7 @@ KMS 호스트 서버의 레지스트리를 검사하여 DNS에 등록하는지 �
    cscript \windows\system32\slmgr.vbs -ato
    ```
    > [!NOTE]
-   > 이 명령에서 \<IP Address\>는 KMS 호스트 컴퓨터의 IP 주소를 나타내고, \<port\>는 KMS에서 사용하는 TCP 포트를 나타냅니다.  
+   > 이 명령에서 \<IP Address\>는 KMS 호스트 컴퓨터의 IP 주소를 나타내고, \<port\>는 KMS에서 사용하는 TCP 포트를 나타냅니다.
 
    이러한 명령으로 문제가 해결되면 이름 확인 이슈일 가능성이 높습니다. 추가 문제 해결 정보는 [DNS 구성 확인](#verify-the-dns-configuration) 절차를 참조하세요.
 
@@ -128,7 +128,7 @@ KMS 호스트 서버의 레지스트리를 검사하여 DNS에 등록하는지 �
 
 ## <a name="verify-the-dns-configuration"></a>DNS 구성 확인
 
->[!NOTE]
+> [!NOTE]
 > 달리 명시되지 않는 한, 해당 오류가 발생한 KMS 클라이언트에서 다음 단계를 수행합니다.
 
 1. 관리자 권한으로 명령 프롬프트 창을 엽니다.
@@ -141,7 +141,7 @@ KMS 호스트 서버의 레지스트리를 검사하여 DNS에 등록하는지 �
    - KMS 클라이언트 컴퓨터에서 사용하는 기본 DNS 서버의 IP 주소
    - KMS 클라이언트 컴퓨터에서 사용하는 기본 게이트웨이의 IP 주소
    - KMS 클라이언트 컴퓨터에서 사용하는 DNS 접미사 검색 목록
-1. KMS 호스트 SRV 레코드가 DNS에 등록되었는지 확인합니다. 이렇게 하려면 다음 단계를 따르십시오.  
+1. KMS 호스트 SRV 레코드가 DNS에 등록되었는지 확인합니다. 이렇게 하려면 다음 단계를 따르십시오.
    1. 관리자 권한 명령 프롬프트 창을 엽니다.
    1. 명령 프롬프트에서 다음 명령을 실행합니다.
       ```cmd
@@ -157,7 +157,7 @@ KMS 호스트 서버의 레지스트리를 검사하여 DNS에 등록하는지 �
        > [!NOTE]
        > 이 항목에서 contoso.com은 KMS 호스트의 도메인을 나타냅니다.
       1. KMS 호스트의의 IP 주소, 호스트 이름, 포트 및 도메인을 확인합니다.
-      1. **_vlmcs** 항목이 있고 이 항목에 예상 KMS 호스트 이름이 들어 있는 경우 [수동으로 KMS 클라이언트에 KMS 호스트 할당](#manually-assign-a-kms-host-to-a-kms-client)으로 이동합니다.  
+      1. **_vlmcs** 항목이 있고 이 항목에 예상 KMS 호스트 이름이 들어 있는 경우 [수동으로 KMS 클라이언트에 KMS 호스트 할당](#manually-assign-a-kms-host-to-a-kms-client)으로 이동합니다.
       > [!NOTE]
       > [**nslookup**](https://docs.microsoft.com/windows-server/administration/windows-commands/nslookup) 명령이 KMS 호스트를 발견하더라도 DNS 클라이언트가 KMS 호스트를 찾을 수 있다는 의미는 아닙니다. **nslookup** 명령이 KMS 호스트를 찾았지만 여전히 KMS 호스트를 사용하여 정품 인증할 수 없는 경우 기본 DNS 접미사나 DNS 접미사의 검색 목록 같은 다른 DNS 설정을 확인합니다.
 1. 기본 DNS 접미사의 검색 목록에 KMS 호스트와 연결된 DNS 도메인 접미사가 포함되어 있는지 확인합니다. 검색 목록에 이 정보가 포함되어 있지 않으면 [여러 DNS 도메인에 게시하도록 KMS 호스트 구성](#configure-the-kms-host-to-publish-in-multiple-dns-domains) 절차로 이동합니다.
@@ -198,7 +198,7 @@ allow-update { any; };
 ```
 ## <a name="manually-assign-a-kms-host-to-a-kms-client"></a>수동으로 KMS 클라이언트에 KMS 호스트 할당
 
-기본적으로 KMS 클라이언트는 자동 검색 프로세스를 사용합니다. 이 프로세스에 따라 KMS 클라이언트는 DNS를 쿼리하여 클라이언트의 구성원 영역 내부에 _vlmcs SRV 레코드를 게시한 서버 목록을 찾습니다. DNS는 임의의 순서로 KMS 호스트 목록을 반환합니다. 클라이언트는 KMS 호스트를 선택하고 해당 호스트에 대한 세션을 설정하려고 시도합니다. 이 시도가 정상적으로 작동하면 클라이언트는 KMS 호스트 이름을 캐시하고 다음 갱신 때 사용합니다. 세션 설정이 실패하면 클라이언트는 다른 KMS 호스트를 임의로 선택합니다. 자동 검색 프로세스를 사용할 것을 강력하게 권장합니다.  
+기본적으로 KMS 클라이언트는 자동 검색 프로세스를 사용합니다. 이 프로세스에 따라 KMS 클라이언트는 DNS를 쿼리하여 클라이언트의 구성원 영역 내부에 `_vlmcs` SRV 레코드를 게시한 서버 목록을 찾습니다. DNS는 임의의 순서로 KMS 호스트 목록을 반환합니다. 클라이언트는 KMS 호스트를 선택하고 해당 호스트에 대한 세션을 설정하려고 시도합니다. 이 시도가 정상적으로 작동하면 클라이언트는 KMS 호스트 이름을 캐시하고 다음 갱신 때 사용합니다. 세션 설정이 실패하면 클라이언트는 다른 KMS 호스트를 임의로 선택합니다. 자동 검색 프로세스를 사용할 것을 강력하게 권장합니다.
 
 하지만 KMS 호스트를 특정 KMS 클라이언트에 수동으로 할당할 수 있습니다. 이를 위해 다음 단계를 수행합니다.
 
@@ -226,26 +226,26 @@ allow-update { any; };
      ```
      > [!NOTE]
      > 이러한 명령은 다음 자리 표시자를 사용합니다.
-     >- **<KMS_FQDN>** 은 KMS 호스트 컴퓨터의 FQDN(정규화된 도메인 이름)을 나타냅니다.
-     >- **\<IPv4Address\>** 는 KMS 호스트 컴퓨터의 IP 버전 4 주소를 나타냅니다.
-     >- **\<IPv6Address\>** 는 KMS 호스트 컴퓨터의 IP 버전 6 주소를 나타냅니다.
-     >- **\<NETBIOSName\>** 은 KMS 호스트 컴퓨터의 NETBIOS 이름을 나타냅니다.
-     >- **\<port\>** 는 KMS에서 사용하는 TCP 포트를 나타냅니다.  
+     > - **<KMS_FQDN>** 은 KMS 호스트 컴퓨터의 FQDN(정규화된 도메인 이름)을 나타냅니다.
+     > - **\<IPv4Address\>** 는 KMS 호스트 컴퓨터의 IP 버전 4 주소를 나타냅니다.
+     > - **\<IPv6Address\>** 는 KMS 호스트 컴퓨터의 IP 버전 6 주소를 나타냅니다.
+     > - **\<NETBIOSName\>** 은 KMS 호스트 컴퓨터의 NETBIOS 이름을 나타냅니다.
+     > - **\<port\>** 는 KMS에서 사용하는 TCP 포트를 나타냅니다.
 
 ## <a name="configure-the-kms-host-to-publish-in-multiple-dns-domains"></a>여러 DNS 도메인에 게시하도록 KMS 호스트 구성
 
 > [!IMPORTANT]
 > 이 섹션의 단계를 신중하게 따릅니다. 레지스트리를 잘못 수정할 경우 심각한 문제가 발생할 수 있습니다. 수정하기 전에, 문제가 발생할 경우를 대비하여 [복원을 위해 레지스트리를 백업](https://support.microsoft.com/help/322756)해 두세요.
 
-[수동으로 KMS 클라이언트에 KMS 호스트 할당](#manually-assign-a-kms-host-to-a-kms-client)에 설명된 대로, KMS 클라이언트는 일반적으로 자동 검색 프로세스를 사용하여 KMS 호스트를 식별합니다. 이 프로세스를 수행하려면 KMS 클라이언트 컴퓨터의 DNS 영역에서 _vlmcs SRV 레코드를 사용할 수 있어야 합니다. DNS 영역은 컴퓨터의 기본 DNS 접미사 또는 다음 중 하나에 해당합니다.
+[수동으로 KMS 클라이언트에 KMS 호스트 할당](#manually-assign-a-kms-host-to-a-kms-client)에 설명된 대로, KMS 클라이언트는 일반적으로 자동 검색 프로세스를 사용하여 KMS 호스트를 식별합니다. 이 프로세스를 수행하려면 KMS 클라이언트 컴퓨터의 DNS 영역에서 `_vlmcs` SRV 레코드를 사용할 수 있어야 합니다. DNS 영역은 컴퓨터의 기본 DNS 접미사 또는 다음 중 하나에 해당합니다.
 - 도메인에 가입된 컴퓨터의 경우 DNS 시스템에서 할당한 컴퓨터의 도메인(예: AD DS(Active Directory Domain Services) DNS).
 - 작업 그룹 컴퓨터의 경우 DHCP(Dynamic Host Configuration Protocol)에서 할당한 컴퓨터의 도메인. 이 도메인 이름은 RFC(Request for Comments) 2132에 정의된 대로 코드 값이 15인 옵션을 통해 정의됩니다.
 
-기본적으로 KMS 호스트는 KMS 호스트 컴퓨터의 도메인과 일치하는 DNS 영역에 SRV 레코드를 등록합니다. 예를 들어 KMS 호스트가 contoso.com 도메인에 가입한다고 가정해 봅시다. 이 시나리오에서 KMS 호스트는 _vmlcs SRV 레코드를 contoso.com DNS 영역 아래에 등록합니다. 따라서 레코드는 서비스를 _VLMCS._TCP.CONTOSO.COM으로 식별합니다.
+기본적으로 KMS 호스트는 KMS 호스트 컴퓨터의 도메인과 일치하는 DNS 영역에 SRV 레코드를 등록합니다. 예를 들어 KMS 호스트가 contoso.com 도메인에 가입한다고 가정해 봅시다. 이 시나리오에서 KMS 호스트는 `_vlmcs` SRV 레코드를 contoso.com DNS 영역 아래에 등록합니다. 따라서 레코드는 서비스를 `_VLMCS._TCP.CONTOSO.COM`으로 식별합니다.
 
 KMS 호스트와 KMS 클라이언트가 서로 다른 DNS 영역을 사용하는 경우 SRV 레코드를 여러 DNS 도메인에 자동으로 게시하도록 KMS 호스트를 구성해야 합니다. 이렇게 하려면 다음 단계를 따르십시오.
 
-1. KMS 호스트에서 레지스트리 편집기를 시작합니다. 
+1. KMS 호스트에서 레지스트리 편집기를 시작합니다.
 1. **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SL** 하위 키를 찾아서 선택합니다.
 1. **세부 정보** 창에서 빈 영역을 마우스 오른쪽 단추로 클릭하고 **새로 만들기**를 선택한 다음, **다중 문자열 값**을 선택합니다.
 1. 새 항목의 이름으로 **DnsDomainPublishList**를 입력합니다.

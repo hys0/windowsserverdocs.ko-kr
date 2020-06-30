@@ -7,14 +7,14 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 05/27/2020
+ms.date: 06/23/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 0d49c49def8b110f42a6d56354c73e5a75b04b7e
-ms.sourcegitcommit: 4fec7d82f0772d03a9e8cac20092a4309b0f796e
+ms.openlocfilehash: 5c3fc20ea42deaa9dd96fd9f7bfabfcb85462bdd
+ms.sourcegitcommit: 6d6a0225b1f83b71fcb494b94d666cd5e54c7566
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84025514"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85267664"
 ---
 # <a name="whats-new-in-the-windows-desktop-client"></a>Windows 데스크톱 클라이언트의 새로운 기능
 
@@ -26,8 +26,21 @@ Windows 데스크톱 클라이언트에 대한 자세한 내용은 [Windows 데�
 
 |사용자 그룹 |Version  |
 |-----------|---------|
-|공용     |1.2.1026 |
-|참가자    |1.2.1026 |
+|공용     |1.2.1104 |
+|참가자    |1.2.1104 |
+
+## <a name="updates-for-version-121104"></a>1\.2.1104 버전에 대한 업데이트
+
+*게시 날짜: 2020/06/23*
+
+다운로드: [Windows 64비트](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4zeHS), [Windows 32비트](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4zrAd), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4zeHR)
+
+- Windows 가상 데스크톱 2020년 봄 업데이트를 지원하기 위해 **구독** 옵션에 대한 자동 검색 논리가 업데이트되었습니다. 봄 업데이트 리소스만 있는 고객이 더 이상 2019년 가을 릴리스에 대한 동의를 제공할 필요가 없습니다.
+- 배율 인수가 최대 400%로 조정되어 DPI가 높은 디바이스에 대한 지원이 개선되었습니다.
+- 연결 끊기 대화 상자가 나타나지 않는 문제가 해결되었습니다.
+- 명령 모음 도구 설명이 예상보다 오래 계속 표시되는 문제가 해결되었습니다.
+- 새로 고침 후 즉시 구독을 시도할 때 발생하는 충돌이 해결되었습니다.
+- 일부 언어에서 날짜 및 시간에 대한 잘못된 구문 분석으로 인한 충돌이 해결되었습니다.
 
 ## <a name="updates-for-version-121026"></a>1\.2.1026 버전에 대한 업데이트
 
@@ -76,8 +89,6 @@ Windows 데스크톱 클라이언트에 대한 자세한 내용은 [Windows 데�
 
 *게시 날짜: 2020/03/24*
 
-다운로드: [Windows 64비트](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4siSh), [Windows 32비트](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4siSi), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4sllb)
-
 - 다른 원격 데스크톱 클라이언트와 일치하도록 작업 영역에 대한 "업데이트" 작업의 이름이 "새로 고침"으로 변경되었습니다.
 - 이제 컨텍스트 메뉴에서 작업 영역을 직접 새로 고칠 수 있습니다.
 - 이제 작업 영역을 수동으로 새로 고치면 모든 로컬 콘텐츠가 업데이트됩니다.
@@ -90,8 +101,6 @@ Windows 데스크톱 클라이언트에 대한 자세한 내용은 [Windows 데�
 
 *게시 날짜: 2020/02/25*
 
-다운로드: [Windows 64비트](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4qeak), [Windows 32비트](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4qm7h), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4qm7g)
-
 - RDP 파일에 서명이 없거나 signscope 속성 중 하나가 수정된 경우 Windows 가상 데스크톱에 대한 연결이 차단됩니다.
 - 작업 영역이 비어 있거나 제거되면 연결 센터가 더 이상 비어있는 것으로 나타나지 않습니다.
 - 문제 해결을 개선하기 위해 연결 해제 메시지에 활동 ID와 오류 코드를 추가했습니다. **Ctrl+C**를 사용하여 대화 상자 메시지를 복사할 수 있습니다.
@@ -102,8 +111,6 @@ Windows 데스크톱 클라이언트에 대한 자세한 내용은 [Windows 데�
 ## <a name="updates-for-version-12605"></a>1\.2.605 버전에 대한 업데이트
 
 *게시 날짜: 2020/01/29*
-
-다운로드: [Windows 64비트](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4oHrD), [Windows 32비트](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4oJZs), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4oXhD)
 
 - 이제 데스크톱 연결에 사용할 디스플레이를 선택할 수 있습니다. 이 설정을 변경하려면 데스크톱 연결의 아이콘을 마우스 오른쪽 단추로 클릭하고 **설정**을 선택합니다.
 - 연결 설정에서 사용 가능한 크기 조정 요소를 올바르게 표시하지 않는 문제가 해결되었습니다.
@@ -116,8 +123,6 @@ Windows 데스크톱 클라이언트에 대한 자세한 내용은 [Windows 데�
 
 *게시 날짜: 2019년 12월 4일*
 
-다운로드: [Windows 64비트](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4k7jH), [Windows 32비트](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4k7jL), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4k27O)
-
 - 이제는 클라이언트 상단의 명령 모음에 있는 추가 옵션 버튼에서 직접 업데이트에 대한 정보에 액세스할 수 있습니다.
 - 이제는 클라이언트의 명령 모음에서 피드백을 보고할 수 있습니다.
 - 피드백 옵션은 이제 피드백 허브를 사용할 수 있는 경우에만 표시됩니다.
@@ -128,8 +133,6 @@ Windows 데스크톱 클라이언트에 대한 자세한 내용은 [Windows 데�
 ## <a name="updates-for-version-12431"></a>1\.2.431 버전에 대한 업데이트
 
 *게시 날짜: 2019/11/12*
-
-다운로드: [Windows 64비트](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE48kow), [Windows 32비트](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE48koA), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE48zYj)
 
 - 이제 32비트 및 ARM64 버전의 클라이언트를 사용할 수 있습니다!
 - 이제 클라이언트는 연결 모음에 대한 변경 내용(예: 위치, 크기 및 고정 상태)을 저장하고 이러한 변경 내용을 세션 간에 적용합니다.
@@ -148,8 +151,6 @@ Windows 데스크톱 클라이언트에 대한 자세한 내용은 [Windows 데�
 ## <a name="updates-for-version-12247"></a>1\.2.247 버전에 대한 업데이트
 
 *게시 날짜: 2019년 9월 17일*
-
-다운로드: [Windows 64비트](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE3LkSa)
 
 - 지역화된 버전의 대체 언어가 향상되었습니다. 예를 들어 FR-CA는 영어 대신 프랑스어로 올바르게 표시됩니다.
 - 구독을 제거하면 이제 클라이언트의 자격 증명 관리자에서 저장된 자격 증명을 올바르게 제거합니다.
