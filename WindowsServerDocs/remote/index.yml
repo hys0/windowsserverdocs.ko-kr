@@ -1,0 +1,86 @@
+### YamlMime:Landing
+title: 원격
+summary: 원격 액세스 및 서버 관리 활용에 대한 지침.
+metadata:
+  title: 원격
+  description: 원격 액세스 및 서버 관리 활용에 대한 지침.
+  ms.service: help
+  ms.prod: windows-server
+  ms.technology: manage-rsat
+  author: coreyp-at-msft
+  ms.author: coreyp
+  manager: dougkim
+  ms.localizationpriority: high
+  ms.topic: landing-page
+  ms.date: 06/29/2020
+  ms.openlocfilehash: e9b87bf12add79075d1999f2b8f048314aad57ed
+  ms.sourcegitcommit: 457e88e5aa6be13a2bffdb8e434a8efc3698678f
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 06/30/2020
+  ms.locfileid: "85549210"
+landingContent:
+- title: MultiPoint 서비스
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: MultiPoint 서비스 배포 계획
+      url: /windows-server/remote/multipoint-services/planning-a-multipoint-services-deployment
+    - text: MultiPoint 서비스 마이그레이션
+      url: /windows-server/remote/multipoint-services/multipoint-services-migrate
+    - text: MultiPoint 서비스 배포
+      url: /windows-server/remote/multipoint-services/deploying-multipoint-services
+    - text: MultiPoint 서비스 관리
+      url: /windows-server/remote/multipoint-services/managing-multipoint-services
+- title: 원격 데스크톱 서비스
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: 시작
+      url: /windows-server/remote/remote-desktop-services/rds-get-started
+  - linkListType: how-to-guide
+    links:
+    - text: 계획 및 디자인
+      url: /windows-server/remote/remote-desktop-services/rds-plan-and-design
+    - text: 빌드 및 배포
+      url: /windows-server/remote/remote-desktop-services/rds-build-and-deploy
+    - text: 실행 및 조정
+      url: /windows-server/remote/remote-desktop-services/rds-run-and-tune
+    - text: 원격 데스크톱 리소스에 액세스
+      url: /windows-server/remote/remote-desktop-services/clients/remote-desktop-clients
+- title: 원격 액세스
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Always On VPN
+      url: /windows-server/remote/remote-access/vpn/always-on-vpn
+    - text: BGP(경계 게이트웨이 프로토콜)
+      url: /windows-server/remote/remote-access/bgp/border-gateway-protocol-bgp
+    - text: RAS 게이트웨이
+      url: /windows-server/remote/remote-access/ras-gateway/ras-gateway
+    - text: 원격 액세스 서버 역할
+      url: /windows-server/remote/remote-access/ras/remote-access-server-role-documentation
+    - text: VPN(가상 사설망)
+      url: /windows-server/remote/remote-access/vpn/vpn-top
+- title: 웹 애플리케이션 프록시
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Windows Server 2016에서에서 웹 애플리케이션 프록시
+      url: /windows-server/remote/remote-access/web-application-proxy/web-application-proxy-windows-server
+  - linkListType: how-to-guide
+    links:
+    - text: AD FS 사전 인증을 사용하는 애플리케이션 게시
+      url: /windows-server/remote/remote-access/web-application-proxy/publishing-applications-using-ad-fs-preauthentication
+    - text: SharePoint, Exchange 및 RDG로 애플리케이션 게시
+      url: /windows-server/remote/remote-access/web-application-proxy/publishing-applications-with-sharepoint,-exchange-and-rdg
+    - text: 웹 애플리케이션 프록시 문제 해결
+      url: /windows-server/remote/remote-access/web-application-proxy/troubleshooting-web-application-proxy
+- title: 도구
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 원격 서버 관리 도구
+      url: /windows-server/remote/remote-server-administration-tools
+    - text: Windows의 OpenSSH
+      url: /windows-server/administration/openssh/openssh_overview
