@@ -1,4 +1,4 @@
-# [원격](index.md)
+# [원격](index.yml)
 ## [MultiPoint 서비스](multipoint-services/MultiPoint-Services.md)
 ### [MultiPoint 서비스 배포 계획](multipoint-services/Planning-a-MultiPoint-Services-Deployment.md)
 #### [MultiPoint 서비스 소개](multipoint-services/Introducing-MultiPoint-services.md)

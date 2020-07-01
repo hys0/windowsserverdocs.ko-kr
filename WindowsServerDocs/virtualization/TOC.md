@@ -1,4 +1,4 @@
-# [가상화](virtualization.md)
+# [가상화](virtualization.yml)
 
 ## [보호된 패브릭 및 보호된 VM](../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md)
 

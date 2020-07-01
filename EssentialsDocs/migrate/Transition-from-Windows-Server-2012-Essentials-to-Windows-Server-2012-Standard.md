@@ -8,12 +8,12 @@ ms.assetid: 51bcf124-c215-4e9d-9fa8-a90fa2c2fa22
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: e99cceb1acc6df7c9b30cef9f473531a6c35c5c7
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 2477cac206af4e70d10e28d7b1da637b7b7accff
+ms.sourcegitcommit: 457e88e5aa6be13a2bffdb8e434a8efc3698678f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85470248"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548817"
 ---
 # <a name="transition-from-windows-server-essentials-to-windows-server-2012-standard"></a>Windows Server Essentials에서 Windows Server 2012 Standard로 전환
 
@@ -75,11 +75,13 @@ ms.locfileid: "85470248"
 ## <a name="turn-off--windows-server-essentials-features"></a>Windows Server Essentials 기능 해제
  서버를 관리 하는 데 Windows Server Essentials 대시보드 또는 기타 값 추가 기능이 더 이상 필요 하지 않은 경우 기능을 해제 하 고 서버에서 제거할 수 있습니다.
 
- **Windows Server Essentials 기능 해제 마법사** 를 사용 하 여 기능을 제거할 수 있습니다. 또한 Windows Server Essentials 서버 소프트웨어에서 만든 파일의 서버를 정리 합니다.  이러한 정리 작업에는 즉시 수행되는 작업과 서버가 다시 시작된 후에 시작되는 작업이 있습니다.
+ **Windows Server Essentials 기능 해제 마법사:**
+ 
+- 기능을 제거 하는 데 도움이 됩니다. 또한 Windows Server Essentials 서버 소프트웨어에서 만든 파일의 서버를 정리 합니다.  이러한 정리 작업에는 즉시 수행되는 작업과 서버가 다시 시작된 후에 시작되는 작업이 있습니다.
 
- **Windows Server Essentials 기능 해제 마법사** 를 완료 하려면 먼저 모든 추가 기능을 수동으로 제거 해야 합니다. 설치된 추가 기능 목록을 보려면 대시보드에서 애플리케이션 페이지를 엽니다. 마법사에서 설치된 추가 기능을 검색한 경우 경고 메시지와 함께 추가 기능을 제거할지 묻는 메시지가 표시됩니다.
+- 마법사를 완료 하려면 먼저 모든 추가 기능을 수동으로 제거 해야 합니다. 설치된 추가 기능 목록을 보려면 대시보드에서 애플리케이션 페이지를 엽니다. 마법사에서 설치된 추가 기능을 검색한 경우 경고 메시지와 함께 추가 기능을 제거할지 묻는 메시지가 표시됩니다.
 
- **Windows Server Essentials 기능 해제 마법사** 를 사용 하 여 Windows server essentials 기능을 해제 한 후 클라이언트 컴퓨터의 백업 파일을 유지할지 여부를 선택할 수 있습니다.
+- Windows Server Essentials 기능을 해제 한 후 클라이언트 컴퓨터의 백업 파일을 유지할지 여부를 선택할 수 있습니다.
 
  대시보드에서 **Windows Server Essentials 기능 해제 마법사** 를 실행 하는 방법에는 두 가지가 있습니다.
 

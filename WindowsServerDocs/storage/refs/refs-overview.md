@@ -6,13 +6,13 @@ manager: mchad
 ms.technology: storage-file-systems
 ms.topic: article
 author: gawatu
-ms.date: 06/17/2019
-ms.openlocfilehash: 7d33f15aafa432cb3f3174087c3b27855b4f35b2
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.date: 06/29/2019
+ms.openlocfilehash: 5bcdbc76259d1dfecaaa5266bb952a21bcbc7825
+ms.sourcegitcommit: 457e88e5aa6be13a2bffdb8e434a8efc3698678f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85475140"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548898"
 ---
 # <a name="resilient-file-system-refs-overview"></a>ReFS(복원 파일 시스템) 개요
 
@@ -119,24 +119,24 @@ ReFS를 백업 대상으로 배포 하는 것은 자체 복원 력 및 가용성
 
 | 기능       | ReFS                                        | NTFS |
 |---------------------------|------------------|-----------------------|
-| BitLocker 암호화 | 예 | Yes |
+| BitLocker 암호화 | 예 | 예 |
 | 데이터 중복 제거 | 예<sup>1</sup> | 예 |
-| CSV(클러스터링된 공유 볼륨) 지원 | 예<sup>2</sup> | Yes |
-| 소프트 링크 | Yes | Yes |
-| 장애 조치 (Failover) 클러스터 지원 | Yes | Yes |
-| 액세스 제어 목록 | Yes | Yes |
-| USN 저널 | Yes | Yes |
-| 변경 알림 | Yes | Yes |
-| 연결점 | Yes | Yes |
-| 탑재 지점 | Yes | Yes |
-| 재분석 지점 | Yes | Yes |
-| 볼륨 스냅숏 | Yes | Yes |
-| 파일 Id | Yes | Yes |
-| Oplock | Yes | Yes |
-| 스파스 파일 | Yes | Yes |
-| 명명 된 스트림 | Yes | Yes |
-| 씬 프로비저닝 | 예<sup>3</sup> | Yes |
-| 트리밍/매핑 해제 | 예<sup>3</sup> | Yes |
+| CSV(클러스터링된 공유 볼륨) 지원 | 예<sup>2</sup> | 예 |
+| 소프트 링크 | 예 | 예 |
+| 장애 조치 (Failover) 클러스터 지원 | 예 | 예 |
+| 액세스 제어 목록 | 예 | 예 |
+| USN 저널 | 예 | 예 |
+| 변경 알림 | 예 | 예 |
+| 연결점 | 예 | 예 |
+| 탑재 지점 | 예 | 예 |
+| 재분석 지점 | 예 | 예 |
+| 볼륨 스냅숏 | 예 | 예 |
+| 파일 Id | 예 | 예 |
+| Oplock | 예 | 예 |
+| 스파스 파일 | 예 | 예 |
+| 명명 된 스트림 | 예 | 예 |
+| 씬 프로비저닝 | 예<sup>3</sup> | 예 |
+| 트리밍/매핑 해제 | 예<sup>3</sup> | 예 |
 1. Windows Server, 버전 1709 이상에서 사용할 수 있습니다.
 2. Windows Server 2012 R2 이상에서 사용할 수 있습니다.
 3. 저장소 공간만
@@ -145,26 +145,26 @@ ReFS를 백업 대상으로 배포 하는 것은 자체 복원 력 및 가용성
 
 | 기능       | ReFS                                        | NTFS |
 |---------------------------|------------------|-----------------------|
-| 블록 클론 | 예 | 아니요 |
-| 스파스 VDL | 예 | 아니요 |
-| 미러 가속 패리티| 예 (스토리지 공간 다이렉트) | No |
+| 블록 클론 | 예 | 예 |
+| 스파스 VDL | 예 | 예 |
+| 미러 가속 패리티| 예 (스토리지 공간 다이렉트) | 예 |
 
 #### <a name="the-following-features-are-unavailable-on-refs-at-this-time"></a>지금은 ReFS에서 다음 기능을 사용할 수 없습니다.
 
 | 기능       | ReFS                                        | NTFS |
 |---------------------------|------------------|-----------------------|
-| 파일 시스템 압축 | 아니요 | 예 |
-| 파일 시스템 암호화 | 아니요 | 예 |
-| 트랜잭션 | 아니요 | 예 |
-| 하드 링크 | 아니요 | 예 |
-| 개체 ID | 아니요 | 예 |
-| ODX (오프 로드 된 데이터 전송) | 아니요 | 예 |
-| 짧은 이름 | 아니요 | 예 |
-| 확장된 특성 | 아니요 | 예 |
-| 디스크 할당량 | 아니요 | 예 |
-| 부팅 가능 | 아니요 | 예 |
-| 페이지 파일 지원 | 아니요 | 예 |
-| 이동식 미디어에서 지원 됨 | 아니요 | 예 |
+| 파일 시스템 압축 | 예 | 예 |
+| 파일 시스템 암호화 | 예 | 예 |
+| 트랜잭션 | 예 | 예 |
+| 하드 링크 | 예 | 예 |
+| 개체 ID | 예 | 예 |
+| ODX (오프 로드 된 데이터 전송) | 예 | 예 |
+| 짧은 이름 | 예 | 예 |
+| 확장된 특성 | 예 | 예 |
+| 디스크 할당량 | 예 | 예 |
+| 부팅 가능 | 예 | 예 |
+| 페이지 파일 지원 | 예 | 예 |
+| 이동식 미디어에서 지원 됨 | 예 | 예 |
 
 ## <a name="additional-references"></a>추가 참조
 
@@ -172,3 +172,4 @@ ReFS를 백업 대상으로 배포 하는 것은 자체 복원 력 및 가용성
 - [스토리지 공간 다이렉트 개요](../storage-spaces/storage-spaces-direct-overview.md)
 - [ReFS 블록 복제](block-cloning.md)
 - [ReFS 무결성 스트림](integrity-streams.md)
+- [ReFSUtil를 사용 하 여 참조 문제 해결](../../administration/windows-commands/refsutil.md)

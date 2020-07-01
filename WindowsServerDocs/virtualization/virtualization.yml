@@ -1,0 +1,75 @@
+### YamlMime:Landing
+title: 가상화 설명서
+summary: Windows Server의 가상화 기술은 소프트웨어 정의 인프라를 생성하기 위해 필요한 기본 기술 중 하나입니다. 가상화 기능은 네트워킹 및 스토리지와 함께 고객에게 워크로드를 지원하기 위해 필요한 유연성을 제공합니다.
+metadata:
+  title: 가상화 설명서
+  description: Windows Server의 가상화 기술은 소프트웨어 정의 인프라를 생성하기 위해 필요한 기본 기술 중 하나입니다.
+  ms.topic: landing-page
+  author: eross-msft
+  ms.author: lizross
+  ms.prod: windows-server
+  manager: brianlic
+  ms.technology: compute
+  ms.assetid: c248b41f-0de3-7136-9a25-b4b07e41ebf0
+  ms.localizationpriority: high
+  ms.openlocfilehash: 65230ad9d35239a86f5c213807c5f8eed9edfa68
+  ms.sourcegitcommit: 457e88e5aa6be13a2bffdb8e434a8efc3698678f
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 06/30/2020
+  ms.locfileid: "85549178"
+landingContent:
+- title: Windows 컨테이너
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Windows 컨테이너
+      url: /virtualization/windowscontainers
+    - text: 창 컨테이너 정보
+      url: /virtualization/windowscontainers/about/
+    - text: 컨테이너와 가상 머신 비교
+      url: /virtualization/windowscontainers/about/containers-vs-vm
+- title: Windows 10의 Hyper-V
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Windows 10의 hyper-v 개요
+      url: /virtualization/hyper-v-on-windows
+    - text: Windows 10의 Hyper-v 정보
+      url: /virtualization/hyper-v-on-windows/about/
+  - linkListType: get-started
+    links:
+    - text: Hyper-V 설치
+      url: /virtualization/hyper-v-on-windows/quick-start/enable-hyper-v
+    - text: Virtual Machine 만들기
+      url: /virtualization/hyper-v-on-windows/quick-start/create-virtual-machine
+- title: Windows Server의 Hyper-V
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Windows Server의 Hyper-V
+      url: hyper-v/Hyper-V-on-Windows-Server.md
+    - text: Hyper-v 기술 개요
+      url: hyper-v/Hyper-V-Technology-Overview.md
+  - linkListType: reference
+    links:
+    - text: Microsoft Hyper-V Server 2016
+      url: /windows-server/virtualization/hyper-v/hyper-v-server-2016
+    - text: Windows Server의 Hyper-v에 대 한 시스템 요구 사항
+      url: hyper-v/System-requirements-for-Hyper-V-on-Windows.md
+- title: Hyper-V 가상 스위치
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Hyper-V 가상 스위치
+      url: hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md
+  - linkListType: how-to-guide
+    links:
+    - text: Hyper-V 가상 스위치 관리
+      url: hyper-v-virtual-switch/Manage-Hyper-V-Virtual-Switch.md
+- title: 보호 된 패브릭을 사용 하 여 Vm에 대 한 보안 환경 제공
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 보호된 패브릭 및 보호된 VM
+      url: ../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms.md

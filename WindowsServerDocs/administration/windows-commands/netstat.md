@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6eae779216724d82ef7ca05026bcfd9725e6ea35
-ms.sourcegitcommit: 99d548141428c964facf666c10b6709d80fbb215
+ms.openlocfilehash: 6e9cd59169922bb6d76b6c65f3381e653df97109
+ms.sourcegitcommit: 457e88e5aa6be13a2bffdb8e434a8efc3698678f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721546"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548847"
 ---
 # <a name="netstat"></a>netstat
 
@@ -28,7 +28,7 @@ ms.locfileid: "84721546"
 ## <a name="syntax"></a>구문
 
 ```
-netstat [-a] [-e] [-n] [-o] [-p <Protocol>] [-r] [-s] [<interval>]
+netstat [-a] [-b] [-e] [-n] [-o] [-p <Protocol>] [-r] [-s] [<interval>]
 ```
 
 ### <a name="parameters"></a>매개 변수
@@ -36,6 +36,7 @@ netstat [-a] [-e] [-n] [-o] [-p <Protocol>] [-r] [-s] [<interval>]
 | 매개 변수 | Description |
 | --------- | ----------- |
 | 지정하지 않을 경우 | 모든 활성 TCP 연결 및 컴퓨터가 수신 대기 하는 TCP 및 UDP 포트를 표시 합니다. |
+| -b | 각 연결 또는 수신 대기 포트를 만드는 작업과 관련 된 실행 파일을 표시 합니다. 일부 경우에는 잘 알려진 실행 파일이 여러 독립적인 구성 요소를 호스트 하 고, 이러한 경우 연결 또는 수신 대기 포트를 만드는 데 관련 된 일련의 구성 요소가 표시 됩니다. 이 경우 실행 파일 이름은 아래에 있는 []에 있으며, 맨 위는 TCP/IP에 도달할 때까지 호출 되는 구성 요소입니다. 이 옵션은 시간이 많이 걸릴 수 있으며 충분 한 권한이 없으면 실패 합니다.
 | -E | 송 / 수신 패킷 및 바이트의 수와 같은 이더넷 통계를 표시 합니다. 이 매개 변수를 결합할 수 **-s**합니다. |
 | -n | 그러나 활성 TCP 연결을 표시 합니다. 주소 및 포트 번호는 수치화 하는 이름을 확인 하려고 시도 하지. |
 | -o | 활성 TCP 연결을 표시 하 고 각 연결에 대 한 프로세스 ID (PID)를 포함 합니다. Windows 작업 관리자의 프로세스 탭에서 PID를 기준으로 애플리케이션을 찾을 수 있습니다. 이 매개 변수를 결합할 수 **-**, **-n**, 및 **-p**합니다. |
@@ -54,7 +55,7 @@ netstat [-a] [-e] [-n] [-o] [-p <Protocol>] [-r] [-s] [<interval>]
     | X-forwarded-proto | 프로토콜 (TCP 또는 UDP)의 이름입니다. |
     | 로컬 주소 | 사용 중인 로컬 컴퓨터의 IP 주소와 포트 번호입니다. IP 주소에 해당 하는 로컬 컴퓨터의 이름 및 포트의 이름을 확인할 수는 **-n** 매개 변수를 지정 합니다. 포트 연결이 아직 설정 되지 포트 번호는 별표 (*)로 표시 됩니다. |
     | 외부 주소 | 소켓이 연결 된 원격 컴퓨터의 IP 주소와 포트 번호입니다. 않는 한 IP 주소 및 포트에 해당 하는 이름이 표시 됩니다는 **-n** 매개 변수를 지정 합니다. 포트 연결이 아직 설정 되지 포트 번호는 별표 (*)로 표시 됩니다. |
-    | 주 | 다음을 포함 하 여 TCP 연결의 상태를 나타냅니다.<ul><li>CLOSE_WAIT</li><li>CLOSED</li><li>설정</li><li>FIN_WAIT_1</li><li>FIN_WAIT_2</li><li>LAST_ACK</li><li>들</li><li>SYN_RECEIVED</li><li>SYN_SEND</li><li>TIMED_WAIT</li></ul> |
+    | 시스템 상태 | 다음을 포함 하 여 TCP 연결의 상태를 나타냅니다.<ul><li>CLOSE_WAIT</li><li>CLOSED</li><li>설정</li><li>FIN_WAIT_1</li><li>FIN_WAIT_2</li><li>LAST_ACK</li><li>들</li><li>SYN_RECEIVED</li><li>SYN_SEND</li><li>TIMED_WAIT</li></ul> |
 
 ### <a name="examples"></a>예제
 

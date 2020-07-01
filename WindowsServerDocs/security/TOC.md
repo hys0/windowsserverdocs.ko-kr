@@ -1,4 +1,4 @@
-# [보안 및 보증](security-and-assurance.md)
+# [보안 및 보증](security-and-assurance.yml)
 ## [Windows Server 2016에 대한 GDPR(일반 데이터 보호 규정) 여정 시작](gdpr/gdpr-winserver-whitepaper.md)
 ## [보호된 패브릭 및 보호된 VM에 대한 HGS 설정](guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md)
 ### [개요](guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms.md)
