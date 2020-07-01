@@ -8,12 +8,12 @@ ms.author: jol
 ms.date: 09/18/2018
 ms.localizationpriority: medium
 ms.prod: windows-server
-ms.openlocfilehash: 0182c4097ec3bc4432e2ba408d701a72d82a7c8d
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 357c37ec395e5c51f3c3f946414f38ea5f95e9e4
+ms.sourcegitcommit: eaf3fb57517b9110082edad356b12daf3345bb2c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75950079"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85593994"
 ---
 # <a name="publishing-extensions"></a>확장 게시
 
@@ -77,15 +77,12 @@ NuGet 패키지를 만들려면 먼저. nuspec 파일을 만들어야 합니다.
 다음은 nuspec 파일 및 필수 또는 권장 속성 목록입니다. 전체 스키마는 [. nuspec 참조](https://docs.microsoft.com/nuget/reference/nuspec)를 참조 하세요. 원하는 파일 이름으로 프로젝트의 루트 폴더에 nuspec 파일을 저장 합니다.
 
 > [!IMPORTANT]
-> Nuspec 파일의 ```<id>``` 값은 프로젝트의 ```manifest.json``` 파일에서 ```"name"``` 값과 일치 해야 합니다. 그렇지 않으면 게시 된 확장 프로그램이 Windows 관리 센터에서 성공적으로 로드 되지 않습니다.
+> ```<id>```Nuspec 파일의 값은 프로젝트 파일의 값과 일치 해야 합니다. ```"name"``` ```manifest.json``` 그렇지 않으면 게시 된 확장 프로그램이 Windows 관리 센터에서 로드 되지 않습니다.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="https://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <packageTypes>
-      <packageType name="WindowsAdminCenterExtension" />
-    </packageTypes>  
     <id>contoso.project.extension</id>
     <version>1.0.0</version>
     <title>Contoso Hello Extension</title>
@@ -111,22 +108,22 @@ NuGet 패키지를 만들려면 먼저. nuspec 파일을 만들어야 합니다.
 | 속성 이름 | 필수/권장 | 설명 |
 | ---- | ---- | ---- |
 | packageType | 필수 | Windows 관리 센터 확장에 대해 정의 된 NuGet 패키지 유형인 "Windowsadmin중앙 확장"을 사용 합니다. |
-| id | 필수 | 피드 내의 고유한 패키지 식별자입니다. 이 값은 프로젝트의 매니페스트. json 파일의 "name" 값과 일치 해야 합니다.  지침은 [고유한 패키지 식별자 선택](https://docs.microsoft.com/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number)을 참조하세요. |
+| id | 필수 | 피드 내의 고유한 패키지 식별자입니다. 이 값은 프로젝트의 manifest.js파일에서 "name" 값과 일치 해야 합니다.  지침은 [고유한 패키지 식별자 선택](https://docs.microsoft.com/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number)을 참조하세요. |
 | title | Windows 관리 센터 피드에 게시 하는 데 필요 합니다. | Windows 관리 센터 확장 관리자에 표시 되는 패키지의 이름입니다. |
-| version | 필수 | 확장 버전입니다. [의미 체계 버전 관리 (SemVer 규칙)](http://semver.org/spec/v1.0.0.html) 를 사용 하는 것이 좋지만 필수는 아닙니다. |
+| 버전 | 필수 | 확장 버전입니다. [의미 체계 버전 관리 (SemVer 규칙)](http://semver.org/spec/v1.0.0.html) 를 사용 하는 것이 좋지만 필수는 아닙니다. |
 | authors | 필수 | 회사를 대신 하 여 게시 하는 경우 회사 이름을 사용 합니다. |
-| 설명 | 필수 | 확장 기능에 대 한 설명을 제공 합니다. |
+| description | 필수 | 확장 기능에 대 한 설명을 제공 합니다. |
 | iconUrl | Windows 관리 센터 피드에 게시할 때 권장 됨 | 확장 관리자에 표시할 아이콘의 URL입니다. |
 | projectUrl | Windows 관리 센터 피드에 게시 하는 데 필요 합니다. | 확장의 웹 사이트에 대 한 URL입니다. 별도의 웹 사이트가 없는 경우 NuGet 피드에서 패키지 웹 페이지의 URL을 사용 합니다. |
 | licenseUrl | Windows 관리 센터 피드에 게시 하는 데 필요 합니다. | 확장의 최종 사용자 사용권 계약에 대 한 URL입니다. |
-| 파일 | 필수 | 이러한 두 설정은 Windows 관리 센터에서 UI 확장 및 게이트웨이 플러그 인에 대해 예상 하는 폴더 구조를 설정 합니다. |
+| files | 필수 | 이러한 두 설정은 Windows 관리 센터에서 UI 확장 및 게이트웨이 플러그 인에 대해 예상 하는 폴더 구조를 설정 합니다. |
 
 ### <a name="3-build-the-extension-nuget-package"></a>3. 확장 NuGet 패키지 빌드
 
 위에서 만든 nuspec 파일을 사용 하 여 nuget 피드에 업로드 하 고 게시할 수 있는 nupkg 파일을 만듭니다.
 
-1. Nuget [클라이언트 도구 웹 사이트](https://docs.microsoft.com/nuget/install-nuget-client-tools)에서 nuget.exe CLI 도구를 다운로드 합니다.
-2. "Nuget.exe pack [. nuspec file name]"을 실행 하 여 nupkg 파일을 만듭니다.
+1. [NuGet 클라이언트 도구 웹 사이트](https://docs.microsoft.com/nuget/install-nuget-client-tools)에서 nuget.exe CLI 도구를 다운로드 합니다.
+2. "nuget.exe pack [. nuspec file name]"을 실행 하 여 nupkg 파일을 만듭니다.
 
 ### <a name="4-signing-your-extension-nuget-package"></a>4. 확장 NuGet 패키지 서명
 
@@ -148,7 +145,7 @@ Windows 관리 센터 피드에 게시 하면 모든 Windows 관리 센터 사�
 
 ### <a name="submit-an-extension-review-request-to-microsoft"></a>Microsoft에 확장 검토 요청 제출
 
-확장 검토 요청을 제출 하려면 다음 정보를 입력 하 고 [wacextensionrequest@microsoft.com](mailto:wacextensionrequest@microsoft.com?subject=Windows%20Admin%20Center%20Extension%20Review%20Request)전자 메일로 보냅니다. 일주일 이내에 전자 메일에 회신 합니다.
+확장 검토 요청을 제출 하려면 다음 정보를 입력 하 고에 전자 메일로 보냅니다 [wacextensionrequest@microsoft.com](mailto:wacextensionrequest@microsoft.com?subject=Windows%20Admin%20Center%20Extension%20Review%20Request) . 일주일 이내에 전자 메일에 회신 합니다.
 
 ```
 Windows Admin Center Extension Review Request
@@ -167,4 +164,4 @@ Windows Admin Center Extension Review Request
 - 스크린샷 또는 비디오를 포함 하는 확장에 대 한 자세한 설명
 - 의견이 나 질문을 수신 하는 전자 메일 주소 또는 웹 사이트 기능
 
-확장을 게시할 준비가 되 면 [wacextensionrequest@microsoft.com](mailto:wacextensionrequest@microsoft.com?subject=Windows%20Admin%20Center%20Extension%20Package%20Review) 에 전자 메일을 보내면 확장 패키지를 전송 하는 방법에 대 한 지침을 제공 합니다. 패키지가 수신 되 면 검토 하 고 승인 되 면 Windows 관리 센터 피드에 게시 합니다.
+확장을 게시할 준비가 되 면에 전자 메일을 보내면 [wacextensionrequest@microsoft.com](mailto:wacextensionrequest@microsoft.com?subject=Windows%20Admin%20Center%20Extension%20Package%20Review) 확장 패키지를 전송 하는 방법에 대 한 지침을 제공 합니다. 패키지가 수신 되 면 검토 하 고 승인 되 면 Windows 관리 센터 피드에 게시 합니다.
