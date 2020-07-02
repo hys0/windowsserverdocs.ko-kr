@@ -8,12 +8,12 @@ ms.author: harowl
 ms.localizationpriority: medium
 ms.prod: windows-server
 ms.date: 03/24/2019
-ms.openlocfilehash: 28108a79bbdc654f6437a698c158a3f74d4423ba
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: d6c18e3c4ef052b2e2d274f491762d8e31de4758
+ms.sourcegitcommit: c40c29683d25ed75b439451d7fa8eda9d8d9e441
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79322945"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85833316"
 ---
 # <a name="monitor-servers-and-configure-alerts-with-azure-monitor-from-windows-admin-center"></a>Windows 관리 센터에서 서버를 모니터링 하 고 Azure Monitor를 사용 하 여 경고 구성
 
@@ -22,7 +22,7 @@ ms.locfileid: "79322945"
 [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview) 은 온-프레미스와 클라우드 모두에서 Windows 서버 및 vm을 비롯 한 다양 한 리소스에서 원격 분석을 수집 하 고 분석 하 고 작동 하는 솔루션입니다. Azure Monitor는 Azure Vm 및 기타 Azure 리소스에서 데이터를 끌어올 것 이지만,이 문서에서는 Azure Monitor Windows 관리 센터에서 온-프레미스 서버와 Vm을 사용 하는 방법을 집중적으로 설명 합니다. Azure Monitor를 사용 하 여 하이퍼 수렴 형 클러스터에 대 한 전자 메일 경고를 가져오는 방법에 대 한 자세한 내용은 [Azure Monitor를 사용 하 여 상태 관리 서비스 오류에 대](https://docs.microsoft.com/windows-server/storage/storage-spaces/configure-azure-monitor)한 전자 메일 보내기를 참조 하세요.
 
 ## <a name="how-does-azure-monitor-work"></a>Azure Monitor 작동 방법
-온-프레미스 Windows 서버에서 생성 된 img](../media/azure-monitor-diagram.png) 데이터 ![Azure Monitor의 Log Analytics 작업 영역에서 수집 됩니다. 작업 영역 내에서 특정 시나리오에 대 한 정보를 제공 하는 논리 집합 등 다양 한 모니터링 솔루션을 사용 하도록 설정할 수 있습니다. 예를 들어 Azure 업데이트 관리, Azure Security Center 및 VM용 Azure Monitor는 작업 영역 내에서 사용할 수 있는 모든 모니터링 솔루션입니다. 
+![](../media/azure-monitor-diagram.png)온-프레미스 Windows 서버에서 생성 된 img 데이터는 Azure Monitor의 Log Analytics 작업 영역에서 수집 됩니다. 작업 영역 내에서 특정 시나리오에 대 한 정보를 제공 하는 논리 집합 등 다양 한 모니터링 솔루션을 사용 하도록 설정할 수 있습니다. 예를 들어 Azure 업데이트 관리, Azure Security Center 및 VM용 Azure Monitor는 작업 영역 내에서 사용할 수 있는 모든 모니터링 솔루션입니다. 
 
 Log Analytics 작업 영역에서 모니터링 솔루션을 사용 하도록 설정 하면 해당 작업 영역에 보고 하는 모든 서버에서 해당 솔루션과 관련 된 데이터를 수집 하기 시작 하므로 솔루션이 작업 영역에 있는 모든 서버에 대 한 정보를 생성할 수 있습니다. 
 
@@ -68,7 +68,7 @@ Azure Monitor의 무료 5gb 데이터/월/고객 허용 기간을 사용 하면 
 
 서버를 Azure Monitor 연결 하면 설정 > 모니터링 및 경고 페이지에서 지능형 하이퍼링크를 사용 하 여 Azure Portal로 이동할 수 있습니다. 관리 센터는 성능 카운터를 자동으로 수집할 수 있도록 하므로 미리 정의 된 많은 쿼리 중 하나를 사용자 지정 하거나 직접 작성 하 여 [새 경고를 쉽게 만들](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-log) 수 있습니다.
 
-### <a name="get-a-consolidated-view-across-multiple-servers-"></a>\* * 여러 서버에서 통합 보기 가져오기 * *
+### <a name="get-a-consolidated-view-across-multiple-servers-"></a>* * 여러 서버에서 통합 보기 가져오기 * *
 
 Azure Monitor 내에서 단일 Log Analytics 작업 영역에 여러 서버를 등록 하는 경우 Azure Monitor 내에서 [Virtual Machines Insights 솔루션](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-overview) 의 모든 서버에 대 한 통합 보기를 가져올 수 있습니다.  Azure Monitor에 대 한 Virtual Machines Insights의 성능 및 맵 탭만 온-프레미스 서버에서 작동 하며, 상태 탭은 Azure Vm 에서만 작동 합니다. Azure Portal에서이를 보려면 Azure Monitor > Virtual Machines (정보)로 이동 하 여 "성능" 또는 "맵" 탭으로 이동 합니다.
 
@@ -81,6 +81,6 @@ Azure Monitor 내에서 단일 Log Analytics 작업 영역에 여러 서버를 �
 
 ## <a name="disabling-monitoring"></a>모니터링 사용 안 함
 
-Log Analytics 작업 영역에서 서버를 완전히 분리 하려면 MMA 에이전트를 제거 합니다. 즉,이 서버는 더 이상 작업 영역에 데이터를 전송 하지 않으며 해당 작업 영역에 설치 된 모든 솔루션이 더 이상 해당 서버에서 데이터를 수집 및 처리 하지 않습니다. 그러나 작업 영역 자체에는 영향을 주지 않습니다 .이 작업 영역에 보고 하는 모든 리소스는이 작업을 계속 수행 합니다. WAC 내에서 MMA agent를 제거 하려면 앱 & 기능으로 이동 하 Microsoft Monitoring Agent를 찾은 다음 제거를 클릭 합니다.
+Log Analytics 작업 영역에서 서버를 완전히 분리 하려면 MMA 에이전트를 제거 합니다. 즉,이 서버는 더 이상 작업 영역에 데이터를 전송 하지 않으며 해당 작업 영역에 설치 된 모든 솔루션이 더 이상 해당 서버에서 데이터를 수집 및 처리 하지 않습니다. 그러나 작업 영역 자체에는 영향을 주지 않습니다 .이 작업 영역에 보고 하는 모든 리소스는이 작업을 계속 수행 합니다. Windows 관리 센터 내에서 MMA agent를 제거 하려면 서버에 연결한 다음 **설치 된 앱**으로 이동 하 여 Microsoft Monitoring Agent 찾은 다음 **제거**를 선택 합니다.
 
 작업 영역 내에서 특정 솔루션을 해제 하려면 [Azure Portal에서 모니터링 솔루션을 제거](https://docs.microsoft.com/azure/azure-monitor/insights/solutions#remove-a-management-solution)해야 합니다. 모니터링 솔루션을 제거 하면 해당 솔루션에 의해 생성 된 정보는 해당 작업 영역에 보고 하는 _모든_ 서버에 대해 더 이상 생성 되지 않습니다. 예를 들어 VM용 Azure Monitor 솔루션을 제거 하면 내 작업 영역에 연결 된 컴퓨터에서 VM 또는 서버 성능에 대 한 정보가 더 이상 표시 되지 않습니다.

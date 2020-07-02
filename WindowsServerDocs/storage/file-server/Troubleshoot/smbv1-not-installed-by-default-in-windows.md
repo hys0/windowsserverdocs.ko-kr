@@ -5,37 +5,42 @@ author: Deland-Han
 manager: dcscontentpm
 ms.topic: article
 ms.author: delhan
-ms.date: 12/25/2019
-ms.openlocfilehash: a1e1a30530f937289770bcef9e71189bf69719ce
-ms.sourcegitcommit: 7200143aa787c7ac05ae0e012263b1c9a95b87ed
+ms.date: 07/01/2020
+ms.openlocfilehash: 18c315a8b3562c25b5fe1c537a8922fc148e444b
+ms.sourcegitcommit: c40c29683d25ed75b439451d7fa8eda9d8d9e441
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721761"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85833289"
 ---
 # <a name="smbv1-is-not-installed-by-default-in-windows-10-version-1709-windows-server-version-1709-and-later-versions"></a>SMBv1는 Windows 10 버전 1709, Windows Server 버전 1709 이상 버전에서 기본적으로 설치 되지 않습니다.
 
 ## <a name="summary"></a>요약
 
-Windows 10의 작성자 업데이트 및 Windows Server, 버전 1709 (RS3) 이상 버전에서 서버 메시지 블록 버전 1 (SMBv1) 네트워크 프로토콜은 더 이상 기본적으로 설치 되지 않습니다. 2007 년부터 시작 하 여 SMBv2 이상 프로토콜에 의해 대체 되었습니다. Microsoft는 2014에서 SMBv1 프로토콜을 공개적으로 사용 하지 않습니다. 
+Windows 10의 작성자 업데이트 및 Windows Server, 버전 1709 (RS3) 이상 버전에서 서버 메시지 블록 버전 1 (SMBv1) 네트워크 프로토콜은 더 이상 기본적으로 설치 되지 않습니다. 2007부터 시작 하는 SMBv2 이상 프로토콜에 의해 대체 되었습니다. Microsoft는 2014에서 SMBv1 프로토콜을 공개적으로 사용 하지 않습니다. 
 
-SMBv1는 Windows 10의 Windows 10 크리에이터 업데이트 및 Windows Server 버전 1709 (RS3)에서 다음과 같은 동작을 수행 합니다. 
+SMBv1는 Windows 10 및 Windows Server 버전 1709 (RS3)에서 시작 하는 다음과 같은 동작을 포함 합니다. 
  
 - 이제 SMBv1에는 클라이언트 및 서버 하위 기능이 따로 제거 될 수 있습니다.    
-- Windows 10 Enterprise 및 Windows 10 교육에는 새로 설치한 후 기본적으로 SMBv1 클라이언트 또는 서버가 더 이상 포함 되지 않습니다.    
+- Windows 10 Enterprise, Windows 10 교육용 및 Windows 10 Pro for Workstation에는 새로 설치 후 기본적으로 SMBv1 클라이언트 또는 서버가 더 이상 포함 되지 않습니다.    
 - Windows Server 2016에는 새로 설치한 후 기본적으로 SMBv1 클라이언트 또는 서버가 더 이상 포함 되지 않습니다.    
-- Windows 10 Home 및 Windows 10 Professional은 새로 설치한 후 기본적으로 SMBv1 서버를 더 이상 포함 하지 않습니다.    
-- Windows 10 Home 및 Windows 10 Professional은 새로 설치한 후에도 기본적으로 SMBv1 클라이언트를 포함 합니다. SMBv1 클라이언트가 전체 15 일 동안 사용 되지 않는 경우 (컴퓨터를 해제 하는 경우 제외) 자동으로 자동으로 제거 됩니다.    
-- Windows 10 Home 및 Windows 10 Professional의 전체 업그레이드 및 Insider 항공편은 처음에 SMBv1를 자동으로 제거 하지 않습니다. SMBv1 클라이언트나 서버를 총 15 일 동안 사용 하지 않으면 (컴퓨터가 꺼진 시간 제외) 각각 자동으로 제거 됩니다.     
-- Windows 10 Enterprise 및 Windows 10 교육용 버전의 전체 업그레이드 및 Insider 항공편은 SMBv1을 자동으로 제거 하지 않습니다. 관리자는 이러한 관리 되는 환경에서 SMBv1 제거를 결정 해야 합니다. Windows 10 버전 1809 (RS5) 이상 버전에서 관리자는 "SMB 1.0/CIFS 자동 제거" 기능을 설정 하 여 SMBv1 자동 제거를 활성화할 수 있습니다.    
+- Windows 10 Home 및 Windows 10 Pro에는 새로 설치한 후 기본적으로 SMBv1 서버가 더 이상 포함 되지 않습니다.    
+- Windows 10 Home 및 Windows 10 Pro는 새로 설치 된 후에도 기본적으로 SMBv1 클라이언트를 포함 합니다. SMBv1 클라이언트가 전체 15 일 동안 사용 되지 않는 경우 (컴퓨터를 해제 하는 경우 제외) 자동으로 자동으로 제거 됩니다.    
+- Windows 10 Home 및 Windows 10 Pro의 전체 업그레이드 및 Insider 항공편은 처음에 SMBv1를 자동으로 제거 하지 않습니다. SMBv1 클라이언트나 서버를 총 15 일 동안 사용 하지 않으면 (컴퓨터가 꺼진 시간 제외) 각각 자동으로 제거 됩니다.     
+- Windows 10 Enterprise, windows 10 교육용 및 Windows 10 Pro for Workstation 버전의 전체 업그레이드 및 Insider 항공편은 SMBv1을 자동으로 제거 하지 않습니다. 관리자는 이러한 관리 되는 환경에서 SMBv1 제거를 결정 해야 합니다. 
 - 15 일 후 SMBv1 자동 제거는 일회성 작업입니다. 관리자가 SMBv1를 다시 설치 하는 경우 추가 시도는 제거 되지 않습니다.
 - SMB 버전 2.02, 2.1, 3.0, 3.02 및 3.1.1 기능은 기본적으로 SMBv2 이진 파일의 일부로 완전히 지원 되 고 포함 되어 있습니다.    
 - 컴퓨터 브라우저 서비스는 SMBv1를 사용 하므로 SMBv1 클라이언트나 서버가 제거 되 면 서비스가 제거 됩니다. 즉, Explorer 네트워크가 레거시 NetBIOS 데이터 그램 검색 방법을 통해 Windows 컴퓨터를 더 이상 표시할 수 없습니다.    
 - SMBv1는 Windows 10 및 Windows Server 2016의 모든 버전에서 계속 다시 설치할 수 있습니다.    
- 
+
+SMBv1는 Windows 10의 RS5 (버전 1809)에서 다음과 같은 추가 동작을 수행 합니다. 1709 버전의 다른 모든 동작은 여전히 적용 됩니다.
+
+- Windows 10 Pro는 새로 설치 된 후 기본적으로 SMBv1 클라이언트를 더 이상 포함 하지 않습니다.
+- Windows 10 Enterprise, Windows 10 교육용 및 Windows 10 Pro for Workstation에서 관리자는 "SMB 1.0/CIFS 자동 제거" 기능을 설정 하 여 SMBv1 자동 제거를 활성화할 수 있습니다.
+
   > [!NOTE]
-  > Windows 10, 버전 1803 (RS4) Professional은 Windows 10, 버전 1703 (RS2) 및 Windows 10 버전 1607 (RS1)와 동일한 방식으로 SMBv1를 처리 합니다. 이 문제는 Windows 10 버전 1809 (RS5)에서 해결 되었습니다. 여전히 SMBv1를 수동으로 제거할 수 있습니다. 그러나 다음 시나리오에서는 15 일 후 Windows가 자동으로 SMBv1를 제거 하지 않습니다. 
- 
+  > Windows 10, 버전 1803 (RS4) Pro는 Windows 10, 버전 1703 (RS2) 및 Windows 10 버전 1607 (RS1)와 동일한 방식으로 SMBv1를 처리 합니다. 이 문제는 Windows 10 버전 1809 (RS5)에서 해결 되었습니다. 여전히 SMBv1를 수동으로 제거할 수 있습니다. 그러나 다음 시나리오에서는 15 일 후 Windows가 자동으로 SMBv1를 제거 하지 않습니다. 
+
 -  Windows 10 버전 1803을 새로 설치 합니다.     
 -  Windows 10, 버전 1709로 먼저 업그레이드 하지 않고 windows 10, 버전 1607 또는 Windows 10, 버전 1703을 Windows 10, 버전 1803로 직접 업그레이드할 수 있습니다.     
  

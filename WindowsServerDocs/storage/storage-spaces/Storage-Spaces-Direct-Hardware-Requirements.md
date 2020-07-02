@@ -1,22 +1,22 @@
 ---
-title: 저장소 공간 다이렉트 하드웨어 요구 사항
+title: 스토리지 공간 다이렉트 하드웨어 요구 사항
 ms.prod: windows-server
-description: 저장소 공간 다이렉트 테스트에 대한 최소 하드웨어 요구 사항
+description: 테스트 스토리지 공간 다이렉트에 대 한 최소 하드웨어 요구 사항
 ms.author: eldenc
 manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: eldenchristensen
-ms.date: 08/05/2019
+ms.date: 06/24/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 42022b6e2e3564d1440e2ba1d45f9f98430242c0
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 0e34f74226edb56e8db0290fd5dc83f0c6e54221
+ms.sourcegitcommit: c40c29683d25ed75b439451d7fa8eda9d8d9e441
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80861056"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85833326"
 ---
-# <a name="storage-spaces-direct-hardware-requirements"></a>저장소 공간 다이렉트 하드웨어 요구 사항
+# <a name="storage-spaces-direct-hardware-requirements"></a>하드웨어 요구 사항 스토리지 공간 다이렉트
 
 > 적용 대상: Windows Server 2019, Windows Server 2016
 
@@ -33,13 +33,13 @@ ms.locfileid: "80861056"
 
 ![SDDC AQs을 보여 주는 Windows Server 카탈로그의 스크린샷](media/hardware-requirements/sddc-aqs.png)
 
-완전히 구성 된 클러스터 (서버, 네트워킹 및 저장소)는 장애 조치(Failover) 클러스터 관리자에서 마법사 당 모든 [클러스터 유효성 검사 테스트](https://technet.microsoft.com/library/cc732035(v=ws.10).aspx) 를 통과 하거나 PowerShell에서 `Test-Cluster` [cmdlet](https://docs.microsoft.com/powershell/module/failoverclusters/test-cluster?view=win10-ps) 을 사용 해야 합니다.
+완전히 구성 된 클러스터 (서버, 네트워킹 및 저장소)는 장애 조치(Failover) 클러스터 관리자에서 마법사 당 모든 [클러스터 유효성 검사 테스트](https://technet.microsoft.com/library/cc732035(v=ws.10).aspx) 를 통과 하거나 `Test-Cluster` PowerShell에서 [cmdlet](https://docs.microsoft.com/powershell/module/failoverclusters/test-cluster?view=win10-ps) 을 사용 해야 합니다.
 
 또한 다음과 같은 요구 사항이 적용 됩니다.
 
 ## <a name="servers"></a>서버
 
-- 최소 2대~최대 16대의 서버
+- 최소 2 개 서버, 최대 16 개의 서버
 - 모든 서버를 제조업체 및 모델로 동일 하 게 하는 것이 좋습니다.
 
 ## <a name="cpu"></a>CPU
@@ -52,7 +52,7 @@ ms.locfileid: "80861056"
 - Windows Server, Vm 및 기타 앱 또는 워크 로드에 대 한 메모리 항목과
 - 스토리지 공간 다이렉트 메타 데이터의 경우 각 서버에서 캐시 드라이브 용량의 1tb (테라바이트) 당 4gb RAM
 
-## <a name="boot"></a>Boot
+## <a name="boot"></a>부팅
 
 - [이제 SATADOM을 포함](https://cloudblogs.microsoft.com/windowsserver/2017/08/30/announcing-support-for-satadom-boot-drives-in-windows-server-2016/) 하는 Windows Server에서 지원 되는 부팅 장치
 - RAID 1 미러가 필요 **하지** 않지만 부팅에 대해 지원 됩니다.
@@ -78,15 +78,16 @@ ms.locfileid: "80861056"
 
 ## <a name="drives"></a>드라이브
 
-스토리지 공간 다이렉트는 각각 하나의 서버에 물리적으로 연결 된 직접 연결 된 SATA, SAS 또는 NVMe 드라이브와 함께 작동 합니다. 드라이브 선택에 대한 자세한 도움말은 [드라이브 선택](choosing-drives.md) 항목을 참조하세요.
+스토리지 공간 다이렉트는 각각 하나의 서버에 실제로 연결 된 직접 연결 된 SATA, SAS, NVMe 또는 PMem (영구 메모리) 드라이브에서 작동 합니다. 드라이브를 선택 하는 데 대 한 자세한 내용은 [드라이브 선택](choosing-drives.md) 및 [영구 메모리 이해 및 배포](deploy-pmem.md) 항목을 참조 하세요.
 
-- SATA, SAS 및 NVMe (M. 2, U. 2, 추가 카드) 드라이브가 모두 지원 됩니다.
+- SATA, SAS, 영구 메모리 및 NVMe (M. 2, U. 2 및 추가 기능 카드) 드라이브가 모두 지원 됩니다.
 - 512n, 512n 및 4K 기본 드라이브가 모두 지원 됩니다.
 - 반도체 드라이브는 [전원 손실 방지 기능을](https://blogs.technet.microsoft.com/filecab/2016/11/18/dont-do-it-consumer-ssd/) 제공 해야 합니다.
 - 모든 서버에서 드라이브의 수와 유형이 동일 합니다. [드라이브 대칭 고려 사항을](drive-symmetry-considerations.md) 참조 하세요.
 - 캐시 장치는 32 GB 이상 이어야 합니다.
+- 영구 메모리 장치가 블록 저장소 모드에서 사용 됩니다.
 - 영구적 메모리 장치를 캐시 장치로 사용할 경우에는 NVMe 또는 SSD 용량 장치 (Hdd를 사용할 수 없음)를 사용 해야 합니다.
-- NVMe 드라이버는 Microsoft에서 제공 하는 Windows에 포함 되어 있습니다. (stornvme. sys)
+- NVMe 드라이버가 Microsoft에서 제공 하는 것은 Windows에 포함 되어 있습니다 (stornvme.sys).
 - 권장: 용량 드라이브 수는 캐시 드라이브 수의 전체 배수입니다.
 - 권장: 캐시 드라이브에는 최대 3 개의 드라이브 쓰기 endurance (DWPD) 또는 하루에 최소 4 테라바이트 쓰기 (TBW)를 포함 해야 합니다. [(DWPD)의 드라이브 쓰기 이해 (), 테라바이트 기록 (TBW) 및 최소 권장 스토리지 공간 다이렉트](https://blogs.technet.microsoft.com/filecab/2017/08/11/understanding-dwpd-tbw/)
 
@@ -110,26 +111,26 @@ ms.locfileid: "80861056"
 
 ### <a name="minimum-number-of-drives-excludes-boot-drive"></a>최소 드라이브 수 (부팅 드라이브 제외)
 
-- 캐시로 사용되는 드라이브가 있는 경우 서버당 최소 2개 이상이어야 함
-- 용량 드라이브(캐시 이외)가 서버당 최소 4개 이상이어야 함
+- 캐시로 사용 되는 드라이브가 있는 경우 서버당 2 개 이상 이어야 합니다.
+- 서버당 4 개 이상의 용량 (비 캐시) 드라이브가 있어야 합니다.
 
-| 보유 드라이브 종류   | 필요한 최소 수 |
+| 제공 되는 드라이브 유형   | 필요한 최소 수 |
 |-----------------------|-------------------------|
 | 모든 영구 메모리 (동일한 모델) | 영구적 메모리 4 개 |
-| 모두 NVMe(동일한 모델) | NVMe 4개                  |
-| 모두 SSD(동일한 모델)  | SSD 4개                   |
+| 모든 NVMe (동일한 모델) | 4 NVMe                  |
+| 모든 SSD (동일한 모델)  | 4 SSD                   |
 | 영구적 메모리 + NVMe 또는 SSD | 2 영구 메모리 + 4 NVMe 또는 SSD |
-| NVMe + SSD            | NVMe 2개 + SSD 4개          |
-| NVMe + HDD            | NVMe 2개 + HDD 4개          |
-| SSD + HDD             | SSD 2개 + HDD 4개           |
-| NVMe + SSD + HDD      | NVMe 2개 + 기타 4개       |
+| NVMe + SSD            | 2 NVMe + 4 SSD          |
+| NVMe + HDD            | 2 NVMe + 4 HDD          |
+| SSD + HDD             | 2 SSD + 4 HDD           |
+| NVMe + SSD + HDD      | 2 NVMe + 4 기타       |
 
    >[!NOTE]
    > 이 표에서는 최소 하드웨어 배포를 제공 합니다. Microsoft Azure와 같이 가상 컴퓨터 및 가상화 된 저장소를 사용 하 여 배포 하는 경우 [게스트 가상 컴퓨터 클러스터에서 스토리지 공간 다이렉트 사용](storage-spaces-direct-in-vm.md)을 참조 하세요.
 
 ### <a name="maximum-capacity"></a>최대 용량
 
-| 최대값                | Windows Server 2019  | Windows Server 2016  |
+| 최대값                | Windows Server 2019  | Windows Server 2016  |
 | ---                     | ---------            | ---------            |
-| 서버당 원시 용량 | 400 TB               | 100 TB               |
-| 풀 용량           | 4 PB (4000 TB)      | 1 PB                 |
+| 서버당 원시 용량 | 400TB               | 100TB               |
+| 풀 용량           | 4 PB (4000 TB)      | 1PB                 |

@@ -7,32 +7,40 @@ manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 09/19/2019
+ms.date: 07/01/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 19679a6838d583ef93175f5f95aa21e8aeca9b36
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 2ffe34097971f4477f0f536637b49b704678c93e
+ms.sourcegitcommit: c40c29683d25ed75b439451d7fa8eda9d8d9e441
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85475260"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85833370"
 ---
 # <a name="choosing-drives-for-storage-spaces-direct"></a>스토리지 공간 다이렉트 드라이브 선택
 
->적용 대상: Windows 2019, Windows Server 2016
+>적용 대상: Windows Server 2019, Windows Server 2016
 
 이 항목에서는 성능 및 용량 요구 사항을 충족 하기 위해 [스토리지 공간 다이렉트](storage-spaces-direct-overview.md) 드라이브를 선택 하는 방법에 대 한 지침을 제공 합니다.
 
 ## <a name="drive-types"></a>드라이브 종류
 
-현재 스토리지 공간 다이렉트는 다음과 같은 세 가지 유형의 드라이브로 작동 합니다.
+현재 스토리지 공간 다이렉트는 다음과 같은 4 가지 유형의 드라이브로 작동 합니다.
 
 <table>
+    <tr style="border: 0;">
+        <td style="padding: 10px; border: 0; width:70px">
+            <img src="media/understand-the-cache/pmem-100px.png">
+        </td>
+        <td style="padding: 10px; border: 0;" valign="middle">
+            <b>PMem</b> 은 영구 메모리, 짧은 대기 시간의 새로운 유형, 고성능 저장소를 나타냅니다.
+        </td>
+    </tr>
     <tr style="border: 0;">
         <td style="padding: 10px; border: 0; width:70px">
             <img src="media/understand-the-cache/NVMe-100px.png">
         </td>
         <td style="padding: 10px; border: 0;" valign="middle">
-            <b>NVMe</b> (비휘발성 메모리 Express)는 PCIe 버스에 직접 앉아 있는 반도체 드라이브를 나타냅니다. 일반적인 폼 팩터는 2.5 "U. 2, PCIe 추가 기능 카드 (AIC) 및 M. 2입니다. NVMe는 현재 지원 되는 다른 종류의 드라이브 보다 낮은 대기 시간으로 더 높은 IOPS 및 IO 처리량을 제공 합니다.
+            <b>NVMe</b> (비휘발성 메모리 Express)는 PCIe 버스에 직접 앉아 있는 반도체 드라이브를 나타냅니다. 일반적인 폼 팩터는 2.5 "U. 2, PCIe 추가 기능 카드 (AIC) 및 M. 2입니다. NVMe는 영구 메모리를 제외 하 고 현재 지원 되는 다른 종류의 드라이브 보다 낮은 대기 시간으로 더 높은 IOPS 및 IO 처리량을 제공 합니다.
         </td>
     </tr>
     <tr style="border: 0;">
