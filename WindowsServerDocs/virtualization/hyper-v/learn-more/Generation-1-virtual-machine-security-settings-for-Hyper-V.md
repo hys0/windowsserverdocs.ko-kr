@@ -9,12 +9,12 @@ ms.assetid: f8f8c569-8b74-4c19-876e-1c7d00cce308
 author: larsiwer
 ms.author: kathydav
 ms.date: 10/04/2016
-ms.openlocfilehash: f745ccd9e5a82aa79fb58798f233bf2662b00a70
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 01a4882ec766673af5ff8f57debb829ace743d77
+ms.sourcegitcommit: 457e88e5aa6be13a2bffdb8e434a8efc3698678f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85475640"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548706"
 ---
 # <a name="generation-1-virtual-machine-security-settings"></a>1 세대 가상 머신의 보안 설정
 
@@ -39,11 +39,11 @@ Hyper-v 관리자 1 세대 가상 머신의 보안 설정에 사용하여 데이
 - 이 가상 머신에는 권한 있는 가드 된 패브릭의 일부 또는
 - 가상 머신의 보호자 중 하나에서 프라이빗 키를 있습니다.
 
-보호 된 패브릭에 대 한 자세한 내용은의 차폐 Vm 소개 섹션을 참조 하십시오 [보안 및 보증](../../../security/Security-and-Assurance.md)합니다.
+보호 된 패브릭에 대 한 자세한 내용은의 차폐 Vm 소개 섹션을 참조 하십시오 [보안 및 보증](../../../security/Security-and-Assurance.yml)합니다.
 
 가상 머신의 IDE 컨트롤러 중 하나를 빈 슬롯 키 스토리지 드라이브를 추가할 수 있습니다. 이 작업을 수행하려면 **키 스토리지 드라이브 추가**를 클릭하여 이 가상 머신의 첫 번째 무료 IDE 컨트롤러 슬롯에 키 스토리지 드라이브를 추가하세요.
 
 ## <a name="additional-references"></a>추가 참조
 
 - [Hyper-V 관리자에서 2세대 가상 머신 보안 설정](Generation-2-virtual-machine-security-settings-for-hyper-v.md)
-- [보안 및 보증](../../../security/Security-and-Assurance.md)
+- [보안 및 보증](../../../security/Security-and-Assurance.yml)

@@ -9,12 +9,12 @@ ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: daveba
 ms.reviewer: mas
-ms.openlocfilehash: 5fefdb83667ba7893218de21df1f6c36cae40e12
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 806a2aced95421bd469ba885d4a81c219ae1b651
+ms.sourcegitcommit: 457e88e5aa6be13a2bffdb8e434a8efc3698678f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80855126"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548837"
 ---
 # <a name="securing-privileged-access"></a>권한 있는 액세스 보안
 
@@ -62,11 +62,11 @@ Active Directory Domain Services 관리자와 같은 권한 있는 계정은 IT 
 
 Microsoft 권장 로드맵은 다음과 같은 3단계로 구성됩니다.
 
-* [1단계: 처음 30일]()
+* [1단계: 처음 30일](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/securing-privileged-access#phase-1-quick-wins-with-minimal-operational-complexity)
    * 의미 있는 긍정적인 효과를 통해 빠르게 성공
-* [2단계: 90일]()
+* [2단계: 90일](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/securing-privileged-access#phase-2-significant-incremental-improvements)
    * 대폭 향상
-* [3단계: 지속]()
+* [3단계: 지속](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/securing-privileged-access#phase-3-security-improvement-and-sustainment)
    * 보안 향상 및 지속
 
 로드맵은 이러한 공격 및 솔루션 구현에 대한 Microsoft의 경험을 바탕으로 가장 효과적이고 신속한 구현부터 우선적으로 수행하도록 지정되었습니다. 

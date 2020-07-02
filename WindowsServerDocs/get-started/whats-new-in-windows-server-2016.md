@@ -10,12 +10,12 @@ author: jasongerend
 ms.author: jgerend
 manager: dongill
 ms.localizationpriority: medium
-ms.openlocfilehash: c3eb62d53ef11d5531590e1a6d46cd6cacaf2e4a
-ms.sourcegitcommit: 5bc5aaf341c711113ca03d1482f933b05b146007
+ms.openlocfilehash: 01b06c2869469ee65e23df2b1f5ca35fb266d234
+ms.sourcegitcommit: 457e88e5aa6be13a2bffdb8e434a8efc3698678f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85094534"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548736"
 ---
 # <a name="whats-new-in-windows-server-2016"></a>Windows Server 2016의 새로운 기능
 
@@ -23,7 +23,7 @@ ms.locfileid: "85094534"
 
 ![신문을 표시하는 아이콘](media/whats-new.png) Windows의 최신 기능을 알아보려면 [Windows Server의 새로운 기능](whats-new-in-windows-server.md)을 참조하세요. 이 섹션은 Windows Server&reg; 2016의 새로운 기능과 변경된 기능을 설명하는 내용입니다. 여기에 나열된 새로운 기능 및 변경 사항은 이 릴리스를 사용할 때 가장 많은 영향을 줄 수 있습니다.
 
-## <a name="compute"></a>[Compute](../virtualization/virtualization.md)
+## <a name="compute"></a>[Compute](../virtualization/virtualization.yml)
 
 가상화 영역에는 IT 전문가가 Windows Server를 디자인, 배포 및 유지 관리하는 데 유용한 가상화 제품 및 기능이 포함됩니다.  
 
@@ -109,8 +109,8 @@ Windows Server 2016 및 Windows 10에는 IT 전문가 및 개발 운영자가 �
 
 패킷 손실로부터 복구할 때 TCP 동작을 개선하기 위해 TCP 테일 손실 검색(TLP) 및 최근 승인(RACK)을 구현했습니다. TLP를 통해 다시 전송 시간 제한(RTO)을 빠른 복구로 변환할 수 있으며 RACK은 빠른 복구로 손실된 패킷을 다시 전송하는 데 필요한 시간을 단축시켜 줍니다. 
 
-## <a name="security-and-assurance"></a>[보안 및 보증](../security/Security-and-Assurance.md)  
-IT 전문가가 데이터 센터 및 클라우드 환경에서 배포할 수 있는 보안 솔루션 및 기능이 포함됩니다. Windows Server 2016에서 일반적인 보안에 대한 자세한 내용은 [보안 및 보증](../security/Security-and-Assurance.md)을 참조하세요.  
+## <a name="security-and-assurance"></a>[보안 및 보증](../security/Security-and-Assurance.yml)  
+IT 전문가가 데이터 센터 및 클라우드 환경에서 배포할 수 있는 보안 솔루션 및 기능이 포함됩니다. Windows Server 2016에서 일반적인 보안에 대한 자세한 내용은 [보안 및 보증](../security/Security-and-Assurance.yml)을 참조하세요.  
 
 ### <a name="just-enough-administration"></a>Just Enough Administration  
 Windows Server 2016의 Just Enough Administration은 Windows PowerShell로 관리할 수 있는 모든 항목에 대한 위임된 관리를 지원하는 보안 기술입니다. 네트워크 ID를 통한 실행, PowerShell Direct를 통한 연결, JEA 엔드포인트와의 보안 파일 복사, 기본적으로 JEA 컨텍스트에서 시작하도록 PowerShell 콘솔 구성 등에 대한 지원이 추가되었습니다. 자세한 내용은 [GitHub의 JEA](https://aka.ms/JEA)를 참조하세요.

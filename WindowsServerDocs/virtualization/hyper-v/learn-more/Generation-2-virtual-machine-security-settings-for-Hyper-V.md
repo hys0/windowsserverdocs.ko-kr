@@ -9,12 +9,12 @@ ms.assetid: 06ab4f5f-6b8e-4058-8108-76785aa93d4c
 author: larsiwer
 ms.author: kathydav
 ms.date: 10/04/2016
-ms.openlocfilehash: 7eb867529d38ab21ee21c19f92c89ed4128b0ea4
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 1b3c7b636d9c93ff0392f266d1e6e18d36dfd15f
+ms.sourcegitcommit: 457e88e5aa6be13a2bffdb8e434a8efc3698678f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80860806"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548917"
 ---
 # <a name="generation-2-virtual-machine-security-settings-for-hyper-v"></a>Hyper-v에 대한 2세대 가상 머신의 보안 설정
 
@@ -83,4 +83,4 @@ Windows Server 2016 실행되는 모든 호스트에 사용하도록 설정하�
 
 차폐 가상 머신 호스트 보호자 서비스를 설정하지 않고 로컬에서 실행할 수 있습니다. 하지만 다른 호스트로 마이그레이션하는 경우에 시작할 수 없습니다. 새 호스트 가상 머신을 실행할 권한을 부여하려면 해당 가상 머신에 대한 키 보호기를 업데이트해야 합니다. 자세한 내용은 참조 [보호 된 패브릭 및 차폐 Vm](https://go.microsoft.com/fwlink/?LinkId=746381)합니다.  
 
-Windows Server의 보안에 대한 자세한 내용은 [보안 및 보증](../../../security/Security-and-Assurance.md)을 참조하세요.  
+Windows Server의 보안에 대한 자세한 내용은 [보안 및 보증](../../../security/Security-and-Assurance.yml)을 참조하세요.  
