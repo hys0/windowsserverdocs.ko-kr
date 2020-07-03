@@ -1,6 +1,6 @@
 ---
 title: offline volume
-description: 오프 라인 상태에 포커스가 있는 온라인 볼륨을 사용 하는 오프 라인 볼륨 명령에 대 한 참조 항목입니다.
+description: 오프 라인 상태에 포커스가 있는 온라인 볼륨을 사용 하는 오프 라인 볼륨 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e49a88671285bed69cfbb9c4e7bc950eb100b3e6
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 9f64a6924b0033b0e7889ccbcab4fb142a4f7c05
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85472719"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85936731"
 ---
 # <a name="offline-volume"></a>offline volume
 
@@ -35,7 +35,7 @@ offline volume [noerr]
 | --------- | ----------- |
 | noerr | 스크립팅 전용입니다. 오류가 발생 하면 오류가 발생 하지 않은 경우에 따라 명령을 처리 하도록 DiskPart 계속 합니다. 이 매개 변수를 크기는 오류 코드를 수행 합니다. |
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 포커스가 있는 디스크를 오프 라인으로 다음을 입력 합니다.
 

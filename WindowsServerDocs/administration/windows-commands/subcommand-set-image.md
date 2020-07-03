@@ -1,6 +1,6 @@
 ---
 title: 하위 명령 집합 이미지
-description: 이미지의 특성을 변경 하는 하위 명령 집합 이미지에 대 한 참조 항목입니다.
+description: 이미지의 특성을 변경 하는 하위 명령 집합 이미지에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e24b20093a726e7553474871ef25e6877223e21f
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: fcf77f34a35a56c872948568071d36c1fcf5940f
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82721708"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85937159"
 ---
 # <a name="subcommand-set-image"></a>하위 명령: 설정 이미지
 
@@ -25,7 +25,7 @@ ms.locfileid: "82721708"
 ## <a name="syntax"></a>구문
 부팅 이미지의 경우:
 ```
-wdsutil /Set-Imagmedia:<Image name> [/Server:<Server name>mediatype:Boot /Architecture:{x86 | ia64 | x64} [/Filename:<File name>] [/Name:<Name>] 
+wdsutil /Set-Imagmedia:<Image name> [/Server:<Server name>mediatype:Boot /Architecture:{x86 | ia64 | x64} [/Filename:<File name>] [/Name:<Name>]
 [/Description:<Description>] [/Enabled:{Yes | No}]
 ```
 설치 이미지:
@@ -59,20 +59,20 @@ wdsutil /Set-Imagmedia:<Image name> [/Server:<Server name>]
 부팅 이미지에 대 한 값을 설정 하려면 다음 중 하나를 입력 합니다.
 ```
 wdsutil /Set-Imagmedia:WinPE boot imagemediatype:Boot /Architecture:x86 /Description:New description
-wdsutil /verbose /Set-Imagmedia:WinPE boot image /Server:MyWDSServemediatype:Boot /Architecture:x86 /Filename:boot.wim 
+wdsutil /verbose /Set-Imagmedia:WinPE boot image /Server:MyWDSServemediatype:Boot /Architecture:x86 /Filename:boot.wim
 /Name:New Name /Description:New Description /Enabled:Yes
 ```
 설치 이미지에 대 한 값을 설정 하려면 다음 중 하나를 입력 합니다.
 ```
-wdsutil /Set-Imagmedia:Windows Vista with Officemediatype:Install /Description:New description 
-wdsutil /verbose /Set-Imagmedia:Windows Vista with Office /Server:MyWDSServemediatype:InstalmediaGroup:ImageGroup1 
+wdsutil /Set-Imagmedia:Windows Vista with Officemediatype:Install /Description:New description
+wdsutil /verbose /Set-Imagmedia:Windows Vista with Office /Server:MyWDSServemediatype:InstalmediaGroup:ImageGroup1
 /Filename:install.wim /Name:New name /Description:New description /UserFilter:O:BAG:DUD:AI(A;ID;FA;;;SY)(A;ID;FA;;;BA)(A;ID;0x1200a9;;;AU) /Enabled:Yes /UnattendFile:\\server\share\unattend.xml /OverwriteUnattend:Yes
 ```
 ## <a name="additional-references"></a>추가 참조
-- [명령줄 구문 키](command-line-syntax-key.md)
-[추가 이미지](using-the-add-image-command.md)
-명령을 사용 하 여 복사 이미지 명령을 사용 하 여[복사](using-the-copy-image-command.md)
-[Using the Export-Image Command](using-the-export-image-command.md)
-이미지 명령을 사용 하 여[get](using-the-get-image-command.md)
-이미지 명령을 사용 하 여[제거](using-the-remove-image-command.md)
-이미지 명령을 사용 하 여 바꾸기 이미지 명령을 사용 하 여[바꾸기](using-the-replace-image-command.md) 이미지 명령을 사용 하 여
+- [명령줄 구문 키](command-line-syntax-key.md) 
+ [추가 이미지 명령을](using-the-add-image-command.md) 
+ 사용 하 여 [복사 이미지 명령을](using-the-copy-image-command.md) 
+ 사용 하 여 [내보내기 이미지 명령 사용](using-the-export-image-command.md) 
+ [Get 이미지 명령을](using-the-get-image-command.md) 
+ 사용 하 여 [제거 이미지 명령을](using-the-remove-image-command.md) 
+ 사용 하 여 [Replace 이미지 명령을 사용 하 여](using-the-replace-image-command.md)

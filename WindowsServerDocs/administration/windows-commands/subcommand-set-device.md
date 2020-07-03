@@ -1,6 +1,6 @@
 ---
 title: 하위 명령 집합-장치
-description: 사전 준비 된 컴퓨터의 특성을 변경 하는 하위 명령 집합-장치에 대 한 참조 항목입니다.
+description: 사전 준비 된 컴퓨터의 특성을 변경 하는 하위 명령 집합-장치에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a587b809b02da775594e795730799bf9af578bc2
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 2e75e0a2a4011e171fa548954bce2bbe942379c0
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82721755"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85937200"
 ---
 # <a name="subcommand-set-device"></a>하위 명령: 집합 디바이스
 
@@ -24,7 +24,7 @@ ms.locfileid: "82721755"
 
 ## <a name="syntax"></a>구문
 ```
-wdsutil [Options] /Set-Device /Device:<Device name> [/ID:<UUID | MAC address>] [/ReferralServer:<Server name>] [/BootProgram:<Relative path>] 
+wdsutil [Options] /Set-Device /Device:<Device name> [/ID:<UUID | MAC address>] [/ReferralServer:<Server name>] [/BootProgram:<Relative path>]
 [/WdsClientUnattend:<Relative path>] [/User:<Domain\User | User@Domain>] [/JoinRights:{JoinOnly | Full}] [/JoinDomain:{Yes | No}] [/BootImagepath:<Relative path>] [/Domain:<Domain>] [/resetAccount]
 ```
 ### <a name="parameters"></a>매개 변수
@@ -38,7 +38,7 @@ wdsutil [Options] /Set-Device /Device:<Device name> [/ID:<UUID | MAC address>] [
 |[/User: <Domain\User &#124; User@Domain>]|컴퓨터를 도메인에 가입 하는 데 필요한 권한이 지정된 된 사용자에 게 컴퓨터 계정 개체에 사용 권한을 설정 합니다.|
 |[/ JoinRights: {JoinOnly & #124; 전체}]|사용자에 게 할당할 권한의 유형을 지정 합니다.<p>-   **Joinonly** 를 사용 하려면 관리자가 컴퓨터 계정을 다시 설정 해야 사용자가 컴퓨터를 도메인에 가입할 수 있습니다.<br />-   **Full** 은 컴퓨터를 도메인에 가입 시킬 수 있는 권한을 포함 하 여 사용자에 게 모든 권한을 부여 합니다.|
 |[/ JoinDomain: {예 & #124; No}]|컴퓨터가 Windows 배포 서비스를 설치 하는 동안이 컴퓨터 계정으로 도메인에 가입 되어야 해야 여부를 지정 합니다. 기본 설정은 **예**입니다.|
-|[/BootImagepath:<Relative path>]|컴퓨터에서 사용 하는 부팅 이미지에 대 한 remoteInstall 폴더의 상대 경로를 지정 합니다.|
+|[/BootImagepath: <Relative path> ]|컴퓨터에서 사용 하는 부팅 이미지에 대 한 remoteInstall 폴더의 상대 경로를 지정 합니다.|
 |[/ 도메인:<Domain>]|사전 준비 된 컴퓨터에 대 한 검색할 도메인을 지정 합니다. 기본값은 로컬 도메인입니다.|
 |[/resetAccount]|적절 한 사용 권한이 있는 모든 사용자가이 계정을 사용 하 여 도메인에 가입할 수 있도록 지정 된 컴퓨터에 대 한 사용 권한을 다시 설정 합니다.|
 ## <a name="examples"></a>예
@@ -49,11 +49,11 @@ wdsutil /Set-Device /Device:computer1 /ReferralServer:MyWDSServer
 ```
 컴퓨터에 대 한 다양 한 설정을 지정 하려면 다음을 입력 합니다.
 ```
-wdsutil /verbose /Set-Device /Device:computer2 /ID:00-B0-56-88-2F-DC /WdsClientUnattend:WDSClientUnattend\unattend.xml 
+wdsutil /verbose /Set-Device /Device:computer2 /ID:00-B0-56-88-2F-DC /WdsClientUnattend:WDSClientUnattend\unattend.xml
 /User:Domain\user /JoinRights:JoinOnly /JoinDomain:No /BootImagepath:boot\x86\images\boot.wim /Domain:NorthAmerica /resetAccount
 ```
 ## <a name="additional-references"></a>추가 참조
-- [명령줄 구문 키](command-line-syntax-key.md)
-[추가 장치 명령을](using-the-add-device-command.md)
-사용 하 여 get[alldevices](using-the-get-alldevices-command.md)
-명령을 사용 하 여[get 장치](using-the-get-device-command.md) 명령을 사용 하 여
+- [명령줄 구문 키](command-line-syntax-key.md) 
+ [장치 추가 명령을](using-the-add-device-command.md) 
+ 사용 하 여 [Get AllDevices 명령을](using-the-get-alldevices-command.md) 
+ 사용 하 여 [Get 장치 명령을 사용 하 여](using-the-get-device-command.md)

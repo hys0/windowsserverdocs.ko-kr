@@ -1,6 +1,6 @@
 ---
 title: 사용-서버
-description: Windows 배포 서비스에 대 한 모든 서비스를 사용 하도록 설정 하는 enable Server에 대 한 참조 항목입니다.
+description: Windows 배포 서비스에 대 한 모든 서비스를 사용 하도록 설정 하는 enable Server에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: bf7bf57c0784fa16719b9f77da50212bca0ef850
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: a0c82614049540e658061bd55bf40f0d0b3beb16
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720929"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85936825"
 ---
 # <a name="enable-server"></a>사용-서버
 
@@ -37,11 +37,11 @@ wdsutil /Enable-Server
 wdsutil /verbose /Enable-Server /Server:MyWDSServer
 ```
 ## <a name="additional-references"></a>추가 참조
-- [명령줄 구문 키](command-line-syntax-key.md)
-[안 함](using-the-disable-server-command.md)
--서버 명령을 사용 하 여[get](using-the-get-server-command.md)
-서버 명령을 사용 하 여[Initialize](using-the-initialize-server-command.md)
-
-서버 명령을 사용 하 여 다음 명령을 사용[합니다. 서버](subcommand-set-server.md)하위 명령:[시작-](subcommand-start-server.md)
-서버 하위 명령: 서버[중지](subcommand-stop-server.md)
-[초기화 서버 옵션](the-uninitialize-server-option.md)
+- [명령줄 구문 키](command-line-syntax-key.md) 
+ [Disable Server 명령 사용](using-the-disable-server-command.md) 
+ [Get Server 명령 사용](using-the-get-server-command.md) 
+ [Initialize 서버 명령을](using-the-initialize-server-command.md) 
+ 사용 하 여 [하위 명령: 설정-서버](subcommand-set-server.md) 
+ [하위 명령: 시작-서버](subcommand-start-server.md) 
+ [하위 명령: 중지 서버](subcommand-stop-server.md) 
+ [초기화 서버 옵션](the-uninitialize-server-option.md)

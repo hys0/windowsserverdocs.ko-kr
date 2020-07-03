@@ -1,6 +1,6 @@
 ---
 title: mqbkup
-description: Mqbkup 명령에 대 한 참조 항목으로, MSMQ 메시지 파일 및 레지스트리 설정을 저장 장치에 백업 하 고 이전에 저장 된 메시지와 설정을 복원 합니다.
+description: MSMQ 메시지 파일 및 레지스트리 설정을 저장 장치에 백업 하 고 이전에 저장 된 메시지와 설정을 복원 하는 mqbkup 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1c07dd5f912a70157052017fc17875c00eaedd3b
-ms.sourcegitcommit: 5e313a004663adb54c90962cfdad9ae889246151
+ms.openlocfilehash: 131d80f32a3c3324dad08b876dd4f4f8610b93e2
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84354424"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85936302"
 ---
 # <a name="mqbkup"></a>mqbkup
 
@@ -34,7 +34,7 @@ mqbkup {/b | /r} <folder path_to_storage_device>
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | ------- | -------- |
 | /b | 백업 작업을 지정 합니다. |
 | /r | 복원 작업을 지정 합니다. |

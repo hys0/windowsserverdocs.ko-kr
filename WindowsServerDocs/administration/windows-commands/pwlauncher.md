@@ -1,6 +1,6 @@
 ---
 title: pwlauncher
-description: Windows To Go 시작 옵션 (pwlauncher)을 사용 하거나 사용 하지 않도록 설정 하는 pwlauncher 명령에 대 한 참조 항목입니다.
+description: Windows To Go 시작 옵션 (pwlauncher)을 사용 하거나 사용 하지 않도록 설정 하는 pwlauncher 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4b6793dead3a41abb82bc3940d0314bcd7610418
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 29e7434731bc89dff9bddbaedb8a6179f266fa28
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85472118"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85936705"
 ---
 # <a name="pwlauncher"></a>pwlauncher
 
@@ -36,7 +36,7 @@ pwlauncher {/enable | /disable}
 | /disable | Windows To Go 시작 옵션을 사용 하지 않도록 설정 합니다 .이 경우 펌웨어에서 수동으로 구성 하지 않으면 컴퓨터를 USB 장치에서 부팅할 수 없습니다. |
 | /? | 명령 프롬프트에 도움말을 표시합니다. |
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 USB에서 부팅을 사용 하도록 설정 하려면:
 

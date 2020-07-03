@@ -1,6 +1,6 @@
 ---
 title: tzutil
-description: Windows 표준 시간대 유틸리티를 표시 하는 tzutil에 대 한 참조 항목입니다.
+description: Windows 표준 시간대 유틸리티를 표시 하는 tzutil에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5d4a94fa9f776af1ae21ad9057b6f9225691b516
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 99d88057c88a55aaf529d238088f8422c33e9ba7
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83821303"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85937289"
 ---
 # <a name="tzutil"></a>tzutil
 
@@ -31,8 +31,8 @@ tzutil [/?] [/g] [/s <timeZoneID>[_dstoff]] [/l]
 |-------|--------|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 |/g|현재 표준 시간대 ID를 표시 합니다.|
-|/s \< timeZoneID> [_dstoff]|지정 된 표준 시간대 ID를 사용 하 여 현재 표준 시간대를 설정 합니다. **_Dstoff** 접미사는 표준 시간대에 대 한 일광 절약 시간 조정을 사용 하지 않도록 설정 합니다 (해당 하는 경우).|
-|/l|모든 유효한 표준 시간대 Id 및 표시 이름을 나열 합니다. 다음과 같이 출력됩니다.<p>-   \<표시 이름><br />-   \<표준 시간대 ID>|
+|/s \<timeZoneID> [_dstoff]|지정 된 표준 시간대 ID를 사용 하 여 현재 표준 시간대를 설정 합니다. **_Dstoff** 접미사는 표준 시간대에 대 한 일광 절약 시간 조정을 사용 하지 않도록 설정 합니다 (해당 하는 경우).|
+|/l|모든 유효한 표준 시간대 Id 및 표시 이름을 나열 합니다. 다음과 같이 출력됩니다.<p>-   \<display name><br />-   \<time zone ID>|
 
 ## <a name="remarks"></a>설명
 종료 코드 **0** 은 명령이 성공적으로 완료 되었음을 나타냅니다.

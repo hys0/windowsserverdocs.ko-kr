@@ -1,6 +1,6 @@
 ---
-title: 복원 시뮬레이트
-description: 작성자에 게 PreRestore 또는 PostRestore 이벤트를 발급 하지 않고 컴퓨터의 복원 세션에서 쓰기를 테스트 하는 복원 시뮬레이션에 대 한 참조 항목입니다.
+title: simulate restore
+description: 작성자에 게 PreRestore 또는 PostRestore 이벤트를 발급 하지 않고 컴퓨터의 복원 세션에서 쓰기를 테스트 하는 복원 시뮬레이션에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1bab6c56cddc1d2ac95dc70205b0990b82fbfd12
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 7cc247848ef4fac1e3a6537247f640f3533c2bcd
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82721785"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85936357"
 ---
 # <a name="simulate-restore"></a>복원 시뮬레이션
 

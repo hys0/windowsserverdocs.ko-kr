@@ -1,6 +1,6 @@
 ---
 title: nslookup set all
-description: 현재 구성 설정 값을 출력 하는 nslookup set all 명령에 대 한 참조 항목입니다.
+description: 현재 구성 설정 값을 출력 하는 nslookup set all 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b541f1f68fd3f43a8e4ab05f8e3e4351b7d8bc71
-ms.sourcegitcommit: 99d548141428c964facf666c10b6709d80fbb215
+ms.openlocfilehash: 1844e2254a694e39dc12e66bf65182df512601e8
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721646"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85936546"
 ---
 # <a name="nslookup-set-all"></a>nslookup set all
 
@@ -28,7 +28,7 @@ set all
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | /? | 명령 프롬프트에 도움말을 표시합니다. |
 | /help | 명령 프롬프트에 도움말을 표시합니다. |

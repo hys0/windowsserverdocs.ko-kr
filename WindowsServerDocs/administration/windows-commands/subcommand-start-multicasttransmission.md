@@ -1,6 +1,6 @@
 ---
 title: 하위 명령 시작-MulticastTransmission
-description: 이미지의 예약 된 캐스트 전송을 시작 하는 하위 명령 MulticastTransmission에 대 한 참조 항목입니다.
+description: 이미지의 예약 된 캐스트 전송을 시작 하는 하위 명령 MulticastTransmission에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5f3ea615da5aa48e805b3b5e3d0df0a02198a304
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: adb09457e2bf26242da9f6d31ee5e71882d7c10a
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82721675"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85936967"
 ---
 # <a name="subcommand-start-multicasttransmission"></a>시작-MulticastTransmission 하위 명령:
 
@@ -65,8 +65,8 @@ wdsutil /start-MulticastTransmission /Server:MyWDSServemedia:X64 Boot Imagemedia
 /Filename:boot.wim\n\
 ```
 ## <a name="additional-references"></a>추가 참조
-- [명령줄 구문 키](command-line-syntax-key.md)
-[Using the get-AllMulticastTransmissions Command](using-the-get-allmulticasttransmissions-command.md)
-[Using the get-MulticastTransmission Command](using-the-get-multicasttransmission-command.md)MulticastTransmission
-명령을 사용 하 여 AllMulticastTransmissions 명령을 사용 하 여[MulticastTransmission 명령을](using-the-new-multicasttransmission-command.md)
-사용 하 여 명령을 사용 하 여[MulticastTransmission](using-the-remove-multicasttransmission-command.md) 명령을 사용 합니다.
+- [명령줄 구문 키](command-line-syntax-key.md) 
+ [AllMulticastTransmissions 명령 사용](using-the-get-allmulticasttransmissions-command.md) 
+ [MulticastTransmission 명령 사용](using-the-get-multicasttransmission-command.md) 
+ [MulticastTransmission 명령 사용](using-the-new-multicasttransmission-command.md) 
+ [MulticastTransmission 명령 사용](using-the-remove-multicasttransmission-command.md)

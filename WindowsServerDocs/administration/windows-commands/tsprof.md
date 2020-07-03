@@ -1,6 +1,6 @@
 ---
 title: tsprof
-description: 원격 데스크톱 서비스 사용자 구성 정보를 한 사용자에서 다른 사용자로 복사 하는 tsprof에 대 한 참조 항목입니다.
+description: 원격 데스크톱 서비스 사용자 구성 정보를 한 사용자에서 다른 사용자로 복사 하는 tsprof에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b5a4980455eb2901db949a06f0c6dfec9ecf5793
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: b0b030f6f1353a6570883cf44c17e383b929cb3a
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82721234"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85937335"
 ---
 # <a name="tsprof"></a>tsprof
 
@@ -41,11 +41,11 @@ tsprof /q {/domain:<DomainName> | /local} <UserName>
 |매개 변수|설명|
 |-------|--------|
 |/update|*도메인> <도메인* 의 <*사용자 이름*>에 대 한 프로필 경로 정보를 <*프로필 경로*>에 업데이트 합니다.|
-|/domain:\<DomainName>|동작을 적용할 도메인의 이름을 지정 합니다.|
+|/domain\<DomainName>|동작을 적용할 도메인의 이름을 지정 합니다.|
 |로컬 /|로컬 사용자 계정에만 작업을 적용합니다.|
-|/profile:\<경로>|로컬 사용자 및 그룹 및 active directory 사용자 및 컴퓨터의 원격 데스크톱 서비스 확장에 표시 된 프로필 경로를 지정 합니다.|
-|\<사용자 이름>|서버 프로필 경로를 업데이트 하거나 쿼리할 사용자의 이름을 지정 합니다.|
-|/copy|\< *Sourceuser*>의 사용자 구성 정보를 \< *destinationuser*>에 복사 하 고 \< *destinationuser*>의 프로필 경로 정보를 \< *프로필 경로*>로 업데이트 합니다. \< *Sourceuser*> 및 \< *destinationuser*>는 모두 로컬 이거나 도메인 \< *DomainName*>에 있어야 합니다.|
+|/profile\<path>|로컬 사용자 및 그룹 및 active directory 사용자 및 컴퓨터의 원격 데스크톱 서비스 확장에 표시 된 프로필 경로를 지정 합니다.|
+|\<UserName>|서버 프로필 경로를 업데이트 하거나 쿼리할 사용자의 이름을 지정 합니다.|
+|/copy|에서로 사용자 구성 정보를 복사 하 \<*SourceUser*> \<*DestinationUser*> 고에 대 한 프로필 경로 정보를 \<*DestinationUser*> 로 업데이트 \<*Profilepath*> 합니다. 와는 모두 \<*SourceUser*> \<*DestinationUser*> 로컬 이거나 도메인에 있어야 합니다 \<*DomainName*> .|
 |\<Src_usr>|사용자 구성 정보를 복사해 올 사용자의 이름을 지정 합니다.|
 |\<Dest_usr>|사용자 구성 정보를 복사 하려면 원하는 사용자의 이름을 지정 합니다.|
 |/q|대상 서버 프로필 경로 쿼리 하려는 사용자의 현재 프로필 경로 표시 합니다.|
@@ -65,5 +65,5 @@ tsprof /q {/domain:<DomainName> | /local} <UserName>
     ```
 
 ## <a name="additional-references"></a>추가 참조
-- [명령줄 구문 키](command-line-syntax-key.md)
-[원격 데스크톱 서비스 (터미널 서비스) 명령 참조](remote-desktop-services-terminal-services-command-reference.md)
+- [명령줄 구문 키](command-line-syntax-key.md) 
+ [원격 데스크톱 서비스 (터미널 서비스) 명령 참조](remote-desktop-services-terminal-services-command-reference.md)

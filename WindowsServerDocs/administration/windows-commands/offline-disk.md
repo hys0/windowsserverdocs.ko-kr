@@ -1,6 +1,6 @@
 ---
 title: offline disk
-description: 오프 라인 상태에 포커스가 있는 온라인 디스크를 사용 하는 오프 라인 디스크 명령에 대 한 참조 항목입니다.
+description: 오프 라인 상태에 포커스가 있는 온라인 디스크를 사용 하는 오프 라인 디스크 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1c62a79db39a7c36e14a8430b47c634f80c0c0c8
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: cc8a746e09e5756eec1890d1715a88e60696cd49
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85472749"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85936752"
 ---
 # <a name="offline-disk"></a>offline disk
 
@@ -37,7 +37,7 @@ offline disk [noerr]
 | --------- | ----------- |
 | noerr | 스크립팅 전용입니다. 오류가 발생 하면 오류가 발생 하지 않은 경우에 따라 명령을 처리 하도록 DiskPart 계속 합니다. 이 매개 변수를 크기는 오류 코드를 수행 합니다. |
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 포커스가 있는 디스크를 오프 라인으로 다음을 입력 합니다.
 

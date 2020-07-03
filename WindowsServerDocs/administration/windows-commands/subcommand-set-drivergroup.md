@@ -1,6 +1,6 @@
 ---
 title: 하위 명령 설정-DriverGroup
-description: 서버에 있는 기존 드라이버 그룹의 속성을 설정 하는 하위 명령 집합-DriverGroup에 대 한 참조 항목입니다.
+description: 서버에 있는 기존 드라이버 그룹의 속성을 설정 하는 하위 명령 집합-DriverGroup에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c70db688e17d185813298cea4fcee3b664f53d64
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: bffd46298dce4313f9506129faf0684413c0d08a
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82721738"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85937191"
 ---
 # <a name="subcommand-set-drivergroup"></a>하위 명령: 집합 DriverGroup
 
@@ -43,5 +43,5 @@ wdsutil /Set-DriverGroup /DriverGroup:printerdrivers /Enabled:Yes
 wdsutil /Set-DriverGroup /DriverGroup:printerdrivers /Name:colorprinterdrivers /Applicability:All
 ```
 ## <a name="additional-references"></a>추가 참조
-- [명령줄 구문 키](command-line-syntax-key.md)
-[하위 명령: set drivergroupfilter](subcommand-set-drivergroupfilter.md)
+- [명령줄 구문 키](command-line-syntax-key.md) 
+ [하위 명령: Set DriverGroupFilter](subcommand-set-drivergroupfilter.md)

@@ -1,6 +1,6 @@
 ---
 title: SET 옵션
-description: 섀도 복사본 만들기 옵션을 설정 하는 Set 옵션에 대 한 참조 항목입니다.
+description: 섀도 복사본 만들기 옵션을 설정 하는 Set 옵션에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a4aba049e29cd74450467cf28057a2ff4e4a7094
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: b7944cd51adffabdc85bc6d419b527b1b643d4a8
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82721898"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85937082"
 ---
 # <a name="set-option"></a>SET 옵션
 

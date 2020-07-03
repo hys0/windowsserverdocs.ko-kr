@@ -1,6 +1,6 @@
 ---
 title: 하위 명령 시작-서버
-description: 전송 서버에 대 한 모든 서비스를 시작 하는 하위 명령 시작 서버에 대 한 참조 항목입니다.
+description: 전송 서버에 대 한 모든 서비스를 시작 하는 하위 명령 시작 서버에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 92bd68421883c49ec29dfb78f06121bff880b01e
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 2d70b070d11424b31a615cf1a3fd00f3c80b0069
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82721644"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85936919"
 ---
 # <a name="subcommand-start-transportserver"></a>시작-TransportServer 하위 명령:
 
@@ -37,9 +37,9 @@ wdsutil /start-TransportServer
 wdsutil /verbose /start-TransportServer /Server:MyWDSServer
 ```
 ## <a name="additional-references"></a>추가 참조
-- [명령줄 구문 키](command-line-syntax-key.md)
-[사용 안 함](using-the-disable-transportserver-command.md)
--지[수](using-the-enable-transportserver-command.md)
-서버 명령을 사용 하 여 지 수 서버 명령을 사용 하 여 명령[하위 명령: 설정-서버](subcommand-set-transportserver.md)
-[하위 명령: 중지-](subcommand-stop-transportserver.md) [수신](using-the-get-transportserver-command.md)
-서버
+- [명령줄 구문 키](command-line-syntax-key.md) 
+ [Disable-서버 명령을](using-the-disable-transportserver-command.md) 
+ 사용 하 여 [Enable-서버 명령 사용](using-the-enable-transportserver-command.md) 
+ [Get-서버 명령 사용](using-the-get-transportserver-command.md) 
+ [하위 명령: 설정-서버](subcommand-set-transportserver.md) 
+ [하위 명령: 중지-서버](subcommand-stop-transportserver.md)

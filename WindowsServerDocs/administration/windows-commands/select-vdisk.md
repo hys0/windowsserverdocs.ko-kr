@@ -1,6 +1,6 @@
 ---
-title: vdisk 선택
-description: '* * * *에 대 한 참조 항목'
+title: select vdisk
+description: '* * * *에 대 한 참조 문서'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 23741d9211ebdf98ac198af2ae1c562724a1955b
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 734b31d9c9bcf174bf4617418978935bc49ad6da
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83821083"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85936430"
 ---
-# <a name="select-vdisk"></a>vdisk 선택
+# <a name="select-vdisk"></a>select vdisk
 
 > 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -55,13 +55,13 @@ select vdisk file=c:\test\test.vhd
 
 
 
--   [Vdisk를 분리 합니다.](detach-vdisk.md)
+-   [분리 vdisk](detach-vdisk.md)
 
--   [세부 정보 vdisk](detail-vdisk.md)
+-   [detail vdisk](detail-vdisk.md)
 
--   [vdisk 확장](expand-vdisk.md)
+-   [expand vdisk](expand-vdisk.md)
 
--   [Vdisk를 병합 합니다.](merge-vdisk.md)
+-   [Merge vdisk](merge-vdisk.md)
 
 -   [list_1](list_1.md)
 

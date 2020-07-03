@@ -1,6 +1,6 @@
 ---
 title: openfiles
-description: 관리자가 시스템에서 열려 있는 파일과 디렉터리를 쿼리, 표시 또는 연결을 끊을 수 있도록 하는 openfiles 명령에 대 한 참조 항목입니다.
+description: 관리자가 시스템에서 열려 있는 파일과 디렉터리를 쿼리, 표시 또는 연결을 끊을 수 있도록 하는 openfiles 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e55dd88052f1bbfdebb02d1fb6d6f48261643c5c
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 1c1683bb916e068d83ab30e03fdd76e35abb77df
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85472599"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85936795"
 ---
 # <a name="openfiles"></a>openfiles
 
@@ -43,7 +43,7 @@ openfiles /disconnect [/s <system> [/u [<domain>\]<username> [/p [<password>]]]]
 | /op`<openfile>` | 열려 있는 특정 파일 이름으로 만들어진 모든 열려 있는 파일 연결을 끊습니다. 이 매개 변수와 함께 와일드 카드 문자 (**&#42;**)를 사용할 수 있습니다. |
 | /? | 명령 프롬프트에 도움말을 표시합니다. |
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 *파일 ID가 26843578*인 열려 있는 모든 파일의 연결을 끊으려면 다음을 입력 합니다.
 
@@ -98,7 +98,7 @@ openfiles /query [/s <system> [/u [<domain>\]<username> [/p [<password>]]]] [/fo
 | /v | 세부 정보 (자세한 정보 표시)를 출력에 표시 하도록 지정 합니다. |
 | /? | 명령 프롬프트에 도움말을 표시합니다. |
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 쿼리하고 열려 있는 모든 파일을 표시 하려면 다음을 입력 합니다.
 
@@ -147,7 +147,7 @@ openfiles /local [on | off]
 | `[on | off]` | 로컬 파일 핸들을 추적 하는 시스템 **유지 관리 개체 목록** 전역 플래그를 사용 하거나 사용 하지 않도록 설정 합니다. |
 | /? | 명령 프롬프트에 도움말을 표시합니다. |
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 **개체 목록 유지 관리** 전역 플래그의 현재 상태를 확인 하려면 다음을 입력 합니다.
 

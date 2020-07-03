@@ -1,6 +1,6 @@
 ---
 title: unlodctr
-description: 시스템 레지스트리에서 서비스 또는 장치 드라이버에 대 한 성능 카운터 이름 및 설명 텍스트를 제거 하는 unlodctr에 대 한 참조 항목
+description: 시스템 레지스트리에서 서비스 또는 장치 드라이버에 대 한 성능 카운터 이름 및 설명 텍스트를 제거 하는 unlodctr에 대 한 참조 문서
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8551b6fc76984b06f28bdda92dcd63791721ec90
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: a054673ada197c6b116abc7eda49c0e755f22af0
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83821293"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85937273"
 ---
 # <a name="unlodctr"></a>unlodctr
 

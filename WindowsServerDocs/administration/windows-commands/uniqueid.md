@@ -1,6 +1,6 @@
 ---
 title: uniqueid
-description: Uniqueid에 대 한 참조 항목-포커스가 있는 디스크에 대 한 GPT (GUID 파티션 테이블) 식별자 또는 MBR (마스터 부트 레코드) 서명을 표시 하거나 설정 합니다.
+description: Uniqueid에 대 한 참조 문서-포커스가 있는 디스크에 대 한 GPT (GUID 파티션 테이블) 식별자 또는 MBR (마스터 부트 레코드) 서명을 표시 하거나 설정 합니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: efaafe889f04511ceef7441b0a42b73259aadedf
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 5acf29d9a7dfd505a5ecdad2a08dfdb1a9f4d975
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82721179"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85937282"
 ---
 # <a name="uniqueid"></a>uniqueid
 

@@ -1,6 +1,6 @@
 ---
 title: 추가 AllDriverPackages 하위 명령 사용
-description: 폴더에 저장 된 모든 드라이버 패키지를 서버에 추가 하는 추가-AllDriverPackages에 대 한 참조 항목입니다.
+description: 폴더에 저장 된 모든 드라이버 패키지를 서버에 추가 하는 추가-AllDriverPackages에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 31daa8fc3e3304dba5079672ea4619fd085dd74f
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: a505175b1b2efc56c9be6d77384c71f8c1db7392
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82721165"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85937261"
 ---
 # <a name="add-alldriverpackages"></a>-AllDriverPackages 추가
 
@@ -30,10 +30,10 @@ WDSUTIL /Add-AllDriverPackages /FolderPath:<Folder Path> [/Server:<Server name>]
 
 |          매개 변수           |                                                              설명                                                              |
 |------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-|  /FolderPath:\<폴더 경로>  |                      드라이버 패키지에 대 한.inf 파일이 있는 폴더의 전체 경로 지정 합니다.                      |
-|   [/Server:\<서버 이름>]   | 서버 이름을 지정합니다. 이 NetBIOS 이름이 나 FQDN 수 있습니다. 서버 이름을 지정 하지, 로컬 서버가 사용 됩니다. |
+|  FolderPath\<Folder Path>  |                      드라이버 패키지에 대 한.inf 파일이 있는 폴더의 전체 경로 지정 합니다.                      |
+|   [/ 서버:\<Server name>]   | 서버 이름을 지정합니다. 이 NetBIOS 이름이 나 FQDN 수 있습니다. 서버 이름을 지정 하지, 로컬 서버가 사용 됩니다. |
 |     [/아키텍처: {x86      |                                                                 ia64                                                                  |
-| [/Drivergroup:\<그룹 이름>] |                             패키지를 추가할 드라이버 그룹의 이름을 지정 합니다.                             |
+| [/ DriverGroup:\<Group Name>] |                             패키지를 추가할 드라이버 그룹의 이름을 지정 합니다.                             |
 
 ## <a name="examples"></a>예
 

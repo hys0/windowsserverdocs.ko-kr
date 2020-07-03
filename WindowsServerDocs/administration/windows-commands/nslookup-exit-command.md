@@ -1,6 +1,6 @@
 ---
 title: nslookup 종료
-description: Nslookup 명령줄 도구를 종료 하는 nslookup exit 명령에 대 한 참조 항목입니다.
+description: Nslookup 명령줄 도구를 종료 하는 nslookup exit 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c233e39d711c37540c30bc64296c6b24b57689c8
-ms.sourcegitcommit: 99d548141428c964facf666c10b6709d80fbb215
+ms.openlocfilehash: f265379c8692d24fff3ad6c0be25295f656c756d
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721486"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85936519"
 ---
 # <a name="nslookup-exit"></a>nslookup/종료
 
@@ -28,7 +28,7 @@ nslookup /exit
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | /? | 명령 프롬프트에 도움말을 표시합니다. |
 | /help | 명령 프롬프트에 도움말을 표시합니다. |

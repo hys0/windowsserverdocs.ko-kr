@@ -1,6 +1,6 @@
 ---
 title: 네트워크 파일 시스템 명령 참조에 대 한 서비스
-description: '* * * *에 대 한 참조 항목'
+description: '* * * *에 대 한 참조 문서'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a5a5e68bfd455fae9aa1e6fcb2c9cf1bd8005ea5
-ms.sourcegitcommit: d1fc59d53055952f8e55aacebeb29547eef0bca7
+ms.openlocfilehash: bd729c6d363beaf31e7753ba01622b7ed9b395bf
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83375214"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85937121"
 ---
 # <a name="services-for-network-file-system-command-reference"></a>네트워크 파일 시스템 명령 참조에 대 한 서비스
 
@@ -25,7 +25,7 @@ NFS (네트워크 파일 시스템) 용 서비스는 NFS 프로토콜을 사용 
 | 명령 | 설명 |
 | ------- | ----------- |
 | [mapadmin](mapadmin.md) | 사용자 이름 네트워크 파일 시스템에 대 한 Microsoft 서비스에 대 한 매핑을 관리 합니다. |
-| [탑재](mount.md) | NFS (네트워크 파일 시스템) 네트워크 공유를 탑재 합니다. |
+| [설치](mount.md) | NFS (네트워크 파일 시스템) 네트워크 공유를 탑재 합니다. |
 | [Nfsadmin](nfsadmin.md) | NFS 용 서버와 NFS 용 클라이언트 서버를 관리 합니다. |
 | [Nfsshare](nfsshare.md) | NFS (네트워크 파일 시스템) 공유를 제어 합니다. |
 | [Nfsstat](nfsstat.md) | NFS 용 서버에 대 한 호출의 횟수를 다시 설정 또는 표시. |

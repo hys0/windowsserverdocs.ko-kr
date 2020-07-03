@@ -1,6 +1,6 @@
 ---
 title: waitfor
-description: 시스템에서 신호를 보내거나 기다리는 waitfor에 대 한 참조 항목입니다. **Waitfor** 네트워크를 통해 컴퓨터를 동기화 하는 데 사용 됩니다.
+description: 시스템에서 신호를 보내거나 기다리는 waitfor에 대 한 참조 문서입니다. **Waitfor** 네트워크를 통해 컴퓨터를 동기화 하는 데 사용 됩니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1264fa3bffde303577bd56a0f1f68a6d7b2d98c2
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 9a80b606fc91ec146a6808bde97a8d7f0081d0ff
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720219"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85937015"
 ---
 # <a name="waitfor"></a>waitfor
 
@@ -35,11 +35,11 @@ waitfor [/t <Timeout>] <SignalName>
 
 |       매개 변수       |                                                                                         설명                                                                                          |
 |-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    /s \<컴퓨터>     | 이름 또는 원격 컴퓨터의 IP 주소를 지정 합니다 (백슬래시를 사용 하지 않습니다). 기본값은 로컬 컴퓨터입니다. 이 매개 변수는 모든 파일 및 명령에 지정 된 폴더에 적용 됩니다. |
-| /u [\<도메인>\]<User> |                              지정한 사용자 계정의 자격 증명을 사용 하 여 스크립트를 실행 합니다. 기본적으로 **waitfor** 현재 사용자의 자격 증명을 사용 합니다.                               |
-|   /p [\<암호>]    |                                                    에 지정 된 사용자 계정의 암호를 지정 된 **/u** 매개 변수입니다.                                                     |
+|    /s\<Computer>     | 이름 또는 원격 컴퓨터의 IP 주소를 지정 합니다 (백슬래시를 사용 하지 않습니다). 기본값은 로컬 컴퓨터입니다. 이 매개 변수는 모든 파일 및 명령에 지정 된 폴더에 적용 됩니다. |
+| 나무\<Domain>\]<User> |                              지정한 사용자 계정의 자격 증명을 사용 하 여 스크립트를 실행 합니다. 기본적으로 **waitfor** 현재 사용자의 자격 증명을 사용 합니다.                               |
+|   /p [\<Password>]    |                                                    에 지정 된 사용자 계정의 암호를 지정 된 **/u** 매개 변수입니다.                                                     |
 |          /si          |                                                                        네트워크를 통해 지정된 된 신호를 보냅니다.                                                                        |
-|     /t \<시간 제한>     |                                              신호를 기다릴 시간 (초) 수를 지정 합니다. 기본적으로 **waitfor** 무기한 대기 합니다.                                               |
+|     /t\<Timeout>     |                                              신호를 기다릴 시간 (초) 수를 지정 합니다. 기본적으로 **waitfor** 무기한 대기 합니다.                                               |
 |     \<SignalName>     |                                                신호를 지정 하는 **waitfor** 보내거나 될 때까지 대기 합니다. *SignalName* 는 대 소문자를 구분 하지 않습니다.                                                 |
 |          /?           |                                                                             명령 프롬프트에 도움말을 표시합니다.                                                                             |
 

@@ -1,6 +1,6 @@
 ---
-title: 텔넷 집합
-description: 옵션을 설정 하는 텔넷 집합에 대 한 참조 항목입니다.
+title: telnet set
+description: 옵션을 설정 하는 텔넷 집합에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 477c2ee259301af26870339a2c329c2c3502963b
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: 7415f084e73d87eb767ed0b487f42e103b998c23
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84222671"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85937365"
 ---
 # <a name="telnet-set"></a>텔넷: 설정
 

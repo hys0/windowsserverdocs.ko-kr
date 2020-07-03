@@ -1,6 +1,6 @@
 ---
 title: mountvol
-description: 볼륨 탑재 지점을 만들거나 삭제 하거나 나열 하는 mountvol 명령에 대 한 참조 항목입니다.
+description: 볼륨 탑재 지점을 만들거나 삭제 하거나 나열 하는 mountvol 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e024ed1e0684da4e1450343dfd097b43fde5c8f4
-ms.sourcegitcommit: 5e313a004663adb54c90962cfdad9ae889246151
+ms.openlocfilehash: 1617149fac677069d97b5b7c1353e85b4e1fea14
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84354553"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85936325"
 ---
 # <a name="mountvol"></a>mountvol
 
@@ -34,7 +34,7 @@ mountvol <drive>: /s
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | `[<drive>:]<path>` | 탑재 지점이 있는 기존 NTFS 디렉터리를 지정 합니다. |
 | `<volumename>` | 탑재 지점의 대상인 볼륨 이름을 지정 합니다. 볼륨 이름은 다음 구문을 사용 합니다. 여기서 *GUID* 는 전역 고유 식별자 `\\?\volume\{GUID}\` 입니다. 대괄호가 `{ }` 필요 합니다. |

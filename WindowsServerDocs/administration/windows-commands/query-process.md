@@ -1,6 +1,6 @@
 ---
 title: 쿼리 프로세스
-description: 원격 데스크톱 세션 호스트 서버에서 실행 중인 프로세스에 대 한 정보를 표시 하는 쿼리 프로세스 명령에 대 한 참조 항목입니다.
+description: 원격 데스크톱 세션 호스트 서버에서 실행 중인 프로세스에 대 한 정보를 표시 하는 쿼리 프로세스 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 32f755fe3e275f2f1adccffacaf2a6999d46298a
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: a11177ad62e83efd9dbe5da844b159b40266837d
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85472028"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85936992"
 ---
 # <a name="query-process"></a>쿼리 프로세스
 

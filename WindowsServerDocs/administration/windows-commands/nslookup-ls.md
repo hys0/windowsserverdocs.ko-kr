@@ -1,6 +1,6 @@
 ---
 title: nslookup ls
-description: DNS 도메인 정보를 나열 하는 nslookup ls 명령에 대 한 참조 항목입니다.
+description: DNS 도메인 정보를 나열 하는 nslookup ls 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 87e30ed5d5b44b805c3b3b004feb5ed252b5a760
-ms.sourcegitcommit: 99d548141428c964facf666c10b6709d80fbb215
+ms.openlocfilehash: 7c0c0aeb01cdffb1f2b779178f0298e1f120348e
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721126"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85936571"
 ---
 # <a name="nslookup-ls"></a>nslookup ls
 
@@ -30,7 +30,7 @@ ls [<option>] <DNSdomain> [{[>] <filename>|[>>] <filename>}]
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | `<option>` | 유효한 옵션은 다음과 같습니다.<ul><li>**-t:** 지정 된 형식의 모든 레코드를 나열 합니다. 자세한 내용은 [nslookup set querytype](nslookup-set-querytype.md)를 참조 하세요.</li><li>**-a:** DNS 도메인에 있는 컴퓨터의 별칭을 나열 합니다. 이 매개 변수는 **-t CNAME** 와 동일 합니다.</li><li>**-d:** DNS 도메인에 대 한 모든 레코드를 나열 합니다. 이 매개 변수는 **-t ANY** 와 동일 합니다.</li><li>**-h:** DNS 도메인에 대 한 CPU 및 운영 체제 정보를 나열 합니다. 이 매개 변수는 **-t HINFO** 와 동일 합니다.</li><li>**-s:** DNS 도메인에 있는 컴퓨터의 잘 알려진 서비스를 나열 합니다. 이 매개 변수는 **-t WKS**와 동일 합니다. |
 | `<DNSdomain>` | 정보를 표시할 수 있는 DNS 도메인을 지정 합니다. |

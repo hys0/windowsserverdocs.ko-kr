@@ -1,6 +1,6 @@
 ---
 title: whoami
-description: Whoami에 대 한 참조 항목으로, 현재 로컬 시스템에 로그온 한 사용자에 대 한 사용자, 그룹 및 권한 정보를 표시 합니다.
+description: Whoami에 대 한 참조 문서-현재 로컬 시스템에 로그온 한 사용자에 대 한 사용자, 그룹 및 권한 정보를 표시 합니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2d672b3aaa20125c5c1da10fa3a5811fb5060d11
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 7a8ab5b02ab8670145887bcbf1ecfaa5efac95ad
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82725802"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85936581"
 ---
 # <a name="whoami"></a>whoami
 
@@ -42,7 +42,7 @@ whoami /all [/fo <Format>] [/nh]
 |/user|현재 도메인 및 사용자 이름 및 보안 식별자 (SID)를 표시합니다.|
 |/ 그룹|현재 사용자가 속해 있는 사용자 그룹을 표시 합니다.|
 |여|현재 사용자의 보안 권한을 표시합니다.|
-|/fo \<형식>|출력 형식을 지정합니다. 유효한 값은 다음과 같습니다.</br>**테이블** 테이블에 출력을 표시 합니다. 이것은 기본값입니다.</br>**목록** 목록에 출력을 표시 합니다.</br>**csv** 쉼표로 구분 된 값 (CSV) 형식으로 출력을 표시 합니다.|
+|/fo\<Format>|출력 형식을 지정합니다. 유효한 값은 다음과 같습니다.</br>**테이블** 테이블에 출력을 표시 합니다. 기본값입니다.</br>**목록** 목록에 출력을 표시 합니다.</br>**csv** 쉼표로 구분 된 값 (CSV) 형식으로 출력을 표시 합니다.|
 |/all|현재 사용자 이름, SID (보안 식별자), 권한 및 현재 사용자가 속한 그룹을 포함 하 여 현재 액세스 토큰의 모든 정보를 표시 합니다.|
 |/nh|열 머리글을 출력에 표시할를 지정 합니다. 테이블 및 CSV 형식에 대해서만 유효합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|

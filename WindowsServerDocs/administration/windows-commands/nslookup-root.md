@@ -1,6 +1,6 @@
 ---
 title: nslookup root
-description: DNS (Domain Name System) 도메인 이름 공간의 루트에 대해 기본 서버를 서버로 변경 하는 nslookup root 명령에 대 한 참조 항목입니다.
+description: DNS (Domain Name System) 도메인 이름 공간의 루트에 대 한 기본 서버를 서버로 변경 하는 nslookup root 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0f1f2bbe3b71660d079a0b7c87f5be487e0ff437
-ms.sourcegitcommit: 99d548141428c964facf666c10b6709d80fbb215
+ms.openlocfilehash: 07dbfcf401314145cb0e7553d71480072da4b574
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721656"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85936279"
 ---
 # <a name="nslookup-root"></a>nslookup root
 
@@ -33,7 +33,7 @@ root
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | /? | 명령 프롬프트에 도움말을 표시합니다. |
 | /help | 명령 프롬프트에 도움말을 표시합니다. |

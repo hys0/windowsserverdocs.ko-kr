@@ -1,6 +1,6 @@
 ---
-title: 숨깁니다
-description: 숨깁니다에 대 한 참조 항목으로, 노출 명령을 사용 하 여 노출 된 섀도 복사본을 노출 하지 않습니다.
+title: unexpose
+description: 표시 명령을 사용 하 여 노출 된 섀도 복사본을 노출 하지 않는 숨깁니다에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e0caa412e5ff7de149f0a2bd8806f7141c368306
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 02edb1f2c9331a22473123f0327dbc84cb05a865
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82721195"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85937304"
 ---
-# <a name="unexpose"></a>숨깁니다
+# <a name="unexpose"></a>unexpose
 
 **공개 명령을 사용** 하 여 노출 된 섀도 복사본을 노출 하지 않습니다. 노출 된 섀도 복사본은 섀도 ID, 드라이브 문자, 공유 또는 탑재 지점으로 지정할 수 있습니다.
 
@@ -33,9 +33,9 @@ unexpose {<ShadowID> | <Drive:> | <Share> | <MountPoint>}
 |매개 변수|설명|
 |---------|-----------|
 |\<ShadowID>|지정 된 섀도 ID로 지정 된 섀도 복사본을 노출 하지 않습니다.|
-|\<드라이브: >|지정 된 드라이브 문자 (예: P 드라이브)와 연결 된 섀도 복사본을 노출 하지 않습니다.|
-|\<공유>|지정 된 공유와 연결 된 섀도 복사본을 공개 하지 않습니다 (예 \\ \\: *MachineName*\)).|
-|\<탑재>|지정 된 탑재 지점과 연결 된 섀도 복사본을 공개 하지 않습니다 (예: C:\shadowcopy\)).|
+|\<Drive:>|지정 된 드라이브 문자 (예: P 드라이브)와 연결 된 섀도 복사본을 노출 하지 않습니다.|
+|\<Share>|지정 된 공유와 연결 된 섀도 복사본을 공개 하지 않습니다 (예: \\ \\ *MachineName*) \) .|
+|\<MountPoint>|지정 된 탑재 지점과 연결 된 섀도 복사본을 공개 하지 않습니다 (예: C:\shadowcopy) \) .|
 
 ## <a name="remarks"></a>설명
 
