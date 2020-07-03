@@ -1,6 +1,6 @@
 ---
 title: manage-bde forcerecovery
-description: Forcerecovery 명령에 대 한 참조 항목으로, 다시 시작 시 BitLocker로 보호 된 드라이브를 복구 모드로 강제로 적용 합니다.
+description: Forcerecovery 명령에 대 한 참조 문서로, 다시 시작 시 BitLocker로 보호 된 드라이브를 복구 모드로 강제로 적용 합니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e152a18137925bd197e672531ccef47e7b2a7119
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: 3d6c9cc9f851d2147cd23e8cc2e6baf3021fdd4c
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84222898"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85935384"
 ---
 # <a name="manage-bde-forcerecovery"></a>manage-bde forcerecovery
 

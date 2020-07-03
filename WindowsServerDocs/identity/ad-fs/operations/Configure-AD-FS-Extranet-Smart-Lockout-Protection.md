@@ -8,12 +8,12 @@ ms.date: 05/20/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 13f25252d60cb0bde67cca1e1aa5106435c3f361
-ms.sourcegitcommit: 2cc251eb5bc3069bf09bc08e06c3478fcbe1f321
+ms.openlocfilehash: 77e3b48874d2b8898b7510ff04ebb133b9358a73
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84333919"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85935539"
 ---
 # <a name="ad-fs-extranet-lockout-and-extranet-smart-lockout"></a>AD FS 엑스트라넷 잠금 및 엑스트라넷 스마트 잠금
 
@@ -251,7 +251,7 @@ AD FS는 보안 감사 로그에 엑스트라넷 잠금 이벤트를 기록 합�
 로그 전용 모드에서는 잠금 이벤트에 대 한 보안 감사 로그를 확인할 수 있습니다. 발견 된 모든 이벤트에 대해 ADFSAccountActivity cmdlet을 사용 하 여 사용자 상태를 확인 하 여 친숙 한 IP 주소나 익숙하지 않은 IP 주소에서 잠금이 발생 했는지 확인 하 고 해당 사용자에 대 한 친숙 한 IP 주소 목록을 다시 확인할 수 있습니다.
 
 
-|이벤트 ID|Description|
+|이벤트 ID|설명|
 |-----|-----|
 |1203|이 이벤트는 잘못 된 암호 시도에 대해 기록 됩니다. BadPwdCount이 ExtranetLockoutThreshold에 지정 된 값에 도달 하는 즉시, ExtranetObservationWindow에 지정 된 기간 동안 ADFS에서 계정이 잠깁니다.</br>작업 ID: %1</br>XML: %2|
 |1201|이 이벤트는 사용자가 잠길 때마다 기록 됩니다. </br>작업 ID: %1</br>XML: %2|
@@ -285,7 +285,7 @@ A: 클라이언트가 ADFS 서버에 직접 연결 하 고 웹 응용 프로그�
 A: ESL는 Exchange Online 또는 기타 레거시 인증 무작위 공격 시나리오를 방지 하는 데 효과적입니다. 레거시 인증에는 00000000-0000-0000-0000-000000000000의 "작업 ID"가 있습니다.이러한 공격에서 잘못 된 행위자는 Exchange Online 기본 인증 (레거시 인증이 라고도 함)을 활용 하 여 클라이언트 IP 주소가 Microsoft 하나로 표시 되도록 합니다. 클라우드의 Exchange online 서버는 Outlook 클라이언트를 대신 하 여 인증 확인을 합니다. 이러한 시나리오에서 악의적인 제출자의 IP 주소는 x-ms로 전달 된-클라이언트 ip에 있고 Microsoft Exchange Online server IP는 x-m-클라이언트 ip 값에 있습니다.
 엑스트라넷 스마트 잠금은 네트워크 ip, 전달 된 ip, x로 전달 된 클라이언트 IP 및 x-m-클라이언트 ip 값을 확인 합니다. 요청에 성공 하면 모든 Ip가 친숙 한 목록에 추가 됩니다. 요청이 표시 되 고 제공 된 Ip가 친숙 한 목록에 없는 경우 요청은 익숙하지 않은 것으로 표시 됩니다. 친숙 한 사용자는 잘 로그인 할 수 있지만, 익숙하지 않은 위치의 요청은 차단 됩니다.  
 
-* * Q: ESL를 사용 하기 전에 ADFSArtifactStore 크기를 예측할 수 있나요?
+**ESL을 사용하도록 설정하기 전에 ADFSArtifactStore의 크기를 예측할 수 있나요?**
 
 A: ESL를 사용 하도록 설정 하면 ADFSArtifactStore 데이터베이스의 사용자에 대 한 계정 작업 및 알려진 위치를 추적 AD FS 합니다. 이 데이터베이스는 추적된 사용자 및 알려진 위치의 수를 기준으로 크기를 조정합니다. ESL을 사용하도록 계획하는 경우 ADFSArtifactStore 데이터베이스의 크기가 사용자 100,000명당 최대 1GB의 속도로 확장한다고 예측할 수 있습니다. AD FS 팜이 WID (Windows 내부 데이터베이스)를 사용 하는 경우 데이터베이스 파일의 기본 위치는 C:\Windows\WID\Data\.입니다. 이 드라이브를 채우지 않도록 방지하려면 ESL을 사용하도록 설정하기 전에 최소 5GB의 사용 가능한 스토리지가 있어야 합니다. 디스크 스토리지 외에도 500,000명 이하의 사용자 인구에 대해 최대 1GB의 RAM을 추가하여 ESL을 사용하도록 설정한 후 총 프로세스 메모리를 늘리도록 계획합니다.
 

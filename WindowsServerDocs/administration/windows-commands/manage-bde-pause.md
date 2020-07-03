@@ -1,6 +1,6 @@
 ---
 title: manage-bde 일시 중지
-description: BitLocker 암호화 또는 암호 해독을 일시 중지 하는 manage-bde 일시 중지 명령에 대 한 참조 항목입니다.
+description: BitLocker 암호화 또는 암호 해독을 일시 중지 하는 manage-bde 일시 중지 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d8eaa28d6be61c5a06698a39be02cd20ff8b72a8
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: 244d18ff9763ccb12c9567fbab68e2fd72f0f076
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84222842"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85935475"
 ---
 # <a name="manage-bde-pause"></a>manage-bde 일시 중지
 

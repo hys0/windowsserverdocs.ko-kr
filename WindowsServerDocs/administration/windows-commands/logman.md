@@ -1,6 +1,6 @@
 ---
 title: logman
-description: Logman 명령에 대 한 참조 항목으로, 이벤트 추적 세션 및 성능 로그를 만들고 관리 하며 명령줄에서 성능 모니터의 많은 기능을 지원 합니다.
+description: Logman 명령에 대 한 참조 문서로, 이벤트 추적 세션 및 성능 로그를 만들고 관리 하며 명령줄에서 성능 모니터의 많은 기능을 지원 합니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 44b5e134440d71eed61ca8e03739abcc962df1f9
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 993c96fbbcccd1b2a48303cc5926f25fd7899c4d
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820553"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85934564"
 ---
 # <a name="logman"></a>logman
 

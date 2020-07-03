@@ -1,6 +1,6 @@
 ---
 title: 가져오기-AllDevices
-description: 모든 사전 준비 된 컴퓨터의 Windows 배포 서비스 속성을 표시 하는 가져오기 AllDevices에 대 한 참조 항목입니다.
+description: 모든 사전 준비 된 컴퓨터의 Windows 배포 서비스 속성을 표시 하는 가져오기 AllDevices에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 26e114be7ecf104687da237636b54b79e4114591
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: b5eae53c2dcd39a7f3587f4c3c6bf96d4782ea05
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720898"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85935223"
 ---
 # <a name="get-alldevices"></a>가져오기-AllDevices
 
@@ -38,7 +38,7 @@ wdsutil /Get-AllDevices
 wdsutil /verbose /Get-AllDevices /forest:Yes /ReferralServer:MyWDSServer
 ```
 ## <a name="additional-references"></a>추가 참조
-- [명령줄 구문 키](command-line-syntax-key.md)
-[하위 명령:](subcommand-set-device.md)
-get 장치 명령을[사용](using-the-get-device-command.md) 하 여 장치[추가 명령을](using-the-add-device-command.md)
-사용 하 여 장치를 설정 합니다.
+- [명령줄 구문 키](command-line-syntax-key.md) 
+ [하위 명령: 설정-장치](subcommand-set-device.md) 
+ [장치 추가 명령을](using-the-add-device-command.md) 
+ 사용 하 여 [Get 장치 명령을 사용 하 여](using-the-get-device-command.md)

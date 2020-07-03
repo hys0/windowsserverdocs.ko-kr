@@ -1,6 +1,6 @@
 ---
-title: wbadmin get 항목
-description: 특정 백업에 포함 된 항목을 나열 하는 wbadmin get 항목에 대 한 참조 항목입니다.
+title: wbadmin get items
+description: 특정 백업에 포함 된 항목을 나열 하는 wbadmin get 항목에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9987a3628682c47cde53433558ef89c01684ccf5
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: d69ac0aa200a694b94d8428e4ae333ae21ed20e1
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83821203"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85934364"
 ---
-# <a name="wbadmin-get-items"></a>wbadmin get 항목
+# <a name="wbadmin-get-items"></a>wbadmin get items
 
 
 

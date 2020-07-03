@@ -1,6 +1,6 @@
 ---
 title: tsdiscon
-description: Tsdiscon에 대 한 참조 항목으로, 원격 데스크톱 세션 호스트 서버에서 세션의 연결을 끊습니다.
+description: 원격 데스크톱 세션 호스트 서버에서 세션의 연결을 끊는 tsdiscon에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e2a97d1b157445fd43acce5a80f3d793ed5ae5af
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 05bf4e05648b0e5dd87657396df763432fab38f0
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82721259"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85934190"
 ---
 # <a name="tsdiscon"></a>tsdiscon
 
@@ -37,7 +37,7 @@ tsdiscon [<SessionID> | <SessionName>] [/server:<ServerName>] [/v]
 |매개 변수|설명|
 |-------|--------|
 |\<SessionId>|연결을 끊을 세션의 ID를 지정 합니다.|
-|\<세션 이름>|연결을 끊을 세션의 이름을 지정 합니다.|
+|\<SessionName>|연결을 끊을 세션의 이름을 지정 합니다.|
 |/server:\<ServerName>|연결을 끊을 세션이 포함 된 터미널 서버를 지정 합니다. 그렇지 않으면 현재 rd 세션 호스트 서버가 사용 됩니다.|
 |/v|수행 중인 작업에 대 한 정보를 표시 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
@@ -63,5 +63,5 @@ tsdiscon [<SessionID> | <SessionName>] [/server:<ServerName>] [/v]
   tsdiscon TERM04
   ```
   ## <a name="additional-references"></a>추가 참조
-  - [명령줄 구문 키](command-line-syntax-key.md)
-  [원격 데스크톱 서비스 (터미널 서비스) 명령 참조](remote-desktop-services-terminal-services-command-reference.md)
+  - [명령줄 구문 키](command-line-syntax-key.md) 
+   [원격 데스크톱 서비스 (터미널 서비스) 명령 참조](remote-desktop-services-terminal-services-command-reference.md)

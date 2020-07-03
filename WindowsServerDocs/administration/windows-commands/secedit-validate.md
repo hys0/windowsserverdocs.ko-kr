@@ -1,6 +1,6 @@
 ---
 title: 'secedit: 유효성 검사'
-description: '* * * *에 대 한 참조 항목'
+description: '* * * *에 대 한 참조 문서'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b93ad6ceadb08f6df8390edc3fc454d951519aad
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 7f2da0792768a6b6d6113842614bc6f93c258822
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83821102"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85935975"
 ---
 # <a name="seceditvalidate"></a>secedit: 유효성 검사
 
@@ -33,7 +33,7 @@ Secedit /validate <configuration file name>
 
 |매개 변수|설명|
 |---------|-----------|
-|구성 파일 이름|필수 사항입니다.</br>유효성을 검사할 보안 서식 파일에 대 한 경로 파일 이름을 지정 합니다.|
+|구성 파일 이름|필수 요소.</br>유효성을 검사할 보안 서식 파일에 대 한 경로 파일 이름을 지정 합니다.|
 
 ## <a name="remarks"></a>설명
 

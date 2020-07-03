@@ -1,6 +1,6 @@
 ---
 title: nslookup set retry
-description: 지정 된 서버에서 정보를 가져오려고 시도 하는 횟수를 설정 하는 nslookup set retry 명령에 대 한 참조 항목입니다.
+description: 지정 된 서버에서 정보를 가져오려고 시도 하는 횟수를 설정 하는 nslookup set retry 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 268a9f0023c0e7e19e8ed413895f639444fe3b88
-ms.sourcegitcommit: 99d548141428c964facf666c10b6709d80fbb215
+ms.openlocfilehash: 9ef38be2abfd423bb093ccf2b2ee6d701df28df3
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721466"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85935699"
 ---
 # <a name="nslookup-set-retry"></a>nslookup set retry
 
@@ -33,7 +33,7 @@ set retry=<number>
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | ---------- | ---------- |
 | `<number>` | 재시도 횟수에 대 한 새 값을 지정합니다. 기본 다시 시도 횟수는 **4**입니다. |
 | /? | 명령 프롬프트에 도움말을 표시합니다. |

@@ -1,6 +1,6 @@
 ---
 title: AllImageGroups
-description: 서버의 모든 이미지 그룹과 해당 이미지 그룹의 모든 이미지에 대 한 정보를 검색 하는 AllImageGroups에 대 한 참조 항목입니다.
+description: 서버의 모든 이미지 그룹과 해당 이미지 그룹의 모든 이미지에 대 한 정보를 검색 하는 AllImageGroups에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 204618955e91f1c9c9659d37ac3dfe2a01897c51
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: d5863ecc22ff5b96024cb3ba2bdbcac9f7ae8455
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720035"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85935179"
 ---
 # <a name="get-allimagegroups"></a>AllImageGroups
 
@@ -38,8 +38,8 @@ wdsutil /Get-AllImageGroups
 wdsutil /verbose /Get-AllImageGroups /Server:MyWDSServer /detailed
 ```
 ## <a name="additional-references"></a>추가 참조
-- [명령줄 구문 키](command-line-syntax-key.md)
-[ImageGroup](using-the-add-imagegroup-command.md)
-명령을 사용 하 여[ImageGroup 명령을](using-the-get-imagegroup-command.md)
-사용 하 여[ImageGroup 명령](using-the-remove-imagegroup-command.md)
-[하위 명령: ImageGroup](subcommand-set-imagegroup.md)
+- [명령줄 구문 키](command-line-syntax-key.md) 
+ [ImageGroup 명령 사용](using-the-add-imagegroup-command.md) 
+ [ImageGroup 명령 사용](using-the-get-imagegroup-command.md) 
+ [ImageGroup 명령 사용](using-the-remove-imagegroup-command.md) 
+ [하위 명령: ImageGroup](subcommand-set-imagegroup.md)

@@ -1,6 +1,6 @@
 ---
-title: logman 가져오기 및 logman 내보내기
-description: XML 파일에서 데이터 수집기 집합을 가져오거나 데이터 수집기 집합을 XML 파일로 내보내는 logman 가져오기 및 logman 내보내기에 대 한 참조 항목입니다.
+title: logman import and logman export
+description: XML 파일에서 데이터 수집기 집합을 가져오거나 데이터 수집기 집합을 XML 파일로 내보내는 logman 가져오기 및 logman 내보내기에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3ad664548dce51d7631a6d1a02d628af91e1921f
-ms.sourcegitcommit: 99d548141428c964facf666c10b6709d80fbb215
+ms.openlocfilehash: d5fbe0139a1c320056e4ba80a845b43755fc0026
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721145"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85934391"
 ---
-# <a name="logman-import-and-logman-export"></a>logman 가져오기 및 logman 내보내기
+# <a name="logman-import-and-logman-export"></a>logman import and logman export
 
 > 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -31,7 +31,7 @@ logman export <[-n] <name> <-xml <name> [options]
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | -s`<computer name>` | 지정된 된 원격 컴퓨터에서 명령을 수행 합니다. |
 | -config`<value>` | 명령 옵션을 포함 하는 설정 파일을 지정 합니다. |
@@ -42,7 +42,7 @@ logman export <[-n] <name> <-xml <name> [options]
 | -y | 메시지를 표시 하지 않고 모든 질문에 답변 합니다. |
 | /? | 도움말 상황에 맞는 표시 합니다. |
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 XML 파일 *c:\windows\perf_log.xml* 를 컴퓨터 *server_1* 에서 *perf_log*라는 데이터 수집기 집합으로 가져오려면 다음을 입력 합니다.
 

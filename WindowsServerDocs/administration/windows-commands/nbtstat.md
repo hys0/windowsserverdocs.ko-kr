@@ -1,6 +1,6 @@
 ---
 title: nbtstat
-description: NetBIOS over TCP/IP (NetBT) 프로토콜 통계, 로컬 컴퓨터와 원격 컴퓨터의 NetBIOS 이름 테이블, NetBIOS 이름 캐시를 표시 하는 nbtstat 명령에 대 한 참조 항목입니다.
+description: NetBIOS over TCP/IP (NetBT) 프로토콜 통계, 로컬 컴퓨터와 원격 컴퓨터의 NetBIOS 이름 테이블, NetBIOS 이름 캐시를 표시 하는 nbtstat 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e205013dc5716b76981e0c9bae667d48802dfc74
-ms.sourcegitcommit: 5e313a004663adb54c90962cfdad9ae889246151
+ms.openlocfilehash: e663559686d95a4aaa123e2d43731a6b613de080
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84354323"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85934850"
 ---
 # <a name="nbtstat"></a>nbtstat
 
@@ -32,7 +32,7 @@ nbtstat [/a <remotename>] [/A <IPaddress>] [/c] [/n] [/r] [/R] [/RR] [/s] [/S] [
 
 #### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | 없음을`<remotename>` | 원격 컴퓨터의 netbios 이름 테이블을 표시 합니다. 여기서 *로그인 이름* 은 원격 컴퓨터의 netbios 컴퓨터 이름입니다. NetBIOS 이름 테이블에는 해당 컴퓨터에서 실행 되는 NetBIOS 애플리케이션에 해당 하는 NetBIOS 이름 목록입니다. |
 | 없음을`<IPaddress>` | 원격 컴퓨터의 점으로 구분 된 10 진수 표기법으로 IP 주소 지정 하는 원격 컴퓨터의 NetBIOS 이름 테이블을 표시 합니다. |
@@ -52,7 +52,7 @@ nbtstat [/a <remotename>] [/A <IPaddress>] [/c] [/n] [/r] [/R] [/RR] [/s] [/S] [
 
 - **Nbtstat** 명령에 의해 생성 된 열 머리글에는 다음이 포함 됩니다.
 
-    | 제목 | Description |
+    | 제목 | 설명 |
     | ------- | ----------- |
     | 입력 | 받은 바이트 수입니다. |
     | 출력 | 보낸 바이트 수입니다. |
@@ -61,13 +61,13 @@ nbtstat [/a <remotename>] [/A <IPaddress>] [/c] [/n] [/r] [/R] [/RR] [/s] [/S] [
     | 로컬 이름 | 연결과 관련 된 로컬 NetBIOS 이름입니다. |
     | 원격 호스트 | 이름 또는 원격 컴퓨터와 연결 된 IP 주소. |
     | `<03>` | NetBIOS 이름이의 마지막 바이트를 16 진수로 변환 합니다. 각 NetBIOS 이름에는 16 자입니다. 이 마지막 바이트는 특별 한 의미 하므로 이름이 같은 여러 번 마지막 바이트만 다르고 동일한 컴퓨터에 있을 수 있습니다. 예를 들어 `<20>` 는 ASCII 텍스트의 공간입니다. |
-    | type | 이름의 유형입니다. 이름을 고유한 이름 또는 그룹 이름 수 있습니다. |
-    | 상태 | 원격 컴퓨터의 NetBIOS 서비스가 실행 중인지 (등록 됨) 아니면 중복 된 컴퓨터 이름이 동일한 서비스 (충돌)를 등록 했는지 여부입니다. |
-    | 주 | NetBIOS 연결의 상태입니다. |
+    | 형식 | 이름의 유형입니다. 이름을 고유한 이름 또는 그룹 이름 수 있습니다. |
+    | Status | 원격 컴퓨터의 NetBIOS 서비스가 실행 중인지 (등록 됨) 아니면 중복 된 컴퓨터 이름이 동일한 서비스 (충돌)를 등록 했는지 여부입니다. |
+    | 시스템 상태 | NetBIOS 연결의 상태입니다. |
 
 - 가능한 NetBIOS 연결 상태는 다음과 같습니다.
 
-    | 주 | 설명 |
+    | 시스템 상태 | 설명 |
     | ------- | ----------- |
     | 연결됨 | 세션 설정 되었습니다. |
     | 준비 | 이 엔드포인트는 인바운드 연결에 사용할 수 있습니다. |

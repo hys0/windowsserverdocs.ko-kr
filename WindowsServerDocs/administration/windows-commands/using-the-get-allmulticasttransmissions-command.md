@@ -1,6 +1,6 @@
 ---
 title: AllMulticastTransmissions
-description: AllMulticastTransmissions에 대 한 참조 항목으로, 서버의 모든 멀티 캐스트 전송에 대 한 정보를 표시 합니다.
+description: 서버에 있는 모든 멀티 캐스트 전송에 대 한 정보를 표시 하는 AllMulticastTransmissions에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5303618d1021a0c585a2bd6f958f73e145028a09
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 0b220f8b3ffb0dd90092329b4d42bb320706263e
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720010"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85935075"
 ---
 # <a name="get-allmulticasttransmissions"></a>AllMulticastTransmissions
 
@@ -48,8 +48,8 @@ wdsutil /Get-AllMulticastTransmissions [/Server:<Server name>] [/Show:{Boot | In
 - Windows Server 2008:`wdsutil /Get-AllMulticastTransmissions /Server:MyWDSServer /Show:Clients /ExcludedeletePending`
 - Windows Server 2008 R2:`wdsutil /Get-AllMulticastTransmissions /Server:MyWDSServer /Show:All /details:Clients /ExcludedeletePending`
   ## <a name="additional-references"></a>추가 참조
-  - [명령줄 구문 키](command-line-syntax-key.md)
-  [MulticastTransmission 명령을](using-the-get-multicasttransmission-command.md)
-  사용 하 여[MulticastTransmission](using-the-new-multicasttransmission-command.md)
-  명령을 사용 하 여[MulticastTransmission 명령](using-the-remove-multicasttransmission-command.md)
-  [하위 명령: MulticastTransmission](subcommand-start-multicasttransmission.md)
+  - [명령줄 구문 키](command-line-syntax-key.md) 
+   [MulticastTransmission 명령 사용](using-the-get-multicasttransmission-command.md) 
+   [MulticastTransmission 명령 사용](using-the-new-multicasttransmission-command.md) 
+   [MulticastTransmission 명령 사용](using-the-remove-multicasttransmission-command.md) 
+   [하위 명령: MulticastTransmission](subcommand-start-multicasttransmission.md)

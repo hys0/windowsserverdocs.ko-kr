@@ -1,6 +1,6 @@
 ---
 title: msinfo32
-description: Msinfo32 명령에 대 한 참조 항목-시스템 정보 도구를 열어 로컬 컴퓨터의 하드웨어, 시스템 구성 요소 및 소프트웨어 환경에 대 한 포괄적인 보기를 표시 합니다.
+description: Msinfo32 명령에 대 한 참조 문서-시스템 정보 도구를 열어 로컬 컴퓨터의 하드웨어, 시스템 구성 요소 및 소프트웨어 환경에 대 한 포괄적인 보기를 표시 합니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d6a97902d9988260a840d236e197d7361bcd3882
-ms.sourcegitcommit: 5e313a004663adb54c90962cfdad9ae889246151
+ms.openlocfilehash: c6506ba51c768f92a19deb1627f5456231cee3f6
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84354435"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85934862"
 ---
 # <a name="msinfo32"></a>msinfo32
 
@@ -32,7 +32,7 @@ msinfo32 [/pch] [/nfo <path>] [/report <path>] [/computer <computername>] [/show
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | `<path>` | *C:\folder1\file1.xxx*형식으로 열 파일을 지정 합니다. 여기서 *C* 는 드라이브 문자이 고, *Folder1* 는 폴더이 고, *File1* 은 파일 이름이 며, *xxx* 는 파일 이름 확장명입니다.<p>이 파일은 한 **.nfo**, **.xml**, **.txt**, 또는 **.cab** 파일입니다. |
 | `<computername>` | 대상 또는 로컬 컴퓨터의 이름을 지정합니다. 이 UNC 이름, IP 주소 또는 전체 컴퓨터 이름 수 있습니다. |

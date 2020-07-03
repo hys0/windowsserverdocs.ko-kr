@@ -1,6 +1,6 @@
 ---
 title: manage-bde 변환
-description: 운영 체제 드라이브의 시작 키를 수정 하는 manage-bde 변환 명령에 대 한 참조 항목입니다.
+description: 운영 체제 드라이브의 시작 키를 수정 하는 manage-bde 변환 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2b6cc92aa20d8c3c0469a5a78bca4bb9b6260132
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: 7f6b09dfdb73e019b909f43e14a82465573c1a6f
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84222992"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85934994"
 ---
 # <a name="manage-bde-changekey"></a>manage-bde 변환
 

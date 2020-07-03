@@ -1,6 +1,6 @@
 ---
 title: tpmvscmgr
-description: 관리자 자격 증명을 가진 사용자가 컴퓨터에서 TPM 가상 스마트 카드를 만들고 삭제 하는 데 사용할 수 있는 명령줄 도구인 tpmvscmgr에 대 한 참조 항목입니다.
+description: 관리자 자격 증명을 가진 사용자가 컴퓨터에서 TPM 가상 스마트 카드를 만들고 삭제 하는 데 사용할 수 있는 명령줄 도구인 tpmvscmgr에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 60c824de891917a2652776ee86b389f04d8eada8
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 8741c947220ce2a3f6852c7374bf0817323bb632
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83821373"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85935596"
 ---
 # <a name="tpmvscmgr"></a>tpmvscmgr
 
@@ -35,7 +35,7 @@ Tpmvscmgr destroy [/instance <instance ID>] [/?]
 
 |매개 변수|설명|
 |---------|-----------|
-|이름 /|필수 사항입니다. 새로운 가상 스마트 카드의 이름을 나타냅니다.|
+|이름 /|필수 요소. 새로운 가상 스마트 카드의 이름을 나타냅니다.|
 |/ AdminKey|사용자가 PIN을 잊어버린 경우 카드의 PIN을 다시 설정에 사용할 수 있는 원하는 관리자 키를 나타냅니다.</br>**기본** 010203040506070801020304050607080102030405060708의 기본값을 지정 합니다.</br>**프롬프트** 관리자 키에 대 한 값을 입력 하 라는 메시지를 표시 합니다.</br>**임의** 사용자에 게 반환 되지 않는 카드에 대 한 관리자 키에 대 한 임의 설정의 결과입니다. 이 스마트 카드 관리 도구를 사용 하 여 관리할 수 없을 수도 있는 카드를 만듭니다. 난수를 생성 하는 경우 48 자리 16 진수도 관리자가 키를 입력 해야 합니다.|
 |/ 핀|원하는 사용자 PIN 값을 나타냅니다.</br>**기본** 기본 12345678의 PIN을 지정 합니다.</br>**프롬프트** 명령줄에서 PIN을 입력 하 라는 메시지입니다. PIN에는 8 자 이상 이어야 합니다 하 고 숫자, 문자 및 특수 문자를 포함할 수 있습니다.|
 |/ PUK|원하는 PIN 잠금 해제 키 PUK () 값을 나타냅니다. PUK 값에는 8 자 이상 이어야 합니다 하 고 숫자, 문자 및 특수 문자를 포함할 수 있습니다. 매개 변수를 생략 하면 카드는 PUK 없이 만들어집니다.</br>**기본** PUK 12345678의 기본을 지정 합니다.</br>**프롬프트** 사용자에 게 명령줄에서 PUK를 입력 하 라는 메시지를 표시 합니다.|
@@ -79,7 +79,7 @@ tpmvscmgr.exe create /name VirtualSmartCardForCorpAccess /AdminKey RANDOM /PIN P
 ```
 tpmvscmgr.exe destroy /instance <instance ID>
 ```
-여기서 \< INSTANCE ID>은 사용자가 카드를 만들 때 화면에 인쇄 되는 값입니다. 특히, 만든 첫 번째 카드, 인스턴스 ID가 ROOT\SMARTCARDREADER\0000입니다.
+여기서 \<instance ID> 값 인쇄 화면에 사용자는 카드를 만들 때. 특히, 만든 첫 번째 카드, 인스턴스 ID가 ROOT\SMARTCARDREADER\0000입니다.
 
 ## <a name="additional-references"></a>추가 참조
 

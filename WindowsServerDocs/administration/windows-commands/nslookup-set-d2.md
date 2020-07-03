@@ -1,6 +1,6 @@
 ---
 title: nslookup set d2
-description: 자세한 디버깅 모드를 설정 하거나 해제 하는 nslookup set d2 명령에 대 한 참조 항목입니다.
+description: 자세한 디버깅 모드를 설정 하거나 해제 하는 nslookup set d2 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8179d91dfbc50ecd60740ad13db66c80a45af6c1
-ms.sourcegitcommit: 99d548141428c964facf666c10b6709d80fbb215
+ms.openlocfilehash: ce7de098069dc4536a1516d982bf7107795545b2
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721576"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85934437"
 ---
 # <a name="nslookup-set-d2"></a>nslookup set d2
 
@@ -28,9 +28,9 @@ set [no]d2
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | ---------- | ---------- |
-| nod2 | 자세한 디버깅 모드를 해제 합니다. 이것은 기본값입니다. |
+| nod2 | 자세한 디버깅 모드를 해제 합니다. 기본값입니다. |
 | d2 | 자세한 디버깅 모드를 설정 합니다. |
 | /? | 명령 프롬프트에 도움말을 표시합니다. |
 | /help | 명령 프롬프트에 도움말을 표시합니다. |

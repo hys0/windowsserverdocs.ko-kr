@@ -1,6 +1,6 @@
 ---
 title: 하위 명령 중지-서버
-description: Windows 배포 서비스 서버에서 모든 서비스를 중지 하는 하위 명령 중지 서버에 대 한 참조 항목입니다.
+description: Windows 배포 서비스 서버에서 모든 서비스를 중지 하는 하위 명령 중지 서버에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 68cc73ac016e2ffded774567034801e1c11944d1
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 044b151247d4f525656f6ad97d882df7ca37472a
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82721629"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85935373"
 ---
 # <a name="subcommand-stop-server"></a>하위 명령: 서버 중지
 
@@ -37,11 +37,11 @@ wdsutil /Stop-Server
 wdsutil /verbose /Stop-Server /Server:MyWDSServer
 ```
 ## <a name="additional-references"></a>추가 참조
-- [명령줄 구문 키](command-line-syntax-key.md)
-[사용 안 함](using-the-disable-server-command.md)
-[Using the enable-Server Command](using-the-enable-server-command.md)
--서버 명령을 사용 하 여 서버를 사용 하 여 명령을 사용 하 여[get](using-the-get-server-command.md)
-서버 명령을 사용 하 여[Initialize](using-the-initialize-server-command.md)
-서버 명령을 사용 하 여 명령을 사용 하 여 서버를 시작
-합니다. 서버[하위](subcommand-start-server.md)명령[:](subcommand-set-server.md)
-서버를 초기화 합니다. 서버[옵션](the-uninitialize-server-option.md)
+- [명령줄 구문 키](command-line-syntax-key.md) 
+ [Disable Server 명령 사용](using-the-disable-server-command.md) 
+ [Enable-Server 명령 사용](using-the-enable-server-command.md) 
+ [Get Server 명령 사용](using-the-get-server-command.md) 
+ [Initialize 서버 명령을](using-the-initialize-server-command.md) 
+ 사용 하 여 [하위 명령: 설정-서버](subcommand-set-server.md) 
+ [하위 명령: 시작-서버](subcommand-start-server.md) 
+ [초기화 서버 옵션](the-uninitialize-server-option.md)

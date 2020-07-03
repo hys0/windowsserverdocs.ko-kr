@@ -1,6 +1,6 @@
 ---
 title: netcfg
-description: 워크스테이션을 배포 하는 데 사용 되는 경량 버전의 Windows 인 WinPE (Windows 사전 설치 환경)를 설치 하는 netcfg 명령에 대 한 참조 항목입니다.
+description: 워크스테이션을 배포 하는 데 사용 되는 경량 버전의 Windows 인 WinPE (Windows 사전 설치 환경)를 설치 하는 netcfg 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5a308441df55873b205972d703ec52f53345beb5
-ms.sourcegitcommit: 99d548141428c964facf666c10b6709d80fbb215
+ms.openlocfilehash: 0f9ed2dde5d85be5432fb7b3af8279b2e71e9db0
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721556"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85934814"
 ---
 # <a name="netcfg"></a>netcfg
 
@@ -30,7 +30,7 @@ netcfg [/v] [/e] [/winpe] [/l ] /c /i
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | /v | 자세한 정보 표시 모드에서 실행 됩니다. |
 | /e | 설치 및 제거 중에 서비스 환경 변수를 사용 합니다. |
@@ -42,7 +42,7 @@ netcfg [/v] [/e] [/winpe] [/l ] /c /i
 | /b | 경로 이름을 포함 하는 문자열이 뒤에 오는 경우 바인딩 경로를 표시 합니다. |
 | /? | 명령 프롬프트에 도움말을 표시합니다. |
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 C:\oemdir\example.inf를 사용 하 여 프로토콜 *예제* 를 설치 하려면 다음을 입력 합니다.
 

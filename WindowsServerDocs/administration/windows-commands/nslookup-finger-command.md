@@ -1,6 +1,6 @@
 ---
 title: nslookup 손가락
-description: 현재 장치의 핑거 서버와 연결 되는 nslookup finger 명령에 대 한 참조 항목입니다.
+description: 현재 장치의 핑거 서버와 연결 되는 nslookup finger 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6341e7297ea661fd9afd4f4b0bb5048d82099b94
-ms.sourcegitcommit: 99d548141428c964facf666c10b6709d80fbb215
+ms.openlocfilehash: 413dc1a38b4fa7ee7bec28991547b5e0b5ef6fb9
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721496"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85934763"
 ---
 # <a name="nslookup-finger"></a>nslookup/손가락
 
@@ -28,7 +28,7 @@ finger [<username>] [{[>] <filename> | [>>] <filename>}]
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | `<username>` | 조회 하는 사용자의 이름을 지정 합니다. |
 | `<filename>` | 출력을 저장 하는 파일 이름을 지정 합니다. 보다 큼 ( `>` ) 및 이중 보다 큼 () 문자를 사용 `>>` 하 여 출력을 일반적인 방식으로 리디렉션할 수 있습니다. |

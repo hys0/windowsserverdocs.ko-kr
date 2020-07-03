@@ -1,6 +1,6 @@
 ---
 title: xcopy
-description: 하위 디렉터리를 포함 하 여 파일 및 디렉터리를 복사 하는 xcopy에 대 한 참조 항목입니다.
+description: 하위 디렉터리를 포함 하 여 파일 및 디렉터리를 복사 하는 xcopy에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 01/05/2019
-ms.openlocfilehash: c55d6ae5ff701555eb9bfb7135ffa28692bd4391
-ms.sourcegitcommit: 4894649cc47dfa535306cc334871f81155198f76
+ms.openlocfilehash: e33450cd330ac962c111b145d71c2595f926da2c
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84254726"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85936063"
 ---
 # <a name="xcopy"></a>xcopy
 
@@ -109,7 +109,7 @@ Xcopy <Source> [<Destination>] [/w] [/p] [/c] [/v] [/q] [/f] [/l] [/g] [/d [:MM-
 
   **Xcopy**에서 반환 된 종료 코드를 처리 하려면 일괄 처리 프로그램의 **If** 명령줄에서 **ErrorLevel** 매개 변수를 사용 합니다. **If**를 사용 하 여 종료 코드를 처리 하는 일괄 처리 프로그램의 예는 [추가 참조](#additional-references)를 참조 하세요. 다음 표에서 종료 코드와 설명을 나열합니다.
 
-  |종료 코드|Description|
+  |종료 코드|설명|
   |---------|-----------|
   |0|파일이 오류 없이 복사 되었습니다.|
   |1|복사할 파일이 없습니다.|

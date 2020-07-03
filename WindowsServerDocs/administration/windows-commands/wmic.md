@@ -1,6 +1,6 @@
 ---
 title: wmic
-description: Wmic에 대 한 참조 항목으로, 대화형 명령 셸 내에 WMI 정보를 표시 합니다.
+description: 대화형 명령 셸 내에 WMI 정보를 표시 하는 wmic에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 252ba6b59c29378dd1f5e437de21a2ec4f5ec5c8
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: c14f877c226bdd376da39cfa6e8f11116d59fe56
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720649"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85936114"
 ---
 # <a name="wmic"></a>wmic
 
@@ -37,7 +37,7 @@ wmic </parameter>
 |하위 명령|설명|
 |-----------|-----------|
 |class|클래스는 WMI 스키마에 직접 액세스 하는 WMIC의 기본 별칭 모드에서 나와 있습니다.|
-|path|WMI 스키마에 있는 인스턴스를 직접 액세스 하는 WMIC의 기본 별칭 모드에서 나와 있습니다.|
+|경로|WMI 스키마에 있는 인스턴스를 직접 액세스 하는 WMIC의 기본 별칭 모드에서 나와 있습니다.|
 |컨텍스트|모든 전역 스위치의 현재 값을 표시합니다.|
 |[ \| 끝내기 종료]|종료는 WMIC 명령 셸.|
 

@@ -1,6 +1,6 @@
 ---
 title: msg
-description: 원격 데스크톱 세션 호스트 서버에서 사용자에 게 메시지를 보내는 msg 명령에 대 한 참조 항목
+description: 원격 데스크톱 세션 호스트 서버에서 사용자에 게 메시지를 보내는 msg 명령에 대 한 참조 문서
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5eca19eee696e7a45cec2f16398055a7b06d00d6
-ms.sourcegitcommit: 5e313a004663adb54c90962cfdad9ae889246151
+ms.openlocfilehash: 6eff557b1fb7eb2c5f67b2902762786bbfc839c1
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84354363"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85934970"
 ---
 # <a name="msg"></a>msg
 
@@ -33,7 +33,7 @@ msg {<username> | <sessionname> | <sessionID>| @<filename> | *} [/server:<server
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | `<username>` | 메시지를 수신 하려는 사용자의 이름을 지정 합니다. 사용자 또는 세션을 지정 하지 않으면이 명령은 오류 메시지를 표시 합니다. 세션을 지정할 때 활성 이어야 합니다. |
 | `<sessionname>` | 메시지를 수신 하려는 세션의 이름을 지정 합니다. 사용자 또는 세션을 지정 하지 않으면이 명령은 오류 메시지를 표시 합니다. 세션을 지정할 때 활성 이어야 합니다. |

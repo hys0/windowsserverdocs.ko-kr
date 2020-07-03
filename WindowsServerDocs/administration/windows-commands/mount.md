@@ -1,6 +1,6 @@
 ---
 title: mount
-description: NFS (네트워크 파일 시스템) 네트워크 공유를 탑재 하는 탑재 명령에 대 한 참조 항목입니다.
+description: NFS (네트워크 파일 시스템) 네트워크 공유를 탑재 하는 탑재 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 823b88b8ab1168776c25e05e3dbf5ec08d784724
-ms.sourcegitcommit: 5e313a004663adb54c90962cfdad9ae889246151
+ms.openlocfilehash: 505094251ab6b0053cc3d46801ba5f6170201ecd
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84354563"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85935720"
 ---
 # <a name="mount"></a>mount
 
@@ -31,7 +31,7 @@ mount [-o <option>[...]] [-u:<username>] [-p:{<password> | *}] {\\<computername>
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수  | Description |
+| 매개 변수  | 설명 |
 | ---------- | ----------- |
 | -o rsize =`<buffersize>` | (킬로바이트) 읽기 버퍼의 크기를 설정합니다. 허용 가능한 값은 1, 2, 4, 8, 16 및 32입니다. 기본값은 32KB입니다. |
 | -o wsize =`<buffersize>` | (킬로바이트) 쓰기 버퍼의 크기를 설정합니다. 허용 가능한 값은 1, 2, 4, 8, 16 및 32입니다. 기본값은 32KB입니다. |

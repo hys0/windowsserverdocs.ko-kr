@@ -1,6 +1,6 @@
 ---
 title: 기록기
-description: 기록기 또는 구성 요소가 백업 또는 복원 프로시저에서 기록기 또는 구성 요소를 포함 하거나 제외 하는지 확인 하는 기록기에 대 한 참조 항목입니다.
+description: 기록기 또는 구성 요소가 백업 또는 복원 프로시저에서 기록기 또는 구성 요소를 포함 하거나 제외 하는지 확인 하는 기록기에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: aed202ac774b17041f48df24333565727b110c53
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 16746f2f070b87e0c287f3a49b19a480ba5399c9
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720639"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85936097"
 ---
 # <a name="writer"></a>기록기
 
@@ -34,8 +34,8 @@ writer exclude [<Writer> | <Component>]
 | 매개 변수  |                                                                                      설명                                                                                      |
 |------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |   verify   | 백업 또는 복원 프로시저에는 지정 된 작성기 나 구성 요소가 포함 되어 있는지 확인 합니다. 백업 또는 복원 프로시저는 작성기 나 구성 요소가 포함 되어 있지 않으면 실패 합니다. |
-|  Exclude   |                                                   백업 또는 복원 프로시저에서 지정 된 작성기 또는 구성 요소를 제외합니다.                                                    |
-| [\<작성기> |                                                                                     <Component>]                                                                                      |
+|  제외   |                                                   백업 또는 복원 프로시저에서 지정 된 작성기 또는 구성 요소를 제외합니다.                                                    |
+| [\<Writer> |                                                                                     <Component>]                                                                                      |
 
 ## <a name="examples"></a>예
 

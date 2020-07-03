@@ -1,6 +1,6 @@
 ---
 title: 시각화
-description: 추가 명령에 대 한 참조 항목으로, 한 번에 하나의 출력 화면을 표시 합니다.
+description: 한 번에 하나의 출력 화면을 표시 하는 more 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/26/2019
-ms.openlocfilehash: 042669aa638990375157d08d9e12840ade486165
-ms.sourcegitcommit: 5e313a004663adb54c90962cfdad9ae889246151
+ms.openlocfilehash: fec0ffbd7f2ce5d1efe1953cb4ab283d33f06ec8
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84354573"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85935735"
 ---
 # <a name="more"></a>시각화
 
@@ -33,7 +33,7 @@ more [/c] [/p] [/s] [/t<n>] [+<n>] [<files>]
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | `<command>` | 출력을 표시 하려는 명령을 지정 합니다. |
 | /C | 페이지를 표시 하기 전에 화면을 지웁니다. |
@@ -49,7 +49,7 @@ more [/c] [/p] [/s] [/t<n>] [+<n>] [<files>]
 
 - 다음 하위 명령은 다음을 포함 하 여 **더 많은** 프롬프트 ()에서 허용 됩니다 `-- More --` .
 
-    | Key | 작업 |
+    | 키 | 작업 |
     | --- | ------ |
     | 스페이스바 | **스페이스바** 를 눌러 다음 화면을 표시 합니다. |
     | Enter 키 | **Enter** 키를 눌러 파일을 한 번에 한 줄씩 표시 합니다. |

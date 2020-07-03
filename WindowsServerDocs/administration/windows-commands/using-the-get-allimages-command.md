@@ -1,6 +1,6 @@
 ---
 title: AllImages
-description: 서버에 있는 모든 이미지에 대 한 정보를 검색 하는 AllImages에 대 한 참조 항목입니다.
+description: 서버에 있는 모든 이미지에 대 한 정보를 검색 하는 AllImages에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c1f32a1789b22d04b7b61979d0ea49d91f0cf157
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 9834552ebe6395f13333e81fbc2996a8ff49f39c
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720024"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85935173"
 ---
 # <a name="get-allimages"></a>AllImages
 
@@ -39,10 +39,10 @@ wdsutil /Get-AllImages /Show:Install
 wdsutil /verbose /Get-AllImages /Server:MyWDSServer /Show:All /detailed
 ```
 ## <a name="additional-references"></a>추가 참조
-- [명령줄 구문 키](command-line-syntax-key.md)
-[추가 이미지](using-the-add-image-command.md)
-명령을 사용 하 여[복사](using-the-copy-image-command.md)
-이미지 명령을 사용 하 여 이미지[내보내기](using-the-export-image-command.md)
-명령을 사용 하 여[제거](using-the-remove-image-command.md)
-이미지 명령을 사용 하 여[바꾸기](using-the-replace-image-command.md)
-이미지 명령을 사용 하 여[하위 명령: 설정 이미지](subcommand-set-image.md)
+- [명령줄 구문 키](command-line-syntax-key.md) 
+ [추가 이미지 명령을](using-the-add-image-command.md) 
+ 사용 하 여 [복사 이미지 명령을](using-the-copy-image-command.md) 
+ 사용 하 여 [내보내기 이미지 명령 사용](using-the-export-image-command.md) 
+ [제거 이미지 명령을](using-the-remove-image-command.md) 
+ 사용 하 여 [Replace 이미지 명령을](using-the-replace-image-command.md) 
+ 사용 하 여 [하위 명령: 설정 이미지](subcommand-set-image.md)

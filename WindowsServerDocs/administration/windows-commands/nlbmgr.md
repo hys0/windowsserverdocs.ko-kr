@@ -1,6 +1,6 @@
 ---
 title: nlbmgr
-description: 네트워크 부하 분산 관리자를 사용 하 여 단일 컴퓨터에서 네트워크 부하 분산 클러스터 및 모든 클러스터 호스트를 구성 하 고 관리 하는 데 도움이 되는 nlbmgr 명령에 대 한 참조 항목입니다.
+description: 네트워크 부하 분산 관리자를 사용 하 여 단일 컴퓨터에서 네트워크 부하 분산 클러스터 및 모든 클러스터 호스트를 구성 하 고 관리 하는 데 도움이 되는 nlbmgr 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2eb7f802944260f7274e7ace30b7b55e9c4b27ad
-ms.sourcegitcommit: 99d548141428c964facf666c10b6709d80fbb215
+ms.openlocfilehash: 882d3540897214db2f3fa9d04a6f11fc76a76502
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721506"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85935531"
 ---
 # <a name="nlbmgr"></a>nlbmgr
 
@@ -32,7 +32,7 @@ nlbmgr [/noping][/hostlist <filename>][/autorefresh <interval>][/help | /?]
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | /noping | WMI(Windows Management Instrumentation) (WMI)를 통해 연결을 시도 하기 전에 네트워크 부하 분산 관리자가 호스트를 ping 하지 못하도록 합니다. 모든 사용 가능한 네트워크 어댑터에서 제어 메시지 ICMP (Internet Protocol)를 사용 하지 않도록 설정한 경우이 옵션을 사용 합니다. 네트워크 부하 분산 관리자가 사용할 수 없는 호스트에 연결 하려고 시도 하는 경우이 옵션을 사용 하면 지연이 발생 합니다. |
 | /hostlist`<filename>` | 파일 이름에 지정 된 호스트를 네트워크 부하 분산 관리자에 로드 합니다. |

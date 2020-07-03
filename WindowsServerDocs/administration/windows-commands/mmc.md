@@ -1,6 +1,6 @@
 ---
 title: mmc
-description: Mmc 명령에 대 한 참조 항목으로, 특정 mmc 콘솔을 열거나, 작성자 모드에서 mmc를 열거나, 32 비트 또는 64 비트 버전의 mmc를 열도록 지정할 수 있습니다.
+description: 특정 mmc 콘솔을 열거나, 작성자 모드에서 mmc를 열거나, 32 비트 또는 64 비트 버전의 mmc를 열도록 지정할 수 있는 mmc 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1de1bc7912b995bf7df0e1acb50cfee18747b700
-ms.sourcegitcommit: 5e313a004663adb54c90962cfdad9ae889246151
+ms.openlocfilehash: 8c93416c9939d37e8d672a7e8d52d01ddfebd48e
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84354593"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85935759"
 ---
 # <a name="mmc"></a>mmc
 
@@ -30,7 +30,7 @@ mmc <path>\<filename>.msc [/a] [/64] [/32]
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | `<path>\<filename>.msc` | **mmc** 를 시작 하 고 저장 된 콘솔을 엽니다. 저장된 된 콘솔 파일에 대 한 전체 경로 파일 이름을 지정 해야 합니다. 콘솔 파일을 지정 하지 않으면 **mmc** 에서 새 콘솔을 엽니다. |
 | /a | 만든이 모드에서 저장된 된 콘솔을 엽니다.  저장 된 콘솔을 변경 하는 데 사용 합니다. |

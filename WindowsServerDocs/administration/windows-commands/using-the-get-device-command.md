@@ -1,6 +1,6 @@
 ---
 title: 장치 가져오기
-description: Hyper-v에 대 한 참조 항목-사전 준비 된 컴퓨터에 대 한 Windows 배포 서비스 정보를 검색 합니다. 즉, active directory 도메인 서비스의 컴퓨터 계정에 줄이 있는 물리적 컴퓨터입니다.
+description: Hyper-v에 대 한 참조 문서-사전 준비 된 컴퓨터에 대 한 Windows 배포 서비스 정보를 검색 합니다. 즉, active directory 도메인 서비스의 컴퓨터 계정에 줄이 있는 물리적 컴퓨터입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6f89266a2f70523ec332ed7cfb6a976f87a8e4f2
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 0367af83ffb826b9bf3a3b94102d02e4d7ee7205
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719965"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85935017"
 ---
 # <a name="get-device"></a>장치 가져오기
 
@@ -47,7 +47,7 @@ GUID 문자열을 사용 하 여 정보를 가져오려면 다음을 입력 합�
 wdsutil /verbose /Get-Device /ID:E8A3EFAC-201F-4E69-953-B2DAA1E8B1B6 /forest:Yes
 ```
 ## <a name="additional-references"></a>추가 참조
-- [명령줄 구문 키](command-line-syntax-key.md)
-[하위 명령:](subcommand-set-device.md)
-[추가 장치 명령을](using-the-add-device-command.md)
-사용 하 여[get alldevices 명령을 사용](using-the-get-alldevices-command.md) 하 여 장치를 설정 합니다.
+- [명령줄 구문 키](command-line-syntax-key.md) 
+ [하위 명령: 설정-장치](subcommand-set-device.md) 
+ [장치 추가 명령을](using-the-add-device-command.md) 
+ 사용 하 여 [Get AllDevices 명령을 사용 하 여](using-the-get-alldevices-command.md)

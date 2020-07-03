@@ -1,6 +1,6 @@
 ---
-title: net 인쇄
-description: Net print 명령에 대 한 참조 항목입니다. 이 명령은 더 이상 사용 되지 않으며 이후 버전의 Windows에서는 지원 되지 않습니다.
+title: net print
+description: Net print 명령에 대 한 참조 문서입니다. 이 명령은 더 이상 사용 되지 않으며 이후 버전의 Windows에서는 지원 되지 않습니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2d8744c3ef4540652b495aea0037e97f433238f2
-ms.sourcegitcommit: 5e313a004663adb54c90962cfdad9ae889246151
+ms.openlocfilehash: af02ca14156c8a85ee54700983e2af6807752f91
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84354313"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85934821"
 ---
-# <a name="net-print"></a>net 인쇄
+# <a name="net-print"></a>net print
 
 > [!IMPORTANT]
 > 이 명령은 더 이상 사용 되지 않습니다. 그러나 [prnjobs.vbs 명령](prnjobs.md), [WMI(Windows Management Instrumentation) (WMI)](https://docs.microsoft.com/windows/win32/wmisdk/wmi-start-page), [POWERSHELL에서 printmanagement](https://docs.microsoft.com/powershell/module/printmanagement)또는 [IT 전문가를 위한 스크립트 리소스](https://gallery.technet.microsoft.com/ScriptCenter/site/search?f%5B0%5D.Type=RootCategory&f%5B0%5D.Value=printing&f%5B0%5D.Text=Printing)를 사용 하 여 여러 가지 동일한 작업을 수행할 수 있습니다.

@@ -1,6 +1,6 @@
 ---
 title: set
-description: Windows 배포 서비스 서버, 사전 준비 된 컴퓨터, 이미지, 이미지 그룹 및 전송 서버에 대 한 속성 및 특성을 설정 하는 집합에 대 한 참조 항목입니다.
+description: Windows 배포 서비스 서버, 사전 준비 된 컴퓨터, 이미지, 이미지 그룹 및 전송 서버에 대 한 속성 및 특성을 설정 하는 집합에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: dd406a04fdb704ec8e2ee1e9aa3548c130e1089c
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: b11c9b349fc1473d1d6ec167528c43ac314b51e9
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82721419"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85934604"
 ---
 # <a name="set"></a>set
 

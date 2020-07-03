@@ -1,6 +1,6 @@
 ---
 title: query termserver
-description: 네트워크에 있는 모든 원격 데스크톱 세션 호스트 서버 목록을 표시 하는 query termserver 명령에 대 한 참조 항목입니다.
+description: 네트워크에 있는 모든 원격 데스크톱 세션 호스트 서버 목록을 표시 하는 query termserver 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c41ed824ee0b1e9dc2672646ef0af03e2593ec07
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: c7f4ca42cc053e943d89f40a71eb24372c0399e5
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85471978"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85934235"
 ---
 # <a name="query-termserver"></a>query termserver
 
@@ -45,7 +45,7 @@ query termserver [<servername>] [/domain:<domain>] [/address] [/continue]
 | 계속 해 서 / | 각 정보 화면에 표시 되 면 일시 중지를 방지 합니다. |
 | /? | 명령 프롬프트에 도움말을 표시합니다. |
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 네트워크에 있는 모든 원격 데스크톱 세션 호스트 서버에 대 한 정보를 표시 하려면 다음을 입력 합니다.
 

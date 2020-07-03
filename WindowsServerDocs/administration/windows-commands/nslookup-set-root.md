@@ -1,6 +1,6 @@
 ---
 title: nslookup set root
-description: 쿼리에 사용 되는 루트 서버의 이름을 변경 하는 nslookup set root 명령에 대 한 참조 항목입니다.
+description: 쿼리에 사용 되는 루트 서버의 이름을 변경 하는 nslookup set root 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1271dbeb0381d01e70380bded82a94ba20163853
-ms.sourcegitcommit: 99d548141428c964facf666c10b6709d80fbb215
+ms.openlocfilehash: 866cc0f9c7c7e4ea99416c1be1fd8de3d374ca64
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721456"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85935675"
 ---
 # <a name="nslookup-set-root"></a>nslookup set root
 
@@ -33,7 +33,7 @@ set root=<rootserver>
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | ---------- | ---------- |
 | `<rootserver>` | 루트 서버에 대 한 새 이름을 지정합니다. 기본값은 **ns.nic.ddn.mil**입니다. |
 | /? | 명령 프롬프트에 도움말을 표시합니다. |

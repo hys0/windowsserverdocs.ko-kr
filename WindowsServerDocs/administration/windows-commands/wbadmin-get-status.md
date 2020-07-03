@@ -1,6 +1,6 @@
 ---
-title: wbadmin 가져오기 상태
-description: 현재 실행 중인 백업 또는 복구 작업의 상태를 보고 하는 wbadmin get status에 대 한 참조 항목입니다.
+title: wbadmin get status
+description: 현재 실행 중인 백업 또는 복구 작업의 상태를 보고 하는 wbadmin get status에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0e41c54b9f916f0032a4976cdfa6d3ca101fb744
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: a5f073941fa0d336e513c8de7502a601f1de5711
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83821193"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85934331"
 ---
-# <a name="wbadmin-get-status"></a>wbadmin 가져오기 상태
+# <a name="wbadmin-get-status"></a>wbadmin get status
 
 
 

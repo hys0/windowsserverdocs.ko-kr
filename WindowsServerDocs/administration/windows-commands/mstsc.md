@@ -1,6 +1,6 @@
 ---
 title: mstsc
-description: 원격 데스크톱 세션 호스트 서버 또는 다른 원격 컴퓨터에 대 한 연결을 만들고, 기존 원격 데스크톱 연결 (.rdp) 구성 파일을 편집 하 고, 클라이언트 연결 관리자를 사용 하 여 만든 레거시 연결 파일을 새 .rdp 연결 파일로 마이그레이션하는 mstsc 명령에 대 한 참조 항목입니다.
+description: 원격 데스크톱 세션 호스트 서버 또는 다른 원격 컴퓨터에 대 한 연결을 만들고, 기존 원격 데스크톱 연결 (.rdp) 구성 파일을 편집 하 고, 클라이언트 연결 관리자를 사용 하 여 만든 레거시 연결 파일을 새 .rdp 연결 파일로 마이그레이션하는 mstsc 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a6620cc2f954e43a6e68369f9b1f3480c1fc508c
-ms.sourcegitcommit: 5e313a004663adb54c90962cfdad9ae889246151
+ms.openlocfilehash: cec9ef281c886964163c233022466d8478d65c79
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84354353"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85934846"
 ---
 # <a name="mstsc"></a>mstsc
 
@@ -32,7 +32,7 @@ mstsc.exe /migrate
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ------------|
 | `<connectionfile>` | 연결에.rdp 파일의 이름을 지정합니다. |
 | /v:`<server>[:<port>]` | 원격 컴퓨터와 선택적으로 연결 하려면 포트 번호를 지정 합니다. |

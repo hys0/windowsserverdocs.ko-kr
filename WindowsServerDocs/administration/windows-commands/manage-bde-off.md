@@ -1,6 +1,6 @@
 ---
 title: manage-bde 꺼짐
-description: 드라이브의 암호를 해독 하 고 BitLocker를 끄는 manage-bde off 명령에 대 한 참조 항목입니다.
+description: 드라이브의 암호를 해독 하 고 BitLocker를 끄는 manage-bde off 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: cbcec0cadba870a5f416af50f12e0b2c5eed6d95
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: 65749f31750b1f7467539b25b09061ea267636df
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84222862"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85935525"
 ---
 # <a name="manage-bde-off"></a>manage-bde 꺼짐
 

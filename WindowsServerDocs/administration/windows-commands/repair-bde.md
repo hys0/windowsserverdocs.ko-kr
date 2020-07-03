@@ -1,6 +1,6 @@
 ---
 title: repair-bde
-description: '* * * *에 대 한 참조 항목'
+description: '* * * *에 대 한 참조 문서'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 235640cacc6c0cca5ee9e820606082afe5d39d41
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: a2ba82708acd9c5830e2dc8a09cd804ade342066
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820113"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85935641"
 ---
 # <a name="repair-bde"></a>repair-bde
 
@@ -57,7 +57,7 @@ repair-bde <InputVolume> <OutputVolumeorImage> [-rk] [–rp] [-pw] [–kp] [–l
 
 ## <a name="examples"></a>예
 
-C 드라이브를 복구 하 고 드라이브 F에 저장 된 복구 키 파일 (Recoverykey.bek .bek)을 사용 하 여 C 드라이브에서 D 드라이브에 콘텐츠를 쓰고이 시도의 결과를 Z 드라이브의 로그 파일 ()에 기록 합니다.
+C 드라이브를 복구 하 고 드라이브 F에 저장 된 복구 키 파일 (Recoverykey.bek)을 사용 하 여 C 드라이브에서 D 드라이브에 콘텐츠를 쓰고이 시도의 결과를 Z 드라이브의 로그 파일 (log.txt)에 기록 합니다.
 ```
 repair-bde C: D: -rk F:\RecoveryKey.bek –lf Z:\log.txt
 ```

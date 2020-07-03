@@ -1,6 +1,6 @@
 ---
 title: 선택
-description: '* * * *에 대 한 참조 항목'
+description: '* * * *에 대 한 참조 문서'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9615918bb7fab45018f40b409427ab12fc3eddb7
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 6004d39e225b1ac4acd96b4108accff2ccfc485c
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82721984"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85935930"
 ---
 # <a name="select"></a>선택
 
@@ -36,9 +36,9 @@ select vdisk
 |매개 변수|설명|
 |---------|-----------|
 |[디스크 선택](select-disk.md)|디스크에 포커스를 이동합니다.|
-|[파티션을 선택합니다](select-partition.md)|파티션의 포커스가 이동합니다.|
+|[파티션 선택](select-partition.md)|파티션의 포커스가 이동합니다.|
 |[볼륨 선택](select-volume.md)|볼륨에 포커스를 이동합니다.|
-|[Vdisk를 선택 합니다.](select-vdisk.md)|VHD에 포커스를 이동합니다.|
+|[Vdisk 선택](select-vdisk.md)|VHD에 포커스를 이동합니다.|
 
 ## <a name="remarks"></a>설명
 

@@ -1,6 +1,6 @@
 ---
 title: lpq
-description: LPD 명령에 대 한 참조 항목-LPD (Line printer Daemon)를 실행 하는 컴퓨터의 인쇄 큐 상태를 표시 합니다.
+description: LPD 명령에 대 한 참조 문서는 LPD (Line printer Daemon)를 실행 하는 컴퓨터에서 인쇄 큐의 상태를 표시 합니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1ecce9b1b4255e5e769fe76b0f753226d61fa916
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: 373b1af5acbc43cbf52c45667c6feb571f1855a8
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84222722"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85934555"
 ---
 # <a name="lpq"></a>lpq
 

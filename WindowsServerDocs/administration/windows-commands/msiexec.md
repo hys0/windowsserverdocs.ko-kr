@@ -1,6 +1,6 @@
 ---
 title: msiexec
-description: 명령줄에서 Windows Installer에 대 한 설치, 수정 및 작업 수행 방법을 제공 하는 msiexec 명령에 대 한 참조 항목입니다.
+description: 명령줄에서 Windows Installer에 대 한 설치, 수정 및 작업 수행 방법을 제공 하는 msiexec 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f84df28104f581873fe1fd86a3abd6a51532b020
-ms.sourcegitcommit: 5e313a004663adb54c90962cfdad9ae889246151
+ms.openlocfilehash: aacdc55ac3895efad7dd9499ea1402b538fb8a9b
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84354343"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85934963"
 ---
 # <a name="msiexec"></a>msiexec
 
@@ -32,7 +32,7 @@ msiexec.exe [/i][/a][/j{u|m|/g|/t}][/x] <path_to_package>
 
 #### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | ------- | -------- |
 | /i | 일반 설치를 지정 합니다. |
 | /a | 관리 설치를 지정 합니다. |
@@ -45,7 +45,7 @@ msiexec.exe [/i][/a][/j{u|m|/g|/t}][/x] <path_to_package>
 
 #### <a name="examples"></a>예
 
-일반 설치 프로세스를 사용 하 여 C: 드라이브에서 *example .msi* 라는 패키지를 설치 하려면 다음을 입력 합니다.
+표준 설치 프로세스를 사용 하 여 C: 드라이브에서 이름이 *example.msi* 인 패키지를 설치 하려면 다음을 입력 합니다.
 
 ```
 msiexec.exe /i "C:\example.msi"
@@ -63,7 +63,7 @@ msiexec.exe /i <path_to_package> [/quiet][/passive][/q{n|b|r|f}]
 
 #### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | ------- | -------- |
 | `<path_to_package>` | 설치 패키지 파일의 위치와 이름을 지정 합니다. |
 | /quiet | 자동 모드를 지정 합니다. 즉, 사용자 조작이 필요 하지 않습니다. |
@@ -81,7 +81,7 @@ msiexec.exe /i <path_to_package> [/quiet][/passive][/q{n|b|r|f}]
 
 #### <a name="examples"></a>예
 
-일반 설치 프로세스를 사용 하 여 *C:\example.msi*패키지를 설치 하려면 다음을 입력 합니다.
+일반 설치 프로세스를 사용 하 고 UI를 사용 하지 않고 패키지 *C:\example.msi*를 설치 하려면 다음을 입력 합니다.
 
 ```
 msiexec.exe /i "C:\example.msi" /qn
@@ -99,7 +99,7 @@ msiexec.exe /i <path_to_package> [/norestart][/promptrestart][/forcerestart]
 
 #### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | ------- | -------- |
 | `<path_to_package>` | 설치 패키지 파일의 위치와 이름을 지정 합니다. |
 | /norestart | 설치가 완료 된 후 장치를 다시 시작 하지 않도록 합니다. |
@@ -108,7 +108,7 @@ msiexec.exe /i <path_to_package> [/norestart][/promptrestart][/forcerestart]
 
 #### <a name="examples"></a>예
 
-*C:\example.msi*패키지를 설치 하려면 마지막에 다시 부팅 하지 않고 일반 설치 프로세스를 사용 하 여 다음을 입력 합니다.
+패키지 *C:\example.msi*를 설치 하려면 마지막에 다시 부팅 하지 않고 일반 설치 프로세스를 사용 하 여 다음을 입력 합니다.
 
 ```
 msiexec.exe /i "C:\example.msi" /norestart
@@ -126,7 +126,7 @@ msiexec.exe [/i][/x] <path_to_package> [/L{i|w|e|a|r|u|c|m|o|p|v|x+|!|*}] <path_
 
 #### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | ------- | -------- |
 | /i | 일반 설치를 지정 합니다. |
 | /x | 패키지를 제거 합니다. |
@@ -152,7 +152,7 @@ msiexec.exe [/i][/x] <path_to_package> [/L{i|w|e|a|r|u|c|m|o|p|v|x+|!|*}] <path_
 
 #### <a name="examples"></a>예
 
-*C:\example.msi*패키지를 설치 하려면 자세한 정보를 출력 하 고 *C:\package.log*에 출력 로그 파일을 저장 하 여 제공 된 모든 로깅 정보가 포함 된 일반 설치 프로세스를 사용 하 여 다음을 입력 합니다.
+*C:\package.log*에 출력 로그 파일을 저장 하 고 자세한 출력을 포함 하 여 모든 로깅 정보를 제공 하는 일반 설치 프로세스를 사용 하 여 패키지 *C:\example.msi*를 설치 하려면 다음을 입력 합니다.
 
 ```
 msiexec.exe /i "C:\example.msi" /L*V "C:\package.log"
@@ -170,7 +170,7 @@ msiexec.exe [/p][/update][/uninstall[/package<product_code_of_package>]] <path_t
 
 #### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | ------- | -------- |
 | /p | 패치를 설치 합니다. 자동으로 설치 하는 경우 REINSTALLMODE 속성을 *ecmus* 로 설정 하 고 *모두*에 다시 설치 해야 합니다. 그렇지 않으면 패치는 대상 장치에서 캐시 된 MSI만 업데이트 합니다. |
 | /update | 패치 설치 옵션. 여러 업데이트를 적용 하는 경우 세미콜론 (;)을 사용 하 여 구분 해야 합니다. |
@@ -202,7 +202,7 @@ msiexec.exe [/f{p|o|e|d|c|a|u|m|s|v}] <product_code>
 
 #### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | ------- | -------- |
 | /fp | 파일이 없는 경우 패키지를 복구 합니다. |
 | /fo | 파일이 없거나 이전 버전이 설치 되어 있는 경우 패키지를 복구 합니다. |

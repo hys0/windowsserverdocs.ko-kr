@@ -1,6 +1,6 @@
 ---
 title: verbose
-description: 지정 된 명령에 대 한 자세한 정보 출력을 표시 하는 자세한 정보에 대 한 참조 항목입니다.
+description: 지정 된 명령에 대 한 자세한 정보 출력을 표시 하는 자세한 정보에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3563673d1f80167e469d98a664a6f96ca49815a1
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 079e441ba4a932e23493e7e37fbe36cab4c4971f
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82721369"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85935241"
 ---
 # <a name="verbose"></a>verbose
 

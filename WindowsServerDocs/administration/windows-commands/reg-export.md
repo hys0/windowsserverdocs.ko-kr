@@ -1,6 +1,6 @@
 ---
-title: reg 내보내기
-description: '* * * *에 대 한 참조 항목'
+title: reg export
+description: 다른 서버로 전송 하기 위해 로컬 컴퓨터의 지정 된 하위 키, 항목 및 값을 파일에 복사 하는 reg export 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,48 +9,45 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b2c697595d5d19c953ef85f7a2e334c6fe05329d
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 4c0cad839569651823e1c1a2bcca3c17c5550c8a
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82722558"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85934640"
 ---
-# <a name="reg-export"></a>reg 내보내기
-
-
+# <a name="reg-export"></a>reg export
 
 다른 서버에 전송 하기 위해서는 파일에 지정 된 하위 키, 항목 및 로컬 컴퓨터의 값을 복사합니다.
-
-
 
 ## <a name="syntax"></a>구문
 
 ```
-Reg export KeyName FileName [/y]
+reg export <keyname> <filename> [/y]
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|Description|
-|---------|-----------|
-|\<KeyName>|하위 키의 전체 경로 지정합니다. 내보내기 작업이 로컬 컴퓨터 에서만 작동합니다. 키 이름에는 유효한 루트 키를 포함 해야 합니다. 유효한 루트 키가: HKLM, HKCU, HKCR, HKU, 및 HKCC 합니다.|
-|\<파일 이름>|작업 중에 만든 파일의 경로 이름을 지정 합니다. 파일은 확장명이.reg 인이 있어야 합니다.|
-|/y|이름의 기존 파일을 덮어씁니다 *FileName* 확인 메시지를 표시 하지 않고 있습니다.|
-|/?|에 대 한 도움말을 표시 **reg 내보내기** 명령 프롬프트입니다.|
+| 매개 변수 | Description |
+|--|--|
+| `<keyname>` | 하위 키의 전체 경로 지정합니다. 내보내기 작업은 로컬 컴퓨터 에서만 작동 합니다. *Keyname* 은 올바른 루트 키를 포함 해야 합니다. 로컬 컴퓨터의 유효한 루트 키는 **HKLM**, **HKCU**, **HKCR**, **HKU**및 **hkcc**입니다. 레지스트리 키 이름에 공백이 포함 되어 있으면 키 이름을 따옴표로 묶으십시오. |
+| `<filename>` | 작업 중에 만든 파일의 경로 이름을 지정 합니다. 파일은 확장명이.reg 인이 있어야 합니다. |
+| /y | 확인 메시지를 *표시 하지 않고 파일 이름* 으로 기존 파일을 덮어씁니다. |
+| /? | 명령 프롬프트에 도움말을 표시합니다. |
 
-## <a name="remarks"></a>설명
+#### <a name="remarks"></a>설명
 
-다음 표에 대 한 반환 값은 **reg 내보내기** 작업 합니다.
+- **Reg export** 작업에 대 한 반환 값은 다음과 같습니다.
 
-|값|설명|
-|-----|-----------|
-|0|Success|
-|1|실패|
+    | 값 | 설명 |
+    |--|--|
+    | 0 | 성공 |
+    | 1 | 실패 |
 
-## <a name="examples"></a>예
+### <a name="examples"></a>예
 
 모든 하위 키의 내용과 MyApp 키의 값 AppBkUp.reg 파일을 내보내려면 다음을 입력 합니다.
+
 ```
 reg export HKLM\Software\MyCo\MyApp AppBkUp.reg
 ```

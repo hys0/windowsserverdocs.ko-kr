@@ -1,6 +1,6 @@
 ---
 title: setlocal
-description: 배치 파일에서 환경 변수를 지역화 하기 시작 하는 setlocal에 대 한 참조 항목입니다.
+description: 배치 파일에서 환경 변수를 지역화 하기 시작 하는 setlocal에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: def4e8c58399af498e3c097f53e526fbedf9de0d
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 4e990cf931e72bd8f6972db448d24db08c2e5208
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82721859"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85934610"
 ---
 # <a name="setlocal"></a>setlocal
 
@@ -51,12 +51,12 @@ setlocal [enableextensions | disableextensions] [enabledelayedexpansion | disabl
     둘 이상의 **setlocal** 또는 **endlocal** 명령을 일괄 프로그램 (즉, 중첩 된 명령).
 -   배치 파일에서 명령 확장에 대 한 테스트
 
-    **setlocal** ERRORLEVEL 변수를 설정 하는 명령입니다. {**Enableextensions** | **disableextensions**} 또는 {**enabledelayedexpansion** | **disabledelayedexpansion**}를 전달 하는 경우 ERRORLEVEL 변수는 **0** (영)으로 설정 됩니다. 그렇지 않으면로 설정 됩니다 **1**합니다. 다음 예제와 같이 확장을 사용할 수 있는 지 확인 하기 위해 배치 스크립트에서이 정보를 사용할 수 있습니다.  
+    **setlocal** ERRORLEVEL 변수를 설정 하는 명령입니다. {**Enableextensions**  |  **disableextensions**} 또는 {**enabledelayedexpansion**  |  **disabledelayedexpansion**}를 전달 하는 경우 ERRORLEVEL 변수는 **0** (영)으로 설정 됩니다. 그렇지 않으면로 설정 됩니다 **1**합니다. 다음 예제와 같이 확장을 사용할 수 있는 지 확인 하기 위해 배치 스크립트에서이 정보를 사용할 수 있습니다.
     ```
     setlocal enableextensions
     verify other 2>nul
     if errorlevel 1 echo Unable to enable extensions
-    ```  
+    ```
     때문에 **cmd** 명령 확장 비활성화 되 면 ERRORLEVEL 변수를 설정 하지 않는 **확인** 명령에 잘못 된 인수를 사용 하는 경우 0이 아닌 값으로 ERRORLEVEL 변수를 초기화 합니다. 또한 사용 하는 경우는 **setlocal** 명령 인수에 {**enableextensions** | **disableextensions**} 또는 {**enabledelayedexpansion** | **disabledelayedexpansion**} ERRORLEVEL 변수 설정 하지 않으므로 및 **1**, 명령 확장을 사용할 수 없습니다.
 
 ## <a name="examples"></a>예

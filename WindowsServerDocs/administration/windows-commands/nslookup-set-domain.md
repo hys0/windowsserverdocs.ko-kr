@@ -1,6 +1,6 @@
 ---
 title: nslookup set domain
-description: 기본 DNS (Domain Name System) 도메인 이름을 지정 된 이름으로 변경 하는 nslookup 도메인 설정 명령에 대 한 참조 항목입니다.
+description: 기본 DNS (Domain Name System) 도메인 이름을 지정 된 이름으로 변경 하는 nslookup 도메인 설정 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e672bf53e655ef12cadb2a30aaa377b24e49afec
-ms.sourcegitcommit: 99d548141428c964facf666c10b6709d80fbb215
+ms.openlocfilehash: eaa12029beab301f955a4c9bed4595831f6ebf12
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721636"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85934415"
 ---
 # <a name="nslookup-set-domain"></a>nslookup set domain
 
@@ -30,7 +30,7 @@ set domain=<domainname>
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | `<domainname>` | 기본 DNS 도메인 이름에 대 한 새 이름을 지정합니다. 기본값은 호스트의 이름입니다. |
 | /? | 명령 프롬프트에 도움말을 표시합니다. |

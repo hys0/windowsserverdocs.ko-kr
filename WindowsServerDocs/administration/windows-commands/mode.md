@@ -1,6 +1,6 @@
 ---
 title: mode
-description: 모드 명령에 대 한 참조 항목으로, 시스템 상태를 표시 하거나, 시스템 설정을 변경 하거나, 포트 또는 장치를 재구성 합니다.
+description: 시스템 상태를 표시 하거나, 시스템 설정을 변경 하거나, 포트 또는 장치를 다시 설정 하는 모드 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f4c895c59bb527b8bfb6973a72d0d4e163cb2ace
-ms.sourcegitcommit: 5e313a004663adb54c90962cfdad9ae889246151
+ms.openlocfilehash: 5794b80f7457b133d3e5b599cb12613469ad58eb
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84354583"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85936054"
 ---
 # <a name="mode"></a>mode
 
@@ -32,7 +32,7 @@ mode com<m>[:] [baud=<b>] [parity=<p>] [data=<d>] [stop=<s>] [to={on|off}] [xon=
 
 #### <a name="parameters"></a>매개 변수
 
-| 매개 변수  | Description |
+| 매개 변수  | 설명 |
 | ---------- | ----------- |
 | `com<m>[:]` | Async Prncnfg.vbshronous 통신 포트 번호를 지정합니다. |
 | `baud=<b>`  | 비트 / 초 전송 속도 지정합니다. 유효한 값은 다음과 같습니다.<ul><li>**11** -110 보드</li><li>**15** -150 전송</li><li>**30** -300 보드</li><li>**60** -600 전송</li><li>**12** -1200 보드</li><li>**24** -2400 전송</li><li>**48** -4800 전송</li><li>**96** -9600 전송</li><li>**19** -19200 전송</li></ul> |
@@ -60,7 +60,7 @@ mode [<device>] [/status]
 
 #### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | `<device>` | 상태를 표시 하려는 디바이스의 이름을 지정 합니다. 표준 이름에는 LPT1: ~ LPT3:, COM1: ~ COM9: 및 CON이 포함 됩니다. |
 | /status | 리디렉션된 모든 병렬 프린터의 상태를 요청 합니다. **/Sta** 를이 명령의 축약 된 버전으로 사용할 수도 있습니다. |
@@ -81,7 +81,7 @@ mode LPT<n>[:]=COM<m>[:]
 
 #### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | LPT `<n>` [:] | 구성할 LPT의 번호를 지정 합니다. 일반적으로이는 시스템에 특별 한 병렬 포트 지원이 포함 되지 않은 경우 **LTP1: ~ LTP3:를 통해**값을 제공 하는 것을 의미 합니다. 이 매개 변수는 필수입니다.|
 | COM `<m>` [:] | 구성할 COM 포트를 지정 합니다. 일반적으로 시스템에 추가 COM 포트에 대 한 특수 하드웨어가 있는 경우를 제외 하 고는 **COM9:부터 COM1**의 값을 제공 하는 것을 의미 합니다. 이 매개 변수는 필수입니다. |
@@ -117,7 +117,7 @@ mode <device> codepage [/status]
 
 #### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | `<device>` |코드 페이지를 선택 하려는 디바이스를 지정 합니다. 디바이스에만 유효한 이름인 CON 합니다. 이 매개 변수는 필수입니다. |
 | codepage | 지정된 된 디바이스를 사용 하는 코드 페이지를 지정 합니다. 이 명령의 축약 된 버전으로 **cp** 를 사용할 수도 있습니다. 이 매개 변수는 필수입니다. |
@@ -137,7 +137,7 @@ mode con[:] [cols=<c>] [lines=<n>]
 
 #### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | con [:] | 명령 프롬프트 창에 변경 내용을 적용 된다는 것을 나타냅니다. 이 매개 변수는 필수입니다. |
 | cols =`<c>` | 명령 프롬프트 화면 버퍼에서 열 수를 지정합니다. 기본 설정은 80 열 이지만이 값을 임의의 값으로 설정할 수 있습니다. 기본값을 사용 하지 않는 경우 일반적인 값은 40 및 135 열입니다. 비표준 값을 사용 하면 명령 프롬프트 앱 문제가 발생할 수 있습니다. |
@@ -159,7 +159,7 @@ mode con[:] [rate=<r> delay=<d>]
 
 #### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | con [:] | 키보드를 지정 합니다. 이 매개 변수는 필수입니다. |
 | rate =`<r>` | 키를 누르고 있을 때 화면에 문자가 반복 되는 속도 지정 합니다. 기본값은 IBM 호환 키보드의 경우 초당 20 자이 고 IBM PS/2 호환 키보드의 경우 21 이지만 1에서 32 사이의 값을 사용할 수 있습니다. 이 매개 변수를 설정 하는 경우 **delay** 매개 변수도 설정 해야 합니다.|

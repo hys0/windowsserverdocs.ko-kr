@@ -1,6 +1,6 @@
 ---
-title: wbadmin 복원 카탈로그
-description: 지정한 저장소 위치에서 로컬 컴퓨터에 대 한 백업 카탈로그를 복구 하는 wbadmin restore catalog에 대 한 참조 항목입니다.
+title: wbadmin restore catalog
+description: 지정한 저장소 위치에서 로컬 컴퓨터에 대 한 백업 카탈로그를 복구 하는 wbadmin restore catalog에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 82a399284862ef59f417efa0b6f17ab6e8c4cb71
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 2584dde27560b5b8f28fb51b8fb5c2cf92a2d805
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820493"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85934309"
 ---
-# <a name="wbadmin-restore-catalog"></a>wbadmin 복원 카탈로그
+# <a name="wbadmin-restore-catalog"></a>wbadmin restore catalog
 
 사용자가 지정한 스토리지 위치에서 로컬 컴퓨터에 대한 백업 카탈로그를 복구합니다.
 

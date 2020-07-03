@@ -1,6 +1,6 @@
 ---
 title: 초기화 취소-서버
-description: 초기 서버 구성 중 서버에 대 한 변경 내용을 되돌리는 서버 초기화 취소에 대 한 참조 항목입니다.
+description: 초기 서버 구성 중 서버에 대 한 변경 내용을 되돌리는 서버 초기화 취소에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4d7747a44172b7382bd22a7d48ccc717a89ccacb
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: fdbe391a7335c347f05f9f9c06bbade3474fa30e
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82721392"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85935874"
 ---
 # <a name="uninitialize-server"></a>초기화 취소-서버
 
@@ -37,11 +37,11 @@ wdsutil /Uninitialize-Server
 wdsutil /verbose /Uninitialize-Server /Server:MyWDSServer
 ```
 ## <a name="additional-references"></a>추가 참조
-- [명령줄 구문 키](command-line-syntax-key.md)
-사용[안 함](using-the-disable-server-command.md)
-[Using the enable-Server Command](using-the-enable-server-command.md)
--서버 명령을 사용 하 여 서버를 사용 하 여 명령을 사용 하 여[get](using-the-get-server-command.md)
-서버 명령을 사용 하 여[Initialize](using-the-initialize-server-command.md)
-
-서버 명령을 사용 하 여 하위 명령[: 서버 하위](subcommand-set-server.md)명령:[시작-](subcommand-start-server.md)
-서버 하위 명령: 서버[중지](subcommand-stop-server.md)
+- [명령줄 구문 키](command-line-syntax-key.md) 
+ [Disable Server 명령 사용](using-the-disable-server-command.md) 
+ [Enable-Server 명령 사용](using-the-enable-server-command.md) 
+ [Get Server 명령 사용](using-the-get-server-command.md) 
+ [Initialize 서버 명령을](using-the-initialize-server-command.md) 
+ 사용 하 여 [하위 명령: 설정-서버](subcommand-set-server.md) 
+ [하위 명령: 시작-서버](subcommand-start-server.md) 
+ [하위 명령: 중지 서버](subcommand-stop-server.md)
