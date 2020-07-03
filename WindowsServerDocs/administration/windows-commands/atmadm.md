@@ -1,6 +1,6 @@
 ---
 title: atmadm
-description: Atm 호출 관리자가 atM (비동기 전송 모드) 네트워크에서 등록 한 연결 및 주소를 모니터링 하는 atmadm 명령에 대 한 참조 항목입니다.
+description: Atm 호출 관리자가 atM (비동기 전송 모드) 네트워크에서 등록 한 연결 및 주소를 모니터링 하는 atmadm 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 32dad00e5a4d03c905f95c48e112f512a9dbc2e5
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 1985634cdbaff0dfe0dcefd53395bc4f62614f2a
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718915"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85923925"
 ---
 # <a name="atmadm"></a>atmadm
 

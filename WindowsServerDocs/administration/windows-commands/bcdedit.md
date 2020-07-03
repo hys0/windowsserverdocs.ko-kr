@@ -1,6 +1,6 @@
 ---
 title: bcdedit
-description: 새 저장소를 만들고, 기존 저장소를 수정 하 고, 부팅 메뉴 매개 변수를 추가 하는 bcdedit 명령에 대 한 참조 항목입니다.
+description: 새 저장소를 만들고, 기존 저장소를 수정 하 고, 부팅 메뉴 매개 변수를 추가 하는 bcdedit 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 03/27/2018
-ms.openlocfilehash: df68c2c1b1087f7e32dbe270657a54e072261c46
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 2e49ed45875b79dfc4d8bbbdad8a1221000bf2b5
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718693"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85923518"
 ---
 # <a name="bcdedit"></a>bcdedit
 

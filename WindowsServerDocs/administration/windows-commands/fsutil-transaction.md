@@ -1,6 +1,6 @@
 ---
 title: fsutil transaction
-description: NTFS 트랜잭션을 관리 하는 fsutil transaction 명령에 대 한 참조 항목입니다.
+description: NTFS 트랜잭션을 관리 하는 fsutil transaction 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 manager: dmoss
 ms.author: toklima
@@ -9,12 +9,12 @@ ms.technology: storage
 ms.assetid: f2eefaaf-2817-4ac7-abac-d2b65fa971dc
 ms.topic: article
 ms.date: 10/16/2017
-ms.openlocfilehash: fc81934c5838fd81722b27a7b7e57b14709ed26a
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: 95cd9a8f62aa9dd64d46a875a90847a65589b447
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83437048"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85922338"
 ---
 # <a name="fsutil-transaction"></a>fsutil transaction
 
@@ -46,7 +46,7 @@ fsutil transaction [rollback] <GUID>
 
 ### <a name="examples"></a>예
 
-*C:\test.txt*파일에 대 한 트랜잭션 정보를 표시 하려면 다음을 입력 합니다.
+파일 *c:\test.txt*에 대 한 트랜잭션 정보를 표시 하려면 다음을 입력 합니다.
 
 ```
 fsutil transaction fileinfo c:\test.txt

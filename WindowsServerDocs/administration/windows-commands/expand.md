@@ -1,6 +1,6 @@
 ---
 title: expand
-description: 하나 이상의 압축 된 파일을 확장 하는 확장 명령에 대 한 참조 항목입니다.
+description: 하나 이상의 압축 된 파일을 확장 하는 확장 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1204f3db338f835b47db03eab3d178544a6acc85
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: aa032953255b3731f500bfb4d78eaca0d772d1d8
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83819123"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85922722"
 ---
 # <a name="expand"></a>expand
 
@@ -39,7 +39,7 @@ expand <source>.cab /f:<files> <destination>
 | 매개 변수 | 설명 |
 | --------- | ----------- |
 | /r | 압축을 푼 파일입니다. |
-| 원본 | 압축을 풀 파일을 지정 합니다. *소스* 드라이브 문자 및 콜론, 디렉터리 이름, 파일 이름, 또는 이들의 조합으로 구성 될 수 있습니다. 와일드 카드 (**&#42;** 또는 **?**)를 사용할 수 있습니다. |
+| source | 압축을 풀 파일을 지정 합니다. *소스* 드라이브 문자 및 콜론, 디렉터리 이름, 파일 이름, 또는 이들의 조합으로 구성 될 수 있습니다. 와일드 카드 (**&#42;** 또는 **?**)를 사용할 수 있습니다. |
 | destination | 확장 하는 파일의 위치를 지정 합니다.<p>*원본이* 여러 파일로 구성 되어 있고 **/r**을 지정 하지 않은 경우 *대상은* 디렉터리 여야 합니다. *대상* 드라이브 문자 및 콜론, 디렉터리 이름, 파일 이름, 또는 이들의 조합으로 구성 될 수 있습니다. 대상 `file | path` 사양입니다. |
 | /i | 확장 된 파일의 이름을 바꿉니다 하 하지만 디렉터리 구조를 무시 합니다. |
 | /d | 원본 위치에서 파일 목록을 표시합니다. 는 파일을 확장 하거나 추출 하지 않습니다. |

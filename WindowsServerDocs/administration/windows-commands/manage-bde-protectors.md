@@ -1,6 +1,6 @@
 ---
 title: manage-bde 보호기
-description: BitLocker 암호화 키에 사용 되는 보호 방법을 관리 하는 manage-bde protectors 명령에 대 한 참조 항목입니다.
+description: BitLocker 암호화 키에 사용 되는 보호 방법을 관리 하는 manage-bde protectors 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 08/06/2018
-ms.openlocfilehash: 999c92fd9f2bfedad92a9c68c1528ee66836f315
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: d277c070ff0cdee0d93d7a8be11dc13bea5adb95
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84222623"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85922308"
 ---
 # <a name="manage-bde-protectors"></a>manage-bde 보호기
 
@@ -99,7 +99,7 @@ manage-bde -protectors -delete <drive> [-type {recoverypassword|externalkey|cert
 | tpmandpin | 드라이브와 연결 된 모든 TPM 및 PIN 기반 키 보호기를 삭제 해야 함을 지정 합니다. |
 | tpmandpinandstartupkey | 드라이브와 연결 된 모든 TPM, PIN 및 시작 키 보호기를 삭제 해야 함을 지정 합니다. |
 | password | 드라이브와 연결 된 모든 암호 키 보호기를 삭제 해야 함을 지정 합니다. |
-| identity | 드라이브와 연결 된 모든 identity 키 보호기를 삭제 해야 함을 지정 합니다. |
+| ID | 드라이브와 연결 된 모든 identity 키 보호기를 삭제 해야 함을 지정 합니다. |
 | -ID | 키 식별자를 사용 하 여 삭제할 키 보호기를 식별 합니다. 이 매개 변수는 다른 옵션에는 **-형식** 매개 변수입니다. |
 | `<keyprotectorID>` | 삭제 하는 드라이브에는 개별 키 보호기를 식별 합니다. Id 키 보호기를 사용 하 여 표시할 수는 **관리 bde-보호기-가져오기** 명령입니다. |
 | -computername | 다른 컴퓨터에서 BitLocker 보호를 수정 하는 데 manage-bde.exe를 사용 하도록 지정 합니다. 사용할 수도 있습니다 **-cn** 이 명령의 축약된 버전으로 합니다. |

@@ -1,6 +1,6 @@
 ---
 title: 마스크
-description: Import 명령을 사용 하 여 가져온 하드웨어 섀도 복사본을 제거 하는 mask 명령에 대 한 참조 항목입니다.
+description: Import 명령을 사용 하 여 가져온 하드웨어 섀도 복사본을 제거 하는 mask 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ee01bb74b1fef1bb31a266c01a9e9bde7743691d
-ms.sourcegitcommit: 5e313a004663adb54c90962cfdad9ae889246151
+ms.openlocfilehash: 2839fce0a64f187c1445a5f6a4af6c5f0ebc9fb8
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84354643"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85922108"
 ---
 # <a name="mask"></a>마스크
 
@@ -28,7 +28,7 @@ mask <shadowsetID>
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | shadowsetID | 제거 섀도 복사본에 지정 된 섀도 복사본 세트 ID에 속하는 |
 

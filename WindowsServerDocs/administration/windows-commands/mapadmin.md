@@ -1,6 +1,6 @@
 ---
 title: mapadmin
-description: 네트워크 파일 시스템용 Microsoft 서비스에 대 한 사용자 이름 매핑를 관리 하는 mapadmin 명령에 대 한 참조 항목입니다.
+description: 네트워크 파일 시스템용 Microsoft 서비스에 대 한 사용자 이름 매핑를 관리 하는 mapadmin 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 059419a134b62ec92b30feacd086e7d7116aab25
-ms.sourcegitcommit: 5e313a004663adb54c90962cfdad9ae889246151
+ms.openlocfilehash: b2ebe5626057bd7f7ddac238360d171c87fd15c6
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84354653"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85922187"
 ---
 # <a name="mapadmin"></a>mapadmin
 
@@ -42,14 +42,14 @@ mapadmin [<computer>] [-u <user> [-p <password>]] listdomainmaps
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | `<computer>` | 관리 하려는 사용자 이름 매핑 서비스를 실행 하는 원격 컴퓨터를 지정 합니다. 인터넷 이름 서비스 WINS (Windows) 이름 또는 도메인 이름 시스템 (DNS) 이름을 사용 하 여 컴퓨터를 지정 하거나 하 여 IP (인터넷 프로토콜) 주소 수 있습니다. |
 | -u`<user>` | 자격 증명에 사용 하려는 사용자의 사용자 이름을 지정 합니다. 사용자 이름에 도메인 이름을 *domain\username*형식으로 추가 해야 할 수도 있습니다. |
 | -p `<password>` | 사용자의 암호를 지정 합니다. 지정 하는 경우는 **-u** 옵션은 있 생략 된 **-p** 옵션을 사용자의 암호를 묻는 메시지가 나타납니다. |
 | `start | stop` | 사용자 이름 매핑 서비스를 시작 하거나 중지 합니다. |
 | config | 사용자 이름 매핑에 대 한 일반 설정을 지정합니다. 이 매개 변수와 함께 사용할 수 있는 옵션은 다음과 같습니다.<ul><li>**-r `<dddd>:<hh>:<mm>` :** Windows 및 NIS 데이터베이스에서 업데이트를 위한 새로 고침 간격을 일, 시간 및 분 단위로 지정 합니다. 최소 간격은 5 분입니다.</li><li>**-i `{yes | no}` :** 단순 매핑을 설정 (**예**) 또는 해제 (**아니요**) 합니다. 기본적으로 매핑은 설정 되어 있습니다.</li></ul> |
-| 추가 | 사용자 또는 그룹에 대 한 새 매핑을 만듭니다. 이 매개 변수와 함께 사용할 수 있는 옵션은 다음과 같습니다.<ul><li>**-wu `<name>` :** 새 매핑을 만들 Windows 사용자의 이름을 지정 합니다.</li><li>**-uu `<name>` :** 새 매핑을 만들 UNIX 사용자의 이름을 지정 합니다.</li><li>**-wg `<group>` :** 새 매핑을 만들 Windows 그룹의 이름을 지정 합니다.</li><li>**-ug `<group>` :** 새 매핑을 만들 UNIX 그룹의 이름을 지정 합니다.</li><li>**-setprimary:** 새 매핑이 기본 매핑 임을 지정 합니다.</li></ul> |
+| add | 사용자 또는 그룹에 대 한 새 매핑을 만듭니다. 이 매개 변수와 함께 사용할 수 있는 옵션은 다음과 같습니다.<ul><li>**-wu `<name>` :** 새 매핑을 만들 Windows 사용자의 이름을 지정 합니다.</li><li>**-uu `<name>` :** 새 매핑을 만들 UNIX 사용자의 이름을 지정 합니다.</li><li>**-wg `<group>` :** 새 매핑을 만들 Windows 그룹의 이름을 지정 합니다.</li><li>**-ug `<group>` :** 새 매핑을 만들 UNIX 그룹의 이름을 지정 합니다.</li><li>**-setprimary:** 새 매핑이 기본 매핑 임을 지정 합니다.</li></ul> |
 | setprimary | 여러 매핑이 있는 UNIX 사용자 또는 그룹에 대 한 기본 매핑 인 매핑을 지정 합니다. 이 매개 변수와 함께 사용할 수 있는 옵션은 다음과 같습니다.<ul><li>**-wu `<name>` :** 기본 매핑의 Windows 사용자를 지정 합니다. 사용 하 여 사용자에 대 한 개 이상의 매핑이 있는 경우는 **-uu** 기본 매핑을 지정 하는 옵션입니다.</li><li>**-uu `<name>` :** 기본 매핑의 UNIX 사용자를 지정 합니다.</li><li>**-wg `<group>` :** 기본 매핑의 Windows 그룹을 지정 합니다. 사용 하 여 그룹에 대 한 개 이상의 매핑이 있는 경우는 **-ug** 기본 매핑을 지정 하는 옵션입니다.</li><li>**-ug `<group>` :** 기본 매핑의 UNIX 그룹을 지정 합니다.</li></ul> |
 | delete | 사용자 또는 그룹에 대 한 매핑을 제거 합니다. 이 매개 변수에 사용할 수 있는 옵션은 다음과 같습니다.<ul><li>**-wu `<user>` :** 매핑을 삭제할 Windows 사용자를 지정 하며로 지정 됩니다 `<windowsdomain>\<username>` .<p>지정 해야는 **-wu** 또는 **-uu** 옵션 중 하나 또는 둘 다. 두 옵션을 지정 하면 두 옵션을 통해 식별 된 특정 매핑을 삭제 됩니다. 만 지정한 경우는 **-wu** 옵션을 모든 매핑이 지정된 된 사용자 삭제 됩니다.</li><li>**-uu `<user>` :** 매핑을 삭제할 UNIX 사용자를 지정 합니다 .이 사용자는로 지정 됩니다 `<username>` .<p>지정 해야는 **-wu** 또는 **-uu** 옵션 중 하나 또는 둘 다. 두 옵션을 지정 하면 두 옵션을 통해 식별 된 특정 매핑을 삭제 됩니다. 만 지정한 경우는 **-uu** 옵션을 모든 매핑이 지정된 된 사용자 삭제 됩니다.</li><li>**-wg `<group>` :** 매핑을 삭제할 Windows 그룹을 지정 합니다. 여기서로 지정 됩니다 `<windowsdomain>\<username>` .<p>지정 해야는 **-wg** 또는 **-ug** 옵션 중 하나 또는 둘 다. 두 옵션을 지정 하면 두 옵션을 통해 식별 된 특정 매핑을 삭제 됩니다. 만 지정한 경우는 **-wg** 옵션을 모든 매핑이 지정 된 그룹이 삭제 됩니다.</li><li>**-ug `<group>` :** 매핑을 삭제할 UNIX 그룹을 지정 합니다. 여기서로 지정 됩니다 `<groupname>` .<p>지정 해야는 **-wg** 또는 **-ug** 옵션 중 하나 또는 둘 다. 두 옵션을 지정 하면 두 옵션을 통해 식별 된 특정 매핑을 삭제 됩니다. 만 지정한 경우는 **-ug** 옵션을 모든 매핑이 지정 된 그룹이 삭제 됩니다.</li></ul> |
 | list | 사용자 및 그룹 매핑에 대 한 정보를 표시 합니다. 이 매개 변수와 함께 사용할 수 있는 옵션은 다음과 같습니다.<ul><li>**-모두:** 사용자 및 그룹에 대 한 단순 및 고급 매핑을 모두 나열 합니다.</li><li>**-단순:** 모든 단순 매핑된 사용자 및 그룹을 나열 합니다.</li><li>**-고급:** 모든 고급 매핑된 사용자 및 그룹을 나열 합니다. 지도 평가 되는 순서에 나열 됩니다. 별표 ()로 표시 된 기본 맵은*먼저 나열 되 고 그 뒤에 캐럿로 표시 된 보조 맵이 나열 됩니다 `(^)` . </li> <li> * *-wu `<name>` :** 지정 된 Windows 사용자에 대 한 매핑을 나열 합니다.</li><li>**-wg `<group>` :** Windows 그룹에 대 한 매핑을 나열 합니다.</li><li>**-uu `<name>` :** UNIX 사용자에 대 한 매핑을 나열 합니다.</li><li>**-ug `<group>` :** UNIX 그룹에 대 한 매핑을 나열 합니다.</li></ul> |

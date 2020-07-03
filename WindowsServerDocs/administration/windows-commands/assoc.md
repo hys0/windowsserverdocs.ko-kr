@@ -1,6 +1,6 @@
 ---
 title: assoc
-description: 파일 이름 확장명 연결을 표시 하거나 수정 하는 assoc 명령에 대 한 참조 항목입니다.
+description: 파일 이름 확장명 연결을 표시 하거나 수정 하는 assoc 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 58735201a1a0711db4d0cee9c292363acf5121f3
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 6e6d72dce2a3e820b52a33bf11dbf38890278fb8
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83819643"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85924048"
 ---
 # <a name="assoc"></a>assoc
 

@@ -1,6 +1,6 @@
 ---
 title: manage-bde 잠금 해제
-description: 복구 암호나 복구 키를 사용 하 여 BitLocker로 보호 된 드라이브의 잠금을 해제 하는 manage-bde unlock 명령에 대 한 참조 항목입니다.
+description: 복구 암호나 복구 키를 사용 하 여 BitLocker로 보호 된 드라이브의 잠금을 해제 하는 manage-bde 잠금 해제 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 67d4c0ec78870af45f0b98f2ab04d85b19e92af9
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: 1be2bf029a378015cd20f21c236c0d519f2e072a
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84222151"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85922210"
 ---
 # <a name="manage-bde-unlock"></a>manage-bde 잠금 해제
 

@@ -1,6 +1,6 @@
 ---
-title: ftp 자세한 정보
-description: 자세한 정보 표시 모드를 전환 하는 ftp verbose 명령에 대 한 참조 항목입니다.
+title: ftp verbose
+description: 자세한 정보 표시 모드를 전환 하는 ftp verbose 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1b2fa15d17c872076ac154aaa6051e3243fdc30e
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: d0a00b03173d49c177c420ab574229d2ddb97e7d
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820253"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85922634"
 ---
-# <a name="ftp-verbose"></a>ftp 자세한 정보
+# <a name="ftp-verbose"></a>ftp verbose
 
 > 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 

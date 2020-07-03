@@ -1,6 +1,6 @@
 ---
 title: ksetup
-description: Ksetup 명령에 대 한 참조 항목으로, kerberos 프로토콜을 설정 및 유지 관리 하는 작업과 관련 된 작업을 수행 하 고 Kerberos 영역을 지원 하기 위해 KDC (키 배포 센터)를 수행 합니다.
+description: Ksetup 명령에 대 한 참조 문서-kerberos 프로토콜을 설정 및 유지 관리 하는 작업과 관련 된 작업을 수행 하 고 Kerberos 영역을 지원 하기 위한 KDC (키 배포 센터)를 수행 합니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 82b1627a8ddbc9e51ac32825c5a42c3df9effbf7
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: a0398d53516f81de68a7de5854ed2c996a78d1e5
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83817353"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85922638"
 ---
 # <a name="ksetup"></a>ksetup
 
@@ -63,16 +63,16 @@ ksetup
 | [ksetup delkdc](ksetup-delkdc.md) | 영역에 대 한 KDC 항목을 삭제합니다. |
 | [ksetup addkpasswd](ksetup-addkpasswd.md) | 영역에 대 한 kpasswd 서버 주소를 추가 합니다. |
 | [ksetup delkpasswd](ksetup-delkpasswd.md) | 영역에 대 한 kpasswd 서버 주소를 삭제 합니다. |
-| [ksetup 서버](ksetup-server.md) | 변경 내용을 적용 하는 Windows 컴퓨터의 이름을 지정할 수 있습니다. |
+| [ksetup server](ksetup-server.md) | 변경 내용을 적용 하는 Windows 컴퓨터의 이름을 지정할 수 있습니다. |
 | [ksetup setcomputerpassword](ksetup-setcomputerpassword.md) | 컴퓨터의 도메인 계정 (또는 호스트 보안 주체)에 대 한 암호를 설정합니다. |
 | [ksetup removerealm](ksetup-removerealm.md) | 레지스트리에서 지정한 영역에 대 한 모든 정보를 삭제합니다. |
-| [ksetup 도메인](ksetup-domain.md) | 도메인을 지정할 수 있습니다 (가 `<domainname>` 이미 **/domain** 매개 변수로 설정 되지 않은 경우). |
+| [ksetup domain](ksetup-domain.md) | 도메인을 지정할 수 있습니다 (가 `<domainname>` 이미 **/domain** 매개 변수로 설정 되지 않은 경우). |
 | [ksetup changepassword](ksetup-changepassword.md) | Kpasswd를 사용 하 여 로그온 한 사용자의 암호를 변경할 수 있습니다. |
 | [ksetup listrealmflags](ksetup-listrealmflags.md) | 사용할 수 있는 목록 영역에 플래그를 지정 하는 **ksetup** 감지할 수 있습니다. |
 | [ksetup setrealmflags](ksetup-setrealmflags.md) | 특정 영역에 대 한 영역 플래그를 설정합니다. |
 | [ksetup addrealmflags](ksetup-addrealmflags.md) | 영역에 추가 영역 플래그를 추가합니다. |
 | [ksetup delrealmflags](ksetup-delrealmflags.md) | 영역에서 영역 플래그를 삭제합니다. |
-| [ksetup](ksetup-dumpstate.md) | 지정한 컴퓨터에서 Kerberos 구성을 분석 합니다. 레지스트리에서 영역 매핑 호스트를 추가합니다. |
+| [ksetup dumpstate](ksetup-dumpstate.md) | 지정한 컴퓨터에서 Kerberos 구성을 분석 합니다. 레지스트리에서 영역 매핑 호스트를 추가합니다. |
 | [ksetup addhosttorealmmap](ksetup-addhosttorealmmap.md) | Kerberos 영역에 호스트를 매핑하려면 레지스트리 값을 추가 합니다. |
 | [ksetup delhosttorealmmap](ksetup-delhosttorealmmap.md) | 호스트 컴퓨터 Kerberos 영역에 매핑된 레지스트리 값을 삭제 합니다. |
 | [ksetup setenctypeattr](ksetup-setenctypeattr.md) | 하나 이상의 암호화 종류는 도메인에 대 한 신뢰 특성을 설정합니다. |

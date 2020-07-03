@@ -1,6 +1,6 @@
 ---
 title: 일시 중지
-description: 일괄 처리 프로그램의 처리를 일시 중단 하는 일시 중지 명령에 대 한 참조 항목입니다.
+description: 일괄 처리 프로그램의 처리를 일시 중단 하는 일시 중지 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f603802926d0f9418a82e1f4981181889fc573ef
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: f604bbd205a074d8966cd2c1a1bc65506e7ca5e0
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85472519"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85922892"
 ---
 # <a name="pause"></a>일시 중지
 
@@ -38,7 +38,7 @@ pause
 
 - 처리 하지 않을 수 있는 배치 파일의 섹션 앞에 **일시 중지** 명령을 삽입할 수 있습니다. **일시 중지가** 일괄 처리 프로그램의 처리를 일시 중단 하면 Ctrl + C를 누른 다음 **Y** 를 눌러 batch 프로그램을 중지할 수 있습니다.
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 사용자에 게 드라이브 중 하나에서 디스크를 변경 하 라는 메시지를 표시 하는 일괄 처리 프로그램을 만들려면 다음을 입력 합니다.
 

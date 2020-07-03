@@ -1,6 +1,6 @@
 ---
 title: CD
-description: Cd 명령에 대 한 참조 항목으로, 이름을 표시 하거나 현재 디렉터리를 변경 합니다.
+description: 이름을 표시 하거나 현재 디렉터리를 변경 하는 cd 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7c9ee57590cf165ba46f394cab06817c7c13f0a9
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 37ce63cd4fce871c615ac64756f8fc17f1d28460
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719654"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85922917"
 ---
 # <a name="cd"></a>CD
 
@@ -50,14 +50,14 @@ chdir [..]
 
 - 디스크의 이름으로는 대/소문자를 사용 하 여 현재 디렉터리 문자열 변환 됩니다. 예를 들어 `cd c:\temp` 되어 디스크의 경우에는 현재 디렉터리를 C:\Temp로 설정 합니다.
 
-- 공백은 구분 기호로 처리 되지 않으므로 `<path>` 따옴표 없이 공백을 포함할 수 있습니다. 다음은 그 예입니다. 
+- 공백은 구분 기호로 처리 되지 않으므로 `<path>` 따옴표 없이 공백을 포함할 수 있습니다. 예를 들어:
 
   ```
   cd username\programs\start menu
   ```
 
-  이 코드는 다음과 같습니다.  
-  
+  이 코드는 다음과 같습니다.
+
   ```
   cd "username\programs\start menu"
   ```

@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getdescription
-description: 지정 된 작업에 대 한 설명을 검색 하는 bitsadmin getdescription 명령에 대 한 참조 항목입니다.
+description: 지정 된 작업에 대 한 설명을 검색 하는 bitsadmin getdescription 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ec5fa9875ca9f669c2a43d58532d3e5e0770d550
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 74e54f963325c0b7222dbd0f9bdccd44d0efc5e1
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718077"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85923067"
 ---
 # <a name="bitsadmin-getdescription"></a>bitsadmin getdescription
 

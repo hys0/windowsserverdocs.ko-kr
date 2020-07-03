@@ -1,6 +1,6 @@
 ---
 title: 변경
-description: 로그온, COM 포트 매핑 및 설치 모드 원격 데스크톱 세션 호스트 서버 설정이 변경 되는 변경 명령에 대 한 참조 항목입니다.
+description: 로그온, COM 포트 매핑 및 설치 모드 원격 데스크톱 세션 호스트 서버 설정이 변경 되는 변경 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a35bd558898b3991a9e6f847d415a67d70f0d01b
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 4b1350b39633580dd60bbc0eb07e567029447d5f
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82715519"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85922455"
 ---
 # <a name="change"></a>변경
 

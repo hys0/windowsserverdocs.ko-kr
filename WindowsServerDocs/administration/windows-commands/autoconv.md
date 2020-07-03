@@ -1,6 +1,6 @@
 ---
 title: autoconv
-description: 파일 할당 테이블 (Fat) 및 Fat32 볼륨을 NTFS 파일 시스템으로 변환 하는 autoconv command에 대 한 참조 항목입니다.
+description: 파일 할당 테이블 (Fat) 및 Fat32 볼륨을 NTFS 파일 시스템으로 변환 하는 autoconv command에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ea8f55270435c6632be2e527569b4a4b4ca81136
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: c6d54f413ab9d4f680f59294a3f01c1de02db222
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718780"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85923568"
 ---
 # <a name="autoconv"></a>autoconv
 

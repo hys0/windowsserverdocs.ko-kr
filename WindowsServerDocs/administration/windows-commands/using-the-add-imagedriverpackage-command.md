@@ -1,6 +1,6 @@
 ---
 title: -ImageDriverPackage 추가
-description: 드라이버 저장소에 있는 드라이버 패키지를 서버의 기존 부팅 이미지에 추가 하는-ImageDriverPackage에 대 한 참조 항목입니다.
+description: 드라이버 저장소에 있는 드라이버 패키지를 서버의 기존 부팅 이미지에 추가 하는 추가-ImageDriverPackage에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4c221d77f80cefdcf6e6214cdd7441ecde5cb693
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 450b06c2c935f83a0851fb887f34d7403061fea8
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82721073"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85922064"
 ---
 # <a name="add-imagedriverpackage"></a>-ImageDriverPackage 추가
 
@@ -24,7 +24,7 @@ ms.locfileid: "82721073"
 
 ## <a name="syntax"></a>구문
 ```
-wdsutil /add-ImageDriverPackage [/Server:<Server name>media:<Image namemediatype:Boot /Architecture:{x86 | ia64 | x64} 
+wdsutil /add-ImageDriverPackage [/Server:<Server name>media:<Image namemediatype:Boot /Architecture:{x86 | ia64 | x64}
 ```
 ```
 [/Filename:<File name>] {/DriverPackage:<Package Name> | /PackageId:<ID>}
@@ -50,5 +50,5 @@ wdsutil /add-ImageDriverPackagmedia:WinPE Boot Imagemediatype:Boot /Architecture
 wdsutil /verbose /add-ImageDriverPackagmedia:WinPE Boot Image /Server:MyWDSServemediatype:Boot /Architecture:x64 /PackageId:{4D36E972-E325-11CE-Bfc1-08002BE10318}
 ```
 ## <a name="additional-references"></a>추가 참조
-- [명령줄 구문 키](command-line-syntax-key.md)
-[추가-imagedriverpackages 패키지 명령을 사용 하 여](using-the-add-imagedriverpackages-command.md)
+- [명령줄 구문 키](command-line-syntax-key.md) 
+ [Add ImageDriverPackages 명령 사용](using-the-add-imagedriverpackages-command.md)

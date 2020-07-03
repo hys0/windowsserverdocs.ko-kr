@@ -1,6 +1,6 @@
 ---
 title: logman 쿼리
-description: 데이터 수집기 또는 데이터 수집기 집합 속성을 쿼리 하는 logman 쿼리 명령에 대 한 참조 항목입니다.
+description: 데이터 수집기 또는 데이터 수집기 집합 속성을 쿼리 하는 logman 쿼리 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f37b78023fd12c1d58234cdecdb69af8a1c6002d
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: ea436ec676ee8097a0df80467744b76f2deeca42
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84222813"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85922317"
 ---
 # <a name="logman-query"></a>logman 쿼리
 

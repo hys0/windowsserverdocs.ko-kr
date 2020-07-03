@@ -1,6 +1,6 @@
 ---
 title: change user
-description: 사용자 변경 명령에 대 한 참조 항목으로, 원격 데스크톱 세션 호스트 서버에 대 한 설치 모드를 변경 합니다.
+description: 사용자 변경 명령에 대 한 참조 문서로, 원격 데스크톱 세션 호스트 서버에 대 한 설치 모드를 변경 합니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: de96280f42f1e3002c4379390367856dcdcb885a
-ms.sourcegitcommit: 568b924d32421256f64abfee171304f1daf320d2
+ms.openlocfilehash: 42d6a5575ebf732a91477a425d93b10f3293e89e
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85070183"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85922493"
 ---
 # <a name="change-user"></a>change user
 
@@ -33,7 +33,7 @@ change user {/execute | /install | /query}
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | / 실행 | .Ini 파일을 홈 디렉터리에 매핑할을 수 있습니다. 이 값은 기본 설정입니다. |
 | /install | 홈 디렉터리에.ini 파일 매핑을 사용 하지 않습니다. 모든.ini 파일 읽고 시스템 디렉터리에 기록 됩니다. 원격 데스크톱 세션 호스트 서버에 응용 프로그램을 설치할 때 .ini 파일 매핑을 사용 하지 않도록 설정 해야 합니다. |
@@ -54,7 +54,7 @@ change user {/execute | /install | /query}
 
 - 로그온 할 때 원격 데스크톱 서비스는 시스템.ini 파일이 컴퓨터에.ini 파일 보다 최신 인지 확인 합니다. 시스템 버전 새 버전인 경우.ini 파일은 대체 또는 최신 버전으로 병합 합니다. 이 든 아니든 INISYNC 비트가 0x40에 따라 달라 집니다, 그리고이.ini 파일에 대해 설정 됩니다. .Ini 파일의 이전 버전은 Inifile.ctx로 이름이 변경 됩니다. 시스템 레지스트리 값을 아래 하는 경우는 **\Terminal Server\Install** 하위 키 아래에서 사용 중인 버전 보다 최신인 **HKEY_CURRENT_USER**, 하위 키의 버전 삭제 되어의 새 하위 키로 대체 **\Terminal Server\Install**합니다.
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 - .Ini 파일을 홈 디렉터리에 매핑할을 사용 하지 않으려면 다음을 입력 합니다.
 

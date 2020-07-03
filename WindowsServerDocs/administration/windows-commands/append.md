@@ -1,6 +1,6 @@
 ---
 title: 추가
-description: 프로그램이 현재 디렉터리에 있는 것 처럼 지정 된 디렉터리의 데이터 파일을 열 수 있도록 하는 추가 명령에 대 한 참조 항목입니다.
+description: 프로그램이 현재 디렉터리에 있는 것 처럼 지정 된 디렉터리의 데이터 파일을 열 수 있도록 하는 추가 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 562a13c6b1a47e43bb66548902f0b8e57e789a34
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: c8e67c4419b563fdeba156b2bb1f082bf7de834c
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718992"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85924032"
 ---
 # <a name="append"></a>추가
 

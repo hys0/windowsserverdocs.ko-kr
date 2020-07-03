@@ -1,6 +1,6 @@
 ---
 title: automount
-description: 자동 탑재 기능을 사용 하거나 사용 하지 않도록 설정 하는 자동 탑재 명령에 대 한 참조 항목입니다.
+description: 자동 탑재 기능을 사용 하거나 사용 하지 않도록 설정 하는 자동 탑재 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0a3ff8782b2110dd1b8039477c0b748dc4ab8f44
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 897927c48a1ba2c2023e35ff1f4c93e6c33fb291
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718723"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85923541"
 ---
 # <a name="automount"></a>automount
 

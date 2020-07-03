@@ -1,6 +1,6 @@
 ---
-title: 텔넷 닫기
-description: 텔넷 닫기에 대 한 참조 항목으로, 현재 텔넷 연결을 닫습니다.
+title: telnet close
+description: 텔넷 닫기에 대 한 참조 문서는 현재 텔넷 연결을 닫습니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 34a575fecaa33619611a28c54c018623ebcede3c
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: ec185f29f428e760e5cee9514e522723214a65ec
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84223062"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85922581"
 ---
 # <a name="telnet-close"></a>텔넷: 닫기
 

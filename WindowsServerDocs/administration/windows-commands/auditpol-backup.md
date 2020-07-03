@@ -1,6 +1,6 @@
 ---
-title: auditpol 백업
-description: 시스템 감사 정책 설정, 모든 사용자에 대 한 사용자별 감사 정책 설정 및 모든 감사 옵션을 쉼표로 구분 된 값 (CSV) 텍스트 파일에 백업 하는 auditpol backup 명령에 대 한 참조 항목입니다.
+title: auditpol backup
+description: 시스템 감사 정책 설정, 모든 사용자에 대 한 사용자별 감사 정책 설정 및 모든 감사 옵션을 쉼표로 구분 된 값 (CSV) 텍스트 파일에 백업 하는 auditpol 백업 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ddc6bbbc379453c86df27674b57f29f7c0960772
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 8678dbc80b664e3ab667f197f708fbbdbbe40dc7
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719167"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85923812"
 ---
-# <a name="auditpol-backup"></a>auditpol 백업
+# <a name="auditpol-backup"></a>auditpol backup
 
 > 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -52,6 +52,6 @@ auditpol /backup /file:C:\auditpolicy.csv
 
 - [명령줄 구문 키](command-line-syntax-key.md)
 
-- [auditpol 복원](auditpol-restore.md)
+- [auditpol restore](auditpol-restore.md)
 
 - [auditpol 명령](auditpol.md)

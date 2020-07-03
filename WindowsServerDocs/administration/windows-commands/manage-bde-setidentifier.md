@@ -1,6 +1,6 @@
 ---
 title: manage-bde setidentifier
-description: Manage-bde setidentifier command에 대 한 참조 항목-드라이브의 드라이브 식별자 필드를 조직에 대 한 고유 식별자 제공 그룹 정책 설정에 지정 된 값으로 설정 합니다.
+description: Manage-bde setidentifier command에 대 한 참조 문서-드라이브의 드라이브 식별자 필드를 조직에 대 한 고유 식별자 제공 그룹 정책 설정에 지정 된 값으로 설정 합니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5b4a21df9d177d7bf6813abb0d418d7355d5e59a
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: 7d20120bf4c6ec76fa6ba040141afadea2a748d5
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84222602"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85922251"
 ---
 # <a name="manage-bde-setidentifier"></a>manage-bde setidentifier
 

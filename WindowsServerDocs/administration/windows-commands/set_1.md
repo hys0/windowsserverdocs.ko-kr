@@ -1,6 +1,6 @@
 ---
 title: set
-description: Cmd.exe 환경 변수를 표시, 설정 또는 제거 하는 set에 대 한 참조 항목입니다.
+description: 환경 변수 cmd.exe 표시, 설정 또는 제거 하는 집합에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5de835dd591e1f70acc896772df501d5ddbdf237
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 002ac4624d9ed501fab7816a83c2a0c5fc6a2bce
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83819393"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85922828"
 ---
 # <a name="set"></a>set
 
-Cmd.exe 환경 변수를 표시, 설정 또는 제거 합니다. 매개 변수 없이 사용 하는 경우 **설정** 현재 환경 변수 설정을 표시 합니다.
+cmd.exe 환경 변수를 표시, 설정 또는 제거 합니다. 매개 변수 없이 사용 하는 경우 **설정** 현재 환경 변수 설정을 표시 합니다.
 
 
 
@@ -34,12 +34,12 @@ set /a <Variable>=<Expression>
 
 |매개 변수|설명|
 |---------|-----------|
-|\<변수>|설정 하거나 수정 하는 환경 변수를 지정 합니다.|
-|\<문자열>|지정된 된 환경 변수와 연결할 문자열을 지정 합니다.|
+|\<Variable>|설정 하거나 수정 하는 환경 변수를 지정 합니다.|
+|\<String>|지정된 된 환경 변수와 연결할 문자열을 지정 합니다.|
 |/p|값을 설정 *변수* 사용자가 입력 하는 입력의 줄으로 합니다.|
-|\<PromptString>|(선택 사항) 입력에 대 한 사용자에 게 묻는 메시지를 지정 합니다. 이 매개 변수는 함께 사용 되는 **/p** 명령줄 옵션입니다.|
+|\<PromptString>|선택 사항입니다. 입력에 대 한 사용자에 게 묻는 메시지를 지정 합니다. 이 매개 변수는 함께 사용 되는 **/p** 명령줄 옵션입니다.|
 |/a|집합 *문자열* 평가 되는 숫자 식입니다.|
-|\<식>|숫자 식을 지정합니다. 사용할 수 있는 유효한 연산자에 대 한 설명을 참조 하십시오. *식*합니다.|
+|\<Expression>|숫자 식을 지정합니다. 사용할 수 있는 유효한 연산자에 대 한 설명을 참조 하십시오. *식*합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
 ## <a name="remarks"></a>설명
@@ -68,7 +68,7 @@ set /a <Variable>=<Expression>
   |        연산자         | 수행 작업  |
   |-------------------------|----------------------|
   |           ( )           |       그룹화       |
-  |          ! ~ -          |        단항         |
+  |          ! ~ -          |        단항 연산자         |
   |         \* / %          |      산술      |
   |           + -           |      산술      |
   |          << >>          |    논리 시프트     |
@@ -129,7 +129,7 @@ set testVar=test^^1
 > ```
 > 이 명령이 처리 되는 경우 해당 문자열 C:\Inc 대체 **% % 포함**합니다.
 
-사용할 수도 있습니다 **설정** 새 디렉터리를 PATH 환경 변수에 추가 하는 일괄 프로그램입니다. 다음은 그 예입니다.
+사용할 수도 있습니다 **설정** 새 디렉터리를 PATH 환경 변수에 추가 하는 일괄 프로그램입니다. 예를 들어:
 ```
 @echo off
 rem ADDPATH.BAT adds a new directory

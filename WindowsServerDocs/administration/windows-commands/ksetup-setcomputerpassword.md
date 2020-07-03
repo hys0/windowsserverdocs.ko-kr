@@ -1,6 +1,6 @@
 ---
 title: ksetup setcomputerpassword
-description: 로컬 컴퓨터의 암호를 설정 하는 ksetup setcomputerpassword 명령에 대 한 참조 항목입니다.
+description: 로컬 컴퓨터의 암호를 설정 하는 ksetup setcomputerpassword 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1ec410cd85c13cb3a925c3fc65b8c9f86fba606a
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 70af854838e439532e49d6159b010e453d339244
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83817433"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85922612"
 ---
 # <a name="ksetup-setcomputerpassword"></a>ksetup setcomputerpassword
 

@@ -1,6 +1,6 @@
 ---
 title: finger
-description: 핑거 명령에 대 한 참조 항목으로, 핑거 서비스 또는 데몬을 실행 하는 지정 된 원격 컴퓨터의 사용자에 대 한 정보를 표시 합니다.
+description: 핑거 명령에 대 한 참조 문서로, finger 서비스 또는 디먼을 실행 하는 지정 된 원격 컴퓨터의 사용자에 대 한 정보를 표시 합니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a3403e10a1777bc117659eb052958d3a20668557
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: fd629374b601686e91e5238ae8db060e0b6bf0f8
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83437238"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85922427"
 ---
 # <a name="finger"></a>finger
 

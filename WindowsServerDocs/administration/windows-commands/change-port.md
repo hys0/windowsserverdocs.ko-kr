@@ -1,6 +1,6 @@
 ---
 title: change port
-description: MS-DOS 응용 프로그램과 호환 되도록 COM 포트 매핑을 나열 하거나 변경 하는 포트 변경 명령에 대 한 참조 항목입니다.
+description: MS-DOS 응용 프로그램과 호환 되도록 COM 포트 매핑을 나열 하거나 변경 하는 포트 변경 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8dcf1097ea037aff9269edafea6e640054a697e3
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 0735c4c21ae8e321da1cfe31c2874f3dcfc540c7
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716074"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85922504"
 ---
 # <a name="change-port"></a>change port
 
@@ -49,13 +49,13 @@ change port [<portX>=<portY| /d <portX | /query]
 ## <a name="examples"></a>예
 
 - COM12 c o m 1을 사용 하기 위해 MS-DOS-기반 애플리케이션을 매핑하려면 다음을 입력 합니다.
-  
+
   ```
   change port com12=com1
   ```
 
 - 현재 매핑된 포트를 표시 하려면 다음을 입력 합니다.
-  
+
   ```
   change port /query
   ```

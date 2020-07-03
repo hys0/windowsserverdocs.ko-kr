@@ -1,6 +1,6 @@
 ---
 title: at
-description: 지정 된 시간 및 날짜에 컴퓨터에서 실행할 명령 및 프로그램을 예약 하는 at 명령에 대 한 참조 항목입니다.
+description: 지정 된 시간 및 날짜에 컴퓨터에서 실행할 명령 및 프로그램을 예약 하는 at 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3aafcf4cbc4a6626a3390fe5ad6a305b90dfaec0
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 1ead4132b70cc98d9bdd7f478a8e3f18ab6da1aa
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718926"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85923937"
 ---
 # <a name="at"></a>at
 
@@ -47,7 +47,7 @@ at [\computername] <time> [/interactive] [/every:date[,...] | /next:date[,...]] 
 
 ### <a name="remarks"></a>설명
 
-- 명령을 실행 하기 전에이 명령은 cmd.exe를 자동으로 로드 하지 않습니다. 실행 파일 (.exe)을 실행 하 고 있지 않은 경우 다음과 같이 명령의 시작 부분에서 cmd.exe를 명시적으로 로드 해야 합니다.
+- 명령을 실행 하기 전에 cmd.exe 자동으로 로드 되지 않습니다. 실행 파일 (.exe)을 실행 하 고 있지 않은 경우 다음과 같이 명령 시작 부분에서 명시적으로 cmd.exe를 로드 해야 합니다.
 
     ```
     cmd /c dir > c:\test.out
@@ -62,7 +62,7 @@ at [\computername] <time> [/interactive] [/every:date[,...] | /next:date[,...]] 
     OK      3    Each F     11:59 PM    backup2.bat
     ```
 
-- 이 명령을 사용 하*여 id 번호*를 포함 하는 경우 단일 항목에 대 한 정보만 다음과 유사한 형식으로 표시 됩니다.  
+- 이 명령을 사용 하*여 id 번호*를 포함 하는 경우 단일 항목에 대 한 정보만 다음과 유사한 형식으로 표시 됩니다.
 
     ```
     Task ID: 1
@@ -74,7 +74,7 @@ at [\computername] <time> [/interactive] [/every:date[,...] | /next:date[,...]] 
 
 - 명령, 특히 명령줄 옵션을 포함 하는 명령을 예약한 후 **에** 명령줄 옵션 없이를 입력 하 여 명령 구문이 올바른지 확인 합니다. **명령줄 열의 정보가** 잘못 된 경우 명령을 삭제 하 고 다시 입력 합니다. 그래도 올바르지 않으면 더 작은 명령줄 옵션을 사용 하 여 명령을 다시 입력 합니다.
 
-- **에서** 로 예약 된 명령은 백그라운드 프로세스로 실행 됩니다. 출력은 컴퓨터 화면에 표시 되지 않습니다. 출력을 파일로 리디렉션하려면 리디렉션 기호 `>`를 사용 합니다. 출력을 파일로 리디렉션하는 경우, 명령줄 또는 배치 **파일에서를 사용** 하는지에 `^` 관계 없이 리디렉션 기호 앞에 이스케이프 기호를 사용 해야 합니다. 예를 들어 출력을 *출력 .txt*로 리디렉션하려면 다음과 같이 입력 합니다.
+- **에서** 로 예약 된 명령은 백그라운드 프로세스로 실행 됩니다. 출력은 컴퓨터 화면에 표시 되지 않습니다. 출력을 파일로 리디렉션하려면 리디렉션 기호를 사용 `>` 합니다. 출력을 파일로 리디렉션하는 경우 `^` , 명령줄 또는 배치 파일에서를 사용 하는지에 관계 없이 리디렉션 기호 앞에 이스케이프 기호를 **사용 해야** 합니다. 예를 들어 출력을 *output.txt*로 리디렉션하려면 다음과 같이 입력 합니다.
 
     ```
     at 14:45 c:\test.bat ^>c:\output.txt
@@ -86,13 +86,13 @@ at [\computername] <time> [/interactive] [/every:date[,...] | /next:date[,...]] 
 
 - 예약 된 명령은 레지스트리에 저장 됩니다. 따라서 일정 서비스를 다시 시작 하는 경우 예약 된 작업이 손실 되지 않습니다.
 
-- 네트워크에 액세스 하는 예약 된 작업에는 리디렉션된 드라이브를 사용 하지 마십시오. 일정 서비스가 리디렉션된 드라이브에 액세스할 수 되지 않거나 리디렉션된 드라이브 예약 된 작업 실행 시간에 다른 사용자가 로그온 하는 경우에 없을 수 있습니다. 예약 된 작업에 대 한 UNC 경로 대신 사용 합니다. 다음은 그 예입니다.   
+- 네트워크에 액세스 하는 예약 된 작업에는 리디렉션된 드라이브를 사용 하지 마십시오. 일정 서비스가 리디렉션된 드라이브에 액세스할 수 되지 않거나 리디렉션된 드라이브 예약 된 작업 실행 시간에 다른 사용자가 로그온 하는 경우에 없을 수 있습니다. 예약 된 작업에 대 한 UNC 경로 대신 사용 합니다. 예를 들어:
 
     ```
     at 1:00pm my_backup \\server\share
     ```
 
-    다음 구문을 사용 하지 마십시오. 여기서 **x:** 는 사용자가 만든 연결입니다.  
+    다음 구문을 사용 하지 마십시오. 여기서 **x:** 는 사용자가 만든 연결입니다.
 
     ```
     at 1:00pm my_backup x:
@@ -115,7 +115,7 @@ at [\computername] <time> [/interactive] [/every:date[,...] | /next:date[,...]] 
 
         - **값 이름입니다.** atTaskMaxHours
 
-        - **데이터 형식입니다.** reg_DWOrd 
+        - **데이터 형식입니다.** reg_DWOrd
 
         - **기 수.** Decimal
 
@@ -137,7 +137,7 @@ Corp 서버에서 id가 3 인 명령에 대 한 자세한 내용을 보려면 �
 at \\corp 3
 ```
 
-Net share 명령이 Corp 서버에서 오전 8:00에 실행 되도록 예약 하려면 다음을 수행 합니다. 그런 다음 목록을 유지 관리 서버, 보고서 공유 디렉터리 및 Corp .txt 파일에 리디렉션하고 다음과 같이 입력 합니다.
+Net share 명령이 Corp 서버에서 오전 8:00에 실행 되도록 예약 하려면 다음을 수행 합니다. 그런 다음 목록을 유지 관리 서버로 리디렉션하고 보고서 공유 디렉터리 및 Corp.txt 파일에 다음을 입력 합니다.
 
 ```
 at \\corp 08:00 cmd /c net share reports=d:\marketing\reports >> \\maintenance\reports\corp.txt
@@ -155,7 +155,7 @@ at \\marketing 00:00 /every:5,10,15,20,25,30 archive
 at /delete
 ```
 
-실행 파일 (.exe)이 아닌 명령을 실행 하려면 명령 앞에 **cmd/c** 를 사용 하 여 다음과 같이 cmd.exe를 로드 합니다.
+실행 파일 (.exe)이 아닌 명령을 실행 하려면 명령 앞에 **cmd/c** 를 사용 하 여 다음과 같이 cmd.exe 로드 합니다.
 
 ```
 cmd /c dir > c:\test.out

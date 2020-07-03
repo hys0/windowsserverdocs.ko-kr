@@ -1,6 +1,6 @@
 ---
-title: auditpol 집합
-description: 사용자 단위 감사 정책, 시스템 감사 정책 또는 감사 옵션을 설정 하는 auditpol set 명령에 대 한 참조 항목입니다.
+title: auditpol set
+description: 사용자 단위 감사 정책, 시스템 감사 정책 또는 감사 옵션을 설정 하는 auditpol set 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 73868d6044d8742d4d9e0ce76e0668402f230f86
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: bc42168d65116261d57053e0812cbb49e17021d5
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718884"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85923692"
 ---
-# <a name="auditpol-set"></a>auditpol 집합
+# <a name="auditpol-set"></a>auditpol set
 
 > 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 

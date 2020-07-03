@@ -1,6 +1,6 @@
 ---
 title: autofmt
-description: Windows 복구 콘솔에서 호출 될 때 드라이브나 파티션을 포맷 하는 autofmt 명령에 대 한 참조 항목입니다.
+description: Windows 복구 콘솔에서 호출 될 때 드라이브나 파티션을 포맷 하는 autofmt 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b7b82d940f2d8bd54d023a2a105208d1a18fc4c8
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 1b6f4ae3fe630ba01d9c789a9f7d73a11a31f456
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718760"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85923556"
 ---
 # <a name="autofmt"></a>autofmt
 

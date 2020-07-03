@@ -1,6 +1,6 @@
 ---
 title: bdehdcfg
-description: BitLocker 드라이브 암호화에 필요한 파티션이 있는 하드 드라이브를 준비 하는 bdehdcfg 명령에 대 한 참조 항목입니다.
+description: BitLocker 드라이브 암호화에 필요한 파티션이 있는 하드 드라이브를 준비 하는 bdehdcfg 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3bcc901847bb8d687d59bc3270dab39de0af8d60
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 0a8b926459f2d1fb96b9a48910c163eb9aaab02c
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718565"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85923355"
 ---
 # <a name="bdehdcfg"></a>bdehdcfg
 

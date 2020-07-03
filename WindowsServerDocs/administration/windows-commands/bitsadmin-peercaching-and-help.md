@@ -1,6 +1,6 @@
 ---
 title: bitsadmin peercaching and help
-description: '**Bitsadmin 피어 캐싱** 및 **도움말**에 대 한 참조 항목으로/피어 캐싱 스위치에 대 한 명령줄 사용법을 표시 합니다.'
+description: '**Bitsadmin 피어 캐싱** 및 **도움말**에 대 한 참조 문서를 참조 하세요.'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 08cb792989470d7492ff2da4b63ddd686b35b232
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 1cef716cd7487868adcd9df32904fda331e49fc1
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717245"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85922927"
 ---
 # <a name="bitsadmin-peercaching-and-help"></a>bitsadmin peercaching and help
 

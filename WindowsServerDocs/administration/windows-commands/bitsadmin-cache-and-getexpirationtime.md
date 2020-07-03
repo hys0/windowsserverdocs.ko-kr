@@ -1,6 +1,6 @@
 ---
 title: bitsadmin cache and getexpirationtime
-description: 캐시 만료 시간을 검색 하는 bitsadmin cache 및 getexpirationtime 명령에 대 한 참조 항목입니다.
+description: 캐시 만료 시간을 검색 하는 bitsadmin cache 및 getexpirationtime 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ecd20a6f35637be3d2f1cad08cf2d060c944857c
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: a968653cadbeadd73296a994cc12ca68b54553c2
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718425"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85923297"
 ---
 # <a name="bitsadmin-cache-and-getexpirationtime"></a>bitsadmin cache and getexpirationtime
 

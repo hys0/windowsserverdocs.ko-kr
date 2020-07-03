@@ -1,6 +1,6 @@
 ---
 title: Diskshadow
-description: 볼륨 섀도 복사본 서비스 (VSS)에서 제공 하는 기능을 노출 하는 도구인 Diskshadow 명령에 대 한 참조 항목입니다.
+description: VSS (볼륨 섀도 복사본 서비스)에서 제공 하는 기능을 노출 하는 도구인 Diskshadow 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,18 +9,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ae3a4ba57d9c29375c560c300a4e4ead807184fc
-ms.sourcegitcommit: aed942d11f1a361fc1d17553a4cf190a864d1268
+ms.openlocfilehash: 02e2836cd69b1fe85ea4f86da125c95c9ca1e4ea
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83235180"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85922799"
 ---
 # <a name="diskshadow"></a>Diskshadow
 
 > 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Diskshadow는 VSS (볼륨 섀도 복사본 서비스)에서 제공 하는 기능을 제공 하는 도구입니다. 기본적으로 Diskshadow는 Diskraid 또는 Diskpart와 유사한 대화형 명령 인터프리터를 사용 합니다. Diskshadow에는 스크립트 가능한 모드도 포함 됩니다.
+Diskshadow.exe은 VSS (볼륨 섀도 복사본 서비스)에서 제공 하는 기능을 제공 하는 도구입니다. 기본적으로 Diskshadow는 Diskraid 또는 Diskpart와 유사한 대화형 명령 인터프리터를 사용 합니다. Diskshadow에는 스크립트 가능한 모드도 포함 됩니다.
 
 > [!NOTE]
 > Diskshadow를 실행 하려면 최소한 로컬 Administrators 그룹의 구성원 이거나이에 해당 하는 권한이 있어야 합니다.
@@ -33,7 +33,7 @@ Diskshadow는 VSS (볼륨 섀도 복사본 서비스)에서 제공 하는 기능
 diskshadow
 ```
 
-스크립트 모드의 경우 다음을 입력 합니다 *. 여기서 rename.txt* 는 Diskshadow 명령이 포함 된 스크립트 파일입니다.
+스크립트 모드의 경우 다음을 입력 합니다. 여기서 *script.txt* 은 Diskshadow 명령이 포함 된 스크립트 파일입니다.
 
 ```
 diskshadow -s script.txt

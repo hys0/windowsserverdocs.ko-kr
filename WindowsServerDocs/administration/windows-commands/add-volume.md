@@ -1,6 +1,6 @@
 ---
-title: 볼륨 추가
-description: 섀도 복사본 집합에 볼륨을 추가 하는 볼륨 추가 명령에 대 한 참조 항목입니다. 섀도 복사본 집합은 섀도 복사 될 볼륨의 집합입니다.
+title: add volume
+description: 섀도 복사본 집합에 볼륨을 추가 하는 볼륨 추가 명령에 대 한 참조 문서입니다. 섀도 복사본 집합은 섀도 복사 될 볼륨의 집합입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a8cfd3d8f7d9f008e3136d8f694dc00370b8b0f2
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 3cd80a60fd3215a2234d4eb5be8a62da91e2cba4
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719205"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85924085"
 ---
-# <a name="add-volume"></a>볼륨 추가
+# <a name="add-volume"></a>add volume
 
 볼륨의 섀도 복사본을 설정 하려면 되 섀도 복사 되는 볼륨의 집합에 추가 합니다. 섀도 복사본을 만들 때 다음 스크립트에 대 한 별칭을 사용할 수 있도록 환경 변수 별칭을 섀도 ID에 연결 합니다.
 

@@ -1,6 +1,6 @@
 ---
-title: 특성 디스크
-description: 디스크의 특성을 표시, 설정 또는 삭제 하는 attributes disk 명령에 대 한 참조 항목입니다.
+title: attributes disk
+description: 디스크의 특성을 표시, 설정 또는 삭제 하는 attributes disk 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c3d378439b30328e4df48020fa4b3288f7af31c6
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 02ad39b84afb2487b388d046d6409a682b58615b
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718893"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85923893"
 ---
-# <a name="attributes-disk"></a>특성 디스크
+# <a name="attributes-disk"></a>attributes disk
 
 표시 설정 하거나 디스크의 특성을 지웁니다. 이 명령을 사용 하 여 디스크의 현재 특성을 표시 하는 경우 시작 디스크 특성은 컴퓨터를 시작 하는 데 사용 되는 디스크를 나타냅니다. 동적 미러의 경우 부팅 볼륨의 부팅 플렉스를 포함 하는 디스크를 표시 합니다.
 

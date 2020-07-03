@@ -1,6 +1,6 @@
 ---
 title: assign
-description: 드라이브 문자 또는 탑재 지점을 포커스가 있는 볼륨에 할당 하는 assign 명령에 대 한 참조 항목입니다.
+description: 드라이브 문자 또는 탑재 지점을 포커스가 있는 볼륨에 할당 하는 assign 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f17c22a0052ade6f16e7842813a04c95e76b57ab
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 8bfcb43b2e42ca65d767f0683bf13dc971073c27
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718983"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85923991"
 ---
 # <a name="assign"></a>assign
 

@@ -1,6 +1,6 @@
 ---
 title: bitsadmin cache and info
-description: 특정 캐시 항목을 덤프 하는 bitsadmin cache 및 info 명령에 대 한 참조 항목입니다.
+description: 특정 캐시 항목을 덤프 하는 bitsadmin cache 및 info 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3a50e6575a5496ff9f7bcd6a0dc429c7960c6933
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: dabf9b229138bf1d39863643574c5509ffcfcd91
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718343"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85923266"
 ---
 # <a name="bitsadmin-cache-and-info"></a>bitsadmin cache and info
 

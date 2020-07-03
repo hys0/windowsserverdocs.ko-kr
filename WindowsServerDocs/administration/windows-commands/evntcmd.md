@@ -1,6 +1,6 @@
 ---
 title: evntcmd
-description: 구성 파일의 정보에 따라 이벤트를 트랩, 트랩 대상 또는 둘 다로 변환 하도록 구성 하는 evntcmd 명령에 대 한 참조 항목입니다.
+description: 구성 파일의 정보에 따라 이벤트를 트랩, 트랩 대상 또는 둘 다로 변환 하도록 구성 하는 evntcmd 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e922d7876a8065a0e05e9fa7bf2cf8db45bffd25
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: 291b13163f5c5a13442ed6dc80b769d0170df42e
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83437098"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85922787"
 ---
 # <a name="evntcmd"></a>evntcmd
 

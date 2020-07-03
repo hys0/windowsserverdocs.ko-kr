@@ -1,6 +1,6 @@
 ---
 title: 퐁뒤
-description: Windows 업데이트에서 필요한 파일을 다운로드 하거나 그룹 정책에서 지정한 다른 소스를 다운로드 하 여 Windows 선택적 기능을 사용할 수 있도록 하는 fondue.exe에 대 한 참조 항목입니다.
+description: Windows 업데이트 또는 그룹 정책에서 지정한 다른 원본에서 필요한 파일을 다운로드 하 여 Windows 선택적 기능을 사용할 수 있도록 하는 fondue.exe에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7a9e751a5ad46d557aa2317ebe4c144fa6f004fa
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: 5d2b7e4b2a8ef3158f5528c43944020274204970
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83437208"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85922697"
 ---
 # <a name="fondue"></a>퐁뒤
 
@@ -32,8 +32,8 @@ fondue.exe /enable-feature:<feature_name> [/caller-name:<program_name>] [/hide-u
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| /enable-feature`<feature_name>` | 사용 하려는 Windows 선택적 기능의 이름을 지정 합니다. 명령줄 당 기능 중 하나에 사용할 수 있습니다. 여러 기능을 사용 하도록 설정 하려면 각 기능에 대해 fondue 사용 합니다. |
-| /caller-name:`<program_name>` | 스크립트나 배치 파일에서 fondue 호출할 때 프로그램 또는 프로세스 이름을 지정 합니다. 이 옵션을 사용 하 여 오류가 발생 하는 경우 프로그램 이름을 SQM 보고서에 추가할 수 있습니다. |
+| /enable-feature`<feature_name>` | 사용 하려는 Windows 선택적 기능의 이름을 지정 합니다. 명령줄 당 기능 중 하나에 사용할 수 있습니다. 여러 기능을 사용 하도록 설정 하려면 각 기능에 대해 fondue.exe를 사용 합니다. |
+| /caller-name:`<program_name>` | 스크립트나 배치 파일에서 fondue.exe를 호출할 때 프로그램 또는 프로세스 이름을 지정 합니다. 이 옵션을 사용 하 여 오류가 발생 하는 경우 프로그램 이름을 SQM 보고서에 추가할 수 있습니다. |
 | /hide-ux:`{all | rebootrequest}` | 사용 하 여 **모든** Windows Update에 액세스 하는 진행률 및 사용 권한 요청을 포함 하 여 사용자에 게 모든 메시지를 숨기려면 합니다. 권한이 필요한 경우 작업이 실패 합니다.<p>**Rebootrequest** 를 사용 하 여 컴퓨터를 다시 부팅 하는 권한을 요청 하는 사용자 메시지만 숨깁니다. 컨트롤 요청 다시 부팅 하는 스크립트가 있으면이 옵션을 사용 합니다. |
 
 ### <a name="examples"></a>예

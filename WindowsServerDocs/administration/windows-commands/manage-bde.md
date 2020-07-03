@@ -1,6 +1,6 @@
 ---
 title: manage-bde
-description: BitLocker를 설정 또는 해제 하 고, 잠금 해제 메커니즘을 지정 하 고, 복구 방법을 업데이트 하 고, BitLocker로 보호 되는 데이터 드라이브의 잠금을 해제 하는 manage-bde 명령에 대 한 참조 항목입니다.
+description: BitLocker를 설정 또는 해제 하 고, 잠금을 해제 하 고, 복구 방법을 업데이트 하 고, BitLocker로 보호 되는 데이터 드라이브의 잠금을 해제 하는 manage-bde 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 84788315a65b32b29a1992580bc6152d15ad02f7
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: 480f44c6467587918ad347413315b208c874f8cd
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84222063"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85922127"
 ---
 # <a name="manage-bde"></a>manage-bde
 

@@ -1,6 +1,6 @@
 ---
 title: perfmon
-description: 특정 독립 실행형 모드에서 Windows 안정성 및 성능 모니터를 시작 하는 perfmon 명령에 대 한 참조 항목입니다.
+description: 특정 독립 실행형 모드에서 Windows 안정성 및 성능 모니터를 시작 하는 perfmon 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/25/2018
-ms.openlocfilehash: 96d1589dcd75814c37c2ad295cf60887eb07739c
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 5beaa1692f3fc4aa66eae81069f0ead5839d22e3
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85472479"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85922835"
 ---
 # <a name="perfmon"></a>perfmon
 

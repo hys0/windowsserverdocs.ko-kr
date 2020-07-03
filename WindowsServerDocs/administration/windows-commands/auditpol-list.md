@@ -1,6 +1,6 @@
 ---
-title: auditpol 목록
-description: 감사 정책 범주 및 하위 범주를 나열 하거나 사용자 단위 감사 정책을 정의한 사용자를 나열 하는 auditpol list 명령에 대 한 참조 항목입니다.
+title: auditpol list
+description: 감사 정책 범주 및 하위 범주를 나열 하거나 사용자 단위 감사 정책을 정의한 사용자를 나열 하는 auditpol list 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 96ee4388c716c066a2e9b55b57dd2e70b4b4f69c
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: a0ce67b9907fa4c5207d75422dc972d70f5e6eea
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719094"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85923716"
 ---
-# <a name="auditpol-list"></a>auditpol 목록
+# <a name="auditpol-list"></a>auditpol list
 
 > 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 

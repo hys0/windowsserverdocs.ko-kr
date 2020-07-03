@@ -1,6 +1,6 @@
 ---
 title: manage-bde wipefreespace
-description: Manage-bde wipefreespace command에 대 한 참조 항목으로, 공간에 있을 수 있는 데이터 조각을 제거 하는 볼륨의 사용 가능한 공간을 제거 합니다.
+description: 공간에 존재 했을 수 있는 데이터 조각을 제거 하는 볼륨의 사용 가능한 공간을 초기화 하는 manage-bde wipefreespace command에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 09bc59ab631dd1fa2177b50aa4187b30239571bd
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: 872c3722028af1612fb80e3b98650ee0a39261ce
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84222130"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85922171"
 ---
 # <a name="manage-bde-wipefreespace"></a>manage-bde wipefreespace
 

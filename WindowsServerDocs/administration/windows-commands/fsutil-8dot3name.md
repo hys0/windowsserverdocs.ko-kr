@@ -1,6 +1,6 @@
 ---
 title: fsutil 8dot3name
-description: 약식 이름 (8.3 이름) 동작에 대 한 설정을 쿼리하거나 변경 하는 fsutil 8dot3name command에 대 한 참조 항목입니다.
+description: 약식 이름 (8.3 이름) 동작에 대 한 설정을 쿼리하거나 변경 하는 fsutil 8dot3name command에 대 한 참조 문서입니다.
 ms.prod: windows-server
 manager: dmoss
 ms.author: toklima
@@ -9,12 +9,12 @@ ms.technology: storage
 ms.assetid: a0c6dbfe-d898-496d-9356-825f7fbd90ec
 ms.topic: article
 ms.date: 10/16/2017
-ms.openlocfilehash: 02977a33c21560fd2078f0f596f312f4ab4bc408
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: 069f7fed72cfe50ef15c869b129dbf98363d9111
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83436058"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85922389"
 ---
 # <a name="fsutil-8dot3name"></a>fsutil 8dot3name
 

@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getbytestransferred
-description: 지정 된 작업에 대해 전송 된 바이트 수를 검색 하는 bitsadmin getbytestransferred 명령에 대 한 참조 항목입니다.
+description: 지정 된 작업에 대해 전송 된 바이트 수를 검색 하는 bitsadmin getbytestransferred 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7c333926ed46dd2e66e0e2507f838f721a73c192
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 6ca8561a0c5eb92bb4bd716f7b20bd9f7ceaf606
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718150"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85923119"
 ---
 # <a name="bitsadmin-getbytestransferred"></a>bitsadmin getbytestransferred
 

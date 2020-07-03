@@ -1,6 +1,6 @@
 ---
 title: bcdboot
-description: 시스템 파티션을 빠르게 설정 하거나 시스템 파티션에 있는 부팅 환경을 복구 하는 bcdboot 명령에 대 한 참조 항목입니다.
+description: 시스템 파티션을 빠르게 설정 하거나 시스템 파티션에 있는 부팅 환경을 복구 하는 bcdboot 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 67aacb3a575e0cdd08af5372b403916961d223c6
-ms.sourcegitcommit: ef089864980a1d4793a35cbf4cbdd02ce1962054
+ms.openlocfilehash: def4052e8aaa4f1e32216b5de837706b5cde3d04
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84149776"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85923506"
 ---
 # <a name="bcdboot"></a>bcdboot
 
@@ -30,7 +30,7 @@ bcdboot <source> [/l] [/s]
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| 원본 | 부팅 환경 파일을 복사 하기 위한 원본으로 사용 하 여 Windows 디렉터리의 위치를 지정 합니다. |
+| source | 부팅 환경 파일을 복사 하기 위한 원본으로 사용 하 여 Windows 디렉터리의 위치를 지정 합니다. |
 | /l | 로캘을 지정 합니다. 기본 로캘은 영어 (미국)입니다. |
 | /s | 시스템 파티션의 볼륨 문자를 지정합니다. 기본값은 시스템 파티션을 펌웨어에서 식별 합니다. |
 

@@ -1,6 +1,6 @@
 ---
-title: auditpol 복원
-description: 시스템 감사 정책 설정, 모든 사용자에 대 한 사용자별 감사 정책 설정 및/backup 옵션에 사용 되는 쉼표로 구분 된 값 (CSV) 파일 형식과 구문적으로 일치 하는 파일의 모든 감사 옵션을 복원 하는 auditpol restore 명령에 대 한 참조 항목입니다.
+title: auditpol restore
+description: 시스템 감사 정책 설정, 모든 사용자에 대 한 사용자별 감사 정책 설정 및/backup 옵션에 사용 되는 쉼표로 구분 된 값 (CSV) 파일 형식과 구문적으로 일치 하는 파일의 모든 감사 옵션을 복원 하는 auditpol restore 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 64605a985c1cff13b842a99ae4ea52485bfc8220
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: d7cd9f26189e9237910cfcbe5399c490ddf0c3c0
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719055"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85923677"
 ---
-# <a name="auditpol-restore"></a>auditpol 복원
+# <a name="auditpol-restore"></a>auditpol restore
 
 > 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -39,7 +39,7 @@ auditpol /restore /file:<filename>
 
 ## <a name="examples"></a>예
 
-시스템 감사 정책 설정, 모든 사용자에 대 한 사용자 단위 감사 정책 설정 및/backup 명령을 사용 하 여 만든 auditpolicy .csv 라는 파일의 모든 감사 옵션을 복원 하려면 다음을 입력 합니다.
+시스템 감사 정책 설정, 모든 사용자에 대 한 사용자별 감사 정책 설정 및/backup 명령을 사용 하 여 만든 auditpolicy.csv 이라는 파일의 모든 감사 옵션을 복원 하려면 다음을 입력 합니다.
 
 ```
 auditpol /restore /file:c:\auditpolicy.csv
@@ -49,6 +49,6 @@ auditpol /restore /file:c:\auditpolicy.csv
 
 - [명령줄 구문 키](command-line-syntax-key.md)
 
-- [auditpol 백업](auditpol-backup.md)
+- [auditpol backup](auditpol-backup.md)
 
 - [auditpol 명령](auditpol.md)

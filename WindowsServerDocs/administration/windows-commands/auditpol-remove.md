@@ -1,6 +1,6 @@
 ---
-title: auditpol 제거
-description: 지정 된 계정 또는 모든 계정에 대 한 사용자 단위 감사 정책을 제거 하는 auditpol remove 명령에 대 한 참조 항목입니다.
+title: auditpol remove
+description: 지정 된 계정 또는 모든 계정에 대 한 사용자 단위 감사 정책을 제거 하는 auditpol remove 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9aedde39d44c7640e6aa2516465e1c8ec7d022c2
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: aada45bdc128c3122f459813d6f015f58532de18
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719085"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85923730"
 ---
-# <a name="auditpol-remove"></a>auditpol 제거
+# <a name="auditpol-remove"></a>auditpol remove
 
 > 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 

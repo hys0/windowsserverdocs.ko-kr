@@ -1,6 +1,6 @@
 ---
-title: auditpol 지우기
-description: 모든 사용자에 대 한 사용자 단위 감사 정책을 삭제 하 고 모든 하위 범주에 대 한 시스템 감사 정책을 다시 설정 (해제) 하 고 모든 감사 옵션을 사용 안 함으로 설정 하는 auditpol clear 명령에 대 한 참조 항목입니다.
+title: auditpol clear
+description: 모든 사용자에 대 한 사용자 단위 감사 정책을 삭제 하 고 모든 하위 범주에 대 한 시스템 감사 정책을 다시 설정 (해제) 하며 모든 감사 옵션을 사용 안 함으로 설정 하는 auditpol clear 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a3d4765907f1dd614f5d0a61585ea09069652ecb
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 797f26ab9e191176808bbce917ca5ac0fa3d73a3
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719145"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85923796"
 ---
-# <a name="auditpol-clear"></a>auditpol 지우기
+# <a name="auditpol-clear"></a>auditpol clear
 
 > 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 

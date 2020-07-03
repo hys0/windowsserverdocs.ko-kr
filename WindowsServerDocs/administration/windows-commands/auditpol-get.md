@@ -1,6 +1,6 @@
 ---
-title: auditpol 가져오기
-description: 시스템 정책, 사용자별 정책, 감사 옵션 및 감사 보안 설명자 개체를 검색 하는 auditpol get 명령에 대 한 참조 항목입니다.
+title: auditpol get
+description: 시스템 정책, 사용자별 정책, 감사 옵션 및 감사 보안 설명자 개체를 검색 하는 auditpol get 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 859ea9e2e42af0fe7f34f4e378166685f8316b9e
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 698823ae48dd4ca52cb26d583a35d3faf1c1d03a
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719133"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85923742"
 ---
-# <a name="auditpol-get"></a>auditpol 가져오기
+# <a name="auditpol-get"></a>auditpol get
 
 > 적용 대상: Windows Server (반기 채널), Windows Server, 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -61,7 +61,7 @@ auditpol /get /user:{S-1-5-21-1443922412-3030960370-963420232-51} /category:Syst
 ```
 
 > [!NOTE]
-> 이 명령은 두 가지 경우에 유용합니다. 1) 의심 스러운 활동에 대 한 특정 사용자 계정을 모니터링할 때 추가 감사를 `/get` 사용 하도록 설정 하는 포함 정책을 사용 하 여 특정 범주에서 결과를 검색 하는 명령을 사용할 수 있습니다. 2) 계정에 대 한 감사 설정이 다양 하지만 불필요 한 이벤트를 기록 하는 경우 `/get` 명령을 사용 하 여 제외 정책을 통해 해당 계정에 대 한 불필요 한 이벤트를 필터링 할 수 있습니다. 모든 범주의 목록을 보려면 `auditpol /list /category` 명령을 사용 합니다.
+> 이 명령은 두 가지 경우에 유용합니다. 1) 의심 스러운 활동에 대 한 특정 사용자 계정을 모니터링할 때 `/get` 추가 감사를 사용 하도록 설정 하는 포함 정책을 사용 하 여 특정 범주에서 결과를 검색 하는 명령을 사용할 수 있습니다. 2) 계정에 대 한 감사 설정이 다양 하지만 불필요 한 이벤트를 기록 하는 경우 `/get` 명령을 사용 하 여 제외 정책을 통해 해당 계정에 대 한 불필요 한 이벤트를 필터링 할 수 있습니다. 모든 범주의 목록을 보려면 `auditpol /list /category` 명령을 사용 합니다.
 
 사용자 단위 감사 정책 범주 및 게스트 계정에 대 한 시스템 범주 아래의 해당 하위 범주에 대 한 포괄 및 전용 설정을 보고, 특정 하위 범주에 대 한 검색 하려면 다음을 입력 합니다.
 

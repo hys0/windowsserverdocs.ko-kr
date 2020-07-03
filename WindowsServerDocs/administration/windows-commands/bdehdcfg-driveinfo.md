@@ -1,6 +1,6 @@
 ---
 title: bdehdcfg driveinfo
-description: Bdehdcfg driveinfo 명령에 대 한 참조 항목으로, 드라이브 문자, 총 크기, 최대 여유 공간 및 파티션 특징을 표시 합니다.
+description: Bdehdcfg driveinfo 명령에 대 한 참조 문서는 드라이브 문자, 총 크기, 최대 여유 공간 및 파티션 특징을 표시 합니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b18b4c3e128cd17353d369b418a049d0208cb654
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 0063c73cd20aca8c8fe5cc21b245517475268c64
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718685"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85923484"
 ---
 # <a name="bdehdcfg-driveinfo"></a>bdehdcfg: driveinfo
 

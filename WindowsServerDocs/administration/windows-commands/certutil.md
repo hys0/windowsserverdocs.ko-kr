@@ -1,6 +1,6 @@
 ---
 title: certutil
-description: Certutil 명령에 대 한 참조 항목-CA (인증 기관) 구성 정보를 덤프 하 고 표시 하 고, 인증서 서비스를 구성 하 고, CA 구성 요소를 백업 및 복원 하 고, 인증서, 키 쌍 및 인증서 체인을 확인 하는 명령줄 프로그램입니다.
+description: Certutil 명령에 대 한 참조 문서는 CA (인증 기관) 구성 정보를 덤프 및 표시 하 고, 인증서 서비스를 구성 하 고, CA 구성 요소를 백업 및 복원 하 고, 인증서, 키 쌍 및 인증서 체인을 확인 하는 명령줄 프로그램입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,21 +9,21 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3848c5493247e7e2d5e5b57be6d5d6e4015708b4
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 0a2cea23d96c4cb438a2acac6d14c1bd37c67b56
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716239"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85922641"
 ---
 # <a name="certutil"></a>certutil
 
-Certutil은 인증서 서비스의 일부로 설치 되는 명령줄 프로그램입니다. Certutil을 사용 하 여 CA (인증 기관) 구성 정보를 덤프 및 표시 하 고, 인증서 서비스를 구성 하 고, CA 구성 요소를 백업 및 복원 하 고, 인증서, 키 쌍 및 인증서 체인을 확인할 수 있습니다.
+Certutil.exe는 인증서 서비스의 일부로 설치 되는 명령줄 프로그램입니다. certutil.exe를 사용 하 여 CA (인증 기관) 구성 정보를 덤프 및 표시 하 고, 인증서 서비스를 구성 하 고, CA 구성 요소를 백업 및 복원 하 고, 인증서, 키 쌍 및 인증서 체인을 확인할 수 있습니다.
 
-Certutil이 추가 매개 변수 없이 인증 기관에서 실행 되 면 현재 인증 기관 구성이 표시 됩니다. Certutil이 인증 되지 않은 기관에서 실행 되는 경우 명령은 기본적으로 `certutil [-dump]` 명령을 실행 합니다.
+Certutil이 추가 매개 변수 없이 인증 기관에서 실행 되 면 현재 인증 기관 구성이 표시 됩니다. Certutil이 인증 되지 않은 기관에서 실행 되는 경우 명령은 기본적으로 명령을 실행 합니다 `certutil [-dump]` .
 
 > [!IMPORTANT]
-> 이전 버전의 certutil이이 문서에서 설명 하는 옵션을 모두를 제공할 수 있습니다. 또는 `certutil -?` `certutil <parameter> -?`를 실행 하 여 특정 버전의 certutil에서 제공 하는 모든 옵션을 볼 수 있습니다.
+> 이전 버전의 certutil이이 문서에서 설명 하는 옵션을 모두를 제공할 수 있습니다. 또는를 실행 하 여 특정 버전의 certutil에서 제공 하는 모든 옵션을 볼 수 있습니다 `certutil -?` `certutil <parameter> -?` .
 
 ## <a name="parameters"></a>매개 변수
 
@@ -132,7 +132,7 @@ certutil [options] -setattributes RequestID attributestring
 
 #### <a name="remarks"></a>설명
 
-- 이름 및 값은 콜론으로 구분 해야 하지만 여러 이름, 값 쌍은 줄 바꿈으로 구분 해야 합니다. 예: `CertificateTemplate:User\nEMail:User@Domain.com` 시퀀스는 `\n` 줄 바꿈 구분 기호로 변환 됩니다.
+- 이름 및 값은 콜론으로 구분 해야 하지만 여러 이름, 값 쌍은 줄 바꿈으로 구분 해야 합니다. 예: `CertificateTemplate:User\nEMail:User@Domain.com` `\n` 시퀀스는 줄 바꿈 구분 기호로 변환 됩니다.
 
 ### <a name="-setextension"></a>-setextension
 
@@ -148,7 +148,7 @@ certutil [options] -setextension requestID extensionname flags {long | date | st
 
 - **extensionname** 는 확장에 대 한 ObjectId 문자열입니다.
 
-- **플래그** 는 확장의 우선 순위를 설정 합니다. `0`를 사용 하는 `1` 것이 좋지만,는 확장 `2` 을 위험으로 설정 하 `3` 고 확장을 사용 하지 않도록 설정 하며 둘 다 수행 합니다.
+- **플래그** 는 확장의 우선 순위를 설정 합니다. `0`를 사용 하는 것이 좋지만,는 `1` 확장을 위험으로 설정 하 `2` 고 확장을 사용 하지 않도록 설정 하며 `3` 둘 다 수행 합니다.
 
 ```
 [-config Machine\CAName]
@@ -160,7 +160,7 @@ certutil [options] -setextension requestID extensionname flags {long | date | st
 
 - 마지막 매개 변수를 날짜로 구문 분석할 수 있는 경우 **날짜로**사용 됩니다.
 
-- 마지막 매개 변수가로 `\@`시작 하는 경우 토큰의 나머지 부분은 이진 데이터 또는 ascii 텍스트 hex 덤프를 사용 하는 파일 이름으로 사용 됩니다.
+- 마지막 매개 변수가로 시작 하는 경우 `\@` 토큰의 나머지 부분은 이진 데이터 또는 ascii 텍스트 hex 덤프를 사용 하는 파일 이름으로 사용 됩니다.
 
 - 마지막 매개 변수가 다른 값 이면 문자열로 간주 됩니다.
 
@@ -253,101 +253,101 @@ certutil [options] -cainfo [infoname [index | errorcode]]
 - **infoname** 는 다음 infoname 인수 구문을 기반으로 표시할 CA 속성을 나타냅니다.
 
   - **파일** -파일 버전
-  
+
   - **제품** 버전
-  
+
   - **exitcount** -끝내기 모듈 수
-  
-  - **끝내기 `[index]` ** 모듈 설명
-  
+
+  - **종료 `[index]` ** -끝내기 모듈 설명
+
   - **정책** -정책 모듈 설명
-  
+
   - **이름** -CA 이름
-  
+
   - **sanitizedname** -삭제 CA 이름
-  
+
   - **dsname** -삭제 한 CA 약식 이름 (DS 이름)
-  
+
   - **sharedfolder** -공유 폴더
-  
+
   - **Error1 ErrorCode** -오류 메시지 텍스트
-  
+
   - **Error2 ErrorCode** -오류 메시지 텍스트 및 오류 코드
-  
+
   - **유형** -CA 유형
-  
+
   - **info** -CA 정보
-  
+
   - **부모** -부모 CA
-  
+
   - **certcount** -CA 인증서 수
-  
+
   - **xchgcount** -CA exchange 인증서 수
-  
+
   - **kracount** -KRA 인증서 수
-  
+
   - **kraused** -KRA 인증서 사용 횟수
-  
+
   - **propidmax** -최대 CA PropId
-  
+
   - **certstate `[index]` ** -CA 인증서
-  
+
   - **certversion `[index]` ** -CA 인증서 버전
-  
+
   - **certstatuscode `[index]` ** -CA 인증서 확인 상태
-  
+
   - **crlstate `[index]` ** -CRL
-  
+
   - **krastate `[index]` ** -KRA 인증서
-  
-  - 상호 **상태 + `[index]` ** -크로스 인증서 전달
-  
-  - 상호 **상태- `[index]` ** -역방향 상호 인증서
-  
+
+  - **교차 상태 + `[index]` ** -크로스 인증서 전달
+
+  - **간 상태- `[index]` ** -역방향 상호 인증서
+
   - **인증서 `[index]` ** -CA 인증서
-  
+
   - **certchain `[index]` ** -CA 인증서 체인
-  
-  - **certcrlchain `[index]` ** -crl을 사용 하는 CA 인증서 체인
-  
+
+  - **certcrlchain `[index]` ** -Crl을 사용 하는 CA 인증서 체인
+
   - **xchg `[index]` ** -CA exchange 인증서
-  
+
   - **xchgchain `[index]` ** -CA exchange 인증서 체인
 
-  - **xchgcrlchain `[index]` ** -crl을 사용 하는 CA 교환 인증서 체인
-  
-  - **kra `[index]` ** -kra 인증서
-  
-  - 크로스-전방 교차 인증서 ** `[index]` **
-  
-  - 크로스-역방향 인증서 ** `[index]` **
-  
-  - **Crl `[index]` ** 기반 crl
-  
+  - **xchgcrlchain `[index]` ** -Crl을 사용한 CA 교환 인증서 체인
+
+  - **kra `[index]` ** -KRA 인증서
+
+  - **크로스 + `[index]` ** -크로스 인증서 전달
+
+  - **교차 `[index]` ** -역방향 상호 인증서
+
+  - **CRL `[index]` ** -기본 CRL
+
   - **deltacrl `[index]` ** -델타 CRL
-  
+
   - **crlstatus `[index]` ** -CRL 게시 상태
-  
+
   - **deltacrlstatus `[index]` ** -델타 CRL 게시 상태
-  
+
   - **dns** -dns 이름
-  
+
   - **역할** -역할 구분
-  
+
   - **광고** -고급 서버
-  
+
   - **템플릿** -템플릿
-  
-  - **csp `[index]` ** -OCSP url
-  
-  - **aia `[index]` ** -aia url
-  
-  - **cdp `[index]` ** -cdp url
-  
+
+  - **csp `[index]` ** -OCSP Url
+
+  - **aia `[index]` ** -AIA Url
+
+  - **cdp `[index]` ** -CDP Url
+
   - **localename** -CA 로캘 이름
-  
+
   - 제목 템플릿 **oid** -주제 템플릿 oid
-  
+
   - **&#42;** -모든 속성을 표시 합니다.
 
 - **index** 는 선택적으로 0부터 시작 하는 속성 인덱스입니다.
@@ -462,7 +462,7 @@ certutil [options] -installcert [cacertfile]
 certutil [options] -renewcert [reusekeys] [Machine\ParentCAName]
 ```
 
-- 을 `-f` 사용 하 여 미해결 갱신 요청을 무시 하 고 새 요청을 생성 합니다.
+- 을 사용 하 여 `-f` 미해결 갱신 요청을 무시 하 고 새 요청을 생성 합니다.
 
 ```
 [-f] [-silent] [-config Machine\CAName]
@@ -480,7 +480,7 @@ certutil [options] -schema [ext | attrib | cRL]
 - 이 명령은 기본적으로 요청 및 인증서 테이블로 설정 됩니다.
 
 - **ext** 는 확장 테이블입니다.
-  
+
 - **특성은 특성** 테이블입니다.
 
 - **crl은 crl** 테이블입니다.
@@ -508,7 +508,7 @@ certutil [options] -view [queue | log | logfail | revoked | ext | attrib | crl] 
 - **해지 된 인증서를 덤프 합니다** .
 
 - **ext** 는 확장 테이블을 덤프 합니다.
-  
+
 - **특성은** 특성 테이블을 덤프 합니다.
 
 - **crl이** crl 테이블을 덤프 합니다.
@@ -533,9 +533,9 @@ certutil [options] -view [queue | log | logfail | revoked | ext | attrib | crl] 
 
 - 전체 CRL 테이블을 표시 하려면 다음을 입력 합니다.`CRL`
 
-- 날짜 `Date[+|-dd:hh]` 제한에 사용 합니다.
+- `Date[+|-dd:hh]`날짜 제한에 사용 합니다.
 
-- 현재 `now+dd:hh` 시간을 기준으로 하는 날짜에 사용 합니다.
+- `now+dd:hh`현재 시간을 기준으로 하는 날짜에 사용 합니다.
 
 ### <a name="-db"></a>-db
 
@@ -564,7 +564,7 @@ certutil [options] -deleterow rowID | date [request | cert | ext | attrib | crl]
 - **인증서** 만료 날짜를 기준으로 만료 되 고 해지 된 인증서를 삭제 합니다.
 
 - **ext** 확장 테이블을 삭제 합니다.
-  
+
 - **특성** 은 특성 테이블을 삭제 합니다.
 
 - **crl이** crl 테이블을 삭제 합니다.
@@ -689,7 +689,7 @@ certutil [options] -restorekey backupdirectory | pfxfile
 
 ### <a name="-importpfx"></a>-importpfx
 
-인증서 및 개인 키를 가져옵니다. 자세한 내용은이 문서의 `-store` 매개 변수를 참조 하세요.
+인증서 및 개인 키를 가져옵니다. 자세한 내용은 `-store` 이 문서의 매개 변수를 참조 하세요.
 
 ```
 certutil [options] -importpfx [certificatestorename] pfxfile [modifiers]
@@ -702,19 +702,19 @@ certutil [options] -importpfx [certificatestorename] pfxfile [modifiers]
 - **한정자** 는 쉼표로 구분 된 목록으로, 다음 중 하나 이상을 포함할 수 있습니다.
 
   1. **AT_SIGNATURE** -keyspec을 서명으로 변경 합니다.
-  
+
   2. **AT_KEYEXCHANGE** -keyspec을 키 교환으로 변경 합니다.
-  
+
   3. **Noexport** -개인 키를 내보낼 수 없게 만듭니다.
-  
+
   4. **Nocert** -인증서를 가져오지 않음
-  
+
   5. **Nochain** -인증서 체인을 가져오지 않음
-  
+
   6. **NoRoot** -루트 인증서를 가져오지 않음
-  
+
   7. **보호** -암호를 사용 하 여 키를 보호 합니다.
-  
+
   8. **Noprotect** -암호를 사용 하 여 키를 보호 하지 않음
 
 ```
@@ -767,20 +767,20 @@ certutil [options] -store [certificatestorename [certID [outputfile]]]
 
 위치:
 
-- **certificatestorename** 은 인증서 저장소 이름입니다. 다음은 그 예입니다. 
+- **certificatestorename** 은 인증서 저장소 이름입니다. 예를 들어:
 
   - `My, CA (default), Root,`
-  
+
   - `ldap:///CN=Certification Authorities,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?one?objectClass=certificationAuthority (View Root Certificates)`
-  
+
   - `ldap:///CN=CAName,CN=Certification Authorities,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?base?objectClass=certificationAuthority (Modify Root Certificates)`
-  
+
   - `ldap:///CN=CAName,CN=MachineName,CN=CDP,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?certificateRevocationList?base?objectClass=cRLDistributionPoint (View CRLs)`
-  
+
   - `ldap:///CN=NTAuthCertificates,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?base?objectClass=certificationAuthority (Enterprise CA Certificates)`
-  
+
   - `ldap: (AD computer object certificates)`
-  
+
   - `-user ldap: (AD user object certificates)`
 
 - **인증서** 는 인증서 또는 CRL 일치 토큰입니다. 숫자 CTL 인덱스 (. 0, 1, 등), 숫자 CRL 인덱스 (. 0, 1 등), 숫자 CTL 인덱스 (. 0, 1, 등), 숫자 CTL 인덱스 (.. 0,. 1 등), 공개 키, 서명 또는 확장명 ObjectId, 인증서 주체 일반 이름, 전자 메일 주소, UPN 또는 DNS 이름, 키 컨테이너 이름 또는 CSP 이름, 템플릿 이름 또는 ObjectId, EKU 또는 응용 프로그램 정책 ObjectId 또는 CRL 발급자 일반 이름입니다. 이러한 대부분의 여러 일치 항목이 될 수 있습니다.
@@ -793,15 +793,15 @@ certutil [options] -store [certificatestorename [certID [outputfile]]]
 
 #### <a name="options"></a>옵션
 
-- 옵션 `-user` 은 컴퓨터 저장소 대신 사용자 저장소에 액세스 합니다.
+- `-user`옵션은 컴퓨터 저장소 대신 사용자 저장소에 액세스 합니다.
 
-- 옵션 `-enterprise` 은 컴퓨터 엔터프라이즈 저장소에 액세스 합니다.
+- `-enterprise`옵션은 컴퓨터 엔터프라이즈 저장소에 액세스 합니다.
 
-- 옵션 `-service` 은 컴퓨터 서비스 저장소에 액세스 합니다.
+- `-service`옵션은 컴퓨터 서비스 저장소에 액세스 합니다.
 
-- 옵션 `-grouppolicy` 은 컴퓨터 그룹 정책 저장소에 액세스 합니다.
+- `-grouppolicy`옵션은 컴퓨터 그룹 정책 저장소에 액세스 합니다.
 
-다음은 그 예입니다. 
+예를 들어:
 
 - `-enterprise NTAuth`
 
@@ -813,7 +813,7 @@ certutil [options] -store [certificatestorename [certID [outputfile]]]
 
 ### <a name="-addstore"></a>-addstore
 
-저장소에 인증서를 추가합니다. 자세한 내용은이 문서의 `-store` 매개 변수를 참조 하세요.
+저장소에 인증서를 추가합니다. 자세한 내용은 `-store` 이 문서의 매개 변수를 참조 하세요.
 
 ```
 certutil [options] -addstore certificatestorename infile
@@ -831,7 +831,7 @@ certutil [options] -addstore certificatestorename infile
 
 ### <a name="-delstore"></a>-delstore
 
-저장소에서 인증서를 삭제합니다. 자세한 내용은이 문서의 `-store` 매개 변수를 참조 하세요.
+저장소에서 인증서를 삭제합니다. 자세한 내용은 `-store` 이 문서의 매개 변수를 참조 하세요.
 
 ```
 certutil [options] -delstore certificatestorename certID
@@ -849,7 +849,7 @@ certutil [options] -delstore certificatestorename certID
 
 ### <a name="-verifystore"></a>-verifystore
 
-저장소에서 인증서를 확인 합니다. 자세한 내용은이 문서의 `-store` 매개 변수를 참조 하세요.
+저장소에서 인증서를 확인 합니다. 자세한 내용은 `-store` 이 문서의 매개 변수를 참조 하세요.
 
 ```
 certutil [options] -verifystore certificatestorename [certID]
@@ -867,7 +867,7 @@ certutil [options] -verifystore certificatestorename [certID]
 
 ### <a name="-repairstore"></a>-repairstore
 
-키 연결을 복구 하거나 인증서 속성 또는 키 보안 설명자를 업데이트 합니다. 자세한 내용은이 문서의 `-store` 매개 변수를 참조 하세요.
+키 연결을 복구 하거나 인증서 속성 또는 키 보안 설명자를 업데이트 합니다. 자세한 내용은 `-store` 이 문서의 매개 변수를 참조 하세요.
 
 ```
 certutil [options] -repairstore certificatestorename certIDlist [propertyinffile | SDDLsecuritydescriptor]
@@ -877,7 +877,7 @@ certutil [options] -repairstore certificatestorename certIDlist [propertyinffile
 
 - **certificatestorename** 은 인증서 저장소 이름입니다.
 
-- **certIDlist** 은 쉼표로 구분 된 인증서 또는 CRL 일치 토큰 목록입니다. 자세한 내용은이 문서에서 설명 `-store certID` 하는 설명을 참조 하세요.
+- **certIDlist** 은 쉼표로 구분 된 인증서 또는 CRL 일치 토큰 목록입니다. 자세한 내용은 `-store certID` 이 문서에서 설명 하는 설명을 참조 하세요.
 
 - **propertyinffile** 은 다음을 비롯 한 외부 속성을 포함 하는 INF 파일입니다.
 
@@ -910,7 +910,7 @@ certutil [options] -repairstore certificatestorename certIDlist [propertyinffile
 
 ### <a name="-viewstore"></a>-뷰 저장소
 
-인증서 저장소를 덤프 합니다. 자세한 내용은이 문서의 `-store` 매개 변수를 참조 하세요.
+인증서 저장소를 덤프 합니다. 자세한 내용은 `-store` 이 문서의 매개 변수를 참조 하세요.
 
 ```
 certutil [options] -viewstore [certificatestorename [certID [outputfile]]]
@@ -930,15 +930,15 @@ certutil [options] -viewstore [certificatestorename [certID [outputfile]]]
 
 #### <a name="options"></a>옵션
 
-- 옵션 `-user` 은 컴퓨터 저장소 대신 사용자 저장소에 액세스 합니다.
+- `-user`옵션은 컴퓨터 저장소 대신 사용자 저장소에 액세스 합니다.
 
-- 옵션 `-enterprise` 은 컴퓨터 엔터프라이즈 저장소에 액세스 합니다.
+- `-enterprise`옵션은 컴퓨터 엔터프라이즈 저장소에 액세스 합니다.
 
-- 옵션 `-service` 은 컴퓨터 서비스 저장소에 액세스 합니다.
+- `-service`옵션은 컴퓨터 서비스 저장소에 액세스 합니다.
 
-- 옵션 `-grouppolicy` 은 컴퓨터 그룹 정책 저장소에 액세스 합니다.
+- `-grouppolicy`옵션은 컴퓨터 그룹 정책 저장소에 액세스 합니다.
 
-다음은 그 예입니다. 
+예를 들어:
 
 - `-enterprise NTAuth`
 
@@ -970,15 +970,15 @@ certutil [options] -viewdelstore [certificatestorename [certID [outputfile]]]
 
 #### <a name="options"></a>옵션
 
-- 옵션 `-user` 은 컴퓨터 저장소 대신 사용자 저장소에 액세스 합니다.
+- `-user`옵션은 컴퓨터 저장소 대신 사용자 저장소에 액세스 합니다.
 
-- 옵션 `-enterprise` 은 컴퓨터 엔터프라이즈 저장소에 액세스 합니다.
+- `-enterprise`옵션은 컴퓨터 엔터프라이즈 저장소에 액세스 합니다.
 
-- 옵션 `-service` 은 컴퓨터 서비스 저장소에 액세스 합니다.
+- `-service`옵션은 컴퓨터 서비스 저장소에 액세스 합니다.
 
-- 옵션 `-grouppolicy` 은 컴퓨터 그룹 정책 저장소에 액세스 합니다.
+- `-grouppolicy`옵션은 컴퓨터 그룹 정책 저장소에 액세스 합니다.
 
-다음은 그 예입니다. 
+예를 들어:
 
 - `-enterprise NTAuth`
 
@@ -1024,7 +1024,7 @@ certutil [options] -dspublish CRLfile [DSCDPContainer [DSCDPCN]]
 
 - **DSCDPCN** 는 일반적으로 삭제 된 CA 약식 이름과 키 인덱스를 기반으로 하는 DS CDP 개체 CN입니다.
 
-- 를 `-f` 사용 하 여 새 DS 개체를 만듭니다.
+- `-f`를 사용 하 여 새 DS 개체를 만듭니다.
 
 ```
 [-f] [-user] [-dc DCName]
@@ -1098,9 +1098,9 @@ certutil [options] -setcasites delete
 
 #### <a name="remarks"></a>설명
 
-- 옵션 `-config` 은 단일 인증 기관 (기본값은 모든 ca)을 대상으로 합니다.
+- `-config`옵션은 단일 인증 기관 (기본값은 모든 ca)을 대상으로 합니다.
 
-- 옵션 `-f` 은 지정 된 **sitename** 의 유효성 검사 오류를 재정의 하거나 모든 CA sitenames을 삭제 하는 데 사용할 수 있습니다.
+- `-f`옵션은 지정 된 **sitename** 의 유효성 검사 오류를 재정의 하거나 모든 CA sitenames을 삭제 하는 데 사용할 수 있습니다.
 
 > [!NOTE]
 > Active Directory Domain Services (AD DS) 사이트 인식에 대해 Ca를 구성 하는 방법에 대 한 자세한 내용은 [AD CS 및 PKI 클라이언트에 대 한 사이트 인식 AD DS](https://social.technet.microsoft.com/wiki/contents/articles/14106.ad-ds-site-awareness-for-ad-cs-and-pki-clients.aspx)을 참조 하십시오.
@@ -1128,7 +1128,7 @@ certutil [options] -enrollmentserverURL URL delete
 
 - **DELETE** CA와 연결 된 지정 된 URL을 삭제 합니다.
 
-- URL을 추가할 `1` 때 지정 되지 않은 경우 **우선 순위** 는로 설정 됩니다.
+- **priority** `1` URL을 추가할 때 지정 되지 않은 경우 우선 순위는로 설정 됩니다.
 
 - **한정자** 는 쉼표로 구분 된 목록으로, 다음 중 하나 이상을 포함 합니다.
 
@@ -1202,7 +1202,7 @@ certutil [options] -credstore URL delete
 
 위치:
 
-- **Url** 은 대상 url입니다. 를 사용 `*` 하 여 모든 항목을 검색 하거나 `https://machine*` URL 접두사와 일치 시킬 수도 있습니다.
+- **Url** 은 대상 url입니다. 를 사용 하 여 `*` 모든 항목을 검색 하거나 `https://machine*` URL 접두사와 일치 시킬 수도 있습니다.
 
 - **추가** 는 자격 증명 저장소 항목을 추가 합니다. 이 옵션을 사용 하려면 SSL 자격 증명도 사용 해야 합니다.
 
@@ -1352,7 +1352,7 @@ certutil [options] -verifykeys [keycontainername cacertfile]
 
 위치:
 
-- **cspparameters.keycontainername** 는 확인할 키의 키 컨테이너 이름입니다. 이 옵션은 기본적으로 컴퓨터 키로 설정 됩니다. 사용자 키로 전환 하려면를 사용 `-user`합니다.
+- **cspparameters.keycontainername** 는 확인할 키의 키 컨테이너 이름입니다. 이 옵션은 기본적으로 컴퓨터 키로 설정 됩니다. 사용자 키로 전환 하려면를 사용 `-user` 합니다.
 
 - **cacertfile** 는 인증서 파일을 서명 하거나 암호화 합니다.
 
@@ -1427,17 +1427,17 @@ certutil [options] -verifyCTL CTLobject [certdir] [certfile]
 
 - **CTLobject** 는 다음을 포함 하 여 확인할 CTL을 식별 합니다.
 
-  - **AuthRootWU** -URL 캐시에서 AuthRoot CAB 및 일치 하는 인증서를 읽습니다. 대신 `-f` 를 사용 하 여 Windows 업데이트에서 다운로드할 수 있습니다.
+  - **AuthRootWU** -URL 캐시에서 AuthRoot CAB 및 일치 하는 인증서를 읽습니다. 대신를 사용 `-f` 하 여 Windows 업데이트에서 다운로드할 수 있습니다.
 
-  - **Disallowedwu** -URL 캐시에서 허용 되지 않는 인증서 CAB 및 허용 되지 않는 인증서 저장소 파일을 읽습니다. 대신 `-f` 를 사용 하 여 Windows 업데이트에서 다운로드할 수 있습니다.
+  - **Disallowedwu** -URL 캐시에서 허용 되지 않는 인증서 CAB 및 허용 되지 않는 인증서 저장소 파일을 읽습니다. 대신를 사용 `-f` 하 여 Windows 업데이트에서 다운로드할 수 있습니다.
 
-  - **AuthRoot** -레지스트리 캐시 된 AuthRoot CTL을 읽습니다. `-f` 및 신뢰할 수 없는 **certfile** 을 사용 하 여 레지스트리 캐시 된 AuthRoot를 강제로 실행 하 고 허용 되지 않는 인증서 ctl을 업데이트 합니다.
+  - **AuthRoot** -레지스트리 캐시 된 AuthRoot CTL을 읽습니다. `-f`및 신뢰할 수 없는 **certfile** 을 사용 하 여 레지스트리 캐시 된 AuthRoot를 강제로 실행 하 고 허용 되지 않는 인증서 ctl을 업데이트 합니다.
 
-  - **허용 안 함** -레지스트리 캐시 된 허용 되지 않는 인증서 CTL을 읽습니다. `-f` 및 신뢰할 수 없는 **certfile** 을 사용 하 여 레지스트리 캐시 된 AuthRoot를 강제로 실행 하 고 허용 되지 않는 인증서 ctl을 업데이트 합니다.
+  - **허용 안 함** -레지스트리 캐시 된 허용 되지 않는 인증서 CTL을 읽습니다. `-f`및 신뢰할 수 없는 **certfile** 을 사용 하 여 레지스트리 캐시 된 AuthRoot를 강제로 실행 하 고 허용 되지 않는 인증서 ctl을 업데이트 합니다.
 
 - **CTLfilename** 는 CTL 또는 CAB 파일에 대 한 파일 또는 http 경로를 지정 합니다.
 
-- **certdir** CTL 항목과 일치 하는 인증서를 포함 하는 폴더를 지정 합니다. 기본값은 **CTLobject**와 동일한 폴더 또는 웹 사이트입니다. Http 폴더 경로를 사용 하려면 끝에 경로 구분 기호가 필요 합니다. **AuthRoot** 또는 **허용**안 함을 지정 하지 않으면 로컬 인증서 저장소, CRYPT32.DLL 리소스 및 로컬 URL 캐시를 포함 하 여 일치 하는 인증서에 대해 여러 위치가 검색 됩니다. 필요 `-f` 에 따라 Windows 업데이트에서 다운로드 하는 데 사용 합니다.
+- **certdir** CTL 항목과 일치 하는 인증서를 포함 하는 폴더를 지정 합니다. 기본값은 **CTLobject**와 동일한 폴더 또는 웹 사이트입니다. Http 폴더 경로를 사용 하려면 끝에 경로 구분 기호가 필요 합니다. **AuthRoot** 또는 **허용**안 함을 지정 하지 않으면 로컬 인증서 저장소, crypt32.dll 리소스 및 로컬 URL 캐시를 포함 하 여 일치 하는 인증서가 여러 위치에서 검색 됩니다. `-f`필요에 따라 Windows 업데이트에서 다운로드 하는 데 사용 합니다.
 
 - **certfile** 은 확인할 인증서를 지정 합니다. 인증서는 CTL 항목과 일치 하 여 결과를 표시 합니다. 이 옵션은 대부분의 기본 출력을 표시 하지 않습니다.
 
@@ -1469,14 +1469,14 @@ certutil [options] -sign infilelist | serialnumber | CRL outfilelist [#hashalgor
   - 선택적 날짜 더하기
 
   - 선택적 요일 및 시간 유효 기간
-  
-  둘 다 지정 하는 경우에는 더하기 기호 (+) 구분 기호를 사용 해야 합니다. 현재 `now[+dd:hh]` 시간에서를 시작 하는 데 사용 합니다. 만료 `never` 날짜를 사용 하지 않으려면를 사용 합니다 (crl에만 해당).
+
+  둘 다 지정 하는 경우에는 더하기 기호 (+) 구분 기호를 사용 해야 합니다. `now[+dd:hh]`현재 시간에서를 시작 하는 데 사용 합니다. `never`만료 날짜를 사용 하지 않으려면를 사용 합니다 (crl에만 해당).
 
 - **serialnumberlist** 은 추가 하거나 제거할 파일의 쉼표로 구분 된 일련 번호 목록입니다.
 
 - **수정** 은 제거할 파일의 쉼표로 구분 된 확장 ObjectId 목록입니다.
 
-- extensionfile은 업데이트 하거나 제거할 확장을 포함 하는 INF 파일입니다. ** \@** 다음은 그 예입니다. 
+- ** \@ extensionfile** 은 업데이트 하거나 제거할 확장을 포함 하는 INF 파일입니다. 예를 들어:
 
   ```
   [Extensions]
@@ -1485,7 +1485,7 @@ certutil [options] -sign infilelist | serialnumber | CRL outfilelist [#hashalgor
       _continue_=03 02 01 86
   ```
 
-- **hashalgorithm** 는 해시 알고리즘의 이름입니다. 이는 `#` 부호 앞에 오는 텍스트 여야 합니다.
+- **hashalgorithm** 는 해시 알고리즘의 이름입니다. 이는 부호 앞에 오는 텍스트 여야 합니다 `#` .
 
 - **alternatesignaturealgorithm** 는 대체 서명 알고리즘 지정자입니다.
 
@@ -1532,7 +1532,7 @@ certutil [options] -addenrollmentserver kerberos | username | clientcertificate 
 - **addenrollmentserver** 를 사용 하려면 다음을 포함 하 여 인증서 등록 서버에 대 한 클라이언트 연결에 대 한 인증 방법을 사용 해야 합니다.
 
   - **kerberos는 KERBEROS** SSL 자격 증명을 사용 합니다.
-  
+
   - **사용자 이름은** SSL 자격 증명에 명명 된 계정을 사용 합니다.
 
   - **clientcertificate** 는 X.509 인증서 SSL 자격 증명을 사용 합니다.
@@ -1558,7 +1558,7 @@ certutil [options] -deleteenrollmentserver kerberos | username | clientcertifica
 - **deleteenrollmentserver** 를 사용 하려면 다음을 포함 하 여 인증서 등록 서버에 대 한 클라이언트 연결에 대 한 인증 방법을 사용 해야 합니다.
 
   - **kerberos는 KERBEROS** SSL 자격 증명을 사용 합니다.
-  
+
   - **사용자 이름은** SSL 자격 증명에 명명 된 계정을 사용 합니다.
 
   - **clientcertificate** 는 X.509 인증서 SSL 자격 증명을 사용 합니다.
@@ -1580,7 +1580,7 @@ certutil [options] -addpolicyserver kerberos | username | clientcertificate [key
 - **addpolicyserver** 를 사용 하려면 다음을 포함 하 여 인증서 정책 서버에 대 한 클라이언트 연결에 대 한 인증 방법을 사용 해야 합니다.
 
   - **kerberos는 KERBEROS** SSL 자격 증명을 사용 합니다.
-  
+
   - **사용자 이름은** SSL 자격 증명에 명명 된 계정을 사용 합니다.
 
   - **clientcertificate** 는 X.509 인증서 SSL 자격 증명을 사용 합니다.
@@ -1598,7 +1598,7 @@ certutil [옵션]-deletePolicyServer kerberos | 사용자 이름 | clientcertifi
 - **deletepolicyserver** 를 사용 하려면 다음을 포함 하 여 인증서 정책 서버에 대 한 클라이언트 연결에 대 한 인증 방법을 사용 해야 합니다.
 
   - **kerberos는 KERBEROS** SSL 자격 증명을 사용 합니다.
-  
+
   - **사용자 이름은** SSL 자격 증명에 명명 된 계정을 사용 합니다.
 
   - **clientcertificate** 는 X.509 인증서 SSL 자격 증명을 사용 합니다.
@@ -1634,7 +1634,7 @@ certutil [options] -oid agID | algorithmname [groupID]
 - **Type** 은 다음을 비롯 하 여 만들 DS 개체의 유형입니다.
 
   - `1`-Template (기본값)
-  
+
   - `2`-발급 정책
 
   - `3`-응용 프로그램 정책
@@ -1667,9 +1667,9 @@ certutil [options] -getreg [{ca | restore | policy | exit | template | enroll |c
 
 - **종료** 는 첫 번째 끝내기 모듈의 레지스트리 키를 사용 합니다.
 
-- **template에서** 템플릿 레지스트리 키를 사용 합니다 `-user` (사용자 템플릿에 사용).
+- **template에서** 템플릿 레지스트리 키를 사용 `-user` 합니다 (사용자 템플릿에 사용).
 
-- **등록은** 등록 레지스트리 키 (사용자 컨텍스트에 `-user` 사용)를 사용 합니다.
+- **등록은** 등록 레지스트리 키 ( `-user` 사용자 컨텍스트에 사용)를 사용 합니다.
 
 - **체인** 구성 레지스트리 키를 사용 합니다.
 
@@ -1677,9 +1677,9 @@ certutil [options] -getreg [{ca | restore | policy | exit | template | enroll |c
 
 - **progid** 는 정책 또는 끝내기 모듈의 progID (레지스트리 하위 키 이름)를 사용 합니다.
 
-- **registryvaluename** 는 레지스트리 값 이름 (접두사 일치 `Name*` 에 사용)을 사용 합니다.
+- **registryvaluename** 는 레지스트리 값 이름 ( `Name*` 접두사 일치에 사용)을 사용 합니다.
 
-- **value** 는 새로운 숫자, 문자열 또는 날짜 레지스트리 값 또는 파일 이름을 사용 합니다. 숫자 값이 또는 `+` `-`로 시작 하는 경우 새 값에 지정 된 비트가 기존 레지스트리 값에서 설정 되거나 지워집니다.
+- **value** 는 새로운 숫자, 문자열 또는 날짜 레지스트리 값 또는 파일 이름을 사용 합니다. 숫자 값이 또는로 시작 하는 경우 `+` `-` 새 값에 지정 된 비트가 기존 레지스트리 값에서 설정 되거나 지워집니다.
 
 ```
 [-f] [-user] [-grouppolicy] [-config Machine\CAName]
@@ -1687,11 +1687,11 @@ certutil [options] -getreg [{ca | restore | policy | exit | template | enroll |c
 
 #### <a name="remarks"></a>설명
 
-- 문자열 값이 또는 `+` `-`로 시작 하 고 기존 값이 `REG_MULTI_SZ` 값 이면 기존 레지스트리 값에서 문자열이 추가 되거나 제거 됩니다. `REG_MULTI_SZ` 값을 강제로 생성 하려면 문자열 값의 `\n` 끝에를 추가 합니다.
+- 문자열 값이 또는로 시작 `+` `-` 하 고 기존 값이 `REG_MULTI_SZ` 값 이면 기존 레지스트리 값에서 문자열이 추가 되거나 제거 됩니다. 값을 강제로 생성 하려면 `REG_MULTI_SZ` `\n` 문자열 값의 끝에를 추가 합니다.
 
-- 값이로 `\@`시작 하는 경우 나머지 값은 이진 값의 16 진수 텍스트 표현을 포함 하는 파일의 이름입니다. 유효한 파일을 참조 하지 않는 경우에는 선택적 날짜를 포함 하 `[Date][+|-][dd:hh]` 는 선택적 날짜를 포함 하는 대신 선택적 날짜와 시간을 추가 하 여 구문 분석 합니다. 둘 다 지정 하는 경우 더하기 기호 (+) 또는 빼기 기호 (-) 구분 기호를 사용 합니다. 현재 `now+dd:hh` 시간을 기준으로 하는 날짜에 사용 합니다.
+- 값이로 시작 하는 경우 `\@` 나머지 값은 이진 값의 16 진수 텍스트 표현을 포함 하는 파일의 이름입니다. 유효한 파일을 참조 하지 않는 경우에는 선택적 날짜를 포함 하는 선택적 날짜를 포함 하는 대신 선택적 날짜와 시간을 추가 하 여 구문 분석 `[Date][+|-][dd:hh]` 합니다. 둘 다 지정 하는 경우 더하기 기호 (+) 또는 빼기 기호 (-) 구분 기호를 사용 합니다. `now+dd:hh`현재 시간을 기준으로 하는 날짜에 사용 합니다.
 
-- 를 `chain\chaincacheresyncfiletime \@now` 사용 하 여 캐시 된 crl을 효과적으로 플러시합니다.
+- `chain\chaincacheresyncfiletime \@now`를 사용 하 여 캐시 된 crl을 효과적으로 플러시합니다.
 
 ### <a name="-setreg"></a>-setreg
 
@@ -1711,9 +1711,9 @@ certutil [options] -setreg [{ca | restore | policy | exit | template | enroll |c
 
 - **종료** 는 첫 번째 끝내기 모듈의 레지스트리 키를 사용 합니다.
 
-- **template에서** 템플릿 레지스트리 키를 사용 합니다 `-user` (사용자 템플릿에 사용).
+- **template에서** 템플릿 레지스트리 키를 사용 `-user` 합니다 (사용자 템플릿에 사용).
 
-- **등록은** 등록 레지스트리 키 (사용자 컨텍스트에 `-user` 사용)를 사용 합니다.
+- **등록은** 등록 레지스트리 키 ( `-user` 사용자 컨텍스트에 사용)를 사용 합니다.
 
 - **체인** 구성 레지스트리 키를 사용 합니다.
 
@@ -1721,9 +1721,9 @@ certutil [options] -setreg [{ca | restore | policy | exit | template | enroll |c
 
 - **progid** 는 정책 또는 끝내기 모듈의 progID (레지스트리 하위 키 이름)를 사용 합니다.
 
-- **registryvaluename** 는 레지스트리 값 이름 (접두사 일치 `Name*` 에 사용)을 사용 합니다.
+- **registryvaluename** 는 레지스트리 값 이름 ( `Name*` 접두사 일치에 사용)을 사용 합니다.
 
-- **value** 는 새로운 숫자, 문자열 또는 날짜 레지스트리 값 또는 파일 이름을 사용 합니다. 숫자 값이 또는 `+` `-`로 시작 하는 경우 새 값에 지정 된 비트가 기존 레지스트리 값에서 설정 되거나 지워집니다.
+- **value** 는 새로운 숫자, 문자열 또는 날짜 레지스트리 값 또는 파일 이름을 사용 합니다. 숫자 값이 또는로 시작 하는 경우 `+` `-` 새 값에 지정 된 비트가 기존 레지스트리 값에서 설정 되거나 지워집니다.
 
 ```
 [-f] [-user] [-grouppolicy] [-config Machine\CAName]
@@ -1731,11 +1731,11 @@ certutil [options] -setreg [{ca | restore | policy | exit | template | enroll |c
 
 #### <a name="remarks"></a>설명
 
-- 문자열 값이 또는 `+` `-`로 시작 하 고 기존 값이 `REG_MULTI_SZ` 값 이면 기존 레지스트리 값에서 문자열이 추가 되거나 제거 됩니다. `REG_MULTI_SZ` 값을 강제로 생성 하려면 문자열 값의 `\n` 끝에를 추가 합니다.
+- 문자열 값이 또는로 시작 `+` `-` 하 고 기존 값이 `REG_MULTI_SZ` 값 이면 기존 레지스트리 값에서 문자열이 추가 되거나 제거 됩니다. 값을 강제로 생성 하려면 `REG_MULTI_SZ` `\n` 문자열 값의 끝에를 추가 합니다.
 
-- 값이로 `\@`시작 하는 경우 나머지 값은 이진 값의 16 진수 텍스트 표현을 포함 하는 파일의 이름입니다. 유효한 파일을 참조 하지 않는 경우에는 선택적 날짜를 포함 하 `[Date][+|-][dd:hh]` 는 선택적 날짜를 포함 하는 대신 선택적 날짜와 시간을 추가 하 여 구문 분석 합니다. 둘 다 지정 하는 경우 더하기 기호 (+) 또는 빼기 기호 (-) 구분 기호를 사용 합니다. 현재 `now+dd:hh` 시간을 기준으로 하는 날짜에 사용 합니다.
+- 값이로 시작 하는 경우 `\@` 나머지 값은 이진 값의 16 진수 텍스트 표현을 포함 하는 파일의 이름입니다. 유효한 파일을 참조 하지 않는 경우에는 선택적 날짜를 포함 하는 선택적 날짜를 포함 하는 대신 선택적 날짜와 시간을 추가 하 여 구문 분석 `[Date][+|-][dd:hh]` 합니다. 둘 다 지정 하는 경우 더하기 기호 (+) 또는 빼기 기호 (-) 구분 기호를 사용 합니다. `now+dd:hh`현재 시간을 기준으로 하는 날짜에 사용 합니다.
 
-- 를 `chain\chaincacheresyncfiletime \@now` 사용 하 여 캐시 된 crl을 효과적으로 플러시합니다.
+- `chain\chaincacheresyncfiletime \@now`를 사용 하 여 캐시 된 crl을 효과적으로 플러시합니다.
 
 ### <a name="-delreg"></a>-delreg
 
@@ -1755,9 +1755,9 @@ certutil [options] -delreg [{ca | restore | policy | exit | template | enroll |c
 
 - **종료** 는 첫 번째 끝내기 모듈의 레지스트리 키를 사용 합니다.
 
-- **template에서** 템플릿 레지스트리 키를 사용 합니다 `-user` (사용자 템플릿에 사용).
+- **template에서** 템플릿 레지스트리 키를 사용 `-user` 합니다 (사용자 템플릿에 사용).
 
-- **등록은** 등록 레지스트리 키 (사용자 컨텍스트에 `-user` 사용)를 사용 합니다.
+- **등록은** 등록 레지스트리 키 ( `-user` 사용자 컨텍스트에 사용)를 사용 합니다.
 
 - **체인** 구성 레지스트리 키를 사용 합니다.
 
@@ -1765,9 +1765,9 @@ certutil [options] -delreg [{ca | restore | policy | exit | template | enroll |c
 
 - **progid** 는 정책 또는 끝내기 모듈의 progID (레지스트리 하위 키 이름)를 사용 합니다.
 
-- **registryvaluename** 는 레지스트리 값 이름 (접두사 일치 `Name*` 에 사용)을 사용 합니다.
+- **registryvaluename** 는 레지스트리 값 이름 ( `Name*` 접두사 일치에 사용)을 사용 합니다.
 
-- **value** 는 새로운 숫자, 문자열 또는 날짜 레지스트리 값 또는 파일 이름을 사용 합니다. 숫자 값이 또는 `+` `-`로 시작 하는 경우 새 값에 지정 된 비트가 기존 레지스트리 값에서 설정 되거나 지워집니다.
+- **value** 는 새로운 숫자, 문자열 또는 날짜 레지스트리 값 또는 파일 이름을 사용 합니다. 숫자 값이 또는로 시작 하는 경우 `+` `-` 새 값에 지정 된 비트가 기존 레지스트리 값에서 설정 되거나 지워집니다.
 
 ```
 [-f] [-user] [-grouppolicy] [-config Machine\CAName]
@@ -1775,11 +1775,11 @@ certutil [options] -delreg [{ca | restore | policy | exit | template | enroll |c
 
 #### <a name="remarks"></a>설명
 
-- 문자열 값이 또는 `+` `-`로 시작 하 고 기존 값이 `REG_MULTI_SZ` 값 이면 기존 레지스트리 값에서 문자열이 추가 되거나 제거 됩니다. `REG_MULTI_SZ` 값을 강제로 생성 하려면 문자열 값의 `\n` 끝에를 추가 합니다.
+- 문자열 값이 또는로 시작 `+` `-` 하 고 기존 값이 `REG_MULTI_SZ` 값 이면 기존 레지스트리 값에서 문자열이 추가 되거나 제거 됩니다. 값을 강제로 생성 하려면 `REG_MULTI_SZ` `\n` 문자열 값의 끝에를 추가 합니다.
 
-- 값이로 `\@`시작 하는 경우 나머지 값은 이진 값의 16 진수 텍스트 표현을 포함 하는 파일의 이름입니다. 유효한 파일을 참조 하지 않는 경우에는 선택적 날짜를 포함 하 `[Date][+|-][dd:hh]` 는 선택적 날짜를 포함 하는 대신 선택적 날짜와 시간을 추가 하 여 구문 분석 합니다. 둘 다 지정 하는 경우 더하기 기호 (+) 또는 빼기 기호 (-) 구분 기호를 사용 합니다. 현재 `now+dd:hh` 시간을 기준으로 하는 날짜에 사용 합니다.
+- 값이로 시작 하는 경우 `\@` 나머지 값은 이진 값의 16 진수 텍스트 표현을 포함 하는 파일의 이름입니다. 유효한 파일을 참조 하지 않는 경우에는 선택적 날짜를 포함 하는 선택적 날짜를 포함 하는 대신 선택적 날짜와 시간을 추가 하 여 구문 분석 `[Date][+|-][dd:hh]` 합니다. 둘 다 지정 하는 경우 더하기 기호 (+) 또는 빼기 기호 (-) 구분 기호를 사용 합니다. `now+dd:hh`현재 시간을 기준으로 하는 날짜에 사용 합니다.
 
-- 를 `chain\chaincacheresyncfiletime \@now` 사용 하 여 캐시 된 crl을 효과적으로 플러시합니다.
+- `chain\chaincacheresyncfiletime \@now`를 사용 하 여 캐시 된 crl을 효과적으로 플러시합니다.
 
 ### <a name="-importkms"></a>-importKMS
 
@@ -1797,7 +1797,7 @@ certutil [options] -importKMS userkeyandcertfile [certID]
 
   - PFX 파일.
 
-- 인증서는 KMS 내보내기 파일 암호 해독 인증서 일치 토큰입니다. 자세한 내용은이 문서의 `-store` 매개 변수를 참조 하세요.
+- 인증서는 KMS 내보내기 파일 암호 해독 인증서 일치 토큰입니다. 자세한 내용은 `-store` 이 문서의 매개 변수를 참조 하세요.
 
 - `-f`인증 기관에서 발급 하지 않은 인증서를 가져옵니다.
 
@@ -1825,7 +1825,7 @@ certutil [options] -importcert certfile [existingrow]
 
 #### <a name="remarks"></a>설명
 
-외래 인증서를 지원 하도록 인증 기관을 구성 해야 할 수도 있습니다. 이렇게 하려면을 입력 `import - certutil -setreg ca\KRAFlags +KRAF_ENABLEFOREIGN`합니다.
+외래 인증서를 지원 하도록 인증 기관을 구성 해야 할 수도 있습니다. 이렇게 하려면을 입력 `import - certutil -setreg ca\KRAFlags +KRAF_ENABLEFOREIGN` 합니다.
 
 ### <a name="-getkey"></a>-getkey
 
@@ -1848,16 +1848,16 @@ certutil [options] -getkey searchtoken retrieve | recover outputfilebasename
 - **토큰** 은 다음을 비롯 하 여 복구할 키와 인증서를 선택 합니다.
 
   - 1. 인증서 일반 이름
-  
+
   - 2. 인증서 일련 번호
-  
+
   - 3. 인증서의 sha-1 해시 (지문)
-  
+
   - 4. 인증서 KeyId sha-1 해시 (주체 키 식별자)
-  
+
   - 5. 요청자 이름 (도메인 \ 사용자)
-  
-  - 6. UPN (사용자\@도메인)
+
+  - 6. UPN (사용자 \@ 도메인)
 
 - **하나가** 파일은 하나 이상의 키 복구 에이전트 인증서로 암호화 된 인증서 체인 및 연결 된 개인 키를 사용 하 여 파일을 출력 합니다.
 
@@ -1905,7 +1905,7 @@ certutil [options] -mergePFX PFXinfilelist PFXoutfile [extendedproperties]
 
 - 명령줄에 지정 된 암호는 쉼표로 구분 된 암호 목록 이어야 합니다.
 
-- 둘 이상의 암호를 지정 하면 출력 파일에 대 한 마지막 암호가 사용 됩니다. 암호를 하나만 제공 하거나 마지막 암호 `*`를 입력 한 경우에는 사용자에 게 출력 파일 암호를 입력 하 라는 메시지가 표시 됩니다.
+- 둘 이상의 암호를 지정 하면 출력 파일에 대 한 마지막 암호가 사용 됩니다. 암호를 하나만 제공 하거나 마지막 암호를 입력 한 경우에는 사용자에 게 `*` 출력 파일 암호를 입력 하 라는 메시지가 표시 됩니다.
 
 ### <a name="-convertepf"></a>-convertEPF
 
@@ -1928,7 +1928,7 @@ certutil [options] -convertEPF PFXinfilelist PFXoutfile [cast | cast-] [V3CAcert
 
 - **cast-** 캐스트 64 암호화 (내보내기)를 사용 합니다.
 
-- **V3CAcertID** 은 V3 CA 인증서 일치 토큰입니다. 자세한 내용은이 문서의 `-store` 매개 변수를 참조 하세요.
+- **V3CAcertID** 은 V3 CA 인증서 일치 토큰입니다. 자세한 내용은 `-store` 이 문서의 매개 변수를 참조 하세요.
 
 - **솔트** 는 EPF 출력 파일 솔트 문자열입니다.
 
@@ -1940,13 +1940,13 @@ certutil [options] -convertEPF PFXinfilelist PFXoutfile [cast | cast-] [V3CAcert
 
 - 명령줄에 지정 된 암호는 쉼표로 구분 된 암호 목록 이어야 합니다.
 
-- 둘 이상의 암호를 지정 하면 출력 파일에 대 한 마지막 암호가 사용 됩니다. 암호를 하나만 제공 하거나 마지막 암호 `*`를 입력 한 경우에는 사용자에 게 출력 파일 암호를 입력 하 라는 메시지가 표시 됩니다.
+- 둘 이상의 암호를 지정 하면 출력 파일에 대 한 마지막 암호가 사용 됩니다. 암호를 하나만 제공 하거나 마지막 암호를 입력 한 경우에는 사용자에 게 `*` 출력 파일 암호를 입력 하 라는 메시지가 표시 됩니다.
 
 ### <a name="-"></a>-?
 
 매개 변수 목록을 표시 합니다.
 
-``` 
+```
 certutil -?
 certutil <name_of_parameter> -?
 certutil -? -v
@@ -1977,27 +1977,27 @@ certutil -? -v
 | -UnicodeText | 유니코드로 출력 파일을 씁니다. |
 | -gmt | GMT를 사용 하 여 시간을 표시 합니다. |
 | -초 | 초와 밀리초를 사용 하 여 시간을 표시 합니다. |
-| -자동 | 플래그를 `silent` 사용 하 여 묘지 컨텍스트를 가져옵니다. |
+| -자동 | 플래그를 사용 `silent` 하 여 묘지 컨텍스트를 가져옵니다. |
 | -분할 | 포함 된 ASN 요소를 분할 하 고 파일에 저장 합니다. |
 | -v | 자세한 정보 (자세한 정보)를 제공 합니다. |
 | -privatekey | 암호 및 개인 키 데이터를 표시 합니다. |
 | -핀 고정 | 스마트 카드 PIN. |
 | -urlfetch | AIA 인증서 및 CDP Crl을 검색 하 고 확인 합니다. |
 | -config Machine\CAName | 인증 기관 및 컴퓨터 이름 문자열입니다. |
-| -policyserver URLorID | 정책 서버 URL 또는 ID입니다. U/I 선택의 경우를 `-policyserver`사용 합니다. 모든 정책 서버에 대해 다음을 사용 합니다.`-policyserver *`|
+| -policyserver URLorID | 정책 서버 URL 또는 ID입니다. U/I 선택의 경우를 사용 `-policyserver` 합니다. 모든 정책 서버에 대해 다음을 사용 합니다.`-policyserver *`|
 | -익명 | 익명 SSL 자격 증명을 사용 합니다. |
 | -kerberos | Kerberos SSL 자격 증명을 사용 합니다. |
-| -clientcertificate clientcertID | SSL 되는 X.509 인증서 자격 증명을 사용 합니다. U/I 선택의 경우를 `-clientcertificate`사용 합니다. |
-| -username 사용자 이름 | SSL 자격 증명에 대 한 명명 된 계정을 사용 합니다. U/I 선택의 경우를 `-username`사용 합니다. |
+| -clientcertificate clientcertID | SSL 되는 X.509 인증서 자격 증명을 사용 합니다. U/I 선택의 경우를 사용 `-clientcertificate` 합니다. |
+| -username 사용자 이름 | SSL 자격 증명에 대 한 명명 된 계정을 사용 합니다. U/I 선택의 경우를 사용 `-username` 합니다. |
 | -cert 인증서 | 서명 인증서입니다. |
 | -dc DCName | 특정 도메인 컨트롤러를 대상으로 지정 합니다. |
-| -restrictionlist 제한 | 쉼표로 구분 된 제한 목록입니다. 각 제한 열 이름, 관계형 연산자 및 상수 정수, 문자열 또는 날짜 구성 됩니다. 한 열 이름 수 앞에 더하기 또는 빼기 기호 정렬 순서를 나타냅니다. 예: `requestID = 47`, `+requestername >= a, requestername`또는`-requestername > DOMAIN, Disposition = 21` |
+| -restrictionlist 제한 | 쉼표로 구분 된 제한 목록입니다. 각 제한 열 이름, 관계형 연산자 및 상수 정수, 문자열 또는 날짜 구성 됩니다. 한 열 이름 수 앞에 더하기 또는 빼기 기호 정렬 순서를 나타냅니다. 예: `requestID = 47`, `+requestername >= a, requestername` 또는 `-requestername > DOMAIN, Disposition = 21` |
 | -out columnlist | 쉼표로 구분 된 열 목록입니다. |
 | -p 암호 | 암호 |
 | -protectto SAMnameandSIDlist | 쉼표로 구분 된 SAM 이름/s i d 목록입니다. |
 | -csp 공급자 | 공급자 |
 | -t 제한 시간 | URL 페치 제한 시간 (밀리초)입니다. |
-| -symkeyalg symmetrickeyalgorithm [, keylength] | 키 길이가 선택적인 대칭 키 알고리즘의 이름입니다. 예: `AES,128` 또는`3DES` |
+| -symkeyalg symmetrickeyalgorithm [, keylength] | 키 길이가 선택적인 대칭 키 알고리즘의 이름입니다. 예: `AES,128` 또는 `3DES` |
 
 ### <a name="additional-references"></a>추가 참조
 
@@ -2007,7 +2007,7 @@ certutil -? -v
 
 - [인증서 관리를 위한 Certutil 작업](https://docs.microsoft.com/previous-versions/orphan-topics/ws.10/cc772898(v=ws.10))
 
-- [Certutil 명령줄 도구를 사용 하 여 이진 요청 내보내기 연습](https://social.technet.microsoft.com/wiki/contents/articles/7573.active-directory-certificate-services-pki-key-archival-and-management.aspx)
+- [certutil.exe 명령줄 도구를 사용 하 여 이진 요청 내보내기 연습](https://social.technet.microsoft.com/wiki/contents/articles/7573.active-directory-certificate-services-pki-key-archival-and-management.aspx)
 
 - [루트 CA 인증서 갱신](https://social.technet.microsoft.com/wiki/contents/articles/2016.root-ca-certificate-renewal.aspx)
 

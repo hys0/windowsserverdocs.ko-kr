@@ -1,6 +1,6 @@
 ---
 title: bdehdcfg newdriveletter
-description: Bdehdcfg newdriveletter 명령에 대 한 참조 항목으로, 시스템 드라이브로 사용 되는 드라이브 부분에 새 드라이브 문자를 할당 합니다.
+description: Bdehdcfg newdriveletter 명령에 대 한 참조 문서로, 시스템 드라이브로 사용 되는 드라이브 부분에 새 드라이브 문자를 할당 합니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: da09ae1469c6fc8370e6bd0f2f7a8f3efd8dc4f0
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: f210056f74e930ad39361c9fc0cbf05d6e1894f4
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718669"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85923492"
 ---
 # <a name="bdehdcfg-newdriveletter"></a>bdehdcfg: newdriveletter
 
@@ -34,7 +34,7 @@ bdehdcfg -target {default|unallocated|<drive_letter> shrink|<drive_letter> merge
 
 ## <a name="examples"></a>예
 
-기본 드라이브에 드라이브 문자 `P`를 할당 하려면 다음을 수행 합니다.
+기본 드라이브에 드라이브 문자를 할당 하려면 `P` 다음을 수행 합니다.
 
 ```
 bdehdcfg -target default -newdriveletter P:

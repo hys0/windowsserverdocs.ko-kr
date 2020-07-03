@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getcreationtime
-description: 지정 된 작업에 대 한 생성 시간을 검색 하는 bitsadmin getcreationtime 명령에 대 한 참조 항목입니다.
+description: 지정 된 작업에 대 한 생성 시간을 검색 하는 bitsadmin getcreationtime 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: dc6ca5ad23730e9f57d58e069e0a2daf961930e8
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 0efc3d2a0f0f2cf3e72a4ff634733b16ef80055d
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718111"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85923083"
 ---
 # <a name="bitsadmin-getcreationtime"></a>bitsadmin getcreationtime
 

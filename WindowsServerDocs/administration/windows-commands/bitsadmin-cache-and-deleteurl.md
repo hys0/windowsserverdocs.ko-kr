@@ -1,6 +1,6 @@
 ---
 title: bitsadmin 캐시 및 deleteURL
-description: 지정 된 URL에 대 한 모든 캐시 항목을 삭제 하는 bitsadmin cache 및 deleteURL 명령에 대 한 참조 항목입니다.
+description: 지정 된 URL에 대 한 모든 캐시 항목을 삭제 하는 bitsadmin cache 및 deleteURL 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 075c48e5c8c205cbbf3fe476260ec7909edcc3e6
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 8d1ed4710bfeeefa721308c54075ddc8da5c5216
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718442"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85923334"
 ---
 # <a name="bitsadmin-cache-and-deleteurl"></a>bitsadmin 캐시 및 deleteURL
 
@@ -34,10 +34,10 @@ bitsadmin /deleteURL URL
 
 ## <a name="examples"></a>예
 
-다음에 대 한 `https://www.contoso.com/en/us/default.aspx`모든 캐시 항목을 삭제 하려면:
+다음에 대 한 모든 캐시 항목을 삭제 하려면 `https://www.contoso.com/en/us/default.aspx` :
 
 ```
-bitsadmin /deleteURL https://www.contoso.com/en/us/default.aspx 
+bitsadmin /deleteURL https://www.contoso.com/en/us/default.aspx
 ```
 
 ## <a name="additional-references"></a>추가 참조

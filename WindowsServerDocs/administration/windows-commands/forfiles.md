@@ -1,6 +1,6 @@
 ---
 title: forfiles
-description: 파일이 나 파일 집합에 대 한 명령을 선택 하 고 실행 하는 하위 폴더 명령에 대 한 참조 항목입니다.
+description: 파일이 나 파일 집합에 대 한 명령을 선택 하 고 실행 하는 하위 폴더 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 05/20/2020
-ms.openlocfilehash: 96ef7d016bd13961a4814ba4cd09095aed4f0e97
-ms.sourcegitcommit: 29f7a4811b4d36d60b8b7c55ce57d4ee7d52e263
+ms.openlocfilehash: 26c443aa05d081fc257dc49d2f2c7f6a9adae865
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83716848"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85922392"
 ---
 # <a name="forfiles"></a>forfiles
 
@@ -55,7 +55,7 @@ forfiles [/P pathname] [/M searchmask] [/S] [/C command] [/D [+ | -] [{<date> | 
     | @FDATE | 파일에 마지막으로 수정한 날짜 스탬프입니다. |
     | @FTIME | 파일의 마지막 수정된 타임 스탬프입니다. |
 
-- **하위 폴더** 명령을 사용 하 여 명령을 실행 하거나 여러 파일에 인수를 전달할 수 있습니다. 예를 들어, 실행할 수는 **형식** .txt 파일 이름 확장명을 사용 하 여 트리의 모든 파일에서 명령입니다. 또는 파일 이름 Myinput을 첫 번째 인수로 사용 하 여 C 드라이브에서 모든 배치 파일 (* .bat)을 실행할 수 있습니다.
+- **하위 폴더** 명령을 사용 하 여 명령을 실행 하거나 여러 파일에 인수를 전달할 수 있습니다. 예를 들어, 실행할 수는 **형식** .txt 파일 이름 확장명을 사용 하 여 트리의 모든 파일에서 명령입니다. 또는 파일 이름 Myinput.txt 첫 번째 인수로 사용 하 여 C 드라이브에서 모든 배치 파일 (* .bat)을 실행할 수 있습니다.
 
 - 이 명령은 다음 작업을 수행할 수 있습니다.
 
