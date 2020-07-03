@@ -1,6 +1,6 @@
 ---
 title: fsutil sparse
-description: 스파스 파일을 관리 하는 fsutil sparse 명령에 대 한 참조 항목입니다.
+description: 스파스 파일을 관리 하는 fsutil sparse 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 manager: dmoss
 ms.author: toklima
@@ -9,12 +9,12 @@ ms.technology: storage
 ms.assetid: 77545920-2d13-4f35-a4d1-14dbec8340dc
 ms.topic: article
 ms.date: 10/16/2017
-ms.openlocfilehash: e68ac844bb7aa7e22a9df0ddb0c982b3701231d7
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: c765b096f1b41b211d3a779d8f838aa56f31aeb8
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83435718"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85925219"
 ---
 # <a name="fsutil-sparse"></a>fsutil sparse
 
@@ -57,7 +57,7 @@ fsutil sparse [setrange] <filename> <beginningoffset> <length>
 
 ### <a name="examples"></a>예
 
-*C:\temp* 디렉터리에서 *.sample* 이라는 파일에 스파스를 표시 하려면 다음을 입력 합니다.
+*C:\temp* 디렉터리에서 *sample.txt* 라는 파일을 스파스로 표시 하려면 다음을 입력 합니다.
 
 ```
 fsutil sparse setflag c:\temp\sample.txt

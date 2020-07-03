@@ -1,6 +1,6 @@
 ---
 title: ftp mls
-description: 원격 디렉터리에서 파일 및 하위 디렉터리의 축약 된 목록을 표시 하는 ftp mls 명령에 대 한 참조 항목입니다.
+description: Ftp mls 명령에 대 한 참조 문서로, 원격 디렉터리에 있는 파일 및 하위 디렉터리의 축약 된 목록을 표시 합니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 372c0b9a42fdfb8600083a301b71c37ada43c014
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 6c2e87cbf0455fccb99435e0a8b67fd30164e35b
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820396"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85925857"
 ---
 # <a name="ftp-mls"></a>ftp mls
 
@@ -43,7 +43,7 @@ mls <remotefile>[ ] <localfile>
 mls dir1 dir2 -
 ```
 
-*Dir1* 및 *dir2* 에 대 한 간략 한 파일 및 하위 디렉터리 목록을 로컬 파일 파일 이름에 저장 하려면 다음을 입력 *합니다*.
+*Dir1* 및 *dir2* 에 대 한 간략 한 파일 및 하위 디렉터리 목록을 로컬 파일 *dirlist.txt*에 저장 하려면 다음을 입력 합니다.
 
 ```
 mls dir1 dir2 dirlist.txt

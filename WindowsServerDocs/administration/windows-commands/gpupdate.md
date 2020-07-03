@@ -1,6 +1,6 @@
 ---
 title: gpupdate
-description: 그룹 정책 설정을 업데이트 하는 gpupdate 명령에 대 한 참조 항목입니다.
+description: 그룹 정책 설정을 업데이트 하는 gpupdate 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a2047d6beb515350a534343ca484bc2deeb50daa
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 78ff3f50a53cfa8f2dd2e1050e6b904896b51cfd
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83818743"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85924609"
 ---
 # <a name="gpupdate"></a>gpupdate
 

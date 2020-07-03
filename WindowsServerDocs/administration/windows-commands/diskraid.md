@@ -1,6 +1,6 @@
 ---
 title: Diskraid
-description: 독립 (또는 저렴 한) 디스크 (RAID) 저장소 하위 시스템의 중복 배열을 구성 하 고 관리 하는 데 사용할 수 있는 Diskraid 명령줄 도구에 대 한 참조 항목입니다.
+description: 독립 (또는 저렴 한) 디스크 (RAID) 저장소 하위 시스템의 중복 배열을 구성 하 고 관리할 수 있는 Diskraid 명령줄 도구에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ffceb9347921536a1bee59f46a4d5ab4800c1e70
-ms.sourcegitcommit: aed942d11f1a361fc1d17553a4cf190a864d1268
+ms.openlocfilehash: d0745c708878fa9da6571666b5702b4408976164
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83235214"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85924766"
 ---
 # <a name="diskraid"></a>Diskraid
 
@@ -185,7 +185,7 @@ create tpgroup [noerr]
 | 드라이브 = | LUN을 만드는 데 사용할 드라이브의 *drive_number* 지정 합니다. **Size**= 또는 **drives**= 매개 변수를 지정 해야 합니다. 함께 사용할 수도 있습니다. **Size =** 매개 변수가 지정 되지 않은 경우 생성 된 LUN은 지정 된 모든 드라이브에서 허용 되는 최대 크기입니다. **Size =** 매개 변수가 지정 된 경우 공급자는 지정 된 드라이브 목록에서 드라이브를 선택 하 여 LUN을 만듭니다. 공급자는 가능 하면 지정 된 순서로 드라이브를 사용 하려고 합니다. |
 | stripesize = | *스트라이프* 또는 *raid* LUN의 크기 (mb)를 지정 합니다. LUN을 만든 후에는 stripesize를 변경할 수 없습니다. 다른 단위를 사용 하 여 크기를 지정 하려면 크기 바로 뒤에 다음과 같은 인식 된 접미사 중 하나를 사용 합니다.<ul><li>**B** -바이트</li><li>**KB** -킬로바이트</li><li>**Mb-mb**</li><li>**Gb-gb**</li><li>**TB** -테라바이트</li><li>**PB** -페타바이트.</li></ul> |
 | 대상 | 현재 선택 된 하위 시스템에 새 iSCSI 대상을 만듭니다. |
-| 이름 | 대상에 대 한 친숙 한 이름을 제공 합니다. |
+| name | 대상에 대 한 친숙 한 이름을 제공 합니다. |
 | iscsiname | 대상에 대 한 iSCSI 이름을 제공 하며, 공급자가 이름을 생성 하도록 생략할 수 있습니다. |
 | tpgroup | 현재 선택한 대상에 새 iSCSI 대상 포털 그룹을 만듭니다. |
 | noerr | 스크립팅 전용입니다. 오류가 발생 하면 Diskraid는 오류가 발생 하지 않은 것 처럼 명령을 계속 처리 합니다. |
@@ -381,7 +381,7 @@ lbpolicy set lun paths=<path>-{primary | <weight>}[,<path>-{primary | <weight>}[
 | 매개 변수 | Description |
 | --------- | ----------- |
 | type | 부하 분산 정책을 지정 합니다. 형식을 지정 하지 않은 경우에는 **path** 매개 변수를 지정 해야 합니다. Type은 다음 중 하나일 수 있습니다.<ul><li>**장애 조치 (FAILOVER)** -다른 경로를 백업 경로로 사용 하는 기본 경로 하나를 사용 합니다.</li><li>**라운드 로빈** -각 경로를 순차적으로 시도 하는 라운드 로빈 방식으로 모든 경로를 사용 합니다.</li><li>**Subsetroundrobin** -라운드 로빈 방식으로 모든 기본 경로를 사용 합니다. 백업 경로는 모든 기본 경로가 실패 하는 경우에만 사용 됩니다.</li><li>**DYNLQD** -활성 요청 수가 가장 적은 경로를 사용 합니다.<li><li>**가중치가** 적용 됨-가중치가 가장 낮은 경로를 사용 합니다 (각 경로에 가중치를 할당 해야 함).</li><li>**LEASTBLOCKS** -블록이 가장 적은 경로를 사용 합니다.</li><li>**VENDORSPECIFIC** -공급 업체별 정책을 사용 합니다.</li></ul> |
-| path | 경로가 **기본** 경로 인지 또는 특정를 포함 하는지 여부를 지정 합니다 `<weight>` . 지정 되지 않은 경로는 모두 백업으로 암시적으로 설정 됩니다. 나열 된 경로는 현재 선택한 LUN의 경로 중 하나 여야 합니다. |
+| 경로 | 경로가 **기본** 경로 인지 또는 특정를 포함 하는지 여부를 지정 합니다 `<weight>` . 지정 되지 않은 경로는 모두 백업으로 암시적으로 설정 됩니다. 나열 된 경로는 현재 선택한 LUN의 경로 중 하나 여야 합니다. |
 
 ### <a name="list"></a>list
 
@@ -466,7 +466,7 @@ maintenance <object operation> [count=<iteration>]
 | `<operation>` | 수행할 유지 관리 작업을 지정 합니다. *작업* 유형은 **spinup**, **spindown**, **blink**, **경고음** 또는 **ping**일 수 있습니다. *작업* 을 지정 해야 합니다. |
 | 개수 = | *작업*을 반복할 횟수를 지정 합니다. 일반적으로이는 **깜박임**, **경고음**또는 **ping**과 함께 사용 됩니다. |
 
-### <a name="name"></a>이름
+### <a name="name"></a>name
 
 현재 선택 된 하위 시스템, LUN 또는 iSCSI 대상의 이름을 지정 된 이름으로 설정 합니다.
 
@@ -704,7 +704,7 @@ unmask lun {all | none | [add] wwn=<hexadecimal_number> [;<hexadecimal_number> [
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| all | 모든 호스트에서 LUN에 액세스할 수 있도록 지정 합니다. 그러나 iSCSI 하위 시스템에서 모든 대상에 대 한 LUN의 마스크를 해제할 수는 없습니다.<P>명령을 실행 하기 전에 대상의 로그를 로그 아웃 해야 합니다 `unmask lun all` . |
+| 모두 | 모든 호스트에서 LUN에 액세스할 수 있도록 지정 합니다. 그러나 iSCSI 하위 시스템에서 모든 대상에 대 한 LUN의 마스크를 해제할 수는 없습니다.<P>명령을 실행 하기 전에 대상의 로그를 로그 아웃 해야 합니다 `unmask lun all` . |
 | 없음 | 모든 호스트에서 LUN에 액세스할 수 없도록 지정 합니다.<P>명령을 실행 하기 전에 대상의 로그를 로그 아웃 해야 합니다 `unmask lun none` . |
 | add | 지정 된 호스트를이 LUN에 액세스할 수 있는 호스트의 기존 목록에 추가 하도록 지정 합니다. 이 매개 변수를 지정 하지 않으면 제공 된 호스트 목록이이 LUN에 액세스할 수 있는 기존 호스트 목록을 대체 합니다. |
 | wwn = | LUN 또는 호스트에 액세스할 수 있어야 하는 wwpn (wide name)을 나타내는 16 진수 목록을 지정 합니다. 파이버 채널 하위 시스템의 특정 호스트 집합에 마스크/마스크 해제 하려면 관심 있는 호스트 컴퓨터의 포트에 대해 세미콜론으로 구분 된 WWN 목록을 입력 하면 됩니다. |

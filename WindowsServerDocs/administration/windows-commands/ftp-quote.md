@@ -1,6 +1,6 @@
 ---
-title: ftp 견적
-description: 원격 ftp 서버에 축 자 인수를 보내는 ftp 인용 명령에 대 한 참조 항목입니다.
+title: ftp quote
+description: 원격 ftp 서버에 축 자 인수를 보내는 ftp 인용 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 87dd81d4feb6a5509a8609f5c479e3352d5fb7ea
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: ce1f0c009ff9e68c4b8f1f9bc074d91d235d1955
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820343"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85925075"
 ---
-# <a name="ftp-quote"></a>ftp 견적
+# <a name="ftp-quote"></a>ftp quote
 
 > 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -33,7 +33,7 @@ quote <argument>[ ]
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | 설명 |
+| 매개 변수 | Description |
 | --------- | ----------- |
 | `<argument>` | Ftp 서버에 보낼 인수를 지정 합니다. |
 

@@ -1,6 +1,6 @@
 ---
-title: ftp 끝내기
-description: Ftp quit 명령에 대 한 참조 항목으로, 원격 컴퓨터와 ftp 세션을 종료 하 고 종료 됩니다.
+title: ftp quit
+description: Ftp quit 명령에 대 한 참조 문서로, 원격 컴퓨터와 ftp 세션을 종료 하 고 종료 됩니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: bbe72d02029e50a64eb2c9892ea4d487d6e1c938
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: c63df8c34bca410b9b9e2b77db1cf185cdfe20c8
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820353"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85925119"
 ---
-# <a name="ftp-quit"></a>ftp 끝내기
+# <a name="ftp-quit"></a>ftp quit
 
 > 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 

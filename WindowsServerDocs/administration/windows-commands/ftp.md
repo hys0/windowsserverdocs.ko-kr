@@ -1,6 +1,6 @@
 ---
 title: ftp
-description: Ftp (파일 전송 프로토콜) 서버 서비스를 실행 하는 컴퓨터에서 파일을 전송 하는 ftp 명령에 대 한 참조 항목입니다.
+description: Ftp (파일 전송 프로토콜) 서버 서비스를 실행 하는 컴퓨터에서 파일을 전송 하는 ftp 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3920306ce05aeb1b1e364c8146c461ea187f6560
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: e78148e1e7dc4f402d80bb4ebfbcbdac52249407
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820243"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85925615"
 ---
 # <a name="ftp"></a>ftp
 
@@ -65,7 +65,7 @@ ftp [-v] [-d] [-i] [-n] [-g] [-s:<filename>] [-a] [-A] [-x:<sendbuffer>] [-r:<re
 ftp ftp.example.microsoft.com
 ```
 
-이라는 ftp 서버에 로그온 하 `ftp.example.microsoft.com` 고 *resync .txt*라는 파일에 포함 된 **ftp** 명령을 실행 하려면 다음을 입력 합니다.
+이라는 ftp 서버에 로그온 하 `ftp.example.microsoft.com` 고 *resync.txt*이라는 파일에 포함 된 **ftp** 명령을 실행 하려면 다음을 입력 합니다.
 
 ```
 ftp -s:resync.txt ftp.example.microsoft.com

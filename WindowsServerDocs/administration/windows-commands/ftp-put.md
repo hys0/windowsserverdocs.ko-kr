@@ -1,6 +1,6 @@
 ---
 title: ftp put
-description: 현재 파일 전송 형식을 사용 하 여 로컬 파일을 원격 컴퓨터에 복사 하는 ftp put 명령에 대 한 참조 항목입니다.
+description: 현재 파일 전송 형식을 사용 하 여 로컬 파일을 원격 컴퓨터에 복사 하는 ftp put 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 03/30/2020
-ms.openlocfilehash: aee76b95ac538868122d5137958723326575eb18
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 7b382673be838af739c29ffa294e3d853f0507c2
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820373"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85925156"
 ---
 # <a name="ftp-put"></a>ftp put
 
@@ -40,13 +40,13 @@ put <localfile> [<remotefile>]
 
 ### <a name="examples"></a>예
 
-로컬 파일 *test.txt* 를 복사 하 고 원격 컴퓨터에서 이름을 *test1* 로 설정 하려면 다음을 입력 합니다.
+로컬 파일 *test.txt* 를 복사 하 고 원격 컴퓨터에 *test1.txt* 이름을 입력 하려면 다음을 입력 합니다.
 
 ```
 put test.txt test1.txt
 ```
 
-로컬 파일 *프로그램* 을 원격 컴퓨터에 복사 하려면 다음을 입력 합니다.
+원격 컴퓨터에 *program.exe* 로컬 파일을 복사 하려면 다음을 입력 합니다.
 
 ```
 put program.exe

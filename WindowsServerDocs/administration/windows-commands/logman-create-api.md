@@ -1,6 +1,6 @@
 ---
 title: logman api 만들기
-description: API 추적 데이터 수집기를 만드는 logman create api 명령에 대 한 참조 항목입니다.
+description: API 추적 데이터 수집기를 만드는 logman create api 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f479fcdf3db4bb5a61b0cd0724220d27c934872f
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: 2294cb7ba7ab962dbba33b0e2612b8dee2d72004
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84222804"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85925436"
 ---
 # <a name="logman-create-api"></a>logman api 만들기
 
@@ -71,13 +71,13 @@ Trace_notepad 이라는 API 추적 카운터를 만들고 실행 파일 c:\windo
 logman create api trace_notepad -exe c:\windows\notepad.exe -o c:\notepad.etl
 ```
 
-Trace_notepad 이라는 API 추적 카운터를 만들려면 실행 파일 c:\windows\notepad.exe에 대해 c:\windows\system32\advapi32.dll에서 모듈에 의해 생성 된 값을 수집 하 고 다음을 입력 합니다.
+Trace_notepad 이라는 API 추적 카운터를 만들려면 실행 파일 c:\windows\notepad.exe에 대해 c:\windows\system32\advapi32.dll에서 모듈에 의해 생성 된 값을 수집 합니다.
 
 ```
 logman create api trace_notepad -exe c:\windows\notepad.exe -mods c:\windows\system32\advapi32.dll
 ```
 
-C:\windows\notepad.exe 모듈 kernel32.dll에서 생성 된 API 호출 TlsGetValue를 제외 하 고 실행 파일에 대해 trace_notepad 라는 API 추적 카운터를 만들려면 다음을 입력 합니다.
+Trace_notepad 이라는 API 추적 카운터를 만들려면 모듈 kernel32.dll에서 생성 된 API 호출 TlsGetValue를 제외 하 고 실행 파일 c:\windows\notepad.exe에 대해 다음을 입력 합니다.
 ```
 logman create api trace_notepad -exe c:\windows\notepad.exe -exapis kernel32.dll!TlsGetValue
 ```

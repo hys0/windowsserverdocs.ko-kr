@@ -1,6 +1,6 @@
 ---
 title: ipconfig
-description: 모든 현재 TCP/IP 네트워크 구성 값을 표시 하 고 DHCP (동적 호스트 구성 프로토콜) 및 DNS (Domain Name System) 설정을 새로 고치는 ipconfig 명령에 대 한 참조 항목입니다.
+description: 모든 현재 TCP/IP 네트워크 구성 값을 표시 하 고 DHCP (동적 호스트 구성 프로토콜) 및 DNS (Domain Name System) 설정을 새로 고치는 ipconfig 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e08e8c493b40475ba61ea76be6b49b9c4e21c1cf
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 3567f855a6066ed318f10daa22f1ca8de0d565c4
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83818393"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85924353"
 ---
 # <a name="ipconfig"></a>ipconfig
 

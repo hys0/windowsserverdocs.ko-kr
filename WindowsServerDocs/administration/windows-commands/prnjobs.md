@@ -1,6 +1,6 @@
 ---
 title: prnjobs
-description: 일시 중지, 다시 시작, 취소 및 인쇄 작업을 나열 하는 prnjobs.vbs 명령에 대 한 참조 항목입니다.
+description: 일시 중지, 다시 시작, 취소 및 인쇄 작업을 나열 하는 prnjobs.vbs 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: e13e217d422aa6d8f2c585c8890915af7e396ddb
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 79ad0631a2d1c871664ecebc11c26f2e005ca772
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85472268"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85924195"
 ---
 # <a name="prnjobs"></a>prnjobs
 
@@ -37,7 +37,7 @@ cscript prnjobs {-z | -m | -x | -l | -?} [-s <Servername>] [-p <Printername>] [-
 | -X | **-J** 매개 변수로 지정 된 인쇄 작업을 취소 합니다. |
 | -l | 인쇄 큐에 있는 모든 인쇄 작업을 나열합니다. |
 | -s`<Servername>` | 프린터를 관리 하려면를 호스트 하는 원격 컴퓨터의 이름을 지정 합니다. 컴퓨터를 지정 하지 않으면 로컬 컴퓨터가 사용 됩니다. |
-| -p `<Printername>` | 필수 사항입니다. 관리 하려는 프린터의 이름을 지정 합니다. |
+| -p `<Printername>` | 필수 요소. 관리 하려는 프린터의 이름을 지정 합니다. |
 | -j`<JobID>` | 인쇄 작업 취소 하 시겠습니까 (ID 번호)으로 지정 합니다. |
 | -u `<Username>` -w`<password>` | 프린터를 관리 하려면를 호스트 하는 컴퓨터에 연결할 수 있는 권한이 있는 계정을 지정 합니다. 대상 컴퓨터의 로컬 관리자 그룹의 모든 구성원이 이러한 권한이 있지만 사용 권한을 다른 사용자에 게 부여 될 수도 있습니다. 계정을 지정 하지 않는 경우 명령이 작동 하려면 이러한 권한이 있는 계정으로 로그온 해야 합니다. |
 | /? | 명령 프롬프트에 도움말을 표시합니다. |
@@ -46,7 +46,7 @@ cscript prnjobs {-z | -m | -x | -l | -?} [-s <Servername>] [-p <Printername>] [-
 
 - 사용자가 제공 하는 정보에 공백이 포함 된 경우 텍스트에 따옴표를 사용 합니다 (예: "컴퓨터 이름").
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 이름이 colorprinter 인 프린터에서 인쇄를 위해 HRServer 라는 원격 컴퓨터에 전송 된 작업 ID가 27 인 인쇄 작업을 일시 중지 하려면 다음을 입력 합니다.
 

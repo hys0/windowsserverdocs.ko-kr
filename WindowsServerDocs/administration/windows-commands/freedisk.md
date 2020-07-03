@@ -1,6 +1,6 @@
 ---
 title: freedisk
-description: 설치 프로세스를 계속 하기 전에 지정 된 크기의 디스크 공간을 사용할 수 있는지 확인 하는 freedisk 명령에 대 한 참조 항목입니다.
+description: 설치 프로세스를 계속 하기 전에 지정 된 크기의 디스크 공간을 사용할 수 있는지 확인 하는 freedisk 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2135bd24e24235de7c687ed58e0603db20c68262
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: d0cfce52c2eaf0917f8169d959b61832bd1779e0
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83436978"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85924745"
 ---
 # <a name="freedisk"></a>freedisk
 

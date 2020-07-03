@@ -1,6 +1,6 @@
 ---
 title: bootcfg
-description: Boot.ini 파일 설정을 구성, 쿼리 또는 변경 하는 bootcfg 명령에 대 한 참조 항목입니다.
+description: 파일 설정 Boot.ini 구성, 쿼리 또는 변경 하는 bootcfg 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: aca24cfbf47586ae1d7d4262c232be47a056f7ae
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: b4c64ab33e8026606072cbb1d509eb3c787f76c0
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82708863"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85924947"
 ---
 # <a name="bootcfg"></a>bootcfg
 
@@ -24,13 +24,13 @@ Boot.ini 파일 설정을 구성, 쿼리 또는 변경합니다.
 
 ## <a name="syntax"></a>구문
 
-```  
-bootcfg <parameter> [arguments...]  
+```
+bootcfg <parameter> [arguments...]
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | 설명 |
+| 매개 변수 | Description |
 | --------- | ----------- |
 | [bootcfg addsw](bootcfg-addsw.md) | 지정된 된 운영 체제 항목에 대 한 운영 체제 로드 옵션을 추가합니다. |
 | [bootcfg copy](bootcfg-copy.md) | 명령줄 옵션을 추가할 수 있는 있는 기존 부팅 항목의 복사본을 만듭니다. |

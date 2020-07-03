@@ -1,6 +1,6 @@
 ---
 title: bootcfg rmsw
-description: 지정 된 운영 체제 항목에 대 한 운영 체제 로드 옵션을 제거 하는 bootcfg rmsw 명령에 대 한 참조 항목입니다.
+description: 지정 된 운영 체제 항목에 대 한 운영 체제 로드 옵션을 제거 하는 bootcfg rmsw 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 41c9819fb3d669b24a5918077bef960869625a15
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: c905712b898501f45cbfc036d771f18232e82d5b
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82708911"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85924970"
 ---
 # <a name="bootcfg-rmsw"></a>bootcfg rmsw
 
@@ -33,7 +33,7 @@ bootcfg /rmsw [/s <computer> [/u <domain>\<user> /p <password>]] [/mm] [/bv] [/s
 | 매개 변수 | 설명 |
 | --------- | ----------- |
 | `/s <computer>` | 원격 컴퓨터의 이름 또는 IP 주소를 지정 합니다 (백슬래시를 사용 하지 않음). 기본값은 로컬 컴퓨터입니다. |
-| `/u <domain>\<user>`  | 또는 `<user>` `<domain>\<user>`로 지정 된 사용자의 계정 권한으로 명령을 실행 합니다. 기본값은 현재 로그온 된 명령을 실행 하는 컴퓨터에서 사용자의 사용 권한. |
+| `/u <domain>\<user>`  | 또는로 지정 된 사용자의 계정 권한으로 명령을 실행 합니다 `<user>` `<domain>\<user>` . 기본값은 현재 로그온 된 명령을 실행 하는 컴퓨터에서 사용자의 사용 권한. |
 | `/p <password>` | 에 지정 된 사용자 계정의 암호를 지정 된 **/u** 매개 변수입니다. |
 | /mm | 지정 된 위치에서 /maxmem 옵션과 관련 된 최대 메모리 값을 제거 `<osentrylinenum>`합니다. 운영 체제에서 사용할 수 있는 RAM의 최대 크기를 지정 하는 /maxmem 옵션입니다. |
 | /bv | 지정 된 위치에서 /basevideo 옵션 제거 `<osentrylinenum>`합니다. /Basevideo 옵션 설치 비디오 드라이버에 대 한 표준 VGA 모드를 사용 하 여 운영 체제에 지시 합니다. |

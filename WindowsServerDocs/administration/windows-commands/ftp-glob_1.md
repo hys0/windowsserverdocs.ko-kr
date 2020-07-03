@@ -1,6 +1,6 @@
 ---
 title: ftp glob
-description: 로컬 파일 이름에 대 한 와일드 카드 확장 허용을 설정/해제 하는 ftp glob 명령에 대 한 참조 항목입니다.
+description: 로컬 파일 이름에 대 한 와일드 카드 확장 허용을 설정/해제 하는 ftp glob 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 35adf2af74a2bcaf952e7bbb58f550fac968aa6f
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 6388fd43ee21d68ac48888ed2e950b2aeca5a5c6
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83819723"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85925914"
 ---
 # <a name="ftp-glob"></a>ftp glob
 

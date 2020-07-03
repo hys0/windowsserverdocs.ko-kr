@@ -1,6 +1,6 @@
 ---
-title: ftp 수신
-description: 현재 파일 전송 형식을 사용 하 여 원격 파일을 로컬 컴퓨터에 복사 하는 ftp recv 명령에 대 한 참조 항목입니다.
+title: ftp recv
+description: 현재 파일 전송 형식을 사용 하 여 원격 파일을 로컬 컴퓨터에 복사 하는 ftp recv 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 011a42d3279a2fa26202d7d886a992956e70f6a1
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 01f9fc1d8e233d8e2c38f606dea12f5d342d5e44
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820333"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85925787"
 ---
-# <a name="ftp-recv"></a>ftp 수신
+# <a name="ftp-recv"></a>ftp recv
 
 > 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -40,13 +40,13 @@ recv <remotefile> [<localfile>]
 
 ### <a name="examples"></a>예
 
-현재 파일 전송을 사용 하 여 로컬 컴퓨터에 test.txt를 복사 하려면 다음을 입력 *합니다* .
+현재 파일 전송을 사용 하 여 로컬 컴퓨터에 *test.txt* 를 복사 하려면 다음을 입력 합니다.
 
 ```
 recv test.txt
 ```
 
-현재 파일 전송을 사용 하 여 *테스트 .txt* 를 로컬 컴퓨터에 *test1* 로 복사 하려면 다음을 입력 합니다.
+현재 파일 전송을 사용 하 여 *test1.txt* 로컬 컴퓨터에 *test.txt* 를 복사 하려면 다음을 입력 합니다.
 
 ```
 recv test.txt test1.txt

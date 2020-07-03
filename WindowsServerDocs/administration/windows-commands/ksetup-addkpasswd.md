@@ -1,6 +1,6 @@
 ---
 title: ksetup addkpasswd
-description: 영역에 대 한 Kerberos 암호 (kpasswd) 서버 주소를 추가 하는 ksetup addkpasswd 명령에 대 한 참조 항목입니다.
+description: 영역에 대 한 Kerberos 암호 (kpasswd) 서버 주소를 추가 하는 ksetup addkpasswd 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e0cff2f3d74e6d862bbdd000602a1d03312373d2
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 2db728684e713df35a39995c8ca95196f0b745ed
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83818073"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85925555"
 ---
 # <a name="ksetup-addkpasswd"></a>ksetup addkpasswd
 

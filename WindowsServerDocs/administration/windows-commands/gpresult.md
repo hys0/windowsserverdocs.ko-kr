@@ -1,6 +1,6 @@
 ---
 title: gpresult
-description: 원격 사용자 및 컴퓨터에 대 한 RSoP (정책 결과 집합) 정보를 표시 하는 gpresult 명령에 대 한 참조 항목입니다.
+description: 원격 사용자 및 컴퓨터에 대 한 RSoP (정책 결과 집합) 정보를 표시 하는 gpresult 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e88a75a15168baaf2e49ca08ff20d3a8ffb5620c
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: b55db74c0c8f9c527ade8412f50ef83ea675a5c6
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83818863"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85924631"
 ---
 # <a name="gpresult"></a>gpresult
 
@@ -63,7 +63,7 @@ gpresult [/s <system> [/u <username> [/p [<password>]]]] [/user [<targetdomain>\
 gpresult /s srvmain /u maindom\hiropln /p p@ssW23 /user targetusername /scope user /r
 ```
 
-그룹 정책에 대 한 사용 가능한 모든 *정보를*srvmain 파일에 저장 하려면 (원격 사용자 *maindom\hiropln* 암호 포함) *p@ssW23* 컴퓨터 *srvmain*에서 다음을 입력 합니다.
+그룹 정책에 대 한 사용 가능한 모든 정보를 *policy.txt*라는 파일에 저장 하려면 *maindom\hiropln* *p@ssW23* 컴퓨터 *srvmain*에서 다음을 입력 합니다.
 
 ```
 gpresult /s srvmain /u maindom\hiropln /p p@ssW23 /user targetusername /z > policy.txt

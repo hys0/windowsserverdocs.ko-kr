@@ -1,6 +1,6 @@
 ---
 title: pnpunattend
-description: Pnpunattend 명령에 대 한 참조 항목으로, 컴퓨터의 장치 드라이버를 감사 하 고 자동 드라이버 설치를 수행 합니다.
+description: 컴퓨터의 장치 드라이버를 감사 하 고 자동 드라이버 설치를 수행 하는 pnpunattend 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,18 +9,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: 23456ec8f8fda5f84819a7105ee1f46814d2f806
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: cb01e2afa763d3e2c906d1b3ac5f194143caf114
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85472408"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85924242"
 ---
 # <a name="pnpunattend"></a>pnpunattend
 
 컴퓨터에서 장치 드라이버를 감사 하 고 무인 드라이버 설치를 수행 하거나, 설치 하지 않고 드라이버를 검색 하 고, 필요에 따라 명령줄에 결과를 보고 합니다. 특정 하드웨어 장치에 대 한 특정 드라이버의 설치를 지정 하려면이 명령을 사용 합니다.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 이전 버전의 Windows 운영 체제에서는 예비 준비가 필요 합니다. 이 명령을 사용 하기 전에 다음 작업을 완료 해야 합니다.
 
@@ -45,11 +45,11 @@ PnPUnattend.exe auditsystem [/help] [/?] [/h] [/s] [/l]
 | 매개 변수 | 설명 |
 |--|--|
 | auditsystem | 온라인 드라이버 설치를 지정 합니다.<p>이 명령이 **/help** 또는 **/?** 를 사용 하 여 실행 되는 경우를 제외 하 고는 필수 항목입니다. 필요합니다. |
-| /s | (선택 사항) 를 설치 하지 않고 드라이버를 검색 하도록 지정 합니다. |
-| /l | (선택 사항) 명령 프롬프트에서이 명령에 대 한 로그 정보를 표시 하도록 지정 합니다. |
-| `/? | /help` | (선택 사항) 명령 프롬프트에서이 명령에 대 한 도움말을 표시 합니다. |
+| /s | 선택 사항입니다. 를 설치 하지 않고 드라이버를 검색 하도록 지정 합니다. |
+| /l | 선택 사항입니다. 명령 프롬프트에서이 명령에 대 한 로그 정보를 표시 하도록 지정 합니다. |
+| `/? | /help` | 선택 사항입니다. 명령 프롬프트에서이 명령에 대 한 도움말을 표시 합니다. |
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 **PNPUnattend.exe** 를 사용 하 여 컴퓨터에서 가능한 드라이버 업데이트를 감사 한 다음 결과를 명령 프롬프트에 보고 하는 방법을 보여 줍니다.
 

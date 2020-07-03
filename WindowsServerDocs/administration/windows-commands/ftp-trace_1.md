@@ -1,6 +1,6 @@
 ---
-title: ftp 추적
-description: 패킷 추적을 설정/해제 하는 ftp 추적 명령에 대 한 참조 항목입니다.
+title: ftp trace
+description: 패킷 추적을 설정/해제 하는 ftp 추적 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 985f860f4a080fed9d6a0c6e2c8950bac8c4b143
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 554e660fd995febce425b6f56a857cd3048b1b0f
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820293"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85925661"
 ---
-# <a name="ftp-trace"></a>ftp 추적
+# <a name="ftp-trace"></a>ftp trace
 
 > 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 

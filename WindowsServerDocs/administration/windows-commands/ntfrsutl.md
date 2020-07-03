@@ -1,6 +1,6 @@
 ---
 title: ntfrsutl
-description: Ntfrsutl 명령에 대 한 참조 항목으로, NT 파일 복제 서비스 (NTFRS)의 내부 테이블, 스레드 및 메모리 정보를 덤프 합니다.
+description: Ntfrsutl 명령에 대 한 참조 문서-NT 파일 복제 서비스 (NTFRS)의 내부 테이블, 스레드 및 메모리 정보를 덤프 합니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f931d916888a372d66a1cc06cb7543067b9b9d3b
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 56aefc1277f67dc6a06ba4686c26f81592afc2f3
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85472769"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85925336"
 ---
 # <a name="ntfrsutl"></a>ntfrsutl
 
@@ -51,7 +51,7 @@ ntfrsutl poll[/quickly[=[<n>]]][/slowly[=[<n>]]][/now][<computer>]
 | 설문 조사 | 현재 폴링 간격을 지정합니다.<ul><li>`/quickly`-안정적인 구성을 검색할 때까지 빠르게 폴링합니다.</li><li>`/quickly=`-기본 시간 (분) 마다 빠르게 폴링합니다.</li><li>`/quickly=<n>`- *N* 분 마다 빠르게 폴링합니다.</li><li>`/slowly`-안정적인 구성을 검색할 때까지 느리게 폴링합니다.</li><li>`/slowly=`-기본 시간 (분) 마다 천천히 폴링합니다.</li><li>`/slowly=<n>`- *N* 분 마다 천천히 폴링합니다.</li><li>`/now`-지금 폴링합니다.</li></ul>|
 | /? | 명령 프롬프트에 도움말을 표시합니다. |
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 파일 복제에 대 한 폴링 간격을 확인 하려면 다음을 입력 합니다.
 

@@ -1,6 +1,6 @@
 ---
 title: irftp
-description: 적외선 링크를 통해 파일을 전송 하는 irftp 명령에 대 한 참조 항목입니다.
+description: 적외선 링크를 통해 파일을 전송 하는 irftp 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0d19e4f0c325baf46c0a92bf04e39bc63863fe90
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 92bb484650245555597121c8b6f6378d3c09209c
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83818313"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85924347"
 ---
 # <a name="irftp"></a>irftp
 
@@ -42,7 +42,7 @@ irftp [<drive>:\] [[<path>] <filename>] [/h][/s]
 
 ### <a name="examples"></a>예
 
-적외선 연결을 통해 *c:\example.txt* 를 보내려면 다음을 입력 합니다.
+적외선 링크를 통해 *c:\example.txt* 을 보내려면 다음을 입력 합니다.
 
 ```
 irftp c:\example.txt

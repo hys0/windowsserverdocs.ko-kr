@@ -1,6 +1,6 @@
 ---
 title: ipxroute
-description: Ipxroute 명령에 대 한 참조 항목으로, IPX 프로토콜에서 사용 하는 라우팅 테이블에 대 한 정보를 표시 하 고 수정 합니다.
+description: Ipxroute 명령에 대 한 참조 문서-IPX 프로토콜에서 사용 하는 라우팅 테이블에 대 한 정보를 표시 하 고 수정 합니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: afcb5064bc8d4eb4a3b4a8920fcfcf71591d7af5
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: a737ede8b56502cfbbf347d9f54fec848922badb
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83818323"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85924381"
 ---
 # <a name="ipxroute"></a>ipxroute
 
@@ -33,7 +33,7 @@ ipxroute config
 ```
 
 ### <a name="parameters"></a>매개 변수
-| 매개 변수 | 설명 |
+| 매개 변수 | Description |
 | ------- | -------- |
 | 서버용`[/type=x]` | 지정 된 서버 유형에 대 한 서비스 액세스 지점 (SAP) 테이블을 표시합니다. **x** 는 정수 여야 합니다. 예를 들어는 `/type=4` 모든 파일 서버를 표시 합니다. **/Type**를 지정 하지 않으면에서 서버 `ipxroute servers` 이름을 나열 하는 모든 유형의 서버를 표시 합니다. |
 | 해결 `{GUID | name}` 방법`{GUID | adaptername}` | GUID의 이름을 식별 이름으로 하거나 이름을 해당 GUID로 확인 됩니다. |

@@ -1,6 +1,6 @@
 ---
 title: gpfixup
-description: Gpfixup 명령에 대 한 참조 항목으로, 도메인 이름 바꾸기 작업 후 그룹 정책 개체 및 그룹 정책 링크의 도메인 이름 종속성을 수정 합니다.
+description: 도메인 이름 바꾸기 작업 후 그룹 정책 개체 및 그룹 정책 링크의 도메인 이름 종속성을 수정 하는 gpfixup 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 14a225209e719707093ddd87918587e24e4572a6
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: c09efb2fc8b1de124cbefc1b2dff73df29d2a4f1
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83818873"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85924651"
 ---
 # <a name="gpfixup"></a>gpfixup
 

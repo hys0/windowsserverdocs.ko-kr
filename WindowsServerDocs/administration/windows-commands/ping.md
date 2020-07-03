@@ -1,6 +1,6 @@
 ---
 title: ping
-description: 네트워크 연결을 확인 하는 ping 명령에 대 한 참조 항목입니다.
+description: 네트워크 연결을 확인 하는 ping 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: 1c1bd15d6536c73feb00decb9ad306f327a6464d
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: b995edf4943cfbaac8bd96cf098d62687c32396f
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85472449"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85924277"
 ---
 # <a name="ping"></a>ping
 

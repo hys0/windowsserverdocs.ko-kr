@@ -1,6 +1,6 @@
 ---
-title: logman start 및 logman stop
-description: Logman start 및 logman stop 명령에 대 한 참조 항목으로, 데이터 수집기를 시작 하 고 시작 시간을 수동으로 설정 하거나 데이터 수집기 집합을 중지 하 고 종료 시간을 수동으로 설정 합니다.
+title: logman start and logman stop
+description: 데이터 수집기를 시작 하 고 시작 시간을 수동으로 설정 하거나 데이터 수집기 집합을 중지 하 고 종료 시간을 수동으로 설정 하는 logman start 및 logman stop 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: db0111c4f58f0a28ad76affd3e4d8e24d4a927c2
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: b7b7da9aad31b977c2343e6f784b19dd420c21e6
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84222912"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85925421"
 ---
-# <a name="logman-start-and-logman-stop"></a>logman start 및 logman stop
+# <a name="logman-start-and-logman-stop"></a>logman start and logman stop
 
 > 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 

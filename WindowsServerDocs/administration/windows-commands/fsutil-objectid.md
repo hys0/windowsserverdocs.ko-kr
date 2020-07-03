@@ -1,6 +1,6 @@
 ---
 title: fsutil objectid
-description: 파일, 디렉터리 및 링크와 같은 다른 개체를 추적 하는 개체 식별자를 관리 하는 fsutil objectid 명령에 대 한 참조 항목입니다.
+description: 파일, 디렉터리 및 링크와 같은 다른 개체를 추적 하는 개체 식별자를 관리 하는 fsutil objectid 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 manager: dmoss
 ms.author: toklima
@@ -9,12 +9,12 @@ ms.technology: storage
 ms.assetid: 693ab895-9d0c-47c1-9f52-df5cd287842a
 ms.topic: article
 ms.date: 10/16/2017
-ms.openlocfilehash: cdaa3fb0a8a439e568e4b181890db49923e109e7
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: 5ab0b95bdcde8bce51e1d5a2c14888229621fcaa
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83435810"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85925244"
 ---
 # <a name="fsutil-objectid"></a>fsutil objectid
 

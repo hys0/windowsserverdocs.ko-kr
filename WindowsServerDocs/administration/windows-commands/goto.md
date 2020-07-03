@@ -1,6 +1,6 @@
 ---
 title: goto
-description: Cmd.exe를 배치 프로그램의 레이블이 지정 된 줄로 이동 하는 goto 명령에 대 한 참조 항목입니다.
+description: 일괄 처리 프로그램에서 cmd.exe 레이블이 지정 된 줄로 지시 하는 goto 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1eb1b6b275887de535614fa5df4adabe33406a31
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: afc77f7837ddaeb0552052538537285f0d652682
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83818973"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85924686"
 ---
 # <a name="goto"></a>goto
 
@@ -35,7 +35,7 @@ goto <label>
 
 #### <a name="remarks"></a>설명
 
--  명령 확장을 사용 (기본값) 하 고 대상 레이블이 **EOF**인 **goto** 명령을 사용 하는 경우 현재 배치 스크립트 파일의 끝으로 제어를 전송 하 고 레이블을 정의 하지 않고 배치 스크립트 파일을 종료 합니다. 이 명령을 **: EOF** 레이블과 함께 사용 하는 경우 레이블 앞에 콜론을 삽입 해야 합니다. 예: `goto:EOF`.
+-  명령 확장을 사용 (기본값) 하 고 대상 레이블이 **EOF**인 **goto** 명령을 사용 하는 경우 현재 배치 스크립트 파일의 끝으로 제어를 전송 하 고 레이블을 정의 하지 않고 배치 스크립트 파일을 종료 합니다. 이 명령을 **: EOF** 레이블과 함께 사용 하는 경우 레이블 앞에 콜론을 삽입 해야 합니다. 예를 들어 `goto:EOF`을 참조하십시오.
 
 - *레이블* 매개 변수에 공백을 사용할 수 있지만 다른 구분 기호 (예: 세미콜론 (;))를 포함할 수 없습니다. 또는 등호 (=)).
 

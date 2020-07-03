@@ -1,6 +1,6 @@
 ---
 title: msdt
-description: 명령 줄 또는 자동화 된 스크립트의 일부로 문제 해결 팩을 호출 하 고 사용자 입력 없이 추가 옵션을 사용 하도록 설정 하는 msdt 명령에 대 한 참조 항목입니다.
+description: 명령 줄 또는 자동화 된 스크립트의 일부로 문제 해결 팩을 호출 하 고 사용자 입력 없이 추가 옵션을 사용 하도록 설정 하는 msdt 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 47eaf859c86a939777ce8878937d36f2c581ab31
-ms.sourcegitcommit: 5e313a004663adb54c90962cfdad9ae889246151
+ms.openlocfilehash: 99ba1320171e4e305209f06fbee617e54c979d30
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84354374"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85925026"
 ---
 # <a name="msdt"></a>msdt
 
@@ -45,7 +45,7 @@ msdt </id <name> | /path <name> | /cab < name>> <</parameter> [options] … <par
 
 문제 해결 팩은 각각 특정 기술 문제를 설명 하는 근본 원인 집합을 구성 합니다. 문제 해결 팩 작업을 완료 한 후에는 각 근본 원인을 해결 됨, 수정 되지 않음, 검색 됨 (수정할 수 제외) 또는 찾을 수 없음 상태를 반환 합니다. 문제 해결사 사용자 인터페이스에서 보고 되는 특정 결과 외에도 문제 해결 엔진은 문제 해결사가 원래 문제를 해결 했는지 여부를 설명 하는 결과의 코드를 일반적인 용어로 반환 합니다. 코드는 다음과 같습니다.
 
-| 코드 | Description |
+| 코드 | 설명 |
 | ---- | ----------- |
 | -1 | **중단:** 문제 해결 작업이 완료 되기 전에 문제 해결사가 닫혔습니다. |
 | 0 | **수정 됨:** 문제 해결사는 근본 원인을 하나 이상 파악 하 고 해결 했지만 근본 원인은 고정 되지 않음 상태로 유지 되지 않습니다. |

@@ -1,6 +1,6 @@
 ---
 title: 찾기
-description: 파일에서 텍스트 문자열을 검색 하 여 파일에 지정 된 텍스트 문자열을 표시 하는 찾기 명령에 대 한 참조 항목입니다.
+description: 파일에서 텍스트 문자열을 검색 하 여 파일에 지정 된 텍스트 문자열을 표시 하는 find 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0273405ce5e5b4958a347cd1eaddee0a38897f0c
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: 8ebebcd29faad50aec84dd464ff0f745d2ddf52c
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83437008"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85925256"
 ---
 # <a name="find"></a>찾기
 
@@ -35,7 +35,7 @@ find [/v] [/c] [/n] [/i] [/off[line]] <string> [[<drive>:][<path>]<filename>[...
 | /n | 파일의 줄 번호와 함께 각 줄 앞에 옵니다. |
 | /i | 검색은 대/소문자 구분을 지정 합니다. |
 | [설정 / 해제 [line]] | 오프 라인 특성 집합이 있는 파일을 건너뛰지 않습니다. |
-| `<string>` | 필수 사항입니다. 문자 (따옴표로)에 대 한 검색 하려는 그룹을 지정 합니다. |
+| `<string>` | 필수 요소. 문자 (따옴표로)에 대 한 검색 하려는 그룹을 지정 합니다. |
 | `[<drive>:][<path>]<filename>` | 지정 된 문자열을 검색 하는 파일의 이름과 위치를 지정 합니다. |
 | /? | 명령 프롬프트에 도움말을 표시합니다. |
 
@@ -63,7 +63,7 @@ find [/v] [/c] [/n] [/i] [/off[line]] <string> [[<drive>:][<path>]<filename>[...
 find pencil sharpener pencil.ad
 ```
 
-텍스트를 찾기 위해 "과학자은 토론 전용으로 레이블을 지정 했습니다. 아닙니다 최종 보고서. " *보고서 .doc* 파일에 다음을 입력 합니다.
+텍스트를 찾기 위해 "과학자은 토론 전용으로 레이블을 지정 했습니다. 아닙니다 최종 보고서. " *report.doc* 파일에서 다음을 입력 합니다.
 
 ```
 find ""The scientists labeled their paper for discussion only. It is not a final report."" report.doc

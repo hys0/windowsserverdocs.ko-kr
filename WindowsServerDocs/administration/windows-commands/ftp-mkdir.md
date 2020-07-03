@@ -1,6 +1,6 @@
 ---
 title: ftp mkdir
-description: 원격 컴퓨터에 디렉터리를 만드는 ftp mkdir 명령에 대 한 참조 항목입니다.
+description: 원격 컴퓨터에 디렉터리를 만드는 ftp mkdir 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 98559664b2288ccf495a039e83e92fb7ba555717
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 2741733191b76547d8639d925cf4288efb35a530
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820423"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85925885"
 ---
 # <a name="ftp-mkdir"></a>ftp mkdir
 

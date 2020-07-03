@@ -1,6 +1,6 @@
 ---
-title: ftp 이름 바꾸기
-description: 원격 파일의 이름을 바꾸는 ftp rename 명령에 대 한 참조 항목입니다.
+title: ftp rename
+description: 원격 파일의 이름을 바꾸는 ftp 이름 바꾸기 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a8d3ea25e48266db6a4a282f2ea395bd8b8d5fd9
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: f46caa4394be9edc80da018d88809a0dd6e91862
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820313"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85925733"
 ---
-# <a name="ftp-rename"></a>ftp 이름 바꾸기
+# <a name="ftp-rename"></a>ftp rename
 
 > 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -37,7 +37,7 @@ rename <filename> <newfilename>
 
 ### <a name="examples"></a>예
 
-원격 파일의 *예 .txt* 를 *example1*로 변경 하려면 다음을 입력 합니다.
+원격 파일의 이름을example1.txt*example.txt* 하려면 * *다음을 입력 합니다.
 
 ```
 rename example.txt example1.txt

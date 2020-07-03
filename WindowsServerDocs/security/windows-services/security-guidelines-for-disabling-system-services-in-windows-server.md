@@ -8,12 +8,12 @@ ms.date: 11/26/2018
 ms.assetid: b886b2fd-3567-4f0a-8aa3-4ba7923d2d21
 author: nirb
 ms.author: nirb
-ms.openlocfilehash: 314b53d41fde81936b70154feeee407e89d2cca3
-ms.sourcegitcommit: c710fea2c0591febfc1bc9a705d59979be6f699b
+ms.openlocfilehash: 71687bc7090eabfaf690dc526cce013798413fdb
+ms.sourcegitcommit: 643a9916efb95ad0bb5cc0a9b115ac29af4cb076
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83705591"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85586722"
 ---
 # <a name="guidance-on-disabling-system-services-on-windows-server-2016-with-desktop-experience"></a>데스크톱 경험이 있는 Windows Server 2016에서 시스템 서비스를 사용하지 않도록 설정하기 위한 지침
 
@@ -42,7 +42,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 1. \Microsoft\XblGameSave\XblGameSaveTask
 2. \Microsoft\XblGameSave\XblGameSaveTaskLogon
 
-(첨부된 Microsoft Excel 스프레드시트를 확인하여 이 문서([데스크톱 경험이 있는 Windows Server 2016에서 시스템 서비스를 사용하지 않도록 설정하기 위한 지침](https://msdnshared.blob.core.windows.net/media/2017/05/Service-management-WS2016.xlsx))에서 자세히 설명하는 모든 서비스에 대한 정보에 액세스할 수도 있습니다.)
+첨부된 Microsoft Excel 스프레드시트: [데스크톱 경험이 있는 Windows Server 2016에서 시스템 서비스를 사용하지 않도록 설정하기 위한 지침](https://msdnshared.blob.core.windows.net/media/2017/05/Service-management-WS2016.xlsx)을 참조하여 이 문서에 설명된 모든 서비스에 대한 정보에 액세스할 수도 있습니다.
 
 
 ### <a name="disabling-services-not-installed-by-default"></a>기본적으로 설치되지 않은 서비스 사용 안 함
@@ -244,7 +244,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 | **설치**   | 데스크톱 경험이 있는 경우에만
 | **시작 유형**   | Manual
 | **추천 사항** | 사용하지 않도록 설정할 수 있음
-| **설명**       | 사용하지 않을 경우 사용하지 않도록 설정할 수 있습니다. 사용하지 않도록 설정하는 다른 메커니즘: https://technet.microsoft.com/library/dd252791.aspx
+| **설명**       | 사용하지 않을 경우 사용하지 않도록 설정할 수 있습니다. 사용하지 않도록 설정하는 다른 메커니즘: [Bluetooth 및 적외선 전송 사용 안 함](https://docs.microsoft.com/previous-versions/tn-archive/dd252791(v=technet.10))
 |||
 
 
@@ -1321,7 +1321,7 @@ Windows 운영 체제에는 중요한 기능을 제공하는 많은 시스템 �
 | **설치**   | 항상 설치
 | **시작 유형**   | 자동
 | **추천 사항** | 인쇄 서버 또는 DC가 아닌 경우 사용하지 않도록 설정할 수 있습니다.
-| **설명**       | 도메인 컨트롤러에서 DC 역할을 설치하면 인쇄 정리 작업을 수행하는 스풀러 서비스에 스레드가 추가되어 Active Directory에서 오래된 인쇄 큐 개체를 제거합니다.  스풀러 서비스가 각 사이트에 있는 하나 이상의 DC에서 실행되고 있지 않으면 AD에서 더 이상 존재하지 않는 이전 큐를 제거할 수 없습니다. https://blogs.technet.microsoft.com/askperf/2008/11/18/disabling-unnecessary-services-a-word-to-the-wise/
+| **설명**       | 도메인 컨트롤러에서 DC 역할을 설치하면 인쇄 정리 작업을 수행하는 스풀러 서비스에 스레드가 추가되어 Active Directory에서 오래된 인쇄 큐 개체를 제거합니다.  스풀러 서비스가 각 사이트에 있는 하나 이상의 DC에서 실행되고 있지 않으면 AD에서 더 이상 존재하지 않는 이전 큐를 제거할 수 없습니다. [성능 팀 블로그에 요청합니다](https://techcommunity.microsoft.com/t5/ask-the-performance-team/bg-p/AskPerf).
 |||
 
 

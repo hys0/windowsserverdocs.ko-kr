@@ -1,6 +1,6 @@
 ---
 title: ftp mput
-description: 현재 파일 전송 형식을 사용 하 여 로컬 파일을 원격 컴퓨터에 복사 하는 ftp mput 명령에 대 한 참조 항목입니다.
+description: 현재 파일 전송 형식을 사용 하 여 로컬 파일을 원격 컴퓨터에 복사 하는 ftp mput 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5006c1ba19f0e017dea377b47bd0d89a68266382
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 506a4d9a64f1dd9b4b37088a30926190d7675695
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820413"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85925803"
 ---
 # <a name="ftp-mput"></a>ftp mput
 
@@ -36,7 +36,7 @@ mput <localfile>[ ]
 
 ### <a name="examples"></a>예
 
-현재 파일 전송 형식을 사용 하 여 *Program1* 및 *program2.c* 을 원격 컴퓨터에 복사 하려면 다음을 입력 합니다.
+현재 파일 전송 형식을 사용 하 여 *Program1.exe* 및 *Program2.exe* 을 원격 컴퓨터에 복사 하려면 다음을 입력 합니다.
 
 ```
 mput Program1.exe Program2.exe

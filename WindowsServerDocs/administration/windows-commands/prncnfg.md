@@ -1,6 +1,6 @@
 ---
 title: prncnfg
-description: Prncnfg.vbs 명령에 대 한 참조 항목으로, 프린터에 대 한 구성 정보를 구성 하거나 표시 합니다.
+description: 프린터에 대 한 구성 정보를 구성 하거나 표시 하는 prncnfg.vbs 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: b60faaa5537ebdf8860c9b0471cf879677b80f1d
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 11eb66c3e1d4fb457f9655750d92ab90ad9b473b
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85472308"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85924234"
 ---
 # <a name="prncnfg"></a>prncnfg
 
@@ -36,7 +36,7 @@ cscript prncnfg {-g | -t | -x | -?} [-S <Servername>] [-P <Printername>] [-z <ne
 | -t | 프린터를 구성합니다. |
 | -X | 프린터를 이름을 바꿉니다. |
 | -S`<Servername>` | 프린터를 관리 하려면를 호스트 하는 원격 컴퓨터의 이름을 지정 합니다. 컴퓨터를 지정 하지 않으면 로컬 컴퓨터가 사용 됩니다. |
-| -P`<Printername>` | 관리 하려는 프린터의 이름을 지정 합니다. 필수 사항입니다. |
+| -P`<Printername>` | 관리 하려는 프린터의 이름을 지정 합니다. 필수 요소. |
 | -z`<newprintername>` | 새 프린터 이름을 지정합니다. 필요는 **-x** 및 **-P** 매개 변수입니다. |
 | -u `<Username>` -w`<password>` | 프린터를 관리 하려면를 호스트 하는 컴퓨터에 연결할 수 있는 권한이 있는 계정을 지정 합니다. 대상 컴퓨터의 로컬 관리자 그룹의 모든 구성원이 이러한 권한이 있지만 사용 권한을 다른 사용자에 게 부여 될 수도 있습니다. 계정을 지정 하지 않는 경우 명령이 작동 하려면 이러한 권한이 있는 계정으로 로그온 해야 합니다. |
 | -r`<portname>` | 프린터가 연결 되어 있는 포트를 지정 합니다. 병렬 또는 직렬 포트 인 경우 (예를 들어 LPT1 또는 COM1) 포트의 ID를 사용 합니다. TCP/IP 포트 이면 포트를 추가할 때 지정 된 포트 이름을 사용 합니다. |

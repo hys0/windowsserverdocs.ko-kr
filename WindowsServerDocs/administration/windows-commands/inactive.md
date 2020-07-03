@@ -1,6 +1,6 @@
 ---
 title: 비활성
-description: 기본 MBR (마스터 부트 레코드) 디스크에서 포커스가 있는 시스템 파티션 또는 부팅 파티션을 비활성으로 표시 하는 비활성 명령에 대 한 참조 항목입니다.
+description: 기본 MBR (마스터 부트 레코드) 디스크에서 포커스가 있는 시스템 파티션 또는 부팅 파티션을 비활성으로 표시 하는 비활성 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9861a54c284002e53b0a8fc354aa883d80fff0e7
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: db7d279577b8120137b4397551a480ea2d2a0e8a
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83818443"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85924415"
 ---
 # <a name="inactive"></a>비활성
 

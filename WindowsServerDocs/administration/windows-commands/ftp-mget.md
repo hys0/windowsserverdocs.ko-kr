@@ -1,6 +1,6 @@
 ---
 title: ftp mget
-description: 현재 파일 전송 형식을 사용 하 여 원격 파일을 로컬 컴퓨터에 복사 하는 ftp mget 명령에 대 한 참조 항목입니다.
+description: 현재 파일 전송 형식을 사용 하 여 원격 파일을 로컬 컴퓨터에 복사 하는 ftp mget 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 93d562fcdaec0d6609e7be8b3543cd55bb910238
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 7239f31fa0a9b40d9bba4db0c3e1e29df5c03108
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820433"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85925894"
 ---
 # <a name="ftp-mget"></a>ftp mget
 
@@ -36,7 +36,7 @@ mget <remotefile>[ ]
 
 ### <a name="examples"></a>예
 
-현재 파일 전송 형식을 사용 하 여 원격 파일을 로컬 *컴퓨터에 복사 하려면 다음을* 입력 *합니다* .
+현재 파일 전송 형식을 사용 하 여 원격 파일 *a.exe* 및 *b.exe* 을 로컬 컴퓨터에 복사 하려면 다음을 입력 합니다.
 
 ```
 mget a.exe b.exe

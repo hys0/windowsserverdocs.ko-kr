@@ -1,6 +1,6 @@
 ---
 title: nslookup
-description: DNS (Domain Name System) 인프라를 진단 하는 데 사용할 수 있는 정보를 표시 하는 nslookup 명령에 대 한 참조 항목입니다.
+description: DNS (Domain Name System) 인프라를 진단 하는 데 사용할 수 있는 정보를 표시 하는 nslookup 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 589b8dd5e1244a5aeb27f33b4985f07b776bc7bd
-ms.sourcegitcommit: 99d548141428c964facf666c10b6709d80fbb215
+ms.openlocfilehash: 87f973349426016b6d62bd1f018f268d4e873c51
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721156"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85925389"
 ---
 # <a name="nslookup"></a>nslookup
 
@@ -42,7 +42,7 @@ nslookup [exit | finger | help | ls | lserver | root | server | set | view] [opt
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | [nslookup 종료](nslookup-exit-command.md) | Nslookup 명령줄 도구를 종료 합니다. |
 | [nslookup 손가락](nslookup-finger-command.md) | 현재 컴퓨터에서 손가락 서버와 연결합니다. |
@@ -79,7 +79,7 @@ nslookup [exit | finger | help | ls | lserver | root | server | set | view] [opt
 
 - 조회 요청이 실패 하는 경우 명령줄 도구는 다음과 같은 오류 메시지를 제공 합니다.
 
-  | 오류 메시지 | Description |
+  | 오류 메시지 | 설명 |
   | ------------- | ----------- |
   | 시간 초과 됨 |특정 시간이 지난 후 서버에서 요청에 응답 하지 않았습니다. [Nslookup set timeout](nslookup-set-timeout.md) 명령을 사용 하 여 시간 제한 기간을 설정할 수 있습니다. [Nslookup 설정 다시 시도](nslookup-set-retry.md) 명령을 사용 하 여 다시 시도 횟수를 설정할 수 있습니다. |
   | 서버에서 응답 없음 | DNS 이름 서버는 서버 컴퓨터에서 실행 됩니다. |

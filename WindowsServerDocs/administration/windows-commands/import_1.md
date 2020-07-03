@@ -1,6 +1,6 @@
 ---
 title: diskpart 가져오기
-description: 로컬 컴퓨터의 디스크 그룹으로 외부 디스크 그룹을 가져오는 가져오기 명령에 대 한 참조 항목입니다.
+description: 로컬 컴퓨터의 디스크 그룹으로 외부 디스크 그룹을 가져오는 가져오기 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6912aa9698d484501cad5f3cdfb5b19955bb4931
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 072c012e5e2cc8d49811fbfa1cff5140b2c745a1
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83818453"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85924427"
 ---
-# <a name="import-diskpart"></a>가져오기 (diskpart)
+# <a name="import-diskpart"></a>import (diskpart)
 
 로컬 컴퓨터의 디스크 그룹에 외부 디스크 그룹을 가져옵니다. 이 명령은 포커스가 있는 디스크와 동일한 그룹에 있는 모든 디스크를 가져옵니다.
 
@@ -30,7 +30,7 @@ import [noerr]
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | 설명 |
+| 매개 변수 | Description |
 | --------- | ----------- |
 | noerr | 스크립팅 전용입니다. 오류가 발생 하면 오류가 발생 하지 않은 경우에 따라 명령을 처리 하도록 DiskPart 계속 합니다. 이 매개 변수를 크기는 오류 코드를 수행 합니다. |
 

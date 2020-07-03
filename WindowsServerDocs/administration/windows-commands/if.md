@@ -1,6 +1,6 @@
 ---
 title: if
-description: 일괄 처리 프로그램에서 조건부 처리를 수행 하는 if 명령의 참조 항목입니다.
+description: 일괄 처리 프로그램에서 조건부 처리를 수행 하는 if 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d6f73e784d6fb394db258a056f38045b6a545469
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: dd55ebb6ae3562906efdc710f7a067a7e7514e59
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83818553"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85924479"
 ---
 # <a name="if"></a>if
 
@@ -41,7 +41,7 @@ if defined <variable> <command> [else <expression>]
 | 매개 변수 | 설명 |
 | --------- |------------ |
 | not | 명령이 실행 되도록 조건이 false 인 경우에 지정 합니다. |
-| 수준은`<number>` | Cmd.exe에서 이전 프로그램이 실행 한 경우에만 true 조건을 지정 하 여 종료 코드를 *number*보다 크거나 같은 값으로 반환 합니다. |
+| 수준은`<number>` | Cmd.exe에서 이전 프로그램을 실행 하 여 종료 코드를 *number*보다 크거나 같은 경우에만 true 조건을 지정 합니다. |
 | `<command>` | 앞의 조건을 충족 하는 경우 실행 되도록 하는 명령을 지정 합니다. |
 | `<string1>==<string2>` | *문자열* 1과 *문자열 2* 가 동일한 경우에만 true 조건을 지정 합니다. 이러한 값은 리터럴 문자열 또는 일괄 처리 변수 일 수 있습니다 (예: `%1` ). 리터럴 문자열을 따옴표로 묶습니다 필요가 없습니다. |
 | 있지만`<filename>` | 지정 된 파일 이름이 있는 경우 참인 조건을 지정 합니다. |
@@ -62,7 +62,7 @@ if defined <variable> <command> [else <expression>]
 
   - **% errorlevel%**: errorlevel 환경 변수의 현재 값에 대 한 문자열 표현으로 확장 됩니다. 이 변수는 이름이 ERRORLEVEL 인 기존 환경 변수가 없는 것으로 가정 합니다. 있는 경우 해당 ERRORLEVEL 값을 대신 가져옵니다.
 
-  - **% cmdcmdline%**: cmd.exe에 의해 처리 되기 전에 cmd.exe에 전달 된 원래 명령줄로 확장 됩니다. 여기서는 이름이 CMDCMDLINE 인 기존 환경 변수가 없는 것으로 가정 합니다. 있는 경우 해당 CMDCMDLINE 값을 대신 가져옵니다.
+  - **% cmdcmdline%**: Cmd.exe에 의해 처리 되기 전에 Cmd.exe에 전달 된 원래 명령줄로 확장 됩니다. 여기서는 이름이 CMDCMDLINE 인 기존 환경 변수가 없는 것으로 가정 합니다. 있는 경우 해당 CMDCMDLINE 값을 대신 가져옵니다.
 
   - **% cmdextversion%**: **cmdextversion**의 현재 값에 대 한 문자열 표현으로 확장 됩니다. 여기서는 이름이 CMDEXTVERSION 인 기존 환경 변수가 없는 것으로 가정 합니다. 있는 경우 해당 CMDEXTVERSION 값을 대신 가져옵니다.
 

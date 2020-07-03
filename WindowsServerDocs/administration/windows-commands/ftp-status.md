@@ -1,6 +1,6 @@
 ---
-title: ftp 상태
-description: Ftp 상태 명령에 대 한 참조 항목으로 ftp 연결의 현재 상태를 표시 합니다.
+title: ftp status
+description: Ftp 상태 명령에 대 한 참조 문서로, ftp 연결의 현재 상태를 표시 합니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c1f773bc7ec0e330258eafaf62c13a884fe112bb
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 6488a8292f266a6f0ab979957c2833d30509824f
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820283"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85925679"
 ---
-# <a name="ftp-status"></a>ftp 상태
+# <a name="ftp-status"></a>ftp status
 
 > 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 

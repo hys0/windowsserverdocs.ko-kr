@@ -1,6 +1,6 @@
 ---
 title: prnmngr
-description: Prnmngr 명령에 대 한 참조 항목으로, 기본 프린터를 설정 하 고 표시 하는 것 외에도 프린터 또는 프린터 연결을 추가, 삭제 및 나열 합니다.
+description: 기본 프린터를 설정 하 고 표시 하는 것 외에도 프린터 또는 프린터 연결을 추가, 삭제 및 나열 하는 prnmngr 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: 1ccc04e7e040612d9243fe1e3f5ed67b8131ab9d
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 562d25a95fa3ccd556b65d0a29b866557c842c55
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85472218"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85924171"
 ---
 # <a name="prnmngr"></a>prnmngr
 
@@ -51,7 +51,7 @@ cscript prnmngr {-a | -d | -x | -g | -t | -l | -?}[c] [-s <Servername>] [-p <Pri
 
 - 사용자가 제공 하는 정보에 공백이 포함 된 경우 텍스트에 따옴표를 사용 합니다 (예: "컴퓨터 이름").
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 로컬 컴퓨터의 LPT1에 연결 된 colorprinter_2 이라는 프린터를 추가 하 고 컬러 프린터 Driver1 이라는 프린터 드라이버가 필요한 경우 다음을 입력 합니다.
 

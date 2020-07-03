@@ -1,6 +1,6 @@
 ---
 title: bootcfg timeout
-description: 운영 체제 시간 제한 값을 변경 하는 bootcfg timeout 명령에 대 한 참조 항목입니다.
+description: 운영 체제 시간 제한 값을 변경 하는 bootcfg timeout 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e10ccab69ca58a6cef260546e965f90eecfc8beb
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 280fb50f6e98024c58d33a174a294ac4309797ed
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82708941"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85924954"
 ---
 # <a name="bootcfg-timeout"></a>bootcfg timeout
 
@@ -32,9 +32,9 @@ bootcfg /timeout <timeoutvalue> [/s <computer> [/u <domain>\<user> /p <password>
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `/timeout <timeoutvalue>` | [부팅 로더] 섹션에서 시간 제한 값을 지정합니다. `<timeoutvalue>` 사용자는 NTLDR 기본값을 로드 하기 전에 운영 체제를 부팅 로더 화면에서 선택 해야 하는 시간 (초)입니다. 의 `<timeoutvalue>` 유효한 범위는 0-999입니다. 값이 0 이면 NTLDR은 부팅 로더 화면을 표시 하지 않고 기본 운영 체제를 즉시 시작 합니다. |
+| `/timeout <timeoutvalue>` | [부팅 로더] 섹션에서 시간 제한 값을 지정합니다. `<timeoutvalue>` 사용자는 NTLDR 기본값을 로드 하기 전에 운영 체제를 부팅 로더 화면에서 선택 해야 하는 시간 (초)입니다. 의 유효한 범위는 `<timeoutvalue>` 0-999입니다. 값이 0 이면 NTLDR은 부팅 로더 화면을 표시 하지 않고 기본 운영 체제를 즉시 시작 합니다. |
 | `/s <computer>` | 원격 컴퓨터의 이름 또는 IP 주소를 지정 합니다 (백슬래시를 사용 하지 않음). 기본값은 로컬 컴퓨터입니다. |
-| `/u <domain>\<user>`  | 또는 `<user>` `<domain>\<user>`로 지정 된 사용자의 계정 권한으로 명령을 실행 합니다. 기본값은 현재 로그온 된 명령을 실행 하는 컴퓨터에서 사용자의 사용 권한. |
+| `/u <domain>\<user>`  | 또는로 지정 된 사용자의 계정 권한으로 명령을 실행 합니다 `<user>` `<domain>\<user>` . 기본값은 현재 로그온 된 명령을 실행 하는 컴퓨터에서 사용자의 사용 권한. |
 | `/p <password>` | 에 지정 된 사용자 계정의 암호를 지정 된 **/u** 매개 변수입니다. |
 | /? | 명령 프롬프트에 도움말을 표시합니다. |
 

@@ -1,6 +1,6 @@
 ---
 title: ksetup addkdc
-description: 지정 된 Kerberos 영역에 대 한 KDC (키 배포 센터) 주소를 광고 하는 ksetup addkdc 명령에 대 한 참조 항목입니다.
+description: 지정 된 Kerberos 영역에 대 한 KDC (키 배포 센터) 주소를 광고 하는 ksetup addkdc 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e51279166bf60196d12f877506d3228b78c4a711
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 32839c0f8c1e408cfa6ab1e067c250551ee7b490
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83818093"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85925563"
 ---
 # <a name="ksetup-addkdc"></a>ksetup addkdc
 

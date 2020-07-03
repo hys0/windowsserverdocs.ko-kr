@@ -1,6 +1,6 @@
 ---
 title: fsutil quota
-description: 네트워크 기반 저장소를 보다 정확 하 게 제어할 수 있도록 NTFS 볼륨의 디스크 할당량을 관리 하는 fsutil quota 명령에 대 한 참조 항목입니다.
+description: 네트워크 기반 저장소를 보다 정확 하 게 제어할 수 있도록 NTFS 볼륨의 디스크 할당량을 관리 하는 fsutil quota 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 manager: dmoss
 ms.author: toklima
@@ -9,12 +9,12 @@ ms.technology: storage
 ms.assetid: 21225c11-7c72-4ea2-96bd-e63d4beb3be5
 ms.topic: article
 ms.date: 10/16/2017
-ms.openlocfilehash: 54c4f6fe5fd5ae7a43d5057cd5837374f1b94ecd
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: f757f822a903f6b5c6d221e17f87cf1e73d1555f
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83435819"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85925229"
 ---
 # <a name="fsutil-quota"></a>fsutil quota
 
@@ -43,7 +43,7 @@ fsutil quota [violations]
 | Query | 기존 디스크 할당량 나열 합니다. |
 | track | 디스크에서 지정 된 볼륨에서 사용을 추적 합니다. |
 | 위반 | 시스템 및 애플리케이션 로그를 검색 하 고 할당량 위반이 검색 되었습니다 또는 사용자 할당량 임계값 또는 할당량 제한에 도달한 있는지를 나타내는 메시지가 표시 됩니다. |
-| `<volumepath>` | 필수 사항입니다. 드라이브 이름 뒤에 콜론 또는 GUID (형식)를 지정 합니다 `volume{GUID}` . |
+| `<volumepath>` | 필수 요소. 드라이브 이름 뒤에 콜론 또는 GUID (형식)를 지정 합니다 `volume{GUID}` . |
 | `<threshold>`  | 경고가 발생 하는 제한 (바이트)을 설정 합니다. 이 매개 변수는 명령에 필요 `fsutil quota modify` 합니다. |
 | `<limit>` | 허용 되는 최대 디스크 사용량 (바이트)을 설정 합니다. 이 매개 변수는 명령에 필요 `fsutil quota modify` 합니다. |
 | `<username>` | 도메인 또는 사용자 이름을 지정합니다. 이 매개 변수는 명령에 필요 `fsutil quota modify` 합니다. |

@@ -1,6 +1,6 @@
 ---
 title: gpt
-description: Gpt 명령에 대 한 참조 항목으로, 포커스가 있는 파티션에 gpt 특성을 할당 합니다.
+description: Gpt 명령에 대 한 참조 문서로, 포커스가 있는 파티션에 gpt 특성을 할당 합니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b1e33b89c1918fcb83dd9d42c155f845805307d9
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 40d3536f5a6be0bf520095e3ba61f75b7a2addc7
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83818803"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85924619"
 ---
 # <a name="gpt"></a>gpt
 

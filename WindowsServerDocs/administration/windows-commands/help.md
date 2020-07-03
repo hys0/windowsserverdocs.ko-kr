@@ -1,6 +1,6 @@
 ---
 title: 도움말
-description: 지정 된 명령에 대 한 자세한 도움말 정보 또는 사용 가능한 명령 목록을 표시 하는 도움말 항목에 대 한 참조 항목입니다.
+description: 지정 된 명령에 대 한 자세한 도움말 정보 또는 사용 가능한 명령 목록을 표시 하는 도움말 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9b73ef32b49b834a91f24e943749eb21398c8588
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 562bb725998cb58eb9a4a9ce9078a833bc0e7781
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83818663"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85924573"
 ---
 # <a name="help"></a>도움말
 

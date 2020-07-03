@@ -1,6 +1,6 @@
 ---
 title: merge vdisk
-description: 차이점 보관용 VHD (가상 하드 디스크)를 해당 부모 VHD와 병합 하는 merge vdisk 명령에 대 한 참조 항목입니다.
+description: 차이점 보관용 VHD (가상 하드 디스크)를 해당 부모 VHD와 병합 하는 merge vdisk 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ccd288baff691576c15c3e9c686b6708d1c45ee8
-ms.sourcegitcommit: 5e313a004663adb54c90962cfdad9ae889246151
+ms.openlocfilehash: 41201885861b7084fa7b49be8b5bf5a0e7394981
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84354623"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85925039"
 ---
 # <a name="merge-vdisk"></a>merge vdisk
 
@@ -33,7 +33,7 @@ merge vdisk depth=<n>
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | 깊이 =`<n>` | 병합 부모 VHD 파일의 수를 나타냅니다. 예를 들어는 `depth=1` 차이점 보관용 VHD가 차이점 보관용 체인의 한 수준과 병합 됨을 나타냅니다. |
 
