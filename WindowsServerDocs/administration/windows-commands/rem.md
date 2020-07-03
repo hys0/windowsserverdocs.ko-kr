@@ -1,6 +1,6 @@
 ---
 title: rem
-description: '* * * *에 대 한 참조 항목'
+description: '* * * *에 대 한 참조 문서'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d115548f15ff45087a771458062da8a3ef919eb3
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 5161a3ba0904396f29b7c567e3a16da5f95e5271
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82722460"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85933507"
 ---
 # <a name="rem"></a>rem
 
@@ -34,13 +34,13 @@ rem [<Comment>]
 
 |매개 변수|설명|
 |---------|-----------|
-|\<주석>|문자열을 주석으로 포함 하도록 지정 합니다.|
+|\<Comment>|문자열을 주석으로 포함 하도록 지정 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
 ## <a name="remarks"></a>설명
 
 -   **rem** 명령 화면에서 설명을 표시 하지 않습니다. 사용 해야는 **화면 표시** 명령을 일괄 처리 또는 구성 합니다. 화면에 주석을 표시 하려면 SYS 파일입니다.
--   배치 파일 주석에는 리디렉션 문자 (**<** 또는 **>**) 또는 파이프 (**|**)를 사용할 수 없습니다.
+-   배치 파일 주석에는 리디렉션 문자 ( **<** 또는 **>** ) 또는 파이프 ()를 사용할 수 없습니다 **|** .
 -   사용할 수 있지만 **rem** 배치 파일에 세로 간격을 추가 하려면 설명 없이 사용할 수 있습니다 빈 줄. 일괄 처리 프로그램을 처리할 때 빈 줄은 무시 됩니다.
 
 ## <a name="examples"></a>예
@@ -52,8 +52,8 @@ rem  This batch program formats and checks new disks.
 rem  It is named Checknew.bat.
 rem
 rem echo Insert new disk in Drive B.
-pause 
-format b: /v chkdsk b: 
+pause
+format b: /v chkdsk b:
 ```
 앞에 설명 주석을 포함 하는 **프롬프트** config에서 명령입니다. SYS 파일을 구성 하려면 다음 줄을 추가 합니다. 시스템 드라이브:
 ```

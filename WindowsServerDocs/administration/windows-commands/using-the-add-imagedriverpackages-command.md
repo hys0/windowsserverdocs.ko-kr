@@ -1,6 +1,6 @@
 ---
 title: -ImageDriverPackages 추가
-description: 드라이버 저장소에서 부팅 이미지에 드라이버 패키지를 추가 하는 추가 ImageDriverPackages에 대 한 참조 항목입니다.
+description: 드라이버 저장소에서 부팅 이미지에 드라이버 패키지를 추가 하는 추가-ImageDriverPackages에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 09a80b430bf23c8264bdda0b37046514771a32f7
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 87d905ac73c7ba64cf908696f1255f8379af4d85
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82721065"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85934154"
 ---
 # <a name="add-imagedriverpackages"></a>-ImageDriverPackages 추가
 
@@ -24,7 +24,7 @@ ms.locfileid: "82721065"
 
 ## <a name="syntax"></a>구문
 ```
-wdsutil /add-ImageDriverPackages [/Server:<Server name>media:<Image namemediatype:Boot /Architecture:{x86 | ia64 | x64} 
+wdsutil /add-ImageDriverPackages [/Server:<Server name>media:<Image namemediatype:Boot /Architecture:{x86 | ia64 | x64}
 [/Filename:<File name>] /Filtertype:<Filter type> /Operator:{Equal | NotEqual | GreaterOrEqual | LessOrEqual | Contains} /Value:<Value> [/Value:<Value> ...]
 ```
 ### <a name="parameters"></a>매개 변수
@@ -38,7 +38,7 @@ wdsutil /add-ImageDriverPackages [/Server:<Server name>media:<Image namemediatyp
 |                                   이름도<File name>                                    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             파일 이름을 지정합니다. 이미지 이름으로 고유 하 게 식별할 수 없으면, 파일 이름을 지정 해야 합니다.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 |                                 Filtertype<Filter type>                                  |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     드라이버 패키지에 대 한 검색의 특성을 지정 합니다. 단일 명령으로 여러 특성을 지정할 수 있습니다. 도 지정 해야 **/Operator** 및 **/v** 이 옵션을 사용 합니다.<p><Filter type>다음 중 하나일 수 있습니다.<p>**PackageId**<p>**PackageName**<p>**PackageEnabled**<p>**Packagedateadded 됨**<p>**PackageInfFilename**<p>**PackageClass**<p>**PackageProvider**<p>**PackageArchitecture**<p>**PackageLocale**<p>**PackageSigned**<p>**PackagedatePublished**<p>**Packageversion**<p>**Driverdescription**<p>**DriverManufacturer**<p>**DriverHardwareId**<p>**DrivercompatibleId**<p>**DriverExcludeId**<p>**DriverGroupId**<p>**DriverGroupName**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | / 연산자: {같은 & #124; NotEqual & #124; GreaterOrEqual & #124; LessOrEqual & #124; (를) 포함 |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             특성 값 사이의 관계입니다. 만 지정할 수 있습니다 **Contains** 문자열 특성입니다. 만 지정할 수 있습니다 **GreaterOrEqual** 및 **LessOrEqual** 날짜 및 버전 특성이 있습니다.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-|                                       / 값입니다.<Value>                                       | 지정 된 기준으로 검색 하려면 값을 지정 <attribute>합니다. 단일 **/Filtertype**에 대해 여러 값을 지정할 수 있습니다. 아래 윤곽선 각 필터에 대해 지정할 수 있는 특성 목록입니다. 이러한 특성에 대 한 자세한 내용은 [드라이버 및 패키지 특성](https://go.microsoft.com/fwlink/?LinkId=166895) (<https://go.microsoft.com/fwlink/?LinkId=166895>)을 참조 하세요.<p>-PackageId-올바른 GUID를 지정 합니다. 예: {4d36e972-e325-11ce-bfc1-08002be10318}.<br />-PackageName 임의의 문자열 값을 지정 합니다.<br />-PackageEnabled-지정 **예** 또는 **No**합니다.<br />-Packagedateadded 됨-YYYY/MM/DD 형식의 날짜를 지정 합니다.<br />-PackageInfFilename 임의의 문자열 값을 지정 합니다.<br />-PackageClass-올바른 클래스 이름 또는 클래스 GUID 지정합니다. 예를 들어: **DiskDrive**, **Net**, 또는 {4d36e972-e325-11ce-bfc1-08002be10318}.<br />-Install-packageprovider 임의의 문자열 값을 지정 합니다.<br />-PackageArchitecture-지정 **x86**,  **x64**, 또는 **ia64**.<b />-PackageLocale-유효한 언어 식별자를 지정 합니다. 예를 들어: **EN-US** 또는 **ES-ES**합니다.<br />-PackageSigned-지정 **예** 또는 **No**합니다.<br />-PackagedatePublished: YYYY/MM/DD 형식의 날짜를 지정 합니다.<br />-Packageversion-다음 형식으로 버전을 지정 합니다. a.b.x.y. 예를 들어: 6.1.0.0<br />-Driverdescription 임의의 문자열 값을 지정 합니다.<br />-DriverManufacturer 임의의 문자열 값을 지정 합니다.<br />-DriverHardwareId-임의의 문자열 값을 지정 합니다.<br />-DrivercompatibleId-임의의 문자열 값을 지정 합니다.<br />-DriverExcludeId-임의의 문자열 값을 지정 합니다.<br />-DriverGroupId-올바른 GUID를 지정 합니다. 예: {4d36e972-e325-11ce-bfc1-08002be10318}.<br />-DriverGroupName은 임의의 문자열 값을 지정 합니다. |
+|                                       / 값입니다.<Value>                                       | 지정 된 기준으로 검색 하려면 값을 지정 <attribute>합니다. 단일 **/Filtertype**에 대해 여러 값을 지정할 수 있습니다. 아래 윤곽선 각 필터에 대해 지정할 수 있는 특성 목록입니다. 이러한 특성에 대 한 자세한 내용은 [드라이버 및 패키지 특성](https://go.microsoft.com/fwlink/?LinkId=166895) ()을 참조 하세요 <https://go.microsoft.com/fwlink/?LinkId=166895> .<p>-PackageId-올바른 GUID를 지정 합니다. 예: {4d36e972-e325-11ce-bfc1-08002be10318}.<br />-PackageName 임의의 문자열 값을 지정 합니다.<br />-PackageEnabled-지정 **예** 또는 **No**합니다.<br />-Packagedateadded 됨-YYYY/MM/DD 형식의 날짜를 지정 합니다.<br />-PackageInfFilename 임의의 문자열 값을 지정 합니다.<br />-PackageClass-올바른 클래스 이름 또는 클래스 GUID 지정합니다. 예를 들어: **DiskDrive**, **Net**, 또는 {4d36e972-e325-11ce-bfc1-08002be10318}.<br />-Install-packageprovider 임의의 문자열 값을 지정 합니다.<br />-PackageArchitecture-지정 **x86**,  **x64**, 또는 **ia64**.<b />-PackageLocale-유효한 언어 식별자를 지정 합니다. 예를 들어: **EN-US** 또는 **ES-ES**합니다.<br />-PackageSigned-지정 **예** 또는 **No**합니다.<br />-PackagedatePublished: YYYY/MM/DD 형식의 날짜를 지정 합니다.<br />-Packageversion-다음 형식으로 버전을 지정 합니다. a.b.x.y. 예를 들어: 6.1.0.0<br />-Driverdescription 임의의 문자열 값을 지정 합니다.<br />-DriverManufacturer 임의의 문자열 값을 지정 합니다.<br />-DriverHardwareId-임의의 문자열 값을 지정 합니다.<br />-DrivercompatibleId-임의의 문자열 값을 지정 합니다.<br />-DriverExcludeId-임의의 문자열 값을 지정 합니다.<br />-DriverGroupId-올바른 GUID를 지정 합니다. 예: {4d36e972-e325-11ce-bfc1-08002be10318}.<br />-DriverGroupName은 임의의 문자열 값을 지정 합니다. |
 
 ## <a name="examples"></a>예
 부팅 이미지에 드라이버 패키지를 추가 하려면 다음 중 하나를 입력 합니다.
@@ -52,6 +52,6 @@ wdsutil /verbose /add-ImageDriverPackagemedia: WinPE Boot Image /Server:MyWDSSer
 wdsutil /verbose /add-ImageDriverPackagemedia:WinPE Boot Image /Server:MyWDSServemediatype:Boot /Architecture:x64 /Filtertype:PackageClass /Operator:Equal /Value:Net /Value:System /Value:DiskDrive /Value:HDC /Value:SCSIAdapter
 ```
 ## <a name="additional-references"></a>추가 참조
-- [명령줄 구문 키](command-line-syntax-key.md)
-추가[imagedriverpackage 명령을](using-the-add-imagedriverpackage-command.md)
-사용 하 여[추가-alldriverpackages 명령을 사용 하](using-the-add-alldriverpackages-subcommand.md) 여
+- [명령줄 구문 키](command-line-syntax-key.md) 
+ [Add ImageDriverPackage 명령을](using-the-add-imagedriverpackage-command.md) 
+ 사용 하 여 [추가-AllDriverPackages 하위 명령 사용](using-the-add-alldriverpackages-subcommand.md)

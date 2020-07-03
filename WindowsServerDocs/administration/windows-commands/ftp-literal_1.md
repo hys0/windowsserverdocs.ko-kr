@@ -1,6 +1,6 @@
 ---
-title: ftp 리터럴
-description: 원격 ftp 서버에 축 자 인수를 보내는 ftp 리터럴 명령에 대 한 참조 항목입니다.
+title: ftp literal
+description: 원격 ftp 서버에 축 자 인수를 보내는 ftp 리터럴 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5015f2184c9273aae6dbd01b18ee1f540d5b9aa3
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: e71d80b5ddf8e3c92f810e295e21dee28376f03d
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820163"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85933141"
 ---
-# <a name="ftp-literal"></a>ftp 리터럴
+# <a name="ftp-literal"></a>ftp literal
 
 > 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 

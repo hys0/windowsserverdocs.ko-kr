@@ -1,6 +1,6 @@
 ---
 title: 삭제-AutoaddDevices
-description: 자동 추가 데이터베이스에서 보류 중이거나 거부 되었거나 승인 된 컴퓨터를 삭제 하는 delete AutoaddDevices에 대 한 참조 항목입니다.
+description: 자동 추가 데이터베이스에서 보류 중이거나 거부 되었거나 승인 된 컴퓨터를 삭제 하는 delete AutoaddDevices에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 90b5b24b68b2cfe3d387cb02b3715b70edba4300
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 60acfbb5ec1bc3f9268044eb0dbcc9ea19ff8ab9
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720988"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85933972"
 ---
 # <a name="delete-autoadddevices"></a>삭제-AutoaddDevices
 
@@ -41,7 +41,7 @@ wdsutil /delete-AutoaddDevices /Devicetype:RejectedDevices
 wdsutil /verbose /delete-AutoaddDevices /Server:MyWDSServer /Devicetype:ApprovedDevices
 ```
 ## <a name="additional-references"></a>추가 참조
-- [명령줄 구문 키](command-line-syntax-key.md)
-[승인 autoadddevices](using-the-approve-autoadddevices-command.md)
-명령을 사용 하 여[get](using-the-get-autoadddevices-command.md)
-autoadddevices 명령을 사용 하 여[거부 autoadddevices](using-the-reject-autoadddevices-command.md) 명령을 사용 하 여
+- [명령줄 구문 키](command-line-syntax-key.md) 
+ [승인 AutoaddDevices 명령을](using-the-approve-autoadddevices-command.md) 
+ 사용 하 여 [Get AutoaddDevices 명령을](using-the-get-autoadddevices-command.md) 
+ 사용 하 여 [거부 AutoaddDevices 명령을 사용 하 여](using-the-reject-autoadddevices-command.md)

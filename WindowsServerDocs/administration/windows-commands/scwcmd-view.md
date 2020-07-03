@@ -1,6 +1,6 @@
 ---
 title: Scwcmd 뷰
-description: '* * * *에 대 한 참조 항목'
+description: '* * * *에 대 한 참조 문서'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: bb38d5100eab74573d5f5ffb4ec684b2b19c3bbb
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: cbae5f3d0157424fb9281d47cdf126bf106447c3
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820943"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85932619"
 ---
 # <a name="scwcmd-view"></a>Scwcmd: 보기
 
@@ -32,8 +32,8 @@ scwcmd view /x:<Xmlfile.xml> [/s:<Xslfile.xsl>]
 
 |매개 변수|설명|
 |---------|-----------|
-|/x: \< Xmlfile>|.Xml 파일을 볼 수를 지정 합니다. 이 매개 변수를 지정 합니다.|
-|/s: \< Xslfile>|렌더링 과정의 일부로.xml 파일에 적용할.xsl 변환을 지정 합니다. 이 매개 변수는 선택 사항 SCW.xml 파일입니다. 경우는 **보기** 명령은 SCW.xml 파일을 렌더링 하는 데 사용 됩니다, 지정한.xml 파일에 대 한 올바른 기본 변환을 로드를 자동으로 시도 합니다. .Xsl 변환을 지정 된 경우 변환은.xml 파일이.xsl 변환와 같은 디렉터리에 있다는 가정 아래 작성 되어야 합니다.|
+|/x\<Xmlfile.xml>|.Xml 파일을 볼 수를 지정 합니다. 이 매개 변수를 지정 합니다.|
+|/s\<Xslfile.xsl>|렌더링 과정의 일부로.xml 파일에 적용할.xsl 변환을 지정 합니다. 이 매개 변수는 선택 사항 SCW.xml 파일입니다. 경우는 **보기** 명령은 SCW.xml 파일을 렌더링 하는 데 사용 됩니다, 지정한.xml 파일에 대 한 올바른 기본 변환을 로드를 자동으로 시도 합니다. .Xsl 변환을 지정 된 경우 변환은.xml 파일이.xsl 변환와 같은 디렉터리에 있다는 가정 아래 작성 되어야 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
 ## <a name="remarks"></a>설명

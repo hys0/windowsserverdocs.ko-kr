@@ -1,6 +1,6 @@
 ---
 title: ksetup setenctypeattr
-description: 도메인에 대 한 암호화 유형 특성을 설정 하는 ksetup setenctypeattr 명령에 대 한 참조 항목입니다.
+description: 도메인에 대 한 암호화 유형 특성을 설정 하는 ksetup setenctypeattr 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e76ad3d08505208346ff2a3e100194239187953d
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 8bb8411a795d0167af1fc921fdf1c19febcb8527
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83817363"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85933915"
 ---
 # <a name="ksetup-setenctypeattr"></a>ksetup setenctypeattr
 

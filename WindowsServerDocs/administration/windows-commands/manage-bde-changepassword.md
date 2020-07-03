@@ -1,6 +1,6 @@
 ---
 title: manage-bde changepassword
-description: 데이터 드라이브에 대 한 암호를 수정 하는 manage-bde changepassword command에 대 한 참조 항목입니다.
+description: 데이터 드라이브에 대 한 암호를 수정 하는 manage-bde changepassword command에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 28cc97165bfc33809c187630e37ad9b9bd24d7c6
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: dcac8ca0f62a34f8f436d4fb0dba822ffbfab4d7
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84222922"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85933863"
 ---
 # <a name="manage-bde-changepassword"></a>manage-bde changepassword
 

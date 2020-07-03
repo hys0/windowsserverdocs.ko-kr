@@ -1,6 +1,6 @@
 ---
 title: Scwcmd
-description: '* * * *에 대 한 참조 항목'
+description: '* * * *에 대 한 참조 문서'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,18 +9,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9a8c002aa735b188fdd9ad75b0db7dbe06053516
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: bb651c2b527d332f70cd0686a7d57f089bc987ac
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83821163"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85932609"
 ---
 # <a name="scwcmd"></a>Scwcmd
 
 > 적용 대상: Windows Server 2012 R2, Windows Server 2012
 
-SCW (보안 구성 마법사)에 포함 된 Scwcmd 명령줄 도구를 사용 하 여 다음 작업을 수행할 수 있습니다.
+SCW (보안 구성 마법사)에 포함 된 Scwcmd.exe 명령줄 도구를 사용 하 여 다음 작업을 수행할 수 있습니다.
 -   SCW에서 생성 된 정책에 하나 이상의 서버를 구성 합니다.
 -   SCW에서 생성 된 정책에 하나 이상의 서버를 분석 합니다.
 -   HTML 형식으로 분석 결과 확인 합니다.

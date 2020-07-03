@@ -1,6 +1,6 @@
 ---
 title: online disk
-description: 온라인 디스크 명령에 대 한 참조 항목으로, 오프 라인 디스크를 온라인 상태로 전환 합니다.
+description: 오프 라인 디스크를 온라인 상태로 전환 하는 온라인 디스크 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 954e52788f3236cb9b2898a23edae25d5b22deb8
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 7313f5b5b8c0594e0706555a203248d760028806
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85472688"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85933551"
 ---
 # <a name="online-disk"></a>online disk
 

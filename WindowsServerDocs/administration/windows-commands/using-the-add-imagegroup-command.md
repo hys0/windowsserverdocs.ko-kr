@@ -1,6 +1,6 @@
 ---
 title: ImageGroup
-description: Windows 배포 서비스 서버에 이미지 그룹을 추가 하는 ImageGroup에 대 한 참조 항목입니다.
+description: Windows 배포 서비스 서버에 이미지 그룹을 추가 하는 ImageGroup에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b08042ac6b33c0ccfe0b66bb0fec70805d55d75f
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 5898b9bccb9ab0581cadd1ed51f4059a4c7c2dcc
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82721049"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85934120"
 ---
 # <a name="add-imagegroup"></a>ImageGroup
 
@@ -38,8 +38,8 @@ wdsutil /add-ImageGroumediaGroup:ImageGroup2
 wdsutil /verbose /add-ImageGroumediaGroup:My Image Group /Server:MyWDSServer
 ```
 ## <a name="additional-references"></a>추가 참조
-- [명령줄 구문 키](command-line-syntax-key.md)
-[AllImageGroups 명령을](using-the-get-allimagegroups-command.md)
-사용 하 여[ImageGroup](using-the-get-imagegroup-command.md)
-명령을 사용 하 여[ImageGroup 명령](using-the-remove-imagegroup-command.md)
-[하위 명령: ImageGroup](subcommand-set-imagegroup.md)
+- [명령줄 구문 키](command-line-syntax-key.md) 
+ [AllImageGroups 명령 사용](using-the-get-allimagegroups-command.md) 
+ [ImageGroup 명령 사용](using-the-get-imagegroup-command.md) 
+ [ImageGroup 명령 사용](using-the-remove-imagegroup-command.md) 
+ [하위 명령: ImageGroup](subcommand-set-imagegroup.md)

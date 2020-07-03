@@ -1,6 +1,6 @@
 ---
 title: -서버 사용 안 함
-description: 전송 서버에 대 한 모든 서비스를 비활성화 하는 서버 사용 안 함에 대 한 참조 항목입니다.
+description: 전송 서버에 대 한 모든 서비스를 비활성화 하는 서버 사용 안 함에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 81ae150b4f8e4de577e377a2d10a7a69675adac7
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: e9d25159cb81408b5a8085fb830eec4479d953f4
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720964"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85933935"
 ---
 # <a name="disable-transportserver"></a>-서버 사용 안 함
 
@@ -37,9 +37,9 @@ wdsutil /Disable-TransportServer
 wdsutil /verbose /Disable-TransportServer /Server:MyWDSServer
 ```
 ## <a name="additional-references"></a>추가 참조
-- [명령줄 구문 키](command-line-syntax-key.md)
-사용[-](using-the-enable-transportserver-command.md)
-지 수 서버 명령을 사용 하 여 명령을 사용 하 여 명령 하위 명령:[set-](subcommand-set-transportserver.md)
-서버 하위 명령:[시작-](subcommand-start-transportserver.md)
-[수신](using-the-get-transportserver-command.md)
-서버 하위 명령:[중지](subcommand-stop-transportserver.md) .
+- [명령줄 구문 키](command-line-syntax-key.md) 
+ [Enable-서버 명령 사용](using-the-enable-transportserver-command.md) 
+ [Get-서버 명령 사용](using-the-get-transportserver-command.md) 
+ [하위 명령: 설정-서버](subcommand-set-transportserver.md) 
+ [하위 명령: 시작-서버](subcommand-start-transportserver.md) 
+ [하위 명령: 중지-서버](subcommand-stop-transportserver.md)

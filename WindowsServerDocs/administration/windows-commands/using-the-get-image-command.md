@@ -1,6 +1,6 @@
 ---
 title: 가져오기-이미지
-description: 이미지에 대 한 정보를 검색 하는 get 이미지에 대 한 참조 항목입니다.
+description: 이미지에 대 한 정보를 검색 하는 get 이미지에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 04cc7b8d90415e32be4103ef6c7f7b709c3550c3
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: d37989fa681e5694b0c15b77aa1baddcfebbeecf
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719919"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85932236"
 ---
 # <a name="get-image"></a>가져오기-이미지
 
@@ -52,10 +52,10 @@ wdsutil /Get-Imagmedia:Windows Vista with Officemediatype:Install
 wdsutil /verbose /Get-Imagmedia:Windows Vista with Office /Server:MyWDSServemediatype:InstalmediaGroup:ImageGroup1 /Filename:install.wim
 ```
 ## <a name="additional-references"></a>추가 참조
-- [명령줄 구문 키](command-line-syntax-key.md)
-[추가 이미지](using-the-add-image-command.md)
-명령을 사용 하 여[복사](using-the-copy-image-command.md)
-이미지 명령을 사용 하 여 이미지[내보내기](using-the-export-image-command.md)
-명령을 사용 하 여[제거](using-the-remove-image-command.md)
-이미지 명령을 사용 하 여[바꾸기](using-the-replace-image-command.md)
-이미지 명령을 사용 하 여[하위 명령: 설정 이미지](subcommand-set-image.md)
+- [명령줄 구문 키](command-line-syntax-key.md) 
+ [추가 이미지 명령을](using-the-add-image-command.md) 
+ 사용 하 여 [복사 이미지 명령을](using-the-copy-image-command.md) 
+ 사용 하 여 [내보내기 이미지 명령 사용](using-the-export-image-command.md) 
+ [제거 이미지 명령을](using-the-remove-image-command.md) 
+ 사용 하 여 [Replace 이미지 명령을](using-the-replace-image-command.md) 
+ 사용 하 여 [하위 명령: 설정 이미지](subcommand-set-image.md)

@@ -1,6 +1,6 @@
 ---
 title: macfile
-description: Macintosh 서버, 볼륨, 디렉터리 및 파일에 대 한 파일 서버를 관리 하는 macfile 명령에 대 한 참조 항목입니다.
+description: Macintosh 서버, 볼륨, 디렉터리 및 파일에 대 한 파일 서버를 관리 하는 macfile 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 740044088bef1537b5b41493f46be9275be84874
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: 6937e8bbf40ec9ce908be095e5de0e04f793f40e
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84223015"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85933650"
 ---
 # <a name="macfile"></a>macfile
 
@@ -49,8 +49,8 @@ macfile directory[/server:\\<computername>] /path:<directory> [/owner:<ownername
 
 | 위치 | 권한 설정 |
 | -------- | --------------- |
-| 처음 | OwnerSeeFiles |
-| 초 | OwnerSeeFolders |
+| 첫째 | OwnerSeeFiles |
+| Second | OwnerSeeFolders |
 | 셋째 | OwnerMakechanges |
 | 넷째 | GroupSeeFiles |
 | 다섯 번째 | GroupSeeFolders |
@@ -113,7 +113,7 @@ Macintosh에서 액세스할 수 있는 볼륨 *D:\release*에서 파일 *tree_a
 macfile forkize /resourcefork:c:\cross\mac\appcode /type:APPL /creator:MAGNOLIA /targetfile:D:\Release\tree_app
 ```
 
-파일 작성자를 *Microsoft Word 5.1*으로 변경 하려면 * \\ 서버 a* *파일 디렉터리의*파일에서 *.txt* 파일에 대해 서버에서 다음을 입력 합니다.
+파일 작성자를 *Microsoft Word 5.1*으로 변경 하려면 * \\ 서버 a*디렉터리의 파일 *Word.txt* 에 대해 서버에서 *다음을 입력*합니다.
 
 ```
 macfile forkize /server:\\ServerA /creator:MSWD /type:TEXT /targetfile:d:\Word documents\Group files\Word.txt

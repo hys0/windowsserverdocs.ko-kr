@@ -1,6 +1,6 @@
 ---
 title: Scwcmd 변환
-description: '* * * *에 대 한 참조 항목'
+description: '* * * *에 대 한 참조 문서'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 86c88f0207a53da813f5d4eaed399375bfc5bc02
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: b70557b64a4cb68a0435bee9db033c893186dc0c
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820953"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85932631"
 ---
 # <a name="scwcmd-transform"></a>Scwcmd: 변환
 
@@ -39,8 +39,8 @@ scwcmd transform /p:<Policyfile.xml> /g:<GPODisplayName>
 
 |매개 변수|설명|
 |---------|-----------|
-|/p: \< Policyfile>|적용 해야 하는.xml 정책 파일의 경로 파일 이름을 지정 합니다. 이 매개 변수를 지정 합니다.|
-|/g: \< GPODisplayName>|GPO의 표시 이름을 지정합니다. 이 매개 변수를 지정 합니다.|
+|/p\<Policyfile.xml>|적용 해야 하는.xml 정책 파일의 경로 파일 이름을 지정 합니다. 이 매개 변수를 지정 합니다.|
+|/g\<GPODisplayName>|GPO의 표시 이름을 지정합니다. 이 매개 변수를 지정 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
 ## <a name="remarks"></a>설명

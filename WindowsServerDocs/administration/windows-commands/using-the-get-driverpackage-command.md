@@ -1,6 +1,6 @@
 ---
 title: 드라이버 패키지 가져오기
-description: 서버에 드라이버 패키지에 대 한 정보를 표시 하는 get DriverPackage에 대 한 참조 항목입니다.
+description: 서버에 드라이버 패키지에 대 한 정보를 표시 하는 get DriverPackage에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4fc6bc327b46f8219a7c40fa47e85cc94b6fc749
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: f0ca307b9f42d0921c896df2fe622c5b0f8a853d
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719940"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85932256"
 ---
 # <a name="get-driverpackage"></a>드라이버 패키지 가져오기
 
@@ -30,9 +30,9 @@ WDSUTIL /Get-DriverPackage [/Server:<Server name>] {/DriverPackage:<Package Name
 
 |        매개 변수         |                                                                           설명                                                                            |
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [/Server:\<서버 이름>] |              서버 이름을 지정합니다. 이 NetBIOS 이름이 나 FQDN 수 있습니다. 서버 이름을 지정 하지, 로컬 서버가 사용 됩니다.               |
-| [/Driverpackage:\<Name>] |                                                        표시 하는 드라이버 패키지의 이름을 지정 합니다.                                                         |
-|    [/PackageId:\<ID>]    | 표시 하는 드라이버 패키지의 Windows 배포 서비스 ID를 지정 합니다. 드라이버 패키지 이름으로 고유 하 게 식별할 수 없는 경우에 ID를 지정 해야 합니다. |
+| [/ 서버:\<Server name>] |              서버 이름을 지정합니다. 이 NetBIOS 이름이 나 FQDN 수 있습니다. 서버 이름을 지정 하지, 로컬 서버가 사용 됩니다.               |
+| [/ DriverPackage:\<Name>] |                                                        표시 하는 드라이버 패키지의 이름을 지정 합니다.                                                         |
+|    [/ 패키지 Id:\<ID>]    | 표시 하는 드라이버 패키지의 Windows 배포 서비스 ID를 지정 합니다. 드라이버 패키지 이름으로 고유 하 게 식별할 수 없는 경우에 ID를 지정 해야 합니다. |
 |     [/Show: {Drivers     |                                                                              파일                                                                               |
 
 ## <a name="examples"></a>예

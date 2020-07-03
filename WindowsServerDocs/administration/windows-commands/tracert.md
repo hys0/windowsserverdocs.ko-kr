@@ -1,6 +1,6 @@
 ---
 title: tracert
-description: 지정 된 TTL (time to Live) 필드 값을 증분 방식으로 증가 시켜 대상에 ICMP (Internet Control Message Protocol) 에코 요청 또는 ICMPv6 메시지를 전송 하 여 대상에 대해 수행 되는 경로를 결정 하는 tracert에 대 한 참조 항목입니다.
+description: 대상에 대 한 참조 문서-ICMP (Internet Control Message Protocol) echo 요청 또는 ICMPv6 메시지를 대상으로 전송 하 여 TTL (time to Live) 필드 값을 점차적으로 증가 시켜 대상에 대해 수행 되는 경로를 결정 합니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a6ef48350a0b8a4f67f1e564a9ca16db8b4dd5e6
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: adc73fdd646b3a9f7202f286912b5295f0c4e140
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85472930"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85933735"
 ---
 # <a name="tracert"></a>tracert
 
@@ -50,7 +50,7 @@ tracert [/d] [/h <MaximumHops>] [/j <Hostlist>] [/w <timeout>] [/R] [/S <Srcaddr
 - 경로를 추적 하 고 각 라우터와 연결에 대 한 네트워크 대기 시간 및 패킷 손실을 제공 하려면 [**pathping**](pathping.md) 명령을 사용 합니다.
 - 이 명령은 네트워크 연결에서 네트워크 어댑터의 속성에 구성 요소로 인터넷 프로토콜 (TCP/IP) 프로토콜을 설치 하는 경우에 사용할 수입니다.
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 Corp7.microsoft.com 명명 된 호스트에 대 한 경로 추적 하려면 다음을 입력 합니다.
 ```

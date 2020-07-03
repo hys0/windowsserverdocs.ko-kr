@@ -1,6 +1,6 @@
 ---
 title: disable
-description: 비활성화에 대 한 참조 항목으로, Windows 배포 서비스에 대 한 모든 서비스를 비활성화 합니다.
+description: Windows 배포 서비스에 대 한 모든 서비스를 비활성화 하는 사용 안 함에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e4523c75af4f75488f6dc0fad5dbb4ebc2442f7d
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 54c8fdd3014ecd7a11039ecdb7771b0517e756e1
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720976"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85933959"
 ---
 # <a name="disable"></a>disable
 

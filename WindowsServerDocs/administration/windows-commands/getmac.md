@@ -1,6 +1,6 @@
 ---
 title: getmac
-description: Getmac 명령에 대 한 참조 항목으로, MAC (미디어 액세스 제어) 주소와 각 로컬 또는 네트워크를 통해 연결 된 네트워크 프로토콜 목록을 반환 합니다.
+description: Getmac 명령에 대 한 참조 문서로, MAC (미디어 액세스 제어) 주소와 각 로컬 또는 네트워크를 통해 연결 된 네트워크 프로토콜 목록을 반환 합니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b84218b5506770bbefd5af8c89801547cc658f88
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 345daa310b075f8a094dd8a87e7c1c0d3694ab10
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83819093"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85932344"
 ---
 # <a name="getmac"></a>getmac
 

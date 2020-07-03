@@ -1,6 +1,6 @@
 ---
 title: 원격 데스크톱 서비스 (터미널 서비스) 명령 참조
-description: '* * * *에 대 한 참조 항목'
+description: '* * * *에 대 한 참조 문서'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 630b2274e96e446af07f7630d95056b40858209f
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 55466409517b63c52f88a7acec3a8f4aba7d258d
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82722439"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85933475"
 ---
 # <a name="remote-desktop-services-terminal-services-command-reference"></a>원격 데스크톱 서비스 (터미널 서비스) 명령 참조
 
@@ -23,7 +23,7 @@ ms.locfileid: "82722439"
 다음은 명령줄 도구를 원격 데스크톱 서비스의 목록이 있습니다.
 > [!NOTE]
 > Windows Server 2008 R2에서는 터미널 서비스의 이름이 원격 데스크톱 서비스로 바뀌었습니다. 최신 버전의 새로운 기능에 대 한 자세한 내용은 Windows Server TechNet 라이브러리의 [Windows server 2012에 있는 원격 데스크톱 서비스의 새로운 기능](https://technet.microsoft.com/library/hh831527) 을 참조 하십시오.
-> 
+>
 > |                 명령                 |                                                      설명                                                       |
 > |-----------------------------------------|------------------------------------------------------------------------------------------------------------------------|
 > |           [change](change.md)           | 로그온, COM 포트 매핑 및 설치 모드에 대 한 원격 데스크톱 세션 호스트 (rd 세션 호스트) 서버 설정을 변경 합니다. |
@@ -40,10 +40,10 @@ ms.locfileid: "82722439"
 > |          [qappsrv](qappsrv.md)          |                             네트워크에 있는 모든 rd 세션 호스트 서버 목록을 표시 합니다.                             |
 > |         [qprocess](qprocess.md)         |                  Rd 세션 호스트 서버에서 실행 중인 프로세스에 대 한 정보를 표시 합니다.                   |
 > |            [쿼리](query.md)            |                      프로세스, 세션 및 rd 세션 호스트 서버에 대 한 정보를 표시 합니다.                      |
-> |    [쿼리 프로세스](query-process.md)    |                  Rd 세션 호스트 서버에서 실행 중인 프로세스에 대 한 정보를 표시 합니다.                   |
-> |    [세션 쿼리](query-session.md)    |                           Rd 세션 호스트 서버에서 세션에 대 한 정보를 표시 합니다.                            |
-> | [termserver 쿼리](query-termserver.md) |                             네트워크에 있는 모든 rd 세션 호스트 서버 목록을 표시 합니다.                             |
-> |       [사용자 쿼리](query-user.md)       |                         Rd 세션 호스트 서버에서 사용자 세션에 대 한 정보를 표시 합니다.                         |
+> |    [query process](query-process.md)    |                  Rd 세션 호스트 서버에서 실행 중인 프로세스에 대 한 정보를 표시 합니다.                   |
+> |    [query session](query-session.md)    |                           Rd 세션 호스트 서버에서 세션에 대 한 정보를 표시 합니다.                            |
+> | [query termserver](query-termserver.md) |                             네트워크에 있는 모든 rd 세션 호스트 서버 목록을 표시 합니다.                             |
+> |       [query user](query-user.md)       |                         Rd 세션 호스트 서버에서 사용자 세션에 대 한 정보를 표시 합니다.                         |
 > |            [quser](quser.md)            |                         Rd 세션 호스트 서버에서 사용자 세션에 대 한 정보를 표시 합니다.                         |
 > |          [qwinsta](qwinsta.md)          |                           Rd 세션 호스트 서버에서 세션에 대 한 정보를 표시 합니다.                            |
 > |          [rdpsign](rdpsign.md)          |                          디지털 방식으로 원격 데스크톱 프로토콜 (.rdp) 파일에 서명할 수 있습니다.                          |

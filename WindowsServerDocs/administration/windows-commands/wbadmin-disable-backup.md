@@ -1,6 +1,6 @@
 ---
-title: wbadmin 백업 사용 안 함
-description: 기존 예약 된 매일 백업 실행을 중지 하는 wbadmin disable backup에 대 한 참조 항목입니다.
+title: wbadmin disable backup
+description: 백업 사용 안 함 백업에 대 한 참조 문서로, 기존 예약 된 매일 백업의 실행을 중지 합니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6bc211946c908b44b196995a9e5000d6ff3b7f82
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 88383975aa3ae8d6821698159e6ee445198301c5
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83821423"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85933670"
 ---
-# <a name="wbadmin-disable-backup"></a>wbadmin 백업 사용 안 함
+# <a name="wbadmin-disable-backup"></a>wbadmin disable backup
 
 
 

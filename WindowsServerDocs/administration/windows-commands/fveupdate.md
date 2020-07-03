@@ -1,6 +1,6 @@
 ---
 title: fveupdate
-description: Fveupdate 도구에 대 한 참조 항목으로, 컴퓨터를 업그레이드할 때 설치 프로그램에서 사용 하는 내부 도구입니다.
+description: 컴퓨터를 업그레이드할 때 설치 프로그램에서 사용 하는 내부 도구인 fveupdate tool에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2f9b2ef409ade13e9b78c068f128fe0cccb0a189
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: d6fa6ab7a69ee6ab7943e6018e862f453b431843
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83819087"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85932350"
 ---
 # <a name="fveupdate"></a>fveupdate
 

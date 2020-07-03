@@ -1,6 +1,6 @@
 ---
 title: fsutil file
-description: 사용자 이름으로 파일을 검색 하 고, 파일의 짧은 이름을 설정 하 고, 파일의 유효한 데이터 길이를 설정 하거나, 파일에 대해 0 데이터를 설정 하거나, 새 파일을 만드는 fsutil file 명령에 대 한 참조 항목입니다.
+description: 사용자 이름으로 파일을 검색 하 고, 파일의 짧은 이름을 설정 하 고, 파일의 유효한 데이터 길이를 설정 하거나, 파일에 대해 0 데이터를 설정 하거나, 새 파일을 만드는 fsutil file 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 manager: dmoss
 ms.author: toklima
@@ -9,12 +9,12 @@ ms.technology: storage
 ms.assetid: 9f3dc104-dd69-4b03-b824-a29896780164
 ms.topic: article
 ms.date: 10/16/2017
-ms.openlocfilehash: e9be8f6d21b89d1017371b9697e1227122826a7d
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: 6909d381ef5dfebb343e70ad117a1a5b400481fa
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83435878"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85932293"
 ---
 # <a name="fsutil-file"></a>fsutil file
 
@@ -116,13 +116,13 @@ fsutil file queryextents C:\Temp\sample.txt
 fsutil file seteof C:\testfile.txt 1000
 ```
 
-파일의 짧은 이름을 설정 하려면 C 드라이브에 있는 파일 *이름* *..*
+파일의 짧은 이름을 설정 하려면 C 드라이브에서 *longfile.txt*를 *longfilename.txt* 다음을 입력 합니다.
 
 ```
 fsutil file setshortname c:\longfilename.txt longfile.txt
 ```
 
-NTFS 볼륨에서 *testfile* 파일에 대해 유효한 데이터 길이를 *4096 바이트로* 설정 하려면 다음을 입력 합니다.
+NTFS 볼륨에서 *testfile.txt* 된 파일에 대해 유효한 데이터 길이를 *4096 바이트로* 설정 하려면 다음을 입력 합니다.
 
 ```
 fsutil file setvaliddata c:\testfile.txt 4096

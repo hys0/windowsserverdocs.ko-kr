@@ -1,6 +1,6 @@
 ---
 title: 새 네임 스페이스
-description: 새 네임 스페이스를 만들고 구성 하는 새 네임 스페이스에 대 한 참조 항목입니다.
+description: 새 네임 스페이스를 만들고 구성 하는 새 네임 스페이스에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e7bc6b365da274fc62df3bb24375c07b97c8e4bc
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 3afbdd195f21450508bfa6992fc73c7d360092c6
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82710541"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85932415"
 ---
 # <a name="new-namespace"></a>새 네임 스페이스
 
@@ -39,10 +39,10 @@ wdsutil [Options] /New-Namespace [/Server:<Server name>]
 |[/ 서버:<Server name>]|서버 이름을 지정합니다. 이 NetBIOS 이름 또는 정규화 된 도메인 이름 (FQDN) 수 있습니다. 서버 이름을 지정 하지, 로컬 서버가 사용 됩니다.|
 |#B1<Friendly name>|네임 스페이스의 이름을 지정합니다.|
 |/Description<Description>]|네임 스페이스에 대 한 설명을 설정합니다.|
-|공간<Namespace name>|네임스페이스의 이름을 지정합니다. Note 이름, 이것이 하 고 고유 해야 합니다.<p>-   **배포 서버 역할 서비스**:이 옵션에 대 한 구문은/NAMESPACE: WDS:<Image group>/<Image name>/<Index>입니다. 예를 들어: **WDS:ImageGroup1/install.wim/1**<br />-   **전송 서버 역할 서비스**:이 값은 서버에서 네임 스페이스를 만들 때 지정 된 이름과 일치 해야 합니다.|
+|공간<Namespace name>|네임스페이스의 이름을 지정합니다. Note 이름, 이것이 하 고 고유 해야 합니다.<p>-   **배포 서버 역할 서비스**:이 옵션에 대 한 구문은/NAMESPACE: WDS: <Image group> / <Image name> / <Index> 입니다. 예를 들어: **WDS:ImageGroup1/install.wim/1**<br />-   **전송 서버 역할 서비스**:이 값은 서버에서 네임 스페이스를 만들 때 지정 된 이름과 일치 해야 합니다.|
 |/ ContentProvider:<Name>]|네임 스페이스에 대 한 콘텐츠를 제공 하는 콘텐츠 공급자의 이름을 지정 합니다.|
 |[/ ConfigString:<Configuration string>]|콘텐츠 공급자에 대 한 구성 문자열을 지정합니다.|
-|/Namespacetype: {AutoCast &#124; ScheduledCast}|전송에 대 한 설정을 지정합니다. 다음 옵션을 사용 하 여 설정을 지정할 수 있습니다.<p>-[/시간: <time>]-다음 형식 (YYYY/MM/DD: hh: MM 형식)을 사용 하 여 전송이 시작 되어야 하는 시간을 설정 합니다. 예약 된 캐스트 전송에만이 옵션에 적용 됩니다.<br />-[/ 클라이언트: <Number of clients>]-전송이 시작 되기 전에 대기 하는 클라이언트의 최소 수를 설정 합니다. 예약 된 캐스트 전송에만이 옵션에 적용 됩니다.|
+|/Namespacetype: {AutoCast &#124; ScheduledCast}|전송에 대 한 설정을 지정합니다. 다음 옵션을 사용 하 여 설정을 지정할 수 있습니다.<p>-[/시간: <time> ]-다음 형식 (YYYY/mm/DD: hh: MM 형식)을 사용 하 여 전송이 시작 되어야 하는 시간을 설정 합니다. 예약 된 캐스트 전송에만이 옵션에 적용 됩니다.<br />-[/ 클라이언트: <Number of clients>]-전송이 시작 되기 전에 대기 하는 클라이언트의 최소 수를 설정 합니다. 예약 된 캐스트 전송에만이 옵션에 적용 됩니다.|
 ## <a name="examples"></a>예
 자동 캐스트 네임 스페이스를 만들려면 다음을 입력 합니다.
 ```
@@ -50,11 +50,11 @@ wdsutil /New-Namespace /FriendlyName:Custom AutoCast Namespace /Namespace:Custom
 ```
 예약 된 캐스트 네임 스페이스를 만들려면 다음을 입력 합니다.
 ```
-wdsutil /New-Namespace /Server:MyWDSServer /FriendlyName:Custom Scheduled Namespace /Namespace:Custom Auto 1 /ContentProvider:MyContentProvider 
+wdsutil /New-Namespace /Server:MyWDSServer /FriendlyName:Custom Scheduled Namespace /Namespace:Custom Auto 1 /ContentProvider:MyContentProvider
 /Namespacetype:ScheduledCast /time:2006/11/20:17:00 /Clients:20
 ```
 ## <a name="additional-references"></a>추가 참조
-- [명령줄 구문 키](command-line-syntax-key.md)
-[Using the get-AllNamespaces Command](using-the-get-allnamespaces-command.md)
-[remove 네임](using-the-remove-namespace-command.md)
-스페이스 명령을 사용 하 여 get 네임 스페이스 명령을 사용 하 여[하위 명령: 시작 네임 스페이스](subcommand-start-namespace.md)
+- [명령줄 구문 키](command-line-syntax-key.md) 
+ [Get AllNamespaces 스페이스 명령을](using-the-get-allnamespaces-command.md) 
+ 사용 하 여 [네임 스페이스 제거 명령을](using-the-remove-namespace-command.md) 
+ 사용 하 여 [하위 명령: 시작-네임 스페이스](subcommand-start-namespace.md)

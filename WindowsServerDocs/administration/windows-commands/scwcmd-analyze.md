@@ -1,6 +1,6 @@
 ---
 title: Scwcmd 분석
-description: '* * * *에 대 한 참조 항목'
+description: '* * * *에 대 한 참조 문서'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 13e33329c399a77c1dd9b2e6ff63de6196c30420
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: dc8616112cc94ae88995e9fd9fe635622b767f17
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820993"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85932779"
 ---
 # <a name="scwcmd-analyze"></a>Scwcmd: 분석
 
@@ -33,14 +33,14 @@ scwcmd analyze [[[/m:<ComputerName> | /ou:<Ou>] /p:<Policy>] | /i:<ComputerList>
 
 |매개 변수|설명|
 |---------|-----------|
-|/m: \< ComputerName>|NetBIOS 이름, DNS 이름 또는 분석할 컴퓨터의 IP 주소를 지정 합니다. 하는 경우는 **/m** 매개 변수를 지정 하면 **/p** 매개 변수도 지정 해야 합니다.|
-|/ou: \< ouname>|Active Directory 도메인 서비스에 조직 구성 단위 (OU)의 정규화 된 도메인 이름 (FQDN)을 지정합니다. 하는 경우는 **/ou** 매개 변수를 지정 하면 **/p** 매개 변수도 지정 해야 합니다. OU의 모든 컴퓨터는 해당된 정책에 대해 분석 됩니다.|
-|/p: \< Policy>|분석을 수행 하는 데 사용할.xml 정책 파일의 경로 파일 이름을 지정 합니다.|
-|/i: \< computerlist>|예상 되는 정책 파일과 함께 컴퓨터의 목록이 포함 된.xml 파일의 경로 파일 이름을 지정 합니다. .Xml 파일에 있는 모든 컴퓨터는 해당 정책 파일에 대해 분석 됩니다. 샘플.xml 파일은 %windir%\security\SampleMachineList.xml.|
-|/o: \< resultdir>|경로 분석 결과 파일을 저장할 디렉터리를 지정 합니다. 기본값은 현재 디렉터리입니다.|
-|/u: \< UserName>|원격 컴퓨터에서 분석을 수행할 때 사용 하는 대체 사용자 자격 증명을 지정 합니다. 기본값은 로그온 된 사용자입니다.|
-|/pw: \< 암호>|원격 컴퓨터에서 분석을 수행할 때 사용 하는 대체 사용자 자격 증명을 지정 합니다. 기본값은 로그온된 한 사용자의 암호입니다.|
-|/t: \< 스레드>|분석 하는 동안 유지 해야 하는 동시 처리 중인 분석 작업의 수를 지정 합니다 (DefaultValue 40, MinValue = = 1, MaxValue = 1000)입니다.|
+|연속\<ComputerName>|NetBIOS 이름, DNS 이름 또는 분석할 컴퓨터의 IP 주소를 지정 합니다. 하는 경우는 **/m** 매개 변수를 지정 하면 **/p** 매개 변수도 지정 해야 합니다.|
+|/ou\<OuName>|Active Directory 도메인 서비스에 조직 구성 단위 (OU)의 정규화 된 도메인 이름 (FQDN)을 지정합니다. 하는 경우는 **/ou** 매개 변수를 지정 하면 **/p** 매개 변수도 지정 해야 합니다. OU의 모든 컴퓨터는 해당된 정책에 대해 분석 됩니다.|
+|/p\<Policy>|분석을 수행 하는 데 사용할.xml 정책 파일의 경로 파일 이름을 지정 합니다.|
+|/i\<ComputerList>|예상 되는 정책 파일과 함께 컴퓨터의 목록이 포함 된.xml 파일의 경로 파일 이름을 지정 합니다. .Xml 파일에 있는 모든 컴퓨터는 해당 정책 파일에 대해 분석 됩니다. 샘플.xml 파일은 %windir%\security\SampleMachineList.xml.|
+|/o\<ResultDir>|경로 분석 결과 파일을 저장할 디렉터리를 지정 합니다. 기본값은 현재 디렉터리입니다.|
+|/u\<UserName>|원격 컴퓨터에서 분석을 수행할 때 사용 하는 대체 사용자 자격 증명을 지정 합니다. 기본값은 로그온 된 사용자입니다.|
+|암호\<Password>|원격 컴퓨터에서 분석을 수행할 때 사용 하는 대체 사용자 자격 증명을 지정 합니다. 기본값은 로그온된 한 사용자의 암호입니다.|
+|/t:\<Threads>|분석 하는 동안 유지 해야 하는 동시 처리 중인 분석 작업의 수를 지정 합니다 (DefaultValue 40, MinValue = = 1, MaxValue = 1000)입니다.|
 |/l|분석 프로세스를 기록 하면 합니다. 분석 되 고 각 컴퓨터에 대해 하나의 로그 파일이 생성 됩니다. 로그 파일은 결과 파일과 동일한 디렉터리에 저장 됩니다. 사용 하 여 **/o** 결과 파일의 디렉터리를 지정 하는 옵션입니다.|
 |/e|불일치가 발견 되는 경우 애플리케이션 이벤트 로그에 이벤트를 기록 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|

@@ -1,6 +1,6 @@
 ---
-title: wbadmin get 버전
-description: 로컬 컴퓨터 또는 다른 컴퓨터에 저장 된 사용 가능한 백업에 대 한 세부 정보를 나열 하는 wbadmin get 버전에 대 한 참조 항목입니다.
+title: wbadmin get versions
+description: 로컬 컴퓨터 또는 다른 컴퓨터에 저장 된 사용 가능한 백업에 대 한 세부 정보를 나열 하는 wbadmin get 버전에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1eabc053e5cb1bdd517cfb02a13e955707ffacf6
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 6729189bb15fd3aeb10172288504e9809b082edb
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820513"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85932319"
 ---
-# <a name="wbadmin-get-versions"></a>wbadmin get 버전
+# <a name="wbadmin-get-versions"></a>wbadmin get versions
 
 
 

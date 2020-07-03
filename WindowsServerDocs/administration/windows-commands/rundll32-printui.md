@@ -1,6 +1,6 @@
 ---
 title: rundll32.exe printui.dll, PrintUIEntry
-description: 여러 프린터 구성 작업을 자동화 하는 rundll32.exe printui.dll, PrintUIEntry 명령에 대 한 참조 항목입니다.
+description: 여러 프린터 구성 작업을 자동화 하는 rundll32.exe printui.dll, PrintUIEntry command에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,18 +9,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 05/25/2018
-ms.openlocfilehash: 3644af74918089e837b01c531099c0e61a6eb771
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: 04678bcaf13bbdc5f325dc56af39c4e0385bcd06
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84223059"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85932790"
 ---
 # <a name="rundll32-printuidllprintuientry"></a>rundll32.exe printui.dll, PrintUIEntry
 
 > 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-여러 프린터 구성 작업을 자동화합니다. printui.dll는 프린터 구성 대화 상자에서 사용 하는 함수를 포함 하는 실행 파일입니다. 이러한 함수 라고도에서 스크립트 또는 명령줄 배치 파일 내에서 또는 명령 프롬프트에서 대화형으로 실행할 수 있습니다.
+여러 프린터 구성 작업을 자동화합니다. printui.dll은 프린터 구성 대화 상자에서 사용 하는 함수를 포함 하는 실행 파일입니다. 이러한 함수 라고도에서 스크립트 또는 명령줄 배치 파일 내에서 또는 명령 프롬프트에서 대화형으로 실행할 수 있습니다.
 
 ## <a name="syntax"></a>구문
 

@@ -1,6 +1,6 @@
 ---
 title: pushd
-description: Popd 명령에 사용 되는 현재 디렉터리를 저장 한 다음 지정 된 디렉터리로 변경 하는 pushd 명령에 대 한 참조 항목입니다.
+description: Popd 명령에 사용 되는 현재 디렉터리를 저장 한 다음 지정 된 디렉터리로 변경 하는 pushd 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ca15d4279c65164c385ce3dce57d0420ad5aace3
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 871834ae1ac29eb53be982831e7ede93d9d309cf
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85472138"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85933749"
 ---
 # <a name="pushd"></a>pushd
 
@@ -43,7 +43,7 @@ pushd [<path>]
 
 - 네트워크 경로 지정 하는 경우는 **pushd** 명령은 지정 된 네트워크 리소스를 일시적으로 가장 높은 사용 하지 않는 드라이브 문자 (z:부터 시작)를 할당 합니다. 다음 명령은 새로 할당 된 드라이브에 지정된 된 디렉터리에 현재 드라이브 및 디렉터리를 변경합니다. 사용 하는 경우는 **popd** 명령을 명령 확장을 사용 하도록 설정 된 **popd** 명령을 제거 하 여 만든 드라이브 문자 할당 **pushd**합니다.
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 일괄 처리가 실행 된 디렉터리에서 현재 디렉터리를 변경한 다음 다시 변경 하려면 다음을 수행 합니다.
 

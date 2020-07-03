@@ -1,6 +1,6 @@
 ---
 title: logman api를 업데이트 합니다.
-description: 기존 API 추적 데이터 수집기의 속성을 업데이트 하는 logman update api 명령에 대 한 참조 항목입니다.
+description: 기존 API 추적 데이터 수집기의 속성을 업데이트 하는 logman update api 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0087edc7cd96bf2bf7611d9a3975d97384c02949
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: 40575772e5f82474c4afbd4809773f47d7e4e075
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84222774"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85933872"
 ---
 # <a name="logman-update-api"></a>logman api를 업데이트 합니다.
 
@@ -65,7 +65,7 @@ logman update api <[-n] <name>> [options]
 
 ### <a name="examples"></a>예
 
-C:\windows\notepad.exe 모듈에 의해 생성 된 API 호출 TlsGetValue를 제외 하 고 실행 파일에 대해 *trace_notepad*이라는 기존 api 추적 카운터를 업데이트 하려면 다음을 입력 합니다.
+*Trace_notepad*이라는 기존 api 추적 카운터를 업데이트 하려면 모듈 kernel32.dll에서 생성 된 Api 호출 TlsGetValue를 제외 하 여 실행 파일 c:\windows\notepad.exe에 대해 다음을 입력 합니다.
 
 ```
 logman update api trace_notepad -exe c:\windows\notepad.exe -exapis kernel32.dll!TlsGetValue

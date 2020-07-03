@@ -1,6 +1,6 @@
 ---
 title: 이미지 복사
-description: 동일한 이미지 그룹 내에 있는 이미지를 복사 하는 복사 이미지에 대 한 참조 항목입니다.
+description: 동일한 이미지 그룹 내에 있는 이미지를 복사 하는 복사 이미지에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b3ffd590682ec36f78d3cbd53fd67fe3b5981e4c
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 04af31680a99c5da60b721ad5dc31cbd3851538d
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82721005"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85933995"
 ---
 # <a name="copy-image"></a>이미지 복사
 
@@ -49,14 +49,14 @@ wdsutil /copy-Imagmedia:Windows Vista with Officemediatype:Install /DestinationI
 ```
 지정된 된 이미지의 복사본을 만들려면 지정 된 설정을 적용 하 고 복사 WindowsVista.wim, 형식 이름:
 ```
-wdsutil /verbose /Progress /copy-Imagmedia:Windows Vista with Office /Server:MyWDSServemediatype:InstalmediaGroup:ImageGroup1 
+wdsutil /verbose /Progress /copy-Imagmedia:Windows Vista with Office /Server:MyWDSServemediatype:InstalmediaGroup:ImageGroup1
 /Filename:install.wim /DestinationImage /Name:copy of Windows Vista with Office /Filename:WindowsVista.wim /Description:This is a copy of the original Windows image with Office installed
 ```
 ## <a name="additional-references"></a>추가 참조
-- [명령줄 구문 키](command-line-syntax-key.md)
-[추가 이미지 명령을](using-the-add-image-command.md)
-사용 하 여 이미지[내보내기](using-the-export-image-command.md)
-명령을 사용 하 여[get](using-the-get-image-command.md)
-이미지 명령을 사용 하 여[제거](using-the-remove-image-command.md)
-이미지 명령을 사용 하 여[바꾸기 이미지](using-the-replace-image-command.md)
-명령을 사용 하 여[하위 명령: 설정 이미지](subcommand-set-image.md)
+- [명령줄 구문 키](command-line-syntax-key.md) 
+ [추가 이미지 명령을](using-the-add-image-command.md) 
+ 사용 하 여 [내보내기 이미지 명령 사용](using-the-export-image-command.md) 
+ [Get 이미지 명령을](using-the-get-image-command.md) 
+ 사용 하 여 [제거 이미지 명령을](using-the-remove-image-command.md) 
+ 사용 하 여 [Replace 이미지 명령을](using-the-replace-image-command.md) 
+ 사용 하 여 [하위 명령: 설정 이미지](subcommand-set-image.md)

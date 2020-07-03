@@ -1,6 +1,6 @@
 ---
 title: nfsadmin
-description: NFS 용 서버와 NFS 용 클라이언트를 모두 관리 하는 nfsadmin 명령에 대 한 참조 항목입니다.
+description: NFS 용 서버와 NFS 용 클라이언트를 모두 관리 하는 nfsadmin 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c122577758dd28d11d25445ca9dc98ed03024c77
-ms.sourcegitcommit: 99d548141428c964facf666c10b6709d80fbb215
+ms.openlocfilehash: ad88594d534c64c0651fcc4e094fef669a02f16c
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721536"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85932332"
 ---
 # <a name="nfsadmin"></a>nfsadmin
 
@@ -42,7 +42,7 @@ nfsadmin client [computername] [-u Username [-p Password]] config option[...]
 
 ### <a name="general-parameters"></a>일반 매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | 컴퓨터 이름 | 관리 하려는 원격 컴퓨터를 지정 합니다. 인터넷 이름 서비스 WINS (Windows) 이름 또는 도메인 이름 시스템 (DNS) 이름을 사용 하 여 컴퓨터를 지정 하거나 하 여 IP (인터넷 프로토콜) 주소 수 있습니다. |
 | -u 사용자 이름 | 자격 증명에 사용 하려는 사용자의 사용자 이름을 지정 합니다. 사용자 이름에 도메인 이름을 *domain\username*형식으로 추가 해야 할 수도 있습니다. |
@@ -50,7 +50,7 @@ nfsadmin client [computername] [-u Username [-p Password]] config option[...]
 
 ### <a name="server-for-nfs-related-parameters"></a>NFS 관련 매개 변수에 대 한 서버
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | -l | 클라이언트에서 보유 한 모든 잠금을 나열 합니다. |
 | -r`{client|all}` | 지정한 잠금을 해제 한 클라이언트 또는 모든 모든 클라이언트에 의해 지정 됩니다. |
@@ -67,13 +67,13 @@ nfsadmin client [computername] [-u Username [-p Password]] config option[...]
 
 ### <a name="client-for-nfs-related-parameters"></a>NFS 관련 매개 변수에 대 한 클라이언트
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | start | NFS 용 클라이언트 서비스를 시작합니다. |
 | stop(정지) | NFS 용 클라이언트 서비스를 중지합니다. |
 | config | NFS 용 클라이언트에 대 한 일반 설정을 지정합니다. 하나 이상의 다음 옵션을 제공 해야는 **config** 인수:<ul><li>**fileaccess = `<mode>` ** -NFS (네트워크 파일 시스템) 서버에서 만든 파일에 대 한 기본 사용 권한 모드를 지정 합니다. **Mode** 인수는 0에서 7 (포함) 사이의 세 자리 숫자로 구성 되며 사용자, 그룹 및 다른 사용자에 게 부여 된 기본 사용 권한을 나타냅니다. 숫자는 다음과 같이 UNIX 스타일 사용 권한으로 변환 됩니다. *0 = 없음*, *1 = x (실행)*, *2 = w (쓰기 전용)*, *3 = wx (쓰기 및 실행*), *4 = r (읽기 전용)*, *5 = rx (읽기 및 실행)*, *6 = rw (읽기 및 쓰기)* 및 *7 = rwx (읽기, 쓰기 및 실행)*. 예를 들어는 `fileaccess=750` 소유자에 대 한 읽기, 쓰기 및 실행 권한을 부여 하 고, 그룹에 대 한 읽기 및 실행 권한을 부여 하 고, 다른 사용자에 게 액세스 권한을 부여 하지 않습니다.</li><li>**mapsvr = `<server>` ** -서버를 NFS 용 클라이언트에 대 한 사용자 이름 매핑 서버로 설정 합니다. 이 옵션을 이전 버전과 호환성에 대 한 지원 계속 있지만 사용 해야는 sfuadmin 유틸리티 대신 합니다.</li><li>**mtype = `{hard|soft}` ** -기본 탑재 유형을 지정 합니다. 하드 탑재에 대 한 NFS 용 클라이언트 계속 성공할 때까지 실패 한 RPC를 다시 시도 합니다. 소프트 탑재를 위해 NFS 용 클라이언트 수를 반환 실패 한 호출을 다시 시도한 후 호출 애플리케이션에 지정 된 횟수는 다시 시도 옵션입니다.</li><li>**retry = `<number>` ** -소프트 탑재에 대 한 연결을 시도 하는 횟수를 지정 합니다. 이 값은 1에서 10 (포함) 여야 합니다. 기본값은 **1**입니다.</li><li>**시간 제한 `<seconds>` =** -연결을 대기할 시간 (초)을 지정 합니다 (원격 프로시저 호출). 이 값은 *0.8*, *0.9*또는 *1에서 60*(포함) 사이의 정수 여야 합니다. 기본값은 **0.8**입니다.</li><li>**프로토콜 = `{TCP|UDP|TCP+UDP}` ** -클라이언트가 지 원하는 전송 프로토콜을 지정 합니다. 기본 설정은 **TCP + UDP**입니다.</li><li>**rsize = `<size>` ** -읽기 버퍼의 크기 (kb)를 지정 합니다. 이 값은 *0.5, 1, 2, 4, 8, 16* 또는 *32*일 수 있습니다. 기본값은 **32**입니다.</li><li>**wsize = `<size>` ** -쓰기 버퍼의 크기 (kb)를 지정 합니다. 이 값은 *0.5, 1, 2, 4, 8, 16* 또는 *32*일 수 있습니다. 기본값은 **32**입니다.</li><li>**perf = default** -다음 성능 설정을 기본값 ( *mtype*, *retry*, *timeout*, *rsize*또는 *wsize*)으로 복원 합니다. |
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 Nfs 용 서버나 NFS 용 클라이언트를 중지 하려면 다음을 입력 합니다.
 

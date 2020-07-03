@@ -1,6 +1,6 @@
 ---
 title: DriverPackageFile 가져오기
-description: 드라이버 패키지 및 드라이버 패키지에 대 한 정보를 표시 하는 드라이버 패키지에 대 한 정보를 표시 하는 get DriverPackageFile에 대 한 참조 항목입니다.
+description: 드라이버 패키지와 여기에 포함 된 파일을 포함 하 여 드라이버 패키지에 대 한 정보를 표시 하는 가져오기 DriverPackageFile에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 71fc38e31471a1deb9d6be29b04d3cd911be1bd6
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 1daa93cb8976229c4c847390416f9332769c5ff5
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719929"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85932247"
 ---
 # <a name="get-driverpackagefile"></a>DriverPackageFile 가져오기
 
@@ -30,7 +30,7 @@ WDSUTIL /Get-DriverPackageFile /InfFile:<Inf File path> [/Architecture:{x86 | ia
 
 |         매개 변수         |                              설명                               |
 |---------------------------|------------------------------------------------------------------------|
-| /InfFile:\<Inf 파일 경로> | 드라이버 패키지.inf 파일의 전체 경로 파일 이름을 지정합니다. |
+| / InfFile:\<Inf File path> | 드라이버 패키지.inf 파일의 전체 경로 파일 이름을 지정합니다. |
 |    [/아키텍처: {x86    |                                  ia64                                  |
 |     [/Show: {Drivers      |                                 파일                                  |
 

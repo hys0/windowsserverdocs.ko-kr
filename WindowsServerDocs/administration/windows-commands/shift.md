@@ -1,6 +1,6 @@
 ---
 title: 시프트
-description: 일괄 처리 파일에서 일괄 처리 매개 변수의 위치를 변경 하는 shift에 대 한 참조 항목입니다.
+description: 일괄 처리 파일에서 일괄 처리 매개 변수의 위치를 변경 하는 shift에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 870bda19de3426fd7007020efb2f3db39bf654c8
-ms.sourcegitcommit: 7116460855701eed4e09d615693efa4fffc40006
+ms.openlocfilehash: c72f1f2390a1adaa993be2caa7954d72dede51e9
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83433167"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85932587"
 ---
 # <a name="shift"></a>시프트
 
@@ -32,7 +32,7 @@ shift [/n <N>]
 
 |매개 변수|설명|
 |---------|-----------|
-|/n \< n>|부터 변경 지정는 *N*번째 인수 여기서 *N* 모든 값을 0에서 8입니다. 기본적으로 사용 하도록 설정 된 명령 확장 해야 합니다.|
+|/n\<N>|부터 변경 지정는 *N*번째 인수 여기서 *N* 모든 값을 0에서 8입니다. 기본적으로 사용 하도록 설정 된 명령 확장 해야 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
 ## <a name="remarks"></a>설명
@@ -47,11 +47,11 @@ shift [/n <N>]
 
 Mycopy.bat 라는 샘플 배치 파일에서 다음 줄에 사용 하는 방법을 보여 줍니다 **shift** 일괄 처리 매개 변수 수 있습니다. 이 예제에서는 Mycopy.bat 파일 목록이 특정 디렉터리에 복사합니다. 일괄 처리 매개 변수는 디렉터리 및 파일 이름 인수 별로 표시 됩니다.
 ```
-@echo off 
+@echo off
 rem MYCOPY.BAT copies any number of files
 rem to a directory.
 rem The command uses the following syntax:
-rem mycopy dir file1 file2 ... 
+rem mycopy dir file1 file2 ...
 set todir=%1
 :getfile
 shift

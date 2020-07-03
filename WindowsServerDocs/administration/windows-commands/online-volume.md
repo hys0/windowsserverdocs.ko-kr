@@ -1,6 +1,6 @@
 ---
 title: online volume
-description: 온라인 볼륨 명령에 대 한 참조 항목으로, 오프 라인 볼륨을 온라인 상태로 전환 합니다.
+description: 온라인 볼륨 명령에 대 한 참조 문서로, 오프 라인 볼륨을 온라인 상태로 전환 합니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 83a1e4bf1d6afe9485ab71c9af372166797900b3
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 2378b4cbc4f0624a0f1d65c62337d4c1a856648c
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85472669"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85933522"
 ---
 # <a name="online-disk"></a>online disk
 
@@ -38,7 +38,7 @@ online volume [noerr]
 |--|--|
 | noerr | 스크립팅 전용입니다. 오류가 발생 하면 오류가 발생 하지 않은 경우에 따라 명령을 처리 하도록 DiskPart 계속 합니다. 이 매개 변수를 크기는 오류 코드를 수행 합니다. |
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 온라인으로 포커스가 있는 볼륨을 사용 하려면 다음을 입력 합니다.
 

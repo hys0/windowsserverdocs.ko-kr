@@ -1,6 +1,6 @@
 ---
 title: ksetup listrealmflags
-description: Ksetup listrealmflags 명령에 대 한 참조 항목으로, ksetup에서 보고할 수 있는 사용 가능한 영역 플래그를 나열 합니다.
+description: Ksetup에서 보고할 수 있는 사용 가능한 영역 플래그를 나열 하는 ksetup listrealmflags 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5c5ebbee7f937733286e0354eca1cf5524459e86
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: d094b7d627885d25313b73bb51a1bbeeec2832d6
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83817723"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85933685"
 ---
 # <a name="ksetup-listrealmflags"></a>ksetup listrealmflags
 
@@ -33,7 +33,7 @@ ksetup /listrealmflags
 | 값 | 영역 플래그 | 설명 |
 | ----- | ---------- | ----------- |
 | 0xF를 지정합니다. | 모두 | 모든 영역 플래그를 설정 합니다. |
-| 0x00 | None | 영역 플래그는 설정 되지 않으며 추가 기능을 사용할 수 없습니다. |
+| 0x00 | 없음 | 영역 플래그는 설정 되지 않으며 추가 기능을 사용할 수 없습니다. |
 | 0x01 | sendaddress | IP 주소는 티켓 부여 티켓에 포함 됩니다. |
 | 0x02 | tcpsupported | 이 영역에서는 TCP (전송 제어 프로토콜)와 UDP (사용자 데이터 그램 프로토콜)가 모두 지원 됩니다. |
 | 0x04 | 대리자(delegate) | 이 영역에 있는 모든 사용자는 위임용으로 트러스트 됩니다. |

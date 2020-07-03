@@ -1,6 +1,6 @@
 ---
 title: ksetup mapuser
-description: Kerberos 주체의 이름을 계정에 매핑하는 ksetup mapuser 명령에 대 한 참조 항목입니다.
+description: Kerberos 주체의 이름을 계정에 매핑하는 ksetup mapuser 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0ac2f3e30b3057ceea4376d7ffe8286875d5301d
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: f387b8c3ff7cf7515a4f2ed9b8ea62d379332ec7
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83817673"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85933694"
 ---
 # <a name="ksetup-mapuser"></a>ksetup mapuser
 
@@ -30,7 +30,7 @@ ksetup /mapuser <principal> <account>
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `<principal>` | 모든 보안 주체 사용자의 정규화 된 도메인 이름을 지정 합니다. mike@corp.CONTOSO.COM)을 입력합니다. 계정 매개 변수를 지정 하지 않으면 지정 된 보안 주체에 대 한 매핑이 삭제 됩니다. |
+| `<principal>` | 모든 보안 주체 사용자의 정규화 된 도메인 이름을 지정 합니다. 예: mike@corp.CONTOSO.COM. 계정 매개 변수를 지정 하지 않으면 지정 된 보안 주체에 대 한 매핑이 삭제 됩니다. |
 | `<account>` | 이 컴퓨터에 있는 계정 또는 보안 그룹 이름 (예: **게스트**, **도메인 사용자**또는 **관리자**)을 지정 합니다. 이 매개 변수를 생략 하면 지정 된 보안 주체에 대 한 매핑이 삭제 됩니다. |
 
 #### <a name="remarks"></a>설명

@@ -1,6 +1,6 @@
 ---
-title: 트리
-description: 경로의 디렉터리 구조 또는 드라이브의 디스크를 그래픽으로 표시 하는 트리에 대 한 참조 항목입니다.
+title: tree
+description: 경로의 디렉터리 구조 또는 드라이브의 디스크를 그래픽으로 표시 하는 트리에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 94b0429dadc3965c7e41ad5aa881fc902988ec9b
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: dea885a8149c8231f3cb8e24c2128622131206e7
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82721280"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85932390"
 ---
-# <a name="tree"></a>트리
+# <a name="tree"></a>tree
 
 드라이브에서의 경로 또는 디스크의 디렉터리 구조를 그래픽으로 표시 합니다.
 
@@ -32,8 +32,8 @@ tree [<Drive>:][<Path>] [/f] [/a]
 
 |매개 변수|설명|
 |---------|-----------|
-|\<드라이브>:|디렉터리 구조를 표시 하려는 디스크를 포함 하는 드라이브를 지정 합니다.|
-|\<경로>|디렉터리 구조를 표시 하려는 디렉터리를 지정 합니다.|
+|\<Drive>:|디렉터리 구조를 표시 하려는 디스크를 포함 하는 드라이브를 지정 합니다.|
+|\<Path>|디렉터리 구조를 표시 하려는 디렉터리를 지정 합니다.|
 |/f|각 디렉터리에 있는 파일의 이름을 표시 합니다.|
 |/a|**트리가** 그래픽 문자 대신 텍스트 문자를 사용 하 여 하위 디렉터리를 연결 하는 줄을 표시 하도록 지정 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
@@ -50,11 +50,11 @@ tree \
 ```
 C 드라이브에 있는 모든 디렉터리에서 파일을 한 번에 한 화면씩 표시 하려면 다음을 입력 합니다.
 ```
-tree c:\ /f | more 
+tree c:\ /f | more
 ```
 C 드라이브에 있는 모든 디렉터리의 목록을 인쇄 하려면 다음을 입력 합니다.
 ```
-tree c:\ /f  prn 
+tree c:\ /f  prn
 ```
 
 ## <a name="additional-references"></a>추가 참조

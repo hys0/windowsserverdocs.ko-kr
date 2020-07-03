@@ -1,6 +1,6 @@
 ---
 title: makecab
-description: 캐비닛 (.cab) 파일에 기존 파일을 패키지 하는 makecab 명령에 대 한 참조 항목입니다.
+description: 캐비닛 (.cab) 파일에 기존 파일을 패키지 하는 makecab 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 192471e6045a530e9deedec70cc957b9362b3ae7
-ms.sourcegitcommit: 5e313a004663adb54c90962cfdad9ae889246151
+ms.openlocfilehash: 60203390ab0955e3f8a2c52887b21192d1ec32f2
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84354663"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85933544"
 ---
 # <a name="makecab"></a>makecab
 
@@ -35,7 +35,7 @@ makecab [/v[<n>]] [/d var=<value> ...] /f <directives_file> [...]
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | `<source>` | 파일을 압축 합니다. |
 | `<destination>` | 압축 된 파일에 파일 이름입니다. 생략 하는 경우 밑줄 (_)로 소스 파일 이름의 마지막 문자와 바뀌고 대상으로 사용 됩니다. |

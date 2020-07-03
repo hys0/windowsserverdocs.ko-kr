@@ -1,6 +1,6 @@
 ---
 title: get-비 표시
-description: Windows 이미지 (.wim) 파일에 포함 된 이미지에 대 한 정보를 검색 하는 get 파일 항목에 대 한 참조 항목입니다.
+description: Windows 이미지 (.wim) 파일에 포함 된 이미지에 대 한 정보를 검색 하는 get 파일 항목에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4f60be17f13e1436a0e895991c72d5ccb7130782
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 127b5282b74020f002c7ccc55663fc2571584582
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719911"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85932225"
 ---
 # <a name="get-imagefile"></a>get-비 표시
 
@@ -30,7 +30,7 @@ WDSUTIL [Options] /Get-ImageFile /ImageFile:<wim file path> [/Detailed]
 
 |매개 변수|설명|
 |---------|-----------|
-|/Svd\<: WIM 파일 경로>|.Wim 파일의 전체 경로 파일 이름을 지정합니다.|
+|/Dt:\<WIM file path>|.Wim 파일의 전체 경로 파일 이름을 지정합니다.|
 |[/ 자세한]|각 이미지에서 모든 이미지 메타 데이터를 반환합니다. 이 옵션을 사용 하지 않는 경우 기본 동작은 반환할 이미지 이름, 설명 및 파일 이름입니다.|
 
 ## <a name="examples"></a>예

@@ -1,6 +1,6 @@
 ---
 title: 거부-AutoaddDevices
-description: 관리 승인이 보류 중인 컴퓨터를 거부 하는 거부-AutoaddDevices에 대 한 참조 항목입니다.
+description: 관리 승인이 보류 중인 컴퓨터를 거부 하는 거부-AutoaddDevices에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7e377d4e2d4aecea2e0ba3af023af39ab7695c0a
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 2b678f7a9fc875dfeebf735475db3adfb7ad9ae7
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82725922"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85932424"
 ---
 # <a name="reject-autoadddevices"></a>거부-AutoaddDevices
 
@@ -40,7 +40,7 @@ wdsutil /Reject-AutoaddDevices /RequestId:12
 wdsutil /verbose /Reject-AutoaddDevices /Server:MyWDSServer /RequestId:ALL
 ```
 ## <a name="additional-references"></a>추가 참조
-- [명령줄 구문 키](command-line-syntax-key.md)
-[승인 autoadddevices](using-the-approve-autoadddevices-command.md)
-명령을 사용 하 여[delete](using-the-delete-autoadddevices-command.md)
-autoadddevices 명령을 사용 하 여[get autoadddevices](using-the-get-autoadddevices-command.md) 명령을 사용 하 여
+- [명령줄 구문 키](command-line-syntax-key.md) 
+ [승인 AutoaddDevices 명령을](using-the-approve-autoadddevices-command.md) 
+ 사용 하 여 [Delete AutoaddDevices 명령을](using-the-delete-autoadddevices-command.md) 
+ 사용 하 여 [Get AutoaddDevices 명령을 사용 하 여](using-the-get-autoadddevices-command.md)

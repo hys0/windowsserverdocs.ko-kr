@@ -1,6 +1,6 @@
 ---
 title: logman update cfg
-description: 기존 구성 데이터 수집기의 속성을 업데이트 하는 logman 업데이트 cfg 명령에 대 한 참조 항목입니다.
+description: 기존 구성 데이터 수집기의 속성을 업데이트 하는 logman 업데이트 cfg 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: af4d61372aa5b10d5bb2a5c93e16df391eadfd2f
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: 6e2d50504d8d4b9a92d36e4279a10526ddbd7877
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84222785"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85933893"
 ---
 # <a name="logman-update-cfg"></a>logman update cfg
 

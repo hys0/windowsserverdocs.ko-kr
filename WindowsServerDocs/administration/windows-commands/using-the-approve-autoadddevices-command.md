@@ -1,6 +1,6 @@
 ---
 title: 승인-AutoaddDevices
-description: 관리 승인이 보류 중인 컴퓨터를 승인 하는 승인 AutoaddDevices에 대 한 참조 항목입니다.
+description: 승인-AutoaddDevices에 대 한 참조 문서-관리 승인이 보류 중인 컴퓨터를 승인 합니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0143c9ab6221eb5633284bd3f2982312bbcda15c
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 8c7a4756a90c329ba6cccd1c1b7c1b93d58d06b4
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82721039"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85934136"
 ---
 # <a name="approve-autoadddevices"></a>승인-AutoaddDevices
 
@@ -24,7 +24,7 @@ ms.locfileid: "82721039"
 
 ## <a name="syntax"></a>구문
 ```
-wdsutil [Options] /Approve-AutoaddDevices [/Server:<Server name>] /RequestId:{<Request ID>| ALL} [/MachineName:<Device name>] [/OU:<DN of OU>] 
+wdsutil [Options] /Approve-AutoaddDevices [/Server:<Server name>] /RequestId:{<Request ID>| ALL} [/MachineName:<Device name>] [/OU:<DN of OU>]
 [/User:<Domain\User | User@Domain>] [/JoinRights:{JoinOnly | Full}] [/JoinDomain:{Yes | No}] [/ReferralServer:<Server name>] [/BootProgram:<Relative path>] [/WdsClientUnattend:<Relative path>] [/BootImagepath:<Relative path>]
 ```
 ### <a name="parameters"></a>매개 변수
@@ -40,7 +40,7 @@ wdsutil [Options] /Approve-AutoaddDevices [/Server:<Server name>] /RequestId:{<R
 |[/ ReferralServer:<Server name>]|Tftp (Trivial 파일 전송 프로토콜)를 사용 하 여 네트워크 부팅 프로그램 및 부팅 이미지를 다운로드 하기 위해 연결할 서버의 이름을 지정 합니다.|
 |[/ BootProgram:<Relative path>]|이 컴퓨터에서 수신 해야 하는 네트워크 부팅 프로그램에 대 한 remoteInstall 폴더의 상대 경로를 지정 합니다. 예: **boot\x86\ pxeboot.com**.|
 |[/ WdsClientUnattend:<Relative path>]|Windows 배포 서비스 클라이언트를 자동화 하는 무인 파일에 대 한 remoteInstall 폴더의 상대 경로를 지정 합니다.|
-|[/BootImagepath:<Relative path>]|이 컴퓨터가 수신할 부팅 이미지에 대 한 remoteInstall 폴더의 상대 경로를 지정 합니다.|
+|[/BootImagepath: <Relative path> ]|이 컴퓨터가 수신할 부팅 이미지에 대 한 remoteInstall 폴더의 상대 경로를 지정 합니다.|
 ## <a name="examples"></a>예
 12 RequestId 사용 하 여 컴퓨터를 승인 하는 경우, 다음을 입력 합니다.
 ```
@@ -48,7 +48,7 @@ wdsutil /Approve-AutoaddDevices /RequestId:12
 ```
 20 대 한 요청 Id 사용 하 여 컴퓨터를 승인 하 고 지정 된 설정 사용 하 여 이미지를 배포 하려면 다음을 입력 합니다.
 ```
-wdsutil /Approve-AutoaddDevices /RequestId:20 /MachineName:computer1 /OU:OU=Test,CN=company,DC=Domain,DC=Com /User:Domain\User1 
+wdsutil /Approve-AutoaddDevices /RequestId:20 /MachineName:computer1 /OU:OU=Test,CN=company,DC=Domain,DC=Com /User:Domain\User1
 /JoinRights:Full /ReferralServer:MyWDSServer /BootProgram:boot\x86\pxeboot.n12 /WdsClientUnattend:WDSClientUnattend\Unattend.xml /BootImagepath:boot\x86\images\boot.wim
 ```
 모든 보류 중인 컴퓨터를 승인 하려면 다음을 입력 합니다.
@@ -56,7 +56,7 @@ wdsutil /Approve-AutoaddDevices /RequestId:20 /MachineName:computer1 /OU:OU=Test
 wdsutil /verbose /Approve-AutoaddDevices /RequestId:ALL
 ```
 ## <a name="additional-references"></a>추가 참조
-- [명령줄 구문 키](command-line-syntax-key.md)
-[delete](using-the-delete-autoadddevices-command.md)
-autoadddevices 명령을 사용 하 여[get](using-the-get-autoadddevices-command.md)
-autoadddevices 명령을 사용 하 여[거부 autoadddevices](using-the-reject-autoadddevices-command.md) 명령을 사용 하 여
+- [명령줄 구문 키](command-line-syntax-key.md) 
+ [Delete AutoaddDevices 명령을](using-the-delete-autoadddevices-command.md) 
+ 사용 하 여 [Get AutoaddDevices 명령을](using-the-get-autoadddevices-command.md) 
+ 사용 하 여 [거부 AutoaddDevices 명령을 사용 하 여](using-the-reject-autoadddevices-command.md)

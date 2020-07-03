@@ -1,6 +1,6 @@
 ---
 title: exec
-description: 로컬 컴퓨터에서 스크립트 파일을 실행 하는 exec 명령에 대 한 참조 항목입니다.
+description: 로컬 컴퓨터에서 스크립트 파일을 실행 하는 exec 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 956f3d4a7c5992980aea0fc0f5933ee7def48381
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: b4c9ff71b886bd84120bd3af7c1f8d8c143425da
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83436109"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85932311"
 ---
 # <a name="exec"></a>exec
 

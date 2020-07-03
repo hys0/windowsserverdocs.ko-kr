@@ -1,6 +1,6 @@
 ---
 title: 축소
-description: 지정한 양만큼 선택한 볼륨의 크기를 줄이는 DiskPart 축소에 대 한 참조 항목입니다.
+description: 지정한 양만큼 선택한 볼륨의 크기를 줄이는 DiskPart 축소에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 357a2320bf8b26130c9aa148d513edff6f1e85db
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 69405e7eda6b7565e9c8effe6639b6ba4dc9e4c2
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82721799"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85932595"
 ---
 # <a name="shrink"></a>축소
 

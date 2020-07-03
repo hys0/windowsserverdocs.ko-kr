@@ -1,6 +1,6 @@
 ---
-title: ftp 디렉터리
-description: 원격 컴퓨터의 디렉터리 파일 및 하위 디렉터리 목록을 표시 하는 ftp dir 명령에 대 한 참조 항목입니다.
+title: ftp dir
+description: 원격 컴퓨터의 디렉터리 파일 및 하위 디렉터리 목록을 표시 하는 ftp dir 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6a120691964b7303cf3241ffef2f11d81573ba4d
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: b1234b11beb61027a8e56f713f76d2c2bdcc4618
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83819863"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85933154"
 ---
-# <a name="ftp-dir"></a>ftp 디렉터리
+# <a name="ftp-dir"></a>ftp dir
 
 > 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -43,7 +43,7 @@ dir [<remotedirectory>] [<localfile>]
 dir dir1
 ```
 
-원격 컴퓨터의 현재 디렉터리 목록을 로컬 파일의 파일 목록에 저장 하려면 다음을 입력 *합니다*.
+원격 컴퓨터의 현재 디렉터리 목록을 로컬 파일 *dirlist.txt*에 저장 하려면 다음을 입력 합니다.
 
 ```
 dir . dirlist.txt

@@ -1,6 +1,6 @@
 ---
-title: vdisk 확장
-description: VHD (가상 하드 디스크)를 지정 된 크기로 확장 하는 expand vdisk 명령에 대 한 참조 항목입니다.
+title: expand vdisk
+description: VHD (가상 하드 디스크)를 지정 된 크기로 확장 하는 expand vdisk 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 48973178f35f792b52fa81e5ed59449ca5db2559
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: a7951d4875249e46d850883f7863262774dd9bab
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83436188"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85932304"
 ---
-# <a name="expand-vdisk"></a>vdisk 확장
+# <a name="expand-vdisk"></a>expand vdisk
 
 > 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 

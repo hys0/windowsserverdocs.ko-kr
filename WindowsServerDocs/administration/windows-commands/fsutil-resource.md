@@ -1,6 +1,6 @@
 ---
 title: fsutil resource
-description: 트랜잭션 리소스 관리자 및 해당 동작을 관리 하는 fsutil resource 명령에 대 한 참조 항목입니다.
+description: 트랜잭션 리소스 관리자 및 해당 동작을 관리 하는 fsutil resource 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 manager: dmoss
 ms.author: toklima
@@ -9,12 +9,12 @@ ms.technology: storage
 ms.assetid: b198d8ca-a5b7-430f-8911-5cbb9f50484c
 ms.topic: article
 ms.date: 10/16/2017
-ms.openlocfilehash: b64dab3a0d0e772f067b0d3fa548692aad38a4c5
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: 75037d39a070f8c7391df4136ab958f671732e09
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83435738"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85933340"
 ---
 # <a name="fsutil-resource"></a>fsutil resource
 
