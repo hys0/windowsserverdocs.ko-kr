@@ -1,6 +1,6 @@
 ---
 title: manage-bde 잠금
-description: 잠금 해제 키가 제공 되지 않은 경우 BitLocker로 보호 된 드라이브를 잠가 액세스를 방지 하는 manage-bde lock 명령에 대 한 참조 항목입니다.
+description: 잠금 해제 키가 제공 되지 않은 경우 BitLocker로 보호 된 드라이브를 잠가 액세스를 방지 하는 manage-bde lock 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 340dc7eb07eaab2583e8b325042803fd8fc82184
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: b67342579c827ad195ddf506e529fbfb370a6d94
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84222873"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931621"
 ---
 # <a name="manage-bde-lock"></a>manage-bde 잠금
 

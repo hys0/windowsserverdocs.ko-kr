@@ -1,6 +1,6 @@
 ---
-title: wbadmin 시작 systemstatebackup
-description: 로컬 컴퓨터의 시스템 상태 백업을 만들고 지정 된 위치에 저장 하는 wbadmin start systemstatebackup에 대 한 참조 항목입니다.
+title: wbadmin start systemstatebackup
+description: 로컬 컴퓨터의 시스템 상태 백업을 만들고 지정 된 위치에 저장 하는 wbadmin start systemstatebackup에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5de3531f19312b9d0d7969a63639db6388487bc2
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 1e92c508d2c9ca9ae759d81292ec3d511144dbd7
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83821183"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85930911"
 ---
-# <a name="wbadmin-start-systemstatebackup"></a>wbadmin 시작 systemstatebackup
+# <a name="wbadmin-start-systemstatebackup"></a>wbadmin start systemstatebackup
 
 
 

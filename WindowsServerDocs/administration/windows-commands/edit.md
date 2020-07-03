@@ -1,6 +1,6 @@
 ---
 title: 편집
-description: MS-DOS 편집기를 시작 하는 편집 명령에 대 한 참조 항목으로, ASCII 텍스트 파일을 만들고 변경할 수 있습니다.
+description: MS-DOS 편집기를 시작 하는 편집 명령에 대 한 참조 문서로, ASCII 텍스트 파일을 만들고 변경할 수 있습니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a9f6c78889f466015d60149c27a87dcefe840133
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: a28af13c5f627010dce1321027b8a246560829f1
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83436918"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85930488"
 ---
 # <a name="edit"></a>편집
 
@@ -52,7 +52,7 @@ MS-DOS 편집기를 열려면 다음을 입력 합니다.
 edit
 ```
 
-현재 디렉터리에 *newtextfile* 라는 파일을 만들고 편집 하려면 다음을 입력 합니다.
+현재 디렉터리에서 *newtextfile.txt* 라는 파일을 만들고 편집 하려면 다음을 입력 합니다.
 
 ```
 edit newtextfile.txt

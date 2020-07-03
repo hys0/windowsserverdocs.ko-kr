@@ -1,6 +1,6 @@
 ---
 title: 경로
-description: PATH 환경 변수에서 명령 경로를 설정 하는 방법에 대 한 참조 항목으로, 실행 파일 (.exe)을 검색 하는 데 사용 되는 디렉터리 집합을 지정 합니다.
+description: PATH 환경 변수에서 명령 경로를 설정 하 고 실행 파일 (.exe)을 검색 하는 데 사용 되는 디렉터리 집합을 지정 하는 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6fadeb2108f0e59ee2f45f3cf45338046a345006
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: f324c2b0fc84d2df05f7df93d83799b3ac463d5d
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85472569"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85932018"
 ---
 # <a name="path"></a>경로
 

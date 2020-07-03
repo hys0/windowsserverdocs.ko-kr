@@ -1,6 +1,6 @@
 ---
 title: Query
-description: 프로세스, 세션 및 원격 데스크톱 세션 호스트 서버에 대 한 정보를 표시 하는 쿼리 명령에 대 한 참조 항목입니다.
+description: 프로세스, 세션 및 원격 데스크톱 세션 호스트 서버에 대 한 정보를 표시 하는 쿼리 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ba5785fb37821848f98383da5b972333dfc8a9cc
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: a00ef08f72108643a045e5b48ec1c69155dd0fd8
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85471938"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931129"
 ---
 # <a name="query"></a>Query
 

@@ -1,6 +1,6 @@
 ---
 title: qwinsta
-description: Qwinsta 명령에 대 한 참조 항목으로, 원격 데스크톱 세션 호스트 서버에서 세션에 대 한 정보를 표시 합니다.
+description: 원격 데스크톱 세션 호스트 서버에서 세션에 대 한 정보를 표시 하는 qwinsta 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9122576cc0b972e01a7593fae918aed378297fc8
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: c9b79495d3fa142fd343b9c521563e093d20fc68
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85471878"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85932003"
 ---
 # <a name="qwinsta"></a>qwinsta
 
@@ -51,7 +51,7 @@ qwinsta [<sessionname> | <username> | <sessionID>] [/server:<servername>] [/mode
 
 - <*username*>, <세션 *이름*> 또는 *sessionID* 매개 변수를 사용 하 여 세션을 지정 하지 않으면이 쿼리는 시스템의 모든 활성 세션에 대 한 정보를 표시 합니다.
 
-- **Qwinsta** 가 정보를 반환 하는 경우 보다 큼 `(>)` 기호가 현재 세션 앞에 표시 됩니다. 예를 들면 다음과 같습니다.
+- **Qwinsta** 가 정보를 반환 하는 경우 보다 큼 `(>)` 기호가 현재 세션 앞에 표시 됩니다. 예를 들어:
 
     ```
     C:\>qwinsta
@@ -71,7 +71,7 @@ qwinsta [<sessionname> | <username> | <sessionID>] [/server:<servername>] [/mode
   - 콘솔 또는 네트워크에 연결 된 세션에 대해 존재 하지 않는 **장치**는 세션에 할당 된 장치 이름입니다.
   - 초기 상태가 사용 안 함으로 구성 된 세션은 사용 하도록 설정 될 때까지 **qwinsta** 목록에 표시 되지 않습니다.
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 *Server2*서버에서 모든 활성 세션에 대 한 정보를 표시 하려면 다음을 입력 합니다.
 

@@ -1,6 +1,6 @@
 ---
 title: fsutil repair
-description: NTFS 자동 복구 복구 작업을 관리 하 고 모니터링 하는 fsutil repair 명령에 대 한 참조 항목입니다.
+description: NTFS 자동 복구 복구 작업을 관리 하 고 모니터링 하는 fsutil repair 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 manager: dmoss
 ms.author: toklima
@@ -9,18 +9,18 @@ ms.technology: storage
 ms.assetid: 62d77150-1d9e-4069-ab4a-299f33024912
 ms.topic: article
 ms.date: 10/16/2017
-ms.openlocfilehash: 449bd39b6b2df0e302085b71ef9db87d2020b0f0
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: 700e1f713d503565321ab29f5384d74382c64f21
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83435758"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931200"
 ---
 # <a name="fsutil-repair"></a>fsutil repair
 
 > 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8
 
-NTFS 자동 복구 복구 작업을 관리 하 고 모니터링 합니다. 자동 복구 NTFS는 **chkdsk.exe** 를 실행 하도록 요구 하지 않고 ntfs 파일 시스템의 손상을 온라인으로 수정 하려고 시도 합니다. 자세한 내용은 [자동 복구 NTFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771388(v=ws.10))를 참조 하세요.
+NTFS 자동 복구 복구 작업을 관리 하 고 모니터링 합니다. 자동 복구 NTFS는 **Chkdsk.exe** 를 실행 하지 않고도 온라인으로 ntfs 파일 시스템의 손상을 해결 하려고 시도 합니다. 자세한 내용은 [자동 복구 NTFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771388(v=ws.10))를 참조 하세요.
 
 ## <a name="syntax"></a>구문
 

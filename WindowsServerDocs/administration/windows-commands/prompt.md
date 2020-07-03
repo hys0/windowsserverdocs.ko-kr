@@ -1,6 +1,6 @@
 ---
 title: prompt
-description: Cmd.exe 명령 프롬프트를 사용자 지정 하는 prompt 명령에 대 한 참조 항목입니다.
+description: Cmd.exe 명령 프롬프트를 사용자 지정 하는 prompt 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: 91146bd075097e54f6aff2fb204feae6a387848a
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 72ed82c316faddba9486649497c8c48f88e6da81
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85472158"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931141"
 ---
 # <a name="prompt"></a>prompt
 
@@ -66,7 +66,7 @@ prompt [<text>]
 
 - 포함 하는 경우는 **$p** 문자 텍스트 매개 변수에서 디스크를 각 명령 (현재 드라이브와 경로 결정)를 입력 한 후 읽습니다. 이 특히 플로피 디스크 드라이브에 대 한 시간이 걸릴 수 있습니다.
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 첫 번째 줄 및 보다 큼 다음 줄에서 기호에 현재 날짜 및 시간으로 두 줄 명령 프롬프트를 설정 하려면 다음을 입력 합니다.
 

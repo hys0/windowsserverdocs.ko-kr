@@ -1,6 +1,6 @@
 ---
 title: nfsshare
-description: NFS (네트워크 파일 시스템) 공유를 제어 하는 nfsshare 명령에 대 한 참조 항목입니다.
+description: NFS (네트워크 파일 시스템) 공유를 제어 하는 nfsshare 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4774d5ce929de5e79e2cde78e45b0cd9bdca163c
-ms.sourcegitcommit: 99d548141428c964facf666c10b6709d80fbb215
+ms.openlocfilehash: 4901e0c9ee0701261dc6abb8cfd69cc02d4dd02e
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721526"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85932046"
 ---
 # <a name="nfsshare"></a>nfsshare
 
@@ -29,7 +29,7 @@ nfsshare {<sharename> | <drive>:<path> | * } /delete
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | -o anon =`{yes|no}` | 익명 (매핑되지 않음) 사용자가 공유 디렉터리에 액세스할 수 있는지 여부를 지정 합니다. |
 | -o rw =`[<host>[:<host>]...]` | *호스트*에서 지정 된 호스트 또는 클라이언트 그룹에 의해 공유 디렉터리에 대 한 읽기/쓰기 액세스를 제공 합니다. 호스트와 그룹 이름을 콜론 (**:**)으로 구분 해야 합니다. *호스트* 를 지정 하지 않으면 모든 호스트와 클라이언트 그룹 ( **ro** 옵션으로 지정 된 그룹 제외)에서 읽기/쓰기 액세스 권한을 얻습니다. 모두는 **ro** 또는 **rw** 옵션 설정, 모든 클라이언트가 공유 디렉터리에 대 한 읽기 / 쓰기 액세스 권한이 있습니다. |

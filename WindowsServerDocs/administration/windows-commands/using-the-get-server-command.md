@@ -1,6 +1,6 @@
 ---
 title: 서버 가져오기
-description: 지정 된 Windows 배포 서비스 서버에서 정보를 검색 하는 get Server에 대 한 참조 항목입니다.
+description: 지정 된 Windows 배포 서비스 서버에서 정보를 검색 하는 get 서버에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a760371797af8eb95da386a3a5b9dbb0dcf7ba3c
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: f035462de8966756e4b47ca6ba04b7d30a9cb1c6
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719735"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85932180"
 ---
 # <a name="get-server"></a>서버 가져오기
 
@@ -42,11 +42,11 @@ wdsutil /Get-Server /Show:Config
 wdsutil /verbose /Get-Server /Server:MyWDSServer /Show:All /detailed
 ```
 ## <a name="additional-references"></a>추가 참조
-- [명령줄 구문 키](command-line-syntax-key.md)
-[사용 안 함](using-the-disable-server-command.md)
-
--서버 명령을 사용 하[여 사용 서버](using-the-enable-server-command.md)명령을 사용 하 여[Initialize](using-the-initialize-server-command.md)
-서버 명령을 사용 하 여 명령[하위](subcommand-set-server.md)
-명령: 서버 하위 명령: 서버[시작](subcommand-start-server.md)
-하위 명령: 서버[중지](subcommand-stop-server.md)
-초기화 서버[옵션](the-uninitialize-server-option.md)
+- [명령줄 구문 키](command-line-syntax-key.md) 
+ [Disable Server 명령 사용](using-the-disable-server-command.md) 
+ [Enable-Server 명령 사용](using-the-enable-server-command.md) 
+ [Initialize 서버 명령을](using-the-initialize-server-command.md) 
+ 사용 하 여 [하위 명령: 설정-서버](subcommand-set-server.md) 
+ [하위 명령: 시작-서버](subcommand-start-server.md) 
+ [하위 명령: 중지 서버](subcommand-stop-server.md) 
+ [초기화 서버 옵션](the-uninitialize-server-option.md)

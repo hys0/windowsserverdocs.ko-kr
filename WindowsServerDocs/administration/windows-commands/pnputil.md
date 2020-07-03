@@ -1,6 +1,6 @@
 ---
 title: pnputil
-description: 드라이버 패키지를 추가 하 고, 드라이버 패키지를 제거 하 고, pnputil.exe 유틸리티를 사용 하 여 드라이버 저장소에 있는 드라이버 패키지를 나열 하는 pnputil 명령에 대 한 참조 항목입니다.
+description: 드라이버 패키지를 추가 하 고, 드라이버 패키지를 제거 하 고, pnputil.exe 유틸리티를 사용 하 여 드라이버 저장소에 있는 드라이버 패키지를 나열 하는 pnputil 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: 6484a3e55c6e5f3b4cb51119ead5cb488dca0721
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 01b8aee1aa4dfb85b590c9d4abbec471fc437da8
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85472402"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85930243"
 ---
 # <a name="pnputil"></a>pnputil
 

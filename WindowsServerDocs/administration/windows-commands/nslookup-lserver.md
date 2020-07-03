@@ -1,6 +1,6 @@
 ---
 title: nslookup lserver
-description: 초기 서버를 지정 된 DNS (Domain Name System) 도메인으로 변경 하는 nslookup 명령에 대 한 참조 항목입니다.
+description: 초기 서버를 지정 된 DNS (Domain Name System) 도메인으로 변경 하는 nslookup 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 868142f251d62ebc3efd7913aded8e22aa077bd3
-ms.sourcegitcommit: 99d548141428c964facf666c10b6709d80fbb215
+ms.openlocfilehash: 1f8d40a39abb6f96e900aee6dc029963ed7c0486
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721599"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931272"
 ---
 # <a name="nslookup-lserver"></a>nslookup lserver
 
@@ -32,7 +32,7 @@ lserver <DNSdomain>
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | `<DNSdomain>` | 초기 서버에 대 한 DNS 도메인을 지정 합니다. |
 | /? | 명령 프롬프트에 도움말을 표시합니다. |

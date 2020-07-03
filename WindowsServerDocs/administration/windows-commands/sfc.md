@@ -1,6 +1,6 @@
 ---
 title: sfc
-description: 모든 보호 된 시스템 파일의 무결성을 검사 하 고 확인 하 고 잘못 된 버전을 올바른 버전으로 대체 하는 sfc에 대 한 참조 항목입니다.
+description: 모든 보호 된 시스템 파일의 무결성을 검사 하 고 확인 하 고 잘못 된 버전을 올바른 버전으로 대체 하는 sfc에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: af2167e1e23b0698c17159b1ae6b1970a06219d4
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 8f4b0798f9c0e3e1c70ca701de1ea2246bddf7b9
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83821265"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931613"
 ---
 # <a name="sfc"></a>sfc
 
@@ -34,7 +34,7 @@ sfc [/scannow] [/verifyonly] [/scanfile=<file>] [/verifyfile=<file>] [/offwindir
 |/scannow|모든 보호 된 파일의 무결성을 검사 하 고 가능한 경우 문제를 사용 하 여 파일을 복구 합니다.|
 |/verifyonly|모든 보호 된 파일의 무결성을 검사합니다. 복구 작업이 수행 됩니다.|
 |/scanfile|지정된 된 파일의 무결성을 검사 하 고 가능한 경우 문제가 감지 되 면 파일을 복구 합니다.|
-|\<파일>|지정 된 전체 경로 파일 이름|
+|\<file>|지정 된 전체 경로 파일 이름|
 |/verifyfile|지정 된 파일의 무결성을 확인 합니다. 복구 작업이 수행 됩니다.|
 |/offwindir|오프 라인 복구에 대 한 오프 라인 windows 디렉터리의 위치를 지정합니다.|
 |/offbootdir|오프 라인에 대 한 오프 라인 부팅 디렉터리의 위치 지정|

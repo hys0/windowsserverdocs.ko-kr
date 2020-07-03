@@ -1,6 +1,6 @@
 ---
 title: fsutil behavior
-description: NTFS 볼륨 동작을 쿼리하거나 설정 하는 fsutil behavior 명령에 대 한 참조 항목입니다.
+description: NTFS 볼륨 동작을 쿼리하거나 설정 하는 fsutil behavior 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 manager: dmoss
 ms.author: toklima
@@ -9,12 +9,12 @@ ms.technology: storage
 ms.topic: article
 ms.date: 10/16/2017
 ms.assetid: 84eaba2c-c0af-49e1-bbbd-2ed2928e5e4b
-ms.openlocfilehash: f1196169ea1d198c4855f06edef542ef34876a2a
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: 74a974bcb7f8138d28e563db35bbde7ae689e110
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83436008"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931830"
 ---
 # <a name="fsutil-behavior"></a>fsutil behavior
 
@@ -66,7 +66,7 @@ fsutil behavior set {allowextchar {1|0} | bugcheckoncorrupt {1|0} | disable8dot3
 | memoryusage`<value>` | NTFS 페이징 풀 메모리 및 NTFS 비페이징 풀 메모리의 내부 캐시 수준을 구성 합니다. 로 설정 **1** 또는 **2**합니다. **1** (기본값)로 설정 된 경우 NTFS는 기본 크기의 페이징 풀 메모리를 사용 합니다. 로 설정 하면 **2**, NTFS 할당 준비 목록 및 메모리 임계값 크기를 늘립니다. 할당 준비 list는 파일 읽기와 같은 파일 시스템 작업을 위해 커널 및 장치 드라이버가 전용 메모리 캐시로 만드는 고정 크기 메모리 버퍼의 풀입니다.<p>이 매개 변수를 적용 하려면 컴퓨터를 다시 시작 해야 합니다. |
 | quotanotify`<frequency>` | NTFS 할당량 위반 시스템 로그에 보고 되는 빈도 구성 합니다. 에 유효한 값은 **0-4294967295**범위에 있습니다. 기본 빈도는 **3600** 초 (1 시간)입니다.<p>이 매개 변수를 적용 하려면 컴퓨터를 다시 시작 해야 합니다. |
 | symlinkevaluation`<symboliclinktype>` | 컴퓨터에 만들 수 있는 바로 가기 링크의 종류를 제어 합니다. 유효한 선택할 수 있습니다.<ul><li>**1** -로컬 기호화 된 링크`L2L:{0|1}`</li><li>**2** -로컬에서 원격 기호화 된 링크,`L2R:{1|0}`</li><li>**3** -원격에서 로컬 기호화 된 링크`R2R:{1|0}`</li><li>**4** -원격에서 원격 기호화 된 링크,`R2L:{1|0}`</li></ul> |
-| disabledeletenotify | (**1**) 또는 (**0**) 삭제 알림을 사용 하지 않도록 설정 합니다. 삭제 알림 (trim 또는 매핑 해제 라고도 함)은 파일 삭제 작업으로 인해 해제 된 클러스터의 기본 저장 장치에 알리는 기능입니다. 이 밖에도 다음 지침을 따릅니다.<ul><li>ReFS v2를 사용 하는 시스템의 경우 trim은 기본적으로 사용 되지 않습니다.</li><li>ReFS v1을 사용 하는 시스템의 경우 trim은 기본적으로 사용 하도록 설정 됩니다.</li><li>NTFS를 사용 하는 시스템의 경우, 관리자가 사용 하지 않도록 설정 하지 않는 한 trim은 기본적으로 사용 됩니다.</li><li>하드 디스크 드라이브 또는 SAN에서 트리밍을 지원 하지 않는 것으로 보고 하는 경우 하드 디스크 드라이브 및 San에서 트리밍 알림을 받지 않습니다.</li><li>를 사용 하거나 사용 하지 않도록 설정 하면 다시 시작이 필요 하지 않습니다.</li><li>Trim은 다음 매핑 해제 명령이 실행 될 때 적용 됩니다.</li><li>기존 처리 중인 IO는 레지스트리 변경의 영향을 받지 않습니다.</li><li>Trim을 사용 하거나 사용 하지 않도록 설정 하는 경우 서비스를 다시 시작 하지 않아도 됩니다.</li></ul> |
+| disabledeletenotify | (**1**) 또는 (**0**) 삭제 알림을 사용 하지 않도록 설정 합니다. 삭제 알림 (trim 또는 매핑 해제 라고도 함)은 파일 삭제 작업으로 인해 해제 된 클러스터의 기본 저장 장치에 알리는 기능입니다. 또한,<ul><li>ReFS v2를 사용 하는 시스템의 경우 trim은 기본적으로 사용 되지 않습니다.</li><li>ReFS v1을 사용 하는 시스템의 경우 trim은 기본적으로 사용 하도록 설정 됩니다.</li><li>NTFS를 사용 하는 시스템의 경우, 관리자가 사용 하지 않도록 설정 하지 않는 한 trim은 기본적으로 사용 됩니다.</li><li>하드 디스크 드라이브 또는 SAN에서 트리밍을 지원 하지 않는 것으로 보고 하는 경우 하드 디스크 드라이브 및 San에서 트리밍 알림을 받지 않습니다.</li><li>를 사용 하거나 사용 하지 않도록 설정 하면 다시 시작이 필요 하지 않습니다.</li><li>Trim은 다음 매핑 해제 명령이 실행 될 때 적용 됩니다.</li><li>기존 처리 중인 IO는 레지스트리 변경의 영향을 받지 않습니다.</li><li>Trim을 사용 하거나 사용 하지 않도록 설정 하는 경우 서비스를 다시 시작 하지 않아도 됩니다.</li></ul> |
 
 #### <a name="remarks"></a>설명
 

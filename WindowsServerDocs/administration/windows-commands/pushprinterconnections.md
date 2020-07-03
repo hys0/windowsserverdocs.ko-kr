@@ -1,6 +1,6 @@
 ---
 title: pushprinterconnections
-description: 그룹 정책에서 배포 된 프린터 연결 설정을 읽고 필요에 따라 프린터 연결을 배포/제거 하는 push프린터 연결 명령에 대 한 참조 항목입니다.
+description: 그룹 정책에서 배포 된 프린터 연결 설정을 읽고 필요에 따라 프린터 연결을 배포/제거 하는 push프린터 연결 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 701089f2597b1d4e7bc05f7949dbc80dee3535bb
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 7b22fd5143a9477b40a515df44c9a0b5663dfd7a
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85472128"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931386"
 ---
 # <a name="pushprinterconnections"></a>pushprinterconnections
 

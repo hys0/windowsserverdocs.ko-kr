@@ -1,6 +1,6 @@
 ---
 title: wbadmin
-description: 명령 프롬프트에서 운영 체제, 볼륨, 파일, 폴더 및 응용 프로그램을 백업 및 복원할 수 있는 wbadmin에 대 한 참조 항목입니다.
+description: 명령 프롬프트에서 운영 체제, 볼륨, 파일, 폴더 및 응용 프로그램을 백업 및 복원할 수 있는 wbadmin에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 94f07d17d46dad4e5301ba3ea6be94b10f26a3af
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: fab17e2d3f1806543eedd8a918ae679a32265742
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82725831"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85930839"
 ---
 # <a name="wbadmin"></a>wbadmin
 

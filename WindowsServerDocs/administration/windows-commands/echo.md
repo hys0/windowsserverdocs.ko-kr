@@ -1,6 +1,6 @@
 ---
 title: echo
-description: 메시지를 표시 하거나 명령 에코 기능을 설정 하거나 해제 하는 echo 명령에 대 한 참조 항목입니다.
+description: 메시지를 표시 하거나 명령 에코 기능을 설정 하거나 해제 하는 echo 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ca2a10a5d52c9d175d453a164f3ab4f47ca0841d
-ms.sourcegitcommit: 430c6564c18f89eecb5bbc39cfee1a6f1d8ff85b
+ms.openlocfilehash: bc463efef38e07c1ce8b9ebee1ddd7bdfd7d3066
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83855667"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85930521"
 ---
 # <a name="echo"></a>echo
 
@@ -29,7 +29,7 @@ echo [on | off]
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | [ \| 꺼짐] | 또는 명령 에코 기능의 해제를 설정 합니다. 기본적으로 켜져 명령 에코 합니다. |
 | `<message>` | 화면에 표시할 텍스트를 지정 합니다. |

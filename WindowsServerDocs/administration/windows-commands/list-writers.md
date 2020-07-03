@@ -1,6 +1,6 @@
 ---
-title: 작성기 나열
-description: 시스템에 있는 작성기를 나열 하는 목록 작성기 명령에 대 한 참조 항목입니다.
+title: list writers
+description: 시스템에 있는 작성기를 나열 하는 목록 작성기 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 85f351ca20332ad67f24c7d66142f7209c0ec425
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: a3b4334d9f1f1a76b390a29a1b9cfd877da91185
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83817163"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931772"
 ---
-# <a name="list-writers"></a>작성기 나열
+# <a name="list-writers"></a>list writers
 
 시스템에는 작성기를 나열 합니다. 매개 변수 없이 사용 하는 경우 **목록** 출력을 표시 **메타 데이터를 목록** 기본적으로 합니다.
 

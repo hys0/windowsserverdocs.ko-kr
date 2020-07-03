@@ -1,6 +1,6 @@
 ---
 title: 초기화-서버
-description: 서버 역할을 설치한 후 초기 사용을 위해 Windows 배포 서비스 서버를 구성 하는 서버 초기화에 대 한 참조 항목입니다.
+description: 서버 역할을 설치한 후 초기 사용을 위해 Windows 배포 서비스 서버를 구성 하는 서버 초기화에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 54180923a077c0b423e73588bcbd1c03b0154d08
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 22c93a07e4c2785e8cda497e9698b2031c764a42
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719715"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85932167"
 ---
 # <a name="initialize-server"></a>초기화-서버
 
@@ -41,11 +41,11 @@ wdsutil /Initialize-Server /remInst:F:\remoteInstall
 wdsutil /verbose /Progress /Initialize-Server /Server:MyWDSServer /remInst:C:\remoteInstall
 ```
 ## <a name="additional-references"></a>추가 참조
-- [명령줄 구문 키](command-line-syntax-key.md)
-[안 함](using-the-disable-server-command.md)
-
--서버 명령을 사용 하[여 사용 서버](using-the-enable-server-command.md)명령을 사용 하 여[get 서버](using-the-get-server-command.md)
-명령을 사용 하 여 명령을 사용 하 여 명령을 사용 합니다[.](subcommand-set-server.md)
-서버 하위 명령:[시작-](subcommand-start-server.md)
-서버 하위 명령: 서버[중지](subcommand-stop-server.md)
-[초기화 서버 옵션](the-uninitialize-server-option.md)
+- [명령줄 구문 키](command-line-syntax-key.md) 
+ [Disable Server 명령 사용](using-the-disable-server-command.md) 
+ [Enable-Server 명령 사용](using-the-enable-server-command.md) 
+ [Get Server 명령 사용](using-the-get-server-command.md) 
+ [하위 명령: 설정-서버](subcommand-set-server.md) 
+ [하위 명령: 시작-서버](subcommand-start-server.md) 
+ [하위 명령: 중지 서버](subcommand-stop-server.md) 
+ [초기화 서버 옵션](the-uninitialize-server-option.md)

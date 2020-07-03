@@ -1,6 +1,6 @@
 ---
 title: prnport
-description: 포트 구성을 표시 하 고 변경 하는 것 외에도 표준 TCP/IP 프린터 포트를 만들고, 삭제 하 고, 나열 하는 prnport.vbs 명령에 대 한 참조 항목입니다.
+description: 포트 구성을 표시 하 고 변경 하는 것 외에도 표준 TCP/IP 프린터 포트를 만들고, 삭제 하 고, 나열 하는 prnport.vbs 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9c209c06c2253e924e5a71753fec0b8ab0ee158d
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 4b373547050d3d3dfb1d64160959c8dbb9e6f5c5
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85472208"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931166"
 ---
 # <a name="prnport"></a>prnport
 
@@ -54,7 +54,7 @@ cscript prnport {-a | -d | -l | -g | -t | -?} [-r <portname>] [-s <Servername>] 
 
 - 사용자가 제공 하는 정보에 공백이 포함 된 경우 텍스트에 따옴표를 사용 합니다 (예: "컴퓨터 이름").
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 서버 Server1에 모든 표준 TCP/IP 인쇄 포트를 표시 하려면 \\ 다음을 입력 합니다.
 

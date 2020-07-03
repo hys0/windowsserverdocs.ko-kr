@@ -1,6 +1,6 @@
 ---
 title: doskey
-description: 이전에 입력 한 명령줄 명령을 호출 하 고, 명령줄을 편집 하 고, 매크로를 만드는 doskey 명령 및 Doskey.exe에 대 한 참조 항목입니다.
+description: 이전에 입력 한 명령줄 명령을 호출 하 고, 명령줄을 편집 하 고, 매크로를 생성 하는 doskey 명령 및 Doskey.exe에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 96a47a40463c5cd6af16ab637f96382228f7d0f8
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: 4a92c9e1d6ffe1f8d7ace5500179697b2a00df1b
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83437028"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85930550"
 ---
 # <a name="doskey"></a>doskey
 
-이전에 입력 한 명령줄 명령을 회수 하 고, 명령줄을 편집 하 고, 매크로를 만드는 Doskey.exe를 호출 합니다.
+는 이전에 입력 한 명령줄 명령을 회수 하 고, 명령줄을 편집 하 고, 매크로를 만드는 Doskey.exe를 호출 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -83,7 +83,7 @@ doskey [/reinstall] [/listsize=<size>] [/macros:[all | <exename>] [/history] [/i
   | F9 | 메시지 기록 버퍼 명령 번호를 표시 하 고 사용자가 지정한 번호와 관련 된 명령을 표시 합니다. Enter 키를 눌러 명령을 실행 합니다. 모든 숫자와 관련된 명령의 표시 하려면 F7 키를 누릅니다. |
   | ALT + F10 | 모든 매크로 정의 삭제합니다. |
 
-- INSERT 키를 누를 경우에 텍스트를 입력할 수는 **doskey** 명령줄 텍스트를 바꾸지 않고 기존 텍스트 진행 합니다. 그러나 ENTER 키를 누르면 Doskey.exe에서 키보드를 **교체** 모드로 되돌립니다. **삽입 모드로 돌아가려면** insert를 다시 눌러야 합니다.
+- INSERT 키를 누를 경우에 텍스트를 입력할 수는 **doskey** 명령줄 텍스트를 바꾸지 않고 기존 텍스트 진행 합니다. 그러나 ENTER 키를 누르면 Doskey.exe 키보드를 **교체** 모드로 되돌립니다. **삽입 모드로 돌아가려면** insert를 다시 눌러야 합니다.
 
 - 삽입 지점 변경 셰이프 INSERT 키를 사용 하 여 다른 한 모드에서 변경 합니다.
 
@@ -152,7 +152,7 @@ doskey mc=md $1$tcd $1
 mc books
 ```
 
-*Debug.exe*라는 프로그램에 대 한 **doskey** 매크로를 만들려면 다음과 같이 **/exename** 을 포함 합니다.
+*Ftp.exe*라는 프로그램에 대 한 **doskey** 매크로를 만들려면 다음과 같이 **/exename** 을 포함 합니다.
 
 ```
 doskey /exename=ftp.exe go=open 172.27.1.100$tmget *.TXT c:\reports$tbye

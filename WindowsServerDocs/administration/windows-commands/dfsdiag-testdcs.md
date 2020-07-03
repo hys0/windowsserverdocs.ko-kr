@@ -1,6 +1,6 @@
 ---
 title: dfsdiag testdcs
-description: 지정 된 도메인에서 도메인 컨트롤러의 구성을 확인 하는 dfsdiag testdcs 명령에 대 한 참조 항목입니다.
+description: 지정 된 도메인에서 도메인 컨트롤러의 구성을 확인 하는 dfsdiag testdcs 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0bbe47474f99edb1626e61a372b02090d3a45ee3
-ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
+ms.openlocfilehash: 1eca75d233661d51a36b52b79230ad36b704e203
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82992998"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85930665"
 ---
 # <a name="dfsdiag-testdcs"></a>dfsdiag testdcs
 
@@ -36,7 +36,7 @@ dfsdiag /testdcs [/domain:<domain_name>]
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | /domain`<domain_name>` | 확인할 도메인의 이름입니다. 이 매개 변수는 선택 사항입니다. 기본값은 로컬 호스트가 조인 된 로컬 도메인입니다. |
 

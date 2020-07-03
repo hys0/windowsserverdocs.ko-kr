@@ -1,6 +1,6 @@
 ---
 title: tsecimp
-description: XML(Extensible Markup Language) (XML) 파일의 할당 정보를 TAPI 서버 보안 파일 (Tsec .ini)로 가져오는 tsecimp에 대 한 참조 항목입니다.
+description: XML(Extensible Markup Language) (XML) 파일에서 TAPI 서버 보안 파일 (Tsec.ini)로 할당 정보를 가져오는 tsecimp에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: afd38f7081a9b4674eb6cac26f52849794b8d5e6
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: d221479e23c737529305a2354e6a5a52b957bd8e
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82721250"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931480"
 ---
 # <a name="tsecimp"></a>tsecimp
 
@@ -31,7 +31,7 @@ tsecimp /d
 
 |매개 변수|설명|
 |---------|-----------|
-|/f \<파일 이름>|필수 사항입니다. 가져올 할당 정보를 포함 하는 XML 파일의 이름을 지정 합니다.|
+|/f \<Filename>|필수 요소. 가져올 할당 정보를 포함 하는 XML 파일의 이름을 지정 합니다.|
 |/v|Tsec.ini 파일에 정보를 가져오지 않고 XML 파일의 구조를 확인 합니다.|
 |/U|각 사용자는 XML 파일에 지정 된 도메인의 구성원 인지 확인 합니다. 이 매개 변수를 사용 하는 컴퓨터는 네트워크에 연결 되어야 합니다. 이 매개 변수는 많은 양의 사용자 할당 정보를 처리 하는 경우 성능이 크게 저하 될 수 있습니다.|
 |/d|설치 된 전화 통신 공급자의 목록이 표시 됩니다. 각 전화 통신 공급자에 대 한 관련된 된 회선 디바이스가 주소와 각 줄 디바이스와 연결 된 사용자가 나열 됩니다.|
@@ -39,7 +39,7 @@ tsecimp /d
 
 ## <a name="remarks"></a>설명
 
--   할당 정보를 가져오려면 원하는 XML 파일 아래에 설명 된 구조를 따라야 합니다.  
+-   할당 정보를 가져오려면 원하는 XML 파일 아래에 설명 된 구조를 따라야 합니다.
     -   **UserList** 요소
 
         **UserList** XML 파일의 최상위 요소입니다.
@@ -62,16 +62,16 @@ tsecimp /d
         각각에 대해 **줄** 설정할 수 있습니다 요소는 **제거** 특성. 이 특성을 설정 하는 경우 사용자가 더 이상 해당 회선 디바이스를 할당 합니다. 이 특성을 설정 하지 않으면 사용자는 해당 줄 디바이스에 대 한 액세스를 얻게 됩니다. 회선 디바이스 사용자에 게 사용할 수 없는 경우 오류가 지정 됩니다.
 
 ## <a name="examples"></a>예
-- 다음 예제 XML 코드 세그먼트 위에 정의 된 요소의 올바른 사용법을 보여 줍니다.  
-  - 다음 코드는 user1 계정에 할당 된 모든 줄 디바이스를 제거 합니다.  
+- 다음 예제 XML 코드 세그먼트 위에 정의 된 요소의 올바른 사용법을 보여 줍니다.
+  - 다음 코드는 user1 계정에 할당 된 모든 줄 디바이스를 제거 합니다.
     ```
     <UserList>
       <User NoMerge=1>
         <DomainUser>domain1\user1</DomainUser>
       </User>
     </UserList>
-    ```  
-  - 다음 코드는 99999 주소로 한 줄을 할당 하기 전에 user1 계정에 할당 된 모든 줄 디바이스를 제거 합니다. User1 회선 디바이스가 이전에 할당 되었는지 여부에 관계 없이 할당 된 다른 줄 디바이스 생깁니다.  
+    ```
+  - 다음 코드는 99999 주소로 한 줄을 할당 하기 전에 user1 계정에 할당 된 모든 줄 디바이스를 제거 합니다. User1 회선 디바이스가 이전에 할당 되었는지 여부에 관계 없이 할당 된 다른 줄 디바이스 생깁니다.
     ```
     <UserList>
       <User NoMerge=1>
@@ -84,8 +84,8 @@ tsecimp /d
         </LineList>
       </User>
     </UserList>
-    ```  
-  - 다음 코드 줄을 이전에 할당 된 디바이스를 삭제 하지 않고 User1에 대 한 한 줄 디바이스를 추가 합니다.  
+    ```
+  - 다음 코드 줄을 이전에 할당 된 디바이스를 삭제 하지 않고 User1에 대 한 한 줄 디바이스를 추가 합니다.
     ```
     <UserList>
       <User>
@@ -98,8 +98,8 @@ tsecimp /d
         </LineList>
       </User>
     </UserList>
-    ```  
-  - 다음 코드 줄 주소 99999를 추가 하 고 회선 주소 88888 User1의 액세스 제거 합니다.  
+    ```
+  - 다음 코드 줄 주소 99999를 추가 하 고 회선 주소 88888 User1의 액세스 제거 합니다.
     ```
     <UserList>
       <User>
@@ -115,8 +115,8 @@ tsecimp /d
         </LineList>
       </User>
     </UserList>
-    ```  
-  - 다음 코드는 영구 디바이스 1000을 추가 하 고 회선 88888 User1의 액세스 제거 합니다.  
+    ```
+  - 다음 코드는 영구 디바이스 1000을 추가 하 고 회선 88888 User1의 액세스 제거 합니다.
     ```
     <UserList>
       <User>
@@ -134,7 +134,7 @@ tsecimp /d
     </UserList>
     ```
 
--   뒤에 다음 예제 출력 표시는 **/d** 현재 TAPI 구성을 표시 하려면 명령줄 옵션을 지정 합니다. 각 전화 통신 공급자에 대 한 관련된 된 회선 디바이스가 주소와 각 줄 디바이스와 연결 된 사용자가 나열 됩니다.  
+-   뒤에 다음 예제 출력 표시는 **/d** 현재 TAPI 구성을 표시 하려면 명령줄 옵션을 지정 합니다. 각 전화 통신 공급자에 대 한 관련된 된 회선 디바이스가 주소와 각 줄 디바이스와 연결 된 사용자가 나열 됩니다.
     ```
     NDIS Proxy TAPI Service Provider
             Line: WAN Miniport (L2TP)

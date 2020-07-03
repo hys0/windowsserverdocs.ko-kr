@@ -1,6 +1,6 @@
 ---
 title: nslookup view
-description: 이전 **ls** 명령 또는 하위 명령의 출력을 정렬 하 고 나열 하는 nslookup view 명령에 대 한 참조 항목입니다.
+description: 이전 **ls** 명령 또는 하위 명령의 출력을 정렬 하 고 나열 하는 nslookup view 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 74ee505a2a84eab23c218c145606d9e58fcd4b5f
-ms.sourcegitcommit: 99d548141428c964facf666c10b6709d80fbb215
+ms.openlocfilehash: ef16b03fbf5e109e580d243dfffc3b8f1d5712da
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721166"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85930232"
 ---
 # <a name="nslookup-view"></a>nslookup view
 
@@ -30,7 +30,7 @@ view <filename>
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | `<filename>` | 이전 **ls** 명령 또는 하위 명령의 출력을 포함 하는 파일의 이름을 지정 합니다. |
 | /? | 명령 프롬프트에 도움말을 표시합니다. |

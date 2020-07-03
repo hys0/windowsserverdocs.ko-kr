@@ -1,6 +1,6 @@
 ---
 title: dispdiag
-description: 표시 정보를 파일에 기록 하는 dispdiag 명령에 대 한 참조 항목입니다.
+description: 표시 정보를 파일에 기록 하는 dispdiag 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ff4e3690ec3b2c9d473f05027d5637eda124d0ba
-ms.sourcegitcommit: aed942d11f1a361fc1d17553a4cf190a864d1268
+ms.openlocfilehash: d95a53f60aa7e51450a640d5ec9c5a5e6ccb41a6
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83235217"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931220"
 ---
 # <a name="dispdiag"></a>dispdiag
 

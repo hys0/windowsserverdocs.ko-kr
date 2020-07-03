@@ -1,6 +1,6 @@
 ---
 title: nslookup set timeout
-description: 조회 요청에 대 한 회신을 대기 하는 초기 시간 (초)을 변경 하는 nslookup set timeout 명령에 대 한 참조 항목입니다.
+description: 조회 요청에 대 한 회신을 대기 하는 초기 시간 (초)을 변경 하는 nslookup set timeout 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0d8fd0d96226e193ba723cc0a726ddf5362a538c
-ms.sourcegitcommit: 99d548141428c964facf666c10b6709d80fbb215
+ms.openlocfilehash: 6df8d1229dd57a84cb0dced3829bb328e41f092c
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721388"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85930349"
 ---
 # <a name="nslookup-set-timeout"></a>nslookup set timeout
 
@@ -30,13 +30,13 @@ set timeout=<number>
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | ---------- | ---------- |
 | `<number>` | 회신을 기다릴 시간 (초) 수를 지정 합니다. 대기할 기본 시간 (초)은 **5**입니다. |
 | /? | 명령 프롬프트에 도움말을 표시합니다. |
 | /help | 명령 프롬프트에 도움말을 표시합니다. |
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 2 초에 대 한 응답 가져오기 제한 시간을 설정 하려면:
 

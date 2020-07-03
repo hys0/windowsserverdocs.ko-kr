@@ -1,6 +1,6 @@
 ---
-title: ftp 유형
-description: Ftp 유형 명령에 대 한 참조 항목으로, 파일 전송 유형을 설정 하거나 표시 합니다.
+title: ftp type
+description: 파일 전송 유형을 설정 하거나 표시 하는 ftp 유형 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 02b6d5b4bd7944c9f4126ba4877360de02586cfb
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: ea0b2a319dae65104db8a215e17fa4b579ee6ffa
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820273"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931196"
 ---
-# <a name="ftp-type"></a>ftp 유형
+# <a name="ftp-type"></a>ftp type
 
 > 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 

@@ -1,6 +1,6 @@
 ---
 title: tskill
-description: 원격 데스크톱 세션 호스트 서버의 세션에서 실행 되는 프로세스를 종료 하는 tskill에 대 한 참조 항목입니다.
+description: 원격 데스크톱 세션 호스트 서버의 세션에서 실행 되는 프로세스를 종료 하는 tskill에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 13bd18a84dccbbeee88c24b9b07208b3174bc558
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 496d5d4e0002ba2c9f8ae6916aafcd08e686ce99
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82721238"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931472"
 ---
 # <a name="tskill"></a>tskill
 
@@ -38,7 +38,7 @@ tskill {<ProcessID> | <ProcessName>} [/server:<ServerName>] [/id:<SessionID> | /
 |\<ProcessID>|종료 하려는 프로세스의 ID를 지정 합니다.|
 |\<ProcessName>|종료 하려는 프로세스의 이름을 지정 합니다. 이 매개 변수는 와일드 카드 문자를 포함할 수 있습니다.|
 |/server:\<ServerName>|종료 하려는 프로세스가 포함 된 터미널 서버를 지정 합니다. **/Server** 를 지정 하지 않으면 현재 RD 세션 호스트 서버가 사용 됩니다.|
-|/id:\<SessionID>|지정 된 세션에서 실행 중인 프로세스를 종료 합니다.|
+|더불어\<SessionID>|지정 된 세션에서 실행 중인 프로세스를 종료 합니다.|
 |/a|모든 세션에서 실행 중인 프로세스를 종료 합니다.|
 |/v|수행 중인 작업에 대 한 정보를 표시 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
@@ -58,5 +58,5 @@ tskill {<ProcessID> | <ProcessName>} [/server:<ServerName>] [/id:<SessionID> | /
   tskill explorer /id:5
   ```
   ## <a name="additional-references"></a>추가 참조
-  - [명령줄 구문 키](command-line-syntax-key.md)
-  [원격 데스크톱 서비스 (터미널 서비스) 명령 참조](remote-desktop-services-terminal-services-command-reference.md)
+  - [명령줄 구문 키](command-line-syntax-key.md) 
+   [원격 데스크톱 서비스 (터미널 서비스) 명령 참조](remote-desktop-services-terminal-services-command-reference.md)

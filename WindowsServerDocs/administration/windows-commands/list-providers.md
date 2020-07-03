@@ -1,6 +1,6 @@
 ---
-title: 목록 공급자
-description: 시스템에 현재 등록 된 섀도 복사본 공급자를 나열 하는 목록 공급자 명령에 대 한 참조 항목입니다.
+title: list providers
+description: 현재 시스템에 등록 된 섀도 복사본 공급자를 나열 하는 목록 공급자 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 98615dfa92c24b91babb55ae3545065834887e5d
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 64996c7a85fa7ad20a5ffbb1c22ae3396820b676
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83817243"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931805"
 ---
-# <a name="list-providers"></a>목록 공급자
+# <a name="list-providers"></a>list providers
 
 현재 시스템에 등록 되어 있는 섀도 복사본 공급자를 나열 합니다.
 

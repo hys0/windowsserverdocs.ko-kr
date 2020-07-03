@@ -1,6 +1,6 @@
 ---
 title: ver
-description: 운영 체제 버전 번호를 표시 하는 ver에 대 한 참조 항목입니다.
+description: 운영 체제 버전 번호를 표시 하는 ver에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7050dddda6cc27c50980f2e44f40e1f682c1d375
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: bd9b40fa526c2917b6cdcbc8d54da510eb40bc53
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720308"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931345"
 ---
 # <a name="ver"></a>ver
 

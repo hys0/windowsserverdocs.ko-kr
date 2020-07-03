@@ -1,6 +1,6 @@
 ---
-title: wbadmin 시작 sysrecovery
-description: 지정한 매개 변수를 사용 하 여 시스템 복구 (완전 복구)를 수행 하는 wbadmin start sysrecovery에 대 한 참조 항목입니다.
+title: wbadmin start sysrecovery
+description: 지정한 매개 변수를 사용 하 여 시스템 복구 (완전 복구)를 수행 하는 wbadmin start sysrecovery에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a7c32818461c46a7d582029ec127c574d6a8f3e3
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 2f7e23a82afba85ea8a670c636e0f700cb7def2e
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83819113"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85930924"
 ---
-# <a name="wbadmin-start-sysrecovery"></a>wbadmin 시작 sysrecovery
+# <a name="wbadmin-start-sysrecovery"></a>wbadmin start sysrecovery
 
 
 

@@ -1,6 +1,6 @@
 ---
 title: fsutil wim
-description: Windows 이미지 (WIM) 지원 파일을 검색 하 고 관리 하는 함수를 제공 하는 fsutil wim 명령에 대 한 참조 항목입니다.
+description: Windows 이미지 (WIM) 지원 파일을 검색 하 고 관리 하는 기능을 제공 하는 fsutil wim 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 manager: dmoss
 ms.author: toklima
@@ -9,12 +9,12 @@ ms.technology: storage
 ms.assetid: 6c6ff819-f349-4aea-b0be-1f637f631736
 ms.topic: article
 ms.date: 10/16/2017
-ms.openlocfilehash: db6a946eac59269d2bb4072c46552ac84366ed40
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: 791eb80942187b0a0309097b2b785fb3dcea88ec
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83436828"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931414"
 ---
 # <a name="fsutil-wim"></a>fsutil wim
 

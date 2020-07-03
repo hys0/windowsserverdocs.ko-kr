@@ -1,6 +1,6 @@
 ---
 title: gettype
-description: Gettype 명령에 대 한 참조 항목입니다. 이 명령은 더 이상 사용 되지 않으며 이후 버전의 Windows에서는 지원 되지 않습니다.
+description: Gettype 명령에 대 한 참조 문서입니다. 이 명령은 더 이상 사용 되지 않으며 이후 버전의 Windows에서는 지원 되지 않습니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1acd3747082d23f9129a766344061af2140692f9
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 69c3b20ed0b555e781fcf93dc830075b3150ef88
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83818983"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931179"
 ---
 # <a name="gettype"></a>gettype
 

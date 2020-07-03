@@ -1,6 +1,6 @@
 ---
 title: extend
-description: 포커스가 있는 볼륨 또는 파티션과 파일 시스템을 디스크의 사용 가능한 공간 (할당 되지 않은)으로 확장 하는 확장 명령에 대 한 참조 항목입니다.
+description: 포커스가 있는 볼륨 또는 파티션과 파일 시스템을 디스크의 사용 가능한 공간 (할당 되지 않은)으로 확장 하는 확장 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: fd10e2ad4d6d647f37e1ad113f1516104e66315f
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: 4749b2ddcd47aa5445d9d77ff86c3473ae37b355
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83437198"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931439"
 ---
 # <a name="extend"></a>extend
 
@@ -35,7 +35,7 @@ extend filesystem [noerr]
 | --------- | ----------- |
 | 크기 =`<n>` | 현재 볼륨 또는 파티션에 추가할 공간의 크기 (MB)를 지정 합니다. 크기를 지정 하는 경우 디스크에서 사용할 수 있는 연속 된 여유 공간을 모두 사용 됩니다. |
 | 디스크 =`<n>` | 볼륨 또는 파티션이 확장 디스크를 지정 합니다. 없는 디스크를 지정 하는 경우 현재 디스크에 볼륨 또는 파티션이 확장 됩니다. |
-| 파일 시스템 | 포커스가 있는 볼륨의 파일 시스템을 확장합니다. 디스크에 파일 시스템 볼륨으로 확장 되지 않은 경우에 사용할 수 있습니다. |
+| filesystem | 포커스가 있는 볼륨의 파일 시스템을 확장합니다. 디스크에 파일 시스템 볼륨으로 확장 되지 않은 경우에 사용할 수 있습니다. |
 | noerr | 스크립팅 전용입니다. 오류가 발생 하면 오류가 발생 하지 않은 경우에 따라 명령을 처리 하도록 DiskPart 계속 합니다. 이 매개 변수를 크기는 오류 코드를 수행 합니다. |
 
 #### <a name="remarks"></a>설명

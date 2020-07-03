@@ -1,6 +1,6 @@
 ---
-title: wbadmin 시작 systemstaterecovery
-description: 지정 된 백업에서 시스템 상태 복구를 수행 하는 wbadmin start systemstaterecovery에 대 한 참조 항목입니다.
+title: wbadmin start systemstaterecovery
+description: 지정 된 백업에서 시스템 상태 복구를 수행 하는 wbadmin start systemstaterecovery에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: edbd6acefe2ef921b9325de4808753d5929efd1e
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: a1645c1612bcc0e10fc6b2526805b169004e4ce1
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83821383"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85930893"
 ---
-# <a name="wbadmin-start-systemstaterecovery"></a>wbadmin 시작 systemstaterecovery
+# <a name="wbadmin-start-systemstaterecovery"></a>wbadmin start systemstaterecovery
 
 
 

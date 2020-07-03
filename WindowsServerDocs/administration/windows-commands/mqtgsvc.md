@@ -1,6 +1,6 @@
 ---
 title: mqtgsvc
-description: 트리거 규칙이 true로 평가 되는 경우 들어오는 메시지의 큐를 모니터링 하 고 실행 파일 또는 COM 구성 요소의 형태로 작업을 수행 하는 mqtgsvc 명령에 대 한 참조 항목입니다.
+description: 트리거의 규칙이 true로 평가 되는 경우 들어오는 메시지의 큐를 모니터링 하 고 실행 파일 또는 COM 구성 요소의 형태로 작업을 수행 하는 mqtgsvc 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 70937c4918b2b01425417368bfa347bd02e5bf22
-ms.sourcegitcommit: 5e313a004663adb54c90962cfdad9ae889246151
+ms.openlocfilehash: cd5222623931bbd940c7ff6e8c6285874c89a385
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84354414"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85932060"
 ---
 # <a name="mqtgsvc"></a>mqtgsvc
 

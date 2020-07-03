@@ -1,6 +1,6 @@
 ---
 title: quser
-description: 원격 데스크톱 세션 호스트 서버의 사용자 세션에 대 한 정보를 표시 하는 quser 명령에 대 한 참조 항목입니다.
+description: 원격 데스크톱 세션 호스트 서버의 사용자 세션에 대 한 정보를 표시 하는 quser 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e51abe030ca0f473246cdc85fd01d89fddf8b056
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 7df52ea8d2b30d9e365d6dc79d53aad9bd0782f9
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85471928"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931115"
 ---
 # <a name="quser"></a>quser
 
@@ -61,7 +61,7 @@ quser [<username> | <sessionname> | <sessionID>] [/server:<servername>]
 
 - **Quser** 가 정보를 반환 하면 보다 큼 `(>)` 기호가 현재 세션 앞에 표시 됩니다.
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 시스템에 로그온 한 모든 사용자에 대 한 정보를 표시 하려면 다음을 입력 합니다.
 

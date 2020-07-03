@@ -1,6 +1,6 @@
 ---
 title: diantz
-description: 캐비닛 (.cab) 파일에 기존 파일을 패키지 하는 di앤틸리스 z 명령에 대 한 참조 항목입니다.
+description: 캐비닛 (.cab) 파일에 기존 파일을 패키지 하는 di앤틸리스 z 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e45c0c4f71bc7faf6d5de0fa198ac872f6ff2597
-ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
+ms.openlocfilehash: 61a10c2fb67225de1060d64db6fda4e4ff703a7b
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82992497"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85930603"
 ---
 # <a name="diantz"></a>diantz
 
@@ -31,7 +31,7 @@ diantz [/v[<n>]] [/d var=<value> ...] /f <directives_file> [...]
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | `<source>` | 파일을 압축 합니다. |
 | `<destination>` | 압축 된 파일에 파일 이름입니다. 생략 하는 경우 밑줄 (_)로 소스 파일 이름의 마지막 문자와 바뀌고 대상으로 사용 됩니다. |

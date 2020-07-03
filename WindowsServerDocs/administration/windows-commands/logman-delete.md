@@ -1,6 +1,6 @@
 ---
 title: logman 삭제
-description: 기존 데이터 수집기를 삭제 하는 logman delete 명령에 대 한 참조 항목입니다.
+description: 기존 데이터 수집기를 삭제 하는 logman delete 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 18739f3d7ab5af38dbe369e45aca8393ba3a3152
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: 505cd8a09bcbb1e46f16242818825f3c504955b9
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84222941"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85930420"
 ---
 # <a name="logman-delete"></a>logman 삭제
 

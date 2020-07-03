@@ -1,6 +1,6 @@
 ---
 title: findstr
-description: 파일에서 텍스트의 패턴을 검색 하는 findstr 명령에 대 한 참조 항목입니다.
+description: 파일에서 텍스트의 패턴을 검색 하는 findstr 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7f8d353b6d3aee77960b208d89372aee5dca07e3
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: f0cf30f19ef23c1b3275b6b7632b03f0dd8e433a
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83436119"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931431"
 ---
 # <a name="findstr"></a>findstr
 
@@ -48,7 +48,7 @@ findstr [/b] [/e] [/l | /r] [/s] [/i] [/x] [/v] [/n] [/m] [/o] [/p] [/f:<file>] 
 | /g`<file>` | 지정된 된 파일에서 문자열을 검색 하는 가져옵니다. |
 | d`<dirlist>` | 지정된 된 디렉터리 목록을 검색합니다. 예를 들어 각 디렉터리는 세미콜론 (;)으로 구분 해야 `dir1;dir2;dir3`합니다. |
 | 없음을`<colorattribute>` | 두 개의 16 진수가 color 특성을 지정합니다. 형식 `color /?` 추가 정보에 대 한 합니다. |
-| `<strings>` | *파일 이름*에서 검색할 텍스트를 지정 합니다. 필수 사항입니다. |
+| `<strings>` | *파일 이름*에서 검색할 텍스트를 지정 합니다. 필수 요소. |
 | `[\<drive>:][<path>]<filename>[ ...]` | 검색할 파일 및 파일 또는 위치를 지정 합니다. 하나 이상의 파일에 이름이 필요 합니다. |
 | /? | 명령 프롬프트에 도움말을 표시합니다. |
 
@@ -99,7 +99,7 @@ File *x. y*에서 *hello* 를 검색 하려면 다음을 입력 합니다.
 findstr /c:hello there x.y
 ```
 
-파일 제안에서 단어 *창의* 모든 항목 (초기 대문자 W)을 찾으려면 다음을 입력 *합니다*.
+파일 *proposal.txt*에서 단어 *창의* 모든 항목 (초기 대문자 W)을 찾으려면 다음을 입력 합니다.
 
 ```
 findstr Windows proposal.txt
@@ -117,7 +117,7 @@ findstr /s /i Windows *.*
 findstr /b /n /r /c:^ *FOR *.bas
 ```
 
-텍스트 파일에서 검색할 정확한 파일을 나열 하려면 파일 *stringlist .txt*에서 검색 조건을 사용 하 여 *filelist*에 나열 된 파일을 검색 한 다음 결과를 파일 결과에 저장 *합니다. 출력*에 결과를 저장 하려면 다음을 입력 합니다.
+텍스트 파일에서 검색할 정확한 파일을 나열 하려면 파일 *stringlist.txt*에서 검색 조건을 사용 하 여 *filelist.txt*에 나열 된 파일을 검색 한 다음 결과를 파일 결과에 저장 *합니다. 출력*에 결과를 저장 하려면 다음을 입력 합니다.
 
 ```
 findstr /g:stringlist.txt /f:filelist.txt > results.out

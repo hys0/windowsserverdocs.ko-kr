@@ -1,6 +1,6 @@
 ---
 title: chkntfs
-description: 컴퓨터를 시작할 때 자동 디스크 검사를 표시 하거나 수정 하는 chkntfs 명령에 대 한 참조 항목입니다.
+description: 컴퓨터를 시작할 때 자동 디스크 검사를 표시 하거나 수정 하는 chkntfs 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 69b8e21a7b43538b6296666d813f2b33daa8045f
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 4d2a19a479ec3b00bda83ecded91f5fbb7941ca0
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82713654"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85930710"
 ---
 # <a name="chkntfs"></a>chkntfs
 
@@ -39,7 +39,7 @@ chkntfs [/c <volume> [...]]
 | --------- | ----------- |
 | `<volume>` [...] | 컴퓨터를 시작할 때를 확인 하려면 하나 이상의 볼륨을 지정 합니다. (콜론) 드라이브 문자를 포함 하는 유효한 볼륨 탑재 지점 또는 볼륨 이름입니다. |
 | /d | 모든 복원 **chkntfs** 기본 카운트다운 검사의 시간을 자동으로 파일을 제외 하 고 설정 합니다. 모든 볼륨은 컴퓨터를 시작할 때 기본적으로 검사 하 고 **chkdsk** 커밋되지 않은에서 실행 됩니다. |
-| /t [`:<time>`] | Autochk.exe 시작 카운트다운 시간 (초)에 지정 된 시간을 변경 합니다. 한 번 입력 하지 않으면 **/t** 현재 카운트 다운 시간을 표시 합니다. |
+| /t [ `:<time>` ] | Autochk.exe 시작 카운트다운 시간 (초)에 지정 된 시간을 변경 합니다. 한 번 입력 하지 않으면 **/t** 현재 카운트 다운 시간을 표시 합니다. |
 | /x `<volume>` [...] | 볼륨은 필요한 것으로 표시 하는 경우에 컴퓨터를 시작할 때 검사에서 제외할 볼륨을 하나 이상 지정 **chkdsk**합니다. |
 | /c `<volume>` [...] | 컴퓨터가 시작 되 고 실행 하는 경우 검사할 볼륨을 하나 이상 예약 **chkdsk** 에 커밋되지 않은 데이터입니다. |
 | /? | 명령 프롬프트에 도움말을 표시합니다. |

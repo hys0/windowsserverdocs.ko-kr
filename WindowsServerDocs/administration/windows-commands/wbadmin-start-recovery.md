@@ -1,6 +1,6 @@
 ---
-title: wbadmin 복구 시작
-description: 지정한 매개 변수에 따라 복구 작업을 실행 하는 wbadmin start recovery에 대 한 참조 항목입니다.
+title: wbadmin start recovery
+description: 지정한 매개 변수에 따라 복구 작업을 실행 하는 wbadmin start recovery에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ec116bb69dd70cb58f6cb71ccf9ccfa04dea2e54
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 2a8934d9177d81cd05124175e64746ecdb4a1bc1
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82725883"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85930952"
 ---
-# <a name="wbadmin-start-recovery"></a>wbadmin 복구 시작
+# <a name="wbadmin-start-recovery"></a>wbadmin start recovery
 
 사용자가 지정한 매개 변수에 따라 복구 작업을 실행 합니다.
 
@@ -79,12 +79,12 @@ wbadmin start recovery -version:03/31/2013-09:00 -itemType:App -items:Registry -
 ```
 wbadmin start recovery -version:03/31/2013-09:00 -itemType:File -items:d:\folder -recursive
 ```
-2013 년 3 월 31 일 오전 \\ \\9:00에 생성 된 백업 복구를 실행 하려면 \Volume{cc566d14-44a0-11d9-9d93-806e6f6e6963}\, 형식:
+2013 년 3 월 31 일 오전 9:00에 생성 된 백업 복구를 실행 하려면 \\ \\ \Volume{cc566d14-44a0-11d9-9d93-806e6f6e6963} \, 형식:
 ```
-wbadmin start recovery -version:03/31/2013-09:00 -itemType:Volume 
+wbadmin start recovery -version:03/31/2013-09:00 -itemType:Volume
 -items:\\?\Volume{cc566d14-44a0-11d9-9d93-806e6f6e6963}\
 ```
-2013 년 4 월 30 일 오전 9:00에 생성 된 공유 폴더 \\ \\servername\share의 백업 복구를 실행 하려면 다음을 입력 합니다.
+2013 년 4 월 30 일 오전 9:00에 생성 된 공유 폴더 servername\share의 백업 복구를 실행 하려면 \\ \\ 다음을 입력 합니다.
 ```
 wbadmin start recovery -version:04/30/2013-09:00 -backupTarget:\\servername\share -machine:server01
 ```

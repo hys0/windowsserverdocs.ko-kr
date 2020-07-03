@@ -1,6 +1,6 @@
 ---
 title: lodctr
-description: 파일에서 성능 카운터 이름 및 레지스트리 설정을 등록 하거나 저장 하 고 신뢰할 수 있는 서비스를 지정 하는 데 사용할 수 있는 lodctr 명령에 대 한 참조 항목입니다.
+description: 파일에서 성능 카운터 이름 및 레지스트리 설정을 등록 하거나 저장 하 고 신뢰할 수 있는 서비스를 지정 하는 데 사용할 수 있는 lodctr 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 221737d68280dabf34c270fccff02071ebf9b5a2
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: e8b1cae87818d3f77474e4193b03836bf1c84990
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820183"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931657"
 ---
 # <a name="lodctr"></a>lodctr
 
@@ -45,7 +45,7 @@ lodctr <filename> [/s:<filename>] [/r:<filename>] [/t:<servicename>]
 
 ### <a name="examples"></a>예
 
-현재 성능 레지스트리 설정 및 설명 텍스트를 파일 *성능 백업 1*에 저장 하려면 다음을 입력 합니다.
+현재 성능 레지스트리 설정 및 설명 텍스트를 파일 *성능 backup1.txt*에 저장 하려면 다음을 입력 합니다.
 
 ```
 lodctr /s:perf backup1.txt

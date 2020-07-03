@@ -1,6 +1,6 @@
 ---
 title: nslookup set srchlist
-description: 기본 DNS (Domain Name System) 도메인 이름 및 검색 목록을 변경 하는 nslookup set srchlist 명령에 대 한 참조 항목입니다.
+description: 기본 DNS (Domain Name System) 도메인 이름 및 검색 목록을 변경 하는 nslookup set srchlist 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ed9bbce1910324c4cae5da4228a6d3d1f269d050
-ms.sourcegitcommit: 99d548141428c964facf666c10b6709d80fbb215
+ms.openlocfilehash: 5d43107ed2c777349a8cac1a0411c035371bc0f7
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721403"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85930414"
 ---
 # <a name="nslookup-set-srchlist"></a>nslookup set srchlist
 
@@ -30,7 +30,7 @@ set srchlist=<domainname>[/...]
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | `<domainname>` | 기본 DNS 도메인 및 검색 목록에 대 한 새 이름을 지정합니다. 기본 도메인 이름 값은 호스트 이름을 기반으로 합니다. 최대 6 개의 이름 슬래시 (/) 구분 하 여 지정할 수 있습니다. |
 | /? | 명령 프롬프트에 도움말을 표시합니다. |
@@ -40,7 +40,7 @@ set srchlist=<domainname>[/...]
 
 - [Nslookup set all](nslookup-set-all.md) 명령을 사용 하 여 목록을 표시 합니다.
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 DNS 도메인을 *mfg.widgets.com* 로 설정 하 고 검색 목록을 세 개의 이름으로 설정 합니다.
 

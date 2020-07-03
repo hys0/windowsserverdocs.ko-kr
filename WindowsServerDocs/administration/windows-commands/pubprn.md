@@ -1,6 +1,6 @@
 ---
 title: pubprn
-description: Active Directory Domain Services에 프린터를 게시 하는 잘라냅니다 명령에 대 한 참조 항목입니다.
+description: Active Directory Domain Services에 프린터를 게시 하는 잘라냅니다 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3d45291b22978dd3fe2781699eaf616b9d08a4bf
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: c73c79450d4feb4d2567f29bfed56364dea9b5a8
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85472148"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85932012"
 ---
 # <a name="pubprn"></a>pubprn
 
@@ -41,7 +41,7 @@ cscript pubprn {<servername> | <UNCprinterpath>} LDAP://CN=<container>,DC=<conta
 
 - 사용자가 제공 하는 정보에 공백이 포함 된 경우 텍스트에 따옴표를 사용 합니다 (예: "컴퓨터 이름").
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 Server1 컴퓨터의 모든 프린터를 \\ MyDomain.company.com 도메인의 MyContainer 컨테이너에 게시 하려면 다음을 입력 합니다.
 

@@ -1,6 +1,6 @@
 ---
 title: ftp mdelete
-description: 원격 컴퓨터에서 파일을 삭제 하는 ftp mdelete 명령에 대 한 참조 항목입니다.
+description: 원격 컴퓨터에서 파일을 삭제 하는 ftp mdelete 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8ee1882878ce06a16bd6ff6f0dcaa512d6d8b56a
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 720ae8b5ebb0ef380f6547a85913cd84c6d98c7e
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820233"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931174"
 ---
 # <a name="ftp-mdelete"></a>ftp mdelete
 
@@ -35,7 +35,7 @@ mdelete <remotefile>[...]
 
 ### <a name="examples"></a>예
 
-*.Exe* 및 *b. .exe*원격 파일을 삭제 하려면 다음을 입력 합니다.
+원격 파일 *a.exe* 및 *b.exe*를 삭제 하려면 다음을 입력 합니다.
 
 ```
 mdelete a.exe b.exe

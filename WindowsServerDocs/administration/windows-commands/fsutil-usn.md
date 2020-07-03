@@ -1,6 +1,6 @@
 ---
 title: fsutil usn
-description: USN (업데이트 시퀀스 번호) 변경 저널을 관리 하는 fsutil usn 명령에 대 한 참조 항목입니다.
+description: USN (업데이트 시퀀스 번호) 변경 저널을 관리 하는 fsutil usn 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 manager: dmoss
 ms.author: toklima
@@ -9,12 +9,12 @@ ms.technology: storage
 ms.assetid: faad34aa-4ba1-4129-bc1f-08088399e2fa
 ms.topic: article
 ms.date: 10/16/2017
-ms.openlocfilehash: d21de9ecb1d63116ee2d186965f7f47fc3a7235e
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: b3f71588c7221f0ba8e3659d9a1a1dd133971ce9
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83437118"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85930473"
 ---
 # <a name="fsutil-usn"></a>fsutil usn
 

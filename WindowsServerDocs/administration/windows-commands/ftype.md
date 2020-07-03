@@ -1,6 +1,6 @@
 ---
 title: ftype
-description: 파일 이름 확장명 연결에 사용 되는 파일 형식을 표시 하거나 수정 하는 ftype 명령에 대 한 참조 항목입니다.
+description: 파일 이름 확장명 연결에 사용 되는 파일 형식을 표시 하거나 수정 하는 ftype 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a1387a9f8cb607d3563a381c757ea237104e6032
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 0ab401c4dd4707cf05c69c1746368927c0bfaa83
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820213"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85930459"
 ---
 # <a name="ftype"></a>ftype
 
@@ -32,7 +32,7 @@ ftype [<filetype>[=[<opencommandstring>]]]
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | 설명 |
+| 매개 변수 | Description |
 | --------- | ----------- |
 | `<filetype>` | 표시 하거나 변경 하려면 파일 형식을 지정 합니다. |
 | `<opencommandstring>` | 지정 된 파일 형식의 파일을 열 때 사용 하 여 열려 있는 명령 문자열을 지정 합니다.|

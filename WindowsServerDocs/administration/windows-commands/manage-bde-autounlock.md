@@ -1,6 +1,6 @@
 ---
 title: manage-bde autounlock
-description: BitLocker로 보호 되는 데이터 드라이브의 자동 잠금 해제를 관리 하는 manage-bde autounlock command에 대 한 참조 항목입니다.
+description: BitLocker로 보호 되는 데이터 드라이브의 자동 잠금 해제를 관리 하는 manage-bde autounlock command에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a214ba868e04a81e6282dc919c93ab626ef26725
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: a81d3e864a33efd5a6a1c81a5a193338d2c25bfa
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84223009"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931635"
 ---
 # <a name="manage-bde-autounlock"></a>manage-bde autounlock
 

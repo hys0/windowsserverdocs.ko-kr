@@ -1,6 +1,6 @@
 ---
-title: ftp 해시
-description: 전송 된 각 데이터 블록의 숫자 기호 (#) 인쇄를 설정/해제 하는 ftp 해시 명령에 대 한 참조 항목입니다.
+title: ftp hash
+description: 전송 된 각 데이터 블록의 숫자 기호 (#) 인쇄를 설정/해제 하는 ftp 해시 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1aad92feb49e3ce8ab5bc0865c73983edf25e4a9
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 38f53b06b9351c0c5d37c88bc29790767f55a23f
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83819695"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931295"
 ---
-# <a name="ftp-hash"></a>ftp 해시
+# <a name="ftp-hash"></a>ftp hash
 
 > 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 

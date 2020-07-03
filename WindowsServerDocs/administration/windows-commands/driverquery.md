@@ -1,6 +1,6 @@
 ---
 title: driverquery
-description: 관리자가 설치 된 장치 드라이버 및 해당 속성의 목록을 표시할 수 있도록 하는 driverquery 명령에 대 한 참조 항목입니다.
+description: 관리자가 설치 된 장치 드라이버 및 해당 속성의 목록을 표시할 수 있도록 하는 driverquery 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f4754cba8cf4cb3a5f01b0aeb0095f727a072a5c
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: 8ad0a028217e07d8c15b59dc96e31c8f236dd743
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83436938"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931464"
 ---
 # <a name="driverquery"></a>driverquery
 
@@ -33,7 +33,7 @@ driverquery [/s <system> [/u [<domain>\]<username> [/p <password>]]] [/fo {table
 | /s`<system>` | 이름 또는 원격 컴퓨터의 IP 주소를 지정합니다. 백슬래시를 사용 하지 마십시오. 기본값은 로컬 컴퓨터입니다. |
 | /u`[<domain>]<username>` | *사용자* 또는 *도메인 \*사용자가 지정한 대로 사용자 계정의 자격 증명을 사용 하 여 명령을 실행 합니다. 기본적으로 */s* 명령을 실행 하는 컴퓨터에 현재 로그온 한 사용자의 자격 증명을 사용 합니다. **/s** 를 지정 하지 않으면 **/u** 를 사용할 수 없습니다. |
 | /p`<password>` | 에 지정 된 사용자 계정의 암호를 지정 된 **/u** 매개 변수입니다. **/p** 않으면 사용할 수 없습니다 **/u** 지정 됩니다. |
-| /fo 테이블 | 출력 형식을 테이블로 지정합니다. 이것이 기본값입니다. |
+| /fo 테이블 | 출력 형식을 테이블로 지정합니다. 기본값입니다. |
 | /fo 목록 | 출력의 형식을 목록으로 지정 합니다. |
 | /fo csv | 쉼표로 구분 된 값을 사용 하 여 출력의 서식을 지정 합니다. |
 | /nh | 표시 된 드라이버 정보에서 머리글 행을 생략합니다. 유효 하지 않은 경우에는 **/fo** 매개 변수는 설정 **목록**합니다. |

@@ -1,6 +1,6 @@
 ---
-title: 메타 데이터 로드
-description: 전송 가능한 섀도 복사본을 가져오기 전에 메타 데이터 .cab 파일을 로드 하거나 복원 시 기록기 메타 데이터를 로드 하는 메타 데이터 로드 명령에 대 한 참조 항목입니다.
+title: load metadata
+description: 전송 가능한 섀도 복사본을 가져오기 전에 메타 데이터 .cab 파일을 로드 하거나 복원 시 기록기 메타 데이터를 로드 하는 메타 데이터 로드 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c7dc967476412261e7afc228088566f74ec4208c
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 01e782d0214da70f831b81120aff3c5097895036
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820193"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931686"
 ---
 # <a name="load-metadata"></a>메타 데이터를 로드 합니다.
 
@@ -31,7 +31,7 @@ load metadata [<drive>:][<path>]<metadata.cab>
 | 매개 변수 | 설명 |
 | --------- | ----------- |
 | `[<drive>:][<path>]` | 메타 데이터 파일의 위치를 지정합니다. |
-| 메타 데이터 .cab | 로드할 메타 데이터.cab 파일을 지정 합니다. |
+| metadata.cab | 로드할 메타 데이터.cab 파일을 지정 합니다. |
 
 ## <a name="remarks"></a>설명
 

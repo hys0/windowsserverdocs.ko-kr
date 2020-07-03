@@ -1,6 +1,6 @@
 ---
 title: ktpass
-description: Ktpass 명령에 대 한 참조 항목으로, AD DS에서 호스트 또는 서비스에 대 한 서버 보안 주체 이름을 구성 하 고 서비스의 공유 비밀 키를 포함 하는 keytab 파일을 생성 합니다.
+description: Ktpass 명령에 대 한 참조 문서를 참조 하세요 .이 문서에서는 AD DS의 호스트나 서비스에 대 한 서버 보안 주체 이름을 구성 하 고 서비스의 공유 비밀 키를 포함 하는 keytab 파일을 생성 합니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 432918343ccee70f0c30d294a349fb721f18f705
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: fbf7b47f4f21a2c964d14dd1200b15ad635d7471
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83817233"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931827"
 ---
 # <a name="ktpass"></a>ktpass
 
@@ -47,9 +47,9 @@ ktpass
 | 매개 변수 | 설명 |
 | --------- | ------------|
 | /out`<filename>` | 생성할 Kerberos 버전 5.keytab 파일의 이름을 지정 합니다. **참고:** 이 파일은 Windows 운영 체제를 실행 하지 않는 컴퓨터에 전송 하는 keytab 파일입니다 .이 파일을 기존. keytab 파일인 */Etc/Krb5.keytab*로 바꾸거나 병합 합니다. |
-| /princ`<principalname>` | 형식으로 보안 주체 이름을 지정 합니다 host/computer.contoso.com@CONTOSO.COM . **경고:** 이 매개 변수는 대/소문자를 구분 합니다. |
-| /mapuser`<useraccount>` | 지정 된 Kerberos 사용자 이름을 매핑하는 **princ** 매개 변수를 지정 된 도메인 계정. |
-| /mapop`{add|set}` | 매핑 특성을 설정 하는 방법을 지정 합니다.<ul><li>**추가** -지정 된 로컬 사용자 이름의 값을 추가 합니다. 이것이 기본값입니다.</li><li>**설정** -지정 된 로컬 사용자 이름에 대 한 DES (Data encryption Standard) 전용 암호화 값을 설정 합니다.</li></ul> |
+| /princ `<principalname>` | 형식으로 보안 주체 이름을 지정 합니다 host/computer.contoso.com@CONTOSO.COM . **경고:** 이 매개 변수는 대/소문자를 구분 합니다. |
+| /mapuser `<useraccount>` | 지정 된 Kerberos 사용자 이름을 매핑하는 **princ** 매개 변수를 지정 된 도메인 계정. |
+| /mapop`{add|set}` | 매핑 특성을 설정 하는 방법을 지정 합니다.<ul><li>**추가** -지정 된 로컬 사용자 이름의 값을 추가 합니다. 기본값입니다.</li><li>**설정** -지정 된 로컬 사용자 이름에 대 한 DES (Data encryption Standard) 전용 암호화 값을 설정 합니다.</li></ul> |
 | `{-|+}`desonly | DES 전용 암호화는 기본적으로 설정 됩니다.<ul><li>**+** DES 전용 암호화에 대 한 계정을 설정 합니다.</li><li>**-** DES 전용 암호화에 대 한 계정에 대 한 제한을 해제 합니다. **중요:** Windows에서는 기본적으로 DES를 지원 하지 않습니다.</li></ul> |
 | /in`<filename>` | Windows 운영 체제를 실행 하지 않는 호스트 컴퓨터에서 읽을.keytab 파일을 지정 합니다. |
 | /pass`{password|*|{-|+}rndpass}` | 로 지정 된 주 사용자 이름에 대 한 암호를 지정 된 **princ** 매개 변수입니다. `*`를 사용 하 여 암호를 묻는 메시지를 표시 합니다. |

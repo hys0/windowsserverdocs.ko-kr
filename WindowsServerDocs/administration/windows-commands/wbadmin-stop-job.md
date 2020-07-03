@@ -1,6 +1,6 @@
 ---
-title: wbadmin 중지 작업
-description: Wbadmin stop job에 대 한 참조 항목-현재 실행 중인 백업 또는 복구 작업을 취소 합니다. 취소 된 작업을 다시 시작할 수 없습니다-시작 부분에서 취소 된 백업 또는 복구 작업을 다시 실행 해야 합니다.
+title: wbadmin stop job
+description: 현재 실행 중인 백업 또는 복구 작업을 취소 하는 wbadmin stop job에 대 한 참조 문서입니다. 취소 된 작업을 다시 시작할 수 없습니다-시작 부분에서 취소 된 백업 또는 복구 작업을 다시 실행 해야 합니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6e6d2be62468102060aad502d47efbb6eae4fca8
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 2c6961b1fae425d06577fce3a93dca6262dd7127
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83821363"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85930886"
 ---
-# <a name="wbadmin-stop-job"></a>wbadmin 중지 작업
+# <a name="wbadmin-stop-job"></a>wbadmin stop job
 
 
 

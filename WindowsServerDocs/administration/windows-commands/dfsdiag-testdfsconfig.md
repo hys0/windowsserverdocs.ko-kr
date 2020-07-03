@@ -1,6 +1,6 @@
 ---
-title: dfsdiag testdfs 구성
-description: 분산 파일 시스템 (DFS) 네임 스페이스의 구성을 확인 하는 dfsdiag testdfs config에 대 한 참조 항목입니다.
+title: dfsdiag testdfsconfig
+description: 분산 파일 시스템 (DFS) 네임 스페이스의 구성을 확인 하는 dfsdiag testdfs config에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2d9490f35c2d509c83d9008aa87627bd3c55a875
-ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
+ms.openlocfilehash: 3387b661f454cff089f76f7c9c0d1abe59387010
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82992989"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85930639"
 ---
-# <a name="dfsdiag-testdfsconfig"></a>dfsdiag testdfs 구성
+# <a name="dfsdiag-testdfsconfig"></a>dfsdiag testdfsconfig
 
 > 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -42,7 +42,7 @@ dfsdiag /testdfsconfig /DFSroot:<namespace>
 
 #### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | /DFSroot:`<namespace>` | 진단할 네임 스페이스 (DFS 루트)입니다. |
 

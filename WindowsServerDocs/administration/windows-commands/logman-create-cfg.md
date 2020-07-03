@@ -1,6 +1,6 @@
 ---
 title: logman cfg 만들기
-description: 구성 데이터 수집기를 만드는 logman create cfg 명령에 대 한 참조 항목입니다.
+description: 구성 데이터 수집기를 만드는 logman create cfg 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 518b0c7bddf1d74522a376aafb7da85abb849ac4
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: f4ae073561ddfc26f4a6a1af834113cff0cc9e29
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84222972"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85932079"
 ---
 # <a name="logman-create-cfg"></a>logman cfg 만들기
 

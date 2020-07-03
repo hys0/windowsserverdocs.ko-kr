@@ -1,6 +1,6 @@
 ---
 title: 새로 만들기
-description: 새에 대 한 참조 항목으로, 캡처 및 검색 이미지, 멀티 캐스트 전송 및 네임 스페이스를 만듭니다.
+description: 새에 대 한 참조 문서-캡처 및 검색 이미지, 멀티 캐스트 전송 및 네임 스페이스를 만듭니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c73ba52725ecb35fb57b0435fa46729a1983d777
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 93efc135e62dc1445a6002444bf3e14ac24adeb2
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719701"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85932142"
 ---
 # <a name="new"></a>새로 만들기
 

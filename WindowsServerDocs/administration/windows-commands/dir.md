@@ -1,6 +1,6 @@
 ---
 title: dir
-description: 디렉터리의 파일 및 하위 디렉터리 목록을 표시 하는 dir 명령에 대 한 참조 항목입니다.
+description: 디렉터리의 파일 및 하위 디렉터리 목록을 표시 하는 dir 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b6d5b99e905d70d81962f96a303e0bcaae0bd9e9
-ms.sourcegitcommit: 5e10afbd128befb7400a6bcf576f0239cf2ed47f
+ms.openlocfilehash: 2372476e153a6dc37b7d068201a40ba17c11fa54
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84302828"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85930827"
 ---
 # <a name="dir"></a>dir
 
@@ -65,7 +65,7 @@ dir [<drive>:][<path>][<filename>] [...] [/p] [/q] [/w] [/d] [/a[[:]<attributes>
 
   - `dir read *.*`모든 확장명을 사용 하 여 읽기로 시작 하는 현재 디렉터리의 모든 파일을 나열 합니다.
 
-  별표 와일드 카드는 항상 짧은 파일 이름 매핑을 사용 하므로 예기치 않은 결과가 발생할 수 있습니다. 예를 들어 다음 디렉터리에는 두 개의 파일 (txt2 및 t97)이 포함 되어 있습니다.
+  별표 와일드 카드는 항상 짧은 파일 이름 매핑을 사용 하므로 예기치 않은 결과가 발생할 수 있습니다. 예를 들어 다음 디렉터리에는 두 개의 파일 (t.txt2와 t97.txt)이 포함 되어 있습니다.
 
   ```
   C:\test>dir /x
@@ -80,9 +80,9 @@ dir [<drive>:][<path>][<filename>] [...] [/p] [/q] [/w] [/d] [/a[[:]<attributes>
   11/30/2004  01:16 PM 0 t97.txt
   ```
 
-  입력 시 `dir t97\*` t97 파일이 반환 될 수도 있습니다. 그러나 `dir t97\*` 별표 와일드 카드는 약식 이름 Map *T97B4 ~ 1.txt*를 사용 하 여 txt2 파일과 t97 파일을 일치 하므로 두 파일을 모두 반환 합니다. 마찬가지로,를 입력 하면 `del t97\*` 두 파일이 모두 삭제 됩니다.
+  입력 시 `dir t97\*` 파일 t97.txt 반환 될 수도 있습니다. 그러나 `dir t97\*` 별표 와일드 카드는 약식 이름 Map *T97B4 ~1.TXT*를 사용 하 여 t97.txt t.txt2에 대 한 파일과 일치 하므로 두 파일을 모두 반환 합니다. 마찬가지로,를 입력 하면 `del t97\*` 두 파일이 모두 삭제 됩니다.
 
-- 물음표 (?)는 이름에서 단일 문자를 대체 하는 데 사용할 수 있습니다. 예를 들어를 입력 하면 `dir read???.txt` 읽기로 시작 하 고 뒤에 최대 3 자까지 현재 디렉터리에 있는 파일의 확장명이 .txt가 됩니다. 여기에는 읽기 .txt, Read1, Read12, Read123 및 Readme1가 포함 되지만 Readme12는 포함 되지 않습니다.
+- 물음표 (?)는 이름에서 단일 문자를 대체 하는 데 사용할 수 있습니다. 예를 들어를 입력 하면 `dir read???.txt` 읽기로 시작 하 고 뒤에 최대 3 자까지 현재 디렉터리에 있는 파일의 확장명이 .txt가 됩니다. 여기에는 Read.txt, Read1.txt, Read12.txt, Read123.txt 및 Readme1.txt 포함 되지만 Readme12.txt는 포함 되지 않습니다.
 
 - *특성*에 두 개 이상의 값이 포함 된 **/a** 를 사용 하는 경우이 명령은 지정 된 모든 특성을 가진 해당 파일의 이름만 표시 합니다. 예를 들어 또는를 사용 하 여 **r** 및 **-h** 와 함께 **/a** 를 특성으로 사용 하는 경우 `/a:r-h` `/ar-h` 이 명령은 숨겨지지 않은 읽기 전용 파일의 이름만 표시 합니다.
 
@@ -114,13 +114,13 @@ dir > prn
 
 **Prn**을 지정 하면 디렉터리 목록이 LPT1 포트에 연결 된 프린터로 전송 됩니다. 프린터가 다른 포트에 연결 된 경우 **prn** 을 올바른 포트의 이름으로 바꾸어야 합니다.
 
-**.Prn** 를 파일 이름으로 바꿔 **dir** 명령의 출력을 파일로 리디렉션할 수도 있습니다. 경로를 입력할 수도 있습니다. 예를 들어 **dir** 출력을 Records 디렉터리의 파일에 전달 하려면 다음을 입력 합니다.
+**.Prn** 를 파일 이름으로 바꿔 **dir** 명령의 출력을 파일로 리디렉션할 수도 있습니다. 경로를 입력할 수도 있습니다. 예를 들어 **디렉터리 출력을** 레코드 디렉터리의 파일 dir.doc로 전달 하려면 다음을 입력 합니다.
 
 ```
 dir > \records\dir.doc
 ```
 
-Dir .doc가 없는 경우에는 **레코드** 디렉터리가 없는 경우에만 dir에서 해당 파일 **을 만듭니다.** 이 경우 다음과 같은 메시지가 나타납니다.
+dir.doc 없는 경우에는 **레코드** 디렉터리가 없는 경우 **dir** 에서이를 만듭니다. 이 경우 다음과 같은 메시지가 나타납니다.
 
 ```
 File creation error

@@ -1,6 +1,6 @@
 ---
 title: rcp
-description: 컴퓨터 간에 파일을 복사 하는 rcp 명령에 대 한 참조 항목입니다. 이 명령은 더 이상 사용 되지 않으며 이후 버전의 Windows에서는 지원 되지 않습니다.
+description: 컴퓨터 간에 파일을 복사 하는 rcp 명령에 대 한 참조 문서입니다. 이 명령은 더 이상 사용 되지 않으며 이후 버전의 Windows에서는 지원 되지 않습니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1e06f9751a690e1593a0fb3e30dc31c14c8f960a
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 34e58471a3f79e2f8ae6f060ec945bfc43b004c3
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85471868"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931997"
 ---
 # <a name="rcp"></a>rcp
 

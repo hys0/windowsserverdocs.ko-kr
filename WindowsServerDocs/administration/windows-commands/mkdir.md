@@ -1,6 +1,6 @@
 ---
 title: mkdir
-description: 디렉터리 또는 하위 디렉터리를 만드는 mkdir 명령에 대 한 참조 항목입니다.
+description: 디렉터리 또는 하위 디렉터리를 만드는 mkdir 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 921e369cb1550bca8e26cc0beada4c1f5c1c3d5b
-ms.sourcegitcommit: 5e313a004663adb54c90962cfdad9ae889246151
+ms.openlocfilehash: c7c1569e82143443de861216e40b904de4481a03
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84354603"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931279"
 ---
 # <a name="mkdir"></a>mkdir
 
@@ -31,7 +31,7 @@ mkdir [<drive>:]<path>
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | `<drive>`: | 새 디렉터리를 만들고 원하는 드라이브를 지정 합니다. |
 | `<path>` | 새 디렉터리의 위치와 이름을 지정합니다. 단일 경로의 최대 길이 파일 시스템에 의해 결정 됩니다. 필수 매개 변수입니다. |

@@ -1,6 +1,6 @@
 ---
 title: fc
-description: 두 파일 또는 파일 집합을 비교 하 여 두 파일 또는 파일 집합 간의 차이점을 표시 하는 fc 명령에 대 한 참조 항목입니다.
+description: 두 파일 또는 파일 집합을 비교 하 여 두 파일 또는 파일 집합 간의 차이점을 표시 하는 fc 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 146ae51334f40284e15c2a4564de8dd04660bf25
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: 6d9e12853d2634f7e7bcbd976b6c301f8e02c0dc
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83437158"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85930483"
 ---
 # <a name="fc"></a>fc
 
@@ -48,7 +48,7 @@ fc /b [<drive1:>][<path1>]<filename1> [<drive2:>][<path2>]<filename2>
 
 #### <a name="remarks"></a>설명
 
-- 이 명령은 c:\WINDOWS\fc.exe.에 의해 implemeted 됩니다. PowerShell 내에서이 명령을 사용할 수 있지만 ' fc '가 형식-사용자 지정의 별칭 이기도 하므로 전체 실행 파일 (fc-al)을 확인 해야 합니다.
+- 이 명령은 c:\WINDOWS\fc.exe에 의해 implemeted 됩니다. PowerShell 내에서이 명령을 사용할 수 있지만 ' fc '가 형식-사용자 지정의 별칭 이기도 하므로 전체 실행 파일 (fc.exe)의 철자를 확인 해야 합니다.
 
 - ASCII 비교에 **fc** 를 사용 하는 경우 **fc** 는 두 파일 간의 차이점을 다음과 같은 순서로 표시 합니다.
 
@@ -86,7 +86,7 @@ fc /b [<drive1:>][<path1>]<filename1> [<drive2:>][<path2>]<filename2>
 fc /a monthly.rpt sales.rpt
 ```
 
-두 배치 파일의 이진 비교를 수행 하려면 *.* 예를 들면 다음과 같이 *입력 합니다.*
+두 배치 파일에 대 한 이진 비교를 수행 하려면 *profits.bat* 및 *earnings.bat*을 입력 합니다.
 
 ```
 fc /b profits.bat earnings.bat
@@ -102,20 +102,20 @@ fc /b profits.bat earnings.bat
 FC: earnings.bat longer than profits.bat
 ```
 
-손익 및 소득 .bat 파일이 동일 하면 **fc** 는 다음과 같은 메시지를 표시 합니다.
+profits.bat 및 earnings.bat 파일이 동일한 경우 **fc** 는 다음과 같은 메시지를 표시 합니다.
 
 ```
 Comparing files profits.bat and earnings.bat
 FC: no differences encountered
 ```
 
-현재 디렉터리에 있는 모든 .bat 파일을 *새 .bat*파일과 비교 하려면 다음을 입력 합니다.
+현재 디렉터리에 있는 모든 .bat 파일 *new.bat*파일을 비교 하려면 다음을 입력 합니다.
 
 ```
 fc *.bat new.bat
 ```
 
-C 드라이브에 있는 *새 .bat 파일을* 드라이브 D의 *새 .bat* 파일과 비교 하려면 다음을 입력 합니다.
+C 드라이브에 있는 파일 *new.bat* 와 C 드라이브의 파일 *new.bat* 비교 하려면 다음을 입력 합니다.
 
 ```
 fc c:new.bat d:*.bat

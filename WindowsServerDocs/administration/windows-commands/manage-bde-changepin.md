@@ -1,6 +1,6 @@
 ---
 title: manage-bde changepin
-description: 운영 체제 드라이브에 대 한 PIN을 수정 하는 manage-bde changepin command에 대 한 참조 항목입니다.
+description: 운영 체제 드라이브에 대 한 PIN을 수정 하는 manage-bde changepin command에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 17b10e5224a117816b012e98219659b167879d6d
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: dabe40e80200a0fd2574dc9a3e0e5b47ef8b97ec
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84222908"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85932075"
 ---
 # <a name="manage-bde-changepin"></a>manage-bde changepin
 

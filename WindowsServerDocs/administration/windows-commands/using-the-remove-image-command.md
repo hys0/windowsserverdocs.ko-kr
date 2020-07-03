@@ -1,6 +1,6 @@
 ---
 title: 제거-이미지
-description: 서버에서 이미지를 삭제 하는 이미지 제거에 대 한 참조 항목입니다.
+description: 서버에서 이미지를 삭제 하는 이미지 제거에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 770c8487bcfe0cba28bffcd32a05285d904ba21c
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: badcb079b12cf4357cba85d5711cfc5b6a50a2a4
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720358"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931239"
 ---
 # <a name="remove-image"></a>제거-이미지
 
@@ -56,10 +56,10 @@ wdsutil /remove-Imagmedia:Windows Vista with Officemediatype:Install
 wdsutil /verbose /remove-Imagmedia:Windows Vista with Office /Server:MyWDSServemediatype:InstalmediaGroup:ImageGroup1 /Filename:install.wim
 ```
 ## <a name="additional-references"></a>추가 참조
-- [명령줄 구문 키](command-line-syntax-key.md)
-[추가 이미지](using-the-add-image-command.md)
-명령을 사용 하 여[복사](using-the-copy-image-command.md)
-이미지 명령을 사용 하 여 이미지[내보내기](using-the-export-image-command.md)
-명령을 사용 하 여[get](using-the-get-image-command.md)
-이미지 명령을 사용 하 여[바꾸기 이미지](using-the-replace-image-command.md)
-명령을 사용 하 여[하위 명령: 설정 이미지](subcommand-set-image.md)
+- [명령줄 구문 키](command-line-syntax-key.md) 
+ [추가 이미지 명령을](using-the-add-image-command.md) 
+ 사용 하 여 [복사 이미지 명령을](using-the-copy-image-command.md) 
+ 사용 하 여 [내보내기 이미지 명령 사용](using-the-export-image-command.md) 
+ [Get 이미지 명령을](using-the-get-image-command.md) 
+ 사용 하 여 [Replace 이미지 명령을](using-the-replace-image-command.md) 
+ 사용 하 여 [하위 명령: 설정 이미지](subcommand-set-image.md)

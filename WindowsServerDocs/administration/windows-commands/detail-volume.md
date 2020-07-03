@@ -1,6 +1,6 @@
 ---
-title: 세부 정보 볼륨
-description: 현재 볼륨이 있는 디스크를 표시 하는 세부 정보 볼륨에 대 한 참조 항목입니다.
+title: detail volume
+description: 현재 볼륨이 있는 디스크를 표시 하는 세부 정보 볼륨에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: eac3749304a06ea4cc11bf90a3220f5e24f9b5ae
-ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
+ms.openlocfilehash: cb74b788c93f4de57ce8fcc017c096ba888cc7a1
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82993010"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85930679"
 ---
-# <a name="detail-volume"></a>세부 정보 볼륨
+# <a name="detail-volume"></a>detail volume
 
 현재 볼륨 상주 하는 디스크를 표시 합니다. 시작 하기 전에이 작업을 수행 하려면 볼륨을 선택 해야 합니다. 사용 하 여는 [볼륨 선택](select-volume.md) 볼륨을 선택 하 고 포커스를 이동 하는 명령입니다. DVD ROM 또는 CD-ROM 드라이브와 같은 읽기 전용 볼륨에는 볼륨 세부 정보를 적용할 수 없습니다.
 

@@ -1,6 +1,6 @@
 ---
 title: dnscmd
-description: DNS 서버를 관리 하는 명령줄 인터페이스인 dnscmd 명령에 대 한 참조 항목입니다.
+description: DNS 서버를 관리 하는 명령줄 인터페이스인 dnscmd 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7c279513549ba149974933c33044fa861fa89a62
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: 47be29e55c4626f5c05498074f10418730c6a6f3
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83437038"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931302"
 ---
 # <a name="dnscmd"></a>Dnscmd
 
@@ -30,7 +30,7 @@ dnscmd <servername> <command> [<command parameters>]
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | `<servername>` | 원격 또는 로컬 DNS 서버의 IP 주소 또는 호스트 이름입니다. |
 
@@ -46,7 +46,7 @@ dnscmd [<servername>] /ageallrecords <zonename>[<nodename>] | [/tree]|[/f]
 
 #### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | ---------- | ----------- |
 | `<servername>` | IP 주소나 정규화 된 도메인 이름 (FQDN)으로 호스트 이름으로 표시는 관리자는 계획을 관리 하는 DNS 서버를 지정 합니다. 이 매개 변수를 생략 하면 로컬 서버에 사용 됩니다. |
 | `<zonename>` | 영역의 FQDN을 지정합니다. |
@@ -355,7 +355,7 @@ dnscmd [<servername>] /enumzones [/primary | /secondary | /forwarder | /stub | /
 
 ## <a name="dnscmd-exportsettings-command"></a>dnscmd/exportsettings 명령
 
-DNS 서버 구성 세부 정보를 나열 하는 텍스트 파일을 만듭니다. 텍스트 파일의 이름은 *DnsSettings*입니다. `%systemroot%\system32\dns`서버 디렉터리에 있습니다. 파일에 정보를 사용할 수 있는 **dnscmd /exportsettings** 구성 문제를 해결 하거나 여러 서버를 동일 하 게 구성 되도록 만듭니다.
+DNS 서버 구성 세부 정보를 나열 하는 텍스트 파일을 만듭니다. 텍스트 파일의 이름은 *DnsSettings.txt*입니다. `%systemroot%\system32\dns`서버 디렉터리에 있습니다. 파일에 정보를 사용할 수 있는 **dnscmd /exportsettings** 구성 문제를 해결 하거나 여러 서버를 동일 하 게 구성 되도록 만듭니다.
 
 ### <a name="syntax"></a>구문
 

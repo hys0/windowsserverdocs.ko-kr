@@ -1,6 +1,6 @@
 ---
 title: vol
-description: 디스크 볼륨 레이블 및 일련 번호 (있는 경우)를 표시 하는 볼륨에 대 한 참조 항목입니다.
+description: 디스크 볼륨 레이블 및 일련 번호 (있는 경우)를 표시 하는 볼륨에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: aa900ade6f434a53ac940d097407aa90509e9141
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: acc2f3ee16604d7b980fa0ddf6e2f42bd1e47435
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720281"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931320"
 ---
 # <a name="vol"></a>vol
 
@@ -32,7 +32,7 @@ vol [<Drive>:]
 
 |매개 변수|설명|
 |---------|-----------|
-|\<드라이브>:|볼륨 레이블 및 일련 번호를 표시 하려는 디스크를 포함 하는 드라이브를 지정 합니다.|
+|\<Drive>:|볼륨 레이블 및 일련 번호를 표시 하려는 디스크를 포함 하는 드라이브를 지정 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
 ## <a name="additional-references"></a>추가 참조
