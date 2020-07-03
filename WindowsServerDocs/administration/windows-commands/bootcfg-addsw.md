@@ -1,6 +1,6 @@
 ---
 title: bootcfg addsw
-description: 지정 된 운영 체제 항목에 대 한 운영 체제 로드 옵션을 추가 하는 bootcfg addsw 명령에 대 한 참조 항목입니다.
+description: 지정 된 운영 체제 항목에 대 한 운영 체제 로드 옵션을 추가 하는 bootcfg addsw 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 17abdc1ba28afad173ea6486519277916f08ad3d
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: f9d54c2cfdf898e1162d804220ae6dbb4a446fc5
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82709940"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85926357"
 ---
 # <a name="bootcfg-addsw"></a>bootcfg addsw
 
@@ -33,11 +33,11 @@ bootcfg /addsw [/s <computer> [/u <domain>\<user> /p <password>]] [/mm <maximumr
 | 용어 | 정의 |
 | ---- | ---------- |
 | `/s <computer>` | 원격 컴퓨터의 이름 또는 IP 주소를 지정 합니다 (백슬래시를 사용 하지 않음). 기본값은 로컬 컴퓨터입니다. |
-| `/u <domain>\<user>`  | 또는 `<user>` `<domain>\<user>`로 지정 된 사용자의 계정 권한으로 명령을 실행 합니다. 기본값은 현재 로그온 된 명령을 실행 하는 컴퓨터에서 사용자의 사용 권한. |
+| `/u <domain>\<user>`  | 또는로 지정 된 사용자의 계정 권한으로 명령을 실행 합니다 `<user>` `<domain>\<user>` . 기본값은 현재 로그온 된 명령을 실행 하는 컴퓨터에서 사용자의 사용 권한. |
 | `/p <password>` | 에 지정 된 사용자 계정의 암호를 지정 된 **/u** 매개 변수입니다. |
 | `/mm <maximumram>` | 운영 체제에서 사용할 수 있는 (메가바이트) ram, 최대 크기를 지정 합니다. 32mb 보다 크거나 같은 값 이어야 합니다. |
 | /bv | 추가 **/basevideo** 옵션을 지정 된 `<osentrylinenum>`, 운영 체제가 설치 된 비디오 드라이버에 대 한 표준 VGA 모드를 사용 하도록 지시 합니다. |
-| /so | 지정 `<osentrylinenum>`된에 **/sos** 옵션을 추가 하 여 운영 체제를 로드 하는 동안 장치 드라이버 이름을 표시 하도록 지시 합니다. |
+| /so | 지정 된에 **/sos** 옵션을 추가 하 여 `<osentrylinenum>` 운영 체제를 로드 하는 동안 장치 드라이버 이름을 표시 하도록 지시 합니다. |
 | /ng | 추가 **/noguiboot** 옵션을 지정 된 `<osentrylinenum>`, CTRL + ALT + DEL 로그온 프롬프트 앞에 나타나는 진행률 표시줄을 사용 하지 않도록 설정 합니다. |
 | `/id <osentrylinenum>` | 운영 체제 로드 옵션 추가 되는 Boot.ini 파일의 [운영 체제] 섹션에 운영 체제 항목 줄 번호를 지정 합니다. [운영 체제] 섹션 헤더 후 첫 번째 줄은 1입니다. |
 | /? | 명령 프롬프트에 도움말을 표시합니다. |

@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getproxybypasslist
-description: 지정 된 작업에 대 한 프록시 바이패스 목록을 검색 하는 bitsadmin getproxybypasslist 명령에 대 한 참조 항목입니다.
+description: 지정 된 작업에 대 한 프록시 바이패스 목록을 검색 하는 bitsadmin getproxybypasslist 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3b4f37d09521c28d55104975ed754a10e8df011e
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 67e6e4a54bb8c4929acbbaa47c78e33bab95a283
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717671"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85926833"
 ---
 # <a name="bitsadmin-getproxybypasslist"></a>bitsadmin getproxybypasslist
 

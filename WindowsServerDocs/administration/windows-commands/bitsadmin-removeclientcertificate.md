@@ -1,6 +1,6 @@
 ---
 title: bitsadmin removeclientcertificate
-description: 작업에서 클라이언트 인증서를 제거 하는 bitsadmin removeclientcertificate 명령에 대 한 참조 항목입니다.
+description: 작업에서 클라이언트 인증서를 제거 하는 bitsadmin removeclientcertificate 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 513830f6048f78aa528fa22cb590571e718452c2
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 3659f830b9462469762fcd4c7690295073400b1e
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717065"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85927987"
 ---
 # <a name="bitsadmin-removeclientcertificate"></a>bitsadmin removeclientcertificate
 

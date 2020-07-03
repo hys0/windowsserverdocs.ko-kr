@@ -1,6 +1,6 @@
 ---
 title: logman 카운터 만들기
-description: 카운터 데이터 수집기를 만드는 logman create counter 명령에 대 한 참조 항목입니다.
+description: 카운터 데이터 수집기를 만드는 logman create counter 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 63fd94fb32fe27b48460922818d1a7220f7f5d7a
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: 80ea79eb8c286a8dbe7c020b4c23ae1483d2cb9b
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84222964"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85927192"
 ---
 # <a name="logman-create-counter"></a>logman 카운터 만들기
 

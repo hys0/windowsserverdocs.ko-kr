@@ -1,6 +1,6 @@
 ---
 title: bootcfg default
-description: 기본값으로 지정할 운영 체제 항목을 지정 하는 bootcfg default 명령에 대 한 참조 항목입니다.
+description: 기본값으로 지정할 운영 체제 항목을 지정 하는 bootcfg 기본 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 43a1c2b4bcbb4062a24d4c72f5856898afecd349
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 4913564157ea08fec797dbb49ed55c33245cb254
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82709697"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85926305"
 ---
 # <a name="bootcfg-default"></a>bootcfg default
 
@@ -33,7 +33,7 @@ bootcfg /default [/s <computer> [/u <domain>\<user> /p <password>]] [/id <osentr
 | 매개 변수 | 설명 |
 | --------- | ----------- |
 | `/s <computer>` | 원격 컴퓨터의 이름 또는 IP 주소를 지정 합니다 (백슬래시를 사용 하지 않음). 기본값은 로컬 컴퓨터입니다. |
-| `/u <domain>\<user>`  | 또는 `<user>` `<domain>\<user>`로 지정 된 사용자의 계정 권한으로 명령을 실행 합니다. 기본값은 현재 로그온 된 명령을 실행 하는 컴퓨터에서 사용자의 사용 권한. |
+| `/u <domain>\<user>`  | 또는로 지정 된 사용자의 계정 권한으로 명령을 실행 합니다 `<user>` `<domain>\<user>` . 기본값은 현재 로그온 된 명령을 실행 하는 컴퓨터에서 사용자의 사용 권한. |
 | `/p <password>` | 에 지정 된 사용자 계정의 암호를 지정 된 **/u** 매개 변수입니다. |
 | `/id <osentrylinenum>` | 운영 체제 로드 옵션 추가 되는 Boot.ini 파일의 [운영 체제] 섹션에 운영 체제 항목 줄 번호를 지정 합니다. [운영 체제] 섹션 헤더 후 첫 번째 줄은 1입니다. |
 | /? | 명령 프롬프트에 도움말을 표시합니다. |

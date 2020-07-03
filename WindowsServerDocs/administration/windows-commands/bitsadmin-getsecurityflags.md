@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getsecurityflags
-description: Bitsadmin getsecurityflags 명령에 대 한 참조 항목으로, 전송 하는 동안 서버 인증서에서 수행 되는 URL 리디렉션과 검사에 대 한 HTTP 보안 플래그를 보고 합니다.
+description: Bitsadmin getsecurityflags 명령에 대 한 참조 문서-전송 하는 동안 서버 인증서에서 수행 되는 URL 리디렉션과 검사에 대 한 HTTP 보안 플래그를 보고 합니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 41b710f9897f24eb4161d9379dc3b1f89b141472
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 8613f2bd293bdbf7680aa730ec6fc222ffcfe158
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717548"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85926685"
 ---
 # <a name="bitsadmin-getsecurityflags"></a>bitsadmin getsecurityflags
 

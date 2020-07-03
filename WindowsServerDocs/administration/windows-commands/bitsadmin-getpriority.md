@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getpriority
-description: 지정 된 작업의 우선 순위를 검색 하는 bitsadmin getpriority 명령에 대 한 참조 항목입니다.
+description: 지정 된 작업의 우선 순위를 검색 하는 bitsadmin getpriority 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -8,12 +8,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 03/01/2019
-ms.openlocfilehash: 38f92e83ccf5b048d168ce6a21c6026f490b18bf
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 39ce769e2eb1dcf7a05d416dc2a66c6c082c9ae4
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717673"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85926853"
 ---
 # <a name="bitsadmin-getpriority"></a>bitsadmin getpriority
 
@@ -37,13 +37,13 @@ bitsadmin /getpriority <job>
 
 - **전경색**
 
-- **HIGH**
+- **최고**
 
 - **일반적**
 
-- **LOW**
+- **거의**
 
-- **없습니다**
+- **UNKNOWN**
 
 ## <a name="examples"></a>예
 

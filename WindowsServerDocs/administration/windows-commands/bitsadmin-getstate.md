@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getstate
-description: 지정 된 작업의 상태를 검색 하는 bitsadmin getstate 명령에 대 한 참조 항목입니다.
+description: 지정 된 작업의 상태를 검색 하는 bitsadmin getstate 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ab014c96c6d5d62232243d704d41d33cfcfc50f0
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: fd698727cba25f15a12a331f847e7f8436d3d54e
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717535"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85926676"
 ---
 # <a name="bitsadmin-getstate"></a>bitsadmin getstate
 
@@ -43,7 +43,7 @@ bitsadmin /getstate <job>
 | 전송 중 | 비트 데이터를 전송 합니다. |
 | 양도할 | BITS가 작업의 모든 파일을 전송 했습니다. |
 | 일시 중단 | 작업 일시 중지 됩니다. |
-| Error | 복구할 수 없는 오류가 발생 했습니다. 전송은 다시 시도 하지 않습니다. |
+| 오류 | 복구할 수 없는 오류가 발생 했습니다. 전송은 다시 시도 하지 않습니다. |
 | Transient_Error | 복구 가능한 오류가 발생 했습니다. 최소 다시 시도 간격에서 만료 되 면 전송 재시도 합니다. |
 | 확인됨 | 작업이 완료 되었습니다. |
 | 취소됨 | 작업이 취소되었습니다. |

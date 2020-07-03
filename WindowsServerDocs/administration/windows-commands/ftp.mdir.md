@@ -1,6 +1,6 @@
 ---
 title: ftp mdir
-description: Ftp mdir 명령에 대 한 참조 항목으로, 원격 디렉터리에서 파일 및 하위 디렉터리의 디렉터리 목록을 표시 합니다.
+description: 원격 디렉터리에서 파일 및 하위 디렉터리의 디렉터리 목록을 표시 하는 ftp mdir 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b192e6de23105fcc696d8369ce0280167a201e20
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 5a4d1b00941d350776fd953607a5cc5da433993c
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820223"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85926153"
 ---
 # <a name="ftp-mdir"></a>ftp mdir
 
@@ -43,7 +43,7 @@ mdir <remotefile>[...] <localfile>
 mdir dir1 dir2 -
 ```
 
-Dir1 및 *dir2* 의 결합 된 디렉터리 목록을 다른 로컬 파일 ( *dir1* 및)에 저장 하려면 *다음을 입력*합니다.
+*Dir1* 및 *dir2* 의 결합 된 디렉터리 목록을 *dirlist.txt*라는 로컬 파일에 저장 하려면 다음을 입력 합니다.
 
 ```
 mdir dir1 dir2 dirlist.txt

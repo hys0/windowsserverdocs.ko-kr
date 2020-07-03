@@ -1,6 +1,6 @@
 ---
 title: bitsadmin addfilewithranges
-description: 지정 된 작업에 파일을 추가 하는 bitsadmin addfilewithranges 명령에 대 한 참조 항목입니다. BITS는 원격 파일에서 지정된 된 범위를 다운로드 합니다.
+description: 지정 된 작업에 파일을 추가 하는 bitsadmin addfilewithranges 명령에 대 한 참조 문서입니다. BITS는 원격 파일에서 지정된 된 범위를 다운로드 합니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4b878b4f48441808bf971c051397d3af9bd975fe
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 5439cfb8330cda7c51150c720fe45faccca8e1ec
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718463"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85927074"
 ---
 # <a name="bitsadmin-addfilewithranges"></a>bitsadmin addfilewithranges
 
@@ -39,7 +39,7 @@ bitsadmin /addfilewithranges <job> <remoteURL> <localname> <rangelist>
 
 - 토큰 **eof** 에 있는 오프셋 및 길이가 쌍 내에서 유효한 길이 값은 `<rangelist>`합니다. 지정된 된 파일의 끝까지 읽는 서비스에 지시 합니다.
 
-- 길이가 `addfilewithranges` 0 인 범위가 동일한 오프셋을 사용 하 여 다른 범위와 함께 지정 된 경우 (예:) 오류 코드 0x8020002c를 사용 하 여 명령이 실패 합니다.
+- `addfilewithranges`길이가 0 인 범위가 동일한 오프셋을 사용 하 여 다른 범위와 함께 지정 된 경우 (예:) 오류 코드 0x8020002c를 사용 하 여 명령이 실패 합니다.
 
     `c:\bits>bitsadmin /addfilewithranges j2 http://bitsdc/dload/1k.zip c:\1k.zip 100:0,100:5`
 

@@ -1,6 +1,6 @@
 ---
 title: bitsadmin replaceremoteprefix
-description: 필요에 따라 작업의 모든 파일에 대 한 원격 URL을 *oldprefix* 에서 *oldprefix*로 변경 하는 bitsadmin replaceremoteprefix 명령에 대 한 참조 항목입니다.
+description: 필요에 따라 작업의 모든 파일에 대 한 원격 URL을 *oldprefix* 에서 *oldprefix*로 변경 하는 bitsadmin replaceremoteprefix 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 745d026513413db799e86df3422d5ee19c89274f
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: e2453ac4c223baa049980578c81d9bc6539baac7
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717032"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85927972"
 ---
 # <a name="bitsadmin-replaceremoteprefix"></a>bitsadmin replaceremoteprefix
 
@@ -36,7 +36,7 @@ bitsadmin /replaceremoteprefix <job> <oldprefix> <newprefix>
 
 ## <a name="examples"></a>예
 
-*Mydownloadjob*이라는 작업의 모든 파일에 대 한 원격 URL을에서 *http://stageserver* 로 *http://prodserver*변경 합니다.
+*Mydownloadjob*이라는 작업의 모든 파일에 대 한 원격 URL을에서로 변경 합니다 *http://stageserver* *http://prodserver* .
 
 ```
 bitsadmin /replaceremoteprefix myDownloadJob http://stageserver http://prodserver

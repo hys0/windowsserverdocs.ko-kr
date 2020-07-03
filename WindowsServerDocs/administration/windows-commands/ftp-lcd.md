@@ -1,6 +1,6 @@
 ---
 title: ftp lcd
-description: 로컬 컴퓨터의 작업 디렉터리를 변경 하는 ftp lcd 명령에 대 한 참조 항목입니다.
+description: 로컬 컴퓨터의 작업 디렉터리를 변경 하는 ftp lcd 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c941adcc8c56d2598ad4ff56852309a256656878
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 7a325569717cb60ad0750447b2367ad18965d915
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820133"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85927228"
 ---
 # <a name="ftp-lcd"></a>ftp lcd
 

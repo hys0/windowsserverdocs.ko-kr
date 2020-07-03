@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getminretrydelay
-description: 서비스에서 임시 오류가 발생 한 후 파일을 전송 하기 전에 대기 하는 시간 (초)을 검색 하는 bitsadmin getminretrydelay 명령에 대 한 참조 항목입니다.
+description: 파일 전송을 시도 하기 전에 일시적 오류가 발생 한 후 서비스가 대기 하는 시간 (초)을 검색 하는 bitsadmin getminretrydelay 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a50b9d98fe0b873dc58b8e86dc672a8f4157208a
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 066eb9a2c967d9d5e92aa8dbad2001a65a682796
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717843"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85927012"
 ---
 # <a name="bitsadmin-getminretrydelay"></a>bitsadmin getminretrydelay
 

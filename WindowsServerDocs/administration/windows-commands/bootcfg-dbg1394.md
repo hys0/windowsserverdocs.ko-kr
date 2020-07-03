@@ -1,6 +1,6 @@
 ---
 title: bootcfg dbg1394
-description: 지정 된 운영 체제 항목에 대해 1394 포트 디버깅을 구성 하는 bootcfg dbg1394 command에 대 한 참조 항목
+description: 지정 된 운영 체제 항목에 대해 1394 포트 디버깅을 구성 하는 bootcfg dbg1394 명령에 대 한 참조 문서
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 16230c52657fd5c9c14972726ed2465401995223
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: f1f71edbabbf85c301bec24138a805523975d3f6
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82709701"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85926344"
 ---
 # <a name="bootcfg-dbg1394"></a>bootcfg dbg1394
 
@@ -32,9 +32,9 @@ bootcfg /dbg1394 {on | off}[/s <computer> [/u <domain>\<user> /p <password>]] [/
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `{on | off}` | 다음을 포함 하 여 1394 포트 디버깅의 값을 지정 합니다.<ul><li>**sign-on.** 지정 `<osentrylinenum>`된에/dbg1394 옵션을 추가 하 여 원격 디버깅을 지원할 수 있도록 합니다.</li><li>**해제.** 지정 <osentrylinenum>된에서/dbg1394 옵션을 제거 하 여 원격 디버깅 지원을 사용 하지 않도록 설정 합니다.</li></ul> |
+| `{on | off}` | 다음을 포함 하 여 1394 포트 디버깅의 값을 지정 합니다.<ul><li>**sign-on.** 지정 된에/dbg1394 옵션을 추가 하 여 원격 디버깅을 지원할 수 있도록 합니다 `<osentrylinenum>` .</li><li>**해제.** 지정 된에서/dbg1394 옵션을 제거 하 여 원격 디버깅 지원을 사용 하지 않도록 설정 <osentrylinenum> 합니다.</li></ul> |
 | `/s <computer>` | 원격 컴퓨터의 이름 또는 IP 주소를 지정 합니다 (백슬래시를 사용 하지 않음). 기본값은 로컬 컴퓨터입니다. |
-| `/u <domain>\<user>`  | 또는 `<user>` `<domain>\<user>`로 지정 된 사용자의 계정 권한으로 명령을 실행 합니다. 기본값은 현재 로그온 된 명령을 실행 하는 컴퓨터에서 사용자의 사용 권한. |
+| `/u <domain>\<user>`  | 또는로 지정 된 사용자의 계정 권한으로 명령을 실행 합니다 `<user>` `<domain>\<user>` . 기본값은 현재 로그온 된 명령을 실행 하는 컴퓨터에서 사용자의 사용 권한. |
 | `/p <password>` | 에 지정 된 사용자 계정의 암호를 지정 된 **/u** 매개 변수입니다. |
 | `/ch <channel>` | 디버깅에 사용할 채널을 지정 합니다. 유효한 값은 1에서 64 사이의 정수를 포함 합니다. 1394 포트 디버깅을 사용 하지 않도록 설정 하는 경우이 매개 변수를 사용 하지 마세요. |
 | `/id <osentrylinenum>` | 운영 체제 로드 옵션 추가 되는 Boot.ini 파일의 [운영 체제] 섹션에 운영 체제 항목 줄 번호를 지정 합니다. [운영 체제] 섹션 헤더 후 첫 번째 줄은 1입니다. |

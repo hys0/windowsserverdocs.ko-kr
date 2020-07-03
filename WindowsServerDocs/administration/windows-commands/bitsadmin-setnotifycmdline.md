@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setnotifycmdline
-description: Bitsadmin setnotifycmdline 명령에 대 한 참조 항목-작업에서 데이터 전송을 완료할 때 실행 되는 명령줄 명령을 설정 하거나 작업이 상태로 전환 될 때 실행 되는 명령줄 명령을 설정 합니다.
+description: Bitsadmin setnotifycmdline 명령에 대 한 참조 문서-작업에서 데이터 전송을 완료할 때 실행 되는 명령줄 명령을 설정 하거나 작업이 상태로 전환 될 때 실행 되는 명령줄 명령을 설정 합니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b21d7151a5b646a4fe07d073220614f5e3c99539
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: c4466a0011f7bb1648cb7e2a51113f0a3d21c7e5
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720130"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85927656"
 ---
 # <a name="bitsadmin-setnotifycmdline"></a>bitsadmin setnotifycmdline
 
@@ -39,13 +39,13 @@ bitsadmin /setnotifycmdline <job> <program_name> [program_parameters]
 
 ## <a name="examples"></a>예
 
-*Mydownloadjob*이라는 작업이 완료 될 때 notepad.exe를 실행 하려면 다음을 수행 합니다.
+*Mydownloadjob*이라는 작업이 완료 되 면 Notepad.exe를 실행 하려면 다음을 수행 합니다.
 
 ```
 bitsadmin /setnotifycmdline myDownloadJob c:\winnt\system32\notepad.exe NULL
 ```
 
-메모장에서 myDownloadJob 이라는 작업을 완료할 때 EULA 텍스트를 표시 하려면 다음을 수행 합니다.
+Notepad.exe에 EULA 텍스트를 표시 하려면 myDownloadJob 이라는 작업을 완료 합니다.
 
 ```
 bitsadmin /setnotifycmdline myDownloadJob c:\winnt\system32\notepad.exe notepad c:\eula.txt

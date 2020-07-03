@@ -1,6 +1,6 @@
 ---
 title: bitsadmin rawreturn
-description: 구문 분석에 적합 한 데이터를 반환 하는 bitsadmin rawreturn 명령에 대 한 참조 항목입니다.
+description: 구문 분석에 적합 한 데이터를 반환 하는 bitsadmin rawreturn 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: af465bb9f51ab6f43980c43bf2be1f5158429a82
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 1b537b21678c100364406d4c59eaa02efd143e21
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717089"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85926469"
 ---
 # <a name="bitsadmin-rawreturn"></a>bitsadmin rawreturn
 

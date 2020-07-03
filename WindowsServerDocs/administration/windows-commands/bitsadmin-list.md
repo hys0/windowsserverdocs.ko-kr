@@ -1,6 +1,6 @@
 ---
 title: bitsadmin list
-description: 현재 사용자가 소유한 전송 작업을 나열 하는 bitsadmin list 명령에 대 한 참조 항목입니다.
+description: 현재 사용자가 소유한 전송 작업을 나열 하는 bitsadmin list 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 262589293a147cc1bae98da8fdca047c5f914094
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 9d9a2c86536ff0910b4e0a8bea15ec43d9371087
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717427"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85926562"
 ---
 # <a name="bitsadmin-list"></a>bitsadmin list
 
@@ -30,8 +30,8 @@ bitsadmin /list [/allusers][/verbose]
 
 | 매개 변수 | 설명 |
 | -------------- | -------------- |
-| /allusers | (선택 사항) 모든 사용자에 대 한 작업을 나열 합니다. 이 매개 변수를 사용 하려면 관리자 권한이 있어야 합니다. |
-| /verbose | (선택 사항) 각 작업에 대 한 자세한 정보를 제공 합니다. |
+| /allusers | 선택 사항입니다. 모든 사용자에 대 한 작업을 나열 합니다. 이 매개 변수를 사용 하려면 관리자 권한이 있어야 합니다. |
+| /verbose | 선택 사항입니다. 각 작업에 대 한 자세한 정보를 제공 합니다. |
 
 ## <a name="examples"></a>예
 

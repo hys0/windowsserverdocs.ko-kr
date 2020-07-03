@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getnotifyinterface
-description: 다른 프로그램에서 지정 된 작업에 대 한 COM 콜백 인터페이스를 등록 했는지 여부를 확인 하는 bitsadmin getnotifyinterface 명령에 대 한 참조 항목입니다.
+description: 다른 프로그램에서 지정 된 작업에 대 한 COM 콜백 인터페이스를 등록 했는지 여부를 확인 하는 bitsadmin getnotifyinterface 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2158759067010292ca213f97014857354247b9c7
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 9c86b611eb5f46759c474171085884c5702e07d1
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717735"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85926906"
 ---
 # <a name="bitsadmin-getnotifyinterface"></a>bitsadmin getnotifyinterface
 

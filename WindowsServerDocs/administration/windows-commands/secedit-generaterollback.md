@@ -1,6 +1,6 @@
 ---
 title: 'secedit: generaterollback'
-description: '* * * *에 대 한 참조 항목'
+description: '* * * *에 대 한 참조 문서'
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 90d139f14db0052c52967e739131a16f92992353
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 1dec7833853d3c0526997f1d3e1bd2113d114cf2
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83821113"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85926176"
 ---
 # <a name="seceditgeneraterollback"></a>secedit: generaterollback
 
@@ -32,11 +32,11 @@ Secedit /generaterollback /db <database file name> /cfg <configuration file name
 
 |매개 변수|설명|
 |---------|-----------|
-|db|필수 사항입니다.</br>분석은 수행할 저장된 된 구성을 포함 하는 데이터베이스의 경로 파일 이름을 지정 합니다.</br>파일 이름을 연결 된 보안 템플릿 (구성 파일에 표시 됨) 처럼 되지 않은 데이터베이스를 지정 하는 경우는 `/cfg \<configuration file name>` 명령줄 옵션 지정 해야 합니다.|
-|cfg|필수 사항입니다.</br>분석을 위해 데이터베이스로 가져올 보안 서식 파일에 대 한 경로 파일 이름을 지정 합니다.</br>이 /cfg 옵션은 함께 사용할만 `/db \<database file name>` 매개 변수입니다. 지정 하지 않으면 데이터베이스에 이미 저장 된 모든 구성에 대해 분석이 수행 됩니다.|
-|rbk|필수 사항입니다.</br>롤백 정보 기록 되는 보안 템플릿을 지정 합니다. 보안 템플릿 스냅인을 사용 하 여 보안 템플릿은 만듭니다. 이 명령을 사용 하 여 롤백 파일을 만들 수 있습니다.|
-|log|(선택 사항)</br>프로세스에 대 한 로그 파일의 경로 파일 이름을 지정합니다.|
-|quiet|(선택 사항)</br>화면 및 로그 출력을 표시 하지 않습니다. 보안 구성 및 분석에 스냅인을 Microsoft Management Console (MMC)를 사용 하 여 분석 결과 보기 수 있습니다.|
+|db|필수 요소.</br>분석은 수행할 저장된 된 구성을 포함 하는 데이터베이스의 경로 파일 이름을 지정 합니다.</br>파일 이름을 연결 된 보안 템플릿 (구성 파일에 표시 됨) 처럼 되지 않은 데이터베이스를 지정 하는 경우는 `/cfg \<configuration file name>` 명령줄 옵션 지정 해야 합니다.|
+|cfg|필수 요소.</br>분석을 위해 데이터베이스로 가져올 보안 서식 파일에 대 한 경로 파일 이름을 지정 합니다.</br>이 /cfg 옵션은 함께 사용할만 `/db \<database file name>` 매개 변수입니다. 지정 하지 않으면 데이터베이스에 이미 저장 된 모든 구성에 대해 분석이 수행 됩니다.|
+|rbk|필수 요소.</br>롤백 정보 기록 되는 보안 템플릿을 지정 합니다. 보안 템플릿 스냅인을 사용 하 여 보안 템플릿은 만듭니다. 이 명령을 사용 하 여 롤백 파일을 만들 수 있습니다.|
+|log|선택 사항입니다.</br>프로세스에 대 한 로그 파일의 경로 파일 이름을 지정합니다.|
+|quiet|선택 사항입니다.</br>화면 및 로그 출력을 표시 하지 않습니다. 보안 구성 및 분석에 스냅인을 Microsoft Management Console (MMC)를 사용 하 여 분석 결과 보기 수 있습니다.|
 
 ## <a name="remarks"></a>설명
 

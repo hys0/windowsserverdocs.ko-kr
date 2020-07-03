@@ -1,6 +1,6 @@
 ---
 title: bootcfg debug
-description: 지정 된 운영 체제 항목에 대 한 디버그 설정을 추가 하거나 변경 하는 bootcfg debug 명령에 대 한 참조 항목입니다.
+description: 지정 된 운영 체제 항목에 대 한 디버그 설정을 추가 하거나 변경 하는 bootcfg debug 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c8059aaefd1b23b3e74f4c27ba96e322c44b5cb6
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: da4179d85d4e84918e75fb4c8490e229230412eb
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82709716"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85926324"
 ---
 # <a name="bootcfg-debug"></a>bootcfg debug
 
@@ -35,9 +35,9 @@ bootcfg /debug {on | off | edit}[/s <computer> [/u <domain>\<user> /p <password>
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `{on | off | edit}` | 다음을 포함 하 여 포트 디버깅의 값을 지정 합니다.<ul><li>**sign-on.** 지정 `<osentrylinenum>`된에/debug 옵션을 추가 하 여 원격 디버깅을 지원할 수 있도록 합니다.</li><li>**해제.** 지정 <osentrylinenum>된에서/debug 옵션을 제거 하 여 원격 디버깅 지원을 사용 하지 않도록 설정 합니다.</li><li>**편집할.** 지정 <osentrylinenum>된에 대 한/debug 옵션과 연결 된 값을 변경 하 여 포트 및 전송 속도 설정을 변경할 수 있습니다.</li></ul> |
+| `{on | off | edit}` | 다음을 포함 하 여 포트 디버깅의 값을 지정 합니다.<ul><li>**sign-on.** 지정 된에/debug 옵션을 추가 하 여 원격 디버깅을 지원할 수 있도록 합니다 `<osentrylinenum>` .</li><li>**해제.** 지정 된에서/debug 옵션을 제거 하 여 원격 디버깅 지원을 사용 하지 않도록 설정 <osentrylinenum> 합니다.</li><li>**편집할.** 지정 된에 대 한/debug 옵션과 연결 된 값을 변경 하 여 포트 및 전송 속도 설정을 변경할 수 있습니다 <osentrylinenum> .</li></ul> |
 | `/s <computer>` | 원격 컴퓨터의 이름 또는 IP 주소를 지정 합니다 (백슬래시를 사용 하지 않음). 기본값은 로컬 컴퓨터입니다. |
-| `/u <domain>\<user>`  | 또는 `<user>` `<domain>\<user>`로 지정 된 사용자의 계정 권한으로 명령을 실행 합니다. 기본값은 현재 로그온 된 명령을 실행 하는 컴퓨터에서 사용자의 사용 권한. |
+| `/u <domain>\<user>`  | 또는로 지정 된 사용자의 계정 권한으로 명령을 실행 합니다 `<user>` `<domain>\<user>` . 기본값은 현재 로그온 된 명령을 실행 하는 컴퓨터에서 사용자의 사용 권한. |
 | `/p <password>` | 에 지정 된 사용자 계정의 암호를 지정 된 **/u** 매개 변수입니다. |
 | `/port {COM1 | COM2 | COM3 | COM4}` |  디버깅에 사용할 COM 포트를 지정 합니다. 디버깅을 사용 하지 않도록 설정한 경우이 매개 변수를 사용 하지 마세요. |
 | `/baud {9600 | 19200 | 38400 | 57600 | 115200}` | 디버깅에 사용할 전송 속도를 지정 합니다. 디버깅을 사용 하지 않도록 설정한 경우이 매개 변수를 사용 하지 마세요. |

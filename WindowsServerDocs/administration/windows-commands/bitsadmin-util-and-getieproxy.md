@@ -1,6 +1,6 @@
 ---
 title: bitsadmin util and getieproxy
-description: 지정 된 서비스 계정에 대 한 프록시 사용을 검색 하는 bitsadmin util 및 getieproxy 명령에 대 한 참조 항목입니다.
+description: 지정 된 서비스 계정에 대 한 프록시 사용을 검색 하는 bitsadmin util 및 getieproxy 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 576f308bc7fb9a4e448638d06621f95eebef0cd0
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 15093341ef2dcaca6dd0f5efb4c48d4b9d1934a1
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707666"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85927402"
 ---
 # <a name="bitsadmin-util-and-getieproxy"></a>bitsadmin util and getieproxy
 
@@ -33,7 +33,7 @@ bitsadmin /util /getieproxy <account> [/conn <connectionname>]
 | 매개 변수 | 설명 |
 | --------- | ---------- |
 | account | 서비스 계정을 검색 하려면 프록시 설정을 지정 합니다. 가능한 값은 다음과 같습니다.<ul><li>LOCALSYSTEM</li><li>   NETWORKSERVICE</li><li>LOCALSERVICE.</li></ul> |
-| connectionname | (선택 사항) **/Conn** 매개 변수와 함께 사용 하 여 사용할 모뎀 연결을 지정 합니다. **/Conn** 매개 변수를 지정 하지 않으면 BITS는 LAN 연결을 사용 합니다. |
+| connectionname | 선택 사항입니다. **/Conn** 매개 변수와 함께 사용 하 여 사용할 모뎀 연결을 지정 합니다. **/Conn** 매개 변수를 지정 하지 않으면 BITS는 LAN 연결을 사용 합니다. |
 
 ## <a name="examples"></a>예
 

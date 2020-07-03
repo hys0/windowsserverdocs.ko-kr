@@ -1,6 +1,6 @@
 ---
 title: bitsadmin peers and list
-description: 모든 피어를 나열 하는 bitsadmin 피어 및 list 명령에 대 한 참조 항목입니다.
+description: 모든 피어를 나열 하는 bitsadmin 피어 및 list 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a6c1f8fbcb6ca40c86a1d589ba7217392b9875cf
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 056e6734de857da7fc99bb0c7a9f525e9553d3eb
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717151"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85926471"
 ---
 # <a name="bitsadmin-peers-and-list"></a>bitsadmin peers and list
 

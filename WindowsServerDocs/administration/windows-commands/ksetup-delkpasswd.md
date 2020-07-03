@@ -1,6 +1,6 @@
 ---
 title: ksetup delkpasswd
-description: 영역에 대 한 Kerberos 암호 서버 (kpasswd)를 제거 하는 ksetup delkpasswd 명령에 대 한 참조 항목입니다.
+description: 영역에 대 한 Kerberos 암호 서버 (kpasswd)를 제거 하는 ksetup delkpasswd 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a84a70158ad707fb36d1ca8a4879a93fe0b7df06
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 05002c860575bce84748adc2fc353f0994d559ab
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83817843"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85926135"
 ---
 # <a name="ksetup-delkpasswd"></a>ksetup delkpasswd
 

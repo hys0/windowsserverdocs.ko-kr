@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getnotifyflags
-description: 지정 된 작업에 대 한 알림 플래그를 검색 하는 bitsadmin getnotifyflags 명령에 대 한 참조 항목입니다.
+description: 지정 된 작업에 대 한 알림 플래그를 검색 하는 bitsadmin getnotifyflags 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 36e4c3584b2e3be9c9985756aeaec08b40e74b0c
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 0ea97c039f372a2211b1e2a6c640c4499a38dfe4
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717771"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85926922"
 ---
 # <a name="bitsadmin-getnotifyflags"></a>bitsadmin getnotifyflags
 
@@ -28,7 +28,7 @@ bitsadmin /getnotifyflags <job>
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | 설명 |
+| 매개 변수 | Description |
 | -------------- | -------------- |
 | 작업(job) | 작업의 표시 이름 또는 GUID입니다. |
 

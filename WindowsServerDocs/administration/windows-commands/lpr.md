@@ -1,6 +1,6 @@
 ---
 title: lpr
-description: 인쇄 준비 과정에서 LPD (Line printer Daemon) 서비스를 실행 하는 컴퓨터 또는 프린터 공유 장치에 파일을 전송 하는 lpr 명령에 대 한 참조 항목입니다.
+description: 인쇄 준비 과정에서 LPD (Line printer Daemon) 서비스를 실행 하는 컴퓨터 또는 프린터 공유 장치에 파일을 전송 하는 lpr 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d11b72ee807869613505052cfb51e80a89a80d70
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: 9ea40ef71da7804f01c963049f07e1f6b5395354
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84223030"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85927117"
 ---
 # <a name="lpr"></a>lpr
 
@@ -44,7 +44,7 @@ lpr [-S <servername>] -P <printername> [-C <bannercontent>] [-J <jobname>] [-o |
 
 ### <a name="examples"></a>예
 
-*에서 10.0.0.45*에서 LPD 호스트의 *Laserprinter1* 프린터 큐에 *문서 .txt* 텍스트 파일을 인쇄 하려면 다음을 입력 합니다.
+*에서 10.0.0.45*에서 LPD 호스트의 *Laserprinter1* 프린터 큐에 *Document.txt* 텍스트 파일을 인쇄 하려면 다음을 입력 합니다.
 
 ```
 lpr -S 10.0.0.45 -P Laserprinter1 -o Document.txt

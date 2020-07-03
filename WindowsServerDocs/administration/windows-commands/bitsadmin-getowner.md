@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getowner
-description: 지정 된 작업의 소유자를 검색 하는 bitsadmin getowner 명령에 대 한 참조 항목입니다.
+description: 지정 된 작업의 소유자를 검색 하는 bitsadmin getowner 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2a345ea47232f1f4d6340e1341747c9dad92382b
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: f530952e510fdff1a30dfd7c6081e112d841f401
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717715"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85926899"
 ---
 # <a name="bitsadmin-getowner"></a>bitsadmin getowner
 

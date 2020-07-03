@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setcustomheaders
-description: GET 요청에 사용자 지정 HTTP 헤더를 추가 하는 bitsadmin setcustomheaders 명령에 대 한 참조 항목입니다.
+description: GET 요청에 사용자 지정 HTTP 헤더를 추가 하는 bitsadmin setcustomheaders 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 92728f8d63a22cf9d13d6c02a69359583a9fc5cc
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 74a8c5f4aa464aa9f362a9761c9f1c449fbaad00
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719330"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85927847"
 ---
 # <a name="bitsadmin-setcustomheaders"></a>bitsadmin setcustomheaders
 

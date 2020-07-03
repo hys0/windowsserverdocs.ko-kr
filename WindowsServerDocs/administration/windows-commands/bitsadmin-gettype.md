@@ -1,6 +1,6 @@
 ---
 title: bitsadmin gettype
-description: 지정 된 작업의 작업 유형을 검색 하는 bitsadmin gettype 명령에 대 한 참조 항목입니다.
+description: 지정 된 작업의 작업 유형을 검색 하는 bitsadmin gettype 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 151f9b8e81229a666111ebcd20f060d84160445a
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: c7224add1b503d9ec50e84879a47442c12447e5d
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717474"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85926641"
 ---
 # <a name="bitsadmin-gettype"></a>bitsadmin gettype
 
@@ -36,12 +36,12 @@ bitsadmin /gettype <job>
 
 반환 된 출력 값은 다음과 같을 수 있습니다.
 
-| Type | 설명 |
+| 형식 | 설명 |
 | --------------- | ----------- |
 | 다운로드 | 작업은 다운로드입니다. |
 | 업로드 | 업로드가 작업입니다. |
 | 업로드-회신 | 작업은 업로드 회신입니다. |
-| Unknown | 작업의 유형을 알 수 없습니다. |
+| 알 수 없음 | 작업의 유형을 알 수 없습니다. |
 
 ## <a name="examples"></a>예
 

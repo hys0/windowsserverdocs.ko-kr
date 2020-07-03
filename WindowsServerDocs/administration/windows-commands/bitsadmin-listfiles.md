@@ -1,6 +1,6 @@
 ---
 title: bitsadmin listfiles
-description: 지정 된 작업의 파일을 나열 하는 bitsadmin listfiles 명령에 대 한 참조 항목입니다.
+description: 지정 된 작업의 파일을 나열 하는 bitsadmin listfiles 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6826c1ec2f624a06d11fedcb8ca9f14d86b7ec27
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 2702fbaec76aac666d931264c9855017b602e8ea
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717413"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85926536"
 ---
 # <a name="bitsadmin-listfiles"></a>bitsadmin listfiles
 

@@ -1,6 +1,6 @@
 ---
 title: bitsadmin
-description: 작업을 만들고 다운로드 하거나 업로드 하 고 진행률을 모니터링 하는 데 사용 되는 명령줄 도구인 bitsadmin 명령에 대 한 참조 항목입니다.
+description: 작업을 만들고 다운로드 하거나 업로드 하 고 진행률을 모니터링 하는 데 사용 되는 명령줄 도구인 bitsadmin 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,20 +9,20 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 94a829ce21c4571188fb5ffeb9a0a1d991637d07
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: e9fd70e4e74dc25c32ff3a74be2fc1c66d697367
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82710042"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85926376"
 ---
 # <a name="bitsadmin"></a>bitsadmin
 
 > 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
 
-Bitsadmin은 작업을 만들고 다운로드 하거나 업로드 하 고 진행률을 모니터링 하는 데 사용 되는 명령줄 도구입니다. Bitsadmin 도구는 스위치를 사용 하 여 수행할 작업을 식별 합니다. 또는 `bitsadmin /help` 를 호출 `bitsadmin /?` 하 여 스위치 목록을 가져올 수 있습니다.
+Bitsadmin은 작업을 만들고 다운로드 하거나 업로드 하 고 진행률을 모니터링 하는 데 사용 되는 명령줄 도구입니다. Bitsadmin 도구는 스위치를 사용 하 여 수행할 작업을 식별 합니다. `bitsadmin /?`또는 `bitsadmin /help` 를 호출 하 여 스위치 목록을 가져올 수 있습니다.
 
-대부분의 스위치에 `<job>` 는 작업의 표시 이름 또는 GUID로 설정 하는 매개 변수가 필요 합니다. 작업의 표시 이름은 고유 하지 않아도 됩니다. **/Create** 및 **/list** 스위치는 작업의 GUID를 반환 합니다.
+대부분의 스위치에는 `<job>` 작업의 표시 이름 또는 GUID로 설정 하는 매개 변수가 필요 합니다. 작업의 표시 이름은 고유 하지 않아도 됩니다. **/Create** 및 **/list** 스위치는 작업의 GUID를 반환 합니다.
 
 기본적으로 자신의 작업에 대 한 정보에 액세스할 수 있습니다. 다른 사용자의 작업에 대 한 정보에 액세스 하려면 관리자 권한이 있어야 합니다. 작업이 상승 된 상태에서 만들어진 경우에는 관리자 권한 창에서 **bitsadmin** 을 실행 해야 합니다. 그렇지 않으면 작업에 읽기 전용으로 액세스할 수 있습니다.
 

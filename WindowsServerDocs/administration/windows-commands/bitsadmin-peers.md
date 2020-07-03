@@ -1,6 +1,6 @@
 ---
 title: bitsadmin peers
-description: Bitsadmin 피어 명령에 대 한 참조 항목입니다 .이 명령에는/peers 스위치가 나열 됩니다.
+description: Bitsadmin 피어 명령에 대 한 참조 문서-/또는 스위치를 나열 합니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: fa2929b842b64841b7b2d50578133dd040475c80
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 3e01a02c2615d353cbdaaa6980e86a965edce018
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717102"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85927995"
 ---
 # <a name="bitsadmin-peers"></a>bitsadmin peers
 

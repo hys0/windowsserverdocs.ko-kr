@@ -1,6 +1,6 @@
 ---
-title: ftp 연결 끊기
-description: Ftp 연결 끊기 명령에 대 한 참조 항목으로, 원격 컴퓨터와의 연결을 끊고 ftp 프롬프트를 유지 합니다.
+title: ftp disconnect
+description: Ftp 연결 끊기 명령에 대 한 참조 문서로, 원격 컴퓨터와의 연결을 끊고 ftp 프롬프트를 유지 합니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 151ffa7d54fda13a87dedc98806150f31587867a
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 3287c5714d5174390e6c17e0f6345f2fb25c079b
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83819774"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85927231"
 ---
-# <a name="ftp-disconnect"></a>ftp 연결 끊기
+# <a name="ftp-disconnect"></a>ftp disconnect
 
 > 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 

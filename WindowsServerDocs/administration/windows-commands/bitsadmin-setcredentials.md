@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setcredentials
-description: 작업에 자격 증명을 추가 하는 bitsadmin setcredentials 명령에 대 한 참조 항목입니다.
+description: 작업에 자격 증명을 추가 하는 bitsadmin setcredentials 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4fbedcc65931e7d3cfb1719786f423b0d071b411
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: e28bf17812335e55db0ae8c5ddd54c418dcb2d66
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719313"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85927862"
 ---
 # <a name="bitsadmin-setcredentials"></a>bitsadmin setcredentials
 

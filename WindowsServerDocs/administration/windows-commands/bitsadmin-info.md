@@ -1,6 +1,6 @@
 ---
 title: bitsadmin info
-description: 지정 된 작업에 대 한 요약 정보를 표시 하는 bitsadmin info 명령에 대 한 참조 항목입니다.
+description: 지정 된 작업에 대 한 요약 정보를 표시 하는 bitsadmin info 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 904f70c82ab4bcc4fb25f759898674cc719b1954
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 0b9a284ee1e0ab8501f0fb6bc3417ca399996a08
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717434"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85926569"
 ---
 # <a name="bitsadmin-info"></a>bitsadmin info
 
@@ -31,7 +31,7 @@ bitsadmin /info <job> [/verbose]
 | 매개 변수 | 설명 |
 | -------------- | -------------- |
 | 작업(job) | 작업의 표시 이름 또는 GUID입니다. |
-| /verbose | (선택 사항) 각 작업에 대 한 자세한 정보를 제공 합니다. |
+| /verbose | 선택 사항입니다. 각 작업에 대 한 자세한 정보를 제공 합니다. |
 
 ## <a name="examples"></a>예
 

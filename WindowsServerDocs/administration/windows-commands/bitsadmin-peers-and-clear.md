@@ -1,6 +1,6 @@
 ---
 title: bitsadmin peers and clear
-description: Bitsadmin 피어 및 clear 명령에 대 한 참조 항목으로, 피어 목록을 지웁니다.
+description: Bitsadmin 피어 및 clear 명령에 대 한 참조 문서로, 피어 목록을 지웁니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 445ce0db00abb3d46f2dc7379c066624cef7afae
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 7f0c60962fbb5d5e20ba1bb120e3aa0726d13069
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717202"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85928063"
 ---
 # <a name="bitsadmin-peers-and-clear"></a>bitsadmin peers and clear
 

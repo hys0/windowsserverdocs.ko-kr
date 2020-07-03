@@ -1,6 +1,6 @@
 ---
 title: bitsadmin peers and help
-description: Bitsadmin 피어 및 도움말 명령에 대 한 참조 항목입니다. 여기에는/svv 스위치에 대 한 명령줄 사용이 표시 됩니다.
+description: Bitsadmin 피어 및 도움말 명령에 대 한 참조 문서-/svv 스위치에 대 한 명령줄 사용법을 표시 합니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 405bf6d0641d46a9e7d365bbd9742633df403020
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: fe6026acc8b3695dd63309e21716ffd54066fc77
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717154"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85928053"
 ---
 # <a name="bitsadmin-peers-and-help"></a>bitsadmin peers and help
 

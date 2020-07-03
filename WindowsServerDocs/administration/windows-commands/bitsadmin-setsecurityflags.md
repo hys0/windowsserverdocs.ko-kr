@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setsecurityflags
-description: Bitsadmin setsecurityflags 명령에 대 한 참조 항목-BITS에서 인증서 해지 목록을 확인 하 고, 특정 인증서 오류를 무시 하 고, 서버가 HTTP 요청을 리디렉션할 때 사용할 정책을 정의 합니다.
+description: BITS에서 인증서 해지 목록을 확인 하 고 특정 인증서 오류를 무시 하 고 서버가 HTTP 요청을 리디렉션할 때 사용할 정책을 정의 하는 bitsadmin setsecurityflags 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 63430f9814037aeb948cc8b91e8590f13a4df00e
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: f6030316396e64c9884d6df9b56d5489ec2c6318
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720472"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85927506"
 ---
 # <a name="bitsadmin-setsecurityflags"></a>bitsadmin setsecurityflags
 

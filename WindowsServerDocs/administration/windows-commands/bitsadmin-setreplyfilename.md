@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setreplyfilename
-description: 서버 업로드-회신이 포함 된 파일의 경로를 지정 하는 bitsadmin setreplyfilename 명령에 대 한 참조 항목입니다.
+description: 서버 업로드-회신이 포함 된 파일의 경로를 지정 하는 bitsadmin setreplyfilename 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2f0bd184db274dc915817ff3e26ae2c686190c27
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 45582035ed986e50129e894fbabaffde5b219548
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720485"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85927567"
 ---
 # <a name="bitsadmin-setreplyfilename"></a>bitsadmin setreplyfilename
 

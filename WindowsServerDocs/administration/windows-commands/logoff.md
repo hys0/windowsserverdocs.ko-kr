@@ -1,6 +1,6 @@
 ---
 title: 로그오프
-description: 원격 데스크톱 세션 호스트 서버의 세션에서 사용자를 로그 오프 하 고 세션을 삭제 하는 logoff 명령에 대 한 참조 항목입니다.
+description: 원격 데스크톱 세션 호스트 서버의 세션에서 사용자를 로그 오프 하 고 세션을 삭제 하는 logoff 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 636591843ce878bc85c5cccf6faece6652e25424
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: d154b767302f5c536e0a7efb30d99ac0a8e087d5
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84222734"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85927161"
 ---
 # <a name="logoff"></a>로그오프
 

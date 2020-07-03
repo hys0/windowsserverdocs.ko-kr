@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setproxysettings
-description: 지정 된 작업에 대 한 프록시 설정을 설정 하는 bitsadmin setproxysettings 명령에 대 한 참조 항목입니다.
+description: 지정 된 작업에 대 한 프록시 설정을 설정 하는 bitsadmin setproxysettings 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7f7c54b3081c85756735d921fb70f726ba60d833
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: a59bbb560b8c89134e81c02f99aaecebdb65ca89
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720486"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85927583"
 ---
 # <a name="bitsadmin-setproxysettings"></a>bitsadmin setproxysettings
 

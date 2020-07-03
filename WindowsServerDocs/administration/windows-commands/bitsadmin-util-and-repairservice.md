@@ -1,6 +1,6 @@
 ---
 title: bitsadmin util and repairservice
-description: BITS 서비스의 여러 버전에서 알려진 문제를 해결 하는 bitsadmin util 및 repairservice 명령에 대 한 참조 항목입니다.
+description: BITS 서비스의 여러 버전에서 알려진 문제를 해결 하는 bitsadmin util 및 repairservice 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0104a3f2ace972821151bf5083f9b0795e427ff1
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: cf62a9410765914187b6a60ff5376e8ff5aabe03
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707651"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85927349"
 ---
 # <a name="bitsadmin-util-and-repairservice"></a>bitsadmin util and repairservice
 
@@ -33,7 +33,7 @@ bitsadmin /util /repairservice [/force]
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| /force | (선택 사항) 서비스를 삭제 하 고 다시 만듭니다.|
+| /force | 선택 사항입니다. 서비스를 삭제 하 고 다시 만듭니다.|
 
 > [!NOTE]
 > BITS가 서비스를 다시 만들 경우 지역화 된 시스템 에서도 서비스 설명 문자열을 영어로 설정할 수 있습니다.

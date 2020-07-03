@@ -1,6 +1,6 @@
 ---
 title: bitsadmin monitor
-description: 현재 사용자가 소유 하는 전송 큐의 작업을 모니터링 하는 bitsadmin monitor 명령에 대 한 참조 항목입니다.
+description: 현재 사용자가 소유 하는 전송 큐의 작업을 모니터링 하는 bitsadmin monitor 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4c8fa52f9fcf30a66b41c9cdbf7b7e1fab69f06e
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 7ce08eccf46fc17086d216bc6797bec451ace7eb
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717373"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85926491"
 ---
 # <a name="bitsadmin-monitor"></a>bitsadmin monitor
 
@@ -30,8 +30,8 @@ bitsadmin /monitor [/allusers] [/refresh <seconds>]
 
 | 매개 변수 | 설명 |
 | -------------- | -------------- |
-| /allusers | (선택 사항) 모든 사용자에 대 한 작업을 모니터링 합니다. 이 매개 변수를 사용 하려면 관리자 권한이 있어야 합니다. |
-| /새로 고침 | (선택 사항) 로 지정 된 간격으로 `<seconds>`데이터를 새로 고칩니다. 기본 새로 고침 간격은 5 초입니다. 새로 고침을 중지 하려면 CTRL + C를 누릅니다. |
+| /allusers | 선택 사항입니다. 모든 사용자에 대 한 작업을 모니터링 합니다. 이 매개 변수를 사용 하려면 관리자 권한이 있어야 합니다. |
+| /새로 고침 | 선택 사항입니다. 로 지정 된 간격으로 데이터를 새로 고칩니다 `<seconds>` . 기본 새로 고침 간격은 5 초입니다. 새로 고침을 중지 하려면 CTRL + C를 누릅니다. |
 
 ## <a name="examples"></a>예
 

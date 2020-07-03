@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getproxyusage
-description: 지정 된 작업에 대 한 프록시 사용 설정을 검색 하는 bitsadmin getproxyusage 명령에 대 한 참조 항목입니다.
+description: 지정 된 작업에 대 한 프록시 사용 설정을 검색 하는 bitsadmin getproxyusage 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 13a3f216b1ed3c77dbbefee37d73a657525daa36
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: ad1ffe5786202d6fecc0d65a719c9d6be0f5609e
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717643"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85926784"
 ---
 # <a name="bitsadmin-getproxyusage"></a>bitsadmin getproxyusage
 
