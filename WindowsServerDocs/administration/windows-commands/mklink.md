@@ -1,6 +1,6 @@
 ---
 title: mklink
-description: Mklink 명령에 대 한 참조 항목으로, 디렉터리 또는 파일 기호화 된 링크나 하드 링크를 만듭니다.
+description: 디렉터리 또는 파일 기호화 된 링크나 하드 링크를 만드는 mklink 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2f998533ce3184213786a341c2413e7323496e96
-ms.sourcegitcommit: 5e313a004663adb54c90962cfdad9ae889246151
+ms.openlocfilehash: cb8339f7dcb2f397d6b90105e2ccd9bdc8cc07a5
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84354613"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85928537"
 ---
 # <a name="mklink"></a>mklink
 
@@ -28,7 +28,7 @@ mklink [[/d] | [/h] | [/j]] <link> <target>
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | /d | 디렉터리 기호화 된 링크를 만듭니다. 기본적으로이 명령은 파일 기호화 된 링크를 만듭니다. |
 | /h | 대신 바로 가기 링크를 하드 링크를 만듭니다. |

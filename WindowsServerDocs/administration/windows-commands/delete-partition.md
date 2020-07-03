@@ -1,6 +1,6 @@
 ---
-title: 파티션 삭제
-description: 파티션 삭제 명령에 대 한 참조 항목으로 포커스가 있는 파티션을 삭제 합니다.
+title: delete partition
+description: 파티션 삭제 명령에 대 한 참조 문서로, 포커스가 있는 파티션을 삭제 합니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 13c79b826480171af578334942af8f73b77d796b
-ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
+ms.openlocfilehash: b45cb060a5d82e254fe371269dbdbcb9d46fee92
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82993119"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85928724"
 ---
-# <a name="delete-partition"></a>파티션 삭제
+# <a name="delete-partition"></a>delete partition
 
 포커스가 있는 파티션을 삭제합니다. 시작 하기 전에이 작업을 수행 하려면 파티션을 선택 해야 합니다. 사용 된 [파티션을 선택](select-partition.md) 파티션을 선택 하 고 포커스를 이동 하는 명령입니다.
 
@@ -33,7 +33,7 @@ delete partition [noerr] [override]
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | noerr | 스크립팅 전용입니다. 오류가 발생 하면 오류가 발생 하지 않은 경우에 따라 명령을 처리 하도록 DiskPart 계속 합니다. 이 매개 변수를 크기는 오류 코드를 수행 합니다. |
 | override | DiskPart를 유형에 관계 없이 모든 파티션을 삭제할 수 있습니다. 일반적으로 DiskPart만 사용 하면 알려진된 데이터 파티션을 삭제할 수 있습니다. |
@@ -56,7 +56,7 @@ delete partition
 
 - [명령줄 구문 키](command-line-syntax-key.md)
 
-- [파티션 선택](select-partition.md)
+- [select partition](select-partition.md)
 
 - [delete 명령](delete.md)
 

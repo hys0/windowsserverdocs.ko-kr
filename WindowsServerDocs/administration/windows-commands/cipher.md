@@ -1,6 +1,6 @@
 ---
 title: cipher
-description: NTFS 볼륨에 있는 디렉터리와 파일의 암호화를 표시 하거나 변경 하는 암호화 명령에 대 한 참조 항목입니다.
+description: NTFS 볼륨에 있는 디렉터리와 파일의 암호화를 표시 하거나 변경 하는 암호 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9b07a0231b6cff6be9533136bf35ef013c854c2e
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: f23e2855c4542cc359d458f6825dd9420581657f
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82713398"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85929982"
 ---
 # <a name="cipher"></a>cipher
 
@@ -51,7 +51,7 @@ cipher /rekey [pathname [...]]
 | /w`<directory>` | 전체 볼륨에 사용 되지 않는 사용 가능한 디스크 공간에서 데이터를 제거합니다. 사용 하는 경우는 **/w** 매개 변수를 다른 모든 매개 변수는 무시 됩니다. 지정 된 디렉터리는 로컬 볼륨에 있는 모든 위치에 수 있습니다. 있으면 마운트 지점 또는 디렉터리를 가리키는 데이터의 다른 볼륨에에 해당 볼륨 제거 됩니다. |
 | /x [: efsfile] [`<FileName>`] | 지정된 된 파일 이름에 EFS 인증서 및 키를 백업 합니다. 과 함께 사용할 경우 **: efsfile**, **/x** 파일을 암호화 하는 데 사용 된 사용자의 인증서를 백업 합니다. 그렇지 않으면 사용자의 현재 EFS 인증서 및 키 백업 됩니다. |
 | /y | 로컬 컴퓨터에서 현재 EFS 인증서 축소판 그림을 표시합니다. |
-| 사용자 \ 사용자 [/certhash:`<hash>` | /certfile:`<filename>`] |
+| 사용자 \ 사용자 [/certhash:`<hash>` | /certfile: `<filename>` ] |
 | /rekey | 현재 구성 된 EFS 키를 사용 하 여 지정된 된 암호화 된 파일을 업데이트 합니다. |
 | /removeuser /certhash:`<hash>` | 지정된 된 파일에서 사용자를 제거합니다. *해시* 제공 **/certhash** 제거 하는 인증서의 SHA1 해시를 이어야 합니다. |
 | /? | 명령 프롬프트에 도움말을 표시합니다. |

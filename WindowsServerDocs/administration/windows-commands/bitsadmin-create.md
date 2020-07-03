@@ -1,6 +1,6 @@
 ---
 title: bitsadmin create
-description: 지정 된 표시 이름을 사용 하 여 전송 작업을 만드는 bitsadmin create 명령에 대 한 참조 항목입니다.
+description: 지정 된 표시 이름을 사용 하 여 전송 작업을 만드는 bitsadmin create 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 728027eb4680805c1f9a2afc32d8d37a14239597
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: b3e0f8fb7d8396a238cabcbeb375f61cbe526c3f
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718214"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85928347"
 ---
 # <a name="bitsadmin-create"></a>bitsadmin create
 
@@ -23,7 +23,7 @@ ms.locfileid: "82718214"
 지정 된 표시 이름과 함께 전송 작업을 만듭니다.
 
 > [!NOTE]
-> **/Upload** 및 **/Upload-Reply** 매개 변수 형식은 BITS 1.2 및 이전 버전에서 지원 되지 않습니다.
+> **/Upload**   및 **/UPLOAD-REPLY** 매개 변수 형식은 BITS 1.2 및 이전 버전에서 지원 되지 않습니다.
 
 ## <a name="syntax"></a>구문
 

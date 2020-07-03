@@ -1,6 +1,6 @@
 ---
-title: fsutil 더티
-description: 볼륨의 더티 비트를 쿼리하거나 설정 하는 fsutil 더티 명령에 대 한 참조 항목입니다.
+title: fsutil dirty
+description: 볼륨의 더티 비트를 쿼리하거나 설정 하는 fsutil 더티 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 manager: dmoss
 ms.author: toklima
@@ -9,14 +9,14 @@ ms.technology: storage
 ms.assetid: 385a2a7c-d6bd-4f11-9c18-fca0413f9e97
 ms.topic: article
 ms.date: 10/16/2017
-ms.openlocfilehash: 72defd974177675f53e89fb8570f028580b7e167
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: c61ab5405fb5b469b6f4513459e4096524f4b7fe
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83435868"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85929267"
 ---
-# <a name="fsutil-dirty"></a>fsutil 더티
+# <a name="fsutil-dirty"></a>fsutil dirty
 
 > 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8
 

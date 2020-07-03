@@ -1,6 +1,6 @@
 ---
 title: 클립
-description: 명령 출력을 명령줄에서 Windows 클립보드로 리디렉션하는 clip 명령에 대 한 참조 항목입니다.
+description: 명령 출력을 명령줄에서 Windows 클립보드로 리디렉션하는 clip 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 61c905e3dcce52f3a3d35adeac55fc5df574f664
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 3c0e23c18d356740a639af760fc7433db59d012a
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82712786"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85929897"
 ---
 # <a name="clip"></a>클립
 
@@ -49,7 +49,7 @@ dir | clip
 awk -f generic.awk input.txt | clip
 ```
 
-Readme.txt 라는 파일의 내용을 Windows 클립보드에 복사 하려면 다음을 입력 *합니다* .
+*readme.txt* 라는 파일의 내용을 Windows 클립보드에 복사 하려면 다음을 입력 합니다.
 
 ```
 clip < readme.txt

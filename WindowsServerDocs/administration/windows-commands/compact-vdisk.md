@@ -1,6 +1,6 @@
 ---
 title: compact vdisk
-description: 동적 확장 VHD (가상 하드 디스크) 파일의 실제 크기를 줄이는 compact vdisk 명령에 대 한 참조 항목입니다.
+description: 동적 확장 VHD (가상 하드 디스크) 파일의 실제 크기를 줄이는 compact vdisk 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c4ae5c653645c9f6f3ef97501a59932682c24be3
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 7379975981c2df386b7180c814799f7129eee7da
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82711146"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85929053"
 ---
 # <a name="compact-vdisk"></a>compact vdisk
 

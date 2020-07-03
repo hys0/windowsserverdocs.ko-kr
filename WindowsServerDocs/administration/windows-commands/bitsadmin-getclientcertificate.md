@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getclientcertificate
-description: 작업에서 클라이언트 인증서를 검색 하는 bitsadmin getclientcertificate 명령에 대 한 참조 항목입니다.
+description: 작업에서 클라이언트 인증서를 검색 하는 bitsadmin getclientcertificate 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d2582950dd02ca1880e4765fb974c83c423b22bb
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 5113214f106aea21b1b13f08cc08002237730daf
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718131"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85928515"
 ---
 # <a name="bitsadmin-getclientcertificate"></a>bitsadmin getclientcertificate
 

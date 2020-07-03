@@ -1,6 +1,6 @@
 ---
 title: create
-description: 디스크에 파티션 또는 섀도 파티션, 하나 이상의 디스크에 볼륨 또는 VHD (가상 하드 디스크)를 만드는 create 명령에 대 한 참조 항목입니다.
+description: 디스크에 파티션 또는 섀도 파티션, 하나 이상의 디스크에 볼륨 또는 VHD (가상 하드 디스크)를 만드는 create 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f371bee591e29a45b1488b2c36112b55ed54d3f8
-ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
+ms.openlocfilehash: 0b5b31f43e58b9e2eddb18f624c1054c9d028f4c
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82993185"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85929535"
 ---
 # <a name="create"></a>create
 
@@ -29,7 +29,7 @@ create volume
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | [create partition primary 명령](create-partition-primary.md) | 포커스가 있는 기본 디스크에 주 파티션을 만듭니다. |
 | [create partition efi 명령](create-partition-efi.md) | Itanium 기반 컴퓨터의 gpt (GUID 파티션 테이블) 디스크에 EFI (확장 가능 펌웨어 인터페이스) 시스템 파티션을 만듭니다. |

@@ -1,6 +1,6 @@
 ---
 title: cmstp
-description: 연결 관리자 서비스 프로필을 설치 하거나 제거 하는 cmstp에 대 한 참조 항목입니다.
+description: 연결 관리자 서비스 프로필을 설치 하거나 제거 하는 cmstp에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 11d2ec5b09cfd9440eb22d66578061ddfb157539
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 8f7bc7bc4b90dced8074fa685ad79c65747e0ded
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82712083"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85929816"
 ---
 # <a name="cmstp"></a>cmstp
 
@@ -24,7 +24,7 @@ ms.locfileid: "82712083"
 
 ## <a name="syntax"></a>구문
 
-구문 1-사용자 지정 설치 응용 프로그램에서 사용 되는 일반적인 구문입니다. 이 구문을 사용 하려면 `<serviceprofilefilename>.exe` 파일이 포함 된 디렉터리에서 **cmstp** 를 실행 해야 합니다.
+구문 1-사용자 지정 설치 응용 프로그램에서 사용 되는 일반적인 구문입니다. 이 구문을 사용 하려면 파일이 포함 된 디렉터리에서 **cmstp** 를 실행 해야 합니다 `<serviceprofilefilename>.exe` .
 
 ```
 <serviceprofilefilename>.exe /q:a /c:cmstp.exe <serviceprofilefilename>.inf [/nf] [/s] [/u]
@@ -40,7 +40,7 @@ cmstp.exe [/nf] [/s] [/u] [drive:][path]serviceprofilefilename.inf
 | --------- | ----------- |
 | `<serviceprofilefilename>.exe` | 설치 하려는 프로필을 포함 하는 설치 패키지 이름으로 지정 합니다.<p>구문 1에는 필수 이지만 구문 2에는 유효 하지 않습니다. |
 | /q:는 | 프로필이 사용자에 게 확인 하지 않고 설치 수를 지정 합니다. 성공적으로 설치 하는 확인 메시지가 표시 됩니다.<p>구문 1에는 필수 이지만 구문 2에는 유효 하지 않습니다. |
-| [드라이브:] path`<serviceprofilefilename>.inf` | 필수 사항입니다. 프로필을 설치 해야 하는 방법을 결정 하는 구성 파일의 이름을 지정 합니다.<p>[Drive:] [path] 매개 변수는 구문 1에 적합 하지 않습니다. |
+| [드라이브:] path`<serviceprofilefilename>.inf` | 필수 요소. 프로필을 설치 해야 하는 방법을 결정 하는 구성 파일의 이름을 지정 합니다.<p>[Drive:] [path] 매개 변수는 구문 1에 적합 하지 않습니다. |
 | /nf | 지원 파일을 설치 하지 않도록 지정 합니다. |
 | /s | 서비스 프로필을 설치 또는 자동으로 (사용자 응답에 대 한 메시지를 표시 하거나 표시 하지 않고 확인 메시지) 제거를 지정 합니다. 이 매개 변수는 **/u**와 함께 사용할 수 있습니다.|
 | /U | 서비스 프로필을 제거 해야 하는 것을 지정 합니다. |

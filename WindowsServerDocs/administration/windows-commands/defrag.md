@@ -1,6 +1,6 @@
 ---
 title: defrag
-description: 조각 모음 명령에 대 한 참조 항목으로, 조각화 된 파일을 찾아 통합 하 여 시스템 성능을 향상 시킵니다.
+description: 조각화 된 파일을 찾아 통합 하는 조각 모음 명령에 대 한 참조 문서를 참조 하세요.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: bf3ca6febfa07c7780b959389ff57fe4f3a0018b
-ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
+ms.openlocfilehash: c952ff78147d3b4c6097aaf9dd87e55ecc7911ad
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82993146"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85928797"
 ---
 # <a name="defrag"></a>defrag
 
@@ -61,7 +61,7 @@ defrag <volume> [<parameters>]
 
   - 파일 시스템에 의해 잠긴 볼륨입니다.
 
-  - 볼륨은 파일 시스템을 더티로 표시 하 여 손상 될 수 있음을 나타냅니다.<br>이 볼륨 또는 `chkdsk` 드라이브를 조각 모음 하려면 먼저를 실행 해야 합니다. `fsutil dirty` 명령을 사용 하 여 볼륨이 변경 되었는지 확인할 수 있습니다.
+  - 볼륨은 파일 시스템을 더티로 표시 하 여 손상 될 수 있음을 나타냅니다.<br>`chkdsk`이 볼륨 또는 드라이브를 조각 모음 하려면 먼저를 실행 해야 합니다. 명령을 사용 하 여 볼륨이 변경 되었는지 확인할 수 있습니다 `fsutil dirty` .
 
   - 네트워크 드라이브.
 
@@ -79,7 +79,7 @@ defrag <volume> [<parameters>]
 
 - 기본적으로 **조각 모음** 지정 하지 않은 경우에 분석 및 조각 모음 보고서의 요약을 표시는 **/a** 또는 **/v** 매개 변수입니다.
 
-- **>** <em>Filename .txt</em>를 입력 하 여 보고서를 텍스트 파일로 보낼 수 있습니다. 여기서 *filename* 은 사용자가 지정 하는 파일 이름입니다. 예: `defrag volume /v > FileName.txt`
+- FileName.txt를 입력 하 여 보고서를 텍스트 파일로 보낼 수 있습니다 **>** <em> </em>. 여기서 *FileName.txt* 은 사용자가 지정 하는 파일 이름입니다. `defrag volume /v > FileName.txt`
 
 - 명령줄에서 조각 모음 프로세스를 중단 하려면 **CTRL + C**합니다.
 
@@ -139,6 +139,6 @@ defrag /c /h /v
 
 - [fsutil](fsutil.md)
 
-- [fsutil 더티](fsutil-dirty.md)
+- [fsutil dirty](fsutil-dirty.md)
 
 - [최적화-볼륨 Powershell](https://docs.microsoft.com/powershell/module/storage/optimize-volume?view=win10-ps)

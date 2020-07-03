@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getaclflags
-description: ACL (액세스 제어 목록) 전파 플래그를 검색 하는 bitsadmin getaclflags 명령에 대 한 참조 항목입니다.
+description: ACL (액세스 제어 목록) 전파 플래그를 검색 하는 bitsadmin getaclflags 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a9ca541b488c3c83e7a64a138bae0914001778e3
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 0a05a0ed1c29e7cf1b0583ce9a0fcfdbe73e7a12
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718180"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85928338"
 ---
 # <a name="bitsadmin-getaclflags"></a>bitsadmin getaclflags
 

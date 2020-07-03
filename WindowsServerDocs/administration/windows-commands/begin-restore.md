@@ -1,6 +1,6 @@
 ---
-title: 복원 시작
-description: 복원 세션을 시작 하 고 관련 기록기에 PreRestore 이벤트를 발급 하는 begin restore 명령에 대 한 참조 항목입니다.
+title: begin restore
+description: 복원 세션을 시작 하 고 관련 기록기에 PreRestore 이벤트를 발급 하는 begin restore 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 98967290bd7f15a518848b53b43e8c9daeb8b860
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 6f97c35eb8a98aedecfd2f5a8dc87d4ddc3a3cd6
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718507"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85928526"
 ---
-# <a name="begin-restore"></a>복원 시작
+# <a name="begin-restore"></a>begin restore
 
 > 적용 대상: Windows Server 2012 R2, Windows Server 2012
 

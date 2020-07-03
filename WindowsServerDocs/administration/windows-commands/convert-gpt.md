@@ -1,6 +1,6 @@
 ---
 title: convert gpt
-description: Gpt 변환 명령에 대 한 참조 항목-MBR (마스터 부트 레코드) 파티션 스타일로 빈 기본 디스크를 GPT (GUID 파티션 테이블) 파티션 스타일을 사용 하는 기본 디스크로 변환 합니다.
+description: Gpt 변환 명령에 대 한 참조 문서-MBR (마스터 부트 레코드) 파티션 스타일로 빈 기본 디스크를 GPT (GUID 파티션 테이블) 파티션 스타일을 사용 하는 기본 디스크로 변환 합니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 25b28473716037235a70e05835e23790f93164a1
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: d8025e897a8ce7083b938e984f9a11b6c32ed312
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720774"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85928959"
 ---
 # <a name="convert-gpt"></a>convert gpt
 

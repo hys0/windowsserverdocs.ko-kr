@@ -1,6 +1,6 @@
 ---
 title: erase
-description: 하나 이상의 파일을 삭제 하는 erase 명령에 대 한 참조 항목입니다.
+description: 하나 이상의 파일을 삭제 하는 erase 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1525f20549b6571975cb622534f8504eb4fa1f79
-ms.sourcegitcommit: 5e313a004663adb54c90962cfdad9ae889246151
+ms.openlocfilehash: 0a22c738215671096373a7077fc89ac87fe03597
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84354683"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85929319"
 ---
 # <a name="erase"></a>erase
 
@@ -33,7 +33,7 @@ del [/p] [/f] [/s] [/q] [/a[:]<attributes>] <names>
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | `<names>` | 하나 이상의 파일 또는 디렉터리 목록을 지정합니다. 여러 파일을 삭제 하려면 와일드 카드를 사용할 수 있습니다. 디렉터리를 지정 하는 경우 디렉터리 내의 모든 파일이 삭제 됩니다. |
 | /p | 지정된 된 파일을 삭제 하기 전에 확인 메시지를 표시 합니다. |

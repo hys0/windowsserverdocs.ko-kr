@@ -1,6 +1,6 @@
 ---
 title: convert
-description: 디스크를 디스크 형식 간에 변환 하는 convert 명령에 대 한 참조 항목입니다.
+description: 디스크를 디스크 유형 간에 변환 하는 변환 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ab7189ea774750f8de2ceaecd9511fc8c3a71a97
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: f93f2b16838a6f54af3f28b7e0883808a6cd013a
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720741"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85928906"
 ---
 # <a name="convert"></a>convert
 

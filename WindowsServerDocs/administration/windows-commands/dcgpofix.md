@@ -1,6 +1,6 @@
 ---
 title: dcgpofix
-description: Dcgpofix 명령에 대 한 참조 항목으로, 도메인에 대 한 기본 Gpo (그룹 정책 개체)를 다시 만듭니다.
+description: Dcgpofix 명령에 대 한 참조 문서로, 도메인에 대 한 기본 Gpo (그룹 정책 개체)를 다시 만듭니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f11b7db8110cd2d7dcf08cd250eba411e7ff21a8
-ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
+ms.openlocfilehash: cf9e3c37c054c34d602e472a2c5f83e9a8b284b9
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82993174"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85928809"
 ---
 # <a name="dcgpofix"></a>dcgpofix
 
@@ -31,7 +31,7 @@ dcgpofix [/ignoreschema] [/target: {domain | dc | both}] [/?]
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | 생성 | 이 명령을 실행할 때 Active Directory 스키마의 버전을 무시 합니다. 그렇지 않으면이 명령은 명령이 배송 된 Windows 버전으로 같은 스키마 버전 에서만 작동 합니다. |
 | `/target {domain | dc | both` | 기본 도메인 정책, 기본 도메인 컨트롤러 정책 또는 두 유형의 정책을 모두 대상으로 할지를 지정 합니다. |

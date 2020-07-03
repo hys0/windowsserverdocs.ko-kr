@@ -1,6 +1,6 @@
 ---
-title: 동적 변환
-description: 기본 디스크를 동적 디스크로 변환 하는 동적 변환 명령에 대 한 참조 항목입니다.
+title: convert dynamic
+description: 기본 디스크를 동적 디스크로 변환 하는 convert 동적 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 05d507fb5a1f8ac3ca8d8899249a26dee496ed2a
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 3474da8c1f4a3e58d9e77c36abe4390ec2f5b731
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720783"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85928971"
 ---
-# <a name="convert-dynamic"></a>동적 변환
+# <a name="convert-dynamic"></a>convert dynamic
 
 기본 디스크를 동적 디스크로 변환합니다. 이 작업을 수행 하려면 기본 디스크를 선택 해야 합니다. [디스크 선택 명령을](select-disk.md) 사용 하 여 기본 디스크를 선택 하 고 포커스를 이동 합니다.
 

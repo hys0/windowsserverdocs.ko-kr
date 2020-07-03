@@ -1,6 +1,6 @@
 ---
-title: 단순 볼륨 만들기
-description: 지정 된 동적 디스크에서 단순 볼륨을 만드는 단순 볼륨 만들기 명령에 대 한 참조 항목입니다.
+title: create volume simple
+description: 지정 된 동적 디스크의 단순 볼륨을 만드는 create volume simple 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: eb5aeebbcbde581fe3259d6cb5aca6445a3b27aa
-ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
+ms.openlocfilehash: 1e7924ca4394a64fd5a8d92577a3f3f62b917461
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82993217"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85929518"
 ---
-# <a name="create-volume-simple"></a>단순 볼륨 만들기
+# <a name="create-volume-simple"></a>create volume simple
 
 > 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -30,7 +30,7 @@ create volume simple [size=<n>] [disk=<n>] [align=<n>] [noerr]
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | 크기 =`<n>`  | 볼륨의 크기 (mb)입니다. 크기를 지정 하는 경우 새 볼륨은 디스크에 남은 공간을 차지 합니다. |
 | 디스크 =`<n>`  | 동적 디스크 볼륨이 만들어집니다. 없는 디스크를 지정 하는 경우 현재 디스크를 사용 합니다. |

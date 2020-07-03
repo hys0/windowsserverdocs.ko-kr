@@ -1,6 +1,6 @@
 ---
 title: chkdsk
-description: 논리적 및 물리적 오류에 대 한 볼륨의 파일 시스템 및 파일 시스템 메타 데이터를 확인 하는 chkdsk 명령에 대 한 참조 항목입니다.
+description: 논리적 및 물리적 오류에 대 한 볼륨의 파일 시스템 및 파일 시스템 메타 데이터를 확인 하는 chkdsk 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: jasongerend
 ms.author: jgerend
 manager: lizapo
 ms.date: 10/09/2019
-ms.openlocfilehash: 4843624337e031f81453def78e4df97bdbfe821e
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: b98699b7e0925b43c15a602b9c193be9301a14ce
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82714406"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85929998"
 ---
 # <a name="chkdsk"></a>chkdsk
 
@@ -32,7 +32,7 @@ ms.locfileid: "82714406"
 ## <a name="syntax"></a>구문
 
 ```
-chkdsk [<volume>[[<path>]<filename>]] [/f] [/v] [/r] [/x] [/i] [/c] [/l[:<size>]] [/b]  
+chkdsk [<volume>[[<path>]<filename>]] [/f] [/v] [/r] [/x] [/i] [/c] [/l[:<size>]] [/b]
 ```
 
 ### <a name="parameters"></a>매개 변수
@@ -47,10 +47,10 @@ chkdsk [<volume>[[<path>]<filename>]] [/f] [/v] [/r] [/x] [/i] [/c] [/l[:<size>]
 | /x | 필요한 경우 볼륨을 먼저 분리 되도록 합니다. 드라이브에 열려 있는 모든 핸들이 무효화 됩니다. **/x** 에는 **/f**의 기능도 포함 되어 있습니다.  |
 | /i | NTFS로 사용 합니다. 실행 하는 데 필요한 시간을 줄일 수 있도록 인덱스 항목 검사 **chkdsk**합니다. |
 | /C | NTFS로 사용 합니다. 주기를 실행 하는 데 필요한 시간을 줄일 수는 폴더 구조 내에서 확인 하지 않습니다 **chkdsk**합니다.  |
-| /l [:`<size>`] | NTFS로 사용 합니다. 입력 한 크기를 로그 파일 크기를 변경 합니다. Size 매개 변수를 생략 하면 **/l** 은 현재 크기를 표시 합니다. |
+| /l [: `<size>` ] | NTFS로 사용 합니다. 입력 한 크기를 로그 파일 크기를 변경 합니다. Size 매개 변수를 생략 하면 **/l** 은 현재 크기를 표시 합니다. |
 | /b | NTFS로 사용 합니다. 볼륨의 잘못 된 클러스터 목록을 지우고 모든 할당 된 클러스터 및 사용 가능한 클러스터에서 오류를 다시 검사. **/b** 는 **/r**의 기능을 포함 합니다. 새 하드 디스크 드라이브에 볼륨 이미징 후이 매개 변수를 사용 합니다. |
 | /scan | NTFS로 사용 합니다. 볼륨에서 온라인 검색을 실행 합니다. |
-| /forceofflinefix | NTFS에만 사용 합니다 ( **/scan**과 함께 사용 해야 함). 모든 온라인 복구 무시 발견 된 모든 결함은 오프 라인 복구를 위해 큐에 `chkdsk /spotfix`대기 됩니다 (예:). |
+| /forceofflinefix | NTFS에만 사용 합니다 ( **/scan**과 함께 사용 해야 함). 모든 온라인 복구 무시 발견 된 모든 결함은 오프 라인 복구를 위해 큐에 대기 됩니다 (예: `chkdsk /spotfix` ). |
 | /perf | NTFS에만 사용 합니다 ( **/scan**과 함께 사용 해야 함). 에서는 더 많은 시스템 리소스를 사용 하 여 가능한 한 빨리 검색을 완료 합니다. 이는 시스템에서 실행 되는 다른 작업에 부정적인 영향을 미칠 수 있습니다. |
 | /spotfix | NTFS로 사용 합니다. 볼륨에서 스폿 수정을 실행 합니다. |
 | /sdcleanup | NTFS로 사용 합니다. 불필요 한 보안 설명자 데이터 ( **/f**함축)를 수집 합니다. |
@@ -66,12 +66,12 @@ chkdsk [<volume>[[<path>]<filename>]] [/f] [/v] [/r] [/x] [/i] [/c] [/l[:<size>]
 - **Chkdsk** 에서 디스크 오류를 수정 하려면 드라이브에서 파일을 열 수 없습니다. 파일이 열려 있으면 다음 오류 메시지가 나타납니다.
 
   ```
-  Chkdsk cannot run because the volume is in use by another process. Would you like to schedule this volume to be checked the next time the system restarts? (Y/N)  
+  Chkdsk cannot run because the volume is in use by another process. Would you like to schedule this volume to be checked the next time the system restarts? (Y/N)
   ```
 
 - 컴퓨터를 다시 시작 하면 다음에 드라이브에 있는지 확인 하려는 경우 **chkdsk** 드라이브를 확인 하 고 컴퓨터를 다시 시작 하는 경우 오류를 자동으로 수정 합니다. 드라이브 파티션 부팅 파티션인 경우 **chkdsk** 드라이브를 검사 한 후 컴퓨터를 자동으로 다시 시작 합니다.
 
-- `chkntfs /c` 명령을 사용 하 여 다음에 컴퓨터를 다시 시작 하는 경우 볼륨을 검사 하도록 예약할 수도 있습니다. 컴퓨터를 `fsutil dirty set` 다시 시작할 때 Windows에서 **chkdsk** 를 실행 하도록 볼륨의 더티 비트 (손상 표시)를 설정 하려면 명령을 사용 합니다.
+- 명령을 사용 하 여 `chkntfs /c` 다음에 컴퓨터를 다시 시작 하는 경우 볼륨을 검사 하도록 예약할 수도 있습니다. 컴퓨터를 `fsutil dirty set` 다시 시작할 때 Windows에서 **chkdsk** 를 실행 하도록 볼륨의 더티 비트 (손상 표시)를 설정 하려면 명령을 사용 합니다.
 
 - 사용 해야 **chkdsk** 디스크 오류를 검사 FAT 또는 NTFS 파일 시스템에 가끔 있습니다. **Chkdsk** 디스크 공간과 디스크 사용을 검사 하 고 각 파일 시스템에 특정 한 상태 보고서를 제공 합니다. 상태 보고서에는 파일 시스템에서 발견 된 오류가 표시 됩니다. 활성 파티션에 **/f** 매개 변수 없이 **chkdsk** 를 실행 하는 경우 드라이브를 잠글 수 없기 때문에 의사 오류를 보고할 수 있습니다.
 
@@ -80,8 +80,8 @@ chkdsk [<volume>[[<path>]<filename>]] [/f] [/v] [/r] [/x] [/i] [/c] [/l[:<size>]
   FAT 파일 시스템에 대 한 복구는 일반적으로 디스크의 파일 할당 테이블을 변경 하 고 데이터의 손실을 나올 **chkdsk** 다음과 유사 하 게 확인 메시지가 표시 될 수 있습니다.
 
   ```
-  10 lost allocation units found in 3 chains.  
-  Convert lost chains to files?  
+  10 lost allocation units found in 3 chains.
+  Convert lost chains to files?
   ```
 
     - 키를 누르면 **Y**, Windows 각 손실된 체인 루트 디렉터리에 있는 파일로 저장 형식 파일에에서 있는 이름으로`<nnnn>`.chk 합니다. 때 **chkdsk** 완료 되 면 모든 필요한 데이터를 포함 하는 경우이 파일을 확인할 수 있습니다.
@@ -90,7 +90,7 @@ chkdsk [<volume>[[<path>]<filename>]] [/f] [/v] [/r] [/x] [/i] [/c] [/l[:<size>]
 
 - **/F** 매개 변수를 사용 하지 않으면 **chkdsk** 는 파일을 수정 해야 한다는 메시지를 표시 하지만 오류를 수정 하지는 않습니다.
 
-- 매우 큰 디스크 `chkdsk /f*` 또는 매우 많은 수의 파일 (예: 수백만 개의 파일)을 사용 하는 디스크에서를 `chkdsk /f` 사용 하는 경우 완료 하는 데 시간이 오래 걸릴 수 있습니다.
+- `chkdsk /f*`매우 큰 디스크 또는 매우 많은 수의 파일 (예: 수백만 개의 파일)을 사용 하는 디스크에서를 사용 하는 경우 `chkdsk /f` 완료 하는 데 시간이 오래 걸릴 수 있습니다.
 
 - **/R** 매개 변수를 사용 하 여 파일 시스템에서 실제 디스크 오류를 찾고 영향을 받는 디스크 섹터에서 데이터를 복구 합니다.
 
@@ -100,11 +100,11 @@ chkdsk [<volume>[[<path>]<filename>]] [/f] [/v] [/r] [/x] [/i] [/c] [/l[:<size>]
 
 - **chkdsk** 다른 매개 변수와 함께 명령을 복구 콘솔에서 사용할 수 있습니다.
 
-- 자주 다시 시작 되는 서버에서 **chkntfs** 또는 `fsutil dirty query` 명령을 사용 하 여 chkdsk를 실행 하기 전에 볼륨의 더티 비트가 이미 설정 되어 있는지 여부를 확인할 수 있습니다.
+- 자주 다시 시작 되는 서버에서 **chkntfs** 또는 명령을 사용 하 여 `fsutil dirty query` chkdsk를 실행 하기 전에 볼륨의 더티 비트가 이미 설정 되어 있는지 여부를 확인할 수 있습니다.
 
 ### <a name="understanding-exit-codes"></a>종료 코드 이해
 
-다음 표에서 종료 코드를 **chkdsk** 이 완료 된 후 보고 합니다.  
+다음 표에서 종료 코드를 **chkdsk** 이 완료 된 후 보고 합니다.
 
   | 종료 코드 | 설명 |
   | --------- | ----------- |
@@ -118,7 +118,7 @@ chkdsk [<volume>[[<path>]<filename>]] [/f] [/v] [/r] [/x] [/i] [/c] [/l[:<size>]
 D 드라이브의 디스크를 확인 하 고 Windows에서 오류를 해결 하려면 다음을 입력 합니다.
 
 ```
-chkdsk d: /f  
+chkdsk d: /f
 ```
 
 오류를 발견 하면 **chkdsk** 일시 중지 하 고 메시지를 표시 합니다. **Chkdsk** 디스크의 상태를 나열 하는 보고서를 표시 하 여 완료 합니다. 될 때까지 지정된 된 드라이브의 모든 파일을 열 수 없습니다 **chkdsk** 완료 합니다.
@@ -126,7 +126,7 @@ chkdsk d: /f
 연속 되지 않은 블록에 대 한 현재 디렉터리에 FAT 디스크에 있는 모든 파일을 확인 하려면 다음을 입력 합니다.
 
 ```
-chkdsk *.*  
+chkdsk *.*
 ```
 
 **Chkdsk** 상태 보고서를 표시 한 후 연속 되지 않은 블록이 파일 사양을 일치 하는 파일을 나열 합니다.

@@ -1,6 +1,6 @@
 ---
 title: bitsadmin peercaching and setconfigurationflags
-description: Bitsadmin 피어 캐싱 및 setconfigurationflags 명령에 대 한 참조 항목 (컴퓨터에서 피어에 콘텐츠를 제공할 수 있는지 여부를 결정 하는 구성 플래그를 설정 하 고, 피어에서 콘텐츠를 다운로드할 수 있는지 여부를 결정 하는 구성 플래그 설정)
+description: Bitsadmin 피어 캐싱 및 setconfigurationflags 명령에 대 한 참조 문서는 컴퓨터에서 피어에 콘텐츠를 제공할 수 있는지 여부를 결정 하는 구성 플래그를 설정 하 고, 피어에서 콘텐츠를 다운로드할 수 있는지 여부를 결정 하는 구성 플래그를 설정
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3c3ce69ce7a372311ce0c30e9b3a391ea33f45ce
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 868ef39104f1d16c760d91eee401c0d48b27ea1f
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717234"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85928123"
 ---
 # <a name="bitsadmin-peercaching-and-setconfigurationflags"></a>bitsadmin peercaching and setconfigurationflags
 

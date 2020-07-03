@@ -1,6 +1,6 @@
 ---
 title: 시간 제한
-description: 지정 된 시간 (초) 동안 명령 프로세서를 일시 중지 하는 제한 시간에 대 한 참조 항목입니다.
+description: 지정 된 시간 (초) 동안 명령 프로세서를 일시 중지 하는 제한 시간에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ed66342c4f0bbe22e9d2dc6440d291941c769cd7
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 62ead9473a9034c02fab18f2318ecb5162511922
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82721355"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85930090"
 ---
 # <a name="timeout"></a>시간 제한
 
@@ -25,14 +25,14 @@ ms.locfileid: "82721355"
 ## <a name="syntax"></a>구문
 
 ```
-timeout /t <TimeoutInSeconds> [/nobreak] 
+timeout /t <TimeoutInSeconds> [/nobreak]
 ```
 
 ### <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------|-----------|
-|/t \<TimeoutInSeconds>|명령 프로세서 처리를 계속 하기 전에 대기 하는 10 진수 (-1에서 99999) 사이 시간 (초)을 지정 합니다. 값-1 하면 컴퓨터의 키 입력을 무기한 대기 합니다.|
+|/t\<TimeoutInSeconds>|명령 프로세서 처리를 계속 하기 전에 대기 하는 10 진수 (-1에서 99999) 사이 시간 (초)을 지정 합니다. 값-1 하면 컴퓨터의 키 입력을 무기한 대기 합니다.|
 |/nobreak|사용자 키 입력을 무시 하도록 지정 합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 

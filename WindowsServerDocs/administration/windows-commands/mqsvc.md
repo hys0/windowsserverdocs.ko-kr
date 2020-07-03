@@ -1,6 +1,6 @@
 ---
 title: mqsvc
-description: 서로 다른 시간에 실행 되는 앱이 일시적으로 오프 라인 상태일 수 있는 다른 유형의 네트워크 및 시스템에서 통신할 수 있도록 하는 mqsvc 명령에 대 한 참조 항목입니다.
+description: 다른 시간에 실행 되는 앱이 일시적으로 오프 라인 상태일 수 있는 다른 유형의 네트워크 및 시스템에서 통신할 수 있도록 하는 mqsvc 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0ae02867c5dba942ac919edadf0d6ab63becf4f0
-ms.sourcegitcommit: 5e313a004663adb54c90962cfdad9ae889246151
+ms.openlocfilehash: caf2cc4cd67795789ae61c0e8e958f605bb88523
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84354333"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85928541"
 ---
 # <a name="mqsvc"></a>mqsvc
 

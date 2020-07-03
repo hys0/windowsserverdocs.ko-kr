@@ -1,6 +1,6 @@
 ---
 title: diskcomp
-description: 두 플로피 디스크의 내용을 비교 하는 diskcomp 명령에 대 한 참조 항목입니다.
+description: 두 플로피 디스크의 내용을 비교 하는 diskcomp 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: fcb810f4cd18d51f8151b27a6f447c86130624fd
-ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
+ms.openlocfilehash: efd935d4630d9397d97863d6d373db3801a97b17
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82992517"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85929359"
 ---
 # <a name="diskcomp"></a>diskcomp
 
@@ -28,7 +28,7 @@ diskcomp [<drive1>: [<drive2>:]]
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | `<drive1>` | 플로피 디스크 중 하나를 포함 하는 드라이브를 지정 합니다. |
 | /? | 명령 프롬프트에 도움말을 표시합니다. |
@@ -91,7 +91,7 @@ diskcomp [<drive1>: [<drive2>:]]
 
 - **diskcomp** 종료 코드:
 
-  | 종료 코드 | Description |
+  | 종료 코드 | 설명 |
   | --------- | ----------- |
   | 0 | 디스크가 동일 합니다. |
   | 1 | 차이점 발견 |

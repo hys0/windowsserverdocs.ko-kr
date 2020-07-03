@@ -1,6 +1,6 @@
 ---
 title: diskcopy
-description: 원본 드라이브의 플로피 디스크 내용을 대상 드라이브의 포맷 되거나 포맷 되지 않은 플로피 디스크로 복사 하는 diskcopy 명령에 대 한 참조 항목입니다.
+description: 원본 드라이브의 플로피 디스크 내용을 대상 드라이브의 포맷 되거나 포맷 되지 않은 플로피 디스크로 복사 하는 diskcopy 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 05/07/2018
-ms.openlocfilehash: 99d1007a7c6f154b621e43d674d06f25b2911f00
-ms.sourcegitcommit: aed942d11f1a361fc1d17553a4cf190a864d1268
+ms.openlocfilehash: 7b29e81dc1befff8cd90b460b1117207146fa191
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83235178"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85929347"
 ---
 # <a name="diskcopy"></a>diskcopy
 

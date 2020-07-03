@@ -1,6 +1,6 @@
 ---
 title: 서버 역할별 명령
-description: 서버의 주요 기능을 설명 하는 서버 역할별 명령에 대 한 참조 항목입니다.
+description: 서버의 주요 기능을 설명 하는 서버 역할별 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: bd52887c00933304678119068eb90d1e902acc4b
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 8d2bbaf00591e4bcc1d607a8309f5cd6688d75fe
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82712021"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85929738"
 ---
 # <a name="commands-by-server-role"></a>서버 역할별 명령
 

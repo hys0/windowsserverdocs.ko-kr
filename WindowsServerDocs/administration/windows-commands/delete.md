@@ -1,6 +1,6 @@
 ---
 title: delete
-description: 파티션 또는 볼륨을 삭제 하는 delete 명령에 대 한 참조 항목입니다.
+description: 파티션 또는 볼륨을 삭제 하는 delete 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d87c3696c9f459098b3b1834f46dbb76a49d5d74
-ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
+ms.openlocfilehash: c3ebd26438836d19f0bcae51a26ba09ebe4fa723
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82993092"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85929482"
 ---
 # <a name="delete"></a>delete
 
@@ -31,11 +31,11 @@ delete volume
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 |---------- | ----------- |
 | [디스크 삭제](delete-disk.md) | 디스크 목록에서 찾을 수 없는 동적 디스크를 삭제합니다. |
-| [파티션을 삭제합니다](delete-partition.md) | 파티션을 삭제합니다. |
-| [그림자를 삭제 합니다.](delete-shadows.md) | 섀도 복사본을 삭제 합니다. |
+| [파티션 삭제](delete-partition.md) | 파티션을 삭제합니다. |
+| [그림자 삭제](delete-shadows.md) | 섀도 복사본을 삭제 합니다. |
 | [볼륨 삭제](delete-volume.md) | 볼륨을 삭제합니다. |
 
 ## <a name="additional-references"></a>추가 참조

@@ -1,6 +1,6 @@
 ---
 title: 확장 된 파티션 만들기
-description: 포커스가 있는 디스크에 확장 파티션을 만드는 확장 만들기 확장 명령에 대 한 참조 항목입니다.
+description: 포커스가 있는 디스크에 확장 파티션을 만드는 확장 만들기 확장 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9d2cc591dca276f70b3ddda1827607d5e2953ed2
-ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
+ms.openlocfilehash: 6acc766a6d9e2fd51bc9c6726d5dec2168ec7eef
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82993277"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85929681"
 ---
 # <a name="create-partition-extended"></a>확장 된 파티션 만들기
 
@@ -35,7 +35,7 @@ create partition extended [size=<n>] [offset=<n>] [align=<n>] [noerr]
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | 크기 =`<n>` | 파티션의 크기 (mb)를 지정 합니다. 크기를 지정 하는 경우 파티션을 확장 파티션의 가능한 공간이 없을 때까지 계속 합니다. |
 | offset =`<n>` | 파티션이 생성 되는 오프셋 (KB)을 지정 합니다. 없는 오프셋을 지정 하는 경우 새 파티션을 보유할 수 있도록 충분히 큰 디스크에 여유 공간 시작 부분에 파티션을 시작 됩니다. |

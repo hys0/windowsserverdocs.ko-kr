@@ -1,6 +1,6 @@
 ---
 title: del
-description: 하나 이상의 파일을 삭제 하는 del 명령에 대 한 참조 항목입니다.
+description: 하나 이상의 파일을 삭제 하는 del 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f32efd6e29a715cdc67b5a1ddcb166922d1cfcc9
-ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
+ms.openlocfilehash: 57f0026aebd7ff2119c7de49a03679792c3e5f0c
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82993133"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85928772"
 ---
 # <a name="del"></a>del
 
@@ -34,7 +34,7 @@ erase [/p] [/f] [/s] [/q] [/a[:]<attributes>] <names>
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | `<names>` | 하나 이상의 파일 또는 디렉터리 목록을 지정합니다. 여러 파일을 삭제 하려면 와일드 카드를 사용할 수 있습니다. 디렉터리를 지정 하는 경우 디렉터리 내의 모든 파일이 삭제 됩니다. |
 | /p | 지정된 된 파일을 삭제 하기 전에 확인 메시지를 표시 합니다. |
@@ -46,7 +46,7 @@ erase [/p] [/f] [/s] [/q] [/a[:]<attributes>] <names>
 
 #### <a name="remarks"></a>설명
 
-- 명령을 사용 하는 `del /p` 경우 다음과 같은 메시지가 표시 됩니다.
+- 명령을 사용 하는 경우 `del /p` 다음과 같은 메시지가 표시 됩니다.
 
     `FileName, Delete (Y/N)?`
 
@@ -54,7 +54,7 @@ erase [/p] [/f] [/s] [/q] [/a[:]<attributes>] <names>
 
 - 명령 확장을 사용 하지 않도록 설정 하면 삭제 되는 파일의 이름을 표시 하는 대신 **/s** 매개 변수를 통해 찾지 못한 파일의 이름이 표시 됩니다.
 
-- `<names>` 매개 변수에 특정 폴더를 지정 하면 포함 된 파일도 모두 삭제 됩니다. 예를 들어 *\work* 폴더의 모든 파일을 삭제 하려면 다음을 입력 합니다.
+- 매개 변수에 특정 폴더를 지정 하면 `<names>` 포함 된 파일도 모두 삭제 됩니다. 예를 들어 *\work* 폴더의 모든 파일을 삭제 하려면 다음을 입력 합니다.
 
   ```
   del \work

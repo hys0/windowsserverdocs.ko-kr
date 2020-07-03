@@ -1,6 +1,6 @@
 ---
 title: bitsadmin geterror
-description: 지정 된 작업에 대 한 자세한 오류 정보를 검색 하는 bitsadmin geterror 명령에 대 한 참조 항목입니다.
+description: 지정 된 작업에 대 한 자세한 오류 정보를 검색 하는 bitsadmin geterror 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e7275bb813ef65f304cf8111c5a1ee387b7528e5
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 1d729b946df4af33da3a55ff8051c59fbb5d7efe
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718013"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85928307"
 ---
 # <a name="bitsadmin-geterror"></a>bitsadmin geterror
 

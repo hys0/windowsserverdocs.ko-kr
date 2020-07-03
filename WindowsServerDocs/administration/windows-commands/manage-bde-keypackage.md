@@ -1,6 +1,6 @@
 ---
 title: manage-bde keypackage
-description: 드라이브의 키 패키지를 생성 하는 manage-bde keypackage command에 대 한 참조 항목입니다.
+description: 드라이브의 키 패키지를 생성 하는 manage-bde keypackage command에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c4d0956154d6b20d5ceedb44d0781614f8da5fb1
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: 4bdbd9bb46b75e7dc87cae1cd6e9b3a101ff91ff
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84222885"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85928565"
 ---
 # <a name="manage-bde-keypackage"></a>manage-bde keypackage
 

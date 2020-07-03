@@ -1,6 +1,6 @@
 ---
 title: chcp
-description: 활성 콘솔 코드 페이지를 변경 하는 chcp 명령에 대 한 참조 항목입니다.
+description: 활성 콘솔 코드 페이지를 변경 하는 chcp 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0f1291176ed5245b06c68491f0d5cb0ae9b0b600
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: a07d439a4738053ea9a76b4ca68fadec2a215ff0
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82715325"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85930023"
 ---
 # <a name="chcp"></a>chcp
 

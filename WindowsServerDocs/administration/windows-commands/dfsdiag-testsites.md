@@ -1,6 +1,6 @@
 ---
 title: dfsdiag testsites
-description: 네임 스페이스 서버 또는 폴더 (링크) 대상 역할을 하는 서버가 모든 도메인 컨트롤러에서 동일한 사이트 연결을 갖고 있는지 확인 하 여 AD DS (active directory 도메인 서비스) 사이트의 구성을 확인 하는 dfsdiag testsites에 대 한 참조 항목입니다.
+description: 네임 스페이스 서버 또는 폴더 (링크) 대상 역할을 하는 서버가 모든 도메인 컨트롤러에서 동일한 사이트 연결을 갖고 있는지 확인 하 여 AD DS (active directory 도메인 서비스) 사이트의 구성을 확인 하는 dfsdiag testsites에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 54eb7c7ec44d7cd4872960ca29cd3146b710f472
-ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
+ms.openlocfilehash: 7942b1535957366af9485580d75c9eec17120f4d
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82992848"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85928683"
 ---
 # <a name="dfsdiag-testsites"></a>dfsdiag testsites
 
@@ -30,7 +30,7 @@ dfsdiag /testsites </machine:<server name>| /DFSpath:<namespace root or DFS fold
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | `/machine:<server name>` | 사이트 연결을 확인 하는 서버의 이름입니다. |
 | `/DFSpath:<namespace root or DFS folder>` | 사이트 연결을 확인할 대상이 포함 된 네임 스페이스 루트 또는 분산 파일 시스템 (DFS) 폴더 (링크)입니다. |

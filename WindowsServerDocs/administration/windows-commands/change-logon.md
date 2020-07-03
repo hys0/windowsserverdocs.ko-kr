@@ -1,6 +1,6 @@
 ---
 title: change logon
-description: 클라이언트 세션에서 로그온을 사용 하거나 사용 하지 않도록 설정 하거나 현재 로그온 상태를 표시 하는 변경 로그온 명령에 대 한 참조 항목입니다.
+description: 클라이언트 세션에서 로그온을 사용 하거나 사용 하지 않도록 설정 하거나 현재 로그온 상태를 표시 하는 변경 로그온 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4a2ebe75f6efa8c3bcfc0018d1f4e6051bb9ebb7
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 1561434347bc6a56e628f185e0984e33587bd999
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716128"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85929129"
 ---
 # <a name="change-logon"></a>change logon
 
@@ -51,7 +51,7 @@ change logon {/query | /enable | /disable | /drain | /drainuntilrestart}
 ### <a name="examples"></a>예
 
 - 현재 로그온 상태를 표시 하려면 다음을 입력 합니다.
-  
+
   ```
   change logon /query
   ```
@@ -67,7 +67,7 @@ change logon {/query | /enable | /disable | /drain | /drainuntilrestart}
   ```
   change logon /disable
   ```
-  
+
 ## <a name="additional-references"></a>추가 참조
 
 - [명령줄 구문 키](command-line-syntax-key.md)

@@ -1,6 +1,6 @@
 ---
 title: ksetup getenctypeattr
-description: 도메인에 대 한 암호화 유형 특성을 검색 하는 ksetup getenctypeattr 명령에 대 한 참조 항목입니다.
+description: 도메인에 대 한 암호화 유형 특성을 검색 하는 ksetup getenctypeattr 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2acead4ff1179002303c18d4feff262080203a28
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 1fa86e8f9a9f2a2e552c7b968c447707b09e7e86
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83817703"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85929145"
 ---
 # <a name="ksetup-getenctypeattr"></a>ksetup getenctypeattr
 

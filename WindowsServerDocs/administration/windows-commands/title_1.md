@@ -1,6 +1,6 @@
 ---
 title: title
-description: 명령 프롬프트 창의 제목을 만드는 제목에 대 한 참조 항목입니다.
+description: 제목에 대 한 참조 문서로, 명령 프롬프트 창의 제목을 만듭니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a94fe033bfd43d825c5beb7c915937bc4419b18f
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 732a0de30b9495e6281248120d2a90f85734ad8b
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82721345"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85930066"
 ---
 # <a name="title"></a>title
 
@@ -32,7 +32,7 @@ title [<String>]
 
 |매개 변수|설명|
 |---------|-----------|
-|\<문자열>|명령 프롬프트 창의 제목을 지정합니다.|
+|\<String>|명령 프롬프트 창의 제목을 지정합니다.|
 |/?|명령 프롬프트에 도움말을 표시합니다.|
 
 ## <a name="remarks"></a>설명

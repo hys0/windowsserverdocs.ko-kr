@@ -1,6 +1,6 @@
 ---
 title: bitsadmin complete
-description: 작업을 완료 하는 bitsadmin complete 명령에 대 한 참조 항목입니다.
+description: 작업을 완료 하는 bitsadmin complete 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6b61f3475afdb0e29e5777940e6426a04fe33e78
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 08fb74690f5a8f70611bb6ca52a291bec89d81e8
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718224"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85928357"
 ---
 # <a name="bitsadmin-complete"></a>bitsadmin complete
 
@@ -34,7 +34,7 @@ bitsadmin /complete <job>
 
 ## <a name="example"></a>예제
 
-상태에 `TRANSFERRED` 도달한 후 *mydownloadjob* 작업을 완료 하려면 다음을 수행 합니다.
+상태에 도달한 후 *Mydownloadjob* 작업을 완료 하려면 다음을 수행 합니다 `TRANSFERRED` .
 
 ```
 bitsadmin /complete myDownloadJob

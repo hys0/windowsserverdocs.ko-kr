@@ -1,6 +1,6 @@
 ---
 title: clean
-description: 포커스가 있는 디스크에서 모든 파티션 또는 볼륨 형식을 제거 하는 Diskpart clean 명령에 대 한 참조 항목입니다.
+description: 포커스가 있는 디스크에서 모든 파티션 또는 볼륨 형식을 제거 하는 Diskpart 정리 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 45a23919dc07c8c1525808859471fdcb9f9e9403
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 7a30e1f765959ed60efa662301f95defc21d6587
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82712873"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85929901"
 ---
 # <a name="clean"></a>clean
 
@@ -35,7 +35,7 @@ clean [all]
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| all | 각 섹터 디스크에서 디스크에 포함 된 모든 데이터를 완전히 삭제를 0으로 설정 되어 있는지를 지정 합니다. |
+| 모두 | 각 섹터 디스크에서 디스크에 포함 된 모든 데이터를 완전히 삭제를 0으로 설정 되어 있는지를 지정 합니다. |
 
 #### <a name="remarks"></a>설명
 

@@ -1,6 +1,6 @@
 ---
 title: 압축
-description: NTFS 파티션에서 파일이 나 디렉터리의 압축을 표시 하거나 변경 하는 압축 명령에 대 한 참조 항목입니다.
+description: NTFS 파티션에서 파일이 나 디렉터리의 압축을 표시 하거나 변경 하는 압축 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 52830530fa281025fcfd970b7675b98004e2a918
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: c17f7c934ecd4b6988b3ab606059a2acd31b852b
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82710945"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85929002"
 ---
 # <a name="compact"></a>압축
 
@@ -32,7 +32,7 @@ compact [/c | /u] [/s[:<dir>]] [/a] [/i] [/f] [/q] [<filename>[...]]
 | --------- | ----------- |
 | /C | 지정 된 디렉터리 또는 파일을 압축 합니다. |
 | /U | 지정 된 디렉터리 또는 파일을 Uncompresses 합니다. |
-| /s [:`<dir>`] | 지정 된 디렉터리 (또는 지정 되지 않은 경우 현재 디렉터리)의 모든 하위 디렉터리에 **compact** 명령을 적용 합니다. |
+| /s [: `<dir>` ] | 지정 된 디렉터리 (또는 지정 되지 않은 경우 현재 디렉터리)의 모든 하위 디렉터리에 **compact** 명령을 적용 합니다. |
 | /a | 숨겨진 또는 시스템 파일을 표시 합니다. |
 | /i | 오류를 무시합니다. |
 | /f | 지정 된 디렉터리나 파일의 압축을 강제로 압축 하거나 압축을 해제 합니다. **/f** 는 시스템 작동 중단에 의해 작업이 중단 된 경우 부분적으로 압축 된 파일의 경우에 사용 됩니다. 파일이 전체적으로 압축 되도록 하려면 **/c** 및 **/f** 매개 변수를 사용 하 고 부분적으로 압축 된 파일을 지정 합니다. |
@@ -75,7 +75,7 @@ compact /c /i /s:\
 compact /c /s:\tmp *.bmp
 ```
 
-시스템 작동이 중단 되는 동안 부분적으로 압축 된 *얼룩말*파일의 전체 압축을 강제로 적용 하려면 다음을 입력 합니다.
+시스템 충돌 시 부분적으로 압축 된 파일 *zebra.bmp*의 압축을 강제로 적용 하려면 다음을 입력 합니다.
 
 ```
 compact /c /f zebra.bmp

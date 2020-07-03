@@ -1,6 +1,6 @@
 ---
 title: comp
-description: 두 파일 또는 파일 집합의 내용을 바이트 단위로 비교 하는 comp 명령에 대 한 참조 항목입니다.
+description: 두 파일 또는 파일 집합의 내용을 바이트 단위로 비교 하는 comp 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c2939ee2166d961cae8ae0699c130e91117dd8a6
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 65008945e2994b9040fcac663185d0526910b8bc
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82711463"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85929719"
 ---
 # <a name="comp"></a>comp
 
@@ -81,7 +81,7 @@ comp [<data1>] [<data2>] [/d] [/a] [/l] [/n=<number>] [/c]
 
 ## <a name="examples"></a>예
 
-*C:\reports* 디렉터리의 내용을 백업 디렉터리 `\\sales\backup\april`와 비교 하려면 다음을 입력 합니다.
+*C:\reports* 디렉터리의 내용을 백업 디렉터리와 비교 하려면 `\\sales\backup\april` 다음을 입력 합니다.
 
 ```
 comp c:\reports \\sales\backup\april

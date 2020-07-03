@@ -1,6 +1,6 @@
 ---
 title: bitsadmin cache and clear
-description: 로컬 캐시를 제거 하는 bitsadmin cache 및 clear 명령에 대 한 참조 항목입니다.
+description: Bitsadmin cache 및 clear 명령에 대 한 참조 문서는 로컬 캐시를 제거 합니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6195bfc28c59fe7609f4a8164fa080ff7f7b977d
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 624045036cae03e790c93a03be1007a8140f8d6a
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718280"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85928432"
 ---
 # <a name="bitsadmin-cache-and-clear"></a>bitsadmin cache and clear
 

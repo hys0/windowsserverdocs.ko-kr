@@ -1,6 +1,6 @@
 ---
-title: 분리 vdisk
-description: 선택 된 가상 하드 디스크 (VHD)가 호스트 컴퓨터의 로컬 하드 디스크 드라이브로 나타나지 않도록 하는 detach vdisk 명령에 대 한 참조 항목입니다.
+title: detach vdisk
+description: 선택 된 가상 하드 디스크 (VHD)가 호스트 컴퓨터의 로컬 하드 디스크 드라이브로 표시 되지 않도록 하는 detach vdisk 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 427b27630341589f3ff6dd422667e1247f5b64ec
-ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
+ms.openlocfilehash: bce18dcf55940ca8529e4bee21af2f09282d0e00
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82993079"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85928707"
 ---
-# <a name="detach-vdisk"></a>분리 vdisk
+# <a name="detach-vdisk"></a>detach vdisk
 
 > 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -31,7 +31,7 @@ detach vdisk [noerr]
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | noerr | 스크립팅 전용입니다. 오류가 발생 하면 오류가 발생 하지 않은 경우에 따라 명령을 처리 하도록 DiskPart 계속 합니다. 이 매개 변수를 크기는 오류 코드를 수행 합니다. |
 

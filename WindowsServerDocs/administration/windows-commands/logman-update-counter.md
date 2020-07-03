@@ -1,6 +1,6 @@
 ---
 title: logman 업데이트 카운터
-description: 기존 카운터 데이터 수집기의 속성을 업데이트 하는 logman update counter 명령에 대 한 참조 항목입니다.
+description: 기존 카운터 데이터 수집기의 속성을 업데이트 하는 logman update counter 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f482e58417e5e3246989169bbb01917fcb6503b0
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: 4bfeb3bf8e0bc88bdefcee308d5c77121477b095
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84222762"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85928580"
 ---
 # <a name="logman-update-counter"></a>logman 업데이트 카운터
 

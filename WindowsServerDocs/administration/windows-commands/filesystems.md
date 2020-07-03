@@ -1,6 +1,6 @@
 ---
-title: 파일 시스템
-description: 포커스가 있는 볼륨의 현재 파일 시스템에 대 한 정보를 표시 하 고 볼륨의 형식을 지정 하는 데 지원 되는 파일 시스템을 나열 하는 파일 시스템 명령에 대 한 참조 항목입니다.
+title: filesystems
+description: 포커스가 있는 볼륨의 현재 파일 시스템에 대 한 정보를 표시 하 고 볼륨의 형식을 지정 하는 데 지원 되는 파일 시스템을 나열 하는 파일 시스템 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8c31a8978beecda223bc75b1374ef4ac473bf1c6
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: 55219ae6a01c260a18592a59785558f3ff87715a
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83437168"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85929299"
 ---
-# <a name="filesystems"></a>파일 시스템
+# <a name="filesystems"></a>filesystems
 
 포커스가 있는 볼륨의 현재 파일 시스템에 대 한 정보를 표시 하 고 볼륨을 포맷에 대해 지원 되는 파일 시스템을 나열 합니다.
 

@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getfilestransferred
-description: 지정 된 작업에 대해 전송 된 파일 수를 검색 하는 bitsadmin getfilestransferred 명령에 대 한 참조 항목입니다.
+description: 지정 된 작업에 대해 전송 된 파일 수를 검색 하는 bitsadmin getfilestransferred 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ed11739029338ecce5fc4efbe1918873a7f37f62
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 43257dcb8350974bfb258a9970c1a6fec787a226
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717920"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85928259"
 ---
 # <a name="bitsadmin-getfilestransferred"></a>bitsadmin getfilestransferred
 

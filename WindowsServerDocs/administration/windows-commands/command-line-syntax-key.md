@@ -1,6 +1,6 @@
 ---
 title: 명령줄 구문 키
-description: 명령줄 구문을 나타내는 데 사용 되는 표기법을 설명 하는 명령줄 구문 키에 대 한 참조 항목입니다.
+description: 명령줄 구문을 나타내는 데 사용 되는 표기법을 설명 하는 명령줄 구문 키에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3a3c78b6081733164be3a656e67c35dd3e2b5e2d
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 7beaab6b6ac05f8e440276424d2cbdb81ddc73b4
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82711947"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85929726"
 ---
 # <a name="command-line-syntax-key"></a>명령줄 구문 키
 

@@ -1,6 +1,6 @@
 ---
 title: chglogon
-description: 원격 데스크톱 세션 호스트 서버의 클라이언트 세션에서 로그온을 사용 하거나 사용 하지 않도록 설정 하거나 현재 로그온 상태를 표시 하는 chglogon 명령에 대 한 참조 항목입니다.
+description: 원격 데스크톱 세션 호스트 서버의 클라이언트 세션에서 로그온을 사용 하거나 사용 하지 않도록 설정 하거나 현재 로그온 상태를 표시 하는 chglogon 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ ms.date: 10/16/2017
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: f232439e51f2d32f1ef4834a3bba7f4428cce093
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 582dc84e54b491f7deb92c249a258d7f321b3f9c
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82714543"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85929096"
 ---
 # <a name="chglogon"></a>chglogon
 

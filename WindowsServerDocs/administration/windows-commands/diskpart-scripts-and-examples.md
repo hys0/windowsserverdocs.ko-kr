@@ -1,6 +1,6 @@
 ---
 title: diskpart 스크립트 및 예제
-description: 볼륨을 만들거나 동적 디스크로 디스크를 변환 하는 등 디스크 관련 작업을 자동화 하는 방법에 대 한 예제와 diskpart 스크립트에 대 한 참조 항목입니다.
+description: 볼륨을 만들거나 동적 디스크로 디스크를 변환 하는 것과 같은 디스크 관련 작업을 자동화 하는 방법에 대 한 예제 및 diskpart 스크립트에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 546f867b2cde199f54975a127b0faf11130996d2
-ms.sourcegitcommit: 5e313a004663adb54c90962cfdad9ae889246151
+ms.openlocfilehash: f2715332a8a6adff29f31a4dbd7d3e7a27a4a6f2
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84354673"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85929322"
 ---
 # <a name="diskpart-scripts-and-examples"></a>diskpart 스크립트 및 예제
 

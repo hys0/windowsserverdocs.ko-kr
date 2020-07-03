@@ -1,6 +1,6 @@
 ---
-title: 세부 정보 vdisk
-description: 선택한 VHD (가상 하드 디스크)의 속성을 표시 하는 detail vdisk 명령에 대 한 참조 항목입니다.
+title: detail vdisk
+description: 선택한 VHD (가상 하드 디스크)의 속성을 표시 하는 detail vdisk 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: fe754b5f089900ac97f288bc2cc8c72327a1bc82
-ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
+ms.openlocfilehash: 5d3f061706bef2d4636e9f18ba428e7ddfb90bdd
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82993019"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85929364"
 ---
-# <a name="detail-vdisk"></a>세부 정보 vdisk
+# <a name="detail-vdisk"></a>detail vdisk
 
 > 적용 대상: Windows Server (반기 채널), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -52,6 +52,6 @@ detail vdisk
 
 - [merge vdisk 명령](merge-vdisk.md)
 
-- [vdisk 선택](select-vdisk.md)
+- [select vdisk](select-vdisk.md)
 
 - [list 명령](list.md)

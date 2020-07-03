@@ -1,6 +1,6 @@
 ---
 title: choice
-description: 선택 명령에 대 한 참조 항목-일괄 처리 프로그램의 단일 문자 선택 목록에서 한 항목을 선택 하 라는 메시지를 표시 한 다음 선택한 선택 항목의 인덱스를 반환 합니다.
+description: 일괄 처리 프로그램의 단일 문자 선택 목록에서 한 항목을 선택 하 라는 메시지를 표시 한 다음 선택한 선택 항목의 인덱스를 반환 하는 choice 명령에 대 한 참조 문서입니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 32c0daa680178c1952015c62c6c6749acf5f6143
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 745321c6388e6faa9de1ce1a8a24afe66514d259
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82713541"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85929977"
 ---
 # <a name="choice"></a>choice
 
@@ -30,7 +30,7 @@ choice [/c [<choice1><choice2><…>]] [/n] [/cs] [/t <timeout> /d <choice>] [/m 
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| /c`<choice1><choice2><…>` | 만들려는 선택 목록을 지정 합니다. 유효한 선택 항목 a-z, A-Z, 0-9 및 확장된 ASCII 문자 (128-254)를 포함 합니다. 기본 목록은로 `[Y,N]?`표시 되는 YN입니다. |
+| /c`<choice1><choice2><…>` | 만들려는 선택 목록을 지정 합니다. 유효한 선택 항목 a-z, A-Z, 0-9 및 확장된 ASCII 문자 (128-254)를 포함 합니다. 기본 목록은로 표시 되는 YN입니다 `[Y,N]?` . |
 | /n | 중에서 선택할 수는 여전히 사용할 수 있지만 선택 목록이 숨깁니다 메시지 텍스트 (지정 된 경우 **/m**) 계속 표시 됩니다. |
 | /cs | 선택 항목은 대/소문자 구분을 지정 합니다. 기본적으로 선택 항목은 대/소문자 구분 하지 않습니다. |
 | /t`<timeout>` | 사용 하 여 지정 된 기본 선택 하기 전에 일시 중지 시간 (초)의 수를 지정 **/d**합니다. 사용할 수 있는 값은 **0** 에 **9999**합니다. 경우 **/t** 로 설정 된 **0**, **선택** 기본 선택 항목을 반환 하기 전에 일시 중지 되지 않습니다. |
@@ -40,9 +40,9 @@ choice [/c [<choice1><choice2><…>]] [/n] [/cs] [/t <timeout> /d <choice>] [/m 
 
 ## <a name="remarks"></a>설명
 
-- **ERRORLEVEL** 환경 변수는 사용자가 선택 목록에서 선택 하는 키의 인덱스로 설정 됩니다. 목록의 첫 번째 선택은 값을 반환 `1`하 고, 두 번째 값 `2`을 반환 합니다. 사용자가 적절 한 선택 되지 않은 키를 누르면 **선택한** 경고 경고음 보이기도 합니다. 
+- **ERRORLEVEL** 환경 변수는 사용자가 선택 목록에서 선택 하는 키의 인덱스로 설정 됩니다. 목록의 첫 번째 선택은 값을 반환 하 고, `1` 두 번째 값을 반환 합니다 `2` . 사용자가 적절 한 선택 되지 않은 키를 누르면 **선택한** 경고 경고음 보이기도 합니다.
 
-- **선택** 하는 경우 오류 조건이 검색 되 면 **ERRORLEVEL** 값을 반환 `255`합니다. 사용자가 CTRL + BREAK 또는 CTRL + C를 누르면 **ERRORLEVEL** 값 **이로 반환** `0`됩니다.
+- **선택** 하는 경우 오류 조건이 검색 되 면 **ERRORLEVEL** 값을 반환 `255` 합니다. 사용자가 CTRL + BREAK 또는 CTRL + C를 누르면 **ERRORLEVEL** 값 **이로 반환** `0` 됩니다.
 
 > [!NOTE]
 > 일괄 처리 프로그램에서 **ERRORLEVEL** 값을 사용 하는 경우에는 내림차순으로 나열 해야 합니다.
@@ -83,7 +83,7 @@ choice /c ync /t 5 /d n
 ```
 
 > [!NOTE]
-> 이 예에서는 사용자가 5 초 내에 키를 누르지 않는 경우 **선택** 은 기본적으로 **N** 을 선택 하 고 오류 값을 `2`반환 합니다. 그렇지 않으면 **선택** 해당 사용자의 선택 하는 값을 반환 합니다.
+> 이 예에서는 사용자가 5 초 내에 키를 누르지 않는 경우 **선택** 은 기본적으로 **N** 을 선택 하 고 오류 값을 반환 `2` 합니다. 그렇지 않으면 **선택** 해당 사용자의 선택 하는 값을 반환 합니다.
 
 ## <a name="additional-references"></a>추가 참조
 

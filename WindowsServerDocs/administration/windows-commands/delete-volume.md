@@ -1,6 +1,6 @@
 ---
 title: delete volume
-description: 볼륨 삭제 명령에 대 한 참조 항목으로, 선택한 볼륨을 삭제 합니다.
+description: 볼륨 삭제 명령에 대 한 참조 문서로, 선택한 볼륨을 삭제 합니다.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 59856e89ff96d2881040365d157540dc62c1aeb0
-ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
+ms.openlocfilehash: 217e9ff1ccb470b5431143360286d312b09a1951
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82993103"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85928719"
 ---
 # <a name="delete-volume"></a>delete volume
 
@@ -31,7 +31,7 @@ delete volume [noerr]
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | noerr | 스크립팅 전용입니다. 오류가 발생 하면 오류가 발생 하지 않은 경우에 따라 명령을 처리 하도록 DiskPart 계속 합니다. 이 매개 변수를 크기는 오류 코드를 수행 합니다. |
 

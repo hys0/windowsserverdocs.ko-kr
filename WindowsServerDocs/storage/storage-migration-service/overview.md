@@ -8,12 +8,12 @@ ms.date: 03/26/2020
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
-ms.openlocfilehash: fab7dff1efc8b21a3b8fdacdeb9d446d7bc0cc30
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 6ec1093a77b036cada9e54c82234d653362ce4d3
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85475310"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85930103"
 ---
 # <a name="storage-migration-service-overview"></a>Storage Migration Service 개요
 
@@ -136,6 +136,8 @@ Windows 관리 센터 버전 1910을 사용 하 여 Azure 가상 컴퓨터를 �
 
    Storage Migration Service를 사용 하 여 Azure Vm으로 마이그레이션하는 방법을 보여 주는 비디오는 다음과 같습니다.
    > [!VIDEO https://www.youtube-nocookie.com/embed/k8Z9LuVL0xQ]
+   
+이후 운영 체제로 마이그레이션하지 않고 가상 컴퓨터를 Azure로 리프트 앤 시프트 하려면 Azure Migrate를 사용 하는 것이 좋습니다. 자세한 내용은 [Azure Migrate 개요](https://go.microsoft.com/fwlink/?linkid=2056064)를 참조 하세요.
 
 ## <a name="whats-new-in-storage-migration-service"></a>저장소 마이그레이션 서비스의 새로운 기능
 

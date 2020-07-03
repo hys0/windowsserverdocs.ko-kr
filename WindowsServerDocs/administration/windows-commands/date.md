@@ -1,6 +1,6 @@
 ---
 title: date
-description: 시스템 날짜를 표시 하거나 설정 하는 date 명령에 대 한 참조 항목입니다. 매개 변수 없이 사용 하는 경우
+description: 시스템 날짜를 표시 하거나 설정 하는 date 명령에 대 한 참조 문서입니다. 매개 변수 없이 사용 하는 경우
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 64d0d94061e1b5c7891b364f4c0fe153b44a564e
-ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
+ms.openlocfilehash: d22c354af45aa0c6383c0dde911b03704bd7a150
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82993198"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85928819"
 ---
 # <a name="date"></a>date
 
@@ -31,7 +31,7 @@ date [/t | <month-day-year>]
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수 | Description |
+| 매개 변수 | 설명 |
 | --------- | ----------- |
 | `<month-day-year>` | 지정 된 날짜를 설정 합니다. 여기서 *month* 는 월 (1 ~ 12 값을 포함 하는 하나 또는 두 개의 숫자), *day* 는 일 (1부터 31 까지의 값을 포함 하는 하나 또는 두 개의 숫자), *year* 는 연도 (00-99 또는 1980 ~ 2099 값을 포함 하 여 두 자리 또는 네 자리)를 설정 합니다. *월*, *일*및 *연도* 에 대 한 값을 마침표 (.), 하이픈 (-) 또는 슬래시 (/)로 구분 해야 합니다.<p>**참고:** 두 자릿수를 사용 하 여 연도를 나타내는 경우 값 80-99은 1980 ~ 1999에 해당 합니다. |
 | /t | 입력 하 라는 새로운 날짜 없이 현재 날짜를 표시 합니다. |
