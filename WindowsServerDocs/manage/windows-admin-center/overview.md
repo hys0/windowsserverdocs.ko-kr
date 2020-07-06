@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.date: 01/07/2020
 ms.localizationpriority: high
 ms.prod: windows-server
-ms.openlocfilehash: 1094072935d463aa57eb6d44d14d008067745f03
-ms.sourcegitcommit: 599162b515c50106fd910f5c180e1a30bbc389b9
+ms.openlocfilehash: cb91b884edfbd105bc9e88a9d11b3b96055247c9
+ms.sourcegitcommit: c40c29683d25ed75b439451d7fa8eda9d8d9e441
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83775324"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85833336"
 ---
 # <a name="windows-admin-center"></a>Windows Admin Center
 
@@ -25,7 +25,7 @@ Windows Admin Center는 Windows 서버, 클러스터, 하이퍼 컨버지드 인
 
 ## <a name="download-now"></a>지금 다운로드
 
-Microsoft Evaluation Center에서 **[Windows Admin Center](https://www.microsoft.com/evalcenter/evaluate-windows-admin-center)를 다운로드합니다.** 비록 "평가 시작"이라고 하지만, 이는 일반적으로 Windows 또는 Windows Server 라이선스의 일부로 제공되는 프로덕션용 버전입니다.
+Microsoft Evaluation Center에서 **[Windows Admin Center](https://www.microsoft.com/evalcenter/evaluate-windows-admin-center)를 다운로드합니다.** 비록 "평가 시작"이라고 하지만, 이는 일반적으로 프로덕션용으로 사용 가능한 버전입니다.
 
 설치에 대한 도움말은 [설치](deploy/install.md)를 참조하세요. Windows Admin Center 시작에 대한 팁은 [시작](use/get-started.md)을 참조하세요.
 
