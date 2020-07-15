@@ -7,13 +7,13 @@ author: rick-man
 ms.author: rickman
 manager: stevelee
 ms.topic: article
-ms.date: 08/21/2019
-ms.openlocfilehash: 7ca8d29b58dc8682575d9cb8b0f26aa49b257335
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.date: 07/14/2020
+ms.openlocfilehash: c8e0e8798da9cb4a2b3ca317d9632450ade82504
+ms.sourcegitcommit: f81aa22739d818382d314561dece59a9341dfb6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80307853"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86390100"
 ---
 # <a name="plan-for-gpu-acceleration-in-windows-server"></a>Windows Server의 GPU 가속 계획
 
@@ -46,7 +46,7 @@ GPU 통과 라고도 하는 불연속 장치 할당 (DDA)을 사용 하면 하�
 
 각 실제 GPU는 최대 하나의 VM에 대 한 가속을 제공할 수 있으므로 DDA 배포는 제한 된 수의 가상 컴퓨터만 가속화할 수 있습니다. 아키텍처가 공유 가상 컴퓨터를 지 원하는 서비스를 개발 하는 경우 VM 당 여러 가속화 된 워크 로드를 호스트 하는 것이 좋습니다. 예를 들어 RDS를 사용 하 여 데스크톱 remoting 서비스를 구축 하는 경우 Windows Server의 다중 세션 기능을 활용 하 여 각 VM에서 여러 사용자 데스크톱을 호스트 함으로써 사용자 규모를 향상할 수 있습니다. 이러한 사용자는 GPU 가속의 이점을 공유 합니다.
 
-자세한 내용은 아래 항목을 참조하세요.
+자세한 내용은 다음 항목을 참조하세요.
 
 - [불연속 장치 할당 배포 계획](plan-for-deploying-devices-using-discrete-device-assignment.md)
 - [불연속 장치 할당을 사용 하 여 그래픽 장치 배포](../deploy/Deploying-graphics-devices-using-dda.md)
@@ -54,14 +54,14 @@ GPU 통과 라고도 하는 불연속 장치 할당 (DDA)을 사용 하면 하�
 ## <a name="remotefx-vgpu"></a>RemoteFX vGPU
 
 > [!NOTE]
-> RemoteFX vGPU는 Windows Server 2016에서 완벽 하 게 지원 되지만 Windows Server 2019에서는 지원 되지 않습니다.
+> 보안 문제로 인해 RemoteFX vGPU는 2020 년 7 월 14 일에 시작 되는 모든 Windows 버전에서 기본적으로 사용 되지 않습니다. 자세히 알아보려면 [KB 4570006](https://support.microsoft.com/help/4570006)을 참조 하세요.
 
 RemoteFX vGPU는 단일 실제 GPU를 여러 가상 컴퓨터에서 공유할 수 있도록 하는 그래픽 가상화 기술입니다. RemoteFX vGPU 배포에서 가상화 된 작업은 Microsoft의 RemoteFX 3D 어댑터에서 실행 되며,이 어댑터는 호스트와 게스트 간의 GPU 처리 요청을 조정 합니다. RemoteFX vGPU는 전용 GPU 리소스가 필요 하지 않은 지식 근로자 및 버스트 작업에 가장 적합 합니다. RemoteFX vGPU는 Windows Vm에 대 한 GPU 가속만 제공할 수 있습니다.
 
-자세한 내용은 아래 항목을 참조하세요.
+자세한 내용은 다음 항목을 참조하세요.
 
 - [RemoteFX vGPU를 사용하여 그래픽 디바이스 배포](../deploy/deploy-graphics-devices-using-remotefx-vgpu.md)
-- [RemoteFX 3D 비디오 어댑터 (vGPU) 지원](../../../remote/remote-desktop-services/rds-supported-config.md#remotefx-3d-video-adapter-vgpu-support)
+- [RemoteFX 3D 비디오 어댑터(vGPU) 지원](../../../remote/remote-desktop-services/rds-supported-config.md#remotefx-3d-video-adapter-vgpu-support)
 
 ## <a name="comparing-dda-and-remotefx-vgpu"></a>DDA 및 RemoteFX vGPU 비교
 
@@ -72,9 +72,9 @@ RemoteFX vGPU는 단일 실제 GPU를 여러 가상 컴퓨터에서 공유할 �
 | GPU 리소스 모델    | 전용 또는 공유                                                                 | 전용 전용                                                                      |
 | VM 밀도            | 높음 (하나 이상의 Gpu에서 많은 Vm에)                                                 | 낮음 (한 VM에 하나 이상의 Gpu)                                                    |
 | 앱 호환성     | DX 11.1, OpenGL 4.4, OpenCL 1.1                                                     | 공급 기업에서 제공하는 모든 GPU 기능(DX 12, OpenGL, CUDA)                       |
-| AVC444                | 기본적으로 사용하도록 설정됨                                                                  | 그룹 정책 통해 사용 가능                                                      |
+| AVC444                | 기본적으로 사용                                                                  | 그룹 정책 통해 사용 가능                                                      |
 | GPU VRAM              | 최대 1GB 전용 VRAM                                                           | GPU에서 지원하는 최대 VRAM                                                     |
-| 프레임 속도            | 최대 30fps                                                                         | 최대 60fps                                                                         |
+| 프레임 율            | 최대 30fps                                                                         | 최대 60fps                                                                         |
 | 게스트의 GPU 드라이버   | RemoteFX 3D 어댑터 디스플레이 드라이버(Microsoft)                                      | GPU 공급 업체 드라이버 (NVIDIA, AMD, Intel)                                              |
 | 호스트 OS 지원       | Windows Server 2016                                                                 | Windows Server 2016; Windows Server 2019                                            |
 | 게스트 OS 지원      | Windows Server 2012 R2; Windows Server 2016; Windows 7 SP1 Windows 8.1; Windows 10 | Windows Server 2012 R2; Windows Server 2016; Windows Server 2019; Windows 10; 용 |

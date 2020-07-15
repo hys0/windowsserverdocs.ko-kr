@@ -1,5 +1,5 @@
 ---
-title: RemoteFX vGPU를 사용 하 여 그래픽 장치 배포
+title: RemoteFX vGPU를 사용하여 그래픽 디바이스 배포
 description: Windows Server에서 RemoteFX vGPU를 배포 및 구성 하는 방법 알아보기
 ms.prod: windows-server
 ms.reviewer: rickman
@@ -7,17 +7,20 @@ author: rick-man
 ms.author: rickman
 manager: stevelee
 ms.topic: article
-ms.date: 08/21/2019
-ms.openlocfilehash: 4ae185232ec39d92997929f8f916ff49caf26dcf
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.date: 07/14/2020
+ms.openlocfilehash: ab16dcdc8ce29f2440207ea5bbc7c421f171ed4a
+ms.sourcegitcommit: f81aa22739d818382d314561dece59a9341dfb6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80310517"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86390090"
 ---
-# <a name="deploy-graphics-devices-using-remotefx-vgpu"></a>RemoteFX vGPU를 사용 하 여 그래픽 장치 배포
+# <a name="deploy-graphics-devices-using-remotefx-vgpu"></a>RemoteFX vGPU를 사용하여 그래픽 디바이스 배포
 
 > 적용 대상: Windows Server 2016, Microsoft Hyper-V Server 2016
+
+> [!NOTE]
+> 보안 문제로 인해 RemoteFX vGPU는 2020 년 7 월 14 일에 시작 되는 모든 Windows 버전에서 기본적으로 사용 되지 않습니다. 자세히 알아보려면 [KB 4570006](https://support.microsoft.com/help/4570006)을 참조 하세요.
 
 RemoteFX 용 vGPU 기능을 사용 하면 여러 가상 컴퓨터에서 실제 GPU를 공유할 수 있습니다. 렌더링 및 계산 리소스는 가상 컴퓨터 간에 동적으로 공유 되며, 전용 GPU 리소스가 필요 하지 않은 버스트 작업에 적합 한 RemoteFX vGPU를 만듭니다. 예를 들어 VDI 서비스에서 RemoteFX vGPU는 CPU 부하를 줄이고 서비스 확장성을 개선 하는 효과를 사용 하 여 앱 렌더링 비용을 GPU로 오프 로드 하는 데 사용할 수 있습니다.
 
@@ -80,13 +83,13 @@ Hyper-V 관리자 UI 또는 PowerShell cmdlet을 사용하여 RemoteFX vGPU 3D �
 
 ## <a name="monitor-performance"></a>성능 모니터링
 
-RemoteFX vGPU 지원 서비스의 성능 및 소수 자릿수는 시스템의 Gpu 수, 총 GPU 메모리, 시스템 메모리 양 및 메모리 속도, CPU 코어 수, CPU 클록 빈도, 저장소 속도, NUMA 등과 같은 다양 한 요소에 의해 결정 됩니다. 구현이.
+RemoteFX vGPU 지원 서비스의 성능 및 크기는 시스템의 Gpu 수, 총 GPU 메모리, 시스템 메모리 양 및 메모리 속도, CPU 코어 수, CPU 클록 빈도, 저장소 속도, NUMA 구현 등과 같은 다양 한 요소에 의해 결정 됩니다.
 
 ### <a name="host-system-memory"></a>호스트 시스템 메모리
 
 VGPU에서 사용 하도록 설정 된 모든 VM에 대해 RemoteFX는 게스트 운영 체제와 호스트 서버 모두에서 시스템 메모리를 사용 합니다. 하이퍼바이저는 게스트 운영 체제에 대 한 시스템 메모리의 가용성을 보장 합니다. 호스트에서 각 vGPU 지원 가상 데스크톱은 시스템 메모리 요구 사항을 하이퍼바이저에 보급 해야 합니다. VGPU 지원 가상 데스크톱이 시작 되 면 하이퍼바이저는 호스트에 추가 시스템 메모리를 예약 합니다.
 
-Remotefx 사용 서버에서 사용 되는 메모리 양이 vGPU 지원 가상 데스크톱에 연결 된 모니터 수와에 대 한 최대 해상도에 따라 다르므로 RemoteFX 사용 서버에 대 한 메모리 요구 사항이 동적입니다. 이러한 모니터
+Remotefx 사용 서버에서 사용 되는 메모리 양이 vGPU 지원 가상 데스크톱에 연결 된 모니터 수와 해당 모니터에 대 한 최대 해상도에 따라 다르므로 RemoteFX 사용 서버에 대 한 메모리 요구 사항이 동적입니다.
 
 ### <a name="host-gpu-video-memory"></a>호스트 GPU 비디오 메모리
 
@@ -94,7 +97,7 @@ Remotefx 사용 서버에서 사용 되는 메모리 양이 vGPU 지원 가상 �
 
 ### <a name="host-cpu"></a>호스트 CPU
 
-하이퍼바이저는 CPU에서 호스트 및 Vm을 예약 합니다. 시스템에서 vGPU 지원 가상 데스크톱 마다 추가 프로세스 (rdvgm)를 실행 하므로 RemoteFX 사용 호스트에서 오버 헤드가 증가 합니다. 이 프로세스는 그래픽 장치 드라이버를 사용 하 여 GPU에서 명령을 실행 합니다. 또한 코덱은 CPU를 사용 하 여 클라이언트로 다시 전송 되어야 하는 화면 데이터를 압축 합니다.
+하이퍼바이저는 CPU에서 호스트 및 Vm을 예약 합니다. 시스템이 vGPU 지원 가상 데스크톱 마다 추가 프로세스 (rdvgm.exe)를 실행 하므로 RemoteFX 사용 호스트에서 오버 헤드가 증가 합니다. 이 프로세스는 그래픽 장치 드라이버를 사용 하 여 GPU에서 명령을 실행 합니다. 또한 코덱은 CPU를 사용 하 여 클라이언트로 다시 전송 되어야 하는 화면 데이터를 압축 합니다.
 
 가상 프로세서를 많이 사용 하면 더 나은 사용자 환경을 의미 합니다. VGPU 지원 가상 데스크톱 당 두 개 이상의 가상 Cpu를 할당 하는 것이 좋습니다. 또한 x64 가상 컴퓨터의 성능은 x86 가상 컴퓨터와 비교 하 여 더 효율적 이므로 vGPU 지원 가상 데스크톱에 x64 아키텍처를 사용 하는 것이 좋습니다.
 

@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 505094251ab6b0053cc3d46801ba5f6170201ecd
-ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
+ms.openlocfilehash: a81e5d6583eeb6859d5c82065b5bab5fff7c6c9f
+ms.sourcegitcommit: 102a929be3523dbd6523079f0a5738844cef81b4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85935720"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86384643"
 ---
 # <a name="mount"></a>mount
 
@@ -31,7 +31,7 @@ mount [-o <option>[...]] [-u:<username>] [-p:{<password> | *}] {\\<computername>
 
 ### <a name="parameters"></a>매개 변수
 
-| 매개 변수  | 설명 |
+| 매개 변수  | Description |
 | ---------- | ----------- |
 | -o rsize =`<buffersize>` | (킬로바이트) 읽기 버퍼의 크기를 설정합니다. 허용 가능한 값은 1, 2, 4, 8, 16 및 32입니다. 기본값은 32KB입니다. |
 | -o wsize =`<buffersize>` | (킬로바이트) 쓰기 버퍼의 크기를 설정합니다. 허용 가능한 값은 1, 2, 4, 8, 16 및 32입니다. 기본값은 32KB입니다. |
@@ -43,7 +43,7 @@ mount [-o <option>[...]] [-u:<username>] [-p:{<password> | *}] {\\<computername>
 | -o casesensitive | 강제로 서버 대/소문자 구분에 조회 파일입니다. |
 | -o fileaccess =`<mode>` | NFS 공유에 만들어진 새 파일의 기본 사용 권한 모드를 지정 합니다. 지정 *모드* 형태로 세 자리 숫자로 *ogw*, 여기서 *o*, *g*, 및 *w* 는 각각 해당 파일의 소유자, 그룹 및 전 세계를 각각 부여 된 액세스를 나타내는 숫자입니다. 숫자는 다음을 포함 하 여 0-7 범위 내에 있어야 합니다.<ul><li>**0:** 액세스 권한 없음</li><li>**1:** x (실행 액세스)</li><li>**2:** w (쓰기 액세스)</li><li>**3:** wx (쓰기 및 실행 액세스)</li><li>**4:** r (읽기 액세스)</li><li>**5:** rx (읽기 및 실행 액세스)</li><li>**6:** rw (읽기 및 쓰기 권한)</li><li>**7:** rwx (읽기, 쓰기 및 실행 액세스)</li></ul> |
 | -o lang =`{euc-jp|euc-tw|euc-kr|shift-jis|Big5|Ksc5601|Gb2312-80|Ansi)` | NFS 공유에서 구성할 언어 인코딩을 지정 합니다. 공유에서 한 언어만 사용할 수 있습니다. 이 값은 다음 값 중 하나를 포함할 수 있습니다.<ul><li>**euc-jp:** 일본어</li><li>**euc-hy 다음과 같이 합니다.** 중국어</li><li>**euc-kr:** 한국어</li><li>**shift-jis:** 일본어</li><li>**Big5:** 중국어</li><li>**Ksc5601:** 한국어</li><li>**Gb2312-80:** 중국어 간체</li><li>**Ansi:** ANSI 인코딩</li></ul> |
-| 나무`<username>` | 공유를 마운트 하는 데 사용할 사용자 이름을 지정 합니다. *사용자 이름* 앞에 백슬래시 (*)가 없으면 *\** UNIX 사용자 이름으로 처리 됩니다. |
+| 나무`<username>` | 공유를 마운트 하는 데 사용할 사용자 이름을 지정 합니다. *사용자 이름* 앞에 백슬래시 ()가 없으면 **\\** UNIX 사용자 이름으로 처리 됩니다. |
 | ®`<password>` | 공유를 마운트 하는 데 사용할 암호입니다. 별표 (**&#42;**)를 사용 하는 경우 암호를 입력 하 라는 메시지가 표시 됩니다. |
 | `<computername>` | NFS 서버의 이름을 지정 합니다. |
 | `<sharename>` | 파일 시스템의 이름을 지정합니다. |
